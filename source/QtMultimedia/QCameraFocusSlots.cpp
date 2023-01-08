@@ -112,7 +112,7 @@ void QCameraFocusSlots_connect_signal( const QString & signal, const QString & s
 {
   QCameraFocus * obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCameraFocusSlots * s = QCoreApplication::instance()->findChild<QCameraFocusSlots*>();
 

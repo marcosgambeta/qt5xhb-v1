@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_DELETE )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_STATE )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_BAND )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETBAND )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISBANDSUPPORTED )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCY )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCYSTEP )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETFREQUENCY )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSTEREO )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_STEREOMODE )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETSTEREOMODE )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SIGNALSTRENGTH )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_VOLUME )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETVOLUME )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISMUTED )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETMUTED )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSEARCHING )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISANTENNACONNECTED )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHFORWARD )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHBACKWARD )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHALLSTATIONS )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_CANCELSEARCH )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_START )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_STOP )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERROR )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERRORSTRING )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

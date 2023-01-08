@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_DELETE )
 {
   QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORNAME )
 {
   QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE )
     */
     QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QMimeType * ptr = new QMimeType( obj->mimeTypeForFile( PQSTRING(1), HB_ISNIL(2)? (QMimeDatabase::MatchMode) QMimeDatabase::MatchDefault : (QMimeDatabase::MatchMode) hb_parni(2) ) );
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE )
     */
     QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QMimeType * ptr = new QMimeType( obj->mimeTypeForFile( *PQFILEINFO(1), HB_ISNIL(2)? (QMimeDatabase::MatchMode) QMimeDatabase::MatchDefault : (QMimeDatabase::MatchMode) hb_parni(2) ) );
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPESFORFILENAME )
 {
   QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORDATA )
     */
     QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QMimeType * ptr = new QMimeType( obj->mimeTypeForData( *PQBYTEARRAY(1) ) );
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORDATA )
     */
     QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QMimeType * ptr = new QMimeType( obj->mimeTypeForData( PQIODEVICE(1) ) );
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORURL )
 {
   QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA )
     */
     QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData( PQSTRING(1), PQIODEVICE(2) ) );
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA )
     */
     QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData( PQSTRING(1), *PQBYTEARRAY(2) ) );
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_SUFFIXFORFILENAME )
 {
   QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_ALLMIMETYPES )
 {
   QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

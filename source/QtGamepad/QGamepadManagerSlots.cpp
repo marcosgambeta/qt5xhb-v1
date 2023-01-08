@@ -217,7 +217,7 @@ void QGamepadManagerSlots_connect_signal( const QString & signal, const QString 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepadManager * obj = (QGamepadManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGamepadManagerSlots * s = QCoreApplication::instance()->findChild<QGamepadManagerSlots*>();
 

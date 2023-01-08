@@ -130,7 +130,7 @@ void QVideoWindowControlSlots_connect_signal( const QString & signal, const QStr
 {
   QVideoWindowControl * obj = (QVideoWindowControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QVideoWindowControlSlots * s = QCoreApplication::instance()->findChild<QVideoWindowControlSlots*>();
 

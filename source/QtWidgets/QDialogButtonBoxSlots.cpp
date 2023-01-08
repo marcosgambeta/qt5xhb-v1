@@ -90,7 +90,7 @@ void QDialogButtonBoxSlots_connect_signal( const QString & signal, const QString
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QDialogButtonBoxSlots * s = QCoreApplication::instance()->findChild<QDialogButtonBoxSlots*>();
 

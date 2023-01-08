@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_DELETE )
 {
   QWebPluginFactory * obj = (QWebPluginFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 {
   QWebPluginFactory * obj = (QWebPluginFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && HB_ISCHAR(1) && ISQURL(2) && HB_ISARRAY(3) && HB_ISARRAY(4) )
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
 {
   QWebPluginFactory * obj = (QWebPluginFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

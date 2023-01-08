@@ -42,7 +42,7 @@ void QDBusServerSlots_connect_signal( const QString & signal, const QString & sl
 {
   QDBusServer * obj = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QDBusServerSlots * s = QCoreApplication::instance()->findChild<QDBusServerSlots*>();
 

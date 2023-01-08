@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSQLINDEX_DELETE )
 {
   QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
     */
     QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->append( *PQSQLFIELD(1) );
     }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
     */
     QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->append( *PQSQLFIELD(1), PBOOL(2) );
     }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
 {
   QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
 {
   QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
 {
   QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
 {
   QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSQLINDEX_NAME )
 {
   QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETNAME )
 {
   QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )

@@ -115,7 +115,7 @@ HB_FUNC_STATIC( Q3DBARS_DELETE )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( Q3DBARS_ISMULTISERIESUNIFORM )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( Q3DBARS_SETMULTISERIESUNIFORM )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( Q3DBARS_BARTHICKNESS )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARTHICKNESS )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( Q3DBARS_BARSPACING )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARSPACING )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZEF(1) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( Q3DBARS_ISBARSPACINGRELATIVE )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARSPACINGRELATIVE )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( Q3DBARS_ROWAXIS )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( Q3DBARS_SETROWAXIS )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCATEGORY3DAXIS(1) )
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( Q3DBARS_COLUMNAXIS )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( Q3DBARS_SETCOLUMNAXIS )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCATEGORY3DAXIS(1) )
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( Q3DBARS_VALUEAXIS )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( Q3DBARS_SETVALUEAXIS )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( Q3DBARS_PRIMARYSERIES )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( Q3DBARS_SETPRIMARYSERIES )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBAR3DSERIES(1) )
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( Q3DBARS_SELECTEDSERIES )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( Q3DBARS_FLOORLEVEL )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( Q3DBARS_SETFLOORLEVEL )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( Q3DBARS_ADDSERIES )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBAR3DSERIES(1) )
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( Q3DBARS_REMOVESERIES )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBAR3DSERIES(1) )
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( Q3DBARS_INSERTSERIES )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQBAR3DSERIES(2) )
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( Q3DBARS_SERIESLIST )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( Q3DBARS_ADDAXIS )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACT3DAXIS(1) )
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( Q3DBARS_RELEASEAXIS )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACT3DAXIS(1) )
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( Q3DBARS_AXES )
 {
   Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

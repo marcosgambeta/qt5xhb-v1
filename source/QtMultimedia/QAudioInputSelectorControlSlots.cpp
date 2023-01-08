@@ -58,7 +58,7 @@ void QAudioInputSelectorControlSlots_connect_signal( const QString & signal, con
 {
   QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QAudioInputSelectorControlSlots * s = QCoreApplication::instance()->findChild<QAudioInputSelectorControlSlots*>();
 

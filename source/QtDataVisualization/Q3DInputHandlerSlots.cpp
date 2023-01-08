@@ -96,7 +96,7 @@ void Q3DInputHandlerSlots_connect_signal( const QString & signal, const QString 
 {
   Q3DInputHandler * obj = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Q3DInputHandlerSlots * s = QCoreApplication::instance()->findChild<Q3DInputHandlerSlots*>();
 

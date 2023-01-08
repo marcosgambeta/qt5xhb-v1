@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_DELETE )
 {
   QMessageLogger * obj = (QMessageLogger *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

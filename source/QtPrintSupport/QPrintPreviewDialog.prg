@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
 {
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
 {
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
 {
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
 {
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
 {
   QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )

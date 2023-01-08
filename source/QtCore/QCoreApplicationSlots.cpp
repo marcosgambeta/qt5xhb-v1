@@ -40,7 +40,7 @@ void QCoreApplicationSlots_connect_signal( const QString & signal, const QString
 {
   QCoreApplication * obj = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCoreApplicationSlots * s = QCoreApplication::instance()->findChild<QCoreApplicationSlots*>();
 

@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_DELETE )
 {
   QCollatorSortKey * obj = (QCollatorSortKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_SWAP )
 {
   QCollatorSortKey * obj = (QCollatorSortKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOLLATORSORTKEY(1) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_COMPARE )
 {
   QCollatorSortKey * obj = (QCollatorSortKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOLLATORSORTKEY(1) )

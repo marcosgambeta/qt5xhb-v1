@@ -210,7 +210,7 @@ void QMediaPlaylistSlots_connect_signal( const QString & signal, const QString &
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QMediaPlaylistSlots * s = QCoreApplication::instance()->findChild<QMediaPlaylistSlots*>();
 

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_DELETE )
 {
   QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
 {
   QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
     */
     QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
     }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
     */
     QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
     }

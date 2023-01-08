@@ -42,7 +42,7 @@ void QCameraFlashControlSlots_connect_signal( const QString & signal, const QStr
 {
   QCameraFlashControl * obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCameraFlashControlSlots * s = QCoreApplication::instance()->findChild<QCameraFlashControlSlots*>();
 

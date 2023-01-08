@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_DELETE )
 {
   QGraphicsSceneHelpEvent * obj = (QGraphicsSceneHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
 {
   QGraphicsSceneHelpEvent * obj = (QGraphicsSceneHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCREENPOS )
 {
   QGraphicsSceneHelpEvent * obj = (QGraphicsSceneHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

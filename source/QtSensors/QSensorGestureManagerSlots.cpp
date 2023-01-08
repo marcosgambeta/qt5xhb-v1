@@ -43,7 +43,7 @@ void QSensorGestureManagerSlots_connect_signal( const QString & signal, const QS
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSensorGestureManager * obj = (QSensorGestureManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QSensorGestureManagerSlots * s = QCoreApplication::instance()->findChild<QSensorGestureManagerSlots*>();
 

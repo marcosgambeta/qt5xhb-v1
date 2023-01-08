@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_DELETE )
 {
   QExposeEvent * obj = (QExposeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_REGION )
 {
   QExposeEvent * obj = (QExposeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

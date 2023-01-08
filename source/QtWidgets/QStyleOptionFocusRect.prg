@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
 {
   QStyleOptionFocusRect * obj = (QStyleOptionFocusRect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR )
 {
   QStyleOptionFocusRect * obj = (QStyleOptionFocusRect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {

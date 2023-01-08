@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceMatchRequest * obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETRESULTS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceMatchRequest * obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISARRAY(1) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_CLEAR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceMatchRequest * obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

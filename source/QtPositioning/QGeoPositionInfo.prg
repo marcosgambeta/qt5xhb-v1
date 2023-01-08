@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * obj = (QGeoPositionInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_ISVALID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * obj = (QGeoPositionInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETTIMESTAMP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * obj = (QGeoPositionInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDATETIME(1) )
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_TIMESTAMP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * obj = (QGeoPositionInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETCOORDINATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * obj = (QGeoPositionInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_COORDINATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * obj = (QGeoPositionInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETATTRIBUTE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * obj = (QGeoPositionInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_ATTRIBUTE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * obj = (QGeoPositionInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_REMOVEATTRIBUTE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * obj = (QGeoPositionInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_HASATTRIBUTE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * obj = (QGeoPositionInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )

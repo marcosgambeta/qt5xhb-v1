@@ -369,7 +369,7 @@ void QPieSliceSlots_connect_signal( const QString & signal, const QString & slot
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QPieSliceSlots * s = QCoreApplication::instance()->findChild<QPieSliceSlots*>();
 

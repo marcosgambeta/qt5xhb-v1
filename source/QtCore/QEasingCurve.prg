@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QEASINGCURVE_DELETE )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QEASINGCURVE_ADDCUBICBEZIERSEGMENT )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QEASINGCURVE_ADDTCBSEGMENT )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SWAP )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TYPE )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QEASINGCURVE_VALUEFORPROGRESS )
 {
   QEasingCurve * obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )

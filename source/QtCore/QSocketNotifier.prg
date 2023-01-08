@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 {
   QSocketNotifier * obj = (QSocketNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 {
   QSocketNotifier * obj = (QSocketNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 {
   QSocketNotifier * obj = (QSocketNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
 {
   QSocketNotifier * obj = (QSocketNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )

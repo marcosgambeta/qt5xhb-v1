@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
   QImageIOPlugin * obj = (QImageIOPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) )

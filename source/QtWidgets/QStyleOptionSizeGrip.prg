@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
 {
   QStyleOptionSizeGrip * obj = (QStyleOptionSizeGrip *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_SETCORNER )
 {
   QStyleOptionSizeGrip * obj = (QStyleOptionSizeGrip *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {

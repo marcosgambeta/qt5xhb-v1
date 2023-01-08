@@ -56,7 +56,7 @@ void QStateSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QState * obj = (QState *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QStateSlots * s = QCoreApplication::instance()->findChild<QStateSlots*>();
 

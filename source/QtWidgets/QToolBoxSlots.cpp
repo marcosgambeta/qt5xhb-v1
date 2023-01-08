@@ -42,7 +42,7 @@ void QToolBoxSlots_connect_signal( const QString & signal, const QString & slot 
 {
   QToolBox * obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QToolBoxSlots * s = QCoreApplication::instance()->findChild<QToolBoxSlots*>();
 

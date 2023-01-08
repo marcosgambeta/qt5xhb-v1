@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_DELETE )
 {
   QAccessibleImageInterface * obj = (QAccessibleImageInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGEDESCRIPTION )
 {
   QAccessibleImageInterface * obj = (QAccessibleImageInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGESIZE )
 {
   QAccessibleImageInterface * obj = (QAccessibleImageInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

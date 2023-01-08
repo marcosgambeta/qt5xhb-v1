@@ -44,7 +44,7 @@ void QQmlPropertyMapSlots_connect_signal( const QString & signal, const QString 
 {
   QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QQmlPropertyMapSlots * s = QCoreApplication::instance()->findChild<QQmlPropertyMapSlots*>();
 

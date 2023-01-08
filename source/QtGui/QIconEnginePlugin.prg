@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_DELETE )
 {
   QIconEnginePlugin * obj = (QIconEnginePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
 {
   QIconEnginePlugin * obj = (QIconEnginePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )

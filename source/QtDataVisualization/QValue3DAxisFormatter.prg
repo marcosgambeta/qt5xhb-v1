@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_DELETE )
 {
   QValue3DAxisFormatter * obj = (QValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

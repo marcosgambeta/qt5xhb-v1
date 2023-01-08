@@ -416,7 +416,7 @@ void QItemModelSurfaceDataProxySlots_connect_signal( const QString & signal, con
 {
   QItemModelSurfaceDataProxy * obj = (QItemModelSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QItemModelSurfaceDataProxySlots * s = QCoreApplication::instance()->findChild<QItemModelSurfaceDataProxySlots*>();
 

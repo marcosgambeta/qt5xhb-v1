@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_DELETE )
 {
   QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_FILTERING )
 {
   QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_RECT )
 {
   QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETFILTERING )
 {
   QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETRECT )
     */
     QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->setRect( *PQRECTF(1) );
     }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETRECT )
     */
     QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->setRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
     }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETTEXTURE )
 {
   QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSGTEXTURE(1) )
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_TEXTURE )
 {
   QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

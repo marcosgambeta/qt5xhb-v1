@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QAREASERIES_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QAREASERIES_UPPERSERIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QAREASERIES_LOWERSERIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QAREASERIES_COLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QAREASERIES_SETCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QAREASERIES_BORDERCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QAREASERIES_SETBORDERCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSFONT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFONT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQFONT(1) )
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCOLOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSCLIPPING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCLIPPING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QAREASERIES_TYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QAREASERIES_SETUPPERSERIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLINESERIES(1) )
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QAREASERIES_SETLOWERSERIES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLINESERIES(1) )
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPEN(1) )
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QAREASERIES_PEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QAREASERIES_SETBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QAREASERIES_BRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTSVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTSVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

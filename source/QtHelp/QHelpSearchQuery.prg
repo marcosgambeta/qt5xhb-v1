@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_DELETE )
 {
   QHelpSearchQuery * obj = (QHelpSearchQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

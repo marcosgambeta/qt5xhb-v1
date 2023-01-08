@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceContactDetail * obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_LABEL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceContactDetail * obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETLABEL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceContactDetail * obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_VALUE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceContactDetail * obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETVALUE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceContactDetail * obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_CLEAR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceContactDetail * obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

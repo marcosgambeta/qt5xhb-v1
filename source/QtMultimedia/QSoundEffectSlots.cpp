@@ -168,7 +168,7 @@ void QSoundEffectSlots_connect_signal( const QString & signal, const QString & s
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QSoundEffectSlots * s = QCoreApplication::instance()->findChild<QSoundEffectSlots*>();
 

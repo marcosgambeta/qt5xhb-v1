@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_STATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_LOCALE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETLOCALE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_VOICE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOICE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVOICE(1) )
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_RATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETRATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_PITCH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETPITCH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_VOLUME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOLUME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLELOCALES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLEVOICES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_SAY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_STOP )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_PAUSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_RESUME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeech * obj = (QTextToSpeech *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYVALUESOURCE_DELETE )
 {
   QDeclarativePropertyValueSource * obj = (QDeclarativePropertyValueSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

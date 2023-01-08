@@ -45,7 +45,7 @@ void QRotationSensorSlots_connect_signal( const QString & signal, const QString 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QRotationSensor * obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QRotationSensorSlots * s = QCoreApplication::instance()->findChild<QRotationSensorSlots*>();
 

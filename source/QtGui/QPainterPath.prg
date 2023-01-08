@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPAINTERPATH_DELETE )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->addEllipse( *PQRECTF(1) );
     }
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->addEllipse( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
     }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->addEllipse( *PQPOINTF(1), PQREAL(2), PQREAL(3) );
     }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDPATH )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDPOLYGON )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOLYGONF(1) )
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDRECT )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->addRect( *PQRECTF(1) );
     }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDRECT )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->addRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
     }
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDREGION )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGION(1) )
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->addRoundedRect( *PQRECTF(1), PQREAL(2), PQREAL(3), HB_ISNIL(4)? (Qt::SizeMode) Qt::AbsoluteSize : (Qt::SizeMode) hb_parni(4) );
     }
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->addRoundedRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), HB_ISNIL(7)? (Qt::SizeMode) Qt::AbsoluteSize : (Qt::SizeMode) hb_parni(7) );
     }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->addText( *PQPOINTF(1), *PQFONT(2), PQSTRING(3) );
     }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->addText( PQREAL(1), PQREAL(2), *PQFONT(3), PQSTRING(4) );
     }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ANGLEATPERCENT )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->arcMoveTo( *PQRECTF(1), PQREAL(2) );
     }
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->arcMoveTo( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) );
     }
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCTO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->arcTo( *PQRECTF(1), PQREAL(2), PQREAL(3) );
     }
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCTO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->arcTo( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
     }
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QPAINTERPATH_BOUNDINGRECT )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CLOSESUBPATH )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONNECTPATH )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->contains( *PQPOINTF(1) ) );
     }
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->contains( *PQRECTF(1) ) );
     }
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->contains( *PQPAINTERPATH(1) ) );
     }
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTROLPOINTRECT )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CUBICTO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->cubicTo( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
     }
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CUBICTO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->cubicTo( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
     }
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CURRENTPOSITION )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ELEMENTCOUNT )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QPAINTERPATH_FILLRULE )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTED )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->intersects( *PQRECTF(1) ) );
     }
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->intersects( *PQPAINTERPATH(1) ) );
     }
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ISEMPTY )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QPAINTERPATH_LENGTH )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QPAINTERPATH_LINETO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->lineTo( *PQPOINTF(1) );
     }
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QPAINTERPATH_LINETO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->lineTo( PQREAL(1), PQREAL(2) );
     }
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QPAINTERPATH_MOVETO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->moveTo( *PQPOINTF(1) );
     }
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QPAINTERPATH_MOVETO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->moveTo( PQREAL(1), PQREAL(2) );
     }
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QPAINTERPATH_PERCENTATLENGTH )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QPAINTERPATH_POINTATPERCENT )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QPAINTERPATH_QUADTO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->quadTo( *PQPOINTF(1), *PQPOINTF(2) );
     }
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QPAINTERPATH_QUADTO )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->quadTo( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
     }
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SETELEMENTPOSITIONAT )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SETFILLRULE )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SIMPLIFIED )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SLOPEATPERCENT )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1103,7 +1103,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SUBTRACTED )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SWAP )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
@@ -1156,7 +1156,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QPolygonF * ptr = new QPolygonF( obj->toFillPolygon( *PQTRANSFORM(1) ) );
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QPolygonF * ptr = new QPolygonF( obj->toFillPolygon( HB_ISNIL(1)? QMatrix() : *(QMatrix *) Qt5xHb::itemGetPtr(1) ) );
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
@@ -1188,7 +1188,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOREVERSED )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->translate( PQREAL(1), PQREAL(2) );
     }
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->translate( *PQPOINTF(1) );
     }
@@ -1251,7 +1251,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QPainterPath * ptr = new QPainterPath( obj->translated( PQREAL(1), PQREAL(2) ) );
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED )
     */
     QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QPainterPath * ptr = new QPainterPath( obj->translated( *PQPOINTF(1) ) );
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC( QPAINTERPATH_UNITED )
 {
   QPainterPath * obj = (QPainterPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )

@@ -45,7 +45,7 @@ void QLightSensorSlots_connect_signal( const QString & signal, const QString & s
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QLightSensor * obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QLightSensorSlots * s = QCoreApplication::instance()->findChild<QLightSensorSlots*>();
 

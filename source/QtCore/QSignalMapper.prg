@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
 {
   QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
     */
     QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->setMapping( PQOBJECT(1), PINT(2) );
     }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
     */
     QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->setMapping( PQOBJECT(1), PQSTRING(2) );
     }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
     */
     QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->setMapping( PQOBJECT(1), PQWIDGET(2) );
     }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
     */
     QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->setMapping( PQOBJECT(1), PQOBJECT(2) );
     }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
 {
   QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
     */
     QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QObject * ptr = obj->mapping( PINT(1) );
       Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
     */
     QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QObject * ptr = obj->mapping( PQSTRING(1) );
       Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
     */
     QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QObject * ptr = obj->mapping( PQWIDGET(1) );
       Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
     */
     QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QObject * ptr = obj->mapping( PQOBJECT(1) );
       Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
     */
     QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->map();
     }
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
     */
     QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->map( PQOBJECT(1) );
     }

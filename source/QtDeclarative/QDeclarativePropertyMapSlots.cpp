@@ -44,7 +44,7 @@ void QDeclarativePropertyMapSlots_connect_signal( const QString & signal, const 
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QDeclarativePropertyMapSlots * s = QCoreApplication::instance()->findChild<QDeclarativePropertyMapSlots*>();
 

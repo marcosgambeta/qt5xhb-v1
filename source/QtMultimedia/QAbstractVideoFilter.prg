@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QAbstractVideoFilter * obj = (QAbstractVideoFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ISACTIVE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QAbstractVideoFilter * obj = (QAbstractVideoFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_SETACTIVE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QAbstractVideoFilter * obj = (QAbstractVideoFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QAbstractVideoFilter * obj = (QAbstractVideoFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

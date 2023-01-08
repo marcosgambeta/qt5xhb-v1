@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QCLOSEEVENT_DELETE )
 {
   QCloseEvent * obj = (QCloseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

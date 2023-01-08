@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_DELETE )
 #if !defined(QT_NO_SCTP)
   QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_CLOSE )
 #if !defined(QT_NO_SCTP)
   QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_DISCONNECTFROMHOST )
 #if !defined(QT_NO_SCTP)
   QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_SETMAXIMUMCHANNELCOUNT )
 #if !defined(QT_NO_SCTP)
   QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_MAXIMUMCHANNELCOUNT )
 #if !defined(QT_NO_SCTP)
   QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_ISINDATAGRAMMODE )
 #if !defined(QT_NO_SCTP)
   QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_READDATAGRAM )
 #if !defined(QT_NO_SCTP)
   QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_WRITEDATAGRAM )
 #if !defined(QT_NO_SCTP)
   QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKDATAGRAM(1) )

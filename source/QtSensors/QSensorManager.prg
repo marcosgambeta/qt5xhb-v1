@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSensorManager * obj = (QSensorManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

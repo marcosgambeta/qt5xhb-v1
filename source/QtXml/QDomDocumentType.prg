@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_DELETE )
 {
   QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 {
   QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 {
   QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 {
   QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 {
   QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 {
   QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 {
   QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
 {
   QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

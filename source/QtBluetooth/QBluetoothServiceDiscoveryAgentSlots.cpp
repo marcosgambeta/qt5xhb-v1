@@ -101,7 +101,7 @@ void QBluetoothServiceDiscoveryAgentSlots_connect_signal( const QString & signal
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServiceDiscoveryAgent * obj = (QBluetoothServiceDiscoveryAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QBluetoothServiceDiscoveryAgentSlots * s = QCoreApplication::instance()->findChild<QBluetoothServiceDiscoveryAgentSlots*>();
 

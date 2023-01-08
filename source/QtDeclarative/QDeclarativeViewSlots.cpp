@@ -60,7 +60,7 @@ void QDeclarativeViewSlots_connect_signal( const QString & signal, const QString
 {
   QDeclarativeView * obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QDeclarativeViewSlots * s = QCoreApplication::instance()->findChild<QDeclarativeViewSlots*>();
 

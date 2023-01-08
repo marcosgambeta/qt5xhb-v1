@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DELETE )
 {
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
 {
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 {
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
 {
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 {
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DESCRIPTION )
 {
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QPRINTERINFO_LOCATION )
 {
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MAKEANDMODEL )
 {
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISREMOTE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QPRINTERINFO_STATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPAGESIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTSCUSTOMPAGESIZES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MINIMUMPHYSICALPAGESIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDRESOLUTIONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTDUPLEXMODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDDUPLEXMODES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPrinterInfo * obj = (QPrinterInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

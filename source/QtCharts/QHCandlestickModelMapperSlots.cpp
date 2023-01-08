@@ -151,7 +151,7 @@ void QHCandlestickModelMapperSlots_connect_signal( const QString & signal, const
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHCandlestickModelMapper * obj = (QHCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QHCandlestickModelMapperSlots * s = QCoreApplication::instance()->findChild<QHCandlestickModelMapperSlots*>();
 

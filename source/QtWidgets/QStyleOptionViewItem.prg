@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DISPLAYALIGNMENT )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONALIGNMENT )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_TEXTELIDEMODE )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONPOSITION )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONSIZE )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONSIZE )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_FONT )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETFONT )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SHOWDECORATIONSELECTED )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETSHOWDECORATIONSELECTED )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_FEATURES )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETFEATURES )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_LOCALE )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETLOCALE )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQLOCALE(1) )
     {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_WIDGET )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETWIDGET )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_INDEX )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETINDEX )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_CHECKSTATE )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETCHECKSTATE )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_ICON )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETICON )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_TEXT )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETTEXT )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_VIEWITEMPOSITION )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETVIEWITEMPOSITION )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_BACKGROUNDBRUSH )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETBACKGROUNDBRUSH )
 {
   QStyleOptionViewItem * obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {

@@ -56,7 +56,7 @@ void QScriptEngineDebuggerSlots_connect_signal( const QString & signal, const QS
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QScriptEngineDebuggerSlots * s = QCoreApplication::instance()->findChild<QScriptEngineDebuggerSlots*>();
 

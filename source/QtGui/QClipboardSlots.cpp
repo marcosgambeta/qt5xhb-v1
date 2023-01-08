@@ -90,7 +90,7 @@ void QClipboardSlots_connect_signal( const QString & signal, const QString & slo
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QClipboardSlots * s = QCoreApplication::instance()->findChild<QClipboardSlots*>();
 

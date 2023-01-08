@@ -90,7 +90,7 @@ void QIODeviceSlots_connect_signal( const QString & signal, const QString & slot
 {
   QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QIODeviceSlots * s = QCoreApplication::instance()->findChild<QIODeviceSlots*>();
 

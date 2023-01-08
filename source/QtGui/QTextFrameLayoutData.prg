@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QTEXTFRAMELAYOUTDATA_DELETE )
 {
   QTextFrameLayoutData * obj = (QTextFrameLayoutData *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

@@ -40,7 +40,7 @@ void QAbstractSpinBoxSlots_connect_signal( const QString & signal, const QString
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractSpinBoxSlots * s = QCoreApplication::instance()->findChild<QAbstractSpinBoxSlots*>();
 

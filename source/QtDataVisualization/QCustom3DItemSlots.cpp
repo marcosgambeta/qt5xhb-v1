@@ -186,7 +186,7 @@ void QCustom3DItemSlots_connect_signal( const QString & signal, const QString & 
 {
   QCustom3DItem * obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCustom3DItemSlots * s = QCoreApplication::instance()->findChild<QCustom3DItemSlots*>();
 

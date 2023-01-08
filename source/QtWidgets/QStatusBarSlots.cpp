@@ -42,7 +42,7 @@ void QStatusBarSlots_connect_signal( const QString & signal, const QString & slo
 {
   QStatusBar * obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QStatusBarSlots * s = QCoreApplication::instance()->findChild<QStatusBarSlots*>();
 

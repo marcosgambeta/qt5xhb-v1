@@ -132,7 +132,7 @@ void QQuickWebEngineScriptSlots_connect_signal( const QString & signal, const QS
 {
   QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QQuickWebEngineScriptSlots * s = QCoreApplication::instance()->findChild<QQuickWebEngineScriptSlots*>();
 

@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_DELETE )
 {
   QAccessiblePlugin * obj = (QAccessiblePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
 {
   QAccessiblePlugin * obj = (QAccessiblePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )

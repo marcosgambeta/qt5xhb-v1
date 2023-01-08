@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QTRANSLATOR_DELETE )
 {
   QTranslator * obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 {
   QTranslator * obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
     */
     QTranslator * obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->load( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
     }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
     */
     QTranslator * obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->load( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
     }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
     */
     QTranslator * obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->load( PCONSTUCHAR(1), PINT(2), OPQSTRING(3,QString()) ) );
     }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
   QTranslator * obj = (QTranslator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3)||HB_ISNIL(3)) && (HB_ISNUM(4)||HB_ISNIL(4)) )

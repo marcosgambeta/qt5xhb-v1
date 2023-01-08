@@ -130,7 +130,7 @@ void QAbstractSliderSlots_connect_signal( const QString & signal, const QString 
 {
   QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractSliderSlots * s = QCoreApplication::instance()->findChild<QAbstractSliderSlots*>();
 

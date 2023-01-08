@@ -42,7 +42,7 @@ void QGraphicsEffectSlots_connect_signal( const QString & signal, const QString 
 {
   QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsEffectSlots*>();
 

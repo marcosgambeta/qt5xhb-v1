@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QREGION_DELETE )
 {
   QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QREGION_SWAP )
 {
   QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGION(1) )
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QREGION_ISEMPTY )
 {
   QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QREGION_ISNULL )
 {
   QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QREGION_CONTAINS )
     */
     QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->contains( *PQPOINT(1) ) );
     }
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QREGION_CONTAINS )
     */
     QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->contains( *PQRECT(1) ) );
     }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATE )
     */
     QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->translate( PINT(1), PINT(2) );
     }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATE )
     */
     QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->translate( *PQPOINT(1) );
     }
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATED )
     */
     QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QRegion * ptr = new QRegion( obj->translated( PINT(1), PINT(2) ) );
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATED )
     */
     QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QRegion * ptr = new QRegion( obj->translated( *PQPOINT(1) ) );
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QREGION_UNITED )
     */
     QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QRegion * ptr = new QRegion( obj->united( *PQREGION(1) ) );
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QREGION_UNITED )
     */
     QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QRegion * ptr = new QRegion( obj->united( *PQRECT(1) ) );
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QREGION_SUBTRACTED )
 {
   QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGION(1) )
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QREGION_XORED )
 {
   QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGION(1) )
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTS )
     */
     QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->intersects( *PQREGION(1) ) );
     }
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTS )
     */
     QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->intersects( *PQRECT(1) ) );
     }
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
 {
   QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QREGION_RECTCOUNT )
 {
   QRegion * obj = (QRegion *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

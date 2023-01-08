@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDOMNOTATION_DELETE )
 {
   QDomNotation * obj = (QDomNotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
 {
   QDomNotation * obj = (QDomNotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
 {
   QDomNotation * obj = (QDomNotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
 {
   QDomNotation * obj = (QDomNotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

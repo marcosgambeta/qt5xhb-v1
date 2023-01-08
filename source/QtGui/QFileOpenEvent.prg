@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 {
   QFileOpenEvent * obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 {
   QFileOpenEvent * obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 {
   QFileOpenEvent * obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQFILE(1) && HB_ISNUM(2) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_URL )
 {
   QFileOpenEvent * obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

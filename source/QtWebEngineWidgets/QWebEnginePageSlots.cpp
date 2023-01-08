@@ -309,7 +309,7 @@ void QWebEnginePageSlots_connect_signal( const QString & signal, const QString &
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEnginePage * obj = (QWebEnginePage *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QWebEnginePageSlots * s = QCoreApplication::instance()->findChild<QWebEnginePageSlots*>();
 

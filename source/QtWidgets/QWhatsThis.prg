@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QWHATSTHIS_DELETE )
 {
   QWhatsThis * obj = (QWhatsThis *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

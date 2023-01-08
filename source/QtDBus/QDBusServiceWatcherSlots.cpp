@@ -82,7 +82,7 @@ void QDBusServiceWatcherSlots_connect_signal( const QString & signal, const QStr
 {
   QDBusServiceWatcher * obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QDBusServiceWatcherSlots * s = QCoreApplication::instance()->findChild<QDBusServiceWatcherSlots*>();
 

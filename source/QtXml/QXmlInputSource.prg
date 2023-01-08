@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DELETE )
 {
   QXmlInputSource * obj = (QXmlInputSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
 {
   QXmlInputSource * obj = (QXmlInputSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
 {
   QXmlInputSource * obj = (QXmlInputSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
 {
   QXmlInputSource * obj = (QXmlInputSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
 {
   QXmlInputSource * obj = (QXmlInputSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
     */
     QXmlInputSource * obj = (QXmlInputSource *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->setData( PQSTRING(1) );
     }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
     */
     QXmlInputSource * obj = (QXmlInputSource *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->setData( *PQBYTEARRAY(1) );
     }

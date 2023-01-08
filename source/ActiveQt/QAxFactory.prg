@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QAXFACTORY_DELETE )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QAXFACTORY_APPID )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QAXFACTORY_CLASSID )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQSETTINGS(2) )
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQSETTINGS(2) )
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
 {
   QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )

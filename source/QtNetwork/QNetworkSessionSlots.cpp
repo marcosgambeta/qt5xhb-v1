@@ -146,7 +146,7 @@ void QNetworkSessionSlots_connect_signal( const QString & signal, const QString 
 {
   QNetworkSession * obj = (QNetworkSession *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QNetworkSessionSlots * s = QCoreApplication::instance()->findChild<QNetworkSessionSlots*>();
 

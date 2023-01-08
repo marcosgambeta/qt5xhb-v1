@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPAINTEVENT_DELETE )
 {
   QPaintEvent * obj = (QPaintEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QPAINTEVENT_RECT )
 {
   QPaintEvent * obj = (QPaintEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QPAINTEVENT_REGION )
 {
   QPaintEvent * obj = (QPaintEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -88,7 +88,7 @@ void QAxObjectSlots_connect_signal( const QString & signal, const QString & slot
 {
   QAxObject * obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QAxObjectSlots * s = QCoreApplication::instance()->findChild<QAxObjectSlots*>();
 

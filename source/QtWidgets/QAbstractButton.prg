@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZE(1) )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
 #ifndef QT_NO_SHORTCUT
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 #ifndef QT_NO_SHORTCUT
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
 #ifndef QT_NO_BUTTONGROUP
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
 {
   QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

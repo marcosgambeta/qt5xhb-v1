@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_DELETE )
 {
   QTreeWidgetItemIterator * obj = (QTreeWidgetItemIterator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

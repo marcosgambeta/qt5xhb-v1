@@ -60,7 +60,7 @@ void QFileSystemWatcherSlots_connect_signal( const QString & signal, const QStri
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QFileSystemWatcherSlots * s = QCoreApplication::instance()->findChild<QFileSystemWatcherSlots*>();
 

@@ -96,7 +96,7 @@ void QAbstractAnimationSlots_connect_signal( const QString & signal, const QStri
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractAnimationSlots * s = QCoreApplication::instance()->findChild<QAbstractAnimationSlots*>();
 

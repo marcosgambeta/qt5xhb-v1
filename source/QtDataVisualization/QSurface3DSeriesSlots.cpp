@@ -150,7 +150,7 @@ void QSurface3DSeriesSlots_connect_signal( const QString & signal, const QString
 {
   QSurface3DSeries * obj = (QSurface3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QSurface3DSeriesSlots * s = QCoreApplication::instance()->findChild<QSurface3DSeriesSlots*>();
 

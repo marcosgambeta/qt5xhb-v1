@@ -90,7 +90,7 @@ void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QStrin
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QHelpSearchEngineSlots * s = QCoreApplication::instance()->findChild<QHelpSearchEngineSlots*>();
 

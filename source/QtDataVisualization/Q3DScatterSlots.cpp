@@ -96,7 +96,7 @@ void Q3DScatterSlots_connect_signal( const QString & signal, const QString & slo
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Q3DScatterSlots * s = QCoreApplication::instance()->findChild<Q3DScatterSlots*>();
 

@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_DEREGISTEROBJECT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_BLOCKUPDATES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_CONNECTTO )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWEBCHANNELABSTRACTTRANSPORT(1) )
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWEBCHANNELABSTRACTTRANSPORT(1) )

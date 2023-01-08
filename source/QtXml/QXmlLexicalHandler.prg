@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_DELETE )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_COMMENT )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDCDATA )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDDTD )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDENTITY )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ERRORSTRING )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTCDATA )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTDTD )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTENTITY )
 {
   QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )

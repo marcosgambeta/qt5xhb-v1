@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_DELETE )
 {
   QExtensionManager * obj = (QExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 {
   QExtensionManager * obj = (QExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
   QExtensionManager * obj = (QExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQABSTRACTEXTENSIONFACTORY(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
   QExtensionManager * obj = (QExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQABSTRACTEXTENSIONFACTORY(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )

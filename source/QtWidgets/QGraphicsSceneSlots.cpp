@@ -98,7 +98,7 @@ void QGraphicsSceneSlots_connect_signal( const QString & signal, const QString &
 {
   QGraphicsScene * obj = (QGraphicsScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsSceneSlots * s = QCoreApplication::instance()->findChild<QGraphicsSceneSlots*>();
 

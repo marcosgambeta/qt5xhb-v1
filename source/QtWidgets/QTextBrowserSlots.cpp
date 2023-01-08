@@ -148,7 +148,7 @@ void QTextBrowserSlots_connect_signal( const QString & signal, const QString & s
 {
   QTextBrowser * obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QTextBrowserSlots * s = QCoreApplication::instance()->findChild<QTextBrowserSlots*>();
 

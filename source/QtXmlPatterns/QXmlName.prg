@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QXMLNAME_DELETE )
 {
   QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QXMLNAME_ISNULL )
 {
   QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
 {
   QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
 {
   QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QXMLNAME_PREFIX )
 {
   QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
 {
   QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )

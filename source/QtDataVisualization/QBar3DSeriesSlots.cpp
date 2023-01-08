@@ -78,7 +78,7 @@ void QBar3DSeriesSlots_connect_signal( const QString & signal, const QString & s
 {
   QBar3DSeries * obj = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QBar3DSeriesSlots * s = QCoreApplication::instance()->findChild<QBar3DSeriesSlots*>();
 

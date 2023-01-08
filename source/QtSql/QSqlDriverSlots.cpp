@@ -64,7 +64,7 @@ void QSqlDriverSlots_connect_signal( const QString & signal, const QString & slo
 {
   QSqlDriver * obj = (QSqlDriver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QSqlDriverSlots * s = QCoreApplication::instance()->findChild<QSqlDriverSlots*>();
 

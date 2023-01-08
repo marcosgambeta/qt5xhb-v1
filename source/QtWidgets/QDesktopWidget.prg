@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_DELETE )
 {
   QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
     */
     QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->availableGeometry( OPINT(1,-1) ) );
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
     */
     QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->availableGeometry( PQWIDGET(1) ) );
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
     */
     QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->availableGeometry( *PQPOINT(1) ) );
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 {
   QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 {
   QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 {
   QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 {
   QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
     */
     QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->screenGeometry( OPINT(1,-1) ) );
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
     */
     QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->screenGeometry( PQWIDGET(1) ) );
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
     */
     QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->screenGeometry( *PQPOINT(1) ) );
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
     */
     QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       RINT( obj->screenNumber( OPQWIDGET(1,0) ) );
     }
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
     */
     QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       RINT( obj->screenNumber( *PQPOINT(1) ) );
     }

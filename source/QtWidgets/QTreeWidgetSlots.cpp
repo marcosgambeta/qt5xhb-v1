@@ -216,7 +216,7 @@ void QTreeWidgetSlots_connect_signal( const QString & signal, const QString & sl
 {
   QTreeWidget * obj = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QTreeWidgetSlots * s = QCoreApplication::instance()->findChild<QTreeWidgetSlots*>();
 

@@ -44,7 +44,7 @@ void QDesignerPropertyEditorInterfaceSlots_connect_signal( const QString & signa
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QDesignerPropertyEditorInterfaceSlots * s = QCoreApplication::instance()->findChild<QDesignerPropertyEditorInterfaceSlots*>();
 

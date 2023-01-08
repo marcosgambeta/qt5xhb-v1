@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 {
   QRegExpValidator * obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 {
   QRegExpValidator * obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 {
   QRegExpValidator * obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 {
   QRegExpValidator * obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )

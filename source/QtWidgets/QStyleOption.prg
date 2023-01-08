@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_DELETE )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_INIT )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_VERSION )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETVERSION )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_TYPE )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETTYPE )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_STATE )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETSTATE )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_DIRECTION )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETDIRECTION )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_RECT )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETRECT )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_FONTMETRICS )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETFONTMETRICS )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQFONTMETRICS(1) )
     {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_PALETTE )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETPALETTE )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQPALETTE(1) )
     {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_STYLEOBJECT )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(0) )
     {
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETSTYLEOBJECT )
 {
   QStyleOption * obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {

@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISSEQUENTIAL )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_URL )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
 {
   QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
     */
     QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QList<QSslError> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
     */
     QNetworkReply * obj = (QNetworkReply *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->ignoreSslErrors();
     }

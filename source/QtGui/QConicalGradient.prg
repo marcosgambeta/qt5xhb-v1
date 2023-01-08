@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_DELETE )
 {
   QConicalGradient * obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 {
   QConicalGradient * obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 {
   QConicalGradient * obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
 {
   QConicalGradient * obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
     */
     QConicalGradient * obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->setCenter( *PQPOINTF(1) );
     }
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
     */
     QConicalGradient * obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->setCenter( PQREAL(1), PQREAL(2) );
     }

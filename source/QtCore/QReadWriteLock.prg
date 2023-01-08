@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_DELETE )
 {
   QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
 {
   QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
     */
     QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->tryLockForRead() );
     }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
     */
     QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->tryLockForRead( PINT(1) ) );
     }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
 {
   QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
     */
     QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->tryLockForWrite() );
     }
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
     */
     QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->tryLockForWrite( PINT(1) ) );
     }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_UNLOCK )
 {
   QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

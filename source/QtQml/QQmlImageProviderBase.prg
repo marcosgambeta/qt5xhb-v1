@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_DELETE )
 {
   QQmlImageProviderBase * obj = (QQmlImageProviderBase *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_FLAGS )
 {
   QQmlImageProviderBase * obj = (QQmlImageProviderBase *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_IMAGETYPE )
 {
   QQmlImageProviderBase * obj = (QQmlImageProviderBase *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

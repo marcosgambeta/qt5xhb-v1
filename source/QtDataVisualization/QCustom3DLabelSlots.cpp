@@ -150,7 +150,7 @@ void QCustom3DLabelSlots_connect_signal( const QString & signal, const QString &
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCustom3DLabelSlots * s = QCoreApplication::instance()->findChild<QCustom3DLabelSlots*>();
 

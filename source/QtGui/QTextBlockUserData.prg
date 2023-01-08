@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QTEXTBLOCKUSERDATA_DELETE )
 {
   QTextBlockUserData * obj = (QTextBlockUserData *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

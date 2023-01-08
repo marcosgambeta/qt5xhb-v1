@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_DELETE )
 {
   QGraphicsRectItem * obj = (QGraphicsRectItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_RECT )
 {
   QGraphicsRectItem * obj = (QGraphicsRectItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_SETRECT )
     */
     QGraphicsRectItem * obj = (QGraphicsRectItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       obj->setRect( *PQRECTF(1) );
     }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_SETRECT )
     */
     QGraphicsRectItem * obj = (QGraphicsRectItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       obj->setRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
     }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_BOUNDINGRECT )
 {
   QGraphicsRectItem * obj = (QGraphicsRectItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_CONTAINS )
 {
   QGraphicsRectItem * obj = (QGraphicsRectItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_ISOBSCUREDBY )
 {
   QGraphicsRectItem * obj = (QGraphicsRectItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_OPAQUEAREA )
 {
   QGraphicsRectItem * obj = (QGraphicsRectItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_PAINT )
 {
   QGraphicsRectItem * obj = (QGraphicsRectItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||HB_ISNIL(3)) )
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_SHAPE )
 {
   QGraphicsRectItem * obj = (QGraphicsRectItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_TYPE )
 {
   QGraphicsRectItem * obj = (QGraphicsRectItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

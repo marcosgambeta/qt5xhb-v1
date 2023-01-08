@@ -42,7 +42,7 @@ void QToolButtonSlots_connect_signal( const QString & signal, const QString & sl
 {
   QToolButton * obj = (QToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QToolButtonSlots * s = QCoreApplication::instance()->findChild<QToolButtonSlots*>();
 

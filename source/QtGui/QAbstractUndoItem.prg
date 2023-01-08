@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_DELETE )
 {
   QAbstractUndoItem * obj = (QAbstractUndoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_UNDO )
 {
   QAbstractUndoItem * obj = (QAbstractUndoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_REDO )
 {
   QAbstractUndoItem * obj = (QAbstractUndoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

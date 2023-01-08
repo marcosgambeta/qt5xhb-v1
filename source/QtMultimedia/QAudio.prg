@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QAUDIO_CONVERTVOLUME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QAudio * obj = (QAudio *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )

@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniObject * obj = (QAndroidJniObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLOBJECTMETHOD1 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniObject * obj = (QAndroidJniObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     QAndroidJniObject * obj = (QAndroidJniObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       QAndroidJniObject * ptr = new QAndroidJniObject( obj->getObjectField( PCONSTCHAR(1) ) );
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     QAndroidJniObject * obj = (QAndroidJniObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       QAndroidJniObject * ptr = new QAndroidJniObject( obj->getObjectField( PCONSTCHAR(1), PCONSTCHAR(2) ) );
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_TOSTRING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniObject * obj = (QAndroidJniObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISVALID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniObject * obj = (QAndroidJniObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

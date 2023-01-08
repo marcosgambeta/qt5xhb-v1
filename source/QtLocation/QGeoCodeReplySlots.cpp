@@ -65,7 +65,7 @@ void QGeoCodeReplySlots_connect_signal( const QString & signal, const QString & 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodeReply * obj = (QGeoCodeReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGeoCodeReplySlots * s = QCoreApplication::instance()->findChild<QGeoCodeReplySlots*>();
 

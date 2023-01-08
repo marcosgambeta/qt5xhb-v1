@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DELETE )
 {
   QTextObjectInterface * obj = (QTextObjectInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
 {
   QTextObjectInterface * obj = (QTextObjectInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQTEXTDOCUMENT(1) && HB_ISNUM(2) && ISQTEXTFORMAT(3) )
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
 {
   QTextObjectInterface * obj = (QTextObjectInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(5) && ISQPAINTER(1) && ISQRECTF(2) && ISQTEXTDOCUMENT(3) && HB_ISNUM(4) && ISQTEXTFORMAT(5) )

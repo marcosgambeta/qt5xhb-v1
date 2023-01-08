@@ -180,7 +180,7 @@ void QAudioDecoderSlots_connect_signal( const QString & signal, const QString & 
 {
   QAudioDecoder * obj = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QAudioDecoderSlots * s = QCoreApplication::instance()->findChild<QAudioDecoderSlots*>();
 

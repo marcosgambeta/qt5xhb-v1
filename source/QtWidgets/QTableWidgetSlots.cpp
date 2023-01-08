@@ -312,7 +312,7 @@ void QTableWidgetSlots_connect_signal( const QString & signal, const QString & s
 {
   QTableWidget * obj = (QTableWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QTableWidgetSlots * s = QCoreApplication::instance()->findChild<QTableWidgetSlots*>();
 

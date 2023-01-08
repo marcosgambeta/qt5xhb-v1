@@ -410,7 +410,7 @@ void QAbstractItemModelSlots_connect_signal( const QString & signal, const QStri
 {
   QAbstractItemModel * obj = (QAbstractItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractItemModelSlots * s = QCoreApplication::instance()->findChild<QAbstractItemModelSlots*>();
 

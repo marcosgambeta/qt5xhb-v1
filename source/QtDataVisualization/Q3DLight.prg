@@ -77,7 +77,7 @@ HB_FUNC_STATIC( Q3DLIGHT_DELETE )
 {
   Q3DLight * obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( Q3DLIGHT_SETAUTOPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   Q3DLight * obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   Q3DLight * obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

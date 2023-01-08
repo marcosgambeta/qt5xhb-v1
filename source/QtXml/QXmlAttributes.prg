@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_DELETE )
 {
   QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_APPEND )
 {
   QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
 {
   QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
 {
   QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
     */
     QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RINT( obj->index( PQSTRING(1) ) );
     }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
     */
     QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RINT( obj->index( *PQLATIN1STRING(1) ) );
     }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
     */
     QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RINT( obj->index( PQSTRING(1), PQSTRING(2) ) );
     }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
 {
   QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
 {
   QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
 {
   QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
     */
     QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRING( obj->type( PINT(1) ) );
     }
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
     */
     QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRING( obj->type( PQSTRING(1) ) );
     }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
     */
     QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRING( obj->type( PQSTRING(1), PQSTRING(2) ) );
     }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
 {
   QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
     */
     QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRING( obj->value( PINT(1) ) );
     }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
     */
     QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRING( obj->value( PQSTRING(1) ) );
     }
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
     */
     QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRING( obj->value( *PQLATIN1STRING(1) ) );
     }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
     */
     QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRING( obj->value( PQSTRING(1), PQSTRING(2) ) );
     }

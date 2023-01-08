@@ -328,7 +328,7 @@ void QCustom3DVolumeSlots_connect_signal( const QString & signal, const QString 
 {
   QCustom3DVolume * obj = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCustom3DVolumeSlots * s = QCoreApplication::instance()->findChild<QCustom3DVolumeSlots*>();
 

@@ -138,7 +138,7 @@ void QQuickWindowSlots_connect_signal( const QString & signal, const QString & s
 {
   QQuickWindow * obj = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QQuickWindowSlots * s = QCoreApplication::instance()->findChild<QQuickWindowSlots*>();
 

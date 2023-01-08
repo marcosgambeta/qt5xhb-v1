@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_DELETE )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQWIDGET(2) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDIR(1) )
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
 {
   QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

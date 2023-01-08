@@ -24,7 +24,7 @@ void QValue3DAxisSlots_connect_signal( const QString & signal, const QString & s
 {
   QValue3DAxis * obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QValue3DAxisSlots * s = QCoreApplication::instance()->findChild<QValue3DAxisSlots*>();
 

@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_DELETE )
 {
   QRadioButton * obj = qobject_cast<QRadioButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
 {
   QRadioButton * obj = qobject_cast<QRadioButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
 {
   QRadioButton * obj = qobject_cast<QRadioButton*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

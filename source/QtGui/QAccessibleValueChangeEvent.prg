@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_DELETE )
 {
   QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_SETVALUE )
 {
   QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVARIANT(1) )
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_VALUE )
 {
   QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

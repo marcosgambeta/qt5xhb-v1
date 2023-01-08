@@ -147,7 +147,7 @@ void QValueAxisSlots_connect_signal( const QString & signal, const QString & slo
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QValueAxisSlots * s = QCoreApplication::instance()->findChild<QValueAxisSlots*>();
 

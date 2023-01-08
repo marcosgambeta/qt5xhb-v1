@@ -63,7 +63,7 @@ void QBluetoothServerSlots_connect_signal( const QString & signal, const QString
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QBluetoothServerSlots * s = QCoreApplication::instance()->findChild<QBluetoothServerSlots*>();
 

@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDOMNODELIST_DELETE )
 {
   QDomNodeList * obj = (QDomNodeList *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
 {
   QDomNodeList * obj = (QDomNodeList *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDOMNODELIST_COUNT )
 {
   QDomNodeList * obj = (QDomNodeList *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
 {
   QDomNodeList * obj = (QDomNodeList *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
 {
   QDomNodeList * obj = (QDomNodeList *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
 {
   QDomNodeList * obj = (QDomNodeList *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QDOMNODELIST_SIZE )
 {
   QDomNodeList * obj = (QDomNodeList *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -46,7 +46,7 @@ void QCameraLocksControlSlots_connect_signal( const QString & signal, const QStr
 {
   QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCameraLocksControlSlots * s = QCoreApplication::instance()->findChild<QCameraLocksControlSlots*>();
 

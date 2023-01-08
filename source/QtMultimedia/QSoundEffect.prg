@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_DELETE )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETSOURCE )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPCOUNT )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETLOOPCOUNT )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPSREMAINING )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_VOLUME )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETVOLUME )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISMUTED )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETMUTED )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISPLAYING )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_STATUS )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_CATEGORY )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETCATEGORY )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISLOADED )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_PLAY )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_STOP )
 {
   QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

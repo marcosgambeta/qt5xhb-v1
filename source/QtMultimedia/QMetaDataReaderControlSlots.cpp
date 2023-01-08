@@ -78,7 +78,7 @@ void QMetaDataReaderControlSlots_connect_signal( const QString & signal, const Q
 {
   QMetaDataReaderControl * obj = (QMetaDataReaderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QMetaDataReaderControlSlots * s = QCoreApplication::instance()->findChild<QMetaDataReaderControlSlots*>();
 

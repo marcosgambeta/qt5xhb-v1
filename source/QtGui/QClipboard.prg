@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQIMAGE(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQMIMEDATA(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQPIXMAP(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 {
   QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT )
     */
     QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRING( obj->text( HB_ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
     }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT )
     */
     QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QString par1 = PQSTRING(1);
       RQSTRING( obj->text ( par1, HB_ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) ) );

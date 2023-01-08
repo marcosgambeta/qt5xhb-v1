@@ -60,7 +60,7 @@ void QGraphicsBlurEffectSlots_connect_signal( const QString & signal, const QStr
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsBlurEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsBlurEffectSlots*>();
 

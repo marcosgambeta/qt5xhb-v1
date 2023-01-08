@@ -104,7 +104,7 @@ void QGraphicsScaleSlots_connect_signal( const QString & signal, const QString &
 {
   QGraphicsScale * obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsScaleSlots * s = QCoreApplication::instance()->findChild<QGraphicsScaleSlots*>();
 

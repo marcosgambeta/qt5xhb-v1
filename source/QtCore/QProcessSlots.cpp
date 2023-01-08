@@ -148,7 +148,7 @@ void QProcessSlots_connect_signal( const QString & signal, const QString & slot 
 {
   QProcess * obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QProcessSlots * s = QCoreApplication::instance()->findChild<QProcessSlots*>();
 

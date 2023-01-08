@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QSTYLEFACTORY_DELETE )
 {
   QStyleFactory * obj = (QStyleFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

@@ -64,7 +64,7 @@ void QListViewSlots_connect_signal( const QString & signal, const QString & slot
 {
   QListView * obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QListViewSlots * s = QCoreApplication::instance()->findChild<QListViewSlots*>();
 

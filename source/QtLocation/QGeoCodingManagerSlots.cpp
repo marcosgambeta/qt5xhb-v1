@@ -69,7 +69,7 @@ void QGeoCodingManagerSlots_connect_signal( const QString & signal, const QStrin
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManager * obj = (QGeoCodingManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGeoCodingManagerSlots * s = QCoreApplication::instance()->findChild<QGeoCodingManagerSlots*>();
 

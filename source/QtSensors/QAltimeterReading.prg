@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QALTIMETERREADING_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAltimeterReading * obj = (QAltimeterReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QALTIMETERREADING_ALTITUDE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAltimeterReading * obj = (QAltimeterReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QALTIMETERREADING_SETALTITUDE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAltimeterReading * obj = (QAltimeterReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )

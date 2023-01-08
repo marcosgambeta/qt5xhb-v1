@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QCHECKBOX_DELETE )
 {
   QCheckBox * obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 {
   QCheckBox * obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 {
   QCheckBox * obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 {
   QCheckBox * obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 {
   QCheckBox * obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 {
   QCheckBox * obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 {
   QCheckBox * obj = qobject_cast<QCheckBox*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

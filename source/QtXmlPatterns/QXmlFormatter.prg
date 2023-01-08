@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_DELETE )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATOMICVALUE )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVARIANT(1) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2) )
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_CHARACTERS )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSTRINGREF(1) )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQXMLNAME(1) && HB_ISCHAR(2) )
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQXMLNAME(1) )
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTOFSEQUENCE )
 {
   QXmlFormatter * obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

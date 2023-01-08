@@ -45,7 +45,7 @@ void QTapSensorSlots_connect_signal( const QString & signal, const QString & slo
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QTapSensor * obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QTapSensorSlots * s = QCoreApplication::instance()->findChild<QTapSensorSlots*>();
 

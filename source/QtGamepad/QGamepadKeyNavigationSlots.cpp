@@ -405,7 +405,7 @@ void QGamepadKeyNavigationSlots_connect_signal( const QString & signal, const QS
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepadKeyNavigation * obj = (QGamepadKeyNavigation *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGamepadKeyNavigationSlots * s = QCoreApplication::instance()->findChild<QGamepadKeyNavigationSlots*>();
 

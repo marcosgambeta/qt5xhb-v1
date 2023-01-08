@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ISFINISHED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ERRORSTRING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_REQUEST )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ROUTES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ABORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRouteReply * obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

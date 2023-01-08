@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DELETE )
 {
   QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SWAP )
 {
   QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1) )
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NAMES )
 {
   QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETVALUENAME )
 {
   QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_VALUENAME )
 {
   QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDESCRIPTION )
 {
   QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DESCRIPTION )
 {
   QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUE )
 {
   QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUES )
 {
   QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISARRAY(1) )
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DEFAULTVALUES )
 {
   QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

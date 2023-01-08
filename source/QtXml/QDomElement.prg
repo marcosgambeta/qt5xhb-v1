@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDOMELEMENT_DELETE )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3)||HB_ISNIL(3)) )
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODE )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODENS )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTES )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAME )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAMENS )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTE )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTENS )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QDOMELEMENT_NODETYPE )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTE )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENS )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENODE )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDOMATTR(1) )
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE1 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE2 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE3 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE4 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE5 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE6 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE7 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS1 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS2 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS3 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS4 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS5 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS6 )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODE )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDOMATTR(1) )
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODENS )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDOMATTR(1) )
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETTAGNAME )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QDOMELEMENT_TEXT )
 {
   QDomElement * obj = (QDomElement *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

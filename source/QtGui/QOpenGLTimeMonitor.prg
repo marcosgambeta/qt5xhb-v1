@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_DELETE )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_SAMPLECOUNT )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_SETSAMPLECOUNT )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_CREATE )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_DESTROY )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISCREATED )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_RECORDSAMPLE )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISRESULTAVAILABLE )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_RESET )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

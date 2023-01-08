@@ -76,7 +76,7 @@ void QAbstractAudioOutputSlots_connect_signal( const QString & signal, const QSt
 {
   QAbstractAudioOutput * obj = (QAbstractAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractAudioOutputSlots * s = QCoreApplication::instance()->findChild<QAbstractAudioOutputSlots*>();
 

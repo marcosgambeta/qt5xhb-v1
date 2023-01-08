@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_DELETE )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
     */
     QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->allocate( (const void *) hb_parptr(1), PINT(2) );
     }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
     */
     QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->allocate( PINT(1) );
     }
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_BIND )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_BUFFERID )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_CREATE )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_DESTROY )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_ISCREATED )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_MAP )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_READ )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
     */
     QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->release();
     }
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_SETUSAGEPATTERN )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_SIZE )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_TYPE )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_UNMAP )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_USAGEPATTERN )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_WRITE )
 {
   QOpenGLBuffer * obj = (QOpenGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )

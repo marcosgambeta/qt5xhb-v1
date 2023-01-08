@@ -60,7 +60,7 @@ void QFontDialogSlots_connect_signal( const QString & signal, const QString & sl
 {
   QFontDialog * obj = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QFontDialogSlots * s = QCoreApplication::instance()->findChild<QFontDialogSlots*>();
 

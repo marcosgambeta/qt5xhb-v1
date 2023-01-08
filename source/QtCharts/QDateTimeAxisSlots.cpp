@@ -127,7 +127,7 @@ void QDateTimeAxisSlots_connect_signal( const QString & signal, const QString & 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QDateTimeAxisSlots * s = QCoreApplication::instance()->findChild<QDateTimeAxisSlots*>();
 

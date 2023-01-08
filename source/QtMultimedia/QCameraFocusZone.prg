@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_DELETE )
 {
   QCameraFocusZone * obj = (QCameraFocusZone *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_ISVALID )
 {
   QCameraFocusZone * obj = (QCameraFocusZone *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_AREA )
 {
   QCameraFocusZone * obj = (QCameraFocusZone *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_STATUS )
 {
   QCameraFocusZone * obj = (QCameraFocusZone *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

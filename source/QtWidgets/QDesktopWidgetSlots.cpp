@@ -78,7 +78,7 @@ void QDesktopWidgetSlots_connect_signal( const QString & signal, const QString &
 {
   QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QDesktopWidgetSlots * s = QCoreApplication::instance()->findChild<QDesktopWidgetSlots*>();
 

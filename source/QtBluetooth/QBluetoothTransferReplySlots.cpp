@@ -67,7 +67,7 @@ void QBluetoothTransferReplySlots_connect_signal( const QString & signal, const 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferReply * obj = (QBluetoothTransferReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QBluetoothTransferReplySlots * s = QCoreApplication::instance()->findChild<QBluetoothTransferReplySlots*>();
 

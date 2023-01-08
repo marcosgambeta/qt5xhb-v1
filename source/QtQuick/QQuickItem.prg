@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QQUICKITEM_DELETE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QQUICKITEM_ACCEPTHOVEREVENTS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QQUICKITEM_ACCEPTEDMOUSEBUTTONS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QQUICKITEM_ANTIALIASING )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QQUICKITEM_BASELINEOFFSET )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QQUICKITEM_CHILDAT )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QQUICKITEM_CHILDRENRECT )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QQUICKITEM_CLIP )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QQUICKITEM_CONTAINS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QQUICKITEM_CURSOR )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QQUICKITEM_FILTERSCHILDMOUSEEVENTS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QQUICKITEM_FLAGS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QQUICKITEM_FORCEACTIVEFOCUS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QQUICKITEM_GRABMOUSE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QQUICKITEM_HASACTIVEFOCUS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QQUICKITEM_HASFOCUS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QQUICKITEM_HEIGHT )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QQUICKITEM_IMPLICITHEIGHT )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QQUICKITEM_IMPLICITWIDTH )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QQUICKITEM_INPUTMETHODQUERY )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QQUICKITEM_ISENABLED )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QQUICKITEM_ISFOCUSSCOPE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QQUICKITEM_ISTEXTUREPROVIDER )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QQUICKITEM_ISVISIBLE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QQUICKITEM_KEEPMOUSEGRAB )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QQUICKITEM_KEEPTOUCHGRAB )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPFROMITEM )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQQUICKITEM(1) && ISQPOINTF(2) )
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPFROMSCENE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMITEM )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQQUICKITEM(1) && ISQRECTF(2) )
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMSCENE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECTF(1) )
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOITEM )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQQUICKITEM(1) && ISQRECTF(2) )
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOSCENE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQRECTF(1) )
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPTOITEM )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQQUICKITEM(1) && ISQPOINTF(2) )
@@ -967,7 +967,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPTOSCENE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QQUICKITEM_OPACITY )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QQUICKITEM_PARENTITEM )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QQUICKITEM_POLISH )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QQUICKITEM_RESETHEIGHT )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1093,7 +1093,7 @@ HB_FUNC_STATIC( QQUICKITEM_RESETWIDTH )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QQUICKITEM_ROTATION )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1143,7 +1143,7 @@ HB_FUNC_STATIC( QQUICKITEM_SCALE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1167,7 +1167,7 @@ HB_FUNC_STATIC( QQUICKITEM_SCOPEDFOCUSITEM )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETACCEPTHOVEREVENTS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1218,7 +1218,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETACCEPTEDMOUSEBUTTONS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1244,7 +1244,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETANTIALIASING )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1270,7 +1270,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETBASELINEOFFSET )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETCLIP )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1322,7 +1322,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETCURSOR )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCURSOR(1) )
@@ -1348,7 +1348,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETENABLED )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1374,7 +1374,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFILTERSCHILDMOUSEEVENTS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1400,7 +1400,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFLAG )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
@@ -1426,7 +1426,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFLAGS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1452,7 +1452,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFOCUS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1478,7 +1478,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETHEIGHT )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1504,7 +1504,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETIMPLICITHEIGHT )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1530,7 +1530,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETIMPLICITWIDTH )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1556,7 +1556,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETKEEPMOUSEGRAB )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1582,7 +1582,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETKEEPTOUCHGRAB )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1608,7 +1608,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETOPACITY )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1634,7 +1634,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETPARENTITEM )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQQUICKITEM(1) )
@@ -1660,7 +1660,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETROTATION )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1686,7 +1686,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETSCALE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1712,7 +1712,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETSMOOTH )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1738,7 +1738,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETSTATE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -1764,7 +1764,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETTRANSFORMORIGIN )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1790,7 +1790,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETVISIBLE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -1816,7 +1816,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETWIDTH )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1842,7 +1842,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETX )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1868,7 +1868,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETY )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1894,7 +1894,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETZ )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1920,7 +1920,7 @@ HB_FUNC_STATIC( QQUICKITEM_SMOOTH )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1944,7 +1944,7 @@ HB_FUNC_STATIC( QQUICKITEM_STACKAFTER )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQQUICKITEM(1) )
@@ -1970,7 +1970,7 @@ HB_FUNC_STATIC( QQUICKITEM_STACKBEFORE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQQUICKITEM(1) )
@@ -1996,7 +1996,7 @@ HB_FUNC_STATIC( QQUICKITEM_STATE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2020,7 +2020,7 @@ HB_FUNC_STATIC( QQUICKITEM_TEXTUREPROVIDER )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2045,7 +2045,7 @@ HB_FUNC_STATIC( QQUICKITEM_TRANSFORMORIGIN )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2069,7 +2069,7 @@ HB_FUNC_STATIC( QQUICKITEM_UNGRABMOUSE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2095,7 +2095,7 @@ HB_FUNC_STATIC( QQUICKITEM_UNGRABTOUCHPOINTS )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2121,7 +2121,7 @@ HB_FUNC_STATIC( QQUICKITEM_UNSETCURSOR )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2147,7 +2147,7 @@ HB_FUNC_STATIC( QQUICKITEM_WIDTH )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2171,7 +2171,7 @@ HB_FUNC_STATIC( QQUICKITEM_WINDOW )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2196,7 +2196,7 @@ HB_FUNC_STATIC( QQUICKITEM_X )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2220,7 +2220,7 @@ HB_FUNC_STATIC( QQUICKITEM_Y )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2244,7 +2244,7 @@ HB_FUNC_STATIC( QQUICKITEM_Z )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -2268,7 +2268,7 @@ HB_FUNC_STATIC( QQUICKITEM_UPDATE )
 {
   QQuickItem * obj = (QQuickItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

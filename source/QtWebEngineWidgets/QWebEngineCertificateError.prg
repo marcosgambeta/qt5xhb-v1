@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEngineCertificateError * obj = (QWebEngineCertificateError *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEngineCertificateError * obj = (QWebEngineCertificateError *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_URL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEngineCertificateError * obj = (QWebEngineCertificateError *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEngineCertificateError * obj = (QWebEngineCertificateError *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERRORDESCRIPTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebEngineCertificateError * obj = (QWebEngineCertificateError *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

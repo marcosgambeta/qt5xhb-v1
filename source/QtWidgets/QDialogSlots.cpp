@@ -74,7 +74,7 @@ void QDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QDialog * obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QDialogSlots * s = QCoreApplication::instance()->findChild<QDialogSlots*>();
 

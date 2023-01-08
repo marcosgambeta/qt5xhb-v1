@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QTILERULES_DELETE )
 {
   QTileRules * obj = (QTileRules *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

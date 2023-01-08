@@ -42,7 +42,7 @@ void QCheckBoxSlots_connect_signal( const QString & signal, const QString & slot
 {
   QCheckBox * obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCheckBoxSlots * s = QCoreApplication::instance()->findChild<QCheckBoxSlots*>();
 

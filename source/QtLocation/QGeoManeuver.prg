@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_ISVALID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_POSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETINSTRUCTIONTEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_INSTRUCTIONTEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETDIRECTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_DIRECTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETTIMETONEXTINSTRUCTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_TIMETONEXTINSTRUCTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETDISTANCETONEXTINSTRUCTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_DISTANCETONEXTINSTRUCTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETWAYPOINT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_WAYPOINT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoManeuver * obj = (QGeoManeuver *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

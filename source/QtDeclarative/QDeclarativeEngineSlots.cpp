@@ -80,7 +80,7 @@ void QDeclarativeEngineSlots_connect_signal( const QString & signal, const QStri
 {
   QDeclarativeEngine * obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QDeclarativeEngineSlots * s = QCoreApplication::instance()->findChild<QDeclarativeEngineSlots*>();
 

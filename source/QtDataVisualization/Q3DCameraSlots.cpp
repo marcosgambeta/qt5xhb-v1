@@ -186,7 +186,7 @@ void Q3DCameraSlots_connect_signal( const QString & signal, const QString & slot
 {
   Q3DCamera * obj = (Q3DCamera *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Q3DCameraSlots * s = QCoreApplication::instance()->findChild<Q3DCameraSlots*>();
 

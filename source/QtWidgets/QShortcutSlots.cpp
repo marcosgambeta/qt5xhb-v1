@@ -56,7 +56,7 @@ void QShortcutSlots_connect_signal( const QString & signal, const QString & slot
 {
   QShortcut * obj = (QShortcut *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QShortcutSlots * s = QCoreApplication::instance()->findChild<QShortcutSlots*>();
 

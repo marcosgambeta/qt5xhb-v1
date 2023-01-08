@@ -65,7 +65,7 @@ void QAbstractOAuthReplyHandlerSlots_connect_signal( const QString & signal, con
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractOAuthReplyHandlerSlots * s = QCoreApplication::instance()->findChild<QAbstractOAuthReplyHandlerSlots*>();
 

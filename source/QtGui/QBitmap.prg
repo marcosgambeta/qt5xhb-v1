@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QBITMAP_DELETE )
 {
   QBitmap * obj = (QBitmap *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QBITMAP_CLEAR )
 {
   QBitmap * obj = (QBitmap *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 {
   QBitmap * obj = (QBitmap *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTRANSFORM(1) )
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QBITMAP_TOVARIANT )
     */
     QBitmap * obj = (QBitmap *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       QVariant * variant = new QVariant();
       variant->setValue<QBitmap>( *obj );

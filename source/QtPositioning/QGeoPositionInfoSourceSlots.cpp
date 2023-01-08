@@ -83,7 +83,7 @@ void QGeoPositionInfoSourceSlots_connect_signal( const QString & signal, const Q
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGeoPositionInfoSourceSlots * s = QCoreApplication::instance()->findChild<QGeoPositionInfoSourceSlots*>();
 

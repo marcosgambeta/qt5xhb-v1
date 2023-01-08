@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
 {
   QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
 {
   QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 {
   QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
 {
   QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
 {
   QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
 {
   QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTSTATE(1) )
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 {
   QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISARRAY(1) )
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
 {
   QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
 {
   QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
 {
   QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

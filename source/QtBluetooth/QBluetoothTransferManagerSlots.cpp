@@ -45,7 +45,7 @@ void QBluetoothTransferManagerSlots_connect_signal( const QString & signal, cons
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferManager * obj = (QBluetoothTransferManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QBluetoothTransferManagerSlots * s = QCoreApplication::instance()->findChild<QBluetoothTransferManagerSlots*>();
 

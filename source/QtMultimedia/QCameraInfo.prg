@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCAMERAINFO_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QCAMERAINFO_ISNULL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QCAMERAINFO_DEVICENAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QCAMERAINFO_DESCRIPTION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QCAMERAINFO_POSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QCAMERAINFO_ORIENTATION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

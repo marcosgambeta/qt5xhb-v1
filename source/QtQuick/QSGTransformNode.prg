@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSGTRANSFORMNODE_DELETE )
 {
   QSGTransformNode * obj = (QSGTransformNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

@@ -63,7 +63,7 @@ void QKeySequenceEditSlots_connect_signal( const QString & signal, const QString
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QKeySequenceEdit * obj = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QKeySequenceEditSlots * s = QCoreApplication::instance()->findChild<QKeySequenceEditSlots*>();
 

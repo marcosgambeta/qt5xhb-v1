@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETE )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISARRAY(1) && ISQURL(2) )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_INSERTCOOKIE )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKCOOKIE(1) )
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_UPDATECOOKIE )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKCOOKIE(1) )
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETECOOKIE )
 {
   QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKCOOKIE(1) )

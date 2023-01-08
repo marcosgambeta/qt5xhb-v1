@@ -164,7 +164,7 @@ void QCameraImageCaptureControlSlots_connect_signal( const QString & signal, con
 {
   QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCameraImageCaptureControlSlots * s = QCoreApplication::instance()->findChild<QCameraImageCaptureControlSlots*>();
 

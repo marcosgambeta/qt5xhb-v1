@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QRUBBERBAND_DELETE )
 {
   QRubberBand * obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
     */
     QRubberBand * obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       obj->move( PINT(1), PINT(2) );
     }
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
     */
     QRubberBand * obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       obj->move( *PQPOINT(1) );
     }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
     */
     QRubberBand * obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       obj->resize( PINT(1), PINT(2) );
     }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
     */
     QRubberBand * obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       obj->resize( *PQSIZE(1) );
     }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
     */
     QRubberBand * obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       obj->setGeometry( *PQRECT(1) );
     }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
     */
     QRubberBand * obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       obj->setGeometry( PINT(1), PINT(2), PINT(3), PINT(4) );
     }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
 {
   QRubberBand * obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

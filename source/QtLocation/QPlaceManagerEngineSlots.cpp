@@ -213,7 +213,7 @@ void QPlaceManagerEngineSlots_connect_signal( const QString & signal, const QStr
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QPlaceManagerEngineSlots * s = QCoreApplication::instance()->findChild<QPlaceManagerEngineSlots*>();
 

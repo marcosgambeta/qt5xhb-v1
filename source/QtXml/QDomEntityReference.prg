@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_DELETE )
 {
   QDomEntityReference * obj = (QDomEntityReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
 {
   QDomEntityReference * obj = (QDomEntityReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

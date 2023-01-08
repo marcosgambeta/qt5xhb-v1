@@ -40,7 +40,7 @@ void QOpenGLContextSlots_connect_signal( const QString & signal, const QString &
 {
   QOpenGLContext * obj = (QOpenGLContext *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QOpenGLContextSlots * s = QCoreApplication::instance()->findChild<QOpenGLContextSlots*>();
 

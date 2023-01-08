@@ -42,7 +42,7 @@ void QCameraCaptureBufferFormatControlSlots_connect_signal( const QString & sign
 {
   QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCameraCaptureBufferFormatControlSlots * s = QCoreApplication::instance()->findChild<QCameraCaptureBufferFormatControlSlots*>();
 

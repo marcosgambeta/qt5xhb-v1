@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QXMLNAMEPOOL_DELETE )
 {
   QXmlNamePool * obj = (QXmlNamePool *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

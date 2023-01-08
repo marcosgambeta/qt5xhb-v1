@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QTILTFILTER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QTiltFilter * obj = (QTiltFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QTILTFILTER_FILTER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QTiltFilter * obj = (QTiltFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTILTREADING(1) )

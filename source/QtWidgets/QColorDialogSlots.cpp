@@ -60,7 +60,7 @@ void QColorDialogSlots_connect_signal( const QString & signal, const QString & s
 {
   QColorDialog * obj = (QColorDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QColorDialogSlots * s = QCoreApplication::instance()->findChild<QColorDialogSlots*>();
 

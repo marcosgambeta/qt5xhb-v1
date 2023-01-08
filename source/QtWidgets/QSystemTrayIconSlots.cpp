@@ -58,7 +58,7 @@ void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString 
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QSystemTrayIconSlots * s = QCoreApplication::instance()->findChild<QSystemTrayIconSlots*>();
 

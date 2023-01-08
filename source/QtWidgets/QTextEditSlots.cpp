@@ -144,7 +144,7 @@ void QTextEditSlots_connect_signal( const QString & signal, const QString & slot
 {
   QTextEdit * obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QTextEditSlots * s = QCoreApplication::instance()->findChild<QTextEditSlots*>();
 

@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSLIDER_DELETE )
 {
   QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 {
   QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
 {
   QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 {
   QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
 {
   QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSLIDER_EVENT )
 {
   QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQEVENT(1) )
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
 {
   QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSLIDER_SIZEHINT )
 {
   QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

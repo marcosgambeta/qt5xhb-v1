@@ -40,7 +40,7 @@ void QWizardPageSlots_connect_signal( const QString & signal, const QString & sl
 {
   QWizardPage * obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QWizardPageSlots * s = QCoreApplication::instance()->findChild<QWizardPageSlots*>();
 

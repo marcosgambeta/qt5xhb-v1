@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QLIGHTFILTER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QLightFilter * obj = (QLightFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QLIGHTFILTER_FILTER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QLightFilter * obj = (QLightFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLIGHTREADING(1) )

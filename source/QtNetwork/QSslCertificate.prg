@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DELETE )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SWAP )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSSLCERTIFICATE(1) )
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
 #if QT_DEPRECATED_SINCE(5,0)
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISBLACKLISTED )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSELFSIGNED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
     */
     QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRINGLIST( obj->issuerInfo( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
     }
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
     */
     QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRINGLIST( obj->issuerInfo( *PQBYTEARRAY(1) ) );
     }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
     */
     QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRINGLIST( obj->subjectInfo( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
     }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
     */
     QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRINGLIST( obj->subjectInfo( *PQBYTEARRAY(1) ) );
     }
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFOATTRIBUTES )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFOATTRIBUTES )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXTENSIONS )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOTEXT )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_HANDLE )
 {
   QSslCertificate * obj = (QSslCertificate *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSERIALPORT_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETPORTNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSERIALPORT_PORTNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETPORT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSERIALPORTINFO(1) )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QSERIALPORT_OPEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QSERIALPORT_CLOSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETSETTINGSRESTOREDONCLOSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETTINGSRESTOREDONCLOSE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETBAUDRATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QSERIALPORT_BAUDRATE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATABITS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QSERIALPORT_DATABITS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETPARITY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QSERIALPORT_PARITY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETSTOPBITS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QSERIALPORT_STOPBITS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETFLOWCONTROL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QSERIALPORT_FLOWCONTROL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATATERMINALREADY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QSERIALPORT_ISDATATERMINALREADY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETREQUESTTOSEND )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QSERIALPORT_ISREQUESTTOSEND )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QSERIALPORT_PINOUTSIGNALS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QSERIALPORT_FLUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QSERIALPORT_CLEAR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QSERIALPORT_ATEND )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATAERRORPOLICY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QSERIALPORT_DATAERRORPOLICY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QSERIALPORT_ERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QSERIALPORT_CLEARERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -935,7 +935,7 @@ HB_FUNC_STATIC( QSERIALPORT_READBUFFERSIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETREADBUFFERSIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -989,7 +989,7 @@ HB_FUNC_STATIC( QSERIALPORT_ISSEQUENTIAL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QSERIALPORT_BYTESAVAILABLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QSERIALPORT_BYTESTOWRITE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QSERIALPORT_CANREADLINE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -1093,7 +1093,7 @@ HB_FUNC_STATIC( QSERIALPORT_WAITFORREADYREAD )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QSERIALPORT_WAITFORBYTESWRITTEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -1145,7 +1145,7 @@ HB_FUNC_STATIC( QSERIALPORT_SENDBREAK )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETBREAKENABLED )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )

@@ -78,7 +78,7 @@ void QVirtualKeyboardAbstractInputMethodSlots_connect_signal( const QString & si
 {
   QVirtualKeyboardAbstractInputMethod * obj = (QVirtualKeyboardAbstractInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QVirtualKeyboardAbstractInputMethodSlots * s = QCoreApplication::instance()->findChild<QVirtualKeyboardAbstractInputMethodSlots*>();
 

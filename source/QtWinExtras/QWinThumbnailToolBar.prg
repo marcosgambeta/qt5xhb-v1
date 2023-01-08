@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_WINDOW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETWINDOW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWINDOW(1) )
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_ADDBUTTON )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWINTHUMBNAILTOOLBUTTON(1) )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_REMOVEBUTTON )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWINTHUMBNAILTOOLBUTTON(1) )
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETBUTTONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISARRAY(1) )
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_BUTTONS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_COUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_CLEAR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinThumbnailToolBar * obj = (QWinThumbnailToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

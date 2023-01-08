@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDERFACTORY_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoServiceProviderFactory * obj = (QGeoServiceProviderFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

@@ -42,7 +42,7 @@ void QCameraCaptureDestinationControlSlots_connect_signal( const QString & signa
 {
   QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCameraCaptureDestinationControlSlots * s = QCoreApplication::instance()->findChild<QCameraCaptureDestinationControlSlots*>();
 

@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QVOICE_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QVoice * obj = (QVoice *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QVOICE_NAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QVoice * obj = (QVoice *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QVOICE_GENDER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QVoice * obj = (QVoice *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QVOICE_AGE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QVoice * obj = (QVoice *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

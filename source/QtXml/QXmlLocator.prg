@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QXMLLOCATOR_DELETE )
 {
   QXmlLocator * obj = (QXmlLocator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QXMLLOCATOR_COLUMNNUMBER )
 {
   QXmlLocator * obj = (QXmlLocator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QXMLLOCATOR_LINENUMBER )
 {
   QXmlLocator * obj = (QXmlLocator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

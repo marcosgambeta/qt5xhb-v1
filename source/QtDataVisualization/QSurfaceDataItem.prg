@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_DELETE )
 {
   QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_SETPOSITION )
 {
   QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_POSITION )
 {
   QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_SETX )
 {
   QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_SETY )
 {
   QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_SETZ )
 {
   QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_X )
 {
   QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_Y )
 {
   QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_Z )
 {
   QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

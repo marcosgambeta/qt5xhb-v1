@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QGLBUFFER_DELETE )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
     */
     QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->allocate( (const void *) hb_parptr(1), PINT(2) );
     }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
     */
     QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->allocate( PINT(1) );
     }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QGLBUFFER_BIND )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QGLBUFFER_CREATE )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGLBUFFER_DESTROY )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QGLBUFFER_MAP )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QGLBUFFER_RELEASE )
     */
     QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->release();
     }
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QGLBUFFER_SIZE )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QGLBUFFER_TYPE )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QGLBUFFER_UNMAP )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QGLBUFFER_WRITE )
 {
   QGLBuffer * obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )

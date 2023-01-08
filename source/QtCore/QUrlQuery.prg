@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QURLQUERY_DELETE )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QURLQUERY_ADDQUERYITEM )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QURLQUERY_CLEAR )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QURLQUERY_HASQUERYITEM )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QURLQUERY_ISEMPTY )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERY )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYPAIRDELIMITER )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYVALUEDELIMITER )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QURLQUERY_REMOVEALLQUERYITEMS )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QURLQUERY_REMOVEQUERYITEM )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QURLQUERY_SETQUERY )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QURLQUERY_SWAP )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURLQUERY(1) )
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QURLQUERY_TOSTRING )
 {
   QUrlQuery * obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )

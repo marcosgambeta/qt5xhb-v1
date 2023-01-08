@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
 {
   QTextObject * obj = (QTextObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
 {
   QTextObject * obj = (QTextObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
 {
   QTextObject * obj = (QTextObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
 {
   QTextObject * obj = (QTextObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

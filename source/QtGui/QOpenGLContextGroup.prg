@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_DELETE )
 {
   QOpenGLContextGroup * obj = (QOpenGLContextGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
 {
   QOpenGLContextGroup * obj = (QOpenGLContextGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

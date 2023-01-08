@@ -114,7 +114,7 @@ void QVideoWidgetControlSlots_connect_signal( const QString & signal, const QStr
 {
   QVideoWidgetControl * obj = (QVideoWidgetControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QVideoWidgetControlSlots * s = QCoreApplication::instance()->findChild<QVideoWidgetControlSlots*>();
 

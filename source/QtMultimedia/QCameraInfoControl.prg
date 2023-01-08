@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfoControl * obj = (QCameraInfoControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAPOSITION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfoControl * obj = (QCameraInfoControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAORIENTATION )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfoControl * obj = (QCameraInfoControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )

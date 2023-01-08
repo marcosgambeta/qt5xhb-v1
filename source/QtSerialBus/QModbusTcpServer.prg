@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QMODBUSTCPSERVER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QModbusTcpServer * obj = (QModbusTcpServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_DELETE )
 {
   QLibraryInfo * obj = (QLibraryInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QFILE_DELETE )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QFILE_COPY )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->copy( PQSTRING(1) ) );
     }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QFILE_ERROR )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QFILE_EXISTS )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->exists() );
     }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QFILE_FILENAME )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QFILE_FLUSH )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QFILE_HANDLE )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QFILE_LINK )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->link( PQSTRING(1) ) );
     }
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QFILE_OPEN )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->open( (QFile::OpenMode) hb_parni(1) ) );
     }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QFILE_OPEN )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->open( (FILE *) hb_parptr(1), (QFile::OpenMode) hb_parni(2), HB_ISNIL(3)? (QFile::FileHandleFlags) QFile::DontCloseHandle : (QFile::FileHandleFlags) hb_parni(3) ) );
     }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QFILE_OPEN )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->open( PINT(1), (QFile::OpenMode) hb_parni(2), HB_ISNIL(3)? (QFile::FileHandleFlags) QFile::DontCloseHandle : (QFile::FileHandleFlags) hb_parni(3) ) );
     }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QFILE_PERMISSIONS )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RENUM( obj->permissions() );
     }
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QFILE_REMOVE )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->remove() );
     }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QFILE_RENAME )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->rename( PQSTRING(1) ) );
     }
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QFILE_RESIZE )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->resize( PQINT64(1) ) );
     }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QFILE_SETFILENAME )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->setPermissions( (QFile::Permissions) hb_parni(1) ) );
     }
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QFILE_SYMLINKTARGET )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRING( obj->symLinkTarget() );
     }
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QFILE_UNMAP )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QFILE_UNSETERROR )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QFILE_ATEND )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QFILE_CLOSE )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QFILE_POS )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QFILE_SEEK )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QFILE_SIZE )
 {
   QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QFILE_READLINK )
     */
     QFile * obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRING( obj->readLink() );
     }

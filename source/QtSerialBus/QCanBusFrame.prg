@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_ISVALID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_FRAMETYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_SETFRAMETYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_HASEXTENDEDFRAMEFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_SETEXTENDEDFRAMEFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_FRAMEID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_SETFRAMEID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_SETPAYLOAD )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_PAYLOAD )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_ERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_SETERROR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_TOSTRING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_HASFLEXIBLEDATARATEFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_SETFLEXIBLEDATARATEFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_HASBITRATESWITCH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_SETBITRATESWITCH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_HASERRORSTATEINDICATOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_SETERRORSTATEINDICATOR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_HASLOCALECHO )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_SETLOCALECHO )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QCanBusFrame * obj = (QCanBusFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )

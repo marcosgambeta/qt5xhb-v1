@@ -78,7 +78,7 @@ void QGraphicsDropShadowEffectSlots_connect_signal( const QString & signal, cons
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsDropShadowEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsDropShadowEffectSlots*>();
 

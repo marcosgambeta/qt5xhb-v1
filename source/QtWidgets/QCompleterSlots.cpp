@@ -96,7 +96,7 @@ void QCompleterSlots_connect_signal( const QString & signal, const QString & slo
 {
   QCompleter * obj = (QCompleter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCompleterSlots * s = QCoreApplication::instance()->findChild<QCompleterSlots*>();
 

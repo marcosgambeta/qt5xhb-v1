@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_NAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SETNAME )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SUPPLIERID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SETSUPPLIERID )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_URL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SETURL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_ICON )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SETICON )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACEICON(1) )
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_ISEMPTY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

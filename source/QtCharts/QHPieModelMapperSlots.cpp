@@ -133,7 +133,7 @@ void QHPieModelMapperSlots_connect_signal( const QString & signal, const QString
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHPieModelMapper * obj = (QHPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QHPieModelMapperSlots * s = QCoreApplication::instance()->findChild<QHPieModelMapperSlots*>();
 

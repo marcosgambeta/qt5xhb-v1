@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_DELETE )
 {
   QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
 {
   QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
 {
   QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
     */
     QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->load( *PQURL(1) ) );
     }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
     */
     QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->load( PQIODEVICE(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
     }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
     */
     QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
     
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->load( *PQBYTEARRAY(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
     }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
 {
   QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
 {
   QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
 {
   QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETMESSAGEHANDLER )
 {
   QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTMESSAGEHANDLER(1) )
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
 {
   QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETURIRESOLVER )
 {
   QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTURIRESOLVER(1) )
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
 {
   QXmlSchema * obj = (QXmlSchema *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

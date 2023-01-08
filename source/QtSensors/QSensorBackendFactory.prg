@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSENSORBACKENDFACTORY_CREATEBACKEND )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSensorBackendFactory * obj = (QSensorBackendFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSENSOR(1) )

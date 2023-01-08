@@ -45,7 +45,7 @@ void QTextToSpeechEngineSlots_connect_signal( const QString & signal, const QStr
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeechEngine * obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QTextToSpeechEngineSlots * s = QCoreApplication::instance()->findChild<QTextToSpeechEngineSlots*>();
 

@@ -42,7 +42,7 @@ void QProgressBarSlots_connect_signal( const QString & signal, const QString & s
 {
   QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QProgressBarSlots * s = QCoreApplication::instance()->findChild<QProgressBarSlots*>();
 

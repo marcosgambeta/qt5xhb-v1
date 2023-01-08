@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QPRINTENGINE_DELETE )
 {
   QPrintEngine * obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 {
   QPrintEngine * obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QPRINTENGINE_METRIC )
 {
   QPrintEngine * obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 {
   QPrintEngine * obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
 {
   QPrintEngine * obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
 {
   QPrintEngine * obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
 {
   QPrintEngine * obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )

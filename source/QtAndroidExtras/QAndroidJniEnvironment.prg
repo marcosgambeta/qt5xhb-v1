@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QAndroidJniEnvironment * obj = (QAndroidJniEnvironment *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_FINDCLASS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
   QAndroidJniEnvironment * obj = (QAndroidJniEnvironment *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )

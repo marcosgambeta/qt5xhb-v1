@@ -200,7 +200,7 @@ void QNetworkAccessManagerSlots_connect_signal( const QString & signal, const QS
 {
   QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QNetworkAccessManagerSlots * s = QCoreApplication::instance()->findChild<QNetworkAccessManagerSlots*>();
 

@@ -44,7 +44,7 @@ void Q3DLightSlots_connect_signal( const QString & signal, const QString & slot 
 {
   Q3DLight * obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Q3DLightSlots * s = QCoreApplication::instance()->findChild<Q3DLightSlots*>();
 

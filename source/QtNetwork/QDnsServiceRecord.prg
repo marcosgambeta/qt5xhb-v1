@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_DELETE )
 {
   QDnsServiceRecord * obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NAME )
 {
   QDnsServiceRecord * obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PORT )
 {
   QDnsServiceRecord * obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PRIORITY )
 {
   QDnsServiceRecord * obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_SWAP )
 {
   QDnsServiceRecord * obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDNSSERVICERECORD(1) )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_TARGET )
 {
   QDnsServiceRecord * obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_TIMETOLIVE )
 {
   QDnsServiceRecord * obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_WEIGHT )
 {
   QDnsServiceRecord * obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

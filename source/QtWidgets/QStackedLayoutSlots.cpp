@@ -60,7 +60,7 @@ void QStackedLayoutSlots_connect_signal( const QString & signal, const QString &
 {
   QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QStackedLayoutSlots * s = QCoreApplication::instance()->findChild<QStackedLayoutSlots*>();
 

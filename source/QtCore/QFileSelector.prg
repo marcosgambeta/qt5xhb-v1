@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QFILESELECTOR_DELETE )
 {
   QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT )
     */
     QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRING( obj->select( PQSTRING(1) ) );
     }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT )
     */
     QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QUrl * ptr = new QUrl( obj->select( *PQURL(1) ) );
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
 {
   QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QFILESELECTOR_SETEXTRASELECTORS )
 {
   QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISARRAY(1) )
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QFILESELECTOR_ALLSELECTORS )
 {
   QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

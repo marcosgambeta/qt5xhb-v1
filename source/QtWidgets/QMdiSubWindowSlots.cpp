@@ -60,7 +60,7 @@ void QMdiSubWindowSlots_connect_signal( const QString & signal, const QString & 
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QMdiSubWindowSlots * s = QCoreApplication::instance()->findChild<QMdiSubWindowSlots*>();
 

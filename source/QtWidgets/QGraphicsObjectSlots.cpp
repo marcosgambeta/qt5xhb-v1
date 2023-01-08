@@ -168,7 +168,7 @@ void QGraphicsObjectSlots_connect_signal( const QString & signal, const QString 
 {
   QGraphicsObject * obj = (QGraphicsObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsObjectSlots * s = QCoreApplication::instance()->findChild<QGraphicsObjectSlots*>();
 

@@ -184,7 +184,7 @@ void QTextDocumentSlots_connect_signal( const QString & signal, const QString & 
 {
   QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QTextDocumentSlots * s = QCoreApplication::instance()->findChild<QTextDocumentSlots*>();
 

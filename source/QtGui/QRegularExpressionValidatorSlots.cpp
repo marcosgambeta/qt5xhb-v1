@@ -42,7 +42,7 @@ void QRegularExpressionValidatorSlots_connect_signal( const QString & signal, co
 {
   QRegularExpressionValidator * obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QRegularExpressionValidatorSlots * s = QCoreApplication::instance()->findChild<QRegularExpressionValidatorSlots*>();
 

@@ -285,7 +285,7 @@ void QAreaSeriesSlots_connect_signal( const QString & signal, const QString & sl
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QAreaSeriesSlots * s = QCoreApplication::instance()->findChild<QAreaSeriesSlots*>();
 

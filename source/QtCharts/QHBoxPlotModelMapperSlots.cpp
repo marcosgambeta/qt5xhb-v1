@@ -133,7 +133,7 @@ void QHBoxPlotModelMapperSlots_connect_signal( const QString & signal, const QSt
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QHBoxPlotModelMapperSlots * s = QCoreApplication::instance()->findChild<QHBoxPlotModelMapperSlots*>();
 

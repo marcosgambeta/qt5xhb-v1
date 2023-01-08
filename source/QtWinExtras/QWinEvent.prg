@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QWINEVENT_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinEvent * obj = (QWinEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

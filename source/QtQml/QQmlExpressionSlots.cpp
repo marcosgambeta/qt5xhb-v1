@@ -40,7 +40,7 @@ void QQmlExpressionSlots_connect_signal( const QString & signal, const QString &
 {
   QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QQmlExpressionSlots * s = QCoreApplication::instance()->findChild<QQmlExpressionSlots*>();
 

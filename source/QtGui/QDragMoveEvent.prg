@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_DELETE )
 {
   QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
     */
     QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->accept( *PQRECT(1) );
     }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
     */
     QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->accept();
     }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
 {
   QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
     */
     QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->ignore( *PQRECT(1) );
     }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
     */
     QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->ignore();
     }

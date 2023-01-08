@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_COUNT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXOUTLINEVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXOUTLINEVISIBLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXWIDTH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXWIDTH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETBRUSH )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBRUSH(1) )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_PEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETPEN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPEN(1) )
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->append( PQBOXSET(1) ) );
     }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QList<QBoxSet *> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_REMOVE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBOXSET(1) )
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_TAKE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBOXSET(1) )
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_INSERT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQBOXSET(2) )
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_CLEAR )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_TYPE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

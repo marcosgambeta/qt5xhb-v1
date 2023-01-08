@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QALTIMETERFILTER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAltimeterFilter * obj = (QAltimeterFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QALTIMETERFILTER_FILTER )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAltimeterFilter * obj = (QAltimeterFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQALTIMETERREADING(1) )

@@ -464,7 +464,7 @@ void Q3DThemeSlots_connect_signal( const QString & signal, const QString & slot 
 {
   Q3DTheme * obj = (Q3DTheme *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Q3DThemeSlots * s = QCoreApplication::instance()->findChild<Q3DThemeSlots*>();
 

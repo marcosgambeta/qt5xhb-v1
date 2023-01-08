@@ -40,7 +40,7 @@ void QSvgRendererSlots_connect_signal( const QString & signal, const QString & s
 {
   QSvgRenderer * obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QSvgRendererSlots * s = QCoreApplication::instance()->findChild<QSvgRendererSlots*>();
 

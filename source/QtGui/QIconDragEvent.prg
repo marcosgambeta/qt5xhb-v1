@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QICONDRAGEVENT_DELETE )
 {
   QIconDragEvent * obj = (QIconDragEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;

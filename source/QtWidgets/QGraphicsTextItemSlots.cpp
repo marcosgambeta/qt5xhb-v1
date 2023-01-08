@@ -60,7 +60,7 @@ void QGraphicsTextItemSlots_connect_signal( const QString & signal, const QStrin
 {
   QGraphicsTextItem * obj = (QGraphicsTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsTextItemSlots * s = QCoreApplication::instance()->findChild<QGraphicsTextItemSlots*>();
 

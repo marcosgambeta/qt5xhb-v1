@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QVideoFilterRunnable * obj = (QVideoFilterRunnable *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_RUN )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QVideoFilterRunnable * obj = (QVideoFilterRunnable *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQVIDEOFRAME(1) && ISQVIDEOSURFACEFORMAT(2) && HB_ISNUM(3) )

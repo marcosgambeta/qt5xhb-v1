@@ -60,7 +60,7 @@ void QLabelSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QLabel * obj = (QLabel *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QLabelSlots * s = QCoreApplication::instance()->findChild<QLabelSlots*>();
 

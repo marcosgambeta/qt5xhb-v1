@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSIZEF_DELETE )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSIZEF_ISNULL )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSIZEF_ISEMPTY )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSIZEF_ISVALID )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSIZEF_WIDTH )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSIZEF_HEIGHT )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSIZEF_SETWIDTH )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSE )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSED )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSIZEF_SCALE )
     */
     QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->scale( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) );
     }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QSIZEF_SCALE )
     */
     QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->scale( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) );
     }
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QSIZEF_SCALED )
     */
     QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QSizeF * ptr = new QSizeF( obj->scaled( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) ) );
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QSIZEF_SCALED )
     */
     QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QSizeF * ptr = new QSizeF( obj->scaled( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) ) );
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZEF(1) )
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSIZEF(1) )
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QSIZEF_TOSIZE )
 {
   QSizeF * obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

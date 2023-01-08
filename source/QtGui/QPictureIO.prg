@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QPICTUREIO_DELETE )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPICTUREIO_PICTURE )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QPICTUREIO_STATUS )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QPICTUREIO_FORMAT )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QPICTUREIO_IODEVICE )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QPICTUREIO_FILENAME )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QPICTUREIO_QUALITY )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QPICTUREIO_DESCRIPTION )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QPICTUREIO_PARAMETERS )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QPICTUREIO_GAMMA )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETPICTURE )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPICTURE(1) )
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETSTATUS )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETFORMAT )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETIODEVICE )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETFILENAME )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETQUALITY )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETDESCRIPTION )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETPARAMETERS )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETGAMMA )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QPICTUREIO_READ )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QPICTUREIO_WRITE )
 {
   QPictureIO * obj = (QPictureIO *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

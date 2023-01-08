@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_READING )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )

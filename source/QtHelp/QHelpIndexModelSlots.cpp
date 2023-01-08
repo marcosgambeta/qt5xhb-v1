@@ -56,7 +56,7 @@ void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString 
 {
   QHelpIndexModel * obj = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QHelpIndexModelSlots * s = QCoreApplication::instance()->findChild<QHelpIndexModelSlots*>();
 

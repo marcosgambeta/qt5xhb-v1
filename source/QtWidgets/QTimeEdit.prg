@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QTIMEEDIT_DELETE )
 {
   QTimeEdit * obj = (QTimeEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

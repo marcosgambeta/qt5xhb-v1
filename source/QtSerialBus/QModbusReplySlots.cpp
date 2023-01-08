@@ -63,7 +63,7 @@ void QModbusReplySlots_connect_signal( const QString & signal, const QString & s
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QModbusReply * obj = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QModbusReplySlots * s = QCoreApplication::instance()->findChild<QModbusReplySlots*>();
 

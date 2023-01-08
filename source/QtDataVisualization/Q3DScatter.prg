@@ -93,7 +93,7 @@ HB_FUNC_STATIC( Q3DSCATTER_DELETE )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( Q3DSCATTER_AXISX )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SETAXISX )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( Q3DSCATTER_AXISY )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SETAXISY )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( Q3DSCATTER_AXISZ )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SETAXISZ )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SELECTEDSERIES )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ADDSERIES )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSCATTER3DSERIES(1) )
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( Q3DSCATTER_REMOVESERIES )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSCATTER3DSERIES(1) )
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SERIESLIST )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ADDAXIS )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( Q3DSCATTER_RELEASEAXIS )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( Q3DSCATTER_AXES )
 {
   Q3DScatter * obj = (Q3DScatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

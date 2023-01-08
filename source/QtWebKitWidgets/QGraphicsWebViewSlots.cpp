@@ -164,7 +164,7 @@ void QGraphicsWebViewSlots_connect_signal( const QString & signal, const QString
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsWebViewSlots * s = QCoreApplication::instance()->findChild<QGraphicsWebViewSlots*>();
 

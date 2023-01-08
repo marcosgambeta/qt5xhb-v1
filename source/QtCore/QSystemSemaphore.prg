@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
 {
   QSystemSemaphore * obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )

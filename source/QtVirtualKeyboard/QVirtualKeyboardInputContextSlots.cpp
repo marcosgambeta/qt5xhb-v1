@@ -281,7 +281,7 @@ void QVirtualKeyboardInputContextSlots_connect_signal( const QString & signal, c
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QVirtualKeyboardInputContextSlots * s = QCoreApplication::instance()->findChild<QVirtualKeyboardInputContextSlots*>();
 

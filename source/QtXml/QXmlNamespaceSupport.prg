@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_DELETE )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
     */
     QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRINGLIST( obj->prefixes() );
     }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
     */
     QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RQSTRINGLIST( obj->prefixes( PQSTRING(1) ) );
     }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISLOG(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETPREFIX )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )

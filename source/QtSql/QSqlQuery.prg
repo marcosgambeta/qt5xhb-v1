@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSQLQUERY_DELETE )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQVARIANT(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
     */
     QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->bindValue( PQSTRING(1), *PQVARIANT(2), HB_ISNIL(3)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(3) );
     }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
     */
     QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       obj->bindValue( PINT(1), *PQVARIANT(2), HB_ISNIL(3)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(3) );
     }
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
     */
     QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->boundValue( PQSTRING(1) ) );
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
     */
     QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->boundValue( PINT(1) ) );
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSQLQUERY_CLEAR )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC )
     */
     QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->exec( PQSTRING(1) ) );
     }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC )
     */
     QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->exec() );
     }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QSQLQUERY_FINISH )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QSQLQUERY_FIRST )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISLOG(1) )
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
     */
     QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->isNull( PINT(1) ) );
     }
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
     QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       RBOOL( obj->isNull( PQSTRING(1) ) );
     }
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISVALID )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QSQLQUERY_LAST )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXT )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREPARE )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QSQLQUERY_RECORD )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QSQLQUERY_RESULT )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QSQLQUERY_SIZE )
 {
   QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QSQLQUERY_VALUE )
     */
     QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->value( PINT(1) ) );
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QSQLQUERY_VALUE )
     */
     QSqlQuery * obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
   
-    if( obj )
+    if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->value( PQSTRING(1) ) );
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);

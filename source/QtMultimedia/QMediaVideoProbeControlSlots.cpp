@@ -58,7 +58,7 @@ void QMediaVideoProbeControlSlots_connect_signal( const QString & signal, const 
 {
   QMediaVideoProbeControl * obj = (QMediaVideoProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QMediaVideoProbeControlSlots * s = QCoreApplication::instance()->findChild<QMediaVideoProbeControlSlots*>();
 

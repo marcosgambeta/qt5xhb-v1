@@ -96,7 +96,7 @@ void QMetaDataWriterControlSlots_connect_signal( const QString & signal, const Q
 {
   QMetaDataWriterControl * obj = (QMetaDataWriterControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QMetaDataWriterControlSlots * s = QCoreApplication::instance()->findChild<QMetaDataWriterControlSlots*>();
 

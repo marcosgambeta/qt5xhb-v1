@@ -69,7 +69,7 @@ void QGeoRoutingManagerSlots_connect_signal( const QString & signal, const QStri
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManager * obj = (QGeoRoutingManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QGeoRoutingManagerSlots * s = QCoreApplication::instance()->findChild<QGeoRoutingManagerSlots*>();
 

@@ -301,7 +301,7 @@ void QBoxPlotSeriesSlots_connect_signal( const QString & signal, const QString &
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QBoxPlotSeriesSlots * s = QCoreApplication::instance()->findChild<QBoxPlotSeriesSlots*>();
 

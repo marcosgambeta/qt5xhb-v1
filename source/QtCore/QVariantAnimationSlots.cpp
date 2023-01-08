@@ -42,7 +42,7 @@ void QVariantAnimationSlots_connect_signal( const QString & signal, const QStrin
 {
   QVariantAnimation * obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QVariantAnimationSlots * s = QCoreApplication::instance()->findChild<QVariantAnimationSlots*>();
 

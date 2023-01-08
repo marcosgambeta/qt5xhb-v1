@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceEditorial * obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceEditorial * obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_SETTEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceEditorial * obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TITLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceEditorial * obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_SETTITLE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceEditorial * obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_LANGUAGE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceEditorial * obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_SETLANGUAGE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceEditorial * obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISCHAR(1) )

@@ -102,7 +102,7 @@ void QDBusConnectionInterfaceSlots_connect_signal( const QString & signal, const
 {
   QDBusConnectionInterface * obj = (QDBusConnectionInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QDBusConnectionInterfaceSlots * s = QCoreApplication::instance()->findChild<QDBusConnectionInterfaceSlots*>();
 

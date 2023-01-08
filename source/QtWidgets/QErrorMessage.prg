@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 {
   QErrorMessage * obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
     */
     QErrorMessage * obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       obj->showMessage( PQSTRING(1) );
     }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
     */
     QErrorMessage * obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj )
+    if( obj != NULL )
     {
       obj->showMessage( PQSTRING(1), PQSTRING(2) );
     }

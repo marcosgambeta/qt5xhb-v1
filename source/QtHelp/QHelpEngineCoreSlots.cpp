@@ -92,7 +92,7 @@ void QHelpEngineCoreSlots_connect_signal( const QString & signal, const QString 
 {
   QHelpEngineCore * obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QHelpEngineCoreSlots * s = QCoreApplication::instance()->findChild<QHelpEngineCoreSlots*>();
 

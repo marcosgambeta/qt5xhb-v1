@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_DELETE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SOURCE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETSOURCE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_RESIZEMODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_STATUS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SIZEHINT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_INITIALSIZE )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETCONTENT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQURL(1) && ISQQMLCOMPONENT(2) && ISQOBJECT(3) )
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_FORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )

@@ -212,7 +212,7 @@ void QVirtualKeyboardInputEngineSlots_connect_signal( const QString & signal, co
 {
   QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QVirtualKeyboardInputEngineSlots * s = QCoreApplication::instance()->findChild<QVirtualKeyboardInputEngineSlots*>();
 

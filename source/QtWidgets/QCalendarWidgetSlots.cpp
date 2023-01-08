@@ -96,7 +96,7 @@ void QCalendarWidgetSlots_connect_signal( const QString & signal, const QString 
 {
   QCalendarWidget * obj = (QCalendarWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QCalendarWidgetSlots * s = QCoreApplication::instance()->findChild<QCalendarWidgetSlots*>();
 

@@ -76,7 +76,7 @@ void QVideoDeviceSelectorControlSlots_connect_signal( const QString & signal, co
 {
   QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QVideoDeviceSelectorControlSlots * s = QCoreApplication::instance()->findChild<QVideoDeviceSelectorControlSlots*>();
 

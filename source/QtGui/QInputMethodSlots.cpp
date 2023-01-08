@@ -122,7 +122,7 @@ void QInputMethodSlots_connect_signal( const QString & signal, const QString & s
 {
   QInputMethod * obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != NULL )
   {
     QInputMethodSlots * s = QCoreApplication::instance()->findChild<QInputMethodSlots*>();
 
