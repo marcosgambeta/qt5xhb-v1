@@ -22,7 +22,7 @@ QScreenSlots::~QScreenSlots()
 
 void QScreenSlots::geometryChanged( const QRect & geometry )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "geometryChanged(QRect)" );
 
@@ -40,7 +40,7 @@ void QScreenSlots::geometryChanged( const QRect & geometry )
 
 void QScreenSlots::physicalSizeChanged( const QSizeF & size )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "physicalSizeChanged(QSizeF)" );
 
@@ -58,7 +58,7 @@ void QScreenSlots::physicalSizeChanged( const QSizeF & size )
 
 void QScreenSlots::physicalDotsPerInchChanged( qreal dpi )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "physicalDotsPerInchChanged(qreal)" );
 
@@ -76,7 +76,7 @@ void QScreenSlots::physicalDotsPerInchChanged( qreal dpi )
 
 void QScreenSlots::logicalDotsPerInchChanged( qreal dpi )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "logicalDotsPerInchChanged(qreal)" );
 
@@ -94,7 +94,7 @@ void QScreenSlots::logicalDotsPerInchChanged( qreal dpi )
 
 void QScreenSlots::virtualGeometryChanged( const QRect & rect )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "virtualGeometryChanged(QRect)" );
 
@@ -112,7 +112,7 @@ void QScreenSlots::virtualGeometryChanged( const QRect & rect )
 
 void QScreenSlots::primaryOrientationChanged( Qt::ScreenOrientation orientation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "primaryOrientationChanged(Qt::ScreenOrientation)" );
 
@@ -130,7 +130,7 @@ void QScreenSlots::primaryOrientationChanged( Qt::ScreenOrientation orientation 
 
 void QScreenSlots::orientationChanged( Qt::ScreenOrientation orientation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "orientationChanged(Qt::ScreenOrientation)" );
 
@@ -148,7 +148,7 @@ void QScreenSlots::orientationChanged( Qt::ScreenOrientation orientation )
 
 void QScreenSlots::refreshRateChanged( qreal refreshRate )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "refreshRateChanged(qreal)" );
 
@@ -170,19 +170,19 @@ void QScreenSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QScreenSlots * s = QCoreApplication::instance()->findChild<QScreenSlots *>();
+    QScreenSlots * s = QCoreApplication::instance()->findChild<QScreenSlots*>();
 
     if( s == NULL )
     {
       s = new QScreenSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

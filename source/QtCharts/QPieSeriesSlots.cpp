@@ -23,7 +23,7 @@ QPieSeriesSlots::~QPieSeriesSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSeriesSlots::added( QList<QPieSlice*> slices )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "added(QList<QPieSlice*>)" );
 
@@ -65,7 +65,7 @@ void QPieSeriesSlots::added( QList<QPieSlice*> slices )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSeriesSlots::clicked( QPieSlice * slice )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QPieSlice*)" );
 
@@ -85,7 +85,7 @@ void QPieSeriesSlots::clicked( QPieSlice * slice )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSeriesSlots::countChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "countChanged()" );
 
@@ -103,7 +103,7 @@ void QPieSeriesSlots::countChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSeriesSlots::doubleClicked( QPieSlice * slice )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(QPieSlice*)" );
 
@@ -123,7 +123,7 @@ void QPieSeriesSlots::doubleClicked( QPieSlice * slice )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSeriesSlots::hovered( QPieSlice * slice, bool state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(QPieSlice*,bool)" );
 
@@ -145,7 +145,7 @@ void QPieSeriesSlots::hovered( QPieSlice * slice, bool state )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSeriesSlots::pressed( QPieSlice * slice )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(QPieSlice*)" );
 
@@ -165,7 +165,7 @@ void QPieSeriesSlots::pressed( QPieSlice * slice )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSeriesSlots::released( QPieSlice * slice )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released(QPieSlice*)" );
 
@@ -185,7 +185,7 @@ void QPieSeriesSlots::released( QPieSlice * slice )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSeriesSlots::removed( QList<QPieSlice*> slices )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "removed(QList<QPieSlice*>)" );
 
@@ -227,7 +227,7 @@ void QPieSeriesSlots::removed( QList<QPieSlice*> slices )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSeriesSlots::sumChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sumChanged()" );
 
@@ -249,22 +249,22 @@ void QPieSeriesSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QPieSeriesSlots * s = QCoreApplication::instance()->findChild<QPieSeriesSlots *>();
+    QPieSeriesSlots * s = QCoreApplication::instance()->findChild<QPieSeriesSlots*>();
 
     if( s == NULL )
     {
       s = new QPieSeriesSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

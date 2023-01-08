@@ -22,7 +22,7 @@ QThreadSlots::~QThreadSlots()
 
 void QThreadSlots::finished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -38,7 +38,7 @@ void QThreadSlots::finished()
 
 void QThreadSlots::started()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "started()" );
 
@@ -58,19 +58,19 @@ void QThreadSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QThreadSlots * s = QCoreApplication::instance()->findChild<QThreadSlots *>();
+    QThreadSlots * s = QCoreApplication::instance()->findChild<QThreadSlots*>();
 
     if( s == NULL )
     {
       s = new QThreadSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

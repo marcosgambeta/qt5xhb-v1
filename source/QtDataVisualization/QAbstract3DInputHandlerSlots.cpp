@@ -22,7 +22,7 @@ QAbstract3DInputHandlerSlots::~QAbstract3DInputHandlerSlots()
 
 void QAbstract3DInputHandlerSlots::inputViewChanged( QAbstract3DInputHandler::InputView view )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
 
@@ -40,7 +40,7 @@ void QAbstract3DInputHandlerSlots::inputViewChanged( QAbstract3DInputHandler::In
 
 void QAbstract3DInputHandlerSlots::positionChanged( const QPoint & position )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionChanged(QPoint)" );
 
@@ -58,7 +58,7 @@ void QAbstract3DInputHandlerSlots::positionChanged( const QPoint & position )
 
 void QAbstract3DInputHandlerSlots::sceneChanged( Q3DScene * scene )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneChanged(Q3DScene*)" );
 
@@ -80,19 +80,19 @@ void QAbstract3DInputHandlerSlots_connect_signal( const QString & signal, const 
 
   if( obj )
   {
-    QAbstract3DInputHandlerSlots * s = QCoreApplication::instance()->findChild<QAbstract3DInputHandlerSlots *>();
+    QAbstract3DInputHandlerSlots * s = QCoreApplication::instance()->findChild<QAbstract3DInputHandlerSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstract3DInputHandlerSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -22,7 +22,7 @@ QScrollerSlots::~QScrollerSlots()
 
 void QScrollerSlots::scrollerPropertiesChanged( const QScrollerProperties & newProperties )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scrollerPropertiesChanged(QScrollerProperties)" );
 
@@ -40,7 +40,7 @@ void QScrollerSlots::scrollerPropertiesChanged( const QScrollerProperties & newP
 
 void QScrollerSlots::stateChanged( QScroller::State newState )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QScroller::State)" );
 
@@ -62,19 +62,19 @@ void QScrollerSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QScrollerSlots * s = QCoreApplication::instance()->findChild<QScrollerSlots *>();
+    QScrollerSlots * s = QCoreApplication::instance()->findChild<QScrollerSlots*>();
 
     if( s == NULL )
     {
       s = new QScrollerSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

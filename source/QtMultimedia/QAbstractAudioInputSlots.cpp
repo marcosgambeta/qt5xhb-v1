@@ -22,7 +22,7 @@ QAbstractAudioInputSlots::~QAbstractAudioInputSlots()
 
 void QAbstractAudioInputSlots::errorChanged( QAudio::Error error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "errorChanged(QAudio::Error)" );
 
@@ -40,7 +40,7 @@ void QAbstractAudioInputSlots::errorChanged( QAudio::Error error )
 
 void QAbstractAudioInputSlots::stateChanged( QAudio::State state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QAudio::State)" );
 
@@ -58,7 +58,7 @@ void QAbstractAudioInputSlots::stateChanged( QAudio::State state )
 
 void QAbstractAudioInputSlots::notify()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "notify()" );
 
@@ -78,19 +78,19 @@ void QAbstractAudioInputSlots_connect_signal( const QString & signal, const QStr
 
   if( obj )
   {
-    QAbstractAudioInputSlots * s = QCoreApplication::instance()->findChild<QAbstractAudioInputSlots *>();
+    QAbstractAudioInputSlots * s = QCoreApplication::instance()->findChild<QAbstractAudioInputSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractAudioInputSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

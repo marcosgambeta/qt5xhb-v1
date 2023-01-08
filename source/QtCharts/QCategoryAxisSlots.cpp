@@ -23,7 +23,7 @@ QCategoryAxisSlots::~QCategoryAxisSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QCategoryAxisSlots::categoriesChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoriesChanged()" );
 
@@ -41,7 +41,7 @@ void QCategoryAxisSlots::categoriesChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QCategoryAxisSlots::labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" );
 
@@ -65,22 +65,22 @@ void QCategoryAxisSlots_connect_signal( const QString & signal, const QString & 
 
   if( obj )
   {
-    QCategoryAxisSlots * s = QCoreApplication::instance()->findChild<QCategoryAxisSlots *>();
+    QCategoryAxisSlots * s = QCoreApplication::instance()->findChild<QCategoryAxisSlots*>();
 
     if( s == NULL )
     {
       s = new QCategoryAxisSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

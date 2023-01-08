@@ -23,7 +23,7 @@ QPlaceManagerSlots::~QPlaceManagerSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QPlaceManagerSlots::finished( QPlaceReply * reply )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QPlaceReply*)" );
 
@@ -43,7 +43,7 @@ void QPlaceManagerSlots::finished( QPlaceReply * reply )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QPlaceManagerSlots::error( QPlaceReply * reply, QPlaceReply::Error error, const QString & errorString )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
 
@@ -67,7 +67,7 @@ void QPlaceManagerSlots::error( QPlaceReply * reply, QPlaceReply::Error error, c
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QPlaceManagerSlots::placeAdded( const QString & placeId )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "placeAdded(QString)" );
 
@@ -87,7 +87,7 @@ void QPlaceManagerSlots::placeAdded( const QString & placeId )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QPlaceManagerSlots::placeUpdated( const QString & placeId )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "placeUpdated(QString)" );
 
@@ -107,7 +107,7 @@ void QPlaceManagerSlots::placeUpdated( const QString & placeId )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QPlaceManagerSlots::placeRemoved( const QString & placeId )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "placeRemoved(QString)" );
 
@@ -127,7 +127,7 @@ void QPlaceManagerSlots::placeRemoved( const QString & placeId )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QPlaceManagerSlots::categoryAdded( const QPlaceCategory & category, const QString & parentId )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoryAdded(QPlaceCategory,QString)" );
 
@@ -149,7 +149,7 @@ void QPlaceManagerSlots::categoryAdded( const QPlaceCategory & category, const Q
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QPlaceManagerSlots::categoryUpdated( const QPlaceCategory & category, const QString & parentId )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoryUpdated(QPlaceCategory,QString)" );
 
@@ -171,7 +171,7 @@ void QPlaceManagerSlots::categoryUpdated( const QPlaceCategory & category, const
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QPlaceManagerSlots::categoryRemoved( const QString & categoryId, const QString & parentId )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoryRemoved(QString,QString)" );
 
@@ -193,7 +193,7 @@ void QPlaceManagerSlots::categoryRemoved( const QString & categoryId, const QStr
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QPlaceManagerSlots::dataChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataChanged()" );
 
@@ -215,22 +215,22 @@ void QPlaceManagerSlots_connect_signal( const QString & signal, const QString & 
 
   if( obj )
   {
-    QPlaceManagerSlots * s = QCoreApplication::instance()->findChild<QPlaceManagerSlots *>();
+    QPlaceManagerSlots * s = QCoreApplication::instance()->findChild<QPlaceManagerSlots*>();
 
     if( s == NULL )
     {
       s = new QPlaceManagerSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

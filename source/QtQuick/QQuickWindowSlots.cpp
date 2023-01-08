@@ -22,7 +22,7 @@ QQuickWindowSlots::~QQuickWindowSlots()
 
 void QQuickWindowSlots::afterRendering()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "afterRendering()" );
 
@@ -38,7 +38,7 @@ void QQuickWindowSlots::afterRendering()
 
 void QQuickWindowSlots::beforeRendering()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeRendering()" );
 
@@ -54,7 +54,7 @@ void QQuickWindowSlots::beforeRendering()
 
 void QQuickWindowSlots::beforeSynchronizing()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeSynchronizing()" );
 
@@ -70,7 +70,7 @@ void QQuickWindowSlots::beforeSynchronizing()
 
 void QQuickWindowSlots::colorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
@@ -88,7 +88,7 @@ void QQuickWindowSlots::colorChanged( const QColor & color )
 
 void QQuickWindowSlots::frameSwapped()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "frameSwapped()" );
 
@@ -104,7 +104,7 @@ void QQuickWindowSlots::frameSwapped()
 
 void QQuickWindowSlots::sceneGraphInitialized()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneGraphInitialized()" );
 
@@ -120,7 +120,7 @@ void QQuickWindowSlots::sceneGraphInitialized()
 
 void QQuickWindowSlots::sceneGraphInvalidated()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneGraphInvalidated()" );
 
@@ -140,19 +140,19 @@ void QQuickWindowSlots_connect_signal( const QString & signal, const QString & s
 
   if( obj )
   {
-    QQuickWindowSlots * s = QCoreApplication::instance()->findChild<QQuickWindowSlots *>();
+    QQuickWindowSlots * s = QCoreApplication::instance()->findChild<QQuickWindowSlots*>();
 
     if( s == NULL )
     {
       s = new QQuickWindowSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

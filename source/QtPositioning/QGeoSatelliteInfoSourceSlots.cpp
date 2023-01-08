@@ -23,7 +23,7 @@ QGeoSatelliteInfoSourceSlots::~QGeoSatelliteInfoSourceSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSatelliteInfo> & satellites )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" );
 
@@ -65,7 +65,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSate
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatelliteInfo> & satellites )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" );
 
@@ -107,7 +107,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatel
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QGeoSatelliteInfoSourceSlots::requestTimeout()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "requestTimeout()" );
 
@@ -125,7 +125,7 @@ void QGeoSatelliteInfoSourceSlots::requestTimeout()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QGeoSatelliteInfoSourceSlots::error( QGeoSatelliteInfoSource::Error error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QGeoSatelliteInfoSource::Error)" );
 
@@ -149,22 +149,22 @@ void QGeoSatelliteInfoSourceSlots_connect_signal( const QString & signal, const 
 
   if( obj )
   {
-    QGeoSatelliteInfoSourceSlots * s = QCoreApplication::instance()->findChild<QGeoSatelliteInfoSourceSlots *>();
+    QGeoSatelliteInfoSourceSlots * s = QCoreApplication::instance()->findChild<QGeoSatelliteInfoSourceSlots*>();
 
     if( s == NULL )
     {
       s = new QGeoSatelliteInfoSourceSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

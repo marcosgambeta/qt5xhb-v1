@@ -22,7 +22,7 @@ QDockWidgetSlots::~QDockWidgetSlots()
 
 void QDockWidgetSlots::allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "allowedAreasChanged(Qt::DockWidgetAreas)" );
 
@@ -40,7 +40,7 @@ void QDockWidgetSlots::allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 
 void QDockWidgetSlots::dockLocationChanged( Qt::DockWidgetArea area )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dockLocationChanged(Qt::DockWidgetArea)" );
 
@@ -58,7 +58,7 @@ void QDockWidgetSlots::dockLocationChanged( Qt::DockWidgetArea area )
 
 void QDockWidgetSlots::featuresChanged( QDockWidget::DockWidgetFeatures features )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
 
@@ -76,7 +76,7 @@ void QDockWidgetSlots::featuresChanged( QDockWidget::DockWidgetFeatures features
 
 void QDockWidgetSlots::topLevelChanged( bool topLevel )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "topLevelChanged(bool)" );
 
@@ -94,7 +94,7 @@ void QDockWidgetSlots::topLevelChanged( bool topLevel )
 
 void QDockWidgetSlots::visibilityChanged( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibilityChanged(bool)" );
 
@@ -116,19 +116,19 @@ void QDockWidgetSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QDockWidgetSlots * s = QCoreApplication::instance()->findChild<QDockWidgetSlots *>();
+    QDockWidgetSlots * s = QCoreApplication::instance()->findChild<QDockWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QDockWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

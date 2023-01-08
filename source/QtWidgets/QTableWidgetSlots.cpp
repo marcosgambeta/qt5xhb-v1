@@ -22,7 +22,7 @@ QTableWidgetSlots::~QTableWidgetSlots()
 
 void QTableWidgetSlots::cellActivated( int row, int column )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cellActivated(int,int)" );
 
@@ -42,7 +42,7 @@ void QTableWidgetSlots::cellActivated( int row, int column )
 
 void QTableWidgetSlots::cellChanged( int row, int column )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cellChanged(int,int)" );
 
@@ -62,7 +62,7 @@ void QTableWidgetSlots::cellChanged( int row, int column )
 
 void QTableWidgetSlots::cellClicked( int row, int column )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cellClicked(int,int)" );
 
@@ -82,7 +82,7 @@ void QTableWidgetSlots::cellClicked( int row, int column )
 
 void QTableWidgetSlots::cellDoubleClicked( int row, int column )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cellDoubleClicked(int,int)" );
 
@@ -102,7 +102,7 @@ void QTableWidgetSlots::cellDoubleClicked( int row, int column )
 
 void QTableWidgetSlots::cellEntered( int row, int column )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cellEntered(int,int)" );
 
@@ -122,7 +122,7 @@ void QTableWidgetSlots::cellEntered( int row, int column )
 
 void QTableWidgetSlots::cellPressed( int row, int column )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cellPressed(int,int)" );
 
@@ -142,7 +142,7 @@ void QTableWidgetSlots::cellPressed( int row, int column )
 
 void QTableWidgetSlots::currentCellChanged( int currentRow, int currentColumn, int previousRow, int previousColumn )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentCellChanged(int,int,int,int)" );
 
@@ -166,7 +166,7 @@ void QTableWidgetSlots::currentCellChanged( int currentRow, int currentColumn, i
 
 void QTableWidgetSlots::currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
 
@@ -186,7 +186,7 @@ void QTableWidgetSlots::currentItemChanged( QTableWidgetItem * current, QTableWi
 
 void QTableWidgetSlots::itemActivated( QTableWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemActivated(QTableWidgetItem*)" );
 
@@ -204,7 +204,7 @@ void QTableWidgetSlots::itemActivated( QTableWidgetItem * item )
 
 void QTableWidgetSlots::itemChanged( QTableWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemChanged(QTableWidgetItem*)" );
 
@@ -222,7 +222,7 @@ void QTableWidgetSlots::itemChanged( QTableWidgetItem * item )
 
 void QTableWidgetSlots::itemClicked( QTableWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemClicked(QTableWidgetItem*)" );
 
@@ -240,7 +240,7 @@ void QTableWidgetSlots::itemClicked( QTableWidgetItem * item )
 
 void QTableWidgetSlots::itemDoubleClicked( QTableWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemDoubleClicked(QTableWidgetItem*)" );
 
@@ -258,7 +258,7 @@ void QTableWidgetSlots::itemDoubleClicked( QTableWidgetItem * item )
 
 void QTableWidgetSlots::itemEntered( QTableWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemEntered(QTableWidgetItem*)" );
 
@@ -276,7 +276,7 @@ void QTableWidgetSlots::itemEntered( QTableWidgetItem * item )
 
 void QTableWidgetSlots::itemPressed( QTableWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemPressed(QTableWidgetItem*)" );
 
@@ -294,7 +294,7 @@ void QTableWidgetSlots::itemPressed( QTableWidgetItem * item )
 
 void QTableWidgetSlots::itemSelectionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemSelectionChanged()" );
 
@@ -314,19 +314,19 @@ void QTableWidgetSlots_connect_signal( const QString & signal, const QString & s
 
   if( obj )
   {
-    QTableWidgetSlots * s = QCoreApplication::instance()->findChild<QTableWidgetSlots *>();
+    QTableWidgetSlots * s = QCoreApplication::instance()->findChild<QTableWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QTableWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

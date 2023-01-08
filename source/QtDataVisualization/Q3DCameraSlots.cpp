@@ -22,7 +22,7 @@ Q3DCameraSlots::~Q3DCameraSlots()
 
 void Q3DCameraSlots::cameraPresetChanged( Q3DCamera::CameraPreset preset )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cameraPresetChanged(Q3DCamera::CameraPreset)" );
 
@@ -40,7 +40,7 @@ void Q3DCameraSlots::cameraPresetChanged( Q3DCamera::CameraPreset preset )
 
 void Q3DCameraSlots::maxZoomLevelChanged( float zoomLevel )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxZoomLevelChanged(float)" );
 
@@ -58,7 +58,7 @@ void Q3DCameraSlots::maxZoomLevelChanged( float zoomLevel )
 
 void Q3DCameraSlots::minZoomLevelChanged( float zoomLevel )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minZoomLevelChanged(float)" );
 
@@ -76,7 +76,7 @@ void Q3DCameraSlots::minZoomLevelChanged( float zoomLevel )
 
 void Q3DCameraSlots::targetChanged( const QVector3D & target )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "targetChanged(QVector3D)" );
 
@@ -94,7 +94,7 @@ void Q3DCameraSlots::targetChanged( const QVector3D & target )
 
 void Q3DCameraSlots::wrapXRotationChanged( bool isEnabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "wrapXRotationChanged(bool)" );
 
@@ -112,7 +112,7 @@ void Q3DCameraSlots::wrapXRotationChanged( bool isEnabled )
 
 void Q3DCameraSlots::wrapYRotationChanged( bool isEnabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "wrapYRotationChanged(bool)" );
 
@@ -130,7 +130,7 @@ void Q3DCameraSlots::wrapYRotationChanged( bool isEnabled )
 
 void Q3DCameraSlots::xRotationChanged( float rotation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xRotationChanged(float)" );
 
@@ -148,7 +148,7 @@ void Q3DCameraSlots::xRotationChanged( float rotation )
 
 void Q3DCameraSlots::yRotationChanged( float rotation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yRotationChanged(float)" );
 
@@ -166,7 +166,7 @@ void Q3DCameraSlots::yRotationChanged( float rotation )
 
 void Q3DCameraSlots::zoomLevelChanged( float zoomLevel )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zoomLevelChanged(float)" );
 
@@ -188,19 +188,19 @@ void Q3DCameraSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj )
   {
-    Q3DCameraSlots * s = QCoreApplication::instance()->findChild<Q3DCameraSlots *>();
+    Q3DCameraSlots * s = QCoreApplication::instance()->findChild<Q3DCameraSlots*>();
 
     if( s == NULL )
     {
       s = new Q3DCameraSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

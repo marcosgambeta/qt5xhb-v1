@@ -22,7 +22,7 @@ QCalendarWidgetSlots::~QCalendarWidgetSlots()
 
 void QCalendarWidgetSlots::activated( const QDate & date )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activated(QDate)" );
 
@@ -40,7 +40,7 @@ void QCalendarWidgetSlots::activated( const QDate & date )
 
 void QCalendarWidgetSlots::clicked( const QDate & date )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QDate)" );
 
@@ -58,7 +58,7 @@ void QCalendarWidgetSlots::clicked( const QDate & date )
 
 void QCalendarWidgetSlots::currentPageChanged( int year, int month )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentPageChanged(int,int)" );
 
@@ -78,7 +78,7 @@ void QCalendarWidgetSlots::currentPageChanged( int year, int month )
 
 void QCalendarWidgetSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
@@ -98,19 +98,19 @@ void QCalendarWidgetSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QCalendarWidgetSlots * s = QCoreApplication::instance()->findChild<QCalendarWidgetSlots *>();
+    QCalendarWidgetSlots * s = QCoreApplication::instance()->findChild<QCalendarWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QCalendarWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

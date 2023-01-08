@@ -22,7 +22,7 @@ QNetworkReplySlots::~QNetworkReplySlots()
 
 void QNetworkReplySlots::downloadProgress( qint64 bytesReceived, qint64 bytesTotal )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "downloadProgress(qint64,qint64)" );
 
@@ -42,7 +42,7 @@ void QNetworkReplySlots::downloadProgress( qint64 bytesReceived, qint64 bytesTot
 
 void QNetworkReplySlots::error( QNetworkReply::NetworkError code )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QNetworkReply::NetworkError)" );
 
@@ -60,7 +60,7 @@ void QNetworkReplySlots::error( QNetworkReply::NetworkError code )
 
 void QNetworkReplySlots::finished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -76,7 +76,7 @@ void QNetworkReplySlots::finished()
 
 void QNetworkReplySlots::metaDataChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged()" );
 
@@ -92,7 +92,7 @@ void QNetworkReplySlots::metaDataChanged()
 
 void QNetworkReplySlots::uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "uploadProgress(qint64,qint64)" );
 
@@ -113,7 +113,7 @@ void QNetworkReplySlots::uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QNetworkReplySlots::encrypted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "encrypted()" );
 
@@ -130,7 +130,7 @@ void QNetworkReplySlots::encrypted()
 
 void QNetworkReplySlots::sslErrors( const QList<QSslError> & errors )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
 
@@ -171,7 +171,7 @@ void QNetworkReplySlots::sslErrors( const QList<QSslError> & errors )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
 void QNetworkReplySlots::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
 
@@ -191,7 +191,7 @@ void QNetworkReplySlots::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAut
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 void QNetworkReplySlots::redirected( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "redirected(QUrl)" );
 
@@ -211,7 +211,7 @@ void QNetworkReplySlots::redirected( const QUrl & url )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QNetworkReplySlots::redirectAllowed()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "redirectAllowed()" );
 
@@ -232,19 +232,19 @@ void QNetworkReplySlots_connect_signal( const QString & signal, const QString & 
 
   if( obj )
   {
-    QNetworkReplySlots * s = QCoreApplication::instance()->findChild<QNetworkReplySlots *>();
+    QNetworkReplySlots * s = QCoreApplication::instance()->findChild<QNetworkReplySlots*>();
 
     if( s == NULL )
     {
       s = new QNetworkReplySlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

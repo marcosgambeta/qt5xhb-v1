@@ -23,7 +23,7 @@ QOAuth1Slots::~QOAuth1Slots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QOAuth1Slots::clientSharedSecretChanged( const QString & credential )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clientSharedSecretChanged(QString)" );
 
@@ -43,7 +43,7 @@ void QOAuth1Slots::clientSharedSecretChanged( const QString & credential )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QOAuth1Slots::signatureMethodChanged( QOAuth1::SignatureMethod method )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "signatureMethodChanged(QOAuth1::SignatureMethod)" );
 
@@ -63,7 +63,7 @@ void QOAuth1Slots::signatureMethodChanged( QOAuth1::SignatureMethod method )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QOAuth1Slots::temporaryCredentialsUrlChanged( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "temporaryCredentialsUrlChanged(QUrl)" );
 
@@ -83,7 +83,7 @@ void QOAuth1Slots::temporaryCredentialsUrlChanged( const QUrl & url )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QOAuth1Slots::tokenCredentialsUrlChanged( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tokenCredentialsUrlChanged(QUrl)" );
 
@@ -103,7 +103,7 @@ void QOAuth1Slots::tokenCredentialsUrlChanged( const QUrl & url )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QOAuth1Slots::tokenSecretChanged( const QString & token )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tokenSecretChanged(QString)" );
 
@@ -127,22 +127,22 @@ void QOAuth1Slots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QOAuth1Slots * s = QCoreApplication::instance()->findChild<QOAuth1Slots *>();
+    QOAuth1Slots * s = QCoreApplication::instance()->findChild<QOAuth1Slots*>();
 
     if( s == NULL )
     {
       s = new QOAuth1Slots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

@@ -22,7 +22,7 @@ QDoubleSpinBoxSlots::~QDoubleSpinBoxSlots()
 
 void QDoubleSpinBoxSlots::valueChanged( double d )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(double)" );
 
@@ -40,7 +40,7 @@ void QDoubleSpinBoxSlots::valueChanged( double d )
 
 void QDoubleSpinBoxSlots::valueChanged( const QString & text )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(QString)" );
 
@@ -62,19 +62,19 @@ void QDoubleSpinBoxSlots_connect_signal( const QString & signal, const QString &
 
   if( obj )
   {
-    QDoubleSpinBoxSlots * s = QCoreApplication::instance()->findChild<QDoubleSpinBoxSlots *>();
+    QDoubleSpinBoxSlots * s = QCoreApplication::instance()->findChild<QDoubleSpinBoxSlots*>();
 
     if( s == NULL )
     {
       s = new QDoubleSpinBoxSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -22,7 +22,7 @@ QCameraExposureSlots::~QCameraExposureSlots()
 
 void QCameraExposureSlots::apertureChanged( qreal value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "apertureChanged(qreal)" );
 
@@ -40,7 +40,7 @@ void QCameraExposureSlots::apertureChanged( qreal value )
 
 void QCameraExposureSlots::apertureRangeChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "apertureRangeChanged()" );
 
@@ -56,7 +56,7 @@ void QCameraExposureSlots::apertureRangeChanged()
 
 void QCameraExposureSlots::exposureCompensationChanged( qreal value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "exposureCompensationChanged(qreal)" );
 
@@ -74,7 +74,7 @@ void QCameraExposureSlots::exposureCompensationChanged( qreal value )
 
 void QCameraExposureSlots::flashReady( bool ready )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "flashReady(bool)" );
 
@@ -92,7 +92,7 @@ void QCameraExposureSlots::flashReady( bool ready )
 
 void QCameraExposureSlots::isoSensitivityChanged( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "isoSensitivityChanged(int)" );
 
@@ -110,7 +110,7 @@ void QCameraExposureSlots::isoSensitivityChanged( int value )
 
 void QCameraExposureSlots::shutterSpeedChanged( qreal speed )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "shutterSpeedChanged(qreal)" );
 
@@ -128,7 +128,7 @@ void QCameraExposureSlots::shutterSpeedChanged( qreal speed )
 
 void QCameraExposureSlots::shutterSpeedRangeChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "shutterSpeedRangeChanged()" );
 
@@ -148,19 +148,19 @@ void QCameraExposureSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QCameraExposureSlots * s = QCoreApplication::instance()->findChild<QCameraExposureSlots *>();
+    QCameraExposureSlots * s = QCoreApplication::instance()->findChild<QCameraExposureSlots*>();
 
     if( s == NULL )
     {
       s = new QCameraExposureSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

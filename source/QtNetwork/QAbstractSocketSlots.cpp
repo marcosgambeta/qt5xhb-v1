@@ -22,7 +22,7 @@ QAbstractSocketSlots::~QAbstractSocketSlots()
 
 void QAbstractSocketSlots::connected()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "connected()" );
 
@@ -38,7 +38,7 @@ void QAbstractSocketSlots::connected()
 
 void QAbstractSocketSlots::disconnected()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "disconnected()" );
 
@@ -54,7 +54,7 @@ void QAbstractSocketSlots::disconnected()
 
 void QAbstractSocketSlots::error( QAbstractSocket::SocketError socketError )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QAbstractSocket::SocketError)" );
 
@@ -72,7 +72,7 @@ void QAbstractSocketSlots::error( QAbstractSocket::SocketError socketError )
 
 void QAbstractSocketSlots::hostFound()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hostFound()" );
 
@@ -88,7 +88,7 @@ void QAbstractSocketSlots::hostFound()
 
 void QAbstractSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
@@ -108,7 +108,7 @@ void QAbstractSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & pr
 
 void QAbstractSocketSlots::stateChanged( QAbstractSocket::SocketState socketState )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QAbstractSocket::SocketState)" );
 
@@ -130,19 +130,19 @@ void QAbstractSocketSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QAbstractSocketSlots * s = QCoreApplication::instance()->findChild<QAbstractSocketSlots *>();
+    QAbstractSocketSlots * s = QCoreApplication::instance()->findChild<QAbstractSocketSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractSocketSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

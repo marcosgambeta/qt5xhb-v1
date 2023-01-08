@@ -22,7 +22,7 @@ QAbstract3DAxisSlots::~QAbstract3DAxisSlots()
 
 void QAbstract3DAxisSlots::autoAdjustRangeChanged( bool autoAdjust )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoAdjustRangeChanged(bool)" );
 
@@ -40,7 +40,7 @@ void QAbstract3DAxisSlots::autoAdjustRangeChanged( bool autoAdjust )
 
 void QAbstract3DAxisSlots::labelAutoRotationChanged( float angle )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelAutoRotationChanged(float)" );
 
@@ -58,7 +58,7 @@ void QAbstract3DAxisSlots::labelAutoRotationChanged( float angle )
 
 void QAbstract3DAxisSlots::labelsChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsChanged()" );
 
@@ -74,7 +74,7 @@ void QAbstract3DAxisSlots::labelsChanged()
 
 void QAbstract3DAxisSlots::maxChanged( float value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxChanged(float)" );
 
@@ -92,7 +92,7 @@ void QAbstract3DAxisSlots::maxChanged( float value )
 
 void QAbstract3DAxisSlots::minChanged( float value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minChanged(float)" );
 
@@ -110,7 +110,7 @@ void QAbstract3DAxisSlots::minChanged( float value )
 
 void QAbstract3DAxisSlots::orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "orientationChanged(QAbstract3DAxis::AxisOrientation)" );
 
@@ -128,7 +128,7 @@ void QAbstract3DAxisSlots::orientationChanged( QAbstract3DAxis::AxisOrientation 
 
 void QAbstract3DAxisSlots::rangeChanged( float min, float max )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rangeChanged(float,float)" );
 
@@ -148,7 +148,7 @@ void QAbstract3DAxisSlots::rangeChanged( float min, float max )
 
 void QAbstract3DAxisSlots::titleChanged( const QString & newTitle )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "titleChanged(QString)" );
 
@@ -166,7 +166,7 @@ void QAbstract3DAxisSlots::titleChanged( const QString & newTitle )
 
 void QAbstract3DAxisSlots::titleFixedChanged( bool fixed )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "titleFixedChanged(bool)" );
 
@@ -184,7 +184,7 @@ void QAbstract3DAxisSlots::titleFixedChanged( bool fixed )
 
 void QAbstract3DAxisSlots::titleVisibilityChanged( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "titleVisibilityChanged(bool)" );
 
@@ -206,19 +206,19 @@ void QAbstract3DAxisSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QAbstract3DAxisSlots * s = QCoreApplication::instance()->findChild<QAbstract3DAxisSlots *>();
+    QAbstract3DAxisSlots * s = QCoreApplication::instance()->findChild<QAbstract3DAxisSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstract3DAxisSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

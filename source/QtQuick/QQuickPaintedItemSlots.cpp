@@ -22,7 +22,7 @@ QQuickPaintedItemSlots::~QQuickPaintedItemSlots()
 
 void QQuickPaintedItemSlots::contentsScaleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsScaleChanged()" );
 
@@ -38,7 +38,7 @@ void QQuickPaintedItemSlots::contentsScaleChanged()
 
 void QQuickPaintedItemSlots::contentsSizeChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsSizeChanged()" );
 
@@ -54,7 +54,7 @@ void QQuickPaintedItemSlots::contentsSizeChanged()
 
 void QQuickPaintedItemSlots::fillColorChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fillColorChanged()" );
 
@@ -70,7 +70,7 @@ void QQuickPaintedItemSlots::fillColorChanged()
 
 void QQuickPaintedItemSlots::renderTargetChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "renderTargetChanged()" );
 
@@ -90,19 +90,19 @@ void QQuickPaintedItemSlots_connect_signal( const QString & signal, const QStrin
 
   if( obj )
   {
-    QQuickPaintedItemSlots * s = QCoreApplication::instance()->findChild<QQuickPaintedItemSlots *>();
+    QQuickPaintedItemSlots * s = QCoreApplication::instance()->findChild<QQuickPaintedItemSlots*>();
 
     if( s == NULL )
     {
       s = new QQuickPaintedItemSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

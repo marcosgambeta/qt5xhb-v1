@@ -22,7 +22,7 @@ QHeightMapSurfaceDataProxySlots::~QHeightMapSurfaceDataProxySlots()
 
 void QHeightMapSurfaceDataProxySlots::heightMapChanged( const QImage & image )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "heightMapChanged(QImage)" );
 
@@ -40,7 +40,7 @@ void QHeightMapSurfaceDataProxySlots::heightMapChanged( const QImage & image )
 
 void QHeightMapSurfaceDataProxySlots::heightMapFileChanged( const QString & filename )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "heightMapFileChanged(QString)" );
 
@@ -58,7 +58,7 @@ void QHeightMapSurfaceDataProxySlots::heightMapFileChanged( const QString & file
 
 void QHeightMapSurfaceDataProxySlots::maxXValueChanged( float value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxXValueChanged(float)" );
 
@@ -76,7 +76,7 @@ void QHeightMapSurfaceDataProxySlots::maxXValueChanged( float value )
 
 void QHeightMapSurfaceDataProxySlots::maxZValueChanged( float value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxZValueChanged(float)" );
 
@@ -94,7 +94,7 @@ void QHeightMapSurfaceDataProxySlots::maxZValueChanged( float value )
 
 void QHeightMapSurfaceDataProxySlots::minXValueChanged( float value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minXValueChanged(float)" );
 
@@ -112,7 +112,7 @@ void QHeightMapSurfaceDataProxySlots::minXValueChanged( float value )
 
 void QHeightMapSurfaceDataProxySlots::minZValueChanged( float value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minZValueChanged(float)" );
 
@@ -134,19 +134,19 @@ void QHeightMapSurfaceDataProxySlots_connect_signal( const QString & signal, con
 
   if( obj )
   {
-    QHeightMapSurfaceDataProxySlots * s = QCoreApplication::instance()->findChild<QHeightMapSurfaceDataProxySlots *>();
+    QHeightMapSurfaceDataProxySlots * s = QCoreApplication::instance()->findChild<QHeightMapSurfaceDataProxySlots*>();
 
     if( s == NULL )
     {
       s = new QHeightMapSurfaceDataProxySlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

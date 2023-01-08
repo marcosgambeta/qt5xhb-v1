@@ -22,7 +22,7 @@ QMovieSlots::~QMovieSlots()
 
 void QMovieSlots::error( QImageReader::ImageReaderError error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QImageReader::ImageReaderError)" );
 
@@ -40,7 +40,7 @@ void QMovieSlots::error( QImageReader::ImageReaderError error )
 
 void QMovieSlots::finished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -56,7 +56,7 @@ void QMovieSlots::finished()
 
 void QMovieSlots::frameChanged( int frameNumber )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "frameChanged(int)" );
 
@@ -74,7 +74,7 @@ void QMovieSlots::frameChanged( int frameNumber )
 
 void QMovieSlots::resized( const QSize & size )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "resized(QSize)" );
 
@@ -92,7 +92,7 @@ void QMovieSlots::resized( const QSize & size )
 
 void QMovieSlots::started()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "started()" );
 
@@ -108,7 +108,7 @@ void QMovieSlots::started()
 
 void QMovieSlots::stateChanged( QMovie::MovieState state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QMovie::MovieState)" );
 
@@ -126,7 +126,7 @@ void QMovieSlots::stateChanged( QMovie::MovieState state )
 
 void QMovieSlots::updated( const QRect & rect )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "updated(QRect)" );
 
@@ -148,19 +148,19 @@ void QMovieSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QMovieSlots * s = QCoreApplication::instance()->findChild<QMovieSlots *>();
+    QMovieSlots * s = QCoreApplication::instance()->findChild<QMovieSlots*>();
 
     if( s == NULL )
     {
       s = new QMovieSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

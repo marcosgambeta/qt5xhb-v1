@@ -22,7 +22,7 @@ QGraphicsObjectSlots::~QGraphicsObjectSlots()
 
 void QGraphicsObjectSlots::enabledChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "enabledChanged()" );
 
@@ -38,7 +38,7 @@ void QGraphicsObjectSlots::enabledChanged()
 
 void QGraphicsObjectSlots::opacityChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "opacityChanged()" );
 
@@ -54,7 +54,7 @@ void QGraphicsObjectSlots::opacityChanged()
 
 void QGraphicsObjectSlots::parentChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "parentChanged()" );
 
@@ -70,7 +70,7 @@ void QGraphicsObjectSlots::parentChanged()
 
 void QGraphicsObjectSlots::rotationChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationChanged()" );
 
@@ -86,7 +86,7 @@ void QGraphicsObjectSlots::rotationChanged()
 
 void QGraphicsObjectSlots::scaleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scaleChanged()" );
 
@@ -102,7 +102,7 @@ void QGraphicsObjectSlots::scaleChanged()
 
 void QGraphicsObjectSlots::visibleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibleChanged()" );
 
@@ -118,7 +118,7 @@ void QGraphicsObjectSlots::visibleChanged()
 
 void QGraphicsObjectSlots::xChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xChanged()" );
 
@@ -134,7 +134,7 @@ void QGraphicsObjectSlots::xChanged()
 
 void QGraphicsObjectSlots::yChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yChanged()" );
 
@@ -150,7 +150,7 @@ void QGraphicsObjectSlots::yChanged()
 
 void QGraphicsObjectSlots::zChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zChanged()" );
 
@@ -170,19 +170,19 @@ void QGraphicsObjectSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QGraphicsObjectSlots * s = QCoreApplication::instance()->findChild<QGraphicsObjectSlots *>();
+    QGraphicsObjectSlots * s = QCoreApplication::instance()->findChild<QGraphicsObjectSlots*>();
 
     if( s == NULL )
     {
       s = new QGraphicsObjectSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

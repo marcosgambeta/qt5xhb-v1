@@ -23,7 +23,7 @@ QWebEnginePageSlots::~QWebEnginePageSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::loadStarted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadStarted()" );
 
@@ -41,7 +41,7 @@ void QWebEnginePageSlots::loadStarted()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::loadProgress( int progress )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadProgress(int)" );
 
@@ -61,7 +61,7 @@ void QWebEnginePageSlots::loadProgress( int progress )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::loadFinished( bool ok )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadFinished(bool)" );
 
@@ -81,7 +81,7 @@ void QWebEnginePageSlots::loadFinished( bool ok )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::linkHovered( const QString & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkHovered(QString)" );
 
@@ -101,7 +101,7 @@ void QWebEnginePageSlots::linkHovered( const QString & url )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
@@ -119,7 +119,7 @@ void QWebEnginePageSlots::selectionChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::geometryChangeRequested( const QRect & geom )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "geometryChangeRequested(QRect)" );
 
@@ -139,7 +139,7 @@ void QWebEnginePageSlots::geometryChangeRequested( const QRect & geom )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::windowCloseRequested()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "windowCloseRequested()" );
 
@@ -157,7 +157,7 @@ void QWebEnginePageSlots::windowCloseRequested()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::featurePermissionRequested( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" );
 
@@ -179,7 +179,7 @@ void QWebEnginePageSlots::featurePermissionRequested( const QUrl & securityOrigi
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::featurePermissionRequestCanceled( const QUrl & securityOrigin, QWebEnginePage::Feature feature )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" );
 
@@ -201,7 +201,7 @@ void QWebEnginePageSlots::featurePermissionRequestCanceled( const QUrl & securit
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::authenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "authenticationRequired(QUrl,QAuthenticator*)" );
 
@@ -223,7 +223,7 @@ void QWebEnginePageSlots::authenticationRequired( const QUrl & requestUrl, QAuth
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::proxyAuthenticationRequired( const QUrl & requestUrl, QAuthenticator * authenticator, const QString & proxyHost )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" );
 
@@ -247,7 +247,7 @@ void QWebEnginePageSlots::proxyAuthenticationRequired( const QUrl & requestUrl, 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::titleChanged( const QString & title )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "titleChanged(QString)" );
 
@@ -267,7 +267,7 @@ void QWebEnginePageSlots::titleChanged( const QString & title )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::urlChanged( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "urlChanged(QUrl)" );
 
@@ -287,7 +287,7 @@ void QWebEnginePageSlots::urlChanged( const QUrl & url )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEnginePageSlots::iconUrlChanged( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "iconUrlChanged(QUrl)" );
 
@@ -311,22 +311,22 @@ void QWebEnginePageSlots_connect_signal( const QString & signal, const QString &
 
   if( obj )
   {
-    QWebEnginePageSlots * s = QCoreApplication::instance()->findChild<QWebEnginePageSlots *>();
+    QWebEnginePageSlots * s = QCoreApplication::instance()->findChild<QWebEnginePageSlots*>();
 
     if( s == NULL )
     {
       s = new QWebEnginePageSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

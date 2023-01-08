@@ -23,7 +23,7 @@ QGeoPositionInfoSourceSlots::~QGeoPositionInfoSourceSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QGeoPositionInfoSourceSlots::positionUpdated( const QGeoPositionInfo & update )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionUpdated(QGeoPositionInfo)" );
 
@@ -43,7 +43,7 @@ void QGeoPositionInfoSourceSlots::positionUpdated( const QGeoPositionInfo & upda
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QGeoPositionInfoSourceSlots::updateTimeout()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "updateTimeout()" );
 
@@ -61,7 +61,7 @@ void QGeoPositionInfoSourceSlots::updateTimeout()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QGeoPositionInfoSourceSlots::error( QGeoPositionInfoSource::Error error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QGeoPositionInfoSource::Error)" );
 
@@ -85,22 +85,22 @@ void QGeoPositionInfoSourceSlots_connect_signal( const QString & signal, const Q
 
   if( obj )
   {
-    QGeoPositionInfoSourceSlots * s = QCoreApplication::instance()->findChild<QGeoPositionInfoSourceSlots *>();
+    QGeoPositionInfoSourceSlots * s = QCoreApplication::instance()->findChild<QGeoPositionInfoSourceSlots*>();
 
     if( s == NULL )
     {
       s = new QGeoPositionInfoSourceSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

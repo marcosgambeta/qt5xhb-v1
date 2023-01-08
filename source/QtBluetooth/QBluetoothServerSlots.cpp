@@ -23,7 +23,7 @@ QBluetoothServerSlots::~QBluetoothServerSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothServerSlots::newConnection()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "newConnection()" );
 
@@ -41,7 +41,7 @@ void QBluetoothServerSlots::newConnection()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothServerSlots::error( QBluetoothServer::Error error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QBluetoothServer::Error)" );
 
@@ -65,22 +65,22 @@ void QBluetoothServerSlots_connect_signal( const QString & signal, const QString
 
   if( obj )
   {
-    QBluetoothServerSlots * s = QCoreApplication::instance()->findChild<QBluetoothServerSlots *>();
+    QBluetoothServerSlots * s = QCoreApplication::instance()->findChild<QBluetoothServerSlots*>();
 
     if( s == NULL )
     {
       s = new QBluetoothServerSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

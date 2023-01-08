@@ -23,7 +23,7 @@ QHBarModelMapperSlots::~QHBarModelMapperSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QHBarModelMapperSlots::columnCountChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnCountChanged()" );
 
@@ -41,7 +41,7 @@ void QHBarModelMapperSlots::columnCountChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QHBarModelMapperSlots::firstBarSetRowChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstBarSetRowChanged()" );
 
@@ -59,7 +59,7 @@ void QHBarModelMapperSlots::firstBarSetRowChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QHBarModelMapperSlots::firstColumnChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstColumnChanged()" );
 
@@ -77,7 +77,7 @@ void QHBarModelMapperSlots::firstColumnChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QHBarModelMapperSlots::lastBarSetRowChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastBarSetRowChanged()" );
 
@@ -95,7 +95,7 @@ void QHBarModelMapperSlots::lastBarSetRowChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QHBarModelMapperSlots::modelReplaced()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "modelReplaced()" );
 
@@ -113,7 +113,7 @@ void QHBarModelMapperSlots::modelReplaced()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QHBarModelMapperSlots::seriesReplaced()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesReplaced()" );
 
@@ -135,22 +135,22 @@ void QHBarModelMapperSlots_connect_signal( const QString & signal, const QString
 
   if( obj )
   {
-    QHBarModelMapperSlots * s = QCoreApplication::instance()->findChild<QHBarModelMapperSlots *>();
+    QHBarModelMapperSlots * s = QCoreApplication::instance()->findChild<QHBarModelMapperSlots*>();
 
     if( s == NULL )
     {
       s = new QHBarModelMapperSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

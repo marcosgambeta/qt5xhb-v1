@@ -23,7 +23,7 @@ QTextToSpeechSlots::~QTextToSpeechSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QTextToSpeechSlots::localeChanged( const QLocale & locale )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "localeChanged(QLocale)" );
 
@@ -43,7 +43,7 @@ void QTextToSpeechSlots::localeChanged( const QLocale & locale )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QTextToSpeechSlots::pitchChanged( double pitch )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pitchChanged(double)" );
 
@@ -63,7 +63,7 @@ void QTextToSpeechSlots::pitchChanged( double pitch )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QTextToSpeechSlots::rateChanged( double rate )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rateChanged(double)" );
 
@@ -83,7 +83,7 @@ void QTextToSpeechSlots::rateChanged( double rate )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QTextToSpeechSlots::stateChanged( QTextToSpeech::State state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QTextToSpeech::State)" );
 
@@ -103,7 +103,7 @@ void QTextToSpeechSlots::stateChanged( QTextToSpeech::State state )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QTextToSpeechSlots::voiceChanged( const QVoice & voice )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "voiceChanged(QVoice)" );
 
@@ -123,7 +123,7 @@ void QTextToSpeechSlots::voiceChanged( const QVoice & voice )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QTextToSpeechSlots::volumeChanged( int volume )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "volumeChanged(int)" );
 
@@ -147,22 +147,22 @@ void QTextToSpeechSlots_connect_signal( const QString & signal, const QString & 
 
   if( obj )
   {
-    QTextToSpeechSlots * s = QCoreApplication::instance()->findChild<QTextToSpeechSlots *>();
+    QTextToSpeechSlots * s = QCoreApplication::instance()->findChild<QTextToSpeechSlots*>();
 
     if( s == NULL )
     {
       s = new QTextToSpeechSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

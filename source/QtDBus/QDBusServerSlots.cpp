@@ -22,7 +22,7 @@ QDBusServerSlots::~QDBusServerSlots()
 
 void QDBusServerSlots::newConnection( const QDBusConnection & connection )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "newConnection(QDBusConnection)" );
 
@@ -44,19 +44,19 @@ void QDBusServerSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QDBusServerSlots * s = QCoreApplication::instance()->findChild<QDBusServerSlots *>();
+    QDBusServerSlots * s = QCoreApplication::instance()->findChild<QDBusServerSlots*>();
 
     if( s == NULL )
     {
       s = new QDBusServerSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

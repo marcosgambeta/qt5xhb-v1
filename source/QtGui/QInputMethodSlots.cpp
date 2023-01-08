@@ -22,7 +22,7 @@ QInputMethodSlots::~QInputMethodSlots()
 
 void QInputMethodSlots::animatingChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "animatingChanged()" );
 
@@ -38,7 +38,7 @@ void QInputMethodSlots::animatingChanged()
 
 void QInputMethodSlots::cursorRectangleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cursorRectangleChanged()" );
 
@@ -54,7 +54,7 @@ void QInputMethodSlots::cursorRectangleChanged()
 
 void QInputMethodSlots::inputDirectionChanged( Qt::LayoutDirection newDirection )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "inputDirectionChanged(Qt::LayoutDirection)" );
 
@@ -72,7 +72,7 @@ void QInputMethodSlots::inputDirectionChanged( Qt::LayoutDirection newDirection 
 
 void QInputMethodSlots::keyboardRectangleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "keyboardRectangleChanged()" );
 
@@ -88,7 +88,7 @@ void QInputMethodSlots::keyboardRectangleChanged()
 
 void QInputMethodSlots::localeChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "localeChanged()" );
 
@@ -104,7 +104,7 @@ void QInputMethodSlots::localeChanged()
 
 void QInputMethodSlots::visibleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibleChanged()" );
 
@@ -124,19 +124,19 @@ void QInputMethodSlots_connect_signal( const QString & signal, const QString & s
 
   if( obj )
   {
-    QInputMethodSlots * s = QCoreApplication::instance()->findChild<QInputMethodSlots *>();
+    QInputMethodSlots * s = QCoreApplication::instance()->findChild<QInputMethodSlots*>();
 
     if( s == NULL )
     {
       s = new QInputMethodSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -22,7 +22,7 @@ Q3DScatterSlots::~Q3DScatterSlots()
 
 void Q3DScatterSlots::axisXChanged( QValue3DAxis * axis )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisXChanged(QValue3DAxis*)" );
 
@@ -40,7 +40,7 @@ void Q3DScatterSlots::axisXChanged( QValue3DAxis * axis )
 
 void Q3DScatterSlots::axisYChanged( QValue3DAxis * axis )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisYChanged(QValue3DAxis*)" );
 
@@ -58,7 +58,7 @@ void Q3DScatterSlots::axisYChanged( QValue3DAxis * axis )
 
 void Q3DScatterSlots::axisZChanged( QValue3DAxis * axis )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisZChanged(QValue3DAxis*)" );
 
@@ -76,7 +76,7 @@ void Q3DScatterSlots::axisZChanged( QValue3DAxis * axis )
 
 void Q3DScatterSlots::selectedSeriesChanged( QScatter3DSeries * series )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedSeriesChanged(QScatter3DSeries*)" );
 
@@ -98,19 +98,19 @@ void Q3DScatterSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj )
   {
-    Q3DScatterSlots * s = QCoreApplication::instance()->findChild<Q3DScatterSlots *>();
+    Q3DScatterSlots * s = QCoreApplication::instance()->findChild<Q3DScatterSlots*>();
 
     if( s == NULL )
     {
       s = new Q3DScatterSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

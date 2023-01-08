@@ -22,7 +22,7 @@ QCameraSlots::~QCameraSlots()
 
 void QCameraSlots::captureModeChanged( QCamera::CaptureModes mode )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "captureModeChanged(QCamera::CaptureModes)" );
 
@@ -40,7 +40,7 @@ void QCameraSlots::captureModeChanged( QCamera::CaptureModes mode )
 
 void QCameraSlots::error( QCamera::Error value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QCamera::Error)" );
 
@@ -58,7 +58,7 @@ void QCameraSlots::error( QCamera::Error value )
 
 void QCameraSlots::lockFailed()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lockFailed()" );
 
@@ -74,7 +74,7 @@ void QCameraSlots::lockFailed()
 
 void QCameraSlots::lockStatusChanged( QCamera::LockStatus status, QCamera::LockChangeReason reason )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)" );
 
@@ -94,7 +94,7 @@ void QCameraSlots::lockStatusChanged( QCamera::LockStatus status, QCamera::LockC
 
 void QCameraSlots::lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" );
 
@@ -116,7 +116,7 @@ void QCameraSlots::lockStatusChanged( QCamera::LockType lock, QCamera::LockStatu
 
 void QCameraSlots::locked()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "locked()" );
 
@@ -132,7 +132,7 @@ void QCameraSlots::locked()
 
 void QCameraSlots::stateChanged( QCamera::State state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QCamera::State)" );
 
@@ -150,7 +150,7 @@ void QCameraSlots::stateChanged( QCamera::State state )
 
 void QCameraSlots::statusChanged( QCamera::Status status )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QCamera::Status)" );
 
@@ -172,19 +172,19 @@ void QCameraSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QCameraSlots * s = QCoreApplication::instance()->findChild<QCameraSlots *>();
+    QCameraSlots * s = QCoreApplication::instance()->findChild<QCameraSlots*>();
 
     if( s == NULL )
     {
       s = new QCameraSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

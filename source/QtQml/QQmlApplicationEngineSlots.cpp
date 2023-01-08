@@ -23,7 +23,7 @@ QQmlApplicationEngineSlots::~QQmlApplicationEngineSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QQmlApplicationEngineSlots::objectCreated( QObject * obj, const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "objectCreated(QObject*,QUrl)" );
 
@@ -49,22 +49,22 @@ void QQmlApplicationEngineSlots_connect_signal( const QString & signal, const QS
 
   if( obj )
   {
-    QQmlApplicationEngineSlots * s = QCoreApplication::instance()->findChild<QQmlApplicationEngineSlots *>();
+    QQmlApplicationEngineSlots * s = QCoreApplication::instance()->findChild<QQmlApplicationEngineSlots*>();
 
     if( s == NULL )
     {
       s = new QQmlApplicationEngineSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

@@ -22,7 +22,7 @@ QScatterDataProxySlots::~QScatterDataProxySlots()
 
 void QScatterDataProxySlots::arrayReset()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "arrayReset()" );
 
@@ -38,7 +38,7 @@ void QScatterDataProxySlots::arrayReset()
 
 void QScatterDataProxySlots::itemCountChanged( int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemCountChanged(int)" );
 
@@ -56,7 +56,7 @@ void QScatterDataProxySlots::itemCountChanged( int count )
 
 void QScatterDataProxySlots::itemsAdded( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemsAdded(int,int)" );
 
@@ -76,7 +76,7 @@ void QScatterDataProxySlots::itemsAdded( int startIndex, int count )
 
 void QScatterDataProxySlots::itemsChanged( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemsChanged(int,int)" );
 
@@ -96,7 +96,7 @@ void QScatterDataProxySlots::itemsChanged( int startIndex, int count )
 
 void QScatterDataProxySlots::itemsInserted( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemsInserted(int,int)" );
 
@@ -116,7 +116,7 @@ void QScatterDataProxySlots::itemsInserted( int startIndex, int count )
 
 void QScatterDataProxySlots::itemsRemoved( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemsRemoved(int,int)" );
 
@@ -136,7 +136,7 @@ void QScatterDataProxySlots::itemsRemoved( int startIndex, int count )
 
 void QScatterDataProxySlots::seriesChanged( QScatter3DSeries * series )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesChanged(QScatter3DSeries*)" );
 
@@ -158,19 +158,19 @@ void QScatterDataProxySlots_connect_signal( const QString & signal, const QStrin
 
   if( obj )
   {
-    QScatterDataProxySlots * s = QCoreApplication::instance()->findChild<QScatterDataProxySlots *>();
+    QScatterDataProxySlots * s = QCoreApplication::instance()->findChild<QScatterDataProxySlots*>();
 
     if( s == NULL )
     {
       s = new QScatterDataProxySlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

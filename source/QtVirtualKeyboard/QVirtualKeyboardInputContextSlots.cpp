@@ -23,7 +23,7 @@ QVirtualKeyboardInputContextSlots::~QVirtualKeyboardInputContextSlots()
 
 void QVirtualKeyboardInputContextSlots::preeditTextChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "preeditTextChanged()" );
 
@@ -39,7 +39,7 @@ void QVirtualKeyboardInputContextSlots::preeditTextChanged()
 
 void QVirtualKeyboardInputContextSlots::inputMethodHintsChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "inputMethodHintsChanged()" );
 
@@ -55,7 +55,7 @@ void QVirtualKeyboardInputContextSlots::inputMethodHintsChanged()
 
 void QVirtualKeyboardInputContextSlots::surroundingTextChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "surroundingTextChanged()" );
 
@@ -71,7 +71,7 @@ void QVirtualKeyboardInputContextSlots::surroundingTextChanged()
 
 void QVirtualKeyboardInputContextSlots::selectedTextChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedTextChanged()" );
 
@@ -87,7 +87,7 @@ void QVirtualKeyboardInputContextSlots::selectedTextChanged()
 
 void QVirtualKeyboardInputContextSlots::anchorPositionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "anchorPositionChanged()" );
 
@@ -103,7 +103,7 @@ void QVirtualKeyboardInputContextSlots::anchorPositionChanged()
 
 void QVirtualKeyboardInputContextSlots::cursorPositionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cursorPositionChanged()" );
 
@@ -119,7 +119,7 @@ void QVirtualKeyboardInputContextSlots::cursorPositionChanged()
 
 void QVirtualKeyboardInputContextSlots::anchorRectangleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "anchorRectangleChanged()" );
 
@@ -135,7 +135,7 @@ void QVirtualKeyboardInputContextSlots::anchorRectangleChanged()
 
 void QVirtualKeyboardInputContextSlots::cursorRectangleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cursorRectangleChanged()" );
 
@@ -151,7 +151,7 @@ void QVirtualKeyboardInputContextSlots::cursorRectangleChanged()
 
 void QVirtualKeyboardInputContextSlots::shiftActiveChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "shiftActiveChanged()" );
 
@@ -167,7 +167,7 @@ void QVirtualKeyboardInputContextSlots::shiftActiveChanged()
 
 void QVirtualKeyboardInputContextSlots::capsLockActiveChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "capsLockActiveChanged()" );
 
@@ -183,7 +183,7 @@ void QVirtualKeyboardInputContextSlots::capsLockActiveChanged()
 
 void QVirtualKeyboardInputContextSlots::uppercaseChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "uppercaseChanged()" );
 
@@ -199,7 +199,7 @@ void QVirtualKeyboardInputContextSlots::uppercaseChanged()
 
 void QVirtualKeyboardInputContextSlots::animatingChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "animatingChanged()" );
 
@@ -215,7 +215,7 @@ void QVirtualKeyboardInputContextSlots::animatingChanged()
 
 void QVirtualKeyboardInputContextSlots::localeChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "localeChanged()" );
 
@@ -231,7 +231,7 @@ void QVirtualKeyboardInputContextSlots::localeChanged()
 
 void QVirtualKeyboardInputContextSlots::selectionControlVisibleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionControlVisibleChanged()" );
 
@@ -247,7 +247,7 @@ void QVirtualKeyboardInputContextSlots::selectionControlVisibleChanged()
 
 void QVirtualKeyboardInputContextSlots::anchorRectIntersectsClipRectChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "anchorRectIntersectsClipRectChanged()" );
 
@@ -263,7 +263,7 @@ void QVirtualKeyboardInputContextSlots::anchorRectIntersectsClipRectChanged()
 
 void QVirtualKeyboardInputContextSlots::cursorRectIntersectsClipRectChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cursorRectIntersectsClipRectChanged()" );
 
@@ -283,19 +283,19 @@ void QVirtualKeyboardInputContextSlots_connect_signal( const QString & signal, c
 
   if( obj )
   {
-    QVirtualKeyboardInputContextSlots * s = QCoreApplication::instance()->findChild<QVirtualKeyboardInputContextSlots *>();
+    QVirtualKeyboardInputContextSlots * s = QCoreApplication::instance()->findChild<QVirtualKeyboardInputContextSlots*>();
 
     if( s == NULL )
     {
       s = new QVirtualKeyboardInputContextSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

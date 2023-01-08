@@ -23,7 +23,7 @@ QAbstractSeriesSlots::~QAbstractSeriesSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractSeriesSlots::nameChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged()" );
 
@@ -41,7 +41,7 @@ void QAbstractSeriesSlots::nameChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractSeriesSlots::opacityChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "opacityChanged()" );
 
@@ -59,7 +59,7 @@ void QAbstractSeriesSlots::opacityChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractSeriesSlots::useOpenGLChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "useOpenGLChanged()" );
 
@@ -77,7 +77,7 @@ void QAbstractSeriesSlots::useOpenGLChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractSeriesSlots::visibleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibleChanged()" );
 
@@ -99,22 +99,22 @@ void QAbstractSeriesSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QAbstractSeriesSlots * s = QCoreApplication::instance()->findChild<QAbstractSeriesSlots *>();
+    QAbstractSeriesSlots * s = QCoreApplication::instance()->findChild<QAbstractSeriesSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractSeriesSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

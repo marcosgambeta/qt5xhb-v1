@@ -22,7 +22,7 @@ QSslSocketSlots::~QSslSocketSlots()
 
 void QSslSocketSlots::encrypted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "encrypted()" );
 
@@ -38,7 +38,7 @@ void QSslSocketSlots::encrypted()
 
 void QSslSocketSlots::encryptedBytesWritten( qint64 written )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "encryptedBytesWritten(qint64)" );
 
@@ -56,7 +56,7 @@ void QSslSocketSlots::encryptedBytesWritten( qint64 written )
 
 void QSslSocketSlots::modeChanged( QSslSocket::SslMode mode )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "modeChanged(QSslSocket::SslMode)" );
 
@@ -74,7 +74,7 @@ void QSslSocketSlots::modeChanged( QSslSocket::SslMode mode )
 
 void QSslSocketSlots::peerVerifyError( const QSslError & error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "peerVerifyError(QSslError)" );
 
@@ -93,7 +93,7 @@ void QSslSocketSlots::peerVerifyError( const QSslError & error )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
 void QSslSocketSlots::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
 
@@ -112,7 +112,7 @@ void QSslSocketSlots::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthen
 
 void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
 
@@ -156,19 +156,19 @@ void QSslSocketSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QSslSocketSlots * s = QCoreApplication::instance()->findChild<QSslSocketSlots *>();
+    QSslSocketSlots * s = QCoreApplication::instance()->findChild<QSslSocketSlots*>();
 
     if( s == NULL )
     {
       s = new QSslSocketSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

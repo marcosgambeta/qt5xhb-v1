@@ -22,7 +22,7 @@ QScatter3DSeriesSlots::~QScatter3DSeriesSlots()
 
 void QScatter3DSeriesSlots::dataProxyChanged( QScatterDataProxy * proxy )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataProxyChanged(QScatterDataProxy*)" );
 
@@ -40,7 +40,7 @@ void QScatter3DSeriesSlots::dataProxyChanged( QScatterDataProxy * proxy )
 
 void QScatter3DSeriesSlots::itemSizeChanged( float size )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemSizeChanged(float)" );
 
@@ -58,7 +58,7 @@ void QScatter3DSeriesSlots::itemSizeChanged( float size )
 
 void QScatter3DSeriesSlots::selectedItemChanged( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedItemChanged(int)" );
 
@@ -80,19 +80,19 @@ void QScatter3DSeriesSlots_connect_signal( const QString & signal, const QString
 
   if( obj )
   {
-    QScatter3DSeriesSlots * s = QCoreApplication::instance()->findChild<QScatter3DSeriesSlots *>();
+    QScatter3DSeriesSlots * s = QCoreApplication::instance()->findChild<QScatter3DSeriesSlots*>();
 
     if( s == NULL )
     {
       s = new QScatter3DSeriesSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

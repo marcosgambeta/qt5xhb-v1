@@ -22,7 +22,7 @@ QQuickWebEngineScriptSlots::~QQuickWebEngineScriptSlots()
 
 void QQuickWebEngineScriptSlots::injectionPointChanged( QQuickWebEngineScript::InjectionPoint injectionPoint )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "injectionPointChanged(QQuickWebEngineScript::InjectionPoint)" );
 
@@ -40,7 +40,7 @@ void QQuickWebEngineScriptSlots::injectionPointChanged( QQuickWebEngineScript::I
 
 void QQuickWebEngineScriptSlots::nameChanged( const QString & name )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged(QString)" );
 
@@ -58,7 +58,7 @@ void QQuickWebEngineScriptSlots::nameChanged( const QString & name )
 
 void QQuickWebEngineScriptSlots::runOnSubframesChanged( bool on )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "runOnSubframesChanged(bool)" );
 
@@ -76,7 +76,7 @@ void QQuickWebEngineScriptSlots::runOnSubframesChanged( bool on )
 
 void QQuickWebEngineScriptSlots::sourceCodeChanged( const QString & code )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sourceCodeChanged(QString)" );
 
@@ -94,7 +94,7 @@ void QQuickWebEngineScriptSlots::sourceCodeChanged( const QString & code )
 
 void QQuickWebEngineScriptSlots::sourceUrlChanged( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sourceUrlChanged(QUrl)" );
 
@@ -112,7 +112,7 @@ void QQuickWebEngineScriptSlots::sourceUrlChanged( const QUrl & url )
 
 void QQuickWebEngineScriptSlots::worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)" );
 
@@ -134,19 +134,19 @@ void QQuickWebEngineScriptSlots_connect_signal( const QString & signal, const QS
 
   if( obj )
   {
-    QQuickWebEngineScriptSlots * s = QCoreApplication::instance()->findChild<QQuickWebEngineScriptSlots *>();
+    QQuickWebEngineScriptSlots * s = QCoreApplication::instance()->findChild<QQuickWebEngineScriptSlots*>();
 
     if( s == NULL )
     {
       s = new QQuickWebEngineScriptSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

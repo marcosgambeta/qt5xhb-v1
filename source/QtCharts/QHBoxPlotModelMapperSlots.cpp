@@ -23,7 +23,7 @@ QHBoxPlotModelMapperSlots::~QHBoxPlotModelMapperSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QHBoxPlotModelMapperSlots::columnCountChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnCountChanged()" );
 
@@ -41,7 +41,7 @@ void QHBoxPlotModelMapperSlots::columnCountChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QHBoxPlotModelMapperSlots::firstBoxSetRowChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstBoxSetRowChanged()" );
 
@@ -59,7 +59,7 @@ void QHBoxPlotModelMapperSlots::firstBoxSetRowChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QHBoxPlotModelMapperSlots::firstColumnChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstColumnChanged()" );
 
@@ -77,7 +77,7 @@ void QHBoxPlotModelMapperSlots::firstColumnChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QHBoxPlotModelMapperSlots::lastBoxSetRowChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastBoxSetRowChanged()" );
 
@@ -95,7 +95,7 @@ void QHBoxPlotModelMapperSlots::lastBoxSetRowChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QHBoxPlotModelMapperSlots::modelReplaced()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "modelReplaced()" );
 
@@ -113,7 +113,7 @@ void QHBoxPlotModelMapperSlots::modelReplaced()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QHBoxPlotModelMapperSlots::seriesReplaced()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesReplaced()" );
 
@@ -135,22 +135,22 @@ void QHBoxPlotModelMapperSlots_connect_signal( const QString & signal, const QSt
 
   if( obj )
   {
-    QHBoxPlotModelMapperSlots * s = QCoreApplication::instance()->findChild<QHBoxPlotModelMapperSlots *>();
+    QHBoxPlotModelMapperSlots * s = QCoreApplication::instance()->findChild<QHBoxPlotModelMapperSlots*>();
 
     if( s == NULL )
     {
       s = new QHBoxPlotModelMapperSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

@@ -23,7 +23,7 @@ QXYSeriesSlots::~QXYSeriesSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::clicked( const QPointF & point )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QPointF)" );
 
@@ -43,7 +43,7 @@ void QXYSeriesSlots::clicked( const QPointF & point )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::colorChanged( QColor color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
@@ -63,7 +63,7 @@ void QXYSeriesSlots::colorChanged( QColor color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::doubleClicked( const QPointF & point )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(QPointF)" );
 
@@ -83,7 +83,7 @@ void QXYSeriesSlots::doubleClicked( const QPointF & point )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::hovered( const QPointF & point, bool state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(QPointF,bool)" );
 
@@ -105,7 +105,7 @@ void QXYSeriesSlots::hovered( const QPointF & point, bool state )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::penChanged( const QPen & pen )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "penChanged(QPen)" );
 
@@ -125,7 +125,7 @@ void QXYSeriesSlots::penChanged( const QPen & pen )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointAdded( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointAdded(int)" );
 
@@ -145,7 +145,7 @@ void QXYSeriesSlots::pointAdded( int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointLabelsClippingChanged( bool clipping )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsClippingChanged(bool)" );
 
@@ -165,7 +165,7 @@ void QXYSeriesSlots::pointLabelsClippingChanged( bool clipping )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointLabelsColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsColorChanged(QColor)" );
 
@@ -185,7 +185,7 @@ void QXYSeriesSlots::pointLabelsColorChanged( const QColor & color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointLabelsFontChanged( const QFont & font )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsFontChanged(QFont)" );
 
@@ -205,7 +205,7 @@ void QXYSeriesSlots::pointLabelsFontChanged( const QFont & font )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointLabelsFormatChanged( const QString & format )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsFormatChanged(QString)" );
 
@@ -225,7 +225,7 @@ void QXYSeriesSlots::pointLabelsFormatChanged( const QString & format )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointLabelsVisibilityChanged( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsVisibilityChanged(bool)" );
 
@@ -245,7 +245,7 @@ void QXYSeriesSlots::pointLabelsVisibilityChanged( bool visible )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointRemoved( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointRemoved(int)" );
 
@@ -265,7 +265,7 @@ void QXYSeriesSlots::pointRemoved( int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointReplaced( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointReplaced(int)" );
 
@@ -285,7 +285,7 @@ void QXYSeriesSlots::pointReplaced( int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointsRemoved( int index, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointsRemoved(int,int)" );
 
@@ -307,7 +307,7 @@ void QXYSeriesSlots::pointsRemoved( int index, int count )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointsReplaced()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointsReplaced()" );
 
@@ -325,7 +325,7 @@ void QXYSeriesSlots::pointsReplaced()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pressed( const QPointF & point )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(QPointF)" );
 
@@ -345,7 +345,7 @@ void QXYSeriesSlots::pressed( const QPointF & point )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::released( const QPointF & point )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released(QPointF)" );
 
@@ -369,22 +369,22 @@ void QXYSeriesSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QXYSeriesSlots * s = QCoreApplication::instance()->findChild<QXYSeriesSlots *>();
+    QXYSeriesSlots * s = QCoreApplication::instance()->findChild<QXYSeriesSlots*>();
 
     if( s == NULL )
     {
       s = new QXYSeriesSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

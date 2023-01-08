@@ -23,7 +23,7 @@ QBluetoothSocketSlots::~QBluetoothSocketSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothSocketSlots::connected()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "connected()" );
 
@@ -41,7 +41,7 @@ void QBluetoothSocketSlots::connected()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothSocketSlots::disconnected()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "disconnected()" );
 
@@ -59,7 +59,7 @@ void QBluetoothSocketSlots::disconnected()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothSocketSlots::error( QBluetoothSocket::SocketError error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QBluetoothSocket::SocketError)" );
 
@@ -79,7 +79,7 @@ void QBluetoothSocketSlots::error( QBluetoothSocket::SocketError error )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothSocketSlots::stateChanged( QBluetoothSocket::SocketState state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QBluetoothSocket::SocketState)" );
 
@@ -103,22 +103,22 @@ void QBluetoothSocketSlots_connect_signal( const QString & signal, const QString
 
   if( obj )
   {
-    QBluetoothSocketSlots * s = QCoreApplication::instance()->findChild<QBluetoothSocketSlots *>();
+    QBluetoothSocketSlots * s = QCoreApplication::instance()->findChild<QBluetoothSocketSlots*>();
 
     if( s == NULL )
     {
       s = new QBluetoothSocketSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

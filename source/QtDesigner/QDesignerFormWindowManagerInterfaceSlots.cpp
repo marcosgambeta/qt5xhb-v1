@@ -22,7 +22,7 @@ QDesignerFormWindowManagerInterfaceSlots::~QDesignerFormWindowManagerInterfaceSl
 
 void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged( QDesignerFormWindowInterface * formWindow )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
 
@@ -40,7 +40,7 @@ void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged( QDesigne
 
 void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded( QDesignerFormWindowInterface * formWindow )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "formWindowAdded(QDesignerFormWindowInterface*)" );
 
@@ -58,7 +58,7 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded( QDesignerFormWin
 
 void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved( QDesignerFormWindowInterface * formWindow )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "formWindowRemoved(QDesignerFormWindowInterface*)" );
 
@@ -80,19 +80,19 @@ void QDesignerFormWindowManagerInterfaceSlots_connect_signal( const QString & si
 
   if( obj )
   {
-    QDesignerFormWindowManagerInterfaceSlots * s = QCoreApplication::instance()->findChild<QDesignerFormWindowManagerInterfaceSlots *>();
+    QDesignerFormWindowManagerInterfaceSlots * s = QCoreApplication::instance()->findChild<QDesignerFormWindowManagerInterfaceSlots*>();
 
     if( s == NULL )
     {
       s = new QDesignerFormWindowManagerInterfaceSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -22,7 +22,7 @@ Q3DObjectSlots::~Q3DObjectSlots()
 
 void Q3DObjectSlots::positionChanged( const QVector3D & position )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionChanged(QVector3D)" );
 
@@ -44,19 +44,19 @@ void Q3DObjectSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj )
   {
-    Q3DObjectSlots * s = QCoreApplication::instance()->findChild<Q3DObjectSlots *>();
+    Q3DObjectSlots * s = QCoreApplication::instance()->findChild<Q3DObjectSlots*>();
 
     if( s == NULL )
     {
       s = new Q3DObjectSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -22,7 +22,7 @@ QSurfaceDataProxySlots::~QSurfaceDataProxySlots()
 
 void QSurfaceDataProxySlots::arrayReset()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "arrayReset()" );
 
@@ -38,7 +38,7 @@ void QSurfaceDataProxySlots::arrayReset()
 
 void QSurfaceDataProxySlots::columnCountChanged( int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnCountChanged(int)" );
 
@@ -56,7 +56,7 @@ void QSurfaceDataProxySlots::columnCountChanged( int count )
 
 void QSurfaceDataProxySlots::itemChanged( int rowIndex, int columnIndex )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemChanged(int,int)" );
 
@@ -76,7 +76,7 @@ void QSurfaceDataProxySlots::itemChanged( int rowIndex, int columnIndex )
 
 void QSurfaceDataProxySlots::rowCountChanged( int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCountChanged(int)" );
 
@@ -94,7 +94,7 @@ void QSurfaceDataProxySlots::rowCountChanged( int count )
 
 void QSurfaceDataProxySlots::rowsAdded( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsAdded(int,int)" );
 
@@ -114,7 +114,7 @@ void QSurfaceDataProxySlots::rowsAdded( int startIndex, int count )
 
 void QSurfaceDataProxySlots::rowsChanged( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsChanged(int,int)" );
 
@@ -134,7 +134,7 @@ void QSurfaceDataProxySlots::rowsChanged( int startIndex, int count )
 
 void QSurfaceDataProxySlots::rowsInserted( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsInserted(int,int)" );
 
@@ -154,7 +154,7 @@ void QSurfaceDataProxySlots::rowsInserted( int startIndex, int count )
 
 void QSurfaceDataProxySlots::rowsRemoved( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsRemoved(int,int)" );
 
@@ -174,7 +174,7 @@ void QSurfaceDataProxySlots::rowsRemoved( int startIndex, int count )
 
 void QSurfaceDataProxySlots::seriesChanged( QSurface3DSeries * series )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesChanged(QSurface3DSeries*)" );
 
@@ -196,19 +196,19 @@ void QSurfaceDataProxySlots_connect_signal( const QString & signal, const QStrin
 
   if( obj )
   {
-    QSurfaceDataProxySlots * s = QCoreApplication::instance()->findChild<QSurfaceDataProxySlots *>();
+    QSurfaceDataProxySlots * s = QCoreApplication::instance()->findChild<QSurfaceDataProxySlots*>();
 
     if( s == NULL )
     {
       s = new QSurfaceDataProxySlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

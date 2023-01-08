@@ -22,7 +22,7 @@ QAbstractTextDocumentLayoutSlots::~QAbstractTextDocumentLayoutSlots()
 
 void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSize )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "documentSizeChanged(QSizeF)" );
 
@@ -40,7 +40,7 @@ void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSi
 
 void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pageCountChanged(int)" );
 
@@ -58,7 +58,7 @@ void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
 
 void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "update(QRectF)" );
 
@@ -76,7 +76,7 @@ void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
 
 void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "updateBlock(QTextBlock)" );
 
@@ -98,19 +98,19 @@ void QAbstractTextDocumentLayoutSlots_connect_signal( const QString & signal, co
 
   if( obj )
   {
-    QAbstractTextDocumentLayoutSlots * s = QCoreApplication::instance()->findChild<QAbstractTextDocumentLayoutSlots *>();
+    QAbstractTextDocumentLayoutSlots * s = QCoreApplication::instance()->findChild<QAbstractTextDocumentLayoutSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractTextDocumentLayoutSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -22,7 +22,7 @@ QGuiApplicationSlots::~QGuiApplicationSlots()
 
 void QGuiApplicationSlots::focusObjectChanged( QObject * focusObject )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "focusObjectChanged(QObject*)" );
 
@@ -40,7 +40,7 @@ void QGuiApplicationSlots::focusObjectChanged( QObject * focusObject )
 
 void QGuiApplicationSlots::focusWindowChanged( QWindow * focusWindow )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "focusWindowChanged(QWindow*)" );
 
@@ -58,7 +58,7 @@ void QGuiApplicationSlots::focusWindowChanged( QWindow * focusWindow )
 
 void QGuiApplicationSlots::fontDatabaseChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fontDatabaseChanged()" );
 
@@ -74,7 +74,7 @@ void QGuiApplicationSlots::fontDatabaseChanged()
 
 void QGuiApplicationSlots::lastWindowClosed()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastWindowClosed()" );
 
@@ -90,7 +90,7 @@ void QGuiApplicationSlots::lastWindowClosed()
 
 void QGuiApplicationSlots::screenAdded( QScreen * screen )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "screenAdded(QScreen*)" );
 
@@ -112,19 +112,19 @@ void QGuiApplicationSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QGuiApplicationSlots * s = QCoreApplication::instance()->findChild<QGuiApplicationSlots *>();
+    QGuiApplicationSlots * s = QCoreApplication::instance()->findChild<QGuiApplicationSlots*>();
 
     if( s == NULL )
     {
       s = new QGuiApplicationSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

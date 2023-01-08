@@ -22,7 +22,7 @@ QAbstractItemViewSlots::~QAbstractItemViewSlots()
 
 void QAbstractItemViewSlots::activated( const QModelIndex & index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activated(QModelIndex)" );
 
@@ -40,7 +40,7 @@ void QAbstractItemViewSlots::activated( const QModelIndex & index )
 
 void QAbstractItemViewSlots::clicked( const QModelIndex & index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QModelIndex)" );
 
@@ -58,7 +58,7 @@ void QAbstractItemViewSlots::clicked( const QModelIndex & index )
 
 void QAbstractItemViewSlots::doubleClicked( const QModelIndex & index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(QModelIndex)" );
 
@@ -76,7 +76,7 @@ void QAbstractItemViewSlots::doubleClicked( const QModelIndex & index )
 
 void QAbstractItemViewSlots::entered( const QModelIndex & index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "entered(QModelIndex)" );
 
@@ -94,7 +94,7 @@ void QAbstractItemViewSlots::entered( const QModelIndex & index )
 
 void QAbstractItemViewSlots::pressed( const QModelIndex & index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(QModelIndex)" );
 
@@ -112,7 +112,7 @@ void QAbstractItemViewSlots::pressed( const QModelIndex & index )
 
 void QAbstractItemViewSlots::viewportEntered()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "viewportEntered()" );
 
@@ -132,19 +132,19 @@ void QAbstractItemViewSlots_connect_signal( const QString & signal, const QStrin
 
   if( obj )
   {
-    QAbstractItemViewSlots * s = QCoreApplication::instance()->findChild<QAbstractItemViewSlots *>();
+    QAbstractItemViewSlots * s = QCoreApplication::instance()->findChild<QAbstractItemViewSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractItemViewSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

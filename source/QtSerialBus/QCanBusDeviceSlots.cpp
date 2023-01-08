@@ -23,7 +23,7 @@ QCanBusDeviceSlots::~QCanBusDeviceSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCanBusDeviceSlots::errorOccurred( QCanBusDevice::CanBusError )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "errorOccurred)" );
 
@@ -41,7 +41,7 @@ void QCanBusDeviceSlots::errorOccurred( QCanBusDevice::CanBusError )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCanBusDeviceSlots::framesReceived()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "framesReceived()" );
 
@@ -59,7 +59,7 @@ void QCanBusDeviceSlots::framesReceived()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCanBusDeviceSlots::framesWritten( qint64 framesCount )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "framesWritten(qint64)" );
 
@@ -79,7 +79,7 @@ void QCanBusDeviceSlots::framesWritten( qint64 framesCount )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCanBusDeviceSlots::stateChanged( QCanBusDevice::CanBusDeviceState state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QCanBusDevice::CanBusDeviceState)" );
 
@@ -103,22 +103,22 @@ void QCanBusDeviceSlots_connect_signal( const QString & signal, const QString & 
 
   if( obj )
   {
-    QCanBusDeviceSlots * s = QCoreApplication::instance()->findChild<QCanBusDeviceSlots *>();
+    QCanBusDeviceSlots * s = QCoreApplication::instance()->findChild<QCanBusDeviceSlots*>();
 
     if( s == NULL )
     {
       s = new QCanBusDeviceSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

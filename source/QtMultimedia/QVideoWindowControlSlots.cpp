@@ -22,7 +22,7 @@ QVideoWindowControlSlots::~QVideoWindowControlSlots()
 
 void QVideoWindowControlSlots::fullScreenChanged( bool fullScreen )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fullScreenChanged(bool)" );
 
@@ -40,7 +40,7 @@ void QVideoWindowControlSlots::fullScreenChanged( bool fullScreen )
 
 void QVideoWindowControlSlots::brightnessChanged( int brightness )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "brightnessChanged(int)" );
 
@@ -58,7 +58,7 @@ void QVideoWindowControlSlots::brightnessChanged( int brightness )
 
 void QVideoWindowControlSlots::contrastChanged( int contrast )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contrastChanged(int)" );
 
@@ -76,7 +76,7 @@ void QVideoWindowControlSlots::contrastChanged( int contrast )
 
 void QVideoWindowControlSlots::hueChanged( int hue )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hueChanged(int)" );
 
@@ -94,7 +94,7 @@ void QVideoWindowControlSlots::hueChanged( int hue )
 
 void QVideoWindowControlSlots::saturationChanged( int saturation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "saturationChanged(int)" );
 
@@ -112,7 +112,7 @@ void QVideoWindowControlSlots::saturationChanged( int saturation )
 
 void QVideoWindowControlSlots::nativeSizeChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nativeSizeChanged()" );
 
@@ -132,19 +132,19 @@ void QVideoWindowControlSlots_connect_signal( const QString & signal, const QStr
 
   if( obj )
   {
-    QVideoWindowControlSlots * s = QCoreApplication::instance()->findChild<QVideoWindowControlSlots *>();
+    QVideoWindowControlSlots * s = QCoreApplication::instance()->findChild<QVideoWindowControlSlots*>();
 
     if( s == NULL )
     {
       s = new QVideoWindowControlSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -23,7 +23,7 @@ QAbstractBarSeriesSlots::~QAbstractBarSeriesSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::barsetsAdded( QList<QBarSet*> sets )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "barsetsAdded(QList<QBarSet*>)" );
 
@@ -65,7 +65,7 @@ void QAbstractBarSeriesSlots::barsetsAdded( QList<QBarSet*> sets )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::barsetsRemoved( QList<QBarSet*> sets )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "barsetsRemoved(QList<QBarSet*>)" );
 
@@ -107,7 +107,7 @@ void QAbstractBarSeriesSlots::barsetsRemoved( QList<QBarSet*> sets )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::clicked( int index, QBarSet * barset )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(int,QBarSet*)" );
 
@@ -129,7 +129,7 @@ void QAbstractBarSeriesSlots::clicked( int index, QBarSet * barset )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::countChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "countChanged()" );
 
@@ -147,7 +147,7 @@ void QAbstractBarSeriesSlots::countChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::doubleClicked( int index, QBarSet * barset )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(int,QBarSet*)" );
 
@@ -169,7 +169,7 @@ void QAbstractBarSeriesSlots::doubleClicked( int index, QBarSet * barset )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::hovered( bool status, int index, QBarSet * barset )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(bool,int,QBarSet*)" );
 
@@ -193,7 +193,7 @@ void QAbstractBarSeriesSlots::hovered( bool status, int index, QBarSet * barset 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::labelsAngleChanged( qreal angle )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsAngleChanged(qreal)" );
 
@@ -213,7 +213,7 @@ void QAbstractBarSeriesSlots::labelsAngleChanged( qreal angle )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::labelsFormatChanged( const QString & format )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsFormatChanged(QString)" );
 
@@ -233,7 +233,7 @@ void QAbstractBarSeriesSlots::labelsFormatChanged( const QString & format )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::labelsPositionChanged( QAbstractBarSeries::LabelsPosition position )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" );
 
@@ -253,7 +253,7 @@ void QAbstractBarSeriesSlots::labelsPositionChanged( QAbstractBarSeries::LabelsP
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::labelsVisibleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsVisibleChanged()" );
 
@@ -271,7 +271,7 @@ void QAbstractBarSeriesSlots::labelsVisibleChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::pressed( int index, QBarSet * barset )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(int,QBarSet*)" );
 
@@ -293,7 +293,7 @@ void QAbstractBarSeriesSlots::pressed( int index, QBarSet * barset )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAbstractBarSeriesSlots::released( int index, QBarSet * barset )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released(int,QBarSet*)" );
 
@@ -319,22 +319,22 @@ void QAbstractBarSeriesSlots_connect_signal( const QString & signal, const QStri
 
   if( obj )
   {
-    QAbstractBarSeriesSlots * s = QCoreApplication::instance()->findChild<QAbstractBarSeriesSlots *>();
+    QAbstractBarSeriesSlots * s = QCoreApplication::instance()->findChild<QAbstractBarSeriesSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractBarSeriesSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

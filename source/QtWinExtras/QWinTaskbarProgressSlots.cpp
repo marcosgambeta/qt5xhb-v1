@@ -23,7 +23,7 @@ QWinTaskbarProgressSlots::~QWinTaskbarProgressSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QWinTaskbarProgressSlots::valueChanged( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(int)" );
 
@@ -43,7 +43,7 @@ void QWinTaskbarProgressSlots::valueChanged( int value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QWinTaskbarProgressSlots::minimumChanged( int minimum )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minimumChanged(int)" );
 
@@ -63,7 +63,7 @@ void QWinTaskbarProgressSlots::minimumChanged( int minimum )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QWinTaskbarProgressSlots::maximumChanged( int maximum )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maximumChanged(int)" );
 
@@ -83,7 +83,7 @@ void QWinTaskbarProgressSlots::maximumChanged( int maximum )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QWinTaskbarProgressSlots::visibilityChanged( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibilityChanged(bool)" );
 
@@ -103,7 +103,7 @@ void QWinTaskbarProgressSlots::visibilityChanged( bool visible )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QWinTaskbarProgressSlots::pausedChanged( bool paused )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pausedChanged(bool)" );
 
@@ -123,7 +123,7 @@ void QWinTaskbarProgressSlots::pausedChanged( bool paused )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QWinTaskbarProgressSlots::stoppedChanged( bool stopped )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stoppedChanged(bool)" );
 
@@ -147,22 +147,22 @@ void QWinTaskbarProgressSlots_connect_signal( const QString & signal, const QStr
 
   if( obj )
   {
-    QWinTaskbarProgressSlots * s = QCoreApplication::instance()->findChild<QWinTaskbarProgressSlots *>();
+    QWinTaskbarProgressSlots * s = QCoreApplication::instance()->findChild<QWinTaskbarProgressSlots*>();
 
     if( s == NULL )
     {
       s = new QWinTaskbarProgressSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

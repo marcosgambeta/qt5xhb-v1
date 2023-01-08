@@ -22,7 +22,7 @@ QUndoStackSlots::~QUndoStackSlots()
 
 void QUndoStackSlots::canRedoChanged( bool canRedo )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "canRedoChanged(bool)" );
 
@@ -40,7 +40,7 @@ void QUndoStackSlots::canRedoChanged( bool canRedo )
 
 void QUndoStackSlots::canUndoChanged( bool canUndo )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "canUndoChanged(bool)" );
 
@@ -58,7 +58,7 @@ void QUndoStackSlots::canUndoChanged( bool canUndo )
 
 void QUndoStackSlots::cleanChanged( bool clean )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cleanChanged(bool)" );
 
@@ -76,7 +76,7 @@ void QUndoStackSlots::cleanChanged( bool clean )
 
 void QUndoStackSlots::indexChanged( int idx )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "indexChanged(int)" );
 
@@ -94,7 +94,7 @@ void QUndoStackSlots::indexChanged( int idx )
 
 void QUndoStackSlots::redoTextChanged( const QString & redoText )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "redoTextChanged(QString)" );
 
@@ -112,7 +112,7 @@ void QUndoStackSlots::redoTextChanged( const QString & redoText )
 
 void QUndoStackSlots::undoTextChanged( const QString & undoText )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "undoTextChanged(QString)" );
 
@@ -134,19 +134,19 @@ void QUndoStackSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QUndoStackSlots * s = QCoreApplication::instance()->findChild<QUndoStackSlots *>();
+    QUndoStackSlots * s = QCoreApplication::instance()->findChild<QUndoStackSlots*>();
 
     if( s == NULL )
     {
       s = new QUndoStackSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

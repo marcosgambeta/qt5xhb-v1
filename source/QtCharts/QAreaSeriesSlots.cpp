@@ -23,7 +23,7 @@ QAreaSeriesSlots::~QAreaSeriesSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::borderColorChanged( QColor color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "borderColorChanged(QColor)" );
 
@@ -43,7 +43,7 @@ void QAreaSeriesSlots::borderColorChanged( QColor color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::clicked( const QPointF & point )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QPointF)" );
 
@@ -63,7 +63,7 @@ void QAreaSeriesSlots::clicked( const QPointF & point )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::colorChanged( QColor color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
@@ -83,7 +83,7 @@ void QAreaSeriesSlots::colorChanged( QColor color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::doubleClicked( const QPointF & point )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(QPointF)" );
 
@@ -103,7 +103,7 @@ void QAreaSeriesSlots::doubleClicked( const QPointF & point )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::hovered( const QPointF & point, bool state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(QPointF,bool)" );
 
@@ -125,7 +125,7 @@ void QAreaSeriesSlots::hovered( const QPointF & point, bool state )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::pointLabelsClippingChanged( bool clipping )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsClippingChanged(bool)" );
 
@@ -145,7 +145,7 @@ void QAreaSeriesSlots::pointLabelsClippingChanged( bool clipping )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::pointLabelsColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsColorChanged(QColor)" );
 
@@ -165,7 +165,7 @@ void QAreaSeriesSlots::pointLabelsColorChanged( const QColor & color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::pointLabelsFontChanged( const QFont & font )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsFontChanged(QFont)" );
 
@@ -185,7 +185,7 @@ void QAreaSeriesSlots::pointLabelsFontChanged( const QFont & font )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::pointLabelsFormatChanged( const QString & format )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsFormatChanged(QString)" );
 
@@ -205,7 +205,7 @@ void QAreaSeriesSlots::pointLabelsFormatChanged( const QString & format )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::pointLabelsVisibilityChanged( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsVisibilityChanged(bool)" );
 
@@ -225,7 +225,7 @@ void QAreaSeriesSlots::pointLabelsVisibilityChanged( bool visible )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::pressed( const QPointF & point )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(QPointF)" );
 
@@ -245,7 +245,7 @@ void QAreaSeriesSlots::pressed( const QPointF & point )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::released( const QPointF & point )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released(QPointF)" );
 
@@ -265,7 +265,7 @@ void QAreaSeriesSlots::released( const QPointF & point )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QAreaSeriesSlots::selected()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selected()" );
 
@@ -287,22 +287,22 @@ void QAreaSeriesSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QAreaSeriesSlots * s = QCoreApplication::instance()->findChild<QAreaSeriesSlots *>();
+    QAreaSeriesSlots * s = QCoreApplication::instance()->findChild<QAreaSeriesSlots*>();
 
     if( s == NULL )
     {
       s = new QAreaSeriesSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

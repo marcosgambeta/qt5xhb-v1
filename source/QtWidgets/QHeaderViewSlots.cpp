@@ -22,7 +22,7 @@ QHeaderViewSlots::~QHeaderViewSlots()
 
 void QHeaderViewSlots::geometriesChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "geometriesChanged()" );
 
@@ -38,7 +38,7 @@ void QHeaderViewSlots::geometriesChanged()
 
 void QHeaderViewSlots::sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sectionAutoResize(int,QHeaderView::ResizeMode)" );
 
@@ -58,7 +58,7 @@ void QHeaderViewSlots::sectionAutoResize( int logicalIndex, QHeaderView::ResizeM
 
 void QHeaderViewSlots::sectionClicked( int logicalIndex )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sectionClicked(int)" );
 
@@ -76,7 +76,7 @@ void QHeaderViewSlots::sectionClicked( int logicalIndex )
 
 void QHeaderViewSlots::sectionCountChanged( int oldCount, int newCount )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sectionCountChanged(int,int)" );
 
@@ -96,7 +96,7 @@ void QHeaderViewSlots::sectionCountChanged( int oldCount, int newCount )
 
 void QHeaderViewSlots::sectionDoubleClicked( int logicalIndex )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sectionDoubleClicked(int)" );
 
@@ -114,7 +114,7 @@ void QHeaderViewSlots::sectionDoubleClicked( int logicalIndex )
 
 void QHeaderViewSlots::sectionEntered( int logicalIndex )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sectionEntered(int)" );
 
@@ -132,7 +132,7 @@ void QHeaderViewSlots::sectionEntered( int logicalIndex )
 
 void QHeaderViewSlots::sectionHandleDoubleClicked( int logicalIndex )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sectionHandleDoubleClicked(int)" );
 
@@ -150,7 +150,7 @@ void QHeaderViewSlots::sectionHandleDoubleClicked( int logicalIndex )
 
 void QHeaderViewSlots::sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sectionMoved(int,int,int)" );
 
@@ -172,7 +172,7 @@ void QHeaderViewSlots::sectionMoved( int logicalIndex, int oldVisualIndex, int n
 
 void QHeaderViewSlots::sectionPressed( int logicalIndex )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sectionPressed(int)" );
 
@@ -190,7 +190,7 @@ void QHeaderViewSlots::sectionPressed( int logicalIndex )
 
 void QHeaderViewSlots::sectionResized( int logicalIndex, int oldSize, int newSize )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sectionResized(int,int,int)" );
 
@@ -212,7 +212,7 @@ void QHeaderViewSlots::sectionResized( int logicalIndex, int oldSize, int newSiz
 
 void QHeaderViewSlots::sortIndicatorChanged( int logicalIndex, Qt::SortOrder order )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sortIndicatorChanged(int,Qt::SortOrder)" );
 
@@ -236,19 +236,19 @@ void QHeaderViewSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QHeaderViewSlots * s = QCoreApplication::instance()->findChild<QHeaderViewSlots *>();
+    QHeaderViewSlots * s = QCoreApplication::instance()->findChild<QHeaderViewSlots*>();
 
     if( s == NULL )
     {
       s = new QHeaderViewSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

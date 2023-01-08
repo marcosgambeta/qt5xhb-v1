@@ -22,7 +22,7 @@ QTextDocumentSlots::~QTextDocumentSlots()
 
 void QTextDocumentSlots::contentsChange( int from, int charsRemoves, int charsAdded )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsChange(int,int,int)" );
 
@@ -44,7 +44,7 @@ void QTextDocumentSlots::contentsChange( int from, int charsRemoves, int charsAd
 
 void QTextDocumentSlots::contentsChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsChanged()" );
 
@@ -60,7 +60,7 @@ void QTextDocumentSlots::contentsChanged()
 
 void QTextDocumentSlots::undoAvailable( bool b )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "undoAvailable(bool)" );
 
@@ -78,7 +78,7 @@ void QTextDocumentSlots::undoAvailable( bool b )
 
 void QTextDocumentSlots::redoAvailable( bool b )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "redoAvailable(bool)" );
 
@@ -96,7 +96,7 @@ void QTextDocumentSlots::redoAvailable( bool b )
 
 void QTextDocumentSlots::undoCommandAdded()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "undoCommandAdded()" );
 
@@ -112,7 +112,7 @@ void QTextDocumentSlots::undoCommandAdded()
 
 void QTextDocumentSlots::modificationChanged( bool m )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "modificationChanged(bool)" );
 
@@ -130,7 +130,7 @@ void QTextDocumentSlots::modificationChanged( bool m )
 
 void QTextDocumentSlots::cursorPositionChanged( const QTextCursor & cursor )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cursorPositionChanged(QTextCursor)" );
 
@@ -148,7 +148,7 @@ void QTextDocumentSlots::cursorPositionChanged( const QTextCursor & cursor )
 
 void QTextDocumentSlots::blockCountChanged( int newBlockCount )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "blockCountChanged(int)" );
 
@@ -166,7 +166,7 @@ void QTextDocumentSlots::blockCountChanged( int newBlockCount )
 
 void QTextDocumentSlots::documentLayoutChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "documentLayoutChanged()" );
 
@@ -186,19 +186,19 @@ void QTextDocumentSlots_connect_signal( const QString & signal, const QString & 
 
   if( obj )
   {
-    QTextDocumentSlots * s = QCoreApplication::instance()->findChild<QTextDocumentSlots *>();
+    QTextDocumentSlots * s = QCoreApplication::instance()->findChild<QTextDocumentSlots*>();
 
     if( s == NULL )
     {
       s = new QTextDocumentSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

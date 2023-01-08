@@ -22,7 +22,7 @@ QLogValue3DAxisFormatterSlots::~QLogValue3DAxisFormatterSlots()
 
 void QLogValue3DAxisFormatterSlots::autoSubGridChanged( bool enabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoSubGridChanged(bool)" );
 
@@ -40,7 +40,7 @@ void QLogValue3DAxisFormatterSlots::autoSubGridChanged( bool enabled )
 
 void QLogValue3DAxisFormatterSlots::baseChanged( qreal base )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "baseChanged(qreal)" );
 
@@ -58,7 +58,7 @@ void QLogValue3DAxisFormatterSlots::baseChanged( qreal base )
 
 void QLogValue3DAxisFormatterSlots::showEdgeLabelsChanged( bool enabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "showEdgeLabelsChanged(bool)" );
 
@@ -80,19 +80,19 @@ void QLogValue3DAxisFormatterSlots_connect_signal( const QString & signal, const
 
   if( obj )
   {
-    QLogValue3DAxisFormatterSlots * s = QCoreApplication::instance()->findChild<QLogValue3DAxisFormatterSlots *>();
+    QLogValue3DAxisFormatterSlots * s = QCoreApplication::instance()->findChild<QLogValue3DAxisFormatterSlots*>();
 
     if( s == NULL )
     {
       s = new QLogValue3DAxisFormatterSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

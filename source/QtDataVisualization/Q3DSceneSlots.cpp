@@ -22,7 +22,7 @@ Q3DSceneSlots::~Q3DSceneSlots()
 
 void Q3DSceneSlots::activeCameraChanged( Q3DCamera * camera )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeCameraChanged(Q3DCamera*)" );
 
@@ -40,7 +40,7 @@ void Q3DSceneSlots::activeCameraChanged( Q3DCamera * camera )
 
 void Q3DSceneSlots::activeLightChanged( Q3DLight * light )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeLightChanged(Q3DLight*)" );
 
@@ -58,7 +58,7 @@ void Q3DSceneSlots::activeLightChanged( Q3DLight * light )
 
 void Q3DSceneSlots::devicePixelRatioChanged( float pixelRatio )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "devicePixelRatioChanged(float)" );
 
@@ -76,7 +76,7 @@ void Q3DSceneSlots::devicePixelRatioChanged( float pixelRatio )
 
 void Q3DSceneSlots::graphPositionQueryChanged( const QPoint & position )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "graphPositionQueryChanged(QPoint)" );
 
@@ -94,7 +94,7 @@ void Q3DSceneSlots::graphPositionQueryChanged( const QPoint & position )
 
 void Q3DSceneSlots::primarySubViewportChanged( const QRect & subViewport )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "primarySubViewportChanged(QRect)" );
 
@@ -112,7 +112,7 @@ void Q3DSceneSlots::primarySubViewportChanged( const QRect & subViewport )
 
 void Q3DSceneSlots::secondarySubviewOnTopChanged( bool isSecondaryOnTop )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "secondarySubviewOnTopChanged(bool)" );
 
@@ -130,7 +130,7 @@ void Q3DSceneSlots::secondarySubviewOnTopChanged( bool isSecondaryOnTop )
 
 void Q3DSceneSlots::secondarySubViewportChanged( const QRect & subViewport )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "secondarySubViewportChanged(QRect)" );
 
@@ -148,7 +148,7 @@ void Q3DSceneSlots::secondarySubViewportChanged( const QRect & subViewport )
 
 void Q3DSceneSlots::selectionQueryPositionChanged( const QPoint & position )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionQueryPositionChanged(QPoint)" );
 
@@ -166,7 +166,7 @@ void Q3DSceneSlots::selectionQueryPositionChanged( const QPoint & position )
 
 void Q3DSceneSlots::slicingActiveChanged( bool isSlicingActive )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "slicingActiveChanged(bool)" );
 
@@ -184,7 +184,7 @@ void Q3DSceneSlots::slicingActiveChanged( bool isSlicingActive )
 
 void Q3DSceneSlots::viewportChanged( const QRect & viewport )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "viewportChanged(QRect)" );
 
@@ -206,19 +206,19 @@ void Q3DSceneSlots_connect_signal( const QString & signal, const QString & slot 
 
   if( obj )
   {
-    Q3DSceneSlots * s = QCoreApplication::instance()->findChild<Q3DSceneSlots *>();
+    Q3DSceneSlots * s = QCoreApplication::instance()->findChild<Q3DSceneSlots*>();
 
     if( s == NULL )
     {
       s = new Q3DSceneSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

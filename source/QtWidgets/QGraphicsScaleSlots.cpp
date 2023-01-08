@@ -22,7 +22,7 @@ QGraphicsScaleSlots::~QGraphicsScaleSlots()
 
 void QGraphicsScaleSlots::originChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "originChanged()" );
 
@@ -38,7 +38,7 @@ void QGraphicsScaleSlots::originChanged()
 
 void QGraphicsScaleSlots::scaleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scaleChanged()" );
 
@@ -54,7 +54,7 @@ void QGraphicsScaleSlots::scaleChanged()
 
 void QGraphicsScaleSlots::xScaleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xScaleChanged()" );
 
@@ -70,7 +70,7 @@ void QGraphicsScaleSlots::xScaleChanged()
 
 void QGraphicsScaleSlots::yScaleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yScaleChanged()" );
 
@@ -86,7 +86,7 @@ void QGraphicsScaleSlots::yScaleChanged()
 
 void QGraphicsScaleSlots::zScaleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zScaleChanged()" );
 
@@ -106,19 +106,19 @@ void QGraphicsScaleSlots_connect_signal( const QString & signal, const QString &
 
   if( obj )
   {
-    QGraphicsScaleSlots * s = QCoreApplication::instance()->findChild<QGraphicsScaleSlots *>();
+    QGraphicsScaleSlots * s = QCoreApplication::instance()->findChild<QGraphicsScaleSlots*>();
 
     if( s == NULL )
     {
       s = new QGraphicsScaleSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

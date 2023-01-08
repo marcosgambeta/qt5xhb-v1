@@ -23,7 +23,7 @@ QAbstractOAuthReplyHandlerSlots::~QAbstractOAuthReplyHandlerSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthReplyHandlerSlots::callbackDataReceived( const QByteArray & data )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "callbackDataReceived(QByteArray)" );
 
@@ -43,7 +43,7 @@ void QAbstractOAuthReplyHandlerSlots::callbackDataReceived( const QByteArray & d
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QAbstractOAuthReplyHandlerSlots::replyDataReceived( const QByteArray & data )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "replyDataReceived(QByteArray)" );
 
@@ -67,22 +67,22 @@ void QAbstractOAuthReplyHandlerSlots_connect_signal( const QString & signal, con
 
   if( obj )
   {
-    QAbstractOAuthReplyHandlerSlots * s = QCoreApplication::instance()->findChild<QAbstractOAuthReplyHandlerSlots *>();
+    QAbstractOAuthReplyHandlerSlots * s = QCoreApplication::instance()->findChild<QAbstractOAuthReplyHandlerSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractOAuthReplyHandlerSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

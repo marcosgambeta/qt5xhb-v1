@@ -22,7 +22,7 @@ QHelpEngineCoreSlots::~QHelpEngineCoreSlots()
 
 void QHelpEngineCoreSlots::currentFilterChanged( const QString & newFilter )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentFilterChanged(QString)" );
 
@@ -40,7 +40,7 @@ void QHelpEngineCoreSlots::currentFilterChanged( const QString & newFilter )
 
 void QHelpEngineCoreSlots::setupFinished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "setupFinished()" );
 
@@ -56,7 +56,7 @@ void QHelpEngineCoreSlots::setupFinished()
 
 void QHelpEngineCoreSlots::setupStarted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "setupStarted()" );
 
@@ -72,7 +72,7 @@ void QHelpEngineCoreSlots::setupStarted()
 
 void QHelpEngineCoreSlots::warning( const QString & msg )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "warning(QString)" );
 
@@ -94,19 +94,19 @@ void QHelpEngineCoreSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QHelpEngineCoreSlots * s = QCoreApplication::instance()->findChild<QHelpEngineCoreSlots *>();
+    QHelpEngineCoreSlots * s = QCoreApplication::instance()->findChild<QHelpEngineCoreSlots*>();
 
     if( s == NULL )
     {
       s = new QHelpEngineCoreSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -22,7 +22,7 @@ QAxObjectSlots::~QAxObjectSlots()
 
 void QAxObjectSlots::exception( int code, const QString & source, const QString & desc, const QString & help )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "exception(int,QString,QString,QString)" );
 
@@ -46,7 +46,7 @@ void QAxObjectSlots::exception( int code, const QString & source, const QString 
 
 void QAxObjectSlots::propertyChanged( const QString & name )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "propertyChanged(QString)" );
 
@@ -64,7 +64,7 @@ void QAxObjectSlots::propertyChanged( const QString & name )
 
 void QAxObjectSlots::signal( const QString & name, int argc, void * argv )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "signal(QString,int,void*)" );
 
@@ -90,19 +90,19 @@ void QAxObjectSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QAxObjectSlots * s = QCoreApplication::instance()->findChild<QAxObjectSlots *>();
+    QAxObjectSlots * s = QCoreApplication::instance()->findChild<QAxObjectSlots*>();
 
     if( s == NULL )
     {
       s = new QAxObjectSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -22,7 +22,7 @@ QMenuSlots::~QMenuSlots()
 
 void QMenuSlots::aboutToHide()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToHide()" );
 
@@ -38,7 +38,7 @@ void QMenuSlots::aboutToHide()
 
 void QMenuSlots::aboutToShow()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToShow()" );
 
@@ -54,7 +54,7 @@ void QMenuSlots::aboutToShow()
 
 void QMenuSlots::hovered( QAction * action )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(QAction*)" );
 
@@ -72,7 +72,7 @@ void QMenuSlots::hovered( QAction * action )
 
 void QMenuSlots::triggered( QAction * action )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "triggered(QAction*)" );
 
@@ -94,19 +94,19 @@ void QMenuSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QMenuSlots * s = QCoreApplication::instance()->findChild<QMenuSlots *>();
+    QMenuSlots * s = QCoreApplication::instance()->findChild<QMenuSlots*>();
 
     if( s == NULL )
     {
       s = new QMenuSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

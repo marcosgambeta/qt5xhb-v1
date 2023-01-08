@@ -23,7 +23,7 @@ QCandlestickSeriesSlots::~QCandlestickSeriesSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::bodyOutlineVisibilityChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bodyOutlineVisibilityChanged()" );
 
@@ -41,7 +41,7 @@ void QCandlestickSeriesSlots::bodyOutlineVisibilityChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::bodyWidthChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bodyWidthChanged()" );
 
@@ -59,7 +59,7 @@ void QCandlestickSeriesSlots::bodyWidthChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::brushChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "brushChanged()" );
 
@@ -77,7 +77,7 @@ void QCandlestickSeriesSlots::brushChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::candlestickSetsAdded( const QList<QCandlestickSet*> & sets )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "candlestickSetsAdded(QList<QCandlestickSet*>)" );
 
@@ -119,7 +119,7 @@ void QCandlestickSeriesSlots::candlestickSetsAdded( const QList<QCandlestickSet*
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::candlestickSetsRemoved( const QList<QCandlestickSet*> & sets )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "candlestickSetsRemoved(QList<QCandlestickSet*>)" );
 
@@ -161,7 +161,7 @@ void QCandlestickSeriesSlots::candlestickSetsRemoved( const QList<QCandlestickSe
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::capsVisibilityChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "capsVisibilityChanged()" );
 
@@ -179,7 +179,7 @@ void QCandlestickSeriesSlots::capsVisibilityChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::capsWidthChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "capsWidthChanged()" );
 
@@ -197,7 +197,7 @@ void QCandlestickSeriesSlots::capsWidthChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::clicked( QCandlestickSet * set )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QCandlestickSet*)" );
 
@@ -217,7 +217,7 @@ void QCandlestickSeriesSlots::clicked( QCandlestickSet * set )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::countChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "countChanged()" );
 
@@ -235,7 +235,7 @@ void QCandlestickSeriesSlots::countChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::decreasingColorChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "decreasingColorChanged()" );
 
@@ -253,7 +253,7 @@ void QCandlestickSeriesSlots::decreasingColorChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::doubleClicked( QCandlestickSet * set )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(QCandlestickSet*)" );
 
@@ -273,7 +273,7 @@ void QCandlestickSeriesSlots::doubleClicked( QCandlestickSet * set )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::hovered( bool status, QCandlestickSet * set )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(bool,QCandlestickSet*)" );
 
@@ -295,7 +295,7 @@ void QCandlestickSeriesSlots::hovered( bool status, QCandlestickSet * set )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::increasingColorChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "increasingColorChanged()" );
 
@@ -313,7 +313,7 @@ void QCandlestickSeriesSlots::increasingColorChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::maximumColumnWidthChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maximumColumnWidthChanged()" );
 
@@ -331,7 +331,7 @@ void QCandlestickSeriesSlots::maximumColumnWidthChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::minimumColumnWidthChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minimumColumnWidthChanged()" );
 
@@ -349,7 +349,7 @@ void QCandlestickSeriesSlots::minimumColumnWidthChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::penChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "penChanged()" );
 
@@ -367,7 +367,7 @@ void QCandlestickSeriesSlots::penChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::pressed( QCandlestickSet * set )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(QCandlestickSet*)" );
 
@@ -387,7 +387,7 @@ void QCandlestickSeriesSlots::pressed( QCandlestickSet * set )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::released( QCandlestickSet * set )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released(QCandlestickSet*)" );
 
@@ -411,22 +411,22 @@ void QCandlestickSeriesSlots_connect_signal( const QString & signal, const QStri
 
   if( obj )
   {
-    QCandlestickSeriesSlots * s = QCoreApplication::instance()->findChild<QCandlestickSeriesSlots *>();
+    QCandlestickSeriesSlots * s = QCoreApplication::instance()->findChild<QCandlestickSeriesSlots*>();
 
     if( s == NULL )
     {
       s = new QCandlestickSeriesSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

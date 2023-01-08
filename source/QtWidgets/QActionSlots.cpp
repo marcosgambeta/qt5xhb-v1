@@ -22,7 +22,7 @@ QActionSlots::~QActionSlots()
 
 void QActionSlots::changed()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "changed()" );
 
@@ -38,7 +38,7 @@ void QActionSlots::changed()
 
 void QActionSlots::hovered()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered()" );
 
@@ -54,7 +54,7 @@ void QActionSlots::hovered()
 
 void QActionSlots::toggled( bool checked )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "toggled(bool)" );
 
@@ -72,7 +72,7 @@ void QActionSlots::toggled( bool checked )
 
 void QActionSlots::triggered( bool checked )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "triggered(bool)" );
 
@@ -94,19 +94,19 @@ void QActionSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QActionSlots * s = QCoreApplication::instance()->findChild<QActionSlots *>();
+    QActionSlots * s = QCoreApplication::instance()->findChild<QActionSlots*>();
 
     if( s == NULL )
     {
       s = new QActionSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

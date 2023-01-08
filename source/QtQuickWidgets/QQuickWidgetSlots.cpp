@@ -23,7 +23,7 @@ QQuickWidgetSlots::~QQuickWidgetSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QQuickWidgetSlots::statusChanged( QQuickWidget::Status status )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QQuickWidget::Status)" );
 
@@ -43,7 +43,7 @@ void QQuickWidgetSlots::statusChanged( QQuickWidget::Status status )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QQuickWidgetSlots::sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
 
@@ -69,22 +69,22 @@ void QQuickWidgetSlots_connect_signal( const QString & signal, const QString & s
 
   if( obj )
   {
-    QQuickWidgetSlots * s = QCoreApplication::instance()->findChild<QQuickWidgetSlots *>();
+    QQuickWidgetSlots * s = QCoreApplication::instance()->findChild<QQuickWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QQuickWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

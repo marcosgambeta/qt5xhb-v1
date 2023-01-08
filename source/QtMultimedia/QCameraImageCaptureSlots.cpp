@@ -22,7 +22,7 @@ QCameraImageCaptureSlots::~QCameraImageCaptureSlots()
 
 void QCameraImageCaptureSlots::bufferFormatChanged( QVideoFrame::PixelFormat format )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
 
@@ -40,7 +40,7 @@ void QCameraImageCaptureSlots::bufferFormatChanged( QVideoFrame::PixelFormat for
 
 void QCameraImageCaptureSlots::captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
 
@@ -58,7 +58,7 @@ void QCameraImageCaptureSlots::captureDestinationChanged( QCameraImageCapture::C
 
 void QCameraImageCaptureSlots::error( int id, QCameraImageCapture::Error error, const QString & errorString )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(int,QCameraImageCapture::Error,QString)" );
 
@@ -80,7 +80,7 @@ void QCameraImageCaptureSlots::error( int id, QCameraImageCapture::Error error, 
 
 void QCameraImageCaptureSlots::imageAvailable( int id, const QVideoFrame & buffer )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "imageAvailable(int,QVideoFrame)" );
 
@@ -100,7 +100,7 @@ void QCameraImageCaptureSlots::imageAvailable( int id, const QVideoFrame & buffe
 
 void QCameraImageCaptureSlots::imageCaptured( int id, const QImage & preview )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "imageCaptured(int,QImage)" );
 
@@ -120,7 +120,7 @@ void QCameraImageCaptureSlots::imageCaptured( int id, const QImage & preview )
 
 void QCameraImageCaptureSlots::imageExposed( int id )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "imageExposed(int)" );
 
@@ -138,7 +138,7 @@ void QCameraImageCaptureSlots::imageExposed( int id )
 
 void QCameraImageCaptureSlots::imageMetadataAvailable( int id, const QString & key, const QVariant & value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "imageMetadataAvailable(int,QString,QVariant)" );
 
@@ -160,7 +160,7 @@ void QCameraImageCaptureSlots::imageMetadataAvailable( int id, const QString & k
 
 void QCameraImageCaptureSlots::imageSaved( int id, const QString & fileName )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "imageSaved(int,QString)" );
 
@@ -180,7 +180,7 @@ void QCameraImageCaptureSlots::imageSaved( int id, const QString & fileName )
 
 void QCameraImageCaptureSlots::readyForCaptureChanged( bool ready )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readyForCaptureChanged(bool)" );
 
@@ -202,19 +202,19 @@ void QCameraImageCaptureSlots_connect_signal( const QString & signal, const QStr
 
   if( obj )
   {
-    QCameraImageCaptureSlots * s = QCoreApplication::instance()->findChild<QCameraImageCaptureSlots *>();
+    QCameraImageCaptureSlots * s = QCoreApplication::instance()->findChild<QCameraImageCaptureSlots*>();
 
     if( s == NULL )
     {
       s = new QCameraImageCaptureSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

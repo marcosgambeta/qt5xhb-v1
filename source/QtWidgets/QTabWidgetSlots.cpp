@@ -22,7 +22,7 @@ QTabWidgetSlots::~QTabWidgetSlots()
 
 void QTabWidgetSlots::currentChanged( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
@@ -40,7 +40,7 @@ void QTabWidgetSlots::currentChanged( int index )
 
 void QTabWidgetSlots::tabCloseRequested( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tabCloseRequested(int)" );
 
@@ -59,7 +59,7 @@ void QTabWidgetSlots::tabCloseRequested( int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QTabWidgetSlots::tabBarClicked( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tabBarClicked(int)" );
 
@@ -79,7 +79,7 @@ void QTabWidgetSlots::tabBarClicked( int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QTabWidgetSlots::tabBarDoubleClicked( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tabBarDoubleClicked(int)" );
 
@@ -102,19 +102,19 @@ void QTabWidgetSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QTabWidgetSlots * s = QCoreApplication::instance()->findChild<QTabWidgetSlots *>();
+    QTabWidgetSlots * s = QCoreApplication::instance()->findChild<QTabWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QTabWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

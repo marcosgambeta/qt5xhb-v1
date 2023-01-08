@@ -23,7 +23,7 @@ QWebEngineViewSlots::~QWebEngineViewSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEngineViewSlots::loadStarted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadStarted()" );
 
@@ -41,7 +41,7 @@ void QWebEngineViewSlots::loadStarted()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEngineViewSlots::loadProgress( int progress )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadProgress(int)" );
 
@@ -61,7 +61,7 @@ void QWebEngineViewSlots::loadProgress( int progress )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEngineViewSlots::loadFinished( bool b )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadFinished(bool)" );
 
@@ -81,7 +81,7 @@ void QWebEngineViewSlots::loadFinished( bool b )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEngineViewSlots::titleChanged( const QString & title )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "titleChanged(QString)" );
 
@@ -101,7 +101,7 @@ void QWebEngineViewSlots::titleChanged( const QString & title )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEngineViewSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
@@ -119,7 +119,7 @@ void QWebEngineViewSlots::selectionChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEngineViewSlots::urlChanged( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "urlChanged(QUrl)" );
 
@@ -139,7 +139,7 @@ void QWebEngineViewSlots::urlChanged( const QUrl & url )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QWebEngineViewSlots::iconUrlChanged( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "iconUrlChanged(QUrl)" );
 
@@ -163,22 +163,22 @@ void QWebEngineViewSlots_connect_signal( const QString & signal, const QString &
 
   if( obj )
   {
-    QWebEngineViewSlots * s = QCoreApplication::instance()->findChild<QWebEngineViewSlots *>();
+    QWebEngineViewSlots * s = QCoreApplication::instance()->findChild<QWebEngineViewSlots*>();
 
     if( s == NULL )
     {
       s = new QWebEngineViewSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

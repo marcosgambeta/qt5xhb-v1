@@ -23,7 +23,7 @@ QDateTimeAxisSlots::~QDateTimeAxisSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QDateTimeAxisSlots::formatChanged( QString format )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "formatChanged(QString)" );
 
@@ -43,7 +43,7 @@ void QDateTimeAxisSlots::formatChanged( QString format )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QDateTimeAxisSlots::maxChanged( QDateTime max )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxChanged(QDateTime)" );
 
@@ -63,7 +63,7 @@ void QDateTimeAxisSlots::maxChanged( QDateTime max )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QDateTimeAxisSlots::minChanged( QDateTime min )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minChanged(QDateTime)" );
 
@@ -83,7 +83,7 @@ void QDateTimeAxisSlots::minChanged( QDateTime min )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QDateTimeAxisSlots::rangeChanged( QDateTime min, QDateTime max )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rangeChanged(QDateTime,QDateTime)" );
 
@@ -105,7 +105,7 @@ void QDateTimeAxisSlots::rangeChanged( QDateTime min, QDateTime max )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QDateTimeAxisSlots::tickCountChanged( int tick )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tickCountChanged(int)" );
 
@@ -129,22 +129,22 @@ void QDateTimeAxisSlots_connect_signal( const QString & signal, const QString & 
 
   if( obj )
   {
-    QDateTimeAxisSlots * s = QCoreApplication::instance()->findChild<QDateTimeAxisSlots *>();
+    QDateTimeAxisSlots * s = QCoreApplication::instance()->findChild<QDateTimeAxisSlots*>();
 
     if( s == NULL )
     {
       s = new QDateTimeAxisSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

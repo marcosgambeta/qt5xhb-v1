@@ -22,7 +22,7 @@ QItemModelBarDataProxySlots::~QItemModelBarDataProxySlots()
 
 void QItemModelBarDataProxySlots::autoColumnCategoriesChanged( bool enable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoColumnCategoriesChanged(bool)" );
 
@@ -40,7 +40,7 @@ void QItemModelBarDataProxySlots::autoColumnCategoriesChanged( bool enable )
 
 void QItemModelBarDataProxySlots::autoRowCategoriesChanged( bool enable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoRowCategoriesChanged(bool)" );
 
@@ -58,7 +58,7 @@ void QItemModelBarDataProxySlots::autoRowCategoriesChanged( bool enable )
 
 void QItemModelBarDataProxySlots::columnCategoriesChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnCategoriesChanged()" );
 
@@ -74,7 +74,7 @@ void QItemModelBarDataProxySlots::columnCategoriesChanged()
 
 void QItemModelBarDataProxySlots::columnRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRoleChanged(QString)" );
 
@@ -92,7 +92,7 @@ void QItemModelBarDataProxySlots::columnRoleChanged( const QString & role )
 
 void QItemModelBarDataProxySlots::columnRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRolePatternChanged(QRegExp)" );
 
@@ -110,7 +110,7 @@ void QItemModelBarDataProxySlots::columnRolePatternChanged( const QRegExp & patt
 
 void QItemModelBarDataProxySlots::columnRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRoleReplaceChanged(QString)" );
 
@@ -128,7 +128,7 @@ void QItemModelBarDataProxySlots::columnRoleReplaceChanged( const QString & repl
 
 void QItemModelBarDataProxySlots::itemModelChanged( const QAbstractItemModel * itemModel )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemModelChanged(QAbstractItemModel)" );
 
@@ -146,7 +146,7 @@ void QItemModelBarDataProxySlots::itemModelChanged( const QAbstractItemModel * i
 
 void QItemModelBarDataProxySlots::multiMatchBehaviorChanged( QItemModelBarDataProxy::MultiMatchBehavior behavior )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" );
 
@@ -164,7 +164,7 @@ void QItemModelBarDataProxySlots::multiMatchBehaviorChanged( QItemModelBarDataPr
 
 void QItemModelBarDataProxySlots::rotationRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRoleChanged(QString)" );
 
@@ -182,7 +182,7 @@ void QItemModelBarDataProxySlots::rotationRoleChanged( const QString & role )
 
 void QItemModelBarDataProxySlots::rotationRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRolePatternChanged(QRegExp)" );
 
@@ -200,7 +200,7 @@ void QItemModelBarDataProxySlots::rotationRolePatternChanged( const QRegExp & pa
 
 void QItemModelBarDataProxySlots::rotationRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRoleReplaceChanged(QString)" );
 
@@ -218,7 +218,7 @@ void QItemModelBarDataProxySlots::rotationRoleReplaceChanged( const QString & re
 
 void QItemModelBarDataProxySlots::rowCategoriesChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCategoriesChanged()" );
 
@@ -234,7 +234,7 @@ void QItemModelBarDataProxySlots::rowCategoriesChanged()
 
 void QItemModelBarDataProxySlots::rowRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRoleChanged(QString)" );
 
@@ -252,7 +252,7 @@ void QItemModelBarDataProxySlots::rowRoleChanged( const QString & role )
 
 void QItemModelBarDataProxySlots::rowRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRolePatternChanged(QRegExp)" );
 
@@ -270,7 +270,7 @@ void QItemModelBarDataProxySlots::rowRolePatternChanged( const QRegExp & pattern
 
 void QItemModelBarDataProxySlots::rowRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRoleReplaceChanged(QString)" );
 
@@ -288,7 +288,7 @@ void QItemModelBarDataProxySlots::rowRoleReplaceChanged( const QString & replace
 
 void QItemModelBarDataProxySlots::useModelCategoriesChanged( bool enable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "useModelCategoriesChanged(bool)" );
 
@@ -306,7 +306,7 @@ void QItemModelBarDataProxySlots::useModelCategoriesChanged( bool enable )
 
 void QItemModelBarDataProxySlots::valueRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueRoleChanged(QString)" );
 
@@ -324,7 +324,7 @@ void QItemModelBarDataProxySlots::valueRoleChanged( const QString & role )
 
 void QItemModelBarDataProxySlots::valueRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueRolePatternChanged(QRegExp)" );
 
@@ -342,7 +342,7 @@ void QItemModelBarDataProxySlots::valueRolePatternChanged( const QRegExp & patte
 
 void QItemModelBarDataProxySlots::valueRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueRoleReplaceChanged(QString)" );
 
@@ -364,19 +364,19 @@ void QItemModelBarDataProxySlots_connect_signal( const QString & signal, const Q
 
   if( obj )
   {
-    QItemModelBarDataProxySlots * s = QCoreApplication::instance()->findChild<QItemModelBarDataProxySlots *>();
+    QItemModelBarDataProxySlots * s = QCoreApplication::instance()->findChild<QItemModelBarDataProxySlots*>();
 
     if( s == NULL )
     {
       s = new QItemModelBarDataProxySlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -22,7 +22,7 @@ QWebViewSlots::~QWebViewSlots()
 
 void QWebViewSlots::iconChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "iconChanged()" );
 
@@ -38,7 +38,7 @@ void QWebViewSlots::iconChanged()
 
 void QWebViewSlots::linkClicked( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkClicked(QUrl)" );
 
@@ -56,7 +56,7 @@ void QWebViewSlots::linkClicked( const QUrl & url )
 
 void QWebViewSlots::loadFinished( bool ok )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadFinished(bool)" );
 
@@ -74,7 +74,7 @@ void QWebViewSlots::loadFinished( bool ok )
 
 void QWebViewSlots::loadProgress( int progress )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadProgress(int)" );
 
@@ -92,7 +92,7 @@ void QWebViewSlots::loadProgress( int progress )
 
 void QWebViewSlots::loadStarted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadStarted()" );
 
@@ -108,7 +108,7 @@ void QWebViewSlots::loadStarted()
 
 void QWebViewSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
@@ -124,7 +124,7 @@ void QWebViewSlots::selectionChanged()
 
 void QWebViewSlots::statusBarMessage( const QString & text )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusBarMessage(QString)" );
 
@@ -142,7 +142,7 @@ void QWebViewSlots::statusBarMessage( const QString & text )
 
 void QWebViewSlots::titleChanged( const QString & title )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "titleChanged(QString)" );
 
@@ -160,7 +160,7 @@ void QWebViewSlots::titleChanged( const QString & title )
 
 void QWebViewSlots::urlChanged( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "urlChanged(QUrl)" );
 
@@ -182,19 +182,19 @@ void QWebViewSlots_connect_signal( const QString & signal, const QString & slot 
 
   if( obj )
   {
-    QWebViewSlots * s = QCoreApplication::instance()->findChild<QWebViewSlots *>();
+    QWebViewSlots * s = QCoreApplication::instance()->findChild<QWebViewSlots*>();
 
     if( s == NULL )
     {
       s = new QWebViewSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

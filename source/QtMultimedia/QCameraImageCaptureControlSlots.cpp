@@ -22,7 +22,7 @@ QCameraImageCaptureControlSlots::~QCameraImageCaptureControlSlots()
 
 void QCameraImageCaptureControlSlots::error( int id, int error, const QString & errorString )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(int,int,QString)" );
 
@@ -44,7 +44,7 @@ void QCameraImageCaptureControlSlots::error( int id, int error, const QString & 
 
 void QCameraImageCaptureControlSlots::imageAvailable( int requestId, const QVideoFrame & buffer )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "imageAvailable(int,QVideoFrame)" );
 
@@ -64,7 +64,7 @@ void QCameraImageCaptureControlSlots::imageAvailable( int requestId, const QVide
 
 void QCameraImageCaptureControlSlots::imageCaptured( int requestId, const QImage & preview )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "imageCaptured(int,QImage)" );
 
@@ -84,7 +84,7 @@ void QCameraImageCaptureControlSlots::imageCaptured( int requestId, const QImage
 
 void QCameraImageCaptureControlSlots::imageExposed( int requestId )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "imageExposed(int)" );
 
@@ -102,7 +102,7 @@ void QCameraImageCaptureControlSlots::imageExposed( int requestId )
 
 void QCameraImageCaptureControlSlots::imageMetadataAvailable( int id, const QString & key, const QVariant & value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "imageMetadataAvailable(int,QString,QVariant)" );
 
@@ -124,7 +124,7 @@ void QCameraImageCaptureControlSlots::imageMetadataAvailable( int id, const QStr
 
 void QCameraImageCaptureControlSlots::imageSaved( int requestId, const QString & fileName )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "imageSaved(int,QString)" );
 
@@ -144,7 +144,7 @@ void QCameraImageCaptureControlSlots::imageSaved( int requestId, const QString &
 
 void QCameraImageCaptureControlSlots::readyForCaptureChanged( bool ready )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readyForCaptureChanged(bool)" );
 
@@ -166,19 +166,19 @@ void QCameraImageCaptureControlSlots_connect_signal( const QString & signal, con
 
   if( obj )
   {
-    QCameraImageCaptureControlSlots * s = QCoreApplication::instance()->findChild<QCameraImageCaptureControlSlots *>();
+    QCameraImageCaptureControlSlots * s = QCoreApplication::instance()->findChild<QCameraImageCaptureControlSlots*>();
 
     if( s == NULL )
     {
       s = new QCameraImageCaptureControlSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

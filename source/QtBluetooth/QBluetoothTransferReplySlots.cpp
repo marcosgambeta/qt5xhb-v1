@@ -23,7 +23,7 @@ QBluetoothTransferReplySlots::~QBluetoothTransferReplySlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothTransferReplySlots::finished( QBluetoothTransferReply * r )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QBluetoothTransferReply*)" );
 
@@ -43,7 +43,7 @@ void QBluetoothTransferReplySlots::finished( QBluetoothTransferReply * r )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothTransferReplySlots::transferProgress( qint64 bytesTransferred, qint64 bytesTotal )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "transferProgress(qint64,qint64)" );
 
@@ -69,22 +69,22 @@ void QBluetoothTransferReplySlots_connect_signal( const QString & signal, const 
 
   if( obj )
   {
-    QBluetoothTransferReplySlots * s = QCoreApplication::instance()->findChild<QBluetoothTransferReplySlots *>();
+    QBluetoothTransferReplySlots * s = QCoreApplication::instance()->findChild<QBluetoothTransferReplySlots*>();
 
     if( s == NULL )
     {
       s = new QBluetoothTransferReplySlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

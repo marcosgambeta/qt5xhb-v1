@@ -22,7 +22,7 @@ QSqlDriverSlots::~QSqlDriverSlots()
 
 void QSqlDriverSlots::notification( const QString & name )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "notification(QString)" );
 
@@ -40,7 +40,7 @@ void QSqlDriverSlots::notification( const QString & name )
 
 void QSqlDriverSlots::notification( const QString & name, QSqlDriver::NotificationSource source, const QVariant & payload )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
 
@@ -66,19 +66,19 @@ void QSqlDriverSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QSqlDriverSlots * s = QCoreApplication::instance()->findChild<QSqlDriverSlots *>();
+    QSqlDriverSlots * s = QCoreApplication::instance()->findChild<QSqlDriverSlots*>();
 
     if( s == NULL )
     {
       s = new QSqlDriverSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -22,7 +22,7 @@ QAbstract3DSeriesSlots::~QAbstract3DSeriesSlots()
 
 void QAbstract3DSeriesSlots::baseColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "baseColorChanged(QColor)" );
 
@@ -40,7 +40,7 @@ void QAbstract3DSeriesSlots::baseColorChanged( const QColor & color )
 
 void QAbstract3DSeriesSlots::baseGradientChanged( const QLinearGradient & gradient )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "baseGradientChanged(QLinearGradient)" );
 
@@ -58,7 +58,7 @@ void QAbstract3DSeriesSlots::baseGradientChanged( const QLinearGradient & gradie
 
 void QAbstract3DSeriesSlots::colorStyleChanged( Q3DTheme::ColorStyle style )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorStyleChanged(Q3DTheme::ColorStyle)" );
 
@@ -76,7 +76,7 @@ void QAbstract3DSeriesSlots::colorStyleChanged( Q3DTheme::ColorStyle style )
 
 void QAbstract3DSeriesSlots::itemLabelChanged( const QString & label )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemLabelChanged(QString)" );
 
@@ -94,7 +94,7 @@ void QAbstract3DSeriesSlots::itemLabelChanged( const QString & label )
 
 void QAbstract3DSeriesSlots::itemLabelFormatChanged( const QString & format )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemLabelFormatChanged(QString)" );
 
@@ -112,7 +112,7 @@ void QAbstract3DSeriesSlots::itemLabelFormatChanged( const QString & format )
 
 void QAbstract3DSeriesSlots::itemLabelVisibilityChanged( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemLabelVisibilityChanged(bool)" );
 
@@ -130,7 +130,7 @@ void QAbstract3DSeriesSlots::itemLabelVisibilityChanged( bool visible )
 
 void QAbstract3DSeriesSlots::meshChanged( QAbstract3DSeries::Mesh mesh )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "meshChanged(QAbstract3DSeries::Mesh)" );
 
@@ -148,7 +148,7 @@ void QAbstract3DSeriesSlots::meshChanged( QAbstract3DSeries::Mesh mesh )
 
 void QAbstract3DSeriesSlots::meshRotationChanged( const QQuaternion & rotation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "meshRotationChanged(QQuaternion)" );
 
@@ -166,7 +166,7 @@ void QAbstract3DSeriesSlots::meshRotationChanged( const QQuaternion & rotation )
 
 void QAbstract3DSeriesSlots::meshSmoothChanged( bool enabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "meshSmoothChanged(bool)" );
 
@@ -184,7 +184,7 @@ void QAbstract3DSeriesSlots::meshSmoothChanged( bool enabled )
 
 void QAbstract3DSeriesSlots::multiHighlightColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "multiHighlightColorChanged(QColor)" );
 
@@ -202,7 +202,7 @@ void QAbstract3DSeriesSlots::multiHighlightColorChanged( const QColor & color )
 
 void QAbstract3DSeriesSlots::multiHighlightGradientChanged( const QLinearGradient & gradient )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "multiHighlightGradientChanged(QLinearGradient)" );
 
@@ -220,7 +220,7 @@ void QAbstract3DSeriesSlots::multiHighlightGradientChanged( const QLinearGradien
 
 void QAbstract3DSeriesSlots::nameChanged( const QString & name )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged(QString)" );
 
@@ -238,7 +238,7 @@ void QAbstract3DSeriesSlots::nameChanged( const QString & name )
 
 void QAbstract3DSeriesSlots::singleHighlightColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "singleHighlightColorChanged(QColor)" );
 
@@ -256,7 +256,7 @@ void QAbstract3DSeriesSlots::singleHighlightColorChanged( const QColor & color )
 
 void QAbstract3DSeriesSlots::singleHighlightGradientChanged( const QLinearGradient & gradient )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "singleHighlightGradientChanged(QLinearGradient)" );
 
@@ -274,7 +274,7 @@ void QAbstract3DSeriesSlots::singleHighlightGradientChanged( const QLinearGradie
 
 void QAbstract3DSeriesSlots::userDefinedMeshChanged( const QString & fileName )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "userDefinedMeshChanged(QString)" );
 
@@ -292,7 +292,7 @@ void QAbstract3DSeriesSlots::userDefinedMeshChanged( const QString & fileName )
 
 void QAbstract3DSeriesSlots::visibilityChanged( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibilityChanged(bool)" );
 
@@ -314,19 +314,19 @@ void QAbstract3DSeriesSlots_connect_signal( const QString & signal, const QStrin
 
   if( obj )
   {
-    QAbstract3DSeriesSlots * s = QCoreApplication::instance()->findChild<QAbstract3DSeriesSlots *>();
+    QAbstract3DSeriesSlots * s = QCoreApplication::instance()->findChild<QAbstract3DSeriesSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstract3DSeriesSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

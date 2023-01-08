@@ -23,7 +23,7 @@ QBarCategoryAxisSlots::~QBarCategoryAxisSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarCategoryAxisSlots::categoriesChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoriesChanged()" );
 
@@ -41,7 +41,7 @@ void QBarCategoryAxisSlots::categoriesChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarCategoryAxisSlots::countChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "countChanged()" );
 
@@ -59,7 +59,7 @@ void QBarCategoryAxisSlots::countChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarCategoryAxisSlots::maxChanged( const QString & max )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxChanged(QString)" );
 
@@ -79,7 +79,7 @@ void QBarCategoryAxisSlots::maxChanged( const QString & max )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarCategoryAxisSlots::minChanged( const QString & min )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minChanged(QString)" );
 
@@ -99,7 +99,7 @@ void QBarCategoryAxisSlots::minChanged( const QString & min )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarCategoryAxisSlots::rangeChanged( const QString & min, const QString & max )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rangeChanged(QString,QString)" );
 
@@ -125,22 +125,22 @@ void QBarCategoryAxisSlots_connect_signal( const QString & signal, const QString
 
   if( obj )
   {
-    QBarCategoryAxisSlots * s = QCoreApplication::instance()->findChild<QBarCategoryAxisSlots *>();
+    QBarCategoryAxisSlots * s = QCoreApplication::instance()->findChild<QBarCategoryAxisSlots*>();
 
     if( s == NULL )
     {
       s = new QBarCategoryAxisSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

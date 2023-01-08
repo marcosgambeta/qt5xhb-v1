@@ -22,7 +22,7 @@ QDragSlots::~QDragSlots()
 
 void QDragSlots::actionChanged( Qt::DropAction action )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
 
@@ -40,7 +40,7 @@ void QDragSlots::actionChanged( Qt::DropAction action )
 
 void QDragSlots::targetChanged( QObject * newTarget )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "targetChanged(QObject*)" );
 
@@ -62,19 +62,19 @@ void QDragSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QDragSlots * s = QCoreApplication::instance()->findChild<QDragSlots *>();
+    QDragSlots * s = QCoreApplication::instance()->findChild<QDragSlots*>();
 
     if( s == NULL )
     {
       s = new QDragSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

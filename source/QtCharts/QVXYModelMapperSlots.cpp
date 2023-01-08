@@ -23,7 +23,7 @@ QVXYModelMapperSlots::~QVXYModelMapperSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QVXYModelMapperSlots::firstRowChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstRowChanged()" );
 
@@ -41,7 +41,7 @@ void QVXYModelMapperSlots::firstRowChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QVXYModelMapperSlots::modelReplaced()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "modelReplaced()" );
 
@@ -59,7 +59,7 @@ void QVXYModelMapperSlots::modelReplaced()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QVXYModelMapperSlots::rowCountChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCountChanged()" );
 
@@ -77,7 +77,7 @@ void QVXYModelMapperSlots::rowCountChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QVXYModelMapperSlots::seriesReplaced()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesReplaced()" );
 
@@ -95,7 +95,7 @@ void QVXYModelMapperSlots::seriesReplaced()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QVXYModelMapperSlots::xColumnChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xColumnChanged()" );
 
@@ -113,7 +113,7 @@ void QVXYModelMapperSlots::xColumnChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QVXYModelMapperSlots::yColumnChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yColumnChanged()" );
 
@@ -135,22 +135,22 @@ void QVXYModelMapperSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QVXYModelMapperSlots * s = QCoreApplication::instance()->findChild<QVXYModelMapperSlots *>();
+    QVXYModelMapperSlots * s = QCoreApplication::instance()->findChild<QVXYModelMapperSlots*>();
 
     if( s == NULL )
     {
       s = new QVXYModelMapperSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

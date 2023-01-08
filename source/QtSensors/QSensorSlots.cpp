@@ -23,7 +23,7 @@ QSensorSlots::~QSensorSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::busyChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "busyChanged()" );
 
@@ -41,7 +41,7 @@ void QSensorSlots::busyChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::activeChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeChanged()" );
 
@@ -59,7 +59,7 @@ void QSensorSlots::activeChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::readingChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readingChanged()" );
 
@@ -77,7 +77,7 @@ void QSensorSlots::readingChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::sensorError( int error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sensorError(int)" );
 
@@ -97,7 +97,7 @@ void QSensorSlots::sensorError( int error )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::availableSensorsChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availableSensorsChanged()" );
 
@@ -115,7 +115,7 @@ void QSensorSlots::availableSensorsChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::alwaysOnChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "alwaysOnChanged()" );
 
@@ -133,7 +133,7 @@ void QSensorSlots::alwaysOnChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::dataRateChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataRateChanged()" );
 
@@ -151,7 +151,7 @@ void QSensorSlots::dataRateChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::skipDuplicatesChanged( bool skipDuplicates )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "skipDuplicatesChanged(bool)" );
 
@@ -171,7 +171,7 @@ void QSensorSlots::skipDuplicatesChanged( bool skipDuplicates )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::axesOrientationModeChanged( QSensor::AxesOrientationMode axesOrientationMode )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axesOrientationModeChanged(QSensor::AxesOrientationMode)" );
 
@@ -191,7 +191,7 @@ void QSensorSlots::axesOrientationModeChanged( QSensor::AxesOrientationMode axes
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::currentOrientationChanged( int currentOrientation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentOrientationChanged(int)" );
 
@@ -211,7 +211,7 @@ void QSensorSlots::currentOrientationChanged( int currentOrientation )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::userOrientationChanged( int userOrientation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "userOrientationChanged(int)" );
 
@@ -231,7 +231,7 @@ void QSensorSlots::userOrientationChanged( int userOrientation )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::maxBufferSizeChanged( int maxBufferSize )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxBufferSizeChanged(int)" );
 
@@ -251,7 +251,7 @@ void QSensorSlots::maxBufferSizeChanged( int maxBufferSize )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::efficientBufferSizeChanged( int efficientBufferSize )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "efficientBufferSizeChanged(int)" );
 
@@ -271,7 +271,7 @@ void QSensorSlots::efficientBufferSizeChanged( int efficientBufferSize )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorSlots::bufferSizeChanged( int bufferSize )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bufferSizeChanged(int)" );
 
@@ -295,22 +295,22 @@ void QSensorSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QSensorSlots * s = QCoreApplication::instance()->findChild<QSensorSlots *>();
+    QSensorSlots * s = QCoreApplication::instance()->findChild<QSensorSlots*>();
 
     if( s == NULL )
     {
       s = new QSensorSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

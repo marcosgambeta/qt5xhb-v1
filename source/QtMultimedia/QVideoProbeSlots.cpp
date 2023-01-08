@@ -22,7 +22,7 @@ QVideoProbeSlots::~QVideoProbeSlots()
 
 void QVideoProbeSlots::flush()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "flush()" );
 
@@ -38,7 +38,7 @@ void QVideoProbeSlots::flush()
 
 void QVideoProbeSlots::videoFrameProbed( const QVideoFrame & frame )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "videoFrameProbed(QVideoFrame)" );
 
@@ -60,19 +60,19 @@ void QVideoProbeSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QVideoProbeSlots * s = QCoreApplication::instance()->findChild<QVideoProbeSlots *>();
+    QVideoProbeSlots * s = QCoreApplication::instance()->findChild<QVideoProbeSlots*>();
 
     if( s == NULL )
     {
       s = new QVideoProbeSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

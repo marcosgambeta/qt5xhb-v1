@@ -22,7 +22,7 @@ QAudioDecoderControlSlots::~QAudioDecoderControlSlots()
 
 void QAudioDecoderControlSlots::bufferAvailableChanged( bool available )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bufferAvailableChanged(bool)" );
 
@@ -40,7 +40,7 @@ void QAudioDecoderControlSlots::bufferAvailableChanged( bool available )
 
 void QAudioDecoderControlSlots::bufferReady()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bufferReady()" );
 
@@ -56,7 +56,7 @@ void QAudioDecoderControlSlots::bufferReady()
 
 void QAudioDecoderControlSlots::durationChanged( qint64 duration )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "durationChanged(qint64)" );
 
@@ -74,7 +74,7 @@ void QAudioDecoderControlSlots::durationChanged( qint64 duration )
 
 void QAudioDecoderControlSlots::error( int error, const QString & errorString )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(int,QString)" );
 
@@ -94,7 +94,7 @@ void QAudioDecoderControlSlots::error( int error, const QString & errorString )
 
 void QAudioDecoderControlSlots::finished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -110,7 +110,7 @@ void QAudioDecoderControlSlots::finished()
 
 void QAudioDecoderControlSlots::formatChanged( const QAudioFormat & format )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "formatChanged(QAudioFormat)" );
 
@@ -128,7 +128,7 @@ void QAudioDecoderControlSlots::formatChanged( const QAudioFormat & format )
 
 void QAudioDecoderControlSlots::positionChanged( qint64 position )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionChanged(qint64)" );
 
@@ -146,7 +146,7 @@ void QAudioDecoderControlSlots::positionChanged( qint64 position )
 
 void QAudioDecoderControlSlots::sourceChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sourceChanged()" );
 
@@ -162,7 +162,7 @@ void QAudioDecoderControlSlots::sourceChanged()
 
 void QAudioDecoderControlSlots::stateChanged( QAudioDecoder::State state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QAudioDecoder::State)" );
 
@@ -184,19 +184,19 @@ void QAudioDecoderControlSlots_connect_signal( const QString & signal, const QSt
 
   if( obj )
   {
-    QAudioDecoderControlSlots * s = QCoreApplication::instance()->findChild<QAudioDecoderControlSlots *>();
+    QAudioDecoderControlSlots * s = QCoreApplication::instance()->findChild<QAudioDecoderControlSlots*>();
 
     if( s == NULL )
     {
       s = new QAudioDecoderControlSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

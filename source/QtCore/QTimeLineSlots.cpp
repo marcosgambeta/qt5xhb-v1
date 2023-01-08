@@ -22,7 +22,7 @@ QTimeLineSlots::~QTimeLineSlots()
 
 void QTimeLineSlots::finished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -38,7 +38,7 @@ void QTimeLineSlots::finished()
 
 void QTimeLineSlots::frameChanged( int frame )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "frameChanged(int)" );
 
@@ -56,7 +56,7 @@ void QTimeLineSlots::frameChanged( int frame )
 
 void QTimeLineSlots::stateChanged( QTimeLine::State newState )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QTimeLine::State)" );
 
@@ -74,7 +74,7 @@ void QTimeLineSlots::stateChanged( QTimeLine::State newState )
 
 void QTimeLineSlots::valueChanged( qreal value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(qreal)" );
 
@@ -96,19 +96,19 @@ void QTimeLineSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QTimeLineSlots * s = QCoreApplication::instance()->findChild<QTimeLineSlots *>();
+    QTimeLineSlots * s = QCoreApplication::instance()->findChild<QTimeLineSlots*>();
 
     if( s == NULL )
     {
       s = new QTimeLineSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -23,7 +23,7 @@ QLegendSlots::~QLegendSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLegendSlots::backgroundVisibleChanged( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "backgroundVisibleChanged(bool)" );
 
@@ -43,7 +43,7 @@ void QLegendSlots::backgroundVisibleChanged( bool visible )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLegendSlots::borderColorChanged( QColor color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "borderColorChanged(QColor)" );
 
@@ -63,7 +63,7 @@ void QLegendSlots::borderColorChanged( QColor color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLegendSlots::colorChanged( QColor color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
@@ -83,7 +83,7 @@ void QLegendSlots::colorChanged( QColor color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLegendSlots::fontChanged( QFont font )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fontChanged(QFont)" );
 
@@ -103,7 +103,7 @@ void QLegendSlots::fontChanged( QFont font )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLegendSlots::labelColorChanged( QColor color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelColorChanged(QColor)" );
 
@@ -123,7 +123,7 @@ void QLegendSlots::labelColorChanged( QColor color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QLegendSlots::markerShapeChanged( QLegend::MarkerShape shape )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "markerShapeChanged(QLegend::MarkerShape)" );
 
@@ -143,7 +143,7 @@ void QLegendSlots::markerShapeChanged( QLegend::MarkerShape shape )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLegendSlots::reverseMarkersChanged( bool reverseMarkers )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "reverseMarkersChanged(bool)" );
 
@@ -163,7 +163,7 @@ void QLegendSlots::reverseMarkersChanged( bool reverseMarkers )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLegendSlots::showToolTipsChanged( bool showToolTips )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "showToolTipsChanged(bool)" );
 
@@ -187,22 +187,22 @@ void QLegendSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QLegendSlots * s = QCoreApplication::instance()->findChild<QLegendSlots *>();
+    QLegendSlots * s = QCoreApplication::instance()->findChild<QLegendSlots*>();
 
     if( s == NULL )
     {
       s = new QLegendSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

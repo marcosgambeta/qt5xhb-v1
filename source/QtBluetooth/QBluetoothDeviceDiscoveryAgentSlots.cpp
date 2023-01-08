@@ -23,7 +23,7 @@ QBluetoothDeviceDiscoveryAgentSlots::~QBluetoothDeviceDiscoveryAgentSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothDeviceDiscoveryAgentSlots::deviceDiscovered( const QBluetoothDeviceInfo & info )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "deviceDiscovered(QBluetoothDeviceInfo)" );
 
@@ -43,7 +43,7 @@ void QBluetoothDeviceDiscoveryAgentSlots::deviceDiscovered( const QBluetoothDevi
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothDeviceDiscoveryAgentSlots::finished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -61,7 +61,7 @@ void QBluetoothDeviceDiscoveryAgentSlots::finished()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothDeviceDiscoveryAgentSlots::error( QBluetoothDeviceDiscoveryAgent::Error error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QBluetoothDeviceDiscoveryAgent::Error)" );
 
@@ -81,7 +81,7 @@ void QBluetoothDeviceDiscoveryAgentSlots::error( QBluetoothDeviceDiscoveryAgent:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothDeviceDiscoveryAgentSlots::canceled()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "canceled()" );
 
@@ -103,22 +103,22 @@ void QBluetoothDeviceDiscoveryAgentSlots_connect_signal( const QString & signal,
 
   if( obj )
   {
-    QBluetoothDeviceDiscoveryAgentSlots * s = QCoreApplication::instance()->findChild<QBluetoothDeviceDiscoveryAgentSlots *>();
+    QBluetoothDeviceDiscoveryAgentSlots * s = QCoreApplication::instance()->findChild<QBluetoothDeviceDiscoveryAgentSlots*>();
 
     if( s == NULL )
     {
       s = new QBluetoothDeviceDiscoveryAgentSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

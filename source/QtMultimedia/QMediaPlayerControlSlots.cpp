@@ -22,7 +22,7 @@ QMediaPlayerControlSlots::~QMediaPlayerControlSlots()
 
 void QMediaPlayerControlSlots::audioAvailableChanged( bool audio )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "audioAvailableChanged(bool)" );
 
@@ -40,7 +40,7 @@ void QMediaPlayerControlSlots::audioAvailableChanged( bool audio )
 
 void QMediaPlayerControlSlots::availablePlaybackRangesChanged( const QMediaTimeRange & ranges )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availablePlaybackRangesChanged(QMediaTimeRange)" );
 
@@ -58,7 +58,7 @@ void QMediaPlayerControlSlots::availablePlaybackRangesChanged( const QMediaTimeR
 
 void QMediaPlayerControlSlots::bufferStatusChanged( int progress )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bufferStatusChanged(int)" );
 
@@ -76,7 +76,7 @@ void QMediaPlayerControlSlots::bufferStatusChanged( int progress )
 
 void QMediaPlayerControlSlots::durationChanged( qint64 duration )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "durationChanged(qint64)" );
 
@@ -94,7 +94,7 @@ void QMediaPlayerControlSlots::durationChanged( qint64 duration )
 
 void QMediaPlayerControlSlots::error( int error, const QString & errorString )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(int,QString)" );
 
@@ -114,7 +114,7 @@ void QMediaPlayerControlSlots::error( int error, const QString & errorString )
 
 void QMediaPlayerControlSlots::mediaChanged( const QMediaContent & content )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mediaChanged(QMediaContent)" );
 
@@ -132,7 +132,7 @@ void QMediaPlayerControlSlots::mediaChanged( const QMediaContent & content )
 
 void QMediaPlayerControlSlots::mediaStatusChanged( QMediaPlayer::MediaStatus status )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mediaStatusChanged(QMediaPlayer::MediaStatus)" );
 
@@ -150,7 +150,7 @@ void QMediaPlayerControlSlots::mediaStatusChanged( QMediaPlayer::MediaStatus sta
 
 void QMediaPlayerControlSlots::mutedChanged( bool mute )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mutedChanged(bool)" );
 
@@ -168,7 +168,7 @@ void QMediaPlayerControlSlots::mutedChanged( bool mute )
 
 void QMediaPlayerControlSlots::playbackRateChanged( qreal rate )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "playbackRateChanged(qreal)" );
 
@@ -186,7 +186,7 @@ void QMediaPlayerControlSlots::playbackRateChanged( qreal rate )
 
 void QMediaPlayerControlSlots::positionChanged( qint64 position )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionChanged(qint64)" );
 
@@ -204,7 +204,7 @@ void QMediaPlayerControlSlots::positionChanged( qint64 position )
 
 void QMediaPlayerControlSlots::seekableChanged( bool seekable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seekableChanged(bool)" );
 
@@ -222,7 +222,7 @@ void QMediaPlayerControlSlots::seekableChanged( bool seekable )
 
 void QMediaPlayerControlSlots::stateChanged( QMediaPlayer::State state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QMediaPlayer::State)" );
 
@@ -240,7 +240,7 @@ void QMediaPlayerControlSlots::stateChanged( QMediaPlayer::State state )
 
 void QMediaPlayerControlSlots::videoAvailableChanged( bool video )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "videoAvailableChanged(bool)" );
 
@@ -258,7 +258,7 @@ void QMediaPlayerControlSlots::videoAvailableChanged( bool video )
 
 void QMediaPlayerControlSlots::volumeChanged( int volume )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "volumeChanged(int)" );
 
@@ -280,19 +280,19 @@ void QMediaPlayerControlSlots_connect_signal( const QString & signal, const QStr
 
   if( obj )
   {
-    QMediaPlayerControlSlots * s = QCoreApplication::instance()->findChild<QMediaPlayerControlSlots *>();
+    QMediaPlayerControlSlots * s = QCoreApplication::instance()->findChild<QMediaPlayerControlSlots*>();
 
     if( s == NULL )
     {
       s = new QMediaPlayerControlSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

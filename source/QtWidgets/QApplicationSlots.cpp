@@ -22,7 +22,7 @@ QApplicationSlots::~QApplicationSlots()
 
 void QApplicationSlots::aboutToReleaseGpuResources()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToReleaseGpuResources()" );
 
@@ -38,7 +38,7 @@ void QApplicationSlots::aboutToReleaseGpuResources()
 
 void QApplicationSlots::aboutToUseGpuResources()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToUseGpuResources()" );
 
@@ -54,7 +54,7 @@ void QApplicationSlots::aboutToUseGpuResources()
 
 void QApplicationSlots::commitDataRequest( QSessionManager & manager )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "commitDataRequest(QSessionManager)" );
 
@@ -72,7 +72,7 @@ void QApplicationSlots::commitDataRequest( QSessionManager & manager )
 
 void QApplicationSlots::focusChanged( QWidget * old, QWidget * now )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "focusChanged(QWidget*,QWidget*)" );
 
@@ -92,7 +92,7 @@ void QApplicationSlots::focusChanged( QWidget * old, QWidget * now )
 
 void QApplicationSlots::fontDatabaseChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fontDatabaseChanged()" );
 
@@ -108,7 +108,7 @@ void QApplicationSlots::fontDatabaseChanged()
 
 void QApplicationSlots::lastWindowClosed()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastWindowClosed()" );
 
@@ -124,7 +124,7 @@ void QApplicationSlots::lastWindowClosed()
 
 void QApplicationSlots::saveStateRequest( QSessionManager & manager )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "saveStateRequest(QSessionManager)" );
 
@@ -146,19 +146,19 @@ void QApplicationSlots_connect_signal( const QString & signal, const QString & s
 
   if( obj )
   {
-    QApplicationSlots * s = QCoreApplication::instance()->findChild<QApplicationSlots *>();
+    QApplicationSlots * s = QCoreApplication::instance()->findChild<QApplicationSlots*>();
 
     if( s == NULL )
     {
       s = new QApplicationSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

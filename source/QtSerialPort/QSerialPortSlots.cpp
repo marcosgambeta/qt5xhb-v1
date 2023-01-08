@@ -23,7 +23,7 @@ QSerialPortSlots::~QSerialPortSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSerialPortSlots::baudRateChanged( qint32 baudRate, QSerialPort::Directions dir )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "baudRateChanged(qint32,QSerialPort::Directions)" );
 
@@ -45,7 +45,7 @@ void QSerialPortSlots::baudRateChanged( qint32 baudRate, QSerialPort::Directions
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSerialPortSlots::dataBitsChanged( QSerialPort::DataBits dataBits )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataBitsChanged(QSerialPort::DataBits)" );
 
@@ -65,7 +65,7 @@ void QSerialPortSlots::dataBitsChanged( QSerialPort::DataBits dataBits )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSerialPortSlots::parityChanged( QSerialPort::Parity parity )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "parityChanged(QSerialPort::Parity)" );
 
@@ -85,7 +85,7 @@ void QSerialPortSlots::parityChanged( QSerialPort::Parity parity )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSerialPortSlots::stopBitsChanged( QSerialPort::StopBits stopBits )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stopBitsChanged(QSerialPort::StopBits)" );
 
@@ -105,7 +105,7 @@ void QSerialPortSlots::stopBitsChanged( QSerialPort::StopBits stopBits )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSerialPortSlots::flowControlChanged( QSerialPort::FlowControl flow )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "flowControlChanged(QSerialPort::FlowControl)" );
 
@@ -125,7 +125,7 @@ void QSerialPortSlots::flowControlChanged( QSerialPort::FlowControl flow )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSerialPortSlots::dataErrorPolicyChanged( QSerialPort::DataErrorPolicy policy )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" );
 
@@ -145,7 +145,7 @@ void QSerialPortSlots::dataErrorPolicyChanged( QSerialPort::DataErrorPolicy poli
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSerialPortSlots::dataTerminalReadyChanged( bool set )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataTerminalReadyChanged(bool)" );
 
@@ -165,7 +165,7 @@ void QSerialPortSlots::dataTerminalReadyChanged( bool set )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSerialPortSlots::requestToSendChanged( bool set )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "requestToSendChanged(bool)" );
 
@@ -185,7 +185,7 @@ void QSerialPortSlots::requestToSendChanged( bool set )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSerialPortSlots::error( QSerialPort::SerialPortError serialPortError )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QSerialPort::SerialPortError)" );
 
@@ -205,7 +205,7 @@ void QSerialPortSlots::error( QSerialPort::SerialPortError serialPortError )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSerialPortSlots::settingsRestoredOnCloseChanged( bool restore )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "settingsRestoredOnCloseChanged(bool)" );
 
@@ -229,22 +229,22 @@ void QSerialPortSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QSerialPortSlots * s = QCoreApplication::instance()->findChild<QSerialPortSlots *>();
+    QSerialPortSlots * s = QCoreApplication::instance()->findChild<QSerialPortSlots*>();
 
     if( s == NULL )
     {
       s = new QSerialPortSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

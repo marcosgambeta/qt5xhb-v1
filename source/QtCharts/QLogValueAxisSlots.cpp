@@ -23,7 +23,7 @@ QLogValueAxisSlots::~QLogValueAxisSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLogValueAxisSlots::baseChanged( qreal base )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "baseChanged(qreal)" );
 
@@ -43,7 +43,7 @@ void QLogValueAxisSlots::baseChanged( qreal base )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLogValueAxisSlots::labelFormatChanged( const QString & format )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelFormatChanged(QString)" );
 
@@ -63,7 +63,7 @@ void QLogValueAxisSlots::labelFormatChanged( const QString & format )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLogValueAxisSlots::maxChanged( qreal max )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxChanged(qreal)" );
 
@@ -83,7 +83,7 @@ void QLogValueAxisSlots::maxChanged( qreal max )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLogValueAxisSlots::minChanged( qreal min )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minChanged(qreal)" );
 
@@ -103,7 +103,7 @@ void QLogValueAxisSlots::minChanged( qreal min )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QLogValueAxisSlots::minorTickCountChanged( int minorTickCount )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minorTickCountChanged(int)" );
 
@@ -123,7 +123,7 @@ void QLogValueAxisSlots::minorTickCountChanged( int minorTickCount )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QLogValueAxisSlots::rangeChanged( qreal min, qreal max )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rangeChanged(qreal,qreal)" );
 
@@ -145,7 +145,7 @@ void QLogValueAxisSlots::rangeChanged( qreal min, qreal max )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QLogValueAxisSlots::tickCountChanged( int tickCount )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tickCountChanged(int)" );
 
@@ -169,22 +169,22 @@ void QLogValueAxisSlots_connect_signal( const QString & signal, const QString & 
 
   if( obj )
   {
-    QLogValueAxisSlots * s = QCoreApplication::instance()->findChild<QLogValueAxisSlots *>();
+    QLogValueAxisSlots * s = QCoreApplication::instance()->findChild<QLogValueAxisSlots*>();
 
     if( s == NULL )
     {
       s = new QLogValueAxisSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

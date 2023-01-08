@@ -23,7 +23,7 @@ QBarSetSlots::~QBarSetSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::borderColorChanged( QColor color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "borderColorChanged(QColor)" );
 
@@ -43,7 +43,7 @@ void QBarSetSlots::borderColorChanged( QColor color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::brushChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "brushChanged()" );
 
@@ -61,7 +61,7 @@ void QBarSetSlots::brushChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::clicked( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(int)" );
 
@@ -81,7 +81,7 @@ void QBarSetSlots::clicked( int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::colorChanged( QColor color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
@@ -101,7 +101,7 @@ void QBarSetSlots::colorChanged( QColor color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::doubleClicked( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(int)" );
 
@@ -121,7 +121,7 @@ void QBarSetSlots::doubleClicked( int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::hovered( bool status, int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(bool,int)" );
 
@@ -143,7 +143,7 @@ void QBarSetSlots::hovered( bool status, int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::labelBrushChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelBrushChanged()" );
 
@@ -161,7 +161,7 @@ void QBarSetSlots::labelBrushChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::labelChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelChanged()" );
 
@@ -179,7 +179,7 @@ void QBarSetSlots::labelChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::labelColorChanged( QColor color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelColorChanged(QColor)" );
 
@@ -199,7 +199,7 @@ void QBarSetSlots::labelColorChanged( QColor color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::labelFontChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelFontChanged()" );
 
@@ -217,7 +217,7 @@ void QBarSetSlots::labelFontChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::penChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "penChanged()" );
 
@@ -235,7 +235,7 @@ void QBarSetSlots::penChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::pressed( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(int)" );
 
@@ -255,7 +255,7 @@ void QBarSetSlots::pressed( int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::released( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released(int)" );
 
@@ -275,7 +275,7 @@ void QBarSetSlots::released( int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::valueChanged( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(int)" );
 
@@ -295,7 +295,7 @@ void QBarSetSlots::valueChanged( int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::valuesAdded( int index, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valuesAdded(int,int)" );
 
@@ -317,7 +317,7 @@ void QBarSetSlots::valuesAdded( int index, int count )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarSetSlots::valuesRemoved( int index, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valuesRemoved(int,int)" );
 
@@ -343,22 +343,22 @@ void QBarSetSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QBarSetSlots * s = QCoreApplication::instance()->findChild<QBarSetSlots *>();
+    QBarSetSlots * s = QCoreApplication::instance()->findChild<QBarSetSlots*>();
 
     if( s == NULL )
     {
       s = new QBarSetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

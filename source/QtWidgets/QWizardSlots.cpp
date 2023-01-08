@@ -22,7 +22,7 @@ QWizardSlots::~QWizardSlots()
 
 void QWizardSlots::currentIdChanged( int id )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentIdChanged(int)" );
 
@@ -40,7 +40,7 @@ void QWizardSlots::currentIdChanged( int id )
 
 void QWizardSlots::customButtonClicked( int which )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "customButtonClicked(int)" );
 
@@ -58,7 +58,7 @@ void QWizardSlots::customButtonClicked( int which )
 
 void QWizardSlots::helpRequested()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "helpRequested()" );
 
@@ -74,7 +74,7 @@ void QWizardSlots::helpRequested()
 
 void QWizardSlots::pageAdded( int id )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pageAdded(int)" );
 
@@ -92,7 +92,7 @@ void QWizardSlots::pageAdded( int id )
 
 void QWizardSlots::pageRemoved( int id )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pageRemoved(int)" );
 
@@ -114,19 +114,19 @@ void QWizardSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QWizardSlots * s = QCoreApplication::instance()->findChild<QWizardSlots *>();
+    QWizardSlots * s = QCoreApplication::instance()->findChild<QWizardSlots*>();
 
     if( s == NULL )
     {
       s = new QWizardSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

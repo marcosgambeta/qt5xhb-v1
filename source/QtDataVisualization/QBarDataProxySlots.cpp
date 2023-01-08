@@ -22,7 +22,7 @@ QBarDataProxySlots::~QBarDataProxySlots()
 
 void QBarDataProxySlots::arrayReset()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "arrayReset()" );
 
@@ -38,7 +38,7 @@ void QBarDataProxySlots::arrayReset()
 
 void QBarDataProxySlots::columnLabelsChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnLabelsChanged()" );
 
@@ -54,7 +54,7 @@ void QBarDataProxySlots::columnLabelsChanged()
 
 void QBarDataProxySlots::itemChanged( int rowIndex, int columnIndex )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemChanged(int,int)" );
 
@@ -74,7 +74,7 @@ void QBarDataProxySlots::itemChanged( int rowIndex, int columnIndex )
 
 void QBarDataProxySlots::rowCountChanged( int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCountChanged(int)" );
 
@@ -92,7 +92,7 @@ void QBarDataProxySlots::rowCountChanged( int count )
 
 void QBarDataProxySlots::rowLabelsChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowLabelsChanged()" );
 
@@ -108,7 +108,7 @@ void QBarDataProxySlots::rowLabelsChanged()
 
 void QBarDataProxySlots::rowsAdded( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsAdded(int,int)" );
 
@@ -128,7 +128,7 @@ void QBarDataProxySlots::rowsAdded( int startIndex, int count )
 
 void QBarDataProxySlots::rowsChanged( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsChanged(int,int)" );
 
@@ -148,7 +148,7 @@ void QBarDataProxySlots::rowsChanged( int startIndex, int count )
 
 void QBarDataProxySlots::rowsInserted( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsInserted(int,int)" );
 
@@ -168,7 +168,7 @@ void QBarDataProxySlots::rowsInserted( int startIndex, int count )
 
 void QBarDataProxySlots::rowsRemoved( int startIndex, int count )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsRemoved(int,int)" );
 
@@ -188,7 +188,7 @@ void QBarDataProxySlots::rowsRemoved( int startIndex, int count )
 
 void QBarDataProxySlots::seriesChanged( QBar3DSeries * series )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesChanged(QBar3DSeries*)" );
 
@@ -210,19 +210,19 @@ void QBarDataProxySlots_connect_signal( const QString & signal, const QString & 
 
   if( obj )
   {
-    QBarDataProxySlots * s = QCoreApplication::instance()->findChild<QBarDataProxySlots *>();
+    QBarDataProxySlots * s = QCoreApplication::instance()->findChild<QBarDataProxySlots*>();
 
     if( s == NULL )
     {
       s = new QBarDataProxySlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

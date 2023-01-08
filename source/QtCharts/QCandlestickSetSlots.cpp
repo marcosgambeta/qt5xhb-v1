@@ -23,7 +23,7 @@ QCandlestickSetSlots::~QCandlestickSetSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::brushChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "brushChanged()" );
 
@@ -41,7 +41,7 @@ void QCandlestickSetSlots::brushChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::clicked()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked()" );
 
@@ -59,7 +59,7 @@ void QCandlestickSetSlots::clicked()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::closeChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "closeChanged()" );
 
@@ -77,7 +77,7 @@ void QCandlestickSetSlots::closeChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::doubleClicked()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked()" );
 
@@ -95,7 +95,7 @@ void QCandlestickSetSlots::doubleClicked()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::highChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "highChanged()" );
 
@@ -113,7 +113,7 @@ void QCandlestickSetSlots::highChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::hovered( bool status )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(bool)" );
 
@@ -133,7 +133,7 @@ void QCandlestickSetSlots::hovered( bool status )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::lowChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lowChanged()" );
 
@@ -151,7 +151,7 @@ void QCandlestickSetSlots::lowChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::openChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "openChanged()" );
 
@@ -169,7 +169,7 @@ void QCandlestickSetSlots::openChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::penChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "penChanged()" );
 
@@ -187,7 +187,7 @@ void QCandlestickSetSlots::penChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::pressed()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed()" );
 
@@ -205,7 +205,7 @@ void QCandlestickSetSlots::pressed()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::released()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released()" );
 
@@ -223,7 +223,7 @@ void QCandlestickSetSlots::released()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSetSlots::timestampChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "timestampChanged()" );
 
@@ -245,22 +245,22 @@ void QCandlestickSetSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QCandlestickSetSlots * s = QCoreApplication::instance()->findChild<QCandlestickSetSlots *>();
+    QCandlestickSetSlots * s = QCoreApplication::instance()->findChild<QCandlestickSetSlots*>();
 
     if( s == NULL )
     {
       s = new QCandlestickSetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

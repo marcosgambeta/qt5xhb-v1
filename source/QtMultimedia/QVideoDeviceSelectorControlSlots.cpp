@@ -22,7 +22,7 @@ QVideoDeviceSelectorControlSlots::~QVideoDeviceSelectorControlSlots()
 
 void QVideoDeviceSelectorControlSlots::devicesChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "devicesChanged()" );
 
@@ -38,7 +38,7 @@ void QVideoDeviceSelectorControlSlots::devicesChanged()
 
 void QVideoDeviceSelectorControlSlots::selectedDeviceChanged( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedDeviceChanged(int)" );
 
@@ -56,7 +56,7 @@ void QVideoDeviceSelectorControlSlots::selectedDeviceChanged( int index )
 
 void QVideoDeviceSelectorControlSlots::selectedDeviceChanged( const QString & name )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedDeviceChanged(QString)" );
 
@@ -78,19 +78,19 @@ void QVideoDeviceSelectorControlSlots_connect_signal( const QString & signal, co
 
   if( obj )
   {
-    QVideoDeviceSelectorControlSlots * s = QCoreApplication::instance()->findChild<QVideoDeviceSelectorControlSlots *>();
+    QVideoDeviceSelectorControlSlots * s = QCoreApplication::instance()->findChild<QVideoDeviceSelectorControlSlots*>();
 
     if( s == NULL )
     {
       s = new QVideoDeviceSelectorControlSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

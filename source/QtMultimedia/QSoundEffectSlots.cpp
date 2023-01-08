@@ -22,7 +22,7 @@ QSoundEffectSlots::~QSoundEffectSlots()
 
 void QSoundEffectSlots::sourceChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sourceChanged()" );
 
@@ -38,7 +38,7 @@ void QSoundEffectSlots::sourceChanged()
 
 void QSoundEffectSlots::loopCountChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loopCountChanged()" );
 
@@ -54,7 +54,7 @@ void QSoundEffectSlots::loopCountChanged()
 
 void QSoundEffectSlots::loopsRemainingChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loopsRemainingChanged()" );
 
@@ -70,7 +70,7 @@ void QSoundEffectSlots::loopsRemainingChanged()
 
 void QSoundEffectSlots::volumeChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "volumeChanged()" );
 
@@ -86,7 +86,7 @@ void QSoundEffectSlots::volumeChanged()
 
 void QSoundEffectSlots::mutedChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mutedChanged()" );
 
@@ -102,7 +102,7 @@ void QSoundEffectSlots::mutedChanged()
 
 void QSoundEffectSlots::loadedChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadedChanged()" );
 
@@ -118,7 +118,7 @@ void QSoundEffectSlots::loadedChanged()
 
 void QSoundEffectSlots::playingChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "playingChanged()" );
 
@@ -134,7 +134,7 @@ void QSoundEffectSlots::playingChanged()
 
 void QSoundEffectSlots::statusChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged()" );
 
@@ -150,7 +150,7 @@ void QSoundEffectSlots::statusChanged()
 
 void QSoundEffectSlots::categoryChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoryChanged()" );
 
@@ -170,19 +170,19 @@ void QSoundEffectSlots_connect_signal( const QString & signal, const QString & s
 
   if( obj )
   {
-    QSoundEffectSlots * s = QCoreApplication::instance()->findChild<QSoundEffectSlots *>();
+    QSoundEffectSlots * s = QCoreApplication::instance()->findChild<QSoundEffectSlots*>();
 
     if( s == NULL )
     {
       s = new QSoundEffectSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

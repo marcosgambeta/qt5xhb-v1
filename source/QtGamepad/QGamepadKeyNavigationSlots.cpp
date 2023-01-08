@@ -23,7 +23,7 @@ QGamepadKeyNavigationSlots::~QGamepadKeyNavigationSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::activeChanged( bool isActive )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeChanged(bool)" );
 
@@ -43,7 +43,7 @@ void QGamepadKeyNavigationSlots::activeChanged( bool isActive )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::gamepadChanged( QGamepad * gamepad )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gamepadChanged(QGamepad*)" );
 
@@ -63,7 +63,7 @@ void QGamepadKeyNavigationSlots::gamepadChanged( QGamepad * gamepad )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::upKeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "upKeyChanged(Qt::Key)" );
 
@@ -83,7 +83,7 @@ void QGamepadKeyNavigationSlots::upKeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::downKeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "downKeyChanged(Qt::Key)" );
 
@@ -103,7 +103,7 @@ void QGamepadKeyNavigationSlots::downKeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::leftKeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "leftKeyChanged(Qt::Key)" );
 
@@ -123,7 +123,7 @@ void QGamepadKeyNavigationSlots::leftKeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::rightKeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rightKeyChanged(Qt::Key)" );
 
@@ -143,7 +143,7 @@ void QGamepadKeyNavigationSlots::rightKeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonAKeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonAKeyChanged(Qt::Key)" );
 
@@ -163,7 +163,7 @@ void QGamepadKeyNavigationSlots::buttonAKeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonBKeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonBKeyChanged(Qt::Key)" );
 
@@ -183,7 +183,7 @@ void QGamepadKeyNavigationSlots::buttonBKeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonXKeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonXKeyChanged(Qt::Key)" );
 
@@ -203,7 +203,7 @@ void QGamepadKeyNavigationSlots::buttonXKeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonYKeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonYKeyChanged(Qt::Key)" );
 
@@ -223,7 +223,7 @@ void QGamepadKeyNavigationSlots::buttonYKeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonSelectKeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonSelectKeyChanged(Qt::Key)" );
 
@@ -243,7 +243,7 @@ void QGamepadKeyNavigationSlots::buttonSelectKeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonStartKeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonStartKeyChanged(Qt::Key)" );
 
@@ -263,7 +263,7 @@ void QGamepadKeyNavigationSlots::buttonStartKeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonGuideKeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonGuideKeyChanged(Qt::Key)" );
 
@@ -283,7 +283,7 @@ void QGamepadKeyNavigationSlots::buttonGuideKeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonL1KeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL1KeyChanged(Qt::Key)" );
 
@@ -303,7 +303,7 @@ void QGamepadKeyNavigationSlots::buttonL1KeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonR1KeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR1KeyChanged(Qt::Key)" );
 
@@ -323,7 +323,7 @@ void QGamepadKeyNavigationSlots::buttonR1KeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonL2KeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL2KeyChanged(Qt::Key)" );
 
@@ -343,7 +343,7 @@ void QGamepadKeyNavigationSlots::buttonL2KeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonR2KeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR2KeyChanged(Qt::Key)" );
 
@@ -363,7 +363,7 @@ void QGamepadKeyNavigationSlots::buttonR2KeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonL3KeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL3KeyChanged(Qt::Key)" );
 
@@ -383,7 +383,7 @@ void QGamepadKeyNavigationSlots::buttonL3KeyChanged( Qt::Key key )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadKeyNavigationSlots::buttonR3KeyChanged( Qt::Key key )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR3KeyChanged(Qt::Key)" );
 
@@ -407,22 +407,22 @@ void QGamepadKeyNavigationSlots_connect_signal( const QString & signal, const QS
 
   if( obj )
   {
-    QGamepadKeyNavigationSlots * s = QCoreApplication::instance()->findChild<QGamepadKeyNavigationSlots *>();
+    QGamepadKeyNavigationSlots * s = QCoreApplication::instance()->findChild<QGamepadKeyNavigationSlots*>();
 
     if( s == NULL )
     {
       s = new QGamepadKeyNavigationSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

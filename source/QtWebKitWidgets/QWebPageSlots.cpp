@@ -22,7 +22,7 @@ QWebPageSlots::~QWebPageSlots()
 
 void QWebPageSlots::applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" );
 
@@ -44,7 +44,7 @@ void QWebPageSlots::applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, 
 
 void QWebPageSlots::contentsChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsChanged()" );
 
@@ -60,7 +60,7 @@ void QWebPageSlots::contentsChanged()
 
 void QWebPageSlots::databaseQuotaExceeded( QWebFrame * frame, QString databaseName )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "databaseQuotaExceeded(QWebFrame*,QString)" );
 
@@ -80,7 +80,7 @@ void QWebPageSlots::databaseQuotaExceeded( QWebFrame * frame, QString databaseNa
 
 void QWebPageSlots::downloadRequested( const QNetworkRequest & request )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "downloadRequested(QNetworkRequest)" );
 
@@ -98,7 +98,7 @@ void QWebPageSlots::downloadRequested( const QNetworkRequest & request )
 
 void QWebPageSlots::featurePermissionRequestCanceled( QWebFrame * frame, QWebPage::Feature feature )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" );
 
@@ -118,7 +118,7 @@ void QWebPageSlots::featurePermissionRequestCanceled( QWebFrame * frame, QWebPag
 
 void QWebPageSlots::featurePermissionRequested( QWebFrame * frame, QWebPage::Feature feature )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" );
 
@@ -138,7 +138,7 @@ void QWebPageSlots::featurePermissionRequested( QWebFrame * frame, QWebPage::Fea
 
 void QWebPageSlots::frameCreated( QWebFrame * frame )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "frameCreated(QWebFrame*)" );
 
@@ -156,7 +156,7 @@ void QWebPageSlots::frameCreated( QWebFrame * frame )
 
 void QWebPageSlots::geometryChangeRequested( const QRect & geom )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "geometryChangeRequested(QRect)" );
 
@@ -174,7 +174,7 @@ void QWebPageSlots::geometryChangeRequested( const QRect & geom )
 
 void QWebPageSlots::linkClicked( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkClicked(QUrl)" );
 
@@ -192,7 +192,7 @@ void QWebPageSlots::linkClicked( const QUrl & url )
 
 void QWebPageSlots::linkHovered( const QString & link, const QString & title, const QString & textContent )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkHovered(QString,QString,QString)" );
 
@@ -214,7 +214,7 @@ void QWebPageSlots::linkHovered( const QString & link, const QString & title, co
 
 void QWebPageSlots::loadFinished( bool ok )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadFinished(bool)" );
 
@@ -232,7 +232,7 @@ void QWebPageSlots::loadFinished( bool ok )
 
 void QWebPageSlots::loadProgress( int progress )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadProgress(int)" );
 
@@ -250,7 +250,7 @@ void QWebPageSlots::loadProgress( int progress )
 
 void QWebPageSlots::loadStarted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadStarted()" );
 
@@ -266,7 +266,7 @@ void QWebPageSlots::loadStarted()
 
 void QWebPageSlots::menuBarVisibilityChangeRequested( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "menuBarVisibilityChangeRequested(bool)" );
 
@@ -284,7 +284,7 @@ void QWebPageSlots::menuBarVisibilityChangeRequested( bool visible )
 
 void QWebPageSlots::microFocusChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "microFocusChanged()" );
 
@@ -300,7 +300,7 @@ void QWebPageSlots::microFocusChanged()
 
 void QWebPageSlots::printRequested( QWebFrame * frame )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "printRequested(QWebFrame*)" );
 
@@ -318,7 +318,7 @@ void QWebPageSlots::printRequested( QWebFrame * frame )
 
 void QWebPageSlots::repaintRequested( const QRect & dirtyRect )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "repaintRequested(QRect)" );
 
@@ -336,7 +336,7 @@ void QWebPageSlots::repaintRequested( const QRect & dirtyRect )
 
 void QWebPageSlots::restoreFrameStateRequested( QWebFrame * frame )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "restoreFrameStateRequested(QWebFrame*)" );
 
@@ -354,7 +354,7 @@ void QWebPageSlots::restoreFrameStateRequested( QWebFrame * frame )
 
 void QWebPageSlots::saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" );
 
@@ -374,7 +374,7 @@ void QWebPageSlots::saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem 
 
 void QWebPageSlots::scrollRequested( int dx, int dy, const QRect & rectToScroll )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scrollRequested(int,int,QRect)" );
 
@@ -396,7 +396,7 @@ void QWebPageSlots::scrollRequested( int dx, int dy, const QRect & rectToScroll 
 
 void QWebPageSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
@@ -412,7 +412,7 @@ void QWebPageSlots::selectionChanged()
 
 void QWebPageSlots::statusBarMessage( const QString & text )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusBarMessage(QString)" );
 
@@ -430,7 +430,7 @@ void QWebPageSlots::statusBarMessage( const QString & text )
 
 void QWebPageSlots::statusBarVisibilityChangeRequested( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusBarVisibilityChangeRequested(bool)" );
 
@@ -448,7 +448,7 @@ void QWebPageSlots::statusBarVisibilityChangeRequested( bool visible )
 
 void QWebPageSlots::toolBarVisibilityChangeRequested( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "toolBarVisibilityChangeRequested(bool)" );
 
@@ -466,7 +466,7 @@ void QWebPageSlots::toolBarVisibilityChangeRequested( bool visible )
 
 void QWebPageSlots::unsupportedContent( QNetworkReply * reply )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "unsupportedContent(QNetworkReply*)" );
 
@@ -484,7 +484,7 @@ void QWebPageSlots::unsupportedContent( QNetworkReply * reply )
 
 void QWebPageSlots::viewportChangeRequested()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "viewportChangeRequested()" );
 
@@ -500,7 +500,7 @@ void QWebPageSlots::viewportChangeRequested()
 
 void QWebPageSlots::windowCloseRequested()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "windowCloseRequested()" );
 
@@ -520,19 +520,19 @@ void QWebPageSlots_connect_signal( const QString & signal, const QString & slot 
 
   if( obj )
   {
-    QWebPageSlots * s = QCoreApplication::instance()->findChild<QWebPageSlots *>();
+    QWebPageSlots * s = QCoreApplication::instance()->findChild<QWebPageSlots*>();
 
     if( s == NULL )
     {
       s = new QWebPageSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

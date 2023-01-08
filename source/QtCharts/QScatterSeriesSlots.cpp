@@ -23,7 +23,7 @@ QScatterSeriesSlots::~QScatterSeriesSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QScatterSeriesSlots::borderColorChanged( QColor color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "borderColorChanged(QColor)" );
 
@@ -43,7 +43,7 @@ void QScatterSeriesSlots::borderColorChanged( QColor color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QScatterSeriesSlots::colorChanged( QColor color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
@@ -63,7 +63,7 @@ void QScatterSeriesSlots::colorChanged( QColor color )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QScatterSeriesSlots::markerShapeChanged( QScatterSeries::MarkerShape shape )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "markerShapeChanged(QScatterSeries::MarkerShape)" );
 
@@ -83,7 +83,7 @@ void QScatterSeriesSlots::markerShapeChanged( QScatterSeries::MarkerShape shape 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QScatterSeriesSlots::markerSizeChanged( qreal size )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "markerSizeChanged(qreal)" );
 
@@ -107,22 +107,22 @@ void QScatterSeriesSlots_connect_signal( const QString & signal, const QString &
 
   if( obj )
   {
-    QScatterSeriesSlots * s = QCoreApplication::instance()->findChild<QScatterSeriesSlots *>();
+    QScatterSeriesSlots * s = QCoreApplication::instance()->findChild<QScatterSeriesSlots*>();
 
     if( s == NULL )
     {
       s = new QScatterSeriesSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

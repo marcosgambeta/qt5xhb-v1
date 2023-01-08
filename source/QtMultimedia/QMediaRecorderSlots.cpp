@@ -22,7 +22,7 @@ QMediaRecorderSlots::~QMediaRecorderSlots()
 
 void QMediaRecorderSlots::actualLocationChanged( const QUrl & location )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "actualLocationChanged(QUrl)" );
 
@@ -40,7 +40,7 @@ void QMediaRecorderSlots::actualLocationChanged( const QUrl & location )
 
 void QMediaRecorderSlots::availabilityChanged( bool available )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availabilityChanged(bool)" );
 
@@ -58,7 +58,7 @@ void QMediaRecorderSlots::availabilityChanged( bool available )
 
 void QMediaRecorderSlots::availabilityChanged( QMultimedia::AvailabilityStatus availability )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
 
@@ -76,7 +76,7 @@ void QMediaRecorderSlots::availabilityChanged( QMultimedia::AvailabilityStatus a
 
 void QMediaRecorderSlots::durationChanged( qint64 duration )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "durationChanged(qint64)" );
 
@@ -94,7 +94,7 @@ void QMediaRecorderSlots::durationChanged( qint64 duration )
 
 void QMediaRecorderSlots::error( QMediaRecorder::Error error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QMediaRecorder::Error)" );
 
@@ -112,7 +112,7 @@ void QMediaRecorderSlots::error( QMediaRecorder::Error error )
 
 void QMediaRecorderSlots::metaDataAvailableChanged( bool available )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
 
@@ -130,7 +130,7 @@ void QMediaRecorderSlots::metaDataAvailableChanged( bool available )
 
 void QMediaRecorderSlots::metaDataChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged()" );
 
@@ -146,7 +146,7 @@ void QMediaRecorderSlots::metaDataChanged()
 
 void QMediaRecorderSlots::metaDataChanged( const QString & key, const QVariant & value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
 
@@ -166,7 +166,7 @@ void QMediaRecorderSlots::metaDataChanged( const QString & key, const QVariant &
 
 void QMediaRecorderSlots::metaDataWritableChanged( bool writable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataWritableChanged(bool)" );
 
@@ -184,7 +184,7 @@ void QMediaRecorderSlots::metaDataWritableChanged( bool writable )
 
 void QMediaRecorderSlots::mutedChanged( bool muted )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mutedChanged(bool)" );
 
@@ -202,7 +202,7 @@ void QMediaRecorderSlots::mutedChanged( bool muted )
 
 void QMediaRecorderSlots::stateChanged( QMediaRecorder::State state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QMediaRecorder::State)" );
 
@@ -220,7 +220,7 @@ void QMediaRecorderSlots::stateChanged( QMediaRecorder::State state )
 
 void QMediaRecorderSlots::statusChanged( QMediaRecorder::Status status )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QMediaRecorder::Status)" );
 
@@ -238,7 +238,7 @@ void QMediaRecorderSlots::statusChanged( QMediaRecorder::Status status )
 
 void QMediaRecorderSlots::volumeChanged( qreal volume )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "volumeChanged(qreal)" );
 
@@ -260,19 +260,19 @@ void QMediaRecorderSlots_connect_signal( const QString & signal, const QString &
 
   if( obj )
   {
-    QMediaRecorderSlots * s = QCoreApplication::instance()->findChild<QMediaRecorderSlots *>();
+    QMediaRecorderSlots * s = QCoreApplication::instance()->findChild<QMediaRecorderSlots*>();
 
     if( s == NULL )
     {
       s = new QMediaRecorderSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

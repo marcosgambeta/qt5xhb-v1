@@ -23,7 +23,7 @@ QWidgetSlots::~QWidgetSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QWidgetSlots::windowTitleChanged( const QString & title )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "windowTitleChanged(QString)" );
 
@@ -43,7 +43,7 @@ void QWidgetSlots::windowTitleChanged( const QString & title )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QWidgetSlots::windowIconChanged( const QIcon & icon )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "windowIconChanged(QIcon)" );
 
@@ -62,7 +62,7 @@ void QWidgetSlots::windowIconChanged( const QIcon & icon )
 
 void QWidgetSlots::windowIconTextChanged( const QString & iconText )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "windowIconTextChanged(QString)" );
 
@@ -80,7 +80,7 @@ void QWidgetSlots::windowIconTextChanged( const QString & iconText )
 
 void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "customContextMenuRequested(QPoint)" );
 
@@ -102,19 +102,19 @@ void QWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QWidgetSlots * s = QCoreApplication::instance()->findChild<QWidgetSlots *>();
+    QWidgetSlots * s = QCoreApplication::instance()->findChild<QWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

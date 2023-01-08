@@ -23,7 +23,7 @@ QPieSliceSlots::~QPieSliceSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::angleSpanChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "angleSpanChanged()" );
 
@@ -41,7 +41,7 @@ void QPieSliceSlots::angleSpanChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::borderColorChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "borderColorChanged()" );
 
@@ -59,7 +59,7 @@ void QPieSliceSlots::borderColorChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::borderWidthChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "borderWidthChanged()" );
 
@@ -77,7 +77,7 @@ void QPieSliceSlots::borderWidthChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::brushChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "brushChanged()" );
 
@@ -95,7 +95,7 @@ void QPieSliceSlots::brushChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::clicked()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked()" );
 
@@ -113,7 +113,7 @@ void QPieSliceSlots::clicked()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::colorChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged()" );
 
@@ -131,7 +131,7 @@ void QPieSliceSlots::colorChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::doubleClicked()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked()" );
 
@@ -149,7 +149,7 @@ void QPieSliceSlots::doubleClicked()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::hovered( bool state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(bool)" );
 
@@ -169,7 +169,7 @@ void QPieSliceSlots::hovered( bool state )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::labelBrushChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelBrushChanged()" );
 
@@ -187,7 +187,7 @@ void QPieSliceSlots::labelBrushChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::labelChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelChanged()" );
 
@@ -205,7 +205,7 @@ void QPieSliceSlots::labelChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::labelColorChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelColorChanged()" );
 
@@ -223,7 +223,7 @@ void QPieSliceSlots::labelColorChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::labelFontChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelFontChanged()" );
 
@@ -241,7 +241,7 @@ void QPieSliceSlots::labelFontChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::labelVisibleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelVisibleChanged()" );
 
@@ -259,7 +259,7 @@ void QPieSliceSlots::labelVisibleChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::penChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "penChanged()" );
 
@@ -277,7 +277,7 @@ void QPieSliceSlots::penChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::percentageChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "percentageChanged()" );
 
@@ -295,7 +295,7 @@ void QPieSliceSlots::percentageChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::pressed()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed()" );
 
@@ -313,7 +313,7 @@ void QPieSliceSlots::pressed()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::released()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released()" );
 
@@ -331,7 +331,7 @@ void QPieSliceSlots::released()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::startAngleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "startAngleChanged()" );
 
@@ -349,7 +349,7 @@ void QPieSliceSlots::startAngleChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QPieSliceSlots::valueChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged()" );
 
@@ -371,22 +371,22 @@ void QPieSliceSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QPieSliceSlots * s = QCoreApplication::instance()->findChild<QPieSliceSlots *>();
+    QPieSliceSlots * s = QCoreApplication::instance()->findChild<QPieSliceSlots*>();
 
     if( s == NULL )
     {
       s = new QPieSliceSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

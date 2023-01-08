@@ -22,7 +22,7 @@ QCameraZoomControlSlots::~QCameraZoomControlSlots()
 
 void QCameraZoomControlSlots::currentDigitalZoomChanged( qreal zoom )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentDigitalZoomChanged(qreal)" );
 
@@ -40,7 +40,7 @@ void QCameraZoomControlSlots::currentDigitalZoomChanged( qreal zoom )
 
 void QCameraZoomControlSlots::currentOpticalZoomChanged( qreal zoom )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentOpticalZoomChanged(qreal)" );
 
@@ -58,7 +58,7 @@ void QCameraZoomControlSlots::currentOpticalZoomChanged( qreal zoom )
 
 void QCameraZoomControlSlots::maximumDigitalZoomChanged( qreal zoom )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maximumDigitalZoomChanged(qreal)" );
 
@@ -76,7 +76,7 @@ void QCameraZoomControlSlots::maximumDigitalZoomChanged( qreal zoom )
 
 void QCameraZoomControlSlots::maximumOpticalZoomChanged( qreal zoom )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maximumOpticalZoomChanged(qreal)" );
 
@@ -94,7 +94,7 @@ void QCameraZoomControlSlots::maximumOpticalZoomChanged( qreal zoom )
 
 void QCameraZoomControlSlots::requestedDigitalZoomChanged( qreal zoom )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "requestedDigitalZoomChanged(qreal)" );
 
@@ -112,7 +112,7 @@ void QCameraZoomControlSlots::requestedDigitalZoomChanged( qreal zoom )
 
 void QCameraZoomControlSlots::requestedOpticalZoomChanged( qreal zoom )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "requestedOpticalZoomChanged(qreal)" );
 
@@ -134,19 +134,19 @@ void QCameraZoomControlSlots_connect_signal( const QString & signal, const QStri
 
   if( obj )
   {
-    QCameraZoomControlSlots * s = QCoreApplication::instance()->findChild<QCameraZoomControlSlots *>();
+    QCameraZoomControlSlots * s = QCoreApplication::instance()->findChild<QCameraZoomControlSlots*>();
 
     if( s == NULL )
     {
       s = new QCameraZoomControlSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

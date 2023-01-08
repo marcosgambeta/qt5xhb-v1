@@ -23,7 +23,7 @@ QGamepadSlots::~QGamepadSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::axisLeftXChanged( double value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisLeftXChanged(double)" );
 
@@ -43,7 +43,7 @@ void QGamepadSlots::axisLeftXChanged( double value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::axisLeftYChanged( double value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisLeftYChanged(double)" );
 
@@ -63,7 +63,7 @@ void QGamepadSlots::axisLeftYChanged( double value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::axisRightXChanged( double value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisRightXChanged(double)" );
 
@@ -83,7 +83,7 @@ void QGamepadSlots::axisRightXChanged( double value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::axisRightYChanged( double value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisRightYChanged(double)" );
 
@@ -103,7 +103,7 @@ void QGamepadSlots::axisRightYChanged( double value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonAChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonAChanged(bool)" );
 
@@ -123,7 +123,7 @@ void QGamepadSlots::buttonAChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonBChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonBChanged(bool)" );
 
@@ -143,7 +143,7 @@ void QGamepadSlots::buttonBChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonCenterChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonCenterChanged(bool)" );
 
@@ -163,7 +163,7 @@ void QGamepadSlots::buttonCenterChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonDownChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonDownChanged(bool)" );
 
@@ -183,7 +183,7 @@ void QGamepadSlots::buttonDownChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonGuideChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonGuideChanged(bool)" );
 
@@ -203,7 +203,7 @@ void QGamepadSlots::buttonGuideChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonL1Changed( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL1Changed(bool)" );
 
@@ -223,7 +223,7 @@ void QGamepadSlots::buttonL1Changed( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonL2Changed( double value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL2Changed(double)" );
 
@@ -243,7 +243,7 @@ void QGamepadSlots::buttonL2Changed( double value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonL3Changed( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL3Changed(bool)" );
 
@@ -263,7 +263,7 @@ void QGamepadSlots::buttonL3Changed( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonLeftChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonLeftChanged(bool)" );
 
@@ -283,7 +283,7 @@ void QGamepadSlots::buttonLeftChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonR1Changed( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR1Changed(bool)" );
 
@@ -303,7 +303,7 @@ void QGamepadSlots::buttonR1Changed( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonR2Changed( double value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR2Changed(double)" );
 
@@ -323,7 +323,7 @@ void QGamepadSlots::buttonR2Changed( double value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonR3Changed( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR3Changed(bool)" );
 
@@ -343,7 +343,7 @@ void QGamepadSlots::buttonR3Changed( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonRightChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonRightChanged(bool)" );
 
@@ -363,7 +363,7 @@ void QGamepadSlots::buttonRightChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonSelectChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonSelectChanged(bool)" );
 
@@ -383,7 +383,7 @@ void QGamepadSlots::buttonSelectChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonStartChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonStartChanged(bool)" );
 
@@ -403,7 +403,7 @@ void QGamepadSlots::buttonStartChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonUpChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonUpChanged(bool)" );
 
@@ -423,7 +423,7 @@ void QGamepadSlots::buttonUpChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonXChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonXChanged(bool)" );
 
@@ -443,7 +443,7 @@ void QGamepadSlots::buttonXChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::buttonYChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonYChanged(bool)" );
 
@@ -463,7 +463,7 @@ void QGamepadSlots::buttonYChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::connectedChanged( bool value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "connectedChanged(bool)" );
 
@@ -483,7 +483,7 @@ void QGamepadSlots::connectedChanged( bool value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::deviceIdChanged( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "deviceIdChanged(int)" );
 
@@ -503,7 +503,7 @@ void QGamepadSlots::deviceIdChanged( int value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadSlots::nameChanged( QString value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged(QString)" );
 
@@ -527,22 +527,22 @@ void QGamepadSlots_connect_signal( const QString & signal, const QString & slot 
 
   if( obj )
   {
-    QGamepadSlots * s = QCoreApplication::instance()->findChild<QGamepadSlots *>();
+    QGamepadSlots * s = QCoreApplication::instance()->findChild<QGamepadSlots*>();
 
     if( s == NULL )
     {
       s = new QGamepadSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

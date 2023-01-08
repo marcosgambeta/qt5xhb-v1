@@ -22,7 +22,7 @@ QListWidgetSlots::~QListWidgetSlots()
 
 void QListWidgetSlots::currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
 
@@ -42,7 +42,7 @@ void QListWidgetSlots::currentItemChanged( QListWidgetItem * current, QListWidge
 
 void QListWidgetSlots::currentRowChanged( int currentRow )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentRowChanged(int)" );
 
@@ -60,7 +60,7 @@ void QListWidgetSlots::currentRowChanged( int currentRow )
 
 void QListWidgetSlots::currentTextChanged( const QString & currentText )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentTextChanged(QString)" );
 
@@ -78,7 +78,7 @@ void QListWidgetSlots::currentTextChanged( const QString & currentText )
 
 void QListWidgetSlots::itemActivated( QListWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemActivated(QListWidgetItem*)" );
 
@@ -96,7 +96,7 @@ void QListWidgetSlots::itemActivated( QListWidgetItem * item )
 
 void QListWidgetSlots::itemChanged( QListWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemChanged(QListWidgetItem*)" );
 
@@ -114,7 +114,7 @@ void QListWidgetSlots::itemChanged( QListWidgetItem * item )
 
 void QListWidgetSlots::itemClicked( QListWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemClicked(QListWidgetItem*)" );
 
@@ -132,7 +132,7 @@ void QListWidgetSlots::itemClicked( QListWidgetItem * item )
 
 void QListWidgetSlots::itemDoubleClicked( QListWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemDoubleClicked(QListWidgetItem*)" );
 
@@ -150,7 +150,7 @@ void QListWidgetSlots::itemDoubleClicked( QListWidgetItem * item )
 
 void QListWidgetSlots::itemEntered( QListWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemEntered(QListWidgetItem*)" );
 
@@ -168,7 +168,7 @@ void QListWidgetSlots::itemEntered( QListWidgetItem * item )
 
 void QListWidgetSlots::itemPressed( QListWidgetItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemPressed(QListWidgetItem*)" );
 
@@ -186,7 +186,7 @@ void QListWidgetSlots::itemPressed( QListWidgetItem * item )
 
 void QListWidgetSlots::itemSelectionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemSelectionChanged()" );
 
@@ -206,19 +206,19 @@ void QListWidgetSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QListWidgetSlots * s = QCoreApplication::instance()->findChild<QListWidgetSlots *>();
+    QListWidgetSlots * s = QCoreApplication::instance()->findChild<QListWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QListWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

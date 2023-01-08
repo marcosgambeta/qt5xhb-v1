@@ -22,7 +22,7 @@ QTextEditSlots::~QTextEditSlots()
 
 void QTextEditSlots::copyAvailable( bool yes )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "copyAvailable(bool)" );
 
@@ -40,7 +40,7 @@ void QTextEditSlots::copyAvailable( bool yes )
 
 void QTextEditSlots::currentCharFormatChanged( const QTextCharFormat & f )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentCharFormatChanged(QTextCharFormat)" );
 
@@ -58,7 +58,7 @@ void QTextEditSlots::currentCharFormatChanged( const QTextCharFormat & f )
 
 void QTextEditSlots::cursorPositionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cursorPositionChanged()" );
 
@@ -74,7 +74,7 @@ void QTextEditSlots::cursorPositionChanged()
 
 void QTextEditSlots::redoAvailable( bool available )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "redoAvailable(bool)" );
 
@@ -92,7 +92,7 @@ void QTextEditSlots::redoAvailable( bool available )
 
 void QTextEditSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
@@ -108,7 +108,7 @@ void QTextEditSlots::selectionChanged()
 
 void QTextEditSlots::textChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textChanged()" );
 
@@ -124,7 +124,7 @@ void QTextEditSlots::textChanged()
 
 void QTextEditSlots::undoAvailable( bool available )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "undoAvailable(bool)" );
 
@@ -146,19 +146,19 @@ void QTextEditSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj )
   {
-    QTextEditSlots * s = QCoreApplication::instance()->findChild<QTextEditSlots *>();
+    QTextEditSlots * s = QCoreApplication::instance()->findChild<QTextEditSlots*>();
 
     if( s == NULL )
     {
       s = new QTextEditSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

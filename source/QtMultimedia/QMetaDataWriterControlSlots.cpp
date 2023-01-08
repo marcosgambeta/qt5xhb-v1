@@ -22,7 +22,7 @@ QMetaDataWriterControlSlots::~QMetaDataWriterControlSlots()
 
 void QMetaDataWriterControlSlots::metaDataChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged()" );
 
@@ -38,7 +38,7 @@ void QMetaDataWriterControlSlots::metaDataChanged()
 
 void QMetaDataWriterControlSlots::metaDataChanged( const QString & key, const QVariant & value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
 
@@ -58,7 +58,7 @@ void QMetaDataWriterControlSlots::metaDataChanged( const QString & key, const QV
 
 void QMetaDataWriterControlSlots::writableChanged( bool writable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "writableChanged(bool)" );
 
@@ -76,7 +76,7 @@ void QMetaDataWriterControlSlots::writableChanged( bool writable )
 
 void QMetaDataWriterControlSlots::metaDataAvailableChanged( bool available )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
 
@@ -98,19 +98,19 @@ void QMetaDataWriterControlSlots_connect_signal( const QString & signal, const Q
 
   if( obj )
   {
-    QMetaDataWriterControlSlots * s = QCoreApplication::instance()->findChild<QMetaDataWriterControlSlots *>();
+    QMetaDataWriterControlSlots * s = QCoreApplication::instance()->findChild<QMetaDataWriterControlSlots*>();
 
     if( s == NULL )
     {
       s = new QMetaDataWriterControlSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

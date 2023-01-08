@@ -22,7 +22,7 @@ QNetworkSessionSlots::~QNetworkSessionSlots()
 
 void QNetworkSessionSlots::closed()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "closed()" );
 
@@ -38,7 +38,7 @@ void QNetworkSessionSlots::closed()
 
 void QNetworkSessionSlots::error( QNetworkSession::SessionError error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QNetworkSession::SessionError)" );
 
@@ -56,7 +56,7 @@ void QNetworkSessionSlots::error( QNetworkSession::SessionError error )
 
 void QNetworkSessionSlots::newConfigurationActivated()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "newConfigurationActivated()" );
 
@@ -72,7 +72,7 @@ void QNetworkSessionSlots::newConfigurationActivated()
 
 void QNetworkSessionSlots::opened()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "opened()" );
 
@@ -88,7 +88,7 @@ void QNetworkSessionSlots::opened()
 
 void QNetworkSessionSlots::preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
 
@@ -108,7 +108,7 @@ void QNetworkSessionSlots::preferredConfigurationChanged( const QNetworkConfigur
 
 void QNetworkSessionSlots::stateChanged( QNetworkSession::State state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QNetworkSession::State)" );
 
@@ -126,7 +126,7 @@ void QNetworkSessionSlots::stateChanged( QNetworkSession::State state )
 
 void QNetworkSessionSlots::usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
 
@@ -148,19 +148,19 @@ void QNetworkSessionSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QNetworkSessionSlots * s = QCoreApplication::instance()->findChild<QNetworkSessionSlots *>();
+    QNetworkSessionSlots * s = QCoreApplication::instance()->findChild<QNetworkSessionSlots*>();
 
     if( s == NULL )
     {
       s = new QNetworkSessionSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

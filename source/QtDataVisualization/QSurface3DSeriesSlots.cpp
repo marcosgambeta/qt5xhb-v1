@@ -22,7 +22,7 @@ QSurface3DSeriesSlots::~QSurface3DSeriesSlots()
 
 void QSurface3DSeriesSlots::dataProxyChanged( QSurfaceDataProxy * proxy )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataProxyChanged(QSurfaceDataProxy*)" );
 
@@ -40,7 +40,7 @@ void QSurface3DSeriesSlots::dataProxyChanged( QSurfaceDataProxy * proxy )
 
 void QSurface3DSeriesSlots::drawModeChanged( QSurface3DSeries::DrawFlags mode )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "drawModeChanged(QSurface3DSeries::DrawFlags)" );
 
@@ -58,7 +58,7 @@ void QSurface3DSeriesSlots::drawModeChanged( QSurface3DSeries::DrawFlags mode )
 
 void QSurface3DSeriesSlots::flatShadingEnabledChanged( bool enable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "flatShadingEnabledChanged(bool)" );
 
@@ -76,7 +76,7 @@ void QSurface3DSeriesSlots::flatShadingEnabledChanged( bool enable )
 
 void QSurface3DSeriesSlots::flatShadingSupportedChanged( bool enable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "flatShadingSupportedChanged(bool)" );
 
@@ -94,7 +94,7 @@ void QSurface3DSeriesSlots::flatShadingSupportedChanged( bool enable )
 
 void QSurface3DSeriesSlots::selectedPointChanged( const QPoint & position )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedPointChanged(QPoint)" );
 
@@ -112,7 +112,7 @@ void QSurface3DSeriesSlots::selectedPointChanged( const QPoint & position )
 
 void QSurface3DSeriesSlots::textureChanged( const QImage & image )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textureChanged(QImage)" );
 
@@ -130,7 +130,7 @@ void QSurface3DSeriesSlots::textureChanged( const QImage & image )
 
 void QSurface3DSeriesSlots::textureFileChanged( const QString & filename )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textureFileChanged(QString)" );
 
@@ -152,19 +152,19 @@ void QSurface3DSeriesSlots_connect_signal( const QString & signal, const QString
 
   if( obj )
   {
-    QSurface3DSeriesSlots * s = QCoreApplication::instance()->findChild<QSurface3DSeriesSlots *>();
+    QSurface3DSeriesSlots * s = QCoreApplication::instance()->findChild<QSurface3DSeriesSlots*>();
 
     if( s == NULL )
     {
       s = new QSurface3DSeriesSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -23,7 +23,7 @@ QWebSocketSlots::~QWebSocketSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::aboutToClose()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToClose()" );
 
@@ -41,7 +41,7 @@ void QWebSocketSlots::aboutToClose()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::connected()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "connected()" );
 
@@ -59,7 +59,7 @@ void QWebSocketSlots::connected()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::disconnected()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "disconnected()" );
 
@@ -77,7 +77,7 @@ void QWebSocketSlots::disconnected()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::stateChanged( QAbstractSocket::SocketState state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QAbstractSocket::SocketState)" );
 
@@ -97,7 +97,7 @@ void QWebSocketSlots::stateChanged( QAbstractSocket::SocketState state )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * pAuthenticator )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
@@ -119,7 +119,7 @@ void QWebSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & proxy, 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::readChannelFinished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readChannelFinished()" );
 
@@ -137,7 +137,7 @@ void QWebSocketSlots::readChannelFinished()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::textFrameReceived( const QString & frame, bool isLastFrame )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textFrameReceived(QString,bool)" );
 
@@ -159,7 +159,7 @@ void QWebSocketSlots::textFrameReceived( const QString & frame, bool isLastFrame
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::binaryFrameReceived( const QByteArray & frame, bool isLastFrame )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "binaryFrameReceived(QByteArray,bool)" );
 
@@ -181,7 +181,7 @@ void QWebSocketSlots::binaryFrameReceived( const QByteArray & frame, bool isLast
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::textMessageReceived( const QString & message )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textMessageReceived(QString)" );
 
@@ -201,7 +201,7 @@ void QWebSocketSlots::textMessageReceived( const QString & message )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::binaryMessageReceived( const QByteArray & message )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "binaryMessageReceived(QByteArray)" );
 
@@ -221,7 +221,7 @@ void QWebSocketSlots::binaryMessageReceived( const QByteArray & message )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::error( QAbstractSocket::SocketError error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QAbstractSocket::SocketError)" );
 
@@ -241,7 +241,7 @@ void QWebSocketSlots::error( QAbstractSocket::SocketError error )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::pong( quint64 elapsedTime, const QByteArray & payload )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pong(quint64,QByteArray)" );
 
@@ -263,7 +263,7 @@ void QWebSocketSlots::pong( quint64 elapsedTime, const QByteArray & payload )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::bytesWritten( qint64 bytes )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bytesWritten(qint64)" );
 
@@ -283,7 +283,7 @@ void QWebSocketSlots::bytesWritten( qint64 bytes )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::sslErrors( const QList<QSslError> & errors )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
 
@@ -329,22 +329,22 @@ void QWebSocketSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QWebSocketSlots * s = QCoreApplication::instance()->findChild<QWebSocketSlots *>();
+    QWebSocketSlots * s = QCoreApplication::instance()->findChild<QWebSocketSlots*>();
 
     if( s == NULL )
     {
       s = new QWebSocketSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

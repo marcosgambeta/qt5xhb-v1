@@ -22,7 +22,7 @@ QCameraFocusControlSlots::~QCameraFocusControlSlots()
 
 void QCameraFocusControlSlots::customFocusPointChanged( const QPointF & point )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "customFocusPointChanged(QPointF)" );
 
@@ -40,7 +40,7 @@ void QCameraFocusControlSlots::customFocusPointChanged( const QPointF & point )
 
 void QCameraFocusControlSlots::focusModeChanged( QCameraFocus::FocusModes mode )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "focusModeChanged(QCameraFocus::FocusModes)" );
 
@@ -58,7 +58,7 @@ void QCameraFocusControlSlots::focusModeChanged( QCameraFocus::FocusModes mode )
 
 void QCameraFocusControlSlots::focusPointModeChanged( QCameraFocus::FocusPointMode mode )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "focusPointModeChanged(QCameraFocus::FocusPointMode)" );
 
@@ -76,7 +76,7 @@ void QCameraFocusControlSlots::focusPointModeChanged( QCameraFocus::FocusPointMo
 
 void QCameraFocusControlSlots::focusZonesChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "focusZonesChanged()" );
 
@@ -96,19 +96,19 @@ void QCameraFocusControlSlots_connect_signal( const QString & signal, const QStr
 
   if( obj )
   {
-    QCameraFocusControlSlots * s = QCoreApplication::instance()->findChild<QCameraFocusControlSlots *>();
+    QCameraFocusControlSlots * s = QCoreApplication::instance()->findChild<QCameraFocusControlSlots*>();
 
     if( s == NULL )
     {
       s = new QCameraFocusControlSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

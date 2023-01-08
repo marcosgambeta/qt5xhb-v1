@@ -22,7 +22,7 @@ QCustom3DItemSlots::~QCustom3DItemSlots()
 
 void QCustom3DItemSlots::meshFileChanged( const QString & meshFile )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "meshFileChanged(QString)" );
 
@@ -40,7 +40,7 @@ void QCustom3DItemSlots::meshFileChanged( const QString & meshFile )
 
 void QCustom3DItemSlots::positionAbsoluteChanged( bool positionAbsolute )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionAbsoluteChanged(bool)" );
 
@@ -58,7 +58,7 @@ void QCustom3DItemSlots::positionAbsoluteChanged( bool positionAbsolute )
 
 void QCustom3DItemSlots::positionChanged( const QVector3D & position )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionChanged(QVector3D)" );
 
@@ -76,7 +76,7 @@ void QCustom3DItemSlots::positionChanged( const QVector3D & position )
 
 void QCustom3DItemSlots::rotationChanged( const QQuaternion & rotation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationChanged(QQuaternion)" );
 
@@ -94,7 +94,7 @@ void QCustom3DItemSlots::rotationChanged( const QQuaternion & rotation )
 
 void QCustom3DItemSlots::scalingAbsoluteChanged( bool scalingAbsolute )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scalingAbsoluteChanged(bool)" );
 
@@ -112,7 +112,7 @@ void QCustom3DItemSlots::scalingAbsoluteChanged( bool scalingAbsolute )
 
 void QCustom3DItemSlots::scalingChanged( const QVector3D & scaling )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scalingChanged(QVector3D)" );
 
@@ -130,7 +130,7 @@ void QCustom3DItemSlots::scalingChanged( const QVector3D & scaling )
 
 void QCustom3DItemSlots::shadowCastingChanged( bool shadowCasting )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "shadowCastingChanged(bool)" );
 
@@ -148,7 +148,7 @@ void QCustom3DItemSlots::shadowCastingChanged( bool shadowCasting )
 
 void QCustom3DItemSlots::textureFileChanged( const QString & textureFile )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textureFileChanged(QString)" );
 
@@ -166,7 +166,7 @@ void QCustom3DItemSlots::textureFileChanged( const QString & textureFile )
 
 void QCustom3DItemSlots::visibleChanged( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibleChanged(bool)" );
 
@@ -188,19 +188,19 @@ void QCustom3DItemSlots_connect_signal( const QString & signal, const QString & 
 
   if( obj )
   {
-    QCustom3DItemSlots * s = QCoreApplication::instance()->findChild<QCustom3DItemSlots *>();
+    QCustom3DItemSlots * s = QCoreApplication::instance()->findChild<QCustom3DItemSlots*>();
 
     if( s == NULL )
     {
       s = new QCustom3DItemSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

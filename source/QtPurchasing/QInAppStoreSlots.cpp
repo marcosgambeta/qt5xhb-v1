@@ -22,7 +22,7 @@ QInAppStoreSlots::~QInAppStoreSlots()
 
 void QInAppStoreSlots::productRegistered( QInAppProduct * product )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "productRegistered(QInAppProduct*)" );
 
@@ -40,7 +40,7 @@ void QInAppStoreSlots::productRegistered( QInAppProduct * product )
 
 void QInAppStoreSlots::productUnknown( QInAppProduct::ProductType productType, const QString & identifier )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "productUnknown(QInAppProduct::ProductType,QString)" );
 
@@ -60,7 +60,7 @@ void QInAppStoreSlots::productUnknown( QInAppProduct::ProductType productType, c
 
 void QInAppStoreSlots::transactionReady( QInAppTransaction * transaction )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "transactionReady(QInAppTransaction*)" );
 
@@ -82,19 +82,19 @@ void QInAppStoreSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj )
   {
-    QInAppStoreSlots * s = QCoreApplication::instance()->findChild<QInAppStoreSlots *>();
+    QInAppStoreSlots * s = QCoreApplication::instance()->findChild<QInAppStoreSlots*>();
 
     if( s == NULL )
     {
       s = new QInAppStoreSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

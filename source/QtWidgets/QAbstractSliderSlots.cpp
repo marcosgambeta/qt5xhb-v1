@@ -22,7 +22,7 @@ QAbstractSliderSlots::~QAbstractSliderSlots()
 
 void QAbstractSliderSlots::actionTriggered( int action )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "actionTriggered(int)" );
 
@@ -40,7 +40,7 @@ void QAbstractSliderSlots::actionTriggered( int action )
 
 void QAbstractSliderSlots::rangeChanged( int min, int max )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rangeChanged(int,int)" );
 
@@ -60,7 +60,7 @@ void QAbstractSliderSlots::rangeChanged( int min, int max )
 
 void QAbstractSliderSlots::sliderMoved( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliderMoved(int)" );
 
@@ -78,7 +78,7 @@ void QAbstractSliderSlots::sliderMoved( int value )
 
 void QAbstractSliderSlots::sliderPressed()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliderPressed()" );
 
@@ -94,7 +94,7 @@ void QAbstractSliderSlots::sliderPressed()
 
 void QAbstractSliderSlots::sliderReleased()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliderReleased()" );
 
@@ -110,7 +110,7 @@ void QAbstractSliderSlots::sliderReleased()
 
 void QAbstractSliderSlots::valueChanged( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(int)" );
 
@@ -132,19 +132,19 @@ void QAbstractSliderSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QAbstractSliderSlots * s = QCoreApplication::instance()->findChild<QAbstractSliderSlots *>();
+    QAbstractSliderSlots * s = QCoreApplication::instance()->findChild<QAbstractSliderSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractSliderSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

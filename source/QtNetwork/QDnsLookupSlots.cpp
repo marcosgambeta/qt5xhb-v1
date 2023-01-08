@@ -22,7 +22,7 @@ QDnsLookupSlots::~QDnsLookupSlots()
 
 void QDnsLookupSlots::finished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -38,7 +38,7 @@ void QDnsLookupSlots::finished()
 
 void QDnsLookupSlots::nameChanged( const QString & name )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged(QString)" );
 
@@ -56,7 +56,7 @@ void QDnsLookupSlots::nameChanged( const QString & name )
 
 void QDnsLookupSlots::nameserverChanged( const QHostAddress & nameserver )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameserverChanged(QHostAddress)" );
 
@@ -74,7 +74,7 @@ void QDnsLookupSlots::nameserverChanged( const QHostAddress & nameserver )
 
 void QDnsLookupSlots::typeChanged( QDnsLookup::Type type )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "typeChanged(QDnsLookup::Type)" );
 
@@ -96,19 +96,19 @@ void QDnsLookupSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QDnsLookupSlots * s = QCoreApplication::instance()->findChild<QDnsLookupSlots *>();
+    QDnsLookupSlots * s = QCoreApplication::instance()->findChild<QDnsLookupSlots*>();
 
     if( s == NULL )
     {
       s = new QDnsLookupSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

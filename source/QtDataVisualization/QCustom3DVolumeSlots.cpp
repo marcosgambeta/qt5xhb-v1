@@ -22,7 +22,7 @@ QCustom3DVolumeSlots::~QCustom3DVolumeSlots()
 
 void QCustom3DVolumeSlots::alphaMultiplierChanged( float mult )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "alphaMultiplierChanged(float)" );
 
@@ -40,7 +40,7 @@ void QCustom3DVolumeSlots::alphaMultiplierChanged( float mult )
 
 void QCustom3DVolumeSlots::colorTableChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorTableChanged()" );
 
@@ -56,7 +56,7 @@ void QCustom3DVolumeSlots::colorTableChanged()
 
 void QCustom3DVolumeSlots::drawSliceFramesChanged( bool enabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "drawSliceFramesChanged(bool)" );
 
@@ -74,7 +74,7 @@ void QCustom3DVolumeSlots::drawSliceFramesChanged( bool enabled )
 
 void QCustom3DVolumeSlots::drawSlicesChanged( bool enabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "drawSlicesChanged(bool)" );
 
@@ -92,7 +92,7 @@ void QCustom3DVolumeSlots::drawSlicesChanged( bool enabled )
 
 void QCustom3DVolumeSlots::preserveOpacityChanged( bool enabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "preserveOpacityChanged(bool)" );
 
@@ -110,7 +110,7 @@ void QCustom3DVolumeSlots::preserveOpacityChanged( bool enabled )
 
 void QCustom3DVolumeSlots::sliceFrameColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliceFrameColorChanged(QColor)" );
 
@@ -128,7 +128,7 @@ void QCustom3DVolumeSlots::sliceFrameColorChanged( const QColor & color )
 
 void QCustom3DVolumeSlots::sliceFrameGapsChanged( const QVector3D & values )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliceFrameGapsChanged(QVector3D)" );
 
@@ -146,7 +146,7 @@ void QCustom3DVolumeSlots::sliceFrameGapsChanged( const QVector3D & values )
 
 void QCustom3DVolumeSlots::sliceFrameThicknessesChanged( const QVector3D & values )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliceFrameThicknessesChanged(QVector3D)" );
 
@@ -164,7 +164,7 @@ void QCustom3DVolumeSlots::sliceFrameThicknessesChanged( const QVector3D & value
 
 void QCustom3DVolumeSlots::sliceFrameWidthsChanged( const QVector3D & values )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliceFrameWidthsChanged(QVector3D)" );
 
@@ -182,7 +182,7 @@ void QCustom3DVolumeSlots::sliceFrameWidthsChanged( const QVector3D & values )
 
 void QCustom3DVolumeSlots::sliceIndexXChanged( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliceIndexXChanged(int)" );
 
@@ -200,7 +200,7 @@ void QCustom3DVolumeSlots::sliceIndexXChanged( int value )
 
 void QCustom3DVolumeSlots::sliceIndexYChanged( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliceIndexYChanged(int)" );
 
@@ -218,7 +218,7 @@ void QCustom3DVolumeSlots::sliceIndexYChanged( int value )
 
 void QCustom3DVolumeSlots::sliceIndexZChanged( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliceIndexZChanged(int)" );
 
@@ -236,7 +236,7 @@ void QCustom3DVolumeSlots::sliceIndexZChanged( int value )
 
 void QCustom3DVolumeSlots::textureDepthChanged( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textureDepthChanged(int)" );
 
@@ -254,7 +254,7 @@ void QCustom3DVolumeSlots::textureDepthChanged( int value )
 
 void QCustom3DVolumeSlots::textureFormatChanged( QImage::Format format )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textureFormatChanged(QImage::Format)" );
 
@@ -272,7 +272,7 @@ void QCustom3DVolumeSlots::textureFormatChanged( QImage::Format format )
 
 void QCustom3DVolumeSlots::textureHeightChanged( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textureHeightChanged(int)" );
 
@@ -290,7 +290,7 @@ void QCustom3DVolumeSlots::textureHeightChanged( int value )
 
 void QCustom3DVolumeSlots::textureWidthChanged( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textureWidthChanged(int)" );
 
@@ -308,7 +308,7 @@ void QCustom3DVolumeSlots::textureWidthChanged( int value )
 
 void QCustom3DVolumeSlots::useHighDefShaderChanged( bool enabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "useHighDefShaderChanged(bool)" );
 
@@ -330,19 +330,19 @@ void QCustom3DVolumeSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QCustom3DVolumeSlots * s = QCoreApplication::instance()->findChild<QCustom3DVolumeSlots *>();
+    QCustom3DVolumeSlots * s = QCoreApplication::instance()->findChild<QCustom3DVolumeSlots*>();
 
     if( s == NULL )
     {
       s = new QCustom3DVolumeSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

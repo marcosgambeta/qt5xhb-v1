@@ -22,7 +22,7 @@ QTabBarSlots::~QTabBarSlots()
 
 void QTabBarSlots::currentChanged( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
@@ -40,7 +40,7 @@ void QTabBarSlots::currentChanged( int index )
 
 void QTabBarSlots::tabCloseRequested( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tabCloseRequested(int)" );
 
@@ -58,7 +58,7 @@ void QTabBarSlots::tabCloseRequested( int index )
 
 void QTabBarSlots::tabMoved( int from, int to )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tabMoved(int,int)" );
 
@@ -82,19 +82,19 @@ void QTabBarSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    QTabBarSlots * s = QCoreApplication::instance()->findChild<QTabBarSlots *>();
+    QTabBarSlots * s = QCoreApplication::instance()->findChild<QTabBarSlots*>();
 
     if( s == NULL )
     {
       s = new QTabBarSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

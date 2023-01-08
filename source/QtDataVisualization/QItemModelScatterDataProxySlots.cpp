@@ -22,7 +22,7 @@ QItemModelScatterDataProxySlots::~QItemModelScatterDataProxySlots()
 
 void QItemModelScatterDataProxySlots::itemModelChanged( const QAbstractItemModel * itemModel )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemModelChanged(QAbstractItemModel)" );
 
@@ -40,7 +40,7 @@ void QItemModelScatterDataProxySlots::itemModelChanged( const QAbstractItemModel
 
 void QItemModelScatterDataProxySlots::rotationRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRoleChanged(QString)" );
 
@@ -58,7 +58,7 @@ void QItemModelScatterDataProxySlots::rotationRoleChanged( const QString & role 
 
 void QItemModelScatterDataProxySlots::rotationRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRolePatternChanged(QRegExp)" );
 
@@ -76,7 +76,7 @@ void QItemModelScatterDataProxySlots::rotationRolePatternChanged( const QRegExp 
 
 void QItemModelScatterDataProxySlots::rotationRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRoleReplaceChanged(QString)" );
 
@@ -94,7 +94,7 @@ void QItemModelScatterDataProxySlots::rotationRoleReplaceChanged( const QString 
 
 void QItemModelScatterDataProxySlots::xPosRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRoleChanged(QString)" );
 
@@ -112,7 +112,7 @@ void QItemModelScatterDataProxySlots::xPosRoleChanged( const QString & role )
 
 void QItemModelScatterDataProxySlots::xPosRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRolePatternChanged(QRegExp)" );
 
@@ -130,7 +130,7 @@ void QItemModelScatterDataProxySlots::xPosRolePatternChanged( const QRegExp & pa
 
 void QItemModelScatterDataProxySlots::xPosRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRoleReplaceChanged(QString)" );
 
@@ -148,7 +148,7 @@ void QItemModelScatterDataProxySlots::xPosRoleReplaceChanged( const QString & re
 
 void QItemModelScatterDataProxySlots::yPosRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRoleChanged(QString)" );
 
@@ -166,7 +166,7 @@ void QItemModelScatterDataProxySlots::yPosRoleChanged( const QString & role )
 
 void QItemModelScatterDataProxySlots::yPosRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRolePatternChanged(QRegExp)" );
 
@@ -184,7 +184,7 @@ void QItemModelScatterDataProxySlots::yPosRolePatternChanged( const QRegExp & pa
 
 void QItemModelScatterDataProxySlots::yPosRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRoleReplaceChanged(QString)" );
 
@@ -202,7 +202,7 @@ void QItemModelScatterDataProxySlots::yPosRoleReplaceChanged( const QString & re
 
 void QItemModelScatterDataProxySlots::zPosRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRoleChanged(QString)" );
 
@@ -220,7 +220,7 @@ void QItemModelScatterDataProxySlots::zPosRoleChanged( const QString & role )
 
 void QItemModelScatterDataProxySlots::zPosRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRolePatternChanged(QRegExp)" );
 
@@ -238,7 +238,7 @@ void QItemModelScatterDataProxySlots::zPosRolePatternChanged( const QRegExp & pa
 
 void QItemModelScatterDataProxySlots::zPosRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRoleReplaceChanged(QString)" );
 
@@ -260,19 +260,19 @@ void QItemModelScatterDataProxySlots_connect_signal( const QString & signal, con
 
   if( obj )
   {
-    QItemModelScatterDataProxySlots * s = QCoreApplication::instance()->findChild<QItemModelScatterDataProxySlots *>();
+    QItemModelScatterDataProxySlots * s = QCoreApplication::instance()->findChild<QItemModelScatterDataProxySlots*>();
 
     if( s == NULL )
     {
       s = new QItemModelScatterDataProxySlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

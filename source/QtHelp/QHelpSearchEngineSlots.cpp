@@ -22,7 +22,7 @@ QHelpSearchEngineSlots::~QHelpSearchEngineSlots()
 
 void QHelpSearchEngineSlots::indexingFinished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "indexingFinished()" );
 
@@ -38,7 +38,7 @@ void QHelpSearchEngineSlots::indexingFinished()
 
 void QHelpSearchEngineSlots::indexingStarted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "indexingStarted()" );
 
@@ -54,7 +54,7 @@ void QHelpSearchEngineSlots::indexingStarted()
 
 void QHelpSearchEngineSlots::searchingFinished( int hits )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "searchingFinished(int)" );
 
@@ -72,7 +72,7 @@ void QHelpSearchEngineSlots::searchingFinished( int hits )
 
 void QHelpSearchEngineSlots::searchingStarted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "searchingStarted()" );
 
@@ -92,19 +92,19 @@ void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QStrin
 
   if( obj )
   {
-    QHelpSearchEngineSlots * s = QCoreApplication::instance()->findChild<QHelpSearchEngineSlots *>();
+    QHelpSearchEngineSlots * s = QCoreApplication::instance()->findChild<QHelpSearchEngineSlots*>();
 
     if( s == NULL )
     {
       s = new QHelpSearchEngineSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

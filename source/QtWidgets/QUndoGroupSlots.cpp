@@ -22,7 +22,7 @@ QUndoGroupSlots::~QUndoGroupSlots()
 
 void QUndoGroupSlots::activeStackChanged( QUndoStack * stack )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeStackChanged(QUndoStack*)" );
 
@@ -40,7 +40,7 @@ void QUndoGroupSlots::activeStackChanged( QUndoStack * stack )
 
 void QUndoGroupSlots::canRedoChanged( bool canRedo )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "canRedoChanged(bool)" );
 
@@ -58,7 +58,7 @@ void QUndoGroupSlots::canRedoChanged( bool canRedo )
 
 void QUndoGroupSlots::canUndoChanged( bool canUndo )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "canUndoChanged(bool)" );
 
@@ -76,7 +76,7 @@ void QUndoGroupSlots::canUndoChanged( bool canUndo )
 
 void QUndoGroupSlots::cleanChanged( bool clean )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cleanChanged(bool)" );
 
@@ -94,7 +94,7 @@ void QUndoGroupSlots::cleanChanged( bool clean )
 
 void QUndoGroupSlots::indexChanged( int idx )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "indexChanged(int)" );
 
@@ -112,7 +112,7 @@ void QUndoGroupSlots::indexChanged( int idx )
 
 void QUndoGroupSlots::redoTextChanged( const QString & redoText )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "redoTextChanged(QString)" );
 
@@ -130,7 +130,7 @@ void QUndoGroupSlots::redoTextChanged( const QString & redoText )
 
 void QUndoGroupSlots::undoTextChanged( const QString & undoText )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "undoTextChanged(QString)" );
 
@@ -152,19 +152,19 @@ void QUndoGroupSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj )
   {
-    QUndoGroupSlots * s = QCoreApplication::instance()->findChild<QUndoGroupSlots *>();
+    QUndoGroupSlots * s = QCoreApplication::instance()->findChild<QUndoGroupSlots*>();
 
     if( s == NULL )
     {
       s = new QUndoGroupSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -306,7 +306,7 @@ void Events::disconnectAllEvents( QObject * obj, bool children )
   else
   {
     // obtém a lista de filhos, netos, bisnetos, etc...
-    QList<QObject *> list = obj->findChildren<QObject *>();
+    QList<QObject *> list = obj->findChildren<QObject*>();
     // adiciona o pai na lista
     list << obj;
     // percorre toda a lista de objetos

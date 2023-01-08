@@ -23,7 +23,7 @@ QGamepadManagerSlots::~QGamepadManagerSlots()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadManagerSlots::axisConfigured( int deviceId, QGamepadManager::GamepadAxis axis )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisConfigured(int,QGamepadManager::GamepadAxis)" );
 
@@ -45,7 +45,7 @@ void QGamepadManagerSlots::axisConfigured( int deviceId, QGamepadManager::Gamepa
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadManagerSlots::buttonConfigured( int deviceId, QGamepadManager::GamepadButton button )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonConfigured(int,QGamepadManager::GamepadButton)" );
 
@@ -67,7 +67,7 @@ void QGamepadManagerSlots::buttonConfigured( int deviceId, QGamepadManager::Game
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadManagerSlots::configurationCanceled( int deviceId )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "configurationCanceled(int)" );
 
@@ -87,7 +87,7 @@ void QGamepadManagerSlots::configurationCanceled( int deviceId )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadManagerSlots::connectedGamepadsChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "connectedGamepadsChanged()" );
 
@@ -105,7 +105,7 @@ void QGamepadManagerSlots::connectedGamepadsChanged()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadManagerSlots::gamepadAxisEvent( int deviceId, QGamepadManager::GamepadAxis axis, double value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" );
 
@@ -129,7 +129,7 @@ void QGamepadManagerSlots::gamepadAxisEvent( int deviceId, QGamepadManager::Game
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadManagerSlots::gamepadButtonPressEvent( int deviceId, QGamepadManager::GamepadButton button, double value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" );
 
@@ -153,7 +153,7 @@ void QGamepadManagerSlots::gamepadButtonPressEvent( int deviceId, QGamepadManage
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadManagerSlots::gamepadButtonReleaseEvent( int deviceId, QGamepadManager::GamepadButton button )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" );
 
@@ -175,7 +175,7 @@ void QGamepadManagerSlots::gamepadButtonReleaseEvent( int deviceId, QGamepadMana
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadManagerSlots::gamepadConnected( int deviceId )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gamepadConnected(int)" );
 
@@ -195,7 +195,7 @@ void QGamepadManagerSlots::gamepadConnected( int deviceId )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void QGamepadManagerSlots::gamepadDisconnected( int deviceId )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gamepadDisconnected(int)" );
 
@@ -219,22 +219,22 @@ void QGamepadManagerSlots_connect_signal( const QString & signal, const QString 
 
   if( obj )
   {
-    QGamepadManagerSlots * s = QCoreApplication::instance()->findChild<QGamepadManagerSlots *>();
+    QGamepadManagerSlots * s = QCoreApplication::instance()->findChild<QGamepadManagerSlots*>();
 
     if( s == NULL )
     {
       s = new QGamepadManagerSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }

@@ -22,7 +22,7 @@ QItemModelSurfaceDataProxySlots::~QItemModelSurfaceDataProxySlots()
 
 void QItemModelSurfaceDataProxySlots::autoColumnCategoriesChanged( bool enable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoColumnCategoriesChanged(bool)" );
 
@@ -40,7 +40,7 @@ void QItemModelSurfaceDataProxySlots::autoColumnCategoriesChanged( bool enable )
 
 void QItemModelSurfaceDataProxySlots::autoRowCategoriesChanged( bool enable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoRowCategoriesChanged(bool)" );
 
@@ -58,7 +58,7 @@ void QItemModelSurfaceDataProxySlots::autoRowCategoriesChanged( bool enable )
 
 void QItemModelSurfaceDataProxySlots::columnCategoriesChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnCategoriesChanged()" );
 
@@ -74,7 +74,7 @@ void QItemModelSurfaceDataProxySlots::columnCategoriesChanged()
 
 void QItemModelSurfaceDataProxySlots::columnRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRoleChanged(QString)" );
 
@@ -92,7 +92,7 @@ void QItemModelSurfaceDataProxySlots::columnRoleChanged( const QString & role )
 
 void QItemModelSurfaceDataProxySlots::columnRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRolePatternChanged(QRegExp)" );
 
@@ -110,7 +110,7 @@ void QItemModelSurfaceDataProxySlots::columnRolePatternChanged( const QRegExp & 
 
 void QItemModelSurfaceDataProxySlots::columnRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRoleReplaceChanged(QString)" );
 
@@ -128,7 +128,7 @@ void QItemModelSurfaceDataProxySlots::columnRoleReplaceChanged( const QString & 
 
 void QItemModelSurfaceDataProxySlots::itemModelChanged( const QAbstractItemModel * itemModel )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemModelChanged(QAbstractItemModel)" );
 
@@ -146,7 +146,7 @@ void QItemModelSurfaceDataProxySlots::itemModelChanged( const QAbstractItemModel
 
 void QItemModelSurfaceDataProxySlots::multiMatchBehaviorChanged( QItemModelSurfaceDataProxy::MultiMatchBehavior behavior )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)" );
 
@@ -164,7 +164,7 @@ void QItemModelSurfaceDataProxySlots::multiMatchBehaviorChanged( QItemModelSurfa
 
 void QItemModelSurfaceDataProxySlots::rowCategoriesChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCategoriesChanged()" );
 
@@ -180,7 +180,7 @@ void QItemModelSurfaceDataProxySlots::rowCategoriesChanged()
 
 void QItemModelSurfaceDataProxySlots::rowRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRoleChanged(QString)" );
 
@@ -198,7 +198,7 @@ void QItemModelSurfaceDataProxySlots::rowRoleChanged( const QString & role )
 
 void QItemModelSurfaceDataProxySlots::rowRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRolePatternChanged(QRegExp)" );
 
@@ -216,7 +216,7 @@ void QItemModelSurfaceDataProxySlots::rowRolePatternChanged( const QRegExp & pat
 
 void QItemModelSurfaceDataProxySlots::rowRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRoleReplaceChanged(QString)" );
 
@@ -234,7 +234,7 @@ void QItemModelSurfaceDataProxySlots::rowRoleReplaceChanged( const QString & rep
 
 void QItemModelSurfaceDataProxySlots::useModelCategoriesChanged( bool enable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "useModelCategoriesChanged(bool)" );
 
@@ -252,7 +252,7 @@ void QItemModelSurfaceDataProxySlots::useModelCategoriesChanged( bool enable )
 
 void QItemModelSurfaceDataProxySlots::xPosRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRoleChanged(QString)" );
 
@@ -270,7 +270,7 @@ void QItemModelSurfaceDataProxySlots::xPosRoleChanged( const QString & role )
 
 void QItemModelSurfaceDataProxySlots::xPosRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRolePatternChanged(QRegExp)" );
 
@@ -288,7 +288,7 @@ void QItemModelSurfaceDataProxySlots::xPosRolePatternChanged( const QRegExp & pa
 
 void QItemModelSurfaceDataProxySlots::xPosRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRoleReplaceChanged(QString)" );
 
@@ -306,7 +306,7 @@ void QItemModelSurfaceDataProxySlots::xPosRoleReplaceChanged( const QString & re
 
 void QItemModelSurfaceDataProxySlots::yPosRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRoleChanged(QString)" );
 
@@ -324,7 +324,7 @@ void QItemModelSurfaceDataProxySlots::yPosRoleChanged( const QString & role )
 
 void QItemModelSurfaceDataProxySlots::yPosRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRolePatternChanged(QRegExp)" );
 
@@ -342,7 +342,7 @@ void QItemModelSurfaceDataProxySlots::yPosRolePatternChanged( const QRegExp & pa
 
 void QItemModelSurfaceDataProxySlots::yPosRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRoleReplaceChanged(QString)" );
 
@@ -360,7 +360,7 @@ void QItemModelSurfaceDataProxySlots::yPosRoleReplaceChanged( const QString & re
 
 void QItemModelSurfaceDataProxySlots::zPosRoleChanged( const QString & role )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRoleChanged(QString)" );
 
@@ -378,7 +378,7 @@ void QItemModelSurfaceDataProxySlots::zPosRoleChanged( const QString & role )
 
 void QItemModelSurfaceDataProxySlots::zPosRolePatternChanged( const QRegExp & pattern )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRolePatternChanged(QRegExp)" );
 
@@ -396,7 +396,7 @@ void QItemModelSurfaceDataProxySlots::zPosRolePatternChanged( const QRegExp & pa
 
 void QItemModelSurfaceDataProxySlots::zPosRoleReplaceChanged( const QString & replace )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRoleReplaceChanged(QString)" );
 
@@ -418,19 +418,19 @@ void QItemModelSurfaceDataProxySlots_connect_signal( const QString & signal, con
 
   if( obj )
   {
-    QItemModelSurfaceDataProxySlots * s = QCoreApplication::instance()->findChild<QItemModelSurfaceDataProxySlots *>();
+    QItemModelSurfaceDataProxySlots * s = QCoreApplication::instance()->findChild<QItemModelSurfaceDataProxySlots*>();
 
     if( s == NULL )
     {
       s = new QItemModelSurfaceDataProxySlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

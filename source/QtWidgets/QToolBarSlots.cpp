@@ -22,7 +22,7 @@ QToolBarSlots::~QToolBarSlots()
 
 void QToolBarSlots::actionTriggered( QAction * action )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "actionTriggered(QAction*)" );
 
@@ -40,7 +40,7 @@ void QToolBarSlots::actionTriggered( QAction * action )
 
 void QToolBarSlots::allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "allowedAreasChanged(Qt::ToolBarAreas)" );
 
@@ -58,7 +58,7 @@ void QToolBarSlots::allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
 
 void QToolBarSlots::iconSizeChanged( const QSize & iconSize )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
 
@@ -76,7 +76,7 @@ void QToolBarSlots::iconSizeChanged( const QSize & iconSize )
 
 void QToolBarSlots::movableChanged( bool movable )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "movableChanged(bool)" );
 
@@ -94,7 +94,7 @@ void QToolBarSlots::movableChanged( bool movable )
 
 void QToolBarSlots::orientationChanged( Qt::Orientation orientation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "orientationChanged(Qt::Orientation)" );
 
@@ -112,7 +112,7 @@ void QToolBarSlots::orientationChanged( Qt::Orientation orientation )
 
 void QToolBarSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
 
@@ -130,7 +130,7 @@ void QToolBarSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle 
 
 void QToolBarSlots::topLevelChanged( bool topLevel )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "topLevelChanged(bool)" );
 
@@ -148,7 +148,7 @@ void QToolBarSlots::topLevelChanged( bool topLevel )
 
 void QToolBarSlots::visibilityChanged( bool visible )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibilityChanged(bool)" );
 
@@ -170,19 +170,19 @@ void QToolBarSlots_connect_signal( const QString & signal, const QString & slot 
 
   if( obj )
   {
-    QToolBarSlots * s = QCoreApplication::instance()->findChild<QToolBarSlots *>();
+    QToolBarSlots * s = QCoreApplication::instance()->findChild<QToolBarSlots*>();
 
     if( s == NULL )
     {
       s = new QToolBarSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

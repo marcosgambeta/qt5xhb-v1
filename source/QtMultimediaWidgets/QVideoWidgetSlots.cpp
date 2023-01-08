@@ -22,7 +22,7 @@ QVideoWidgetSlots::~QVideoWidgetSlots()
 
 void QVideoWidgetSlots::fullScreenChanged( bool fullScreen )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fullScreenChanged(bool)" );
 
@@ -40,7 +40,7 @@ void QVideoWidgetSlots::fullScreenChanged( bool fullScreen )
 
 void QVideoWidgetSlots::brightnessChanged( int brightness )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "brightnessChanged(int)" );
 
@@ -58,7 +58,7 @@ void QVideoWidgetSlots::brightnessChanged( int brightness )
 
 void QVideoWidgetSlots::contrastChanged( int contrast )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contrastChanged(int)" );
 
@@ -76,7 +76,7 @@ void QVideoWidgetSlots::contrastChanged( int contrast )
 
 void QVideoWidgetSlots::hueChanged( int hue )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hueChanged(int)" );
 
@@ -94,7 +94,7 @@ void QVideoWidgetSlots::hueChanged( int hue )
 
 void QVideoWidgetSlots::saturationChanged( int saturation )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "saturationChanged(int)" );
 
@@ -116,19 +116,19 @@ void QVideoWidgetSlots_connect_signal( const QString & signal, const QString & s
 
   if( obj )
   {
-    QVideoWidgetSlots * s = QCoreApplication::instance()->findChild<QVideoWidgetSlots *>();
+    QVideoWidgetSlots * s = QCoreApplication::instance()->findChild<QVideoWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QVideoWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

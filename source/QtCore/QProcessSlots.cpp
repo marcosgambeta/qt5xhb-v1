@@ -22,7 +22,7 @@ QProcessSlots::~QProcessSlots()
 
 void QProcessSlots::error( QProcess::ProcessError error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QProcess::ProcessError)" );
 
@@ -40,7 +40,7 @@ void QProcessSlots::error( QProcess::ProcessError error )
 
 void QProcessSlots::finished( int exitCode, QProcess::ExitStatus exitStatus )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(int,QProcess::ExitStatus)" );
 
@@ -60,7 +60,7 @@ void QProcessSlots::finished( int exitCode, QProcess::ExitStatus exitStatus )
 
 void QProcessSlots::readyReadStandardError()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readyReadStandardError()" );
 
@@ -76,7 +76,7 @@ void QProcessSlots::readyReadStandardError()
 
 void QProcessSlots::readyReadStandardOutput()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readyReadStandardOutput()" );
 
@@ -92,7 +92,7 @@ void QProcessSlots::readyReadStandardOutput()
 
 void QProcessSlots::started()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "started()" );
 
@@ -108,7 +108,7 @@ void QProcessSlots::started()
 
 void QProcessSlots::stateChanged( QProcess::ProcessState newState )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QProcess::ProcessState)" );
 
@@ -127,7 +127,7 @@ void QProcessSlots::stateChanged( QProcess::ProcessState newState )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
 void QProcessSlots::errorOccurred( QProcess::ProcessError error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "errorOccurred(QProcess::ProcessError)" );
 
@@ -150,19 +150,19 @@ void QProcessSlots_connect_signal( const QString & signal, const QString & slot 
 
   if( obj )
   {
-    QProcessSlots * s = QCoreApplication::instance()->findChild<QProcessSlots *>();
+    QProcessSlots * s = QCoreApplication::instance()->findChild<QProcessSlots*>();
 
     if( s == NULL )
     {
       s = new QProcessSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

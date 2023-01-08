@@ -22,7 +22,7 @@ QMediaPlaylistSlots::~QMediaPlaylistSlots()
 
 void QMediaPlaylistSlots::currentIndexChanged( int position )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentIndexChanged(int)" );
 
@@ -40,7 +40,7 @@ void QMediaPlaylistSlots::currentIndexChanged( int position )
 
 void QMediaPlaylistSlots::currentMediaChanged( const QMediaContent & content )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentMediaChanged(QMediaContent)" );
 
@@ -58,7 +58,7 @@ void QMediaPlaylistSlots::currentMediaChanged( const QMediaContent & content )
 
 void QMediaPlaylistSlots::loadFailed()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadFailed()" );
 
@@ -74,7 +74,7 @@ void QMediaPlaylistSlots::loadFailed()
 
 void QMediaPlaylistSlots::loaded()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loaded()" );
 
@@ -90,7 +90,7 @@ void QMediaPlaylistSlots::loaded()
 
 void QMediaPlaylistSlots::mediaAboutToBeInserted( int start, int end )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mediaAboutToBeInserted(int,int)" );
 
@@ -110,7 +110,7 @@ void QMediaPlaylistSlots::mediaAboutToBeInserted( int start, int end )
 
 void QMediaPlaylistSlots::mediaAboutToBeRemoved( int start, int end )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mediaAboutToBeRemoved(int,int)" );
 
@@ -130,7 +130,7 @@ void QMediaPlaylistSlots::mediaAboutToBeRemoved( int start, int end )
 
 void QMediaPlaylistSlots::mediaChanged( int start, int end )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mediaChanged(int,int)" );
 
@@ -150,7 +150,7 @@ void QMediaPlaylistSlots::mediaChanged( int start, int end )
 
 void QMediaPlaylistSlots::mediaInserted( int start, int end )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mediaInserted(int,int)" );
 
@@ -170,7 +170,7 @@ void QMediaPlaylistSlots::mediaInserted( int start, int end )
 
 void QMediaPlaylistSlots::mediaRemoved( int start, int end )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mediaRemoved(int,int)" );
 
@@ -190,7 +190,7 @@ void QMediaPlaylistSlots::mediaRemoved( int start, int end )
 
 void QMediaPlaylistSlots::playbackModeChanged( QMediaPlaylist::PlaybackMode mode )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "playbackModeChanged(QMediaPlaylist::PlaybackMode)" );
 
@@ -212,19 +212,19 @@ void QMediaPlaylistSlots_connect_signal( const QString & signal, const QString &
 
   if( obj )
   {
-    QMediaPlaylistSlots * s = QCoreApplication::instance()->findChild<QMediaPlaylistSlots *>();
+    QMediaPlaylistSlots * s = QCoreApplication::instance()->findChild<QMediaPlaylistSlots*>();
 
     if( s == NULL )
     {
       s = new QMediaPlaylistSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

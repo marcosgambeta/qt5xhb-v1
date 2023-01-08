@@ -22,7 +22,7 @@ Q3DThemeSlots::~Q3DThemeSlots()
 
 void Q3DThemeSlots::ambientLightStrengthChanged( float strength )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "ambientLightStrengthChanged(float)" );
 
@@ -40,7 +40,7 @@ void Q3DThemeSlots::ambientLightStrengthChanged( float strength )
 
 void Q3DThemeSlots::backgroundColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "backgroundColorChanged(QColor)" );
 
@@ -58,7 +58,7 @@ void Q3DThemeSlots::backgroundColorChanged( const QColor & color )
 
 void Q3DThemeSlots::backgroundEnabledChanged( bool enabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "backgroundEnabledChanged(bool)" );
 
@@ -76,7 +76,7 @@ void Q3DThemeSlots::backgroundEnabledChanged( bool enabled )
 
 void Q3DThemeSlots::baseColorsChanged( const QList<QColor> & colors )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "baseColorsChanged(QList<QColor>)" );
 
@@ -116,7 +116,7 @@ void Q3DThemeSlots::baseColorsChanged( const QList<QColor> & colors )
 
 void Q3DThemeSlots::baseGradientsChanged( const QList<QLinearGradient> & gradients )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "baseGradientsChanged(QList<QLinearGradient>)" );
 
@@ -156,7 +156,7 @@ void Q3DThemeSlots::baseGradientsChanged( const QList<QLinearGradient> & gradien
 
 void Q3DThemeSlots::colorStyleChanged( Q3DTheme::ColorStyle style )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorStyleChanged(Q3DTheme::ColorStyle)" );
 
@@ -174,7 +174,7 @@ void Q3DThemeSlots::colorStyleChanged( Q3DTheme::ColorStyle style )
 
 void Q3DThemeSlots::fontChanged( const QFont & font )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fontChanged(QFont)" );
 
@@ -192,7 +192,7 @@ void Q3DThemeSlots::fontChanged( const QFont & font )
 
 void Q3DThemeSlots::gridEnabledChanged( bool enabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gridEnabledChanged(bool)" );
 
@@ -210,7 +210,7 @@ void Q3DThemeSlots::gridEnabledChanged( bool enabled )
 
 void Q3DThemeSlots::gridLineColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gridLineColorChanged(QColor)" );
 
@@ -228,7 +228,7 @@ void Q3DThemeSlots::gridLineColorChanged( const QColor & color )
 
 void Q3DThemeSlots::highlightLightStrengthChanged( float strength )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "highlightLightStrengthChanged(float)" );
 
@@ -246,7 +246,7 @@ void Q3DThemeSlots::highlightLightStrengthChanged( float strength )
 
 void Q3DThemeSlots::labelBackgroundColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelBackgroundColorChanged(QColor)" );
 
@@ -264,7 +264,7 @@ void Q3DThemeSlots::labelBackgroundColorChanged( const QColor & color )
 
 void Q3DThemeSlots::labelBackgroundEnabledChanged( bool enabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelBackgroundEnabledChanged(bool)" );
 
@@ -282,7 +282,7 @@ void Q3DThemeSlots::labelBackgroundEnabledChanged( bool enabled )
 
 void Q3DThemeSlots::labelBorderEnabledChanged( bool enabled )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelBorderEnabledChanged(bool)" );
 
@@ -300,7 +300,7 @@ void Q3DThemeSlots::labelBorderEnabledChanged( bool enabled )
 
 void Q3DThemeSlots::labelTextColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelTextColorChanged(QColor)" );
 
@@ -318,7 +318,7 @@ void Q3DThemeSlots::labelTextColorChanged( const QColor & color )
 
 void Q3DThemeSlots::lightColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lightColorChanged(QColor)" );
 
@@ -336,7 +336,7 @@ void Q3DThemeSlots::lightColorChanged( const QColor & color )
 
 void Q3DThemeSlots::lightStrengthChanged( float strength )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lightStrengthChanged(float)" );
 
@@ -354,7 +354,7 @@ void Q3DThemeSlots::lightStrengthChanged( float strength )
 
 void Q3DThemeSlots::multiHighlightColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "multiHighlightColorChanged(QColor)" );
 
@@ -372,7 +372,7 @@ void Q3DThemeSlots::multiHighlightColorChanged( const QColor & color )
 
 void Q3DThemeSlots::multiHighlightGradientChanged( const QLinearGradient & gradient )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "multiHighlightGradientChanged(QLinearGradient)" );
 
@@ -390,7 +390,7 @@ void Q3DThemeSlots::multiHighlightGradientChanged( const QLinearGradient & gradi
 
 void Q3DThemeSlots::singleHighlightColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "singleHighlightColorChanged(QColor)" );
 
@@ -408,7 +408,7 @@ void Q3DThemeSlots::singleHighlightColorChanged( const QColor & color )
 
 void Q3DThemeSlots::singleHighlightGradientChanged( const QLinearGradient & gradient )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "singleHighlightGradientChanged(QLinearGradient)" );
 
@@ -426,7 +426,7 @@ void Q3DThemeSlots::singleHighlightGradientChanged( const QLinearGradient & grad
 
 void Q3DThemeSlots::typeChanged( Q3DTheme::Theme themeType )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "typeChanged(Q3DTheme::Theme)" );
 
@@ -444,7 +444,7 @@ void Q3DThemeSlots::typeChanged( Q3DTheme::Theme themeType )
 
 void Q3DThemeSlots::windowColorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "windowColorChanged(QColor)" );
 
@@ -466,19 +466,19 @@ void Q3DThemeSlots_connect_signal( const QString & signal, const QString & slot 
 
   if( obj )
   {
-    Q3DThemeSlots * s = QCoreApplication::instance()->findChild<Q3DThemeSlots *>();
+    Q3DThemeSlots * s = QCoreApplication::instance()->findChild<Q3DThemeSlots*>();
 
     if( s == NULL )
     {
       s = new Q3DThemeSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

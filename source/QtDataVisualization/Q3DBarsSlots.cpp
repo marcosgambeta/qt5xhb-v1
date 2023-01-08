@@ -22,7 +22,7 @@ Q3DBarsSlots::~Q3DBarsSlots()
 
 void Q3DBarsSlots::barSpacingChanged( const QSizeF & spacing )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "barSpacingChanged(QSizeF)" );
 
@@ -40,7 +40,7 @@ void Q3DBarsSlots::barSpacingChanged( const QSizeF & spacing )
 
 void Q3DBarsSlots::barSpacingRelativeChanged( bool relative )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "barSpacingRelativeChanged(bool)" );
 
@@ -58,7 +58,7 @@ void Q3DBarsSlots::barSpacingRelativeChanged( bool relative )
 
 void Q3DBarsSlots::barThicknessChanged( float thicknessRatio )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "barThicknessChanged(float)" );
 
@@ -76,7 +76,7 @@ void Q3DBarsSlots::barThicknessChanged( float thicknessRatio )
 
 void Q3DBarsSlots::columnAxisChanged( QCategory3DAxis * axis )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnAxisChanged(QCategory3DAxis*)" );
 
@@ -94,7 +94,7 @@ void Q3DBarsSlots::columnAxisChanged( QCategory3DAxis * axis )
 
 void Q3DBarsSlots::floorLevelChanged( float level )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "floorLevelChanged(float)" );
 
@@ -112,7 +112,7 @@ void Q3DBarsSlots::floorLevelChanged( float level )
 
 void Q3DBarsSlots::multiSeriesUniformChanged( bool uniform )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "multiSeriesUniformChanged(bool)" );
 
@@ -130,7 +130,7 @@ void Q3DBarsSlots::multiSeriesUniformChanged( bool uniform )
 
 void Q3DBarsSlots::primarySeriesChanged( QBar3DSeries * series )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "primarySeriesChanged(QBar3DSeries*)" );
 
@@ -148,7 +148,7 @@ void Q3DBarsSlots::primarySeriesChanged( QBar3DSeries * series )
 
 void Q3DBarsSlots::rowAxisChanged( QCategory3DAxis * axis )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowAxisChanged(QCategory3DAxis*)" );
 
@@ -166,7 +166,7 @@ void Q3DBarsSlots::rowAxisChanged( QCategory3DAxis * axis )
 
 void Q3DBarsSlots::selectedSeriesChanged( QBar3DSeries * series )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedSeriesChanged(QBar3DSeries*)" );
 
@@ -184,7 +184,7 @@ void Q3DBarsSlots::selectedSeriesChanged( QBar3DSeries * series )
 
 void Q3DBarsSlots::valueAxisChanged( QValue3DAxis * axis )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject *object = qobject_cast<QObject*>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueAxisChanged(QValue3DAxis*)" );
 
@@ -206,19 +206,19 @@ void Q3DBarsSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj )
   {
-    Q3DBarsSlots * s = QCoreApplication::instance()->findChild<Q3DBarsSlots *>();
+    Q3DBarsSlots * s = QCoreApplication::instance()->findChild<Q3DBarsSlots*>();
 
     if( s == NULL )
     {
       s = new Q3DBarsSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
