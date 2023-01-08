@@ -26,7 +26,7 @@ void Q3DCameraSlots::cameraPresetChanged( Q3DCamera::CameraPreset preset )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cameraPresetChanged(Q3DCamera::CameraPreset)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DCAMERA");
     PHB_ITEM ppreset = hb_itemPutNI( NULL, (int) preset );
@@ -44,7 +44,7 @@ void Q3DCameraSlots::maxZoomLevelChanged( float zoomLevel )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxZoomLevelChanged(float)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DCAMERA");
     PHB_ITEM pzoomLevel = hb_itemPutND( NULL, zoomLevel );
@@ -62,7 +62,7 @@ void Q3DCameraSlots::minZoomLevelChanged( float zoomLevel )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minZoomLevelChanged(float)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DCAMERA");
     PHB_ITEM pzoomLevel = hb_itemPutND( NULL, zoomLevel );
@@ -80,7 +80,7 @@ void Q3DCameraSlots::targetChanged( const QVector3D & target )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "targetChanged(QVector3D)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DCAMERA");
     PHB_ITEM ptarget = Qt5xHb::Signals_return_object( (void *) &target, "QVECTOR3D" );
@@ -98,7 +98,7 @@ void Q3DCameraSlots::wrapXRotationChanged( bool isEnabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "wrapXRotationChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DCAMERA");
     PHB_ITEM pisEnabled = hb_itemPutL( NULL, isEnabled );
@@ -116,7 +116,7 @@ void Q3DCameraSlots::wrapYRotationChanged( bool isEnabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "wrapYRotationChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DCAMERA");
     PHB_ITEM pisEnabled = hb_itemPutL( NULL, isEnabled );
@@ -134,7 +134,7 @@ void Q3DCameraSlots::xRotationChanged( float rotation )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xRotationChanged(float)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DCAMERA");
     PHB_ITEM protation = hb_itemPutND( NULL, rotation );
@@ -152,7 +152,7 @@ void Q3DCameraSlots::yRotationChanged( float rotation )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yRotationChanged(float)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DCAMERA");
     PHB_ITEM protation = hb_itemPutND( NULL, rotation );
@@ -170,7 +170,7 @@ void Q3DCameraSlots::zoomLevelChanged( float zoomLevel )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zoomLevelChanged(float)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DCAMERA");
     PHB_ITEM pzoomLevel = hb_itemPutND( NULL, zoomLevel );

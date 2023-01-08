@@ -26,7 +26,7 @@ void QAnimationDriverSlots::started()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "started()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QANIMATIONDRIVER");
 
@@ -42,7 +42,7 @@ void QAnimationDriverSlots::stopped()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stopped()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QANIMATIONDRIVER");
 

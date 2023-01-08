@@ -26,7 +26,7 @@ void QCustom3DLabelSlots::backgroundColorChanged( const QColor & color )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "backgroundColorChanged(QColor)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DLABEL");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
@@ -44,7 +44,7 @@ void QCustom3DLabelSlots::backgroundEnabledChanged( bool enabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "backgroundEnabledChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DLABEL");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
@@ -62,7 +62,7 @@ void QCustom3DLabelSlots::borderEnabledChanged( bool enabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "borderEnabledChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DLABEL");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
@@ -80,7 +80,7 @@ void QCustom3DLabelSlots::facingCameraChanged( bool enabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "facingCameraChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DLABEL");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
@@ -98,7 +98,7 @@ void QCustom3DLabelSlots::fontChanged( const QFont & font )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fontChanged(QFont)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DLABEL");
     PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT" );
@@ -116,7 +116,7 @@ void QCustom3DLabelSlots::textChanged( const QString & text )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DLABEL");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
@@ -134,7 +134,7 @@ void QCustom3DLabelSlots::textColorChanged( const QColor & color )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textColorChanged(QColor)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DLABEL");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );

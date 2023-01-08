@@ -26,7 +26,7 @@ void QBarDataProxySlots::arrayReset()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "arrayReset()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
 
@@ -42,7 +42,7 @@ void QBarDataProxySlots::columnLabelsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnLabelsChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
 
@@ -58,7 +58,7 @@ void QBarDataProxySlots::itemChanged( int rowIndex, int columnIndex )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemChanged(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM prowIndex = hb_itemPutNI( NULL, rowIndex );
@@ -78,7 +78,7 @@ void QBarDataProxySlots::rowCountChanged( int count )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCountChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
@@ -96,7 +96,7 @@ void QBarDataProxySlots::rowLabelsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowLabelsChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
 
@@ -112,7 +112,7 @@ void QBarDataProxySlots::rowsAdded( int startIndex, int count )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsAdded(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
@@ -132,7 +132,7 @@ void QBarDataProxySlots::rowsChanged( int startIndex, int count )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsChanged(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
@@ -152,7 +152,7 @@ void QBarDataProxySlots::rowsInserted( int startIndex, int count )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsInserted(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
@@ -172,7 +172,7 @@ void QBarDataProxySlots::rowsRemoved( int startIndex, int count )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowsRemoved(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
@@ -192,7 +192,7 @@ void QBarDataProxySlots::seriesChanged( QBar3DSeries * series )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesChanged(QBar3DSeries*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pseries = Qt5xHb::Signals_return_qobject(series, "QBAR3DSERIES");

@@ -26,7 +26,7 @@ void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSi
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "documentSizeChanged(QSizeF)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTTEXTDOCUMENTLAYOUT");
     PHB_ITEM pnewSize = Qt5xHb::Signals_return_object( (void *) &newSize, "QSIZEF" );
@@ -44,7 +44,7 @@ void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pageCountChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTTEXTDOCUMENTLAYOUT");
     PHB_ITEM pnewPages = hb_itemPutNI( NULL, newPages );
@@ -62,7 +62,7 @@ void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "update(QRectF)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTTEXTDOCUMENTLAYOUT");
     PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECTF" );
@@ -80,7 +80,7 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "updateBlock(QTextBlock)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTTEXTDOCUMENTLAYOUT");
     PHB_ITEM pblock = Qt5xHb::Signals_return_object( (void *) &block, "QTEXTBLOCK" );

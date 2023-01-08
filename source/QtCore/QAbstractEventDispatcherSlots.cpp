@@ -26,7 +26,7 @@ void QAbstractEventDispatcherSlots::aboutToBlock()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToBlock()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTEVENTDISPATCHER");
 
@@ -42,7 +42,7 @@ void QAbstractEventDispatcherSlots::awake()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "awake()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTEVENTDISPATCHER");
 

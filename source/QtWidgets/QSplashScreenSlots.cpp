@@ -26,7 +26,7 @@ void QSplashScreenSlots::messageChanged( const QString & message )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "messageChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSPLASHSCREEN");
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );

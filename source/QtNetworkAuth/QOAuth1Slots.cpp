@@ -27,7 +27,7 @@ void QOAuth1Slots::clientSharedSecretChanged( const QString & credential )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clientSharedSecretChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH1");
     PHB_ITEM pcredential = hb_itemPutC( NULL, QSTRINGTOSTRING(credential) );
@@ -47,7 +47,7 @@ void QOAuth1Slots::signatureMethodChanged( QOAuth1::SignatureMethod method )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "signatureMethodChanged(QOAuth1::SignatureMethod)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH1");
     PHB_ITEM pmethod = hb_itemPutNI( NULL, (int) method );
@@ -67,7 +67,7 @@ void QOAuth1Slots::temporaryCredentialsUrlChanged( const QUrl & url )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "temporaryCredentialsUrlChanged(QUrl)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH1");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
@@ -87,7 +87,7 @@ void QOAuth1Slots::tokenCredentialsUrlChanged( const QUrl & url )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tokenCredentialsUrlChanged(QUrl)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH1");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
@@ -107,7 +107,7 @@ void QOAuth1Slots::tokenSecretChanged( const QString & token )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tokenSecretChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH1");
     PHB_ITEM ptoken = hb_itemPutC( NULL, QSTRINGTOSTRING(token) );

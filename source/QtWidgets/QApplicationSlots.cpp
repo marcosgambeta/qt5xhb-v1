@@ -26,7 +26,7 @@ void QApplicationSlots::aboutToReleaseGpuResources()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToReleaseGpuResources()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
 
@@ -42,7 +42,7 @@ void QApplicationSlots::aboutToUseGpuResources()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToUseGpuResources()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
 
@@ -58,7 +58,7 @@ void QApplicationSlots::commitDataRequest( QSessionManager & manager )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "commitDataRequest(QSessionManager)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
     PHB_ITEM pmanager = Qt5xHb::Signals_return_qobject(&manager, "QSESSIONMANAGER");
@@ -76,7 +76,7 @@ void QApplicationSlots::focusChanged( QWidget * old, QWidget * now )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "focusChanged(QWidget*,QWidget*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
     PHB_ITEM pold = Qt5xHb::Signals_return_qobject(old, "QWIDGET");
@@ -96,7 +96,7 @@ void QApplicationSlots::fontDatabaseChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fontDatabaseChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
 
@@ -112,7 +112,7 @@ void QApplicationSlots::lastWindowClosed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastWindowClosed()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
 
@@ -128,7 +128,7 @@ void QApplicationSlots::saveStateRequest( QSessionManager & manager )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "saveStateRequest(QSessionManager)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
     PHB_ITEM pmanager = Qt5xHb::Signals_return_qobject(&manager, "QSESSIONMANAGER");

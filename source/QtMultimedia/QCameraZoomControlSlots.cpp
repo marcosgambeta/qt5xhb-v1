@@ -26,7 +26,7 @@ void QCameraZoomControlSlots::currentDigitalZoomChanged( qreal zoom )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentDigitalZoomChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAZOOMCONTROL");
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
@@ -44,7 +44,7 @@ void QCameraZoomControlSlots::currentOpticalZoomChanged( qreal zoom )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentOpticalZoomChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAZOOMCONTROL");
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
@@ -62,7 +62,7 @@ void QCameraZoomControlSlots::maximumDigitalZoomChanged( qreal zoom )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maximumDigitalZoomChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAZOOMCONTROL");
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
@@ -80,7 +80,7 @@ void QCameraZoomControlSlots::maximumOpticalZoomChanged( qreal zoom )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maximumOpticalZoomChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAZOOMCONTROL");
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
@@ -98,7 +98,7 @@ void QCameraZoomControlSlots::requestedDigitalZoomChanged( qreal zoom )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "requestedDigitalZoomChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAZOOMCONTROL");
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
@@ -116,7 +116,7 @@ void QCameraZoomControlSlots::requestedOpticalZoomChanged( qreal zoom )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "requestedOpticalZoomChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAZOOMCONTROL");
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );

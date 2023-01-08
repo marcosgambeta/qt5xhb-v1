@@ -27,7 +27,7 @@ void QVBoxPlotModelMapperSlots::firstBoxSetColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstBoxSetColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBOXPLOTMODELMAPPER");
 
@@ -45,7 +45,7 @@ void QVBoxPlotModelMapperSlots::firstRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstRowChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBOXPLOTMODELMAPPER");
 
@@ -63,7 +63,7 @@ void QVBoxPlotModelMapperSlots::lastBoxSetColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastBoxSetColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBOXPLOTMODELMAPPER");
 
@@ -81,7 +81,7 @@ void QVBoxPlotModelMapperSlots::modelReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "modelReplaced()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBOXPLOTMODELMAPPER");
 
@@ -99,7 +99,7 @@ void QVBoxPlotModelMapperSlots::rowCountChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCountChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBOXPLOTMODELMAPPER");
 
@@ -117,7 +117,7 @@ void QVBoxPlotModelMapperSlots::seriesReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesReplaced()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBOXPLOTMODELMAPPER");
 

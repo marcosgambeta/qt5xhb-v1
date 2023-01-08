@@ -26,7 +26,7 @@ void QToolBarSlots::actionTriggered( QAction * action )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "actionTriggered(QAction*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBAR");
     PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
@@ -44,7 +44,7 @@ void QToolBarSlots::allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "allowedAreasChanged(Qt::ToolBarAreas)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBAR");
     PHB_ITEM pallowedAreas = hb_itemPutNI( NULL, (int) allowedAreas );
@@ -62,7 +62,7 @@ void QToolBarSlots::iconSizeChanged( const QSize & iconSize )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBAR");
     PHB_ITEM piconSize = Qt5xHb::Signals_return_object( (void *) &iconSize, "QSIZE" );
@@ -80,7 +80,7 @@ void QToolBarSlots::movableChanged( bool movable )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "movableChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBAR");
     PHB_ITEM pmovable = hb_itemPutL( NULL, movable );
@@ -98,7 +98,7 @@ void QToolBarSlots::orientationChanged( Qt::Orientation orientation )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "orientationChanged(Qt::Orientation)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBAR");
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
@@ -116,7 +116,7 @@ void QToolBarSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBAR");
     PHB_ITEM ptoolButtonStyle = hb_itemPutNI( NULL, (int) toolButtonStyle );
@@ -134,7 +134,7 @@ void QToolBarSlots::topLevelChanged( bool topLevel )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "topLevelChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBAR");
     PHB_ITEM ptopLevel = hb_itemPutL( NULL, topLevel );
@@ -152,7 +152,7 @@ void QToolBarSlots::visibilityChanged( bool visible )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibilityChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBAR");
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );

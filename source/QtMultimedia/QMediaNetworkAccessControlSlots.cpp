@@ -26,7 +26,7 @@ void QMediaNetworkAccessControlSlots::configurationChanged( const QNetworkConfig
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIANETWORKACCESSCONTROL");
     PHB_ITEM pconfiguration = Qt5xHb::Signals_return_object( (void *) &configuration, "QNETWORKCONFIGURATION" );

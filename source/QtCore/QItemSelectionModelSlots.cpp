@@ -26,7 +26,7 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged(QItemSelection,QItemSelection)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pselected = Qt5xHb::Signals_return_object( (void *) &selected, "QITEMSELECTION" );
@@ -46,7 +46,7 @@ void QItemSelectionModelSlots::currentChanged( const QModelIndex & current, cons
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentChanged(QModelIndex,QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );
@@ -66,7 +66,7 @@ void QItemSelectionModelSlots::currentRowChanged( const QModelIndex & current, c
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentRowChanged(QModelIndex,QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );
@@ -86,7 +86,7 @@ void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentColumnChanged(QModelIndex,QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );

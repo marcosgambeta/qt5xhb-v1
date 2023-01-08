@@ -27,7 +27,7 @@ void QVBarModelMapperSlots::firstBarSetColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstBarSetColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
@@ -45,7 +45,7 @@ void QVBarModelMapperSlots::firstRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstRowChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
@@ -63,7 +63,7 @@ void QVBarModelMapperSlots::lastBarSetColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastBarSetColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
@@ -81,7 +81,7 @@ void QVBarModelMapperSlots::modelReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "modelReplaced()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
@@ -99,7 +99,7 @@ void QVBarModelMapperSlots::rowCountChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCountChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
@@ -117,7 +117,7 @@ void QVBarModelMapperSlots::seriesReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesReplaced()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 

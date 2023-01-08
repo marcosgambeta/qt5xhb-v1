@@ -26,7 +26,7 @@ void QCompleterSlots::activated( const QString & text )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activated(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOMPLETER");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
@@ -44,7 +44,7 @@ void QCompleterSlots::activated( const QModelIndex & index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activated(QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOMPLETER");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
@@ -62,7 +62,7 @@ void QCompleterSlots::highlighted( const QString & text )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "highlighted(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOMPLETER");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
@@ -80,7 +80,7 @@ void QCompleterSlots::highlighted( const QModelIndex & index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "highlighted(QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOMPLETER");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );

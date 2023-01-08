@@ -27,7 +27,7 @@ void QGeoCodingManagerEngineSlots::finished( QGeoCodeReply * reply )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QGeoCodeReply*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOCODINGMANAGERENGINE");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QGEOCODEREPLY");
@@ -47,7 +47,7 @@ void QGeoCodingManagerEngineSlots::error( QGeoCodeReply * reply, QGeoCodeReply::
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOCODINGMANAGERENGINE");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QGEOCODEREPLY");

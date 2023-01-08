@@ -26,7 +26,7 @@ void QQuickWebEngineProfileSlots::cachePathChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cachePathChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -42,7 +42,7 @@ void QQuickWebEngineProfileSlots::httpAcceptLanguageChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "httpAcceptLanguageChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -58,7 +58,7 @@ void QQuickWebEngineProfileSlots::httpCacheMaximumSizeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "httpCacheMaximumSizeChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -74,7 +74,7 @@ void QQuickWebEngineProfileSlots::httpCacheTypeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "httpCacheTypeChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -90,7 +90,7 @@ void QQuickWebEngineProfileSlots::httpUserAgentChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "httpUserAgentChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -106,7 +106,7 @@ void QQuickWebEngineProfileSlots::offTheRecordChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "offTheRecordChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -122,7 +122,7 @@ void QQuickWebEngineProfileSlots::persistentCookiesPolicyChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "persistentCookiesPolicyChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -138,7 +138,7 @@ void QQuickWebEngineProfileSlots::persistentStoragePathChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "persistentStoragePathChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -154,7 +154,7 @@ void QQuickWebEngineProfileSlots::spellCheckEnabledChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "spellCheckEnabledChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -170,7 +170,7 @@ void QQuickWebEngineProfileSlots::spellCheckLanguagesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "spellCheckLanguagesChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -186,7 +186,7 @@ void QQuickWebEngineProfileSlots::storageNameChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "storageNameChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 

@@ -26,7 +26,7 @@ void Q3DSceneSlots::activeCameraChanged( Q3DCamera * camera )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeCameraChanged(Q3DCamera*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCENE");
     PHB_ITEM pcamera = Qt5xHb::Signals_return_qobject(camera, "Q3DCAMERA");
@@ -44,7 +44,7 @@ void Q3DSceneSlots::activeLightChanged( Q3DLight * light )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeLightChanged(Q3DLight*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCENE");
     PHB_ITEM plight = Qt5xHb::Signals_return_qobject(light, "Q3DLIGHT");
@@ -62,7 +62,7 @@ void Q3DSceneSlots::devicePixelRatioChanged( float pixelRatio )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "devicePixelRatioChanged(float)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCENE");
     PHB_ITEM ppixelRatio = hb_itemPutND( NULL, pixelRatio );
@@ -80,7 +80,7 @@ void Q3DSceneSlots::graphPositionQueryChanged( const QPoint & position )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "graphPositionQueryChanged(QPoint)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCENE");
     PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT" );
@@ -98,7 +98,7 @@ void Q3DSceneSlots::primarySubViewportChanged( const QRect & subViewport )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "primarySubViewportChanged(QRect)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCENE");
     PHB_ITEM psubViewport = Qt5xHb::Signals_return_object( (void *) &subViewport, "QRECT" );
@@ -116,7 +116,7 @@ void Q3DSceneSlots::secondarySubviewOnTopChanged( bool isSecondaryOnTop )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "secondarySubviewOnTopChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCENE");
     PHB_ITEM pisSecondaryOnTop = hb_itemPutL( NULL, isSecondaryOnTop );
@@ -134,7 +134,7 @@ void Q3DSceneSlots::secondarySubViewportChanged( const QRect & subViewport )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "secondarySubViewportChanged(QRect)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCENE");
     PHB_ITEM psubViewport = Qt5xHb::Signals_return_object( (void *) &subViewport, "QRECT" );
@@ -152,7 +152,7 @@ void Q3DSceneSlots::selectionQueryPositionChanged( const QPoint & position )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionQueryPositionChanged(QPoint)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCENE");
     PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT" );
@@ -170,7 +170,7 @@ void Q3DSceneSlots::slicingActiveChanged( bool isSlicingActive )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "slicingActiveChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCENE");
     PHB_ITEM pisSlicingActive = hb_itemPutL( NULL, isSlicingActive );
@@ -188,7 +188,7 @@ void Q3DSceneSlots::viewportChanged( const QRect & viewport )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "viewportChanged(QRect)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCENE");
     PHB_ITEM pviewport = Qt5xHb::Signals_return_object( (void *) &viewport, "QRECT" );

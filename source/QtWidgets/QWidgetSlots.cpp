@@ -27,7 +27,7 @@ void QWidgetSlots::windowTitleChanged( const QString & title )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "windowTitleChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIDGET");
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
@@ -47,7 +47,7 @@ void QWidgetSlots::windowIconChanged( const QIcon & icon )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "windowIconChanged(QIcon)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIDGET");
     PHB_ITEM picon = Qt5xHb::Signals_return_object( (void *) &icon, "QICON" );
@@ -66,7 +66,7 @@ void QWidgetSlots::windowIconTextChanged( const QString & iconText )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "windowIconTextChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIDGET");
     PHB_ITEM piconText = hb_itemPutC( NULL, QSTRINGTOSTRING(iconText) );
@@ -84,7 +84,7 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "customContextMenuRequested(QPoint)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIDGET");
     PHB_ITEM ppos = Qt5xHb::Signals_return_object( (void *) &pos, "QPOINT" );

@@ -27,7 +27,7 @@ void QGamepadSlots::axisLeftXChanged( double value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisLeftXChanged(double)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
@@ -47,7 +47,7 @@ void QGamepadSlots::axisLeftYChanged( double value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisLeftYChanged(double)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
@@ -67,7 +67,7 @@ void QGamepadSlots::axisRightXChanged( double value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisRightXChanged(double)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
@@ -87,7 +87,7 @@ void QGamepadSlots::axisRightYChanged( double value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisRightYChanged(double)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
@@ -107,7 +107,7 @@ void QGamepadSlots::buttonAChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonAChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -127,7 +127,7 @@ void QGamepadSlots::buttonBChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonBChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -147,7 +147,7 @@ void QGamepadSlots::buttonCenterChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonCenterChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -167,7 +167,7 @@ void QGamepadSlots::buttonDownChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonDownChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -187,7 +187,7 @@ void QGamepadSlots::buttonGuideChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonGuideChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -207,7 +207,7 @@ void QGamepadSlots::buttonL1Changed( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL1Changed(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -227,7 +227,7 @@ void QGamepadSlots::buttonL2Changed( double value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL2Changed(double)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
@@ -247,7 +247,7 @@ void QGamepadSlots::buttonL3Changed( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL3Changed(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -267,7 +267,7 @@ void QGamepadSlots::buttonLeftChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonLeftChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -287,7 +287,7 @@ void QGamepadSlots::buttonR1Changed( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR1Changed(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -307,7 +307,7 @@ void QGamepadSlots::buttonR2Changed( double value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR2Changed(double)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
@@ -327,7 +327,7 @@ void QGamepadSlots::buttonR3Changed( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR3Changed(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -347,7 +347,7 @@ void QGamepadSlots::buttonRightChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonRightChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -367,7 +367,7 @@ void QGamepadSlots::buttonSelectChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonSelectChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -387,7 +387,7 @@ void QGamepadSlots::buttonStartChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonStartChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -407,7 +407,7 @@ void QGamepadSlots::buttonUpChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonUpChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -427,7 +427,7 @@ void QGamepadSlots::buttonXChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonXChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -447,7 +447,7 @@ void QGamepadSlots::buttonYChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonYChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -467,7 +467,7 @@ void QGamepadSlots::connectedChanged( bool value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "connectedChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
@@ -487,7 +487,7 @@ void QGamepadSlots::deviceIdChanged( int value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "deviceIdChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
@@ -507,7 +507,7 @@ void QGamepadSlots::nameChanged( QString value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutC( NULL, (const char *) value.toLatin1().data() );

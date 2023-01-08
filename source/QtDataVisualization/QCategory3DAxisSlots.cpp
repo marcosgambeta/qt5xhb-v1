@@ -26,7 +26,7 @@ void QCategory3DAxisSlots::labelsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCATEGORY3DAXIS");
 

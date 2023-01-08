@@ -27,7 +27,7 @@ void QBluetoothTransferReplySlots::finished( QBluetoothTransferReply * r )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QBluetoothTransferReply*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHTRANSFERREPLY");
     PHB_ITEM pr = Qt5xHb::Signals_return_qobject(r, "QBLUETOOTHTRANSFERREPLY");
@@ -47,7 +47,7 @@ void QBluetoothTransferReplySlots::transferProgress( qint64 bytesTransferred, qi
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "transferProgress(qint64,qint64)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHTRANSFERREPLY");
     PHB_ITEM pbytesTransferred = hb_itemPutNLL( NULL, bytesTransferred );

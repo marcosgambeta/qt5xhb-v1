@@ -26,7 +26,7 @@ void QOpenGLDebugLoggerSlots::messageLogged( const QOpenGLDebugMessage & debugMe
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "messageLogged(QOpenGLDebugMessage)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLDEBUGLOGGER");
     PHB_ITEM pdebugMessage = Qt5xHb::Signals_return_object( (void *) &debugMessage, "QOPENGLDEBUGMESSAGE" );

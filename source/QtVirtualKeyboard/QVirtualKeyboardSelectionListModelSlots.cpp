@@ -26,7 +26,7 @@ void QVirtualKeyboardSelectionListModelSlots::countChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "countChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDSELECTIONLISTMODEL");
 
@@ -42,7 +42,7 @@ void QVirtualKeyboardSelectionListModelSlots::activeItemChanged( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeItemChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDSELECTIONLISTMODEL");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
@@ -60,7 +60,7 @@ void QVirtualKeyboardSelectionListModelSlots::itemSelected( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemSelected(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDSELECTIONLISTMODEL");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );

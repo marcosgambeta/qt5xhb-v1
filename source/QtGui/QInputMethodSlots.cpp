@@ -26,7 +26,7 @@ void QInputMethodSlots::animatingChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "animatingChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
@@ -42,7 +42,7 @@ void QInputMethodSlots::cursorRectangleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cursorRectangleChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
@@ -58,7 +58,7 @@ void QInputMethodSlots::inputDirectionChanged( Qt::LayoutDirection newDirection 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "inputDirectionChanged(Qt::LayoutDirection)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
     PHB_ITEM pnewDirection = hb_itemPutNI( NULL, (int) newDirection );
@@ -76,7 +76,7 @@ void QInputMethodSlots::keyboardRectangleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "keyboardRectangleChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
@@ -92,7 +92,7 @@ void QInputMethodSlots::localeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "localeChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
@@ -108,7 +108,7 @@ void QInputMethodSlots::visibleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibleChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 

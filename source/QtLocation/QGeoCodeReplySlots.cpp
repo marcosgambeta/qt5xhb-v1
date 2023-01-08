@@ -27,7 +27,7 @@ void QGeoCodeReplySlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOCODEREPLY");
 
@@ -45,7 +45,7 @@ void QGeoCodeReplySlots::error( QGeoCodeReply::Error error, const QString & erro
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QGeoCodeReply::Error,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOCODEREPLY");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );

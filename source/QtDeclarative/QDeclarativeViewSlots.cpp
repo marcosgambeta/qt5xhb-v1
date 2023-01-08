@@ -26,7 +26,7 @@ void QDeclarativeViewSlots::sceneResized( QSize size )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneResized(QSize)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVEVIEW");
     PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZE" );
@@ -44,7 +44,7 @@ void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QDeclarativeView::Status)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVEVIEW");
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );

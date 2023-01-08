@@ -26,7 +26,7 @@ void QDockWidgetSlots::allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "allowedAreasChanged(Qt::DockWidgetAreas)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOCKWIDGET");
     PHB_ITEM pallowedAreas = hb_itemPutNI( NULL, (int) allowedAreas );
@@ -44,7 +44,7 @@ void QDockWidgetSlots::dockLocationChanged( Qt::DockWidgetArea area )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dockLocationChanged(Qt::DockWidgetArea)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOCKWIDGET");
     PHB_ITEM parea = hb_itemPutNI( NULL, (int) area );
@@ -62,7 +62,7 @@ void QDockWidgetSlots::featuresChanged( QDockWidget::DockWidgetFeatures features
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOCKWIDGET");
     PHB_ITEM pfeatures = hb_itemPutNI( NULL, (int) features );
@@ -80,7 +80,7 @@ void QDockWidgetSlots::topLevelChanged( bool topLevel )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "topLevelChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOCKWIDGET");
     PHB_ITEM ptopLevel = hb_itemPutL( NULL, topLevel );
@@ -98,7 +98,7 @@ void QDockWidgetSlots::visibilityChanged( bool visible )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibilityChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOCKWIDGET");
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );

@@ -26,7 +26,7 @@ void QAbstractItemViewSlots::activated( const QModelIndex & index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activated(QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
@@ -44,7 +44,7 @@ void QAbstractItemViewSlots::clicked( const QModelIndex & index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
@@ -62,7 +62,7 @@ void QAbstractItemViewSlots::doubleClicked( const QModelIndex & index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
@@ -80,7 +80,7 @@ void QAbstractItemViewSlots::entered( const QModelIndex & index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "entered(QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
@@ -98,7 +98,7 @@ void QAbstractItemViewSlots::pressed( const QModelIndex & index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
@@ -116,7 +116,7 @@ void QAbstractItemViewSlots::viewportEntered()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "viewportEntered()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
 

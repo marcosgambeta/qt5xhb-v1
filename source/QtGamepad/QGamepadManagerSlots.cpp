@@ -27,7 +27,7 @@ void QGamepadManagerSlots::axisConfigured( int deviceId, QGamepadManager::Gamepa
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisConfigured(int,QGamepadManager::GamepadAxis)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADMANAGER");
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
@@ -49,7 +49,7 @@ void QGamepadManagerSlots::buttonConfigured( int deviceId, QGamepadManager::Game
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonConfigured(int,QGamepadManager::GamepadButton)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADMANAGER");
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
@@ -71,7 +71,7 @@ void QGamepadManagerSlots::configurationCanceled( int deviceId )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "configurationCanceled(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADMANAGER");
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
@@ -91,7 +91,7 @@ void QGamepadManagerSlots::connectedGamepadsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "connectedGamepadsChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADMANAGER");
 
@@ -109,7 +109,7 @@ void QGamepadManagerSlots::gamepadAxisEvent( int deviceId, QGamepadManager::Game
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADMANAGER");
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
@@ -133,7 +133,7 @@ void QGamepadManagerSlots::gamepadButtonPressEvent( int deviceId, QGamepadManage
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADMANAGER");
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
@@ -157,7 +157,7 @@ void QGamepadManagerSlots::gamepadButtonReleaseEvent( int deviceId, QGamepadMana
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADMANAGER");
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
@@ -179,7 +179,7 @@ void QGamepadManagerSlots::gamepadConnected( int deviceId )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gamepadConnected(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADMANAGER");
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
@@ -199,7 +199,7 @@ void QGamepadManagerSlots::gamepadDisconnected( int deviceId )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "gamepadDisconnected(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADMANAGER");
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );

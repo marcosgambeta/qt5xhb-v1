@@ -26,7 +26,7 @@ void QNetworkAccessManagerSlots::proxyAuthenticationRequired( const QNetworkProx
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM pproxy = Qt5xHb::Signals_return_object( (void *) &proxy, "QNETWORKPROXY" );
@@ -46,7 +46,7 @@ void QNetworkAccessManagerSlots::authenticationRequired( QNetworkReply * reply, 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "authenticationRequired(QNetworkReply*,QAuthenticator*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QNETWORKREPLY");
@@ -66,7 +66,7 @@ void QNetworkAccessManagerSlots::finished( QNetworkReply * reply )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QNetworkReply*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QNETWORKREPLY");
@@ -85,7 +85,7 @@ void QNetworkAccessManagerSlots::encrypted( QNetworkReply * reply )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "encrypted(QNetworkReply*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QNETWORKREPLY");
@@ -104,7 +104,7 @@ void QNetworkAccessManagerSlots::sslErrors( QNetworkReply * reply, const QList<Q
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sslErrors(QNetworkReply*,QList<QSslError>)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QNETWORKREPLY");
@@ -147,7 +147,7 @@ void QNetworkAccessManagerSlots::preSharedKeyAuthenticationRequired( QNetworkRep
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "preSharedKeyAuthenticationRequired(QNetworkReply*,QSslPreSharedKeyAuthenticator*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QNETWORKREPLY");
@@ -168,7 +168,7 @@ void QNetworkAccessManagerSlots::networkSessionConnected()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "networkSessionConnected()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
 
@@ -184,7 +184,7 @@ void QNetworkAccessManagerSlots::networkAccessibleChanged( QNetworkAccessManager
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM paccessible = hb_itemPutNI( NULL, (int) accessible );

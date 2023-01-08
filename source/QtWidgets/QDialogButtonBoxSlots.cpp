@@ -26,7 +26,7 @@ void QDialogButtonBoxSlots::accepted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "accepted()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
 
@@ -42,7 +42,7 @@ void QDialogButtonBoxSlots::clicked( QAbstractButton * button )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QAbstractButton*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
     PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");
@@ -60,7 +60,7 @@ void QDialogButtonBoxSlots::helpRequested()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "helpRequested()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
 
@@ -76,7 +76,7 @@ void QDialogButtonBoxSlots::rejected()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rejected()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
 

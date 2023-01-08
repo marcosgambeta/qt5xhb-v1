@@ -26,7 +26,7 @@ void QLogValue3DAxisFormatterSlots::autoSubGridChanged( bool enabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoSubGridChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUE3DAXISFORMATTER");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
@@ -44,7 +44,7 @@ void QLogValue3DAxisFormatterSlots::baseChanged( qreal base )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "baseChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUE3DAXISFORMATTER");
     PHB_ITEM pbase = hb_itemPutND( NULL, base );
@@ -62,7 +62,7 @@ void QLogValue3DAxisFormatterSlots::showEdgeLabelsChanged( bool enabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "showEdgeLabelsChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUE3DAXISFORMATTER");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );

@@ -26,7 +26,7 @@ void QItemModelBarDataProxySlots::autoColumnCategoriesChanged( bool enable )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoColumnCategoriesChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
@@ -44,7 +44,7 @@ void QItemModelBarDataProxySlots::autoRowCategoriesChanged( bool enable )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoRowCategoriesChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
@@ -62,7 +62,7 @@ void QItemModelBarDataProxySlots::columnCategoriesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnCategoriesChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
 
@@ -78,7 +78,7 @@ void QItemModelBarDataProxySlots::columnRoleChanged( const QString & role )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRoleChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
@@ -96,7 +96,7 @@ void QItemModelBarDataProxySlots::columnRolePatternChanged( const QRegExp & patt
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRolePatternChanged(QRegExp)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
@@ -114,7 +114,7 @@ void QItemModelBarDataProxySlots::columnRoleReplaceChanged( const QString & repl
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRoleReplaceChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
@@ -132,7 +132,7 @@ void QItemModelBarDataProxySlots::itemModelChanged( const QAbstractItemModel * i
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemModelChanged(QAbstractItemModel)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM pitemModel = Qt5xHb::Signals_return_qobject(const_cast<QAbstractItemModel*>(itemModel), "QABSTRACTITEMMODEL");
@@ -150,7 +150,7 @@ void QItemModelBarDataProxySlots::multiMatchBehaviorChanged( QItemModelBarDataPr
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM pbehavior = hb_itemPutNI( NULL, (int) behavior );
@@ -168,7 +168,7 @@ void QItemModelBarDataProxySlots::rotationRoleChanged( const QString & role )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRoleChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
@@ -186,7 +186,7 @@ void QItemModelBarDataProxySlots::rotationRolePatternChanged( const QRegExp & pa
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRolePatternChanged(QRegExp)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
@@ -204,7 +204,7 @@ void QItemModelBarDataProxySlots::rotationRoleReplaceChanged( const QString & re
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRoleReplaceChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
@@ -222,7 +222,7 @@ void QItemModelBarDataProxySlots::rowCategoriesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCategoriesChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
 
@@ -238,7 +238,7 @@ void QItemModelBarDataProxySlots::rowRoleChanged( const QString & role )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRoleChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
@@ -256,7 +256,7 @@ void QItemModelBarDataProxySlots::rowRolePatternChanged( const QRegExp & pattern
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRolePatternChanged(QRegExp)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
@@ -274,7 +274,7 @@ void QItemModelBarDataProxySlots::rowRoleReplaceChanged( const QString & replace
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRoleReplaceChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
@@ -292,7 +292,7 @@ void QItemModelBarDataProxySlots::useModelCategoriesChanged( bool enable )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "useModelCategoriesChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
@@ -310,7 +310,7 @@ void QItemModelBarDataProxySlots::valueRoleChanged( const QString & role )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueRoleChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
@@ -328,7 +328,7 @@ void QItemModelBarDataProxySlots::valueRolePatternChanged( const QRegExp & patte
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueRolePatternChanged(QRegExp)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
@@ -346,7 +346,7 @@ void QItemModelBarDataProxySlots::valueRoleReplaceChanged( const QString & repla
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueRoleReplaceChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELBARDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );

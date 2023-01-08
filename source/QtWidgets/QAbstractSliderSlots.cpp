@@ -26,7 +26,7 @@ void QAbstractSliderSlots::actionTriggered( int action )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "actionTriggered(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM paction = hb_itemPutNI( NULL, action );
@@ -44,7 +44,7 @@ void QAbstractSliderSlots::rangeChanged( int min, int max )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rangeChanged(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM pmin = hb_itemPutNI( NULL, min );
@@ -64,7 +64,7 @@ void QAbstractSliderSlots::sliderMoved( int value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliderMoved(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
@@ -82,7 +82,7 @@ void QAbstractSliderSlots::sliderPressed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliderPressed()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
 
@@ -98,7 +98,7 @@ void QAbstractSliderSlots::sliderReleased()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sliderReleased()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
 
@@ -114,7 +114,7 @@ void QAbstractSliderSlots::valueChanged( int value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );

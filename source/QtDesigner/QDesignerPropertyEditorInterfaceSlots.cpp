@@ -26,7 +26,7 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "propertyChanged(QString,QVariant)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDESIGNERPROPERTYEDITORINTERFACE");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );

@@ -26,7 +26,7 @@ void QAbstractAnimationSlots::currentLoopChanged( int currentLoop )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentLoopChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
     PHB_ITEM pcurrentLoop = hb_itemPutNI( NULL, currentLoop );
@@ -44,7 +44,7 @@ void QAbstractAnimationSlots::directionChanged( QAbstractAnimation::Direction ne
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "directionChanged(QAbstractAnimation::Direction)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
     PHB_ITEM pnewDirection = hb_itemPutNI( NULL, (int) newDirection );
@@ -62,7 +62,7 @@ void QAbstractAnimationSlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
 
@@ -78,7 +78,7 @@ void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );

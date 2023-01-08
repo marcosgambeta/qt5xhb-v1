@@ -26,7 +26,7 @@ void QDBusServerSlots::newConnection( const QDBusConnection & connection )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "newConnection(QDBusConnection)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVER");
     PHB_ITEM pconnection = Qt5xHb::Signals_return_object( (void *) &connection, "QDBUSCONNECTION" );

@@ -26,7 +26,7 @@ void QProcessSlots::error( QProcess::ProcessError error )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QProcess::ProcessError)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
@@ -44,7 +44,7 @@ void QProcessSlots::finished( int exitCode, QProcess::ExitStatus exitStatus )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(int,QProcess::ExitStatus)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
     PHB_ITEM pexitCode = hb_itemPutNI( NULL, exitCode );
@@ -64,7 +64,7 @@ void QProcessSlots::readyReadStandardError()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readyReadStandardError()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
 
@@ -80,7 +80,7 @@ void QProcessSlots::readyReadStandardOutput()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readyReadStandardOutput()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
 
@@ -96,7 +96,7 @@ void QProcessSlots::started()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "started()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
 
@@ -112,7 +112,7 @@ void QProcessSlots::stateChanged( QProcess::ProcessState newState )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QProcess::ProcessState)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
@@ -131,7 +131,7 @@ void QProcessSlots::errorOccurred( QProcess::ProcessError error )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "errorOccurred(QProcess::ProcessError)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );

@@ -26,7 +26,7 @@ void QCustom3DItemSlots::meshFileChanged( const QString & meshFile )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "meshFileChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
     PHB_ITEM pmeshFile = hb_itemPutC( NULL, QSTRINGTOSTRING(meshFile) );
@@ -44,7 +44,7 @@ void QCustom3DItemSlots::positionAbsoluteChanged( bool positionAbsolute )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionAbsoluteChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
     PHB_ITEM ppositionAbsolute = hb_itemPutL( NULL, positionAbsolute );
@@ -62,7 +62,7 @@ void QCustom3DItemSlots::positionChanged( const QVector3D & position )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionChanged(QVector3D)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
     PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QVECTOR3D" );
@@ -80,7 +80,7 @@ void QCustom3DItemSlots::rotationChanged( const QQuaternion & rotation )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationChanged(QQuaternion)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
     PHB_ITEM protation = Qt5xHb::Signals_return_object( (void *) &rotation, "QQUATERNION" );
@@ -98,7 +98,7 @@ void QCustom3DItemSlots::scalingAbsoluteChanged( bool scalingAbsolute )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scalingAbsoluteChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
     PHB_ITEM pscalingAbsolute = hb_itemPutL( NULL, scalingAbsolute );
@@ -116,7 +116,7 @@ void QCustom3DItemSlots::scalingChanged( const QVector3D & scaling )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scalingChanged(QVector3D)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
     PHB_ITEM pscaling = Qt5xHb::Signals_return_object( (void *) &scaling, "QVECTOR3D" );
@@ -134,7 +134,7 @@ void QCustom3DItemSlots::shadowCastingChanged( bool shadowCasting )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "shadowCastingChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
     PHB_ITEM pshadowCasting = hb_itemPutL( NULL, shadowCasting );
@@ -152,7 +152,7 @@ void QCustom3DItemSlots::textureFileChanged( const QString & textureFile )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textureFileChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
     PHB_ITEM ptextureFile = hb_itemPutC( NULL, QSTRINGTOSTRING(textureFile) );
@@ -170,7 +170,7 @@ void QCustom3DItemSlots::visibleChanged( bool visible )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibleChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );

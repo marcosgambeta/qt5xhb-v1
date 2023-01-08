@@ -26,7 +26,7 @@ void QFileSystemModelSlots::directoryLoaded( const QString & path )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "directoryLoaded(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILESYSTEMMODEL");
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
@@ -44,7 +44,7 @@ void QFileSystemModelSlots::fileRenamed( const QString & path, const QString & o
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fileRenamed(QString,QString,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILESYSTEMMODEL");
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
@@ -66,7 +66,7 @@ void QFileSystemModelSlots::rootPathChanged( const QString & newPath )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rootPathChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILESYSTEMMODEL");
     PHB_ITEM pnewPath = hb_itemPutC( NULL, QSTRINGTOSTRING(newPath) );

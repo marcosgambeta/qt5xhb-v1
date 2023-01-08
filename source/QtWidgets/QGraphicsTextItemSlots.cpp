@@ -26,7 +26,7 @@ void QGraphicsTextItemSlots::linkActivated( const QString & link )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkActivated(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSTEXTITEM");
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
@@ -44,7 +44,7 @@ void QGraphicsTextItemSlots::linkHovered( const QString & link )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkHovered(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSTEXTITEM");
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );

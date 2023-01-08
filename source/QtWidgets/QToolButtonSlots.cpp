@@ -26,7 +26,7 @@ void QToolButtonSlots::triggered( QAction * action )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "triggered(QAction*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBUTTON");
     PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");

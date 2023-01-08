@@ -26,7 +26,7 @@ void QSqlDriverSlots::notification( const QString & name )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "notification(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSQLDRIVER");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
@@ -44,7 +44,7 @@ void QSqlDriverSlots::notification( const QString & name, QSqlDriver::Notificati
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSQLDRIVER");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );

@@ -26,7 +26,7 @@ void QVideoWidgetSlots::fullScreenChanged( bool fullScreen )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fullScreenChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
     PHB_ITEM pfullScreen = hb_itemPutL( NULL, fullScreen );
@@ -44,7 +44,7 @@ void QVideoWidgetSlots::brightnessChanged( int brightness )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "brightnessChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
     PHB_ITEM pbrightness = hb_itemPutNI( NULL, brightness );
@@ -62,7 +62,7 @@ void QVideoWidgetSlots::contrastChanged( int contrast )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contrastChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
     PHB_ITEM pcontrast = hb_itemPutNI( NULL, contrast );
@@ -80,7 +80,7 @@ void QVideoWidgetSlots::hueChanged( int hue )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hueChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
     PHB_ITEM phue = hb_itemPutNI( NULL, hue );
@@ -98,7 +98,7 @@ void QVideoWidgetSlots::saturationChanged( int saturation )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "saturationChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
     PHB_ITEM psaturation = hb_itemPutNI( NULL, saturation );

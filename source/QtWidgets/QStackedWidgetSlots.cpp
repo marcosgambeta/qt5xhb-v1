@@ -26,7 +26,7 @@ void QStackedWidgetSlots::currentChanged( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTACKEDWIDGET");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
@@ -44,7 +44,7 @@ void QStackedWidgetSlots::widgetRemoved( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "widgetRemoved(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTACKEDWIDGET");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );

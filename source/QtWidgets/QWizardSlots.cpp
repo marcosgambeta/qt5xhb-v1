@@ -26,7 +26,7 @@ void QWizardSlots::currentIdChanged( int id )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentIdChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
@@ -44,7 +44,7 @@ void QWizardSlots::customButtonClicked( int which )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "customButtonClicked(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pwhich = hb_itemPutNI( NULL, which );
@@ -62,7 +62,7 @@ void QWizardSlots::helpRequested()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "helpRequested()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
 
@@ -78,7 +78,7 @@ void QWizardSlots::pageAdded( int id )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pageAdded(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
@@ -96,7 +96,7 @@ void QWizardSlots::pageRemoved( int id )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pageRemoved(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pid = hb_itemPutNI( NULL, id );

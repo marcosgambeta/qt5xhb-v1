@@ -26,7 +26,7 @@ void QColorDialogSlots::colorSelected( const QColor & color )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorSelected(QColor)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOLORDIALOG");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
@@ -44,7 +44,7 @@ void QColorDialogSlots::currentColorChanged( const QColor & color )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentColorChanged(QColor)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOLORDIALOG");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );

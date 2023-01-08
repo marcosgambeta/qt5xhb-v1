@@ -27,7 +27,7 @@ void QTextToSpeechSlots::localeChanged( const QLocale & locale )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "localeChanged(QLocale)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM plocale = Qt5xHb::Signals_return_object( (void *) &locale, "QLOCALE" );
@@ -47,7 +47,7 @@ void QTextToSpeechSlots::pitchChanged( double pitch )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pitchChanged(double)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM ppitch = hb_itemPutND( NULL, pitch );
@@ -67,7 +67,7 @@ void QTextToSpeechSlots::rateChanged( double rate )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rateChanged(double)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM prate = hb_itemPutND( NULL, rate );
@@ -87,7 +87,7 @@ void QTextToSpeechSlots::stateChanged( QTextToSpeech::State state )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QTextToSpeech::State)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
@@ -107,7 +107,7 @@ void QTextToSpeechSlots::voiceChanged( const QVoice & voice )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "voiceChanged(QVoice)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM pvoice = Qt5xHb::Signals_return_object( (void *) &voice, "QVOICE" );
@@ -127,7 +127,7 @@ void QTextToSpeechSlots::volumeChanged( int volume )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "volumeChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );

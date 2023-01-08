@@ -26,7 +26,7 @@ void QDnsLookupSlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDNSLOOKUP");
 
@@ -42,7 +42,7 @@ void QDnsLookupSlots::nameChanged( const QString & name )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDNSLOOKUP");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
@@ -60,7 +60,7 @@ void QDnsLookupSlots::nameserverChanged( const QHostAddress & nameserver )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameserverChanged(QHostAddress)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDNSLOOKUP");
     PHB_ITEM pnameserver = Qt5xHb::Signals_return_object( (void *) &nameserver, "QHOSTADDRESS" );
@@ -78,7 +78,7 @@ void QDnsLookupSlots::typeChanged( QDnsLookup::Type type )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "typeChanged(QDnsLookup::Type)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDNSLOOKUP");
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );

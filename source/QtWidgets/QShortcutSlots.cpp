@@ -26,7 +26,7 @@ void QShortcutSlots::activated()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activated()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSHORTCUT");
 
@@ -42,7 +42,7 @@ void QShortcutSlots::activatedAmbiguously()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activatedAmbiguously()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSHORTCUT");
 

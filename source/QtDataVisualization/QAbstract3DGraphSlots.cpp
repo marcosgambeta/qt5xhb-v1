@@ -26,7 +26,7 @@ void QAbstract3DGraphSlots::activeInputHandlerChanged( QAbstract3DInputHandler *
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeInputHandlerChanged(QAbstract3DInputHandler*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pinputHandler = Qt5xHb::Signals_return_qobject(inputHandler, "QABSTRACT3DINPUTHANDLER");
@@ -44,7 +44,7 @@ void QAbstract3DGraphSlots::activeThemeChanged( Q3DTheme * theme )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeThemeChanged(Q3DTheme*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM ptheme = Qt5xHb::Signals_return_qobject(theme, "Q3DTHEME");
@@ -62,7 +62,7 @@ void QAbstract3DGraphSlots::aspectRatioChanged( qreal ratio )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aspectRatioChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pratio = hb_itemPutND( NULL, ratio );
@@ -80,7 +80,7 @@ void QAbstract3DGraphSlots::currentFpsChanged( qreal fps )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentFpsChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pfps = hb_itemPutND( NULL, fps );
@@ -98,7 +98,7 @@ void QAbstract3DGraphSlots::horizontalAspectRatioChanged( qreal ratio )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "horizontalAspectRatioChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pratio = hb_itemPutND( NULL, ratio );
@@ -116,7 +116,7 @@ void QAbstract3DGraphSlots::localeChanged( const QLocale & locale )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "localeChanged(QLocale)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM plocale = Qt5xHb::Signals_return_object( (void *) &locale, "QLOCALE" );
@@ -134,7 +134,7 @@ void QAbstract3DGraphSlots::marginChanged( qreal margin )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "marginChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pmargin = hb_itemPutND( NULL, margin );
@@ -152,7 +152,7 @@ void QAbstract3DGraphSlots::measureFpsChanged( bool enabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "measureFpsChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
@@ -170,7 +170,7 @@ void QAbstract3DGraphSlots::optimizationHintsChanged( QAbstract3DGraph::Optimiza
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM phints = hb_itemPutNI( NULL, (int) hints );
@@ -188,7 +188,7 @@ void QAbstract3DGraphSlots::orthoProjectionChanged( bool enabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "orthoProjectionChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
@@ -206,7 +206,7 @@ void QAbstract3DGraphSlots::polarChanged( bool enabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "polarChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
@@ -224,7 +224,7 @@ void QAbstract3DGraphSlots::queriedGraphPositionChanged( const QVector3D & data 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "queriedGraphPositionChanged(QVector3D)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QVECTOR3D" );
@@ -242,7 +242,7 @@ void QAbstract3DGraphSlots::radialLabelOffsetChanged( float offset )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "radialLabelOffsetChanged(float)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM poffset = hb_itemPutND( NULL, offset );
@@ -260,7 +260,7 @@ void QAbstract3DGraphSlots::reflectionChanged( bool enabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "reflectionChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
@@ -278,7 +278,7 @@ void QAbstract3DGraphSlots::reflectivityChanged( qreal reflectivity )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "reflectivityChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM preflectivity = hb_itemPutND( NULL, reflectivity );
@@ -296,7 +296,7 @@ void QAbstract3DGraphSlots::selectedElementChanged( QAbstract3DGraph::ElementTyp
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedElementChanged(QAbstract3DGraph::ElementType)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );
@@ -314,7 +314,7 @@ void QAbstract3DGraphSlots::selectionModeChanged( QAbstract3DGraph::SelectionFla
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
@@ -332,7 +332,7 @@ void QAbstract3DGraphSlots::shadowQualityChanged( QAbstract3DGraph::ShadowQualit
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pquality = hb_itemPutNI( NULL, (int) quality );

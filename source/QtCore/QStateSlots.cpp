@@ -26,7 +26,7 @@ void QStateSlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATE");
 
@@ -42,7 +42,7 @@ void QStateSlots::propertiesAssigned()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "propertiesAssigned()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATE");
 

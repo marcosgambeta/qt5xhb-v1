@@ -26,7 +26,7 @@ void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfig
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "configurationAdded(QNetworkConfiguration)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
@@ -44,7 +44,7 @@ void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConf
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
@@ -62,7 +62,7 @@ void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConf
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "configurationRemoved(QNetworkConfiguration)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
@@ -80,7 +80,7 @@ void QNetworkConfigurationManagerSlots::onlineStateChanged( bool isOnline )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "onlineStateChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pisOnline = hb_itemPutL( NULL, isOnline );
@@ -98,7 +98,7 @@ void QNetworkConfigurationManagerSlots::updateCompleted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "updateCompleted()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
 

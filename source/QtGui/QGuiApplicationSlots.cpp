@@ -26,7 +26,7 @@ void QGuiApplicationSlots::focusObjectChanged( QObject * focusObject )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "focusObjectChanged(QObject*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pfocusObject = Qt5xHb::Signals_return_qobject(focusObject, "QOBJECT");
@@ -44,7 +44,7 @@ void QGuiApplicationSlots::focusWindowChanged( QWindow * focusWindow )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "focusWindowChanged(QWindow*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pfocusWindow = Qt5xHb::Signals_return_qobject(focusWindow, "QWINDOW");
@@ -62,7 +62,7 @@ void QGuiApplicationSlots::fontDatabaseChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fontDatabaseChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
 
@@ -78,7 +78,7 @@ void QGuiApplicationSlots::lastWindowClosed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastWindowClosed()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
 
@@ -94,7 +94,7 @@ void QGuiApplicationSlots::screenAdded( QScreen * screen )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "screenAdded(QScreen*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject(screen, "QSCREEN");

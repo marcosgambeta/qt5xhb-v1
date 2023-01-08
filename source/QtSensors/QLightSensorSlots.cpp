@@ -27,7 +27,7 @@ void QLightSensorSlots::fieldOfViewChanged( qreal fieldOfView )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fieldOfViewChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLIGHTSENSOR");
     PHB_ITEM pfieldOfView = hb_itemPutND( NULL, fieldOfView );

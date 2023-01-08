@@ -27,7 +27,7 @@ void QRotationSensorSlots::hasZChanged( bool hasZ )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hasZChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QROTATIONSENSOR");
     PHB_ITEM phasZ = hb_itemPutL( NULL, hasZ );

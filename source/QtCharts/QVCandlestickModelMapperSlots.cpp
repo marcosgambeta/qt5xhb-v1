@@ -27,7 +27,7 @@ void QVCandlestickModelMapperSlots::closeRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "closeRowChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVCANDLESTICKMODELMAPPER");
 
@@ -45,7 +45,7 @@ void QVCandlestickModelMapperSlots::firstSetColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstSetColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVCANDLESTICKMODELMAPPER");
 
@@ -63,7 +63,7 @@ void QVCandlestickModelMapperSlots::highRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "highRowChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVCANDLESTICKMODELMAPPER");
 
@@ -81,7 +81,7 @@ void QVCandlestickModelMapperSlots::lastSetColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastSetColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVCANDLESTICKMODELMAPPER");
 
@@ -99,7 +99,7 @@ void QVCandlestickModelMapperSlots::lowRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lowRowChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVCANDLESTICKMODELMAPPER");
 
@@ -117,7 +117,7 @@ void QVCandlestickModelMapperSlots::openRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "openRowChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVCANDLESTICKMODELMAPPER");
 
@@ -135,7 +135,7 @@ void QVCandlestickModelMapperSlots::timestampRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "timestampRowChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVCANDLESTICKMODELMAPPER");
 

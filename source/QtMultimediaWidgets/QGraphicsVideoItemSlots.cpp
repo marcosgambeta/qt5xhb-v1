@@ -26,7 +26,7 @@ void QGraphicsVideoItemSlots::nativeSizeChanged( const QSizeF & size )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nativeSizeChanged(QSizeF)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSVIDEOITEM");
     PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZEF" );

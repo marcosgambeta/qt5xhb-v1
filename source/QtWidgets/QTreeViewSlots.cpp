@@ -26,7 +26,7 @@ void QTreeViewSlots::collapsed( const QModelIndex & index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "collapsed(QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEVIEW");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
@@ -44,7 +44,7 @@ void QTreeViewSlots::expanded( const QModelIndex & index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "expanded(QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEVIEW");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );

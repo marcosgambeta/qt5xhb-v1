@@ -27,7 +27,7 @@ void QQuickWidgetSlots::statusChanged( QQuickWidget::Status status )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QQuickWidget::Status)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWIDGET");
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
@@ -47,7 +47,7 @@ void QQuickWidgetSlots::sceneGraphError( QQuickWindow::SceneGraphError error, co
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWIDGET");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );

@@ -27,7 +27,7 @@ void QPlaceReplySlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEREPLY");
 
@@ -45,7 +45,7 @@ void QPlaceReplySlots::error( QPlaceReply::Error error, const QString & errorStr
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QPlaceReply::Error,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEREPLY");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );

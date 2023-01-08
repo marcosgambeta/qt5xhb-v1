@@ -26,7 +26,7 @@ void QGraphicsBlurEffectSlots::blurHintsChanged( QGraphicsBlurEffect::BlurHints 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSBLUREFFECT");
     PHB_ITEM phints = hb_itemPutNI( NULL, (int) hints );
@@ -44,7 +44,7 @@ void QGraphicsBlurEffectSlots::blurRadiusChanged( qreal radius )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSBLUREFFECT");
     PHB_ITEM pradius = hb_itemPutND( NULL, radius );

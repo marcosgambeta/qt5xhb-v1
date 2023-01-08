@@ -27,7 +27,7 @@ void QOAuth2AuthorizationCodeFlowSlots::accessTokenUrlChanged( const QUrl & acce
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "accessTokenUrlChanged(QUrl)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH2AUTHORIZATIONCODEFLOW");
     PHB_ITEM paccessTokenUrl = Qt5xHb::Signals_return_object( (void *) &accessTokenUrl, "QURL" );

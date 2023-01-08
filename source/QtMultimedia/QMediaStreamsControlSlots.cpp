@@ -26,7 +26,7 @@ void QMediaStreamsControlSlots::activeStreamsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeStreamsChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIASTREAMSCONTROL");
 
@@ -42,7 +42,7 @@ void QMediaStreamsControlSlots::streamsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "streamsChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIASTREAMSCONTROL");
 

@@ -27,7 +27,7 @@ void QHCandlestickModelMapperSlots::closeColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "closeColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -45,7 +45,7 @@ void QHCandlestickModelMapperSlots::firstSetRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstSetRowChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -63,7 +63,7 @@ void QHCandlestickModelMapperSlots::highColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "highColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -81,7 +81,7 @@ void QHCandlestickModelMapperSlots::lastSetRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastSetRowChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -99,7 +99,7 @@ void QHCandlestickModelMapperSlots::lowColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lowColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -117,7 +117,7 @@ void QHCandlestickModelMapperSlots::openColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "openColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -135,7 +135,7 @@ void QHCandlestickModelMapperSlots::timestampColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "timestampColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 

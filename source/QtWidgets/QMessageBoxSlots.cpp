@@ -26,7 +26,7 @@ void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMESSAGEBOX");
     PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");

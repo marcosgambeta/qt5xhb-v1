@@ -26,7 +26,7 @@ void QPrintPreviewWidgetSlots::paintRequested( QPrinter * printer )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPRINTPREVIEWWIDGET");
     PHB_ITEM pprinter = Qt5xHb::Signals_return_object( (void *) printer, "QPRINTER" );
@@ -44,7 +44,7 @@ void QPrintPreviewWidgetSlots::previewChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "previewChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPRINTPREVIEWWIDGET");
 

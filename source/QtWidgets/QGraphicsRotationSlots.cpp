@@ -26,7 +26,7 @@ void QGraphicsRotationSlots::angleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "angleChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 
@@ -42,7 +42,7 @@ void QGraphicsRotationSlots::axisChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 
@@ -58,7 +58,7 @@ void QGraphicsRotationSlots::originChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "originChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 

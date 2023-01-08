@@ -26,7 +26,7 @@ void QAxScriptSlots::entered()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "entered()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
 
@@ -42,7 +42,7 @@ void QAxScriptSlots::error( int code, const QString & description, int sourcePos
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(int,QString,int,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
@@ -66,7 +66,7 @@ void QAxScriptSlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
 
@@ -82,7 +82,7 @@ void QAxScriptSlots::finished( const QVariant & result )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QVariant)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM presult = Qt5xHb::Signals_return_object( (void *) &result, "QVARIANT" );
@@ -100,7 +100,7 @@ void QAxScriptSlots::finished( int code, const QString & source, const QString &
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(int,QString,QString,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
@@ -124,7 +124,7 @@ void QAxScriptSlots::stateChanged( int state )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM pstate = hb_itemPutNI( NULL, state );

@@ -26,7 +26,7 @@ void QSoundEffectSlots::sourceChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sourceChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSOUNDEFFECT");
 
@@ -42,7 +42,7 @@ void QSoundEffectSlots::loopCountChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loopCountChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSOUNDEFFECT");
 
@@ -58,7 +58,7 @@ void QSoundEffectSlots::loopsRemainingChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loopsRemainingChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSOUNDEFFECT");
 
@@ -74,7 +74,7 @@ void QSoundEffectSlots::volumeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "volumeChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSOUNDEFFECT");
 
@@ -90,7 +90,7 @@ void QSoundEffectSlots::mutedChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mutedChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSOUNDEFFECT");
 
@@ -106,7 +106,7 @@ void QSoundEffectSlots::loadedChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadedChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSOUNDEFFECT");
 
@@ -122,7 +122,7 @@ void QSoundEffectSlots::playingChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "playingChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSOUNDEFFECT");
 
@@ -138,7 +138,7 @@ void QSoundEffectSlots::statusChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSOUNDEFFECT");
 
@@ -154,7 +154,7 @@ void QSoundEffectSlots::categoryChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoryChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSOUNDEFFECT");
 

@@ -26,7 +26,7 @@ void QCameraLocksControlSlots::lockStatusChanged( QCamera::LockType lock, QCamer
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERALOCKSCONTROL");
     PHB_ITEM plock = hb_itemPutNI( NULL, (int) lock );

@@ -26,7 +26,7 @@ void QMediaAvailabilityControlSlots::availabilityChanged( QMultimedia::Availabil
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAAVAILABILITYCONTROL");
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );

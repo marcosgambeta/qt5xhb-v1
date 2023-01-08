@@ -26,7 +26,7 @@ void QMainWindowSlots::iconSizeChanged( const QSize & iconSize )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMAINWINDOW");
     PHB_ITEM piconSize = Qt5xHb::Signals_return_object( (void *) &iconSize, "QSIZE" );
@@ -44,7 +44,7 @@ void QMainWindowSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonSty
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMAINWINDOW");
     PHB_ITEM ptoolButtonStyle = hb_itemPutNI( NULL, (int) toolButtonStyle );

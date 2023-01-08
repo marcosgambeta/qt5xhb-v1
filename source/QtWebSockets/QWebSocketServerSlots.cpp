@@ -27,7 +27,7 @@ void QWebSocketServerSlots::acceptError( QAbstractSocket::SocketError socketErro
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "acceptError(QAbstractSocket::SocketError)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKETSERVER");
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
@@ -47,7 +47,7 @@ void QWebSocketServerSlots::serverError( QWebSocketProtocol::CloseCode closeCode
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "serverError(QWebSocketProtocol::CloseCode)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKETSERVER");
     PHB_ITEM pcloseCode = hb_itemPutNI( NULL, (int) closeCode );
@@ -67,7 +67,7 @@ void QWebSocketServerSlots::originAuthenticationRequired( QWebSocketCorsAuthenti
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKETSERVER");
     PHB_ITEM ppAuthenticator = Qt5xHb::Signals_return_object( (void *) pAuthenticator, "QWEBSOCKETCORSAUTHENTICATOR" );
@@ -87,7 +87,7 @@ void QWebSocketServerSlots::newConnection()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "newConnection()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKETSERVER");
 
@@ -105,7 +105,7 @@ void QWebSocketServerSlots::peerVerifyError( const QSslError & error )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "peerVerifyError(QSslError)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKETSERVER");
     PHB_ITEM perror = Qt5xHb::Signals_return_object( (void *) &error, "QSSLERROR" );
@@ -125,7 +125,7 @@ void QWebSocketServerSlots::sslErrors( const QList<QSslError> & errors )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKETSERVER");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
@@ -167,7 +167,7 @@ void QWebSocketServerSlots::closed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "closed()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKETSERVER");
 

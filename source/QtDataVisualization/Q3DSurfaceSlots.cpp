@@ -26,7 +26,7 @@ void Q3DSurfaceSlots::axisXChanged( QValue3DAxis * axis )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisXChanged(QValue3DAxis*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSURFACE");
     PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QVALUE3DAXIS");
@@ -44,7 +44,7 @@ void Q3DSurfaceSlots::axisYChanged( QValue3DAxis * axis )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisYChanged(QValue3DAxis*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSURFACE");
     PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QVALUE3DAXIS");
@@ -62,7 +62,7 @@ void Q3DSurfaceSlots::axisZChanged( QValue3DAxis * axis )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisZChanged(QValue3DAxis*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSURFACE");
     PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QVALUE3DAXIS");
@@ -80,7 +80,7 @@ void Q3DSurfaceSlots::flipHorizontalGridChanged( bool flip )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "flipHorizontalGridChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSURFACE");
     PHB_ITEM pflip = hb_itemPutL( NULL, flip );
@@ -98,7 +98,7 @@ void Q3DSurfaceSlots::selectedSeriesChanged( QSurface3DSeries * series )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedSeriesChanged(QSurface3DSeries*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSURFACE");
     PHB_ITEM pseries = Qt5xHb::Signals_return_qobject(series, "QSURFACE3DSERIES");

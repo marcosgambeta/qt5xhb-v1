@@ -27,7 +27,7 @@ void QCandlestickSeriesSlots::bodyOutlineVisibilityChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bodyOutlineVisibilityChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
 
@@ -45,7 +45,7 @@ void QCandlestickSeriesSlots::bodyWidthChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bodyWidthChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
 
@@ -63,7 +63,7 @@ void QCandlestickSeriesSlots::brushChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "brushChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
 
@@ -81,7 +81,7 @@ void QCandlestickSeriesSlots::candlestickSetsAdded( const QList<QCandlestickSet*
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "candlestickSetsAdded(QList<QCandlestickSet*>)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
@@ -123,7 +123,7 @@ void QCandlestickSeriesSlots::candlestickSetsRemoved( const QList<QCandlestickSe
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "candlestickSetsRemoved(QList<QCandlestickSet*>)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
@@ -165,7 +165,7 @@ void QCandlestickSeriesSlots::capsVisibilityChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "capsVisibilityChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
 
@@ -183,7 +183,7 @@ void QCandlestickSeriesSlots::capsWidthChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "capsWidthChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
 
@@ -201,7 +201,7 @@ void QCandlestickSeriesSlots::clicked( QCandlestickSet * set )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QCandlestickSet*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
     PHB_ITEM pset = Qt5xHb::Signals_return_qobject(set, "QCANDLESTICKSET");
@@ -221,7 +221,7 @@ void QCandlestickSeriesSlots::countChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "countChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
 
@@ -239,7 +239,7 @@ void QCandlestickSeriesSlots::decreasingColorChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "decreasingColorChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
 
@@ -257,7 +257,7 @@ void QCandlestickSeriesSlots::doubleClicked( QCandlestickSet * set )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(QCandlestickSet*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
     PHB_ITEM pset = Qt5xHb::Signals_return_qobject(set, "QCANDLESTICKSET");
@@ -277,7 +277,7 @@ void QCandlestickSeriesSlots::hovered( bool status, QCandlestickSet * set )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(bool,QCandlestickSet*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
@@ -299,7 +299,7 @@ void QCandlestickSeriesSlots::increasingColorChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "increasingColorChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
 
@@ -317,7 +317,7 @@ void QCandlestickSeriesSlots::maximumColumnWidthChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maximumColumnWidthChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
 
@@ -335,7 +335,7 @@ void QCandlestickSeriesSlots::minimumColumnWidthChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minimumColumnWidthChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
 
@@ -353,7 +353,7 @@ void QCandlestickSeriesSlots::penChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "penChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
 
@@ -371,7 +371,7 @@ void QCandlestickSeriesSlots::pressed( QCandlestickSet * set )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(QCandlestickSet*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
     PHB_ITEM pset = Qt5xHb::Signals_return_qobject(set, "QCANDLESTICKSET");
@@ -391,7 +391,7 @@ void QCandlestickSeriesSlots::released( QCandlestickSet * set )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released(QCandlestickSet*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
     PHB_ITEM pset = Qt5xHb::Signals_return_qobject(set, "QCANDLESTICKSET");

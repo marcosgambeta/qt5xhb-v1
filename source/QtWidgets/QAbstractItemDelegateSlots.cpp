@@ -26,7 +26,7 @@ void QAbstractItemDelegateSlots::closeEditor( QWidget * editor, QAbstractItemDel
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTITEMDELEGATE");
     PHB_ITEM peditor = Qt5xHb::Signals_return_qobject(editor, "QWIDGET");
@@ -46,7 +46,7 @@ void QAbstractItemDelegateSlots::commitData( QWidget * editor )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "commitData(QWidget*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTITEMDELEGATE");
     PHB_ITEM peditor = Qt5xHb::Signals_return_qobject(editor, "QWIDGET");
@@ -64,7 +64,7 @@ void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sizeHintChanged(QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTITEMDELEGATE");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );

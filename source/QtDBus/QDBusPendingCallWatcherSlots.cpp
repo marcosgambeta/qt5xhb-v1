@@ -26,7 +26,7 @@ void QDBusPendingCallWatcherSlots::finished( QDBusPendingCallWatcher * self )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QDBusPendingCallWatcher*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSPENDINGCALLWATCHER");
     PHB_ITEM pself = Qt5xHb::Signals_return_qobject(self, "QDBUSPENDINGCALLWATCHER");

@@ -26,7 +26,7 @@ void QScreenSlots::geometryChanged( const QRect & geometry )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "geometryChanged(QRect)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
     PHB_ITEM pgeometry = Qt5xHb::Signals_return_object( (void *) &geometry, "QRECT" );
@@ -44,7 +44,7 @@ void QScreenSlots::physicalSizeChanged( const QSizeF & size )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "physicalSizeChanged(QSizeF)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
     PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZEF" );
@@ -62,7 +62,7 @@ void QScreenSlots::physicalDotsPerInchChanged( qreal dpi )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "physicalDotsPerInchChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
     PHB_ITEM pdpi = hb_itemPutND( NULL, dpi );
@@ -80,7 +80,7 @@ void QScreenSlots::logicalDotsPerInchChanged( qreal dpi )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "logicalDotsPerInchChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
     PHB_ITEM pdpi = hb_itemPutND( NULL, dpi );
@@ -98,7 +98,7 @@ void QScreenSlots::virtualGeometryChanged( const QRect & rect )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "virtualGeometryChanged(QRect)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
     PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECT" );
@@ -116,7 +116,7 @@ void QScreenSlots::primaryOrientationChanged( Qt::ScreenOrientation orientation 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "primaryOrientationChanged(Qt::ScreenOrientation)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
@@ -134,7 +134,7 @@ void QScreenSlots::orientationChanged( Qt::ScreenOrientation orientation )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "orientationChanged(Qt::ScreenOrientation)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
@@ -152,7 +152,7 @@ void QScreenSlots::refreshRateChanged( qreal refreshRate )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "refreshRateChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
     PHB_ITEM prefreshRate = hb_itemPutND( NULL, refreshRate );

@@ -27,7 +27,7 @@ void QOpenGLWidgetSlots::aboutToCompose()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToCompose()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLWIDGET");
 
@@ -45,7 +45,7 @@ void QOpenGLWidgetSlots::frameSwapped()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "frameSwapped()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLWIDGET");
 
@@ -63,7 +63,7 @@ void QOpenGLWidgetSlots::aboutToResize()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToResize()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLWIDGET");
 
@@ -81,7 +81,7 @@ void QOpenGLWidgetSlots::resized()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "resized()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLWIDGET");
 

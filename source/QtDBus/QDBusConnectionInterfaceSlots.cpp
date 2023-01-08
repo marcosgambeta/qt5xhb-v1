@@ -26,7 +26,7 @@ void QDBusConnectionInterfaceSlots::serviceRegistered( const QString & service )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "serviceRegistered(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
@@ -44,7 +44,7 @@ void QDBusConnectionInterfaceSlots::serviceUnregistered( const QString & service
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "serviceUnregistered(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
@@ -62,7 +62,7 @@ void QDBusConnectionInterfaceSlots::serviceOwnerChanged( const QString & name, c
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "serviceOwnerChanged(QString,QString,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
@@ -84,7 +84,7 @@ void QDBusConnectionInterfaceSlots::callWithCallbackFailed( const QDBusError & e
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "callWithCallbackFailed(QDBusError,QDBusMessage)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM perror = Qt5xHb::Signals_return_object( (void *) &error, "QDBUSERROR" );

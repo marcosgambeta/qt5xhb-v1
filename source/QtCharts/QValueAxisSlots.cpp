@@ -27,7 +27,7 @@ void QValueAxisSlots::labelFormatChanged( const QString & format )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelFormatChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
@@ -47,7 +47,7 @@ void QValueAxisSlots::maxChanged( qreal max )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pmax = hb_itemPutND( NULL, max );
@@ -67,7 +67,7 @@ void QValueAxisSlots::minChanged( qreal min )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pmin = hb_itemPutND( NULL, min );
@@ -87,7 +87,7 @@ void QValueAxisSlots::minorTickCountChanged( int tickCount )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minorTickCountChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM ptickCount = hb_itemPutNI( NULL, tickCount );
@@ -107,7 +107,7 @@ void QValueAxisSlots::rangeChanged( qreal min, qreal max )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rangeChanged(qreal,qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pmin = hb_itemPutND( NULL, min );
@@ -129,7 +129,7 @@ void QValueAxisSlots::tickCountChanged( int tickCount )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tickCountChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM ptickCount = hb_itemPutNI( NULL, tickCount );

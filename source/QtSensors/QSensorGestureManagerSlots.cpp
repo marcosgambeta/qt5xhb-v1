@@ -27,7 +27,7 @@ void QSensorGestureManagerSlots::newSensorGestureAvailable()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "newSensorGestureAvailable()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSORGESTUREMANAGER");
 

@@ -26,7 +26,7 @@ void QIODeviceSlots::aboutToClose()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToClose()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
 
@@ -42,7 +42,7 @@ void QIODeviceSlots::bytesWritten( qint64 bytes )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bytesWritten(qint64)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
     PHB_ITEM pbytes = hb_itemPutNLL( NULL, bytes );
@@ -60,7 +60,7 @@ void QIODeviceSlots::readChannelFinished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readChannelFinished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
 
@@ -76,7 +76,7 @@ void QIODeviceSlots::readyRead()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readyRead()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
 

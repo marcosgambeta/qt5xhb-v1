@@ -26,7 +26,7 @@ void QCheckBoxSlots::stateChanged( int state )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCHECKBOX");
     PHB_ITEM pstate = hb_itemPutNI( NULL, state );

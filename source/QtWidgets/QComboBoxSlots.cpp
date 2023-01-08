@@ -26,7 +26,7 @@ void QComboBoxSlots::activated( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activated(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOMBOBOX");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
@@ -44,7 +44,7 @@ void QComboBoxSlots::activated( const QString & text )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activated(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOMBOBOX");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
@@ -62,7 +62,7 @@ void QComboBoxSlots::currentIndexChanged( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentIndexChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOMBOBOX");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
@@ -80,7 +80,7 @@ void QComboBoxSlots::currentIndexChanged( const QString & text )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentIndexChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOMBOBOX");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
@@ -98,7 +98,7 @@ void QComboBoxSlots::editTextChanged( const QString & text )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "editTextChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOMBOBOX");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
@@ -116,7 +116,7 @@ void QComboBoxSlots::highlighted( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "highlighted(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOMBOBOX");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
@@ -134,7 +134,7 @@ void QComboBoxSlots::highlighted( const QString & text )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "highlighted(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOMBOBOX");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );

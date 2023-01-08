@@ -26,7 +26,7 @@ void QMediaGaplessPlaybackControlSlots::advancedToNextMedia()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "advancedToNextMedia()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAGAPLESSPLAYBACKCONTROL");
 
@@ -42,7 +42,7 @@ void QMediaGaplessPlaybackControlSlots::crossfadeTimeChanged( qreal crossfadeTim
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "crossfadeTimeChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAGAPLESSPLAYBACKCONTROL");
     PHB_ITEM pcrossfadeTime = hb_itemPutND( NULL, crossfadeTime );
@@ -60,7 +60,7 @@ void QMediaGaplessPlaybackControlSlots::nextMediaChanged( const QMediaContent & 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nextMediaChanged(QMediaContent)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAGAPLESSPLAYBACKCONTROL");
     PHB_ITEM pmedia = Qt5xHb::Signals_return_object( (void *) &media, "QMEDIACONTENT" );

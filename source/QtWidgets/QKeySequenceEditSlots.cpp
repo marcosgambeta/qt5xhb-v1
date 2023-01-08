@@ -27,7 +27,7 @@ void QKeySequenceEditSlots::editingFinished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "editingFinished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QKEYSEQUENCEEDIT");
 
@@ -45,7 +45,7 @@ void QKeySequenceEditSlots::keySequenceChanged( const QKeySequence & keySequence
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "keySequenceChanged(QKeySequence)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QKEYSEQUENCEEDIT");
     PHB_ITEM pkeySequence = Qt5xHb::Signals_return_object( (void *) &keySequence, "QKEYSEQUENCE" );

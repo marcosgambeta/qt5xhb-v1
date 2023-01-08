@@ -26,7 +26,7 @@ void QTextEditSlots::copyAvailable( bool yes )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "copyAvailable(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
     PHB_ITEM pyes = hb_itemPutL( NULL, yes );
@@ -44,7 +44,7 @@ void QTextEditSlots::currentCharFormatChanged( const QTextCharFormat & f )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentCharFormatChanged(QTextCharFormat)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
     PHB_ITEM pf = Qt5xHb::Signals_return_object( (void *) &f, "QTEXTCHARFORMAT" );
@@ -62,7 +62,7 @@ void QTextEditSlots::cursorPositionChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cursorPositionChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
 
@@ -78,7 +78,7 @@ void QTextEditSlots::redoAvailable( bool available )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "redoAvailable(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
@@ -96,7 +96,7 @@ void QTextEditSlots::selectionChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
 
@@ -112,7 +112,7 @@ void QTextEditSlots::textChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
 
@@ -128,7 +128,7 @@ void QTextEditSlots::undoAvailable( bool available )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "undoAvailable(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );

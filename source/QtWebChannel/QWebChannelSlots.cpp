@@ -27,7 +27,7 @@ void QWebChannelSlots::blockUpdatesChanged( bool block )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "blockUpdatesChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBCHANNEL");
     PHB_ITEM pblock = hb_itemPutL( NULL, block );

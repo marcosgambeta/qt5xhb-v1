@@ -27,7 +27,7 @@ void QTapSensorSlots::returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "returnDoubleTapEventsChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTAPSENSOR");
     PHB_ITEM preturnDoubleTapEvents = hb_itemPutL( NULL, returnDoubleTapEvents );

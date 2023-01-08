@@ -26,7 +26,7 @@ void QCameraFlashControlSlots::flashReady( bool ready )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "flashReady(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFLASHCONTROL");
     PHB_ITEM pready = hb_itemPutL( NULL, ready );

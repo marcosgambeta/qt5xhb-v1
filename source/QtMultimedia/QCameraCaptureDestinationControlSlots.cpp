@@ -26,7 +26,7 @@ void QCameraCaptureDestinationControlSlots::captureDestinationChanged( QCameraIm
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERACAPTUREDESTINATIONCONTROL");
     PHB_ITEM pdestination = hb_itemPutNI( NULL, (int) destination );

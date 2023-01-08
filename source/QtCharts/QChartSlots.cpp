@@ -27,7 +27,7 @@ void QChartSlots::plotAreaChanged( const QRectF & plotArea )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "plotAreaChanged(QRectF)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCHART");
     PHB_ITEM pplotArea = Qt5xHb::Signals_return_object( (void *) &plotArea, "QRECTF" );

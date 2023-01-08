@@ -27,7 +27,7 @@ void QAbstractOAuthReplyHandlerSlots::callbackDataReceived( const QByteArray & d
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "callbackDataReceived(QByteArray)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTHREPLYHANDLER");
     PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QBYTEARRAY" );
@@ -47,7 +47,7 @@ void QAbstractOAuthReplyHandlerSlots::replyDataReceived( const QByteArray & data
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "replyDataReceived(QByteArray)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTHREPLYHANDLER");
     PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QBYTEARRAY" );

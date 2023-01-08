@@ -27,7 +27,7 @@ void QSensorGestureRecognizerSlots::detected( const QString & s )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "detected(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSORGESTURERECOGNIZER");
     PHB_ITEM ps = hb_itemPutC( NULL, QSTRINGTOSTRING(s) );

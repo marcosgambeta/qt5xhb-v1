@@ -26,7 +26,7 @@ void QScatter3DSeriesSlots::dataProxyChanged( QScatterDataProxy * proxy )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataProxyChanged(QScatterDataProxy*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTER3DSERIES");
     PHB_ITEM pproxy = Qt5xHb::Signals_return_qobject(proxy, "QSCATTERDATAPROXY");
@@ -44,7 +44,7 @@ void QScatter3DSeriesSlots::itemSizeChanged( float size )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemSizeChanged(float)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTER3DSERIES");
     PHB_ITEM psize = hb_itemPutND( NULL, size );
@@ -62,7 +62,7 @@ void QScatter3DSeriesSlots::selectedItemChanged( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedItemChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTER3DSERIES");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );

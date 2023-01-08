@@ -26,7 +26,7 @@ void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "updatePreviewWidget(QModelIndex)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOLUMNVIEW");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );

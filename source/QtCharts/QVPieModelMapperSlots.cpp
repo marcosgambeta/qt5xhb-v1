@@ -27,7 +27,7 @@ void QVPieModelMapperSlots::firstRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstRowChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 
@@ -45,7 +45,7 @@ void QVPieModelMapperSlots::labelsColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 
@@ -63,7 +63,7 @@ void QVPieModelMapperSlots::modelReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "modelReplaced()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 
@@ -81,7 +81,7 @@ void QVPieModelMapperSlots::rowCountChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCountChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 
@@ -99,7 +99,7 @@ void QVPieModelMapperSlots::seriesReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesReplaced()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 
@@ -117,7 +117,7 @@ void QVPieModelMapperSlots::valuesColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valuesColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 

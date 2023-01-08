@@ -26,7 +26,7 @@ void QQuickWindowSlots::afterRendering()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "afterRendering()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
@@ -42,7 +42,7 @@ void QQuickWindowSlots::beforeRendering()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeRendering()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
@@ -58,7 +58,7 @@ void QQuickWindowSlots::beforeSynchronizing()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeSynchronizing()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
@@ -74,7 +74,7 @@ void QQuickWindowSlots::colorChanged( const QColor & color )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
@@ -92,7 +92,7 @@ void QQuickWindowSlots::frameSwapped()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "frameSwapped()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
@@ -108,7 +108,7 @@ void QQuickWindowSlots::sceneGraphInitialized()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneGraphInitialized()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
@@ -124,7 +124,7 @@ void QQuickWindowSlots::sceneGraphInvalidated()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneGraphInvalidated()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 

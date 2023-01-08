@@ -27,7 +27,7 @@ void QAbstractSeriesSlots::nameChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 
@@ -45,7 +45,7 @@ void QAbstractSeriesSlots::opacityChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "opacityChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 
@@ -63,7 +63,7 @@ void QAbstractSeriesSlots::useOpenGLChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "useOpenGLChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 
@@ -81,7 +81,7 @@ void QAbstractSeriesSlots::visibleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibleChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 

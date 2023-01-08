@@ -26,7 +26,7 @@ void QGraphicsObjectSlots::enabledChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "enabledChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
@@ -42,7 +42,7 @@ void QGraphicsObjectSlots::opacityChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "opacityChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
@@ -58,7 +58,7 @@ void QGraphicsObjectSlots::parentChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "parentChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
@@ -74,7 +74,7 @@ void QGraphicsObjectSlots::rotationChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
@@ -90,7 +90,7 @@ void QGraphicsObjectSlots::scaleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scaleChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
@@ -106,7 +106,7 @@ void QGraphicsObjectSlots::visibleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibleChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
@@ -122,7 +122,7 @@ void QGraphicsObjectSlots::xChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
@@ -138,7 +138,7 @@ void QGraphicsObjectSlots::yChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
@@ -154,7 +154,7 @@ void QGraphicsObjectSlots::zChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 

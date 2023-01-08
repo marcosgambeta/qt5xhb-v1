@@ -26,7 +26,7 @@ void QAbstractButtonSlots::clicked( bool checked )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTBUTTON");
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
@@ -44,7 +44,7 @@ void QAbstractButtonSlots::pressed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTBUTTON");
 
@@ -60,7 +60,7 @@ void QAbstractButtonSlots::released()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTBUTTON");
 
@@ -76,7 +76,7 @@ void QAbstractButtonSlots::toggled( bool checked )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "toggled(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTBUTTON");
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );

@@ -26,7 +26,7 @@ void QMediaObjectSlots::availabilityChanged( bool available )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availabilityChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
@@ -44,7 +44,7 @@ void QMediaObjectSlots::availabilityChanged( QMultimedia::AvailabilityStatus ava
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
@@ -62,7 +62,7 @@ void QMediaObjectSlots::metaDataAvailableChanged( bool available )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
@@ -80,7 +80,7 @@ void QMediaObjectSlots::metaDataChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
 
@@ -96,7 +96,7 @@ void QMediaObjectSlots::metaDataChanged( const QString & key, const QVariant & v
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
@@ -116,7 +116,7 @@ void QMediaObjectSlots::notifyIntervalChanged( int milliseconds )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "notifyIntervalChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pmilliseconds = hb_itemPutNI( NULL, milliseconds );

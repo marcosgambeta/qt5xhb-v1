@@ -26,7 +26,7 @@ void QQuickPaintedItemSlots::contentsScaleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsScaleChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
@@ -42,7 +42,7 @@ void QQuickPaintedItemSlots::contentsSizeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsSizeChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
@@ -58,7 +58,7 @@ void QQuickPaintedItemSlots::fillColorChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fillColorChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
@@ -74,7 +74,7 @@ void QQuickPaintedItemSlots::renderTargetChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "renderTargetChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 

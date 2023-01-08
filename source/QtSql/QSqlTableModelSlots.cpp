@@ -26,7 +26,7 @@ void QSqlTableModelSlots::beforeDelete( int row )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeDelete(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSQLTABLEMODEL");
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
@@ -44,7 +44,7 @@ void QSqlTableModelSlots::beforeInsert( QSqlRecord & record )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeInsert(QSqlRecord)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSQLTABLEMODEL");
     PHB_ITEM precord = Qt5xHb::Signals_return_object( (void *) &record, "QSQLRECORD" );
@@ -62,7 +62,7 @@ void QSqlTableModelSlots::beforeUpdate( int row, QSqlRecord & record )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeUpdate(int,QSqlRecord)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSQLTABLEMODEL");
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
@@ -82,7 +82,7 @@ void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "primeInsert(int,QSqlRecord)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSQLTABLEMODEL");
     PHB_ITEM prow = hb_itemPutNI( NULL, row );

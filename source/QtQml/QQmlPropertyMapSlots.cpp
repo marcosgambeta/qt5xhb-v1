@@ -26,7 +26,7 @@ void QQmlPropertyMapSlots::valueChanged( const QString & key, const QVariant & v
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(QString,QVariant)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLPROPERTYMAP");
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );

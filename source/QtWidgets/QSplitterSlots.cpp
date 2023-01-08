@@ -26,7 +26,7 @@ void QSplitterSlots::splitterMoved( int pos, int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "splitterMoved(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSPLITTER");
     PHB_ITEM ppos = hb_itemPutNI( NULL, pos );

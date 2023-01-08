@@ -26,7 +26,7 @@ void QRadioTunerSlots::stateChanged( QRadioTuner::State state )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QRadioTuner::State)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
@@ -44,7 +44,7 @@ void QRadioTunerSlots::bandChanged( QRadioTuner::Band band )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bandChanged(QRadioTuner::Band)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
     PHB_ITEM pband = hb_itemPutNI( NULL, (int) band );
@@ -62,7 +62,7 @@ void QRadioTunerSlots::frequencyChanged( int frequency )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "frequencyChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
     PHB_ITEM pfrequency = hb_itemPutNI( NULL, frequency );
@@ -80,7 +80,7 @@ void QRadioTunerSlots::stereoStatusChanged( bool stereo )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stereoStatusChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
     PHB_ITEM pstereo = hb_itemPutL( NULL, stereo );
@@ -98,7 +98,7 @@ void QRadioTunerSlots::searchingChanged( bool searching )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "searchingChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
     PHB_ITEM psearching = hb_itemPutL( NULL, searching );
@@ -116,7 +116,7 @@ void QRadioTunerSlots::signalStrengthChanged( int signalStrength )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "signalStrengthChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
     PHB_ITEM psignalStrength = hb_itemPutNI( NULL, signalStrength );
@@ -134,7 +134,7 @@ void QRadioTunerSlots::volumeChanged( int volume )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "volumeChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
     PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );
@@ -152,7 +152,7 @@ void QRadioTunerSlots::mutedChanged( bool muted )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mutedChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
     PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
@@ -170,7 +170,7 @@ void QRadioTunerSlots::stationFound( int frequency, QString stationId )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stationFound(int,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
     PHB_ITEM pfrequency = hb_itemPutNI( NULL, frequency );
@@ -190,7 +190,7 @@ void QRadioTunerSlots::antennaConnectedChanged( bool connectionStatus )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "antennaConnectedChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
     PHB_ITEM pconnectionStatus = hb_itemPutL( NULL, connectionStatus );
@@ -208,7 +208,7 @@ void QRadioTunerSlots::error( QRadioTuner::Error error )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QRadioTuner::Error)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );

@@ -27,7 +27,7 @@ void QModbusDeviceSlots::errorOccurred( QModbusDevice::Error error )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "errorOccurred(QModbusDevice::Error)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSDEVICE");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
@@ -47,7 +47,7 @@ void QModbusDeviceSlots::stateChanged( QModbusDevice::State state )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QModbusDevice::State)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSDEVICE");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );

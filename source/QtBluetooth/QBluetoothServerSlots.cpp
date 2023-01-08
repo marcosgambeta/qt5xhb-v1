@@ -27,7 +27,7 @@ void QBluetoothServerSlots::newConnection()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "newConnection()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSERVER");
 
@@ -45,7 +45,7 @@ void QBluetoothServerSlots::error( QBluetoothServer::Error error )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QBluetoothServer::Error)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSERVER");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );

@@ -26,7 +26,7 @@ void QMediaVideoProbeControlSlots::flush()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "flush()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAVIDEOPROBECONTROL");
 
@@ -42,7 +42,7 @@ void QMediaVideoProbeControlSlots::videoFrameProbed( const QVideoFrame & frame )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "videoFrameProbed(QVideoFrame)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAVIDEOPROBECONTROL");
     PHB_ITEM pframe = Qt5xHb::Signals_return_object( (void *) &frame, "QVIDEOFRAME" );

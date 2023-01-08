@@ -26,7 +26,7 @@ void QNetworkSessionSlots::closed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "closed()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
 
@@ -42,7 +42,7 @@ void QNetworkSessionSlots::error( QNetworkSession::SessionError error )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QNetworkSession::SessionError)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
@@ -60,7 +60,7 @@ void QNetworkSessionSlots::newConfigurationActivated()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "newConfigurationActivated()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
 
@@ -76,7 +76,7 @@ void QNetworkSessionSlots::opened()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "opened()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
 
@@ -92,7 +92,7 @@ void QNetworkSessionSlots::preferredConfigurationChanged( const QNetworkConfigur
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
     PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
@@ -112,7 +112,7 @@ void QNetworkSessionSlots::stateChanged( QNetworkSession::State state )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QNetworkSession::State)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
@@ -130,7 +130,7 @@ void QNetworkSessionSlots::usagePoliciesChanged( QNetworkSession::UsagePolicies 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
     PHB_ITEM pusagePolicies = hb_itemPutNI( NULL, (int) usagePolicies );

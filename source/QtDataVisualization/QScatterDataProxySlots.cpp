@@ -26,7 +26,7 @@ void QScatterDataProxySlots::arrayReset()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "arrayReset()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERDATAPROXY");
 
@@ -42,7 +42,7 @@ void QScatterDataProxySlots::itemCountChanged( int count )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemCountChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERDATAPROXY");
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
@@ -60,7 +60,7 @@ void QScatterDataProxySlots::itemsAdded( int startIndex, int count )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemsAdded(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
@@ -80,7 +80,7 @@ void QScatterDataProxySlots::itemsChanged( int startIndex, int count )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemsChanged(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
@@ -100,7 +100,7 @@ void QScatterDataProxySlots::itemsInserted( int startIndex, int count )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemsInserted(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
@@ -120,7 +120,7 @@ void QScatterDataProxySlots::itemsRemoved( int startIndex, int count )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemsRemoved(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
@@ -140,7 +140,7 @@ void QScatterDataProxySlots::seriesChanged( QScatter3DSeries * series )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesChanged(QScatter3DSeries*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERDATAPROXY");
     PHB_ITEM pseries = Qt5xHb::Signals_return_qobject(series, "QSCATTER3DSERIES");

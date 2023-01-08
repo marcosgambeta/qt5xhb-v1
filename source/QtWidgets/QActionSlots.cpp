@@ -26,7 +26,7 @@ void QActionSlots::changed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "changed()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
 
@@ -42,7 +42,7 @@ void QActionSlots::hovered()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
 
@@ -58,7 +58,7 @@ void QActionSlots::toggled( bool checked )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "toggled(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
@@ -76,7 +76,7 @@ void QActionSlots::triggered( bool checked )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "triggered(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );

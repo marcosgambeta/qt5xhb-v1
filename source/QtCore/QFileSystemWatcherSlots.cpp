@@ -26,7 +26,7 @@ void QFileSystemWatcherSlots::directoryChanged( const QString & path )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "directoryChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILESYSTEMWATCHER");
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
@@ -44,7 +44,7 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fileChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILESYSTEMWATCHER");
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );

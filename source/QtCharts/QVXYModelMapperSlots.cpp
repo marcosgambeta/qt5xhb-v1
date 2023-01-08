@@ -27,7 +27,7 @@ void QVXYModelMapperSlots::firstRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstRowChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
@@ -45,7 +45,7 @@ void QVXYModelMapperSlots::modelReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "modelReplaced()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
@@ -63,7 +63,7 @@ void QVXYModelMapperSlots::rowCountChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCountChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
@@ -81,7 +81,7 @@ void QVXYModelMapperSlots::seriesReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesReplaced()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
@@ -99,7 +99,7 @@ void QVXYModelMapperSlots::xColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
@@ -117,7 +117,7 @@ void QVXYModelMapperSlots::yColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yColumnChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 

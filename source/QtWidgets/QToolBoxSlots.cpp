@@ -26,7 +26,7 @@ void QToolBoxSlots::currentChanged( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBOX");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );

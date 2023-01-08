@@ -26,7 +26,7 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "enabledChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSEFFECT");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );

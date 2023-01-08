@@ -26,7 +26,7 @@ void QTabBarSlots::currentChanged( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABBAR");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
@@ -44,7 +44,7 @@ void QTabBarSlots::tabCloseRequested( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tabCloseRequested(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABBAR");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
@@ -62,7 +62,7 @@ void QTabBarSlots::tabMoved( int from, int to )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tabMoved(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABBAR");
     PHB_ITEM pfrom = hb_itemPutNI( NULL, from );

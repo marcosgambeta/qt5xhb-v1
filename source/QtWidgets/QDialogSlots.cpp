@@ -26,7 +26,7 @@ void QDialogSlots::accepted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "accepted()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
 
@@ -42,7 +42,7 @@ void QDialogSlots::finished( int result )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
     PHB_ITEM presult = hb_itemPutNI( NULL, result );
@@ -60,7 +60,7 @@ void QDialogSlots::rejected()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rejected()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
 

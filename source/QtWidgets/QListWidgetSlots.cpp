@@ -26,7 +26,7 @@ void QListWidgetSlots::currentItemChanged( QListWidgetItem * current, QListWidge
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTWIDGET");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) current, "QLISTWIDGETITEM" );
@@ -46,7 +46,7 @@ void QListWidgetSlots::currentRowChanged( int currentRow )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentRowChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTWIDGET");
     PHB_ITEM pcurrentRow = hb_itemPutNI( NULL, currentRow );
@@ -64,7 +64,7 @@ void QListWidgetSlots::currentTextChanged( const QString & currentText )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentTextChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTWIDGET");
     PHB_ITEM pcurrentText = hb_itemPutC( NULL, QSTRINGTOSTRING(currentText) );
@@ -82,7 +82,7 @@ void QListWidgetSlots::itemActivated( QListWidgetItem * item )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemActivated(QListWidgetItem*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
@@ -100,7 +100,7 @@ void QListWidgetSlots::itemChanged( QListWidgetItem * item )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemChanged(QListWidgetItem*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
@@ -118,7 +118,7 @@ void QListWidgetSlots::itemClicked( QListWidgetItem * item )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemClicked(QListWidgetItem*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
@@ -136,7 +136,7 @@ void QListWidgetSlots::itemDoubleClicked( QListWidgetItem * item )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemDoubleClicked(QListWidgetItem*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
@@ -154,7 +154,7 @@ void QListWidgetSlots::itemEntered( QListWidgetItem * item )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemEntered(QListWidgetItem*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
@@ -172,7 +172,7 @@ void QListWidgetSlots::itemPressed( QListWidgetItem * item )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemPressed(QListWidgetItem*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QLISTWIDGETITEM" );
@@ -190,7 +190,7 @@ void QListWidgetSlots::itemSelectionChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemSelectionChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTWIDGET");
 

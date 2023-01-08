@@ -26,7 +26,7 @@ void QQuickWebEngineScriptSlots::injectionPointChanged( QQuickWebEngineScript::I
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "injectionPointChanged(QQuickWebEngineScript::InjectionPoint)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pinjectionPoint = hb_itemPutNI( NULL, (int) injectionPoint );
@@ -44,7 +44,7 @@ void QQuickWebEngineScriptSlots::nameChanged( const QString & name )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
@@ -62,7 +62,7 @@ void QQuickWebEngineScriptSlots::runOnSubframesChanged( bool on )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "runOnSubframesChanged(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pon = hb_itemPutL( NULL, on );
@@ -80,7 +80,7 @@ void QQuickWebEngineScriptSlots::sourceCodeChanged( const QString & code )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sourceCodeChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pcode = hb_itemPutC( NULL, QSTRINGTOSTRING(code) );
@@ -98,7 +98,7 @@ void QQuickWebEngineScriptSlots::sourceUrlChanged( const QUrl & url )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sourceUrlChanged(QUrl)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
@@ -116,7 +116,7 @@ void QQuickWebEngineScriptSlots::worldIdChanged( QQuickWebEngineScript::ScriptWo
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pscriptWorldId = hb_itemPutNI( NULL, (int) scriptWorldId );

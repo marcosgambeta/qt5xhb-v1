@@ -26,7 +26,7 @@ void QTreeWidgetSlots::currentItemChanged( QTreeWidgetItem * current, QTreeWidge
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) current, "QTREEWIDGETITEM" );
@@ -46,7 +46,7 @@ void QTreeWidgetSlots::itemActivated( QTreeWidgetItem * item, int column )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemActivated(QTreeWidgetItem*,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
@@ -66,7 +66,7 @@ void QTreeWidgetSlots::itemChanged( QTreeWidgetItem * item, int column )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemChanged(QTreeWidgetItem*,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
@@ -86,7 +86,7 @@ void QTreeWidgetSlots::itemClicked( QTreeWidgetItem * item, int column )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemClicked(QTreeWidgetItem*,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
@@ -106,7 +106,7 @@ void QTreeWidgetSlots::itemCollapsed( QTreeWidgetItem * item )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemCollapsed(QTreeWidgetItem*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
@@ -124,7 +124,7 @@ void QTreeWidgetSlots::itemDoubleClicked( QTreeWidgetItem * item, int column )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemDoubleClicked(QTreeWidgetItem*,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
@@ -144,7 +144,7 @@ void QTreeWidgetSlots::itemEntered( QTreeWidgetItem * item, int column )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemEntered(QTreeWidgetItem*,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
@@ -164,7 +164,7 @@ void QTreeWidgetSlots::itemExpanded( QTreeWidgetItem * item )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemExpanded(QTreeWidgetItem*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
@@ -182,7 +182,7 @@ void QTreeWidgetSlots::itemPressed( QTreeWidgetItem * item, int column )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemPressed(QTreeWidgetItem*,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
@@ -202,7 +202,7 @@ void QTreeWidgetSlots::itemSelectionChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemSelectionChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
 

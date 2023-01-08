@@ -26,7 +26,7 @@ void QLineEditSlots::cursorPositionChanged( int iold, int inew )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cursorPositionChanged(int,int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
     PHB_ITEM piold = hb_itemPutNI( NULL, iold );
@@ -46,7 +46,7 @@ void QLineEditSlots::editingFinished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "editingFinished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
 
@@ -62,7 +62,7 @@ void QLineEditSlots::returnPressed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "returnPressed()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
 
@@ -78,7 +78,7 @@ void QLineEditSlots::selectionChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
 
@@ -94,7 +94,7 @@ void QLineEditSlots::textChanged( const QString & text )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
@@ -112,7 +112,7 @@ void QLineEditSlots::textEdited( const QString & text )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textEdited(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );

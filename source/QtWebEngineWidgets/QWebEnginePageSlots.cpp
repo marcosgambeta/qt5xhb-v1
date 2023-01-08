@@ -27,7 +27,7 @@ void QWebEnginePageSlots::loadStarted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadStarted()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
 
@@ -45,7 +45,7 @@ void QWebEnginePageSlots::loadProgress( int progress )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadProgress(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
     PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
@@ -65,7 +65,7 @@ void QWebEnginePageSlots::loadFinished( bool ok )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadFinished(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
     PHB_ITEM pok = hb_itemPutL( NULL, ok );
@@ -85,7 +85,7 @@ void QWebEnginePageSlots::linkHovered( const QString & url )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkHovered(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
     PHB_ITEM purl = hb_itemPutC( NULL, QSTRINGTOSTRING(url) );
@@ -105,7 +105,7 @@ void QWebEnginePageSlots::selectionChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
 
@@ -123,7 +123,7 @@ void QWebEnginePageSlots::geometryChangeRequested( const QRect & geom )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "geometryChangeRequested(QRect)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
     PHB_ITEM pgeom = Qt5xHb::Signals_return_object( (void *) &geom, "QRECT" );
@@ -143,7 +143,7 @@ void QWebEnginePageSlots::windowCloseRequested()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "windowCloseRequested()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
 
@@ -161,7 +161,7 @@ void QWebEnginePageSlots::featurePermissionRequested( const QUrl & securityOrigi
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
     PHB_ITEM psecurityOrigin = Qt5xHb::Signals_return_object( (void *) &securityOrigin, "QURL" );
@@ -183,7 +183,7 @@ void QWebEnginePageSlots::featurePermissionRequestCanceled( const QUrl & securit
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
     PHB_ITEM psecurityOrigin = Qt5xHb::Signals_return_object( (void *) &securityOrigin, "QURL" );
@@ -205,7 +205,7 @@ void QWebEnginePageSlots::authenticationRequired( const QUrl & requestUrl, QAuth
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "authenticationRequired(QUrl,QAuthenticator*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
     PHB_ITEM prequestUrl = Qt5xHb::Signals_return_object( (void *) &requestUrl, "QURL" );
@@ -227,7 +227,7 @@ void QWebEnginePageSlots::proxyAuthenticationRequired( const QUrl & requestUrl, 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
     PHB_ITEM prequestUrl = Qt5xHb::Signals_return_object( (void *) &requestUrl, "QURL" );
@@ -251,7 +251,7 @@ void QWebEnginePageSlots::titleChanged( const QString & title )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "titleChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
@@ -271,7 +271,7 @@ void QWebEnginePageSlots::urlChanged( const QUrl & url )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "urlChanged(QUrl)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
@@ -291,7 +291,7 @@ void QWebEnginePageSlots::iconUrlChanged( const QUrl & url )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "iconUrlChanged(QUrl)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEPAGE");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );

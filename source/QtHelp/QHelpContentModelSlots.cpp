@@ -26,7 +26,7 @@ void QHelpContentModelSlots::contentsCreated()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsCreated()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPCONTENTMODEL");
 
@@ -42,7 +42,7 @@ void QHelpContentModelSlots::contentsCreationStarted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsCreationStarted()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPCONTENTMODEL");
 

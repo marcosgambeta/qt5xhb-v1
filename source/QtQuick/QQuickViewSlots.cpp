@@ -26,7 +26,7 @@ void QQuickViewSlots::statusChanged( QQuickView::Status status )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QQuickView::Status)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKVIEW");
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );

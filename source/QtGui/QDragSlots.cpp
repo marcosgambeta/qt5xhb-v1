@@ -26,7 +26,7 @@ void QDragSlots::actionChanged( Qt::DropAction action )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDRAG");
     PHB_ITEM paction = hb_itemPutNI( NULL, (int) action );
@@ -44,7 +44,7 @@ void QDragSlots::targetChanged( QObject * newTarget )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "targetChanged(QObject*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDRAG");
     PHB_ITEM pnewTarget = Qt5xHb::Signals_return_qobject(newTarget, "QOBJECT");

@@ -26,7 +26,7 @@ void QHelpSearchEngineSlots::indexingFinished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "indexingFinished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPSEARCHENGINE");
 
@@ -42,7 +42,7 @@ void QHelpSearchEngineSlots::indexingStarted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "indexingStarted()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPSEARCHENGINE");
 
@@ -58,7 +58,7 @@ void QHelpSearchEngineSlots::searchingFinished( int hits )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "searchingFinished(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPSEARCHENGINE");
     PHB_ITEM phits = hb_itemPutNI( NULL, hits );
@@ -76,7 +76,7 @@ void QHelpSearchEngineSlots::searchingStarted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "searchingStarted()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPSEARCHENGINE");
 

@@ -26,7 +26,7 @@ void QBar3DSeriesSlots::dataProxyChanged( QBarDataProxy * proxy )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataProxyChanged(QBarDataProxy*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBAR3DSERIES");
     PHB_ITEM pproxy = Qt5xHb::Signals_return_qobject(proxy, "QBARDATAPROXY");
@@ -44,7 +44,7 @@ void QBar3DSeriesSlots::meshAngleChanged( float angle )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "meshAngleChanged(float)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBAR3DSERIES");
     PHB_ITEM pangle = hb_itemPutND( NULL, angle );
@@ -62,7 +62,7 @@ void QBar3DSeriesSlots::selectedBarChanged( const QPoint & position )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedBarChanged(QPoint)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBAR3DSERIES");
     PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT" );

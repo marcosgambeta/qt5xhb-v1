@@ -26,7 +26,7 @@ void QNetworkReplySlots::downloadProgress( qint64 bytesReceived, qint64 bytesTot
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "downloadProgress(qint64,qint64)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_ITEM pbytesReceived = hb_itemPutNLL( NULL, bytesReceived );
@@ -46,7 +46,7 @@ void QNetworkReplySlots::error( QNetworkReply::NetworkError code )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QNetworkReply::NetworkError)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_ITEM pcode = hb_itemPutNI( NULL, (int) code );
@@ -64,7 +64,7 @@ void QNetworkReplySlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKREPLY");
 
@@ -80,7 +80,7 @@ void QNetworkReplySlots::metaDataChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKREPLY");
 
@@ -96,7 +96,7 @@ void QNetworkReplySlots::uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "uploadProgress(qint64,qint64)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_ITEM pbytesSent = hb_itemPutNLL( NULL, bytesSent );
@@ -117,7 +117,7 @@ void QNetworkReplySlots::encrypted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "encrypted()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKREPLY");
 
@@ -134,7 +134,7 @@ void QNetworkReplySlots::sslErrors( const QList<QSslError> & errors )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
@@ -175,7 +175,7 @@ void QNetworkReplySlots::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAut
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_ITEM pauthenticator = Qt5xHb::Signals_return_object( (void *) authenticator, "QSSLPRESHAREDKEYAUTHENTICATOR" );
@@ -195,7 +195,7 @@ void QNetworkReplySlots::redirected( const QUrl & url )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "redirected(QUrl)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
@@ -215,7 +215,7 @@ void QNetworkReplySlots::redirectAllowed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "redirectAllowed()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKREPLY");
 

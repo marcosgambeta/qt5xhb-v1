@@ -26,7 +26,7 @@ void QCameraExposureControlSlots::actualValueChanged( int parameter )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "actualValueChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURECONTROL");
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
@@ -44,7 +44,7 @@ void QCameraExposureControlSlots::parameterRangeChanged( int parameter )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "parameterRangeChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURECONTROL");
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
@@ -62,7 +62,7 @@ void QCameraExposureControlSlots::requestedValueChanged( int parameter )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "requestedValueChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURECONTROL");
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );

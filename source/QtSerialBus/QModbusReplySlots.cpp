@@ -27,7 +27,7 @@ void QModbusReplySlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSREPLY");
 
@@ -45,7 +45,7 @@ void QModbusReplySlots::errorOccurred( QModbusDevice::Error error )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "errorOccurred(QModbusDevice::Error)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSREPLY");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );

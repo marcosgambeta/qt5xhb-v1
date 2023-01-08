@@ -27,7 +27,7 @@ void QGeoRoutingManagerEngineSlots::finished( QGeoRouteReply * reply )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QGeoRouteReply*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOROUTINGMANAGERENGINE");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QGEOROUTEREPLY");
@@ -47,7 +47,7 @@ void QGeoRoutingManagerEngineSlots::error( QGeoRouteReply * reply, QGeoRouteRepl
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOROUTINGMANAGERENGINE");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QGEOROUTEREPLY");

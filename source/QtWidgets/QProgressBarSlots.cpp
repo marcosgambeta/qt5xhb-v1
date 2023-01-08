@@ -26,7 +26,7 @@ void QProgressBarSlots::valueChanged( int value )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROGRESSBAR");
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );

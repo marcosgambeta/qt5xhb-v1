@@ -26,7 +26,7 @@ void QDBusServiceWatcherSlots::serviceRegistered( const QString & service )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "serviceRegistered(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVICEWATCHER");
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
@@ -44,7 +44,7 @@ void QDBusServiceWatcherSlots::serviceUnregistered( const QString & service )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "serviceUnregistered(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVICEWATCHER");
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
@@ -62,7 +62,7 @@ void QDBusServiceWatcherSlots::serviceOwnerChanged( const QString & service, con
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "serviceOwnerChanged(QString,QString,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVICEWATCHER");
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );

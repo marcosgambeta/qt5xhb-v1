@@ -26,7 +26,7 @@ void QDeclarativeEngineSlots::quit()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "quit()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVEENGINE");
 
@@ -42,7 +42,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "warnings(QList<QDeclarativeError>)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVEENGINE");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );

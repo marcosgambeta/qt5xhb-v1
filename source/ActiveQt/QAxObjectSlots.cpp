@@ -26,7 +26,7 @@ void QAxObjectSlots::exception( int code, const QString & source, const QString 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "exception(int,QString,QString,QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXOBJECT");
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
@@ -50,7 +50,7 @@ void QAxObjectSlots::propertyChanged( const QString & name )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "propertyChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXOBJECT");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
@@ -68,7 +68,7 @@ void QAxObjectSlots::signal( const QString & name, int argc, void * argv )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "signal(QString,int,void*)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXOBJECT");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );

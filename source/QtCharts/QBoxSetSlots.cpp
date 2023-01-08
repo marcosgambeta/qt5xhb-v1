@@ -27,7 +27,7 @@ void QBoxSetSlots::brushChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "brushChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -45,7 +45,7 @@ void QBoxSetSlots::cleared()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cleared()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -63,7 +63,7 @@ void QBoxSetSlots::clicked()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -81,7 +81,7 @@ void QBoxSetSlots::doubleClicked()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -99,7 +99,7 @@ void QBoxSetSlots::hovered( bool status )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
@@ -119,7 +119,7 @@ void QBoxSetSlots::penChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "penChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -137,7 +137,7 @@ void QBoxSetSlots::pressed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -155,7 +155,7 @@ void QBoxSetSlots::released()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -173,7 +173,7 @@ void QBoxSetSlots::valueChanged( int index )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(int)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
@@ -193,7 +193,7 @@ void QBoxSetSlots::valuesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valuesChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 

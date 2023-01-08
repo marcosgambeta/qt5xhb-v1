@@ -26,7 +26,7 @@ void QDeclarativeComponentSlots::progressChanged( qreal progress )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "progressChanged(qreal)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVECOMPONENT");
     PHB_ITEM pprogress = hb_itemPutND( NULL, progress );
@@ -44,7 +44,7 @@ void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status st
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QDeclarativeComponent::Status)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVECOMPONENT");
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );

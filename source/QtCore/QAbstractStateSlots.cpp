@@ -26,7 +26,7 @@ void QAbstractStateSlots::entered()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "entered()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
@@ -42,7 +42,7 @@ void QAbstractStateSlots::exited()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "exited()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 

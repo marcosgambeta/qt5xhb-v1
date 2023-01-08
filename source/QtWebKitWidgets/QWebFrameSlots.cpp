@@ -26,7 +26,7 @@ void QWebFrameSlots::contentsSizeChanged( const QSize & size )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsSizeChanged(QSize)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBFRAME");
     PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZE" );
@@ -44,7 +44,7 @@ void QWebFrameSlots::iconChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "iconChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBFRAME");
 
@@ -60,7 +60,7 @@ void QWebFrameSlots::initialLayoutCompleted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "initialLayoutCompleted()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBFRAME");
 
@@ -76,7 +76,7 @@ void QWebFrameSlots::javaScriptWindowObjectCleared()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "javaScriptWindowObjectCleared()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBFRAME");
 
@@ -92,7 +92,7 @@ void QWebFrameSlots::loadFinished( bool ok )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadFinished(bool)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBFRAME");
     PHB_ITEM pok = hb_itemPutL( NULL, ok );
@@ -110,7 +110,7 @@ void QWebFrameSlots::loadStarted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadStarted()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBFRAME");
 
@@ -126,7 +126,7 @@ void QWebFrameSlots::pageChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pageChanged()" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBFRAME");
 
@@ -142,7 +142,7 @@ void QWebFrameSlots::titleChanged( const QString & title )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "titleChanged(QString)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBFRAME");
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
@@ -160,7 +160,7 @@ void QWebFrameSlots::urlChanged( const QUrl & url )
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "urlChanged(QUrl)" );
 
-  if( cb )
+  if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBFRAME");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
