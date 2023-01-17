@@ -40,8 +40,7 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
         hb_vmDo( 0 );
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QRectF *) new QRectF( region [i] ) );
+        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QRectF( region [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pregion, pTempObject );
         hb_itemRelease( pTempObject );
