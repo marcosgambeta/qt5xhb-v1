@@ -13,10 +13,10 @@
 #ifndef QT5XHB_MACROS_QTUITOOLS_H
 #define QT5XHB_MACROS_QTUITOOLS_H
 
-#define ISQUILOADER( n )                                    Qt5xHb::isObjectDerivedFrom( n, "QUiLoader" )
+#define ISQUILOADER(n)                                      Qt5xHb::isObjectDerivedFrom(n, "QUiLoader")
 
-#define PQUILOADER( n )                                     static_cast< QUiLoader * >( Qt5xHb::itemGetPtr( n ) )
+#define PQUILOADER(n)                                       static_cast<QUiLoader*>(Qt5xHb::itemGetPtr(n))
 
-#define OPQUILOADER( n, v )                                 HB_ISNIL( n ) ? v : static_cast< QUiLoader * >( Qt5xHb::itemGetPtr( n ) )
+#define OPQUILOADER(n, v)                                   HB_ISNIL(n) ? v : static_cast<QUiLoader*>(Qt5xHb::itemGetPtr(n))
 
 #endif /* QT5XHB_MACROS_QTUITOOLS_H */

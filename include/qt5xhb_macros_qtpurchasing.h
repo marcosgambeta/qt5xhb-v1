@@ -13,16 +13,16 @@
 #ifndef QT5XHB_MACROS_QTPURCHASING_H
 #define QT5XHB_MACROS_QTPURCHASING_H
 
-#define ISQINAPPPRODUCT( n )                                Qt5xHb::isObjectDerivedFrom( n, "QInAppProduct" )
-#define ISQINAPPSTORE( n )                                  Qt5xHb::isObjectDerivedFrom( n, "QInAppStore" )
-#define ISQINAPPTRANSACTION( n )                            Qt5xHb::isObjectDerivedFrom( n, "QInAppTransaction" )
+#define ISQINAPPPRODUCT(n)                                  Qt5xHb::isObjectDerivedFrom(n, "QInAppProduct")
+#define ISQINAPPSTORE(n)                                    Qt5xHb::isObjectDerivedFrom(n, "QInAppStore")
+#define ISQINAPPTRANSACTION(n)                              Qt5xHb::isObjectDerivedFrom(n, "QInAppTransaction")
 
-#define PQINAPPPRODUCT( n )                                 static_cast< QInAppProduct * >( Qt5xHb::itemGetPtr( n ) )
-#define PQINAPPSTORE( n )                                   static_cast< QInAppStore * >( Qt5xHb::itemGetPtr( n ) )
-#define PQINAPPTRANSACTION( n )                             static_cast< QInAppTransaction * >( Qt5xHb::itemGetPtr( n ) )
+#define PQINAPPPRODUCT(n)                                   static_cast<QInAppProduct*>(Qt5xHb::itemGetPtr(n))
+#define PQINAPPSTORE(n)                                     static_cast<QInAppStore*>(Qt5xHb::itemGetPtr(n))
+#define PQINAPPTRANSACTION(n)                               static_cast<QInAppTransaction*>(Qt5xHb::itemGetPtr(n))
 
-#define OPQINAPPPRODUCT( n, v )                             HB_ISNIL( n ) ? v : static_cast< QInAppProduct * >( Qt5xHb::itemGetPtr( n ) )
-#define OPQINAPPSTORE( n, v )                               HB_ISNIL( n ) ? v : static_cast< QInAppStore * >( Qt5xHb::itemGetPtr( n ) )
-#define OPQINAPPTRANSACTION( n, v )                         HB_ISNIL( n ) ? v : static_cast< QInAppTransaction * >( Qt5xHb::itemGetPtr( n ) )
+#define OPQINAPPPRODUCT(n, v)                               HB_ISNIL(n) ? v : static_cast<QInAppProduct*>(Qt5xHb::itemGetPtr(n))
+#define OPQINAPPSTORE(n, v)                                 HB_ISNIL(n) ? v : static_cast<QInAppStore*>(Qt5xHb::itemGetPtr(n))
+#define OPQINAPPTRANSACTION(n, v)                           HB_ISNIL(n) ? v : static_cast<QInAppTransaction*>(Qt5xHb::itemGetPtr(n))
 
 #endif /* QT5XHB_MACROS_QTPURCHASING_H */
