@@ -94,8 +94,7 @@ void Q3DThemeSlots::baseColorsChanged( const QList<QColor> & colors )
         hb_vmDo( 0 );
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QColor *) new QColor( colors [i] ) );
+        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QColor( colors [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pcolors, pTempObject );
         hb_itemRelease( pTempObject );
@@ -134,8 +133,7 @@ void Q3DThemeSlots::baseGradientsChanged( const QList<QLinearGradient> & gradien
         hb_vmDo( 0 );
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QLinearGradient *) new QLinearGradient( gradients [i] ) );
+        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QLinearGradient( gradients [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pgradients, pTempObject );
         hb_itemRelease( pTempObject );

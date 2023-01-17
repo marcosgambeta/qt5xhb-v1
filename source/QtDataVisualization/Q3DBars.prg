@@ -713,8 +713,7 @@ HB_FUNC_STATIC( Q3DBARS_SERIESLIST )
           hb_vmDo( 0 );
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QBar3DSeries *) list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -813,8 +812,7 @@ HB_FUNC_STATIC( Q3DBARS_AXES )
           hb_vmDo( 0 );
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QAbstract3DAxis *) list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );

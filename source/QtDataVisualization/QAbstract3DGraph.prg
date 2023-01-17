@@ -1083,8 +1083,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_INPUTHANDLERS )
           hb_vmDo( 0 );
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QAbstract3DInputHandler *) list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -1183,8 +1182,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_THEMES )
           hb_vmDo( 0 );
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (Q3DTheme *) list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -1409,8 +1407,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CUSTOMITEMS )
           hb_vmDo( 0 );
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QCustom3DItem *) list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
