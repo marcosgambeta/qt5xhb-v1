@@ -1887,12 +1887,10 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QLocale *) new QLocale( list[i] ) );
+        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QLocale( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
+        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
         hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
         hb_itemRelease( pDestroy );
         hb_arrayAddForward( pArray, pObject );
