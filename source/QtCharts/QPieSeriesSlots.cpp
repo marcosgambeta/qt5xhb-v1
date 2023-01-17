@@ -41,8 +41,7 @@ void QPieSeriesSlots::added( QList<QPieSlice*> slices )
         hb_vmDo( 0 );
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QPieSlice *) slices [i] );
+        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, slices [i] );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pslices, pTempObject );
         hb_itemRelease( pTempObject );
@@ -203,8 +202,7 @@ void QPieSeriesSlots::removed( QList<QPieSlice*> slices )
         hb_vmDo( 0 );
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QPieSlice *) slices [i] );
+        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, slices [i] );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pslices, pTempObject );
         hb_itemRelease( pTempObject );

@@ -95,8 +95,7 @@ void QCandlestickSeriesSlots::candlestickSetsAdded( const QList<QCandlestickSet*
         hb_vmDo( 0 );
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QCandlestickSet *) sets [i] );
+        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, sets [i] );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( psets, pTempObject );
         hb_itemRelease( pTempObject );
@@ -137,8 +136,7 @@ void QCandlestickSeriesSlots::candlestickSetsRemoved( const QList<QCandlestickSe
         hb_vmDo( 0 );
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QCandlestickSet *) sets [i] );
+        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, sets [i] );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( psets, pTempObject );
         hb_itemRelease( pTempObject );

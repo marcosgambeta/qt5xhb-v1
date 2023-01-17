@@ -520,8 +520,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
           hb_vmDo( 0 );
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QBoxSet *) list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );

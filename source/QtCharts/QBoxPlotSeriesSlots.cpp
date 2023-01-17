@@ -59,8 +59,7 @@ void QBoxPlotSeriesSlots::boxsetsAdded( QList<QBoxSet*> sets )
         hb_vmDo( 0 );
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QBoxSet *) sets [i] );
+        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, sets [i] );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( psets, pTempObject );
         hb_itemRelease( pTempObject );
@@ -101,8 +100,7 @@ void QBoxPlotSeriesSlots::boxsetsRemoved( QList<QBoxSet*> sets )
         hb_vmDo( 0 );
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QBoxSet *) sets [i] );
+        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, sets [i] );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( psets, pTempObject );
         hb_itemRelease( pTempObject );
