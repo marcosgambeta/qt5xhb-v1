@@ -229,8 +229,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QWindow *) list[i] );
+        PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         hb_arrayAddForward( pArray, pObject );
@@ -703,8 +702,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QScreen *) list[i] );
+        PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         hb_arrayAddForward( pArray, pObject );
@@ -933,8 +931,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
         hb_vmDo( 0 );
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QWindow *) list[i] );
+        PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         hb_arrayAddForward( pArray, pObject );
