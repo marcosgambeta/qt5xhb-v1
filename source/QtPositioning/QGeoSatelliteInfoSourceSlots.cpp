@@ -41,8 +41,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSate
         hb_vmDo( 0 );
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QGeoSatelliteInfo *) new QGeoSatelliteInfo( satellites [i] ) );
+        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QGeoSatelliteInfo( satellites [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( psatellites, pTempObject );
         hb_itemRelease( pTempObject );
@@ -83,8 +82,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatel
         hb_vmDo( 0 );
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QGeoSatelliteInfo *) new QGeoSatelliteInfo( satellites [i] ) );
+        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QGeoSatelliteInfo( satellites [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( psatellites, pTempObject );
         hb_itemRelease( pTempObject );
