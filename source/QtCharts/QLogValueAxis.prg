@@ -467,68 +467,68 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETRANGE )
 #endif
 }
 
-void QLogValueAxisSlots_connect_signal( const QString & signal, const QString & slot );
+void QLogValueAxisSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxisSlots_connect_signal( "baseChanged(qreal)", "baseChanged(qreal)" );
+  QLogValueAxisSlots_connect_signal("baseChanged(qreal)", "baseChanged(qreal)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxisSlots_connect_signal( "labelFormatChanged(QString)", "labelFormatChanged(QString)" );
+  QLogValueAxisSlots_connect_signal("labelFormatChanged(QString)", "labelFormatChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxisSlots_connect_signal( "maxChanged(qreal)", "maxChanged(qreal)" );
+  QLogValueAxisSlots_connect_signal("maxChanged(qreal)", "maxChanged(qreal)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxisSlots_connect_signal( "minChanged(qreal)", "minChanged(qreal)" );
+  QLogValueAxisSlots_connect_signal("minChanged(qreal)", "minChanged(qreal)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLogValueAxisSlots_connect_signal( "minorTickCountChanged(int)", "minorTickCountChanged(int)" );
+  QLogValueAxisSlots_connect_signal("minorTickCountChanged(int)", "minorTickCountChanged(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxisSlots_connect_signal( "rangeChanged(qreal,qreal)", "rangeChanged(qreal,qreal)" );
+  QLogValueAxisSlots_connect_signal("rangeChanged(qreal,qreal)", "rangeChanged(qreal,qreal)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLogValueAxisSlots_connect_signal( "tickCountChanged(int)", "tickCountChanged(int)" );
+  QLogValueAxisSlots_connect_signal("tickCountChanged(int)", "tickCountChanged(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

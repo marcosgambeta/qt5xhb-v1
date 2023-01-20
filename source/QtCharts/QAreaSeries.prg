@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QAREASERIES_UPPERSERIES )
     {
 #endif
       QLineSeries * ptr = obj->upperSeries();
-      Qt5xHb::createReturnQObjectClass( ptr, "QLINESERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QLINESERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QAREASERIES_LOWERSERIES )
     {
 #endif
       QLineSeries * ptr = obj->lowerSeries();
-      Qt5xHb::createReturnQObjectClass( ptr, "QLINESERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QLINESERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -834,122 +834,122 @@ HB_FUNC_STATIC( QAREASERIES_POINTSVISIBLE )
 #endif
 }
 
-void QAreaSeriesSlots_connect_signal( const QString & signal, const QString & slot );
+void QAreaSeriesSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAREASERIES_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "borderColorChanged(QColor)", "borderColorChanged(QColor)" );
+  QAreaSeriesSlots_connect_signal("borderColorChanged(QColor)", "borderColorChanged(QColor)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "clicked(QPointF)", "clicked(QPointF)" );
+  QAreaSeriesSlots_connect_signal("clicked(QPointF)", "clicked(QPointF)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+  QAreaSeriesSlots_connect_signal("colorChanged(QColor)", "colorChanged(QColor)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "doubleClicked(QPointF)", "doubleClicked(QPointF)" );
+  QAreaSeriesSlots_connect_signal("doubleClicked(QPointF)", "doubleClicked(QPointF)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "hovered(QPointF,bool)", "hovered(QPointF,bool)" );
+  QAreaSeriesSlots_connect_signal("hovered(QPointF,bool)", "hovered(QPointF,bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "pointLabelsClippingChanged(bool)", "pointLabelsClippingChanged(bool)" );
+  QAreaSeriesSlots_connect_signal("pointLabelsClippingChanged(bool)", "pointLabelsClippingChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "pointLabelsColorChanged(QColor)", "pointLabelsColorChanged(QColor)" );
+  QAreaSeriesSlots_connect_signal("pointLabelsColorChanged(QColor)", "pointLabelsColorChanged(QColor)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "pointLabelsFontChanged(QFont)", "pointLabelsFontChanged(QFont)" );
+  QAreaSeriesSlots_connect_signal("pointLabelsFontChanged(QFont)", "pointLabelsFontChanged(QFont)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "pointLabelsFormatChanged(QString)", "pointLabelsFormatChanged(QString)" );
+  QAreaSeriesSlots_connect_signal("pointLabelsFormatChanged(QString)", "pointLabelsFormatChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "pointLabelsVisibilityChanged(bool)", "pointLabelsVisibilityChanged(bool)" );
+  QAreaSeriesSlots_connect_signal("pointLabelsVisibilityChanged(bool)", "pointLabelsVisibilityChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "pressed(QPointF)", "pressed(QPointF)" );
+  QAreaSeriesSlots_connect_signal("pressed(QPointF)", "pressed(QPointF)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "released(QPointF)", "released(QPointF)" );
+  QAreaSeriesSlots_connect_signal("released(QPointF)", "released(QPointF)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QAREASERIES_ONSELECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeriesSlots_connect_signal( "selected()", "selected()" );
+  QAreaSeriesSlots_connect_signal("selected()", "selected()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

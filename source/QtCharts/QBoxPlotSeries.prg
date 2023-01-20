@@ -391,18 +391,17 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     /*
-    bool append( QList<QBoxSet *> boxes )
+    bool append( QList<QBoxSet*> boxes )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
   
     if( obj != NULL )
     {
-      QList<QBoxSet *> par1;
+      QList<QBoxSet*> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << (QBoxSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -495,7 +494,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_INSERT )
 }
 
 /*
-QList<QBoxSet *> boxSets() const
+QList<QBoxSet*> boxSets() const
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
 {
@@ -508,28 +507,28 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QBoxSet *> list = obj->boxSets();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
+      QList<QBoxSet*> list = obj->boxSets();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QBOXSET");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -597,113 +596,113 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_TYPE )
 #endif
 }
 
-void QBoxPlotSeriesSlots_connect_signal( const QString & signal, const QString & slot );
+void QBoxPlotSeriesSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "boxOutlineVisibilityChanged()", "boxOutlineVisibilityChanged()" );
+  QBoxPlotSeriesSlots_connect_signal("boxOutlineVisibilityChanged()", "boxOutlineVisibilityChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "boxsetsAdded(QList<QBoxSet*>)", "boxsetsAdded(QList<QBoxSet*>)" );
+  QBoxPlotSeriesSlots_connect_signal("boxsetsAdded(QList<QBoxSet*>)", "boxsetsAdded(QList<QBoxSet*>)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "boxsetsRemoved(QList<QBoxSet*>)", "boxsetsRemoved(QList<QBoxSet*>)" );
+  QBoxPlotSeriesSlots_connect_signal("boxsetsRemoved(QList<QBoxSet*>)", "boxsetsRemoved(QList<QBoxSet*>)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "boxWidthChanged()", "boxWidthChanged()" );
+  QBoxPlotSeriesSlots_connect_signal("boxWidthChanged()", "boxWidthChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "brushChanged()", "brushChanged()" );
+  QBoxPlotSeriesSlots_connect_signal("brushChanged()", "brushChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "clicked(QBoxSet*)", "clicked(QBoxSet*)" );
+  QBoxPlotSeriesSlots_connect_signal("clicked(QBoxSet*)", "clicked(QBoxSet*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "countChanged()", "countChanged()" );
+  QBoxPlotSeriesSlots_connect_signal("countChanged()", "countChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "doubleClicked(QBoxSet*)", "doubleClicked(QBoxSet*)" );
+  QBoxPlotSeriesSlots_connect_signal("doubleClicked(QBoxSet*)", "doubleClicked(QBoxSet*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "hovered(bool,QBoxSet*)", "hovered(bool,QBoxSet*)" );
+  QBoxPlotSeriesSlots_connect_signal("hovered(bool,QBoxSet*)", "hovered(bool,QBoxSet*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "penChanged()", "penChanged()" );
+  QBoxPlotSeriesSlots_connect_signal("penChanged()", "penChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "pressed(QBoxSet*)", "pressed(QBoxSet*)" );
+  QBoxPlotSeriesSlots_connect_signal("pressed(QBoxSet*)", "pressed(QBoxSet*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeriesSlots_connect_signal( "released(QBoxSet*)", "released(QBoxSet*)" );
+  QBoxPlotSeriesSlots_connect_signal("released(QBoxSet*)", "released(QBoxSet*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_SERIES )
     {
 #endif
       QBoxPlotSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QBOXPLOTSERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QBOXPLOTSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

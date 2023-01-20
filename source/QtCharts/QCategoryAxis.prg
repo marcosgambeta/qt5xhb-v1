@@ -406,23 +406,23 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
 #endif
 }
 
-void QCategoryAxisSlots_connect_signal( const QString & signal, const QString & slot );
+void QCategoryAxisSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxisSlots_connect_signal( "categoriesChanged()", "categoriesChanged()" );
+  QCategoryAxisSlots_connect_signal("categoriesChanged()", "categoriesChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxisSlots_connect_signal( "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)", "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" );
+  QCategoryAxisSlots_connect_signal("labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)", "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

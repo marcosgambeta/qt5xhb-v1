@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SERIES )
     {
 #endif
       QBoxPlotSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QBOXPLOTSERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QBOXPLOTSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,59 +423,59 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETCOLUMNCOUNT )
 #endif
 }
 
-void QHBoxPlotModelMapperSlots_connect_signal( const QString & signal, const QString & slot );
+void QHBoxPlotModelMapperSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHBoxPlotModelMapperSlots_connect_signal( "columnCountChanged()", "columnCountChanged()" );
+  QHBoxPlotModelMapperSlots_connect_signal("columnCountChanged()", "columnCountChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTBOXSETROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHBoxPlotModelMapperSlots_connect_signal( "firstBoxSetRowChanged()", "firstBoxSetRowChanged()" );
+  QHBoxPlotModelMapperSlots_connect_signal("firstBoxSetRowChanged()", "firstBoxSetRowChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHBoxPlotModelMapperSlots_connect_signal( "firstColumnChanged()", "firstColumnChanged()" );
+  QHBoxPlotModelMapperSlots_connect_signal("firstColumnChanged()", "firstColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONLASTBOXSETROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHBoxPlotModelMapperSlots_connect_signal( "lastBoxSetRowChanged()", "lastBoxSetRowChanged()" );
+  QHBoxPlotModelMapperSlots_connect_signal("lastBoxSetRowChanged()", "lastBoxSetRowChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHBoxPlotModelMapperSlots_connect_signal( "modelReplaced()", "modelReplaced()" );
+  QHBoxPlotModelMapperSlots_connect_signal("modelReplaced()", "modelReplaced()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHBoxPlotModelMapperSlots_connect_signal( "seriesReplaced()", "seriesReplaced()" );
+  QHBoxPlotModelMapperSlots_connect_signal("seriesReplaced()", "seriesReplaced()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QLEGEND_ISATTACHEDTOCHART )
 }
 
 /*
-QList<QLegendMarker *> markers( QAbstractSeries * series = nullptr ) const
+QList<QLegendMarker*> markers( QAbstractSeries * series = nullptr ) const
 */
 HB_FUNC_STATIC( QLEGEND_MARKERS )
 {
@@ -899,28 +899,28 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
     if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||HB_ISNIL(1)) )
     {
 #endif
-      QList<QLegendMarker *> list = obj->markers( OPQABSTRACTSERIES(1,nullptr) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QLEGENDMARKER" );
+      QList<QLegendMarker*> list = obj->markers( OPQABSTRACTSERIES(1,nullptr) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QLEGENDMARKER");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QLEGENDMARKER", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QLEGENDMARKER", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -934,77 +934,77 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
 #endif
 }
 
-void QLegendSlots_connect_signal( const QString & signal, const QString & slot );
+void QLegendSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "backgroundVisibleChanged(bool)", "backgroundVisibleChanged(bool)" );
+  QLegendSlots_connect_signal("backgroundVisibleChanged(bool)", "backgroundVisibleChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "borderColorChanged(QColor)", "borderColorChanged(QColor)" );
+  QLegendSlots_connect_signal("borderColorChanged(QColor)", "borderColorChanged(QColor)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+  QLegendSlots_connect_signal("colorChanged(QColor)", "colorChanged(QColor)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "fontChanged(QFont)", "fontChanged(QFont)" );
+  QLegendSlots_connect_signal("fontChanged(QFont)", "fontChanged(QFont)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "labelColorChanged(QColor)", "labelColorChanged(QColor)" );
+  QLegendSlots_connect_signal("labelColorChanged(QColor)", "labelColorChanged(QColor)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLegendSlots_connect_signal( "markerShapeChanged(QLegend::MarkerShape)", "markerShapeChanged(QLegend::MarkerShape)" );
+  QLegendSlots_connect_signal("markerShapeChanged(QLegend::MarkerShape)", "markerShapeChanged(QLegend::MarkerShape)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "reverseMarkersChanged(bool)", "reverseMarkersChanged(bool)" );
+  QLegendSlots_connect_signal("reverseMarkersChanged(bool)", "reverseMarkersChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendSlots_connect_signal( "showToolTipsChanged(bool)", "showToolTipsChanged(bool)" );
+  QLegendSlots_connect_signal("showToolTipsChanged(bool)", "showToolTipsChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

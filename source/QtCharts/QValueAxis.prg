@@ -468,59 +468,59 @@ HB_FUNC_STATIC( QVALUEAXIS_APPLYNICENUMBERS )
 #endif
 }
 
-void QValueAxisSlots_connect_signal( const QString & signal, const QString & slot );
+void QValueAxisSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVALUEAXIS_ONLABELFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxisSlots_connect_signal( "labelFormatChanged(QString)", "labelFormatChanged(QString)" );
+  QValueAxisSlots_connect_signal("labelFormatChanged(QString)", "labelFormatChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVALUEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxisSlots_connect_signal( "maxChanged(qreal)", "maxChanged(qreal)" );
+  QValueAxisSlots_connect_signal("maxChanged(qreal)", "maxChanged(qreal)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVALUEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxisSlots_connect_signal( "minChanged(qreal)", "minChanged(qreal)" );
+  QValueAxisSlots_connect_signal("minChanged(qreal)", "minChanged(qreal)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVALUEAXIS_ONMINORTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxisSlots_connect_signal( "minorTickCountChanged(int)", "minorTickCountChanged(int)" );
+  QValueAxisSlots_connect_signal("minorTickCountChanged(int)", "minorTickCountChanged(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVALUEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxisSlots_connect_signal( "rangeChanged(qreal,qreal)", "rangeChanged(qreal,qreal)" );
+  QValueAxisSlots_connect_signal("rangeChanged(qreal,qreal)", "rangeChanged(qreal,qreal)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVALUEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxisSlots_connect_signal( "tickCountChanged(int)", "tickCountChanged(int)" );
+  QValueAxisSlots_connect_signal("tickCountChanged(int)", "tickCountChanged(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

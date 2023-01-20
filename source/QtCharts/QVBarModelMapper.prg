@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SERIES )
     {
 #endif
       QAbstractBarSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTBARSERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTBARSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,59 +421,59 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETROWCOUNT )
 #endif
 }
 
-void QVBarModelMapperSlots_connect_signal( const QString & signal, const QString & slot );
+void QVBarModelMapperSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "firstBarSetColumnChanged()", "firstBarSetColumnChanged()" );
+  QVBarModelMapperSlots_connect_signal("firstBarSetColumnChanged()", "firstBarSetColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "firstRowChanged()", "firstRowChanged()" );
+  QVBarModelMapperSlots_connect_signal("firstRowChanged()", "firstRowChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "lastBarSetColumnChanged()", "lastBarSetColumnChanged()" );
+  QVBarModelMapperSlots_connect_signal("lastBarSetColumnChanged()", "lastBarSetColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "modelReplaced()", "modelReplaced()" );
+  QVBarModelMapperSlots_connect_signal("modelReplaced()", "modelReplaced()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONROWCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "rowCountChanged()", "rowCountChanged()" );
+  QVBarModelMapperSlots_connect_signal("rowCountChanged()", "rowCountChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVBARMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapperSlots_connect_signal( "seriesReplaced()", "seriesReplaced()" );
+  QVBarModelMapperSlots_connect_signal("seriesReplaced()", "seriesReplaced()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

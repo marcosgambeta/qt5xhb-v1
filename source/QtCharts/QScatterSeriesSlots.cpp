@@ -25,17 +25,17 @@ void QScatterSeriesSlots::borderColorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "borderColorChanged(QColor)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "borderColorChanged(QColor)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
 
-    hb_vmEvalBlockV( cb, 2, psender, pcolor );
+    hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pcolor );
+    hb_itemRelease(psender);
+    hb_itemRelease(pcolor);
   }
 }
 #endif
@@ -45,17 +45,17 @@ void QScatterSeriesSlots::colorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
 
-    hb_vmEvalBlockV( cb, 2, psender, pcolor );
+    hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pcolor );
+    hb_itemRelease(psender);
+    hb_itemRelease(pcolor);
   }
 }
 #endif
@@ -65,17 +65,17 @@ void QScatterSeriesSlots::markerShapeChanged( QScatterSeries::MarkerShape shape 
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "markerShapeChanged(QScatterSeries::MarkerShape)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "markerShapeChanged(QScatterSeries::MarkerShape)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
-    PHB_ITEM pshape = hb_itemPutNI( NULL, (int) shape );
+    PHB_ITEM pshape = hb_itemPutNI( NULL, static_cast<int>(shape) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pshape );
+    hb_vmEvalBlockV(cb, 2, psender, pshape);
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pshape );
+    hb_itemRelease(psender);
+    hb_itemRelease(pshape);
   }
 }
 #endif
@@ -85,22 +85,22 @@ void QScatterSeriesSlots::markerSizeChanged( qreal size )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "markerSizeChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "markerSizeChanged(qreal)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
     PHB_ITEM psize = hb_itemPutND( NULL, size );
 
-    hb_vmEvalBlockV( cb, 2, psender, psize );
+    hb_vmEvalBlockV(cb, 2, psender, psize);
 
-    hb_itemRelease( psender );
-    hb_itemRelease( psize );
+    hb_itemRelease(psender);
+    hb_itemRelease(psize);
   }
 }
 #endif
 
-void QScatterSeriesSlots_connect_signal( const QString & signal, const QString & slot )
+void QScatterSeriesSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();

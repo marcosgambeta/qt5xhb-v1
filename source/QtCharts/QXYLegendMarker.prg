@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_SERIES )
     {
 #endif
       QXYSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QXYSERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QXYSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

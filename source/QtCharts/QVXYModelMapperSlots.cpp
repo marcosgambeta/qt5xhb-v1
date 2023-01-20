@@ -25,15 +25,15 @@ void QVXYModelMapperSlots::firstRowChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstRowChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "firstRowChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -43,15 +43,15 @@ void QVXYModelMapperSlots::modelReplaced()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "modelReplaced()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "modelReplaced()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -61,15 +61,15 @@ void QVXYModelMapperSlots::rowCountChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCountChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowCountChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -79,15 +79,15 @@ void QVXYModelMapperSlots::seriesReplaced()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "seriesReplaced()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "seriesReplaced()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -97,15 +97,15 @@ void QVXYModelMapperSlots::xColumnChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xColumnChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xColumnChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -115,20 +115,20 @@ void QVXYModelMapperSlots::yColumnChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yColumnChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yColumnChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
 
-void QVXYModelMapperSlots_connect_signal( const QString & signal, const QString & slot )
+void QVXYModelMapperSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVXYModelMapper * obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();

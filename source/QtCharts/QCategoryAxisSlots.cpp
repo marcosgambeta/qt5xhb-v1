@@ -25,15 +25,15 @@ void QCategoryAxisSlots::categoriesChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoriesChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "categoriesChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCATEGORYAXIS");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -43,22 +43,22 @@ void QCategoryAxisSlots::labelsPositionChanged( QCategoryAxis::AxisLabelsPositio
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCATEGORYAXIS");
-    PHB_ITEM pposition = hb_itemPutNI( NULL, (int) position );
+    PHB_ITEM pposition = hb_itemPutNI( NULL, static_cast<int>(position) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pposition );
+    hb_vmEvalBlockV(cb, 2, psender, pposition);
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pposition );
+    hb_itemRelease(psender);
+    hb_itemRelease(pposition);
   }
 }
 #endif
 
-void QCategoryAxisSlots_connect_signal( const QString & signal, const QString & slot )
+void QCategoryAxisSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();

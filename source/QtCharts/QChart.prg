@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QCHART_REMOVEALLSERIES )
 }
 
 /*
-QList<QAbstractSeries *> series() const
+QList<QAbstractSeries*> series() const
 */
 HB_FUNC_STATIC( QCHART_SERIES )
 {
@@ -945,28 +945,28 @@ HB_FUNC_STATIC( QCHART_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAbstractSeries *> list = obj->series();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTSERIES" );
+      QList<QAbstractSeries*> list = obj->series();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTSERIES");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QABSTRACTSERIES", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QABSTRACTSERIES", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QCHART_AXISX )
     {
 #endif
       QAbstractAxis * ptr = obj->axisX( OPQABSTRACTSERIES(1,nullptr) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTAXIS" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC( QCHART_AXISY )
     {
 #endif
       QAbstractAxis * ptr = obj->axisY( OPQABSTRACTSERIES(1,nullptr) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTAXIS" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC( QCHART_REMOVEAXIS )
 }
 
 /*
-QList<QAbstractAxis *> axes( Qt::Orientations orientation = Qt::Horizontal | Qt::Vertical, QAbstractSeries * series = nullptr ) const
+QList<QAbstractAxis*> axes( Qt::Orientations orientation = Qt::Horizontal | Qt::Vertical, QAbstractSeries * series = nullptr ) const
 */
 HB_FUNC_STATIC( QCHART_AXES )
 {
@@ -1160,28 +1160,28 @@ HB_FUNC_STATIC( QCHART_AXES )
     if( ISBETWEEN(0,2) && (HB_ISNUM(1)||HB_ISNIL(1)) && (ISQABSTRACTSERIES(2)||HB_ISNIL(2)) )
     {
 #endif
-      QList<QAbstractAxis *> list = obj->axes( HB_ISNIL(1)? (Qt::Orientations) Qt::Horizontal | Qt::Vertical : (Qt::Orientations) hb_parni(1), OPQABSTRACTSERIES(2,nullptr) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTAXIS" );
+      QList<QAbstractAxis*> list = obj->axes( HB_ISNIL(1)? (Qt::Orientations) Qt::Horizontal | Qt::Vertical : (Qt::Orientations) hb_parni(1), OPQABSTRACTSERIES(2,nullptr) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QABSTRACTAXIS", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QABSTRACTAXIS", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1664,7 +1664,7 @@ HB_FUNC_STATIC( QCHART_LEGEND )
     {
 #endif
       QLegend * ptr = obj->legend();
-      Qt5xHb::createReturnQObjectClass( ptr, "QLEGEND" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QLEGEND");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1840,14 +1840,14 @@ HB_FUNC_STATIC( QCHART_MAPTOPOSITION )
 #endif
 }
 
-void QChartSlots_connect_signal( const QString & signal, const QString & slot );
+void QChartSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartSlots_connect_signal( "plotAreaChanged(QRectF)", "plotAreaChanged(QRectF)" );
+  QChartSlots_connect_signal("plotAreaChanged(QRectF)", "plotAreaChanged(QRectF)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

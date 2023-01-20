@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
     {
 #endif
       QCandlestickSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QCANDLESTICKSERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QCANDLESTICKSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,23 +205,23 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ORIENTATION )
 #endif
 }
 
-void QCandlestickModelMapperSlots_connect_signal( const QString & signal, const QString & slot );
+void QCandlestickModelMapperSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapperSlots_connect_signal( "modelReplaced()", "modelReplaced()" );
+  QCandlestickModelMapperSlots_connect_signal("modelReplaced()", "modelReplaced()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapperSlots_connect_signal( "seriesReplaced()", "seriesReplaced()" );
+  QCandlestickModelMapperSlots_connect_signal("seriesReplaced()", "seriesReplaced()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

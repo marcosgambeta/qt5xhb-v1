@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SERIES )
     {
 #endif
       QXYSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QXYSERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QXYSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,59 +421,59 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETROWCOUNT )
 #endif
 }
 
-void QVXYModelMapperSlots_connect_signal( const QString & signal, const QString & slot );
+void QVXYModelMapperSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONFIRSTROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapperSlots_connect_signal( "firstRowChanged()", "firstRowChanged()" );
+  QVXYModelMapperSlots_connect_signal("firstRowChanged()", "firstRowChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapperSlots_connect_signal( "modelReplaced()", "modelReplaced()" );
+  QVXYModelMapperSlots_connect_signal("modelReplaced()", "modelReplaced()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONROWCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapperSlots_connect_signal( "rowCountChanged()", "rowCountChanged()" );
+  QVXYModelMapperSlots_connect_signal("rowCountChanged()", "rowCountChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapperSlots_connect_signal( "seriesReplaced()", "seriesReplaced()" );
+  QVXYModelMapperSlots_connect_signal("seriesReplaced()", "seriesReplaced()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONXCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapperSlots_connect_signal( "xColumnChanged()", "xColumnChanged()" );
+  QVXYModelMapperSlots_connect_signal("xColumnChanged()", "xColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONYCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapperSlots_connect_signal( "yColumnChanged()", "yColumnChanged()" );
+  QVXYModelMapperSlots_connect_signal("yColumnChanged()", "yColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

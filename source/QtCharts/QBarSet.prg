@@ -609,10 +609,9 @@ HB_FUNC_STATIC( QBARSET_APPEND )
     {
       QList<qreal> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         temp1 = hb_arrayGetND(aList1, i1+1);
         par1 << temp1;
@@ -791,149 +790,149 @@ HB_FUNC_STATIC( QBARSET_SUM )
 #endif
 }
 
-void QBarSetSlots_connect_signal( const QString & signal, const QString & slot );
+void QBarSetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QBARSET_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "borderColorChanged(QColor)", "borderColorChanged(QColor)" );
+  QBarSetSlots_connect_signal("borderColorChanged(QColor)", "borderColorChanged(QColor)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "brushChanged()", "brushChanged()" );
+  QBarSetSlots_connect_signal("brushChanged()", "brushChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "clicked(int)", "clicked(int)" );
+  QBarSetSlots_connect_signal("clicked(int)", "clicked(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+  QBarSetSlots_connect_signal("colorChanged(QColor)", "colorChanged(QColor)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "doubleClicked(int)", "doubleClicked(int)" );
+  QBarSetSlots_connect_signal("doubleClicked(int)", "doubleClicked(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "hovered(bool,int)", "hovered(bool,int)" );
+  QBarSetSlots_connect_signal("hovered(bool,int)", "hovered(bool,int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONLABELBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "labelBrushChanged()", "labelBrushChanged()" );
+  QBarSetSlots_connect_signal("labelBrushChanged()", "labelBrushChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONLABELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "labelChanged()", "labelChanged()" );
+  QBarSetSlots_connect_signal("labelChanged()", "labelChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONLABELCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "labelColorChanged(QColor)", "labelColorChanged(QColor)" );
+  QBarSetSlots_connect_signal("labelColorChanged(QColor)", "labelColorChanged(QColor)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONLABELFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "labelFontChanged()", "labelFontChanged()" );
+  QBarSetSlots_connect_signal("labelFontChanged()", "labelFontChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "penChanged()", "penChanged()" );
+  QBarSetSlots_connect_signal("penChanged()", "penChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "pressed(int)", "pressed(int)" );
+  QBarSetSlots_connect_signal("pressed(int)", "pressed(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "released(int)", "released(int)" );
+  QBarSetSlots_connect_signal("released(int)", "released(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "valueChanged(int)", "valueChanged(int)" );
+  QBarSetSlots_connect_signal("valueChanged(int)", "valueChanged(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONVALUESADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "valuesAdded(int,int)", "valuesAdded(int,int)" );
+  QBarSetSlots_connect_signal("valuesAdded(int,int)", "valuesAdded(int,int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBARSET_ONVALUESREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSetSlots_connect_signal( "valuesRemoved(int,int)", "valuesRemoved(int,int)" );
+  QBarSetSlots_connect_signal("valuesRemoved(int,int)", "valuesRemoved(int,int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

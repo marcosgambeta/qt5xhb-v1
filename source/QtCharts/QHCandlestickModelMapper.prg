@@ -500,68 +500,68 @@ HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_ORIENTATION )
 #endif
 }
 
-void QHCandlestickModelMapperSlots_connect_signal( const QString & signal, const QString & slot );
+void QHCandlestickModelMapperSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_ONCLOSECOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHCandlestickModelMapperSlots_connect_signal( "closeColumnChanged()", "closeColumnChanged()" );
+  QHCandlestickModelMapperSlots_connect_signal("closeColumnChanged()", "closeColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_ONFIRSTSETROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHCandlestickModelMapperSlots_connect_signal( "firstSetRowChanged()", "firstSetRowChanged()" );
+  QHCandlestickModelMapperSlots_connect_signal("firstSetRowChanged()", "firstSetRowChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_ONHIGHCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHCandlestickModelMapperSlots_connect_signal( "highColumnChanged()", "highColumnChanged()" );
+  QHCandlestickModelMapperSlots_connect_signal("highColumnChanged()", "highColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_ONLASTSETROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHCandlestickModelMapperSlots_connect_signal( "lastSetRowChanged()", "lastSetRowChanged()" );
+  QHCandlestickModelMapperSlots_connect_signal("lastSetRowChanged()", "lastSetRowChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_ONLOWCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHCandlestickModelMapperSlots_connect_signal( "lowColumnChanged()", "lowColumnChanged()" );
+  QHCandlestickModelMapperSlots_connect_signal("lowColumnChanged()", "lowColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_ONOPENCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHCandlestickModelMapperSlots_connect_signal( "openColumnChanged()", "openColumnChanged()" );
+  QHCandlestickModelMapperSlots_connect_signal("openColumnChanged()", "openColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_ONTIMESTAMPCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHCandlestickModelMapperSlots_connect_signal( "timestampColumnChanged()", "timestampColumnChanged()" );
+  QHCandlestickModelMapperSlots_connect_signal("timestampColumnChanged()", "timestampColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

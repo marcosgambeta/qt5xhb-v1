@@ -555,9 +555,8 @@ HB_FUNC_STATIC( QXYSERIES_APPEND )
     {
       QList<QPointF> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -651,9 +650,8 @@ HB_FUNC_STATIC( QXYSERIES_REPLACE )
     {
       QList<QPointF> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -675,9 +673,8 @@ HB_FUNC_STATIC( QXYSERIES_REPLACE )
     {
       QVector<QPointF> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -874,30 +871,30 @@ HB_FUNC_STATIC( QXYSERIES_POINTS )
     {
 #endif
       QList<QPointF> list = obj->points();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QPOINTF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QPointF( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QPointF(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPOINTF", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPOINTF", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -926,30 +923,30 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
     {
 #endif
       QVector<QPointF> list = obj->pointsVector();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QPOINTF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QPointF( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QPointF(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPOINTF", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPOINTF", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1100,158 +1097,158 @@ HB_FUNC_STATIC( QXYSERIES_BRUSH )
 #endif
 }
 
-void QXYSeriesSlots_connect_signal( const QString & signal, const QString & slot );
+void QXYSeriesSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "clicked(QPointF)", "clicked(QPointF)" );
+  QXYSeriesSlots_connect_signal("clicked(QPointF)", "clicked(QPointF)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+  QXYSeriesSlots_connect_signal("colorChanged(QColor)", "colorChanged(QColor)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "doubleClicked(QPointF)", "doubleClicked(QPointF)" );
+  QXYSeriesSlots_connect_signal("doubleClicked(QPointF)", "doubleClicked(QPointF)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "hovered(QPointF,bool)", "hovered(QPointF,bool)" );
+  QXYSeriesSlots_connect_signal("hovered(QPointF,bool)", "hovered(QPointF,bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "penChanged(QPen)", "penChanged(QPen)" );
+  QXYSeriesSlots_connect_signal("penChanged(QPen)", "penChanged(QPen)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointAdded(int)", "pointAdded(int)" );
+  QXYSeriesSlots_connect_signal("pointAdded(int)", "pointAdded(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointLabelsClippingChanged(bool)", "pointLabelsClippingChanged(bool)" );
+  QXYSeriesSlots_connect_signal("pointLabelsClippingChanged(bool)", "pointLabelsClippingChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointLabelsColorChanged(QColor)", "pointLabelsColorChanged(QColor)" );
+  QXYSeriesSlots_connect_signal("pointLabelsColorChanged(QColor)", "pointLabelsColorChanged(QColor)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointLabelsFontChanged(QFont)", "pointLabelsFontChanged(QFont)" );
+  QXYSeriesSlots_connect_signal("pointLabelsFontChanged(QFont)", "pointLabelsFontChanged(QFont)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointLabelsFormatChanged(QString)", "pointLabelsFormatChanged(QString)" );
+  QXYSeriesSlots_connect_signal("pointLabelsFormatChanged(QString)", "pointLabelsFormatChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointLabelsVisibilityChanged(bool)", "pointLabelsVisibilityChanged(bool)" );
+  QXYSeriesSlots_connect_signal("pointLabelsVisibilityChanged(bool)", "pointLabelsVisibilityChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointRemoved(int)", "pointRemoved(int)" );
+  QXYSeriesSlots_connect_signal("pointRemoved(int)", "pointRemoved(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointReplaced(int)", "pointReplaced(int)" );
+  QXYSeriesSlots_connect_signal("pointReplaced(int)", "pointReplaced(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointsRemoved(int,int)", "pointsRemoved(int,int)" );
+  QXYSeriesSlots_connect_signal("pointsRemoved(int,int)", "pointsRemoved(int,int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pointsReplaced()", "pointsReplaced()" );
+  QXYSeriesSlots_connect_signal("pointsReplaced()", "pointsReplaced()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "pressed(QPointF)", "pressed(QPointF)" );
+  QXYSeriesSlots_connect_signal("pressed(QPointF)", "pressed(QPointF)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeriesSlots_connect_signal( "released(QPointF)", "released(QPointF)" );
+  QXYSeriesSlots_connect_signal("released(QPointF)", "released(QPointF)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

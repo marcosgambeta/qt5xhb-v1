@@ -423,18 +423,17 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     /*
-    bool append( QList<QBarSet *> sets )
+    bool append( QList<QBarSet*> sets )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     QAbstractBarSeries * obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
   
     if( obj != NULL )
     {
-      QList<QBarSet *> par1;
+      QList<QBarSet*> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -527,7 +526,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_INSERT )
 }
 
 /*
-QList<QBarSet *> barSets() const
+QList<QBarSet*> barSets() const
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_BARSETS )
 {
@@ -540,28 +539,28 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_BARSETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QBarSet *> list = obj->barSets();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
+      QList<QBarSet*> list = obj->barSets();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QBARSET");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBARSET", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBARSET", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -603,113 +602,113 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_CLEAR )
 #endif
 }
 
-void QAbstractBarSeriesSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractBarSeriesSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "barsetsAdded(QList<QBarSet*>)", "barsetsAdded(QList<QBarSet*>)" );
+  QAbstractBarSeriesSlots_connect_signal("barsetsAdded(QList<QBarSet*>)", "barsetsAdded(QList<QBarSet*>)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "barsetsRemoved(QList<QBarSet*>)", "barsetsRemoved(QList<QBarSet*>)" );
+  QAbstractBarSeriesSlots_connect_signal("barsetsRemoved(QList<QBarSet*>)", "barsetsRemoved(QList<QBarSet*>)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "clicked(int,QBarSet*)", "clicked(int,QBarSet*)" );
+  QAbstractBarSeriesSlots_connect_signal("clicked(int,QBarSet*)", "clicked(int,QBarSet*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "countChanged()", "countChanged()" );
+  QAbstractBarSeriesSlots_connect_signal("countChanged()", "countChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "doubleClicked(int,QBarSet*)", "doubleClicked(int,QBarSet*)" );
+  QAbstractBarSeriesSlots_connect_signal("doubleClicked(int,QBarSet*)", "doubleClicked(int,QBarSet*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "hovered(bool,int,QBarSet*)", "hovered(bool,int,QBarSet*)" );
+  QAbstractBarSeriesSlots_connect_signal("hovered(bool,int,QBarSet*)", "hovered(bool,int,QBarSet*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "labelsAngleChanged(qreal)", "labelsAngleChanged(qreal)" );
+  QAbstractBarSeriesSlots_connect_signal("labelsAngleChanged(qreal)", "labelsAngleChanged(qreal)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "labelsFormatChanged(QString)", "labelsFormatChanged(QString)" );
+  QAbstractBarSeriesSlots_connect_signal("labelsFormatChanged(QString)", "labelsFormatChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)", "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" );
+  QAbstractBarSeriesSlots_connect_signal("labelsPositionChanged(QAbstractBarSeries::LabelsPosition)", "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "labelsVisibleChanged()", "labelsVisibleChanged()" );
+  QAbstractBarSeriesSlots_connect_signal("labelsVisibleChanged()", "labelsVisibleChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "pressed(int,QBarSet*)", "pressed(int,QBarSet*)" );
+  QAbstractBarSeriesSlots_connect_signal("pressed(int,QBarSet*)", "pressed(int,QBarSet*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeriesSlots_connect_signal( "released(int,QBarSet*)", "released(int,QBarSet*)" );
+  QAbstractBarSeriesSlots_connect_signal("released(int,QBarSet*)", "released(int,QBarSet*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

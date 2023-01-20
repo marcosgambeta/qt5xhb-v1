@@ -552,18 +552,17 @@ HB_FUNC_STATIC( QPIESERIES_APPEND )
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     /*
-    bool append( QList<QPieSlice *> slices )
+    bool append( QList<QPieSlice*> slices )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
     QPieSeries * obj = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
   
     if( obj != NULL )
     {
-      QList<QPieSlice *> par1;
+      QList<QPieSlice*> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -582,7 +581,7 @@ HB_FUNC_STATIC( QPIESERIES_APPEND )
     if( obj != NULL )
     {
       QPieSlice * ptr = obj->append( PQSTRING(1), PQREAL(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPIESLICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPIESLICE");
     }
 #endif
   }
@@ -699,7 +698,7 @@ HB_FUNC_STATIC( QPIESERIES_CLEAR )
 }
 
 /*
-QList<QPieSlice *> slices() const
+QList<QPieSlice*> slices() const
 */
 HB_FUNC_STATIC( QPIESERIES_SLICES )
 {
@@ -712,28 +711,28 @@ HB_FUNC_STATIC( QPIESERIES_SLICES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QPieSlice *> list = obj->slices();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
+      QList<QPieSlice*> list = obj->slices();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QPIESLICE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -829,86 +828,86 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSPOSITION )
 #endif
 }
 
-void QPieSeriesSlots_connect_signal( const QString & signal, const QString & slot );
+void QPieSeriesSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPIESERIES_ONADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "added(QList<QPieSlice*>)", "added(QList<QPieSlice*>)" );
+  QPieSeriesSlots_connect_signal("added(QList<QPieSlice*>)", "added(QList<QPieSlice*>)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "clicked(QPieSlice*)", "clicked(QPieSlice*)" );
+  QPieSeriesSlots_connect_signal("clicked(QPieSlice*)", "clicked(QPieSlice*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "countChanged()", "countChanged()" );
+  QPieSeriesSlots_connect_signal("countChanged()", "countChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "doubleClicked(QPieSlice*)", "doubleClicked(QPieSlice*)" );
+  QPieSeriesSlots_connect_signal("doubleClicked(QPieSlice*)", "doubleClicked(QPieSlice*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "hovered(QPieSlice*,bool)", "hovered(QPieSlice*,bool)" );
+  QPieSeriesSlots_connect_signal("hovered(QPieSlice*,bool)", "hovered(QPieSlice*,bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "pressed(QPieSlice*)", "pressed(QPieSlice*)" );
+  QPieSeriesSlots_connect_signal("pressed(QPieSlice*)", "pressed(QPieSlice*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "released(QPieSlice*)", "released(QPieSlice*)" );
+  QPieSeriesSlots_connect_signal("released(QPieSlice*)", "released(QPieSlice*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "removed(QList<QPieSlice*>)", "removed(QList<QPieSlice*>)" );
+  QPieSeriesSlots_connect_signal("removed(QList<QPieSlice*>)", "removed(QList<QPieSlice*>)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeriesSlots_connect_signal( "sumChanged()", "sumChanged()" );
+  QPieSeriesSlots_connect_signal("sumChanged()", "sumChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

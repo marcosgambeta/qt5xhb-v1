@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SERIES )
     {
 #endif
       QPieSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QPIESERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPIESERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,59 +421,59 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SETROWCOUNT )
 #endif
 }
 
-void QVPieModelMapperSlots_connect_signal( const QString & signal, const QString & slot );
+void QVPieModelMapperSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVPIEMODELMAPPER_ONFIRSTROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapperSlots_connect_signal( "firstRowChanged()", "firstRowChanged()" );
+  QVPieModelMapperSlots_connect_signal("firstRowChanged()", "firstRowChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVPIEMODELMAPPER_ONLABELSCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapperSlots_connect_signal( "labelsColumnChanged()", "labelsColumnChanged()" );
+  QVPieModelMapperSlots_connect_signal("labelsColumnChanged()", "labelsColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVPIEMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapperSlots_connect_signal( "modelReplaced()", "modelReplaced()" );
+  QVPieModelMapperSlots_connect_signal("modelReplaced()", "modelReplaced()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVPIEMODELMAPPER_ONROWCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapperSlots_connect_signal( "rowCountChanged()", "rowCountChanged()" );
+  QVPieModelMapperSlots_connect_signal("rowCountChanged()", "rowCountChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVPIEMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapperSlots_connect_signal( "seriesReplaced()", "seriesReplaced()" );
+  QVPieModelMapperSlots_connect_signal("seriesReplaced()", "seriesReplaced()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QVPIEMODELMAPPER_ONVALUESCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapperSlots_connect_signal( "valuesColumnChanged()", "valuesColumnChanged()" );
+  QVPieModelMapperSlots_connect_signal("valuesColumnChanged()", "valuesColumnChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

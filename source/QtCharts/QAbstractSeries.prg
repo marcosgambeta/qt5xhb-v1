@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_CHART )
     {
 #endif
       QChart * ptr = obj->chart();
-      Qt5xHb::createReturnQObjectClass( ptr, "QCHART" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QCHART");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_DETACHAXIS )
 }
 
 /*
-QList<QAbstractAxis *> attachedAxes()
+QList<QAbstractAxis*> attachedAxes()
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHEDAXES )
 {
@@ -436,28 +436,28 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHEDAXES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAbstractAxis *> list = obj->attachedAxes();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTAXIS" );
+      QList<QAbstractAxis*> list = obj->attachedAxes();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTAXIS");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QABSTRACTAXIS", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QABSTRACTAXIS", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -527,41 +527,41 @@ HB_FUNC_STATIC( QABSTRACTSERIES_HIDE )
 #endif
 }
 
-void QAbstractSeriesSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractSeriesSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractSeriesSlots_connect_signal( "nameChanged()", "nameChanged()" );
+  QAbstractSeriesSlots_connect_signal("nameChanged()", "nameChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractSeriesSlots_connect_signal( "opacityChanged()", "opacityChanged()" );
+  QAbstractSeriesSlots_connect_signal("opacityChanged()", "opacityChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractSeriesSlots_connect_signal( "useOpenGLChanged()", "useOpenGLChanged()" );
+  QAbstractSeriesSlots_connect_signal("useOpenGLChanged()", "useOpenGLChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractSeriesSlots_connect_signal( "visibleChanged()", "visibleChanged()" );
+  QAbstractSeriesSlots_connect_signal("visibleChanged()", "visibleChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

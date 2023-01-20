@@ -25,22 +25,22 @@ void QChartSlots::plotAreaChanged( const QRectF & plotArea )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "plotAreaChanged(QRectF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "plotAreaChanged(QRectF)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCHART");
-    PHB_ITEM pplotArea = Qt5xHb::Signals_return_object( (void *) &plotArea, "QRECTF" );
+    PHB_ITEM pplotArea = Qt5xHb::Signals_return_object( (void *) &plotArea, "QRECTF");
 
-    hb_vmEvalBlockV( cb, 2, psender, pplotArea );
+    hb_vmEvalBlockV(cb, 2, psender, pplotArea);
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pplotArea );
+    hb_itemRelease(psender);
+    hb_itemRelease(pplotArea);
   }
 }
 #endif
 
-void QChartSlots_connect_signal( const QString & signal, const QString & slot )
+void QChartSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QChart * obj = (QChart *) Qt5xHb::itemGetPtrStackSelfItem();

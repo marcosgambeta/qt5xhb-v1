@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_SERIES )
     {
 #endif
       QAreaSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QAREASERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QAREASERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

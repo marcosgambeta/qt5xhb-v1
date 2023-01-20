@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QCHARTVIEW_CHART )
     {
 #endif
       QChart * ptr = obj->chart();
-      Qt5xHb::createReturnQObjectClass( ptr, "QCHART" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QCHART");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

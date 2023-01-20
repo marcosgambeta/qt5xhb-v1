@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
     {
 #endif
       QPieSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QPIESERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPIESERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
     {
 #endif
       QPieSlice * ptr = obj->slice();
-      Qt5xHb::createReturnQObjectClass( ptr, "QPIESLICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPIESLICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

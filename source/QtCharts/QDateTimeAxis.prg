@@ -387,50 +387,50 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETRANGE )
 #endif
 }
 
-void QDateTimeAxisSlots_connect_signal( const QString & signal, const QString & slot );
+void QDateTimeAxisSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxisSlots_connect_signal( "formatChanged(QString)", "formatChanged(QString)" );
+  QDateTimeAxisSlots_connect_signal("formatChanged(QString)", "formatChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxisSlots_connect_signal( "maxChanged(QDateTime)", "maxChanged(QDateTime)" );
+  QDateTimeAxisSlots_connect_signal("maxChanged(QDateTime)", "maxChanged(QDateTime)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxisSlots_connect_signal( "minChanged(QDateTime)", "minChanged(QDateTime)" );
+  QDateTimeAxisSlots_connect_signal("minChanged(QDateTime)", "minChanged(QDateTime)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxisSlots_connect_signal( "rangeChanged(QDateTime,QDateTime)", "rangeChanged(QDateTime,QDateTime)" );
+  QDateTimeAxisSlots_connect_signal("rangeChanged(QDateTime,QDateTime)", "rangeChanged(QDateTime,QDateTime)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxisSlots_connect_signal( "tickCountChanged(int)", "tickCountChanged(int)" );
+  QDateTimeAxisSlots_connect_signal("tickCountChanged(int)", "tickCountChanged(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
