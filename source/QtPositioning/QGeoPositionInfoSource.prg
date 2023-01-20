@@ -478,32 +478,32 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_AVAILABLESOURCES )
 #endif
 }
 
-void QGeoPositionInfoSourceSlots_connect_signal( const QString & signal, const QString & slot );
+void QGeoPositionInfoSourceSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSourceSlots_connect_signal( "positionUpdated(QGeoPositionInfo)", "positionUpdated(QGeoPositionInfo)" );
+  QGeoPositionInfoSourceSlots_connect_signal("positionUpdated(QGeoPositionInfo)", "positionUpdated(QGeoPositionInfo)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSourceSlots_connect_signal( "updateTimeout()", "updateTimeout()" );
+  QGeoPositionInfoSourceSlots_connect_signal("updateTimeout()", "updateTimeout()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSourceSlots_connect_signal( "error(QGeoPositionInfoSource::Error)", "error(QGeoPositionInfoSource::Error)" );
+  QGeoPositionInfoSourceSlots_connect_signal("error(QGeoPositionInfoSource::Error)", "error(QGeoPositionInfoSource::Error)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

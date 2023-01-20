@@ -25,20 +25,20 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSate
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QGEOSATELLITEINFO");
     PHB_ITEM psatellites = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < satellites.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
+        hb_vmDo(0);
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QGeoSatelliteInfo( satellites [i] ) );
@@ -50,12 +50,12 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSate
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS);
     }
 
-    hb_vmEvalBlockV( cb, 2, psender, psatellites );
+    hb_vmEvalBlockV(cb, 2, psender, psatellites);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( psatellites );
   }
 }
@@ -66,20 +66,20 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatel
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QGEOSATELLITEINFO");
     PHB_ITEM psatellites = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < satellites.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
+        hb_vmDo(0);
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QGeoSatelliteInfo( satellites [i] ) );
@@ -91,12 +91,12 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatel
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS);
     }
 
-    hb_vmEvalBlockV( cb, 2, psender, psatellites );
+    hb_vmEvalBlockV(cb, 2, psender, psatellites);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( psatellites );
   }
 }
@@ -107,15 +107,15 @@ void QGeoSatelliteInfoSourceSlots::requestTimeout()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "requestTimeout()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "requestTimeout()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -125,22 +125,22 @@ void QGeoSatelliteInfoSourceSlots::error( QGeoSatelliteInfoSource::Error error )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QGeoSatelliteInfoSource::Error)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QGeoSatelliteInfoSource::Error)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
-    PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
 
-    hb_vmEvalBlockV( cb, 2, psender, perror );
+    hb_vmEvalBlockV(cb, 2, psender, perror);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( perror );
   }
 }
 #endif
 
-void QGeoSatelliteInfoSourceSlots_connect_signal( const QString & signal, const QString & slot )
+void QGeoSatelliteInfoSourceSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();

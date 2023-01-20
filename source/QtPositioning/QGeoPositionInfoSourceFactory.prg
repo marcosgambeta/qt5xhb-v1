@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_AREAMONITOR )
     {
 #endif
       QGeoAreaMonitorSource * ptr = obj->areaMonitor( PQOBJECT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QGEOAREAMONITORSOURCE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGEOAREAMONITORSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

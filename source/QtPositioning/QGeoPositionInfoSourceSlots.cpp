@@ -25,16 +25,16 @@ void QGeoPositionInfoSourceSlots::positionUpdated( const QGeoPositionInfo & upda
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionUpdated(QGeoPositionInfo)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "positionUpdated(QGeoPositionInfo)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOPOSITIONINFOSOURCE");
-    PHB_ITEM pupdate = Qt5xHb::Signals_return_object( (void *) &update, "QGEOPOSITIONINFO" );
+    PHB_ITEM pupdate = Qt5xHb::Signals_return_object( (void *) &update, "QGEOPOSITIONINFO");
 
-    hb_vmEvalBlockV( cb, 2, psender, pupdate );
+    hb_vmEvalBlockV(cb, 2, psender, pupdate);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pupdate );
   }
 }
@@ -45,15 +45,15 @@ void QGeoPositionInfoSourceSlots::updateTimeout()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "updateTimeout()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "updateTimeout()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOPOSITIONINFOSOURCE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -63,22 +63,22 @@ void QGeoPositionInfoSourceSlots::error( QGeoPositionInfoSource::Error error )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QGeoPositionInfoSource::Error)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QGeoPositionInfoSource::Error)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOPOSITIONINFOSOURCE");
-    PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
 
-    hb_vmEvalBlockV( cb, 2, psender, perror );
+    hb_vmEvalBlockV(cb, 2, psender, perror);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( perror );
   }
 }
 #endif
 
-void QGeoPositionInfoSourceSlots_connect_signal( const QString & signal, const QString & slot )
+void QGeoPositionInfoSourceSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();

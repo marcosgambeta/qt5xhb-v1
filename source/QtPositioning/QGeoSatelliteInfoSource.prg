@@ -367,41 +367,41 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_AVAILABLESOURCES )
 #endif
 }
 
-void QGeoSatelliteInfoSourceSlots_connect_signal( const QString & signal, const QString & slot );
+void QGeoSatelliteInfoSourceSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSourceSlots_connect_signal( "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)", "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" );
+  QGeoSatelliteInfoSourceSlots_connect_signal("satellitesInViewUpdated(QList<QGeoSatelliteInfo>)", "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSourceSlots_connect_signal( "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)", "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" );
+  QGeoSatelliteInfoSourceSlots_connect_signal("satellitesInUseUpdated(QList<QGeoSatelliteInfo>)", "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSourceSlots_connect_signal( "requestTimeout()", "requestTimeout()" );
+  QGeoSatelliteInfoSourceSlots_connect_signal("requestTimeout()", "requestTimeout()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSourceSlots_connect_signal( "error(QGeoSatelliteInfoSource::Error)", "error(QGeoSatelliteInfoSource::Error)" );
+  QGeoSatelliteInfoSourceSlots_connect_signal("error(QGeoSatelliteInfoSource::Error)", "error(QGeoSatelliteInfoSource::Error)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
