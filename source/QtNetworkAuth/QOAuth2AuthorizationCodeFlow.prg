@@ -252,14 +252,14 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
 #endif
 }
 
-void QOAuth2AuthorizationCodeFlowSlots_connect_signal( const QString & signal, const QString & slot );
+void QOAuth2AuthorizationCodeFlowSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ONACCESSTOKENURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth2AuthorizationCodeFlowSlots_connect_signal( "accessTokenUrlChanged(QUrl)", "accessTokenUrlChanged(QUrl)" );
+  QOAuth2AuthorizationCodeFlowSlots_connect_signal("accessTokenUrlChanged(QUrl)", "accessTokenUrlChanged(QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

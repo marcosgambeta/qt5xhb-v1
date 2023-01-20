@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_NETWORKACCESSMANAGER )
     {
 #endif
       QNetworkAccessManager * ptr = obj->networkAccessManager();
-      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_REPLYHANDLER )
     {
 #endif
       QAbstractOAuthReplyHandler * ptr = obj->replyHandler();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTOAUTHREPLYHANDLER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTOAUTHREPLYHANDLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,86 +486,86 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_GRANT )
 #endif
 }
 
-void QAbstractOAuthSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractOAuthSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "authorizationUrlChanged(QUrl)", "authorizationUrlChanged(QUrl)" );
+  QAbstractOAuthSlots_connect_signal("authorizationUrlChanged(QUrl)", "authorizationUrlChanged(QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "authorizeWithBrowser(QUrl)", "authorizeWithBrowser(QUrl)" );
+  QAbstractOAuthSlots_connect_signal("authorizeWithBrowser(QUrl)", "authorizeWithBrowser(QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "clientIdentifierChanged(QString)", "clientIdentifierChanged(QString)" );
+  QAbstractOAuthSlots_connect_signal("clientIdentifierChanged(QString)", "clientIdentifierChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "contentTypeChanged(QAbstractOAuth::ContentType)", "contentTypeChanged(QAbstractOAuth::ContentType)" );
+  QAbstractOAuthSlots_connect_signal("contentTypeChanged(QAbstractOAuth::ContentType)", "contentTypeChanged(QAbstractOAuth::ContentType)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "finished(QNetworkReply*)", "finished(QNetworkReply*)" );
+  QAbstractOAuthSlots_connect_signal("finished(QNetworkReply*)", "finished(QNetworkReply*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "granted()", "granted()" );
+  QAbstractOAuthSlots_connect_signal("granted()", "granted()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)" );
+  QAbstractOAuthSlots_connect_signal("replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "statusChanged(QAbstractOAuth::Status)", "statusChanged(QAbstractOAuth::Status)" );
+  QAbstractOAuthSlots_connect_signal("statusChanged(QAbstractOAuth::Status)", "statusChanged(QAbstractOAuth::Status)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthSlots_connect_signal( "tokenChanged(QString)", "tokenChanged(QString)" );
+  QAbstractOAuthSlots_connect_signal("tokenChanged(QString)", "tokenChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

@@ -479,50 +479,50 @@ HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
 #endif
 }
 
-void QOAuth1Slots_connect_signal( const QString & signal, const QString & slot );
+void QOAuth1Slots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Slots_connect_signal( "clientSharedSecretChanged(QString)", "clientSharedSecretChanged(QString)" );
+  QOAuth1Slots_connect_signal("clientSharedSecretChanged(QString)", "clientSharedSecretChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Slots_connect_signal( "signatureMethodChanged(QOAuth1::SignatureMethod)", "signatureMethodChanged(QOAuth1::SignatureMethod)" );
+  QOAuth1Slots_connect_signal("signatureMethodChanged(QOAuth1::SignatureMethod)", "signatureMethodChanged(QOAuth1::SignatureMethod)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Slots_connect_signal( "temporaryCredentialsUrlChanged(QUrl)", "temporaryCredentialsUrlChanged(QUrl)" );
+  QOAuth1Slots_connect_signal("temporaryCredentialsUrlChanged(QUrl)", "temporaryCredentialsUrlChanged(QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Slots_connect_signal( "tokenCredentialsUrlChanged(QUrl)", "tokenCredentialsUrlChanged(QUrl)" );
+  QOAuth1Slots_connect_signal("tokenCredentialsUrlChanged(QUrl)", "tokenCredentialsUrlChanged(QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Slots_connect_signal( "tokenSecretChanged(QString)", "tokenSecretChanged(QString)" );
+  QOAuth1Slots_connect_signal("tokenSecretChanged(QString)", "tokenSecretChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

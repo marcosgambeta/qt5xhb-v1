@@ -25,16 +25,16 @@ void QAbstractOAuthSlots::authorizationUrlChanged( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "authorizationUrlChanged(QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "authorizationUrlChanged(QUrl)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
 
-    hb_vmEvalBlockV( cb, 2, psender, purl );
+    hb_vmEvalBlockV(cb, 2, psender, purl);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( purl );
   }
 }
@@ -45,16 +45,16 @@ void QAbstractOAuthSlots::authorizeWithBrowser( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "authorizeWithBrowser(QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "authorizeWithBrowser(QUrl)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
 
-    hb_vmEvalBlockV( cb, 2, psender, purl );
+    hb_vmEvalBlockV(cb, 2, psender, purl);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( purl );
   }
 }
@@ -65,16 +65,16 @@ void QAbstractOAuthSlots::clientIdentifierChanged( const QString & clientIdentif
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clientIdentifierChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clientIdentifierChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
     PHB_ITEM pclientIdentifier = hb_itemPutC( NULL, QSTRINGTOSTRING(clientIdentifier) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pclientIdentifier );
+    hb_vmEvalBlockV(cb, 2, psender, pclientIdentifier);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pclientIdentifier );
   }
 }
@@ -85,16 +85,16 @@ void QAbstractOAuthSlots::contentTypeChanged( QAbstractOAuth::ContentType conten
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentTypeChanged(QAbstractOAuth::ContentType)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentTypeChanged(QAbstractOAuth::ContentType)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
-    PHB_ITEM pcontentType = hb_itemPutNI( NULL, (int) contentType );
+    PHB_ITEM pcontentType = hb_itemPutNI( NULL, static_cast<int>(contentType) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pcontentType );
+    hb_vmEvalBlockV(cb, 2, psender, pcontentType);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pcontentType );
   }
 }
@@ -105,16 +105,16 @@ void QAbstractOAuthSlots::finished( QNetworkReply * reply )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QNetworkReply*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(QNetworkReply*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QNETWORKREPLY");
 
-    hb_vmEvalBlockV( cb, 2, psender, preply );
+    hb_vmEvalBlockV(cb, 2, psender, preply);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preply );
   }
 }
@@ -125,15 +125,15 @@ void QAbstractOAuthSlots::granted()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "granted()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "granted()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -143,16 +143,16 @@ void QAbstractOAuthSlots::replyDataReceived( const QByteArray & data )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "replyDataReceived(QByteArray)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "replyDataReceived(QByteArray)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
-    PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QBYTEARRAY" );
+    PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QBYTEARRAY");
 
-    hb_vmEvalBlockV( cb, 2, psender, pdata );
+    hb_vmEvalBlockV(cb, 2, psender, pdata);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pdata );
   }
 }
@@ -163,16 +163,16 @@ void QAbstractOAuthSlots::statusChanged( QAbstractOAuth::Status status )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QAbstractOAuth::Status)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QAbstractOAuth::Status)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
+    PHB_ITEM pstatus = hb_itemPutNI( NULL, static_cast<int>(status) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pstatus );
+    hb_vmEvalBlockV(cb, 2, psender, pstatus);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pstatus );
   }
 }
@@ -183,22 +183,22 @@ void QAbstractOAuthSlots::tokenChanged( const QString & token )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tokenChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tokenChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
     PHB_ITEM ptoken = hb_itemPutC( NULL, QSTRINGTOSTRING(token) );
 
-    hb_vmEvalBlockV( cb, 2, psender, ptoken );
+    hb_vmEvalBlockV(cb, 2, psender, ptoken);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ptoken );
   }
 }
 #endif
 
-void QAbstractOAuthSlots_connect_signal( const QString & signal, const QString & slot )
+void QAbstractOAuthSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuth * obj = (QAbstractOAuth *) Qt5xHb::itemGetPtrStackSelfItem();

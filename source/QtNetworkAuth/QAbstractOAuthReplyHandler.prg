@@ -134,23 +134,23 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 #endif
 }
 
-void QAbstractOAuthReplyHandlerSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractOAuthReplyHandlerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandlerSlots_connect_signal( "callbackDataReceived(QByteArray)", "callbackDataReceived(QByteArray)" );
+  QAbstractOAuthReplyHandlerSlots_connect_signal("callbackDataReceived(QByteArray)", "callbackDataReceived(QByteArray)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandlerSlots_connect_signal( "replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)" );
+  QAbstractOAuthReplyHandlerSlots_connect_signal("replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

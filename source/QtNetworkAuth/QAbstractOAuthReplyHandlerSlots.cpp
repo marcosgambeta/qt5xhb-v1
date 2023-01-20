@@ -25,16 +25,16 @@ void QAbstractOAuthReplyHandlerSlots::callbackDataReceived( const QByteArray & d
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "callbackDataReceived(QByteArray)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "callbackDataReceived(QByteArray)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTHREPLYHANDLER");
-    PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QBYTEARRAY" );
+    PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QBYTEARRAY");
 
-    hb_vmEvalBlockV( cb, 2, psender, pdata );
+    hb_vmEvalBlockV(cb, 2, psender, pdata);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pdata );
   }
 }
@@ -45,22 +45,22 @@ void QAbstractOAuthReplyHandlerSlots::replyDataReceived( const QByteArray & data
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "replyDataReceived(QByteArray)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "replyDataReceived(QByteArray)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTHREPLYHANDLER");
-    PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QBYTEARRAY" );
+    PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QBYTEARRAY");
 
-    hb_vmEvalBlockV( cb, 2, psender, pdata );
+    hb_vmEvalBlockV(cb, 2, psender, pdata);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pdata );
   }
 }
 #endif
 
-void QAbstractOAuthReplyHandlerSlots_connect_signal( const QString & signal, const QString & slot )
+void QAbstractOAuthReplyHandlerSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();

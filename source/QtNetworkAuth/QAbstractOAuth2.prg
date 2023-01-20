@@ -419,68 +419,68 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETREFRESHTOKEN )
 #endif
 }
 
-void QAbstractOAuth2Slots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractOAuth2Slots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2Slots_connect_signal( "clientIdentifierSharedKeyChanged(QString)", "clientIdentifierSharedKeyChanged(QString)" );
+  QAbstractOAuth2Slots_connect_signal("clientIdentifierSharedKeyChanged(QString)", "clientIdentifierSharedKeyChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2Slots_connect_signal( "error(QString,QString,QUrl)", "error(QString,QString,QUrl)" );
+  QAbstractOAuth2Slots_connect_signal("error(QString,QString,QUrl)", "error(QString,QString,QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2Slots_connect_signal( "expirationAtChanged(QDateTime)", "expirationAtChanged(QDateTime)" );
+  QAbstractOAuth2Slots_connect_signal("expirationAtChanged(QDateTime)", "expirationAtChanged(QDateTime)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2Slots_connect_signal( "responseTypeChanged(QString)", "responseTypeChanged(QString)" );
+  QAbstractOAuth2Slots_connect_signal("responseTypeChanged(QString)", "responseTypeChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2Slots_connect_signal( "scopeChanged(QString)", "scopeChanged(QString)" );
+  QAbstractOAuth2Slots_connect_signal("scopeChanged(QString)", "scopeChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2Slots_connect_signal( "stateChanged(QString)", "stateChanged(QString)" );
+  QAbstractOAuth2Slots_connect_signal("stateChanged(QString)", "stateChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2Slots_connect_signal( "userAgentChanged(QString)", "userAgentChanged(QString)" );
+  QAbstractOAuth2Slots_connect_signal("userAgentChanged(QString)", "userAgentChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
