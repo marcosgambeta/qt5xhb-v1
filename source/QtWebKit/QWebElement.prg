@@ -1553,7 +1553,7 @@ HB_FUNC_STATIC( QWEBELEMENT_WEBFRAME )
     {
 #endif
       QWebFrame * ptr = obj->webFrame();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBFRAME" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
