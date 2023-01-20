@@ -24,21 +24,21 @@ void QGraphicsVideoItemSlots::nativeSizeChanged( const QSizeF & size )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nativeSizeChanged(QSizeF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "nativeSizeChanged(QSizeF)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSVIDEOITEM");
-    PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZEF" );
+    PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZEF");
 
-    hb_vmEvalBlockV( cb, 2, psender, psize );
+    hb_vmEvalBlockV(cb, 2, psender, psize);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( psize );
   }
 }
 
-void QGraphicsVideoItemSlots_connect_signal( const QString & signal, const QString & slot )
+void QGraphicsVideoItemSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QGraphicsVideoItem * obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 

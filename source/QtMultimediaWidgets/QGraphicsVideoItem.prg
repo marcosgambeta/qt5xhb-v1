@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,11 +352,11 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_PAINT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsVideoItemSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsVideoItemSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
 {
-  QGraphicsVideoItemSlots_connect_signal( "nativeSizeChanged(QSizeF)", "nativeSizeChanged(QSizeF)" );
+  QGraphicsVideoItemSlots_connect_signal("nativeSizeChanged(QSizeF)", "nativeSizeChanged(QSizeF)");
 }
 
 #pragma ENDDUMP

@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_VIDEOWIDGET )
     {
 #endif
       QWidget * ptr = obj->videoWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,31 +411,31 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETSATURATION )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QVideoWidgetControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QVideoWidgetControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONFULLSCREENCHANGED )
 {
-  QVideoWidgetControlSlots_connect_signal( "fullScreenChanged(bool)", "fullScreenChanged(bool)" );
+  QVideoWidgetControlSlots_connect_signal("fullScreenChanged(bool)", "fullScreenChanged(bool)");
 }
 
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONBRIGHTNESSCHANGED )
 {
-  QVideoWidgetControlSlots_connect_signal( "brightnessChanged(int)", "brightnessChanged(int)" );
+  QVideoWidgetControlSlots_connect_signal("brightnessChanged(int)", "brightnessChanged(int)");
 }
 
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONCONTRASTCHANGED )
 {
-  QVideoWidgetControlSlots_connect_signal( "contrastChanged(int)", "contrastChanged(int)" );
+  QVideoWidgetControlSlots_connect_signal("contrastChanged(int)", "contrastChanged(int)");
 }
 
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONHUECHANGED )
 {
-  QVideoWidgetControlSlots_connect_signal( "hueChanged(int)", "hueChanged(int)" );
+  QVideoWidgetControlSlots_connect_signal("hueChanged(int)", "hueChanged(int)");
 }
 
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONSATURATIONCHANGED )
 {
-  QVideoWidgetControlSlots_connect_signal( "saturationChanged(int)", "saturationChanged(int)" );
+  QVideoWidgetControlSlots_connect_signal("saturationChanged(int)", "saturationChanged(int)");
 }
 
 #pragma ENDDUMP
