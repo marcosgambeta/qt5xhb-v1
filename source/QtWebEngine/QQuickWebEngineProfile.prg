@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_COOKIESTORE )
     {
 #endif
       QWebEngineCookieStore * ptr = obj->cookieStore();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBENGINECOOKIESTORE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBENGINECOOKIESTORE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER )
     {
 #endif
       const QWebEngineUrlSchemeHandler * ptr = obj->urlSchemeHandler( *PQBYTEARRAY(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBENGINEURLSCHEMEHANDLER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBENGINEURLSCHEMEHANDLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DEFAULTPROFILE )
   {
 #endif
     QQuickWebEngineProfile * ptr = QQuickWebEngineProfile::defaultProfile();
-    Qt5xHb::createReturnQObjectClass( ptr, "QQUICKWEBENGINEPROFILE" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QQUICKWEBENGINEPROFILE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -984,61 +984,61 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DEFAULTPROFILE )
 #endif
 }
 
-void QQuickWebEngineProfileSlots_connect_signal( const QString & signal, const QString & slot );
+void QQuickWebEngineProfileSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "cachePathChanged()", "cachePathChanged()" );
+  QQuickWebEngineProfileSlots_connect_signal("cachePathChanged()", "cachePathChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPACCEPTLANGUAGECHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "httpAcceptLanguageChanged()", "httpAcceptLanguageChanged()" );
+  QQuickWebEngineProfileSlots_connect_signal("httpAcceptLanguageChanged()", "httpAcceptLanguageChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHEMAXIMUMSIZECHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "httpCacheMaximumSizeChanged()", "httpCacheMaximumSizeChanged()" );
+  QQuickWebEngineProfileSlots_connect_signal("httpCacheMaximumSizeChanged()", "httpCacheMaximumSizeChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPCACHETYPECHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "httpCacheTypeChanged()", "httpCacheTypeChanged()" );
+  QQuickWebEngineProfileSlots_connect_signal("httpCacheTypeChanged()", "httpCacheTypeChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONHTTPUSERAGENTCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "httpUserAgentChanged()", "httpUserAgentChanged()" );
+  QQuickWebEngineProfileSlots_connect_signal("httpUserAgentChanged()", "httpUserAgentChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONOFFTHERECORDCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "offTheRecordChanged()", "offTheRecordChanged()" );
+  QQuickWebEngineProfileSlots_connect_signal("offTheRecordChanged()", "offTheRecordChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTCOOKIESPOLICYCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "persistentCookiesPolicyChanged()", "persistentCookiesPolicyChanged()" );
+  QQuickWebEngineProfileSlots_connect_signal("persistentCookiesPolicyChanged()", "persistentCookiesPolicyChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONPERSISTENTSTORAGEPATHCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "persistentStoragePathChanged()", "persistentStoragePathChanged()" );
+  QQuickWebEngineProfileSlots_connect_signal("persistentStoragePathChanged()", "persistentStoragePathChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKENABLEDCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "spellCheckEnabledChanged()", "spellCheckEnabledChanged()" );
+  QQuickWebEngineProfileSlots_connect_signal("spellCheckEnabledChanged()", "spellCheckEnabledChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSPELLCHECKLANGUAGESCHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "spellCheckLanguagesChanged()", "spellCheckLanguagesChanged()" );
+  QQuickWebEngineProfileSlots_connect_signal("spellCheckLanguagesChanged()", "spellCheckLanguagesChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONSTORAGENAMECHANGED )
 {
-  QQuickWebEngineProfileSlots_connect_signal( "storageNameChanged()", "storageNameChanged()" );
+  QQuickWebEngineProfileSlots_connect_signal("storageNameChanged()", "storageNameChanged()");
 }
 
 #pragma ENDDUMP

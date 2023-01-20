@@ -24,16 +24,16 @@ void QQuickWebEngineScriptSlots::injectionPointChanged( QQuickWebEngineScript::I
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "injectionPointChanged(QQuickWebEngineScript::InjectionPoint)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "injectionPointChanged(QQuickWebEngineScript::InjectionPoint)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
-    PHB_ITEM pinjectionPoint = hb_itemPutNI( NULL, (int) injectionPoint );
+    PHB_ITEM pinjectionPoint = hb_itemPutNI( NULL, static_cast<int>(injectionPoint) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pinjectionPoint );
+    hb_vmEvalBlockV(cb, 2, psender, pinjectionPoint);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pinjectionPoint );
   }
 }
@@ -42,16 +42,16 @@ void QQuickWebEngineScriptSlots::nameChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "nameChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pname );
+    hb_vmEvalBlockV(cb, 2, psender, pname);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pname );
   }
 }
@@ -60,16 +60,16 @@ void QQuickWebEngineScriptSlots::runOnSubframesChanged( bool on )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "runOnSubframesChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "runOnSubframesChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pon = hb_itemPutL( NULL, on );
 
-    hb_vmEvalBlockV( cb, 2, psender, pon );
+    hb_vmEvalBlockV(cb, 2, psender, pon);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pon );
   }
 }
@@ -78,16 +78,16 @@ void QQuickWebEngineScriptSlots::sourceCodeChanged( const QString & code )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sourceCodeChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sourceCodeChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pcode = hb_itemPutC( NULL, QSTRINGTOSTRING(code) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pcode );
+    hb_vmEvalBlockV(cb, 2, psender, pcode);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pcode );
   }
 }
@@ -96,16 +96,16 @@ void QQuickWebEngineScriptSlots::sourceUrlChanged( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sourceUrlChanged(QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sourceUrlChanged(QUrl)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
 
-    hb_vmEvalBlockV( cb, 2, psender, purl );
+    hb_vmEvalBlockV(cb, 2, psender, purl);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( purl );
   }
 }
@@ -114,21 +114,21 @@ void QQuickWebEngineScriptSlots::worldIdChanged( QQuickWebEngineScript::ScriptWo
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
-    PHB_ITEM pscriptWorldId = hb_itemPutNI( NULL, (int) scriptWorldId );
+    PHB_ITEM pscriptWorldId = hb_itemPutNI( NULL, static_cast<int>(scriptWorldId) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pscriptWorldId );
+    hb_vmEvalBlockV(cb, 2, psender, pscriptWorldId);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pscriptWorldId );
   }
 }
 
-void QQuickWebEngineScriptSlots_connect_signal( const QString & signal, const QString & slot )
+void QQuickWebEngineScriptSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 

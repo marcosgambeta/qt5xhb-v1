@@ -466,36 +466,36 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_TOSTRING )
 #endif
 }
 
-void QQuickWebEngineScriptSlots_connect_signal( const QString & signal, const QString & slot );
+void QQuickWebEngineScriptSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
 {
-  QQuickWebEngineScriptSlots_connect_signal( "injectionPointChanged(QQuickWebEngineScript::InjectionPoint)", "injectionPointChanged(QQuickWebEngineScript::InjectionPoint)" );
+  QQuickWebEngineScriptSlots_connect_signal("injectionPointChanged(QQuickWebEngineScript::InjectionPoint)", "injectionPointChanged(QQuickWebEngineScript::InjectionPoint)");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
 {
-  QQuickWebEngineScriptSlots_connect_signal( "nameChanged(QString)", "nameChanged(QString)" );
+  QQuickWebEngineScriptSlots_connect_signal("nameChanged(QString)", "nameChanged(QString)");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
 {
-  QQuickWebEngineScriptSlots_connect_signal( "runOnSubframesChanged(bool)", "runOnSubframesChanged(bool)" );
+  QQuickWebEngineScriptSlots_connect_signal("runOnSubframesChanged(bool)", "runOnSubframesChanged(bool)");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
 {
-  QQuickWebEngineScriptSlots_connect_signal( "sourceCodeChanged(QString)", "sourceCodeChanged(QString)" );
+  QQuickWebEngineScriptSlots_connect_signal("sourceCodeChanged(QString)", "sourceCodeChanged(QString)");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
 {
-  QQuickWebEngineScriptSlots_connect_signal( "sourceUrlChanged(QUrl)", "sourceUrlChanged(QUrl)" );
+  QQuickWebEngineScriptSlots_connect_signal("sourceUrlChanged(QUrl)", "sourceUrlChanged(QUrl)");
 }
 
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
 {
-  QQuickWebEngineScriptSlots_connect_signal( "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)", "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)" );
+  QQuickWebEngineScriptSlots_connect_signal("worldIdChanged(QQuickWebEngineScript::ScriptWorldId)", "worldIdChanged(QQuickWebEngineScript::ScriptWorldId)");
 }
 
 #pragma ENDDUMP
