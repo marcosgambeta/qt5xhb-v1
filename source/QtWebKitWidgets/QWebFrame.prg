@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
 }
 
 /*
-QList<QWebFrame *> childFrames() const
+QList<QWebFrame*> childFrames() const
 */
 HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
 {
@@ -505,28 +505,28 @@ HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QWebFrame *> list = obj->childFrames();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBFRAME" );
+      QList<QWebFrame*> list = obj->childFrames();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QWEBFRAME");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWEBFRAME", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QWEBFRAME", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QWEBFRAME_PAGE )
     {
 #endif
       QWebPage * ptr = obj->page();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBPAGE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QWEBFRAME_PARENTFRAME )
     {
 #endif
       QWebFrame * ptr = obj->parentFrame();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBFRAME" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1288,51 +1288,51 @@ HB_FUNC_STATIC( QWEBFRAME_EVENT )
   }
 }
 
-void QWebFrameSlots_connect_signal( const QString & signal, const QString & slot );
+void QWebFrameSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
 {
-  QWebFrameSlots_connect_signal( "contentsSizeChanged(QSize)", "contentsSizeChanged(QSize)" );
+  QWebFrameSlots_connect_signal("contentsSizeChanged(QSize)", "contentsSizeChanged(QSize)");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONICONCHANGED )
 {
-  QWebFrameSlots_connect_signal( "iconChanged()", "iconChanged()" );
+  QWebFrameSlots_connect_signal("iconChanged()", "iconChanged()");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
 {
-  QWebFrameSlots_connect_signal( "initialLayoutCompleted()", "initialLayoutCompleted()" );
+  QWebFrameSlots_connect_signal("initialLayoutCompleted()", "initialLayoutCompleted()");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
 {
-  QWebFrameSlots_connect_signal( "javaScriptWindowObjectCleared()", "javaScriptWindowObjectCleared()" );
+  QWebFrameSlots_connect_signal("javaScriptWindowObjectCleared()", "javaScriptWindowObjectCleared()");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONLOADFINISHED )
 {
-  QWebFrameSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+  QWebFrameSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONLOADSTARTED )
 {
-  QWebFrameSlots_connect_signal( "loadStarted()", "loadStarted()" );
+  QWebFrameSlots_connect_signal("loadStarted()", "loadStarted()");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONPAGECHANGED )
 {
-  QWebFrameSlots_connect_signal( "pageChanged()", "pageChanged()" );
+  QWebFrameSlots_connect_signal("pageChanged()", "pageChanged()");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONTITLECHANGED )
 {
-  QWebFrameSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+  QWebFrameSlots_connect_signal("titleChanged(QString)", "titleChanged(QString)");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
 {
-  QWebFrameSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
+  QWebFrameSlots_connect_signal("urlChanged(QUrl)", "urlChanged(QUrl)");
 }
 
 #pragma ENDDUMP

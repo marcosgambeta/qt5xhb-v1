@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGE )
     {
 #endif
       QWebPage * ptr = obj->page();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBPAGE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
     {
 #endif
       QAction * ptr = obj->pageAction( (QWebPage::WebAction) hb_parni(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -983,51 +983,51 @@ HB_FUNC_STATIC( QWEBVIEW_EVENT )
   }
 }
 
-void QWebViewSlots_connect_signal( const QString & signal, const QString & slot );
+void QWebViewSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
 {
-  QWebViewSlots_connect_signal( "iconChanged()", "iconChanged()" );
+  QWebViewSlots_connect_signal("iconChanged()", "iconChanged()");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
 {
-  QWebViewSlots_connect_signal( "linkClicked(QUrl)", "linkClicked(QUrl)" );
+  QWebViewSlots_connect_signal("linkClicked(QUrl)", "linkClicked(QUrl)");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
 {
-  QWebViewSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+  QWebViewSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
 {
-  QWebViewSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
+  QWebViewSlots_connect_signal("loadProgress(int)", "loadProgress(int)");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
 {
-  QWebViewSlots_connect_signal( "loadStarted()", "loadStarted()" );
+  QWebViewSlots_connect_signal("loadStarted()", "loadStarted()");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
 {
-  QWebViewSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QWebViewSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
 {
-  QWebViewSlots_connect_signal( "statusBarMessage(QString)", "statusBarMessage(QString)" );
+  QWebViewSlots_connect_signal("statusBarMessage(QString)", "statusBarMessage(QString)");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
 {
-  QWebViewSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+  QWebViewSlots_connect_signal("titleChanged(QString)", "titleChanged(QString)");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
 {
-  QWebViewSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
+  QWebViewSlots_connect_signal("urlChanged(QUrl)", "urlChanged(QUrl)");
 }
 
 #pragma ENDDUMP

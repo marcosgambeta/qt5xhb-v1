@@ -24,15 +24,15 @@ void QGraphicsWebViewSlots::iconChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "iconChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "iconChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSWEBVIEW");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,16 +40,16 @@ void QGraphicsWebViewSlots::linkClicked( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkClicked(QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "linkClicked(QUrl)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSWEBVIEW");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
 
-    hb_vmEvalBlockV( cb, 2, psender, purl );
+    hb_vmEvalBlockV(cb, 2, psender, purl);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( purl );
   }
 }
@@ -58,16 +58,16 @@ void QGraphicsWebViewSlots::loadFinished( bool ok )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadFinished(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "loadFinished(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSWEBVIEW");
     PHB_ITEM pok = hb_itemPutL( NULL, ok );
 
-    hb_vmEvalBlockV( cb, 2, psender, pok );
+    hb_vmEvalBlockV(cb, 2, psender, pok);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pok );
   }
 }
@@ -76,16 +76,16 @@ void QGraphicsWebViewSlots::loadProgress( int progress )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadProgress(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "loadProgress(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSWEBVIEW");
     PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
 
-    hb_vmEvalBlockV( cb, 2, psender, pprogress );
+    hb_vmEvalBlockV(cb, 2, psender, pprogress);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pprogress );
   }
 }
@@ -94,15 +94,15 @@ void QGraphicsWebViewSlots::loadStarted()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "loadStarted()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "loadStarted()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSWEBVIEW");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -110,16 +110,16 @@ void QGraphicsWebViewSlots::statusBarMessage( const QString & text )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusBarMessage(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusBarMessage(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSWEBVIEW");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
 
-    hb_vmEvalBlockV( cb, 2, psender, ptext );
+    hb_vmEvalBlockV(cb, 2, psender, ptext);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ptext );
   }
 }
@@ -128,16 +128,16 @@ void QGraphicsWebViewSlots::titleChanged( const QString & title )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "titleChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "titleChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSWEBVIEW");
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
 
-    hb_vmEvalBlockV( cb, 2, psender, ptitle );
+    hb_vmEvalBlockV(cb, 2, psender, ptitle);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ptitle );
   }
 }
@@ -146,21 +146,21 @@ void QGraphicsWebViewSlots::urlChanged( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "urlChanged(QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "urlChanged(QUrl)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSWEBVIEW");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
 
-    hb_vmEvalBlockV( cb, 2, psender, purl );
+    hb_vmEvalBlockV(cb, 2, psender, purl);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( purl );
   }
 }
 
-void QGraphicsWebViewSlots_connect_signal( const QString & signal, const QString & slot )
+void QGraphicsWebViewSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QGraphicsWebView * obj = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
 

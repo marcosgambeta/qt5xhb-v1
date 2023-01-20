@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
     {
 #endif
       QWebPage * ptr = obj->page();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBPAGE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

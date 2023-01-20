@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QWEBPAGE_ACTION )
     {
 #endif
       QAction * ptr = obj->action( (QWebPage::WebAction) hb_parni(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
     {
 #endif
       QMenu * ptr = obj->createStandardContextMenu();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QWEBPAGE_CURRENTFRAME )
     {
 #endif
       QWebFrame * ptr = obj->currentFrame();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBFRAME" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
     {
 #endif
       QWebFrame * ptr = obj->frameAt( *PQPOINT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBFRAME" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QWEBPAGE_MAINFRAME )
     {
 #endif
       QWebFrame * ptr = obj->mainFrame();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBFRAME" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QWEBPAGE_NETWORKACCESSMANAGER )
     {
 #endif
       QNetworkAccessManager * ptr = obj->networkAccessManager();
-      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QWEBPAGE_PLUGINFACTORY )
     {
 #endif
       QWebPluginFactory * ptr = obj->pluginFactory();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBPLUGINFACTORY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBPLUGINFACTORY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QWEBPAGE_UNDOSTACK )
     {
 #endif
       QUndoStack * ptr = obj->undoStack();
-      Qt5xHb::createReturnQObjectClass( ptr, "QUNDOSTACK" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QWEBPAGE_VIEW )
     {
 #endif
       QWidget * ptr = obj->view();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1333,141 +1333,141 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTSCONTENTTYPE )
   }
 }
 
-void QWebPageSlots_connect_signal( const QString & signal, const QString & slot );
+void QWebPageSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
 {
-  QWebPageSlots_connect_signal( "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)", "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)" );
+  QWebPageSlots_connect_signal("applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)", "applicationCacheQuotaExceeded(QWebSecurityOrigin*,quint64,quint64)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
 {
-  QWebPageSlots_connect_signal( "contentsChanged()", "contentsChanged()" );
+  QWebPageSlots_connect_signal("contentsChanged()", "contentsChanged()");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
 {
-  QWebPageSlots_connect_signal( "databaseQuotaExceeded(QWebFrame*,QString)", "databaseQuotaExceeded(QWebFrame*,QString)" );
+  QWebPageSlots_connect_signal("databaseQuotaExceeded(QWebFrame*,QString)", "databaseQuotaExceeded(QWebFrame*,QString)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
 {
-  QWebPageSlots_connect_signal( "downloadRequested(QNetworkRequest)", "downloadRequested(QNetworkRequest)" );
+  QWebPageSlots_connect_signal("downloadRequested(QNetworkRequest)", "downloadRequested(QNetworkRequest)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 {
-  QWebPageSlots_connect_signal( "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)", "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)" );
+  QWebPageSlots_connect_signal("featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)", "featurePermissionRequestCanceled(QWebFrame*,QWebPage::Feature)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
 {
-  QWebPageSlots_connect_signal( "featurePermissionRequested(QWebFrame*,QWebPage::Feature)", "featurePermissionRequested(QWebFrame*,QWebPage::Feature)" );
+  QWebPageSlots_connect_signal("featurePermissionRequested(QWebFrame*,QWebPage::Feature)", "featurePermissionRequested(QWebFrame*,QWebPage::Feature)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
 {
-  QWebPageSlots_connect_signal( "frameCreated(QWebFrame*)", "frameCreated(QWebFrame*)" );
+  QWebPageSlots_connect_signal("frameCreated(QWebFrame*)", "frameCreated(QWebFrame*)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "geometryChangeRequested(QRect)", "geometryChangeRequested(QRect)" );
+  QWebPageSlots_connect_signal("geometryChangeRequested(QRect)", "geometryChangeRequested(QRect)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
 {
-  QWebPageSlots_connect_signal( "linkClicked(QUrl)", "linkClicked(QUrl)" );
+  QWebPageSlots_connect_signal("linkClicked(QUrl)", "linkClicked(QUrl)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
 {
-  QWebPageSlots_connect_signal( "linkHovered(QString,QString,QString)", "linkHovered(QString,QString,QString)" );
+  QWebPageSlots_connect_signal("linkHovered(QString,QString,QString)", "linkHovered(QString,QString,QString)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
 {
-  QWebPageSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+  QWebPageSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
 {
-  QWebPageSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
+  QWebPageSlots_connect_signal("loadProgress(int)", "loadProgress(int)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
 {
-  QWebPageSlots_connect_signal( "loadStarted()", "loadStarted()" );
+  QWebPageSlots_connect_signal("loadStarted()", "loadStarted()");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "menuBarVisibilityChangeRequested(bool)", "menuBarVisibilityChangeRequested(bool)" );
+  QWebPageSlots_connect_signal("menuBarVisibilityChangeRequested(bool)", "menuBarVisibilityChangeRequested(bool)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
 {
-  QWebPageSlots_connect_signal( "microFocusChanged()", "microFocusChanged()" );
+  QWebPageSlots_connect_signal("microFocusChanged()", "microFocusChanged()");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
 {
-  QWebPageSlots_connect_signal( "printRequested(QWebFrame*)", "printRequested(QWebFrame*)" );
+  QWebPageSlots_connect_signal("printRequested(QWebFrame*)", "printRequested(QWebFrame*)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
 {
-  QWebPageSlots_connect_signal( "repaintRequested(QRect)", "repaintRequested(QRect)" );
+  QWebPageSlots_connect_signal("repaintRequested(QRect)", "repaintRequested(QRect)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "restoreFrameStateRequested(QWebFrame*)", "restoreFrameStateRequested(QWebFrame*)" );
+  QWebPageSlots_connect_signal("restoreFrameStateRequested(QWebFrame*)", "restoreFrameStateRequested(QWebFrame*)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)", "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)" );
+  QWebPageSlots_connect_signal("saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)", "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
 {
-  QWebPageSlots_connect_signal( "scrollRequested(int,int,QRect)", "scrollRequested(int,int,QRect)" );
+  QWebPageSlots_connect_signal("scrollRequested(int,int,QRect)", "scrollRequested(int,int,QRect)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
 {
-  QWebPageSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QWebPageSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
 {
-  QWebPageSlots_connect_signal( "statusBarMessage(QString)", "statusBarMessage(QString)" );
+  QWebPageSlots_connect_signal("statusBarMessage(QString)", "statusBarMessage(QString)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "statusBarVisibilityChangeRequested(bool)", "statusBarVisibilityChangeRequested(bool)" );
+  QWebPageSlots_connect_signal("statusBarVisibilityChangeRequested(bool)", "statusBarVisibilityChangeRequested(bool)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "toolBarVisibilityChangeRequested(bool)", "toolBarVisibilityChangeRequested(bool)" );
+  QWebPageSlots_connect_signal("toolBarVisibilityChangeRequested(bool)", "toolBarVisibilityChangeRequested(bool)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
 {
-  QWebPageSlots_connect_signal( "unsupportedContent(QNetworkReply*)", "unsupportedContent(QNetworkReply*)" );
+  QWebPageSlots_connect_signal("unsupportedContent(QNetworkReply*)", "unsupportedContent(QNetworkReply*)");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "viewportChangeRequested()", "viewportChangeRequested()" );
+  QWebPageSlots_connect_signal("viewportChangeRequested()", "viewportChangeRequested()");
 }
 
 HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
 {
-  QWebPageSlots_connect_signal( "windowCloseRequested()", "windowCloseRequested()" );
+  QWebPageSlots_connect_signal("windowCloseRequested()", "windowCloseRequested()");
 }
 
 #pragma ENDDUMP
