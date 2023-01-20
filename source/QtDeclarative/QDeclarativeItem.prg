@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
     {
 #endif
       QDeclarativeItem * ptr = obj->childAt( PQREAL(1), PQREAL(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVEITEM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
     {
 #endif
       QDeclarativeItem * ptr = obj->parentItem();
-      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVEITEM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

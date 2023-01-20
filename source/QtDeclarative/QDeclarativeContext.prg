@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
     {
 #endif
       QObject * ptr = obj->contextObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
     {
 #endif
       QDeclarativeEngine * ptr = obj->engine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVEENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->parentContext();
-      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

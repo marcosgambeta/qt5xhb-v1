@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_OBJECT )
     {
 #endif
       QObject * ptr = obj->object();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->propertyTypeName() );
+      hb_retc( obj->propertyTypeName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

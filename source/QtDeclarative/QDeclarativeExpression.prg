@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->context();
-      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
     {
 #endif
       QDeclarativeEngine * ptr = obj->engine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVEENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
     {
 #endif
       QObject * ptr = obj->scopeObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,11 +466,11 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
   }
 }
 
-void QDeclarativeExpressionSlots_connect_signal( const QString & signal, const QString & slot );
+void QDeclarativeExpressionSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
 {
-  QDeclarativeExpressionSlots_connect_signal( "valueChanged()", "valueChanged()" );
+  QDeclarativeExpressionSlots_connect_signal("valueChanged()", "valueChanged()");
 }
 
 #pragma ENDDUMP

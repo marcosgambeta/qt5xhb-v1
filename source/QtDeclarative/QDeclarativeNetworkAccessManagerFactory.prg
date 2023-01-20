@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_CREATE )
     {
 #endif
       QNetworkAccessManager * ptr = obj->create( PQOBJECT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

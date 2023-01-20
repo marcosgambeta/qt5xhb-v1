@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
     {
 #endif
       QNetworkAccessManager * ptr = obj->networkAccessManager();
-      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->rootContext();
-      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
   {
 #endif
     QDeclarativeContext * ptr = QDeclarativeEngine::contextForObject( PQOBJECT(1) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -707,16 +707,16 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDeclarativeEngineSlots_connect_signal( const QString & signal, const QString & slot );
+void QDeclarativeEngineSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
 {
-  QDeclarativeEngineSlots_connect_signal( "quit()", "quit()" );
+  QDeclarativeEngineSlots_connect_signal("quit()", "quit()");
 }
 
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
 {
-  QDeclarativeEngineSlots_connect_signal( "warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)" );
+  QDeclarativeEngineSlots_connect_signal("warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)");
 }
 
 #pragma ENDDUMP

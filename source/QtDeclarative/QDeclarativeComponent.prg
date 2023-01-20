@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
     {
 #endif
       QObject * ptr = obj->beginCreate( PQDECLARATIVECONTEXT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
     {
 #endif
       QObject * ptr = obj->create( OPQDECLARATIVECONTEXT(1,0) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->creationContext();
-      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,30 +237,30 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
     {
 #endif
       QList<QDeclarativeError> list = obj->errors();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QDeclarativeError( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QDeclarativeError(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -494,16 +494,16 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
   }
 }
 
-void QDeclarativeComponentSlots_connect_signal( const QString & signal, const QString & slot );
+void QDeclarativeComponentSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
 {
-  QDeclarativeComponentSlots_connect_signal( "progressChanged(qreal)", "progressChanged(qreal)" );
+  QDeclarativeComponentSlots_connect_signal("progressChanged(qreal)", "progressChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
 {
-  QDeclarativeComponentSlots_connect_signal( "statusChanged(QDeclarativeComponent::Status)", "statusChanged(QDeclarativeComponent::Status)" );
+  QDeclarativeComponentSlots_connect_signal("statusChanged(QDeclarativeComponent::Status)", "statusChanged(QDeclarativeComponent::Status)");
 }
 
 #pragma ENDDUMP
