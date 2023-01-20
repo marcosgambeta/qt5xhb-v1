@@ -307,21 +307,21 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETCONNECTION )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDBusServiceWatcherSlots_connect_signal( const QString & signal, const QString & slot );
+void QDBusServiceWatcherSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEREGISTERED )
 {
-  QDBusServiceWatcherSlots_connect_signal( "serviceRegistered(QString)", "serviceRegistered(QString)" );
+  QDBusServiceWatcherSlots_connect_signal("serviceRegistered(QString)", "serviceRegistered(QString)");
 }
 
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED )
 {
-  QDBusServiceWatcherSlots_connect_signal( "serviceUnregistered(QString)", "serviceUnregistered(QString)" );
+  QDBusServiceWatcherSlots_connect_signal("serviceUnregistered(QString)", "serviceUnregistered(QString)");
 }
 
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED )
 {
-  QDBusServiceWatcherSlots_connect_signal( "serviceOwnerChanged(QString,QString,QString)", "serviceOwnerChanged(QString,QString,QString)" );
+  QDBusServiceWatcherSlots_connect_signal("serviceOwnerChanged(QString,QString,QString)", "serviceOwnerChanged(QString,QString,QString)");
 }
 
 #pragma ENDDUMP

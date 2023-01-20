@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_TYPETOSIGNATURE )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    hb_retc( (const char *) QDBusMetaType::typeToSignature( PINT(1) ) );
+    hb_retc( QDBusMetaType::typeToSignature( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
