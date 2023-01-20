@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGE )
     {
 #endif
       QWebEnginePage * ptr = obj->page();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBENGINEPAGE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBENGINEPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
     {
 #endif
       QAction * ptr = obj->pageAction( (QWebEnginePage::WebAction) hb_parni(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -703,68 +703,68 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_RELOAD )
 #endif
 }
 
-void QWebEngineViewSlots_connect_signal( const QString & signal, const QString & slot );
+void QWebEngineViewSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADSTARTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "loadStarted()", "loadStarted()" );
+  QWebEngineViewSlots_connect_signal("loadStarted()", "loadStarted()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
+  QWebEngineViewSlots_connect_signal("loadProgress(int)", "loadProgress(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+  QWebEngineViewSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+  QWebEngineViewSlots_connect_signal("titleChanged(QString)", "titleChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QWebEngineViewSlots_connect_signal("selectionChanged()", "selectionChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
+  QWebEngineViewSlots_connect_signal("urlChanged(QUrl)", "urlChanged(QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONICONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineViewSlots_connect_signal( "iconUrlChanged(QUrl)", "iconUrlChanged(QUrl)" );
+  QWebEngineViewSlots_connect_signal("iconUrlChanged(QUrl)", "iconUrlChanged(QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

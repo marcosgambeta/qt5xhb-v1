@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_VIEW )
     {
 #endif
       QWidget * ptr = obj->view();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ACTION )
     {
 #endif
       QAction * ptr = obj->action( (QWebEnginePage::WebAction) hb_parni(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU )
     {
 #endif
       QMenu * ptr = obj->createStandardContextMenu();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -732,131 +732,131 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETTINGS )
 #endif
 }
 
-void QWebEnginePageSlots_connect_signal( const QString & signal, const QString & slot );
+void QWebEnginePageSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADSTARTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "loadStarted()", "loadStarted()" );
+  QWebEnginePageSlots_connect_signal("loadStarted()", "loadStarted()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
+  QWebEnginePageSlots_connect_signal("loadProgress(int)", "loadProgress(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+  QWebEnginePageSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLINKHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "linkHovered(QString)", "linkHovered(QString)" );
+  QWebEnginePageSlots_connect_signal("linkHovered(QString)", "linkHovered(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONSELECTIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QWebEnginePageSlots_connect_signal("selectionChanged()", "selectionChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "geometryChangeRequested(QRect)", "geometryChangeRequested(QRect)" );
+  QWebEnginePageSlots_connect_signal("geometryChangeRequested(QRect)", "geometryChangeRequested(QRect)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "windowCloseRequested()", "windowCloseRequested()" );
+  QWebEnginePageSlots_connect_signal("windowCloseRequested()", "windowCloseRequested()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "featurePermissionRequested(QUrl,QWebEnginePage::Feature)", "featurePermissionRequested(QUrl,QWebEnginePage::Feature)" );
+  QWebEnginePageSlots_connect_signal("featurePermissionRequested(QUrl,QWebEnginePage::Feature)", "featurePermissionRequested(QUrl,QWebEnginePage::Feature)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)", "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)" );
+  QWebEnginePageSlots_connect_signal("featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)", "featurePermissionRequestCanceled(QUrl,QWebEnginePage::Feature)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "authenticationRequired(QUrl,QAuthenticator*)", "authenticationRequired(QUrl,QAuthenticator*)" );
+  QWebEnginePageSlots_connect_signal("authenticationRequired(QUrl,QAuthenticator*)", "authenticationRequired(QUrl,QAuthenticator*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)", "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)" );
+  QWebEnginePageSlots_connect_signal("proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)", "proxyAuthenticationRequired(QUrl,QAuthenticator*,QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+  QWebEnginePageSlots_connect_signal("titleChanged(QString)", "titleChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
+  QWebEnginePageSlots_connect_signal("urlChanged(QUrl)", "urlChanged(QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONICONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePageSlots_connect_signal( "iconUrlChanged(QUrl)", "iconUrlChanged(QUrl)" );
+  QWebEnginePageSlots_connect_signal("iconUrlChanged(QUrl)", "iconUrlChanged(QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
