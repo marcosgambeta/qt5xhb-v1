@@ -25,16 +25,16 @@ void QQuickWidgetSlots::statusChanged( QQuickWidget::Status status )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QQuickWidget::Status)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QQuickWidget::Status)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWIDGET");
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
+    PHB_ITEM pstatus = hb_itemPutNI( NULL, static_cast<int>(status) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pstatus );
+    hb_vmEvalBlockV(cb, 2, psender, pstatus);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pstatus );
   }
 }
@@ -45,24 +45,24 @@ void QQuickWidgetSlots::sceneGraphError( QQuickWindow::SceneGraphError error, co
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sceneGraphError(QQuickWindow::SceneGraphError,QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWIDGET");
-    PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
 
-    hb_vmEvalBlockV( cb, 3, psender, perror, pmessage );
+    hb_vmEvalBlockV(cb, 3, psender, perror, pmessage);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( perror );
     hb_itemRelease( pmessage );
   }
 }
 #endif
 
-void QQuickWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QQuickWidgetSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();

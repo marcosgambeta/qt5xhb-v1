@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
     {
 #endif
       QQmlEngine * ptr = obj->engine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQMLENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
     {
 #endif
       QQmlContext * ptr = obj->rootContext();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQMLCONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
     {
 #endif
       QQuickItem * ptr = obj->rootObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQUICKITEM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,30 +373,30 @@ HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
     {
 #endif
       QList<QQmlError> list = obj->errors();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QQMLERROR" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QQMLERROR");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QQmlError( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QQmlError(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QQMLERROR", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QQMLERROR", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -547,23 +547,23 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
 #endif
 }
 
-void QQuickWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QQuickWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidgetSlots_connect_signal( "statusChanged(QQuickWidget::Status)", "statusChanged(QQuickWidget::Status)" );
+  QQuickWidgetSlots_connect_signal("statusChanged(QQuickWidget::Status)", "statusChanged(QQuickWidget::Status)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidgetSlots_connect_signal( "sceneGraphError(QQuickWindow::SceneGraphError,QString)", "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
+  QQuickWidgetSlots_connect_signal("sceneGraphError(QQuickWindow::SceneGraphError,QString)", "sceneGraphError(QQuickWindow::SceneGraphError,QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
