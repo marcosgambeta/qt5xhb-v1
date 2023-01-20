@@ -608,59 +608,59 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_STOP )
 #endif
 }
 
-void QWinTaskbarProgressSlots_connect_signal( const QString & signal, const QString & slot );
+void QWinTaskbarProgressSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgressSlots_connect_signal( "valueChanged(int)", "valueChanged(int)" );
+  QWinTaskbarProgressSlots_connect_signal("valueChanged(int)", "valueChanged(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMINIMUMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgressSlots_connect_signal( "minimumChanged(int)", "minimumChanged(int)" );
+  QWinTaskbarProgressSlots_connect_signal("minimumChanged(int)", "minimumChanged(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONMAXIMUMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgressSlots_connect_signal( "maximumChanged(int)", "maximumChanged(int)" );
+  QWinTaskbarProgressSlots_connect_signal("maximumChanged(int)", "maximumChanged(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgressSlots_connect_signal( "visibilityChanged(bool)", "visibilityChanged(bool)" );
+  QWinTaskbarProgressSlots_connect_signal("visibilityChanged(bool)", "visibilityChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONPAUSEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgressSlots_connect_signal( "pausedChanged(bool)", "pausedChanged(bool)" );
+  QWinTaskbarProgressSlots_connect_signal("pausedChanged(bool)", "pausedChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONSTOPPEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgressSlots_connect_signal( "stoppedChanged(bool)", "stoppedChanged(bool)" );
+  QWinTaskbarProgressSlots_connect_signal("stoppedChanged(bool)", "stoppedChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

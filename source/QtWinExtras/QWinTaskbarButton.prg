@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_WINDOW )
     {
 #endif
       QWindow * ptr = obj->window();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_PROGRESS )
     {
 #endif
       QWinTaskbarProgress * ptr = obj->progress();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWINTASKBARPROGRESS" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWINTASKBARPROGRESS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

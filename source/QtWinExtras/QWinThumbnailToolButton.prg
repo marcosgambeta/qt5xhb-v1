@@ -517,23 +517,23 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_CLICK )
 #endif
 }
 
-void QWinThumbnailToolButtonSlots_connect_signal( const QString & signal, const QString & slot );
+void QWinThumbnailToolButtonSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButtonSlots_connect_signal( "clicked()", "clicked()" );
+  QWinThumbnailToolButtonSlots_connect_signal("clicked()", "clicked()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButtonSlots_connect_signal( "changed()", "changed()" );
+  QWinThumbnailToolButtonSlots_connect_signal("changed()", "changed()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

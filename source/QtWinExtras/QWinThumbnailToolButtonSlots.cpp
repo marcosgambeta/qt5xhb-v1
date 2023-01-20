@@ -25,15 +25,15 @@ void QWinThumbnailToolButtonSlots::clicked()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTHUMBNAILTOOLBUTTON");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -43,20 +43,20 @@ void QWinThumbnailToolButtonSlots::changed()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "changed()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "changed()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTHUMBNAILTOOLBUTTON");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
 
-void QWinThumbnailToolButtonSlots_connect_signal( const QString & signal, const QString & slot )
+void QWinThumbnailToolButtonSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
