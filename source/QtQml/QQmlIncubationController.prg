@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
     {
 #endif
       QQmlEngine * ptr = obj->engine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQMLENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

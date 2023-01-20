@@ -25,24 +25,24 @@ void QQmlApplicationEngineSlots::objectCreated( QObject * obj, const QUrl & url 
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "objectCreated(QObject*,QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "objectCreated(QObject*,QUrl)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLAPPLICATIONENGINE");
     PHB_ITEM pobj = Qt5xHb::Signals_return_qobject(obj, "QOBJECT");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
 
-    hb_vmEvalBlockV( cb, 3, psender, pobj, purl );
+    hb_vmEvalBlockV(cb, 3, psender, pobj, purl);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pobj );
     hb_itemRelease( purl );
   }
 }
 #endif
 
-void QQmlApplicationEngineSlots_connect_signal( const QString & signal, const QString & slot )
+void QQmlApplicationEngineSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QQmlApplicationEngine * obj = (QQmlApplicationEngine *) Qt5xHb::itemGetPtrStackSelfItem();

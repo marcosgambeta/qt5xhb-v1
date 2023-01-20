@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
     {
 #endif
       QObject * ptr = obj->at( PINT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_OBJECT )
     {
 #endif
       QObject * ptr = obj->object();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

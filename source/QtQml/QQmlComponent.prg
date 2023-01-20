@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_BEGINCREATE )
     {
 #endif
       QObject * ptr = obj->beginCreate( PQQMLCONTEXT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
     if( obj != NULL )
     {
       QObject * ptr = obj->create( OPQQMLCONTEXT(1,0) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
   }
   else if( ISBETWEEN(1,3) && ISQQMLINCUBATOR(1) && (ISQQMLCONTEXT(2)||HB_ISNIL(2)) && (ISQQMLCONTEXT(3)||HB_ISNIL(3)) )
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATIONCONTEXT )
     {
 #endif
       QQmlContext * ptr = obj->creationContext();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQMLCONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,16 +478,16 @@ HB_FUNC_STATIC( QQMLCOMPONENT_SETDATA )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QQmlComponentSlots_connect_signal( const QString & signal, const QString & slot );
+void QQmlComponentSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
 {
-  QQmlComponentSlots_connect_signal( "progressChanged(qreal)", "progressChanged(qreal)" );
+  QQmlComponentSlots_connect_signal("progressChanged(qreal)", "progressChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
 {
-  QQmlComponentSlots_connect_signal( "statusChanged(QQmlComponent::Status)", "statusChanged(QQmlComponent::Status)" );
+  QQmlComponentSlots_connect_signal("statusChanged(QQmlComponent::Status)", "statusChanged(QQmlComponent::Status)");
 }
 
 #pragma ENDDUMP

@@ -24,19 +24,19 @@ void QQmlEngineSlots::quit()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "quit()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "quit()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLENGINE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QQmlEngineSlots_connect_signal( const QString & signal, const QString & slot )
+void QQmlEngineSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 

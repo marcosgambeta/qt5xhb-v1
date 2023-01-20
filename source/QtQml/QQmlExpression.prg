@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_CONTEXT )
     {
 #endif
       QQmlContext * ptr = obj->context();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQMLCONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ENGINE )
     {
 #endif
       QQmlEngine * ptr = obj->engine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQMLENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SCOPEOBJECT )
     {
 #endif
       QObject * ptr = obj->scopeObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,11 +499,11 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SOURCEFILE )
   }
 }
 
-void QQmlExpressionSlots_connect_signal( const QString & signal, const QString & slot );
+void QQmlExpressionSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QQMLEXPRESSION_ONVALUECHANGED )
 {
-  QQmlExpressionSlots_connect_signal( "valueChanged()", "valueChanged()" );
+  QQmlExpressionSlots_connect_signal("valueChanged()", "valueChanged()");
 }
 
 #pragma ENDDUMP

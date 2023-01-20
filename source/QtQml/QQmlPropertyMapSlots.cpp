@@ -24,23 +24,23 @@ void QQmlPropertyMapSlots::valueChanged( const QString & key, const QVariant & v
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(QString,QVariant)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged(QString,QVariant)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLPROPERTYMAP");
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
-    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT" );
+    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT");
 
-    hb_vmEvalBlockV( cb, 3, psender, pkey, pvalue );
+    hb_vmEvalBlockV(cb, 3, psender, pkey, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
   }
 }
 
-void QQmlPropertyMapSlots_connect_signal( const QString & signal, const QString & slot )
+void QQmlPropertyMapSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
 

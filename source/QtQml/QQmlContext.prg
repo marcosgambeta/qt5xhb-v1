@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTOBJECT )
     {
 #endif
       QObject * ptr = obj->contextObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_ENGINE )
     {
 #endif
       QQmlEngine * ptr = obj->engine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQMLENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_PARENTCONTEXT )
     {
 #endif
       QQmlContext * ptr = obj->parentContext();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQMLCONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

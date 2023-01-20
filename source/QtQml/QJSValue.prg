@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QJSVALUE_TOQOBJECT )
     {
 #endif
       QObject * ptr = obj->toQObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_DELETE )
 }
 
 /*
-QList<QObject *> rootObjects()
+QList<QObject*> rootObjects()
 */
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
 {
@@ -131,28 +131,28 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QObject *> list = obj->rootObjects();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
+      QList<QObject*> list = obj->rootObjects();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,14 +234,14 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOADDATA )
 #endif
 }
 
-void QQmlApplicationEngineSlots_connect_signal( const QString & signal, const QString & slot );
+void QQmlApplicationEngineSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngineSlots_connect_signal( "objectCreated(QObject*,QUrl)", "objectCreated(QObject*,QUrl)" );
+  QQmlApplicationEngineSlots_connect_signal("objectCreated(QObject*,QUrl)", "objectCreated(QObject*,QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
