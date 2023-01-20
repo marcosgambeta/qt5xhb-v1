@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
     {
 #endif
       QSqlTableModel * ptr = obj->relationModel( PINT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QSQLTABLEMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSQLTABLEMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
     {
 #endif
       const QSqlDriver * ptr = obj->driver();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSQLDRIVER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSQLDRIVER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

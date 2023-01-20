@@ -713,16 +713,16 @@ HB_FUNC_STATIC( QSQLDRIVER_CANCELQUERY )
   }
 }
 
-void QSqlDriverSlots_connect_signal( const QString & signal, const QString & slot );
+void QSqlDriverSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
 {
-  QSqlDriverSlots_connect_signal( "notification(QString)", "notification(QString)" );
+  QSqlDriverSlots_connect_signal("notification(QString)", "notification(QString)");
 }
 
 HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
 {
-  QSqlDriverSlots_connect_signal( "notification(QString,QSqlDriver::NotificationSource,QVariant)", "notification(QString,QSqlDriver::NotificationSource,QVariant)" );
+  QSqlDriverSlots_connect_signal("notification(QString,QSqlDriver::NotificationSource,QVariant)", "notification(QString,QSqlDriver::NotificationSource,QVariant)");
 }
 
 #pragma ENDDUMP

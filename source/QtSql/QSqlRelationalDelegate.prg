@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
     {
 #endif
       QWidget * ptr = obj->createEditor( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
