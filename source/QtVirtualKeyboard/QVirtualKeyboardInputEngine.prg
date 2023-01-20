@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMETHOD )
     {
 #endif
       QVirtualKeyboardAbstractInputMethod * ptr = obj->inputMethod();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMODES )
     {
 #endif
       QList<int> list = obj->inputModes();
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_PATTERNRECOGNITIONMODES )
     {
 #endif
       QList<int> list = obj->patternRecognitionModes();
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_WORDCANDIDATELISTMODEL )
     {
 #endif
       QVirtualKeyboardSelectionListModel * ptr = obj->wordCandidateListModel();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDSELECTIONLISTMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTCONTEXT )
     {
 #endif
       QVirtualKeyboardInputContext * ptr = obj->inputContext();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDINPUTCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,61 +564,61 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_CLICKPREEDITTEXT )
   }
 }
 
-void QVirtualKeyboardInputEngineSlots_connect_signal( const QString & signal, const QString & slot );
+void QVirtualKeyboardInputEngineSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONVIRTUALKEYCLICKED )
 {
-  QVirtualKeyboardInputEngineSlots_connect_signal( "virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)", "virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)" );
+  QVirtualKeyboardInputEngineSlots_connect_signal("virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)", "virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONACTIVEKEYCHANGED )
 {
-  QVirtualKeyboardInputEngineSlots_connect_signal( "activeKeyChanged(Qt::Key)", "activeKeyChanged(Qt::Key)" );
+  QVirtualKeyboardInputEngineSlots_connect_signal("activeKeyChanged(Qt::Key)", "activeKeyChanged(Qt::Key)");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPREVIOUSKEYCHANGED )
 {
-  QVirtualKeyboardInputEngineSlots_connect_signal( "previousKeyChanged(Qt::Key)", "previousKeyChanged(Qt::Key)" );
+  QVirtualKeyboardInputEngineSlots_connect_signal("previousKeyChanged(Qt::Key)", "previousKeyChanged(Qt::Key)");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODCHANGED )
 {
-  QVirtualKeyboardInputEngineSlots_connect_signal( "inputMethodChanged()", "inputMethodChanged()" );
+  QVirtualKeyboardInputEngineSlots_connect_signal("inputMethodChanged()", "inputMethodChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODRESET )
 {
-  QVirtualKeyboardInputEngineSlots_connect_signal( "inputMethodReset()", "inputMethodReset()" );
+  QVirtualKeyboardInputEngineSlots_connect_signal("inputMethodReset()", "inputMethodReset()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODUPDATE )
 {
-  QVirtualKeyboardInputEngineSlots_connect_signal( "inputMethodUpdate()", "inputMethodUpdate()" );
+  QVirtualKeyboardInputEngineSlots_connect_signal("inputMethodUpdate()", "inputMethodUpdate()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODESCHANGED )
 {
-  QVirtualKeyboardInputEngineSlots_connect_signal( "inputModesChanged()", "inputModesChanged()" );
+  QVirtualKeyboardInputEngineSlots_connect_signal("inputModesChanged()", "inputModesChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODECHANGED )
 {
-  QVirtualKeyboardInputEngineSlots_connect_signal( "inputModeChanged()", "inputModeChanged()" );
+  QVirtualKeyboardInputEngineSlots_connect_signal("inputModeChanged()", "inputModeChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPATTERNRECOGNITIONMODESCHANGED )
 {
-  QVirtualKeyboardInputEngineSlots_connect_signal( "patternRecognitionModesChanged()", "patternRecognitionModesChanged()" );
+  QVirtualKeyboardInputEngineSlots_connect_signal("patternRecognitionModesChanged()", "patternRecognitionModesChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTMODELCHANGED )
 {
-  QVirtualKeyboardInputEngineSlots_connect_signal( "wordCandidateListModelChanged()", "wordCandidateListModelChanged()" );
+  QVirtualKeyboardInputEngineSlots_connect_signal("wordCandidateListModelChanged()", "wordCandidateListModelChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTVISIBLEHINTCHANGED )
 {
-  QVirtualKeyboardInputEngineSlots_connect_signal( "wordCandidateListVisibleHintChanged()", "wordCandidateListVisibleHintChanged()" );
+  QVirtualKeyboardInputEngineSlots_connect_signal("wordCandidateListVisibleHintChanged()", "wordCandidateListVisibleHintChanged()");
 }
 
 #pragma ENDDUMP

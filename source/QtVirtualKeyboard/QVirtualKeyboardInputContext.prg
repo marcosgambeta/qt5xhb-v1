@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_INPUTENGINE )
     {
 #endif
       QVirtualKeyboardInputEngine * ptr = obj->inputEngine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDINPUTENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDINPUTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -678,86 +678,86 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SETSELECTIONONFOCUSOBJECT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QVirtualKeyboardInputContextSlots_connect_signal( const QString & signal, const QString & slot );
+void QVirtualKeyboardInputContextSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONPREEDITTEXTCHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "preeditTextChanged()", "preeditTextChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("preeditTextChanged()", "preeditTextChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONINPUTMETHODHINTSCHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "inputMethodHintsChanged()", "inputMethodHintsChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("inputMethodHintsChanged()", "inputMethodHintsChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSURROUNDINGTEXTCHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "surroundingTextChanged()", "surroundingTextChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("surroundingTextChanged()", "surroundingTextChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTEDTEXTCHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "selectedTextChanged()", "selectedTextChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("selectedTextChanged()", "selectedTextChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORPOSITIONCHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "anchorPositionChanged()", "anchorPositionChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("anchorPositionChanged()", "anchorPositionChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORPOSITIONCHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "cursorPositionChanged()", "cursorPositionChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("cursorPositionChanged()", "cursorPositionChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTANGLECHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "anchorRectangleChanged()", "anchorRectangleChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("anchorRectangleChanged()", "anchorRectangleChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTANGLECHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "cursorRectangleChanged()", "cursorRectangleChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("cursorRectangleChanged()", "cursorRectangleChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSHIFTACTIVECHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "shiftActiveChanged()", "shiftActiveChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("shiftActiveChanged()", "shiftActiveChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCAPSLOCKACTIVECHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "capsLockActiveChanged()", "capsLockActiveChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("capsLockActiveChanged()", "capsLockActiveChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONUPPERCASECHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "uppercaseChanged()", "uppercaseChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("uppercaseChanged()", "uppercaseChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANIMATINGCHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "animatingChanged()", "animatingChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("animatingChanged()", "animatingChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONLOCALECHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "localeChanged()", "localeChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("localeChanged()", "localeChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTIONCONTROLVISIBLECHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "selectionControlVisibleChanged()", "selectionControlVisibleChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("selectionControlVisibleChanged()", "selectionControlVisibleChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTINTERSECTSCLIPRECTCHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "anchorRectIntersectsClipRectChanged()", "anchorRectIntersectsClipRectChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("anchorRectIntersectsClipRectChanged()", "anchorRectIntersectsClipRectChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTINTERSECTSCLIPRECTCHANGED )
 {
-  QVirtualKeyboardInputContextSlots_connect_signal( "cursorRectIntersectsClipRectChanged()", "cursorRectIntersectsClipRectChanged()" );
+  QVirtualKeyboardInputContextSlots_connect_signal("cursorRectIntersectsClipRectChanged()", "cursorRectIntersectsClipRectChanged()");
 }
 
 #pragma ENDDUMP

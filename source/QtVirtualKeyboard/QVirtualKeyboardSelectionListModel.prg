@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATASOURCE )
     {
 #endif
       QVirtualKeyboardAbstractInputMethod * ptr = obj->dataSource();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,21 +248,21 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_REMOVEITEM )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QVirtualKeyboardSelectionListModelSlots_connect_signal( const QString & signal, const QString & slot );
+void QVirtualKeyboardSelectionListModelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED )
 {
-  QVirtualKeyboardSelectionListModelSlots_connect_signal( "countChanged()", "countChanged()" );
+  QVirtualKeyboardSelectionListModelSlots_connect_signal("countChanged()", "countChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED )
 {
-  QVirtualKeyboardSelectionListModelSlots_connect_signal( "activeItemChanged(int)", "activeItemChanged(int)" );
+  QVirtualKeyboardSelectionListModelSlots_connect_signal("activeItemChanged(int)", "activeItemChanged(int)");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONITEMSELECTED )
 {
-  QVirtualKeyboardSelectionListModelSlots_connect_signal( "itemSelected(int)", "itemSelected(int)" );
+  QVirtualKeyboardSelectionListModelSlots_connect_signal("itemSelected(int)", "itemSelected(int)");
 }
 
 #pragma ENDDUMP

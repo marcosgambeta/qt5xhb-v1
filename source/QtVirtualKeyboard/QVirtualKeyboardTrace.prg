@@ -397,30 +397,30 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
     {
 #endif
       QVariantList list = obj->points( OPINT(1,0), OPINT(2,-1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QVARIANT" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QVariant( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QVariant(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -497,30 +497,30 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
     {
 #endif
       QVariantList list = obj->channelData( PQSTRING(1), OPINT(2,0), OPINT(3,-1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QVARIANT" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QVariant( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QVariant(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,36 +533,36 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
   }
 }
 
-void QVirtualKeyboardTraceSlots_connect_signal( const QString & signal, const QString & slot );
+void QVirtualKeyboardTraceSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
 {
-  QVirtualKeyboardTraceSlots_connect_signal( "traceIdChanged(int)", "traceIdChanged(int)" );
+  QVirtualKeyboardTraceSlots_connect_signal("traceIdChanged(int)", "traceIdChanged(int)");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
 {
-  QVirtualKeyboardTraceSlots_connect_signal( "channelsChanged()", "channelsChanged()" );
+  QVirtualKeyboardTraceSlots_connect_signal("channelsChanged()", "channelsChanged()");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
 {
-  QVirtualKeyboardTraceSlots_connect_signal( "lengthChanged(int)", "lengthChanged(int)" );
+  QVirtualKeyboardTraceSlots_connect_signal("lengthChanged(int)", "lengthChanged(int)");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
 {
-  QVirtualKeyboardTraceSlots_connect_signal( "finalChanged(bool)", "finalChanged(bool)" );
+  QVirtualKeyboardTraceSlots_connect_signal("finalChanged(bool)", "finalChanged(bool)");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
 {
-  QVirtualKeyboardTraceSlots_connect_signal( "canceledChanged(bool)", "canceledChanged(bool)" );
+  QVirtualKeyboardTraceSlots_connect_signal("canceledChanged(bool)", "canceledChanged(bool)");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
 {
-  QVirtualKeyboardTraceSlots_connect_signal( "opacityChanged(qreal)", "opacityChanged(qreal)" );
+  QVirtualKeyboardTraceSlots_connect_signal("opacityChanged(qreal)", "opacityChanged(qreal)");
 }
 
 #pragma ENDDUMP

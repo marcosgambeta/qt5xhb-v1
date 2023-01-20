@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTCONTEXT )
     {
 #endif
       QVirtualKeyboardInputContext * ptr = obj->inputContext();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDINPUTCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTENGINE )
     {
 #endif
       QVirtualKeyboardInputEngine * ptr = obj->inputEngine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDINPUTENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVIRTUALKEYBOARDINPUTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTMODES )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SELECTIONLISTS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_PATTERNRECOGNITIONMODES )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -526,21 +526,21 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_UPDATE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QVirtualKeyboardAbstractInputMethodSlots_connect_signal( const QString & signal, const QString & slot );
+void QVirtualKeyboardAbstractInputMethodSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
 {
-  QVirtualKeyboardAbstractInputMethodSlots_connect_signal( "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)", "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)" );
+  QVirtualKeyboardAbstractInputMethodSlots_connect_signal("selectionListChanged(QVirtualKeyboardSelectionListModel::Type)", "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHANGED )
 {
-  QVirtualKeyboardAbstractInputMethodSlots_connect_signal( "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)", "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)" );
+  QVirtualKeyboardAbstractInputMethodSlots_connect_signal("selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)", "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)");
 }
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED )
 {
-  QVirtualKeyboardAbstractInputMethodSlots_connect_signal( "selectionListsChanged()", "selectionListsChanged()" );
+  QVirtualKeyboardAbstractInputMethodSlots_connect_signal("selectionListsChanged()", "selectionListsChanged()");
 }
 
 #pragma ENDDUMP
