@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
     if( obj != NULL )
     {
       QAxObject * ptr = obj->querySubObject( PCONSTCHAR(1), HB_ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2), HB_ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3), HB_ISNIL(4)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(4), HB_ISNIL(5)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(5), HB_ISNIL(6)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(6), HB_ISNIL(7)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(7), HB_ISNIL(8)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(8), HB_ISNIL(9)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(9) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
     if( obj != NULL )
     {
       QAxObject * ptr = obj->querySubObject( PCONSTCHAR(1), PQVARIANTLIST(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
   }
   else
@@ -512,21 +512,21 @@ HB_FUNC_STATIC( QAXOBJECT_VERBS )
   }
 }
 
-void QAxObjectSlots_connect_signal( const QString & signal, const QString & slot );
+void QAxObjectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAXOBJECT_ONEXCEPTION )
 {
-  QAxObjectSlots_connect_signal( "exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)" );
+  QAxObjectSlots_connect_signal("exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)");
 }
 
 HB_FUNC_STATIC( QAXOBJECT_ONPROPERTYCHANGED )
 {
-  QAxObjectSlots_connect_signal( "propertyChanged(QString)", "propertyChanged(QString)" );
+  QAxObjectSlots_connect_signal("propertyChanged(QString)", "propertyChanged(QString)");
 }
 
 HB_FUNC_STATIC( QAXOBJECT_ONSIGNAL )
 {
-  QAxObjectSlots_connect_signal( "signal(QString,int,void*)", "signal(QString,int,void*)" );
+  QAxObjectSlots_connect_signal("signal(QString,int,void*)", "signal(QString,int,void*)");
 }
 
 #pragma ENDDUMP

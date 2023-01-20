@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
     {
 #endif
       QObject * ptr = obj->createObject( PQSTRING(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
