@@ -24,15 +24,15 @@ void QScriptEngineDebuggerSlots::evaluationResumed()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "evaluationResumed()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "evaluationResumed()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCRIPTENGINEDEBUGGER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,19 +40,19 @@ void QScriptEngineDebuggerSlots::evaluationSuspended()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "evaluationSuspended()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "evaluationSuspended()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCRIPTENGINEDEBUGGER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QScriptEngineDebuggerSlots_connect_signal( const QString & signal, const QString & slot )
+void QScriptEngineDebuggerSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) Qt5xHb::itemGetPtrStackSelfItem();
 

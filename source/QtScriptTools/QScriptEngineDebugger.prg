@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
     {
 #endif
       QAction * ptr = obj->action( (QScriptEngineDebugger::DebuggerAction) hb_parni(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
     {
 #endif
       QMenu * ptr = obj->createStandardMenu( OPQWIDGET(1,0) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
     {
 #endif
       QToolBar * ptr = obj->createStandardToolBar( OPQWIDGET(1,0) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QTOOLBAR" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QTOOLBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
     {
 #endif
       QMainWindow * ptr = obj->standardWindow();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMAINWINDOW" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMAINWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget( (QScriptEngineDebugger::DebuggerWidget) hb_parni(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,16 +357,16 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
   }
 }
 
-void QScriptEngineDebuggerSlots_connect_signal( const QString & signal, const QString & slot );
+void QScriptEngineDebuggerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
 {
-  QScriptEngineDebuggerSlots_connect_signal( "evaluationResumed()", "evaluationResumed()" );
+  QScriptEngineDebuggerSlots_connect_signal("evaluationResumed()", "evaluationResumed()");
 }
 
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED )
 {
-  QScriptEngineDebuggerSlots_connect_signal( "evaluationSuspended()", "evaluationSuspended()" );
+  QScriptEngineDebuggerSlots_connect_signal("evaluationSuspended()", "evaluationSuspended()");
 }
 
 #pragma ENDDUMP
