@@ -685,41 +685,41 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERRORSTRING )
 #endif
 }
 
-void QBluetoothSocketSlots_connect_signal( const QString & signal, const QString & slot );
+void QBluetoothSocketSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocketSlots_connect_signal( "connected()", "connected()" );
+  QBluetoothSocketSlots_connect_signal("connected()", "connected()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONDISCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocketSlots_connect_signal( "disconnected()", "disconnected()" );
+  QBluetoothSocketSlots_connect_signal("disconnected()", "disconnected()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocketSlots_connect_signal( "error(QBluetoothSocket::SocketError)", "error(QBluetoothSocket::SocketError)" );
+  QBluetoothSocketSlots_connect_signal("error(QBluetoothSocket::SocketError)", "error(QBluetoothSocket::SocketError)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocketSlots_connect_signal( "stateChanged(QBluetoothSocket::SocketState)", "stateChanged(QBluetoothSocket::SocketState)" );
+  QBluetoothSocketSlots_connect_signal("stateChanged(QBluetoothSocket::SocketState)", "stateChanged(QBluetoothSocket::SocketState)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

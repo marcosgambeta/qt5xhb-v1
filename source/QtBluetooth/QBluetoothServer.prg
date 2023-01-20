@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEXTPENDINGCONNECTION )
     {
 #endif
       QBluetoothSocket * ptr = obj->nextPendingConnection();
-      Qt5xHb::createReturnQObjectClass( ptr, "QBLUETOOTHSOCKET" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QBLUETOOTHSOCKET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,23 +467,23 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ERROR )
 #endif
 }
 
-void QBluetoothServerSlots_connect_signal( const QString & signal, const QString & slot );
+void QBluetoothServerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QBLUETOOTHSERVER_ONNEWCONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServerSlots_connect_signal( "newConnection()", "newConnection()" );
+  QBluetoothServerSlots_connect_signal("newConnection()", "newConnection()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBLUETOOTHSERVER_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServerSlots_connect_signal( "error(QBluetoothServer::Error)", "error(QBluetoothServer::Error)" );
+  QBluetoothServerSlots_connect_signal("error(QBluetoothServer::Error)", "error(QBluetoothServer::Error)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

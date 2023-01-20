@@ -25,22 +25,22 @@ void QBluetoothTransferManagerSlots::finished( QBluetoothTransferReply * reply )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QBluetoothTransferReply*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(QBluetoothTransferReply*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHTRANSFERMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QBLUETOOTHTRANSFERREPLY");
 
-    hb_vmEvalBlockV( cb, 2, psender, preply );
+    hb_vmEvalBlockV(cb, 2, psender, preply);
 
-    hb_itemRelease( psender );
-    hb_itemRelease( preply );
+    hb_itemRelease(psender);
+    hb_itemRelease(preply);
   }
 }
 #endif
 
-void QBluetoothTransferManagerSlots_connect_signal( const QString & signal, const QString & slot )
+void QBluetoothTransferManagerSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferManager * obj = (QBluetoothTransferManager *) Qt5xHb::itemGetPtrStackSelfItem();

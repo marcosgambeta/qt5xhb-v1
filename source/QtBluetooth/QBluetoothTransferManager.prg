@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
     {
 #endif
       QBluetoothTransferReply * ptr = obj->put( *PQBLUETOOTHTRANSFERREQUEST(1), PQIODEVICE(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QBLUETOOTHTRANSFERREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QBLUETOOTHTRANSFERREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,14 +124,14 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
 #endif
 }
 
-void QBluetoothTransferManagerSlots_connect_signal( const QString & signal, const QString & slot );
+void QBluetoothTransferManagerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferManagerSlots_connect_signal( "finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)" );
+  QBluetoothTransferManagerSlots_connect_signal("finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

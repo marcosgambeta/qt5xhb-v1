@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_MANAGER )
     {
 #endif
       QBluetoothTransferManager * ptr = obj->manager();
-      Qt5xHb::createReturnQObjectClass( ptr, "QBLUETOOTHTRANSFERMANAGER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QBLUETOOTHTRANSFERMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,23 +270,23 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ABORT )
 #endif
 }
 
-void QBluetoothTransferReplySlots_connect_signal( const QString & signal, const QString & slot );
+void QBluetoothTransferReplySlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReplySlots_connect_signal( "finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)" );
+  QBluetoothTransferReplySlots_connect_signal("finished(QBluetoothTransferReply*)", "finished(QBluetoothTransferReply*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReplySlots_connect_signal( "transferProgress(qint64,qint64)", "transferProgress(qint64,qint64)" );
+  QBluetoothTransferReplySlots_connect_signal("transferProgress(qint64,qint64)", "transferProgress(qint64,qint64)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
