@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
     {
 #endif
       QNetworkAccessManager * ptr = obj->manager();
-      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,30 +442,30 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
     {
 #endif
       QList<QByteArray> list = obj->rawHeaderList();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -618,9 +618,8 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
     {
       QList<QSslError> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -649,71 +648,71 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
   }
 }
 
-void QNetworkReplySlots_connect_signal( const QString & signal, const QString & slot );
+void QNetworkReplySlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
 {
-  QNetworkReplySlots_connect_signal( "downloadProgress(qint64,qint64)", "downloadProgress(qint64,qint64)" );
+  QNetworkReplySlots_connect_signal("downloadProgress(qint64,qint64)", "downloadProgress(qint64,qint64)");
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
 {
-  QNetworkReplySlots_connect_signal( "error(QNetworkReply::NetworkError)", "error(QNetworkReply::NetworkError)" );
+  QNetworkReplySlots_connect_signal("error(QNetworkReply::NetworkError)", "error(QNetworkReply::NetworkError)");
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
 {
-  QNetworkReplySlots_connect_signal( "finished()", "finished()" );
+  QNetworkReplySlots_connect_signal("finished()", "finished()");
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
 {
-  QNetworkReplySlots_connect_signal( "metaDataChanged()", "metaDataChanged()" );
+  QNetworkReplySlots_connect_signal("metaDataChanged()", "metaDataChanged()");
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
 {
-  QNetworkReplySlots_connect_signal( "uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)" );
+  QNetworkReplySlots_connect_signal("uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)");
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QNetworkReplySlots_connect_signal( "encrypted()", "encrypted()" );
+  QNetworkReplySlots_connect_signal("encrypted()", "encrypted()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
 {
-  QNetworkReplySlots_connect_signal( "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" );
+  QNetworkReplySlots_connect_signal("sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)");
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QNetworkReplySlots_connect_signal( "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)", "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)" );
+  QNetworkReplySlots_connect_signal("preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)", "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QNetworkReplySlots_connect_signal( "redirected(QUrl)", "redirected(QUrl)" );
+  QNetworkReplySlots_connect_signal("redirected(QUrl)", "redirected(QUrl)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QNetworkReplySlots_connect_signal( "redirectAllowed()", "redirectAllowed()" );
+  QNetworkReplySlots_connect_signal("redirectAllowed()", "redirectAllowed()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

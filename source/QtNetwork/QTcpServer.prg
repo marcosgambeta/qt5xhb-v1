@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QTCPSERVER_NEXTPENDINGCONNECTION )
     {
 #endif
       QTcpSocket * ptr = obj->nextPendingConnection();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTCPSOCKET" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTCPSOCKET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -560,16 +560,16 @@ HB_FUNC_STATIC( QTCPSERVER_PROXY )
   }
 }
 
-void QTcpServerSlots_connect_signal( const QString & signal, const QString & slot );
+void QTcpServerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
 {
-  QTcpServerSlots_connect_signal( "acceptError(QAbstractSocket::SocketError)", "acceptError(QAbstractSocket::SocketError)" );
+  QTcpServerSlots_connect_signal("acceptError(QAbstractSocket::SocketError)", "acceptError(QAbstractSocket::SocketError)");
 }
 
 HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
 {
-  QTcpServerSlots_connect_signal( "newConnection()", "newConnection()" );
+  QTcpServerSlots_connect_signal("newConnection()", "newConnection()");
 }
 
 #pragma ENDDUMP

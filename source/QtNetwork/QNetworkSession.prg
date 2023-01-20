@@ -616,41 +616,41 @@ HB_FUNC_STATIC( QNETWORKSESSION_USAGEPOLICIES )
   }
 }
 
-void QNetworkSessionSlots_connect_signal( const QString & signal, const QString & slot );
+void QNetworkSessionSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
 {
-  QNetworkSessionSlots_connect_signal( "closed()", "closed()" );
+  QNetworkSessionSlots_connect_signal("closed()", "closed()");
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
 {
-  QNetworkSessionSlots_connect_signal( "error(QNetworkSession::SessionError)", "error(QNetworkSession::SessionError)" );
+  QNetworkSessionSlots_connect_signal("error(QNetworkSession::SessionError)", "error(QNetworkSession::SessionError)");
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
 {
-  QNetworkSessionSlots_connect_signal( "newConfigurationActivated()", "newConfigurationActivated()" );
+  QNetworkSessionSlots_connect_signal("newConfigurationActivated()", "newConfigurationActivated()");
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
 {
-  QNetworkSessionSlots_connect_signal( "opened()", "opened()" );
+  QNetworkSessionSlots_connect_signal("opened()", "opened()");
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
 {
-  QNetworkSessionSlots_connect_signal( "preferredConfigurationChanged(QNetworkConfiguration,bool)", "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
+  QNetworkSessionSlots_connect_signal("preferredConfigurationChanged(QNetworkConfiguration,bool)", "preferredConfigurationChanged(QNetworkConfiguration,bool)");
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
 {
-  QNetworkSessionSlots_connect_signal( "stateChanged(QNetworkSession::State)", "stateChanged(QNetworkSession::State)" );
+  QNetworkSessionSlots_connect_signal("stateChanged(QNetworkSession::State)", "stateChanged(QNetworkSession::State)");
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
 {
-  QNetworkSessionSlots_connect_signal( "usagePoliciesChanged(QNetworkSession::UsagePolicies)", "usagePoliciesChanged(QNetworkSession::UsagePolicies)" );
+  QNetworkSessionSlots_connect_signal("usagePoliciesChanged(QNetworkSession::UsagePolicies)", "usagePoliciesChanged(QNetworkSession::UsagePolicies)");
 }
 
 #pragma ENDDUMP

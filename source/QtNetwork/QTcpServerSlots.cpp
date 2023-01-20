@@ -24,16 +24,16 @@ void QTcpServerSlots::acceptError( QAbstractSocket::SocketError socketError )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "acceptError(QAbstractSocket::SocketError)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "acceptError(QAbstractSocket::SocketError)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTCPSERVER");
-    PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
+    PHB_ITEM psocketError = hb_itemPutNI( NULL, static_cast<int>(socketError) );
 
-    hb_vmEvalBlockV( cb, 2, psender, psocketError );
+    hb_vmEvalBlockV(cb, 2, psender, psocketError);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( psocketError );
   }
 }
@@ -42,19 +42,19 @@ void QTcpServerSlots::newConnection()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "newConnection()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "newConnection()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTCPSERVER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QTcpServerSlots_connect_signal( const QString & signal, const QString & slot )
+void QTcpServerSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QTcpServer * obj = (QTcpServer *) Qt5xHb::itemGetPtrStackSelfItem();
 

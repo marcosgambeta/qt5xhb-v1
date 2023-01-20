@@ -113,30 +113,30 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
     {
 #endif
       QList<QNetworkConfiguration> list = obj->allConfigurations( HB_ISNIL(1)? (QNetworkConfiguration::StateFlags) QNetworkConfiguration::StateFlags() : (QNetworkConfiguration::StateFlags) hb_parni(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKCONFIGURATION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QNetworkConfiguration( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QNetworkConfiguration(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QNETWORKCONFIGURATION", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QNETWORKCONFIGURATION", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,31 +273,31 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QNetworkConfigurationManagerSlots_connect_signal( const QString & signal, const QString & slot );
+void QNetworkConfigurationManagerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "configurationAdded(QNetworkConfiguration)", "configurationAdded(QNetworkConfiguration)" );
+  QNetworkConfigurationManagerSlots_connect_signal("configurationAdded(QNetworkConfiguration)", "configurationAdded(QNetworkConfiguration)");
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)" );
+  QNetworkConfigurationManagerSlots_connect_signal("configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)");
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "configurationRemoved(QNetworkConfiguration)", "configurationRemoved(QNetworkConfiguration)" );
+  QNetworkConfigurationManagerSlots_connect_signal("configurationRemoved(QNetworkConfiguration)", "configurationRemoved(QNetworkConfiguration)");
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "onlineStateChanged(bool)", "onlineStateChanged(bool)" );
+  QNetworkConfigurationManagerSlots_connect_signal("onlineStateChanged(bool)", "onlineStateChanged(bool)");
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "updateCompleted()", "updateCompleted()" );
+  QNetworkConfigurationManagerSlots_connect_signal("updateCompleted()", "updateCompleted()");
 }
 
 #pragma ENDDUMP

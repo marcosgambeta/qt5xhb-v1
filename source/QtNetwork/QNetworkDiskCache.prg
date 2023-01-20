@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_DATA )
     {
 #endif
       QIODevice * ptr = obj->data( *PQURL(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_PREPARE )
     {
 #endif
       QIODevice * ptr = obj->prepare( *PQNETWORKCACHEMETADATA(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

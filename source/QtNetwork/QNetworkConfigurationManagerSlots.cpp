@@ -24,16 +24,16 @@ void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfig
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "configurationAdded(QNetworkConfiguration)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "configurationAdded(QNetworkConfiguration)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
-    PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION");
 
-    hb_vmEvalBlockV( cb, 2, psender, pconfig );
+    hb_vmEvalBlockV(cb, 2, psender, pconfig);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pconfig );
   }
 }
@@ -42,16 +42,16 @@ void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConf
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "configurationChanged(QNetworkConfiguration)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
-    PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION");
 
-    hb_vmEvalBlockV( cb, 2, psender, pconfig );
+    hb_vmEvalBlockV(cb, 2, psender, pconfig);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pconfig );
   }
 }
@@ -60,16 +60,16 @@ void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConf
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "configurationRemoved(QNetworkConfiguration)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "configurationRemoved(QNetworkConfiguration)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
-    PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION");
 
-    hb_vmEvalBlockV( cb, 2, psender, pconfig );
+    hb_vmEvalBlockV(cb, 2, psender, pconfig);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pconfig );
   }
 }
@@ -78,16 +78,16 @@ void QNetworkConfigurationManagerSlots::onlineStateChanged( bool isOnline )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "onlineStateChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "onlineStateChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pisOnline = hb_itemPutL( NULL, isOnline );
 
-    hb_vmEvalBlockV( cb, 2, psender, pisOnline );
+    hb_vmEvalBlockV(cb, 2, psender, pisOnline);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pisOnline );
   }
 }
@@ -96,19 +96,19 @@ void QNetworkConfigurationManagerSlots::updateCompleted()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "updateCompleted()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "updateCompleted()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QNetworkConfigurationManagerSlots_connect_signal( const QString & signal, const QString & slot )
+void QNetworkConfigurationManagerSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
