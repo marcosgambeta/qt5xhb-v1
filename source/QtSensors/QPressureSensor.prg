@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPRESSURESENSOR_READING )
     {
 #endif
       QPressureReading * ptr = obj->reading();
-      Qt5xHb::createReturnQObjectClass( ptr, "QPRESSUREREADING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPRESSUREREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

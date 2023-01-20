@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTILTSENSOR_READING )
     {
 #endif
       QTiltReading * ptr = obj->reading();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTILTREADING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTILTREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

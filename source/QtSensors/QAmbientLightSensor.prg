@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_READING )
     {
 #endif
       QAmbientLightReading * ptr = obj->reading();
-      Qt5xHb::createReturnQObjectClass( ptr, "QAMBIENTLIGHTREADING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QAMBIENTLIGHTREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

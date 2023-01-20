@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_READING )
     {
 #endif
       QRotationReading * ptr = obj->reading();
-      Qt5xHb::createReturnQObjectClass( ptr, "QROTATIONREADING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QROTATIONREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,14 +178,14 @@ HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
 #endif
 }
 
-void QRotationSensorSlots_connect_signal( const QString & signal, const QString & slot );
+void QRotationSensorSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QROTATIONSENSOR_ONHASZCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensorSlots_connect_signal( "hasZChanged(bool)", "hasZChanged(bool)" );
+  QRotationSensorSlots_connect_signal("hasZChanged(bool)", "hasZChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

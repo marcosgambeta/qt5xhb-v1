@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_READING )
     {
 #endif
       QLightReading * ptr = obj->reading();
-      Qt5xHb::createReturnQObjectClass( ptr, "QLIGHTREADING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QLIGHTREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,14 +178,14 @@ HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
 #endif
 }
 
-void QLightSensorSlots_connect_signal( const QString & signal, const QString & slot );
+void QLightSensorSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensorSlots_connect_signal( "fieldOfViewChanged(qreal)", "fieldOfViewChanged(qreal)" );
+  QLightSensorSlots_connect_signal("fieldOfViewChanged(qreal)", "fieldOfViewChanged(qreal)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

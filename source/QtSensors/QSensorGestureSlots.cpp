@@ -25,22 +25,22 @@ void QSensorGestureSlots::detected( QString s )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "detected(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "detected(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSORGESTURE");
     PHB_ITEM ps = hb_itemPutC( NULL, (const char *) s.toLatin1().data() );
 
-    hb_vmEvalBlockV( cb, 2, psender, ps );
+    hb_vmEvalBlockV(cb, 2, psender, ps);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ps );
   }
 }
 #endif
 
-void QSensorGestureSlots_connect_signal( const QString & signal, const QString & slot )
+void QSensorGestureSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSensorGesture * obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();

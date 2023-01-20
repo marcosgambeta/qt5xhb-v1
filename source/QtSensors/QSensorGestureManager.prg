@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
   {
 #endif
     QSensorGestureRecognizer * ptr = QSensorGestureManager::sensorGestureRecognizer( PQSTRING(1) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QSENSORGESTURERECOGNIZER" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QSENSORGESTURERECOGNIZER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -198,14 +198,14 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
 #endif
 }
 
-void QSensorGestureManagerSlots_connect_signal( const QString & signal, const QString & slot );
+void QSensorGestureManagerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManagerSlots_connect_signal( "newSensorGestureAvailable()", "newSensorGestureAvailable()" );
+  QSensorGestureManagerSlots_connect_signal("newSensorGestureAvailable()", "newSensorGestureAvailable()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

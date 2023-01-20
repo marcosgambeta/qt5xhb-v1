@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QHOLSTERSENSOR_READING )
     {
 #endif
       QHolsterReading * ptr = obj->reading();
-      Qt5xHb::createReturnQObjectClass( ptr, "QHOLSTERREADING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QHOLSTERREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

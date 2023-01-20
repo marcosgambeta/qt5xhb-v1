@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGYROSCOPE_READING )
     {
 #endif
       QGyroscopeReading * ptr = obj->reading();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGYROSCOPEREADING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGYROSCOPEREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

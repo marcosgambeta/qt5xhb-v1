@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_READING )
     {
 #endif
       QAmbientTemperatureReading * ptr = obj->reading();
-      Qt5xHb::createReturnQObjectClass( ptr, "QAMBIENTTEMPERATUREREADING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QAMBIENTTEMPERATUREREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

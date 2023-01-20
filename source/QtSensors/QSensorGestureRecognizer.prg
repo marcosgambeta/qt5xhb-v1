@@ -242,14 +242,14 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_GESTURESIGNALS )
 #endif
 }
 
-void QSensorGestureRecognizerSlots_connect_signal( const QString & signal, const QString & slot );
+void QSensorGestureRecognizerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ONDETECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizerSlots_connect_signal( "detected(QString)", "detected(QString)" );
+  QSensorGestureRecognizerSlots_connect_signal("detected(QString)", "detected(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

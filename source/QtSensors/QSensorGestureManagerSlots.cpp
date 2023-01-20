@@ -25,20 +25,20 @@ void QSensorGestureManagerSlots::newSensorGestureAvailable()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "newSensorGestureAvailable()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "newSensorGestureAvailable()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSORGESTUREMANAGER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
 
-void QSensorGestureManagerSlots_connect_signal( const QString & signal, const QString & slot )
+void QSensorGestureManagerSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSensorGestureManager * obj = (QSensorGestureManager *) Qt5xHb::itemGetPtrStackSelfItem();

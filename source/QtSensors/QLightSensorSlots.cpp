@@ -25,22 +25,22 @@ void QLightSensorSlots::fieldOfViewChanged( qreal fieldOfView )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fieldOfViewChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fieldOfViewChanged(qreal)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLIGHTSENSOR");
     PHB_ITEM pfieldOfView = hb_itemPutND( NULL, fieldOfView );
 
-    hb_vmEvalBlockV( cb, 2, psender, pfieldOfView );
+    hb_vmEvalBlockV(cb, 2, psender, pfieldOfView);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pfieldOfView );
   }
 }
 #endif
 
-void QLightSensorSlots_connect_signal( const QString & signal, const QString & slot )
+void QLightSensorSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QLightSensor * obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();

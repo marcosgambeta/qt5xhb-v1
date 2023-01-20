@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QIRPROXIMITYSENSOR_READING )
     {
 #endif
       QIRProximityReading * ptr = obj->reading();
-      Qt5xHb::createReturnQObjectClass( ptr, "QIRPROXIMITYREADING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QIRPROXIMITYREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

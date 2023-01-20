@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTAPSENSOR_READING )
     {
 #endif
       QTapReading * ptr = obj->reading();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTAPREADING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTAPREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,14 +178,14 @@ HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
 #endif
 }
 
-void QTapSensorSlots_connect_signal( const QString & signal, const QString & slot );
+void QTapSensorSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensorSlots_connect_signal( "returnDoubleTapEventsChanged(bool)", "returnDoubleTapEventsChanged(bool)" );
+  QTapSensorSlots_connect_signal("returnDoubleTapEventsChanged(bool)", "returnDoubleTapEventsChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

@@ -25,22 +25,22 @@ void QAccelerometerSlots::accelerationModeChanged( QAccelerometer::AccelerationM
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "accelerationModeChanged(QAccelerometer::AccelerationMode)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accelerationModeChanged(QAccelerometer::AccelerationMode)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACCELEROMETER");
-    PHB_ITEM paccelerationMode = hb_itemPutNI( NULL, (int) accelerationMode );
+    PHB_ITEM paccelerationMode = hb_itemPutNI( NULL, static_cast<int>(accelerationMode) );
 
-    hb_vmEvalBlockV( cb, 2, psender, paccelerationMode );
+    hb_vmEvalBlockV(cb, 2, psender, paccelerationMode);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( paccelerationMode );
   }
 }
 #endif
 
-void QAccelerometerSlots_connect_signal( const QString & signal, const QString & slot )
+void QAccelerometerSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAccelerometer * obj = (QAccelerometer *) Qt5xHb::itemGetPtrStackSelfItem();

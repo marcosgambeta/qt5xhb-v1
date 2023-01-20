@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_CREATEBACKEND )
   {
 #endif
     QSensorBackend * ptr = QSensorManager::createBackend( PQSENSOR(1) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QSENSORBACKEND" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QSENSORBACKEND");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

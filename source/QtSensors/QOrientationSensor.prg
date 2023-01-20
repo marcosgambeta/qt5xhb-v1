@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QORIENTATIONSENSOR_READING )
     {
 #endif
       QOrientationReading * ptr = obj->reading();
-      Qt5xHb::createReturnQObjectClass( ptr, "QORIENTATIONREADING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QORIENTATIONREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
