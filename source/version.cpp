@@ -9,7 +9,7 @@
 //#include <QtCore/QtGlobal>
 #include <QtGlobal>
 
-#include "hbapi.h"
+#include <hbapi.h>
 
 HB_FUNC( QT5XHB_VERSION )
 {

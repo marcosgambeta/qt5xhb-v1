@@ -6,7 +6,7 @@
 
 */
 
-#include "hbapi.h"
+#include <hbapi.h>
 
 #include <Qt>
 

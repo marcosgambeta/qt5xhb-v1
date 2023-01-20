@@ -472,8 +472,8 @@ HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE ) // deprecated
   hb_retni( count );
 }
 
-#include "hbvm.h"
-#include "hbinit.h"
+#include <hbvm.h>
+#include <hbinit.h>
 
 static void qt5xhb_signals_init( void * cargo )
 {
@@ -501,5 +501,5 @@ HB_CALL_ON_STARTUP_END( _qt5xhb_signals_init_ )
   #pragma startup _qt5xhb_signals_init_
 #elif defined( HB_DATASEG_STARTUP )
   #define HB_DATASEG_BODY HB_DATASEG_FUNC( _qt5xhb_signals_init_ )
-  #include "hbiniseg.h"
+  #include <hbiniseg.h>
 #endif

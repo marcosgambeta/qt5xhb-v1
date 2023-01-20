@@ -17,13 +17,13 @@
 #include <QtCore/QMetaEnum>
 #include <QtCore/QMutex>
 
-#include "hbapi.h"
-#include "hbapiitm.h"
-#include "hbapierr.h"
-#include "hbvm.h"
-#include "hbstack.h"
+#include <hbapi.h>
+#include <hbapiitm.h>
+#include <hbapierr.h>
+#include <hbvm.h>
+#include <hbstack.h>
 #ifndef __XHARBOUR__
-#include "hbapicls.h"
+#include <hbapicls.h>
 #endif
 
 namespace Qt5xHb

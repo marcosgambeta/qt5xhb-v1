@@ -10,7 +10,7 @@
   Funções nulas, para evitar erros com classes ou recursos não implementados
 */
 
-#include "hbapi.h"
+#include <hbapi.h>
 
 HB_FUNC( Q_IPV6ADDR )
 {
