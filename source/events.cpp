@@ -8,101 +8,103 @@
 
 #include "events.h"
 
-static Events *s_events = NULL;
+static Events * s_events = NULL;
 
 /*
   constructor
 */
-Events::Events( QObject *parent ) : QObject( parent )
+Events::Events(QObject * parent) : QObject(parent)
 {
-  m_list1 = new QVector<QObject*>( 1000, NULL );     // armazena ponteiro do objeto
-  m_list2 = new QVector<QEvent::Type>( 1000, QEvent::None ); // armazena tipo de evento
-  m_list3 = new QVector<PHB_ITEM>( 1000, NULL );     // armazena codeblock
+  m_list1 = new QVector<QObject*>(1000, NULL);             // armazena ponteiro do objeto
+  m_list2 = new QVector<QEvent::Type>(1000, QEvent::None); // armazena tipo de evento
+  m_list3 = new QVector<PHB_ITEM>(1000, NULL);             // armazena codeblock
   m_mutex = new QMutex();
   m_events = new QHash<QEvent::Type, QString>();
 
-  m_events->insert( QEvent::ActionAdded, "QActionEvent" );
-  m_events->insert( QEvent::ActionChanged, "QActionEvent" );
-  m_events->insert( QEvent::ActionRemoved, "QActionEvent" );
-  m_events->insert( QEvent::ChildAdded, "QChildEvent" );
-  m_events->insert( QEvent::ChildPolished, "QChildEvent" );
-  m_events->insert( QEvent::ChildRemoved, "QChildEvent" );
-  m_events->insert( QEvent::Close, "QCloseEvent" );
-  m_events->insert( QEvent::ContextMenu, "QContextMenuEvent" );
-  m_events->insert( QEvent::DeferredDelete, "QDeferredDeleteEvent" );
-  m_events->insert( QEvent::DragEnter, "QDragEnterEvent" );
-  m_events->insert( QEvent::DragLeave, "QDragLeaveEvent" );
-  m_events->insert( QEvent::DragMove, "QDragMoveEvent" );
-  m_events->insert( QEvent::Drop, "QDropEvent" );
-  m_events->insert( QEvent::Enter, "QEnterEvent" );
-  m_events->insert( QEvent::FileOpen, "QFileOpenEvent" );
-  m_events->insert( QEvent::FocusIn, "QFocusEvent" );
-  m_events->insert( QEvent::FocusOut, "QFocusEvent" );
-  m_events->insert( QEvent::FocusAboutToChange, "QFocusEvent" );
-  m_events->insert( QEvent::Gesture, "QGestureEvent" );
-  m_events->insert( QEvent::GestureOverride, "QGestureEvent" );
-  m_events->insert( QEvent::GraphicsSceneContextMenu, "QGraphicsSceneContextMenuEvent" );
-  m_events->insert( QEvent::GraphicsSceneDragEnter, "QGraphicsSceneDragDropEvent" );
-  m_events->insert( QEvent::GraphicsSceneDragLeave, "QGraphicsSceneDragDropEvent" );
-  m_events->insert( QEvent::GraphicsSceneDragMove, "QGraphicsSceneDragDropEvent" );
-  m_events->insert( QEvent::GraphicsSceneDrop, "QGraphicsSceneDragDropEvent" );
-  m_events->insert( QEvent::GraphicsSceneHelp, "QHelpEvent" );
-  m_events->insert( QEvent::GraphicsSceneHoverEnter, "QGraphicsSceneHoverEvent" );
-  m_events->insert( QEvent::GraphicsSceneHoverLeave, "QGraphicsSceneHoverEvent" );
-  m_events->insert( QEvent::GraphicsSceneHoverMove, "QGraphicsSceneHoverEvent" );
-  m_events->insert( QEvent::GraphicsSceneMouseDoubleClick, "QGraphicsSceneMouseEvent" );
-  m_events->insert( QEvent::GraphicsSceneMouseMove, "QGraphicsSceneMouseEvent" );
-  m_events->insert( QEvent::GraphicsSceneMousePress, "QGraphicsSceneMouseEvent" );
-  m_events->insert( QEvent::GraphicsSceneMouseRelease, "QGraphicsSceneMouseEvent" );
-  m_events->insert( QEvent::GraphicsSceneMove, "QGraphicsSceneMoveEvent" );
-  m_events->insert( QEvent::GraphicsSceneResize, "QGraphicsSceneResizeEvent" );
-  m_events->insert( QEvent::GraphicsSceneWheel, "QGraphicsSceneWheelEvent" );
-  m_events->insert( QEvent::Hide, "QHideEvent" );
-  m_events->insert( QEvent::HoverEnter, "QHoverEvent" );
-  m_events->insert( QEvent::HoverLeave, "QHoverEvent" );
-  m_events->insert( QEvent::HoverMove, "QHoverEvent" );
-  m_events->insert( QEvent::IconDrag, "QIconDragEvent" );
-  m_events->insert( QEvent::InputMethod, "QInputMethodEvent" );
-  m_events->insert( QEvent::InputMethodQuery, "QInputMethodQueryEvent" );
-  m_events->insert( QEvent::KeyPress, "QKeyEvent" );
-  m_events->insert( QEvent::KeyRelease, "QKeyEvent" );
-  m_events->insert( QEvent::NonClientAreaMouseButtonDblClick, "QMouseEvent" );
-  m_events->insert( QEvent::NonClientAreaMouseButtonPress, "QMouseEvent" );
-  m_events->insert( QEvent::NonClientAreaMouseButtonRelease, "QMouseEvent" );
-  m_events->insert( QEvent::NonClientAreaMouseMove, "QMouseEvent" );
-  m_events->insert( QEvent::MouseButtonDblClick, "QMouseEvent" );
-  m_events->insert( QEvent::MouseButtonPress, "QMouseEvent" );
-  m_events->insert( QEvent::MouseButtonRelease, "QMouseEvent" );
-  m_events->insert( QEvent::MouseMove, "QMouseEvent" );
-  m_events->insert( QEvent::Move, "QMoveEvent" );
-  m_events->insert( QEvent::NativeGesture, "QNativeGestureEvent" );
-  m_events->insert( QEvent::OrientationChange, "QScreenOrientationChangeEvent" );
-  m_events->insert( QEvent::Paint, "QPaintEvent" );
-  m_events->insert( QEvent::PlatformSurface, "QPlatformSurfaceEvent" );
-  m_events->insert( QEvent::QueryWhatsThis, "QHelpEvent" );
-  m_events->insert( QEvent::Resize, "QResizeEvent" );
-  m_events->insert( QEvent::ScrollPrepare, "QScrollPrepareEvent" );
-  m_events->insert( QEvent::Scroll, "QScrollEvent" );
-  m_events->insert( QEvent::Shortcut, "QShortcutEvent" );
-  m_events->insert( QEvent::ShortcutOverride, "QKeyEvent" );
-  m_events->insert( QEvent::Show, "QShowEvent" );
-  //m_events->insert( QEvent::StateMachineSignal, "QStateMachine::SignalEvent" );
-  //m_events->insert( QEvent::StateMachineWrapped, "QStateMachine::WrappedEvent" );
-  m_events->insert( QEvent::StatusTip, "QStatusTipEvent" );
-  m_events->insert( QEvent::TabletMove, "QTabletEvent" );
-  m_events->insert( QEvent::TabletPress, "QTabletEvent" );
-  m_events->insert( QEvent::TabletRelease, "QTabletEvent" );
-  m_events->insert( QEvent::TabletEnterProximity, "QTabletEvent" );
-  m_events->insert( QEvent::TabletLeaveProximity, "QTabletEvent" );
-  m_events->insert( QEvent::Timer, "QTimerEvent" );
-  m_events->insert( QEvent::ToolTip, "QHelpEvent" );
-  m_events->insert( QEvent::TouchBegin, "QTouchEvent" );
-  m_events->insert( QEvent::TouchCancel, "QTouchEvent" );
-  m_events->insert( QEvent::TouchEnd, "QTouchEvent" );
-  m_events->insert( QEvent::TouchUpdate, "QTouchEvent" );
-  m_events->insert( QEvent::WhatsThis, "QHelpEvent" );
-  m_events->insert( QEvent::Wheel, "QWheelEvent" );
-  m_events->insert( QEvent::WindowStateChange, "QWindowStateChangeEvent" );
+  m_events->insert(QEvent::ActionAdded,                      "QActionEvent");
+  m_events->insert(QEvent::ActionChanged,                    "QActionEvent");
+  m_events->insert(QEvent::ActionRemoved,                    "QActionEvent");
+  m_events->insert(QEvent::ChildAdded,                       "QChildEvent");
+  m_events->insert(QEvent::ChildPolished,                    "QChildEvent");
+  m_events->insert(QEvent::ChildRemoved,                     "QChildEvent");
+  m_events->insert(QEvent::Close,                            "QCloseEvent");
+  m_events->insert(QEvent::ContextMenu,                      "QContextMenuEvent");
+  m_events->insert(QEvent::DeferredDelete,                   "QDeferredDeleteEvent");
+  m_events->insert(QEvent::DragEnter,                        "QDragEnterEvent");
+  m_events->insert(QEvent::DragLeave,                        "QDragLeaveEvent");
+  m_events->insert(QEvent::DragMove,                         "QDragMoveEvent");
+  m_events->insert(QEvent::Drop,                             "QDropEvent");
+  m_events->insert(QEvent::Enter,                            "QEnterEvent");
+  m_events->insert(QEvent::FileOpen,                         "QFileOpenEvent");
+  m_events->insert(QEvent::FocusIn,                          "QFocusEvent");
+  m_events->insert(QEvent::FocusOut,                         "QFocusEvent");
+  m_events->insert(QEvent::FocusAboutToChange,               "QFocusEvent");
+  m_events->insert(QEvent::Gesture,                          "QGestureEvent");
+  m_events->insert(QEvent::GestureOverride,                  "QGestureEvent");
+  m_events->insert(QEvent::GraphicsSceneContextMenu,         "QGraphicsSceneContextMenuEvent");
+  m_events->insert(QEvent::GraphicsSceneDragEnter,           "QGraphicsSceneDragDropEvent");
+  m_events->insert(QEvent::GraphicsSceneDragLeave,           "QGraphicsSceneDragDropEvent");
+  m_events->insert(QEvent::GraphicsSceneDragMove,            "QGraphicsSceneDragDropEvent");
+  m_events->insert(QEvent::GraphicsSceneDrop,                "QGraphicsSceneDragDropEvent");
+  m_events->insert(QEvent::GraphicsSceneHelp,                "QHelpEvent");
+  m_events->insert(QEvent::GraphicsSceneHoverEnter,          "QGraphicsSceneHoverEvent");
+  m_events->insert(QEvent::GraphicsSceneHoverLeave,          "QGraphicsSceneHoverEvent");
+  m_events->insert(QEvent::GraphicsSceneHoverMove,           "QGraphicsSceneHoverEvent");
+  m_events->insert(QEvent::GraphicsSceneMouseDoubleClick,    "QGraphicsSceneMouseEvent");
+  m_events->insert(QEvent::GraphicsSceneMouseMove,           "QGraphicsSceneMouseEvent");
+  m_events->insert(QEvent::GraphicsSceneMousePress,          "QGraphicsSceneMouseEvent");
+  m_events->insert(QEvent::GraphicsSceneMouseRelease,        "QGraphicsSceneMouseEvent");
+  m_events->insert(QEvent::GraphicsSceneMove,                "QGraphicsSceneMoveEvent");
+  m_events->insert(QEvent::GraphicsSceneResize,              "QGraphicsSceneResizeEvent");
+  m_events->insert(QEvent::GraphicsSceneWheel,               "QGraphicsSceneWheelEvent");
+  m_events->insert(QEvent::Hide,                             "QHideEvent");
+  m_events->insert(QEvent::HoverEnter,                       "QHoverEvent");
+  m_events->insert(QEvent::HoverLeave,                       "QHoverEvent");
+  m_events->insert(QEvent::HoverMove,                        "QHoverEvent");
+  m_events->insert(QEvent::IconDrag,                         "QIconDragEvent");
+  m_events->insert(QEvent::InputMethod,                      "QInputMethodEvent");
+  m_events->insert(QEvent::InputMethodQuery,                 "QInputMethodQueryEvent");
+  m_events->insert(QEvent::KeyPress,                         "QKeyEvent");
+  m_events->insert(QEvent::KeyRelease,                       "QKeyEvent");
+  m_events->insert(QEvent::NonClientAreaMouseButtonDblClick, "QMouseEvent");
+  m_events->insert(QEvent::NonClientAreaMouseButtonPress,    "QMouseEvent");
+  m_events->insert(QEvent::NonClientAreaMouseButtonRelease,  "QMouseEvent");
+  m_events->insert(QEvent::NonClientAreaMouseMove,           "QMouseEvent");
+  m_events->insert(QEvent::MouseButtonDblClick,              "QMouseEvent");
+  m_events->insert(QEvent::MouseButtonPress,                 "QMouseEvent");
+  m_events->insert(QEvent::MouseButtonRelease,               "QMouseEvent");
+  m_events->insert(QEvent::MouseMove,                        "QMouseEvent");
+  m_events->insert(QEvent::Move,                             "QMoveEvent");
+  m_events->insert(QEvent::NativeGesture,                    "QNativeGestureEvent");
+  m_events->insert(QEvent::OrientationChange,                "QScreenOrientationChangeEvent");
+  m_events->insert(QEvent::Paint,                            "QPaintEvent");
+  m_events->insert(QEvent::PlatformSurface,                  "QPlatformSurfaceEvent");
+  m_events->insert(QEvent::QueryWhatsThis,                   "QHelpEvent");
+  m_events->insert(QEvent::Resize,                           "QResizeEvent");
+  m_events->insert(QEvent::ScrollPrepare,                    "QScrollPrepareEvent");
+  m_events->insert(QEvent::Scroll,                           "QScrollEvent");
+  m_events->insert(QEvent::Shortcut,                         "QShortcutEvent");
+  m_events->insert(QEvent::ShortcutOverride,                 "QKeyEvent");
+  m_events->insert(QEvent::Show,                             "QShowEvent");
+#if 0
+  m_events->insert(QEvent::StateMachineSignal,               "QStateMachine::SignalEvent");
+  m_events->insert(QEvent::StateMachineWrapped,              "QStateMachine::WrappedEvent");
+#endif
+  m_events->insert(QEvent::StatusTip,                        "QStatusTipEvent");
+  m_events->insert(QEvent::TabletMove,                       "QTabletEvent");
+  m_events->insert(QEvent::TabletPress,                      "QTabletEvent");
+  m_events->insert(QEvent::TabletRelease,                    "QTabletEvent");
+  m_events->insert(QEvent::TabletEnterProximity,             "QTabletEvent");
+  m_events->insert(QEvent::TabletLeaveProximity,             "QTabletEvent");
+  m_events->insert(QEvent::Timer,                            "QTimerEvent");
+  m_events->insert(QEvent::ToolTip,                          "QHelpEvent");
+  m_events->insert(QEvent::TouchBegin,                       "QTouchEvent");
+  m_events->insert(QEvent::TouchCancel,                      "QTouchEvent");
+  m_events->insert(QEvent::TouchEnd,                         "QTouchEvent");
+  m_events->insert(QEvent::TouchUpdate,                      "QTouchEvent");
+  m_events->insert(QEvent::WhatsThis,                        "QHelpEvent");
+  m_events->insert(QEvent::Wheel,                            "QWheelEvent");
+  m_events->insert(QEvent::WindowStateChange,                "QWindowStateChangeEvent");
 }
 
 /*
@@ -114,9 +116,9 @@ Events::~Events()
   const int listsize = m_list1->size();
   for( int i = 0; i < listsize; ++i )
   {
-    if( m_list1->at(i) )
+    if( m_list1->at(i) != NULL )
     {
-      hb_itemRelease( m_list3->at(i) );
+      hb_itemRelease(m_list3->at(i));
     }
   }
 
@@ -130,7 +132,7 @@ Events::~Events()
 /*
   filtro de eventos
 */
-bool Events::eventFilter( QObject *obj, QEvent *event )
+bool Events::eventFilter(QObject * obj, QEvent * event)
 {
   QEvent::Type eventtype = event->type();
   int found = -1;
@@ -139,7 +141,7 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
   const int listsize = m_list1->size();
   for( int i = 0; i < listsize; ++i )
   {
-    if( ( m_list1->at(i) == obj ) && ( m_list2->at(i) == eventtype ) )
+    if( (m_list1->at(i) == obj) && (m_list2->at(i) == eventtype) )
     {
       found = i;
       break;
@@ -154,14 +156,14 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
 
   // executa bloco de código/função
   //PHB_ITEM pObject = hb_itemPutPtr( NULL, (QObject *) obj );
-  PHB_ITEM pObject = returnQObject( obj, "QOBJECT" );
+  PHB_ITEM pObject = returnQObject(obj, "QOBJECT");
   //PHB_ITEM pEvent = hb_itemPutPtr( NULL, (QEvent *) event );
-  PHB_ITEM pEvent = returnObject( event, "QEVENT" );
+  PHB_ITEM pEvent = returnObject(event, "QEVENT");
 
-  bool ret = hb_itemGetL( hb_vmEvalBlockV( m_list3->at(found), 2, pObject, pEvent ) );
+  bool ret = hb_itemGetL(hb_vmEvalBlockV(m_list3->at(found), 2, pObject, pEvent));
 
-  hb_itemRelease( pObject );
-  hb_itemRelease( pEvent );
+  hb_itemRelease(pObject);
+  hb_itemRelease(pEvent);
 
   // retorna resultado
   // .t.: interrompe processamento do evento
@@ -178,14 +180,12 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
+bool Events::connectEvent(QObject * object, int type, PHB_ITEM codeblock)
 {
-  int i;
-
   // instala eventfilter, se não houver nenhum evento
-  if( m_list1->contains( object ) == false )
+  if( !m_list1->contains(object) )
   {
-    object->installEventFilter( this );
+    object->installEventFilter(this);
   }
 
   m_mutex->lock();
@@ -194,12 +194,12 @@ bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
   int found = -1;
 
   const int listsize = m_list1->size();
-  for( i = 0; i < listsize; ++i )
+  for( int i = 0; i < listsize; ++i )
   {
-    if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == (QEvent::Type) type ) )
+    if( (m_list1->at(i) == object) && (m_list2->at(i) == static_cast<QEvent::Type>(type)) )
     {
       found = i;
-      hb_itemRelease( codeblock );
+      hb_itemRelease(codeblock);
       break;
     }
   }
@@ -210,21 +210,21 @@ bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
   if( found == -1 )
   {
     // procura por posição livre
-    i = m_list1->indexOf( NULL );
+    int i = m_list1->indexOf(NULL);
 
     if( i == -1 ) // nao encontrou posicao livre
     {
       // adiciona evento na lista de eventos
-      m_list1->append( object );
-      m_list2->append( (QEvent::Type) type );
-      m_list3->append( codeblock );
+      m_list1->append(object);
+      m_list2->append(static_cast<QEvent::Type>(type));
+      m_list3->append(codeblock);
     }
     else // encontrou posicao livre
     {
       // coloca na posição livre
-      m_list1->replace( i, object );
-      m_list2->replace( i, (QEvent::Type) type );
-      m_list3->replace( i, codeblock );
+      m_list1->replace(i, object);
+      m_list2->replace(i, static_cast<QEvent::Type>(type));
+      m_list3->replace(i, codeblock);
     }
 
     ret = true;
@@ -245,29 +245,28 @@ bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-bool Events::disconnectEvent( QObject * object, int type )
+bool Events::disconnectEvent(QObject * object, int type)
 {
-  int i;
   bool ret = false;
 
   // remove evento da lista de eventos
   const int listsize = m_list1->size();
-  for( i = 0; i < listsize; ++i )
+  for( int i = 0; i < listsize; ++i )
   {
-    if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == (QEvent::Type) type ) )
+    if( (m_list1->at(i) == object) && (m_list2->at(i) == static_cast<QEvent::Type>(type)) )
     {
-      hb_itemRelease( m_list3->at(i) );
-      m_list1->replace( i, NULL );
-      m_list2->replace( i, QEvent::None );
-      m_list3->replace( i, NULL );
+      hb_itemRelease(m_list3->at(i));
+      m_list1->replace(i, NULL);
+      m_list2->replace(i, QEvent::None);
+      m_list3->replace(i, NULL);
       ret = true;
     }
   }
 
   // desinstala eventfilter, se não houver mais nenhum evento
-  if( m_list1->contains( object ) == false )
+  if( !m_list1->contains(object) )
   {
-    object->removeEventFilter( this );
+    object->removeEventFilter(this);
   }
 
   // retorna o resultado da operação
@@ -280,7 +279,7 @@ bool Events::disconnectEvent( QObject * object, int type )
   incluindo os eventos ligados aos filhos, netos, bisnetos, etc... (se children = true).
 */
 
-void Events::disconnectAllEvents( QObject * obj, bool children )
+void Events::disconnectAllEvents(QObject * obj, bool children)
 {
   if( !children )
   {
@@ -291,22 +290,22 @@ void Events::disconnectAllEvents( QObject * obj, bool children )
       // elimina eventos ativos (true) ligados ao objeto (obj)
       if( m_list1->at(i) == obj )
       {
-        hb_itemRelease( m_list3->at(i) );
-        m_list1->replace( i, NULL );
-        m_list2->replace( i, QEvent::None );
-        m_list3->replace( i, NULL );
+        hb_itemRelease(m_list3->at(i));
+        m_list1->replace(i, NULL);
+        m_list2->replace(i, QEvent::None);
+        m_list3->replace(i, NULL);
       }
     }
     // desinstala eventfilter do objeto 'obj'
-    if( m_list1->contains( obj ) == false )
+    if( !m_list1->contains(obj) )
     {
-      obj->removeEventFilter( this );
+      obj->removeEventFilter(this);
     }
   }
   else
   {
     // obtém a lista de filhos, netos, bisnetos, etc...
-    QList<QObject *> list = obj->findChildren<QObject*>();
+    QList<QObject*> list = obj->findChildren<QObject*>();
     // adiciona o pai na lista
     list << obj;
     // percorre toda a lista de objetos
@@ -320,85 +319,81 @@ void Events::disconnectAllEvents( QObject * obj, bool children )
         // elimina eventos ativos (true) ligados ao objeto list.at(i)
         if( m_list1->at(ii) == list.at(i) )
         {
-          hb_itemRelease( m_list3->at(ii) );
-          m_list1->replace( ii, NULL );
-          m_list2->replace( ii, QEvent::None );
-          m_list3->replace( ii, NULL );
+          hb_itemRelease(m_list3->at(ii));
+          m_list1->replace(ii, NULL);
+          m_list2->replace(ii, QEvent::None);
+          m_list3->replace(ii, NULL);
         }
       }
       // desinstala eventfilter do objeto 'list.at(i)'
-      if( m_list1->contains( list.at(i) ) == false )
+      if( !m_list1->contains(list.at(i)) )
       {
-        list.at(i)->removeEventFilter( this );
+        list.at(i)->removeEventFilter(this);
       }
     }
   }
 }
 
-PHB_ITEM Events::returnObject( QEvent * event, const char * classname )
+PHB_ITEM Events::returnObject(QEvent * event, const char * classname)
 {
-  QString eventname = m_events->value( event->type(), "QEvent" );
+  QString eventname = m_events->value(event->type(), "QEvent");
 
-  PHB_DYNS pDynSym;
+  PHB_DYNS pDynSym = hb_dynsymFindName(eventname.toUpper().toLatin1().data());
 
-  pDynSym = hb_dynsymFindName( (const char *) eventname.toUpper().toLatin1().data() );
-
-  if( !pDynSym )
+  if( pDynSym == NULL )
   {
-    pDynSym = hb_dynsymFindName( classname );
+    pDynSym = hb_dynsymFindName(classname);
   }
 
-  PHB_ITEM pObject = hb_itemNew( NULL );
+  PHB_ITEM pObject = hb_itemNew(NULL);
 
-  if( pDynSym )
+  if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemNew( NULL );
-    hb_itemPutPtr( pItem, (QEvent *) event );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, event);
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemRelease(pItem);
   }
   else
   {
-    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 
   return pObject;
 }
 
-PHB_ITEM Events::returnQObject( QObject * ptr, const char * classname )
+PHB_ITEM Events::returnQObject(QObject * ptr, const char * classname)
 {
   PHB_DYNS pDynSym = NULL;
 
-  if( ptr )
+  if( ptr != NULL )
   {
-    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+    pDynSym = hb_dynsymFindName(ptr->metaObject()->className());
   }
 
-  if( !pDynSym )
+  if( pDynSym == NULL )
   {
-    pDynSym = hb_dynsymFindName( classname );
+    pDynSym = hb_dynsymFindName(classname);
   }
 
-  PHB_ITEM pObject = hb_itemNew( NULL );
+  PHB_ITEM pObject = hb_itemNew(NULL);
 
-  if( pDynSym )
+  if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemNew( NULL );
-    hb_itemPutPtr( pItem, (void *) ptr );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemRelease(pItem);
   }
   else
   {
-    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 
   return pObject;
@@ -428,29 +423,29 @@ int Events::active()
 
 namespace Qt5xHb
 {
-  bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
+  bool Events_connect_event(QObject * object, int type, PHB_ITEM codeblock)
   {
-    return s_events->connectEvent( object, type, codeblock );
+    return s_events->connectEvent(object, type, codeblock);
   }
 
-  bool Events_disconnect_event( QObject * object, int type )
+  bool Events_disconnect_event(QObject * object, int type)
   {
-    return s_events->disconnectEvent( object, type );
+    return s_events->disconnectEvent(object, type);
   }
 
-  void Events_disconnect_all_events( QObject * obj, bool children )
+  void Events_disconnect_all_events(QObject * obj, bool children)
   {
-    s_events->disconnectAllEvents( obj, children );
+    s_events->disconnectAllEvents(obj, children);
   }
 
-  PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
+  PHB_ITEM Events_return_object(QEvent * ptr, const char * classname)
   {
-    return s_events->returnObject( ptr, classname );
+    return s_events->returnObject(ptr, classname);
   }
 
-  PHB_ITEM Events_return_qobject( QObject * ptr, const char * classname )
+  PHB_ITEM Events_return_qobject(QObject * ptr, const char * classname)
   {
-    return s_events->returnQObject( ptr, classname );
+    return s_events->returnQObject(ptr, classname);
   }
 }
 
@@ -462,7 +457,7 @@ namespace Qt5xHb
 
 HB_FUNC( QTXHB_EVENTS_SIZE )
 {
-  hb_retni( s_events->size() );
+  hb_retni(s_events->size());
 }
 
 /*
@@ -473,20 +468,20 @@ HB_FUNC( QTXHB_EVENTS_SIZE )
 
 HB_FUNC( QTXHB_EVENTS_ACTIVE )
 {
-  hb_retni( s_events->active() );
+  hb_retni(s_events->active());
 }
 
 HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE ) // deprecated
 {
-  hb_retni( s_events->active() );
+  hb_retni(s_events->active());
 }
 
-#include "hbvm.h"
-#include "hbinit.h"
+#include <hbvm.h>
+#include <hbinit.h>
 
-static void qt5xhb_events_init( void * cargo )
+static void qt5xhb_events_init(void * cargo)
 {
-  HB_SYMBOL_UNUSED( cargo );
+  HB_SYMBOL_UNUSED(cargo);
 
   if( s_events == NULL )
   {
@@ -494,21 +489,21 @@ static void qt5xhb_events_init( void * cargo )
   }
 }
 
-static void qt5xhb_events_exit( void * cargo )
+static void qt5xhb_events_exit(void * cargo)
 {
-  HB_SYMBOL_UNUSED( cargo );
+  HB_SYMBOL_UNUSED(cargo);
 
   delete s_events;
 }
 
-HB_CALL_ON_STARTUP_BEGIN( _qt5xhb_events_init_ )
-  hb_vmAtInit( qt5xhb_events_init, NULL );
-  hb_vmAtExit( qt5xhb_events_exit, NULL );
-HB_CALL_ON_STARTUP_END( _qt5xhb_events_init_ )
+HB_CALL_ON_STARTUP_BEGIN(_qt5xhb_events_init_)
+  hb_vmAtInit(qt5xhb_events_init, NULL);
+  hb_vmAtExit(qt5xhb_events_exit, NULL);
+HB_CALL_ON_STARTUP_END(_qt5xhb_events_init_)
 
-#if defined( HB_PRAGMA_STARTUP )
+#if defined(HB_PRAGMA_STARTUP)
   #pragma startup _qt5xhb_events_init_
-#elif defined( HB_DATASEG_STARTUP )
-  #define HB_DATASEG_BODY HB_DATASEG_FUNC( _qt5xhb_events_init_ )
-  #include "hbiniseg.h"
+#elif defined(HB_DATASEG_STARTUP)
+  #define HB_DATASEG_BODY HB_DATASEG_FUNC(_qt5xhb_events_init_)
+  #include <hbiniseg.h>
 #endif
