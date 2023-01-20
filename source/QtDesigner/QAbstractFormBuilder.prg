@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
     {
 #endif
       QWidget * ptr = obj->load( PQIODEVICE(1), OPQWIDGET(2,0) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

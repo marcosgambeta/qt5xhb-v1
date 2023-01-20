@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
     {
 #endif
       QDesignerFormEditorInterface * ptr = obj->core();
-      Qt5xHb::createReturnQObjectClass( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QDESIGNERFORMEDITORINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
     {
 #endif
       QObject * ptr = obj->object();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,11 +255,11 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDesignerPropertyEditorInterfaceSlots_connect_signal( const QString & signal, const QString & slot );
+void QDesignerPropertyEditorInterfaceSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
 {
-  QDesignerPropertyEditorInterfaceSlots_connect_signal( "propertyChanged(QString,QVariant)", "propertyChanged(QString,QVariant)" );
+  QDesignerPropertyEditorInterfaceSlots_connect_signal("propertyChanged(QString,QVariant)", "propertyChanged(QString,QVariant)");
 }
 
 #pragma ENDDUMP

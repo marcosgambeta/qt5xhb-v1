@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
     {
 #endif
       QExtensionManager * ptr = obj->extensionManager();
-      Qt5xHb::createReturnQObjectClass( ptr, "QEXTENSIONMANAGER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QEXTENSIONMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
     {
 #endif
       QObject * ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

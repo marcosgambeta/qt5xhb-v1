@@ -24,23 +24,23 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "propertyChanged(QString,QVariant)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "propertyChanged(QString,QVariant)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDESIGNERPROPERTYEDITORINTERFACE");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
-    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT" );
+    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT");
 
-    hb_vmEvalBlockV( cb, 3, psender, pname, pvalue );
+    hb_vmEvalBlockV(cb, 3, psender, pname, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pname );
     hb_itemRelease( pvalue );
   }
 }
 
-void QDesignerPropertyEditorInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
+void QDesignerPropertyEditorInterfaceSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
