@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QWINDOW_FOCUSOBJECT )
     {
 #endif
       QObject * ptr = obj->focusObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QWINDOW_PARENT )
     {
 #endif
       QWindow * ptr = obj->parent();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QWINDOW_SCREEN )
     {
 #endif
       QScreen * ptr = obj->screen();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSCREEN" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QWINDOW_TRANSIENTPARENT )
     {
 #endif
       QWindow * ptr = obj->transientParent();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1871,51 +1871,51 @@ HB_FUNC_STATIC( QWINDOW_REQUESTUPDATE )
 #endif
 }
 
-void QWindowSlots_connect_signal( const QString & signal, const QString & slot );
+void QWindowSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
 {
-  QWindowSlots_connect_signal( "contentOrientationChanged(Qt::ScreenOrientation)", "contentOrientationChanged(Qt::ScreenOrientation)" );
+  QWindowSlots_connect_signal("contentOrientationChanged(Qt::ScreenOrientation)", "contentOrientationChanged(Qt::ScreenOrientation)");
 }
 
 HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
 {
-  QWindowSlots_connect_signal( "focusObjectChanged(QObject*)", "focusObjectChanged(QObject*)" );
+  QWindowSlots_connect_signal("focusObjectChanged(QObject*)", "focusObjectChanged(QObject*)");
 }
 
 HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
 {
-  QWindowSlots_connect_signal( "heightChanged(int)", "heightChanged(int)" );
+  QWindowSlots_connect_signal("heightChanged(int)", "heightChanged(int)");
 }
 
 HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
 {
-  QWindowSlots_connect_signal( "screenChanged(QScreen*)", "screenChanged(QScreen*)" );
+  QWindowSlots_connect_signal("screenChanged(QScreen*)", "screenChanged(QScreen*)");
 }
 
 HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
 {
-  QWindowSlots_connect_signal( "visibleChanged(bool)", "visibleChanged(bool)" );
+  QWindowSlots_connect_signal("visibleChanged(bool)", "visibleChanged(bool)");
 }
 
 HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
 {
-  QWindowSlots_connect_signal( "widthChanged(int)", "widthChanged(int)" );
+  QWindowSlots_connect_signal("widthChanged(int)", "widthChanged(int)");
 }
 
 HB_FUNC_STATIC( QWINDOW_ONWINDOWMODALITYCHANGED )
 {
-  QWindowSlots_connect_signal( "windowModalityChanged(Qt::WindowModality)", "windowModalityChanged(Qt::WindowModality)" );
+  QWindowSlots_connect_signal("windowModalityChanged(Qt::WindowModality)", "windowModalityChanged(Qt::WindowModality)");
 }
 
 HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
 {
-  QWindowSlots_connect_signal( "xChanged(int)", "xChanged(int)" );
+  QWindowSlots_connect_signal("xChanged(int)", "xChanged(int)");
 }
 
 HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
 {
-  QWindowSlots_connect_signal( "yChanged(int)", "yChanged(int)" );
+  QWindowSlots_connect_signal("yChanged(int)", "yChanged(int)");
 }
 
 #pragma ENDDUMP

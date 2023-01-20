@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
     {
 #endif
       QObject * ptr = obj->create( PQSTRING(1), PQSTRING(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
     {
 #endif
       QObject * ptr = obj->object();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_WINDOW )
     {
 #endif
       QWindow * ptr = obj->window();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

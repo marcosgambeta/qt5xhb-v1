@@ -24,16 +24,16 @@ void QScreenSlots::geometryChanged( const QRect & geometry )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "geometryChanged(QRect)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "geometryChanged(QRect)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
-    PHB_ITEM pgeometry = Qt5xHb::Signals_return_object( (void *) &geometry, "QRECT" );
+    PHB_ITEM pgeometry = Qt5xHb::Signals_return_object( (void *) &geometry, "QRECT");
 
-    hb_vmEvalBlockV( cb, 2, psender, pgeometry );
+    hb_vmEvalBlockV(cb, 2, psender, pgeometry);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pgeometry );
   }
 }
@@ -42,16 +42,16 @@ void QScreenSlots::physicalSizeChanged( const QSizeF & size )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "physicalSizeChanged(QSizeF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "physicalSizeChanged(QSizeF)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
-    PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZEF" );
+    PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZEF");
 
-    hb_vmEvalBlockV( cb, 2, psender, psize );
+    hb_vmEvalBlockV(cb, 2, psender, psize);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( psize );
   }
 }
@@ -60,16 +60,16 @@ void QScreenSlots::physicalDotsPerInchChanged( qreal dpi )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "physicalDotsPerInchChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "physicalDotsPerInchChanged(qreal)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
     PHB_ITEM pdpi = hb_itemPutND( NULL, dpi );
 
-    hb_vmEvalBlockV( cb, 2, psender, pdpi );
+    hb_vmEvalBlockV(cb, 2, psender, pdpi);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pdpi );
   }
 }
@@ -78,16 +78,16 @@ void QScreenSlots::logicalDotsPerInchChanged( qreal dpi )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "logicalDotsPerInchChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "logicalDotsPerInchChanged(qreal)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
     PHB_ITEM pdpi = hb_itemPutND( NULL, dpi );
 
-    hb_vmEvalBlockV( cb, 2, psender, pdpi );
+    hb_vmEvalBlockV(cb, 2, psender, pdpi);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pdpi );
   }
 }
@@ -96,16 +96,16 @@ void QScreenSlots::virtualGeometryChanged( const QRect & rect )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "virtualGeometryChanged(QRect)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "virtualGeometryChanged(QRect)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
-    PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECT" );
+    PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECT");
 
-    hb_vmEvalBlockV( cb, 2, psender, prect );
+    hb_vmEvalBlockV(cb, 2, psender, prect);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( prect );
   }
 }
@@ -114,16 +114,16 @@ void QScreenSlots::primaryOrientationChanged( Qt::ScreenOrientation orientation 
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "primaryOrientationChanged(Qt::ScreenOrientation)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "primaryOrientationChanged(Qt::ScreenOrientation)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
-    PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
+    PHB_ITEM porientation = hb_itemPutNI( NULL, static_cast<int>(orientation) );
 
-    hb_vmEvalBlockV( cb, 2, psender, porientation );
+    hb_vmEvalBlockV(cb, 2, psender, porientation);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( porientation );
   }
 }
@@ -132,16 +132,16 @@ void QScreenSlots::orientationChanged( Qt::ScreenOrientation orientation )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "orientationChanged(Qt::ScreenOrientation)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "orientationChanged(Qt::ScreenOrientation)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
-    PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
+    PHB_ITEM porientation = hb_itemPutNI( NULL, static_cast<int>(orientation) );
 
-    hb_vmEvalBlockV( cb, 2, psender, porientation );
+    hb_vmEvalBlockV(cb, 2, psender, porientation);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( porientation );
   }
 }
@@ -150,21 +150,21 @@ void QScreenSlots::refreshRateChanged( qreal refreshRate )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "refreshRateChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "refreshRateChanged(qreal)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCREEN");
     PHB_ITEM prefreshRate = hb_itemPutND( NULL, refreshRate );
 
-    hb_vmEvalBlockV( cb, 2, psender, prefreshRate );
+    hb_vmEvalBlockV(cb, 2, psender, prefreshRate);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( prefreshRate );
   }
 }
 
-void QScreenSlots_connect_signal( const QString & signal, const QString & slot )
+void QScreenSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QScreen * obj = (QScreen *) Qt5xHb::itemGetPtrStackSelfItem();
 

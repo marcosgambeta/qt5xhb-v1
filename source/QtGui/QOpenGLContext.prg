@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SCREEN )
     {
 #endif
       QScreen * ptr = obj->screen();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSCREEN" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHARECONTEXT )
     {
 #endif
       QOpenGLContext * ptr = obj->shareContext();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOPENGLCONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHAREGROUP )
     {
 #endif
       QOpenGLContextGroup * ptr = obj->shareGroup();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOPENGLCONTEXTGROUP" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXTGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_CURRENTCONTEXT )
   {
 #endif
     QOpenGLContext * ptr = QOpenGLContext::currentContext();
-    Qt5xHb::createReturnQObjectClass( ptr, "QOPENGLCONTEXT" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -549,11 +549,11 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_CURRENTCONTEXT )
 #endif
 }
 
-void QOpenGLContextSlots_connect_signal( const QString & signal, const QString & slot );
+void QOpenGLContextSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QOPENGLCONTEXT_ONABOUTTOBEDESTROYED )
 {
-  QOpenGLContextSlots_connect_signal( "aboutToBeDestroyed()", "aboutToBeDestroyed()" );
+  QOpenGLContextSlots_connect_signal("aboutToBeDestroyed()", "aboutToBeDestroyed()");
 }
 
 #pragma ENDDUMP

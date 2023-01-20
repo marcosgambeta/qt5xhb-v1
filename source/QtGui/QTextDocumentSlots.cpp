@@ -24,7 +24,7 @@ void QTextDocumentSlots::contentsChange( int from, int charsRemoves, int charsAd
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsChange(int,int,int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsChange(int,int,int)");
 
   if( cb != NULL )
   {
@@ -33,9 +33,9 @@ void QTextDocumentSlots::contentsChange( int from, int charsRemoves, int charsAd
     PHB_ITEM pcharsRemoves = hb_itemPutNI( NULL, charsRemoves );
     PHB_ITEM pcharsAdded = hb_itemPutNI( NULL, charsAdded );
 
-    hb_vmEvalBlockV( cb, 4, psender, pfrom, pcharsRemoves, pcharsAdded );
+    hb_vmEvalBlockV(cb, 4, psender, pfrom, pcharsRemoves, pcharsAdded);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pfrom );
     hb_itemRelease( pcharsRemoves );
     hb_itemRelease( pcharsAdded );
@@ -46,15 +46,15 @@ void QTextDocumentSlots::contentsChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -62,16 +62,16 @@ void QTextDocumentSlots::undoAvailable( bool b )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "undoAvailable(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "undoAvailable(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
     PHB_ITEM pb = hb_itemPutL( NULL, b );
 
-    hb_vmEvalBlockV( cb, 2, psender, pb );
+    hb_vmEvalBlockV(cb, 2, psender, pb);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pb );
   }
 }
@@ -80,16 +80,16 @@ void QTextDocumentSlots::redoAvailable( bool b )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "redoAvailable(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "redoAvailable(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
     PHB_ITEM pb = hb_itemPutL( NULL, b );
 
-    hb_vmEvalBlockV( cb, 2, psender, pb );
+    hb_vmEvalBlockV(cb, 2, psender, pb);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pb );
   }
 }
@@ -98,15 +98,15 @@ void QTextDocumentSlots::undoCommandAdded()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "undoCommandAdded()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "undoCommandAdded()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -114,16 +114,16 @@ void QTextDocumentSlots::modificationChanged( bool m )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "modificationChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "modificationChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
     PHB_ITEM pm = hb_itemPutL( NULL, m );
 
-    hb_vmEvalBlockV( cb, 2, psender, pm );
+    hb_vmEvalBlockV(cb, 2, psender, pm);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pm );
   }
 }
@@ -132,16 +132,16 @@ void QTextDocumentSlots::cursorPositionChanged( const QTextCursor & cursor )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cursorPositionChanged(QTextCursor)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "cursorPositionChanged(QTextCursor)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
-    PHB_ITEM pcursor = Qt5xHb::Signals_return_object( (void *) &cursor, "QTEXTCURSOR" );
+    PHB_ITEM pcursor = Qt5xHb::Signals_return_object( (void *) &cursor, "QTEXTCURSOR");
 
-    hb_vmEvalBlockV( cb, 2, psender, pcursor );
+    hb_vmEvalBlockV(cb, 2, psender, pcursor);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pcursor );
   }
 }
@@ -150,16 +150,16 @@ void QTextDocumentSlots::blockCountChanged( int newBlockCount )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "blockCountChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "blockCountChanged(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
     PHB_ITEM pnewBlockCount = hb_itemPutNI( NULL, newBlockCount );
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewBlockCount );
+    hb_vmEvalBlockV(cb, 2, psender, pnewBlockCount);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pnewBlockCount );
   }
 }
@@ -168,19 +168,19 @@ void QTextDocumentSlots::documentLayoutChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "documentLayoutChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "documentLayoutChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QTextDocumentSlots_connect_signal( const QString & signal, const QString & slot )
+void QTextDocumentSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 

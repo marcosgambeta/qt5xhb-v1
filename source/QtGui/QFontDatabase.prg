@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
     {
 #endif
       QList<int> list = obj->pointSizes( PQSTRING(1), OPQSTRING(2,QString()) );
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
     {
 #endif
       QList<int> list = obj->smoothSizes( PQSTRING(1), PQSTRING(2) );
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STANDARDSIZES )
   {
 #endif
     QList<int> list = QFontDatabase::standardSizes();
-    Qt5xHb::convert_qlist_int_to_array( list );
+    Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -24,16 +24,16 @@ void QGuiApplicationSlots::focusObjectChanged( QObject * focusObject )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "focusObjectChanged(QObject*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "focusObjectChanged(QObject*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pfocusObject = Qt5xHb::Signals_return_qobject(focusObject, "QOBJECT");
 
-    hb_vmEvalBlockV( cb, 2, psender, pfocusObject );
+    hb_vmEvalBlockV(cb, 2, psender, pfocusObject);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pfocusObject );
   }
 }
@@ -42,16 +42,16 @@ void QGuiApplicationSlots::focusWindowChanged( QWindow * focusWindow )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "focusWindowChanged(QWindow*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "focusWindowChanged(QWindow*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pfocusWindow = Qt5xHb::Signals_return_qobject(focusWindow, "QWINDOW");
 
-    hb_vmEvalBlockV( cb, 2, psender, pfocusWindow );
+    hb_vmEvalBlockV(cb, 2, psender, pfocusWindow);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pfocusWindow );
   }
 }
@@ -60,15 +60,15 @@ void QGuiApplicationSlots::fontDatabaseChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fontDatabaseChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fontDatabaseChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -76,15 +76,15 @@ void QGuiApplicationSlots::lastWindowClosed()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastWindowClosed()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lastWindowClosed()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -92,21 +92,21 @@ void QGuiApplicationSlots::screenAdded( QScreen * screen )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "screenAdded(QScreen*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "screenAdded(QScreen*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject(screen, "QSCREEN");
 
-    hb_vmEvalBlockV( cb, 2, psender, pscreen );
+    hb_vmEvalBlockV(cb, 2, psender, pscreen);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pscreen );
   }
 }
 
-void QGuiApplicationSlots_connect_signal( const QString & signal, const QString & slot )
+void QGuiApplicationSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QGuiApplication * obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 

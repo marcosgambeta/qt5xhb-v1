@@ -455,36 +455,36 @@ HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QInputMethodSlots_connect_signal( const QString & signal, const QString & slot );
+void QInputMethodSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
 {
-  QInputMethodSlots_connect_signal( "animatingChanged()", "animatingChanged()" );
+  QInputMethodSlots_connect_signal("animatingChanged()", "animatingChanged()");
 }
 
 HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
 {
-  QInputMethodSlots_connect_signal( "cursorRectangleChanged()", "cursorRectangleChanged()" );
+  QInputMethodSlots_connect_signal("cursorRectangleChanged()", "cursorRectangleChanged()");
 }
 
 HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
 {
-  QInputMethodSlots_connect_signal( "inputDirectionChanged(Qt::LayoutDirection)", "inputDirectionChanged(Qt::LayoutDirection)" );
+  QInputMethodSlots_connect_signal("inputDirectionChanged(Qt::LayoutDirection)", "inputDirectionChanged(Qt::LayoutDirection)");
 }
 
 HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
 {
-  QInputMethodSlots_connect_signal( "keyboardRectangleChanged()", "keyboardRectangleChanged()" );
+  QInputMethodSlots_connect_signal("keyboardRectangleChanged()", "keyboardRectangleChanged()");
 }
 
 HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
 {
-  QInputMethodSlots_connect_signal( "localeChanged()", "localeChanged()" );
+  QInputMethodSlots_connect_signal("localeChanged()", "localeChanged()");
 }
 
 HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
 {
-  QInputMethodSlots_connect_signal( "visibleChanged()", "visibleChanged()" );
+  QInputMethodSlots_connect_signal("visibleChanged()", "visibleChanged()");
 }
 
 #pragma ENDDUMP

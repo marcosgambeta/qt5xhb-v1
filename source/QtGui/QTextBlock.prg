@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
     {
 #endif
       const QTextDocument * ptr = obj->document();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
     {
 #endif
       QTextList * ptr = obj->textList();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTLIST" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
     {
 #endif
       const QMimeData * ptr = obj->mimeData( HB_ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,26 +431,26 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT )
   }
 }
 
-void QClipboardSlots_connect_signal( const QString & signal, const QString & slot );
+void QClipboardSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCLIPBOARD_ONCHANGED )
 {
-  QClipboardSlots_connect_signal( "changed(QClipboard::Mode)", "changed(QClipboard::Mode)" );
+  QClipboardSlots_connect_signal("changed(QClipboard::Mode)", "changed(QClipboard::Mode)");
 }
 
 HB_FUNC_STATIC( QCLIPBOARD_ONDATACHANGED )
 {
-  QClipboardSlots_connect_signal( "dataChanged()", "dataChanged()" );
+  QClipboardSlots_connect_signal("dataChanged()", "dataChanged()");
 }
 
 HB_FUNC_STATIC( QCLIPBOARD_ONFINDBUFFERCHANGED )
 {
-  QClipboardSlots_connect_signal( "findBufferChanged()", "findBufferChanged()" );
+  QClipboardSlots_connect_signal("findBufferChanged()", "findBufferChanged()");
 }
 
 HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
 {
-  QClipboardSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QClipboardSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 #pragma ENDDUMP

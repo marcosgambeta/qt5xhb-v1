@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
     {
 #endif
       QWindow * ptr = obj->window();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
     {
 #endif
       QObject * ptr = obj->target();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

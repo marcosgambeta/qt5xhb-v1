@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
 }
 
 /*
-virtual QList<QAccessibleInterface *> selectedCells() const = 0
+virtual QList<QAccessibleInterface*> selectedCells() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS )
 {
@@ -322,28 +322,28 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAccessibleInterface *> list = obj->selectedCells();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QACCESSIBLEINTERFACE" );
+      QList<QAccessibleInterface*> list = obj->selectedCells();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QACCESSIBLEINTERFACE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QACCESSIBLEINTERFACE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QACCESSIBLEINTERFACE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS )
     {
 #endif
       QList<int> list = obj->selectedColumns();
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWS )
     {
 #endif
       QList<int> list = obj->selectedRows();
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

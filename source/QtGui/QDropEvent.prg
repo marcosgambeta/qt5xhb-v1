@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
     {
 #endif
       const QMimeData * ptr = obj->mimeData();
-      Qt5xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QDROPEVENT_SOURCE )
     {
 #endif
       QObject * ptr = obj->source();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

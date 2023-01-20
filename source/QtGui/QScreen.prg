@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEGEOMETRY )
 }
 
 /*
-QList<QScreen *> virtualSiblings() const
+QList<QScreen*> virtualSiblings() const
 */
 HB_FUNC_STATIC( QSCREEN_VIRTUALSIBLINGS )
 {
@@ -466,28 +466,28 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALSIBLINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QScreen *> list = obj->virtualSiblings();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSCREEN" );
+      QList<QScreen*> list = obj->virtualSiblings();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSCREEN");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSCREEN", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSCREEN", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -869,46 +869,46 @@ HB_FUNC_STATIC( QSCREEN_REFRESHRATE )
   }
 }
 
-void QScreenSlots_connect_signal( const QString & signal, const QString & slot );
+void QScreenSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
 {
-  QScreenSlots_connect_signal( "geometryChanged(QRect)", "geometryChanged(QRect)" );
+  QScreenSlots_connect_signal("geometryChanged(QRect)", "geometryChanged(QRect)");
 }
 
 HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
 {
-  QScreenSlots_connect_signal( "physicalSizeChanged(QSizeF)", "physicalSizeChanged(QSizeF)" );
+  QScreenSlots_connect_signal("physicalSizeChanged(QSizeF)", "physicalSizeChanged(QSizeF)");
 }
 
 HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
 {
-  QScreenSlots_connect_signal( "physicalDotsPerInchChanged(qreal)", "physicalDotsPerInchChanged(qreal)" );
+  QScreenSlots_connect_signal("physicalDotsPerInchChanged(qreal)", "physicalDotsPerInchChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
 {
-  QScreenSlots_connect_signal( "logicalDotsPerInchChanged(qreal)", "logicalDotsPerInchChanged(qreal)" );
+  QScreenSlots_connect_signal("logicalDotsPerInchChanged(qreal)", "logicalDotsPerInchChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
 {
-  QScreenSlots_connect_signal( "virtualGeometryChanged(QRect)", "virtualGeometryChanged(QRect)" );
+  QScreenSlots_connect_signal("virtualGeometryChanged(QRect)", "virtualGeometryChanged(QRect)");
 }
 
 HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
 {
-  QScreenSlots_connect_signal( "primaryOrientationChanged(Qt::ScreenOrientation)", "primaryOrientationChanged(Qt::ScreenOrientation)" );
+  QScreenSlots_connect_signal("primaryOrientationChanged(Qt::ScreenOrientation)", "primaryOrientationChanged(Qt::ScreenOrientation)");
 }
 
 HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
 {
-  QScreenSlots_connect_signal( "orientationChanged(Qt::ScreenOrientation)", "orientationChanged(Qt::ScreenOrientation)" );
+  QScreenSlots_connect_signal("orientationChanged(Qt::ScreenOrientation)", "orientationChanged(Qt::ScreenOrientation)");
 }
 
 HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
 {
-  QScreenSlots_connect_signal( "refreshRateChanged(qreal)", "refreshRateChanged(qreal)" );
+  QScreenSlots_connect_signal("refreshRateChanged(qreal)", "refreshRateChanged(qreal)");
 }
 
 #pragma ENDDUMP

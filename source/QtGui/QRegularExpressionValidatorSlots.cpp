@@ -24,21 +24,21 @@ void QRegularExpressionValidatorSlots::regularExpressionChanged( const QRegularE
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "regularExpressionChanged(QRegularExpression)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "regularExpressionChanged(QRegularExpression)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QREGULAREXPRESSIONVALIDATOR");
-    PHB_ITEM pre = Qt5xHb::Signals_return_object( (void *) &re, "QREGULAREXPRESSION" );
+    PHB_ITEM pre = Qt5xHb::Signals_return_object( (void *) &re, "QREGULAREXPRESSION");
 
-    hb_vmEvalBlockV( cb, 2, psender, pre );
+    hb_vmEvalBlockV(cb, 2, psender, pre);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pre );
   }
 }
 
-void QRegularExpressionValidatorSlots_connect_signal( const QString & signal, const QString & slot )
+void QRegularExpressionValidatorSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QRegularExpressionValidator * obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 

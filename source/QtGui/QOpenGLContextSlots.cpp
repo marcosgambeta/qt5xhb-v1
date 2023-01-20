@@ -24,19 +24,19 @@ void QOpenGLContextSlots::aboutToBeDestroyed()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToBeDestroyed()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToBeDestroyed()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLCONTEXT");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QOpenGLContextSlots_connect_signal( const QString & signal, const QString & slot )
+void QOpenGLContextSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QOpenGLContext * obj = (QOpenGLContext *) Qt5xHb::itemGetPtrStackSelfItem();
 

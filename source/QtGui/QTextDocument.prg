@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
     {
 #endif
       QTextDocument * ptr = obj->clone( OPQOBJECT(1,0) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
     {
 #endif
       QAbstractTextDocumentLayout * ptr = obj->documentLayout();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTTEXTDOCUMENTLAYOUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FRAMEAT )
     {
 #endif
       QTextFrame * ptr = obj->frameAt( PINT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTFRAME" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
     {
 #endif
       QTextFrame * ptr = obj->rootFrame();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTFRAME" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
     {
 #endif
       QTextObject * ptr = obj->object( PINT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTEXTOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
     {
 #endif
       QTextObject * ptr = obj->objectForFormat( *PQTEXTFORMAT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTEXTOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1941,51 +1941,51 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTextDocumentSlots_connect_signal( const QString & signal, const QString & slot );
+void QTextDocumentSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
 {
-  QTextDocumentSlots_connect_signal( "contentsChange(int,int,int)", "contentsChange(int,int,int)" );
+  QTextDocumentSlots_connect_signal("contentsChange(int,int,int)", "contentsChange(int,int,int)");
 }
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
 {
-  QTextDocumentSlots_connect_signal( "contentsChanged()", "contentsChanged()" );
+  QTextDocumentSlots_connect_signal("contentsChanged()", "contentsChanged()");
 }
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
 {
-  QTextDocumentSlots_connect_signal( "undoAvailable(bool)", "undoAvailable(bool)" );
+  QTextDocumentSlots_connect_signal("undoAvailable(bool)", "undoAvailable(bool)");
 }
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
 {
-  QTextDocumentSlots_connect_signal( "redoAvailable(bool)", "redoAvailable(bool)" );
+  QTextDocumentSlots_connect_signal("redoAvailable(bool)", "redoAvailable(bool)");
 }
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
 {
-  QTextDocumentSlots_connect_signal( "undoCommandAdded()", "undoCommandAdded()" );
+  QTextDocumentSlots_connect_signal("undoCommandAdded()", "undoCommandAdded()");
 }
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
 {
-  QTextDocumentSlots_connect_signal( "modificationChanged(bool)", "modificationChanged(bool)" );
+  QTextDocumentSlots_connect_signal("modificationChanged(bool)", "modificationChanged(bool)");
 }
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
 {
-  QTextDocumentSlots_connect_signal( "cursorPositionChanged(QTextCursor)", "cursorPositionChanged(QTextCursor)" );
+  QTextDocumentSlots_connect_signal("cursorPositionChanged(QTextCursor)", "cursorPositionChanged(QTextCursor)");
 }
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
 {
-  QTextDocumentSlots_connect_signal( "blockCountChanged(int)", "blockCountChanged(int)" );
+  QTextDocumentSlots_connect_signal("blockCountChanged(int)", "blockCountChanged(int)");
 }
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
 {
-  QTextDocumentSlots_connect_signal( "documentLayoutChanged()", "documentLayoutChanged()" );
+  QTextDocumentSlots_connect_signal("documentLayoutChanged()", "documentLayoutChanged()");
 }
 
 #pragma ENDDUMP

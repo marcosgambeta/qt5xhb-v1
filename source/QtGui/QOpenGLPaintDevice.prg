@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_CONTEXT )
     {
 #endif
       QOpenGLContext * ptr = obj->context();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOPENGLCONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

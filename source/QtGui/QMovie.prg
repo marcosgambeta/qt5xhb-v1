@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QMOVIE_DEVICE )
     {
 #endif
       QIODevice * ptr = obj->device();
-      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -844,41 +844,41 @@ HB_FUNC_STATIC( QMOVIE_STOP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMovieSlots_connect_signal( const QString & signal, const QString & slot );
+void QMovieSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMOVIE_ONERROR )
 {
-  QMovieSlots_connect_signal( "error(QImageReader::ImageReaderError)", "error(QImageReader::ImageReaderError)" );
+  QMovieSlots_connect_signal("error(QImageReader::ImageReaderError)", "error(QImageReader::ImageReaderError)");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONFINISHED )
 {
-  QMovieSlots_connect_signal( "finished()", "finished()" );
+  QMovieSlots_connect_signal("finished()", "finished()");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
 {
-  QMovieSlots_connect_signal( "frameChanged(int)", "frameChanged(int)" );
+  QMovieSlots_connect_signal("frameChanged(int)", "frameChanged(int)");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONRESIZED )
 {
-  QMovieSlots_connect_signal( "resized(QSize)", "resized(QSize)" );
+  QMovieSlots_connect_signal("resized(QSize)", "resized(QSize)");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONSTARTED )
 {
-  QMovieSlots_connect_signal( "started()", "started()" );
+  QMovieSlots_connect_signal("started()", "started()");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
 {
-  QMovieSlots_connect_signal( "stateChanged(QMovie::MovieState)", "stateChanged(QMovie::MovieState)" );
+  QMovieSlots_connect_signal("stateChanged(QMovie::MovieState)", "stateChanged(QMovie::MovieState)");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONUPDATED )
 {
-  QMovieSlots_connect_signal( "updated(QRect)", "updated(QRect)" );
+  QMovieSlots_connect_signal("updated(QRect)", "updated(QRect)");
 }
 
 #pragma ENDDUMP

@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,26 +361,26 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAbstractTextDocumentLayoutSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractTextDocumentLayoutSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal( "documentSizeChanged(QSizeF)", "documentSizeChanged(QSizeF)" );
+  QAbstractTextDocumentLayoutSlots_connect_signal("documentSizeChanged(QSizeF)", "documentSizeChanged(QSizeF)");
 }
 
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal( "pageCountChanged(int)", "pageCountChanged(int)" );
+  QAbstractTextDocumentLayoutSlots_connect_signal("pageCountChanged(int)", "pageCountChanged(int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal( "update(QRectF)", "update(QRectF)" );
+  QAbstractTextDocumentLayoutSlots_connect_signal("update(QRectF)", "update(QRectF)");
 }
 
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal( "updateBlock(QTextBlock)", "updateBlock(QTextBlock)" );
+  QAbstractTextDocumentLayoutSlots_connect_signal("updateBlock(QTextBlock)", "updateBlock(QTextBlock)");
 }
 
 #pragma ENDDUMP

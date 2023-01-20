@@ -320,11 +320,11 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_STOPLOGGING )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QOpenGLDebugLoggerSlots_connect_signal( const QString & signal, const QString & slot );
+void QOpenGLDebugLoggerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
 {
-  QOpenGLDebugLoggerSlots_connect_signal( "messageLogged(QOpenGLDebugMessage)", "messageLogged(QOpenGLDebugMessage)" );
+  QOpenGLDebugLoggerSlots_connect_signal("messageLogged(QOpenGLDebugMessage)", "messageLogged(QOpenGLDebugMessage)");
 }
 
 #pragma ENDDUMP

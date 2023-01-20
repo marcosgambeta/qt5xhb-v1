@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QIMAGEREADER_DEVICE )
     {
 #endif
       QIODevice * ptr = obj->device();
-      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1098,30 +1098,30 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTEDIMAGEFORMATS )
   {
 #endif
     QList<QByteArray> list = QImageReader::supportedImageFormats();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1144,30 +1144,30 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMATSFORMIMETYPE )
   {
 #endif
     QList<QByteArray> list = QImageReader::imageFormatsForMimeType( *PQBYTEARRAY(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

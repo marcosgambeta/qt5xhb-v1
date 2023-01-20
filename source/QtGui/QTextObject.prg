@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

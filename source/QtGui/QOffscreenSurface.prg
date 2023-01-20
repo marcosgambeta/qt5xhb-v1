@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SCREEN )
     {
 #endif
       QScreen * ptr = obj->screen();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSCREEN" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,11 +352,11 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SETSCREEN )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QOffscreenSurfaceSlots_connect_signal( const QString & signal, const QString & slot );
+void QOffscreenSurfaceSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
 {
-  QOffscreenSurfaceSlots_connect_signal( "screenChanged(QScreen*)", "screenChanged(QScreen*)" );
+  QOffscreenSurfaceSlots_connect_signal("screenChanged(QScreen*)", "screenChanged(QScreen*)");
 }
 
 #pragma ENDDUMP

@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QPICTURE_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->data() );
+      hb_retc( obj->data() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

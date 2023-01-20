@@ -218,27 +218,27 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ALLWINDOWS )
   {
 #endif
     QWindowList list = QGuiApplication::allWindows();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWINDOW" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QWINDOW");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWINDOW", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QWINDOW", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_CLIPBOARD )
   {
 #endif
     QClipboard * ptr = QGuiApplication::clipboard();
-    Qt5xHb::createReturnQObjectClass( ptr, "QCLIPBOARD" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QCLIPBOARD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSOBJECT )
   {
 #endif
     QObject * ptr = QGuiApplication::focusObject();
-    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSWINDOW )
   {
 #endif
     QWindow * ptr = QGuiApplication::focusWindow();
-    Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_INPUTMETHOD )
   {
 #endif
     QInputMethod * ptr = QGuiApplication::inputMethod();
-    Qt5xHb::createReturnQObjectClass( ptr, "QINPUTMETHOD" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QINPUTMETHOD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_MODALWINDOW )
   {
 #endif
     QWindow * ptr = QGuiApplication::modalWindow();
-    Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_PRIMARYSCREEN )
   {
 #endif
     QScreen * ptr = QGuiApplication::primaryScreen();
-    Qt5xHb::createReturnQObjectClass( ptr, "QSCREEN" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QSCREEN");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_RESTOREOVERRIDECURSOR )
 }
 
 /*
-static QList<QScreen *> screens()
+static QList<QScreen*> screens()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
 {
@@ -690,28 +690,28 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QScreen *> list = QGuiApplication::screens();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSCREEN" );
+    QList<QScreen*> list = QGuiApplication::screens();
+    PHB_DYNS pDynSym = hb_dynsymFindName("QSCREEN");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSCREEN", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSCREEN", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_STYLEHINTS )
   {
 #endif
     QStyleHints * ptr = QGuiApplication::styleHints();
-    Qt5xHb::createReturnQObjectClass( ptr, "QSTYLEHINTS" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QSTYLEHINTS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELAT )
   {
 #endif
     QWindow * ptr = QGuiApplication::topLevelAt( *PQPOINT(1) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -920,27 +920,27 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
   {
 #endif
     QWindowList list = QGuiApplication::topLevelWindows();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWINDOW" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QWINDOW");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWINDOW", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QWINDOW", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -952,31 +952,31 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
 #endif
 }
 
-void QGuiApplicationSlots_connect_signal( const QString & signal, const QString & slot );
+void QGuiApplicationSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
 {
-  QGuiApplicationSlots_connect_signal( "focusObjectChanged(QObject*)", "focusObjectChanged(QObject*)" );
+  QGuiApplicationSlots_connect_signal("focusObjectChanged(QObject*)", "focusObjectChanged(QObject*)");
 }
 
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
 {
-  QGuiApplicationSlots_connect_signal( "focusWindowChanged(QWindow*)", "focusWindowChanged(QWindow*)" );
+  QGuiApplicationSlots_connect_signal("focusWindowChanged(QWindow*)", "focusWindowChanged(QWindow*)");
 }
 
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
 {
-  QGuiApplicationSlots_connect_signal( "fontDatabaseChanged()", "fontDatabaseChanged()" );
+  QGuiApplicationSlots_connect_signal("fontDatabaseChanged()", "fontDatabaseChanged()");
 }
 
 HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
 {
-  QGuiApplicationSlots_connect_signal( "lastWindowClosed()", "lastWindowClosed()" );
+  QGuiApplicationSlots_connect_signal("lastWindowClosed()", "lastWindowClosed()");
 }
 
 HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
 {
-  QGuiApplicationSlots_connect_signal( "screenAdded(QScreen*)", "screenAdded(QScreen*)" );
+  QGuiApplicationSlots_connect_signal("screenAdded(QScreen*)", "screenAdded(QScreen*)");
 }
 
 #pragma ENDDUMP

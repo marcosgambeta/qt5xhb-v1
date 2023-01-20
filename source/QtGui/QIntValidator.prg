@@ -336,11 +336,11 @@ HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
   }
 }
 
-void QIntValidatorSlots_connect_signal( const QString & signal, const QString & slot );
+void QIntValidatorSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
 {
-  QIntValidatorSlots_connect_signal( "changed()", "changed()" );
+  QIntValidatorSlots_connect_signal("changed()", "changed()");
 }
 
 #pragma ENDDUMP

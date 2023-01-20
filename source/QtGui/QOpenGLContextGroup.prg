@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_DELETE )
 }
 
 /*
-QList<QOpenGLContext *> shares() const
+QList<QOpenGLContext*> shares() const
 */
 HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
 {
@@ -82,28 +82,28 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QOpenGLContext *> list = obj->shares();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOPENGLCONTEXT" );
+      QList<QOpenGLContext*> list = obj->shares();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QOPENGLCONTEXT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOPENGLCONTEXT", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QOPENGLCONTEXT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP )
   {
 #endif
     QOpenGLContextGroup * ptr = QOpenGLContextGroup::currentContextGroup();
-    Qt5xHb::createReturnQObjectClass( ptr, "QOPENGLCONTEXTGROUP" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXTGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

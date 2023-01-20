@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
     {
 #endif
       QMimeData * ptr = obj->mimeData();
-      Qt5xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
     {
 #endif
       QObject * ptr = obj->source();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QDRAG_TARGET )
     {
 #endif
       QObject * ptr = obj->target();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,16 +441,16 @@ HB_FUNC_STATIC( QDRAG_TARGET )
   }
 }
 
-void QDragSlots_connect_signal( const QString & signal, const QString & slot );
+void QDragSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
 {
-  QDragSlots_connect_signal( "actionChanged(Qt::DropAction)", "actionChanged(Qt::DropAction)" );
+  QDragSlots_connect_signal("actionChanged(Qt::DropAction)", "actionChanged(Qt::DropAction)");
 }
 
 HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
 {
-  QDragSlots_connect_signal( "targetChanged(QObject*)", "targetChanged(QObject*)" );
+  QDragSlots_connect_signal("targetChanged(QObject*)", "targetChanged(QObject*)");
 }
 
 #pragma ENDDUMP

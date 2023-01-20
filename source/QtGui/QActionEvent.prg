@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
     {
 #endif
       QAction * ptr = obj->action();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
     {
 #endif
       QAction * ptr = obj->before();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
