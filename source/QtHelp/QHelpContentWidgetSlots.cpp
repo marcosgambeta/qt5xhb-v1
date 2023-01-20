@@ -24,21 +24,21 @@ void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkActivated(QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "linkActivated(QUrl)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPCONTENTWIDGET");
-    PHB_ITEM plink = Qt5xHb::Signals_return_object( (void *) &link, "QURL" );
+    PHB_ITEM plink = Qt5xHb::Signals_return_object( (void *) &link, "QURL");
 
-    hb_vmEvalBlockV( cb, 2, psender, plink );
+    hb_vmEvalBlockV(cb, 2, psender, plink);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( plink );
   }
 }
 
-void QHelpContentWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QHelpContentWidgetSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QHelpContentWidget * obj = (QHelpContentWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 

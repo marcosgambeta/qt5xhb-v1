@@ -122,11 +122,11 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QHelpIndexWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
 {
-  QHelpIndexWidgetSlots_connect_signal( "linkActivated(QUrl,QString)", "linkActivated(QUrl,QString)" );
+  QHelpIndexWidgetSlots_connect_signal("linkActivated(QUrl,QString)", "linkActivated(QUrl,QString)");
 }
 
 #pragma ENDDUMP

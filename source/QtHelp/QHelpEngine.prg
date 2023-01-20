@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
     {
 #endif
       QHelpContentModel * ptr = obj->contentModel();
-      Qt5xHb::createReturnQObjectClass( ptr, "QHELPCONTENTMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QHELPCONTENTMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
     {
 #endif
       QHelpContentWidget * ptr = obj->contentWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPCONTENTWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPCONTENTWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
     {
 #endif
       QHelpIndexModel * ptr = obj->indexModel();
-      Qt5xHb::createReturnQObjectClass( ptr, "QHELPINDEXMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QHELPINDEXMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
     {
 #endif
       QHelpIndexWidget * ptr = obj->indexWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPINDEXWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPINDEXWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
     {
 #endif
       QHelpSearchEngine * ptr = obj->searchEngine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QHELPSEARCHENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QHELPSEARCHENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

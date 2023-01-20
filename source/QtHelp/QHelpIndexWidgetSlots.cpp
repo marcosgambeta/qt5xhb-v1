@@ -24,23 +24,23 @@ void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & ke
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkActivated(QUrl,QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "linkActivated(QUrl,QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPINDEXWIDGET");
-    PHB_ITEM plink = Qt5xHb::Signals_return_object( (void *) &link, "QURL" );
+    PHB_ITEM plink = Qt5xHb::Signals_return_object( (void *) &link, "QURL");
     PHB_ITEM pkeyword = hb_itemPutC( NULL, QSTRINGTOSTRING(keyword) );
 
-    hb_vmEvalBlockV( cb, 3, psender, plink, pkeyword );
+    hb_vmEvalBlockV(cb, 3, psender, plink, pkeyword);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( plink );
     hb_itemRelease( pkeyword );
   }
 }
 
-void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QHelpIndexWidgetSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QHelpIndexWidget * obj = (QHelpIndexWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 

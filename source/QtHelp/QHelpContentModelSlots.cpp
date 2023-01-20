@@ -24,15 +24,15 @@ void QHelpContentModelSlots::contentsCreated()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsCreated()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsCreated()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPCONTENTMODEL");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,19 +40,19 @@ void QHelpContentModelSlots::contentsCreationStarted()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsCreationStarted()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsCreationStarted()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPCONTENTMODEL");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QHelpContentModelSlots_connect_signal( const QString & signal, const QString & slot )
+void QHelpContentModelSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QHelpContentModel * obj = (QHelpContentModel *) Qt5xHb::itemGetPtrStackSelfItem();
 

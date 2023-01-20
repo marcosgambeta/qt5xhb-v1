@@ -140,30 +140,30 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
     {
 #endif
       QList<QHelpSearchQuery> list = obj->query();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QHELPSEARCHQUERY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QHelpSearchQuery( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QHelpSearchQuery(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QHELPSEARCHQUERY", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QHELPSEARCHQUERY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
     {
 #endif
       QHelpSearchQueryWidget * ptr = obj->queryWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPSEARCHQUERYWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPSEARCHQUERYWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
     {
 #endif
       QHelpSearchResultWidget * ptr = obj->resultWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPSEARCHRESULTWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QHELPSEARCHRESULTWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,9 +319,8 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
 #endif
       QList<QHelpSearchQuery> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QHelpSearchQuery *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -338,26 +337,26 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QString & slot );
+void QHelpSearchEngineSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
 {
-  QHelpSearchEngineSlots_connect_signal( "indexingFinished()", "indexingFinished()" );
+  QHelpSearchEngineSlots_connect_signal("indexingFinished()", "indexingFinished()");
 }
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
 {
-  QHelpSearchEngineSlots_connect_signal( "indexingStarted()", "indexingStarted()" );
+  QHelpSearchEngineSlots_connect_signal("indexingStarted()", "indexingStarted()");
 }
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
 {
-  QHelpSearchEngineSlots_connect_signal( "searchingFinished(int)", "searchingFinished(int)" );
+  QHelpSearchEngineSlots_connect_signal("searchingFinished(int)", "searchingFinished(int)");
 }
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
 {
-  QHelpSearchEngineSlots_connect_signal( "searchingStarted()", "searchingStarted()" );
+  QHelpSearchEngineSlots_connect_signal("searchingStarted()", "searchingStarted()");
 }
 
 #pragma ENDDUMP

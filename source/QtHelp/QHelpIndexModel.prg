@@ -128,16 +128,16 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
   }
 }
 
-void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString & slot );
+void QHelpIndexModelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 {
-  QHelpIndexModelSlots_connect_signal( "indexCreated()", "indexCreated()" );
+  QHelpIndexModelSlots_connect_signal("indexCreated()", "indexCreated()");
 }
 
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 {
-  QHelpIndexModelSlots_connect_signal( "indexCreationStarted()", "indexCreationStarted()" );
+  QHelpIndexModelSlots_connect_signal("indexCreationStarted()", "indexCreationStarted()");
 }
 
 #pragma ENDDUMP
