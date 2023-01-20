@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_PROGRAM )
     {
 #endif
       QOpenGLShaderProgram * ptr = obj->program();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOPENGLSHADERPROGRAM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLSHADERPROGRAM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QQUICKVIEW_ENGINE )
     {
 #endif
       QQmlEngine * ptr = obj->engine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQMLENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTCONTEXT )
     {
 #endif
       QQmlContext * ptr = obj->rootContext();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQMLCONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTOBJECT )
     {
 #endif
       QQuickItem * ptr = obj->rootObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQUICKITEM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,11 +345,11 @@ HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QQuickViewSlots_connect_signal( const QString & signal, const QString & slot );
+void QQuickViewSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QQUICKVIEW_ONSTATUSCHANGED )
 {
-  QQuickViewSlots_connect_signal( "statusChanged(QQuickView::Status)", "statusChanged(QQuickView::Status)" );
+  QQuickViewSlots_connect_signal("statusChanged(QQuickView::Status)", "statusChanged(QQuickView::Status)");
 }
 
 #pragma ENDDUMP

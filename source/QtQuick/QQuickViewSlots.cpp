@@ -24,21 +24,21 @@ void QQuickViewSlots::statusChanged( QQuickView::Status status )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QQuickView::Status)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QQuickView::Status)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKVIEW");
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
+    PHB_ITEM pstatus = hb_itemPutNI( NULL, static_cast<int>(status) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pstatus );
+    hb_vmEvalBlockV(cb, 2, psender, pstatus);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pstatus );
   }
 }
 
-void QQuickViewSlots_connect_signal( const QString & signal, const QString & slot )
+void QQuickViewSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QQuickView * obj = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
 

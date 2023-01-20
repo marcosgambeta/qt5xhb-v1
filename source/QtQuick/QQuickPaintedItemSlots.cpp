@@ -24,15 +24,15 @@ void QQuickPaintedItemSlots::contentsScaleChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsScaleChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsScaleChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,15 +40,15 @@ void QQuickPaintedItemSlots::contentsSizeChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsSizeChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsSizeChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -56,15 +56,15 @@ void QQuickPaintedItemSlots::fillColorChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "fillColorChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fillColorChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -72,19 +72,19 @@ void QQuickPaintedItemSlots::renderTargetChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "renderTargetChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "renderTargetChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QQuickPaintedItemSlots_connect_signal( const QString & signal, const QString & slot )
+void QQuickPaintedItemSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 

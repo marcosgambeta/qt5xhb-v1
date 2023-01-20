@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_ACTIVEFOCUSITEM )
     {
 #endif
       QQuickItem * ptr = obj->activeFocusItem();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQUICKITEM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CONTENTITEM )
     {
 #endif
       QQuickItem * ptr = obj->contentItem();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQUICKITEM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
     {
 #endif
       QSGTexture * ptr = obj->createTextureFromId( PUINT(1), *PQSIZE(2), HB_ISNIL(3)? (QQuickWindow::CreateTextureOptions) QQuickWindow::CreateTextureOption( 0 ) : (QQuickWindow::CreateTextureOptions) hb_parni(3) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QSGTEXTURE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMIMAGE )
     {
 #endif
       QSGTexture * ptr = obj->createTextureFromImage( *PQIMAGE(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QSGTEXTURE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_MOUSEGRABBERITEM )
     {
 #endif
       QQuickItem * ptr = obj->mouseGrabberItem();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQUICKITEM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_OPENGLCONTEXT )
     {
 #endif
       QOpenGLContext * ptr = obj->openglContext();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOPENGLCONTEXT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -740,41 +740,41 @@ HB_FUNC_STATIC( QQUICKWINDOW_UPDATE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QQuickWindowSlots_connect_signal( const QString & signal, const QString & slot );
+void QQuickWindowSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
 {
-  QQuickWindowSlots_connect_signal( "afterRendering()", "afterRendering()" );
+  QQuickWindowSlots_connect_signal("afterRendering()", "afterRendering()");
 }
 
 HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
 {
-  QQuickWindowSlots_connect_signal( "beforeRendering()", "beforeRendering()" );
+  QQuickWindowSlots_connect_signal("beforeRendering()", "beforeRendering()");
 }
 
 HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
 {
-  QQuickWindowSlots_connect_signal( "beforeSynchronizing()", "beforeSynchronizing()" );
+  QQuickWindowSlots_connect_signal("beforeSynchronizing()", "beforeSynchronizing()");
 }
 
 HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
 {
-  QQuickWindowSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+  QQuickWindowSlots_connect_signal("colorChanged(QColor)", "colorChanged(QColor)");
 }
 
 HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
 {
-  QQuickWindowSlots_connect_signal( "frameSwapped()", "frameSwapped()" );
+  QQuickWindowSlots_connect_signal("frameSwapped()", "frameSwapped()");
 }
 
 HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
 {
-  QQuickWindowSlots_connect_signal( "sceneGraphInitialized()", "sceneGraphInitialized()" );
+  QQuickWindowSlots_connect_signal("sceneGraphInitialized()", "sceneGraphInitialized()");
 }
 
 HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
 {
-  QQuickWindowSlots_connect_signal( "sceneGraphInvalidated()", "sceneGraphInvalidated()" );
+  QQuickWindowSlots_connect_signal("sceneGraphInvalidated()", "sceneGraphInvalidated()");
 }
 
 #pragma ENDDUMP

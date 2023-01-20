@@ -24,15 +24,15 @@ void QQuickWindowSlots::afterRendering()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "afterRendering()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "afterRendering()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,15 +40,15 @@ void QQuickWindowSlots::beforeRendering()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeRendering()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "beforeRendering()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -56,15 +56,15 @@ void QQuickWindowSlots::beforeSynchronizing()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeSynchronizing()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "beforeSynchronizing()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -72,16 +72,16 @@ void QQuickWindowSlots::colorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
 
-    hb_vmEvalBlockV( cb, 2, psender, pcolor );
+    hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pcolor );
   }
 }
@@ -90,15 +90,15 @@ void QQuickWindowSlots::frameSwapped()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "frameSwapped()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "frameSwapped()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -106,15 +106,15 @@ void QQuickWindowSlots::sceneGraphInitialized()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneGraphInitialized()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sceneGraphInitialized()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -122,19 +122,19 @@ void QQuickWindowSlots::sceneGraphInvalidated()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneGraphInvalidated()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sceneGraphInvalidated()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QQuickWindowSlots_connect_signal( const QString & signal, const QString & slot )
+void QQuickWindowSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QQuickWindow * obj = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 

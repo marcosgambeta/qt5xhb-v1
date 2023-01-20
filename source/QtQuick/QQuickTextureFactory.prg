@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_CREATETEXTURE )
     {
 #endif
       QSGTexture * ptr = obj->createTexture( PQQUICKWINDOW(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QSGTEXTURE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

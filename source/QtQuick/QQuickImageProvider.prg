@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTTEXTURE )
     {
 #endif
       QQuickTextureFactory * ptr = obj->requestTexture( PQSTRING(1), PQSIZE(2), *PQSIZE(3) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QQUICKTEXTUREFACTORY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQUICKTEXTUREFACTORY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

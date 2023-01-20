@@ -626,26 +626,26 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_UPDATE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QQuickPaintedItemSlots_connect_signal( const QString & signal, const QString & slot );
+void QQuickPaintedItemSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
 {
-  QQuickPaintedItemSlots_connect_signal( "contentsScaleChanged()", "contentsScaleChanged()" );
+  QQuickPaintedItemSlots_connect_signal("contentsScaleChanged()", "contentsScaleChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
 {
-  QQuickPaintedItemSlots_connect_signal( "contentsSizeChanged()", "contentsSizeChanged()" );
+  QQuickPaintedItemSlots_connect_signal("contentsSizeChanged()", "contentsSizeChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
 {
-  QQuickPaintedItemSlots_connect_signal( "fillColorChanged()", "fillColorChanged()" );
+  QQuickPaintedItemSlots_connect_signal("fillColorChanged()", "fillColorChanged()");
 }
 
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
 {
-  QQuickPaintedItemSlots_connect_signal( "renderTargetChanged()", "renderTargetChanged()" );
+  QQuickPaintedItemSlots_connect_signal("renderTargetChanged()", "renderTargetChanged()");
 }
 
 #pragma ENDDUMP

@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QQUICKITEM_CHILDAT )
     {
 #endif
       QQuickItem * ptr = obj->childAt( PQREAL(1), PQREAL(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QQUICKITEM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC( QQUICKITEM_PARENTITEM )
     {
 #endif
       QQuickItem * ptr = obj->parentItem();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQUICKITEM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QQUICKITEM_SCOPEDFOCUSITEM )
     {
 #endif
       QQuickItem * ptr = obj->scopedFocusItem();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQUICKITEM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2027,7 +2027,7 @@ HB_FUNC_STATIC( QQUICKITEM_TEXTUREPROVIDER )
     {
 #endif
       QSGTextureProvider * ptr = obj->textureProvider();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSGTEXTUREPROVIDER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTUREPROVIDER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2178,7 +2178,7 @@ HB_FUNC_STATIC( QQUICKITEM_WINDOW )
     {
 #endif
       QQuickWindow * ptr = obj->window();
-      Qt5xHb::createReturnQObjectClass( ptr, "QQUICKWINDOW" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QQUICKWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

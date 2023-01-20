@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_TEXTURE )
     {
 #endif
       QSGTexture * ptr = obj->texture();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSGTEXTURE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
