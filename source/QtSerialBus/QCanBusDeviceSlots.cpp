@@ -25,15 +25,15 @@ void QCanBusDeviceSlots::errorOccurred( QCanBusDevice::CanBusError )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "errorOccurred)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "errorOccurred)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
 
-    hb_vmEvalBlockV( cb, 1, psender,  );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -43,15 +43,15 @@ void QCanBusDeviceSlots::framesReceived()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "framesReceived()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "framesReceived()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -61,16 +61,16 @@ void QCanBusDeviceSlots::framesWritten( qint64 framesCount )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "framesWritten(qint64)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "framesWritten(qint64)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
     PHB_ITEM pframesCount = hb_itemPutNLL( NULL, framesCount );
 
-    hb_vmEvalBlockV( cb, 2, psender, pframesCount );
+    hb_vmEvalBlockV(cb, 2, psender, pframesCount);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pframesCount );
   }
 }
@@ -81,22 +81,22 @@ void QCanBusDeviceSlots::stateChanged( QCanBusDevice::CanBusDeviceState state )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QCanBusDevice::CanBusDeviceState)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QCanBusDevice::CanBusDeviceState)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
-    PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
+    PHB_ITEM pstate = hb_itemPutNI( NULL, static_cast<int>(state) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pstate );
+    hb_vmEvalBlockV(cb, 2, psender, pstate);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pstate );
   }
 }
 #endif
 
-void QCanBusDeviceSlots_connect_signal( const QString & signal, const QString & slot )
+void QCanBusDeviceSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusDevice * obj = (QCanBusDevice *) Qt5xHb::itemGetPtrStackSelfItem();

@@ -265,23 +265,23 @@ HB_FUNC_STATIC( QMODBUSREPLY_SETERROR )
 #endif
 }
 
-void QModbusReplySlots_connect_signal( const QString & signal, const QString & slot );
+void QModbusReplySlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReplySlots_connect_signal( "finished()", "finished()" );
+  QModbusReplySlots_connect_signal("finished()", "finished()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReplySlots_connect_signal( "errorOccurred(QModbusDevice::Error)", "errorOccurred(QModbusDevice::Error)" );
+  QModbusReplySlots_connect_signal("errorOccurred(QModbusDevice::Error)", "errorOccurred(QModbusDevice::Error)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

@@ -262,14 +262,14 @@ HB_FUNC_STATIC( QMODBUSSERVER_SETDATA )
 #endif
 }
 
-void QModbusServerSlots_connect_signal( const QString & signal, const QString & slot );
+void QModbusServerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusServerSlots_connect_signal( "dataWritten(QModbusDataUnit::RegisterType,int,int)", "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
+  QModbusServerSlots_connect_signal("dataWritten(QModbusDataUnit::RegisterType,int,int)", "dataWritten(QModbusDataUnit::RegisterType,int,int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

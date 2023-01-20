@@ -25,15 +25,15 @@ void QModbusReplySlots::finished()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSREPLY");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -43,22 +43,22 @@ void QModbusReplySlots::errorOccurred( QModbusDevice::Error error )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "errorOccurred(QModbusDevice::Error)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "errorOccurred(QModbusDevice::Error)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSREPLY");
-    PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
 
-    hb_vmEvalBlockV( cb, 2, psender, perror );
+    hb_vmEvalBlockV(cb, 2, psender, perror);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( perror );
   }
 }
 #endif
 
-void QModbusReplySlots_connect_signal( const QString & signal, const QString & slot )
+void QModbusReplySlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QModbusReply * obj = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();

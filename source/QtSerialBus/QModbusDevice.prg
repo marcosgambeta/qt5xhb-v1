@@ -292,23 +292,23 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ERRORSTRING )
 #endif
 }
 
-void QModbusDeviceSlots_connect_signal( const QString & signal, const QString & slot );
+void QModbusDeviceSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusDeviceSlots_connect_signal( "errorOccurred(QModbusDevice::Error)", "errorOccurred(QModbusDevice::Error)" );
+  QModbusDeviceSlots_connect_signal("errorOccurred(QModbusDevice::Error)", "errorOccurred(QModbusDevice::Error)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusDeviceSlots_connect_signal( "stateChanged(QModbusDevice::State)", "stateChanged(QModbusDevice::State)" );
+  QModbusDeviceSlots_connect_signal("stateChanged(QModbusDevice::State)", "stateChanged(QModbusDevice::State)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

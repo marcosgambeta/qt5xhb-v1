@@ -25,18 +25,18 @@ void QModbusServerSlots::dataWritten( QModbusDataUnit::RegisterType table, int a
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataWritten(QModbusDataUnit::RegisterType,int,int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSSERVER");
-    PHB_ITEM ptable = hb_itemPutNI( NULL, (int) table );
+    PHB_ITEM ptable = hb_itemPutNI( NULL, static_cast<int>(table) );
     PHB_ITEM paddress = hb_itemPutNI( NULL, address );
     PHB_ITEM psize = hb_itemPutNI( NULL, size );
 
-    hb_vmEvalBlockV( cb, 4, psender, ptable, paddress, psize );
+    hb_vmEvalBlockV(cb, 4, psender, ptable, paddress, psize);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ptable );
     hb_itemRelease( paddress );
     hb_itemRelease( psize );
@@ -44,7 +44,7 @@ void QModbusServerSlots::dataWritten( QModbusDataUnit::RegisterType table, int a
 }
 #endif
 
-void QModbusServerSlots_connect_signal( const QString & signal, const QString & slot )
+void QModbusServerSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QModbusServer * obj = (QModbusServer *) Qt5xHb::itemGetPtrStackSelfItem();

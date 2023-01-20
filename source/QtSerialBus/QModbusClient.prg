@@ -208,14 +208,14 @@ HB_FUNC_STATIC( QMODBUSCLIENT_SETNUMBEROFRETRIES )
 #endif
 }
 
-void QModbusClientSlots_connect_signal( const QString & signal, const QString & slot );
+void QModbusClientSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusClientSlots_connect_signal( "timeoutChanged(int)", "timeoutChanged(int)" );
+  QModbusClientSlots_connect_signal("timeoutChanged(int)", "timeoutChanged(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

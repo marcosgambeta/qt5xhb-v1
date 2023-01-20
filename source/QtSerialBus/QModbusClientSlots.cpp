@@ -25,22 +25,22 @@ void QModbusClientSlots::timeoutChanged( int newTimeout )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "timeoutChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "timeoutChanged(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSCLIENT");
     PHB_ITEM pnewTimeout = hb_itemPutNI( NULL, newTimeout );
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewTimeout );
+    hb_vmEvalBlockV(cb, 2, psender, pnewTimeout);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pnewTimeout );
   }
 }
 #endif
 
-void QModbusClientSlots_connect_signal( const QString & signal, const QString & slot )
+void QModbusClientSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QModbusClient * obj = (QModbusClient *) Qt5xHb::itemGetPtrStackSelfItem();
