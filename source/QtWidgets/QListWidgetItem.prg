@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
     {
 #endif
       QListWidget * ptr = obj->listWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QLISTWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QLISTWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

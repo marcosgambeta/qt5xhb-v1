@@ -193,23 +193,23 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
 #endif
 }
 
-void QKeySequenceEditSlots_connect_signal( const QString & signal, const QString & slot );
+void QKeySequenceEditSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEditSlots_connect_signal( "editingFinished()", "editingFinished()" );
+  QKeySequenceEditSlots_connect_signal("editingFinished()", "editingFinished()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEditSlots_connect_signal( "keySequenceChanged(QKeySequence)", "keySequenceChanged(QKeySequence)" );
+  QKeySequenceEditSlots_connect_signal("keySequenceChanged(QKeySequence)", "keySequenceChanged(QKeySequence)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

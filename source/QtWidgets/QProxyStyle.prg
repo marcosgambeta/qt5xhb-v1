@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_BASESTYLE )
     {
 #endif
       QStyle * ptr = obj->baseStyle();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

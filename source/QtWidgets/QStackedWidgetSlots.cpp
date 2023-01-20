@@ -24,16 +24,16 @@ void QStackedWidgetSlots::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTACKEDWIDGET");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV(cb, 2, psender, pindex);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pindex );
   }
 }
@@ -42,21 +42,21 @@ void QStackedWidgetSlots::widgetRemoved( int index )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "widgetRemoved(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "widgetRemoved(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTACKEDWIDGET");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV(cb, 2, psender, pindex);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pindex );
   }
 }
 
-void QStackedWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QStackedWidgetSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QStackedWidget * obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 

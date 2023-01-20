@@ -24,20 +24,20 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "indexesMoved(QModelIndexList)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "indexesMoved(QModelIndexList)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTVIEW");
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
     PHB_ITEM pindexes = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < indexes.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
+        hb_vmDo(0);
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QModelIndex( indexes [i] ) );
@@ -49,17 +49,17 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
     }
 
-    hb_vmEvalBlockV( cb, 2, psender, pindexes );
+    hb_vmEvalBlockV(cb, 2, psender, pindexes);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pindexes );
   }
 }
 
-void QListViewSlots_connect_signal( const QString & signal, const QString & slot )
+void QListViewSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QListView * obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 

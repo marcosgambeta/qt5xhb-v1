@@ -610,16 +610,16 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
   }
 }
 
-void QDoubleSpinBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QDoubleSpinBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
 {
-  QDoubleSpinBoxSlots_connect_signal( "valueChanged(double)", "valueChanged(double)" );
+  QDoubleSpinBoxSlots_connect_signal("valueChanged(double)", "valueChanged(double)");
 }
 
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 {
-  QDoubleSpinBoxSlots_connect_signal( "valueChanged(QString)", "valueChanged(QString)" );
+  QDoubleSpinBoxSlots_connect_signal("valueChanged(QString)", "valueChanged(QString)");
 }
 
 #pragma ENDDUMP

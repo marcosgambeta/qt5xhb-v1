@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEMODALWIDGET )
   {
 #endif
     QWidget * ptr = QApplication::activeModalWidget();
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEPOPUPWIDGET )
   {
 #endif
     QWidget * ptr = QApplication::activePopupWidget();
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
   {
 #endif
     QWidget * ptr = QApplication::activeWindow();
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -468,27 +468,27 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
   {
 #endif
     QWidgetList list = QApplication::allWidgets();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QAPPLICATION_CLIPBOARD )
   {
 #endif
     QClipboard * ptr = QApplication::clipboard();
-    Qt5xHb::createReturnQObjectClass( ptr, "QCLIPBOARD" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QCLIPBOARD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QAPPLICATION_DESKTOP )
   {
 #endif
     QDesktopWidget * ptr = QApplication::desktop();
-    Qt5xHb::createReturnQWidgetClass( ptr, "QDESKTOPWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QDESKTOPWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
   {
 #endif
     QWidget * ptr = QApplication::focusWidget();
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1345,7 +1345,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
     static QStyle * setStyle( const QString & style )
     */
     QStyle * ptr = QApplication::setStyle( PQSTRING(1) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
   }
   else
   {
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC( QAPPLICATION_STYLE )
   {
 #endif
     QStyle * ptr = QApplication::style();
-    Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1461,7 +1461,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
     static QWidget * topLevelAt( const QPoint & point )
     */
     QWidget * ptr = QApplication::topLevelAt( *PQPOINT(1) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
@@ -1469,7 +1469,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
     static QWidget * topLevelAt( int x, int y )
     */
     QWidget * ptr = QApplication::topLevelAt( PINT(1), PINT(2) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
   }
   else
   {
@@ -1487,27 +1487,27 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
   {
 #endif
     QWidgetList list = QApplication::topLevelWidgets();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1546,7 +1546,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
     static QWidget * widgetAt( const QPoint & point )
     */
     QWidget * ptr = QApplication::widgetAt( *PQPOINT(1) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
@@ -1554,7 +1554,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
     static QWidget * widgetAt( int x, int y )
     */
     QWidget * ptr = QApplication::widgetAt( PINT(1), PINT(2) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
   }
   else
   {
@@ -1582,41 +1582,41 @@ HB_FUNC_STATIC( QAPPLICATION_WINDOWICON )
 #endif
 }
 
-void QApplicationSlots_connect_signal( const QString & signal, const QString & slot );
+void QApplicationSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAPPLICATION_ONABOUTTORELEASEGPURESOURCES )
 {
-  QApplicationSlots_connect_signal( "aboutToReleaseGpuResources()", "aboutToReleaseGpuResources()" );
+  QApplicationSlots_connect_signal("aboutToReleaseGpuResources()", "aboutToReleaseGpuResources()");
 }
 
 HB_FUNC_STATIC( QAPPLICATION_ONABOUTTOUSEGPURESOURCES )
 {
-  QApplicationSlots_connect_signal( "aboutToUseGpuResources()", "aboutToUseGpuResources()" );
+  QApplicationSlots_connect_signal("aboutToUseGpuResources()", "aboutToUseGpuResources()");
 }
 
 HB_FUNC_STATIC( QAPPLICATION_ONCOMMITDATAREQUEST )
 {
-  QApplicationSlots_connect_signal( "commitDataRequest(QSessionManager)", "commitDataRequest(QSessionManager)" );
+  QApplicationSlots_connect_signal("commitDataRequest(QSessionManager)", "commitDataRequest(QSessionManager)");
 }
 
 HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
 {
-  QApplicationSlots_connect_signal( "focusChanged(QWidget*,QWidget*)", "focusChanged(QWidget*,QWidget*)" );
+  QApplicationSlots_connect_signal("focusChanged(QWidget*,QWidget*)", "focusChanged(QWidget*,QWidget*)");
 }
 
 HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
 {
-  QApplicationSlots_connect_signal( "fontDatabaseChanged()", "fontDatabaseChanged()" );
+  QApplicationSlots_connect_signal("fontDatabaseChanged()", "fontDatabaseChanged()");
 }
 
 HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
 {
-  QApplicationSlots_connect_signal( "lastWindowClosed()", "lastWindowClosed()" );
+  QApplicationSlots_connect_signal("lastWindowClosed()", "lastWindowClosed()");
 }
 
 HB_FUNC_STATIC( QAPPLICATION_ONSAVESTATEREQUEST )
 {
-  QApplicationSlots_connect_signal( "saveStateRequest(QSessioManager)", "saveStateRequest(QSessioManager)" );
+  QApplicationSlots_connect_signal("saveStateRequest(QSessioManager)", "saveStateRequest(QSessioManager)");
 }
 
 #pragma ENDDUMP

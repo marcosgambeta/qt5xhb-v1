@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FOCUSWIDGET )
     {
 #endif
       QGraphicsWidget * ptr = obj->focusWidget();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSWIDGET" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_STYLE )
     {
 #endif
       QStyle * ptr = obj->style();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1442,11 +1442,11 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETTABORDER )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
 {
-  QGraphicsWidgetSlots_connect_signal( "geometryChanged()", "geometryChanged()" );
+  QGraphicsWidgetSlots_connect_signal("geometryChanged()", "geometryChanged()");
 }
 
 #pragma ENDDUMP

@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
     {
 #endif
       QWidget * ptr = obj->createEditor( PINT(1), PQWIDGET(2) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

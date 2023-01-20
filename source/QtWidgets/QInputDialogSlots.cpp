@@ -24,16 +24,16 @@ void QInputDialogSlots::doubleValueChanged( double value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleValueChanged(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "doubleValueChanged(double)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -42,16 +42,16 @@ void QInputDialogSlots::doubleValueSelected( double value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleValueSelected(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "doubleValueSelected(double)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -60,16 +60,16 @@ void QInputDialogSlots::intValueChanged( int value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "intValueChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "intValueChanged(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -78,16 +78,16 @@ void QInputDialogSlots::intValueSelected( int value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "intValueSelected(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "intValueSelected(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -96,16 +96,16 @@ void QInputDialogSlots::textValueChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textValueChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "textValueChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
 
-    hb_vmEvalBlockV( cb, 2, psender, ptext );
+    hb_vmEvalBlockV(cb, 2, psender, ptext);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ptext );
   }
 }
@@ -114,21 +114,21 @@ void QInputDialogSlots::textValueSelected( const QString & text )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textValueSelected(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "textValueSelected(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
 
-    hb_vmEvalBlockV( cb, 2, psender, ptext );
+    hb_vmEvalBlockV(cb, 2, psender, ptext);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ptext );
   }
 }
 
-void QInputDialogSlots_connect_signal( const QString & signal, const QString & slot )
+void QInputDialogSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QInputDialog * obj = (QInputDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -24,21 +24,21 @@ void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "updatePreviewWidget(QModelIndex)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "updatePreviewWidget(QModelIndex)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOLUMNVIEW");
-    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV(cb, 2, psender, pindex);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pindex );
   }
 }
 
-void QColumnViewSlots_connect_signal( const QString & signal, const QString & slot )
+void QColumnViewSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QColumnView * obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 

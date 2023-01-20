@@ -24,15 +24,15 @@ void QActionSlots::changed()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "changed()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "changed()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,15 +40,15 @@ void QActionSlots::hovered()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -56,16 +56,16 @@ void QActionSlots::toggled( bool checked )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "toggled(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "toggled(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
 
-    hb_vmEvalBlockV( cb, 2, psender, pchecked );
+    hb_vmEvalBlockV(cb, 2, psender, pchecked);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pchecked );
   }
 }
@@ -74,21 +74,21 @@ void QActionSlots::triggered( bool checked )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "triggered(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "triggered(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
 
-    hb_vmEvalBlockV( cb, 2, psender, pchecked );
+    hb_vmEvalBlockV(cb, 2, psender, pchecked);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pchecked );
   }
 }
 
-void QActionSlots_connect_signal( const QString & signal, const QString & slot )
+void QActionSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QAction * obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 

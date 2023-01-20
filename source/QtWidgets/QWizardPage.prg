@@ -528,11 +528,11 @@ HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
   }
 }
 
-void QWizardPageSlots_connect_signal( const QString & signal, const QString & slot );
+void QWizardPageSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
 {
-  QWizardPageSlots_connect_signal( "completeChanged()", "completeChanged()" );
+  QWizardPageSlots_connect_signal("completeChanged()", "completeChanged()");
 }
 
 #pragma ENDDUMP

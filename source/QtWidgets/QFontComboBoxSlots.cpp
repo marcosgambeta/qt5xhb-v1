@@ -24,21 +24,21 @@ void QFontComboBoxSlots::currentFontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentFontChanged(QFont)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentFontChanged(QFont)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFONTCOMBOBOX");
-    PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT" );
+    PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT");
 
-    hb_vmEvalBlockV( cb, 2, psender, pfont );
+    hb_vmEvalBlockV(cb, 2, psender, pfont);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pfont );
   }
 }
 
-void QFontComboBoxSlots_connect_signal( const QString & signal, const QString & slot )
+void QFontComboBoxSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QFontComboBox * obj = (QFontComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 

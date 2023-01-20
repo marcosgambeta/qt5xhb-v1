@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_TABLEWIDGET )
     {
 #endif
       QTableWidget * ptr = obj->tableWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QTABLEWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QTABLEWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

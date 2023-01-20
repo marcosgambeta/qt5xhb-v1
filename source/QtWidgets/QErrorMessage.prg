@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
   {
 #endif
     QErrorMessage * ptr = QErrorMessage::qtHandler();
-    Qt5xHb::createReturnQWidgetClass( ptr, "QERRORMESSAGE" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QERRORMESSAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

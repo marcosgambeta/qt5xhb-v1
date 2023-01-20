@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSTYLEFACTORY_CREATE )
   {
 #endif
     QStyle * ptr = QStyleFactory::create( PQSTRING(1) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

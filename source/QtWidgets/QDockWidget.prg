@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
     {
 #endif
       QWidget * ptr = obj->titleBarWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
     {
 #endif
       QAction * ptr = obj->toggleViewAction();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,31 +414,31 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
   }
 }
 
-void QDockWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QDockWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 {
-  QDockWidgetSlots_connect_signal( "allowedAreasChanged(Qt::DockWidgetAreas)", "allowedAreasChanged(Qt::DockWidgetAreas)" );
+  QDockWidgetSlots_connect_signal("allowedAreasChanged(Qt::DockWidgetAreas)", "allowedAreasChanged(Qt::DockWidgetAreas)");
 }
 
 HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
 {
-  QDockWidgetSlots_connect_signal( "dockLocationChanged(Qt::DockWidgetArea)", "dockLocationChanged(Qt::DockWidgetArea)" );
+  QDockWidgetSlots_connect_signal("dockLocationChanged(Qt::DockWidgetArea)", "dockLocationChanged(Qt::DockWidgetArea)");
 }
 
 HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
 {
-  QDockWidgetSlots_connect_signal( "featuresChanged(QDockWidget::DockWidgetFeatures)", "featuresChanged(QDockWidget::DockWidgetFeatures)" );
+  QDockWidgetSlots_connect_signal("featuresChanged(QDockWidget::DockWidgetFeatures)", "featuresChanged(QDockWidget::DockWidgetFeatures)");
 }
 
 HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
 {
-  QDockWidgetSlots_connect_signal( "topLevelChanged(bool)", "topLevelChanged(bool)" );
+  QDockWidgetSlots_connect_signal("topLevelChanged(bool)", "topLevelChanged(bool)");
 }
 
 HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
 {
-  QDockWidgetSlots_connect_signal( "visibilityChanged(bool)", "visibilityChanged(bool)" );
+  QDockWidgetSlots_connect_signal("visibilityChanged(bool)", "visibilityChanged(bool)");
 }
 
 #pragma ENDDUMP

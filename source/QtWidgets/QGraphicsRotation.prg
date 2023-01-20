@@ -283,21 +283,21 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsRotationSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsRotationSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
 {
-  QGraphicsRotationSlots_connect_signal( "angleChanged()", "angleChanged()" );
+  QGraphicsRotationSlots_connect_signal("angleChanged()", "angleChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
 {
-  QGraphicsRotationSlots_connect_signal( "axisChanged()", "axisChanged()" );
+  QGraphicsRotationSlots_connect_signal("axisChanged()", "axisChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
 {
-  QGraphicsRotationSlots_connect_signal( "originChanged()", "originChanged()" );
+  QGraphicsRotationSlots_connect_signal("originChanged()", "originChanged()");
 }
 
 #pragma ENDDUMP

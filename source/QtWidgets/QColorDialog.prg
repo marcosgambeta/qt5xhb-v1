@@ -476,16 +476,16 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETSTANDARDCOLOR )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QColorDialogSlots_connect_signal( const QString & signal, const QString & slot );
+void QColorDialogSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
 {
-  QColorDialogSlots_connect_signal( "colorSelected(QColor)", "colorSelected(QColor)" );
+  QColorDialogSlots_connect_signal("colorSelected(QColor)", "colorSelected(QColor)");
 }
 
 HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
 {
-  QColorDialogSlots_connect_signal( "currentColorChanged(QColor)", "currentColorChanged(QColor)" );
+  QColorDialogSlots_connect_signal("currentColorChanged(QColor)", "currentColorChanged(QColor)");
 }
 
 #pragma ENDDUMP

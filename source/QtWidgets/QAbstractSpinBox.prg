@@ -967,11 +967,11 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETGROUPSEPARATORSHOWN )
 #endif
 }
 
-void QAbstractSpinBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractSpinBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 {
-  QAbstractSpinBoxSlots_connect_signal( "editingFinished()", "editingFinished()" );
+  QAbstractSpinBoxSlots_connect_signal("editingFinished()", "editingFinished()");
 }
 
 #pragma ENDDUMP

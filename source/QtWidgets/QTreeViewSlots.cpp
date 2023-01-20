@@ -24,16 +24,16 @@ void QTreeViewSlots::collapsed( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "collapsed(QModelIndex)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "collapsed(QModelIndex)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEVIEW");
-    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV(cb, 2, psender, pindex);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pindex );
   }
 }
@@ -42,21 +42,21 @@ void QTreeViewSlots::expanded( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "expanded(QModelIndex)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "expanded(QModelIndex)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEVIEW");
-    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV(cb, 2, psender, pindex);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pindex );
   }
 }
 
-void QTreeViewSlots_connect_signal( const QString & signal, const QString & slot )
+void QTreeViewSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QTreeView * obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 

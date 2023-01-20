@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
     {
 #endif
       QButtonGroup * ptr = obj->group();
-      Qt5xHb::createReturnQObjectClass( ptr, "QBUTTONGROUP" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QBUTTONGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -768,26 +768,26 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAbstractButtonSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractButtonSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
 {
-  QAbstractButtonSlots_connect_signal( "clicked(bool)", "clicked(bool)" );
+  QAbstractButtonSlots_connect_signal("clicked(bool)", "clicked(bool)");
 }
 
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
 {
-  QAbstractButtonSlots_connect_signal( "pressed()", "pressed()" );
+  QAbstractButtonSlots_connect_signal("pressed()", "pressed()");
 }
 
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
 {
-  QAbstractButtonSlots_connect_signal( "released()", "released()" );
+  QAbstractButtonSlots_connect_signal("released()", "released()");
 }
 
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
 {
-  QAbstractButtonSlots_connect_signal( "toggled(bool)", "toggled(bool)" );
+  QAbstractButtonSlots_connect_signal("toggled(bool)", "toggled(bool)");
 }
 
 #pragma ENDDUMP

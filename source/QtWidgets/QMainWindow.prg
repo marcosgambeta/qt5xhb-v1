@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
     if( obj != NULL )
     {
       QToolBar * ptr = obj->addToolBar( PQSTRING(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QTOOLBAR" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QTOOLBAR");
     }
   }
   else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
     {
 #endif
       QWidget * ptr = obj->centralWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
     {
 #endif
       QMenu * ptr = obj->createPopupMenu();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
     {
 #endif
       QMenuBar * ptr = obj->menuBar();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENUBAR" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENUBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
     {
 #endif
       QWidget * ptr = obj->menuWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
     {
 #endif
       QStatusBar * ptr = obj->statusBar();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QSTATUSBAR" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QSTATUSBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1275,7 +1275,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TAKECENTRALWIDGET )
     {
 #endif
       QWidget * ptr = obj->takeCentralWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1287,16 +1287,16 @@ HB_FUNC_STATIC( QMAINWINDOW_TAKECENTRALWIDGET )
 #endif
 }
 
-void QMainWindowSlots_connect_signal( const QString & signal, const QString & slot );
+void QMainWindowSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
 {
-  QMainWindowSlots_connect_signal( "iconSizeChanged(QSize)", "iconSizeChanged(QSize)" );
+  QMainWindowSlots_connect_signal("iconSizeChanged(QSize)", "iconSizeChanged(QSize)");
 }
 
 HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 {
-  QMainWindowSlots_connect_signal( "toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+  QMainWindowSlots_connect_signal("toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)");
 }
 
 #pragma ENDDUMP

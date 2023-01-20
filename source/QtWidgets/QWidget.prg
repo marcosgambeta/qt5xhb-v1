@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QWIDGET_SETACCESSIBLENAME )
 }
 
 /*
-QList<QAction *> actions () const
+QList<QAction*> actions () const
 */
 HB_FUNC_STATIC( QWIDGET_ACTIONS )
 {
@@ -523,28 +523,28 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAction *> list = obj->actions();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
+      QList<QAction*> list = obj->actions();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QACTION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QACTION", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QACTION", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QWIDGET_ADDACTION )
 }
 
 /*
-void addActions ( QList<QAction *> actions )
+void addActions ( QList<QAction*> actions )
 */
 HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
 {
@@ -626,11 +626,10 @@ HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
     if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
-      QList<QAction *> par1;
+      QList<QAction*> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -847,7 +846,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDAT )
     if( obj != NULL )
     {
       QWidget * ptr = obj->childAt( PINT(1), PINT(2) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
     }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -860,7 +859,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDAT )
     if( obj != NULL )
     {
       QWidget * ptr = obj->childAt( *PQPOINT(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
     }
   }
   else
@@ -1268,7 +1267,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSPROXY )
     {
 #endif
       QWidget * ptr = obj->focusProxy();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1293,7 +1292,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSWIDGET )
     {
 #endif
       QWidget * ptr = obj->focusWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1670,7 +1669,7 @@ HB_FUNC_STATIC( QWIDGET_GRAPHICSEFFECT )
     {
 #endif
       QGraphicsEffect * ptr = obj->graphicsEffect();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSEFFECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSEFFECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1725,7 +1724,7 @@ HB_FUNC_STATIC( QWIDGET_GRAPHICSPROXYWIDGET )
     {
 #endif
       QGraphicsProxyWidget * ptr = obj->graphicsProxyWidget();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSPROXYWIDGET" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSPROXYWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1989,7 +1988,7 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTION )
 }
 
 /*
-void insertActions ( QAction * before, QList<QAction *> actions )
+void insertActions ( QAction * before, QList<QAction*> actions )
 */
 HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
 {
@@ -2002,7 +2001,7 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
     if( ISNUMPAR(2) && ISQACTION(1) && HB_ISARRAY(2) )
     {
 #endif
-      QList<QAction *> par2;
+      QList<QAction*> par2;
       PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
       int i2;
       int nLen2 = hb_arrayLen(aList2);
@@ -2378,7 +2377,7 @@ HB_FUNC_STATIC( QWIDGET_LAYOUT )
     {
 #endif
       QLayout * ptr = obj->layout();
-      Qt5xHb::createReturnQObjectClass( ptr, "QLAYOUT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QLAYOUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3053,7 +3052,7 @@ HB_FUNC_STATIC( QWIDGET_NATIVEPARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->nativeParentWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3078,7 +3077,7 @@ HB_FUNC_STATIC( QWIDGET_NEXTINFOCUSCHAIN )
     {
 #endif
       QWidget * ptr = obj->nextInFocusChain();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3205,7 +3204,7 @@ HB_FUNC_STATIC( QWIDGET_PARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->parentWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3230,7 +3229,7 @@ HB_FUNC_STATIC( QWIDGET_PREVIOUSINFOCUSCHAIN )
     {
 #endif
       QWidget * ptr = obj->previousInFocusChain();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4562,7 +4561,7 @@ HB_FUNC_STATIC( QWIDGET_STYLE )
     {
 #endif
       QStyle * ptr = obj->style();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -5088,7 +5087,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOW )
     {
 #endif
       QWidget * ptr = obj->window();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -5965,7 +5964,7 @@ HB_FUNC_STATIC( QWIDGET_TOPLEVELWIDGET )
     {
 #endif
       QWidget * ptr = obj->topLevelWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -6114,7 +6113,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWHANDLE )
     {
 #endif
       QWindow * ptr = obj->windowHandle();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -6375,7 +6374,7 @@ HB_FUNC_STATIC( QWIDGET_FIND )
   {
 #endif
     QWidget * ptr = QWidget::find( (WId) hb_parptr(1) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -6395,7 +6394,7 @@ HB_FUNC_STATIC( QWIDGET_KEYBOARDGRABBER )
   {
 #endif
     QWidget * ptr = QWidget::keyboardGrabber();
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -6415,7 +6414,7 @@ HB_FUNC_STATIC( QWIDGET_MOUSEGRABBER )
   {
 #endif
     QWidget * ptr = QWidget::mouseGrabber();
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -6456,7 +6455,7 @@ HB_FUNC_STATIC( QWIDGET_CREATEWINDOWCONTAINER )
   {
 #endif
     QWidget * ptr = QWidget::createWindowContainer( PQWINDOW(1), OPQWIDGET(2,0), HB_ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -6466,34 +6465,34 @@ HB_FUNC_STATIC( QWIDGET_CREATEWINDOWCONTAINER )
 #endif
 }
 
-void QWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWidgetSlots_connect_signal( "windowTitleChanged(QString)", "windowTitleChanged(QString)" );
+  QWidgetSlots_connect_signal("windowTitleChanged(QString)", "windowTitleChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWidgetSlots_connect_signal( "windowIconChanged(QIcon)", "windowIconChanged(QIcon)" );
+  QWidgetSlots_connect_signal("windowIconChanged(QIcon)", "windowIconChanged(QIcon)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
 {
-  QWidgetSlots_connect_signal( "windowIconTextChanged(QString)", "windowIconTextChanged(QString)" );
+  QWidgetSlots_connect_signal("windowIconTextChanged(QString)", "windowIconTextChanged(QString)");
 }
 
 HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 {
-  QWidgetSlots_connect_signal( "customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)" );
+  QWidgetSlots_connect_signal("customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)");
 }
 
 #pragma ENDDUMP

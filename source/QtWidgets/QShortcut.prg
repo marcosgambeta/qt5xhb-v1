@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->parentWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -408,16 +408,16 @@ HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
   }
 }
 
-void QShortcutSlots_connect_signal( const QString & signal, const QString & slot );
+void QShortcutSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
 {
-  QShortcutSlots_connect_signal( "activated()", "activated()" );
+  QShortcutSlots_connect_signal("activated()", "activated()");
 }
 
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
 {
-  QShortcutSlots_connect_signal( "activatedAmbiguously()", "activatedAmbiguously()" );
+  QShortcutSlots_connect_signal("activatedAmbiguously()", "activatedAmbiguously()");
 }
 
 #pragma ENDDUMP

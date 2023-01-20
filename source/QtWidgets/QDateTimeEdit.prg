@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_CALENDARWIDGET )
     {
 #endif
       QCalendarWidget * ptr = obj->calendarWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QCALENDARWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QCALENDARWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1383,21 +1383,21 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIME )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDateTimeEditSlots_connect_signal( const QString & signal, const QString & slot );
+void QDateTimeEditSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
 {
-  QDateTimeEditSlots_connect_signal( "dateChanged(QDate)", "dateChanged(QDate)" );
+  QDateTimeEditSlots_connect_signal("dateChanged(QDate)", "dateChanged(QDate)");
 }
 
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
 {
-  QDateTimeEditSlots_connect_signal( "dateTimeChanged(QDateTime)", "dateTimeChanged(QDateTime)" );
+  QDateTimeEditSlots_connect_signal("dateTimeChanged(QDateTime)", "dateTimeChanged(QDateTime)");
 }
 
 HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
 {
-  QDateTimeEditSlots_connect_signal( "timeChanged(QTime)", "timeChanged(QTime)" );
+  QDateTimeEditSlots_connect_signal("timeChanged(QTime)", "timeChanged(QTime)");
 }
 
 #pragma ENDDUMP

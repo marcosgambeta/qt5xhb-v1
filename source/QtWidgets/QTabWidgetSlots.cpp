@@ -24,16 +24,16 @@ void QTabWidgetSlots::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABWIDGET");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV(cb, 2, psender, pindex);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pindex );
   }
 }
@@ -42,16 +42,16 @@ void QTabWidgetSlots::tabCloseRequested( int index )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tabCloseRequested(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tabCloseRequested(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABWIDGET");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV(cb, 2, psender, pindex);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pindex );
   }
 }
@@ -61,16 +61,16 @@ void QTabWidgetSlots::tabBarClicked( int index )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tabBarClicked(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tabBarClicked(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABWIDGET");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV(cb, 2, psender, pindex);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pindex );
   }
 }
@@ -81,22 +81,22 @@ void QTabWidgetSlots::tabBarDoubleClicked( int index )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tabBarDoubleClicked(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tabBarDoubleClicked(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABWIDGET");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV(cb, 2, psender, pindex);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pindex );
   }
 }
 #endif
 
-void QTabWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QTabWidgetSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QTabWidget * obj = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 

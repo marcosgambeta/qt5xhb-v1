@@ -24,15 +24,15 @@ void QMenuSlots::aboutToHide()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToHide()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToHide()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMENU");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,15 +40,15 @@ void QMenuSlots::aboutToShow()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToShow()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToShow()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMENU");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -56,16 +56,16 @@ void QMenuSlots::hovered( QAction * action )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(QAction*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered(QAction*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMENU");
     PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
 
-    hb_vmEvalBlockV( cb, 2, psender, paction );
+    hb_vmEvalBlockV(cb, 2, psender, paction);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( paction );
   }
 }
@@ -74,21 +74,21 @@ void QMenuSlots::triggered( QAction * action )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "triggered(QAction*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "triggered(QAction*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMENU");
     PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
 
-    hb_vmEvalBlockV( cb, 2, psender, paction );
+    hb_vmEvalBlockV(cb, 2, psender, paction);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( paction );
   }
 }
 
-void QMenuSlots_connect_signal( const QString & signal, const QString & slot )
+void QMenuSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QMenu * obj = (QMenu *) Qt5xHb::itemGetPtrStackSelfItem();
 

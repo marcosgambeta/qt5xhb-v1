@@ -24,15 +24,15 @@ void QShortcutSlots::activated()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activated()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activated()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSHORTCUT");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,19 +40,19 @@ void QShortcutSlots::activatedAmbiguously()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activatedAmbiguously()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activatedAmbiguously()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSHORTCUT");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QShortcutSlots_connect_signal( const QString & signal, const QString & slot )
+void QShortcutSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QShortcut * obj = (QShortcut *) Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -25,15 +25,15 @@ void QKeySequenceEditSlots::editingFinished()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "editingFinished()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "editingFinished()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QKEYSEQUENCEEDIT");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -43,22 +43,22 @@ void QKeySequenceEditSlots::keySequenceChanged( const QKeySequence & keySequence
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "keySequenceChanged(QKeySequence)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "keySequenceChanged(QKeySequence)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QKEYSEQUENCEEDIT");
-    PHB_ITEM pkeySequence = Qt5xHb::Signals_return_object( (void *) &keySequence, "QKEYSEQUENCE" );
+    PHB_ITEM pkeySequence = Qt5xHb::Signals_return_object( (void *) &keySequence, "QKEYSEQUENCE");
 
-    hb_vmEvalBlockV( cb, 2, psender, pkeySequence );
+    hb_vmEvalBlockV(cb, 2, psender, pkeySequence);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pkeySequence );
   }
 }
 #endif
 
-void QKeySequenceEditSlots_connect_signal( const QString & signal, const QString & slot )
+void QKeySequenceEditSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QKeySequenceEdit * obj = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();

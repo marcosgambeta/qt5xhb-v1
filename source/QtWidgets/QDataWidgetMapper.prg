@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegate();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
     {
 #endif
       QWidget * ptr = obj->mappedWidgetAt( PINT(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -763,11 +763,11 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDataWidgetMapperSlots_connect_signal( const QString & signal, const QString & slot );
+void QDataWidgetMapperSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
 {
-  QDataWidgetMapperSlots_connect_signal( "currentIndexChanged(int)", "currentIndexChanged(int)" );
+  QDataWidgetMapperSlots_connect_signal("currentIndexChanged(int)", "currentIndexChanged(int)");
 }
 
 #pragma ENDDUMP

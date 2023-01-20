@@ -24,16 +24,16 @@ void QGraphicsDropShadowEffectSlots::blurRadiusChanged( qreal blurRadius )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "blurRadiusChanged(qreal)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSDROPSHADOWEFFECT");
     PHB_ITEM pblurRadius = hb_itemPutND( NULL, blurRadius );
 
-    hb_vmEvalBlockV( cb, 2, psender, pblurRadius );
+    hb_vmEvalBlockV(cb, 2, psender, pblurRadius);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pblurRadius );
   }
 }
@@ -42,16 +42,16 @@ void QGraphicsDropShadowEffectSlots::colorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSDROPSHADOWEFFECT");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
 
-    hb_vmEvalBlockV( cb, 2, psender, pcolor );
+    hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pcolor );
   }
 }
@@ -60,21 +60,21 @@ void QGraphicsDropShadowEffectSlots::offsetChanged( const QPointF & offset )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "offsetChanged(QPointF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "offsetChanged(QPointF)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSDROPSHADOWEFFECT");
-    PHB_ITEM poffset = Qt5xHb::Signals_return_object( (void *) &offset, "QPOINTF" );
+    PHB_ITEM poffset = Qt5xHb::Signals_return_object( (void *) &offset, "QPOINTF");
 
-    hb_vmEvalBlockV( cb, 2, psender, poffset );
+    hb_vmEvalBlockV(cb, 2, psender, poffset);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( poffset );
   }
 }
 
-void QGraphicsDropShadowEffectSlots_connect_signal( const QString & signal, const QString & slot )
+void QGraphicsDropShadowEffectSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 

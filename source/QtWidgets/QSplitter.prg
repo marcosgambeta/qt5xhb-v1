@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
     {
 #endif
       QSplitterHandle * ptr = obj->handle( PINT(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QSPLITTERHANDLE" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QSPLITTERHANDLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget( PINT(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -701,11 +701,11 @@ HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
   }
 }
 
-void QSplitterSlots_connect_signal( const QString & signal, const QString & slot );
+void QSplitterSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
 {
-  QSplitterSlots_connect_signal( "splitterMoved(int,int)", "splitterMoved(int,int)" );
+  QSplitterSlots_connect_signal("splitterMoved(int,int)", "splitterMoved(int,int)");
 }
 
 #pragma ENDDUMP

@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
     {
 #endif
       QGraphicsScene * ptr = obj->scene();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSSCENE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1734,9 +1734,8 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENE )
 #endif
       QList<QRectF> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }

@@ -24,15 +24,15 @@ void QMdiSubWindowSlots::aboutToActivate()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToActivate()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToActivate()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMDISUBWINDOW");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,23 +40,23 @@ void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::Wind
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMDISUBWINDOW");
-    PHB_ITEM poldState = hb_itemPutNI( NULL, (int) oldState );
-    PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
+    PHB_ITEM poldState = hb_itemPutNI( NULL, static_cast<int>(oldState) );
+    PHB_ITEM pnewState = hb_itemPutNI( NULL, static_cast<int>(newState) );
 
-    hb_vmEvalBlockV( cb, 3, psender, poldState, pnewState );
+    hb_vmEvalBlockV(cb, 3, psender, poldState, pnewState);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( poldState );
     hb_itemRelease( pnewState );
   }
 }
 
-void QMdiSubWindowSlots_connect_signal( const QString & signal, const QString & slot )
+void QMdiSubWindowSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 

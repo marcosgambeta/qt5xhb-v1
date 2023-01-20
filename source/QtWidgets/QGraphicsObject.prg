@@ -130,51 +130,51 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsObjectSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsObjectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
 {
-  QGraphicsObjectSlots_connect_signal( "enabledChanged()", "enabledChanged()" );
+  QGraphicsObjectSlots_connect_signal("enabledChanged()", "enabledChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
 {
-  QGraphicsObjectSlots_connect_signal( "opacityChanged()", "opacityChanged()" );
+  QGraphicsObjectSlots_connect_signal("opacityChanged()", "opacityChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONPARENTCHANGED )
 {
-  QGraphicsObjectSlots_connect_signal( "parentChanged()", "parentChanged()" );
+  QGraphicsObjectSlots_connect_signal("parentChanged()", "parentChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
 {
-  QGraphicsObjectSlots_connect_signal( "rotationChanged()", "rotationChanged()" );
+  QGraphicsObjectSlots_connect_signal("rotationChanged()", "rotationChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONSCALECHANGED )
 {
-  QGraphicsObjectSlots_connect_signal( "scaleChanged()", "scaleChanged()" );
+  QGraphicsObjectSlots_connect_signal("scaleChanged()", "scaleChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
 {
-  QGraphicsObjectSlots_connect_signal( "visibleChanged()", "visibleChanged()" );
+  QGraphicsObjectSlots_connect_signal("visibleChanged()", "visibleChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONXCHANGED )
 {
-  QGraphicsObjectSlots_connect_signal( "xChanged()", "xChanged()" );
+  QGraphicsObjectSlots_connect_signal("xChanged()", "xChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONYCHANGED )
 {
-  QGraphicsObjectSlots_connect_signal( "yChanged()", "yChanged()" );
+  QGraphicsObjectSlots_connect_signal("yChanged()", "yChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
 {
-  QGraphicsObjectSlots_connect_signal( "zChanged()", "zChanged()" );
+  QGraphicsObjectSlots_connect_signal("zChanged()", "zChanged()");
 }
 
 #pragma ENDDUMP

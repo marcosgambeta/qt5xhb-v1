@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
     {
 #endif
       QWidget * ptr = obj->screen( OPINT(1,-1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,21 +302,21 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
   }
 }
 
-void QDesktopWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QDesktopWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
 {
-  QDesktopWidgetSlots_connect_signal( "resized(int)", "resized(int)" );
+  QDesktopWidgetSlots_connect_signal("resized(int)", "resized(int)");
 }
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
 {
-  QDesktopWidgetSlots_connect_signal( "screenCountChanged(int)", "screenCountChanged(int)" );
+  QDesktopWidgetSlots_connect_signal("screenCountChanged(int)", "screenCountChanged(int)");
 }
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
 {
-  QDesktopWidgetSlots_connect_signal( "workAreaResized(int)", "workAreaResized(int)" );
+  QDesktopWidgetSlots_connect_signal("workAreaResized(int)", "workAreaResized(int)");
 }
 
 #pragma ENDDUMP

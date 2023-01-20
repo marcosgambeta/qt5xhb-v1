@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -831,16 +831,16 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
   }
 }
 
-void QGraphicsTextItemSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsTextItemSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
 {
-  QGraphicsTextItemSlots_connect_signal( "linkActivated(QString)", "linkActivated(QString)" );
+  QGraphicsTextItemSlots_connect_signal("linkActivated(QString)", "linkActivated(QString)");
 }
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
 {
-  QGraphicsTextItemSlots_connect_signal( "linkHovered(QString)", "linkHovered(QString)" );
+  QGraphicsTextItemSlots_connect_signal("linkHovered(QString)", "linkHovered(QString)");
 }
 
 #pragma ENDDUMP

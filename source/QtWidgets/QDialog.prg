@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QDIALOG_EXTENSION )
     {
 #endif
       QWidget * ptr = obj->extension();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,21 +564,21 @@ HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDialogSlots_connect_signal( const QString & signal, const QString & slot );
+void QDialogSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 {
-  QDialogSlots_connect_signal( "accepted()", "accepted()" );
+  QDialogSlots_connect_signal("accepted()", "accepted()");
 }
 
 HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 {
-  QDialogSlots_connect_signal( "finished(int)", "finished(int)" );
+  QDialogSlots_connect_signal("finished(int)", "finished(int)");
 }
 
 HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 {
-  QDialogSlots_connect_signal( "rejected()", "rejected()" );
+  QDialogSlots_connect_signal("rejected()", "rejected()");
 }
 
 #pragma ENDDUMP

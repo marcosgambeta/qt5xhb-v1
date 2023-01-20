@@ -24,21 +24,21 @@ void QToolButtonSlots::triggered( QAction * action )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "triggered(QAction*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "triggered(QAction*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBUTTON");
     PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
 
-    hb_vmEvalBlockV( cb, 2, psender, paction );
+    hb_vmEvalBlockV(cb, 2, psender, paction);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( paction );
   }
 }
 
-void QToolButtonSlots_connect_signal( const QString & signal, const QString & slot )
+void QToolButtonSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QToolButton * obj = (QToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -24,16 +24,16 @@ void QGraphicsOpacityEffectSlots::opacityChanged( qreal opacity )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "opacityChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "opacityChanged(qreal)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOPACITYEFFECT");
     PHB_ITEM popacity = hb_itemPutND( NULL, opacity );
 
-    hb_vmEvalBlockV( cb, 2, psender, popacity );
+    hb_vmEvalBlockV(cb, 2, psender, popacity);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( popacity );
   }
 }
@@ -42,21 +42,21 @@ void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "opacityMaskChanged(QBrush)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "opacityMaskChanged(QBrush)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOPACITYEFFECT");
-    PHB_ITEM pmask = Qt5xHb::Signals_return_object( (void *) &mask, "QBRUSH" );
+    PHB_ITEM pmask = Qt5xHb::Signals_return_object( (void *) &mask, "QBRUSH");
 
-    hb_vmEvalBlockV( cb, 2, psender, pmask );
+    hb_vmEvalBlockV(cb, 2, psender, pmask);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pmask );
   }
 }
 
-void QGraphicsOpacityEffectSlots_connect_signal( const QString & signal, const QString & slot )
+void QGraphicsOpacityEffectSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 

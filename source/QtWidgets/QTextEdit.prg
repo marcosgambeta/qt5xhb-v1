@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
     if( obj != NULL )
     {
       QMenu * ptr = obj->createStandardContextMenu();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
     }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
     if( obj != NULL )
     {
       QMenu * ptr = obj->createStandardContextMenu( *PQPOINT(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
     }
   }
   else
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2203,41 +2203,41 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTextEditSlots_connect_signal( const QString & signal, const QString & slot );
+void QTextEditSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
 {
-  QTextEditSlots_connect_signal( "copyAvailable(bool)", "copyAvailable(bool)" );
+  QTextEditSlots_connect_signal("copyAvailable(bool)", "copyAvailable(bool)");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
 {
-  QTextEditSlots_connect_signal( "currentCharFormatChanged(QTextCharFormat)", "currentCharFormatChanged(QTextCharFormat)" );
+  QTextEditSlots_connect_signal("currentCharFormatChanged(QTextCharFormat)", "currentCharFormatChanged(QTextCharFormat)");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
-  QTextEditSlots_connect_signal( "cursorPositionChanged()", "cursorPositionChanged()" );
+  QTextEditSlots_connect_signal("cursorPositionChanged()", "cursorPositionChanged()");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
 {
-  QTextEditSlots_connect_signal( "redoAvailable(bool)", "redoAvailable(bool)" );
+  QTextEditSlots_connect_signal("redoAvailable(bool)", "redoAvailable(bool)");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
 {
-  QTextEditSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QTextEditSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
 {
-  QTextEditSlots_connect_signal( "textChanged()", "textChanged()" );
+  QTextEditSlots_connect_signal("textChanged()", "textChanged()");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
 {
-  QTextEditSlots_connect_signal( "undoAvailable(bool)", "undoAvailable(bool)" );
+  QTextEditSlots_connect_signal("undoAvailable(bool)", "undoAvailable(bool)");
 }
 
 #pragma ENDDUMP

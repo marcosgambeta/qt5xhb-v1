@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
     if( obj != NULL )
     {
       QAction * ptr = obj->actionAt( PINT(1), PINT(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
     if( obj != NULL )
     {
       QAction * ptr = obj->actionAt( *PQPOINT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
     if( obj != NULL )
     {
       QAction * ptr = obj->addAction( PQSTRING(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else if( ISNUMPAR(2) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
     if( obj != NULL )
     {
       QAction * ptr = obj->addAction( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-     Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+     Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3) )
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
     if( obj != NULL )
     {
       QAction * ptr = obj->addAction( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else if( ISNUMPAR(4) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) )
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
     if( obj != NULL )
     {
       QAction * ptr = obj->addAction( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
     {
 #endif
       QAction * ptr = obj->addSeparator();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
     {
 #endif
       QAction * ptr = obj->addWidget( PQWIDGET(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
     {
 #endif
       QAction * ptr = obj->insertSeparator( PQACTION(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
     {
 #endif
       QAction * ptr = obj->insertWidget( PQACTION(1), PQWIDGET(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
     {
 #endif
       QAction * ptr = obj->toggleViewAction();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
     {
 #endif
       QWidget * ptr = obj->widgetForAction( PQACTION(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -762,46 +762,46 @@ HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QToolBarSlots_connect_signal( const QString & signal, const QString & slot );
+void QToolBarSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 {
-  QToolBarSlots_connect_signal( "actionTriggered(QAction*)", "actionTriggered(QAction*)" );
+  QToolBarSlots_connect_signal("actionTriggered(QAction*)", "actionTriggered(QAction*)");
 }
 
 HB_FUNC_STATIC( QTOOLBAR_ONALLOWEDAREASCHANGED )
 {
-  QToolBarSlots_connect_signal( "allowedAreasChanged(Qt::ToolBarAreas)", "allowedAreasChanged(Qt::ToolBarAreas)" );
+  QToolBarSlots_connect_signal("allowedAreasChanged(Qt::ToolBarAreas)", "allowedAreasChanged(Qt::ToolBarAreas)");
 }
 
 HB_FUNC_STATIC( QTOOLBAR_ONICONSIZECHANGED )
 {
-  QToolBarSlots_connect_signal( "iconSizeChanged(QSize)", "iconSizeChanged(QSize)" );
+  QToolBarSlots_connect_signal("iconSizeChanged(QSize)", "iconSizeChanged(QSize)");
 }
 
 HB_FUNC_STATIC( QTOOLBAR_ONMOVABLECHANGED )
 {
-  QToolBarSlots_connect_signal( "movableChanged(bool)", "movableChanged(bool)" );
+  QToolBarSlots_connect_signal("movableChanged(bool)", "movableChanged(bool)");
 }
 
 HB_FUNC_STATIC( QTOOLBAR_ONORIENTATIONCHANGED )
 {
-  QToolBarSlots_connect_signal( "orientationChanged(Qt::Orientation)", "orientationChanged(Qt::Orientation)" );
+  QToolBarSlots_connect_signal("orientationChanged(Qt::Orientation)", "orientationChanged(Qt::Orientation)");
 }
 
 HB_FUNC_STATIC( QTOOLBAR_ONTOOLBUTTONSTYLECHANGED )
 {
-  QToolBarSlots_connect_signal( "toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+  QToolBarSlots_connect_signal("toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)");
 }
 
 HB_FUNC_STATIC( QTOOLBAR_ONTOPLEVELCHANGED )
 {
-  QToolBarSlots_connect_signal( "topLevelChanged(bool)", "topLevelChanged(bool)" );
+  QToolBarSlots_connect_signal("topLevelChanged(bool)", "topLevelChanged(bool)");
 }
 
 HB_FUNC_STATIC( QTOOLBAR_ONVISIBILITYCHANGED )
 {
-  QToolBarSlots_connect_signal( "visibilityChanged(bool)", "visibilityChanged(bool)" );
+  QToolBarSlots_connect_signal("visibilityChanged(bool)", "visibilityChanged(bool)");
 }
 
 #pragma ENDDUMP

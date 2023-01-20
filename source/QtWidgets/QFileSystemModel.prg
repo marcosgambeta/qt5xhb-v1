@@ -1103,14 +1103,13 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
 #endif
       QModelIndexList par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
       QMimeData * ptr = obj->mimeData( par1 );
-      Qt5xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1244,21 +1243,21 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
   }
 }
 
-void QFileSystemModelSlots_connect_signal( const QString & signal, const QString & slot );
+void QFileSystemModelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
 {
-  QFileSystemModelSlots_connect_signal( "directoryLoaded(QString)", "directoryLoaded(QString)" );
+  QFileSystemModelSlots_connect_signal("directoryLoaded(QString)", "directoryLoaded(QString)");
 }
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
 {
-  QFileSystemModelSlots_connect_signal( "fileRenamed(QString,QString,QString)", "fileRenamed(QString,QString,QString)" );
+  QFileSystemModelSlots_connect_signal("fileRenamed(QString,QString,QString)", "fileRenamed(QString,QString,QString)");
 }
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
 {
-  QFileSystemModelSlots_connect_signal( "rootPathChanged(QString)", "rootPathChanged(QString)" );
+  QFileSystemModelSlots_connect_signal("rootPathChanged(QString)", "rootPathChanged(QString)");
 }
 
 #pragma ENDDUMP

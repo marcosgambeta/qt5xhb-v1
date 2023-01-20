@@ -24,19 +24,19 @@ void QProgressDialogSlots::canceled()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "canceled()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "canceled()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROGRESSDIALOG");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QProgressDialogSlots_connect_signal( const QString & signal, const QString & slot )
+void QProgressDialogSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 

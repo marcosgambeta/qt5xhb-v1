@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEWINDOW )
     {
 #endif
       QGraphicsWidget * ptr = obj->activeWindow();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSWIDGET" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDWIDGET )
     {
 #endif
       QGraphicsProxyWidget * ptr = obj->addWidget( PQWIDGET(1), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSPROXYWIDGET" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSPROXYWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARFOCUS )
 }
 
 /*
-QGraphicsItemGroup * createItemGroup( const QList<QGraphicsItem *> & items )
+QGraphicsItemGroup * createItemGroup( const QList<QGraphicsItem*> & items )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
 {
@@ -611,11 +611,10 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
     if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
-      QList<QGraphicsItem *> par1;
+      QList<QGraphicsItem*> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -1596,7 +1595,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_STYLE )
     {
 #endif
       QStyle * ptr = obj->style();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1745,21 +1744,21 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARSELECTION )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsSceneSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsSceneSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
 {
-  QGraphicsSceneSlots_connect_signal( "changed(QList<QRectF>)", "changed(QList<QRectF>)" );
+  QGraphicsSceneSlots_connect_signal("changed(QList<QRectF>)", "changed(QList<QRectF>)");
 }
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
 {
-  QGraphicsSceneSlots_connect_signal( "sceneRectChanged(QRectF)", "sceneRectChanged(QRectF)" );
+  QGraphicsSceneSlots_connect_signal("sceneRectChanged(QRectF)", "sceneRectChanged(QRectF)");
 }
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
 {
-  QGraphicsSceneSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QGraphicsSceneSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 #pragma ENDDUMP

@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
     {
 #endif
       QWidget * ptr = obj->tabButton( PINT(1), (QTabBar::ButtonPosition) hb_parni(2) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1449,21 +1449,21 @@ HB_FUNC_STATIC( QTABBAR_SETCHANGECURRENTONDRAG )
 #endif
 }
 
-void QTabBarSlots_connect_signal( const QString & signal, const QString & slot );
+void QTabBarSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTABBAR_ONCURRENTCHANGED )
 {
-  QTabBarSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+  QTabBarSlots_connect_signal("currentChanged(int)", "currentChanged(int)");
 }
 
 HB_FUNC_STATIC( QTABBAR_ONTABCLOSEREQUESTED )
 {
-  QTabBarSlots_connect_signal( "tabCloseRequested(int)", "tabCloseRequested(int)" );
+  QTabBarSlots_connect_signal("tabCloseRequested(int)", "tabCloseRequested(int)");
 }
 
 HB_FUNC_STATIC( QTABBAR_ONTABMOVED )
 {
-  QTabBarSlots_connect_signal( "tabMoved(int,int)", "tabMoved(int,int)" );
+  QTabBarSlots_connect_signal("tabMoved(int,int)", "tabMoved(int,int)");
 }
 
 #pragma ENDDUMP

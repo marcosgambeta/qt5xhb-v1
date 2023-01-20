@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
     {
 #endif
       QWidget * ptr = obj->buddy();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QLABEL_MOVIE )
     {
 #endif
       QMovie * ptr = obj->movie();
-      Qt5xHb::createReturnQObjectClass( ptr, "QMOVIE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMOVIE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1011,16 +1011,16 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QLabelSlots_connect_signal( const QString & signal, const QString & slot );
+void QLabelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
 {
-  QLabelSlots_connect_signal( "linkActivated(QString)", "linkActivated(QString)" );
+  QLabelSlots_connect_signal("linkActivated(QString)", "linkActivated(QString)");
 }
 
 HB_FUNC_STATIC( QLABEL_ONLINKHOVERED )
 {
-  QLabelSlots_connect_signal( "linkHovered(QString)", "linkHovered(QString)" );
+  QLabelSlots_connect_signal("linkHovered(QString)", "linkHovered(QString)");
 }
 
 #pragma ENDDUMP

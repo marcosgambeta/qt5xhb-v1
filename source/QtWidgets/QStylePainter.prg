@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_STYLE )
     {
 #endif
       QStyle * ptr = obj->style();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

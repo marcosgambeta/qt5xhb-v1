@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
     {
 #endif
       QList<int> list = obj->columnWidths();
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
     {
 #endif
       QWidget * ptr = obj->previewWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,10 +192,9 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETCOLUMNWIDTHS )
 #endif
       QList<int> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
       int temp1;
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         temp1 = hb_arrayGetNI(aList1, i1+1);
         par1 << temp1;
@@ -470,11 +469,11 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
   }
 }
 
-void QColumnViewSlots_connect_signal( const QString & signal, const QString & slot );
+void QColumnViewSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
 {
-  QColumnViewSlots_connect_signal( "updatePreviewWidget(QModelIndex)", "updatePreviewWidget(QModelIndex)" );
+  QColumnViewSlots_connect_signal("updatePreviewWidget(QModelIndex)", "updatePreviewWidget(QModelIndex)");
 }
 
 #pragma ENDDUMP

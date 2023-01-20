@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegate();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
     {
 #endif
       QAbstractProxyModel * ptr = obj->proxyModel();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTPROXYMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTPROXYMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1232,30 +1232,30 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
     {
 #endif
       QList<QUrl> list = obj->sidebarUrls();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QUrl( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QUrl(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1283,9 +1283,8 @@ HB_FUNC_STATIC( QFILEDIALOG_SETSIDEBARURLS )
 #endif
       QList<QUrl> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -1493,30 +1492,30 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDURLS )
     {
 #endif
       QList<QUrl> list = obj->selectedUrls();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QUrl( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QUrl(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1751,30 +1750,30 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
   {
 #endif
     QList<QUrl> list = QFileDialog::getOpenFileUrls( OPQWIDGET(1,0), OPQSTRING(2,QString()), HB_ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3), OPQSTRING(4,QString()), NULL, HB_ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QUrl( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QUrl(list[i]));
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1786,51 +1785,51 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
 #endif
 }
 
-void QFileDialogSlots_connect_signal( const QString & signal, const QString & slot );
+void QFileDialogSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 {
-  QFileDialogSlots_connect_signal( "currentChanged(QString)", "currentChanged(QString)" );
+  QFileDialogSlots_connect_signal("currentChanged(QString)", "currentChanged(QString)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 {
-  QFileDialogSlots_connect_signal( "directoryEntered(QString)", "directoryEntered(QString)" );
+  QFileDialogSlots_connect_signal("directoryEntered(QString)", "directoryEntered(QString)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 {
-  QFileDialogSlots_connect_signal( "fileSelected(QString)", "fileSelected(QString)" );
+  QFileDialogSlots_connect_signal("fileSelected(QString)", "fileSelected(QString)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 {
-  QFileDialogSlots_connect_signal( "filesSelected(QStringList)", "filesSelected(QStringList)" );
+  QFileDialogSlots_connect_signal("filesSelected(QStringList)", "filesSelected(QStringList)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 {
-  QFileDialogSlots_connect_signal( "filterSelected(QString)", "filterSelected(QString)" );
+  QFileDialogSlots_connect_signal("filterSelected(QString)", "filterSelected(QString)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 {
-  QFileDialogSlots_connect_signal( "urlSelected(QUrl)", "urlSelected(QUrl)" );
+  QFileDialogSlots_connect_signal("urlSelected(QUrl)", "urlSelected(QUrl)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 {
-  QFileDialogSlots_connect_signal( "urlsSelected(QList<QUrl>)", "urlsSelected(QList<QUrl>)" );
+  QFileDialogSlots_connect_signal("urlsSelected(QList<QUrl>)", "urlsSelected(QList<QUrl>)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 {
-  QFileDialogSlots_connect_signal( "currentUrlChanged(QUrl)", "currentUrlChanged(QUrl)" );
+  QFileDialogSlots_connect_signal("currentUrlChanged(QUrl)", "currentUrlChanged(QUrl)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 {
-  QFileDialogSlots_connect_signal( "directoryUrlEntered(QUrl)", "directoryUrlEntered(QUrl)" );
+  QFileDialogSlots_connect_signal("directoryUrlEntered(QUrl)", "directoryUrlEntered(QUrl)");
 }
 
 #pragma ENDDUMP

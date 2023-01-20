@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CELLWIDGET )
     {
 #endif
       QWidget * ptr = obj->cellWidget( PINT(1), PINT(2) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1247,81 +1247,81 @@ HB_FUNC_STATIC( QTABLEWIDGET_SCROLLTOITEM )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTableWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QTableWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 {
-  QTableWidgetSlots_connect_signal( "cellActivated(int,int)", "cellActivated(int,int)" );
+  QTableWidgetSlots_connect_signal("cellActivated(int,int)", "cellActivated(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "cellChanged(int,int)", "cellChanged(int,int)" );
+  QTableWidgetSlots_connect_signal("cellChanged(int,int)", "cellChanged(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 {
-  QTableWidgetSlots_connect_signal( "cellClicked(int,int)", "cellClicked(int,int)" );
+  QTableWidgetSlots_connect_signal("cellClicked(int,int)", "cellClicked(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 {
-  QTableWidgetSlots_connect_signal( "cellDoubleClicked(int,int)", "cellDoubleClicked(int,int)" );
+  QTableWidgetSlots_connect_signal("cellDoubleClicked(int,int)", "cellDoubleClicked(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 {
-  QTableWidgetSlots_connect_signal( "cellEntered(int,int)", "cellEntered(int,int)" );
+  QTableWidgetSlots_connect_signal("cellEntered(int,int)", "cellEntered(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 {
-  QTableWidgetSlots_connect_signal( "cellPressed(int,int)", "cellPressed(int,int)" );
+  QTableWidgetSlots_connect_signal("cellPressed(int,int)", "cellPressed(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "currentCellChanged(int,int,int,int)", "currentCellChanged(int,int,int,int)" );
+  QTableWidgetSlots_connect_signal("currentCellChanged(int,int,int,int)", "currentCellChanged(int,int,int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)", "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)", "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 {
-  QTableWidgetSlots_connect_signal( "itemActivated(QTableWidgetItem*)", "itemActivated(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemActivated(QTableWidgetItem*)", "itemActivated(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "itemChanged(QTableWidgetItem*)", "itemChanged(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemChanged(QTableWidgetItem*)", "itemChanged(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 {
-  QTableWidgetSlots_connect_signal( "itemClicked(QTableWidgetItem*)", "itemClicked(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemClicked(QTableWidgetItem*)", "itemClicked(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 {
-  QTableWidgetSlots_connect_signal( "itemDoubleClicked(QTableWidgetItem*)", "itemDoubleClicked(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemDoubleClicked(QTableWidgetItem*)", "itemDoubleClicked(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 {
-  QTableWidgetSlots_connect_signal( "itemEntered(QTableWidgetItem*)", "itemEntered(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemEntered(QTableWidgetItem*)", "itemEntered(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 {
-  QTableWidgetSlots_connect_signal( "itemPressed(QTableWidgetItem*)", "itemPressed(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemPressed(QTableWidgetItem*)", "itemPressed(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "itemSelectionChanged()", "itemSelectionChanged()" );
+  QTableWidgetSlots_connect_signal("itemSelectionChanged()", "itemSelectionChanged()");
 }
 
 #pragma ENDDUMP

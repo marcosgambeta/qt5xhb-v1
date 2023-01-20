@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
     {
 #endif
       QAction * ptr = obj->createRedoAction( PQOBJECT(1), OPQSTRING(2,QString()) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
     {
 #endif
       QAction * ptr = obj->createUndoAction( PQOBJECT(1), OPQSTRING(2,QString()) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -717,36 +717,36 @@ HB_FUNC_STATIC( QUNDOSTACK_UNDO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QUndoStackSlots_connect_signal( const QString & signal, const QString & slot );
+void QUndoStackSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QUNDOSTACK_ONCANREDOCHANGED )
 {
-  QUndoStackSlots_connect_signal( "canRedoChanged(bool)", "canRedoChanged(bool)" );
+  QUndoStackSlots_connect_signal("canRedoChanged(bool)", "canRedoChanged(bool)");
 }
 
 HB_FUNC_STATIC( QUNDOSTACK_ONCANUNDOCHANGED )
 {
-  QUndoStackSlots_connect_signal( "canUndoChanged(bool)", "canUndoChanged(bool)" );
+  QUndoStackSlots_connect_signal("canUndoChanged(bool)", "canUndoChanged(bool)");
 }
 
 HB_FUNC_STATIC( QUNDOSTACK_ONCLEANCHANGED )
 {
-  QUndoStackSlots_connect_signal( "cleanChanged(bool)", "cleanChanged(bool)" );
+  QUndoStackSlots_connect_signal("cleanChanged(bool)", "cleanChanged(bool)");
 }
 
 HB_FUNC_STATIC( QUNDOSTACK_ONINDEXCHANGED )
 {
-  QUndoStackSlots_connect_signal( "indexChanged(int)", "indexChanged(int)" );
+  QUndoStackSlots_connect_signal("indexChanged(int)", "indexChanged(int)");
 }
 
 HB_FUNC_STATIC( QUNDOSTACK_ONREDOTEXTCHANGED )
 {
-  QUndoStackSlots_connect_signal( "redoTextChanged(QString)", "redoTextChanged(QString)" );
+  QUndoStackSlots_connect_signal("redoTextChanged(QString)", "redoTextChanged(QString)");
 }
 
 HB_FUNC_STATIC( QUNDOSTACK_ONUNDOTEXTCHANGED )
 {
-  QUndoStackSlots_connect_signal( "undoTextChanged(QString)", "undoTextChanged(QString)" );
+  QUndoStackSlots_connect_signal("undoTextChanged(QString)", "undoTextChanged(QString)");
 }
 
 #pragma ENDDUMP

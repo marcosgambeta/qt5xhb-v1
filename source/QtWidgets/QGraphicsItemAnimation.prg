@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_TIMELINE )
     {
 #endif
       QTimeLine * ptr = obj->timeLine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTIMELINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTIMELINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

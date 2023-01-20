@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
     if( obj != NULL )
     {
       QPushButton * ptr = obj->addButton( PQSTRING(1), (QMessageBox::ButtonRole) hb_parni(2) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
     }
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) )
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
     if( obj != NULL )
     {
       QPushButton * ptr = obj->addButton( (QMessageBox::StandardButton) hb_parni(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
     }
   }
   else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
     {
 #endif
       QAbstractButton * ptr = obj->button( (QMessageBox::StandardButton) hb_parni(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONROLE )
 }
 
 /*
-QList<QAbstractButton *> buttons() const
+QList<QAbstractButton*> buttons() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
 {
@@ -254,28 +254,28 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAbstractButton *> list = obj->buttons();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
+      QList<QAbstractButton*> list = obj->buttons();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTBUTTON");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QABSTRACTBUTTON", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QABSTRACTBUTTON", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
     {
 #endif
       QAbstractButton * ptr = obj->clickedButton();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
     {
 #endif
       QPushButton * ptr = obj->defaultButton();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
     {
 #endif
       QAbstractButton * ptr = obj->escapeButton();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CHECKBOX )
     {
 #endif
       QCheckBox * ptr = obj->checkBox();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QCHECKBOX" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QCHECKBOX");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1259,11 +1259,11 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETBUTTONTEXT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMessageBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QMessageBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
 {
-  QMessageBoxSlots_connect_signal( "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" );
+  QMessageBoxSlots_connect_signal("buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)");
 }
 
 #pragma ENDDUMP

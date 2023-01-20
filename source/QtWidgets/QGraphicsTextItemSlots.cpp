@@ -24,16 +24,16 @@ void QGraphicsTextItemSlots::linkActivated( const QString & link )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkActivated(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "linkActivated(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSTEXTITEM");
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
 
-    hb_vmEvalBlockV( cb, 2, psender, plink );
+    hb_vmEvalBlockV(cb, 2, psender, plink);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( plink );
   }
 }
@@ -42,21 +42,21 @@ void QGraphicsTextItemSlots::linkHovered( const QString & link )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "linkHovered(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "linkHovered(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSTEXTITEM");
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
 
-    hb_vmEvalBlockV( cb, 2, psender, plink );
+    hb_vmEvalBlockV(cb, 2, psender, plink);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( plink );
   }
 }
 
-void QGraphicsTextItemSlots_connect_signal( const QString & signal, const QString & slot )
+void QGraphicsTextItemSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QGraphicsTextItem * obj = (QGraphicsTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 

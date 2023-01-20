@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
   {
 #endif
     QAction * ptr = QWhatsThis::createAction( OPQOBJECT(1,0) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

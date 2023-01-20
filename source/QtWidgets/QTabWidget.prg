@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
     {
 #endif
       QWidget * ptr = obj->cornerWidget( HB_ISNIL(1)? (Qt::Corner) Qt::TopRightCorner : (Qt::Corner) hb_parni(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTABWIDGET_CURRENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->currentWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC( QTABWIDGET_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget( PINT(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1307,7 +1307,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABBAR )
     {
 #endif
       QTabBar * ptr = obj->tabBar();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QTABBAR" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QTABBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1318,33 +1318,33 @@ HB_FUNC_STATIC( QTABWIDGET_TABBAR )
   }
 }
 
-void QTabWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QTabWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTABWIDGET_ONCURRENTCHANGED )
 {
-  QTabWidgetSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+  QTabWidgetSlots_connect_signal("currentChanged(int)", "currentChanged(int)");
 }
 
 HB_FUNC_STATIC( QTABWIDGET_ONTABCLOSEREQUESTED )
 {
-  QTabWidgetSlots_connect_signal( "tabCloseRequested(int)", "tabCloseRequested(int)" );
+  QTabWidgetSlots_connect_signal("tabCloseRequested(int)", "tabCloseRequested(int)");
 }
 
 HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTabWidgetSlots_connect_signal( "tabBarClicked(int)", "tabBarClicked(int)" );
+  QTabWidgetSlots_connect_signal("tabBarClicked(int)", "tabBarClicked(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTabWidgetSlots_connect_signal( "tabBarDoubleClicked(int)", "tabBarDoubleClicked(int)" );
+  QTabWidgetSlots_connect_signal("tabBarDoubleClicked(int)", "tabBarDoubleClicked(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

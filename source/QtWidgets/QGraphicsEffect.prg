@@ -200,11 +200,11 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsEffectSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsEffectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
 {
-  QGraphicsEffectSlots_connect_signal( "enabledChanged(bool)", "enabledChanged(bool)" );
+  QGraphicsEffectSlots_connect_signal("enabledChanged(bool)", "enabledChanged(bool)");
 }
 
 #pragma ENDDUMP

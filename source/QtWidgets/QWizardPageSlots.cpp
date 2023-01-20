@@ -24,19 +24,19 @@ void QWizardPageSlots::completeChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "completeChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "completeChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARDPAGE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QWizardPageSlots_connect_signal( const QString & signal, const QString & slot )
+void QWizardPageSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QWizardPage * obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 

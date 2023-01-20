@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GRAPHICSEFFECT )
     {
 #endif
       QGraphicsEffect * ptr = obj->graphicsEffect();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSEFFECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSEFFECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2338,7 +2338,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PARENTOBJECT )
     {
 #endif
       QGraphicsObject * ptr = obj->parentObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2363,7 +2363,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PARENTWIDGET )
     {
 #endif
       QGraphicsWidget * ptr = obj->parentWidget();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSWIDGET" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2513,7 +2513,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENE )
     {
 #endif
       QGraphicsScene * ptr = obj->scene();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSSCENE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3568,7 +3568,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
     {
 #endif
       QGraphicsObject * ptr = obj->toGraphicsObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3642,7 +3642,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELWIDGET )
     {
 #endif
       QGraphicsWidget * ptr = obj->topLevelWidget();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSWIDGET" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3855,7 +3855,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_WINDOW )
     {
 #endif
       QGraphicsWidget * ptr = obj->window();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSWIDGET" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

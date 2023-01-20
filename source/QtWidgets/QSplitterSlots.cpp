@@ -24,7 +24,7 @@ void QSplitterSlots::splitterMoved( int pos, int index )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "splitterMoved(int,int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "splitterMoved(int,int)");
 
   if( cb != NULL )
   {
@@ -32,15 +32,15 @@ void QSplitterSlots::splitterMoved( int pos, int index )
     PHB_ITEM ppos = hb_itemPutNI( NULL, pos );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 3, psender, ppos, pindex );
+    hb_vmEvalBlockV(cb, 3, psender, ppos, pindex);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ppos );
     hb_itemRelease( pindex );
   }
 }
 
-void QSplitterSlots_connect_signal( const QString & signal, const QString & slot )
+void QSplitterSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QSplitter * obj = (QSplitter *) Qt5xHb::itemGetPtrStackSelfItem();
 

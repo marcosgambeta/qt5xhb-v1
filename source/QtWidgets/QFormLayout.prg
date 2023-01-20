@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
     if( obj != NULL )
     {
       QWidget * ptr = obj->labelForField( PQWIDGET(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
     }
   }
   else if( ISNUMPAR(1) && ISQLAYOUT(1) )
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
     if( obj != NULL )
     {
       QWidget * ptr = obj->labelForField( PQLAYOUT(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
     }
   }
   else

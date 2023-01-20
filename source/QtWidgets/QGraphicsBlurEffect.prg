@@ -217,16 +217,16 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsBlurEffectSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsBlurEffectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
 {
-  QGraphicsBlurEffectSlots_connect_signal( "blurHintsChanged(QGraphicsBlurEffect::BlurHints)", "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
+  QGraphicsBlurEffectSlots_connect_signal("blurHintsChanged(QGraphicsBlurEffect::BlurHints)", "blurHintsChanged(QGraphicsBlurEffect::BlurHints)");
 }
 
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
 {
-  QGraphicsBlurEffectSlots_connect_signal( "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" );
+  QGraphicsBlurEffectSlots_connect_signal("blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)");
 }
 
 #pragma ENDDUMP

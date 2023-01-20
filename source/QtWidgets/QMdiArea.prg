@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
     {
 #endif
       QMdiSubWindow * ptr = obj->activeSubWindow();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
     {
 #endif
       QMdiSubWindow * ptr = obj->addSubWindow( PQWIDGET(1), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
     {
 #endif
       QMdiSubWindow * ptr = obj->currentSubWindow();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMDISUBWINDOW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QMDIAREA_SETVIEWMODE )
 }
 
 /*
-QList<QMdiSubWindow *> subWindowList( QMdiArea::WindowOrder order = QMdiArea::CreationOrder ) const
+QList<QMdiSubWindow*> subWindowList( QMdiArea::WindowOrder order = QMdiArea::CreationOrder ) const
 */
 HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
 {
@@ -491,28 +491,28 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
     if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
-      QList<QMdiSubWindow *> list = obj->subWindowList( HB_ISNIL(1)? (QMdiArea::WindowOrder) QMdiArea::CreationOrder : (QMdiArea::WindowOrder) hb_parni(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QMDISUBWINDOW" );
+      QList<QMdiSubWindow*> list = obj->subWindowList( HB_ISNIL(1)? (QMdiArea::WindowOrder) QMdiArea::CreationOrder : (QMdiArea::WindowOrder) hb_parni(1) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QMDISUBWINDOW");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMDISUBWINDOW", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QMDISUBWINDOW", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -953,11 +953,11 @@ HB_FUNC_STATIC( QMDIAREA_SETTABSMOVABLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMdiAreaSlots_connect_signal( const QString & signal, const QString & slot );
+void QMdiAreaSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
 {
-  QMdiAreaSlots_connect_signal( "subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)" );
+  QMdiAreaSlots_connect_signal("subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)");
 }
 
 #pragma ENDDUMP

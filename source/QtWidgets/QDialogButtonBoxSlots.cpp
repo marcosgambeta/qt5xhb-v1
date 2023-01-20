@@ -24,15 +24,15 @@ void QDialogButtonBoxSlots::accepted()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "accepted()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accepted()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,16 +40,16 @@ void QDialogButtonBoxSlots::clicked( QAbstractButton * button )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QAbstractButton*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked(QAbstractButton*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
     PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");
 
-    hb_vmEvalBlockV( cb, 2, psender, pbutton );
+    hb_vmEvalBlockV(cb, 2, psender, pbutton);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pbutton );
   }
 }
@@ -58,15 +58,15 @@ void QDialogButtonBoxSlots::helpRequested()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "helpRequested()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "helpRequested()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -74,19 +74,19 @@ void QDialogButtonBoxSlots::rejected()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rejected()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rejected()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QDialogButtonBoxSlots_connect_signal( const QString & signal, const QString & slot )
+void QDialogButtonBoxSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 

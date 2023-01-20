@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
     {
 #endif
       QWidget * ptr = obj->indexWidget( *PQMODELINDEX(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
     if( obj != NULL )
     {
       QAbstractItemDelegate * ptr = obj->itemDelegate();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
@@ -826,7 +826,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
     if( obj != NULL )
     {
       QAbstractItemDelegate * ptr = obj->itemDelegate( *PQMODELINDEX(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
   }
   else
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegateForColumn( PINT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORROW )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegateForRow( PINT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1257,7 +1257,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODEL )
     {
 #endif
       QItemSelectionModel * ptr = obj->selectionModel();
-      Qt5xHb::createReturnQObjectClass( ptr, "QITEMSELECTIONMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QITEMSELECTIONMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1877,36 +1877,36 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DOITEMSLAYOUT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAbstractItemViewSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractItemViewSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
 {
-  QAbstractItemViewSlots_connect_signal( "activated(QModelIndex)", "activated(QModelIndex)" );
+  QAbstractItemViewSlots_connect_signal("activated(QModelIndex)", "activated(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
 {
-  QAbstractItemViewSlots_connect_signal( "clicked(QModelIndex)", "clicked(QModelIndex)" );
+  QAbstractItemViewSlots_connect_signal("clicked(QModelIndex)", "clicked(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 {
-  QAbstractItemViewSlots_connect_signal( "doubleClicked(QModelIndex)", "doubleClicked(QModelIndex)" );
+  QAbstractItemViewSlots_connect_signal("doubleClicked(QModelIndex)", "doubleClicked(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
 {
-  QAbstractItemViewSlots_connect_signal( "entered(QModelIndex)", "entered(QModelIndex)" );
+  QAbstractItemViewSlots_connect_signal("entered(QModelIndex)", "entered(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
 {
-  QAbstractItemViewSlots_connect_signal( "pressed(QModelIndex)", "pressed(QModelIndex)" );
+  QAbstractItemViewSlots_connect_signal("pressed(QModelIndex)", "pressed(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 {
-  QAbstractItemViewSlots_connect_signal( "viewportEntered()", "viewportEntered()" );
+  QAbstractItemViewSlots_connect_signal("viewportEntered()", "viewportEntered()");
 }
 
 #pragma ENDDUMP

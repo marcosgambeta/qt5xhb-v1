@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->completionModel();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QCOMPLETER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QCOMPLETER_POPUP )
     {
 #endif
       QAbstractItemView * ptr = obj->popup();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTITEMVIEW" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTITEMVIEW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QCOMPLETER_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -978,26 +978,26 @@ HB_FUNC_STATIC( QCOMPLETER_FILTERMODE )
 #endif
 }
 
-void QCompleterSlots_connect_signal( const QString & signal, const QString & slot );
+void QCompleterSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 {
-  QCompleterSlots_connect_signal( "activated(QString)", "activated(QString)" );
+  QCompleterSlots_connect_signal("activated(QString)", "activated(QString)");
 }
 
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 {
-  QCompleterSlots_connect_signal( "activated(QModelIndex)", "activated(QModelIndex)" );
+  QCompleterSlots_connect_signal("activated(QModelIndex)", "activated(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 {
-  QCompleterSlots_connect_signal( "highlighted(QString)", "highlighted(QString)" );
+  QCompleterSlots_connect_signal("highlighted(QString)", "highlighted(QString)");
 }
 
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 {
-  QCompleterSlots_connect_signal( "highlighted(QModelIndex)", "highlighted(QModelIndex)" );
+  QCompleterSlots_connect_signal("highlighted(QModelIndex)", "highlighted(QModelIndex)");
 }
 
 #pragma ENDDUMP

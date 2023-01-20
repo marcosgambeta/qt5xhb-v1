@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
     {
 #endif
       QMenu * ptr = obj->contextMenu();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -456,16 +456,16 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 #endif
 }
 
-void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString & slot );
+void QSystemTrayIconSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
 {
-  QSystemTrayIconSlots_connect_signal( "activated(QSystemTrayIcon::ActivationReason)", "activated(QSystemTrayIcon::ActivationReason)" );
+  QSystemTrayIconSlots_connect_signal("activated(QSystemTrayIcon::ActivationReason)", "activated(QSystemTrayIcon::ActivationReason)");
 }
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
 {
-  QSystemTrayIconSlots_connect_signal( "messageClicked()", "messageClicked()" );
+  QSystemTrayIconSlots_connect_signal("messageClicked()", "messageClicked()");
 }
 
 #pragma ENDDUMP

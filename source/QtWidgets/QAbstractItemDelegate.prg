@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
     {
 #endif
       QWidget * ptr = obj->createEditor( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,21 +362,21 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
   }
 }
 
-void QAbstractItemDelegateSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractItemDelegateSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
 {
-  QAbstractItemDelegateSlots_connect_signal( "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)", "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
+  QAbstractItemDelegateSlots_connect_signal("closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)", "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
 {
-  QAbstractItemDelegateSlots_connect_signal( "commitData(QWidget*)", "commitData(QWidget*)" );
+  QAbstractItemDelegateSlots_connect_signal("commitData(QWidget*)", "commitData(QWidget*)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
 {
-  QAbstractItemDelegateSlots_connect_signal( "sizeHintChanged(QModelIndex)", "sizeHintChanged(QModelIndex)" );
+  QAbstractItemDelegateSlots_connect_signal("sizeHintChanged(QModelIndex)", "sizeHintChanged(QModelIndex)");
 }
 
 #pragma ENDDUMP

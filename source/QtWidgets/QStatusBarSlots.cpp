@@ -24,21 +24,21 @@ void QStatusBarSlots::messageChanged( const QString & message )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "messageChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "messageChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATUSBAR");
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pmessage );
+    hb_vmEvalBlockV(cb, 2, psender, pmessage);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pmessage );
   }
 }
 
-void QStatusBarSlots_connect_signal( const QString & signal, const QString & slot )
+void QStatusBarSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QStatusBar * obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 

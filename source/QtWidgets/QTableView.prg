@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
     {
 #endif
       QHeaderView * ptr = obj->horizontalHeader();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QHEADERVIEW" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QHEADERVIEW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
     {
 #endif
       QHeaderView * ptr = obj->verticalHeader();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QHEADERVIEW" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QHEADERVIEW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

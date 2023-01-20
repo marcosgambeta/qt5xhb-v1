@@ -24,21 +24,21 @@ void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonClicked(QAbstractButton*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMESSAGEBOX");
     PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");
 
-    hb_vmEvalBlockV( cb, 2, psender, pbutton );
+    hb_vmEvalBlockV(cb, 2, psender, pbutton);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pbutton );
   }
 }
 
-void QMessageBoxSlots_connect_signal( const QString & signal, const QString & slot )
+void QMessageBoxSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QMessageBox * obj = (QMessageBox *) Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
     if( obj != NULL )
     {
       QPushButton * ptr = obj->addButton( PQSTRING(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
     if( obj != NULL )
     {
       QPushButton * ptr = obj->addButton( (QDialogButtonBox::StandardButton) hb_parni(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
     }
   }
   else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
     {
 #endif
       QPushButton * ptr = obj->button( (QDialogButtonBox::StandardButton) hb_parni(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,26 +442,26 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
   }
 }
 
-void QDialogButtonBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QDialogButtonBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
 {
-  QDialogButtonBoxSlots_connect_signal( "accepted()", "accepted()" );
+  QDialogButtonBoxSlots_connect_signal("accepted()", "accepted()");
 }
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
 {
-  QDialogButtonBoxSlots_connect_signal( "clicked(QAbstractButton*)", "clicked(QAbstractButton*)" );
+  QDialogButtonBoxSlots_connect_signal("clicked(QAbstractButton*)", "clicked(QAbstractButton*)");
 }
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
 {
-  QDialogButtonBoxSlots_connect_signal( "helpRequested()", "helpRequested()" );
+  QDialogButtonBoxSlots_connect_signal("helpRequested()", "helpRequested()");
 }
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
 {
-  QDialogButtonBoxSlots_connect_signal( "rejected()", "rejected()" );
+  QDialogButtonBoxSlots_connect_signal("rejected()", "rejected()");
 }
 
 #pragma ENDDUMP

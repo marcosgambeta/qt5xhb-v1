@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_STYLEOBJECT )
     if( ISNUMPAR(0) )
     {
       QObject * ptr = obj->styleObject;
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
     else
     {

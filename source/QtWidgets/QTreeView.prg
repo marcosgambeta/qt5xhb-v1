@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QTREEVIEW_HEADER )
     {
 #endif
       QHeaderView * ptr = obj->header();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QHEADERVIEW" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QHEADERVIEW");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1589,16 +1589,16 @@ HB_FUNC_STATIC( QTREEVIEW_SHOWCOLUMN )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTreeViewSlots_connect_signal( const QString & signal, const QString & slot );
+void QTreeViewSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
 {
-  QTreeViewSlots_connect_signal( "collapsed(QModelIndex)", "collapsed(QModelIndex)" );
+  QTreeViewSlots_connect_signal("collapsed(QModelIndex)", "collapsed(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
 {
-  QTreeViewSlots_connect_signal( "expanded(QModelIndex)", "expanded(QModelIndex)" );
+  QTreeViewSlots_connect_signal("expanded(QModelIndex)", "expanded(QModelIndex)");
 }
 
 #pragma ENDDUMP

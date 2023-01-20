@@ -24,19 +24,19 @@ void QLCDNumberSlots::overflow()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "overflow()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "overflow()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLCDNUMBER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QLCDNumberSlots_connect_signal( const QString & signal, const QString & slot )
+void QLCDNumberSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 

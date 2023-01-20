@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
     {
 #endif
       QGesture * ptr = obj->create( PQOBJECT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QGESTURE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGESTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

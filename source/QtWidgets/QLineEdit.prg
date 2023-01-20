@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
     {
 #endif
       QCompleter * ptr = obj->completer();
-      Qt5xHb::createReturnQObjectClass( ptr, "QCOMPLETER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QCOMPLETER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
     {
 #endif
       QMenu * ptr = obj->createStandardContextMenu();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1366,7 +1366,7 @@ HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
     {
 #endif
       const QValidator * ptr = obj->validator();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVALIDATOR" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVALIDATOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1784,7 +1784,7 @@ HB_FUNC_STATIC( QLINEEDIT_ADDACTION )
     if( obj != NULL )
     {
       QAction * ptr = obj->addAction( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), (QLineEdit::ActionPosition) hb_parni(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else
@@ -1843,36 +1843,36 @@ HB_FUNC_STATIC( QLINEEDIT_ISCLEARBUTTONENABLED )
   }
 }
 
-void QLineEditSlots_connect_signal( const QString & signal, const QString & slot );
+void QLineEditSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
 {
-  QLineEditSlots_connect_signal( "cursorPositionChanged(int,int)", "cursorPositionChanged(int,int)" );
+  QLineEditSlots_connect_signal("cursorPositionChanged(int,int)", "cursorPositionChanged(int,int)");
 }
 
 HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
 {
-  QLineEditSlots_connect_signal( "editingFinished()", "editingFinished()" );
+  QLineEditSlots_connect_signal("editingFinished()", "editingFinished()");
 }
 
 HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
 {
-  QLineEditSlots_connect_signal( "returnPressed()", "returnPressed()" );
+  QLineEditSlots_connect_signal("returnPressed()", "returnPressed()");
 }
 
 HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
 {
-  QLineEditSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QLineEditSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
 {
-  QLineEditSlots_connect_signal( "textChanged(QString)", "textChanged(QString)" );
+  QLineEditSlots_connect_signal("textChanged(QString)", "textChanged(QString)");
 }
 
 HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
 {
-  QLineEditSlots_connect_signal( "textEdited(QString)", "textEdited(QString)" );
+  QLineEditSlots_connect_signal("textEdited(QString)", "textEdited(QString)");
 }
 
 #pragma ENDDUMP

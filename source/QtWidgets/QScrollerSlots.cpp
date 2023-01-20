@@ -24,16 +24,16 @@ void QScrollerSlots::scrollerPropertiesChanged( const QScrollerProperties & newP
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scrollerPropertiesChanged(QScrollerProperties)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "scrollerPropertiesChanged(QScrollerProperties)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCROLLER");
-    PHB_ITEM pnewProperties = Qt5xHb::Signals_return_object( (void *) &newProperties, "QSCROLLERPROPERTIES" );
+    PHB_ITEM pnewProperties = Qt5xHb::Signals_return_object( (void *) &newProperties, "QSCROLLERPROPERTIES");
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewProperties );
+    hb_vmEvalBlockV(cb, 2, psender, pnewProperties);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pnewProperties );
   }
 }
@@ -42,21 +42,21 @@ void QScrollerSlots::stateChanged( QScroller::State newState )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QScroller::State)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QScroller::State)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCROLLER");
-    PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
+    PHB_ITEM pnewState = hb_itemPutNI( NULL, static_cast<int>(newState) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewState );
+    hb_vmEvalBlockV(cb, 2, psender, pnewState);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pnewState );
   }
 }
 
-void QScrollerSlots_connect_signal( const QString & signal, const QString & slot )
+void QScrollerSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QScroller * obj = (QScroller *) Qt5xHb::itemGetPtrStackSelfItem();
 

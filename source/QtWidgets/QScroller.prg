@@ -184,10 +184,9 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX )
     {
       QList<qreal> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         temp1 = hb_arrayGetND(aList1, i1+1);
         par1 << temp1;
@@ -230,10 +229,9 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY )
     {
       QList<qreal> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         temp1 = hb_arrayGetND(aList1, i1+1);
         par1 << temp1;
@@ -327,7 +325,7 @@ HB_FUNC_STATIC( QSCROLLER_TARGET )
     {
 #endif
       QObject * ptr = obj->target();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,7 +486,7 @@ HB_FUNC_STATIC( QSCROLLER_SETSCROLLERPROPERTIES )
 }
 
 /*
-static QList<QScroller *> activeScrollers()
+static QList<QScroller*> activeScrollers()
 */
 HB_FUNC_STATIC( QSCROLLER_ACTIVESCROLLERS )
 {
@@ -496,28 +494,28 @@ HB_FUNC_STATIC( QSCROLLER_ACTIVESCROLLERS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QScroller *> list = QScroller::activeScrollers();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSCROLLER" );
+    QList<QScroller*> list = QScroller::activeScrollers();
+    PHB_DYNS pDynSym = hb_dynsymFindName("QSCROLLER");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSCROLLER", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSCROLLER", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -593,7 +591,7 @@ static const QScroller * scroller( const QObject * target )
 void QScroller_scroller2()
 {
   const QScroller * ptr = QScroller::scroller( PQOBJECT(1) );
-  Qt5xHb::createReturnQObjectClass( ptr, "QSCROLLER" );
+  Qt5xHb::createReturnQObjectClass(ptr, "QSCROLLER");
 }
 #endif
 
@@ -607,7 +605,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLER )
     {
 #endif
       QScroller * ptr = QScroller::scroller( PQOBJECT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QSCROLLER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSCROLLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -643,16 +641,16 @@ HB_FUNC_STATIC( QSCROLLER_UNGRABGESTURE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QScrollerSlots_connect_signal( const QString & signal, const QString & slot );
+void QScrollerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
 {
-  QScrollerSlots_connect_signal( "scrollerPropertiesChanged(QScrollerProperties)", "scrollerPropertiesChanged(QScrollerProperties)" );
+  QScrollerSlots_connect_signal("scrollerPropertiesChanged(QScrollerProperties)", "scrollerPropertiesChanged(QScrollerProperties)");
 }
 
 HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
 {
-  QScrollerSlots_connect_signal( "stateChanged(QScroller::State)", "stateChanged(QScroller::State)" );
+  QScrollerSlots_connect_signal("stateChanged(QScroller::State)", "stateChanged(QScroller::State)");
 }
 
 #pragma ENDDUMP

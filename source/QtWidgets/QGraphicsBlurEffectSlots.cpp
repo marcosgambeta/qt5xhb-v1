@@ -24,16 +24,16 @@ void QGraphicsBlurEffectSlots::blurHintsChanged( QGraphicsBlurEffect::BlurHints 
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSBLUREFFECT");
-    PHB_ITEM phints = hb_itemPutNI( NULL, (int) hints );
+    PHB_ITEM phints = hb_itemPutNI( NULL, static_cast<int>(hints) );
 
-    hb_vmEvalBlockV( cb, 2, psender, phints );
+    hb_vmEvalBlockV(cb, 2, psender, phints);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( phints );
   }
 }
@@ -42,21 +42,21 @@ void QGraphicsBlurEffectSlots::blurRadiusChanged( qreal radius )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "blurRadiusChanged(qreal)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSBLUREFFECT");
     PHB_ITEM pradius = hb_itemPutND( NULL, radius );
 
-    hb_vmEvalBlockV( cb, 2, psender, pradius );
+    hb_vmEvalBlockV(cb, 2, psender, pradius);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pradius );
   }
 }
 
-void QGraphicsBlurEffectSlots_connect_signal( const QString & signal, const QString & slot )
+void QGraphicsBlurEffectSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 

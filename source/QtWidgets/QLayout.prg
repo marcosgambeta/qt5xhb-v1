@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QLAYOUT_MENUBAR )
     {
 #endif
       QWidget * ptr = obj->menuBar();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->parentWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -826,7 +826,7 @@ HB_FUNC_STATIC( QLAYOUT_LAYOUT )
     {
 #endif
       QLayout * ptr = obj->layout();
-      Qt5xHb::createReturnQObjectClass( ptr, "QLAYOUT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QLAYOUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

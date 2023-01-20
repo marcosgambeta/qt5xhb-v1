@@ -382,16 +382,16 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGroupBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QGroupBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
 {
-  QGroupBoxSlots_connect_signal( "clicked(bool)", "clicked(bool)" );
+  QGroupBoxSlots_connect_signal("clicked(bool)", "clicked(bool)");
 }
 
 HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
 {
-  QGroupBoxSlots_connect_signal( "toggled(bool)", "toggled(bool)" );
+  QGroupBoxSlots_connect_signal("toggled(bool)", "toggled(bool)");
 }
 
 #pragma ENDDUMP

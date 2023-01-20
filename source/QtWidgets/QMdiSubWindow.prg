@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
     {
 #endif
       QMdiArea * ptr = obj->mdiArea();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMDIAREA" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMDIAREA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
     {
 #endif
       QMenu * ptr = obj->systemMenu();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -512,16 +512,16 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMdiSubWindowSlots_connect_signal( const QString & signal, const QString & slot );
+void QMdiSubWindowSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
 {
-  QMdiSubWindowSlots_connect_signal( "aboutToActivate()", "aboutToActivate()" );
+  QMdiSubWindowSlots_connect_signal("aboutToActivate()", "aboutToActivate()");
 }
 
 HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 {
-  QMdiSubWindowSlots_connect_signal( "windowStateChanged(Qt::WindowStates,Qt::WindowStates)", "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
+  QMdiSubWindowSlots_connect_signal("windowStateChanged(Qt::WindowStates,Qt::WindowStates)", "windowStateChanged(Qt::WindowStates,Qt::WindowStates)");
 }
 
 #pragma ENDDUMP

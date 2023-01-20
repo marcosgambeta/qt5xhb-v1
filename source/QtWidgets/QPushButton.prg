@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_MENU )
     {
 #endif
       QMenu * ptr = obj->menu();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

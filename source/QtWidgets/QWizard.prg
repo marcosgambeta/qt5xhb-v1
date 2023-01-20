@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTON )
     {
 #endif
       QAbstractButton * ptr = obj->button( (QWizard::WizardButton) hb_parni(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QABSTRACTBUTTON");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
     {
 #endif
       QWizardPage * ptr = obj->currentPage();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIZARDPAGE" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIZARDPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QWIZARD_PAGE )
     {
 #endif
       QWizardPage * ptr = obj->page( PINT(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIZARDPAGE" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIZARDPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QWIZARD_PAGEIDS )
     {
 #endif
       QList<int> list = obj->pageIds();
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,9 +551,8 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
 #endif
       QList<QWizard::WizardButton> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << (QWizard::WizardButton) hb_arrayGetNI(aList1, i1+1);
       }
@@ -740,7 +739,7 @@ HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
     {
 #endif
       QWidget * ptr = obj->sideWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -963,7 +962,7 @@ HB_FUNC_STATIC( QWIZARD_VISITEDPAGES )
     {
 #endif
       QList<int> list = obj->visitedPages();
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1153,31 +1152,31 @@ HB_FUNC_STATIC( QWIZARD_RESTART )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QWizardSlots_connect_signal( const QString & signal, const QString & slot );
+void QWizardSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
 {
-  QWizardSlots_connect_signal( "currentIdChanged(int)", "currentIdChanged(int)" );
+  QWizardSlots_connect_signal("currentIdChanged(int)", "currentIdChanged(int)");
 }
 
 HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 {
-  QWizardSlots_connect_signal( "customButtonClicked(int)", "customButtonClicked(int)" );
+  QWizardSlots_connect_signal("customButtonClicked(int)", "customButtonClicked(int)");
 }
 
 HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
 {
-  QWizardSlots_connect_signal( "helpRequested()", "helpRequested()" );
+  QWizardSlots_connect_signal("helpRequested()", "helpRequested()");
 }
 
 HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
 {
-  QWizardSlots_connect_signal( "pageAdded(int)", "pageAdded(int)" );
+  QWizardSlots_connect_signal("pageAdded(int)", "pageAdded(int)");
 }
 
 HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
 {
-  QWizardSlots_connect_signal( "pageRemoved(int)", "pageRemoved(int)" );
+  QWizardSlots_connect_signal("pageRemoved(int)", "pageRemoved(int)");
 }
 
 #pragma ENDDUMP

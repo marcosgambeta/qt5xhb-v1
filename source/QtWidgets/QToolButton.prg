@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
     {
 #endif
       QAction * ptr = obj->defaultAction();
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MENU )
     {
 #endif
       QMenu * ptr = obj->menu();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -494,11 +494,11 @@ HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
 #endif
 }
 
-void QToolButtonSlots_connect_signal( const QString & signal, const QString & slot );
+void QToolButtonSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
 {
-  QToolButtonSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
+  QToolButtonSlots_connect_signal("triggered(QAction*)", "triggered(QAction*)");
 }
 
 #pragma ENDDUMP

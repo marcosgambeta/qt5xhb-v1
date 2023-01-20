@@ -24,15 +24,15 @@ void QDialogSlots::accepted()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "accepted()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accepted()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,16 +40,16 @@ void QDialogSlots::finished( int result )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
     PHB_ITEM presult = hb_itemPutNI( NULL, result );
 
-    hb_vmEvalBlockV( cb, 2, psender, presult );
+    hb_vmEvalBlockV(cb, 2, psender, presult);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( presult );
   }
 }
@@ -58,19 +58,19 @@ void QDialogSlots::rejected()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rejected()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rejected()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QDialogSlots_connect_signal( const QString & signal, const QString & slot )
+void QDialogSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QDialog * obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -24,16 +24,16 @@ void QDateTimeEditSlots::dateChanged( const QDate & date )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dateChanged(QDate)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dateChanged(QDate)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEEDIT");
-    PHB_ITEM pdate = Qt5xHb::Signals_return_object( (void *) &date, "QDATE" );
+    PHB_ITEM pdate = Qt5xHb::Signals_return_object( (void *) &date, "QDATE");
 
-    hb_vmEvalBlockV( cb, 2, psender, pdate );
+    hb_vmEvalBlockV(cb, 2, psender, pdate);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pdate );
   }
 }
@@ -42,16 +42,16 @@ void QDateTimeEditSlots::dateTimeChanged( const QDateTime & datetime )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dateTimeChanged(QDateTime)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dateTimeChanged(QDateTime)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEEDIT");
-    PHB_ITEM pdatetime = Qt5xHb::Signals_return_object( (void *) &datetime, "QDATETIME" );
+    PHB_ITEM pdatetime = Qt5xHb::Signals_return_object( (void *) &datetime, "QDATETIME");
 
-    hb_vmEvalBlockV( cb, 2, psender, pdatetime );
+    hb_vmEvalBlockV(cb, 2, psender, pdatetime);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pdatetime );
   }
 }
@@ -60,21 +60,21 @@ void QDateTimeEditSlots::timeChanged( const QTime & time )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "timeChanged(QTime)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "timeChanged(QTime)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEEDIT");
-    PHB_ITEM ptime = Qt5xHb::Signals_return_object( (void *) &time, "QTIME" );
+    PHB_ITEM ptime = Qt5xHb::Signals_return_object( (void *) &time, "QTIME");
 
-    hb_vmEvalBlockV( cb, 2, psender, ptime );
+    hb_vmEvalBlockV(cb, 2, psender, ptime);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ptime );
   }
 }
 
-void QDateTimeEditSlots_connect_signal( const QString & signal, const QString & slot )
+void QDateTimeEditSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QDateTimeEdit * obj = (QDateTimeEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 

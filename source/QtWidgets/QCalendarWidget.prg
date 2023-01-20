@@ -1158,26 +1158,26 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWTODAY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCalendarWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QCalendarWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
 {
-  QCalendarWidgetSlots_connect_signal( "activated(QDate)", "activated(QDate)" );
+  QCalendarWidgetSlots_connect_signal("activated(QDate)", "activated(QDate)");
 }
 
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
 {
-  QCalendarWidgetSlots_connect_signal( "clicked(QDate)", "clicked(QDate)" );
+  QCalendarWidgetSlots_connect_signal("clicked(QDate)", "clicked(QDate)");
 }
 
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
 {
-  QCalendarWidgetSlots_connect_signal( "currentPageChanged(int,int)", "currentPageChanged(int,int)" );
+  QCalendarWidgetSlots_connect_signal("currentPageChanged(int,int)", "currentPageChanged(int,int)");
 }
 
 HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
 {
-  QCalendarWidgetSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QCalendarWidgetSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 #pragma ENDDUMP

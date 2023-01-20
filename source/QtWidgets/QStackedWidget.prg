@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->currentWidget();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget( PINT(1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,16 +345,16 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTWIDGET )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QStackedWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QStackedWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSTACKEDWIDGET_ONCURRENTCHANGED )
 {
-  QStackedWidgetSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+  QStackedWidgetSlots_connect_signal("currentChanged(int)", "currentChanged(int)");
 }
 
 HB_FUNC_STATIC( QSTACKEDWIDGET_ONWIDGETREMOVED )
 {
-  QStackedWidgetSlots_connect_signal( "widgetRemoved(int)", "widgetRemoved(int)" );
+  QStackedWidgetSlots_connect_signal("widgetRemoved(int)", "widgetRemoved(int)");
 }
 
 #pragma ENDDUMP
