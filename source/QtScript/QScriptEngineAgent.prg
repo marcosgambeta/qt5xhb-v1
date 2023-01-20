@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
     {
 #endif
       QScriptEngine * ptr = obj->engine();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSCRIPTENGINE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSCRIPTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
