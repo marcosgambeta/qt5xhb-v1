@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
     {
 #endif
       QSvgRenderer * ptr = obj->renderer();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSVGRENDERER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSVGRENDERER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
