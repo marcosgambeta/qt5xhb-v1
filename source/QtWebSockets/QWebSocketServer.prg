@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_NEXTPENDINGCONNECTION )
     {
 #endif
       QWebSocket * ptr = obj->nextPendingConnection();
-      Qt5xHb::createReturnQObjectClass( ptr, "QWEBSOCKET" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QWEBSOCKET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SUPPORTEDVERSIONS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -753,68 +753,68 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SUPPORTEDVERSIONS )
 #endif
 }
 
-void QWebSocketServerSlots_connect_signal( const QString & signal, const QString & slot );
+void QWebSocketServerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "acceptError(QAbstractSocket::SocketError)", "acceptError(QAbstractSocket::SocketError)" );
+  QWebSocketServerSlots_connect_signal("acceptError(QAbstractSocket::SocketError)", "acceptError(QAbstractSocket::SocketError)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "serverError(QWebSocketProtocol::CloseCode)", "serverError(QWebSocketProtocol::CloseCode)" );
+  QWebSocketServerSlots_connect_signal("serverError(QWebSocketProtocol::CloseCode)", "serverError(QWebSocketProtocol::CloseCode)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "originAuthenticationRequired(QWebSocketCorsAuthenticator*)", "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" );
+  QWebSocketServerSlots_connect_signal("originAuthenticationRequired(QWebSocketCorsAuthenticator*)", "originAuthenticationRequired(QWebSocketCorsAuthenticator*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "newConnection()", "newConnection()" );
+  QWebSocketServerSlots_connect_signal("newConnection()", "newConnection()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "peerVerifyError(QSslError)", "peerVerifyError(QSslError)" );
+  QWebSocketServerSlots_connect_signal("peerVerifyError(QSslError)", "peerVerifyError(QSslError)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" );
+  QWebSocketServerSlots_connect_signal("sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketServerSlots_connect_signal( "closed()", "closed()" );
+  QWebSocketServerSlots_connect_signal("closed()", "closed()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
