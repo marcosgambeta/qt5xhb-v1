@@ -703,16 +703,16 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QPrintPreviewWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QPrintPreviewWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
 {
-  QPrintPreviewWidgetSlots_connect_signal( "paintRequested(QPrinter*)", "paintRequested(QPrinter*)" );
+  QPrintPreviewWidgetSlots_connect_signal("paintRequested(QPrinter*)", "paintRequested(QPrinter*)");
 }
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
 {
-  QPrintPreviewWidgetSlots_connect_signal( "previewChanged()", "previewChanged()" );
+  QPrintPreviewWidgetSlots_connect_signal("previewChanged()", "previewChanged()");
 }
 
 #pragma ENDDUMP

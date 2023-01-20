@@ -201,11 +201,11 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QPrintPreviewDialogSlots_connect_signal( const QString & signal, const QString & slot );
+void QPrintPreviewDialogSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
 {
-  QPrintPreviewDialogSlots_connect_signal( "paintRequested(QPrinter*)", "paintRequested(QPrinter*)" );
+  QPrintPreviewDialogSlots_connect_signal("paintRequested(QPrinter*)", "paintRequested(QPrinter*)");
 }
 
 #pragma ENDDUMP

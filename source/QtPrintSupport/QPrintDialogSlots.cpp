@@ -24,21 +24,21 @@ void QPrintDialogSlots::accepted( QPrinter * printer )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "accepted(QPrinter*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accepted(QPrinter*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPRINTDIALOG");
-    PHB_ITEM pprinter = Qt5xHb::Signals_return_object( (void *) printer, "QPRINTER" );
+    PHB_ITEM pprinter = Qt5xHb::Signals_return_object( (void *) printer, "QPRINTER");
 
-    hb_vmEvalBlockV( cb, 2, psender, pprinter );
+    hb_vmEvalBlockV(cb, 2, psender, pprinter);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pprinter );
   }
 }
 
-void QPrintDialogSlots_connect_signal( const QString & signal, const QString & slot )
+void QPrintDialogSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QPrintDialog * obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 

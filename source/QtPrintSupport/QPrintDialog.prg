@@ -330,11 +330,11 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QPrintDialogSlots_connect_signal( const QString & signal, const QString & slot );
+void QPrintDialogSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
 {
-  QPrintDialogSlots_connect_signal( "accepted(QPrinter*)", "accepted(QPrinter*)" );
+  QPrintDialogSlots_connect_signal("accepted(QPrinter*)", "accepted(QPrinter*)");
 }
 
 #pragma ENDDUMP
