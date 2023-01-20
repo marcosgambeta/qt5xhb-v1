@@ -824,230 +824,230 @@ HB_FUNC_STATIC( QGAMEPAD_BUTTONGUIDE )
 #endif
 }
 
-void QGamepadSlots_connect_signal( const QString & signal, const QString & slot );
+void QGamepadSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "axisLeftXChanged(double)", "axisLeftXChanged(double)" );
+  QGamepadSlots_connect_signal("axisLeftXChanged(double)", "axisLeftXChanged(double)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "axisLeftYChanged(double)", "axisLeftYChanged(double)" );
+  QGamepadSlots_connect_signal("axisLeftYChanged(double)", "axisLeftYChanged(double)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "axisRightXChanged(double)", "axisRightXChanged(double)" );
+  QGamepadSlots_connect_signal("axisRightXChanged(double)", "axisRightXChanged(double)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "axisRightYChanged(double)", "axisRightYChanged(double)" );
+  QGamepadSlots_connect_signal("axisRightYChanged(double)", "axisRightYChanged(double)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonAChanged(bool)", "buttonAChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonAChanged(bool)", "buttonAChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonBChanged(bool)", "buttonBChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonBChanged(bool)", "buttonBChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonCenterChanged(bool)", "buttonCenterChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonCenterChanged(bool)", "buttonCenterChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonDownChanged(bool)", "buttonDownChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonDownChanged(bool)", "buttonDownChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonGuideChanged(bool)", "buttonGuideChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonGuideChanged(bool)", "buttonGuideChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonL1Changed(bool)", "buttonL1Changed(bool)" );
+  QGamepadSlots_connect_signal("buttonL1Changed(bool)", "buttonL1Changed(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonL2Changed(double)", "buttonL2Changed(double)" );
+  QGamepadSlots_connect_signal("buttonL2Changed(double)", "buttonL2Changed(double)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonL3Changed(bool)", "buttonL3Changed(bool)" );
+  QGamepadSlots_connect_signal("buttonL3Changed(bool)", "buttonL3Changed(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonLeftChanged(bool)", "buttonLeftChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonLeftChanged(bool)", "buttonLeftChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonR1Changed(bool)", "buttonR1Changed(bool)" );
+  QGamepadSlots_connect_signal("buttonR1Changed(bool)", "buttonR1Changed(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonR2Changed(double)", "buttonR2Changed(double)" );
+  QGamepadSlots_connect_signal("buttonR2Changed(double)", "buttonR2Changed(double)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonR3Changed(bool)", "buttonR3Changed(bool)" );
+  QGamepadSlots_connect_signal("buttonR3Changed(bool)", "buttonR3Changed(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonRightChanged(bool)", "buttonRightChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonRightChanged(bool)", "buttonRightChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonSelectChanged(bool)", "buttonSelectChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonSelectChanged(bool)", "buttonSelectChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonStartChanged(bool)", "buttonStartChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonStartChanged(bool)", "buttonStartChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonUpChanged(bool)", "buttonUpChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonUpChanged(bool)", "buttonUpChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonXChanged(bool)", "buttonXChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonXChanged(bool)", "buttonXChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "buttonYChanged(bool)", "buttonYChanged(bool)" );
+  QGamepadSlots_connect_signal("buttonYChanged(bool)", "buttonYChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "connectedChanged(bool)", "connectedChanged(bool)" );
+  QGamepadSlots_connect_signal("connectedChanged(bool)", "connectedChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "deviceIdChanged(int)", "deviceIdChanged(int)" );
+  QGamepadSlots_connect_signal("deviceIdChanged(int)", "deviceIdChanged(int)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadSlots_connect_signal( "nameChanged(QString)", "nameChanged(QString)" );
+  QGamepadSlots_connect_signal("nameChanged(QString)", "nameChanged(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

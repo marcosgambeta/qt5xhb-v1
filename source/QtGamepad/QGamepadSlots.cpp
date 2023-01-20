@@ -25,16 +25,16 @@ void QGamepadSlots::axisLeftXChanged( double value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisLeftXChanged(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisLeftXChanged(double)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -45,16 +45,16 @@ void QGamepadSlots::axisLeftYChanged( double value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisLeftYChanged(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisLeftYChanged(double)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -65,16 +65,16 @@ void QGamepadSlots::axisRightXChanged( double value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisRightXChanged(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisRightXChanged(double)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -85,16 +85,16 @@ void QGamepadSlots::axisRightYChanged( double value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "axisRightYChanged(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisRightYChanged(double)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -105,16 +105,16 @@ void QGamepadSlots::buttonAChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonAChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonAChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -125,16 +125,16 @@ void QGamepadSlots::buttonBChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonBChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonBChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -145,16 +145,16 @@ void QGamepadSlots::buttonCenterChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonCenterChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonCenterChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -165,16 +165,16 @@ void QGamepadSlots::buttonDownChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonDownChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonDownChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -185,16 +185,16 @@ void QGamepadSlots::buttonGuideChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonGuideChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonGuideChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -205,16 +205,16 @@ void QGamepadSlots::buttonL1Changed( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL1Changed(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonL1Changed(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -225,16 +225,16 @@ void QGamepadSlots::buttonL2Changed( double value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL2Changed(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonL2Changed(double)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -245,16 +245,16 @@ void QGamepadSlots::buttonL3Changed( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonL3Changed(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonL3Changed(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -265,16 +265,16 @@ void QGamepadSlots::buttonLeftChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonLeftChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonLeftChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -285,16 +285,16 @@ void QGamepadSlots::buttonR1Changed( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR1Changed(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonR1Changed(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -305,16 +305,16 @@ void QGamepadSlots::buttonR2Changed( double value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR2Changed(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonR2Changed(double)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -325,16 +325,16 @@ void QGamepadSlots::buttonR3Changed( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonR3Changed(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonR3Changed(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -345,16 +345,16 @@ void QGamepadSlots::buttonRightChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonRightChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonRightChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -365,16 +365,16 @@ void QGamepadSlots::buttonSelectChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonSelectChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonSelectChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -385,16 +385,16 @@ void QGamepadSlots::buttonStartChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonStartChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonStartChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -405,16 +405,16 @@ void QGamepadSlots::buttonUpChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonUpChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonUpChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -425,16 +425,16 @@ void QGamepadSlots::buttonXChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonXChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonXChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -445,16 +445,16 @@ void QGamepadSlots::buttonYChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "buttonYChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonYChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -465,16 +465,16 @@ void QGamepadSlots::connectedChanged( bool value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "connectedChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "connectedChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -485,16 +485,16 @@ void QGamepadSlots::deviceIdChanged( int value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "deviceIdChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "deviceIdChanged(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -505,22 +505,22 @@ void QGamepadSlots::nameChanged( QString value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "nameChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPAD");
-    PHB_ITEM pvalue = hb_itemPutC( NULL, (const char *) value.toLatin1().data() );
+    PHB_ITEM pvalue = hb_itemPutC( NULL, value.toLatin1().data() );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
 #endif
 
-void QGamepadSlots_connect_signal( const QString & signal, const QString & slot )
+void QGamepadSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepad * obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
