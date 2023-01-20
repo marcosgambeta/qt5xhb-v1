@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }

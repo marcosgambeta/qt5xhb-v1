@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDSAMPLERATES )
 #endif
       bool par2;
       QList<int> list = obj->supportedSampleRates( *PQAUDIOENCODERSETTINGS(1), &par2 );
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

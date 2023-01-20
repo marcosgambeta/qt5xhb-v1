@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDAUDIOSAMPLERATES )
 #endif
       bool par2;
       QList<int> list = obj->supportedAudioSampleRates( HB_ISNIL(1)? QAudioEncoderSettings() : *(QAudioEncoderSettings *) Qt5xHb::itemGetPtr(1), &par2 );
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDFRAMERATES )
 #endif
       bool par2;
       QList<qreal> list = obj->supportedFrameRates( HB_ISNIL(1)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) Qt5xHb::itemGetPtr(1), &par2 );
-      Qt5xHb::convert_qlist_qreal_to_array( list );
+      Qt5xHb::convert_qlist_qreal_to_array(list);
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -930,30 +930,30 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDRESOLUTIONS )
 #endif
       bool par2;
       QList<QSize> list = obj->supportedResolutions( HB_ISNIL(1)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) Qt5xHb::itemGetPtr(1), &par2 );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QSize( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QSize(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSIZE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSIZE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
       hb_storl( par2, 2 );
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1143,71 +1143,71 @@ HB_FUNC_STATIC( QMEDIARECORDER_STOP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMediaRecorderSlots_connect_signal( const QString & signal, const QString & slot );
+void QMediaRecorderSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
 {
-  QMediaRecorderSlots_connect_signal( "actualLocationChanged(QUrl)", "actualLocationChanged(QUrl)" );
+  QMediaRecorderSlots_connect_signal("actualLocationChanged(QUrl)", "actualLocationChanged(QUrl)");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
 {
-  QMediaRecorderSlots_connect_signal( "availabilityChanged(bool)", "availabilityChanged(bool)" );
+  QMediaRecorderSlots_connect_signal("availabilityChanged(bool)", "availabilityChanged(bool)");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
 {
-  QMediaRecorderSlots_connect_signal( "availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)" );
+  QMediaRecorderSlots_connect_signal("availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONDURATIONCHANGED )
 {
-  QMediaRecorderSlots_connect_signal( "durationChanged(qint64)", "durationChanged(qint64)" );
+  QMediaRecorderSlots_connect_signal("durationChanged(qint64)", "durationChanged(qint64)");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONERROR )
 {
-  QMediaRecorderSlots_connect_signal( "error(QMediaRecorder::Error)", "error(QMediaRecorder::Error)" );
+  QMediaRecorderSlots_connect_signal("error(QMediaRecorder::Error)", "error(QMediaRecorder::Error)");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
 {
-  QMediaRecorderSlots_connect_signal( "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" );
+  QMediaRecorderSlots_connect_signal("metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED1 )
 {
-  QMediaRecorderSlots_connect_signal( "metaDataChanged()", "metaDataChanged()" );
+  QMediaRecorderSlots_connect_signal("metaDataChanged()", "metaDataChanged()");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED2 )
 {
-  QMediaRecorderSlots_connect_signal( "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" );
+  QMediaRecorderSlots_connect_signal("metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
 {
-  QMediaRecorderSlots_connect_signal( "metaDataWritableChanged(bool)", "metaDataWritableChanged(bool)" );
+  QMediaRecorderSlots_connect_signal("metaDataWritableChanged(bool)", "metaDataWritableChanged(bool)");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONMUTEDCHANGED )
 {
-  QMediaRecorderSlots_connect_signal( "mutedChanged(bool)", "mutedChanged(bool)" );
+  QMediaRecorderSlots_connect_signal("mutedChanged(bool)", "mutedChanged(bool)");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONSTATECHANGED )
 {
-  QMediaRecorderSlots_connect_signal( "stateChanged(QMediaRecorder::State)", "stateChanged(QMediaRecorder::State)" );
+  QMediaRecorderSlots_connect_signal("stateChanged(QMediaRecorder::State)", "stateChanged(QMediaRecorder::State)");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONSTATUSCHANGED )
 {
-  QMediaRecorderSlots_connect_signal( "statusChanged(QMediaRecorder::Status)", "statusChanged(QMediaRecorder::Status)" );
+  QMediaRecorderSlots_connect_signal("statusChanged(QMediaRecorder::Status)", "statusChanged(QMediaRecorder::Status)");
 }
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONVOLUMECHANGED )
 {
-  QMediaRecorderSlots_connect_signal( "volumeChanged(qreal)", "volumeChanged(qreal)" );
+  QMediaRecorderSlots_connect_signal("volumeChanged(qreal)", "volumeChanged(qreal)");
 }
 
 #pragma ENDDUMP

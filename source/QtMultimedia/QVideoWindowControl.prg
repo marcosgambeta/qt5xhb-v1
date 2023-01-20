@@ -548,36 +548,36 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETWINID )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QVideoWindowControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QVideoWindowControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONFULLSCREENCHANGED )
 {
-  QVideoWindowControlSlots_connect_signal( "fullScreenChanged(bool)", "fullScreenChanged(bool)" );
+  QVideoWindowControlSlots_connect_signal("fullScreenChanged(bool)", "fullScreenChanged(bool)");
 }
 
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONBRIGHTNESSCHANGED )
 {
-  QVideoWindowControlSlots_connect_signal( "brightnessChanged(int)", "brightnessChanged(int)" );
+  QVideoWindowControlSlots_connect_signal("brightnessChanged(int)", "brightnessChanged(int)");
 }
 
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONCONTRASTCHANGED )
 {
-  QVideoWindowControlSlots_connect_signal( "contrastChanged(int)", "contrastChanged(int)" );
+  QVideoWindowControlSlots_connect_signal("contrastChanged(int)", "contrastChanged(int)");
 }
 
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONHUECHANGED )
 {
-  QVideoWindowControlSlots_connect_signal( "hueChanged(int)", "hueChanged(int)" );
+  QVideoWindowControlSlots_connect_signal("hueChanged(int)", "hueChanged(int)");
 }
 
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONSATURATIONCHANGED )
 {
-  QVideoWindowControlSlots_connect_signal( "saturationChanged(int)", "saturationChanged(int)" );
+  QVideoWindowControlSlots_connect_signal("saturationChanged(int)", "saturationChanged(int)");
 }
 
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONNATIVESIZECHANGED )
 {
-  QVideoWindowControlSlots_connect_signal( "nativeSizeChanged()", "nativeSizeChanged()" );
+  QVideoWindowControlSlots_connect_signal("nativeSizeChanged()", "nativeSizeChanged()");
 }
 
 #pragma ENDDUMP

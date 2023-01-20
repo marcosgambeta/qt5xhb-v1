@@ -204,21 +204,21 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMediaGaplessPlaybackControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QMediaGaplessPlaybackControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
 {
-  QMediaGaplessPlaybackControlSlots_connect_signal( "advancedToNextMedia()", "advancedToNextMedia()" );
+  QMediaGaplessPlaybackControlSlots_connect_signal("advancedToNextMedia()", "advancedToNextMedia()");
 }
 
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED )
 {
-  QMediaGaplessPlaybackControlSlots_connect_signal( "crossfadeTimeChanged(qreal)", "crossfadeTimeChanged(qreal)" );
+  QMediaGaplessPlaybackControlSlots_connect_signal("crossfadeTimeChanged(qreal)", "crossfadeTimeChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
 {
-  QMediaGaplessPlaybackControlSlots_connect_signal( "nextMediaChanged(QMediaContent)", "nextMediaChanged(QMediaContent)" );
+  QMediaGaplessPlaybackControlSlots_connect_signal("nextMediaChanged(QMediaContent)", "nextMediaChanged(QMediaContent)");
 }
 
 #pragma ENDDUMP

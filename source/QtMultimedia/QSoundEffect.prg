@@ -532,51 +532,51 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SUPPORTEDMIMETYPES )
 #endif
 }
 
-void QSoundEffectSlots_connect_signal( const QString & signal, const QString & slot );
+void QSoundEffectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
 {
-  QSoundEffectSlots_connect_signal( "sourceChanged()", "sourceChanged()" );
+  QSoundEffectSlots_connect_signal("sourceChanged()", "sourceChanged()");
 }
 
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
 {
-  QSoundEffectSlots_connect_signal( "loopCountChanged()", "loopCountChanged()" );
+  QSoundEffectSlots_connect_signal("loopCountChanged()", "loopCountChanged()");
 }
 
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
 {
-  QSoundEffectSlots_connect_signal( "loopsRemainingChanged()", "loopsRemainingChanged()" );
+  QSoundEffectSlots_connect_signal("loopsRemainingChanged()", "loopsRemainingChanged()");
 }
 
 HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
 {
-  QSoundEffectSlots_connect_signal( "volumeChanged()", "volumeChanged()" );
+  QSoundEffectSlots_connect_signal("volumeChanged()", "volumeChanged()");
 }
 
 HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
 {
-  QSoundEffectSlots_connect_signal( "mutedChanged()", "mutedChanged()" );
+  QSoundEffectSlots_connect_signal("mutedChanged()", "mutedChanged()");
 }
 
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
 {
-  QSoundEffectSlots_connect_signal( "loadedChanged()", "loadedChanged()" );
+  QSoundEffectSlots_connect_signal("loadedChanged()", "loadedChanged()");
 }
 
 HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
 {
-  QSoundEffectSlots_connect_signal( "playingChanged()", "playingChanged()" );
+  QSoundEffectSlots_connect_signal("playingChanged()", "playingChanged()");
 }
 
 HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
 {
-  QSoundEffectSlots_connect_signal( "statusChanged()", "statusChanged()" );
+  QSoundEffectSlots_connect_signal("statusChanged()", "statusChanged()");
 }
 
 HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
 {
-  QSoundEffectSlots_connect_signal( "categoryChanged()", "categoryChanged()" );
+  QSoundEffectSlots_connect_signal("categoryChanged()", "categoryChanged()");
 }
 
 #pragma ENDDUMP

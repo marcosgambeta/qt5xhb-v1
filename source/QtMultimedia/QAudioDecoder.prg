@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SOURCEDEVICE )
     {
 #endif
       QIODevice * ptr = obj->sourceDevice();
-      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -559,51 +559,51 @@ HB_FUNC_STATIC( QAUDIODECODER_UNBIND )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAudioDecoderSlots_connect_signal( const QString & signal, const QString & slot );
+void QAudioDecoderSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERAVAILABLECHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "bufferAvailableChanged(bool)", "bufferAvailableChanged(bool)" );
+  QAudioDecoderSlots_connect_signal("bufferAvailableChanged(bool)", "bufferAvailableChanged(bool)");
 }
 
 HB_FUNC_STATIC( QAUDIODECODER_ONBUFFERREADY )
 {
-  QAudioDecoderSlots_connect_signal( "bufferReady()", "bufferReady()" );
+  QAudioDecoderSlots_connect_signal("bufferReady()", "bufferReady()");
 }
 
 HB_FUNC_STATIC( QAUDIODECODER_ONDURATIONCHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "durationChanged(qint64)", "durationChanged(qint64)" );
+  QAudioDecoderSlots_connect_signal("durationChanged(qint64)", "durationChanged(qint64)");
 }
 
 HB_FUNC_STATIC( QAUDIODECODER_ONERROR )
 {
-  QAudioDecoderSlots_connect_signal( "error(QAudioDecoder::Error)", "error(QAudioDecoder::Error)" );
+  QAudioDecoderSlots_connect_signal("error(QAudioDecoder::Error)", "error(QAudioDecoder::Error)");
 }
 
 HB_FUNC_STATIC( QAUDIODECODER_ONFINISHED )
 {
-  QAudioDecoderSlots_connect_signal( "finished()", "finished()" );
+  QAudioDecoderSlots_connect_signal("finished()", "finished()");
 }
 
 HB_FUNC_STATIC( QAUDIODECODER_ONFORMATCHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "formatChanged(QAudioFormat)", "formatChanged(QAudioFormat)" );
+  QAudioDecoderSlots_connect_signal("formatChanged(QAudioFormat)", "formatChanged(QAudioFormat)");
 }
 
 HB_FUNC_STATIC( QAUDIODECODER_ONPOSITIONCHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "positionChanged(qint64)", "positionChanged(qint64)" );
+  QAudioDecoderSlots_connect_signal("positionChanged(qint64)", "positionChanged(qint64)");
 }
 
 HB_FUNC_STATIC( QAUDIODECODER_ONSOURCECHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "sourceChanged()", "sourceChanged()" );
+  QAudioDecoderSlots_connect_signal("sourceChanged()", "sourceChanged()");
 }
 
 HB_FUNC_STATIC( QAUDIODECODER_ONSTATECHANGED )
 {
-  QAudioDecoderSlots_connect_signal( "stateChanged(QAudioDecoder::State)", "stateChanged(QAudioDecoder::State)" );
+  QAudioDecoderSlots_connect_signal("stateChanged(QAudioDecoder::State)", "stateChanged(QAudioDecoder::State)");
 }
 
 #pragma ENDDUMP

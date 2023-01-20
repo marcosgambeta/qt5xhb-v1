@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMEDIABINDABLEINTERFACE_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

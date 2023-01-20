@@ -72,16 +72,16 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMediaVideoProbeControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QMediaVideoProbeControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
 {
-  QMediaVideoProbeControlSlots_connect_signal( "flush()", "flush()" );
+  QMediaVideoProbeControlSlots_connect_signal("flush()", "flush()");
 }
 
 HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
 {
-  QMediaVideoProbeControlSlots_connect_signal( "videoFrameProbed(QVideoFrame)", "videoFrameProbed(QVideoFrame)" );
+  QMediaVideoProbeControlSlots_connect_signal("videoFrameProbed(QVideoFrame)", "videoFrameProbed(QVideoFrame)");
 }
 
 #pragma ENDDUMP

@@ -304,41 +304,41 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ERRORSTRING )
   }
 }
 
-void QRadioDataControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QRadioDataControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QRADIODATACONTROL_ONSTATIONIDCHANGED )
 {
-  QRadioDataControlSlots_connect_signal( "stationIdChanged(QString)", "stationIdChanged(QString)" );
+  QRadioDataControlSlots_connect_signal("stationIdChanged(QString)", "stationIdChanged(QString)");
 }
 
 HB_FUNC_STATIC( QRADIODATACONTROL_ONPROGRAMTYPECHANGED )
 {
-  QRadioDataControlSlots_connect_signal( "programTypeChanged(QRadioData::ProgramType)", "programTypeChanged(QRadioData::ProgramType)" );
+  QRadioDataControlSlots_connect_signal("programTypeChanged(QRadioData::ProgramType)", "programTypeChanged(QRadioData::ProgramType)");
 }
 
 HB_FUNC_STATIC( QRADIODATACONTROL_ONPROGRAMTYPENAMECHANGED )
 {
-  QRadioDataControlSlots_connect_signal( "programTypeNameChanged(QString)", "programTypeNameChanged(QString)" );
+  QRadioDataControlSlots_connect_signal("programTypeNameChanged(QString)", "programTypeNameChanged(QString)");
 }
 
 HB_FUNC_STATIC( QRADIODATACONTROL_ONSTATIONNAMECHANGED )
 {
-  QRadioDataControlSlots_connect_signal( "stationNameChanged(QString)", "stationNameChanged(QString)" );
+  QRadioDataControlSlots_connect_signal("stationNameChanged(QString)", "stationNameChanged(QString)");
 }
 
 HB_FUNC_STATIC( QRADIODATACONTROL_ONRADIOTEXTCHANGED )
 {
-  QRadioDataControlSlots_connect_signal( "radioTextChanged(QString)", "radioTextChanged(QString)" );
+  QRadioDataControlSlots_connect_signal("radioTextChanged(QString)", "radioTextChanged(QString)");
 }
 
 HB_FUNC_STATIC( QRADIODATACONTROL_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 {
-  QRadioDataControlSlots_connect_signal( "alternativeFrequenciesEnabledChanged(bool)", "alternativeFrequenciesEnabledChanged(bool)" );
+  QRadioDataControlSlots_connect_signal("alternativeFrequenciesEnabledChanged(bool)", "alternativeFrequenciesEnabledChanged(bool)");
 }
 
 HB_FUNC_STATIC( QRADIODATACONTROL_ONERROR )
 {
-  QRadioDataControlSlots_connect_signal( "error(QRadioData::Error)", "error(QRadioData::Error)" );
+  QRadioDataControlSlots_connect_signal("error(QRadioData::Error)", "error(QRadioData::Error)");
 }
 
 #pragma ENDDUMP

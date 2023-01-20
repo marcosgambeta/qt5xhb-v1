@@ -216,16 +216,16 @@ HB_FUNC_STATIC( QAUDIORECORDER_DEFAULTAUDIOINPUT )
   }
 }
 
-void QAudioRecorderSlots_connect_signal( const QString & signal, const QString & slot );
+void QAudioRecorderSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAUDIORECORDER_ONAUDIOINPUTCHANGED )
 {
-  QAudioRecorderSlots_connect_signal( "audioInputChanged(QString)", "audioInputChanged(QString)" );
+  QAudioRecorderSlots_connect_signal("audioInputChanged(QString)", "audioInputChanged(QString)");
 }
 
 HB_FUNC_STATIC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
 {
-  QAudioRecorderSlots_connect_signal( "availableAudioInputsChanged()", "availableAudioInputsChanged()" );
+  QAudioRecorderSlots_connect_signal("availableAudioInputsChanged()", "availableAudioInputsChanged()");
 }
 
 #pragma ENDDUMP

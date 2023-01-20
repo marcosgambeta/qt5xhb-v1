@@ -201,16 +201,16 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
   }
 }
 
-void QMediaStreamsControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QMediaStreamsControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED )
 {
-  QMediaStreamsControlSlots_connect_signal( "activeStreamsChanged()", "activeStreamsChanged()" );
+  QMediaStreamsControlSlots_connect_signal("activeStreamsChanged()", "activeStreamsChanged()");
 }
 
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED )
 {
-  QMediaStreamsControlSlots_connect_signal( "streamsChanged()", "streamsChanged()" );
+  QMediaStreamsControlSlots_connect_signal("streamsChanged()", "streamsChanged()");
 }
 
 #pragma ENDDUMP

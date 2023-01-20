@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_CREATE )
     {
 #endif
       QMediaService * ptr = obj->create( PQSTRING(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIASERVICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMEDIASERVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

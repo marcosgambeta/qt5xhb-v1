@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
 #endif
       bool par1;
       QList<qreal> list = obj->supportedApertures( &par1 );
-      Qt5xHb::convert_qlist_qreal_to_array( list );
+      Qt5xHb::convert_qlist_qreal_to_array(list);
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
 #endif
       bool par1;
       QList<int> list = obj->supportedIsoSensitivities( &par1 );
-      Qt5xHb::convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array(list);
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS )
 #endif
       bool par1;
       QList<qreal> list = obj->supportedShutterSpeeds( &par1 );
-      Qt5xHb::convert_qlist_qreal_to_array( list );
+      Qt5xHb::convert_qlist_qreal_to_array(list);
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -839,41 +839,41 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCameraExposureSlots_connect_signal( const QString & signal, const QString & slot );
+void QCameraExposureSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
 {
-  QCameraExposureSlots_connect_signal( "apertureChanged(qreal)", "apertureChanged(qreal)" );
+  QCameraExposureSlots_connect_signal("apertureChanged(qreal)", "apertureChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
 {
-  QCameraExposureSlots_connect_signal( "apertureRangeChanged()", "apertureRangeChanged()" );
+  QCameraExposureSlots_connect_signal("apertureRangeChanged()", "apertureRangeChanged()");
 }
 
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
 {
-  QCameraExposureSlots_connect_signal( "exposureCompensationChanged(qreal)", "exposureCompensationChanged(qreal)" );
+  QCameraExposureSlots_connect_signal("exposureCompensationChanged(qreal)", "exposureCompensationChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
 {
-  QCameraExposureSlots_connect_signal( "flashReady(bool)", "flashReady(bool)" );
+  QCameraExposureSlots_connect_signal("flashReady(bool)", "flashReady(bool)");
 }
 
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
 {
-  QCameraExposureSlots_connect_signal( "isoSensitivityChanged(int)", "isoSensitivityChanged(int)" );
+  QCameraExposureSlots_connect_signal("isoSensitivityChanged(int)", "isoSensitivityChanged(int)");
 }
 
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
 {
-  QCameraExposureSlots_connect_signal( "shutterSpeedChanged(qreal)", "shutterSpeedChanged(qreal)" );
+  QCameraExposureSlots_connect_signal("shutterSpeedChanged(qreal)", "shutterSpeedChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
 {
-  QCameraExposureSlots_connect_signal( "shutterSpeedRangeChanged()", "shutterSpeedRangeChanged()" );
+  QCameraExposureSlots_connect_signal("shutterSpeedRangeChanged()", "shutterSpeedRangeChanged()");
 }
 
 #pragma ENDDUMP

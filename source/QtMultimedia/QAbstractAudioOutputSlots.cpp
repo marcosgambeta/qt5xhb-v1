@@ -24,16 +24,16 @@ void QAbstractAudioOutputSlots::errorChanged( QAudio::Error error )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "errorChanged(QAudio::Error)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "errorChanged(QAudio::Error)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAUDIOOUTPUT");
-    PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
 
-    hb_vmEvalBlockV( cb, 2, psender, perror );
+    hb_vmEvalBlockV(cb, 2, psender, perror);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( perror );
   }
 }
@@ -42,16 +42,16 @@ void QAbstractAudioOutputSlots::stateChanged( QAudio::State state )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QAudio::State)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QAudio::State)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAUDIOOUTPUT");
-    PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
+    PHB_ITEM pstate = hb_itemPutNI( NULL, static_cast<int>(state) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pstate );
+    hb_vmEvalBlockV(cb, 2, psender, pstate);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pstate );
   }
 }
@@ -60,19 +60,19 @@ void QAbstractAudioOutputSlots::notify()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "notify()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "notify()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAUDIOOUTPUT");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QAbstractAudioOutputSlots_connect_signal( const QString & signal, const QString & slot )
+void QAbstractAudioOutputSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QAbstractAudioOutput * obj = (QAbstractAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
 

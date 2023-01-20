@@ -148,11 +148,11 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCameraCaptureDestinationControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QCameraCaptureDestinationControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED )
 {
-  QCameraCaptureDestinationControlSlots_connect_signal( "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)", "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
+  QCameraCaptureDestinationControlSlots_connect_signal("captureDestinationChanged(QCameraImageCapture::CaptureDestinations)", "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)");
 }
 
 #pragma ENDDUMP

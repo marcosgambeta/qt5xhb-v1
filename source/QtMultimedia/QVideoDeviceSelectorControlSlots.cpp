@@ -24,15 +24,15 @@ void QVideoDeviceSelectorControlSlots::devicesChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "devicesChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "devicesChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEODEVICESELECTORCONTROL");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,16 +40,16 @@ void QVideoDeviceSelectorControlSlots::selectedDeviceChanged( int index )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedDeviceChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectedDeviceChanged(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEODEVICESELECTORCONTROL");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV(cb, 2, psender, pindex);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pindex );
   }
 }
@@ -58,21 +58,21 @@ void QVideoDeviceSelectorControlSlots::selectedDeviceChanged( const QString & na
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedDeviceChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectedDeviceChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEODEVICESELECTORCONTROL");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pname );
+    hb_vmEvalBlockV(cb, 2, psender, pname);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pname );
   }
 }
 
-void QVideoDeviceSelectorControlSlots_connect_signal( const QString & signal, const QString & slot )
+void QVideoDeviceSelectorControlSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 

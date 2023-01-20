@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_START )
     if( obj != NULL )
     {
       QIODevice * ptr = obj->start();
-      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
     }
   }
   else
@@ -627,16 +627,16 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_VOLUME )
   }
 }
 
-void QAudioOutputSlots_connect_signal( const QString & signal, const QString & slot );
+void QAudioOutputSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONNOTIFY )
 {
-  QAudioOutputSlots_connect_signal( "notify()", "notify()" );
+  QAudioOutputSlots_connect_signal("notify()", "notify()");
 }
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
 {
-  QAudioOutputSlots_connect_signal( "stateChanged(QAudio::State)", "stateChanged(QAudio::State)" );
+  QAudioOutputSlots_connect_signal("stateChanged(QAudio::State)", "stateChanged(QAudio::State)");
 }
 
 #pragma ENDDUMP

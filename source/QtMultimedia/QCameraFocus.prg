@@ -234,30 +234,30 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSZONES )
     {
 #endif
       QCameraFocusZoneList list = obj->focusZones();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QCAMERAFOCUSZONE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QCAMERAFOCUSZONE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QCameraFocusZone( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QCameraFocusZone(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCAMERAFOCUSZONE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QCAMERAFOCUSZONE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -464,31 +464,31 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ZOOMTO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCameraFocusSlots_connect_signal( const QString & signal, const QString & slot );
+void QCameraFocusSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
 {
-  QCameraFocusSlots_connect_signal( "digitalZoomChanged(qreal)", "digitalZoomChanged(qreal)" );
+  QCameraFocusSlots_connect_signal("digitalZoomChanged(qreal)", "digitalZoomChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
 {
-  QCameraFocusSlots_connect_signal( "focusZonesChanged()", "focusZonesChanged()" );
+  QCameraFocusSlots_connect_signal("focusZonesChanged()", "focusZonesChanged()");
 }
 
 HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
 {
-  QCameraFocusSlots_connect_signal( "maximumDigitalZoomChanged(qreal)", "maximumDigitalZoomChanged(qreal)" );
+  QCameraFocusSlots_connect_signal("maximumDigitalZoomChanged(qreal)", "maximumDigitalZoomChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
 {
-  QCameraFocusSlots_connect_signal( "maximumOpticalZoomChanged(qreal)", "maximumOpticalZoomChanged(qreal)" );
+  QCameraFocusSlots_connect_signal("maximumOpticalZoomChanged(qreal)", "maximumOpticalZoomChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
 {
-  QCameraFocusSlots_connect_signal( "opticalZoomChanged(qreal)", "opticalZoomChanged(qreal)" );
+  QCameraFocusSlots_connect_signal("opticalZoomChanged(qreal)", "opticalZoomChanged(qreal)");
 }
 
 #pragma ENDDUMP

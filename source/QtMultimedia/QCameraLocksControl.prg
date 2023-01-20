@@ -175,11 +175,11 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_UNLOCK )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCameraLocksControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QCameraLocksControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
 {
-  QCameraLocksControlSlots_connect_signal( "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" );
+  QCameraLocksControlSlots_connect_signal("lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)");
 }
 
 #pragma ENDDUMP

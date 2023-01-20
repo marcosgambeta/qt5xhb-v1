@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) list[i].toLatin1().data() );
+        PHB_ITEM pItem = hb_itemPutC( NULL, list[i].toLatin1().data() );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -207,16 +207,16 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAudioInputSelectorControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QAudioInputSelectorControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONACTIVEINPUTCHANGED )
 {
-  QAudioInputSelectorControlSlots_connect_signal( "activeInputChanged(QString)", "activeInputChanged(QString)" );
+  QAudioInputSelectorControlSlots_connect_signal("activeInputChanged(QString)", "activeInputChanged(QString)");
 }
 
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONAVAILABLEINPUTSCHANGED )
 {
-  QAudioInputSelectorControlSlots_connect_signal( "availableInputsChanged()", "availableInputsChanged()" );
+  QAudioInputSelectorControlSlots_connect_signal("availableInputsChanged()", "availableInputsChanged()");
 }
 
 #pragma ENDDUMP

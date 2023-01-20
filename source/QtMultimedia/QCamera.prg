@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QCAMERA_EXPOSURE )
     {
 #endif
       QCameraExposure * ptr = obj->exposure();
-      Qt5xHb::createReturnQObjectClass( ptr, "QCAMERAEXPOSURE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QCAMERAEXPOSURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QCAMERA_FOCUS )
     {
 #endif
       QCameraFocus * ptr = obj->focus();
-      Qt5xHb::createReturnQObjectClass( ptr, "QCAMERAFOCUS" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QCAMERAFOCUS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QCAMERA_IMAGEPROCESSING )
     {
 #endif
       QCameraImageProcessing * ptr = obj->imageProcessing();
-      Qt5xHb::createReturnQObjectClass( ptr, "QCAMERAIMAGEPROCESSING" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QCAMERAIMAGEPROCESSING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -802,30 +802,30 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERSETTINGS )
     {
 #endif
       QList<QCameraViewfinderSettings> list = obj->supportedViewfinderSettings( HB_ISNIL(1)? QCameraViewfinderSettings() : *(QCameraViewfinderSettings *) Qt5xHb::itemGetPtr(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QCAMERAVIEWFINDERSETTINGS" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QCAMERAVIEWFINDERSETTINGS");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QCameraViewfinderSettings( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QCameraViewfinderSettings(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCAMERAVIEWFINDERSETTINGS", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QCAMERAVIEWFINDERSETTINGS", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -854,30 +854,30 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS )
     {
 #endif
       QList<QSize> list = obj->supportedViewfinderResolutions( HB_ISNIL(1)? QCameraViewfinderSettings() : *(QCameraViewfinderSettings *) Qt5xHb::itemGetPtr(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QSize( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QSize(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSIZE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSIZE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -935,30 +935,30 @@ HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
   {
 #endif
     QList<QByteArray> list = QCamera::availableDevices();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -989,46 +989,46 @@ HB_FUNC_STATIC( QCAMERA_DEVICEDESCRIPTION )
 #endif
 }
 
-void QCameraSlots_connect_signal( const QString & signal, const QString & slot );
+void QCameraSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCAMERA_ONCAPTUREMODECHANGED )
 {
-  QCameraSlots_connect_signal( "captureModeChanged(QCamera::CaptureModes)", "captureModeChanged(QCamera::CaptureModes)" );
+  QCameraSlots_connect_signal("captureModeChanged(QCamera::CaptureModes)", "captureModeChanged(QCamera::CaptureModes)");
 }
 
 HB_FUNC_STATIC( QCAMERA_ONERROR )
 {
-  QCameraSlots_connect_signal( "error(QCamera::Error)", "error(QCamera::Error)" );
+  QCameraSlots_connect_signal("error(QCamera::Error)", "error(QCamera::Error)");
 }
 
 HB_FUNC_STATIC( QCAMERA_ONLOCKFAILED )
 {
-  QCameraSlots_connect_signal( "lockFailed()", "lockFailed()" );
+  QCameraSlots_connect_signal("lockFailed()", "lockFailed()");
 }
 
 HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED1 )
 {
-  QCameraSlots_connect_signal( "lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)" );
+  QCameraSlots_connect_signal("lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)");
 }
 
 HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED2 )
 {
-  QCameraSlots_connect_signal( "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" );
+  QCameraSlots_connect_signal("lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)");
 }
 
 HB_FUNC_STATIC( QCAMERA_ONLOCKED )
 {
-  QCameraSlots_connect_signal( "locked()", "locked()" );
+  QCameraSlots_connect_signal("locked()", "locked()");
 }
 
 HB_FUNC_STATIC( QCAMERA_ONSTATECHANGED )
 {
-  QCameraSlots_connect_signal( "stateChanged(QCamera::State)", "stateChanged(QCamera::State)" );
+  QCameraSlots_connect_signal("stateChanged(QCamera::State)", "stateChanged(QCamera::State)");
 }
 
 HB_FUNC_STATIC( QCAMERA_ONSTATUSCHANGED )
 {
-  QCameraSlots_connect_signal( "statusChanged(QCamera::Status)", "statusChanged(QCamera::Status)" );
+  QCameraSlots_connect_signal("statusChanged(QCamera::Status)", "statusChanged(QCamera::Status)");
 }
 
 #pragma ENDDUMP

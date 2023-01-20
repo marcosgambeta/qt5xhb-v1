@@ -253,36 +253,36 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ZOOMTO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCameraZoomControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QCameraZoomControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED )
 {
-  QCameraZoomControlSlots_connect_signal( "currentDigitalZoomChanged(qreal)", "currentDigitalZoomChanged(qreal)" );
+  QCameraZoomControlSlots_connect_signal("currentDigitalZoomChanged(qreal)", "currentDigitalZoomChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED )
 {
-  QCameraZoomControlSlots_connect_signal( "currentOpticalZoomChanged(qreal)", "currentOpticalZoomChanged(qreal)" );
+  QCameraZoomControlSlots_connect_signal("currentOpticalZoomChanged(qreal)", "currentOpticalZoomChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED )
 {
-  QCameraZoomControlSlots_connect_signal( "maximumDigitalZoomChanged(qreal)", "maximumDigitalZoomChanged(qreal)" );
+  QCameraZoomControlSlots_connect_signal("maximumDigitalZoomChanged(qreal)", "maximumDigitalZoomChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED )
 {
-  QCameraZoomControlSlots_connect_signal( "maximumOpticalZoomChanged(qreal)", "maximumOpticalZoomChanged(qreal)" );
+  QCameraZoomControlSlots_connect_signal("maximumOpticalZoomChanged(qreal)", "maximumOpticalZoomChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED )
 {
-  QCameraZoomControlSlots_connect_signal( "requestedDigitalZoomChanged(qreal)", "requestedDigitalZoomChanged(qreal)" );
+  QCameraZoomControlSlots_connect_signal("requestedDigitalZoomChanged(qreal)", "requestedDigitalZoomChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED )
 {
-  QCameraZoomControlSlots_connect_signal( "requestedOpticalZoomChanged(qreal)", "requestedOpticalZoomChanged(qreal)" );
+  QCameraZoomControlSlots_connect_signal("requestedOpticalZoomChanged(qreal)", "requestedOpticalZoomChanged(qreal)");
 }
 
 #pragma ENDDUMP

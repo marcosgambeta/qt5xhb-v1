@@ -24,15 +24,15 @@ void QMediaVideoProbeControlSlots::flush()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "flush()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flush()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAVIDEOPROBECONTROL");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,21 +40,21 @@ void QMediaVideoProbeControlSlots::videoFrameProbed( const QVideoFrame & frame )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "videoFrameProbed(QVideoFrame)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "videoFrameProbed(QVideoFrame)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAVIDEOPROBECONTROL");
-    PHB_ITEM pframe = Qt5xHb::Signals_return_object( (void *) &frame, "QVIDEOFRAME" );
+    PHB_ITEM pframe = Qt5xHb::Signals_return_object( (void *) &frame, "QVIDEOFRAME");
 
-    hb_vmEvalBlockV( cb, 2, psender, pframe );
+    hb_vmEvalBlockV(cb, 2, psender, pframe);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pframe );
   }
 }
 
-void QMediaVideoProbeControlSlots_connect_signal( const QString & signal, const QString & slot )
+void QMediaVideoProbeControlSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QMediaVideoProbeControl * obj = (QMediaVideoProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
 

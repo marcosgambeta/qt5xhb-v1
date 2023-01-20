@@ -72,16 +72,16 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMediaAudioProbeControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QMediaAudioProbeControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
 {
-  QMediaAudioProbeControlSlots_connect_signal( "audioBufferProbed(QAudioBuffer)", "audioBufferProbed(QAudioBuffer)" );
+  QMediaAudioProbeControlSlots_connect_signal("audioBufferProbed(QAudioBuffer)", "audioBufferProbed(QAudioBuffer)");
 }
 
 HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
 {
-  QMediaAudioProbeControlSlots_connect_signal( "flush()", "flush()" );
+  QMediaAudioProbeControlSlots_connect_signal("flush()", "flush()");
 }
 
 #pragma ENDDUMP

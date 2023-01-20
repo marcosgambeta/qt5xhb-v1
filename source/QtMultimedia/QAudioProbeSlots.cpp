@@ -24,16 +24,16 @@ void QAudioProbeSlots::audioBufferProbed( const QAudioBuffer & buffer )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "audioBufferProbed(QAudioBuffer)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "audioBufferProbed(QAudioBuffer)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOPROBE");
-    PHB_ITEM pbuffer = Qt5xHb::Signals_return_object( (void *) &buffer, "QAUDIOBUFFER" );
+    PHB_ITEM pbuffer = Qt5xHb::Signals_return_object( (void *) &buffer, "QAUDIOBUFFER");
 
-    hb_vmEvalBlockV( cb, 2, psender, pbuffer );
+    hb_vmEvalBlockV(cb, 2, psender, pbuffer);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pbuffer );
   }
 }
@@ -42,19 +42,19 @@ void QAudioProbeSlots::flush()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "flush()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flush()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOPROBE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QAudioProbeSlots_connect_signal( const QString & signal, const QString & slot )
+void QAudioProbeSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 

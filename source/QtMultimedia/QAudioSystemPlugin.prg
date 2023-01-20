@@ -91,30 +91,30 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_AVAILABLEDEVICES )
     {
 #endif
       QList<QByteArray> list = obj->availableDevices( (QAudio::Mode) hb_parni(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, (QByteArray *) new QByteArray( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEINPUT )
     {
 #endif
       QAbstractAudioInput * ptr = obj->createInput( *PQBYTEARRAY(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTAUDIOINPUT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIOINPUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEOUTPUT )
     {
 #endif
       QAbstractAudioOutput * ptr = obj->createOutput( *PQBYTEARRAY(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTAUDIOOUTPUT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIOOUTPUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEDEVICEINFO )
     {
 #endif
       QAbstractAudioDeviceInfo * ptr = obj->createDeviceInfo( *PQBYTEARRAY(1), (QAudio::Mode) hb_parni(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTAUDIODEVICEINFO" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIODEVICEINFO");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

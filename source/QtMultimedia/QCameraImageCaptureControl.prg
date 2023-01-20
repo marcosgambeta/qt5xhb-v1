@@ -206,41 +206,41 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCameraImageCaptureControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QCameraImageCaptureControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "error(int,int,QString)", "error(int,int,QString)" );
+  QCameraImageCaptureControlSlots_connect_signal("error(int,int,QString)", "error(int,int,QString)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "imageAvailable(int,QVideoFrame)", "imageAvailable(int,QVideoFrame)" );
+  QCameraImageCaptureControlSlots_connect_signal("imageAvailable(int,QVideoFrame)", "imageAvailable(int,QVideoFrame)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "imageCaptured(int,QImage)", "imageCaptured(int,QImage)" );
+  QCameraImageCaptureControlSlots_connect_signal("imageCaptured(int,QImage)", "imageCaptured(int,QImage)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "imageExposed(int)", "imageExposed(int)" );
+  QCameraImageCaptureControlSlots_connect_signal("imageExposed(int)", "imageExposed(int)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "imageMetadataAvailable(int,QString,QVariant)", "imageMetadataAvailable(int,QString,QVariant)" );
+  QCameraImageCaptureControlSlots_connect_signal("imageMetadataAvailable(int,QString,QVariant)", "imageMetadataAvailable(int,QString,QVariant)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "imageSaved(int,QString)", "imageSaved(int,QString)" );
+  QCameraImageCaptureControlSlots_connect_signal("imageSaved(int,QString)", "imageSaved(int,QString)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
 {
-  QCameraImageCaptureControlSlots_connect_signal( "readyForCaptureChanged(bool)", "readyForCaptureChanged(bool)" );
+  QCameraImageCaptureControlSlots_connect_signal("readyForCaptureChanged(bool)", "readyForCaptureChanged(bool)");
 }
 
 #pragma ENDDUMP

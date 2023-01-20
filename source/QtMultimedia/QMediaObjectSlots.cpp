@@ -24,16 +24,16 @@ void QMediaObjectSlots::availabilityChanged( bool available )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availabilityChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availabilityChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
-    hb_vmEvalBlockV( cb, 2, psender, pavailable );
+    hb_vmEvalBlockV(cb, 2, psender, pavailable);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pavailable );
   }
 }
@@ -42,16 +42,16 @@ void QMediaObjectSlots::availabilityChanged( QMultimedia::AvailabilityStatus ava
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availabilityChanged(QMultimedia::AvailabilityStatus)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
-    PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
+    PHB_ITEM pavailability = hb_itemPutNI( NULL, static_cast<int>(availability) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pavailability );
+    hb_vmEvalBlockV(cb, 2, psender, pavailability);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pavailability );
   }
 }
@@ -60,16 +60,16 @@ void QMediaObjectSlots::metaDataAvailableChanged( bool available )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataAvailableChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
-    hb_vmEvalBlockV( cb, 2, psender, pavailable );
+    hb_vmEvalBlockV(cb, 2, psender, pavailable);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pavailable );
   }
 }
@@ -78,15 +78,15 @@ void QMediaObjectSlots::metaDataChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -94,17 +94,17 @@ void QMediaObjectSlots::metaDataChanged( const QString & key, const QVariant & v
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataChanged(QString,QVariant)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
-    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT" );
+    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT");
 
-    hb_vmEvalBlockV( cb, 3, psender, pkey, pvalue );
+    hb_vmEvalBlockV(cb, 3, psender, pkey, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
   }
@@ -114,21 +114,21 @@ void QMediaObjectSlots::notifyIntervalChanged( int milliseconds )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "notifyIntervalChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "notifyIntervalChanged(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pmilliseconds = hb_itemPutNI( NULL, milliseconds );
 
-    hb_vmEvalBlockV( cb, 2, psender, pmilliseconds );
+    hb_vmEvalBlockV(cb, 2, psender, pmilliseconds);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pmilliseconds );
   }
 }
 
-void QMediaObjectSlots_connect_signal( const QString & signal, const QString & slot )
+void QMediaObjectSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QMediaObject * obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
 

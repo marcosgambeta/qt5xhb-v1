@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDBUFFERFORMATS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -533,30 +533,30 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
 #endif
       bool par2;
       QList<QSize> list = obj->supportedResolutions( HB_ISNIL(1)? QImageEncoderSettings() : *(QImageEncoderSettings *) Qt5xHb::itemGetPtr(1), &par2 );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QSize( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QSize(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSIZE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSIZE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
       hb_storl( par2, 2 );
@@ -620,51 +620,51 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
   }
 }
 
-void QCameraImageCaptureSlots_connect_signal( const QString & signal, const QString & slot );
+void QCameraImageCaptureSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED )
 {
-  QCameraImageCaptureSlots_connect_signal( "bufferFormatChanged(QVideoFrame::PixelFormat)", "bufferFormatChanged(QVideoFrame::PixelFormat)" );
+  QCameraImageCaptureSlots_connect_signal("bufferFormatChanged(QVideoFrame::PixelFormat)", "bufferFormatChanged(QVideoFrame::PixelFormat)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED )
 {
-  QCameraImageCaptureSlots_connect_signal( "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)", "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
+  QCameraImageCaptureSlots_connect_signal("captureDestinationChanged(QCameraImageCapture::CaptureDestinations)", "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONERROR )
 {
-  QCameraImageCaptureSlots_connect_signal( "error(int,QCameraImageCapture::Error,QString)", "error(int,QCameraImageCapture::Error,QString)" );
+  QCameraImageCaptureSlots_connect_signal("error(int,QCameraImageCapture::Error,QString)", "error(int,QCameraImageCapture::Error,QString)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE )
 {
-  QCameraImageCaptureSlots_connect_signal( "imageAvailable(int,QVideoFrame)", "imageAvailable(int,QVideoFrame)" );
+  QCameraImageCaptureSlots_connect_signal("imageAvailable(int,QVideoFrame)", "imageAvailable(int,QVideoFrame)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGECAPTURED )
 {
-  QCameraImageCaptureSlots_connect_signal( "imageCaptured(int,QImage)", "imageCaptured(int,QImage)" );
+  QCameraImageCaptureSlots_connect_signal("imageCaptured(int,QImage)", "imageCaptured(int,QImage)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED )
 {
-  QCameraImageCaptureSlots_connect_signal( "imageExposed(int)", "imageExposed(int)" );
+  QCameraImageCaptureSlots_connect_signal("imageExposed(int)", "imageExposed(int)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE )
 {
-  QCameraImageCaptureSlots_connect_signal( "imageMetadataAvailable(int,QString,QVariant)", "imageMetadataAvailable(int,QString,QVariant)" );
+  QCameraImageCaptureSlots_connect_signal("imageMetadataAvailable(int,QString,QVariant)", "imageMetadataAvailable(int,QString,QVariant)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGESAVED )
 {
-  QCameraImageCaptureSlots_connect_signal( "imageSaved(int,QString)", "imageSaved(int,QString)" );
+  QCameraImageCaptureSlots_connect_signal("imageSaved(int,QString)", "imageSaved(int,QString)");
 }
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED )
 {
-  QCameraImageCaptureSlots_connect_signal( "readyForCaptureChanged(bool)", "readyForCaptureChanged(bool)" );
+  QCameraImageCaptureSlots_connect_signal("readyForCaptureChanged(bool)", "readyForCaptureChanged(bool)");
 }
 
 #pragma ENDDUMP

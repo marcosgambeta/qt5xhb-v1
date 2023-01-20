@@ -147,16 +147,16 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
   }
 }
 
-void QAudioProbeSlots_connect_signal( const QString & signal, const QString & slot );
+void QAudioProbeSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
 {
-  QAudioProbeSlots_connect_signal( "audioBufferProbed(QAudioBuffer)", "audioBufferProbed(QAudioBuffer)" );
+  QAudioProbeSlots_connect_signal("audioBufferProbed(QAudioBuffer)", "audioBufferProbed(QAudioBuffer)");
 }
 
 HB_FUNC_STATIC( QAUDIOPROBE_ONFLUSH )
 {
-  QAudioProbeSlots_connect_signal( "flush()", "flush()" );
+  QAudioProbeSlots_connect_signal("flush()", "flush()");
 }
 
 #pragma ENDDUMP

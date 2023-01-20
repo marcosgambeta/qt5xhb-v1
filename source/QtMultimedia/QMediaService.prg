@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QMEDIASERVICE_REQUESTCONTROL )
     {
 #endif
       QMediaControl * ptr = obj->requestControl( PCONSTCHAR(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIACONTROL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMEDIACONTROL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

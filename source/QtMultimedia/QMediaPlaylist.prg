@@ -273,9 +273,8 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ADDMEDIA )
     {
       QList<QMediaContent> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -673,7 +672,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -788,56 +787,56 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
 #endif
 }
 
-void QMediaPlaylistSlots_connect_signal( const QString & signal, const QString & slot );
+void QMediaPlaylistSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
 {
-  QMediaPlaylistSlots_connect_signal( "currentIndexChanged(int)", "currentIndexChanged(int)" );
+  QMediaPlaylistSlots_connect_signal("currentIndexChanged(int)", "currentIndexChanged(int)");
 }
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
 {
-  QMediaPlaylistSlots_connect_signal( "currentMediaChanged(QMediaContent)", "currentMediaChanged(QMediaContent)" );
+  QMediaPlaylistSlots_connect_signal("currentMediaChanged(QMediaContent)", "currentMediaChanged(QMediaContent)");
 }
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADFAILED )
 {
-  QMediaPlaylistSlots_connect_signal( "loadFailed()", "loadFailed()" );
+  QMediaPlaylistSlots_connect_signal("loadFailed()", "loadFailed()");
 }
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADED )
 {
-  QMediaPlaylistSlots_connect_signal( "loaded()", "loaded()" );
+  QMediaPlaylistSlots_connect_signal("loaded()", "loaded()");
 }
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
 {
-  QMediaPlaylistSlots_connect_signal( "mediaAboutToBeInserted(int,int)", "mediaAboutToBeInserted(int,int)" );
+  QMediaPlaylistSlots_connect_signal("mediaAboutToBeInserted(int,int)", "mediaAboutToBeInserted(int,int)");
 }
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
 {
-  QMediaPlaylistSlots_connect_signal( "mediaAboutToBeRemoved(int,int)", "mediaAboutToBeRemoved(int,int)" );
+  QMediaPlaylistSlots_connect_signal("mediaAboutToBeRemoved(int,int)", "mediaAboutToBeRemoved(int,int)");
 }
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIACHANGED )
 {
-  QMediaPlaylistSlots_connect_signal( "mediaChanged(int,int)", "mediaChanged(int,int)" );
+  QMediaPlaylistSlots_connect_signal("mediaChanged(int,int)", "mediaChanged(int,int)");
 }
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
 {
-  QMediaPlaylistSlots_connect_signal( "mediaInserted(int,int)", "mediaInserted(int,int)" );
+  QMediaPlaylistSlots_connect_signal("mediaInserted(int,int)", "mediaInserted(int,int)");
 }
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
 {
-  QMediaPlaylistSlots_connect_signal( "mediaRemoved(int,int)", "mediaRemoved(int,int)" );
+  QMediaPlaylistSlots_connect_signal("mediaRemoved(int,int)", "mediaRemoved(int,int)");
 }
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
 {
-  QMediaPlaylistSlots_connect_signal( "playbackModeChanged(QMediaPlaylist::PlaybackMode)", "playbackModeChanged(QMediaPlaylist::PlaybackMode)" );
+  QMediaPlaylistSlots_connect_signal("playbackModeChanged(QMediaPlaylist::PlaybackMode)", "playbackModeChanged(QMediaPlaylist::PlaybackMode)");
 }
 
 #pragma ENDDUMP

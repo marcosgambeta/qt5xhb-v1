@@ -253,26 +253,26 @@ HB_FUNC_STATIC( QCAMERACONTROL_STATUS )
   }
 }
 
-void QCameraControlSlots_connect_signal( const QString & signal, const QString & slot );
+void QCameraControlSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
 {
-  QCameraControlSlots_connect_signal( "captureModeChanged(QCamera::CaptureModes)", "captureModeChanged(QCamera::CaptureModes)" );
+  QCameraControlSlots_connect_signal("captureModeChanged(QCamera::CaptureModes)", "captureModeChanged(QCamera::CaptureModes)");
 }
 
 HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
 {
-  QCameraControlSlots_connect_signal( "error(int,QString)", "error(int,QString)" );
+  QCameraControlSlots_connect_signal("error(int,QString)", "error(int,QString)");
 }
 
 HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
 {
-  QCameraControlSlots_connect_signal( "stateChanged(QCamera::State)", "stateChanged(QCamera::State)" );
+  QCameraControlSlots_connect_signal("stateChanged(QCamera::State)", "stateChanged(QCamera::State)");
 }
 
 HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
 {
-  QCameraControlSlots_connect_signal( "statusChanged(QCamera::Status)", "statusChanged(QCamera::Status)" );
+  QCameraControlSlots_connect_signal("statusChanged(QCamera::Status)", "statusChanged(QCamera::Status)");
 }
 
 #pragma ENDDUMP

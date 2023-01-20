@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_SERVICE )
     {
 #endif
       QMediaService * ptr = obj->service();
-      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIASERVICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QMEDIASERVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,36 +337,36 @@ HB_FUNC_STATIC( QMEDIAOBJECT_UNBIND )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMediaObjectSlots_connect_signal( const QString & signal, const QString & slot );
+void QMediaObjectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
 {
-  QMediaObjectSlots_connect_signal( "availabilityChanged(bool)", "availabilityChanged(bool)" );
+  QMediaObjectSlots_connect_signal("availabilityChanged(bool)", "availabilityChanged(bool)");
 }
 
 HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
 {
-  QMediaObjectSlots_connect_signal( "availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)" );
+  QMediaObjectSlots_connect_signal("availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)");
 }
 
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
 {
-  QMediaObjectSlots_connect_signal( "metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)" );
+  QMediaObjectSlots_connect_signal("metaDataAvailableChanged(bool)", "metaDataAvailableChanged(bool)");
 }
 
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED1 )
 {
-  QMediaObjectSlots_connect_signal( "metaDataChanged()", "metaDataChanged()" );
+  QMediaObjectSlots_connect_signal("metaDataChanged()", "metaDataChanged()");
 }
 
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED2 )
 {
-  QMediaObjectSlots_connect_signal( "metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)" );
+  QMediaObjectSlots_connect_signal("metaDataChanged(QString,QVariant)", "metaDataChanged(QString,QVariant)");
 }
 
 HB_FUNC_STATIC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
 {
-  QMediaObjectSlots_connect_signal( "notifyIntervalChanged(int)", "notifyIntervalChanged(int)" );
+  QMediaObjectSlots_connect_signal("notifyIntervalChanged(int)", "notifyIntervalChanged(int)");
 }
 
 #pragma ENDDUMP
