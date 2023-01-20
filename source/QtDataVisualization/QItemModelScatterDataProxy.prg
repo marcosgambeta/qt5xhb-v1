@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ITEMMODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->itemModel();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -836,71 +836,71 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_REMAP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QItemModelScatterDataProxySlots_connect_signal( const QString & signal, const QString & slot );
+void QItemModelScatterDataProxySlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "itemModelChanged(QAbstractItemModel*)", "itemModelChanged(QAbstractItemModel*)" );
+  QItemModelScatterDataProxySlots_connect_signal("itemModelChanged(QAbstractItemModel*)", "itemModelChanged(QAbstractItemModel*)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "rotationRoleChanged(QString)", "rotationRoleChanged(QString)" );
+  QItemModelScatterDataProxySlots_connect_signal("rotationRoleChanged(QString)", "rotationRoleChanged(QString)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "rotationRolePatternChanged(QRegExp)", "rotationRolePatternChanged(QRegExp)" );
+  QItemModelScatterDataProxySlots_connect_signal("rotationRolePatternChanged(QRegExp)", "rotationRolePatternChanged(QRegExp)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "rotationRoleReplaceChanged(QString)", "rotationRoleReplaceChanged(QString)" );
+  QItemModelScatterDataProxySlots_connect_signal("rotationRoleReplaceChanged(QString)", "rotationRoleReplaceChanged(QString)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "xPosRoleChanged(QString)", "xPosRoleChanged(QString)" );
+  QItemModelScatterDataProxySlots_connect_signal("xPosRoleChanged(QString)", "xPosRoleChanged(QString)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "xPosRolePatternChanged(QRegExp)", "xPosRolePatternChanged(QRegExp)" );
+  QItemModelScatterDataProxySlots_connect_signal("xPosRolePatternChanged(QRegExp)", "xPosRolePatternChanged(QRegExp)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "xPosRoleReplaceChanged(QString)", "xPosRoleReplaceChanged(QString)" );
+  QItemModelScatterDataProxySlots_connect_signal("xPosRoleReplaceChanged(QString)", "xPosRoleReplaceChanged(QString)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "yPosRoleChanged(QString)", "yPosRoleChanged(QString)" );
+  QItemModelScatterDataProxySlots_connect_signal("yPosRoleChanged(QString)", "yPosRoleChanged(QString)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "yPosRolePatternChanged(QRegExp)", "yPosRolePatternChanged(QRegExp)" );
+  QItemModelScatterDataProxySlots_connect_signal("yPosRolePatternChanged(QRegExp)", "yPosRolePatternChanged(QRegExp)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "yPosRoleReplaceChanged(QString)", "yPosRoleReplaceChanged(QString)" );
+  QItemModelScatterDataProxySlots_connect_signal("yPosRoleReplaceChanged(QString)", "yPosRoleReplaceChanged(QString)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "zPosRoleChanged(QString)", "zPosRoleChanged(QString)" );
+  QItemModelScatterDataProxySlots_connect_signal("zPosRoleChanged(QString)", "zPosRoleChanged(QString)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "zPosRolePatternChanged(QRegExp)", "zPosRolePatternChanged(QRegExp)" );
+  QItemModelScatterDataProxySlots_connect_signal("zPosRolePatternChanged(QRegExp)", "zPosRolePatternChanged(QRegExp)");
 }
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED )
 {
-  QItemModelScatterDataProxySlots_connect_signal( "zPosRoleReplaceChanged(QString)", "zPosRoleReplaceChanged(QString)" );
+  QItemModelScatterDataProxySlots_connect_signal("zPosRoleReplaceChanged(QString)", "zPosRoleReplaceChanged(QString)");
 }
 
 #pragma ENDDUMP

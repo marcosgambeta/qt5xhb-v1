@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SERIES )
     {
 #endif
       QScatter3DSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSCATTER3DSERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSCATTER3DSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,41 +283,41 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_REMOVEITEMS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QScatterDataProxySlots_connect_signal( const QString & signal, const QString & slot );
+void QScatterDataProxySlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
 {
-  QScatterDataProxySlots_connect_signal( "arrayReset();", "arrayReset();" );
+  QScatterDataProxySlots_connect_signal("arrayReset();", "arrayReset();");
 }
 
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
 {
-  QScatterDataProxySlots_connect_signal( "itemCountChanged(int)", "itemCountChanged(int)" );
+  QScatterDataProxySlots_connect_signal("itemCountChanged(int)", "itemCountChanged(int)");
 }
 
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
 {
-  QScatterDataProxySlots_connect_signal( "itemsAdded(int,int)", "itemsAdded(int,int)" );
+  QScatterDataProxySlots_connect_signal("itemsAdded(int,int)", "itemsAdded(int,int)");
 }
 
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
 {
-  QScatterDataProxySlots_connect_signal( "itemsChanged(int,int)", "itemsChanged(int,int)" );
+  QScatterDataProxySlots_connect_signal("itemsChanged(int,int)", "itemsChanged(int,int)");
 }
 
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
 {
-  QScatterDataProxySlots_connect_signal( "itemsInserted(int,int)", "itemsInserted(int,int)" );
+  QScatterDataProxySlots_connect_signal("itemsInserted(int,int)", "itemsInserted(int,int)");
 }
 
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
 {
-  QScatterDataProxySlots_connect_signal( "itemsRemoved(int,int)", "itemsRemoved(int,int)" );
+  QScatterDataProxySlots_connect_signal("itemsRemoved(int,int)", "itemsRemoved(int,int)");
 }
 
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
 {
-  QScatterDataProxySlots_connect_signal( "seriesChanged(QScatter3DSeries*)", "seriesChanged(QScatter3DSeries*)" );
+  QScatterDataProxySlots_connect_signal("seriesChanged(QScatter3DSeries*)", "seriesChanged(QScatter3DSeries*)");
 }
 
 #pragma ENDDUMP

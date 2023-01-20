@@ -24,16 +24,16 @@ void QHeightMapSurfaceDataProxySlots::heightMapChanged( const QImage & image )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "heightMapChanged(QImage)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "heightMapChanged(QImage)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
-    PHB_ITEM pimage = Qt5xHb::Signals_return_object( (void *) &image, "QIMAGE" );
+    PHB_ITEM pimage = Qt5xHb::Signals_return_object( (void *) &image, "QIMAGE");
 
-    hb_vmEvalBlockV( cb, 2, psender, pimage );
+    hb_vmEvalBlockV(cb, 2, psender, pimage);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pimage );
   }
 }
@@ -42,16 +42,16 @@ void QHeightMapSurfaceDataProxySlots::heightMapFileChanged( const QString & file
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "heightMapFileChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "heightMapFileChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
     PHB_ITEM pfilename = hb_itemPutC( NULL, QSTRINGTOSTRING(filename) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pfilename );
+    hb_vmEvalBlockV(cb, 2, psender, pfilename);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pfilename );
   }
 }
@@ -60,16 +60,16 @@ void QHeightMapSurfaceDataProxySlots::maxXValueChanged( float value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxXValueChanged(float)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxXValueChanged(float)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -78,16 +78,16 @@ void QHeightMapSurfaceDataProxySlots::maxZValueChanged( float value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxZValueChanged(float)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxZValueChanged(float)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -96,16 +96,16 @@ void QHeightMapSurfaceDataProxySlots::minXValueChanged( float value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minXValueChanged(float)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minXValueChanged(float)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
@@ -114,21 +114,21 @@ void QHeightMapSurfaceDataProxySlots::minZValueChanged( float value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minZValueChanged(float)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minZValueChanged(float)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
 
-void QHeightMapSurfaceDataProxySlots_connect_signal( const QString & signal, const QString & slot )
+void QHeightMapSurfaceDataProxySlots_connect_signal(const QString & signal, const QString & slot)
 {
   QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 

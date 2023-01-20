@@ -20,7 +20,7 @@ QValue3DAxisSlots::~QValue3DAxisSlots()
 {
 }
 
-void QValue3DAxisSlots_connect_signal( const QString & signal, const QString & slot )
+void QValue3DAxisSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QValue3DAxis * obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 

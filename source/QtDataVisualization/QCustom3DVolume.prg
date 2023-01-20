@@ -1087,91 +1087,91 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_RENDERSLICE )
   }
 }
 
-void QCustom3DVolumeSlots_connect_signal( const QString & signal, const QString & slot );
+void QCustom3DVolumeSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "alphaMultiplierChanged(float)", "alphaMultiplierChanged(float)" );
+  QCustom3DVolumeSlots_connect_signal("alphaMultiplierChanged(float)", "alphaMultiplierChanged(float)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "colorTableChanged()", "colorTableChanged()" );
+  QCustom3DVolumeSlots_connect_signal("colorTableChanged()", "colorTableChanged()");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "drawSliceFramesChanged(bool)", "drawSliceFramesChanged(bool)" );
+  QCustom3DVolumeSlots_connect_signal("drawSliceFramesChanged(bool)", "drawSliceFramesChanged(bool)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "drawSlicesChanged(bool)", "drawSlicesChanged(bool)" );
+  QCustom3DVolumeSlots_connect_signal("drawSlicesChanged(bool)", "drawSlicesChanged(bool)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "preserveOpacityChanged(bool)", "preserveOpacityChanged(bool)" );
+  QCustom3DVolumeSlots_connect_signal("preserveOpacityChanged(bool)", "preserveOpacityChanged(bool)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceFrameColorChanged(QColor)", "sliceFrameColorChanged(QColor)" );
+  QCustom3DVolumeSlots_connect_signal("sliceFrameColorChanged(QColor)", "sliceFrameColorChanged(QColor)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceFrameGapsChanged(QVector3D)", "sliceFrameGapsChanged(QVector3D)" );
+  QCustom3DVolumeSlots_connect_signal("sliceFrameGapsChanged(QVector3D)", "sliceFrameGapsChanged(QVector3D)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceFrameThicknessesChanged(QVector3D)", "sliceFrameThicknessesChanged(QVector3D)" );
+  QCustom3DVolumeSlots_connect_signal("sliceFrameThicknessesChanged(QVector3D)", "sliceFrameThicknessesChanged(QVector3D)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceFrameWidthsChanged(QVector3D)", "sliceFrameWidthsChanged(QVector3D)" );
+  QCustom3DVolumeSlots_connect_signal("sliceFrameWidthsChanged(QVector3D)", "sliceFrameWidthsChanged(QVector3D)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceIndexXChanged(int)", "sliceIndexXChanged(int)" );
+  QCustom3DVolumeSlots_connect_signal("sliceIndexXChanged(int)", "sliceIndexXChanged(int)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceIndexYChanged(int)", "sliceIndexYChanged(int)" );
+  QCustom3DVolumeSlots_connect_signal("sliceIndexYChanged(int)", "sliceIndexYChanged(int)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "sliceIndexZChanged(int)", "sliceIndexZChanged(int)" );
+  QCustom3DVolumeSlots_connect_signal("sliceIndexZChanged(int)", "sliceIndexZChanged(int)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "textureDepthChanged(int)", "textureDepthChanged(int)" );
+  QCustom3DVolumeSlots_connect_signal("textureDepthChanged(int)", "textureDepthChanged(int)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "textureFormatChanged(QImage::Format)", "textureFormatChanged(QImage::Format)" );
+  QCustom3DVolumeSlots_connect_signal("textureFormatChanged(QImage::Format)", "textureFormatChanged(QImage::Format)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "textureHeightChanged(int)", "textureHeightChanged(int)" );
+  QCustom3DVolumeSlots_connect_signal("textureHeightChanged(int)", "textureHeightChanged(int)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "textureWidthChanged(int)", "textureWidthChanged(int)" );
+  QCustom3DVolumeSlots_connect_signal("textureWidthChanged(int)", "textureWidthChanged(int)");
 }
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
 {
-  QCustom3DVolumeSlots_connect_signal( "useHighDefShaderChanged(bool)", "useHighDefShaderChanged(bool)" );
+  QCustom3DVolumeSlots_connect_signal("useHighDefShaderChanged(bool)", "useHighDefShaderChanged(bool)");
 }
 
 #pragma ENDDUMP

@@ -24,19 +24,19 @@ void QCategory3DAxisSlots::labelsChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelsChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCATEGORY3DAXIS");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QCategory3DAxisSlots_connect_signal( const QString & signal, const QString & slot )
+void QCategory3DAxisSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QCategory3DAxis * obj = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 

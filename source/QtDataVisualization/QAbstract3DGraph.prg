@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER )
     {
 #endif
       QAbstract3DInputHandler * ptr = obj->activeInputHandler();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACT3DINPUTHANDLER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACT3DINPUTHANDLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVETHEME )
     {
 #endif
       Q3DTheme * ptr = obj->activeTheme();
-      Qt5xHb::createReturnQObjectClass( ptr, "Q3DTHEME" );
+      Qt5xHb::createReturnQObjectClass(ptr, "Q3DTHEME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SCENE )
     {
 #endif
       Q3DScene * ptr = obj->scene();
-      Qt5xHb::createReturnQObjectClass( ptr, "Q3DSCENE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "Q3DSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASEINPUTHANDLER )
 }
 
 /*
-QList<QAbstract3DInputHandler *> inputHandlers() const
+QList<QAbstract3DInputHandler*> inputHandlers() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_INPUTHANDLERS )
 {
@@ -1071,28 +1071,28 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_INPUTHANDLERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAbstract3DInputHandler *> list = obj->inputHandlers();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACT3DINPUTHANDLER" );
+      QList<QAbstract3DInputHandler*> list = obj->inputHandlers();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACT3DINPUTHANDLER");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QABSTRACT3DINPUTHANDLER", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QABSTRACT3DINPUTHANDLER", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASETHEME )
 }
 
 /*
-QList<Q3DTheme *> themes() const
+QList<Q3DTheme*> themes() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_THEMES )
 {
@@ -1170,28 +1170,28 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_THEMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<Q3DTheme *> list = obj->themes();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "Q3DTHEME" );
+      QList<Q3DTheme*> list = obj->themes();
+      PHB_DYNS pDynSym = hb_dynsymFindName("Q3DTHEME");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "Q3DTHEME", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "Q3DTHEME", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1383,7 +1383,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASECUSTOMITEM )
 }
 
 /*
-QList<QCustom3DItem *> customItems() const
+QList<QCustom3DItem*> customItems() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_CUSTOMITEMS )
 {
@@ -1395,28 +1395,28 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CUSTOMITEMS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QCustom3DItem *> list = obj->customItems();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QCUSTOM3DITEM" );
+      QList<QCustom3DItem*> list = obj->customItems();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QCUSTOM3DITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCUSTOM3DITEM", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QCUSTOM3DITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDAXIS )
     {
 #endif
       QAbstract3DAxis * ptr = obj->selectedAxis();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACT3DAXIS" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACT3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1516,7 +1516,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM )
     {
 #endif
       QCustom3DItem * ptr = obj->selectedCustomItem();
-      Qt5xHb::createReturnQObjectClass( ptr, "QCUSTOM3DITEM" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QCUSTOM3DITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1576,96 +1576,96 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_HASCONTEXT )
   }
 }
 
-void QAbstract3DGraphSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstract3DGraphSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVEINPUTHANDLERCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "activeInputHandlerChanged(QAbstract3DInputHandler*)", "activeInputHandlerChanged(QAbstract3DInputHandler*)" );
+  QAbstract3DGraphSlots_connect_signal("activeInputHandlerChanged(QAbstract3DInputHandler*)", "activeInputHandlerChanged(QAbstract3DInputHandler*)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONACTIVETHEMECHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "activeThemeChanged(Q3DTheme*)", "activeThemeChanged(Q3DTheme*)" );
+  QAbstract3DGraphSlots_connect_signal("activeThemeChanged(Q3DTheme*)", "activeThemeChanged(Q3DTheme*)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONASPECTRATIOCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "aspectRatioChanged(qreal)", "aspectRatioChanged(qreal)" );
+  QAbstract3DGraphSlots_connect_signal("aspectRatioChanged(qreal)", "aspectRatioChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONCURRENTFPSCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "currentFpsChanged(qreal)", "currentFpsChanged(qreal)" );
+  QAbstract3DGraphSlots_connect_signal("currentFpsChanged(qreal)", "currentFpsChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONHORIZONTALASPECTRATIOCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "horizontalAspectRatioChanged(qreal)", "horizontalAspectRatioChanged(qreal)" );
+  QAbstract3DGraphSlots_connect_signal("horizontalAspectRatioChanged(qreal)", "horizontalAspectRatioChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONLOCALECHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "localeChanged(QLocale)", "localeChanged(QLocale)" );
+  QAbstract3DGraphSlots_connect_signal("localeChanged(QLocale)", "localeChanged(QLocale)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMARGINCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "marginChanged(qreal)", "marginChanged(qreal)" );
+  QAbstract3DGraphSlots_connect_signal("marginChanged(qreal)", "marginChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONMEASUREFPSCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "measureFpsChanged(bool)", "measureFpsChanged(bool)" );
+  QAbstract3DGraphSlots_connect_signal("measureFpsChanged(bool)", "measureFpsChanged(bool)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONOPTIMIZATIONHINTSCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)", "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)" );
+  QAbstract3DGraphSlots_connect_signal("optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)", "optimizationHintsChanged(QAbstract3DGraph::OptimizationHints)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONORTHOPROJECTIONCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "orthoProjectionChanged(bool)", "orthoProjectionChanged(bool)" );
+  QAbstract3DGraphSlots_connect_signal("orthoProjectionChanged(bool)", "orthoProjectionChanged(bool)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONPOLARCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "polarChanged(bool)", "polarChanged(bool)" );
+  QAbstract3DGraphSlots_connect_signal("polarChanged(bool)", "polarChanged(bool)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONQUERIEDGRAPHPOSITIONCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "queriedGraphPositionChanged(QVector3D)", "queriedGraphPositionChanged(QVector3D)" );
+  QAbstract3DGraphSlots_connect_signal("queriedGraphPositionChanged(QVector3D)", "queriedGraphPositionChanged(QVector3D)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONRADIALLABELOFFSETCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "radialLabelOffsetChanged(float)", "radialLabelOffsetChanged(float)" );
+  QAbstract3DGraphSlots_connect_signal("radialLabelOffsetChanged(float)", "radialLabelOffsetChanged(float)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIONCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "reflectionChanged(bool)", "reflectionChanged(bool)" );
+  QAbstract3DGraphSlots_connect_signal("reflectionChanged(bool)", "reflectionChanged(bool)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONREFLECTIVITYCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "reflectivityChanged(qreal)", "reflectivityChanged(qreal)" );
+  QAbstract3DGraphSlots_connect_signal("reflectivityChanged(qreal)", "reflectivityChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTEDELEMENTCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "selectedElementChanged(QAbstract3DGraph::ElementType)", "selectedElementChanged(QAbstract3DGraph::ElementType)" );
+  QAbstract3DGraphSlots_connect_signal("selectedElementChanged(QAbstract3DGraph::ElementType)", "selectedElementChanged(QAbstract3DGraph::ElementType)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSELECTIONMODECHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "selectionModeChanged(QAbstract3DGraph::SelectionFlags)", "selectionModeChanged(QAbstract3DGraph::SelectionFlags)" );
+  QAbstract3DGraphSlots_connect_signal("selectionModeChanged(QAbstract3DGraph::SelectionFlags)", "selectionModeChanged(QAbstract3DGraph::SelectionFlags)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ONSHADOWQUALITYCHANGED )
 {
-  QAbstract3DGraphSlots_connect_signal( "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)", "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)" );
+  QAbstract3DGraphSlots_connect_signal("shadowQualityChanged(QAbstract3DGraph::ShadowQuality)", "shadowQualityChanged(QAbstract3DGraph::ShadowQuality)");
 }
 
 #pragma ENDDUMP

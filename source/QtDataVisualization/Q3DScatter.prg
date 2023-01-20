@@ -122,7 +122,7 @@ HB_FUNC_STATIC( Q3DSCATTER_AXISX )
     {
 #endif
       QValue3DAxis * ptr = obj->axisX();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVALUE3DAXIS" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( Q3DSCATTER_AXISY )
     {
 #endif
       QValue3DAxis * ptr = obj->axisY();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVALUE3DAXIS" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( Q3DSCATTER_AXISZ )
     {
 #endif
       QValue3DAxis * ptr = obj->axisZ();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVALUE3DAXIS" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SELECTEDSERIES )
     {
 #endif
       QScatter3DSeries * ptr = obj->selectedSeries();
-      Qt5xHb::createReturnQObjectClass( ptr, "QSCATTER3DSERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QSCATTER3DSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( Q3DSCATTER_REMOVESERIES )
 }
 
 /*
-QList<QScatter3DSeries *> seriesList() const
+QList<QScatter3DSeries*> seriesList() const
 */
 HB_FUNC_STATIC( Q3DSCATTER_SERIESLIST )
 {
@@ -351,28 +351,28 @@ HB_FUNC_STATIC( Q3DSCATTER_SERIESLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QScatter3DSeries *> list = obj->seriesList();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSCATTER3DSERIES" );
+      QList<QScatter3DSeries*> list = obj->seriesList();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSCATTER3DSERIES");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSCATTER3DSERIES", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSCATTER3DSERIES", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( Q3DSCATTER_RELEASEAXIS )
 }
 
 /*
-QList<QValue3DAxis *> axes() const
+QList<QValue3DAxis*> axes() const
 */
 HB_FUNC_STATIC( Q3DSCATTER_AXES )
 {
@@ -450,28 +450,28 @@ HB_FUNC_STATIC( Q3DSCATTER_AXES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QValue3DAxis *> list = obj->axes();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QVALUE3DAXIS" );
+      QList<QValue3DAxis*> list = obj->axes();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QVALUE3DAXIS");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVALUE3DAXIS", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QVALUE3DAXIS", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -484,26 +484,26 @@ HB_FUNC_STATIC( Q3DSCATTER_AXES )
   }
 }
 
-void Q3DScatterSlots_connect_signal( const QString & signal, const QString & slot );
+void Q3DScatterSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
 {
-  Q3DScatterSlots_connect_signal( "axisXChanged(QValue3DAxis*)", "axisXChanged(QValue3DAxis*)" );
+  Q3DScatterSlots_connect_signal("axisXChanged(QValue3DAxis*)", "axisXChanged(QValue3DAxis*)");
 }
 
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
 {
-  Q3DScatterSlots_connect_signal( "axisYChanged(QValue3DAxis*)", "axisYChanged(QValue3DAxis*)" );
+  Q3DScatterSlots_connect_signal("axisYChanged(QValue3DAxis*)", "axisYChanged(QValue3DAxis*)");
 }
 
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
 {
-  Q3DScatterSlots_connect_signal( "axisZChanged(QValue3DAxis*)", "axisZChanged(QValue3DAxis*)" );
+  Q3DScatterSlots_connect_signal("axisZChanged(QValue3DAxis*)", "axisZChanged(QValue3DAxis*)");
 }
 
 HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
 {
-  Q3DScatterSlots_connect_signal( "selectedSeriesChanged(QScatter3DSeries*)", "selectedSeriesChanged(QScatter3DSeries*)" );
+  Q3DScatterSlots_connect_signal("selectedSeriesChanged(QScatter3DSeries*)", "selectedSeriesChanged(QScatter3DSeries*)");
 }
 
 #pragma ENDDUMP

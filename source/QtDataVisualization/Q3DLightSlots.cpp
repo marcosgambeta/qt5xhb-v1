@@ -25,22 +25,22 @@ void Q3DLightSlots::autoPositionChanged( bool autoPosition )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoPositionChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "autoPositionChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DLIGHT");
     PHB_ITEM pautoPosition = hb_itemPutL( NULL, autoPosition );
 
-    hb_vmEvalBlockV( cb, 2, psender, pautoPosition );
+    hb_vmEvalBlockV(cb, 2, psender, pautoPosition);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pautoPosition );
   }
 }
 #endif
 
-void Q3DLightSlots_connect_signal( const QString & signal, const QString & slot )
+void Q3DLightSlots_connect_signal(const QString & signal, const QString & slot)
 {
   Q3DLight * obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -142,11 +142,11 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCategory3DAxisSlots_connect_signal( const QString & signal, const QString & slot );
+void QCategory3DAxisSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
 {
-  QCategory3DAxisSlots_connect_signal( "labelsChanged()", "labelsChanged()" );
+  QCategory3DAxisSlots_connect_signal("labelsChanged()", "labelsChanged()");
 }
 
 #pragma ENDDUMP

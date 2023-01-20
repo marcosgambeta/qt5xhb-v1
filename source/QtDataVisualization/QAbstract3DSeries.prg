@@ -955,86 +955,86 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHAXISANDANGLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAbstract3DSeriesSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstract3DSeriesSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "baseColorChanged(QColor)", "baseColorChanged(QColor)" );
+  QAbstract3DSeriesSlots_connect_signal("baseColorChanged(QColor)", "baseColorChanged(QColor)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "baseGradientChanged(QLinearGradient)", "baseGradientChanged(QLinearGradient)" );
+  QAbstract3DSeriesSlots_connect_signal("baseGradientChanged(QLinearGradient)", "baseGradientChanged(QLinearGradient)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "colorStyleChanged(Q3DTheme::ColorStyle)", "colorStyleChanged(Q3DTheme::ColorStyle)" );
+  QAbstract3DSeriesSlots_connect_signal("colorStyleChanged(Q3DTheme::ColorStyle)", "colorStyleChanged(Q3DTheme::ColorStyle)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "itemLabelChanged(QString)", "itemLabelChanged(QString)" );
+  QAbstract3DSeriesSlots_connect_signal("itemLabelChanged(QString)", "itemLabelChanged(QString)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "itemLabelFormatChanged(QString)", "itemLabelFormatChanged(QString)" );
+  QAbstract3DSeriesSlots_connect_signal("itemLabelFormatChanged(QString)", "itemLabelFormatChanged(QString)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "itemLabelVisibilityChanged(bool)", "itemLabelVisibilityChanged(bool)" );
+  QAbstract3DSeriesSlots_connect_signal("itemLabelVisibilityChanged(bool)", "itemLabelVisibilityChanged(bool)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "meshChanged(QAbstract3DSeries::Mesh)", "meshChanged(QAbstract3DSeries::Mesh)" );
+  QAbstract3DSeriesSlots_connect_signal("meshChanged(QAbstract3DSeries::Mesh)", "meshChanged(QAbstract3DSeries::Mesh)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "meshRotationChanged(QQuaternion)", "meshRotationChanged(QQuaternion)" );
+  QAbstract3DSeriesSlots_connect_signal("meshRotationChanged(QQuaternion)", "meshRotationChanged(QQuaternion)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "meshSmoothChanged(bool)", "meshSmoothChanged(bool)" );
+  QAbstract3DSeriesSlots_connect_signal("meshSmoothChanged(bool)", "meshSmoothChanged(bool)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "multiHighlightColorChanged(QColor)", "multiHighlightColorChanged(QColor)" );
+  QAbstract3DSeriesSlots_connect_signal("multiHighlightColorChanged(QColor)", "multiHighlightColorChanged(QColor)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "multiHighlightGradientChanged(QLinearGradient)", "multiHighlightGradientChanged(QLinearGradient)" );
+  QAbstract3DSeriesSlots_connect_signal("multiHighlightGradientChanged(QLinearGradient)", "multiHighlightGradientChanged(QLinearGradient)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "nameChanged(QString)", "nameChanged(QString)" );
+  QAbstract3DSeriesSlots_connect_signal("nameChanged(QString)", "nameChanged(QString)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "singleHighlightColorChanged(QColor)", "singleHighlightColorChanged(QColor)" );
+  QAbstract3DSeriesSlots_connect_signal("singleHighlightColorChanged(QColor)", "singleHighlightColorChanged(QColor)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "singleHighlightGradientChanged(QLinearGradient)", "singleHighlightGradientChanged(QLinearGradient)" );
+  QAbstract3DSeriesSlots_connect_signal("singleHighlightGradientChanged(QLinearGradient)", "singleHighlightGradientChanged(QLinearGradient)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "userDefinedMeshChanged(QString)", "userDefinedMeshChanged(QString)" );
+  QAbstract3DSeriesSlots_connect_signal("userDefinedMeshChanged(QString)", "userDefinedMeshChanged(QString)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
 {
-  QAbstract3DSeriesSlots_connect_signal( "visibilityChanged(bool)", "visibilityChanged(bool)" );
+  QAbstract3DSeriesSlots_connect_signal("visibilityChanged(bool)", "visibilityChanged(bool)");
 }
 
 #pragma ENDDUMP

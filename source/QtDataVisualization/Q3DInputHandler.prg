@@ -301,26 +301,26 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMATTARGETENABLED )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void Q3DInputHandlerSlots_connect_signal( const QString & signal, const QString & slot );
+void Q3DInputHandlerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
 {
-  Q3DInputHandlerSlots_connect_signal( "rotationEnabledChanged(bool)", "rotationEnabledChanged(bool)" );
+  Q3DInputHandlerSlots_connect_signal("rotationEnabledChanged(bool)", "rotationEnabledChanged(bool)");
 }
 
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
 {
-  Q3DInputHandlerSlots_connect_signal( "selectionEnabledChanged(bool)", "selectionEnabledChanged(bool)" );
+  Q3DInputHandlerSlots_connect_signal("selectionEnabledChanged(bool)", "selectionEnabledChanged(bool)");
 }
 
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
 {
-  Q3DInputHandlerSlots_connect_signal( "zoomAtTargetEnabledChanged(bool)", "zoomAtTargetEnabledChanged(bool)" );
+  Q3DInputHandlerSlots_connect_signal("zoomAtTargetEnabledChanged(bool)", "zoomAtTargetEnabledChanged(bool)");
 }
 
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
 {
-  Q3DInputHandlerSlots_connect_signal( "zoomEnabledChanged(bool)", "zoomEnabledChanged(bool)" );
+  Q3DInputHandlerSlots_connect_signal("zoomEnabledChanged(bool)", "zoomEnabledChanged(bool)");
 }
 
 #pragma ENDDUMP

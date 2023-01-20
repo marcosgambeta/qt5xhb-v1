@@ -24,21 +24,21 @@ void Q3DObjectSlots::positionChanged( const QVector3D & position )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionChanged(QVector3D)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "positionChanged(QVector3D)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DOBJECT");
-    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QVECTOR3D" );
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QVECTOR3D");
 
-    hb_vmEvalBlockV( cb, 2, psender, pposition );
+    hb_vmEvalBlockV(cb, 2, psender, pposition);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pposition );
   }
 }
 
-void Q3DObjectSlots_connect_signal( const QString & signal, const QString & slot )
+void Q3DObjectSlots_connect_signal(const QString & signal, const QString & slot)
 {
   Q3DObject * obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -24,16 +24,16 @@ void QLogValue3DAxisFormatterSlots::autoSubGridChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoSubGridChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "autoSubGridChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUE3DAXISFORMATTER");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
-    hb_vmEvalBlockV( cb, 2, psender, penabled );
+    hb_vmEvalBlockV(cb, 2, psender, penabled);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( penabled );
   }
 }
@@ -42,16 +42,16 @@ void QLogValue3DAxisFormatterSlots::baseChanged( qreal base )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "baseChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "baseChanged(qreal)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUE3DAXISFORMATTER");
     PHB_ITEM pbase = hb_itemPutND( NULL, base );
 
-    hb_vmEvalBlockV( cb, 2, psender, pbase );
+    hb_vmEvalBlockV(cb, 2, psender, pbase);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pbase );
   }
 }
@@ -60,21 +60,21 @@ void QLogValue3DAxisFormatterSlots::showEdgeLabelsChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "showEdgeLabelsChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "showEdgeLabelsChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUE3DAXISFORMATTER");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
-    hb_vmEvalBlockV( cb, 2, psender, penabled );
+    hb_vmEvalBlockV(cb, 2, psender, penabled);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( penabled );
   }
 }
 
-void QLogValue3DAxisFormatterSlots_connect_signal( const QString & signal, const QString & slot )
+void QLogValue3DAxisFormatterSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 

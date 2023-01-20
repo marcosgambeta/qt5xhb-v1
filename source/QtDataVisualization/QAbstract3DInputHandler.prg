@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
     {
 #endif
       Q3DScene * ptr = obj->scene();
-      Qt5xHb::createReturnQObjectClass( ptr, "Q3DSCENE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "Q3DSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,21 +397,21 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_WHEELEVENT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAbstract3DInputHandlerSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstract3DInputHandlerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 {
-  QAbstract3DInputHandlerSlots_connect_signal( "inputViewChanged(QAbstract3DInputHandler::InputView)", "inputViewChanged(QAbstract3DInputHandler::InputView)" );
+  QAbstract3DInputHandlerSlots_connect_signal("inputViewChanged(QAbstract3DInputHandler::InputView)", "inputViewChanged(QAbstract3DInputHandler::InputView)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 {
-  QAbstract3DInputHandlerSlots_connect_signal( "positionChanged(QPoint)", "positionChanged(QPoint)" );
+  QAbstract3DInputHandlerSlots_connect_signal("positionChanged(QPoint)", "positionChanged(QPoint)");
 }
 
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
 {
-  QAbstract3DInputHandlerSlots_connect_signal( "sceneChanged(Q3DScene*)", "sceneChanged(Q3DScene*)" );
+  QAbstract3DInputHandlerSlots_connect_signal("sceneChanged(Q3DScene*)", "sceneChanged(Q3DScene*)");
 }
 
 #pragma ENDDUMP

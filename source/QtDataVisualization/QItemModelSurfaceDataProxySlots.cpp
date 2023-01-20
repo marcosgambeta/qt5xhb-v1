@@ -24,16 +24,16 @@ void QItemModelSurfaceDataProxySlots::autoColumnCategoriesChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoColumnCategoriesChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "autoColumnCategoriesChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
 
-    hb_vmEvalBlockV( cb, 2, psender, penable );
+    hb_vmEvalBlockV(cb, 2, psender, penable);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( penable );
   }
 }
@@ -42,16 +42,16 @@ void QItemModelSurfaceDataProxySlots::autoRowCategoriesChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoRowCategoriesChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "autoRowCategoriesChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
 
-    hb_vmEvalBlockV( cb, 2, psender, penable );
+    hb_vmEvalBlockV(cb, 2, psender, penable);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( penable );
   }
 }
@@ -60,15 +60,15 @@ void QItemModelSurfaceDataProxySlots::columnCategoriesChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnCategoriesChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "columnCategoriesChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -76,16 +76,16 @@ void QItemModelSurfaceDataProxySlots::columnRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRoleChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "columnRoleChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
-    hb_vmEvalBlockV( cb, 2, psender, prole );
+    hb_vmEvalBlockV(cb, 2, psender, prole);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( prole );
   }
 }
@@ -94,16 +94,16 @@ void QItemModelSurfaceDataProxySlots::columnRolePatternChanged( const QRegExp & 
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRolePatternChanged(QRegExp)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "columnRolePatternChanged(QRegExp)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
-    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP");
 
-    hb_vmEvalBlockV( cb, 2, psender, ppattern );
+    hb_vmEvalBlockV(cb, 2, psender, ppattern);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ppattern );
   }
 }
@@ -112,16 +112,16 @@ void QItemModelSurfaceDataProxySlots::columnRoleReplaceChanged( const QString & 
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "columnRoleReplaceChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "columnRoleReplaceChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
-    hb_vmEvalBlockV( cb, 2, psender, preplace );
+    hb_vmEvalBlockV(cb, 2, psender, preplace);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preplace );
   }
 }
@@ -130,16 +130,16 @@ void QItemModelSurfaceDataProxySlots::itemModelChanged( const QAbstractItemModel
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemModelChanged(QAbstractItemModel)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "itemModelChanged(QAbstractItemModel)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM pitemModel = Qt5xHb::Signals_return_qobject(const_cast<QAbstractItemModel*>(itemModel), "QABSTRACTITEMMODEL");
 
-    hb_vmEvalBlockV( cb, 2, psender, pitemModel );
+    hb_vmEvalBlockV(cb, 2, psender, pitemModel);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pitemModel );
   }
 }
@@ -148,16 +148,16 @@ void QItemModelSurfaceDataProxySlots::multiMatchBehaviorChanged( QItemModelSurfa
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
-    PHB_ITEM pbehavior = hb_itemPutNI( NULL, (int) behavior );
+    PHB_ITEM pbehavior = hb_itemPutNI( NULL, static_cast<int>(behavior) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pbehavior );
+    hb_vmEvalBlockV(cb, 2, psender, pbehavior);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pbehavior );
   }
 }
@@ -166,15 +166,15 @@ void QItemModelSurfaceDataProxySlots::rowCategoriesChanged()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowCategoriesChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowCategoriesChanged()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -182,16 +182,16 @@ void QItemModelSurfaceDataProxySlots::rowRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRoleChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowRoleChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
-    hb_vmEvalBlockV( cb, 2, psender, prole );
+    hb_vmEvalBlockV(cb, 2, psender, prole);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( prole );
   }
 }
@@ -200,16 +200,16 @@ void QItemModelSurfaceDataProxySlots::rowRolePatternChanged( const QRegExp & pat
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRolePatternChanged(QRegExp)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowRolePatternChanged(QRegExp)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
-    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP");
 
-    hb_vmEvalBlockV( cb, 2, psender, ppattern );
+    hb_vmEvalBlockV(cb, 2, psender, ppattern);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ppattern );
   }
 }
@@ -218,16 +218,16 @@ void QItemModelSurfaceDataProxySlots::rowRoleReplaceChanged( const QString & rep
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rowRoleReplaceChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowRoleReplaceChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
-    hb_vmEvalBlockV( cb, 2, psender, preplace );
+    hb_vmEvalBlockV(cb, 2, psender, preplace);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preplace );
   }
 }
@@ -236,16 +236,16 @@ void QItemModelSurfaceDataProxySlots::useModelCategoriesChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "useModelCategoriesChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "useModelCategoriesChanged(bool)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
 
-    hb_vmEvalBlockV( cb, 2, psender, penable );
+    hb_vmEvalBlockV(cb, 2, psender, penable);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( penable );
   }
 }
@@ -254,16 +254,16 @@ void QItemModelSurfaceDataProxySlots::xPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRoleChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xPosRoleChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
-    hb_vmEvalBlockV( cb, 2, psender, prole );
+    hb_vmEvalBlockV(cb, 2, psender, prole);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( prole );
   }
 }
@@ -272,16 +272,16 @@ void QItemModelSurfaceDataProxySlots::xPosRolePatternChanged( const QRegExp & pa
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRolePatternChanged(QRegExp)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xPosRolePatternChanged(QRegExp)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
-    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP");
 
-    hb_vmEvalBlockV( cb, 2, psender, ppattern );
+    hb_vmEvalBlockV(cb, 2, psender, ppattern);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ppattern );
   }
 }
@@ -290,16 +290,16 @@ void QItemModelSurfaceDataProxySlots::xPosRoleReplaceChanged( const QString & re
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRoleReplaceChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xPosRoleReplaceChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
-    hb_vmEvalBlockV( cb, 2, psender, preplace );
+    hb_vmEvalBlockV(cb, 2, psender, preplace);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preplace );
   }
 }
@@ -308,16 +308,16 @@ void QItemModelSurfaceDataProxySlots::yPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRoleChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yPosRoleChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
-    hb_vmEvalBlockV( cb, 2, psender, prole );
+    hb_vmEvalBlockV(cb, 2, psender, prole);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( prole );
   }
 }
@@ -326,16 +326,16 @@ void QItemModelSurfaceDataProxySlots::yPosRolePatternChanged( const QRegExp & pa
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRolePatternChanged(QRegExp)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yPosRolePatternChanged(QRegExp)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
-    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP");
 
-    hb_vmEvalBlockV( cb, 2, psender, ppattern );
+    hb_vmEvalBlockV(cb, 2, psender, ppattern);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ppattern );
   }
 }
@@ -344,16 +344,16 @@ void QItemModelSurfaceDataProxySlots::yPosRoleReplaceChanged( const QString & re
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRoleReplaceChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yPosRoleReplaceChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
-    hb_vmEvalBlockV( cb, 2, psender, preplace );
+    hb_vmEvalBlockV(cb, 2, psender, preplace);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preplace );
   }
 }
@@ -362,16 +362,16 @@ void QItemModelSurfaceDataProxySlots::zPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRoleChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "zPosRoleChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
-    hb_vmEvalBlockV( cb, 2, psender, prole );
+    hb_vmEvalBlockV(cb, 2, psender, prole);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( prole );
   }
 }
@@ -380,16 +380,16 @@ void QItemModelSurfaceDataProxySlots::zPosRolePatternChanged( const QRegExp & pa
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRolePatternChanged(QRegExp)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "zPosRolePatternChanged(QRegExp)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
-    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP");
 
-    hb_vmEvalBlockV( cb, 2, psender, ppattern );
+    hb_vmEvalBlockV(cb, 2, psender, ppattern);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ppattern );
   }
 }
@@ -398,21 +398,21 @@ void QItemModelSurfaceDataProxySlots::zPosRoleReplaceChanged( const QString & re
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRoleReplaceChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "zPosRoleReplaceChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSURFACEDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
-    hb_vmEvalBlockV( cb, 2, psender, preplace );
+    hb_vmEvalBlockV(cb, 2, psender, preplace);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preplace );
   }
 }
 
-void QItemModelSurfaceDataProxySlots_connect_signal( const QString & signal, const QString & slot )
+void QItemModelSurfaceDataProxySlots_connect_signal(const QString & signal, const QString & slot)
 {
   QItemModelSurfaceDataProxy * obj = (QItemModelSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 

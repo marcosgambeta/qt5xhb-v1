@@ -24,16 +24,16 @@ void QItemModelScatterDataProxySlots::itemModelChanged( const QAbstractItemModel
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemModelChanged(QAbstractItemModel)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "itemModelChanged(QAbstractItemModel)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM pitemModel = Qt5xHb::Signals_return_qobject(const_cast<QAbstractItemModel*>(itemModel), "QABSTRACTITEMMODEL");
 
-    hb_vmEvalBlockV( cb, 2, psender, pitemModel );
+    hb_vmEvalBlockV(cb, 2, psender, pitemModel);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pitemModel );
   }
 }
@@ -42,16 +42,16 @@ void QItemModelScatterDataProxySlots::rotationRoleChanged( const QString & role 
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRoleChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rotationRoleChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
-    hb_vmEvalBlockV( cb, 2, psender, prole );
+    hb_vmEvalBlockV(cb, 2, psender, prole);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( prole );
   }
 }
@@ -60,16 +60,16 @@ void QItemModelScatterDataProxySlots::rotationRolePatternChanged( const QRegExp 
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRolePatternChanged(QRegExp)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rotationRolePatternChanged(QRegExp)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
-    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP");
 
-    hb_vmEvalBlockV( cb, 2, psender, ppattern );
+    hb_vmEvalBlockV(cb, 2, psender, ppattern);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ppattern );
   }
 }
@@ -78,16 +78,16 @@ void QItemModelScatterDataProxySlots::rotationRoleReplaceChanged( const QString 
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationRoleReplaceChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rotationRoleReplaceChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
-    hb_vmEvalBlockV( cb, 2, psender, preplace );
+    hb_vmEvalBlockV(cb, 2, psender, preplace);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preplace );
   }
 }
@@ -96,16 +96,16 @@ void QItemModelScatterDataProxySlots::xPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRoleChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xPosRoleChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
-    hb_vmEvalBlockV( cb, 2, psender, prole );
+    hb_vmEvalBlockV(cb, 2, psender, prole);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( prole );
   }
 }
@@ -114,16 +114,16 @@ void QItemModelScatterDataProxySlots::xPosRolePatternChanged( const QRegExp & pa
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRolePatternChanged(QRegExp)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xPosRolePatternChanged(QRegExp)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
-    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP");
 
-    hb_vmEvalBlockV( cb, 2, psender, ppattern );
+    hb_vmEvalBlockV(cb, 2, psender, ppattern);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ppattern );
   }
 }
@@ -132,16 +132,16 @@ void QItemModelScatterDataProxySlots::xPosRoleReplaceChanged( const QString & re
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "xPosRoleReplaceChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xPosRoleReplaceChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
-    hb_vmEvalBlockV( cb, 2, psender, preplace );
+    hb_vmEvalBlockV(cb, 2, psender, preplace);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preplace );
   }
 }
@@ -150,16 +150,16 @@ void QItemModelScatterDataProxySlots::yPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRoleChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yPosRoleChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
-    hb_vmEvalBlockV( cb, 2, psender, prole );
+    hb_vmEvalBlockV(cb, 2, psender, prole);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( prole );
   }
 }
@@ -168,16 +168,16 @@ void QItemModelScatterDataProxySlots::yPosRolePatternChanged( const QRegExp & pa
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRolePatternChanged(QRegExp)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yPosRolePatternChanged(QRegExp)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
-    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP");
 
-    hb_vmEvalBlockV( cb, 2, psender, ppattern );
+    hb_vmEvalBlockV(cb, 2, psender, ppattern);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ppattern );
   }
 }
@@ -186,16 +186,16 @@ void QItemModelScatterDataProxySlots::yPosRoleReplaceChanged( const QString & re
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "yPosRoleReplaceChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yPosRoleReplaceChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
-    hb_vmEvalBlockV( cb, 2, psender, preplace );
+    hb_vmEvalBlockV(cb, 2, psender, preplace);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preplace );
   }
 }
@@ -204,16 +204,16 @@ void QItemModelScatterDataProxySlots::zPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRoleChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "zPosRoleChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
-    hb_vmEvalBlockV( cb, 2, psender, prole );
+    hb_vmEvalBlockV(cb, 2, psender, prole);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( prole );
   }
 }
@@ -222,16 +222,16 @@ void QItemModelScatterDataProxySlots::zPosRolePatternChanged( const QRegExp & pa
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRolePatternChanged(QRegExp)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "zPosRolePatternChanged(QRegExp)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
-    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP");
 
-    hb_vmEvalBlockV( cb, 2, psender, ppattern );
+    hb_vmEvalBlockV(cb, 2, psender, ppattern);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ppattern );
   }
 }
@@ -240,21 +240,21 @@ void QItemModelScatterDataProxySlots::zPosRoleReplaceChanged( const QString & re
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "zPosRoleReplaceChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "zPosRoleReplaceChanged(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
-    hb_vmEvalBlockV( cb, 2, psender, preplace );
+    hb_vmEvalBlockV(cb, 2, psender, preplace);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preplace );
   }
 }
 
-void QItemModelScatterDataProxySlots_connect_signal( const QString & signal, const QString & slot )
+void QItemModelScatterDataProxySlots_connect_signal(const QString & signal, const QString & slot)
 {
   QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -146,14 +146,14 @@ HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
 #endif
 }
 
-void Q3DLightSlots_connect_signal( const QString & signal, const QString & slot );
+void Q3DLightSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( Q3DLIGHT_ONAUTOPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  Q3DLightSlots_connect_signal( "autoPositionChanged(bool)", "autoPositionChanged(bool)" );
+  Q3DLightSlots_connect_signal("autoPositionChanged(bool)", "autoPositionChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

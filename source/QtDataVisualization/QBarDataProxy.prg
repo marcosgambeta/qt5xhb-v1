@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
     {
 #endif
       QBar3DSeries * ptr = obj->series();
-      Qt5xHb::createReturnQObjectClass( ptr, "QBAR3DSERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QBAR3DSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,56 +392,56 @@ HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QBarDataProxySlots_connect_signal( const QString & signal, const QString & slot );
+void QBarDataProxySlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
 {
-  QBarDataProxySlots_connect_signal( "arrayReset()", "arrayReset()" );
+  QBarDataProxySlots_connect_signal("arrayReset()", "arrayReset()");
 }
 
 HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "columnLabelsChanged()", "columnLabelsChanged()" );
+  QBarDataProxySlots_connect_signal("columnLabelsChanged()", "columnLabelsChanged()");
 }
 
 HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "itemChanged(int,int)", "itemChanged(int,int)" );
+  QBarDataProxySlots_connect_signal("itemChanged(int,int)", "itemChanged(int,int)");
 }
 
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "rowCountChanged(int)", "rowCountChanged(int)" );
+  QBarDataProxySlots_connect_signal("rowCountChanged(int)", "rowCountChanged(int)");
 }
 
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "rowLabelsChanged()", "rowLabelsChanged()" );
+  QBarDataProxySlots_connect_signal("rowLabelsChanged()", "rowLabelsChanged()");
 }
 
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
 {
-  QBarDataProxySlots_connect_signal( "rowsAdded(int,int)", "rowsAdded(int,int)" );
+  QBarDataProxySlots_connect_signal("rowsAdded(int,int)", "rowsAdded(int,int)");
 }
 
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "rowsChanged(int,int)", "rowsChanged(int,int)" );
+  QBarDataProxySlots_connect_signal("rowsChanged(int,int)", "rowsChanged(int,int)");
 }
 
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
 {
-  QBarDataProxySlots_connect_signal( "rowsInserted(int,int)", "rowsInserted(int,int)" );
+  QBarDataProxySlots_connect_signal("rowsInserted(int,int)", "rowsInserted(int,int)");
 }
 
 HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
 {
-  QBarDataProxySlots_connect_signal( "rowsRemoved(int,int)", "rowsRemoved(int,int)" );
+  QBarDataProxySlots_connect_signal("rowsRemoved(int,int)", "rowsRemoved(int,int)");
 }
 
 HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
 {
-  QBarDataProxySlots_connect_signal( "seriesChanged(QBar3DSeries*)", "seriesChanged(QBar3DSeries*)" );
+  QBarDataProxySlots_connect_signal("seriesChanged(QBar3DSeries*)", "seriesChanged(QBar3DSeries*)");
 }
 
 #pragma ENDDUMP

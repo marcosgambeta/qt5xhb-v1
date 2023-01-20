@@ -345,7 +345,7 @@ HB_FUNC_STATIC( Q3DBARS_ROWAXIS )
     {
 #endif
       QCategory3DAxis * ptr = obj->rowAxis();
-      Qt5xHb::createReturnQObjectClass( ptr, "QCATEGORY3DAXIS" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QCATEGORY3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( Q3DBARS_COLUMNAXIS )
     {
 #endif
       QCategory3DAxis * ptr = obj->columnAxis();
-      Qt5xHb::createReturnQObjectClass( ptr, "QCATEGORY3DAXIS" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QCATEGORY3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( Q3DBARS_VALUEAXIS )
     {
 #endif
       QValue3DAxis * ptr = obj->valueAxis();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVALUE3DAXIS" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( Q3DBARS_PRIMARYSERIES )
     {
 #endif
       QBar3DSeries * ptr = obj->primarySeries();
-      Qt5xHb::createReturnQObjectClass( ptr, "QBAR3DSERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QBAR3DSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( Q3DBARS_SELECTEDSERIES )
     {
 #endif
       QBar3DSeries * ptr = obj->selectedSeries();
-      Qt5xHb::createReturnQObjectClass( ptr, "QBAR3DSERIES" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QBAR3DSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( Q3DBARS_INSERTSERIES )
 }
 
 /*
-QList<QBar3DSeries *> seriesList() const
+QList<QBar3DSeries*> seriesList() const
 */
 HB_FUNC_STATIC( Q3DBARS_SERIESLIST )
 {
@@ -701,28 +701,28 @@ HB_FUNC_STATIC( Q3DBARS_SERIESLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QBar3DSeries *> list = obj->seriesList();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBAR3DSERIES" );
+      QList<QBar3DSeries*> list = obj->seriesList();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QBAR3DSERIES");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBAR3DSERIES", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBAR3DSERIES", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( Q3DBARS_RELEASEAXIS )
 }
 
 /*
-QList<QAbstract3DAxis *> axes() const
+QList<QAbstract3DAxis*> axes() const
 */
 HB_FUNC_STATIC( Q3DBARS_AXES )
 {
@@ -800,28 +800,28 @@ HB_FUNC_STATIC( Q3DBARS_AXES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAbstract3DAxis *> list = obj->axes();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACT3DAXIS" );
+      QList<QAbstract3DAxis*> list = obj->axes();
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACT3DAXIS");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QABSTRACT3DAXIS", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QABSTRACT3DAXIS", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -834,56 +834,56 @@ HB_FUNC_STATIC( Q3DBARS_AXES )
   }
 }
 
-void Q3DBarsSlots_connect_signal( const QString & signal, const QString & slot );
+void Q3DBarsSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "barSpacingChanged(QSizeF)", "barSpacingChanged(QSizeF)" );
+  Q3DBarsSlots_connect_signal("barSpacingChanged(QSizeF)", "barSpacingChanged(QSizeF)");
 }
 
 HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
 {
-  Q3DBarsSlots_connect_signal( "barSpacingRelativeChanged(bool)", "barSpacingRelativeChanged(bool)" );
+  Q3DBarsSlots_connect_signal("barSpacingRelativeChanged(bool)", "barSpacingRelativeChanged(bool)");
 }
 
 HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "barThicknessChanged(float)", "barThicknessChanged(float)" );
+  Q3DBarsSlots_connect_signal("barThicknessChanged(float)", "barThicknessChanged(float)");
 }
 
 HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "columnAxisChanged(QCategory3DAxis*)", "columnAxisChanged(QCategory3DAxis*)" );
+  Q3DBarsSlots_connect_signal("columnAxisChanged(QCategory3DAxis*)", "columnAxisChanged(QCategory3DAxis*)");
 }
 
 HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "floorLevelChanged(float)", "floorLevelChanged(float)" );
+  Q3DBarsSlots_connect_signal("floorLevelChanged(float)", "floorLevelChanged(float)");
 }
 
 HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "multiSeriesUniformChanged(bool)", "multiSeriesUniformChanged(bool)" );
+  Q3DBarsSlots_connect_signal("multiSeriesUniformChanged(bool)", "multiSeriesUniformChanged(bool)");
 }
 
 HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "primarySeriesChanged(QBar3DSeries*)", "primarySeriesChanged(QBar3DSeries*)" );
+  Q3DBarsSlots_connect_signal("primarySeriesChanged(QBar3DSeries*)", "primarySeriesChanged(QBar3DSeries*)");
 }
 
 HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "rowAxisChanged(QCategory3DAxis*)", "rowAxisChanged(QCategory3DAxis*)" );
+  Q3DBarsSlots_connect_signal("rowAxisChanged(QCategory3DAxis*)", "rowAxisChanged(QCategory3DAxis*)");
 }
 
 HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "selectedSeriesChanged(QBar3DSeries*)", "selectedSeriesChanged(QBar3DSeries*)" );
+  Q3DBarsSlots_connect_signal("selectedSeriesChanged(QBar3DSeries*)", "selectedSeriesChanged(QBar3DSeries*)");
 }
 
 HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
 {
-  Q3DBarsSlots_connect_signal( "valueAxisChanged(QValue3DAxis*)", "valueAxisChanged(QValue3DAxis*)" );
+  Q3DBarsSlots_connect_signal("valueAxisChanged(QValue3DAxis*)", "valueAxisChanged(QValue3DAxis*)");
 }
 
 #pragma ENDDUMP

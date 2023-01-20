@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_FORMATTER )
     {
 #endif
       QValue3DAxisFormatter * ptr = obj->formatter();
-      Qt5xHb::createReturnQObjectClass( ptr, "QVALUE3DAXISFORMATTER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXISFORMATTER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -350,6 +350,6 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETREVERSED )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QValue3DAxisSlots_connect_signal( const QString & signal, const QString & slot );
+void QValue3DAxisSlots_connect_signal(const QString & signal, const QString & slot);
 
 #pragma ENDDUMP

@@ -24,16 +24,16 @@ void QBar3DSeriesSlots::dataProxyChanged( QBarDataProxy * proxy )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataProxyChanged(QBarDataProxy*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataProxyChanged(QBarDataProxy*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBAR3DSERIES");
     PHB_ITEM pproxy = Qt5xHb::Signals_return_qobject(proxy, "QBARDATAPROXY");
 
-    hb_vmEvalBlockV( cb, 2, psender, pproxy );
+    hb_vmEvalBlockV(cb, 2, psender, pproxy);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pproxy );
   }
 }
@@ -42,16 +42,16 @@ void QBar3DSeriesSlots::meshAngleChanged( float angle )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "meshAngleChanged(float)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "meshAngleChanged(float)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBAR3DSERIES");
     PHB_ITEM pangle = hb_itemPutND( NULL, angle );
 
-    hb_vmEvalBlockV( cb, 2, psender, pangle );
+    hb_vmEvalBlockV(cb, 2, psender, pangle);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pangle );
   }
 }
@@ -60,21 +60,21 @@ void QBar3DSeriesSlots::selectedBarChanged( const QPoint & position )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedBarChanged(QPoint)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectedBarChanged(QPoint)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBAR3DSERIES");
-    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT" );
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT");
 
-    hb_vmEvalBlockV( cb, 2, psender, pposition );
+    hb_vmEvalBlockV(cb, 2, psender, pposition);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pposition );
   }
 }
 
-void QBar3DSeriesSlots_connect_signal( const QString & signal, const QString & slot )
+void QBar3DSeriesSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QBar3DSeries * obj = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 

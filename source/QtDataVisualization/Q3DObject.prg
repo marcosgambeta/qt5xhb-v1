@@ -112,7 +112,7 @@ HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
     {
 #endif
       Q3DScene * ptr = obj->parentScene();
-      Qt5xHb::createReturnQObjectClass( ptr, "Q3DSCENE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "Q3DSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,11 +200,11 @@ HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void Q3DObjectSlots_connect_signal( const QString & signal, const QString & slot );
+void Q3DObjectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
 {
-  Q3DObjectSlots_connect_signal( "positionChanged(QVector3D)", "positionChanged(QVector3D)" );
+  Q3DObjectSlots_connect_signal("positionChanged(QVector3D)", "positionChanged(QVector3D)");
 }
 
 #pragma ENDDUMP
