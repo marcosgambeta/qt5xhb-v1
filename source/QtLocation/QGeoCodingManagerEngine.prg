@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
     if( obj != NULL )
     {
       QGeoCodeReply * ptr = obj->geocode( *PQGEOADDRESS(1), *PQGEOSHAPE(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
     }
 #endif
   }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
     if( obj != NULL )
     {
       QGeoCodeReply * ptr = obj->geocode( PQSTRING(1), PINT(2), PINT(3), *PQGEOSHAPE(4) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
     }
 #endif
   }
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_REVERSEGEOCODE )
     {
 #endif
       QGeoCodeReply * ptr = obj->reverseGeocode( *PQGEOCOORDINATE(1), *PQGEOSHAPE(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,23 +257,23 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_LOCALE )
 #endif
 }
 
-void QGeoCodingManagerEngineSlots_connect_signal( const QString & signal, const QString & slot );
+void QGeoCodingManagerEngineSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManagerEngineSlots_connect_signal( "finished(QGeoCodeReply*)", "finished(QGeoCodeReply*)" );
+  QGeoCodingManagerEngineSlots_connect_signal("finished(QGeoCodeReply*)", "finished(QGeoCodeReply*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManagerEngineSlots_connect_signal( "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)", "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" );
+  QGeoCodingManagerEngineSlots_connect_signal("error(QGeoCodeReply*,QGeoCodeReply::Error,QString)", "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

@@ -25,15 +25,15 @@ void QPlaceReplySlots::finished()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEREPLY");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 #endif
@@ -43,24 +43,24 @@ void QPlaceReplySlots::error( QPlaceReply::Error error, const QString & errorStr
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QPlaceReply::Error,QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QPlaceReply::Error,QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEREPLY");
-    PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
 
-    hb_vmEvalBlockV( cb, 3, psender, perror, perrorString );
+    hb_vmEvalBlockV(cb, 3, psender, perror, perrorString);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( perror );
     hb_itemRelease( perrorString );
   }
 }
 #endif
 
-void QPlaceReplySlots_connect_signal( const QString & signal, const QString & slot )
+void QPlaceReplySlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceReply * obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();

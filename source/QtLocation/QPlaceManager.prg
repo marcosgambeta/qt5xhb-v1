@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_GETPLACEDETAILS )
     {
 #endif
       QPlaceDetailsReply * ptr = obj->getPlaceDetails( PQSTRING(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPLACEDETAILSREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPLACEDETAILSREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_GETPLACECONTENT )
     {
 #endif
       QPlaceContentReply * ptr = obj->getPlaceContent( *PQPLACECONTENTREQUEST(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPLACECONTENTREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPLACECONTENTREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SEARCH )
     {
 #endif
       QPlaceSearchReply * ptr = obj->search( *PQPLACESEARCHREQUEST(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPLACESEARCHREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPLACESEARCHREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SEARCHSUGGESTIONS )
     {
 #endif
       QPlaceSearchSuggestionReply * ptr = obj->searchSuggestions( *PQPLACESEARCHREQUEST(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPLACESEARCHSUGGESTIONREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPLACESEARCHSUGGESTIONREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVEPLACE )
     {
 #endif
       QPlaceIdReply * ptr = obj->savePlace( *PQPLACE(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPLACEIDREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_REMOVEPLACE )
     {
 #endif
       QPlaceIdReply * ptr = obj->removePlace( PQSTRING(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPLACEIDREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVECATEGORY )
     {
 #endif
       QPlaceIdReply * ptr = obj->saveCategory( *PQPLACECATEGORY(1), OPQSTRING(2,QString()) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPLACEIDREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_REMOVECATEGORY )
     {
 #endif
       QPlaceIdReply * ptr = obj->removeCategory( PQSTRING(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPLACEIDREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_INITIALIZECATEGORIES )
     {
 #endif
       QPlaceReply * ptr = obj->initializeCategories();
-      Qt5xHb::createReturnQObjectClass( ptr, "QPLACEREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPLACEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -503,30 +503,30 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORIES )
     {
 #endif
       QList<QPlaceCategory> list = obj->childCategories( OPQSTRING(1,QString()) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPLACECATEGORY" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QPLACECATEGORY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QPlaceCategory( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QPlaceCategory(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPLACECATEGORY", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPLACECATEGORY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -555,30 +555,30 @@ HB_FUNC_STATIC( QPLACEMANAGER_LOCALES )
     {
 #endif
       QList<QLocale> list = obj->locales();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QLOCALE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QLOCALE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QLocale( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QLocale(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QLOCALE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QLOCALE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -608,9 +608,8 @@ HB_FUNC_STATIC( QPLACEMANAGER_SETLOCALES )
 #endif
       QList<QLocale> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -698,7 +697,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_MATCHINGPLACES )
     {
 #endif
       QPlaceMatchReply * ptr = obj->matchingPlaces( *PQPLACEMATCHREQUEST(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPLACEMATCHREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPLACEMATCHREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -710,86 +709,86 @@ HB_FUNC_STATIC( QPLACEMANAGER_MATCHINGPLACES )
 #endif
 }
 
-void QPlaceManagerSlots_connect_signal( const QString & signal, const QString & slot );
+void QPlaceManagerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerSlots_connect_signal( "finished(QPlaceReply*)", "finished(QPlaceReply*)" );
+  QPlaceManagerSlots_connect_signal("finished(QPlaceReply*)", "finished(QPlaceReply*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerSlots_connect_signal( "error(QPlaceReply*,QPlaceReply::Error,QString)", "error(QPlaceReply*,QPlaceReply::Error,QString)" );
+  QPlaceManagerSlots_connect_signal("error(QPlaceReply*,QPlaceReply::Error,QString)", "error(QPlaceReply*,QPlaceReply::Error,QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerSlots_connect_signal( "placeAdded(QString)", "placeAdded(QString)" );
+  QPlaceManagerSlots_connect_signal("placeAdded(QString)", "placeAdded(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerSlots_connect_signal( "placeUpdated(QString)", "placeUpdated(QString)" );
+  QPlaceManagerSlots_connect_signal("placeUpdated(QString)", "placeUpdated(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerSlots_connect_signal( "placeRemoved(QString)", "placeRemoved(QString)" );
+  QPlaceManagerSlots_connect_signal("placeRemoved(QString)", "placeRemoved(QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerSlots_connect_signal( "categoryAdded(QPlaceCategory,QString)", "categoryAdded(QPlaceCategory,QString)" );
+  QPlaceManagerSlots_connect_signal("categoryAdded(QPlaceCategory,QString)", "categoryAdded(QPlaceCategory,QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerSlots_connect_signal( "categoryUpdated(QPlaceCategory,QString)", "categoryUpdated(QPlaceCategory,QString)" );
+  QPlaceManagerSlots_connect_signal("categoryUpdated(QPlaceCategory,QString)", "categoryUpdated(QPlaceCategory,QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerSlots_connect_signal( "categoryRemoved(QString,QString)", "categoryRemoved(QString,QString)" );
+  QPlaceManagerSlots_connect_signal("categoryRemoved(QString,QString)", "categoryRemoved(QString,QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerSlots_connect_signal( "dataChanged()", "dataChanged()" );
+  QPlaceManagerSlots_connect_signal("dataChanged()", "dataChanged()");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

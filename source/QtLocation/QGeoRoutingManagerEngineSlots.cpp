@@ -25,16 +25,16 @@ void QGeoRoutingManagerEngineSlots::finished( QGeoRouteReply * reply )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QGeoRouteReply*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(QGeoRouteReply*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOROUTINGMANAGERENGINE");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QGEOROUTEREPLY");
 
-    hb_vmEvalBlockV( cb, 2, psender, preply );
+    hb_vmEvalBlockV(cb, 2, psender, preply);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preply );
   }
 }
@@ -45,18 +45,18 @@ void QGeoRoutingManagerEngineSlots::error( QGeoRouteReply * reply, QGeoRouteRepl
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOROUTINGMANAGERENGINE");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QGEOROUTEREPLY");
-    PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    PHB_ITEM perrorString = hb_itemPutC( NULL, (const char *) errorString.toLatin1().data() );
+    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
+    PHB_ITEM perrorString = hb_itemPutC( NULL, errorString.toLatin1().data() );
 
-    hb_vmEvalBlockV( cb, 4, psender, preply, perror, perrorString );
+    hb_vmEvalBlockV(cb, 4, psender, preply, perror, perrorString);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( preply );
     hb_itemRelease( perror );
     hb_itemRelease( perrorString );
@@ -64,7 +64,7 @@ void QGeoRoutingManagerEngineSlots::error( QGeoRouteReply * reply, QGeoRouteRepl
 }
 #endif
 
-void QGeoRoutingManagerEngineSlots_connect_signal( const QString & signal, const QString & slot )
+void QGeoRoutingManagerEngineSlots_connect_signal(const QString & signal, const QString & slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoRoutingManagerEngine * obj = (QGeoRoutingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();

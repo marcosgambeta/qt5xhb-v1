@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_GEOCODINGMANAGER )
     {
 #endif
       QGeoCodingManager * ptr = obj->geocodingManager();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODINGMANAGER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODINGMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ROUTINGMANAGER )
     {
 #endif
       QGeoRoutingManager * ptr = obj->routingManager();
-      Qt5xHb::createReturnQObjectClass( ptr, "QGEOROUTINGMANAGER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTINGMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_PLACEMANAGER )
     {
 #endif
       QPlaceManager * ptr = obj->placeManager();
-      Qt5xHb::createReturnQObjectClass( ptr, "QPLACEMANAGER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPLACEMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

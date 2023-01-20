@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_CALCULATEROUTE )
     {
 #endif
       QGeoRouteReply * ptr = obj->calculateRoute( *PQGEOROUTEREQUEST(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QGEOROUTEREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_UPDATEROUTE )
     {
 #endif
       QGeoRouteReply * ptr = obj->updateRoute( *PQGEOROUTE(1), *PQGEOCOORDINATE(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QGEOROUTEREPLY" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QGEOROUTEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,23 +462,23 @@ HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_MEASUREMENTSYSTEM )
 #endif
 }
 
-void QGeoRoutingManagerEngineSlots_connect_signal( const QString & signal, const QString & slot );
+void QGeoRoutingManagerEngineSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoutingManagerEngineSlots_connect_signal( "finished(QGeoRouteReply*)", "finished(QGeoRouteReply*)" );
+  QGeoRoutingManagerEngineSlots_connect_signal("finished(QGeoRouteReply*)", "finished(QGeoRouteReply*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
 HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoutingManagerEngineSlots_connect_signal( "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)", "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
+  QGeoRoutingManagerEngineSlots_connect_signal("error(QGeoRouteReply*,QGeoRouteReply::Error,QString)", "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
