@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
     {
 #endif
       QAction * ptr = obj->createAction( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
     {
 #endif
       QActionGroup * ptr = obj->createActionGroup( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QACTIONGROUP" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QACTIONGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
     {
 #endif
       QLayout * ptr = obj->createLayout( PQSTRING(1), OPQOBJECT(2,0), OPQSTRING(3,QString()) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QLAYOUT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QLAYOUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
     {
 #endif
       QWidget * ptr = obj->createWidget( PQSTRING(1), OPQWIDGET(2,0), OPQSTRING(3,QString()) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
     {
 #endif
       QWidget * ptr = obj->load( PQIODEVICE(1), OPQWIDGET(2,0) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
