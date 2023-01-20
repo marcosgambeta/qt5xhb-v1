@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QMETATYPE_TYPENAME )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    hb_retc( (const char *) QMetaType::typeName( PINT(1) ) );
+    hb_retc( QMetaType::typeName( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

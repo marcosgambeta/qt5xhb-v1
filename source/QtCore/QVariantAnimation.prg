@@ -335,11 +335,11 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
   }
 }
 
-void QVariantAnimationSlots_connect_signal( const QString & signal, const QString & slot );
+void QVariantAnimationSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
 {
-  QVariantAnimationSlots_connect_signal( "valueChanged(QVariant)", "valueChanged(QVariant)" );
+  QVariantAnimationSlots_connect_signal("valueChanged(QVariant)", "valueChanged(QVariant)");
 }
 
 #pragma ENDDUMP

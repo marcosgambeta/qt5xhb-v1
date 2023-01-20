@@ -1768,7 +1768,7 @@ HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -1876,30 +1876,30 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
   {
 #endif
     QList<QLocale> list = QLocale::matchingLocales( (QLocale::Language) hb_parni(1), (QLocale::Script) hb_parni(2), (QLocale::Country) hb_parni(3) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QLOCALE" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QLOCALE");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QLocale( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QLocale(list[i]));
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QLOCALE", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QLOCALE", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

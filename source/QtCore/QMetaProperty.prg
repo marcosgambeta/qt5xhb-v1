@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->name() );
+      hb_retc( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_TYPENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->typeName() );
+      hb_retc( obj->typeName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
     if( obj != NULL )
     {
       QObject * ptr = obj->mapping( PINT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
     if( obj != NULL )
     {
       QObject * ptr = obj->mapping( PQSTRING(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
     if( obj != NULL )
     {
       QObject * ptr = obj->mapping( PQWIDGET(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
     if( obj != NULL )
     {
       QObject * ptr = obj->mapping( PQOBJECT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
   }
   else
@@ -279,26 +279,26 @@ HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
   }
 }
 
-void QSignalMapperSlots_connect_signal( const QString & signal, const QString & slot );
+void QSignalMapperSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
 {
-  QSignalMapperSlots_connect_signal( "mapped(int)", "mapped(int)" );
+  QSignalMapperSlots_connect_signal("mapped(int)", "mapped(int)");
 }
 
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
 {
-  QSignalMapperSlots_connect_signal( "mapped(QString)", "mapped(QString)" );
+  QSignalMapperSlots_connect_signal("mapped(QString)", "mapped(QString)");
 }
 
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
 {
-  QSignalMapperSlots_connect_signal( "mapped(QWidget*)", "mapped(QWidget*)" );
+  QSignalMapperSlots_connect_signal("mapped(QWidget*)", "mapped(QWidget*)");
 }
 
 HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
 {
-  QSignalMapperSlots_connect_signal( "mapped(QObject*)", "mapped(QObject*)" );
+  QSignalMapperSlots_connect_signal("mapped(QObject*)", "mapped(QObject*)");
 }
 
 #pragma ENDDUMP

@@ -124,6 +124,9 @@ HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
   }
 }
 
+/*
+const uchar * data() const
+*/
 HB_FUNC_STATIC( QRESOURCE_DATA )
 {
   QResource * obj = (QResource *) Qt5xHb::itemGetPtrStackSelfItem();

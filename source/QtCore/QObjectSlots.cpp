@@ -24,18 +24,18 @@ void QObjectSlots::destroyed( QObject * obj )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "destroyed(QObject*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "destroyed(QObject*)");
 
   if( cb != NULL )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOBJECT");
     PHB_ITEM pobj = Qt5xHb::Signals_return_qobject(obj, "QOBJECT");
 
-    hb_vmEvalBlockV( cb, 2, psender, pobj );
+    hb_vmEvalBlockV(cb, 2, psender, pobj);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pobj );
-    Qt5xHb::Signals_disconnect_signal( object, "destroyed(QObject*)" );
+    Qt5xHb::Signals_disconnect_signal( object, "destroyed(QObject*)");
   }
 }
 
@@ -43,21 +43,21 @@ void QObjectSlots::objectNameChanged( const QString & objectName )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "objectNameChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "objectNameChanged(QString)");
 
   if( cb != NULL )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOBJECT");
     PHB_ITEM pobjectName = hb_itemPutC( NULL, QSTRINGTOSTRING(objectName) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pobjectName );
+    hb_vmEvalBlockV(cb, 2, psender, pobjectName);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pobjectName );
   }
 }
 
-void QObjectSlots_connect_signal( const QString & signal, const QString & slot )
+void QObjectSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QObject * obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 

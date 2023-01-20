@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CONSTDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->constData() );
+      hb_retc( obj->constData() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QBYTEARRAY_DATA2 )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->data() );
+      hb_retc( obj->data() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2296,30 +2296,30 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
     {
 #endif
       QList<QByteArray> list = obj->split( PCHAR(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

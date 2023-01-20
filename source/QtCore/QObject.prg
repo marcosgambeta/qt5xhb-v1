@@ -352,27 +352,27 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
     {
 #endif
       const QObjectList list = obj->children();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -452,30 +452,30 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
     {
 #endif
       QList<QByteArray> list = obj->dynamicPropertyNames();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
     {
 #endif
       QObject * ptr = obj->findChild<QObject *>( OPQSTRING(1,QString()), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -573,28 +573,28 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 
     if( obj != NULL )
     {
-      QList<QObject *> list = obj->findChildren<QObject *>( OPQSTRING(1,QString()), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
+      QList<QObject*> list = obj->findChildren<QObject *>( OPQSTRING(1,QString()), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
     }
@@ -609,28 +609,28 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 
     if( obj != NULL )
     {
-      QList<QObject *> list = obj->findChildren<QObject *>( *PQREGEXP(1), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
+      QList<QObject*> list = obj->findChildren<QObject *>( *PQREGEXP(1), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
     }
@@ -646,28 +646,28 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 
     if( obj != NULL )
     {
-      QList<QObject *> list = obj->findChildren<QObject *>( *PQREGULAREXPRESSION(1), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
+      QList<QObject*> list = obj->findChildren<QObject *>( *PQREGULAREXPRESSION(1), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
     }
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QOBJECT_PARENT )
     {
 #endif
       QObject * ptr = obj->parent();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QOBJECT_THREAD )
     {
 #endif
       QThread * ptr = obj->thread();
-      Qt5xHb::createReturnQObjectClass( ptr, "QTHREAD" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QTHREAD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2117,11 +2117,11 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data() );
 
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPush( hb_stackSelfItem() );
         PHB_ITEM codeblock = hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL );
         hb_vmPush( codeblock );
@@ -2129,7 +2129,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
     }
     else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -2139,17 +2139,17 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data() );
 
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPush( hb_stackSelfItem() );
         hb_vmSend( 0 );
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
     }
     else if( ISNUMPAR(2) && HB_ISNUM(1) )
@@ -2182,17 +2182,17 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data() );
 
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPush( hb_stackSelfItem() );
         hb_vmSend( 0 );
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
     }
     else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -2207,16 +2207,16 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
   }
 }
 
-void QObjectSlots_connect_signal( const QString & signal, const QString & slot );
+void QObjectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
 {
-  QObjectSlots_connect_signal( "destroyed(QObject*)", "destroyed(QObject*)" );
+  QObjectSlots_connect_signal("destroyed(QObject*)", "destroyed(QObject*)");
 }
 
 HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
 {
-  QObjectSlots_connect_signal( "objectNameChanged(QString)", "objectNameChanged(QString)" );
+  QObjectSlots_connect_signal("objectNameChanged(QString)", "objectNameChanged(QString)");
 }
 
 HB_FUNC_STATIC( QOBJECT_NEWFROM )

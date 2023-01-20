@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QCHILDEVENT_CHILD )
     {
 #endif
       QObject * ptr = obj->child();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

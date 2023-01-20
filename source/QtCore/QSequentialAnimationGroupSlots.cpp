@@ -24,21 +24,21 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentAnimationChanged(QAbstractAnimation*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentAnimationChanged(QAbstractAnimation*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSEQUENTIALANIMATIONGROUP");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_qobject(current, "QABSTRACTANIMATION");
 
-    hb_vmEvalBlockV( cb, 2, psender, pcurrent );
+    hb_vmEvalBlockV(cb, 2, psender, pcurrent);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pcurrent );
   }
 }
 
-void QSequentialAnimationGroupSlots_connect_signal( const QString & signal, const QString & slot )
+void QSequentialAnimationGroupSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 

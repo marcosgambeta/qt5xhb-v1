@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
   {
 #endif
     QThreadPool * ptr = QThreadPool::globalInstance();
-    Qt5xHb::createReturnQObjectClass( ptr, "QTHREADPOOL" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QTHREADPOOL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

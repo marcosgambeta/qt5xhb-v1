@@ -24,15 +24,15 @@ void QIODeviceSlots::aboutToClose()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToClose()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToClose()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,16 +40,16 @@ void QIODeviceSlots::bytesWritten( qint64 bytes )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bytesWritten(qint64)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "bytesWritten(qint64)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
     PHB_ITEM pbytes = hb_itemPutNLL( NULL, bytes );
 
-    hb_vmEvalBlockV( cb, 2, psender, pbytes );
+    hb_vmEvalBlockV(cb, 2, psender, pbytes);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pbytes );
   }
 }
@@ -58,15 +58,15 @@ void QIODeviceSlots::readChannelFinished()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readChannelFinished()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "readChannelFinished()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -74,19 +74,19 @@ void QIODeviceSlots::readyRead()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "readyRead()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "readyRead()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QIODeviceSlots_connect_signal( const QString & signal, const QString & slot )
+void QIODeviceSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 

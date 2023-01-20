@@ -24,19 +24,19 @@ void QCoreApplicationSlots::aboutToQuit()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToQuit()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToQuit()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOREAPPLICATION");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QCoreApplicationSlots_connect_signal( const QString & signal, const QString & slot )
+void QCoreApplicationSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QCoreApplication * obj = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 

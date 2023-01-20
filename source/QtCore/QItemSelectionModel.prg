@@ -300,30 +300,30 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
     {
 #endif
       QModelIndexList list = obj->selectedIndexes();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QModelIndex( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QModelIndex(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,30 +350,30 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
     {
 #endif
       QModelIndexList list = obj->selectedRows( OPINT(1,0) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QModelIndex( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QModelIndex(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,30 +400,30 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
     {
 #endif
       QModelIndexList list = obj->selectedColumns( OPINT(1,0) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QModelIndex( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_vmDo(0);
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QModelIndex(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
     {
 #endif
       const QAbstractItemModel * ptr = obj->model();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -652,26 +652,26 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARCURRENTINDEX )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QItemSelectionModelSlots_connect_signal( const QString & signal, const QString & slot );
+void QItemSelectionModelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "selectionChanged(QItemSelection,QItemSelection)", "selectionChanged(QItemSelection,QItemSelection)" );
+  QItemSelectionModelSlots_connect_signal("selectionChanged(QItemSelection,QItemSelection)", "selectionChanged(QItemSelection,QItemSelection)");
 }
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "currentChanged(QModelIndex,QModelIndex)", "currentChanged(QModelIndex,QModelIndex)" );
+  QItemSelectionModelSlots_connect_signal("currentChanged(QModelIndex,QModelIndex)", "currentChanged(QModelIndex,QModelIndex)");
 }
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "currentRowChanged(QModelIndex,QModelIndex)", "currentRowChanged(QModelIndex,QModelIndex)" );
+  QItemSelectionModelSlots_connect_signal("currentRowChanged(QModelIndex,QModelIndex)", "currentRowChanged(QModelIndex,QModelIndex)");
 }
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "currentColumnChanged(QModelIndex,QModelIndex)", "currentColumnChanged(QModelIndex,QModelIndex)" );
+  QItemSelectionModelSlots_connect_signal("currentColumnChanged(QModelIndex,QModelIndex)", "currentColumnChanged(QModelIndex,QModelIndex)");
 }
 
 #pragma ENDDUMP

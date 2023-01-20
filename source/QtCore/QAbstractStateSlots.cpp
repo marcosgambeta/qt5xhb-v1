@@ -24,15 +24,15 @@ void QAbstractStateSlots::entered()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "entered()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "entered()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,19 +40,19 @@ void QAbstractStateSlots::exited()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "exited()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "exited()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QAbstractStateSlots_connect_signal( const QString & signal, const QString & slot )
+void QAbstractStateSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QAbstractState * obj = (QAbstractState *) Qt5xHb::itemGetPtrStackSelfItem();
 

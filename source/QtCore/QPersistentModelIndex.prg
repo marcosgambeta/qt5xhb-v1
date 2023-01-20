@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_MODEL )
     {
 #endif
       const QAbstractItemModel * ptr = obj->model();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -1446,44 +1446,44 @@ HB_FUNC_STATIC( QPROCESS_NULLDEVICE )
 #endif
 }
 
-void QProcessSlots_connect_signal( const QString & signal, const QString & slot );
+void QProcessSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPROCESS_ONERROR )
 {
-  QProcessSlots_connect_signal( "error(QProcess::ProcessError)", "error(QProcess::ProcessError)" );
+  QProcessSlots_connect_signal("error(QProcess::ProcessError)", "error(QProcess::ProcessError)");
 }
 
 HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 {
-  QProcessSlots_connect_signal( "finished(int,QProcess::ExitStatus)", "finished(int,QProcess::ExitStatus)" );
+  QProcessSlots_connect_signal("finished(int,QProcess::ExitStatus)", "finished(int,QProcess::ExitStatus)");
 }
 
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
 {
-  QProcessSlots_connect_signal( "readyReadStandardError()", "readyReadStandardError()" );
+  QProcessSlots_connect_signal("readyReadStandardError()", "readyReadStandardError()");
 }
 
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 {
-  QProcessSlots_connect_signal( "readyReadStandardOutput()", "readyReadStandardOutput()" );
+  QProcessSlots_connect_signal("readyReadStandardOutput()", "readyReadStandardOutput()");
 }
 
 HB_FUNC_STATIC( QPROCESS_ONSTARTED )
 {
-  QProcessSlots_connect_signal( "started()", "started()" );
+  QProcessSlots_connect_signal("started()", "started()");
 }
 
 HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 {
-  QProcessSlots_connect_signal( "stateChanged(QProcess::ProcessState)", "stateChanged(QProcess::ProcessState)" );
+  QProcessSlots_connect_signal("stateChanged(QProcess::ProcessState)", "stateChanged(QProcess::ProcessState)");
 }
 
 HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QProcessSlots_connect_signal( "errorOccurred(QProcess::ProcessError)", "errorOccurred(QProcess::ProcessError)" );
+  QProcessSlots_connect_signal("errorOccurred(QProcess::ProcessError)", "errorOccurred(QProcess::ProcessError)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

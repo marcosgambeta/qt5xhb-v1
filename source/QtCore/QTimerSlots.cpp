@@ -24,19 +24,19 @@ void QTimerSlots::timeout()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "timeout()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "timeout()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTIMER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QTimerSlots_connect_signal( const QString & signal, const QString & slot )
+void QTimerSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 

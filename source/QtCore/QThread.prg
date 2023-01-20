@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QTHREAD_EVENTDISPATCHER )
     {
 #endif
       QAbstractEventDispatcher * ptr = obj->eventDispatcher();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTEVENTDISPATCHER" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTEVENTDISPATCHER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
   {
 #endif
     QThread * ptr = QThread::currentThread();
-    Qt5xHb::createReturnQObjectClass( ptr, "QTHREAD" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QTHREAD");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -558,16 +558,16 @@ HB_FUNC_STATIC( QTHREAD_YIELDCURRENTTHREAD )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QThreadSlots_connect_signal( const QString & signal, const QString & slot );
+void QThreadSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTHREAD_ONFINISHED )
 {
-  QThreadSlots_connect_signal( "finished()", "finished()" );
+  QThreadSlots_connect_signal("finished()", "finished()");
 }
 
 HB_FUNC_STATIC( QTHREAD_ONSTARTED )
 {
-  QThreadSlots_connect_signal( "started()", "started()" );
+  QThreadSlots_connect_signal("started()", "started()");
 }
 
 #pragma ENDDUMP

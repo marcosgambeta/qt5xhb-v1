@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_CATEGORYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->categoryName() );
+      hb_retc( obj->categoryName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

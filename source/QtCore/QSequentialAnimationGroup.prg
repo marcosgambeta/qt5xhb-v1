@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
     {
 #endif
       QPauseAnimation * ptr = obj->addPause( PINT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPAUSEANIMATION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
     {
 #endif
       QAbstractAnimation * ptr = obj->currentAnimation();
-      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTANIMATION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
     {
 #endif
       QPauseAnimation * ptr = obj->insertPause( PINT(1), PINT(2) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QPAUSEANIMATION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,11 +192,11 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
   }
 }
 
-void QSequentialAnimationGroupSlots_connect_signal( const QString & signal, const QString & slot );
+void QSequentialAnimationGroupSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
 {
-  QSequentialAnimationGroupSlots_connect_signal( "currentAnimationChanged(QAbstractAnimation*)", "currentAnimationChanged(QAbstractAnimation*)" );
+  QSequentialAnimationGroupSlots_connect_signal("currentAnimationChanged(QAbstractAnimation*)", "currentAnimationChanged(QAbstractAnimation*)");
 }
 
 #pragma ENDDUMP

@@ -24,17 +24,17 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged(QItemSelection,QItemSelection)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionChanged(QItemSelection,QItemSelection)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
-    PHB_ITEM pselected = Qt5xHb::Signals_return_object( (void *) &selected, "QITEMSELECTION" );
-    PHB_ITEM pdeselected = Qt5xHb::Signals_return_object( (void *) &deselected, "QITEMSELECTION" );
+    PHB_ITEM pselected = Qt5xHb::Signals_return_object( (void *) &selected, "QITEMSELECTION");
+    PHB_ITEM pdeselected = Qt5xHb::Signals_return_object( (void *) &deselected, "QITEMSELECTION");
 
-    hb_vmEvalBlockV( cb, 3, psender, pselected, pdeselected );
+    hb_vmEvalBlockV(cb, 3, psender, pselected, pdeselected);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pselected );
     hb_itemRelease( pdeselected );
   }
@@ -44,17 +44,17 @@ void QItemSelectionModelSlots::currentChanged( const QModelIndex & current, cons
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentChanged(QModelIndex,QModelIndex)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentChanged(QModelIndex,QModelIndex)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
-    PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );
-    PHB_ITEM pprevious = Qt5xHb::Signals_return_object( (void *) &previous, "QMODELINDEX" );
+    PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX");
+    PHB_ITEM pprevious = Qt5xHb::Signals_return_object( (void *) &previous, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
+    hb_vmEvalBlockV(cb, 3, psender, pcurrent, pprevious);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );
   }
@@ -64,17 +64,17 @@ void QItemSelectionModelSlots::currentRowChanged( const QModelIndex & current, c
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentRowChanged(QModelIndex,QModelIndex)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentRowChanged(QModelIndex,QModelIndex)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
-    PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );
-    PHB_ITEM pprevious = Qt5xHb::Signals_return_object( (void *) &previous, "QMODELINDEX" );
+    PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX");
+    PHB_ITEM pprevious = Qt5xHb::Signals_return_object( (void *) &previous, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
+    hb_vmEvalBlockV(cb, 3, psender, pcurrent, pprevious);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );
   }
@@ -84,23 +84,23 @@ void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentColumnChanged(QModelIndex,QModelIndex)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentColumnChanged(QModelIndex,QModelIndex)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
-    PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );
-    PHB_ITEM pprevious = Qt5xHb::Signals_return_object( (void *) &previous, "QMODELINDEX" );
+    PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX");
+    PHB_ITEM pprevious = Qt5xHb::Signals_return_object( (void *) &previous, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
+    hb_vmEvalBlockV(cb, 3, psender, pcurrent, pprevious);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );
   }
 }
 
-void QItemSelectionModelSlots_connect_signal( const QString & signal, const QString & slot )
+void QItemSelectionModelSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) Qt5xHb::itemGetPtrStackSelfItem();
 

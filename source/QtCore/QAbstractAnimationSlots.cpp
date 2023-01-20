@@ -24,16 +24,16 @@ void QAbstractAnimationSlots::currentLoopChanged( int currentLoop )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentLoopChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentLoopChanged(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
     PHB_ITEM pcurrentLoop = hb_itemPutNI( NULL, currentLoop );
 
-    hb_vmEvalBlockV( cb, 2, psender, pcurrentLoop );
+    hb_vmEvalBlockV(cb, 2, psender, pcurrentLoop);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pcurrentLoop );
   }
 }
@@ -42,16 +42,16 @@ void QAbstractAnimationSlots::directionChanged( QAbstractAnimation::Direction ne
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "directionChanged(QAbstractAnimation::Direction)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "directionChanged(QAbstractAnimation::Direction)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
-    PHB_ITEM pnewDirection = hb_itemPutNI( NULL, (int) newDirection );
+    PHB_ITEM pnewDirection = hb_itemPutNI( NULL, static_cast<int>(newDirection) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewDirection );
+    hb_vmEvalBlockV(cb, 2, psender, pnewDirection);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pnewDirection );
   }
 }
@@ -60,15 +60,15 @@ void QAbstractAnimationSlots::finished()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -76,23 +76,23 @@ void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, 
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
-    PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
-    PHB_ITEM poldState = hb_itemPutNI( NULL, (int) oldState );
+    PHB_ITEM pnewState = hb_itemPutNI( NULL, static_cast<int>(newState) );
+    PHB_ITEM poldState = hb_itemPutNI( NULL, static_cast<int>(oldState) );
 
-    hb_vmEvalBlockV( cb, 3, psender, pnewState, poldState );
+    hb_vmEvalBlockV(cb, 3, psender, pnewState, poldState);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pnewState );
     hb_itemRelease( poldState );
   }
 }
 
-void QAbstractAnimationSlots_connect_signal( const QString & signal, const QString & slot )
+void QAbstractAnimationSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QAbstractAnimation * obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 

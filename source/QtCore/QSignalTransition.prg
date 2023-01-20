@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
     {
 #endif
       QObject * ptr = obj->senderObject();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

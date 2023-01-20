@@ -24,16 +24,16 @@ void QSignalMapperSlots::mapped( int arg )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mapped(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mapped(int)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSIGNALMAPPER");
     PHB_ITEM parg = hb_itemPutNI( NULL, arg );
 
-    hb_vmEvalBlockV( cb, 2, psender, parg );
+    hb_vmEvalBlockV(cb, 2, psender, parg);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( parg );
   }
 }
@@ -42,16 +42,16 @@ void QSignalMapperSlots::mapped( const QString & arg )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mapped(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mapped(QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSIGNALMAPPER");
     PHB_ITEM parg = hb_itemPutC( NULL, QSTRINGTOSTRING(arg) );
 
-    hb_vmEvalBlockV( cb, 2, psender, parg );
+    hb_vmEvalBlockV(cb, 2, psender, parg);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( parg );
   }
 }
@@ -60,16 +60,16 @@ void QSignalMapperSlots::mapped( QWidget * arg )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mapped(QWidget*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mapped(QWidget*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSIGNALMAPPER");
     PHB_ITEM parg = Qt5xHb::Signals_return_qobject(arg, "QWIDGET");
 
-    hb_vmEvalBlockV( cb, 2, psender, parg );
+    hb_vmEvalBlockV(cb, 2, psender, parg);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( parg );
   }
 }
@@ -78,21 +78,21 @@ void QSignalMapperSlots::mapped( QObject * arg )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mapped(QObject*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mapped(QObject*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSIGNALMAPPER");
     PHB_ITEM parg = Qt5xHb::Signals_return_qobject(arg, "QOBJECT");
 
-    hb_vmEvalBlockV( cb, 2, psender, parg );
+    hb_vmEvalBlockV(cb, 2, psender, parg);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( parg );
   }
 }
 
-void QSignalMapperSlots_connect_signal( const QString & signal, const QString & slot )
+void QSignalMapperSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_RAWDATA )
     {
 #endif
       int par1;
-      hb_retc( (const char *) obj->rawData( &par1 ) );
+      hb_retc( obj->rawData( &par1 ) );
       hb_storni( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

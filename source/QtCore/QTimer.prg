@@ -325,11 +325,11 @@ HB_FUNC_STATIC( QTIMER_SINGLESHOT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTimerSlots_connect_signal( const QString & signal, const QString & slot );
+void QTimerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTIMER_ONTIMEOUT )
 {
-  QTimerSlots_connect_signal( "timeout()", "timeout()" );
+  QTimerSlots_connect_signal("timeout()", "timeout()");
 }
 
 #pragma ENDDUMP

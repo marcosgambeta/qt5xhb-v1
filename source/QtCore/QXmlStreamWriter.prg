@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_DEVICE )
     {
 #endif
       QIODevice * ptr = obj->device();
-      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

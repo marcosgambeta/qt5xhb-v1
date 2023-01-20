@@ -24,21 +24,21 @@ void QVariantAnimationSlots::valueChanged( const QVariant & value )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged(QVariant)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged(QVariant)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVARIANTANIMATION");
-    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT" );
+    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT");
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pvalue );
   }
 }
 
-void QVariantAnimationSlots_connect_signal( const QString & signal, const QString & slot )
+void QVariantAnimationSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QVariantAnimation * obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 

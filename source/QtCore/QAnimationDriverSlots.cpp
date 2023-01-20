@@ -24,15 +24,15 @@ void QAnimationDriverSlots::started()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "started()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "started()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QANIMATIONDRIVER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,19 +40,19 @@ void QAnimationDriverSlots::stopped()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stopped()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stopped()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QANIMATIONDRIVER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QAnimationDriverSlots_connect_signal( const QString & signal, const QString & slot )
+void QAnimationDriverSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QAnimationDriver * obj = (QAnimationDriver *) Qt5xHb::itemGetPtrStackSelfItem();
 

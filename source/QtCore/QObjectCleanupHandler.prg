@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
     {
 #endif
       QObject * ptr = obj->add( PQOBJECT(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -564,30 +564,30 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS1 )
   {
 #endif
     QList<QByteArray> list = QTimeZone::availableTimeZoneIds();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -611,30 +611,30 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS2 )
   {
 #endif
     QList<QByteArray> list = QTimeZone::availableTimeZoneIds( (QLocale::Country) hb_parni(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -658,30 +658,30 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS3 )
   {
 #endif
     QList<QByteArray> list = QTimeZone::availableTimeZoneIds( PINT(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -773,30 +773,30 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #endif
@@ -808,30 +808,30 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
     QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1), (QLocale::Country) hb_parni(2) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_vmDo(0);
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #endif

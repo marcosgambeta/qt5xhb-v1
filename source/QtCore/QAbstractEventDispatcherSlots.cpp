@@ -24,15 +24,15 @@ void QAbstractEventDispatcherSlots::aboutToBlock()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToBlock()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToBlock()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTEVENTDISPATCHER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,19 +40,19 @@ void QAbstractEventDispatcherSlots::awake()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "awake()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "awake()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTEVENTDISPATCHER");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QAbstractEventDispatcherSlots_connect_signal( const QString & signal, const QString & slot )
+void QAbstractEventDispatcherSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 

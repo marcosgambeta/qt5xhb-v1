@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
     static QTemporaryFile * createNativeFile( QFile & file )
     */
     QTemporaryFile * ptr = QTemporaryFile::createNativeFile( *PQFILE(1) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
     static QTemporaryFile * createNativeFile( const QString & fileName )
     */
     QTemporaryFile * ptr = QTemporaryFile::createNativeFile( PQSTRING(1) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
+    Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
   }
   else
   {

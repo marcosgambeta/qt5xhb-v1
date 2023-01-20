@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
     {
 #endif
       QObject * ptr = obj->eventSource();
-      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

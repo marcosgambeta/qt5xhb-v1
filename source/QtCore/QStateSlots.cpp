@@ -24,15 +24,15 @@ void QStateSlots::finished()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
@@ -40,19 +40,19 @@ void QStateSlots::propertiesAssigned()
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "propertiesAssigned()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "propertiesAssigned()");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATE");
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV(cb, 1, psender);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
   }
 }
 
-void QStateSlots_connect_signal( const QString & signal, const QString & slot )
+void QStateSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QState * obj = (QState *) Qt5xHb::itemGetPtrStackSelfItem();
 
