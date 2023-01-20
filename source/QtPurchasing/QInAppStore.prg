@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
     {
 #endif
       QInAppProduct * ptr = obj->registeredProduct( PQSTRING(1) );
-      Qt5xHb::createReturnQObjectClass( ptr, "QINAPPPRODUCT" );
+      Qt5xHb::createReturnQObjectClass(ptr, "QINAPPPRODUCT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,21 +198,21 @@ HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QInAppStoreSlots_connect_signal( const QString & signal, const QString & slot );
+void QInAppStoreSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 {
-  QInAppStoreSlots_connect_signal( "productRegistered(QInAppProduct*)", "productRegistered(QInAppProduct*)" );
+  QInAppStoreSlots_connect_signal("productRegistered(QInAppProduct*)", "productRegistered(QInAppProduct*)");
 }
 
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 {
-  QInAppStoreSlots_connect_signal( "productUnknown(QInAppProduct::ProductType,QString)", "productUnknown(QInAppProduct::ProductType,QString)" );
+  QInAppStoreSlots_connect_signal("productUnknown(QInAppProduct::ProductType,QString)", "productUnknown(QInAppProduct::ProductType,QString)");
 }
 
 HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
 {
-  QInAppStoreSlots_connect_signal( "transactionReady(QInAppTransaction*)", "transactionReady(QInAppTransaction*)" );
+  QInAppStoreSlots_connect_signal("transactionReady(QInAppTransaction*)", "transactionReady(QInAppTransaction*)");
 }
 
 #pragma ENDDUMP

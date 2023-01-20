@@ -24,16 +24,16 @@ void QInAppStoreSlots::productRegistered( QInAppProduct * product )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "productRegistered(QInAppProduct*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "productRegistered(QInAppProduct*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINAPPSTORE");
     PHB_ITEM pproduct = Qt5xHb::Signals_return_qobject(product, "QINAPPPRODUCT");
 
-    hb_vmEvalBlockV( cb, 2, psender, pproduct );
+    hb_vmEvalBlockV(cb, 2, psender, pproduct);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pproduct );
   }
 }
@@ -42,17 +42,17 @@ void QInAppStoreSlots::productUnknown( QInAppProduct::ProductType productType, c
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "productUnknown(QInAppProduct::ProductType,QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "productUnknown(QInAppProduct::ProductType,QString)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINAPPSTORE");
-    PHB_ITEM pproductType = hb_itemPutNI( NULL, (int) productType );
+    PHB_ITEM pproductType = hb_itemPutNI( NULL, static_cast<int>(productType) );
     PHB_ITEM pidentifier = hb_itemPutC( NULL, QSTRINGTOSTRING(identifier) );
 
-    hb_vmEvalBlockV( cb, 3, psender, pproductType, pidentifier );
+    hb_vmEvalBlockV(cb, 3, psender, pproductType, pidentifier);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( pproductType );
     hb_itemRelease( pidentifier );
   }
@@ -62,21 +62,21 @@ void QInAppStoreSlots::transactionReady( QInAppTransaction * transaction )
 {
   QObject *object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "transactionReady(QInAppTransaction*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "transactionReady(QInAppTransaction*)");
 
   if( cb != NULL )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINAPPSTORE");
     PHB_ITEM ptransaction = Qt5xHb::Signals_return_qobject(transaction, "QINAPPTRANSACTION");
 
-    hb_vmEvalBlockV( cb, 2, psender, ptransaction );
+    hb_vmEvalBlockV(cb, 2, psender, ptransaction);
 
-    hb_itemRelease( psender );
+    hb_itemRelease(psender);
     hb_itemRelease( ptransaction );
   }
 }
 
-void QInAppStoreSlots_connect_signal( const QString & signal, const QString & slot )
+void QInAppStoreSlots_connect_signal(const QString & signal, const QString & slot)
 {
   QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
 
