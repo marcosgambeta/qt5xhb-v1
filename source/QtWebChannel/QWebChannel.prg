@@ -265,14 +265,14 @@ HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
 #endif
 }
 
-void QWebChannelSlots_connect_signal( const QString & signal, const QString & slot );
+void QWebChannelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannelSlots_connect_signal( "blockUpdatesChanged(bool)", "blockUpdatesChanged(bool)" );
+  QWebChannelSlots_connect_signal("blockUpdatesChanged(bool)", "blockUpdatesChanged(bool)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 

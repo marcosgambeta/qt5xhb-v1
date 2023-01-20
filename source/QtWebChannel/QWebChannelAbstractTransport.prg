@@ -103,14 +103,14 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
 #endif
 }
 
-void QWebChannelAbstractTransportSlots_connect_signal( const QString & signal, const QString & slot );
+void QWebChannelAbstractTransportSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannelAbstractTransportSlots_connect_signal( "messageReceived(QJsonObject,QWebChannelAbstractTransport*)", "messageReceived(QJsonObject,QWebChannelAbstractTransport*)" );
+  QWebChannelAbstractTransportSlots_connect_signal("messageReceived(QJsonObject,QWebChannelAbstractTransport*)", "messageReceived(QJsonObject,QWebChannelAbstractTransport*)");
 #else
-  hb_retl( false );
+  hb_retl(false);
 #endif
 }
 
