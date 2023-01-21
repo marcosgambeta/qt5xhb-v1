@@ -16,6 +16,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
+#include <QtNetwork/QNetworkReply>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #include <QtNetworkAuth/QAbstractOAuth>
