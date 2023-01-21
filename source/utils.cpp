@@ -523,7 +523,7 @@ bool isClassDerivedFrom(const char * className1, const char * className2)
 
 /*
 */
-bool isObjectDerivedFrom(int numpar, const QString className)
+bool isObjectDerivedFrom(int numpar, const QString & className)
 {
   PHB_ITEM pItem = hb_param(numpar, HB_IT_OBJECT);
 
