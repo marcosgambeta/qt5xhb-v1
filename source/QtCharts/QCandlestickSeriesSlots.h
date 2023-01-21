@@ -16,6 +16,9 @@
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#include <QtCharts/QCandlestickSet>
+#endif
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QtCharts/QCandlestickSeries>
