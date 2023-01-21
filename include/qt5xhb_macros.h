@@ -184,7 +184,7 @@
 #define RGLBITFIELD( x )                                    hb_retni( static_cast<( GLbitfield >( x ) )
 #define RGLSIZEI( x )                                       hb_retni( static_cast< GLsizei >( x ) )
 #define RQSTRINGLIST( x )                                   Qt5xHb::convert_qstringlist_to_array( x )
-#define RENUM( x )                                          hb_retni( x )
+#define RENUM( x )                                          hb_retni( static_cast<int>( x ) )
 #define RQRGB( x )                                          hb_retni( x )
 #define RQINTPTR( x )                                       hb_retnll( x )
 #define RQUINTPTR( x )                                      hb_retnll( x )
