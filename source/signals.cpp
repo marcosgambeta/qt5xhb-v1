@@ -51,7 +51,7 @@ Signals::~Signals()
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-bool Signals::connectSignal( QObject * object, QString signal, PHB_ITEM codeblock )
+bool Signals::connectSignal( QObject * object, const QString & signal, PHB_ITEM codeblock )
 {
   bool found = false;
   bool result = false;
@@ -103,7 +103,7 @@ bool Signals::connectSignal( QObject * object, QString signal, PHB_ITEM codebloc
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-bool Signals::disconnectSignal( QObject * object, QString signal )
+bool Signals::disconnectSignal( QObject * object, const QString & signal )
 {
   bool result = false;
 
@@ -132,7 +132,7 @@ bool Signals::disconnectSignal( QObject * object, QString signal )
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-bool Signals::isSignalConnected( QObject * object, QString signal )
+bool Signals::isSignalConnected( QObject * object, const QString & signal )
 {
   bool result = false;
 
@@ -154,7 +154,7 @@ bool Signals::isSignalConnected( QObject * object, QString signal )
   Retorna o codeblock de um determinado objeto e sinal
 */
 
-PHB_ITEM Signals::returnCodeblock( QObject * object, QString signal )
+PHB_ITEM Signals::returnCodeblock( QObject * object, const QString & signal )
 {
   PHB_ITEM result = NULL;
 
@@ -228,7 +228,7 @@ void Signals::disconnectAllSignals( QObject * obj, bool children )
 /*
   conecta/desconecta sinais e retorna resultado (true/false) (para uso nas classes Q*Slots)
 */
-bool Signals::connectionDisconnection( QObject * s, QString signal, QString slot )
+bool Signals::connectionDisconnection( QObject * s, const QString & signal, const QString & slot )
 {
   bool result = false;
 
@@ -367,22 +367,22 @@ int Signals::active()
 
 namespace Qt5xHb
 {
-  bool Signals_connect_signal( QObject * object, QString signal, PHB_ITEM codeblock )
+  bool Signals_connect_signal( QObject * object, const QString & signal, PHB_ITEM codeblock )
   {
     return s_signals->connectSignal( object, signal, codeblock );
   }
 
-  bool Signals_disconnect_signal( QObject * object, QString signal )
+  bool Signals_disconnect_signal( QObject * object, const QString & signal )
   {
     return s_signals->disconnectSignal( object, signal );
   }
 
-  bool Signals_is_signal_connected( QObject * object, QString signal )
+  bool Signals_is_signal_connected( QObject * object, const QString & signal )
   {
     return s_signals->isSignalConnected( object, signal );
   }
 
-  PHB_ITEM Signals_return_codeblock( QObject * object, QString signal )
+  PHB_ITEM Signals_return_codeblock( QObject * object, const QString & signal )
   {
     return s_signals->returnCodeblock( object, signal );
   }
@@ -392,7 +392,7 @@ namespace Qt5xHb
     s_signals->disconnectAllSignals( obj, children );
   }
 
-  bool Signals_connection_disconnection( QObject * s, QString signal, QString slot )
+  bool Signals_connection_disconnection( QObject * s, const QString & signal, const QString & slot )
   {
     return s_signals->connectionDisconnection( s, signal, slot );
   }
