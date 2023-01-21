@@ -16,6 +16,9 @@
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#include <QtGamepad/QGamepad>
+#endif
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 #include <QtGamepad/QGamepadKeyNavigation>
