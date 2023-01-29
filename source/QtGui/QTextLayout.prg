@@ -145,9 +145,8 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DELETE )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
-    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
     hb_itemRelease(ptr);
   }
 
