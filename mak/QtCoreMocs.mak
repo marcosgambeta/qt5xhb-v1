@@ -44,7 +44,7 @@ $(QT5XHB_OBJ_DIR)/QTimerSlotsMoc.cpp                    : $(QT5XHB_SRC_DIR)/QtCo
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QVariantAnimationSlotsMoc.cpp         : $(QT5XHB_SRC_DIR)/QtCore/QVariantAnimationSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/HAbstractListModelMoc.cpp             : $(QT5XHB_SRC_DIR)/QtCore/HAbstractListModel.h
+$(QT5XHB_OBJ_DIR)/HAbstractListModelMoc.cpp             : $(QT5XHB_SRC_DIR)/QtCore/HAbstractListModel.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/HAbstractTableModelMoc.cpp            : $(QT5XHB_SRC_DIR)/QtCore/HAbstractTableModel.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
