@@ -6,7 +6,7 @@
 
 */
 
-#include "HAbstractTableModelV2.h"
+#include "HAbstractTableModelV2.hpp"
 
 /*
   método construtor
