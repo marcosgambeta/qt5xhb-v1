@@ -6,7 +6,7 @@
 
 */
 
-#include "signals.h"
+#include "signals.hpp"
 
 static Signals *s_signals = NULL;
 
