@@ -164,5 +164,5 @@ $(QT5XHB_OBJ_DIR)/QWizardSlotsMoc.cpp                   : $(QT5XHB_SRC_DIR)/QtWi
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QWizardPageSlotsMoc.cpp               : $(QT5XHB_SRC_DIR)/QtWidgets/QWizardPageSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/HStyledItemDelegateMoc.cpp            : $(QT5XHB_SRC_DIR)/QtWidgets/HStyledItemDelegate.h
+$(QT5XHB_OBJ_DIR)/HStyledItemDelegateMoc.cpp            : $(QT5XHB_SRC_DIR)/QtWidgets/HStyledItemDelegate.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@

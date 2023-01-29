@@ -6,7 +6,7 @@
 
 */
 
-#include "HStyledItemDelegate.h"
+#include "HStyledItemDelegate.hpp"
 
 HStyledItemDelegate::HStyledItemDelegate( QObject *parent ) : QStyledItemDelegate( parent )
 {
