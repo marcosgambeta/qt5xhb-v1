@@ -6,9 +6,9 @@
 
 */
 
-#include <hbapi.h>
+#include <QtCore/Qt>
 
-#include <Qt>
+#include <hbapi.h>
 
 HB_FUNC( Q_OS_WIN )
 {
