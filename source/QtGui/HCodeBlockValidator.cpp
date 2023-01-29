@@ -6,7 +6,7 @@
 
 */
 
-#include "HCodeBlockValidator.h"
+#include "HCodeBlockValidator.hpp"
 
 HCodeBlockValidator::HCodeBlockValidator( QObject *parent ) :
     QValidator( parent )
