@@ -11,8 +11,8 @@
 
 #include <QtCore/QObject>
 #include <QtCore/QStringList>
-#include <QtWidgets/QWidget>
 #include <QtCore/QVariant>
+#include <QtWidgets/QWidget>
 
 namespace Qt5xHb
 {
