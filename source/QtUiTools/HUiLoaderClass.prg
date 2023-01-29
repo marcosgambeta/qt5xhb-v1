@@ -37,7 +37,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include "HUiLoader.h"
+#include "HUiLoader.hpp"
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

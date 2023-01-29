@@ -6,7 +6,7 @@
 
 */
 
-#include "HUiLoader.h"
+#include "HUiLoader.hpp"
 
 HUiLoader::HUiLoader( QObject *parent ) : QUiLoader( parent )
 {
