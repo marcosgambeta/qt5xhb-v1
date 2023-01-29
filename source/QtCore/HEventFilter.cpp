@@ -6,7 +6,7 @@
 
 */
 
-#include "HEventFilter.h"
+#include "HEventFilter.hpp"
 
 HEventFilter::HEventFilter( QObject *parent ) : QObject( parent )
 {

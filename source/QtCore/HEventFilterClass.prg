@@ -30,7 +30,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include "HEventFilter.h"
+#include "HEventFilter.hpp"
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
