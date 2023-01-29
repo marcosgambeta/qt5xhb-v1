@@ -6,7 +6,7 @@
 
 */
 
-#include "events.h"
+#include "events.hpp"
 
 static Events * s_events = NULL;
 
