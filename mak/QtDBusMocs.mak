@@ -4,11 +4,11 @@
 # Copyright (C) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT5XHB_OBJ_DIR)/QDBusConnectionInterfaceSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtDBus/QDBusConnectionInterfaceSlots.h
+$(QT5XHB_OBJ_DIR)/QDBusConnectionInterfaceSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtDBus/QDBusConnectionInterfaceSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QDBusPendingCallWatcherSlotsMoc.cpp  : $(QT5XHB_SRC_DIR)/QtDBus/QDBusPendingCallWatcherSlots.h
+$(QT5XHB_OBJ_DIR)/QDBusPendingCallWatcherSlotsMoc.cpp  : $(QT5XHB_SRC_DIR)/QtDBus/QDBusPendingCallWatcherSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QDBusServerSlotsMoc.cpp              : $(QT5XHB_SRC_DIR)/QtDBus/QDBusServerSlots.h
+$(QT5XHB_OBJ_DIR)/QDBusServerSlotsMoc.cpp              : $(QT5XHB_SRC_DIR)/QtDBus/QDBusServerSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QDBusServiceWatcherSlotsMoc.cpp      : $(QT5XHB_SRC_DIR)/QtDBus/QDBusServiceWatcherSlots.h
+$(QT5XHB_OBJ_DIR)/QDBusServiceWatcherSlotsMoc.cpp      : $(QT5XHB_SRC_DIR)/QtDBus/QDBusServiceWatcherSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
