@@ -4,21 +4,21 @@
 # Copyright (C) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT5XHB_OBJ_DIR)/QGeoCodeReplySlotsMoc.cpp            : $(QT5XHB_SRC_DIR)/QtLocation/QGeoCodeReplySlots.h
+$(QT5XHB_OBJ_DIR)/QGeoCodeReplySlotsMoc.cpp            : $(QT5XHB_SRC_DIR)/QtLocation/QGeoCodeReplySlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QGeoCodingManagerSlotsMoc.cpp        : $(QT5XHB_SRC_DIR)/QtLocation/QGeoCodingManagerSlots.h
+$(QT5XHB_OBJ_DIR)/QGeoCodingManagerSlotsMoc.cpp        : $(QT5XHB_SRC_DIR)/QtLocation/QGeoCodingManagerSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QGeoCodingManagerEngineSlotsMoc.cpp  : $(QT5XHB_SRC_DIR)/QtLocation/QGeoCodingManagerEngineSlots.h
+$(QT5XHB_OBJ_DIR)/QGeoCodingManagerEngineSlotsMoc.cpp  : $(QT5XHB_SRC_DIR)/QtLocation/QGeoCodingManagerEngineSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QGeoRouteReplySlotsMoc.cpp           : $(QT5XHB_SRC_DIR)/QtLocation/QGeoRouteReplySlots.h
+$(QT5XHB_OBJ_DIR)/QGeoRouteReplySlotsMoc.cpp           : $(QT5XHB_SRC_DIR)/QtLocation/QGeoRouteReplySlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QGeoRoutingManagerSlotsMoc.cpp       : $(QT5XHB_SRC_DIR)/QtLocation/QGeoRoutingManagerSlots.h
+$(QT5XHB_OBJ_DIR)/QGeoRoutingManagerSlotsMoc.cpp       : $(QT5XHB_SRC_DIR)/QtLocation/QGeoRoutingManagerSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QGeoRoutingManagerEngineSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtLocation/QGeoRoutingManagerEngineSlots.h
+$(QT5XHB_OBJ_DIR)/QGeoRoutingManagerEngineSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtLocation/QGeoRoutingManagerEngineSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QPlaceManagerSlotsMoc.cpp            : $(QT5XHB_SRC_DIR)/QtLocation/QPlaceManagerSlots.h
+$(QT5XHB_OBJ_DIR)/QPlaceManagerSlotsMoc.cpp            : $(QT5XHB_SRC_DIR)/QtLocation/QPlaceManagerSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QPlaceManagerEngineSlotsMoc.cpp      : $(QT5XHB_SRC_DIR)/QtLocation/QPlaceManagerEngineSlots.h
+$(QT5XHB_OBJ_DIR)/QPlaceManagerEngineSlotsMoc.cpp      : $(QT5XHB_SRC_DIR)/QtLocation/QPlaceManagerEngineSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QPlaceReplySlotsMoc.cpp              : $(QT5XHB_SRC_DIR)/QtLocation/QPlaceReplySlots.h
+$(QT5XHB_OBJ_DIR)/QPlaceReplySlotsMoc.cpp              : $(QT5XHB_SRC_DIR)/QtLocation/QPlaceReplySlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
