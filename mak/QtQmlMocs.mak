@@ -4,13 +4,13 @@
 # Copyright (C) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT5XHB_OBJ_DIR)/QQmlApplicationEngineSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtQml/QQmlApplicationEngineSlots.h
+$(QT5XHB_OBJ_DIR)/QQmlApplicationEngineSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtQml/QQmlApplicationEngineSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QQmlComponentSlotsMoc.cpp         : $(QT5XHB_SRC_DIR)/QtQml/QQmlComponentSlots.h
+$(QT5XHB_OBJ_DIR)/QQmlComponentSlotsMoc.cpp         : $(QT5XHB_SRC_DIR)/QtQml/QQmlComponentSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QQmlEngineSlotsMoc.cpp            : $(QT5XHB_SRC_DIR)/QtQml/QQmlEngineSlots.h
+$(QT5XHB_OBJ_DIR)/QQmlEngineSlotsMoc.cpp            : $(QT5XHB_SRC_DIR)/QtQml/QQmlEngineSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QQmlExpressionSlotsMoc.cpp        : $(QT5XHB_SRC_DIR)/QtQml/QQmlExpressionSlots.h
+$(QT5XHB_OBJ_DIR)/QQmlExpressionSlotsMoc.cpp        : $(QT5XHB_SRC_DIR)/QtQml/QQmlExpressionSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QQmlPropertyMapSlotsMoc.cpp       : $(QT5XHB_SRC_DIR)/QtQml/QQmlPropertyMapSlots.h
+$(QT5XHB_OBJ_DIR)/QQmlPropertyMapSlotsMoc.cpp       : $(QT5XHB_SRC_DIR)/QtQml/QQmlPropertyMapSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
