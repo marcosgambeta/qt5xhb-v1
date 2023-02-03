@@ -4,7 +4,7 @@
 # Copyright (C) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT5XHB_OBJ_DIR)/QTextToSpeechEngineSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtTextToSpeech/QTextToSpeechEngineSlots.h
+$(QT5XHB_OBJ_DIR)/QTextToSpeechEngineSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtTextToSpeech/QTextToSpeechEngineSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QTextToSpeechSlotsMoc.cpp       : $(QT5XHB_SRC_DIR)/QtTextToSpeech/QTextToSpeechSlots.h
+$(QT5XHB_OBJ_DIR)/QTextToSpeechSlotsMoc.cpp       : $(QT5XHB_SRC_DIR)/QtTextToSpeech/QTextToSpeechSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
