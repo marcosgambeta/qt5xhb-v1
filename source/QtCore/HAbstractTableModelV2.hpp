@@ -11,9 +11,9 @@
 
 #include <QtCore/QAbstractTableModel>
 
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
+#include "qt5xhb_common.hpp"
+#include "qt5xhb_macros.hpp"
+#include "qt5xhb_utils.hpp"
 
 class HAbstractTableModelV2 : public QAbstractTableModel
 {
