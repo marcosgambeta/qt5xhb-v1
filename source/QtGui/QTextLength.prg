@@ -50,9 +50,9 @@ RETURN
 #include <QtGui/QTextLength>
 #endif
 
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
+#include "qt5xhb_common.hpp"
+#include "qt5xhb_macros.hpp"
+#include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
 #include <QtGui/QTextLength>
