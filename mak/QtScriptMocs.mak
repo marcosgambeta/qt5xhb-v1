@@ -4,5 +4,5 @@
 # Copyright (C) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT5XHB_OBJ_DIR)/QScriptEngineSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtScript/QScriptEngineSlots.h
+$(QT5XHB_OBJ_DIR)/QScriptEngineSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtScript/QScriptEngineSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
