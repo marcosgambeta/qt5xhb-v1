@@ -4,7 +4,7 @@
 # Copyright (C) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT5XHB_OBJ_DIR)/QQuickWebEngineProfileSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtWebEngine/QQuickWebEngineProfileSlots.h
+$(QT5XHB_OBJ_DIR)/QQuickWebEngineProfileSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtWebEngine/QQuickWebEngineProfileSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QQuickWebEngineScriptSlotsMoc.cpp  : $(QT5XHB_SRC_DIR)/QtWebEngine/QQuickWebEngineScriptSlots.h
+$(QT5XHB_OBJ_DIR)/QQuickWebEngineScriptSlotsMoc.cpp  : $(QT5XHB_SRC_DIR)/QtWebEngine/QQuickWebEngineScriptSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
