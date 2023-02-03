@@ -4,7 +4,7 @@
 # Copyright (C) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT5XHB_OBJ_DIR)/QSqlDriverSlotsMoc.cpp     : $(QT5XHB_SRC_DIR)/QtSql/QSqlDriverSlots.h
+$(QT5XHB_OBJ_DIR)/QSqlDriverSlotsMoc.cpp     : $(QT5XHB_SRC_DIR)/QtSql/QSqlDriverSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QSqlTableModelSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtSql/QSqlTableModelSlots.h
+$(QT5XHB_OBJ_DIR)/QSqlTableModelSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtSql/QSqlTableModelSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
