@@ -4,7 +4,7 @@
 # Copyright (C) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT5XHB_OBJ_DIR)/QWebSocketSlotsMoc.cpp       : $(QT5XHB_SRC_DIR)/QtWebSockets/QWebSocketSlots.h
+$(QT5XHB_OBJ_DIR)/QWebSocketSlotsMoc.cpp       : $(QT5XHB_SRC_DIR)/QtWebSockets/QWebSocketSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QWebSocketServerSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtWebSockets/QWebSocketServerSlots.h
+$(QT5XHB_OBJ_DIR)/QWebSocketServerSlotsMoc.cpp : $(QT5XHB_SRC_DIR)/QtWebSockets/QWebSocketServerSlots.hpp
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
