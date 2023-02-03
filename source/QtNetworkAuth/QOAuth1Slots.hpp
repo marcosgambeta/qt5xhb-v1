@@ -21,10 +21,10 @@
 #include <QtNetworkAuth/QOAuth1>
 #endif
 
-#include "qt5xhb_common.h"
-#include "qt5xhb_macros.h"
-#include "qt5xhb_utils.h"
-#include "qt5xhb_signals.h"
+#include "qt5xhb_common.hpp"
+#include "qt5xhb_macros.hpp"
+#include "qt5xhb_utils.hpp"
+#include "qt5xhb_signals.hpp"
 
 class QOAuth1Slots: public QObject
 {
