@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QUNDOVIEW_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
-    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
   }
 
