@@ -12,7 +12,7 @@
 
 #include "QAbstractTransitionSlots.hpp"
 
-QAbstractTransitionSlots::QAbstractTransitionSlots( QObject *parent ) : QObject( parent )
+QAbstractTransitionSlots::QAbstractTransitionSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QAbstractTransitionSlots::~QAbstractTransitionSlots()
 
 void QAbstractTransitionSlots::triggered()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "triggered()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTTRANSITION");
 
@@ -36,15 +36,15 @@ void QAbstractTransitionSlots::triggered()
   }
 }
 
-void QAbstractTransitionSlots_connect_signal(const QString & signal, const QString & slot)
+void QAbstractTransitionSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAbstractTransitionSlots * s = QCoreApplication::instance()->findChild<QAbstractTransitionSlots*>();
+    QAbstractTransitionSlots *s = QCoreApplication::instance()->findChild<QAbstractTransitionSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAbstractTransitionSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QFileSystemWatcherSlots: public QObject
+class QFileSystemWatcherSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QFileSystemWatcherSlots( QObject *parent = 0 );
+public:
+  QFileSystemWatcherSlots(QObject *parent = 0);
   ~QFileSystemWatcherSlots();
-  public slots:
-  void directoryChanged( const QString & path );
-  void fileChanged( const QString & path );
+public slots:
+  void directoryChanged(const QString &path);
+  void fileChanged(const QString &path);
 };
 
 #endif /* QFILESYSTEMWATCHERSLOTS_H */

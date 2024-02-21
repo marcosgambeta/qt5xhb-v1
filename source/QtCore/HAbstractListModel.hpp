@@ -27,11 +27,10 @@ class HAbstractListModel : public QAbstractListModel
   Q_OBJECT
 
 public:
-  HAbstractListModel( QObject * parent = NULL );
+  HAbstractListModel(QObject *parent = NULL);
   virtual ~HAbstractListModel();
 
 private:
-
   /*
    linhas
   */
@@ -99,82 +98,81 @@ private:
   PHB_ITEM m_setDataCB;
 
 public:
-
   /*
    linhas
   */
 
-  void setRowCountCB( PHB_ITEM block );
+  void setRowCountCB(PHB_ITEM block);
 
   /*
    células
   */
 
-  void setCB( int role, PHB_ITEM block );
-  void setDisplayRoleCB( PHB_ITEM block );                       // Qt::DisplayRole
-  void setDecorationRoleCB( PHB_ITEM block );                    // Qt::DecorationRole
-  void setEditRoleCB( PHB_ITEM block );                          // Qt::EditRole
-  void setToolTipRoleCB( PHB_ITEM block );                       // Qt::ToolTipRole
-  void setStatusTipRoleCB( PHB_ITEM block );                     // Qt::StatusTipRole
-  void setWhatsThisRoleCB( PHB_ITEM block );                     // Qt::WhatsThisRole
-  void setSizeHintRoleCB( PHB_ITEM block );                      // Qt::SizeHintRole
-  void setFontRoleCB( PHB_ITEM block );                          // Qt::FontRole
-  void setTextAlignmentRoleCB( PHB_ITEM block );                 // Qt::TextAlignmentRole
-  void setBackgroundRoleCB( PHB_ITEM block );                    // Qt::BackgroundRole / Qt::BackgroundColorRole
-  void setForegroundRoleCB( PHB_ITEM block );                    // Qt::ForegroundRole / Qt::TextColorRole
-  void setCheckStateRoleCB( PHB_ITEM block );                    // Qt::CheckStateRole
-  void setAccessibleTextRoleCB( PHB_ITEM block );                // Qt::AccessibleTextRole
-  void setAccessibleDescriptionRoleCB( PHB_ITEM block );         // Qt::AccessibleDescriptionRole
+  void setCB(int role, PHB_ITEM block);
+  void setDisplayRoleCB(PHB_ITEM block);               // Qt::DisplayRole
+  void setDecorationRoleCB(PHB_ITEM block);            // Qt::DecorationRole
+  void setEditRoleCB(PHB_ITEM block);                  // Qt::EditRole
+  void setToolTipRoleCB(PHB_ITEM block);               // Qt::ToolTipRole
+  void setStatusTipRoleCB(PHB_ITEM block);             // Qt::StatusTipRole
+  void setWhatsThisRoleCB(PHB_ITEM block);             // Qt::WhatsThisRole
+  void setSizeHintRoleCB(PHB_ITEM block);              // Qt::SizeHintRole
+  void setFontRoleCB(PHB_ITEM block);                  // Qt::FontRole
+  void setTextAlignmentRoleCB(PHB_ITEM block);         // Qt::TextAlignmentRole
+  void setBackgroundRoleCB(PHB_ITEM block);            // Qt::BackgroundRole / Qt::BackgroundColorRole
+  void setForegroundRoleCB(PHB_ITEM block);            // Qt::ForegroundRole / Qt::TextColorRole
+  void setCheckStateRoleCB(PHB_ITEM block);            // Qt::CheckStateRole
+  void setAccessibleTextRoleCB(PHB_ITEM block);        // Qt::AccessibleTextRole
+  void setAccessibleDescriptionRoleCB(PHB_ITEM block); // Qt::AccessibleDescriptionRole
 
   /*
    cabeçalho horizontal
   */
 
-  void setHorizontalHeaderCB( int role, PHB_ITEM block );
-  void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block );       // Qt::DisplayRole
-  void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block );    // Qt::DecorationRole
-                                                                 // Qt::EditRole
-  void setHorizontalHeaderToolTipRoleCB( PHB_ITEM block );       // Qt::ToolTipRole
-                                                                 // Qt::StatusTipRole
-                                                                 // Qt::WhatsThisRole
-  void setHorizontalHeaderSizeHintRoleCB( PHB_ITEM block );      // Qt::SizeHintRole
-  void setHorizontalHeaderFontRoleCB( PHB_ITEM block );          // Qt::FontRole
-  void setHorizontalHeaderTextAlignmentRoleCB( PHB_ITEM block ); // Qt::TextAlignmentRole
-  void setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block );    // Qt::BackgroundRole / Qt::BackgroundColorRole
-  void setHorizontalHeaderForegroundRoleCB( PHB_ITEM block );    // Qt::ForegroundRole
-                                                                 // Qt::CheckStateRole
-                                                                 // Qt::AccessibleTextRole
-                                                                 // Qt::AccessibleDescriptionRole
+  void setHorizontalHeaderCB(int role, PHB_ITEM block);
+  void setHorizontalHeaderDisplayRoleCB(PHB_ITEM block);       // Qt::DisplayRole
+  void setHorizontalHeaderDecorationRoleCB(PHB_ITEM block);    // Qt::DecorationRole
+                                                               // Qt::EditRole
+  void setHorizontalHeaderToolTipRoleCB(PHB_ITEM block);       // Qt::ToolTipRole
+                                                               // Qt::StatusTipRole
+                                                               // Qt::WhatsThisRole
+  void setHorizontalHeaderSizeHintRoleCB(PHB_ITEM block);      // Qt::SizeHintRole
+  void setHorizontalHeaderFontRoleCB(PHB_ITEM block);          // Qt::FontRole
+  void setHorizontalHeaderTextAlignmentRoleCB(PHB_ITEM block); // Qt::TextAlignmentRole
+  void setHorizontalHeaderBackgroundRoleCB(PHB_ITEM block);    // Qt::BackgroundRole / Qt::BackgroundColorRole
+  void setHorizontalHeaderForegroundRoleCB(PHB_ITEM block);    // Qt::ForegroundRole
+                                                               // Qt::CheckStateRole
+                                                               // Qt::AccessibleTextRole
+                                                               // Qt::AccessibleDescriptionRole
 
   /*
    cabeçalho vertical
   */
 
-  void setVerticalHeaderCB( int role, PHB_ITEM block );
-  void setVerticalHeaderDisplayRoleCB( PHB_ITEM block );         // Qt::DisplayRole
-  void setVerticalHeaderDecorationRoleCB( PHB_ITEM block );      // Qt::DecorationRole
-                                                                 // Qt::EditRole
-  void setVerticalHeaderToolTipRoleCB( PHB_ITEM block );         // Qt::ToolTipRole
-                                                                 // Qt::StatusTipRole
-                                                                 // Qt::WhatsThisRole
-  void setVerticalHeaderSizeHintRoleCB( PHB_ITEM block );        // Qt::SizeHintRole
-  void setVerticalHeaderFontRoleCB( PHB_ITEM block );            // Qt::FontRole
-  void setVerticalHeaderTextAlignmentRoleCB( PHB_ITEM block );   // Qt::TextAlignmentRole
-  void setVerticalHeaderBackgroundRoleCB( PHB_ITEM block );      // Qt::BackgroundRole / Qt::BackgroundColorRole
-  void setVerticalHeaderForegroundRoleCB( PHB_ITEM block );      // Qt::ForegroundRole
-                                                                 // Qt::CheckStateRole
-                                                                 // Qt::AccessibleTextRole
-                                                                 // Qt::AccessibleDescriptionRole
+  void setVerticalHeaderCB(int role, PHB_ITEM block);
+  void setVerticalHeaderDisplayRoleCB(PHB_ITEM block);       // Qt::DisplayRole
+  void setVerticalHeaderDecorationRoleCB(PHB_ITEM block);    // Qt::DecorationRole
+                                                             // Qt::EditRole
+  void setVerticalHeaderToolTipRoleCB(PHB_ITEM block);       // Qt::ToolTipRole
+                                                             // Qt::StatusTipRole
+                                                             // Qt::WhatsThisRole
+  void setVerticalHeaderSizeHintRoleCB(PHB_ITEM block);      // Qt::SizeHintRole
+  void setVerticalHeaderFontRoleCB(PHB_ITEM block);          // Qt::FontRole
+  void setVerticalHeaderTextAlignmentRoleCB(PHB_ITEM block); // Qt::TextAlignmentRole
+  void setVerticalHeaderBackgroundRoleCB(PHB_ITEM block);    // Qt::BackgroundRole / Qt::BackgroundColorRole
+  void setVerticalHeaderForegroundRoleCB(PHB_ITEM block);    // Qt::ForegroundRole
+                                                             // Qt::CheckStateRole
+                                                             // Qt::AccessibleTextRole
+                                                             // Qt::AccessibleDescriptionRole
 
-  void setFlagsCB( PHB_ITEM block );
-  void setSetDataCB( PHB_ITEM block );
+  void setFlagsCB(PHB_ITEM block);
+  void setSetDataCB(PHB_ITEM block);
 
-  QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const;
-  QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const;
-  int rowCount( const QModelIndex & parent = QModelIndex() ) const;
+  QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+  QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
+  int rowCount(const QModelIndex &parent = QModelIndex()) const;
   void reloadData();
-  Qt::ItemFlags flags( const QModelIndex &index ) const;
-  bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole );
+  Qt::ItemFlags flags(const QModelIndex &index) const;
+  bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
 };
 
 #endif /* HABSTRACTLISTMODEL_H */

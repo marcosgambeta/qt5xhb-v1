@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAbstractTransitionSlots: public QObject
+class QAbstractTransitionSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractTransitionSlots( QObject *parent = 0 );
+public:
+  QAbstractTransitionSlots(QObject *parent = 0);
   ~QAbstractTransitionSlots();
-  public slots:
+public slots:
   void triggered();
 };
 

@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAnimationDriverSlots: public QObject
+class QAnimationDriverSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAnimationDriverSlots( QObject *parent = 0 );
+public:
+  QAnimationDriverSlots(QObject *parent = 0);
   ~QAnimationDriverSlots();
-  public slots:
+public slots:
   void started();
   void stopped();
 };

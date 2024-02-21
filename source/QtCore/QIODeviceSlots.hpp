@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QIODeviceSlots: public QObject
+class QIODeviceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QIODeviceSlots( QObject *parent = 0 );
+public:
+  QIODeviceSlots(QObject *parent = 0);
   ~QIODeviceSlots();
-  public slots:
+public slots:
   void aboutToClose();
-  void bytesWritten( qint64 bytes );
+  void bytesWritten(qint64 bytes);
   void readChannelFinished();
   void readyRead();
 };

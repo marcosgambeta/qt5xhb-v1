@@ -25,17 +25,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QSignalMapperSlots: public QObject
+class QSignalMapperSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSignalMapperSlots( QObject *parent = 0 );
+public:
+  QSignalMapperSlots(QObject *parent = 0);
   ~QSignalMapperSlots();
-  public slots:
-  void mapped( int arg );
-  void mapped( const QString & arg );
-  void mapped( QWidget * arg );
-  void mapped( QObject * arg );
+public slots:
+  void mapped(int arg);
+  void mapped(const QString &arg);
+  void mapped(QWidget *arg);
+  void mapped(QObject *arg);
 };
 
 #endif /* QSIGNALMAPPERSLOTS_H */

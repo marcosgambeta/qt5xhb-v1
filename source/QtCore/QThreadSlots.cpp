@@ -12,7 +12,7 @@
 
 #include "QThreadSlots.hpp"
 
-QThreadSlots::QThreadSlots( QObject *parent ) : QObject( parent )
+QThreadSlots::QThreadSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QThreadSlots::~QThreadSlots()
 
 void QThreadSlots::finished()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTHREAD");
 
@@ -38,11 +38,11 @@ void QThreadSlots::finished()
 
 void QThreadSlots::started()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "started()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTHREAD");
 
@@ -52,15 +52,15 @@ void QThreadSlots::started()
   }
 }
 
-void QThreadSlots_connect_signal(const QString & signal, const QString & slot)
+void QThreadSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QThread * obj = (QThread *) Qt5xHb::itemGetPtrStackSelfItem();
+  QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QThreadSlots * s = QCoreApplication::instance()->findChild<QThreadSlots*>();
+    QThreadSlots *s = QCoreApplication::instance()->findChild<QThreadSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QThreadSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAbstractAnimationSlots: public QObject
+class QAbstractAnimationSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractAnimationSlots( QObject *parent = 0 );
+public:
+  QAbstractAnimationSlots(QObject *parent = 0);
   ~QAbstractAnimationSlots();
-  public slots:
-  void currentLoopChanged( int currentLoop );
-  void directionChanged( QAbstractAnimation::Direction newDirection );
+public slots:
+  void currentLoopChanged(int currentLoop);
+  void directionChanged(QAbstractAnimation::Direction newDirection);
   void finished();
-  void stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State oldState );
+  void stateChanged(QAbstractAnimation::State newState, QAbstractAnimation::State oldState);
 };
 
 #endif /* QABSTRACTANIMATIONSLOTS_H */

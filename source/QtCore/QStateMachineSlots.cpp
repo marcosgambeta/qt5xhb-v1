@@ -12,7 +12,7 @@
 
 #include "QStateMachineSlots.hpp"
 
-QStateMachineSlots::QStateMachineSlots( QObject *parent ) : QObject( parent )
+QStateMachineSlots::QStateMachineSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QStateMachineSlots::~QStateMachineSlots()
 
 void QStateMachineSlots::started()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "started()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATEMACHINE");
 
@@ -38,11 +38,11 @@ void QStateMachineSlots::started()
 
 void QStateMachineSlots::stopped()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stopped()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATEMACHINE");
 
@@ -52,15 +52,15 @@ void QStateMachineSlots::stopped()
   }
 }
 
-void QStateMachineSlots_connect_signal(const QString & signal, const QString & slot)
+void QStateMachineSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStateMachine *obj = (QStateMachine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QStateMachineSlots * s = QCoreApplication::instance()->findChild<QStateMachineSlots*>();
+    QStateMachineSlots *s = QCoreApplication::instance()->findChild<QStateMachineSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QStateMachineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

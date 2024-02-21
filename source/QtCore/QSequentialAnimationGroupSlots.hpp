@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QSequentialAnimationGroupSlots: public QObject
+class QSequentialAnimationGroupSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSequentialAnimationGroupSlots( QObject *parent = 0 );
+public:
+  QSequentialAnimationGroupSlots(QObject *parent = 0);
   ~QSequentialAnimationGroupSlots();
-  public slots:
-  void currentAnimationChanged ( QAbstractAnimation * current );
+public slots:
+  void currentAnimationChanged(QAbstractAnimation *current);
 };
 
 #endif /* QSEQUENTIALANIMATIONGROUPSLOTS_H */

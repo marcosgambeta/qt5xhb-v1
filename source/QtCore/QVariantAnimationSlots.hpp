@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QVariantAnimationSlots: public QObject
+class QVariantAnimationSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QVariantAnimationSlots( QObject *parent = 0 );
+public:
+  QVariantAnimationSlots(QObject *parent = 0);
   ~QVariantAnimationSlots();
-  public slots:
-  void valueChanged( const QVariant & value );
+public slots:
+  void valueChanged(const QVariant &value);
 };
 
 #endif /* QVARIANTANIMATIONSLOTS_H */

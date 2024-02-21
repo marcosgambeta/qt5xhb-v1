@@ -12,7 +12,7 @@
 
 #include "QSequentialAnimationGroupSlots.hpp"
 
-QSequentialAnimationGroupSlots::QSequentialAnimationGroupSlots( QObject *parent ) : QObject( parent )
+QSequentialAnimationGroupSlots::QSequentialAnimationGroupSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QSequentialAnimationGroupSlots::~QSequentialAnimationGroupSlots()
 {
 }
 
-void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation * current )
+void QSequentialAnimationGroupSlots::currentAnimationChanged(QAbstractAnimation *current)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentAnimationChanged(QAbstractAnimation*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSEQUENTIALANIMATIONGROUP");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_qobject(current, "QABSTRACTANIMATION");
@@ -34,19 +34,19 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
     hb_vmEvalBlockV(cb, 2, psender, pcurrent);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcurrent );
+    hb_itemRelease(pcurrent);
   }
 }
 
-void QSequentialAnimationGroupSlots_connect_signal(const QString & signal, const QString & slot)
+void QSequentialAnimationGroupSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup *obj = (QSequentialAnimationGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QSequentialAnimationGroupSlots * s = QCoreApplication::instance()->findChild<QSequentialAnimationGroupSlots*>();
+    QSequentialAnimationGroupSlots *s = QCoreApplication::instance()->findChild<QSequentialAnimationGroupSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QSequentialAnimationGroupSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

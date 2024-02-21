@@ -12,7 +12,7 @@
 
 #include "QObjectSlots.hpp"
 
-QObjectSlots::QObjectSlots( QObject *parent ) : QObject( parent )
+QObjectSlots::QObjectSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QObjectSlots::~QObjectSlots()
 {
 }
 
-void QObjectSlots::destroyed( QObject * obj )
+void QObjectSlots::destroyed(QObject *obj)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "destroyed(QObject*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOBJECT");
     PHB_ITEM pobj = Qt5xHb::Signals_return_qobject(obj, "QOBJECT");
@@ -34,38 +34,38 @@ void QObjectSlots::destroyed( QObject * obj )
     hb_vmEvalBlockV(cb, 2, psender, pobj);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pobj );
-    Qt5xHb::Signals_disconnect_signal( object, "destroyed(QObject*)");
+    hb_itemRelease(pobj);
+    Qt5xHb::Signals_disconnect_signal(object, "destroyed(QObject*)");
   }
 }
 
-void QObjectSlots::objectNameChanged( const QString & objectName )
+void QObjectSlots::objectNameChanged(const QString &objectName)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "objectNameChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOBJECT");
-    PHB_ITEM pobjectName = hb_itemPutC( NULL, QSTRINGTOSTRING(objectName) );
+    PHB_ITEM pobjectName = hb_itemPutC(NULL, QSTRINGTOSTRING(objectName));
 
     hb_vmEvalBlockV(cb, 2, psender, pobjectName);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pobjectName );
+    hb_itemRelease(pobjectName);
   }
 }
 
-void QObjectSlots_connect_signal(const QString & signal, const QString & slot)
+void QObjectSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QObject * obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  QObject *obj = (QObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QObjectSlots * s = QCoreApplication::instance()->findChild<QObjectSlots*>();
+    QObjectSlots *s = QCoreApplication::instance()->findChild<QObjectSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QObjectSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

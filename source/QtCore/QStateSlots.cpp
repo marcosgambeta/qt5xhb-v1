@@ -12,7 +12,7 @@
 
 #include "QStateSlots.hpp"
 
-QStateSlots::QStateSlots( QObject *parent ) : QObject( parent )
+QStateSlots::QStateSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QStateSlots::~QStateSlots()
 
 void QStateSlots::finished()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATE");
 
@@ -38,11 +38,11 @@ void QStateSlots::finished()
 
 void QStateSlots::propertiesAssigned()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "propertiesAssigned()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATE");
 
@@ -52,15 +52,15 @@ void QStateSlots::propertiesAssigned()
   }
 }
 
-void QStateSlots_connect_signal(const QString & signal, const QString & slot)
+void QStateSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QState * obj = (QState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QStateSlots * s = QCoreApplication::instance()->findChild<QStateSlots*>();
+    QStateSlots *s = QCoreApplication::instance()->findChild<QStateSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QStateSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -21,20 +21,20 @@ class HEventFilter : public QObject
 {
   Q_OBJECT
 public:
-  HEventFilter( QObject *parent = NULL );
+  HEventFilter(QObject *parent = NULL);
   ~HEventFilter();
 
 protected:
-  bool eventFilter( QObject *obj, QEvent *event );
+  bool eventFilter(QObject *obj, QEvent *event);
 
 private:
-  QHash<QEvent::Type, QString> * m_events;
+  QHash<QEvent::Type, QString> *m_events;
   PHB_ITEM m_eventFilterBlock;
 
 public:
-  void setEventFilterCB( PHB_ITEM block );
-  PHB_ITEM returnQEvent( QEvent * ptr, const char * classname );
-  PHB_ITEM returnQObject( QObject * ptr, const char * classname );
+  void setEventFilterCB(PHB_ITEM block);
+  PHB_ITEM returnQEvent(QEvent *ptr, const char *classname);
+  PHB_ITEM returnQObject(QObject *ptr, const char *classname);
 };
 
 #endif /* HEVENTFILTER_H */

@@ -12,7 +12,7 @@
 
 #include "QTimerSlots.hpp"
 
-QTimerSlots::QTimerSlots( QObject *parent ) : QObject( parent )
+QTimerSlots::QTimerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QTimerSlots::~QTimerSlots()
 
 void QTimerSlots::timeout()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "timeout()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTIMER");
 
@@ -36,15 +36,15 @@ void QTimerSlots::timeout()
   }
 }
 
-void QTimerSlots_connect_signal(const QString & signal, const QString & slot)
+void QTimerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QTimerSlots * s = QCoreApplication::instance()->findChild<QTimerSlots*>();
+    QTimerSlots *s = QCoreApplication::instance()->findChild<QTimerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QTimerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

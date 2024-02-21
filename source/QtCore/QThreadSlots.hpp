@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QThreadSlots: public QObject
+class QThreadSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QThreadSlots( QObject *parent = 0 );
+public:
+  QThreadSlots(QObject *parent = 0);
   ~QThreadSlots();
-  public slots:
+public slots:
   void finished();
   void started();
 };

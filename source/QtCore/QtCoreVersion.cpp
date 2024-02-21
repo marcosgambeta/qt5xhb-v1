@@ -24,12 +24,12 @@
 #include <QtCore/QtCoreVersion>
 #endif
 
-HB_FUNC( QTCORE_VERSION_STR )
+HB_FUNC(QTCORE_VERSION_STR)
 {
-  hb_retc( (const char *) QTCORE_VERSION_STR );
+  hb_retc((const char *)QTCORE_VERSION_STR);
 }
 
-HB_FUNC( QTCORE_VERSION )
+HB_FUNC(QTCORE_VERSION)
 {
-  hb_retni( QTCORE_VERSION );
+  hb_retni(QTCORE_VERSION);
 }

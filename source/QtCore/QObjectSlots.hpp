@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QObjectSlots: public QObject
+class QObjectSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QObjectSlots( QObject *parent = 0 );
+public:
+  QObjectSlots(QObject *parent = 0);
   ~QObjectSlots();
-  public slots:
-  void destroyed( QObject * obj = 0 );
-  void objectNameChanged( const QString & objectName );
+public slots:
+  void destroyed(QObject *obj = 0);
+  void objectNameChanged(const QString &objectName);
 };
 
 #endif /* QOBJECTSLOTS_H */

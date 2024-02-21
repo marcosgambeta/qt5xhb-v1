@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QTimeLineSlots: public QObject
+class QTimeLineSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTimeLineSlots( QObject *parent = 0 );
+public:
+  QTimeLineSlots(QObject *parent = 0);
   ~QTimeLineSlots();
-  public slots:
+public slots:
   void finished();
-  void frameChanged( int frame );
-  void stateChanged( QTimeLine::State newState );
-  void valueChanged( qreal value );
+  void frameChanged(int frame);
+  void stateChanged(QTimeLine::State newState);
+  void valueChanged(qreal value);
 };
 
 #endif /* QTIMELINESLOTS_H */
