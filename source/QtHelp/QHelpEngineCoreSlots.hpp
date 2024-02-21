@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QHelpEngineCoreSlots: public QObject
+class QHelpEngineCoreSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QHelpEngineCoreSlots( QObject *parent = 0 );
+public:
+  QHelpEngineCoreSlots(QObject *parent = 0);
   ~QHelpEngineCoreSlots();
-  public slots:
-  void currentFilterChanged( const QString & newFilter );
+public slots:
+  void currentFilterChanged(const QString &newFilter);
   void setupFinished();
   void setupStarted();
-  void warning( const QString & msg );
+  void warning(const QString &msg);
 };
 
 #endif /* QHELPENGINECORESLOTS_H */

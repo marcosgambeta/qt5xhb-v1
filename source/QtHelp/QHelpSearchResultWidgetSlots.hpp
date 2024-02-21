@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QHelpSearchResultWidgetSlots: public QObject
+class QHelpSearchResultWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QHelpSearchResultWidgetSlots( QObject *parent = 0 );
+public:
+  QHelpSearchResultWidgetSlots(QObject *parent = 0);
   ~QHelpSearchResultWidgetSlots();
-  public slots:
-  void requestShowLink( const QUrl & link );
+public slots:
+  void requestShowLink(const QUrl &link);
 };
 
 #endif /* QHELPSEARCHRESULTWIDGETSLOTS_H */

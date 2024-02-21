@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QHelpIndexModelSlots: public QObject
+class QHelpIndexModelSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QHelpIndexModelSlots( QObject *parent = 0 );
+public:
+  QHelpIndexModelSlots(QObject *parent = 0);
   ~QHelpIndexModelSlots();
-  public slots:
+public slots:
   void indexCreated();
   void indexCreationStarted();
 };

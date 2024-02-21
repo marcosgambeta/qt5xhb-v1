@@ -24,12 +24,12 @@
 #include <QtHelp/QtHelpVersion>
 #endif
 
-HB_FUNC( QTHELP_VERSION_STR )
+HB_FUNC(QTHELP_VERSION_STR)
 {
-  hb_retc( (const char *) QTHELP_VERSION_STR );
+  hb_retc((const char *)QTHELP_VERSION_STR);
 }
 
-HB_FUNC( QTHELP_VERSION )
+HB_FUNC(QTHELP_VERSION)
 {
-  hb_retni( QTHELP_VERSION );
+  hb_retni(QTHELP_VERSION);
 }

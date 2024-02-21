@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QHelpContentModelSlots: public QObject
+class QHelpContentModelSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QHelpContentModelSlots( QObject *parent = 0 );
+public:
+  QHelpContentModelSlots(QObject *parent = 0);
   ~QHelpContentModelSlots();
-  public slots:
+public slots:
   void contentsCreated();
   void contentsCreationStarted();
 };

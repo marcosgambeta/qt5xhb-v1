@@ -12,7 +12,7 @@
 
 #include "QHelpContentWidgetSlots.hpp"
 
-QHelpContentWidgetSlots::QHelpContentWidgetSlots( QObject *parent ) : QObject( parent )
+QHelpContentWidgetSlots::QHelpContentWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QHelpContentWidgetSlots::~QHelpContentWidgetSlots()
 {
 }
 
-void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
+void QHelpContentWidgetSlots::linkActivated(const QUrl &link)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "linkActivated(QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPCONTENTWIDGET");
-    PHB_ITEM plink = Qt5xHb::Signals_return_object( (void *) &link, "QURL");
+    PHB_ITEM plink = Qt5xHb::Signals_return_object((void *)&link, "QURL");
 
     hb_vmEvalBlockV(cb, 2, psender, plink);
 
     hb_itemRelease(psender);
-    hb_itemRelease( plink );
+    hb_itemRelease(plink);
   }
 }
 
-void QHelpContentWidgetSlots_connect_signal(const QString & signal, const QString & slot)
+void QHelpContentWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHelpContentWidget * obj = (QHelpContentWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentWidget *obj = (QHelpContentWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QHelpContentWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpContentWidgetSlots*>();
+    QHelpContentWidgetSlots *s = QCoreApplication::instance()->findChild<QHelpContentWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QHelpContentWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
