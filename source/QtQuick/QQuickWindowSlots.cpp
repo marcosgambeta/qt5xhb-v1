@@ -12,7 +12,7 @@
 
 #include "QQuickWindowSlots.hpp"
 
-QQuickWindowSlots::QQuickWindowSlots( QObject *parent ) : QObject( parent )
+QQuickWindowSlots::QQuickWindowSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QQuickWindowSlots::~QQuickWindowSlots()
 
 void QQuickWindowSlots::afterRendering()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "afterRendering()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
@@ -38,11 +38,11 @@ void QQuickWindowSlots::afterRendering()
 
 void QQuickWindowSlots::beforeRendering()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "beforeRendering()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
@@ -54,11 +54,11 @@ void QQuickWindowSlots::beforeRendering()
 
 void QQuickWindowSlots::beforeSynchronizing()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "beforeSynchronizing()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
@@ -68,31 +68,31 @@ void QQuickWindowSlots::beforeSynchronizing()
   }
 }
 
-void QQuickWindowSlots::colorChanged( const QColor & color )
+void QQuickWindowSlots::colorChanged(const QColor &color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcolor );
+    hb_itemRelease(pcolor);
   }
 }
 
 void QQuickWindowSlots::frameSwapped()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "frameSwapped()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
@@ -104,11 +104,11 @@ void QQuickWindowSlots::frameSwapped()
 
 void QQuickWindowSlots::sceneGraphInitialized()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sceneGraphInitialized()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
@@ -120,11 +120,11 @@ void QQuickWindowSlots::sceneGraphInitialized()
 
 void QQuickWindowSlots::sceneGraphInvalidated()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sceneGraphInvalidated()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
@@ -134,15 +134,15 @@ void QQuickWindowSlots::sceneGraphInvalidated()
   }
 }
 
-void QQuickWindowSlots_connect_signal(const QString & signal, const QString & slot)
+void QQuickWindowSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QQuickWindow * obj = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickWindow *obj = (QQuickWindow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QQuickWindowSlots * s = QCoreApplication::instance()->findChild<QQuickWindowSlots*>();
+    QQuickWindowSlots *s = QCoreApplication::instance()->findChild<QQuickWindowSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QQuickWindowSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

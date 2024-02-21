@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QQuickPaintedItemSlots: public QObject
+class QQuickPaintedItemSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QQuickPaintedItemSlots( QObject *parent = 0 );
+public:
+  QQuickPaintedItemSlots(QObject *parent = 0);
   ~QQuickPaintedItemSlots();
-  public slots:
+public slots:
   void contentsScaleChanged();
   void contentsSizeChanged();
   void fillColorChanged();

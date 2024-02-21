@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QQuickViewSlots: public QObject
+class QQuickViewSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QQuickViewSlots( QObject *parent = 0 );
+public:
+  QQuickViewSlots(QObject *parent = 0);
   ~QQuickViewSlots();
-  public slots:
-  void statusChanged( QQuickView::Status status );
+public slots:
+  void statusChanged(QQuickView::Status status);
 };
 
 #endif /* QQUICKVIEWSLOTS_H */

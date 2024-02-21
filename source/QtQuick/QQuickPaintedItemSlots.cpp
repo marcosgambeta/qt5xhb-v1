@@ -12,7 +12,7 @@
 
 #include "QQuickPaintedItemSlots.hpp"
 
-QQuickPaintedItemSlots::QQuickPaintedItemSlots( QObject *parent ) : QObject( parent )
+QQuickPaintedItemSlots::QQuickPaintedItemSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QQuickPaintedItemSlots::~QQuickPaintedItemSlots()
 
 void QQuickPaintedItemSlots::contentsScaleChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsScaleChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
@@ -38,11 +38,11 @@ void QQuickPaintedItemSlots::contentsScaleChanged()
 
 void QQuickPaintedItemSlots::contentsSizeChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsSizeChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
@@ -54,11 +54,11 @@ void QQuickPaintedItemSlots::contentsSizeChanged()
 
 void QQuickPaintedItemSlots::fillColorChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fillColorChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
@@ -70,11 +70,11 @@ void QQuickPaintedItemSlots::fillColorChanged()
 
 void QQuickPaintedItemSlots::renderTargetChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "renderTargetChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
@@ -84,15 +84,15 @@ void QQuickPaintedItemSlots::renderTargetChanged()
   }
 }
 
-void QQuickPaintedItemSlots_connect_signal(const QString & signal, const QString & slot)
+void QQuickPaintedItemSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QQuickPaintedItemSlots * s = QCoreApplication::instance()->findChild<QQuickPaintedItemSlots*>();
+    QQuickPaintedItemSlots *s = QCoreApplication::instance()->findChild<QQuickPaintedItemSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QQuickPaintedItemSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

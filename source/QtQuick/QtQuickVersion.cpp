@@ -24,12 +24,12 @@
 #include <QtQuick/QtQuickVersion>
 #endif
 
-HB_FUNC( QTQUICK_VERSION_STR )
+HB_FUNC(QTQUICK_VERSION_STR)
 {
-  hb_retc( (const char *) QTQUICK_VERSION_STR );
+  hb_retc((const char *)QTQUICK_VERSION_STR);
 }
 
-HB_FUNC( QTQUICK_VERSION )
+HB_FUNC(QTQUICK_VERSION)
 {
-  hb_retni( QTQUICK_VERSION );
+  hb_retni(QTQUICK_VERSION);
 }

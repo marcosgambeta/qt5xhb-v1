@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QQuickWindowSlots: public QObject
+class QQuickWindowSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QQuickWindowSlots( QObject *parent = 0 );
+public:
+  QQuickWindowSlots(QObject *parent = 0);
   ~QQuickWindowSlots();
-  public slots:
+public slots:
   void afterRendering();
   void beforeRendering();
   void beforeSynchronizing();
-  void colorChanged( const QColor & color );
+  void colorChanged(const QColor &color);
   void frameSwapped();
   void sceneGraphInitialized();
   void sceneGraphInvalidated();
