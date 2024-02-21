@@ -16,11 +16,11 @@
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #include <QtGamepad/QGamepad>
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #include <QtGamepad/QGamepadKeyNavigation>
 #endif
 
@@ -29,69 +29,69 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGamepadKeyNavigationSlots: public QObject
+class QGamepadKeyNavigationSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGamepadKeyNavigationSlots( QObject *parent = 0 );
+public:
+  QGamepadKeyNavigationSlots(QObject *parent = 0);
   ~QGamepadKeyNavigationSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void activeChanged( bool isActive );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void activeChanged(bool isActive);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void gamepadChanged( QGamepad * gamepad );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void gamepadChanged(QGamepad *gamepad);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void upKeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void upKeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void downKeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void downKeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void leftKeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void leftKeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void rightKeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void rightKeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonAKeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonAKeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonBKeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonBKeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonXKeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonXKeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonYKeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonYKeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonSelectKeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonSelectKeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonStartKeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonStartKeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonGuideKeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonGuideKeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonL1KeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonL1KeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonR1KeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonR1KeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonL2KeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonL2KeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonR2KeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonR2KeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonL3KeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonL3KeyChanged(Qt::Key key);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonR3KeyChanged( Qt::Key key );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonR3KeyChanged(Qt::Key key);
 #endif
 };
 

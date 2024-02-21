@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #include <QtGamepad/QGamepad>
 #endif
 
@@ -26,87 +26,87 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGamepadSlots: public QObject
+class QGamepadSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGamepadSlots( QObject *parent = 0 );
+public:
+  QGamepadSlots(QObject *parent = 0);
   ~QGamepadSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void axisLeftXChanged( double value );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void axisLeftXChanged(double value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void axisLeftYChanged( double value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void axisLeftYChanged(double value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void axisRightXChanged( double value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void axisRightXChanged(double value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void axisRightYChanged( double value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void axisRightYChanged(double value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonAChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonAChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonBChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonBChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonCenterChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonCenterChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonDownChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonDownChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonGuideChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonGuideChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonL1Changed( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonL1Changed(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonL2Changed( double value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonL2Changed(double value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonL3Changed( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonL3Changed(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonLeftChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonLeftChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonR1Changed( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonR1Changed(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonR2Changed( double value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonR2Changed(double value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonR3Changed( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonR3Changed(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonRightChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonRightChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonSelectChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonSelectChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonStartChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonStartChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonUpChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonUpChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonXChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonXChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void buttonYChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void buttonYChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void connectedChanged( bool value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void connectedChanged(bool value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void deviceIdChanged( int value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void deviceIdChanged(int value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void nameChanged( QString value );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void nameChanged(QString value);
 #endif
 };
 
