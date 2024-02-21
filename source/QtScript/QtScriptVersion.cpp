@@ -24,12 +24,12 @@
 #include <QtScript/QtScriptVersion>
 #endif
 
-HB_FUNC( QTSCRIPT_VERSION_STR )
+HB_FUNC(QTSCRIPT_VERSION_STR)
 {
-  hb_retc( (const char *) QTSCRIPT_VERSION_STR );
+  hb_retc((const char *)QTSCRIPT_VERSION_STR);
 }
 
-HB_FUNC( QTSCRIPT_VERSION )
+HB_FUNC(QTSCRIPT_VERSION)
 {
-  hb_retni( QTSCRIPT_VERSION );
+  hb_retni(QTSCRIPT_VERSION);
 }

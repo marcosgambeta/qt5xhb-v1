@@ -12,7 +12,7 @@
 
 #include "QScriptEngineSlots.hpp"
 
-QScriptEngineSlots::QScriptEngineSlots( QObject *parent ) : QObject( parent )
+QScriptEngineSlots::QScriptEngineSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QScriptEngineSlots::~QScriptEngineSlots()
 {
 }
 
-void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception )
+void QScriptEngineSlots::signalHandlerException(const QScriptValue &exception)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "signalHandlerException(QScriptValue)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCRIPTENGINE");
-    PHB_ITEM pexception = Qt5xHb::Signals_return_object( (void *) &exception, "QSCRIPTVALUE");
+    PHB_ITEM pexception = Qt5xHb::Signals_return_object((void *)&exception, "QSCRIPTVALUE");
 
     hb_vmEvalBlockV(cb, 2, psender, pexception);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pexception );
+    hb_itemRelease(pexception);
   }
 }
 
-void QScriptEngineSlots_connect_signal(const QString & signal, const QString & slot)
+void QScriptEngineSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptEngine *obj = (QScriptEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QScriptEngineSlots * s = QCoreApplication::instance()->findChild<QScriptEngineSlots*>();
+    QScriptEngineSlots *s = QCoreApplication::instance()->findChild<QScriptEngineSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QScriptEngineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
