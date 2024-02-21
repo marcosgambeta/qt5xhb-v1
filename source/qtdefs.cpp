@@ -10,7 +10,7 @@
 
 #include <hbapi.h>
 
-HB_FUNC( Q_OS_WIN )
+HB_FUNC(Q_OS_WIN)
 {
 #if defined(Q_OS_WIN)
   hb_retl(true);
@@ -19,7 +19,7 @@ HB_FUNC( Q_OS_WIN )
 #endif
 }
 
-HB_FUNC( Q_OS_WIN32 )
+HB_FUNC(Q_OS_WIN32)
 {
 #if defined(Q_OS_WIN32)
   hb_retl(true);
@@ -28,7 +28,7 @@ HB_FUNC( Q_OS_WIN32 )
 #endif
 }
 
-HB_FUNC( Q_OS_WIN64 )
+HB_FUNC(Q_OS_WIN64)
 {
 #if defined(Q_OS_WIN64)
   hb_retl(true);
@@ -37,7 +37,7 @@ HB_FUNC( Q_OS_WIN64 )
 #endif
 }
 
-HB_FUNC( Q_OS_WINCE )
+HB_FUNC(Q_OS_WINCE)
 {
 #if defined(Q_OS_WINCE)
   hb_retl(true);
@@ -46,7 +46,7 @@ HB_FUNC( Q_OS_WINCE )
 #endif
 }
 
-HB_FUNC( Q_OS_WINCE_WM )
+HB_FUNC(Q_OS_WINCE_WM)
 {
 #if defined(Q_OS_WINCE_WM)
   hb_retl(true);
@@ -55,7 +55,7 @@ HB_FUNC( Q_OS_WINCE_WM )
 #endif
 }
 
-HB_FUNC( Q_OS_WINRT )
+HB_FUNC(Q_OS_WINRT)
 {
 #if defined(Q_OS_WINRT)
   hb_retl(true);
@@ -64,7 +64,7 @@ HB_FUNC( Q_OS_WINRT )
 #endif
 }
 
-HB_FUNC( Q_OS_UNIX )
+HB_FUNC(Q_OS_UNIX)
 {
 #if defined(Q_OS_UNIX)
   hb_retl(true);
@@ -73,7 +73,7 @@ HB_FUNC( Q_OS_UNIX )
 #endif
 }
 
-HB_FUNC( Q_OS_LINUX )
+HB_FUNC(Q_OS_LINUX)
 {
 #if defined(Q_OS_LINUX)
   hb_retl(true);
@@ -82,7 +82,7 @@ HB_FUNC( Q_OS_LINUX )
 #endif
 }
 
-HB_FUNC( Q_OS_ANDROID )
+HB_FUNC(Q_OS_ANDROID)
 {
 #if defined(Q_OS_ANDROID)
   hb_retl(true);
@@ -91,7 +91,7 @@ HB_FUNC( Q_OS_ANDROID )
 #endif
 }
 
-HB_FUNC( Q_OS_MAC )
+HB_FUNC(Q_OS_MAC)
 {
 #if defined(Q_OS_MAC)
   hb_retl(true);
@@ -100,7 +100,7 @@ HB_FUNC( Q_OS_MAC )
 #endif
 }
 
-HB_FUNC( Q_OS_QNX )
+HB_FUNC(Q_OS_QNX)
 {
 #if defined(Q_OS_QNX)
   hb_retl(true);
@@ -109,7 +109,7 @@ HB_FUNC( Q_OS_QNX )
 #endif
 }
 
-HB_FUNC( Q_OS_BLACKBERRY )
+HB_FUNC(Q_OS_BLACKBERRY)
 {
 #if defined(Q_OS_BLACKBERRY)
   hb_retl(true);
