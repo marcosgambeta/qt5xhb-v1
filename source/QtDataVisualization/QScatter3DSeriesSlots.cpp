@@ -12,7 +12,7 @@
 
 #include "QScatter3DSeriesSlots.hpp"
 
-QScatter3DSeriesSlots::QScatter3DSeriesSlots( QObject *parent ) : QObject( parent )
+QScatter3DSeriesSlots::QScatter3DSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QScatter3DSeriesSlots::~QScatter3DSeriesSlots()
 {
 }
 
-void QScatter3DSeriesSlots::dataProxyChanged( QScatterDataProxy * proxy )
+void QScatter3DSeriesSlots::dataProxyChanged(QScatterDataProxy *proxy)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataProxyChanged(QScatterDataProxy*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTER3DSERIES");
     PHB_ITEM pproxy = Qt5xHb::Signals_return_qobject(proxy, "QSCATTERDATAPROXY");
@@ -34,55 +34,55 @@ void QScatter3DSeriesSlots::dataProxyChanged( QScatterDataProxy * proxy )
     hb_vmEvalBlockV(cb, 2, psender, pproxy);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pproxy );
+    hb_itemRelease(pproxy);
   }
 }
 
-void QScatter3DSeriesSlots::itemSizeChanged( float size )
+void QScatter3DSeriesSlots::itemSizeChanged(float size)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "itemSizeChanged(float)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTER3DSERIES");
-    PHB_ITEM psize = hb_itemPutND( NULL, size );
+    PHB_ITEM psize = hb_itemPutND(NULL, size);
 
     hb_vmEvalBlockV(cb, 2, psender, psize);
 
     hb_itemRelease(psender);
-    hb_itemRelease( psize );
+    hb_itemRelease(psize);
   }
 }
 
-void QScatter3DSeriesSlots::selectedItemChanged( int index )
+void QScatter3DSeriesSlots::selectedItemChanged(int index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectedItemChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTER3DSERIES");
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindex );
+    hb_itemRelease(pindex);
   }
 }
 
-void QScatter3DSeriesSlots_connect_signal(const QString & signal, const QString & slot)
+void QScatter3DSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QScatter3DSeries * obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScatter3DSeries *obj = (QScatter3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QScatter3DSeriesSlots * s = QCoreApplication::instance()->findChild<QScatter3DSeriesSlots*>();
+    QScatter3DSeriesSlots *s = QCoreApplication::instance()->findChild<QScatter3DSeriesSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QScatter3DSeriesSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

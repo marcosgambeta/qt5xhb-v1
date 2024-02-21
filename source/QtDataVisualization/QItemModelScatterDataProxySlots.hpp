@@ -26,26 +26,26 @@
 
 using namespace QtDataVisualization;
 
-class QItemModelScatterDataProxySlots: public QObject
+class QItemModelScatterDataProxySlots : public QObject
 {
   Q_OBJECT
-  public:
-  QItemModelScatterDataProxySlots( QObject *parent = 0 );
+public:
+  QItemModelScatterDataProxySlots(QObject *parent = 0);
   ~QItemModelScatterDataProxySlots();
-  public slots:
-  void itemModelChanged( const QAbstractItemModel * itemModel );
-  void rotationRoleChanged( const QString & role );
-  void rotationRolePatternChanged( const QRegExp & pattern );
-  void rotationRoleReplaceChanged( const QString & replace );
-  void xPosRoleChanged( const QString & role );
-  void xPosRolePatternChanged( const QRegExp & pattern );
-  void xPosRoleReplaceChanged( const QString & replace );
-  void yPosRoleChanged( const QString & role );
-  void yPosRolePatternChanged( const QRegExp & pattern );
-  void yPosRoleReplaceChanged( const QString & replace );
-  void zPosRoleChanged( const QString & role );
-  void zPosRolePatternChanged( const QRegExp & pattern );
-  void zPosRoleReplaceChanged( const QString & replace );
+public slots:
+  void itemModelChanged(const QAbstractItemModel *itemModel);
+  void rotationRoleChanged(const QString &role);
+  void rotationRolePatternChanged(const QRegExp &pattern);
+  void rotationRoleReplaceChanged(const QString &replace);
+  void xPosRoleChanged(const QString &role);
+  void xPosRolePatternChanged(const QRegExp &pattern);
+  void xPosRoleReplaceChanged(const QString &replace);
+  void yPosRoleChanged(const QString &role);
+  void yPosRolePatternChanged(const QRegExp &pattern);
+  void yPosRoleReplaceChanged(const QString &replace);
+  void zPosRoleChanged(const QString &role);
+  void zPosRolePatternChanged(const QRegExp &pattern);
+  void zPosRoleReplaceChanged(const QString &replace);
 };
 
 #endif /* QITEMMODELSCATTERDATAPROXYSLOTS_H */

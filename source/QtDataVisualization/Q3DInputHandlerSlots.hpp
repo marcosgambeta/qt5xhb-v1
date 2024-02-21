@@ -26,17 +26,17 @@
 
 using namespace QtDataVisualization;
 
-class Q3DInputHandlerSlots: public QObject
+class Q3DInputHandlerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  Q3DInputHandlerSlots( QObject *parent = 0 );
+public:
+  Q3DInputHandlerSlots(QObject *parent = 0);
   ~Q3DInputHandlerSlots();
-  public slots:
-  void rotationEnabledChanged( bool enable );
-  void selectionEnabledChanged( bool enable );
-  void zoomAtTargetEnabledChanged( bool enable );
-  void zoomEnabledChanged( bool enable );
+public slots:
+  void rotationEnabledChanged(bool enable);
+  void selectionEnabledChanged(bool enable);
+  void zoomAtTargetEnabledChanged(bool enable);
+  void zoomEnabledChanged(bool enable);
 };
 
 #endif /* Q3DINPUTHANDLERSLOTS_H */

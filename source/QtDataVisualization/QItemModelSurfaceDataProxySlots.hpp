@@ -26,35 +26,35 @@
 
 using namespace QtDataVisualization;
 
-class QItemModelSurfaceDataProxySlots: public QObject
+class QItemModelSurfaceDataProxySlots : public QObject
 {
   Q_OBJECT
-  public:
-  QItemModelSurfaceDataProxySlots( QObject *parent = 0 );
+public:
+  QItemModelSurfaceDataProxySlots(QObject *parent = 0);
   ~QItemModelSurfaceDataProxySlots();
-  public slots:
-  void autoColumnCategoriesChanged( bool enable );
-  void autoRowCategoriesChanged( bool enable );
+public slots:
+  void autoColumnCategoriesChanged(bool enable);
+  void autoRowCategoriesChanged(bool enable);
   void columnCategoriesChanged();
-  void columnRoleChanged( const QString & role );
-  void columnRolePatternChanged( const QRegExp & pattern );
-  void columnRoleReplaceChanged( const QString & replace );
-  void itemModelChanged( const QAbstractItemModel * itemModel );
-  void multiMatchBehaviorChanged( QItemModelSurfaceDataProxy::MultiMatchBehavior behavior );
+  void columnRoleChanged(const QString &role);
+  void columnRolePatternChanged(const QRegExp &pattern);
+  void columnRoleReplaceChanged(const QString &replace);
+  void itemModelChanged(const QAbstractItemModel *itemModel);
+  void multiMatchBehaviorChanged(QItemModelSurfaceDataProxy::MultiMatchBehavior behavior);
   void rowCategoriesChanged();
-  void rowRoleChanged( const QString & role );
-  void rowRolePatternChanged( const QRegExp & pattern );
-  void rowRoleReplaceChanged( const QString & replace );
-  void useModelCategoriesChanged( bool enable );
-  void xPosRoleChanged( const QString & role );
-  void xPosRolePatternChanged( const QRegExp & pattern );
-  void xPosRoleReplaceChanged( const QString & replace );
-  void yPosRoleChanged( const QString & role );
-  void yPosRolePatternChanged( const QRegExp & pattern );
-  void yPosRoleReplaceChanged( const QString & replace );
-  void zPosRoleChanged( const QString & role );
-  void zPosRolePatternChanged( const QRegExp & pattern );
-  void zPosRoleReplaceChanged( const QString & replace );
+  void rowRoleChanged(const QString &role);
+  void rowRolePatternChanged(const QRegExp &pattern);
+  void rowRoleReplaceChanged(const QString &replace);
+  void useModelCategoriesChanged(bool enable);
+  void xPosRoleChanged(const QString &role);
+  void xPosRolePatternChanged(const QRegExp &pattern);
+  void xPosRoleReplaceChanged(const QString &replace);
+  void yPosRoleChanged(const QString &role);
+  void yPosRolePatternChanged(const QRegExp &pattern);
+  void yPosRoleReplaceChanged(const QString &replace);
+  void zPosRoleChanged(const QString &role);
+  void zPosRolePatternChanged(const QRegExp &pattern);
+  void zPosRoleReplaceChanged(const QString &replace);
 };
 
 #endif /* QITEMMODELSURFACEDATAPROXYSLOTS_H */

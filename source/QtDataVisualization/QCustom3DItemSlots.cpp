@@ -12,7 +12,7 @@
 
 #include "QCustom3DItemSlots.hpp"
 
-QCustom3DItemSlots::QCustom3DItemSlots( QObject *parent ) : QObject( parent )
+QCustom3DItemSlots::QCustom3DItemSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,177 +20,177 @@ QCustom3DItemSlots::~QCustom3DItemSlots()
 {
 }
 
-void QCustom3DItemSlots::meshFileChanged( const QString & meshFile )
+void QCustom3DItemSlots::meshFileChanged(const QString &meshFile)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "meshFileChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
-    PHB_ITEM pmeshFile = hb_itemPutC( NULL, QSTRINGTOSTRING(meshFile) );
+    PHB_ITEM pmeshFile = hb_itemPutC(NULL, QSTRINGTOSTRING(meshFile));
 
     hb_vmEvalBlockV(cb, 2, psender, pmeshFile);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pmeshFile );
+    hb_itemRelease(pmeshFile);
   }
 }
 
-void QCustom3DItemSlots::positionAbsoluteChanged( bool positionAbsolute )
+void QCustom3DItemSlots::positionAbsoluteChanged(bool positionAbsolute)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "positionAbsoluteChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
-    PHB_ITEM ppositionAbsolute = hb_itemPutL( NULL, positionAbsolute );
+    PHB_ITEM ppositionAbsolute = hb_itemPutL(NULL, positionAbsolute);
 
     hb_vmEvalBlockV(cb, 2, psender, ppositionAbsolute);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ppositionAbsolute );
+    hb_itemRelease(ppositionAbsolute);
   }
 }
 
-void QCustom3DItemSlots::positionChanged( const QVector3D & position )
+void QCustom3DItemSlots::positionChanged(const QVector3D &position)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "positionChanged(QVector3D)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
-    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QVECTOR3D");
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object((void *)&position, "QVECTOR3D");
 
     hb_vmEvalBlockV(cb, 2, psender, pposition);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pposition );
+    hb_itemRelease(pposition);
   }
 }
 
-void QCustom3DItemSlots::rotationChanged( const QQuaternion & rotation )
+void QCustom3DItemSlots::rotationChanged(const QQuaternion &rotation)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rotationChanged(QQuaternion)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
-    PHB_ITEM protation = Qt5xHb::Signals_return_object( (void *) &rotation, "QQUATERNION");
+    PHB_ITEM protation = Qt5xHb::Signals_return_object((void *)&rotation, "QQUATERNION");
 
     hb_vmEvalBlockV(cb, 2, psender, protation);
 
     hb_itemRelease(psender);
-    hb_itemRelease( protation );
+    hb_itemRelease(protation);
   }
 }
 
-void QCustom3DItemSlots::scalingAbsoluteChanged( bool scalingAbsolute )
+void QCustom3DItemSlots::scalingAbsoluteChanged(bool scalingAbsolute)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "scalingAbsoluteChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
-    PHB_ITEM pscalingAbsolute = hb_itemPutL( NULL, scalingAbsolute );
+    PHB_ITEM pscalingAbsolute = hb_itemPutL(NULL, scalingAbsolute);
 
     hb_vmEvalBlockV(cb, 2, psender, pscalingAbsolute);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pscalingAbsolute );
+    hb_itemRelease(pscalingAbsolute);
   }
 }
 
-void QCustom3DItemSlots::scalingChanged( const QVector3D & scaling )
+void QCustom3DItemSlots::scalingChanged(const QVector3D &scaling)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "scalingChanged(QVector3D)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
-    PHB_ITEM pscaling = Qt5xHb::Signals_return_object( (void *) &scaling, "QVECTOR3D");
+    PHB_ITEM pscaling = Qt5xHb::Signals_return_object((void *)&scaling, "QVECTOR3D");
 
     hb_vmEvalBlockV(cb, 2, psender, pscaling);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pscaling );
+    hb_itemRelease(pscaling);
   }
 }
 
-void QCustom3DItemSlots::shadowCastingChanged( bool shadowCasting )
+void QCustom3DItemSlots::shadowCastingChanged(bool shadowCasting)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "shadowCastingChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
-    PHB_ITEM pshadowCasting = hb_itemPutL( NULL, shadowCasting );
+    PHB_ITEM pshadowCasting = hb_itemPutL(NULL, shadowCasting);
 
     hb_vmEvalBlockV(cb, 2, psender, pshadowCasting);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pshadowCasting );
+    hb_itemRelease(pshadowCasting);
   }
 }
 
-void QCustom3DItemSlots::textureFileChanged( const QString & textureFile )
+void QCustom3DItemSlots::textureFileChanged(const QString &textureFile)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "textureFileChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
-    PHB_ITEM ptextureFile = hb_itemPutC( NULL, QSTRINGTOSTRING(textureFile) );
+    PHB_ITEM ptextureFile = hb_itemPutC(NULL, QSTRINGTOSTRING(textureFile));
 
     hb_vmEvalBlockV(cb, 2, psender, ptextureFile);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ptextureFile );
+    hb_itemRelease(ptextureFile);
   }
 }
 
-void QCustom3DItemSlots::visibleChanged( bool visible )
+void QCustom3DItemSlots::visibleChanged(bool visible)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "visibleChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCUSTOM3DITEM");
-    PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+    PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
     hb_vmEvalBlockV(cb, 2, psender, pvisible);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvisible );
+    hb_itemRelease(pvisible);
   }
 }
 
-void QCustom3DItemSlots_connect_signal(const QString & signal, const QString & slot)
+void QCustom3DItemSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCustom3DItem * obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCustom3DItem *obj = (QCustom3DItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QCustom3DItemSlots * s = QCoreApplication::instance()->findChild<QCustom3DItemSlots*>();
+    QCustom3DItemSlots *s = QCoreApplication::instance()->findChild<QCustom3DItemSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QCustom3DItemSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

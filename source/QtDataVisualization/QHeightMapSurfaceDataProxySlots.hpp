@@ -26,19 +26,19 @@
 
 using namespace QtDataVisualization;
 
-class QHeightMapSurfaceDataProxySlots: public QObject
+class QHeightMapSurfaceDataProxySlots : public QObject
 {
   Q_OBJECT
-  public:
-  QHeightMapSurfaceDataProxySlots( QObject *parent = 0 );
+public:
+  QHeightMapSurfaceDataProxySlots(QObject *parent = 0);
   ~QHeightMapSurfaceDataProxySlots();
-  public slots:
-  void heightMapChanged( const QImage & image );
-  void heightMapFileChanged( const QString & filename );
-  void minXValueChanged( float value );
-  void maxXValueChanged( float value );
-  void minZValueChanged( float value );
-  void maxZValueChanged( float value );
+public slots:
+  void heightMapChanged(const QImage &image);
+  void heightMapFileChanged(const QString &filename);
+  void minXValueChanged(float value);
+  void maxXValueChanged(float value);
+  void minZValueChanged(float value);
+  void maxZValueChanged(float value);
 };
 
 #endif /* QHEIGHTMAPSURFACEDATAPROXYSLOTS_H */

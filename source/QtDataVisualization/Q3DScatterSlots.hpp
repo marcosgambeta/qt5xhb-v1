@@ -26,17 +26,17 @@
 
 using namespace QtDataVisualization;
 
-class Q3DScatterSlots: public QObject
+class Q3DScatterSlots : public QObject
 {
   Q_OBJECT
-  public:
-  Q3DScatterSlots( QObject *parent = 0 );
+public:
+  Q3DScatterSlots(QObject *parent = 0);
   ~Q3DScatterSlots();
-  public slots:
-  void axisXChanged( QValue3DAxis * axis );
-  void axisYChanged( QValue3DAxis * axis );
-  void axisZChanged( QValue3DAxis * axis );
-  void selectedSeriesChanged( QScatter3DSeries * series );
+public slots:
+  void axisXChanged(QValue3DAxis *axis);
+  void axisYChanged(QValue3DAxis *axis);
+  void axisZChanged(QValue3DAxis *axis);
+  void selectedSeriesChanged(QScatter3DSeries *series);
 };
 
 #endif /* Q3DSCATTERSLOTS_H */

@@ -26,18 +26,18 @@
 
 using namespace QtDataVisualization;
 
-class Q3DSurfaceSlots: public QObject
+class Q3DSurfaceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  Q3DSurfaceSlots( QObject *parent = 0 );
+public:
+  Q3DSurfaceSlots(QObject *parent = 0);
   ~Q3DSurfaceSlots();
-  public slots:
-  void axisXChanged( QValue3DAxis * axis );
-  void axisYChanged( QValue3DAxis * axis );
-  void axisZChanged( QValue3DAxis * axis );
-  void flipHorizontalGridChanged( bool flip );
-  void selectedSeriesChanged( QSurface3DSeries * series );
+public slots:
+  void axisXChanged(QValue3DAxis *axis);
+  void axisYChanged(QValue3DAxis *axis);
+  void axisZChanged(QValue3DAxis *axis);
+  void flipHorizontalGridChanged(bool flip);
+  void selectedSeriesChanged(QSurface3DSeries *series);
 };
 
 #endif /* Q3DSURFACESLOTS_H */

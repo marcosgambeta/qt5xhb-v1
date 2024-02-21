@@ -26,20 +26,20 @@
 
 using namespace QtDataVisualization;
 
-class QSurface3DSeriesSlots: public QObject
+class QSurface3DSeriesSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSurface3DSeriesSlots( QObject *parent = 0 );
+public:
+  QSurface3DSeriesSlots(QObject *parent = 0);
   ~QSurface3DSeriesSlots();
-  public slots:
-  void dataProxyChanged( QSurfaceDataProxy * proxy );
-  void drawModeChanged( QSurface3DSeries::DrawFlags mode );
-  void flatShadingEnabledChanged( bool enable );
-  void flatShadingSupportedChanged( bool enable );
-  void selectedPointChanged( const QPoint & position );
-  void textureChanged( const QImage & image );
-  void textureFileChanged( const QString & filename );
+public slots:
+  void dataProxyChanged(QSurfaceDataProxy *proxy);
+  void drawModeChanged(QSurface3DSeries::DrawFlags mode);
+  void flatShadingEnabledChanged(bool enable);
+  void flatShadingSupportedChanged(bool enable);
+  void selectedPointChanged(const QPoint &position);
+  void textureChanged(const QImage &image);
+  void textureFileChanged(const QString &filename);
 };
 
 #endif /* QSURFACE3DSERIESSLOTS_H */

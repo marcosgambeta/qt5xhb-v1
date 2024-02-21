@@ -26,29 +26,29 @@
 
 using namespace QtDataVisualization;
 
-class QAbstract3DSeriesSlots: public QObject
+class QAbstract3DSeriesSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstract3DSeriesSlots( QObject *parent = 0 );
+public:
+  QAbstract3DSeriesSlots(QObject *parent = 0);
   ~QAbstract3DSeriesSlots();
-  public slots:
-  void baseColorChanged( const QColor & color );
-  void baseGradientChanged( const QLinearGradient & gradient );
-  void colorStyleChanged( Q3DTheme::ColorStyle style );
-  void itemLabelChanged( const QString & label );
-  void itemLabelFormatChanged( const QString & format );
-  void itemLabelVisibilityChanged( bool visible );
-  void meshChanged( QAbstract3DSeries::Mesh mesh );
-  void meshRotationChanged( const QQuaternion & rotation );
-  void meshSmoothChanged( bool enabled );
-  void multiHighlightColorChanged( const QColor & color );
-  void multiHighlightGradientChanged( const QLinearGradient & gradient );
-  void nameChanged( const QString & name );
-  void singleHighlightColorChanged( const QColor & color );
-  void singleHighlightGradientChanged( const QLinearGradient & gradient );
-  void userDefinedMeshChanged( const QString & fileName );
-  void visibilityChanged( bool visible );
+public slots:
+  void baseColorChanged(const QColor &color);
+  void baseGradientChanged(const QLinearGradient &gradient);
+  void colorStyleChanged(Q3DTheme::ColorStyle style);
+  void itemLabelChanged(const QString &label);
+  void itemLabelFormatChanged(const QString &format);
+  void itemLabelVisibilityChanged(bool visible);
+  void meshChanged(QAbstract3DSeries::Mesh mesh);
+  void meshRotationChanged(const QQuaternion &rotation);
+  void meshSmoothChanged(bool enabled);
+  void multiHighlightColorChanged(const QColor &color);
+  void multiHighlightGradientChanged(const QLinearGradient &gradient);
+  void nameChanged(const QString &name);
+  void singleHighlightColorChanged(const QColor &color);
+  void singleHighlightGradientChanged(const QLinearGradient &gradient);
+  void userDefinedMeshChanged(const QString &fileName);
+  void visibilityChanged(bool visible);
 };
 
 #endif /* QABSTRACT3DSERIESSLOTS_H */

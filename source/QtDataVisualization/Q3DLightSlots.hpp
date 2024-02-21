@@ -26,15 +26,15 @@
 
 using namespace QtDataVisualization;
 
-class Q3DLightSlots: public QObject
+class Q3DLightSlots : public QObject
 {
   Q_OBJECT
-  public:
-  Q3DLightSlots( QObject *parent = 0 );
+public:
+  Q3DLightSlots(QObject *parent = 0);
   ~Q3DLightSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void autoPositionChanged( bool autoPosition );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void autoPositionChanged(bool autoPosition);
 #endif
 };
 

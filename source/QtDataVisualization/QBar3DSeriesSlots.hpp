@@ -26,16 +26,16 @@
 
 using namespace QtDataVisualization;
 
-class QBar3DSeriesSlots: public QObject
+class QBar3DSeriesSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QBar3DSeriesSlots( QObject *parent = 0 );
+public:
+  QBar3DSeriesSlots(QObject *parent = 0);
   ~QBar3DSeriesSlots();
-  public slots:
-  void dataProxyChanged( QBarDataProxy * proxy );
-  void selectedBarChanged( const QPoint & position );
-  void meshAngleChanged( float angle );
+public slots:
+  void dataProxyChanged(QBarDataProxy *proxy);
+  void selectedBarChanged(const QPoint &position);
+  void meshAngleChanged(float angle);
 };
 
 #endif /* QBAR3DSERIESSLOTS_H */

@@ -12,7 +12,7 @@
 
 #include "QAbstract3DAxisSlots.hpp"
 
-QAbstract3DAxisSlots::QAbstract3DAxisSlots( QObject *parent ) : QObject( parent )
+QAbstract3DAxisSlots::QAbstract3DAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,49 +20,49 @@ QAbstract3DAxisSlots::~QAbstract3DAxisSlots()
 {
 }
 
-void QAbstract3DAxisSlots::autoAdjustRangeChanged( bool autoAdjust )
+void QAbstract3DAxisSlots::autoAdjustRangeChanged(bool autoAdjust)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "autoAdjustRangeChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DAXIS");
-    PHB_ITEM pautoAdjust = hb_itemPutL( NULL, autoAdjust );
+    PHB_ITEM pautoAdjust = hb_itemPutL(NULL, autoAdjust);
 
     hb_vmEvalBlockV(cb, 2, psender, pautoAdjust);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pautoAdjust );
+    hb_itemRelease(pautoAdjust);
   }
 }
 
-void QAbstract3DAxisSlots::labelAutoRotationChanged( float angle )
+void QAbstract3DAxisSlots::labelAutoRotationChanged(float angle)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelAutoRotationChanged(float)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DAXIS");
-    PHB_ITEM pangle = hb_itemPutND( NULL, angle );
+    PHB_ITEM pangle = hb_itemPutND(NULL, angle);
 
     hb_vmEvalBlockV(cb, 2, psender, pangle);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pangle );
+    hb_itemRelease(pangle);
   }
 }
 
 void QAbstract3DAxisSlots::labelsChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelsChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DAXIS");
 
@@ -72,143 +72,143 @@ void QAbstract3DAxisSlots::labelsChanged()
   }
 }
 
-void QAbstract3DAxisSlots::maxChanged( float value )
+void QAbstract3DAxisSlots::maxChanged(float value)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxChanged(float)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DAXIS");
-    PHB_ITEM pvalue = hb_itemPutND( NULL, value );
+    PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
     hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvalue );
+    hb_itemRelease(pvalue);
   }
 }
 
-void QAbstract3DAxisSlots::minChanged( float value )
+void QAbstract3DAxisSlots::minChanged(float value)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minChanged(float)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DAXIS");
-    PHB_ITEM pvalue = hb_itemPutND( NULL, value );
+    PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
     hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvalue );
+    hb_itemRelease(pvalue);
   }
 }
 
-void QAbstract3DAxisSlots::orientationChanged( QAbstract3DAxis::AxisOrientation orientation )
+void QAbstract3DAxisSlots::orientationChanged(QAbstract3DAxis::AxisOrientation orientation)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "orientationChanged(QAbstract3DAxis::AxisOrientation)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DAXIS");
-    PHB_ITEM porientation = hb_itemPutNI( NULL, static_cast<int>(orientation) );
+    PHB_ITEM porientation = hb_itemPutNI(NULL, static_cast<int>(orientation));
 
     hb_vmEvalBlockV(cb, 2, psender, porientation);
 
     hb_itemRelease(psender);
-    hb_itemRelease( porientation );
+    hb_itemRelease(porientation);
   }
 }
 
-void QAbstract3DAxisSlots::rangeChanged( float min, float max )
+void QAbstract3DAxisSlots::rangeChanged(float min, float max)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rangeChanged(float,float)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DAXIS");
-    PHB_ITEM pmin = hb_itemPutND( NULL, min );
-    PHB_ITEM pmax = hb_itemPutND( NULL, max );
+    PHB_ITEM pmin = hb_itemPutND(NULL, min);
+    PHB_ITEM pmax = hb_itemPutND(NULL, max);
 
     hb_vmEvalBlockV(cb, 3, psender, pmin, pmax);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pmin );
-    hb_itemRelease( pmax );
+    hb_itemRelease(pmin);
+    hb_itemRelease(pmax);
   }
 }
 
-void QAbstract3DAxisSlots::titleChanged( const QString & newTitle )
+void QAbstract3DAxisSlots::titleChanged(const QString &newTitle)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "titleChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DAXIS");
-    PHB_ITEM pnewTitle = hb_itemPutC( NULL, QSTRINGTOSTRING(newTitle) );
+    PHB_ITEM pnewTitle = hb_itemPutC(NULL, QSTRINGTOSTRING(newTitle));
 
     hb_vmEvalBlockV(cb, 2, psender, pnewTitle);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pnewTitle );
+    hb_itemRelease(pnewTitle);
   }
 }
 
-void QAbstract3DAxisSlots::titleFixedChanged( bool fixed )
+void QAbstract3DAxisSlots::titleFixedChanged(bool fixed)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "titleFixedChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DAXIS");
-    PHB_ITEM pfixed = hb_itemPutL( NULL, fixed );
+    PHB_ITEM pfixed = hb_itemPutL(NULL, fixed);
 
     hb_vmEvalBlockV(cb, 2, psender, pfixed);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfixed );
+    hb_itemRelease(pfixed);
   }
 }
 
-void QAbstract3DAxisSlots::titleVisibilityChanged( bool visible )
+void QAbstract3DAxisSlots::titleVisibilityChanged(bool visible)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "titleVisibilityChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DAXIS");
-    PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+    PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
     hb_vmEvalBlockV(cb, 2, psender, pvisible);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvisible );
+    hb_itemRelease(pvisible);
   }
 }
 
-void QAbstract3DAxisSlots_connect_signal(const QString & signal, const QString & slot)
+void QAbstract3DAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstract3DAxis * obj = (QAbstract3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAbstract3DAxisSlots * s = QCoreApplication::instance()->findChild<QAbstract3DAxisSlots*>();
+    QAbstract3DAxisSlots *s = QCoreApplication::instance()->findChild<QAbstract3DAxisSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAbstract3DAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -12,7 +12,7 @@
 
 #include "Q3DThemeSlots.hpp"
 
-Q3DThemeSlots::Q3DThemeSlots( QObject *parent ) : QObject( parent )
+Q3DThemeSlots::Q3DThemeSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,85 +20,85 @@ Q3DThemeSlots::~Q3DThemeSlots()
 {
 }
 
-void Q3DThemeSlots::ambientLightStrengthChanged( float strength )
+void Q3DThemeSlots::ambientLightStrengthChanged(float strength)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "ambientLightStrengthChanged(float)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pstrength = hb_itemPutND( NULL, strength );
+    PHB_ITEM pstrength = hb_itemPutND(NULL, strength);
 
     hb_vmEvalBlockV(cb, 2, psender, pstrength);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstrength );
+    hb_itemRelease(pstrength);
   }
 }
 
-void Q3DThemeSlots::backgroundColorChanged( const QColor & color )
+void Q3DThemeSlots::backgroundColorChanged(const QColor &color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "backgroundColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcolor );
+    hb_itemRelease(pcolor);
   }
 }
 
-void Q3DThemeSlots::backgroundEnabledChanged( bool enabled )
+void Q3DThemeSlots::backgroundEnabledChanged(bool enabled)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "backgroundEnabledChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
+    PHB_ITEM penabled = hb_itemPutL(NULL, enabled);
 
     hb_vmEvalBlockV(cb, 2, psender, penabled);
 
     hb_itemRelease(psender);
-    hb_itemRelease( penabled );
+    hb_itemRelease(penabled);
   }
 }
 
-void Q3DThemeSlots::baseColorsChanged( const QList<QColor> & colors )
+void Q3DThemeSlots::baseColorsChanged(const QList<QColor> &colors)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "baseColorsChanged(QList<QColor>)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_DYNS pDynSym = hb_dynsymFindName("QCOLOR");
     PHB_ITEM pcolors = hb_itemArrayNew(0);
-    if( pDynSym != NULL )
+    if (pDynSym != NULL)
     {
-      for( int i = 0; i < colors.count(); i++ )
+      for (int i = 0; i < colors.count(); i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pTempObject = hb_itemNew( NULL );
-        hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QColor( colors [i] ) );
-        hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-        hb_arrayAddForward( pcolors, pTempObject );
-        hb_itemRelease( pTempObject );
-        hb_itemRelease( pTempItem );
+        PHB_ITEM pTempObject = hb_itemNew(NULL);
+        hb_itemCopy(pTempObject, hb_stackReturnItem());
+        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, new QColor(colors[i]));
+        hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+        hb_arrayAddForward(pcolors, pTempObject);
+        hb_itemRelease(pTempObject);
+        hb_itemRelease(pTempItem);
       }
     }
     else
@@ -109,35 +109,35 @@ void Q3DThemeSlots::baseColorsChanged( const QList<QColor> & colors )
     hb_vmEvalBlockV(cb, 2, psender, pcolors);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcolors );
+    hb_itemRelease(pcolors);
   }
 }
 
-void Q3DThemeSlots::baseGradientsChanged( const QList<QLinearGradient> & gradients )
+void Q3DThemeSlots::baseGradientsChanged(const QList<QLinearGradient> &gradients)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "baseGradientsChanged(QList<QLinearGradient>)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_DYNS pDynSym = hb_dynsymFindName("QLINEARGRADIENT");
     PHB_ITEM pgradients = hb_itemArrayNew(0);
-    if( pDynSym != NULL )
+    if (pDynSym != NULL)
     {
-      for( int i = 0; i < gradients.count(); i++ )
+      for (int i = 0; i < gradients.count(); i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pTempObject = hb_itemNew( NULL );
-        hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QLinearGradient( gradients [i] ) );
-        hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-        hb_arrayAddForward( pgradients, pTempObject );
-        hb_itemRelease( pTempObject );
-        hb_itemRelease( pTempItem );
+        PHB_ITEM pTempObject = hb_itemNew(NULL);
+        hb_itemCopy(pTempObject, hb_stackReturnItem());
+        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, new QLinearGradient(gradients[i]));
+        hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+        hb_arrayAddForward(pgradients, pTempObject);
+        hb_itemRelease(pTempObject);
+        hb_itemRelease(pTempItem);
       }
     }
     else
@@ -148,325 +148,325 @@ void Q3DThemeSlots::baseGradientsChanged( const QList<QLinearGradient> & gradien
     hb_vmEvalBlockV(cb, 2, psender, pgradients);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pgradients );
+    hb_itemRelease(pgradients);
   }
 }
 
-void Q3DThemeSlots::colorStyleChanged( Q3DTheme::ColorStyle style )
+void Q3DThemeSlots::colorStyleChanged(Q3DTheme::ColorStyle style)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorStyleChanged(Q3DTheme::ColorStyle)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pstyle = hb_itemPutNI( NULL, static_cast<int>(style) );
+    PHB_ITEM pstyle = hb_itemPutNI(NULL, static_cast<int>(style));
 
     hb_vmEvalBlockV(cb, 2, psender, pstyle);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstyle );
+    hb_itemRelease(pstyle);
   }
 }
 
-void Q3DThemeSlots::fontChanged( const QFont & font )
+void Q3DThemeSlots::fontChanged(const QFont &font)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fontChanged(QFont)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT");
+    PHB_ITEM pfont = Qt5xHb::Signals_return_object((void *)&font, "QFONT");
 
     hb_vmEvalBlockV(cb, 2, psender, pfont);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfont );
+    hb_itemRelease(pfont);
   }
 }
 
-void Q3DThemeSlots::gridEnabledChanged( bool enabled )
+void Q3DThemeSlots::gridEnabledChanged(bool enabled)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "gridEnabledChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
+    PHB_ITEM penabled = hb_itemPutL(NULL, enabled);
 
     hb_vmEvalBlockV(cb, 2, psender, penabled);
 
     hb_itemRelease(psender);
-    hb_itemRelease( penabled );
+    hb_itemRelease(penabled);
   }
 }
 
-void Q3DThemeSlots::gridLineColorChanged( const QColor & color )
+void Q3DThemeSlots::gridLineColorChanged(const QColor &color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "gridLineColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcolor );
+    hb_itemRelease(pcolor);
   }
 }
 
-void Q3DThemeSlots::highlightLightStrengthChanged( float strength )
+void Q3DThemeSlots::highlightLightStrengthChanged(float strength)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "highlightLightStrengthChanged(float)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pstrength = hb_itemPutND( NULL, strength );
+    PHB_ITEM pstrength = hb_itemPutND(NULL, strength);
 
     hb_vmEvalBlockV(cb, 2, psender, pstrength);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstrength );
+    hb_itemRelease(pstrength);
   }
 }
 
-void Q3DThemeSlots::labelBackgroundColorChanged( const QColor & color )
+void Q3DThemeSlots::labelBackgroundColorChanged(const QColor &color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelBackgroundColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcolor );
+    hb_itemRelease(pcolor);
   }
 }
 
-void Q3DThemeSlots::labelBackgroundEnabledChanged( bool enabled )
+void Q3DThemeSlots::labelBackgroundEnabledChanged(bool enabled)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelBackgroundEnabledChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
+    PHB_ITEM penabled = hb_itemPutL(NULL, enabled);
 
     hb_vmEvalBlockV(cb, 2, psender, penabled);
 
     hb_itemRelease(psender);
-    hb_itemRelease( penabled );
+    hb_itemRelease(penabled);
   }
 }
 
-void Q3DThemeSlots::labelBorderEnabledChanged( bool enabled )
+void Q3DThemeSlots::labelBorderEnabledChanged(bool enabled)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelBorderEnabledChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
+    PHB_ITEM penabled = hb_itemPutL(NULL, enabled);
 
     hb_vmEvalBlockV(cb, 2, psender, penabled);
 
     hb_itemRelease(psender);
-    hb_itemRelease( penabled );
+    hb_itemRelease(penabled);
   }
 }
 
-void Q3DThemeSlots::labelTextColorChanged( const QColor & color )
+void Q3DThemeSlots::labelTextColorChanged(const QColor &color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelTextColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcolor );
+    hb_itemRelease(pcolor);
   }
 }
 
-void Q3DThemeSlots::lightColorChanged( const QColor & color )
+void Q3DThemeSlots::lightColorChanged(const QColor &color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lightColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcolor );
+    hb_itemRelease(pcolor);
   }
 }
 
-void Q3DThemeSlots::lightStrengthChanged( float strength )
+void Q3DThemeSlots::lightStrengthChanged(float strength)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lightStrengthChanged(float)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pstrength = hb_itemPutND( NULL, strength );
+    PHB_ITEM pstrength = hb_itemPutND(NULL, strength);
 
     hb_vmEvalBlockV(cb, 2, psender, pstrength);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstrength );
+    hb_itemRelease(pstrength);
   }
 }
 
-void Q3DThemeSlots::multiHighlightColorChanged( const QColor & color )
+void Q3DThemeSlots::multiHighlightColorChanged(const QColor &color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "multiHighlightColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcolor );
+    hb_itemRelease(pcolor);
   }
 }
 
-void Q3DThemeSlots::multiHighlightGradientChanged( const QLinearGradient & gradient )
+void Q3DThemeSlots::multiHighlightGradientChanged(const QLinearGradient &gradient)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "multiHighlightGradientChanged(QLinearGradient)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pgradient = Qt5xHb::Signals_return_object( (void *) &gradient, "QLINEARGRADIENT");
+    PHB_ITEM pgradient = Qt5xHb::Signals_return_object((void *)&gradient, "QLINEARGRADIENT");
 
     hb_vmEvalBlockV(cb, 2, psender, pgradient);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pgradient );
+    hb_itemRelease(pgradient);
   }
 }
 
-void Q3DThemeSlots::singleHighlightColorChanged( const QColor & color )
+void Q3DThemeSlots::singleHighlightColorChanged(const QColor &color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "singleHighlightColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcolor );
+    hb_itemRelease(pcolor);
   }
 }
 
-void Q3DThemeSlots::singleHighlightGradientChanged( const QLinearGradient & gradient )
+void Q3DThemeSlots::singleHighlightGradientChanged(const QLinearGradient &gradient)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "singleHighlightGradientChanged(QLinearGradient)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pgradient = Qt5xHb::Signals_return_object( (void *) &gradient, "QLINEARGRADIENT");
+    PHB_ITEM pgradient = Qt5xHb::Signals_return_object((void *)&gradient, "QLINEARGRADIENT");
 
     hb_vmEvalBlockV(cb, 2, psender, pgradient);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pgradient );
+    hb_itemRelease(pgradient);
   }
 }
 
-void Q3DThemeSlots::typeChanged( Q3DTheme::Theme themeType )
+void Q3DThemeSlots::typeChanged(Q3DTheme::Theme themeType)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "typeChanged(Q3DTheme::Theme)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pthemeType = hb_itemPutNI( NULL, static_cast<int>(themeType) );
+    PHB_ITEM pthemeType = hb_itemPutNI(NULL, static_cast<int>(themeType));
 
     hb_vmEvalBlockV(cb, 2, psender, pthemeType);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pthemeType );
+    hb_itemRelease(pthemeType);
   }
 }
 
-void Q3DThemeSlots::windowColorChanged( const QColor & color )
+void Q3DThemeSlots::windowColorChanged(const QColor &color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "windowColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcolor );
+    hb_itemRelease(pcolor);
   }
 }
 
-void Q3DThemeSlots_connect_signal(const QString & signal, const QString & slot)
+void Q3DThemeSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  Q3DTheme * obj = (Q3DTheme *) Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DTheme *obj = (Q3DTheme *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    Q3DThemeSlots * s = QCoreApplication::instance()->findChild<Q3DThemeSlots*>();
+    Q3DThemeSlots *s = QCoreApplication::instance()->findChild<Q3DThemeSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new Q3DThemeSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

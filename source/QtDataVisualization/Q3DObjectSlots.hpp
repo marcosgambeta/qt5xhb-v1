@@ -26,14 +26,14 @@
 
 using namespace QtDataVisualization;
 
-class Q3DObjectSlots: public QObject
+class Q3DObjectSlots : public QObject
 {
   Q_OBJECT
-  public:
-  Q3DObjectSlots( QObject *parent = 0 );
+public:
+  Q3DObjectSlots(QObject *parent = 0);
   ~Q3DObjectSlots();
-  public slots:
-  void positionChanged( const QVector3D & position );
+public slots:
+  void positionChanged(const QVector3D &position);
 };
 
 #endif /* Q3DOBJECTSLOTS_H */

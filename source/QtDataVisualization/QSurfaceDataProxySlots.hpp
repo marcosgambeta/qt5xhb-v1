@@ -27,22 +27,22 @@
 
 using namespace QtDataVisualization;
 
-class QSurfaceDataProxySlots: public QObject
+class QSurfaceDataProxySlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSurfaceDataProxySlots( QObject *parent = 0 );
+public:
+  QSurfaceDataProxySlots(QObject *parent = 0);
   ~QSurfaceDataProxySlots();
-  public slots:
+public slots:
   void arrayReset();
-  void columnCountChanged( int count );
-  void itemChanged( int rowIndex, int columnIndex );
-  void rowCountChanged( int count );
-  void rowsAdded( int startIndex, int count );
-  void rowsChanged( int startIndex, int count );
-  void rowsInserted( int startIndex, int count );
-  void rowsRemoved( int startIndex, int count );
-  void seriesChanged( QSurface3DSeries * series );
+  void columnCountChanged(int count);
+  void itemChanged(int rowIndex, int columnIndex);
+  void rowCountChanged(int count);
+  void rowsAdded(int startIndex, int count);
+  void rowsChanged(int startIndex, int count);
+  void rowsInserted(int startIndex, int count);
+  void rowsRemoved(int startIndex, int count);
+  void seriesChanged(QSurface3DSeries *series);
 };
 
 #endif /* QSURFACEDATAPROXYSLOTS_H */

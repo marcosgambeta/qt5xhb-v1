@@ -26,13 +26,13 @@
 
 using namespace QtDataVisualization;
 
-class QCategory3DAxisSlots: public QObject
+class QCategory3DAxisSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCategory3DAxisSlots( QObject *parent = 0 );
+public:
+  QCategory3DAxisSlots(QObject *parent = 0);
   ~QCategory3DAxisSlots();
-  public slots:
+public slots:
   void labelsChanged();
 };
 

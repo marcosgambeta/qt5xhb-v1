@@ -26,20 +26,20 @@
 
 using namespace QtDataVisualization;
 
-class QCustom3DLabelSlots: public QObject
+class QCustom3DLabelSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCustom3DLabelSlots( QObject *parent = 0 );
+public:
+  QCustom3DLabelSlots(QObject *parent = 0);
   ~QCustom3DLabelSlots();
-  public slots:
-  void backgroundColorChanged( const QColor & color );
-  void backgroundEnabledChanged( bool enabled );
-  void borderEnabledChanged( bool enabled );
-  void facingCameraChanged( bool enabled );
-  void fontChanged( const QFont & font );
-  void textChanged( const QString & text );
-  void textColorChanged( const QColor & color );
+public slots:
+  void backgroundColorChanged(const QColor &color);
+  void backgroundEnabledChanged(bool enabled);
+  void borderEnabledChanged(bool enabled);
+  void facingCameraChanged(bool enabled);
+  void fontChanged(const QFont &font);
+  void textChanged(const QString &text);
+  void textColorChanged(const QColor &color);
 };
 
 #endif /* QCUSTOM3DLABELSLOTS_H */

@@ -27,20 +27,20 @@
 
 using namespace QtDataVisualization;
 
-class QScatterDataProxySlots: public QObject
+class QScatterDataProxySlots : public QObject
 {
   Q_OBJECT
-  public:
-  QScatterDataProxySlots( QObject *parent = 0 );
+public:
+  QScatterDataProxySlots(QObject *parent = 0);
   ~QScatterDataProxySlots();
-  public slots:
+public slots:
   void arrayReset();
-  void itemCountChanged( int count );
-  void itemsAdded( int startIndex, int count );
-  void itemsChanged( int startIndex, int count );
-  void itemsInserted( int startIndex, int count );
-  void itemsRemoved( int startIndex, int count );
-  void seriesChanged( QScatter3DSeries * series );
+  void itemCountChanged(int count);
+  void itemsAdded(int startIndex, int count);
+  void itemsChanged(int startIndex, int count);
+  void itemsInserted(int startIndex, int count);
+  void itemsRemoved(int startIndex, int count);
+  void seriesChanged(QScatter3DSeries *series);
 };
 
 #endif /* QSCATTERDATAPROXYSLOTS_H */

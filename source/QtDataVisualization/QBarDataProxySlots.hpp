@@ -27,23 +27,23 @@
 
 using namespace QtDataVisualization;
 
-class QBarDataProxySlots: public QObject
+class QBarDataProxySlots : public QObject
 {
   Q_OBJECT
-  public:
-  QBarDataProxySlots( QObject *parent = 0 );
+public:
+  QBarDataProxySlots(QObject *parent = 0);
   ~QBarDataProxySlots();
-  public slots:
+public slots:
   void arrayReset();
   void columnLabelsChanged();
-  void itemChanged( int rowIndex, int columnIndex );
-  void rowCountChanged( int count );
+  void itemChanged(int rowIndex, int columnIndex);
+  void rowCountChanged(int count);
   void rowLabelsChanged();
-  void rowsAdded( int startIndex, int count );
-  void rowsChanged( int startIndex, int count );
-  void rowsInserted( int startIndex, int count );
-  void rowsRemoved( int startIndex, int count );
-  void seriesChanged( QBar3DSeries * series );
+  void rowsAdded(int startIndex, int count);
+  void rowsChanged(int startIndex, int count);
+  void rowsInserted(int startIndex, int count);
+  void rowsRemoved(int startIndex, int count);
+  void seriesChanged(QBar3DSeries *series);
 };
 
 #endif /* QBARDATAPROXYSLOTS_H */

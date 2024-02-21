@@ -26,23 +26,23 @@
 
 using namespace QtDataVisualization;
 
-class Q3DBarsSlots: public QObject
+class Q3DBarsSlots : public QObject
 {
   Q_OBJECT
-  public:
-  Q3DBarsSlots( QObject *parent = 0 );
+public:
+  Q3DBarsSlots(QObject *parent = 0);
   ~Q3DBarsSlots();
-  public slots:
-  void multiSeriesUniformChanged( bool uniform );
-  void barThicknessChanged( float thicknessRatio );
-  void barSpacingChanged( const QSizeF & spacing );
-  void barSpacingRelativeChanged( bool relative );
-  void rowAxisChanged( QCategory3DAxis * axis );
-  void columnAxisChanged( QCategory3DAxis * axis );
-  void valueAxisChanged( QValue3DAxis * axis );
-  void primarySeriesChanged( QBar3DSeries * series );
-  void selectedSeriesChanged( QBar3DSeries * series );
-  void floorLevelChanged( float level );
+public slots:
+  void multiSeriesUniformChanged(bool uniform);
+  void barThicknessChanged(float thicknessRatio);
+  void barSpacingChanged(const QSizeF &spacing);
+  void barSpacingRelativeChanged(bool relative);
+  void rowAxisChanged(QCategory3DAxis *axis);
+  void columnAxisChanged(QCategory3DAxis *axis);
+  void valueAxisChanged(QValue3DAxis *axis);
+  void primarySeriesChanged(QBar3DSeries *series);
+  void selectedSeriesChanged(QBar3DSeries *series);
+  void floorLevelChanged(float level);
 };
 
 #endif /* Q3DBARSSLOTS_H */

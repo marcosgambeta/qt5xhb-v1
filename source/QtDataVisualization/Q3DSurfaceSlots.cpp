@@ -12,7 +12,7 @@
 
 #include "Q3DSurfaceSlots.hpp"
 
-Q3DSurfaceSlots::Q3DSurfaceSlots( QObject *parent ) : QObject( parent )
+Q3DSurfaceSlots::Q3DSurfaceSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ Q3DSurfaceSlots::~Q3DSurfaceSlots()
 {
 }
 
-void Q3DSurfaceSlots::axisXChanged( QValue3DAxis * axis )
+void Q3DSurfaceSlots::axisXChanged(QValue3DAxis *axis)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisXChanged(QValue3DAxis*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSURFACE");
     PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QVALUE3DAXIS");
@@ -34,17 +34,17 @@ void Q3DSurfaceSlots::axisXChanged( QValue3DAxis * axis )
     hb_vmEvalBlockV(cb, 2, psender, paxis);
 
     hb_itemRelease(psender);
-    hb_itemRelease( paxis );
+    hb_itemRelease(paxis);
   }
 }
 
-void Q3DSurfaceSlots::axisYChanged( QValue3DAxis * axis )
+void Q3DSurfaceSlots::axisYChanged(QValue3DAxis *axis)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisYChanged(QValue3DAxis*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSURFACE");
     PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QVALUE3DAXIS");
@@ -52,17 +52,17 @@ void Q3DSurfaceSlots::axisYChanged( QValue3DAxis * axis )
     hb_vmEvalBlockV(cb, 2, psender, paxis);
 
     hb_itemRelease(psender);
-    hb_itemRelease( paxis );
+    hb_itemRelease(paxis);
   }
 }
 
-void Q3DSurfaceSlots::axisZChanged( QValue3DAxis * axis )
+void Q3DSurfaceSlots::axisZChanged(QValue3DAxis *axis)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisZChanged(QValue3DAxis*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSURFACE");
     PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QVALUE3DAXIS");
@@ -70,35 +70,35 @@ void Q3DSurfaceSlots::axisZChanged( QValue3DAxis * axis )
     hb_vmEvalBlockV(cb, 2, psender, paxis);
 
     hb_itemRelease(psender);
-    hb_itemRelease( paxis );
+    hb_itemRelease(paxis);
   }
 }
 
-void Q3DSurfaceSlots::flipHorizontalGridChanged( bool flip )
+void Q3DSurfaceSlots::flipHorizontalGridChanged(bool flip)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flipHorizontalGridChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSURFACE");
-    PHB_ITEM pflip = hb_itemPutL( NULL, flip );
+    PHB_ITEM pflip = hb_itemPutL(NULL, flip);
 
     hb_vmEvalBlockV(cb, 2, psender, pflip);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pflip );
+    hb_itemRelease(pflip);
   }
 }
 
-void Q3DSurfaceSlots::selectedSeriesChanged( QSurface3DSeries * series )
+void Q3DSurfaceSlots::selectedSeriesChanged(QSurface3DSeries *series)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectedSeriesChanged(QSurface3DSeries*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSURFACE");
     PHB_ITEM pseries = Qt5xHb::Signals_return_qobject(series, "QSURFACE3DSERIES");
@@ -106,19 +106,19 @@ void Q3DSurfaceSlots::selectedSeriesChanged( QSurface3DSeries * series )
     hb_vmEvalBlockV(cb, 2, psender, pseries);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pseries );
+    hb_itemRelease(pseries);
   }
 }
 
-void Q3DSurfaceSlots_connect_signal(const QString & signal, const QString & slot)
+void Q3DSurfaceSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  Q3DSurface * obj = (Q3DSurface *) Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DSurface *obj = (Q3DSurface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    Q3DSurfaceSlots * s = QCoreApplication::instance()->findChild<Q3DSurfaceSlots*>();
+    Q3DSurfaceSlots *s = QCoreApplication::instance()->findChild<Q3DSurfaceSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new Q3DSurfaceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

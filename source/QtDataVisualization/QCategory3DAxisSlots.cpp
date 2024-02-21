@@ -12,7 +12,7 @@
 
 #include "QCategory3DAxisSlots.hpp"
 
-QCategory3DAxisSlots::QCategory3DAxisSlots( QObject *parent ) : QObject( parent )
+QCategory3DAxisSlots::QCategory3DAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QCategory3DAxisSlots::~QCategory3DAxisSlots()
 
 void QCategory3DAxisSlots::labelsChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelsChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCATEGORY3DAXIS");
 
@@ -36,15 +36,15 @@ void QCategory3DAxisSlots::labelsChanged()
   }
 }
 
-void QCategory3DAxisSlots_connect_signal(const QString & signal, const QString & slot)
+void QCategory3DAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCategory3DAxis * obj = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCategory3DAxis *obj = (QCategory3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QCategory3DAxisSlots * s = QCoreApplication::instance()->findChild<QCategory3DAxisSlots*>();
+    QCategory3DAxisSlots *s = QCoreApplication::instance()->findChild<QCategory3DAxisSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QCategory3DAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

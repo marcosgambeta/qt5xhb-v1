@@ -26,35 +26,35 @@
 
 using namespace QtDataVisualization;
 
-class Q3DThemeSlots: public QObject
+class Q3DThemeSlots : public QObject
 {
   Q_OBJECT
-  public:
-  Q3DThemeSlots( QObject *parent = 0 );
+public:
+  Q3DThemeSlots(QObject *parent = 0);
   ~Q3DThemeSlots();
-  public slots:
-  void ambientLightStrengthChanged( float strength );
-  void backgroundColorChanged( const QColor & color );
-  void backgroundEnabledChanged( bool enabled );
-  void baseColorsChanged( const QList<QColor> & colors );
-  void baseGradientsChanged( const QList<QLinearGradient> & gradients );
-  void colorStyleChanged( Q3DTheme::ColorStyle style );
-  void fontChanged( const QFont & font );
-  void gridEnabledChanged( bool enabled );
-  void gridLineColorChanged( const QColor & color );
-  void highlightLightStrengthChanged( float strength );
-  void labelBackgroundColorChanged( const QColor & color );
-  void labelBackgroundEnabledChanged( bool enabled );
-  void labelBorderEnabledChanged( bool enabled );
-  void labelTextColorChanged( const QColor & color );
-  void lightColorChanged( const QColor & color );
-  void lightStrengthChanged( float strength );
-  void multiHighlightColorChanged( const QColor & color );
-  void multiHighlightGradientChanged( const QLinearGradient & gradient );
-  void singleHighlightColorChanged( const QColor & color );
-  void singleHighlightGradientChanged( const QLinearGradient & gradient );
-  void typeChanged( Q3DTheme::Theme themeType );
-  void windowColorChanged( const QColor & color );
+public slots:
+  void ambientLightStrengthChanged(float strength);
+  void backgroundColorChanged(const QColor &color);
+  void backgroundEnabledChanged(bool enabled);
+  void baseColorsChanged(const QList<QColor> &colors);
+  void baseGradientsChanged(const QList<QLinearGradient> &gradients);
+  void colorStyleChanged(Q3DTheme::ColorStyle style);
+  void fontChanged(const QFont &font);
+  void gridEnabledChanged(bool enabled);
+  void gridLineColorChanged(const QColor &color);
+  void highlightLightStrengthChanged(float strength);
+  void labelBackgroundColorChanged(const QColor &color);
+  void labelBackgroundEnabledChanged(bool enabled);
+  void labelBorderEnabledChanged(bool enabled);
+  void labelTextColorChanged(const QColor &color);
+  void lightColorChanged(const QColor &color);
+  void lightStrengthChanged(float strength);
+  void multiHighlightColorChanged(const QColor &color);
+  void multiHighlightGradientChanged(const QLinearGradient &gradient);
+  void singleHighlightColorChanged(const QColor &color);
+  void singleHighlightGradientChanged(const QLinearGradient &gradient);
+  void typeChanged(Q3DTheme::Theme themeType);
+  void windowColorChanged(const QColor &color);
 };
 
 #endif /* Q3DTHEMESLOTS_H */

@@ -26,16 +26,16 @@
 
 using namespace QtDataVisualization;
 
-class QScatter3DSeriesSlots: public QObject
+class QScatter3DSeriesSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QScatter3DSeriesSlots( QObject *parent = 0 );
+public:
+  QScatter3DSeriesSlots(QObject *parent = 0);
   ~QScatter3DSeriesSlots();
-  public slots:
-  void dataProxyChanged( QScatterDataProxy * proxy );
-  void itemSizeChanged( float size );
-  void selectedItemChanged( int index );
+public slots:
+  void dataProxyChanged(QScatterDataProxy *proxy);
+  void itemSizeChanged(float size);
+  void selectedItemChanged(int index);
 };
 
 #endif /* QSCATTER3DSERIESSLOTS_H */

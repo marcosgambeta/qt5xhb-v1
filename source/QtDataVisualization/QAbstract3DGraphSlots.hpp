@@ -26,31 +26,31 @@
 
 using namespace QtDataVisualization;
 
-class QAbstract3DGraphSlots: public QObject
+class QAbstract3DGraphSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstract3DGraphSlots( QObject *parent = 0 );
+public:
+  QAbstract3DGraphSlots(QObject *parent = 0);
   ~QAbstract3DGraphSlots();
-  public slots:
-  void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler );
-  void activeThemeChanged( Q3DTheme * theme );
-  void aspectRatioChanged( qreal ratio );
-  void currentFpsChanged( qreal fps );
-  void horizontalAspectRatioChanged( qreal ratio );
-  void localeChanged( const QLocale & locale );
-  void marginChanged( qreal margin );
-  void measureFpsChanged( bool enabled );
-  void optimizationHintsChanged( QAbstract3DGraph::OptimizationHints hints );
-  void orthoProjectionChanged( bool enabled );
-  void polarChanged( bool enabled );
-  void queriedGraphPositionChanged( const QVector3D & data );
-  void radialLabelOffsetChanged( float offset );
-  void reflectionChanged( bool enabled );
-  void reflectivityChanged( qreal reflectivity );
-  void selectedElementChanged( QAbstract3DGraph::ElementType type );
-  void selectionModeChanged( QAbstract3DGraph::SelectionFlags mode );
-  void shadowQualityChanged( QAbstract3DGraph::ShadowQuality quality );
+public slots:
+  void activeInputHandlerChanged(QAbstract3DInputHandler *inputHandler);
+  void activeThemeChanged(Q3DTheme *theme);
+  void aspectRatioChanged(qreal ratio);
+  void currentFpsChanged(qreal fps);
+  void horizontalAspectRatioChanged(qreal ratio);
+  void localeChanged(const QLocale &locale);
+  void marginChanged(qreal margin);
+  void measureFpsChanged(bool enabled);
+  void optimizationHintsChanged(QAbstract3DGraph::OptimizationHints hints);
+  void orthoProjectionChanged(bool enabled);
+  void polarChanged(bool enabled);
+  void queriedGraphPositionChanged(const QVector3D &data);
+  void radialLabelOffsetChanged(float offset);
+  void reflectionChanged(bool enabled);
+  void reflectivityChanged(qreal reflectivity);
+  void selectedElementChanged(QAbstract3DGraph::ElementType type);
+  void selectionModeChanged(QAbstract3DGraph::SelectionFlags mode);
+  void shadowQualityChanged(QAbstract3DGraph::ShadowQuality quality);
 };
 
 #endif /* QABSTRACT3DGRAPHSLOTS_H */

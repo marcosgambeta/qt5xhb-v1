@@ -26,23 +26,23 @@
 
 using namespace QtDataVisualization;
 
-class Q3DSceneSlots: public QObject
+class Q3DSceneSlots : public QObject
 {
   Q_OBJECT
-  public:
-  Q3DSceneSlots( QObject *parent = 0 );
+public:
+  Q3DSceneSlots(QObject *parent = 0);
   ~Q3DSceneSlots();
-  public slots:
-  void activeCameraChanged( Q3DCamera * camera );
-  void activeLightChanged( Q3DLight * light );
-  void devicePixelRatioChanged( float pixelRatio );
-  void graphPositionQueryChanged( const QPoint & position );
-  void primarySubViewportChanged( const QRect & subViewport );
-  void secondarySubviewOnTopChanged( bool isSecondaryOnTop );
-  void secondarySubViewportChanged( const QRect & subViewport );
-  void selectionQueryPositionChanged( const QPoint & position );
-  void slicingActiveChanged( bool isSlicingActive );
-  void viewportChanged( const QRect & viewport );
+public slots:
+  void activeCameraChanged(Q3DCamera *camera);
+  void activeLightChanged(Q3DLight *light);
+  void devicePixelRatioChanged(float pixelRatio);
+  void graphPositionQueryChanged(const QPoint &position);
+  void primarySubViewportChanged(const QRect &subViewport);
+  void secondarySubviewOnTopChanged(bool isSecondaryOnTop);
+  void secondarySubViewportChanged(const QRect &subViewport);
+  void selectionQueryPositionChanged(const QPoint &position);
+  void slicingActiveChanged(bool isSlicingActive);
+  void viewportChanged(const QRect &viewport);
 };
 
 #endif /* Q3DSCENESLOTS_H */

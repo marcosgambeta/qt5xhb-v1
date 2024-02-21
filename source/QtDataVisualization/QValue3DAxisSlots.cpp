@@ -12,7 +12,7 @@
 
 #include "QValue3DAxisSlots.hpp"
 
-QValue3DAxisSlots::QValue3DAxisSlots( QObject *parent ) : QObject( parent )
+QValue3DAxisSlots::QValue3DAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,15 +20,15 @@ QValue3DAxisSlots::~QValue3DAxisSlots()
 {
 }
 
-void QValue3DAxisSlots_connect_signal(const QString & signal, const QString & slot)
+void QValue3DAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QValue3DAxis * obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QValue3DAxisSlots * s = QCoreApplication::instance()->findChild<QValue3DAxisSlots*>();
+    QValue3DAxisSlots *s = QCoreApplication::instance()->findChild<QValue3DAxisSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QValue3DAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -26,16 +26,16 @@
 
 using namespace QtDataVisualization;
 
-class QLogValue3DAxisFormatterSlots: public QObject
+class QLogValue3DAxisFormatterSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QLogValue3DAxisFormatterSlots( QObject *parent = 0 );
+public:
+  QLogValue3DAxisFormatterSlots(QObject *parent = 0);
   ~QLogValue3DAxisFormatterSlots();
-  public slots:
-  void autoSubGridChanged( bool enabled );
-  void baseChanged( qreal base );
-  void showEdgeLabelsChanged( bool enabled );
+public slots:
+  void autoSubGridChanged(bool enabled);
+  void baseChanged(qreal base);
+  void showEdgeLabelsChanged(bool enabled);
 };
 
 #endif /* QLOGVALUE3DAXISFORMATTERSLOTS_H */

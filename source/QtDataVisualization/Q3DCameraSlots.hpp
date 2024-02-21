@@ -26,22 +26,22 @@
 
 using namespace QtDataVisualization;
 
-class Q3DCameraSlots: public QObject
+class Q3DCameraSlots : public QObject
 {
   Q_OBJECT
-  public:
-  Q3DCameraSlots( QObject *parent = 0 );
+public:
+  Q3DCameraSlots(QObject *parent = 0);
   ~Q3DCameraSlots();
-  public slots:
-  void cameraPresetChanged( Q3DCamera::CameraPreset preset );
-  void maxZoomLevelChanged( float zoomLevel );
-  void minZoomLevelChanged( float zoomLevel );
-  void targetChanged( const QVector3D & target );
-  void wrapXRotationChanged( bool isEnabled );
-  void wrapYRotationChanged( bool isEnabled );
-  void xRotationChanged( float rotation );
-  void yRotationChanged( float rotation );
-  void zoomLevelChanged( float zoomLevel );
+public slots:
+  void cameraPresetChanged(Q3DCamera::CameraPreset preset);
+  void maxZoomLevelChanged(float zoomLevel);
+  void minZoomLevelChanged(float zoomLevel);
+  void targetChanged(const QVector3D &target);
+  void wrapXRotationChanged(bool isEnabled);
+  void wrapYRotationChanged(bool isEnabled);
+  void xRotationChanged(float rotation);
+  void yRotationChanged(float rotation);
+  void zoomLevelChanged(float zoomLevel);
 };
 
 #endif /* Q3DCAMERASLOTS_H */

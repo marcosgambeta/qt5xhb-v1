@@ -26,32 +26,32 @@
 
 using namespace QtDataVisualization;
 
-class QItemModelBarDataProxySlots: public QObject
+class QItemModelBarDataProxySlots : public QObject
 {
   Q_OBJECT
-  public:
-  QItemModelBarDataProxySlots( QObject *parent = 0 );
+public:
+  QItemModelBarDataProxySlots(QObject *parent = 0);
   ~QItemModelBarDataProxySlots();
-  public slots:
-  void autoColumnCategoriesChanged( bool enable );
-  void autoRowCategoriesChanged( bool enable );
+public slots:
+  void autoColumnCategoriesChanged(bool enable);
+  void autoRowCategoriesChanged(bool enable);
   void columnCategoriesChanged();
-  void columnRoleChanged( const QString & role );
-  void columnRolePatternChanged( const QRegExp & pattern );
-  void columnRoleReplaceChanged( const QString & replace );
-  void itemModelChanged( const QAbstractItemModel * itemModel );
-  void multiMatchBehaviorChanged( QItemModelBarDataProxy::MultiMatchBehavior behavior );
-  void rotationRoleChanged( const QString & role );
-  void rotationRolePatternChanged( const QRegExp & pattern );
-  void rotationRoleReplaceChanged( const QString & replace );
+  void columnRoleChanged(const QString &role);
+  void columnRolePatternChanged(const QRegExp &pattern);
+  void columnRoleReplaceChanged(const QString &replace);
+  void itemModelChanged(const QAbstractItemModel *itemModel);
+  void multiMatchBehaviorChanged(QItemModelBarDataProxy::MultiMatchBehavior behavior);
+  void rotationRoleChanged(const QString &role);
+  void rotationRolePatternChanged(const QRegExp &pattern);
+  void rotationRoleReplaceChanged(const QString &replace);
   void rowCategoriesChanged();
-  void rowRoleChanged( const QString & role );
-  void rowRolePatternChanged( const QRegExp & pattern );
-  void rowRoleReplaceChanged( const QString & replace );
-  void useModelCategoriesChanged( bool enable );
-  void valueRoleChanged( const QString & role );
-  void valueRolePatternChanged( const QRegExp & pattern );
-  void valueRoleReplaceChanged( const QString & replace );
+  void rowRoleChanged(const QString &role);
+  void rowRolePatternChanged(const QRegExp &pattern);
+  void rowRoleReplaceChanged(const QString &replace);
+  void useModelCategoriesChanged(bool enable);
+  void valueRoleChanged(const QString &role);
+  void valueRolePatternChanged(const QRegExp &pattern);
+  void valueRoleReplaceChanged(const QString &replace);
 };
 
 #endif /* QITEMMODELBARDATAPROXYSLOTS_H */

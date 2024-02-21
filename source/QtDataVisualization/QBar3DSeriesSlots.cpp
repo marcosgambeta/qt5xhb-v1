@@ -12,7 +12,7 @@
 
 #include "QBar3DSeriesSlots.hpp"
 
-QBar3DSeriesSlots::QBar3DSeriesSlots( QObject *parent ) : QObject( parent )
+QBar3DSeriesSlots::QBar3DSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QBar3DSeriesSlots::~QBar3DSeriesSlots()
 {
 }
 
-void QBar3DSeriesSlots::dataProxyChanged( QBarDataProxy * proxy )
+void QBar3DSeriesSlots::dataProxyChanged(QBarDataProxy *proxy)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataProxyChanged(QBarDataProxy*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBAR3DSERIES");
     PHB_ITEM pproxy = Qt5xHb::Signals_return_qobject(proxy, "QBARDATAPROXY");
@@ -34,55 +34,55 @@ void QBar3DSeriesSlots::dataProxyChanged( QBarDataProxy * proxy )
     hb_vmEvalBlockV(cb, 2, psender, pproxy);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pproxy );
+    hb_itemRelease(pproxy);
   }
 }
 
-void QBar3DSeriesSlots::meshAngleChanged( float angle )
+void QBar3DSeriesSlots::meshAngleChanged(float angle)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "meshAngleChanged(float)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBAR3DSERIES");
-    PHB_ITEM pangle = hb_itemPutND( NULL, angle );
+    PHB_ITEM pangle = hb_itemPutND(NULL, angle);
 
     hb_vmEvalBlockV(cb, 2, psender, pangle);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pangle );
+    hb_itemRelease(pangle);
   }
 }
 
-void QBar3DSeriesSlots::selectedBarChanged( const QPoint & position )
+void QBar3DSeriesSlots::selectedBarChanged(const QPoint &position)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectedBarChanged(QPoint)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBAR3DSERIES");
-    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT");
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object((void *)&position, "QPOINT");
 
     hb_vmEvalBlockV(cb, 2, psender, pposition);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pposition );
+    hb_itemRelease(pposition);
   }
 }
 
-void QBar3DSeriesSlots_connect_signal(const QString & signal, const QString & slot)
+void QBar3DSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QBar3DSeries * obj = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBar3DSeries *obj = (QBar3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QBar3DSeriesSlots * s = QCoreApplication::instance()->findChild<QBar3DSeriesSlots*>();
+    QBar3DSeriesSlots *s = QCoreApplication::instance()->findChild<QBar3DSeriesSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QBar3DSeriesSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

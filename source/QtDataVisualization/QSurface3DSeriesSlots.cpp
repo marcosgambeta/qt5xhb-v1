@@ -12,7 +12,7 @@
 
 #include "QSurface3DSeriesSlots.hpp"
 
-QSurface3DSeriesSlots::QSurface3DSeriesSlots( QObject *parent ) : QObject( parent )
+QSurface3DSeriesSlots::QSurface3DSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QSurface3DSeriesSlots::~QSurface3DSeriesSlots()
 {
 }
 
-void QSurface3DSeriesSlots::dataProxyChanged( QSurfaceDataProxy * proxy )
+void QSurface3DSeriesSlots::dataProxyChanged(QSurfaceDataProxy *proxy)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataProxyChanged(QSurfaceDataProxy*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSURFACE3DSERIES");
     PHB_ITEM pproxy = Qt5xHb::Signals_return_qobject(proxy, "QSURFACEDATAPROXY");
@@ -34,127 +34,127 @@ void QSurface3DSeriesSlots::dataProxyChanged( QSurfaceDataProxy * proxy )
     hb_vmEvalBlockV(cb, 2, psender, pproxy);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pproxy );
+    hb_itemRelease(pproxy);
   }
 }
 
-void QSurface3DSeriesSlots::drawModeChanged( QSurface3DSeries::DrawFlags mode )
+void QSurface3DSeriesSlots::drawModeChanged(QSurface3DSeries::DrawFlags mode)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "drawModeChanged(QSurface3DSeries::DrawFlags)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSURFACE3DSERIES");
-    PHB_ITEM pmode = hb_itemPutNI( NULL, static_cast<int>(mode) );
+    PHB_ITEM pmode = hb_itemPutNI(NULL, static_cast<int>(mode));
 
     hb_vmEvalBlockV(cb, 2, psender, pmode);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pmode );
+    hb_itemRelease(pmode);
   }
 }
 
-void QSurface3DSeriesSlots::flatShadingEnabledChanged( bool enable )
+void QSurface3DSeriesSlots::flatShadingEnabledChanged(bool enable)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flatShadingEnabledChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSURFACE3DSERIES");
-    PHB_ITEM penable = hb_itemPutL( NULL, enable );
+    PHB_ITEM penable = hb_itemPutL(NULL, enable);
 
     hb_vmEvalBlockV(cb, 2, psender, penable);
 
     hb_itemRelease(psender);
-    hb_itemRelease( penable );
+    hb_itemRelease(penable);
   }
 }
 
-void QSurface3DSeriesSlots::flatShadingSupportedChanged( bool enable )
+void QSurface3DSeriesSlots::flatShadingSupportedChanged(bool enable)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flatShadingSupportedChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSURFACE3DSERIES");
-    PHB_ITEM penable = hb_itemPutL( NULL, enable );
+    PHB_ITEM penable = hb_itemPutL(NULL, enable);
 
     hb_vmEvalBlockV(cb, 2, psender, penable);
 
     hb_itemRelease(psender);
-    hb_itemRelease( penable );
+    hb_itemRelease(penable);
   }
 }
 
-void QSurface3DSeriesSlots::selectedPointChanged( const QPoint & position )
+void QSurface3DSeriesSlots::selectedPointChanged(const QPoint &position)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectedPointChanged(QPoint)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSURFACE3DSERIES");
-    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT");
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object((void *)&position, "QPOINT");
 
     hb_vmEvalBlockV(cb, 2, psender, pposition);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pposition );
+    hb_itemRelease(pposition);
   }
 }
 
-void QSurface3DSeriesSlots::textureChanged( const QImage & image )
+void QSurface3DSeriesSlots::textureChanged(const QImage &image)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "textureChanged(QImage)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSURFACE3DSERIES");
-    PHB_ITEM pimage = Qt5xHb::Signals_return_object( (void *) &image, "QIMAGE");
+    PHB_ITEM pimage = Qt5xHb::Signals_return_object((void *)&image, "QIMAGE");
 
     hb_vmEvalBlockV(cb, 2, psender, pimage);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pimage );
+    hb_itemRelease(pimage);
   }
 }
 
-void QSurface3DSeriesSlots::textureFileChanged( const QString & filename )
+void QSurface3DSeriesSlots::textureFileChanged(const QString &filename)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "textureFileChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSURFACE3DSERIES");
-    PHB_ITEM pfilename = hb_itemPutC( NULL, QSTRINGTOSTRING(filename) );
+    PHB_ITEM pfilename = hb_itemPutC(NULL, QSTRINGTOSTRING(filename));
 
     hb_vmEvalBlockV(cb, 2, psender, pfilename);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfilename );
+    hb_itemRelease(pfilename);
   }
 }
 
-void QSurface3DSeriesSlots_connect_signal(const QString & signal, const QString & slot)
+void QSurface3DSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QSurface3DSeries * obj = (QSurface3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSurface3DSeries *obj = (QSurface3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QSurface3DSeriesSlots * s = QCoreApplication::instance()->findChild<QSurface3DSeriesSlots*>();
+    QSurface3DSeriesSlots *s = QCoreApplication::instance()->findChild<QSurface3DSeriesSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QSurface3DSeriesSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

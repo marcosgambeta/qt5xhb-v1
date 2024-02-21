@@ -26,22 +26,22 @@
 
 using namespace QtDataVisualization;
 
-class QCustom3DItemSlots: public QObject
+class QCustom3DItemSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCustom3DItemSlots( QObject *parent = 0 );
+public:
+  QCustom3DItemSlots(QObject *parent = 0);
   ~QCustom3DItemSlots();
-  public slots:
-  void meshFileChanged( const QString & meshFile );
-  void positionAbsoluteChanged( bool positionAbsolute );
-  void positionChanged( const QVector3D & position );
-  void rotationChanged( const QQuaternion & rotation );
-  void scalingAbsoluteChanged( bool scalingAbsolute );
-  void scalingChanged( const QVector3D & scaling );
-  void shadowCastingChanged( bool shadowCasting );
-  void textureFileChanged( const QString & textureFile );
-  void visibleChanged( bool visible );
+public slots:
+  void meshFileChanged(const QString &meshFile);
+  void positionAbsoluteChanged(bool positionAbsolute);
+  void positionChanged(const QVector3D &position);
+  void rotationChanged(const QQuaternion &rotation);
+  void scalingAbsoluteChanged(bool scalingAbsolute);
+  void scalingChanged(const QVector3D &scaling);
+  void shadowCastingChanged(bool shadowCasting);
+  void textureFileChanged(const QString &textureFile);
+  void visibleChanged(bool visible);
 };
 
 #endif /* QCUSTOM3DITEMSLOTS_H */

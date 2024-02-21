@@ -26,23 +26,23 @@
 
 using namespace QtDataVisualization;
 
-class QAbstract3DAxisSlots: public QObject
+class QAbstract3DAxisSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstract3DAxisSlots( QObject *parent = 0 );
+public:
+  QAbstract3DAxisSlots(QObject *parent = 0);
   ~QAbstract3DAxisSlots();
-  public slots:
-  void titleChanged( const QString & newTitle );
+public slots:
+  void titleChanged(const QString &newTitle);
   void labelsChanged();
-  void orientationChanged( QAbstract3DAxis::AxisOrientation orientation );
-  void minChanged( float value );
-  void maxChanged( float value );
-  void rangeChanged( float min, float max );
-  void autoAdjustRangeChanged( bool autoAdjust );
-  void labelAutoRotationChanged( float angle );
-  void titleVisibilityChanged( bool visible );
-  void titleFixedChanged( bool fixed );
+  void orientationChanged(QAbstract3DAxis::AxisOrientation orientation);
+  void minChanged(float value);
+  void maxChanged(float value);
+  void rangeChanged(float min, float max);
+  void autoAdjustRangeChanged(bool autoAdjust);
+  void labelAutoRotationChanged(float angle);
+  void titleVisibilityChanged(bool visible);
+  void titleFixedChanged(bool fixed);
 };
 
 #endif /* QABSTRACT3DAXISSLOTS_H */

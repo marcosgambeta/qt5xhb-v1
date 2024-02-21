@@ -26,30 +26,30 @@
 
 using namespace QtDataVisualization;
 
-class QCustom3DVolumeSlots: public QObject
+class QCustom3DVolumeSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCustom3DVolumeSlots( QObject *parent = 0 );
+public:
+  QCustom3DVolumeSlots(QObject *parent = 0);
   ~QCustom3DVolumeSlots();
-  public slots:
-  void alphaMultiplierChanged( float mult );
+public slots:
+  void alphaMultiplierChanged(float mult);
   void colorTableChanged();
-  void drawSliceFramesChanged( bool enabled );
-  void drawSlicesChanged( bool enabled );
-  void preserveOpacityChanged( bool enabled );
-  void sliceFrameColorChanged( const QColor & color );
-  void sliceFrameGapsChanged( const QVector3D & values );
-  void sliceFrameThicknessesChanged( const QVector3D & values );
-  void sliceFrameWidthsChanged( const QVector3D & values );
-  void sliceIndexXChanged( int value );
-  void sliceIndexYChanged( int value );
-  void sliceIndexZChanged( int value );
-  void textureDepthChanged( int value );
-  void textureFormatChanged( QImage::Format format );
-  void textureHeightChanged( int value );
-  void textureWidthChanged( int value );
-  void useHighDefShaderChanged( bool enabled );
+  void drawSliceFramesChanged(bool enabled);
+  void drawSlicesChanged(bool enabled);
+  void preserveOpacityChanged(bool enabled);
+  void sliceFrameColorChanged(const QColor &color);
+  void sliceFrameGapsChanged(const QVector3D &values);
+  void sliceFrameThicknessesChanged(const QVector3D &values);
+  void sliceFrameWidthsChanged(const QVector3D &values);
+  void sliceIndexXChanged(int value);
+  void sliceIndexYChanged(int value);
+  void sliceIndexZChanged(int value);
+  void textureDepthChanged(int value);
+  void textureFormatChanged(QImage::Format format);
+  void textureHeightChanged(int value);
+  void textureWidthChanged(int value);
+  void useHighDefShaderChanged(bool enabled);
 };
 
 #endif /* QCUSTOM3DVOLUMESLOTS_H */
