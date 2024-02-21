@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QLocalSocketSlots: public QObject
+class QLocalSocketSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QLocalSocketSlots( QObject *parent = 0 );
+public:
+  QLocalSocketSlots(QObject *parent = 0);
   ~QLocalSocketSlots();
-  public slots:
+public slots:
   void connected();
   void disconnected();
-  void error( QLocalSocket::LocalSocketError socketError );
-  void stateChanged( QLocalSocket::LocalSocketState socketState );
+  void error(QLocalSocket::LocalSocketError socketError);
+  void stateChanged(QLocalSocket::LocalSocketState socketState);
 };
 
 #endif /* QLOCALSOCKETSLOTS_H */

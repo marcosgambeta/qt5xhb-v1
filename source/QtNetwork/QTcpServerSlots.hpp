@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QTcpServerSlots: public QObject
+class QTcpServerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTcpServerSlots( QObject *parent = 0 );
+public:
+  QTcpServerSlots(QObject *parent = 0);
   ~QTcpServerSlots();
-  public slots:
-  void acceptError( QAbstractSocket::SocketError socketError );
+public slots:
+  void acceptError(QAbstractSocket::SocketError socketError);
   void newConnection();
 };
 

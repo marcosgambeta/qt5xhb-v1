@@ -24,21 +24,21 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QSslSocketSlots: public QObject
+class QSslSocketSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSslSocketSlots( QObject *parent = 0 );
+public:
+  QSslSocketSlots(QObject *parent = 0);
   ~QSslSocketSlots();
-  public slots:
+public slots:
   void encrypted();
-  void encryptedBytesWritten( qint64 written );
-  void modeChanged( QSslSocket::SslMode mode );
-  void peerVerifyError( const QSslError & error );
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenticator );
+  void encryptedBytesWritten(qint64 written);
+  void modeChanged(QSslSocket::SslMode mode);
+  void peerVerifyError(const QSslError &error);
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+  void preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator *authenticator);
 #endif
-  void sslErrors( const QList<QSslError> & errors );
+  void sslErrors(const QList<QSslError> &errors);
 };
 
 #endif /* QSSLSOCKETSLOTS_H */

@@ -24,12 +24,12 @@
 #include <QtNetwork/QtNetworkVersion>
 #endif
 
-HB_FUNC( QTNETWORK_VERSION_STR )
+HB_FUNC(QTNETWORK_VERSION_STR)
 {
-  hb_retc( (const char *) QTNETWORK_VERSION_STR );
+  hb_retc((const char *)QTNETWORK_VERSION_STR);
 }
 
-HB_FUNC( QTNETWORK_VERSION )
+HB_FUNC(QTNETWORK_VERSION)
 {
-  hb_retni( QTNETWORK_VERSION );
+  hb_retni(QTNETWORK_VERSION);
 }

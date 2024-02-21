@@ -25,25 +25,25 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QNetworkAccessManagerSlots: public QObject
+class QNetworkAccessManagerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QNetworkAccessManagerSlots( QObject *parent = 0 );
+public:
+  QNetworkAccessManagerSlots(QObject *parent = 0);
   ~QNetworkAccessManagerSlots();
-  public slots:
-  void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator );
-  void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator );
-  void finished( QNetworkReply * reply );
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void encrypted( QNetworkReply * reply );
+public slots:
+  void proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator *authenticator);
+  void authenticationRequired(QNetworkReply *reply, QAuthenticator *authenticator);
+  void finished(QNetworkReply *reply);
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void encrypted(QNetworkReply *reply);
 #endif
-  void sslErrors( QNetworkReply * reply, const QList<QSslError> & errors );
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  void preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKeyAuthenticator * authenticator );
+  void sslErrors(QNetworkReply *reply, const QList<QSslError> &errors);
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+  void preSharedKeyAuthenticationRequired(QNetworkReply *reply, QSslPreSharedKeyAuthenticator *authenticator);
 #endif
   void networkSessionConnected();
-  void networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible );
+  void networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility accessible);
 };
 
 #endif /* QNETWORKACCESSMANAGERSLOTS_H */

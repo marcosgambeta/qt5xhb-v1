@@ -24,19 +24,19 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAbstractSocketSlots: public QObject
+class QAbstractSocketSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractSocketSlots( QObject *parent = 0 );
+public:
+  QAbstractSocketSlots(QObject *parent = 0);
   ~QAbstractSocketSlots();
-  public slots:
+public slots:
   void connected();
   void disconnected();
-  void error( QAbstractSocket::SocketError socketError );
+  void error(QAbstractSocket::SocketError socketError);
   void hostFound();
-  void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator );
-  void stateChanged( QAbstractSocket::SocketState socketState );
+  void proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator *authenticator);
+  void stateChanged(QAbstractSocket::SocketState socketState);
 };
 
 #endif /* QABSTRACTSOCKETSLOTS_H */

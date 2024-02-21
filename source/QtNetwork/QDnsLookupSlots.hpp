@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDnsLookupSlots: public QObject
+class QDnsLookupSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDnsLookupSlots( QObject *parent = 0 );
+public:
+  QDnsLookupSlots(QObject *parent = 0);
   ~QDnsLookupSlots();
-  public slots:
+public slots:
   void finished();
-  void nameChanged( const QString & name );
-  void nameserverChanged( const QHostAddress & nameserver );
-  void typeChanged( QDnsLookup::Type type );
+  void nameChanged(const QString &name);
+  void nameserverChanged(const QHostAddress &nameserver);
+  void typeChanged(QDnsLookup::Type type);
 };
 
 #endif /* QDNSLOOKUPSLOTS_H */

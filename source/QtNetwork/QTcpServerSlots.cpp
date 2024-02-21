@@ -12,7 +12,7 @@
 
 #include "QTcpServerSlots.hpp"
 
-QTcpServerSlots::QTcpServerSlots( QObject *parent ) : QObject( parent )
+QTcpServerSlots::QTcpServerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QTcpServerSlots::~QTcpServerSlots()
 {
 }
 
-void QTcpServerSlots::acceptError( QAbstractSocket::SocketError socketError )
+void QTcpServerSlots::acceptError(QAbstractSocket::SocketError socketError)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "acceptError(QAbstractSocket::SocketError)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTCPSERVER");
-    PHB_ITEM psocketError = hb_itemPutNI( NULL, static_cast<int>(socketError) );
+    PHB_ITEM psocketError = hb_itemPutNI(NULL, static_cast<int>(socketError));
 
     hb_vmEvalBlockV(cb, 2, psender, psocketError);
 
     hb_itemRelease(psender);
-    hb_itemRelease( psocketError );
+    hb_itemRelease(psocketError);
   }
 }
 
 void QTcpServerSlots::newConnection()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "newConnection()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTCPSERVER");
 
@@ -54,15 +54,15 @@ void QTcpServerSlots::newConnection()
   }
 }
 
-void QTcpServerSlots_connect_signal(const QString & signal, const QString & slot)
+void QTcpServerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QTcpServer * obj = (QTcpServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTcpServer *obj = (QTcpServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QTcpServerSlots * s = QCoreApplication::instance()->findChild<QTcpServerSlots*>();
+    QTcpServerSlots *s = QCoreApplication::instance()->findChild<QTcpServerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QTcpServerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -12,7 +12,7 @@
 
 #include "QLocalSocketSlots.hpp"
 
-QLocalSocketSlots::QLocalSocketSlots( QObject *parent ) : QObject( parent )
+QLocalSocketSlots::QLocalSocketSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QLocalSocketSlots::~QLocalSocketSlots()
 
 void QLocalSocketSlots::connected()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "connected()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOCALSOCKET");
 
@@ -38,11 +38,11 @@ void QLocalSocketSlots::connected()
 
 void QLocalSocketSlots::disconnected()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "disconnected()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOCALSOCKET");
 
@@ -52,51 +52,51 @@ void QLocalSocketSlots::disconnected()
   }
 }
 
-void QLocalSocketSlots::error( QLocalSocket::LocalSocketError socketError )
+void QLocalSocketSlots::error(QLocalSocket::LocalSocketError socketError)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QLocalSocket::LocalSocketError)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOCALSOCKET");
-    PHB_ITEM psocketError = hb_itemPutNI( NULL, static_cast<int>(socketError) );
+    PHB_ITEM psocketError = hb_itemPutNI(NULL, static_cast<int>(socketError));
 
     hb_vmEvalBlockV(cb, 2, psender, psocketError);
 
     hb_itemRelease(psender);
-    hb_itemRelease( psocketError );
+    hb_itemRelease(psocketError);
   }
 }
 
-void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState )
+void QLocalSocketSlots::stateChanged(QLocalSocket::LocalSocketState socketState)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QLocalSocket::LocalSocketState)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOCALSOCKET");
-    PHB_ITEM psocketState = hb_itemPutNI( NULL, static_cast<int>(socketState) );
+    PHB_ITEM psocketState = hb_itemPutNI(NULL, static_cast<int>(socketState));
 
     hb_vmEvalBlockV(cb, 2, psender, psocketState);
 
     hb_itemRelease(psender);
-    hb_itemRelease( psocketState );
+    hb_itemRelease(psocketState);
   }
 }
 
-void QLocalSocketSlots_connect_signal(const QString & signal, const QString & slot)
+void QLocalSocketSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QLocalSocketSlots * s = QCoreApplication::instance()->findChild<QLocalSocketSlots*>();
+    QLocalSocketSlots *s = QCoreApplication::instance()->findChild<QLocalSocketSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QLocalSocketSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

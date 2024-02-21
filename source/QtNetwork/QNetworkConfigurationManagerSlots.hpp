@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QNetworkConfigurationManagerSlots: public QObject
+class QNetworkConfigurationManagerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QNetworkConfigurationManagerSlots( QObject *parent = 0 );
+public:
+  QNetworkConfigurationManagerSlots(QObject *parent = 0);
   ~QNetworkConfigurationManagerSlots();
-  public slots:
-  void configurationAdded( const QNetworkConfiguration & config );
-  void configurationChanged( const QNetworkConfiguration & config );
-  void configurationRemoved( const QNetworkConfiguration & config );
-  void onlineStateChanged( bool isOnline );
+public slots:
+  void configurationAdded(const QNetworkConfiguration &config);
+  void configurationChanged(const QNetworkConfiguration &config);
+  void configurationRemoved(const QNetworkConfiguration &config);
+  void onlineStateChanged(bool isOnline);
   void updateCompleted();
 };
 
