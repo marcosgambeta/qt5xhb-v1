@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QAccelerometer>
 #endif
 
@@ -26,15 +26,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAccelerometerSlots: public QObject
+class QAccelerometerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAccelerometerSlots( QObject *parent = 0 );
+public:
+  QAccelerometerSlots(QObject *parent = 0);
   ~QAccelerometerSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void accelerationModeChanged(QAccelerometer::AccelerationMode accelerationMode);
 #endif
 };
 

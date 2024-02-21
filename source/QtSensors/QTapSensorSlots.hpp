@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QTapSensor>
 #endif
 
@@ -26,15 +26,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QTapSensorSlots: public QObject
+class QTapSensorSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTapSensorSlots( QObject *parent = 0 );
+public:
+  QTapSensorSlots(QObject *parent = 0);
   ~QTapSensorSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void returnDoubleTapEventsChanged( bool returnDoubleTapEvents );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void returnDoubleTapEventsChanged(bool returnDoubleTapEvents);
 #endif
 };
 

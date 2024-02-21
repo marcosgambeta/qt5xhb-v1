@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QRotationSensor>
 #endif
 
@@ -26,15 +26,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QRotationSensorSlots: public QObject
+class QRotationSensorSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QRotationSensorSlots( QObject *parent = 0 );
+public:
+  QRotationSensorSlots(QObject *parent = 0);
   ~QRotationSensorSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void hasZChanged( bool hasZ );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void hasZChanged(bool hasZ);
 #endif
 };
 

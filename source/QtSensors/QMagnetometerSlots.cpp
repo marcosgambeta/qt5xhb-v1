@@ -12,7 +12,7 @@
 
 #include "QMagnetometerSlots.hpp"
 
-QMagnetometerSlots::QMagnetometerSlots( QObject *parent ) : QObject( parent )
+QMagnetometerSlots::QMagnetometerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,36 +20,36 @@ QMagnetometerSlots::~QMagnetometerSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QMagnetometerSlots::returnGeoValuesChanged( bool returnGeoValues )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QMagnetometerSlots::returnGeoValuesChanged(bool returnGeoValues)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "returnGeoValuesChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMAGNETOMETER");
-    PHB_ITEM preturnGeoValues = hb_itemPutL( NULL, returnGeoValues );
+    PHB_ITEM preturnGeoValues = hb_itemPutL(NULL, returnGeoValues);
 
     hb_vmEvalBlockV(cb, 2, psender, preturnGeoValues);
 
     hb_itemRelease(psender);
-    hb_itemRelease( preturnGeoValues );
+    hb_itemRelease(preturnGeoValues);
   }
 }
 #endif
 
-void QMagnetometerSlots_connect_signal(const QString & signal, const QString & slot)
+void QMagnetometerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QMagnetometer *obj = (QMagnetometer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMagnetometerSlots * s = QCoreApplication::instance()->findChild<QMagnetometerSlots*>();
+    QMagnetometerSlots *s = QCoreApplication::instance()->findChild<QMagnetometerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMagnetometerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

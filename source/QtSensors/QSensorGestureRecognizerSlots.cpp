@@ -12,7 +12,7 @@
 
 #include "QSensorGestureRecognizerSlots.hpp"
 
-QSensorGestureRecognizerSlots::QSensorGestureRecognizerSlots( QObject *parent ) : QObject( parent )
+QSensorGestureRecognizerSlots::QSensorGestureRecognizerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,36 +20,36 @@ QSensorGestureRecognizerSlots::~QSensorGestureRecognizerSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QSensorGestureRecognizerSlots::detected( const QString & s )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QSensorGestureRecognizerSlots::detected(const QString &s)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "detected(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSORGESTURERECOGNIZER");
-    PHB_ITEM ps = hb_itemPutC( NULL, QSTRINGTOSTRING(s) );
+    PHB_ITEM ps = hb_itemPutC(NULL, QSTRINGTOSTRING(s));
 
     hb_vmEvalBlockV(cb, 2, psender, ps);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ps );
+    hb_itemRelease(ps);
   }
 }
 #endif
 
-void QSensorGestureRecognizerSlots_connect_signal(const QString & signal, const QString & slot)
+void QSensorGestureRecognizerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSensorGestureRecognizer *obj = (QSensorGestureRecognizer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QSensorGestureRecognizerSlots * s = QCoreApplication::instance()->findChild<QSensorGestureRecognizerSlots*>();
+    QSensorGestureRecognizerSlots *s = QCoreApplication::instance()->findChild<QSensorGestureRecognizerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QSensorGestureRecognizerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

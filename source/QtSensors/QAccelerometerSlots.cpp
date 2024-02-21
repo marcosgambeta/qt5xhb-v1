@@ -12,7 +12,7 @@
 
 #include "QAccelerometerSlots.hpp"
 
-QAccelerometerSlots::QAccelerometerSlots( QObject *parent ) : QObject( parent )
+QAccelerometerSlots::QAccelerometerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,36 +20,36 @@ QAccelerometerSlots::~QAccelerometerSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QAccelerometerSlots::accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QAccelerometerSlots::accelerationModeChanged(QAccelerometer::AccelerationMode accelerationMode)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accelerationModeChanged(QAccelerometer::AccelerationMode)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACCELEROMETER");
-    PHB_ITEM paccelerationMode = hb_itemPutNI( NULL, static_cast<int>(accelerationMode) );
+    PHB_ITEM paccelerationMode = hb_itemPutNI(NULL, static_cast<int>(accelerationMode));
 
     hb_vmEvalBlockV(cb, 2, psender, paccelerationMode);
 
     hb_itemRelease(psender);
-    hb_itemRelease( paccelerationMode );
+    hb_itemRelease(paccelerationMode);
   }
 }
 #endif
 
-void QAccelerometerSlots_connect_signal(const QString & signal, const QString & slot)
+void QAccelerometerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * obj = (QAccelerometer *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QAccelerometer *obj = (QAccelerometer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAccelerometerSlots * s = QCoreApplication::instance()->findChild<QAccelerometerSlots*>();
+    QAccelerometerSlots *s = QCoreApplication::instance()->findChild<QAccelerometerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAccelerometerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

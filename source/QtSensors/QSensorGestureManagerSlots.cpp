@@ -12,7 +12,7 @@
 
 #include "QSensorGestureManagerSlots.hpp"
 
-QSensorGestureManagerSlots::QSensorGestureManagerSlots( QObject *parent ) : QObject( parent )
+QSensorGestureManagerSlots::QSensorGestureManagerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QSensorGestureManagerSlots::~QSensorGestureManagerSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 void QSensorGestureManagerSlots::newSensorGestureAvailable()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "newSensorGestureAvailable()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSORGESTUREMANAGER");
 
@@ -38,16 +38,16 @@ void QSensorGestureManagerSlots::newSensorGestureAvailable()
 }
 #endif
 
-void QSensorGestureManagerSlots_connect_signal(const QString & signal, const QString & slot)
+void QSensorGestureManagerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManager * obj = (QSensorGestureManager *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSensorGestureManager *obj = (QSensorGestureManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QSensorGestureManagerSlots * s = QCoreApplication::instance()->findChild<QSensorGestureManagerSlots*>();
+    QSensorGestureManagerSlots *s = QCoreApplication::instance()->findChild<QSensorGestureManagerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QSensorGestureManagerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

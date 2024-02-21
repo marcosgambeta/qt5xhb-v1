@@ -12,7 +12,7 @@
 
 #include "QTapSensorSlots.hpp"
 
-QTapSensorSlots::QTapSensorSlots( QObject *parent ) : QObject( parent )
+QTapSensorSlots::QTapSensorSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,36 +20,36 @@ QTapSensorSlots::~QTapSensorSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QTapSensorSlots::returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QTapSensorSlots::returnDoubleTapEventsChanged(bool returnDoubleTapEvents)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "returnDoubleTapEventsChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTAPSENSOR");
-    PHB_ITEM preturnDoubleTapEvents = hb_itemPutL( NULL, returnDoubleTapEvents );
+    PHB_ITEM preturnDoubleTapEvents = hb_itemPutL(NULL, returnDoubleTapEvents);
 
     hb_vmEvalBlockV(cb, 2, psender, preturnDoubleTapEvents);
 
     hb_itemRelease(psender);
-    hb_itemRelease( preturnDoubleTapEvents );
+    hb_itemRelease(preturnDoubleTapEvents);
   }
 }
 #endif
 
-void QTapSensorSlots_connect_signal(const QString & signal, const QString & slot)
+void QTapSensorSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTapSensor *obj = (QTapSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QTapSensorSlots * s = QCoreApplication::instance()->findChild<QTapSensorSlots*>();
+    QTapSensorSlots *s = QCoreApplication::instance()->findChild<QTapSensorSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QTapSensorSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

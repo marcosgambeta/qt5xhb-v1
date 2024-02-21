@@ -12,7 +12,7 @@
 
 #include "QRotationSensorSlots.hpp"
 
-QRotationSensorSlots::QRotationSensorSlots( QObject *parent ) : QObject( parent )
+QRotationSensorSlots::QRotationSensorSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,36 +20,36 @@ QRotationSensorSlots::~QRotationSensorSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QRotationSensorSlots::hasZChanged( bool hasZ )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QRotationSensorSlots::hasZChanged(bool hasZ)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hasZChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QROTATIONSENSOR");
-    PHB_ITEM phasZ = hb_itemPutL( NULL, hasZ );
+    PHB_ITEM phasZ = hb_itemPutL(NULL, hasZ);
 
     hb_vmEvalBlockV(cb, 2, psender, phasZ);
 
     hb_itemRelease(psender);
-    hb_itemRelease( phasZ );
+    hb_itemRelease(phasZ);
   }
 }
 #endif
 
-void QRotationSensorSlots_connect_signal(const QString & signal, const QString & slot)
+void QRotationSensorSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QRotationSensor *obj = (QRotationSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QRotationSensorSlots * s = QCoreApplication::instance()->findChild<QRotationSensorSlots*>();
+    QRotationSensorSlots *s = QCoreApplication::instance()->findChild<QRotationSensorSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QRotationSensorSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

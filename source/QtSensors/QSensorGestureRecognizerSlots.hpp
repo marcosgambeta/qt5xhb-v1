@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QSensorGestureRecognizer>
 #endif
 
@@ -26,15 +26,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QSensorGestureRecognizerSlots: public QObject
+class QSensorGestureRecognizerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSensorGestureRecognizerSlots( QObject *parent = 0 );
+public:
+  QSensorGestureRecognizerSlots(QObject *parent = 0);
   ~QSensorGestureRecognizerSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void detected( const QString & s );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void detected(const QString &s);
 #endif
 };
 

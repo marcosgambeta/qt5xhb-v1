@@ -13,7 +13,7 @@
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QtSensorsVersion>
 #endif
 #endif
@@ -23,25 +23,25 @@
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QtSensorsVersion>
 #endif
 #endif
 
-HB_FUNC( QTSENSORS_VERSION_STR )
+HB_FUNC(QTSENSORS_VERSION_STR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retc( (const char *) QTSENSORS_VERSION_STR );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  hb_retc((const char *)QTSENSORS_VERSION_STR);
 #else
-  hb_retc( (const char *) "" );
+  hb_retc((const char *)"");
 #endif
 }
 
-HB_FUNC( QTSENSORS_VERSION )
+HB_FUNC(QTSENSORS_VERSION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retni( QTSENSORS_VERSION );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  hb_retni(QTSENSORS_VERSION);
 #else
-  hb_retni( 0 );
+  hb_retni(0);
 #endif
 }

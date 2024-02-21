@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QMagnetometer>
 #endif
 
@@ -26,15 +26,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMagnetometerSlots: public QObject
+class QMagnetometerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMagnetometerSlots( QObject *parent = 0 );
+public:
+  QMagnetometerSlots(QObject *parent = 0);
   ~QMagnetometerSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void returnGeoValuesChanged( bool returnGeoValues );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void returnGeoValuesChanged(bool returnGeoValues);
 #endif
 };
 
