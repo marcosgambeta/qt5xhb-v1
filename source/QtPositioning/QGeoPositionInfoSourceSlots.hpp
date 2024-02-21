@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtPositioning/QGeoPositionInfoSource>
 #endif
 
@@ -26,21 +26,21 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGeoPositionInfoSourceSlots: public QObject
+class QGeoPositionInfoSourceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGeoPositionInfoSourceSlots( QObject *parent = 0 );
+public:
+  QGeoPositionInfoSourceSlots(QObject *parent = 0);
   ~QGeoPositionInfoSourceSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void positionUpdated( const QGeoPositionInfo & update );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void positionUpdated(const QGeoPositionInfo &update);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   void updateTimeout();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void error( QGeoPositionInfoSource::Error error );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void error(QGeoPositionInfoSource::Error error);
 #endif
 };
 

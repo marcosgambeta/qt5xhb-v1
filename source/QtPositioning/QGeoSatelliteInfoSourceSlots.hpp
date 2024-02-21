@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtPositioning/QGeoSatelliteInfoSource>
 #endif
 
@@ -26,24 +26,24 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGeoSatelliteInfoSourceSlots: public QObject
+class QGeoSatelliteInfoSourceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGeoSatelliteInfoSourceSlots( QObject *parent = 0 );
+public:
+  QGeoSatelliteInfoSourceSlots(QObject *parent = 0);
   ~QGeoSatelliteInfoSourceSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void satellitesInViewUpdated( const QList<QGeoSatelliteInfo> & satellites );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void satellitesInViewUpdated(const QList<QGeoSatelliteInfo> &satellites);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void satellitesInUseUpdated( const QList<QGeoSatelliteInfo> & satellites );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void satellitesInUseUpdated(const QList<QGeoSatelliteInfo> &satellites);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   void requestTimeout();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void error( QGeoSatelliteInfoSource::Error error );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void error(QGeoSatelliteInfoSource::Error error);
 #endif
 };
 

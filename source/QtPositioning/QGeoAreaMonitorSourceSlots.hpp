@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtPositioning/QGeoAreaMonitorSource>
 #endif
 
@@ -26,24 +26,24 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGeoAreaMonitorSourceSlots: public QObject
+class QGeoAreaMonitorSourceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGeoAreaMonitorSourceSlots( QObject *parent = 0 );
+public:
+  QGeoAreaMonitorSourceSlots(QObject *parent = 0);
   ~QGeoAreaMonitorSourceSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void areaEntered(const QGeoAreaMonitorInfo &monitor, const QGeoPositionInfo &update);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & update );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void areaExited(const QGeoAreaMonitorInfo &monitor, const QGeoPositionInfo &update);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void monitorExpired( const QGeoAreaMonitorInfo & monitor );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void monitorExpired(const QGeoAreaMonitorInfo &monitor);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void error( QGeoAreaMonitorSource::Error error );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void error(QGeoAreaMonitorSource::Error error);
 #endif
 };
 
