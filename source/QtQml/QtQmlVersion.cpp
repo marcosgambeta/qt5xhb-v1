@@ -24,12 +24,12 @@
 #include <QtQml/QtQmlVersion>
 #endif
 
-HB_FUNC( QTQML_VERSION_STR )
+HB_FUNC(QTQML_VERSION_STR)
 {
-  hb_retc( (const char *) QTQML_VERSION_STR );
+  hb_retc((const char *)QTQML_VERSION_STR);
 }
 
-HB_FUNC( QTQML_VERSION )
+HB_FUNC(QTQML_VERSION)
 {
-  hb_retni( QTQML_VERSION );
+  hb_retni(QTQML_VERSION);
 }

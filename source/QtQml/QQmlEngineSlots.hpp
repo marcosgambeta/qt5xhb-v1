@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QQmlEngineSlots: public QObject
+class QQmlEngineSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QQmlEngineSlots( QObject *parent = 0 );
+public:
+  QQmlEngineSlots(QObject *parent = 0);
   ~QQmlEngineSlots();
-  public slots:
+public slots:
   void quit();
 };
 

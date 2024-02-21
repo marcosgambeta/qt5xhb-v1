@@ -12,7 +12,7 @@
 
 #include "QQmlComponentSlots.hpp"
 
-QQmlComponentSlots::QQmlComponentSlots( QObject *parent ) : QObject( parent )
+QQmlComponentSlots::QQmlComponentSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QQmlComponentSlots::~QQmlComponentSlots()
 {
 }
 
-void QQmlComponentSlots::progressChanged( qreal progress )
+void QQmlComponentSlots::progressChanged(qreal progress)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "progressChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLCOMPONENT");
-    PHB_ITEM pprogress = hb_itemPutND( NULL, progress );
+    PHB_ITEM pprogress = hb_itemPutND(NULL, progress);
 
     hb_vmEvalBlockV(cb, 2, psender, pprogress);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pprogress );
+    hb_itemRelease(pprogress);
   }
 }
 
-void QQmlComponentSlots::statusChanged( QQmlComponent::Status status )
+void QQmlComponentSlots::statusChanged(QQmlComponent::Status status)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QQmlComponent::Status)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLCOMPONENT");
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, static_cast<int>(status) );
+    PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
 
     hb_vmEvalBlockV(cb, 2, psender, pstatus);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstatus );
+    hb_itemRelease(pstatus);
   }
 }
 
-void QQmlComponentSlots_connect_signal(const QString & signal, const QString & slot)
+void QQmlComponentSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QQmlComponent * obj = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QQmlComponentSlots * s = QCoreApplication::instance()->findChild<QQmlComponentSlots*>();
+    QQmlComponentSlots *s = QCoreApplication::instance()->findChild<QQmlComponentSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QQmlComponentSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

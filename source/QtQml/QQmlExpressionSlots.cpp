@@ -12,7 +12,7 @@
 
 #include "QQmlExpressionSlots.hpp"
 
-QQmlExpressionSlots::QQmlExpressionSlots( QObject *parent ) : QObject( parent )
+QQmlExpressionSlots::QQmlExpressionSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QQmlExpressionSlots::~QQmlExpressionSlots()
 
 void QQmlExpressionSlots::valueChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLEXPRESSION");
 
@@ -36,15 +36,15 @@ void QQmlExpressionSlots::valueChanged()
   }
 }
 
-void QQmlExpressionSlots_connect_signal(const QString & signal, const QString & slot)
+void QQmlExpressionSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QQmlExpressionSlots * s = QCoreApplication::instance()->findChild<QQmlExpressionSlots*>();
+    QQmlExpressionSlots *s = QCoreApplication::instance()->findChild<QQmlExpressionSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QQmlExpressionSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

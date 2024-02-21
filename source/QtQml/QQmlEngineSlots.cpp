@@ -12,7 +12,7 @@
 
 #include "QQmlEngineSlots.hpp"
 
-QQmlEngineSlots::QQmlEngineSlots( QObject *parent ) : QObject( parent )
+QQmlEngineSlots::QQmlEngineSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QQmlEngineSlots::~QQmlEngineSlots()
 
 void QQmlEngineSlots::quit()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "quit()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLENGINE");
 
@@ -36,15 +36,15 @@ void QQmlEngineSlots::quit()
   }
 }
 
-void QQmlEngineSlots_connect_signal(const QString & signal, const QString & slot)
+void QQmlEngineSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QQmlEngineSlots * s = QCoreApplication::instance()->findChild<QQmlEngineSlots*>();
+    QQmlEngineSlots *s = QCoreApplication::instance()->findChild<QQmlEngineSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QQmlEngineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

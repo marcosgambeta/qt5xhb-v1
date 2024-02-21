@@ -12,7 +12,7 @@
 
 #include "QQmlApplicationEngineSlots.hpp"
 
-QQmlApplicationEngineSlots::QQmlApplicationEngineSlots( QObject *parent ) : QObject( parent )
+QQmlApplicationEngineSlots::QQmlApplicationEngineSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,38 +20,38 @@ QQmlApplicationEngineSlots::~QQmlApplicationEngineSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QQmlApplicationEngineSlots::objectCreated( QObject * obj, const QUrl & url )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QQmlApplicationEngineSlots::objectCreated(QObject *obj, const QUrl &url)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "objectCreated(QObject*,QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLAPPLICATIONENGINE");
     PHB_ITEM pobj = Qt5xHb::Signals_return_qobject(obj, "QOBJECT");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
+    PHB_ITEM purl = Qt5xHb::Signals_return_object((void *)&url, "QURL");
 
     hb_vmEvalBlockV(cb, 3, psender, pobj, purl);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pobj );
-    hb_itemRelease( purl );
+    hb_itemRelease(pobj);
+    hb_itemRelease(purl);
   }
 }
 #endif
 
-void QQmlApplicationEngineSlots_connect_signal(const QString & signal, const QString & slot)
+void QQmlApplicationEngineSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QQmlApplicationEngine * obj = (QQmlApplicationEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QQmlApplicationEngine *obj = (QQmlApplicationEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QQmlApplicationEngineSlots * s = QCoreApplication::instance()->findChild<QQmlApplicationEngineSlots*>();
+    QQmlApplicationEngineSlots *s = QCoreApplication::instance()->findChild<QQmlApplicationEngineSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QQmlApplicationEngineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

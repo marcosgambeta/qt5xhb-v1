@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QQmlComponentSlots: public QObject
+class QQmlComponentSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QQmlComponentSlots( QObject *parent = 0 );
+public:
+  QQmlComponentSlots(QObject *parent = 0);
   ~QQmlComponentSlots();
-  public slots:
-  void progressChanged( qreal progress );
-  void statusChanged( QQmlComponent::Status status );
+public slots:
+  void progressChanged(qreal progress);
+  void statusChanged(QQmlComponent::Status status);
 };
 
 #endif /* QQMLCOMPONENTSLOTS_H */
