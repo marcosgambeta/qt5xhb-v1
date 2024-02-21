@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSerialPort/QSerialPort>
 #endif
 
@@ -26,42 +26,42 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QSerialPortSlots: public QObject
+class QSerialPortSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSerialPortSlots( QObject *parent = 0 );
+public:
+  QSerialPortSlots(QObject *parent = 0);
   ~QSerialPortSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void baudRateChanged( qint32 baudRate, QSerialPort::Directions dir );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void baudRateChanged(qint32 baudRate, QSerialPort::Directions dir);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void dataBitsChanged( QSerialPort::DataBits dataBits );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void dataBitsChanged(QSerialPort::DataBits dataBits);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void parityChanged( QSerialPort::Parity parity );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void parityChanged(QSerialPort::Parity parity);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void stopBitsChanged( QSerialPort::StopBits stopBits );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void stopBitsChanged(QSerialPort::StopBits stopBits);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void flowControlChanged( QSerialPort::FlowControl flow );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void flowControlChanged(QSerialPort::FlowControl flow);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void dataErrorPolicyChanged( QSerialPort::DataErrorPolicy policy );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void dataErrorPolicyChanged(QSerialPort::DataErrorPolicy policy);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void dataTerminalReadyChanged( bool set );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void dataTerminalReadyChanged(bool set);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void requestToSendChanged( bool set );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void requestToSendChanged(bool set);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void error( QSerialPort::SerialPortError serialPortError );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void error(QSerialPort::SerialPortError serialPortError);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  void settingsRestoredOnCloseChanged( bool restore );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  void settingsRestoredOnCloseChanged(bool restore);
 #endif
 };
 

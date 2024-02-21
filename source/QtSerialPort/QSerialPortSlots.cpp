@@ -12,7 +12,7 @@
 
 #include "QSerialPortSlots.hpp"
 
-QSerialPortSlots::QSerialPortSlots( QObject *parent ) : QObject( parent )
+QSerialPortSlots::QSerialPortSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,218 +20,218 @@ QSerialPortSlots::~QSerialPortSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QSerialPortSlots::baudRateChanged( qint32 baudRate, QSerialPort::Directions dir )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QSerialPortSlots::baudRateChanged(qint32 baudRate, QSerialPort::Directions dir)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "baudRateChanged(qint32,QSerialPort::Directions)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
-    PHB_ITEM pbaudRate = hb_itemPutNI( NULL, baudRate );
-    PHB_ITEM pdir = hb_itemPutNI( NULL, static_cast<int>(dir) );
+    PHB_ITEM pbaudRate = hb_itemPutNI(NULL, baudRate);
+    PHB_ITEM pdir = hb_itemPutNI(NULL, static_cast<int>(dir));
 
     hb_vmEvalBlockV(cb, 3, psender, pbaudRate, pdir);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pbaudRate );
-    hb_itemRelease( pdir );
+    hb_itemRelease(pbaudRate);
+    hb_itemRelease(pdir);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QSerialPortSlots::dataBitsChanged( QSerialPort::DataBits dataBits )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QSerialPortSlots::dataBitsChanged(QSerialPort::DataBits dataBits)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataBitsChanged(QSerialPort::DataBits)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
-    PHB_ITEM pdataBits = hb_itemPutNI( NULL, static_cast<int>(dataBits) );
+    PHB_ITEM pdataBits = hb_itemPutNI(NULL, static_cast<int>(dataBits));
 
     hb_vmEvalBlockV(cb, 2, psender, pdataBits);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pdataBits );
+    hb_itemRelease(pdataBits);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QSerialPortSlots::parityChanged( QSerialPort::Parity parity )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QSerialPortSlots::parityChanged(QSerialPort::Parity parity)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "parityChanged(QSerialPort::Parity)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
-    PHB_ITEM pparity = hb_itemPutNI( NULL, static_cast<int>(parity) );
+    PHB_ITEM pparity = hb_itemPutNI(NULL, static_cast<int>(parity));
 
     hb_vmEvalBlockV(cb, 2, psender, pparity);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pparity );
+    hb_itemRelease(pparity);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QSerialPortSlots::stopBitsChanged( QSerialPort::StopBits stopBits )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QSerialPortSlots::stopBitsChanged(QSerialPort::StopBits stopBits)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stopBitsChanged(QSerialPort::StopBits)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
-    PHB_ITEM pstopBits = hb_itemPutNI( NULL, static_cast<int>(stopBits) );
+    PHB_ITEM pstopBits = hb_itemPutNI(NULL, static_cast<int>(stopBits));
 
     hb_vmEvalBlockV(cb, 2, psender, pstopBits);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstopBits );
+    hb_itemRelease(pstopBits);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QSerialPortSlots::flowControlChanged( QSerialPort::FlowControl flow )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QSerialPortSlots::flowControlChanged(QSerialPort::FlowControl flow)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flowControlChanged(QSerialPort::FlowControl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
-    PHB_ITEM pflow = hb_itemPutNI( NULL, static_cast<int>(flow) );
+    PHB_ITEM pflow = hb_itemPutNI(NULL, static_cast<int>(flow));
 
     hb_vmEvalBlockV(cb, 2, psender, pflow);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pflow );
+    hb_itemRelease(pflow);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QSerialPortSlots::dataErrorPolicyChanged( QSerialPort::DataErrorPolicy policy )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QSerialPortSlots::dataErrorPolicyChanged(QSerialPort::DataErrorPolicy policy)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
-    PHB_ITEM ppolicy = hb_itemPutNI( NULL, static_cast<int>(policy) );
+    PHB_ITEM ppolicy = hb_itemPutNI(NULL, static_cast<int>(policy));
 
     hb_vmEvalBlockV(cb, 2, psender, ppolicy);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ppolicy );
+    hb_itemRelease(ppolicy);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QSerialPortSlots::dataTerminalReadyChanged( bool set )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QSerialPortSlots::dataTerminalReadyChanged(bool set)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataTerminalReadyChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
-    PHB_ITEM pset = hb_itemPutL( NULL, set );
+    PHB_ITEM pset = hb_itemPutL(NULL, set);
 
     hb_vmEvalBlockV(cb, 2, psender, pset);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pset );
+    hb_itemRelease(pset);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QSerialPortSlots::requestToSendChanged( bool set )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QSerialPortSlots::requestToSendChanged(bool set)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "requestToSendChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
-    PHB_ITEM pset = hb_itemPutL( NULL, set );
+    PHB_ITEM pset = hb_itemPutL(NULL, set);
 
     hb_vmEvalBlockV(cb, 2, psender, pset);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pset );
+    hb_itemRelease(pset);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QSerialPortSlots::error( QSerialPort::SerialPortError serialPortError )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QSerialPortSlots::error(QSerialPort::SerialPortError serialPortError)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QSerialPort::SerialPortError)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
-    PHB_ITEM pserialPortError = hb_itemPutNI( NULL, static_cast<int>(serialPortError) );
+    PHB_ITEM pserialPortError = hb_itemPutNI(NULL, static_cast<int>(serialPortError));
 
     hb_vmEvalBlockV(cb, 2, psender, pserialPortError);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pserialPortError );
+    hb_itemRelease(pserialPortError);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-void QSerialPortSlots::settingsRestoredOnCloseChanged( bool restore )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+void QSerialPortSlots::settingsRestoredOnCloseChanged(bool restore)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "settingsRestoredOnCloseChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
-    PHB_ITEM prestore = hb_itemPutL( NULL, restore );
+    PHB_ITEM prestore = hb_itemPutL(NULL, restore);
 
     hb_vmEvalBlockV(cb, 2, psender, prestore);
 
     hb_itemRelease(psender);
-    hb_itemRelease( prestore );
+    hb_itemRelease(prestore);
   }
 }
 #endif
 
-void QSerialPortSlots_connect_signal(const QString & signal, const QString & slot)
+void QSerialPortSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPort * obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPort *obj = (QSerialPort *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QSerialPortSlots * s = QCoreApplication::instance()->findChild<QSerialPortSlots*>();
+    QSerialPortSlots *s = QCoreApplication::instance()->findChild<QSerialPortSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QSerialPortSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
