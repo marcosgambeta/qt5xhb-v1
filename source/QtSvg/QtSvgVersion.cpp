@@ -24,12 +24,12 @@
 #include <QtSvg/QtSvgVersion>
 #endif
 
-HB_FUNC( QTSVG_VERSION_STR )
+HB_FUNC(QTSVG_VERSION_STR)
 {
-  hb_retc( (const char *) QTSVG_VERSION_STR );
+  hb_retc((const char *)QTSVG_VERSION_STR);
 }
 
-HB_FUNC( QTSVG_VERSION )
+HB_FUNC(QTSVG_VERSION)
 {
-  hb_retni( QTSVG_VERSION );
+  hb_retni(QTSVG_VERSION);
 }
