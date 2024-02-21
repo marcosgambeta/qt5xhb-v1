@@ -24,19 +24,19 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAxScriptSlots: public QObject
+class QAxScriptSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAxScriptSlots( QObject *parent = 0 );
+public:
+  QAxScriptSlots(QObject *parent = 0);
   ~QAxScriptSlots();
-  public slots:
+public slots:
   void entered();
-  void error( int code, const QString & description, int sourcePosition, const QString & sourceText );
+  void error(int code, const QString &description, int sourcePosition, const QString &sourceText);
   void finished();
-  void finished( const QVariant & result );
-  void finished( int code, const QString & source, const QString & description, const QString & help );
-  void stateChanged( int state );
+  void finished(const QVariant &result);
+  void finished(int code, const QString &source, const QString &description, const QString &help);
+  void stateChanged(int state);
 };
 
 #endif /* QAXSCRIPTSLOTS_H */

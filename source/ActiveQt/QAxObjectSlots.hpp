@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAxObjectSlots: public QObject
+class QAxObjectSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAxObjectSlots( QObject *parent = 0 );
+public:
+  QAxObjectSlots(QObject *parent = 0);
   ~QAxObjectSlots();
-  public slots:
-  void exception( int code, const QString & source, const QString & desc, const QString & help );
-  void propertyChanged( const QString & name );
-  void signal( const QString & name, int argc, void * argv );
+public slots:
+  void exception(int code, const QString &source, const QString &desc, const QString &help);
+  void propertyChanged(const QString &name);
+  void signal(const QString &name, int argc, void *argv);
 };
 
 #endif /* QAXOBJECTSLOTS_H */

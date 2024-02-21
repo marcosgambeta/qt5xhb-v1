@@ -12,4 +12,3 @@
 
 #ifndef QAXBASESLOTS_H
 #define QAXBASESLOTS_H
-
