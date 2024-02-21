@@ -25,16 +25,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QInAppStoreSlots: public QObject
+class QInAppStoreSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QInAppStoreSlots( QObject *parent = 0 );
+public:
+  QInAppStoreSlots(QObject *parent = 0);
   ~QInAppStoreSlots();
-  public slots:
-  void productRegistered( QInAppProduct * product );
-  void productUnknown( QInAppProduct::ProductType productType, const QString & identifier );
-  void transactionReady( QInAppTransaction * transaction );
+public slots:
+  void productRegistered(QInAppProduct *product);
+  void productUnknown(QInAppProduct::ProductType productType, const QString &identifier);
+  void transactionReady(QInAppTransaction *transaction);
 };
 
 #endif /* QINAPPSTORESLOTS_H */
