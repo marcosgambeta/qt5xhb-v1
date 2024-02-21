@@ -21,13 +21,13 @@ class HUiLoader : public QUiLoader
 {
   Q_OBJECT
 public:
-  HUiLoader( QObject *parent = 0 );
+  HUiLoader(QObject *parent = 0);
   ~HUiLoader();
 
-  QAction * createAction( QObject *parent = 0, const QString &name = QString() );
-  QActionGroup * createActionGroup( QObject *parent = 0, const QString &name = QString() );
-  QLayout * createLayout( const QString &className, QObject *parent = 0, const QString &name = QString() );
-  QWidget * createWidget( const QString &className, QWidget *parent = 0, const QString &name = QString() );
+  QAction *createAction(QObject *parent = 0, const QString &name = QString());
+  QActionGroup *createActionGroup(QObject *parent = 0, const QString &name = QString());
+  QLayout *createLayout(const QString &className, QObject *parent = 0, const QString &name = QString());
+  QWidget *createWidget(const QString &className, QWidget *parent = 0, const QString &name = QString());
 
 private:
   PHB_ITEM m_createActionBlock;
@@ -36,10 +36,10 @@ private:
   PHB_ITEM m_createWidgetBlock;
 
 public:
-  void setCreateActionCB( PHB_ITEM block );
-  void setCreateActionGroupCB( PHB_ITEM block );
-  void setCreateLayoutCB( PHB_ITEM block );
-  void setCreateWidgetCB( PHB_ITEM block );
+  void setCreateActionCB(PHB_ITEM block);
+  void setCreateActionGroupCB(PHB_ITEM block);
+  void setCreateLayoutCB(PHB_ITEM block);
+  void setCreateWidgetCB(PHB_ITEM block);
 };
 
 #endif /* HUILOADER_H */
