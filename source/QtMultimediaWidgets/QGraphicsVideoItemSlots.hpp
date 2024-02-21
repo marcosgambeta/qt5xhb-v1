@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGraphicsVideoItemSlots: public QObject
+class QGraphicsVideoItemSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGraphicsVideoItemSlots( QObject *parent = 0 );
+public:
+  QGraphicsVideoItemSlots(QObject *parent = 0);
   ~QGraphicsVideoItemSlots();
-  public slots:
-  void nativeSizeChanged( const QSizeF & size );
+public slots:
+  void nativeSizeChanged(const QSizeF &size);
 };
 
 #endif /* QGRAPHICSVIDEOITEMSLOTS_H */

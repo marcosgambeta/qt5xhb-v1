@@ -24,18 +24,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QVideoWidgetControlSlots: public QObject
+class QVideoWidgetControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QVideoWidgetControlSlots( QObject *parent = 0 );
+public:
+  QVideoWidgetControlSlots(QObject *parent = 0);
   ~QVideoWidgetControlSlots();
-  public slots:
-  void fullScreenChanged( bool fullScreen );
-  void brightnessChanged( int brightness );
-  void contrastChanged( int contrast );
-  void hueChanged( int hue );
-  void saturationChanged( int saturation );
+public slots:
+  void fullScreenChanged(bool fullScreen);
+  void brightnessChanged(int brightness);
+  void contrastChanged(int contrast);
+  void hueChanged(int hue);
+  void saturationChanged(int saturation);
 };
 
 #endif /* QVIDEOWIDGETCONTROLSLOTS_H */

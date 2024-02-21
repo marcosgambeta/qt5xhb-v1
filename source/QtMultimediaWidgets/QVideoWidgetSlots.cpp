@@ -12,7 +12,7 @@
 
 #include "QVideoWidgetSlots.hpp"
 
-QVideoWidgetSlots::QVideoWidgetSlots( QObject *parent ) : QObject( parent )
+QVideoWidgetSlots::QVideoWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,105 +20,105 @@ QVideoWidgetSlots::~QVideoWidgetSlots()
 {
 }
 
-void QVideoWidgetSlots::fullScreenChanged( bool fullScreen )
+void QVideoWidgetSlots::fullScreenChanged(bool fullScreen)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fullScreenChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
-    PHB_ITEM pfullScreen = hb_itemPutL( NULL, fullScreen );
+    PHB_ITEM pfullScreen = hb_itemPutL(NULL, fullScreen);
 
     hb_vmEvalBlockV(cb, 2, psender, pfullScreen);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfullScreen );
+    hb_itemRelease(pfullScreen);
   }
 }
 
-void QVideoWidgetSlots::brightnessChanged( int brightness )
+void QVideoWidgetSlots::brightnessChanged(int brightness)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "brightnessChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
-    PHB_ITEM pbrightness = hb_itemPutNI( NULL, brightness );
+    PHB_ITEM pbrightness = hb_itemPutNI(NULL, brightness);
 
     hb_vmEvalBlockV(cb, 2, psender, pbrightness);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pbrightness );
+    hb_itemRelease(pbrightness);
   }
 }
 
-void QVideoWidgetSlots::contrastChanged( int contrast )
+void QVideoWidgetSlots::contrastChanged(int contrast)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contrastChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
-    PHB_ITEM pcontrast = hb_itemPutNI( NULL, contrast );
+    PHB_ITEM pcontrast = hb_itemPutNI(NULL, contrast);
 
     hb_vmEvalBlockV(cb, 2, psender, pcontrast);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcontrast );
+    hb_itemRelease(pcontrast);
   }
 }
 
-void QVideoWidgetSlots::hueChanged( int hue )
+void QVideoWidgetSlots::hueChanged(int hue)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hueChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
-    PHB_ITEM phue = hb_itemPutNI( NULL, hue );
+    PHB_ITEM phue = hb_itemPutNI(NULL, hue);
 
     hb_vmEvalBlockV(cb, 2, psender, phue);
 
     hb_itemRelease(psender);
-    hb_itemRelease( phue );
+    hb_itemRelease(phue);
   }
 }
 
-void QVideoWidgetSlots::saturationChanged( int saturation )
+void QVideoWidgetSlots::saturationChanged(int saturation)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "saturationChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
-    PHB_ITEM psaturation = hb_itemPutNI( NULL, saturation );
+    PHB_ITEM psaturation = hb_itemPutNI(NULL, saturation);
 
     hb_vmEvalBlockV(cb, 2, psender, psaturation);
 
     hb_itemRelease(psender);
-    hb_itemRelease( psaturation );
+    hb_itemRelease(psaturation);
   }
 }
 
-void QVideoWidgetSlots_connect_signal(const QString & signal, const QString & slot)
+void QVideoWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVideoWidget *obj = (QVideoWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QVideoWidgetSlots * s = QCoreApplication::instance()->findChild<QVideoWidgetSlots*>();
+    QVideoWidgetSlots *s = QCoreApplication::instance()->findChild<QVideoWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QVideoWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

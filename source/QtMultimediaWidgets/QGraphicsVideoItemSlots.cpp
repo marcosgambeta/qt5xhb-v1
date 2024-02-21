@@ -12,7 +12,7 @@
 
 #include "QGraphicsVideoItemSlots.hpp"
 
-QGraphicsVideoItemSlots::QGraphicsVideoItemSlots( QObject *parent ) : QObject( parent )
+QGraphicsVideoItemSlots::QGraphicsVideoItemSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QGraphicsVideoItemSlots::~QGraphicsVideoItemSlots()
 {
 }
 
-void QGraphicsVideoItemSlots::nativeSizeChanged( const QSizeF & size )
+void QGraphicsVideoItemSlots::nativeSizeChanged(const QSizeF &size)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "nativeSizeChanged(QSizeF)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSVIDEOITEM");
-    PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZEF");
+    PHB_ITEM psize = Qt5xHb::Signals_return_object((void *)&size, "QSIZEF");
 
     hb_vmEvalBlockV(cb, 2, psender, psize);
 
     hb_itemRelease(psender);
-    hb_itemRelease( psize );
+    hb_itemRelease(psize);
   }
 }
 
-void QGraphicsVideoItemSlots_connect_signal(const QString & signal, const QString & slot)
+void QGraphicsVideoItemSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsVideoItem *obj = (QGraphicsVideoItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QGraphicsVideoItemSlots * s = QCoreApplication::instance()->findChild<QGraphicsVideoItemSlots*>();
+    QGraphicsVideoItemSlots *s = QCoreApplication::instance()->findChild<QGraphicsVideoItemSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QGraphicsVideoItemSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
