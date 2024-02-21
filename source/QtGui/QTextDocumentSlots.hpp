@@ -24,21 +24,21 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QTextDocumentSlots: public QObject
+class QTextDocumentSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTextDocumentSlots( QObject *parent = 0 );
+public:
+  QTextDocumentSlots(QObject *parent = 0);
   ~QTextDocumentSlots();
-  public slots:
-  void contentsChange( int from, int charsRemoves, int charsAdded );
+public slots:
+  void contentsChange(int from, int charsRemoves, int charsAdded);
   void contentsChanged();
-  void undoAvailable( bool b );
-  void redoAvailable( bool b );
+  void undoAvailable(bool b);
+  void redoAvailable(bool b);
   void undoCommandAdded();
-  void modificationChanged( bool m );
-  void cursorPositionChanged( const QTextCursor & cursor );
-  void blockCountChanged( int newBlockCount );
+  void modificationChanged(bool m);
+  void cursorPositionChanged(const QTextCursor &cursor);
+  void blockCountChanged(int newBlockCount);
   void documentLayoutChanged();
 };
 

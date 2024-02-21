@@ -12,7 +12,7 @@
 
 #include "QOffscreenSurfaceSlots.hpp"
 
-QOffscreenSurfaceSlots::QOffscreenSurfaceSlots( QObject *parent ) : QObject( parent )
+QOffscreenSurfaceSlots::QOffscreenSurfaceSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QOffscreenSurfaceSlots::~QOffscreenSurfaceSlots()
 {
 }
 
-void QOffscreenSurfaceSlots::screenChanged( QScreen * screen )
+void QOffscreenSurfaceSlots::screenChanged(QScreen *screen)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "screenChanged(QScreen*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOFFSCREENSURFACE");
     PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject(screen, "QSCREEN");
@@ -34,19 +34,19 @@ void QOffscreenSurfaceSlots::screenChanged( QScreen * screen )
     hb_vmEvalBlockV(cb, 2, psender, pscreen);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pscreen );
+    hb_itemRelease(pscreen);
   }
 }
 
-void QOffscreenSurfaceSlots_connect_signal(const QString & signal, const QString & slot)
+void QOffscreenSurfaceSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QOffscreenSurface * obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QOffscreenSurfaceSlots * s = QCoreApplication::instance()->findChild<QOffscreenSurfaceSlots*>();
+    QOffscreenSurfaceSlots *s = QCoreApplication::instance()->findChild<QOffscreenSurfaceSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QOffscreenSurfaceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

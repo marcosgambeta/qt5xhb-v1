@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAbstractTextDocumentLayoutSlots: public QObject
+class QAbstractTextDocumentLayoutSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractTextDocumentLayoutSlots( QObject *parent = 0 );
+public:
+  QAbstractTextDocumentLayoutSlots(QObject *parent = 0);
   ~QAbstractTextDocumentLayoutSlots();
-  public slots:
-  void documentSizeChanged( const QSizeF & newSize );
-  void pageCountChanged( int newPages );
-  void update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) );
-  void updateBlock( const QTextBlock & block );
+public slots:
+  void documentSizeChanged(const QSizeF &newSize);
+  void pageCountChanged(int newPages);
+  void update(const QRectF &rect = QRectF(0., 0., 1000000000., 1000000000.));
+  void updateBlock(const QTextBlock &block);
 };
 
 #endif /* QABSTRACTTEXTDOCUMENTLAYOUTSLOTS_H */

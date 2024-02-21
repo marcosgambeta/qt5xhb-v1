@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QIntValidatorSlots: public QObject
+class QIntValidatorSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QIntValidatorSlots( QObject *parent = 0 );
+public:
+  QIntValidatorSlots(QObject *parent = 0);
   ~QIntValidatorSlots();
-  public slots:
+public slots:
   void changed();
 };
 

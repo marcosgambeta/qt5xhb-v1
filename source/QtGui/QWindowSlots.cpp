@@ -12,7 +12,7 @@
 
 #include "QWindowSlots.hpp"
 
-QWindowSlots::QWindowSlots( QObject *parent ) : QObject( parent )
+QWindowSlots::QWindowSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QWindowSlots::~QWindowSlots()
 {
 }
 
-void QWindowSlots::contentOrientationChanged( Qt::ScreenOrientation orientation )
+void QWindowSlots::contentOrientationChanged(Qt::ScreenOrientation orientation)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentOrientationChanged(Qt::ScreenOrientation)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINDOW");
-    PHB_ITEM porientation = hb_itemPutNI( NULL, static_cast<int>(orientation) );
+    PHB_ITEM porientation = hb_itemPutNI(NULL, static_cast<int>(orientation));
 
     hb_vmEvalBlockV(cb, 2, psender, porientation);
 
     hb_itemRelease(psender);
-    hb_itemRelease( porientation );
+    hb_itemRelease(porientation);
   }
 }
 
-void QWindowSlots::focusObjectChanged( QObject * focusObject )
+void QWindowSlots::focusObjectChanged(QObject *focusObject)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "focusObjectChanged(QObject*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINDOW");
     PHB_ITEM pfocusObject = Qt5xHb::Signals_return_qobject(focusObject, "QOBJECT");
@@ -52,35 +52,35 @@ void QWindowSlots::focusObjectChanged( QObject * focusObject )
     hb_vmEvalBlockV(cb, 2, psender, pfocusObject);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfocusObject );
+    hb_itemRelease(pfocusObject);
   }
 }
 
-void QWindowSlots::heightChanged( int arg )
+void QWindowSlots::heightChanged(int arg)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "heightChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINDOW");
-    PHB_ITEM parg = hb_itemPutNI( NULL, arg );
+    PHB_ITEM parg = hb_itemPutNI(NULL, arg);
 
     hb_vmEvalBlockV(cb, 2, psender, parg);
 
     hb_itemRelease(psender);
-    hb_itemRelease( parg );
+    hb_itemRelease(parg);
   }
 }
 
-void QWindowSlots::screenChanged( QScreen * screen )
+void QWindowSlots::screenChanged(QScreen *screen)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "screenChanged(QScreen*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINDOW");
     PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject(screen, "QSCREEN");
@@ -88,109 +88,109 @@ void QWindowSlots::screenChanged( QScreen * screen )
     hb_vmEvalBlockV(cb, 2, psender, pscreen);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pscreen );
+    hb_itemRelease(pscreen);
   }
 }
 
-void QWindowSlots::visibleChanged( bool arg )
+void QWindowSlots::visibleChanged(bool arg)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "visibleChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINDOW");
-    PHB_ITEM parg = hb_itemPutL( NULL, arg );
+    PHB_ITEM parg = hb_itemPutL(NULL, arg);
 
     hb_vmEvalBlockV(cb, 2, psender, parg);
 
     hb_itemRelease(psender);
-    hb_itemRelease( parg );
+    hb_itemRelease(parg);
   }
 }
 
-void QWindowSlots::widthChanged( int arg )
+void QWindowSlots::widthChanged(int arg)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "widthChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINDOW");
-    PHB_ITEM parg = hb_itemPutNI( NULL, arg );
+    PHB_ITEM parg = hb_itemPutNI(NULL, arg);
 
     hb_vmEvalBlockV(cb, 2, psender, parg);
 
     hb_itemRelease(psender);
-    hb_itemRelease( parg );
+    hb_itemRelease(parg);
   }
 }
 
-void QWindowSlots::windowModalityChanged( Qt::WindowModality windowModality )
+void QWindowSlots::windowModalityChanged(Qt::WindowModality windowModality)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "windowModalityChanged(Qt::WindowModality)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINDOW");
-    PHB_ITEM pwindowModality = hb_itemPutNI( NULL, static_cast<int>(windowModality) );
+    PHB_ITEM pwindowModality = hb_itemPutNI(NULL, static_cast<int>(windowModality));
 
     hb_vmEvalBlockV(cb, 2, psender, pwindowModality);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pwindowModality );
+    hb_itemRelease(pwindowModality);
   }
 }
 
-void QWindowSlots::xChanged( int arg )
+void QWindowSlots::xChanged(int arg)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINDOW");
-    PHB_ITEM parg = hb_itemPutNI( NULL, arg );
+    PHB_ITEM parg = hb_itemPutNI(NULL, arg);
 
     hb_vmEvalBlockV(cb, 2, psender, parg);
 
     hb_itemRelease(psender);
-    hb_itemRelease( parg );
+    hb_itemRelease(parg);
   }
 }
 
-void QWindowSlots::yChanged( int arg )
+void QWindowSlots::yChanged(int arg)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINDOW");
-    PHB_ITEM parg = hb_itemPutNI( NULL, arg );
+    PHB_ITEM parg = hb_itemPutNI(NULL, arg);
 
     hb_vmEvalBlockV(cb, 2, psender, parg);
 
     hb_itemRelease(psender);
-    hb_itemRelease( parg );
+    hb_itemRelease(parg);
   }
 }
 
-void QWindowSlots_connect_signal(const QString & signal, const QString & slot)
+void QWindowSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWindow *obj = (QWindow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWindowSlots * s = QCoreApplication::instance()->findChild<QWindowSlots*>();
+    QWindowSlots *s = QCoreApplication::instance()->findChild<QWindowSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWindowSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

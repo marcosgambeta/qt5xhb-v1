@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDragSlots: public QObject
+class QDragSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDragSlots( QObject *parent = 0 );
+public:
+  QDragSlots(QObject *parent = 0);
   ~QDragSlots();
-  public slots:
-  void actionChanged( Qt::DropAction action );
-  void targetChanged( QObject * newTarget );
+public slots:
+  void actionChanged(Qt::DropAction action);
+  void targetChanged(QObject *newTarget);
 };
 
 #endif /* QDRAGSLOTS_H */

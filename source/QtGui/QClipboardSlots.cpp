@@ -12,7 +12,7 @@
 
 #include "QClipboardSlots.hpp"
 
-QClipboardSlots::QClipboardSlots( QObject *parent ) : QObject( parent )
+QClipboardSlots::QClipboardSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QClipboardSlots::~QClipboardSlots()
 {
 }
 
-void QClipboardSlots::changed( QClipboard::Mode mode )
+void QClipboardSlots::changed(QClipboard::Mode mode)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "changed(QClipboard::Mode)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCLIPBOARD");
-    PHB_ITEM pmode = hb_itemPutNI( NULL, static_cast<int>(mode) );
+    PHB_ITEM pmode = hb_itemPutNI(NULL, static_cast<int>(mode));
 
     hb_vmEvalBlockV(cb, 2, psender, pmode);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pmode );
+    hb_itemRelease(pmode);
   }
 }
 
 void QClipboardSlots::dataChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCLIPBOARD");
 
@@ -56,11 +56,11 @@ void QClipboardSlots::dataChanged()
 
 void QClipboardSlots::findBufferChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "findBufferChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCLIPBOARD");
 
@@ -72,11 +72,11 @@ void QClipboardSlots::findBufferChanged()
 
 void QClipboardSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCLIPBOARD");
 
@@ -86,15 +86,15 @@ void QClipboardSlots::selectionChanged()
   }
 }
 
-void QClipboardSlots_connect_signal(const QString & signal, const QString & slot)
+void QClipboardSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
+  QClipboard *obj = (QClipboard *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QClipboardSlots * s = QCoreApplication::instance()->findChild<QClipboardSlots*>();
+    QClipboardSlots *s = QCoreApplication::instance()->findChild<QClipboardSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QClipboardSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

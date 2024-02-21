@@ -25,22 +25,22 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QWindowSlots: public QObject
+class QWindowSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWindowSlots( QObject *parent = 0 );
+public:
+  QWindowSlots(QObject *parent = 0);
   ~QWindowSlots();
-  public slots:
-  void contentOrientationChanged( Qt::ScreenOrientation orientation );
-  void focusObjectChanged( QObject * focusObject );
-  void heightChanged( int arg );
-  void screenChanged( QScreen * screen );
-  void visibleChanged( bool arg );
-  void widthChanged( int arg );
-  void windowModalityChanged( Qt::WindowModality windowModality );
-  void xChanged( int arg );
-  void yChanged( int arg );
+public slots:
+  void contentOrientationChanged(Qt::ScreenOrientation orientation);
+  void focusObjectChanged(QObject *focusObject);
+  void heightChanged(int arg);
+  void screenChanged(QScreen *screen);
+  void visibleChanged(bool arg);
+  void widthChanged(int arg);
+  void windowModalityChanged(Qt::WindowModality windowModality);
+  void xChanged(int arg);
+  void yChanged(int arg);
 };
 
 #endif /* QWINDOWSLOTS_H */

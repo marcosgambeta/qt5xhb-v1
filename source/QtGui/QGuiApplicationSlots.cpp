@@ -12,7 +12,7 @@
 
 #include "QGuiApplicationSlots.hpp"
 
-QGuiApplicationSlots::QGuiApplicationSlots( QObject *parent ) : QObject( parent )
+QGuiApplicationSlots::QGuiApplicationSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QGuiApplicationSlots::~QGuiApplicationSlots()
 {
 }
 
-void QGuiApplicationSlots::focusObjectChanged( QObject * focusObject )
+void QGuiApplicationSlots::focusObjectChanged(QObject *focusObject)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "focusObjectChanged(QObject*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pfocusObject = Qt5xHb::Signals_return_qobject(focusObject, "QOBJECT");
@@ -34,17 +34,17 @@ void QGuiApplicationSlots::focusObjectChanged( QObject * focusObject )
     hb_vmEvalBlockV(cb, 2, psender, pfocusObject);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfocusObject );
+    hb_itemRelease(pfocusObject);
   }
 }
 
-void QGuiApplicationSlots::focusWindowChanged( QWindow * focusWindow )
+void QGuiApplicationSlots::focusWindowChanged(QWindow *focusWindow)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "focusWindowChanged(QWindow*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pfocusWindow = Qt5xHb::Signals_return_qobject(focusWindow, "QWINDOW");
@@ -52,17 +52,17 @@ void QGuiApplicationSlots::focusWindowChanged( QWindow * focusWindow )
     hb_vmEvalBlockV(cb, 2, psender, pfocusWindow);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfocusWindow );
+    hb_itemRelease(pfocusWindow);
   }
 }
 
 void QGuiApplicationSlots::fontDatabaseChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fontDatabaseChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
 
@@ -74,11 +74,11 @@ void QGuiApplicationSlots::fontDatabaseChanged()
 
 void QGuiApplicationSlots::lastWindowClosed()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lastWindowClosed()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
 
@@ -88,13 +88,13 @@ void QGuiApplicationSlots::lastWindowClosed()
   }
 }
 
-void QGuiApplicationSlots::screenAdded( QScreen * screen )
+void QGuiApplicationSlots::screenAdded(QScreen *screen)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "screenAdded(QScreen*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject(screen, "QSCREEN");
@@ -102,19 +102,19 @@ void QGuiApplicationSlots::screenAdded( QScreen * screen )
     hb_vmEvalBlockV(cb, 2, psender, pscreen);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pscreen );
+    hb_itemRelease(pscreen);
   }
 }
 
-void QGuiApplicationSlots_connect_signal(const QString & signal, const QString & slot)
+void QGuiApplicationSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QGuiApplication * obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGuiApplication *obj = (QGuiApplication *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QGuiApplicationSlots * s = QCoreApplication::instance()->findChild<QGuiApplicationSlots*>();
+    QGuiApplicationSlots *s = QCoreApplication::instance()->findChild<QGuiApplicationSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QGuiApplicationSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

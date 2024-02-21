@@ -12,7 +12,7 @@
 
 #include "QDragSlots.hpp"
 
-QDragSlots::QDragSlots( QObject *parent ) : QObject( parent )
+QDragSlots::QDragSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QDragSlots::~QDragSlots()
 {
 }
 
-void QDragSlots::actionChanged( Qt::DropAction action )
+void QDragSlots::actionChanged(Qt::DropAction action)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "actionChanged(Qt::DropAction)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDRAG");
-    PHB_ITEM paction = hb_itemPutNI( NULL, static_cast<int>(action) );
+    PHB_ITEM paction = hb_itemPutNI(NULL, static_cast<int>(action));
 
     hb_vmEvalBlockV(cb, 2, psender, paction);
 
     hb_itemRelease(psender);
-    hb_itemRelease( paction );
+    hb_itemRelease(paction);
   }
 }
 
-void QDragSlots::targetChanged( QObject * newTarget )
+void QDragSlots::targetChanged(QObject *newTarget)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "targetChanged(QObject*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDRAG");
     PHB_ITEM pnewTarget = Qt5xHb::Signals_return_qobject(newTarget, "QOBJECT");
@@ -52,19 +52,19 @@ void QDragSlots::targetChanged( QObject * newTarget )
     hb_vmEvalBlockV(cb, 2, psender, pnewTarget);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pnewTarget );
+    hb_itemRelease(pnewTarget);
   }
 }
 
-void QDragSlots_connect_signal(const QString & signal, const QString & slot)
+void QDragSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDrag * obj = (QDrag *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDrag *obj = (QDrag *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDragSlots * s = QCoreApplication::instance()->findChild<QDragSlots*>();
+    QDragSlots *s = QCoreApplication::instance()->findChild<QDragSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDragSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

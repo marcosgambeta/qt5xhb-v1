@@ -12,7 +12,7 @@
 
 #include "QInputMethodSlots.hpp"
 
-QInputMethodSlots::QInputMethodSlots( QObject *parent ) : QObject( parent )
+QInputMethodSlots::QInputMethodSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QInputMethodSlots::~QInputMethodSlots()
 
 void QInputMethodSlots::animatingChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "animatingChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
@@ -38,11 +38,11 @@ void QInputMethodSlots::animatingChanged()
 
 void QInputMethodSlots::cursorRectangleChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "cursorRectangleChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
@@ -52,31 +52,31 @@ void QInputMethodSlots::cursorRectangleChanged()
   }
 }
 
-void QInputMethodSlots::inputDirectionChanged( Qt::LayoutDirection newDirection )
+void QInputMethodSlots::inputDirectionChanged(Qt::LayoutDirection newDirection)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "inputDirectionChanged(Qt::LayoutDirection)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
-    PHB_ITEM pnewDirection = hb_itemPutNI( NULL, static_cast<int>(newDirection) );
+    PHB_ITEM pnewDirection = hb_itemPutNI(NULL, static_cast<int>(newDirection));
 
     hb_vmEvalBlockV(cb, 2, psender, pnewDirection);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pnewDirection );
+    hb_itemRelease(pnewDirection);
   }
 }
 
 void QInputMethodSlots::keyboardRectangleChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "keyboardRectangleChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
@@ -88,11 +88,11 @@ void QInputMethodSlots::keyboardRectangleChanged()
 
 void QInputMethodSlots::localeChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "localeChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
@@ -104,11 +104,11 @@ void QInputMethodSlots::localeChanged()
 
 void QInputMethodSlots::visibleChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "visibleChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
@@ -118,15 +118,15 @@ void QInputMethodSlots::visibleChanged()
   }
 }
 
-void QInputMethodSlots_connect_signal(const QString & signal, const QString & slot)
+void QInputMethodSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QInputMethod * obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QInputMethodSlots * s = QCoreApplication::instance()->findChild<QInputMethodSlots*>();
+    QInputMethodSlots *s = QCoreApplication::instance()->findChild<QInputMethodSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QInputMethodSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

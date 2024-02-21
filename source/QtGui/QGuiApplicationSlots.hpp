@@ -26,18 +26,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGuiApplicationSlots: public QObject
+class QGuiApplicationSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGuiApplicationSlots( QObject *parent = 0 );
+public:
+  QGuiApplicationSlots(QObject *parent = 0);
   ~QGuiApplicationSlots();
-  public slots:
-  void focusObjectChanged( QObject * focusObject );
-  void focusWindowChanged( QWindow * focusWindow );
+public slots:
+  void focusObjectChanged(QObject *focusObject);
+  void focusWindowChanged(QWindow *focusWindow);
   void fontDatabaseChanged();
   void lastWindowClosed();
-  void screenAdded( QScreen * screen );
+  void screenAdded(QScreen *screen);
 };
 
 #endif /* QGUIAPPLICATIONSLOTS_H */

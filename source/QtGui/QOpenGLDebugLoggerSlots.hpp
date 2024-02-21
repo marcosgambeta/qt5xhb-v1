@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QOpenGLDebugLoggerSlots: public QObject
+class QOpenGLDebugLoggerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QOpenGLDebugLoggerSlots( QObject *parent = 0 );
+public:
+  QOpenGLDebugLoggerSlots(QObject *parent = 0);
   ~QOpenGLDebugLoggerSlots();
-  public slots:
-  void messageLogged( const QOpenGLDebugMessage & debugMessage );
+public slots:
+  void messageLogged(const QOpenGLDebugMessage &debugMessage);
 };
 
 #endif /* QOPENGLDEBUGLOGGERSLOTS_H */

@@ -24,20 +24,20 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMovieSlots: public QObject
+class QMovieSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMovieSlots( QObject *parent = 0 );
+public:
+  QMovieSlots(QObject *parent = 0);
   ~QMovieSlots();
-  public slots:
-  void error( QImageReader::ImageReaderError error );
+public slots:
+  void error(QImageReader::ImageReaderError error);
   void finished();
-  void frameChanged( int frameNumber );
-  void resized( const QSize & size );
+  void frameChanged(int frameNumber);
+  void resized(const QSize &size);
   void started();
-  void stateChanged( QMovie::MovieState state );
-  void updated( const QRect & rect );
+  void stateChanged(QMovie::MovieState state);
+  void updated(const QRect &rect);
 };
 
 #endif /* QMOVIESLOTS_H */

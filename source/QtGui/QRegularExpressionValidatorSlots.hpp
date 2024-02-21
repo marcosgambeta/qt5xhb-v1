@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QRegularExpressionValidatorSlots: public QObject
+class QRegularExpressionValidatorSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QRegularExpressionValidatorSlots( QObject *parent = 0 );
+public:
+  QRegularExpressionValidatorSlots(QObject *parent = 0);
   ~QRegularExpressionValidatorSlots();
-  public slots:
-  void regularExpressionChanged( const QRegularExpression & re );
+public slots:
+  void regularExpressionChanged(const QRegularExpression &re);
 };
 
 #endif /* QREGULAREXPRESSIONVALIDATORSLOTS_H */

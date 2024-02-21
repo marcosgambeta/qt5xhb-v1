@@ -12,7 +12,7 @@
 
 #include "QIntValidatorSlots.hpp"
 
-QIntValidatorSlots::QIntValidatorSlots( QObject *parent ) : QObject( parent )
+QIntValidatorSlots::QIntValidatorSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QIntValidatorSlots::~QIntValidatorSlots()
 
 void QIntValidatorSlots::changed()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "changed()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINTVALIDATOR");
 
@@ -36,15 +36,15 @@ void QIntValidatorSlots::changed()
   }
 }
 
-void QIntValidatorSlots_connect_signal(const QString & signal, const QString & slot)
+void QIntValidatorSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QIntValidator * obj = (QIntValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIntValidator *obj = (QIntValidator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QIntValidatorSlots * s = QCoreApplication::instance()->findChild<QIntValidatorSlots*>();
+    QIntValidatorSlots *s = QCoreApplication::instance()->findChild<QIntValidatorSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QIntValidatorSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -25,14 +25,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QOffscreenSurfaceSlots: public QObject
+class QOffscreenSurfaceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QOffscreenSurfaceSlots( QObject *parent = 0 );
+public:
+  QOffscreenSurfaceSlots(QObject *parent = 0);
   ~QOffscreenSurfaceSlots();
-  public slots:
-  void screenChanged( QScreen * screen );
+public slots:
+  void screenChanged(QScreen *screen);
 };
 
 #endif /* QOFFSCREENSURFACESLOTS_H */

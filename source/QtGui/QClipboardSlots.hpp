@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QClipboardSlots: public QObject
+class QClipboardSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QClipboardSlots( QObject *parent = 0 );
+public:
+  QClipboardSlots(QObject *parent = 0);
   ~QClipboardSlots();
-  public slots:
-  void changed( QClipboard::Mode mode );
+public slots:
+  void changed(QClipboard::Mode mode);
   void dataChanged();
   void findBufferChanged();
   void selectionChanged();

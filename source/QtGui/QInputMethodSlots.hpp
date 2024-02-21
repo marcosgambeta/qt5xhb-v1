@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QInputMethodSlots: public QObject
+class QInputMethodSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QInputMethodSlots( QObject *parent = 0 );
+public:
+  QInputMethodSlots(QObject *parent = 0);
   ~QInputMethodSlots();
-  public slots:
+public slots:
   void animatingChanged();
   void cursorRectangleChanged();
-  void inputDirectionChanged( Qt::LayoutDirection newDirection );
+  void inputDirectionChanged(Qt::LayoutDirection newDirection);
   void keyboardRectangleChanged();
   void localeChanged();
   void visibleChanged();

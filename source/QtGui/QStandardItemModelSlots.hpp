@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QStandardItemModelSlots: public QObject
+class QStandardItemModelSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QStandardItemModelSlots( QObject *parent = 0 );
+public:
+  QStandardItemModelSlots(QObject *parent = 0);
   ~QStandardItemModelSlots();
-  public slots:
-  void itemChanged( QStandardItem * item );
+public slots:
+  void itemChanged(QStandardItem *item);
 };
 
 #endif /* QSTANDARDITEMMODELSLOTS_H */

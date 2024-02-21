@@ -12,7 +12,7 @@
 
 #include "QRegularExpressionValidatorSlots.hpp"
 
-QRegularExpressionValidatorSlots::QRegularExpressionValidatorSlots( QObject *parent ) : QObject( parent )
+QRegularExpressionValidatorSlots::QRegularExpressionValidatorSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QRegularExpressionValidatorSlots::~QRegularExpressionValidatorSlots()
 {
 }
 
-void QRegularExpressionValidatorSlots::regularExpressionChanged( const QRegularExpression & re )
+void QRegularExpressionValidatorSlots::regularExpressionChanged(const QRegularExpression &re)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "regularExpressionChanged(QRegularExpression)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QREGULAREXPRESSIONVALIDATOR");
-    PHB_ITEM pre = Qt5xHb::Signals_return_object( (void *) &re, "QREGULAREXPRESSION");
+    PHB_ITEM pre = Qt5xHb::Signals_return_object((void *)&re, "QREGULAREXPRESSION");
 
     hb_vmEvalBlockV(cb, 2, psender, pre);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pre );
+    hb_itemRelease(pre);
   }
 }
 
-void QRegularExpressionValidatorSlots_connect_signal(const QString & signal, const QString & slot)
+void QRegularExpressionValidatorSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpressionValidator *obj = (QRegularExpressionValidator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QRegularExpressionValidatorSlots * s = QCoreApplication::instance()->findChild<QRegularExpressionValidatorSlots*>();
+    QRegularExpressionValidatorSlots *s = QCoreApplication::instance()->findChild<QRegularExpressionValidatorSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QRegularExpressionValidatorSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

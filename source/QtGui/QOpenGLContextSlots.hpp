@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QOpenGLContextSlots: public QObject
+class QOpenGLContextSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QOpenGLContextSlots( QObject *parent = 0 );
+public:
+  QOpenGLContextSlots(QObject *parent = 0);
   ~QOpenGLContextSlots();
-  public slots:
+public slots:
   void aboutToBeDestroyed();
 };
 

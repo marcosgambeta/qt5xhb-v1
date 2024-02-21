@@ -24,12 +24,12 @@
 #include <QtGui/QtGuiVersion>
 #endif
 
-HB_FUNC( QTGUI_VERSION_STR )
+HB_FUNC(QTGUI_VERSION_STR)
 {
-  hb_retc( (const char *) QTGUI_VERSION_STR );
+  hb_retc((const char *)QTGUI_VERSION_STR);
 }
 
-HB_FUNC( QTGUI_VERSION )
+HB_FUNC(QTGUI_VERSION)
 {
-  hb_retni( QTGUI_VERSION );
+  hb_retni(QTGUI_VERSION);
 }

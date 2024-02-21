@@ -12,7 +12,7 @@
 
 #include "QStandardItemModelSlots.hpp"
 
-QStandardItemModelSlots::QStandardItemModelSlots( QObject *parent ) : QObject( parent )
+QStandardItemModelSlots::QStandardItemModelSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QStandardItemModelSlots::~QStandardItemModelSlots()
 {
 }
 
-void QStandardItemModelSlots::itemChanged( QStandardItem * item )
+void QStandardItemModelSlots::itemChanged(QStandardItem *item)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "itemChanged(QStandardItem*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTANDARDITEMMODEL");
-    PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QSTANDARDITEM");
+    PHB_ITEM pitem = Qt5xHb::Signals_return_object((void *)item, "QSTANDARDITEM");
 
     hb_vmEvalBlockV(cb, 2, psender, pitem);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pitem );
+    hb_itemRelease(pitem);
   }
 }
 
-void QStandardItemModelSlots_connect_signal(const QString & signal, const QString & slot)
+void QStandardItemModelSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QStandardItemModel * obj = (QStandardItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStandardItemModel *obj = (QStandardItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QStandardItemModelSlots * s = QCoreApplication::instance()->findChild<QStandardItemModelSlots*>();
+    QStandardItemModelSlots *s = QCoreApplication::instance()->findChild<QStandardItemModelSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QStandardItemModelSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
