@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QPrintDialogSlots: public QObject
+class QPrintDialogSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QPrintDialogSlots( QObject *parent = 0 );
+public:
+  QPrintDialogSlots(QObject *parent = 0);
   ~QPrintDialogSlots();
-  public slots:
-  void accepted( QPrinter * printer );
+public slots:
+  void accepted(QPrinter *printer);
 };
 
 #endif /* QPRINTDIALOGSLOTS_H */

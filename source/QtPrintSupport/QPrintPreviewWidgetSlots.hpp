@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QPrintPreviewWidgetSlots: public QObject
+class QPrintPreviewWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QPrintPreviewWidgetSlots( QObject *parent = 0 );
+public:
+  QPrintPreviewWidgetSlots(QObject *parent = 0);
   ~QPrintPreviewWidgetSlots();
-  public slots:
-  void paintRequested( QPrinter * printer );
+public slots:
+  void paintRequested(QPrinter *printer);
   void previewChanged();
 };
 

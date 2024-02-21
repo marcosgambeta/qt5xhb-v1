@@ -12,7 +12,7 @@
 
 #include "QPrintDialogSlots.hpp"
 
-QPrintDialogSlots::QPrintDialogSlots( QObject *parent ) : QObject( parent )
+QPrintDialogSlots::QPrintDialogSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QPrintDialogSlots::~QPrintDialogSlots()
 {
 }
 
-void QPrintDialogSlots::accepted( QPrinter * printer )
+void QPrintDialogSlots::accepted(QPrinter *printer)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accepted(QPrinter*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPRINTDIALOG");
-    PHB_ITEM pprinter = Qt5xHb::Signals_return_object( (void *) printer, "QPRINTER");
+    PHB_ITEM pprinter = Qt5xHb::Signals_return_object((void *)printer, "QPRINTER");
 
     hb_vmEvalBlockV(cb, 2, psender, pprinter);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pprinter );
+    hb_itemRelease(pprinter);
   }
 }
 
-void QPrintDialogSlots_connect_signal(const QString & signal, const QString & slot)
+void QPrintDialogSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QPrintDialog * obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPrintDialog *obj = (QPrintDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QPrintDialogSlots * s = QCoreApplication::instance()->findChild<QPrintDialogSlots*>();
+    QPrintDialogSlots *s = QCoreApplication::instance()->findChild<QPrintDialogSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QPrintDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

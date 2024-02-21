@@ -12,7 +12,7 @@
 
 #include "QPrintPreviewDialogSlots.hpp"
 
-QPrintPreviewDialogSlots::QPrintPreviewDialogSlots( QObject *parent ) : QObject( parent )
+QPrintPreviewDialogSlots::QPrintPreviewDialogSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QPrintPreviewDialogSlots::~QPrintPreviewDialogSlots()
 {
 }
 
-void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
+void QPrintPreviewDialogSlots::paintRequested(QPrinter *printer)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "paintRequested(QPrinter*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPRINTPREVIEWDIALOG");
-    PHB_ITEM pprinter = Qt5xHb::Signals_return_object( (void *) printer, "QPRINTER");
+    PHB_ITEM pprinter = Qt5xHb::Signals_return_object((void *)printer, "QPRINTER");
 
     hb_vmEvalBlockV(cb, 2, psender, pprinter);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pprinter );
+    hb_itemRelease(pprinter);
   }
 }
 
-void QPrintPreviewDialogSlots_connect_signal(const QString & signal, const QString & slot)
+void QPrintPreviewDialogSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPrintPreviewDialog *obj = (QPrintPreviewDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QPrintPreviewDialogSlots * s = QCoreApplication::instance()->findChild<QPrintPreviewDialogSlots*>();
+    QPrintPreviewDialogSlots *s = QCoreApplication::instance()->findChild<QPrintPreviewDialogSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QPrintPreviewDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
