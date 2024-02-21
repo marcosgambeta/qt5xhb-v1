@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusDevice>
 #endif
 
@@ -26,18 +26,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QModbusDeviceSlots: public QObject
+class QModbusDeviceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QModbusDeviceSlots( QObject *parent = 0 );
+public:
+  QModbusDeviceSlots(QObject *parent = 0);
   ~QModbusDeviceSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void errorOccurred( QModbusDevice::Error error );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void errorOccurred(QModbusDevice::Error error);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void stateChanged( QModbusDevice::State state );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void stateChanged(QModbusDevice::State state);
 #endif
 };
 

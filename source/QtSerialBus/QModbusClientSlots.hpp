@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusClient>
 #endif
 
@@ -26,15 +26,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QModbusClientSlots: public QObject
+class QModbusClientSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QModbusClientSlots( QObject *parent = 0 );
+public:
+  QModbusClientSlots(QObject *parent = 0);
   ~QModbusClientSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void timeoutChanged( int newTimeout );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void timeoutChanged(int newTimeout);
 #endif
 };
 

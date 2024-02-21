@@ -12,7 +12,7 @@
 
 #include "QModbusReplySlots.hpp"
 
-QModbusReplySlots::QModbusReplySlots( QObject *parent ) : QObject( parent )
+QModbusReplySlots::QModbusReplySlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QModbusReplySlots::~QModbusReplySlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 void QModbusReplySlots::finished()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSREPLY");
 
@@ -38,36 +38,36 @@ void QModbusReplySlots::finished()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-void QModbusReplySlots::errorOccurred( QModbusDevice::Error error )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+void QModbusReplySlots::errorOccurred(QModbusDevice::Error error)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "errorOccurred(QModbusDevice::Error)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSREPLY");
-    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
+    PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
     hb_vmEvalBlockV(cb, 2, psender, perror);
 
     hb_itemRelease(psender);
-    hb_itemRelease( perror );
+    hb_itemRelease(perror);
   }
 }
 #endif
 
-void QModbusReplySlots_connect_signal(const QString & signal, const QString & slot)
+void QModbusReplySlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReply * obj = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QModbusReplySlots * s = QCoreApplication::instance()->findChild<QModbusReplySlots*>();
+    QModbusReplySlots *s = QCoreApplication::instance()->findChild<QModbusReplySlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QModbusReplySlots();
       s->moveToThread(QCoreApplication::instance()->thread());

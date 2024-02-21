@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QCanBusDevice>
 #endif
 
@@ -26,24 +26,24 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QCanBusDeviceSlots: public QObject
+class QCanBusDeviceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCanBusDeviceSlots( QObject *parent = 0 );
+public:
+  QCanBusDeviceSlots(QObject *parent = 0);
   ~QCanBusDeviceSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void errorOccurred( QCanBusDevice::CanBusError );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void errorOccurred(QCanBusDevice::CanBusError);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void framesReceived();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void framesWritten( qint64 framesCount );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void framesWritten(qint64 framesCount);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void stateChanged( QCanBusDevice::CanBusDeviceState state );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void stateChanged(QCanBusDevice::CanBusDeviceState state);
 #endif
 };
 

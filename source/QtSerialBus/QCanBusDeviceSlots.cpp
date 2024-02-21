@@ -12,7 +12,7 @@
 
 #include "QCanBusDeviceSlots.hpp"
 
-QCanBusDeviceSlots::QCanBusDeviceSlots( QObject *parent ) : QObject( parent )
+QCanBusDeviceSlots::QCanBusDeviceSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QCanBusDeviceSlots::~QCanBusDeviceSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-void QCanBusDeviceSlots::errorOccurred( QCanBusDevice::CanBusError )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+void QCanBusDeviceSlots::errorOccurred(QCanBusDevice::CanBusError)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "errorOccurred)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
 
@@ -38,14 +38,14 @@ void QCanBusDeviceSlots::errorOccurred( QCanBusDevice::CanBusError )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 void QCanBusDeviceSlots::framesReceived()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "framesReceived()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
 
@@ -56,56 +56,56 @@ void QCanBusDeviceSlots::framesReceived()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-void QCanBusDeviceSlots::framesWritten( qint64 framesCount )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+void QCanBusDeviceSlots::framesWritten(qint64 framesCount)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "framesWritten(qint64)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
-    PHB_ITEM pframesCount = hb_itemPutNLL( NULL, framesCount );
+    PHB_ITEM pframesCount = hb_itemPutNLL(NULL, framesCount);
 
     hb_vmEvalBlockV(cb, 2, psender, pframesCount);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pframesCount );
+    hb_itemRelease(pframesCount);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-void QCanBusDeviceSlots::stateChanged( QCanBusDevice::CanBusDeviceState state )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+void QCanBusDeviceSlots::stateChanged(QCanBusDevice::CanBusDeviceState state)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QCanBusDevice::CanBusDeviceState)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
-    PHB_ITEM pstate = hb_itemPutNI( NULL, static_cast<int>(state) );
+    PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
     hb_vmEvalBlockV(cb, 2, psender, pstate);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstate );
+    hb_itemRelease(pstate);
   }
 }
 #endif
 
-void QCanBusDeviceSlots_connect_signal(const QString & signal, const QString & slot)
+void QCanBusDeviceSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBusDevice * obj = (QCanBusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QCanBusDeviceSlots * s = QCoreApplication::instance()->findChild<QCanBusDeviceSlots*>();
+    QCanBusDeviceSlots *s = QCoreApplication::instance()->findChild<QCanBusDeviceSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QCanBusDeviceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
