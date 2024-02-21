@@ -13,7 +13,7 @@
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtX11Extras/QtX11ExtrasVersion>
 #endif
 #endif
@@ -23,25 +23,25 @@
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtX11Extras/QtX11ExtrasVersion>
 #endif
 #endif
 
-HB_FUNC( QTX11EXTRAS_VERSION_STR )
+HB_FUNC(QTX11EXTRAS_VERSION_STR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retc( (const char *) QTX11EXTRAS_VERSION_STR );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  hb_retc((const char *)QTX11EXTRAS_VERSION_STR);
 #else
-  hb_retc( (const char *) "" );
+  hb_retc((const char *)"");
 #endif
 }
 
-HB_FUNC( QTX11EXTRAS_VERSION )
+HB_FUNC(QTX11EXTRAS_VERSION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retni( QTX11EXTRAS_VERSION );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  hb_retni(QTX11EXTRAS_VERSION);
 #else
-  hb_retni( 0 );
+  hb_retni(0);
 #endif
 }
