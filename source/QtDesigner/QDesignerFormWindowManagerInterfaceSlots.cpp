@@ -12,7 +12,7 @@
 
 #include "QDesignerFormWindowManagerInterfaceSlots.hpp"
 
-QDesignerFormWindowManagerInterfaceSlots::QDesignerFormWindowManagerInterfaceSlots( QObject *parent ) : QObject( parent )
+QDesignerFormWindowManagerInterfaceSlots::QDesignerFormWindowManagerInterfaceSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QDesignerFormWindowManagerInterfaceSlots::~QDesignerFormWindowManagerInterfaceSl
 {
 }
 
-void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged( QDesignerFormWindowInterface * formWindow )
+void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged(QDesignerFormWindowInterface *formWindow)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activeFormWindowChanged(QDesignerFormWindowInterface*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
     PHB_ITEM pformWindow = Qt5xHb::Signals_return_qobject(formWindow, "QDESIGNERFORMWINDOWINTERFACE");
@@ -34,17 +34,17 @@ void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged( QDesigne
     hb_vmEvalBlockV(cb, 2, psender, pformWindow);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pformWindow );
+    hb_itemRelease(pformWindow);
   }
 }
 
-void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded( QDesignerFormWindowInterface * formWindow )
+void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded(QDesignerFormWindowInterface *formWindow)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "formWindowAdded(QDesignerFormWindowInterface*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
     PHB_ITEM pformWindow = Qt5xHb::Signals_return_qobject(formWindow, "QDESIGNERFORMWINDOWINTERFACE");
@@ -52,17 +52,17 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded( QDesignerFormWin
     hb_vmEvalBlockV(cb, 2, psender, pformWindow);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pformWindow );
+    hb_itemRelease(pformWindow);
   }
 }
 
-void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved( QDesignerFormWindowInterface * formWindow )
+void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved(QDesignerFormWindowInterface *formWindow)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "formWindowRemoved(QDesignerFormWindowInterface*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
     PHB_ITEM pformWindow = Qt5xHb::Signals_return_qobject(formWindow, "QDESIGNERFORMWINDOWINTERFACE");
@@ -70,19 +70,20 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved( QDesignerFormW
     hb_vmEvalBlockV(cb, 2, psender, pformWindow);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pformWindow );
+    hb_itemRelease(pformWindow);
   }
 }
 
-void QDesignerFormWindowManagerInterfaceSlots_connect_signal(const QString & signal, const QString & slot)
+void QDesignerFormWindowManagerInterfaceSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface *obj = (QDesignerFormWindowManagerInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDesignerFormWindowManagerInterfaceSlots * s = QCoreApplication::instance()->findChild<QDesignerFormWindowManagerInterfaceSlots*>();
+    QDesignerFormWindowManagerInterfaceSlots *s =
+        QCoreApplication::instance()->findChild<QDesignerFormWindowManagerInterfaceSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDesignerFormWindowManagerInterfaceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,12 +24,12 @@
 #include <QtDesigner/QtDesignerVersion>
 #endif
 
-HB_FUNC( QTDESIGNER_VERSION_STR )
+HB_FUNC(QTDESIGNER_VERSION_STR)
 {
-  hb_retc( (const char *) QTDESIGNER_VERSION_STR );
+  hb_retc((const char *)QTDESIGNER_VERSION_STR);
 }
 
-HB_FUNC( QTDESIGNER_VERSION )
+HB_FUNC(QTDESIGNER_VERSION)
 {
-  hb_retni( QTDESIGNER_VERSION );
+  hb_retni(QTDESIGNER_VERSION);
 }

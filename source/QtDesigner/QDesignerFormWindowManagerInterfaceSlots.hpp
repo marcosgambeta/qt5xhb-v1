@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDesignerFormWindowManagerInterfaceSlots: public QObject
+class QDesignerFormWindowManagerInterfaceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDesignerFormWindowManagerInterfaceSlots( QObject *parent = 0 );
+public:
+  QDesignerFormWindowManagerInterfaceSlots(QObject *parent = 0);
   ~QDesignerFormWindowManagerInterfaceSlots();
-  public slots:
-  void activeFormWindowChanged( QDesignerFormWindowInterface * formWindow );
-  void formWindowAdded( QDesignerFormWindowInterface * formWindow );
-  void formWindowRemoved( QDesignerFormWindowInterface * formWindow );
+public slots:
+  void activeFormWindowChanged(QDesignerFormWindowInterface *formWindow);
+  void formWindowAdded(QDesignerFormWindowInterface *formWindow);
+  void formWindowRemoved(QDesignerFormWindowInterface *formWindow);
 };
 
 #endif /* QDESIGNERFORMWINDOWMANAGERINTERFACESLOTS_H */

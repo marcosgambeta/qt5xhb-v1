@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDesignerPropertyEditorInterfaceSlots: public QObject
+class QDesignerPropertyEditorInterfaceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDesignerPropertyEditorInterfaceSlots( QObject *parent = 0 );
+public:
+  QDesignerPropertyEditorInterfaceSlots(QObject *parent = 0);
   ~QDesignerPropertyEditorInterfaceSlots();
-  public slots:
-  void propertyChanged( const QString & name, const QVariant & value );
+public slots:
+  void propertyChanged(const QString &name, const QVariant &value);
 };
 
 #endif /* QDESIGNERPROPERTYEDITORINTERFACESLOTS_H */
