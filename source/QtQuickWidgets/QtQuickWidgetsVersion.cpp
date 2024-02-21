@@ -13,7 +13,7 @@
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
 #include <QtQuickWidgets/QtQuickWidgetsVersion>
 #endif
 #endif
@@ -23,25 +23,25 @@
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
 #include <QtQuickWidgets/QtQuickWidgetsVersion>
 #endif
 #endif
 
-HB_FUNC( QTQUICKWIDGETS_VERSION_STR )
+HB_FUNC(QTQUICKWIDGETS_VERSION_STR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  hb_retc( (const char *) QTQUICKWIDGETS_VERSION_STR );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  hb_retc((const char *)QTQUICKWIDGETS_VERSION_STR);
 #else
-  hb_retc( (const char *) "" );
+  hb_retc((const char *)"");
 #endif
 }
 
-HB_FUNC( QTQUICKWIDGETS_VERSION )
+HB_FUNC(QTQUICKWIDGETS_VERSION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  hb_retni( QTQUICKWIDGETS_VERSION );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  hb_retni(QTQUICKWIDGETS_VERSION);
 #else
-  hb_retni( 0 );
+  hb_retni(0);
 #endif
 }

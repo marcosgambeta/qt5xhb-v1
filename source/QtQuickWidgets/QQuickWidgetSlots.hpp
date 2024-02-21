@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #include <QtQuickWidgets/QQuickWidget>
 #endif
 
@@ -26,18 +26,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QQuickWidgetSlots: public QObject
+class QQuickWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QQuickWidgetSlots( QObject *parent = 0 );
+public:
+  QQuickWidgetSlots(QObject *parent = 0);
   ~QQuickWidgetSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void statusChanged( QQuickWidget::Status status );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void statusChanged(QQuickWidget::Status status);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void sceneGraphError(QQuickWindow::SceneGraphError error, const QString &message);
 #endif
 };
 
