@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDBusConnectionInterfaceSlots: public QObject
+class QDBusConnectionInterfaceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDBusConnectionInterfaceSlots( QObject *parent = 0 );
+public:
+  QDBusConnectionInterfaceSlots(QObject *parent = 0);
   ~QDBusConnectionInterfaceSlots();
-  public slots:
-  void serviceRegistered( const QString & service );
-  void serviceUnregistered( const QString & service );
-  void serviceOwnerChanged( const QString & name, const QString & oldOwner, const QString & newOwner );
-  void callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call );
+public slots:
+  void serviceRegistered(const QString &service);
+  void serviceUnregistered(const QString &service);
+  void serviceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner);
+  void callWithCallbackFailed(const QDBusError &error, const QDBusMessage &call);
 };
 
 #endif /* QDBUSCONNECTIONINTERFACESLOTS_H */

@@ -12,7 +12,7 @@
 
 #include "QDBusPendingCallWatcherSlots.hpp"
 
-QDBusPendingCallWatcherSlots::QDBusPendingCallWatcherSlots( QObject *parent ) : QObject( parent )
+QDBusPendingCallWatcherSlots::QDBusPendingCallWatcherSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QDBusPendingCallWatcherSlots::~QDBusPendingCallWatcherSlots()
 {
 }
 
-void QDBusPendingCallWatcherSlots::finished( QDBusPendingCallWatcher * self )
+void QDBusPendingCallWatcherSlots::finished(QDBusPendingCallWatcher *self)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(QDBusPendingCallWatcher*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSPENDINGCALLWATCHER");
     PHB_ITEM pself = Qt5xHb::Signals_return_qobject(self, "QDBUSPENDINGCALLWATCHER");
@@ -34,19 +34,19 @@ void QDBusPendingCallWatcherSlots::finished( QDBusPendingCallWatcher * self )
     hb_vmEvalBlockV(cb, 2, psender, pself);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pself );
+    hb_itemRelease(pself);
   }
 }
 
-void QDBusPendingCallWatcherSlots_connect_signal(const QString & signal, const QString & slot)
+void QDBusPendingCallWatcherSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDBusPendingCallWatcher * obj = (QDBusPendingCallWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCallWatcher *obj = (QDBusPendingCallWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDBusPendingCallWatcherSlots * s = QCoreApplication::instance()->findChild<QDBusPendingCallWatcherSlots*>();
+    QDBusPendingCallWatcherSlots *s = QCoreApplication::instance()->findChild<QDBusPendingCallWatcherSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDBusPendingCallWatcherSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

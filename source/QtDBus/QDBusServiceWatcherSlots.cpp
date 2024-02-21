@@ -12,7 +12,7 @@
 
 #include "QDBusServiceWatcherSlots.hpp"
 
-QDBusServiceWatcherSlots::QDBusServiceWatcherSlots( QObject *parent ) : QObject( parent )
+QDBusServiceWatcherSlots::QDBusServiceWatcherSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,73 +20,74 @@ QDBusServiceWatcherSlots::~QDBusServiceWatcherSlots()
 {
 }
 
-void QDBusServiceWatcherSlots::serviceRegistered( const QString & service )
+void QDBusServiceWatcherSlots::serviceRegistered(const QString &service)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "serviceRegistered(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVICEWATCHER");
-    PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
+    PHB_ITEM pservice = hb_itemPutC(NULL, QSTRINGTOSTRING(service));
 
     hb_vmEvalBlockV(cb, 2, psender, pservice);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pservice );
+    hb_itemRelease(pservice);
   }
 }
 
-void QDBusServiceWatcherSlots::serviceUnregistered( const QString & service )
+void QDBusServiceWatcherSlots::serviceUnregistered(const QString &service)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "serviceUnregistered(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVICEWATCHER");
-    PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
+    PHB_ITEM pservice = hb_itemPutC(NULL, QSTRINGTOSTRING(service));
 
     hb_vmEvalBlockV(cb, 2, psender, pservice);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pservice );
+    hb_itemRelease(pservice);
   }
 }
 
-void QDBusServiceWatcherSlots::serviceOwnerChanged( const QString & service, const QString & oldOwner, const QString & newOwner )
+void QDBusServiceWatcherSlots::serviceOwnerChanged(const QString &service, const QString &oldOwner,
+                                                   const QString &newOwner)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "serviceOwnerChanged(QString,QString,QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVICEWATCHER");
-    PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
-    PHB_ITEM poldOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(oldOwner) );
-    PHB_ITEM pnewOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(newOwner) );
+    PHB_ITEM pservice = hb_itemPutC(NULL, QSTRINGTOSTRING(service));
+    PHB_ITEM poldOwner = hb_itemPutC(NULL, QSTRINGTOSTRING(oldOwner));
+    PHB_ITEM pnewOwner = hb_itemPutC(NULL, QSTRINGTOSTRING(newOwner));
 
     hb_vmEvalBlockV(cb, 4, psender, pservice, poldOwner, pnewOwner);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pservice );
-    hb_itemRelease( poldOwner );
-    hb_itemRelease( pnewOwner );
+    hb_itemRelease(pservice);
+    hb_itemRelease(poldOwner);
+    hb_itemRelease(pnewOwner);
   }
 }
 
-void QDBusServiceWatcherSlots_connect_signal(const QString & signal, const QString & slot)
+void QDBusServiceWatcherSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusServiceWatcher *obj = (QDBusServiceWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDBusServiceWatcherSlots * s = QCoreApplication::instance()->findChild<QDBusServiceWatcherSlots*>();
+    QDBusServiceWatcherSlots *s = QCoreApplication::instance()->findChild<QDBusServiceWatcherSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDBusServiceWatcherSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

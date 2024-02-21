@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDBusServerSlots: public QObject
+class QDBusServerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDBusServerSlots( QObject *parent = 0 );
+public:
+  QDBusServerSlots(QObject *parent = 0);
   ~QDBusServerSlots();
-  public slots:
-  void newConnection( const QDBusConnection & connection );
+public slots:
+  void newConnection(const QDBusConnection &connection);
 };
 
 #endif /* QDBUSSERVERSLOTS_H */
