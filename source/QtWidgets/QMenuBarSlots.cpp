@@ -12,7 +12,7 @@
 
 #include "QMenuBarSlots.hpp"
 
-QMenuBarSlots::QMenuBarSlots( QObject *parent ) : QObject( parent )
+QMenuBarSlots::QMenuBarSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QMenuBarSlots::~QMenuBarSlots()
 {
 }
 
-void QMenuBarSlots::hovered( QAction * action )
+void QMenuBarSlots::hovered(QAction *action)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered(QAction*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMENUBAR");
     PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
@@ -34,17 +34,17 @@ void QMenuBarSlots::hovered( QAction * action )
     hb_vmEvalBlockV(cb, 2, psender, paction);
 
     hb_itemRelease(psender);
-    hb_itemRelease( paction );
+    hb_itemRelease(paction);
   }
 }
 
-void QMenuBarSlots::triggered( QAction * action )
+void QMenuBarSlots::triggered(QAction *action)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "triggered(QAction*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMENUBAR");
     PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
@@ -52,19 +52,19 @@ void QMenuBarSlots::triggered( QAction * action )
     hb_vmEvalBlockV(cb, 2, psender, paction);
 
     hb_itemRelease(psender);
-    hb_itemRelease( paction );
+    hb_itemRelease(paction);
   }
 }
 
-void QMenuBarSlots_connect_signal(const QString & signal, const QString & slot)
+void QMenuBarSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMenuBar *obj = (QMenuBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMenuBarSlots * s = QCoreApplication::instance()->findChild<QMenuBarSlots*>();
+    QMenuBarSlots *s = QCoreApplication::instance()->findChild<QMenuBarSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMenuBarSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

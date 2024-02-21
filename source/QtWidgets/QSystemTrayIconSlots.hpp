@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QSystemTrayIconSlots: public QObject
+class QSystemTrayIconSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSystemTrayIconSlots( QObject *parent = 0 );
+public:
+  QSystemTrayIconSlots(QObject *parent = 0);
   ~QSystemTrayIconSlots();
-  public slots:
-  void activated( QSystemTrayIcon::ActivationReason reason );
+public slots:
+  void activated(QSystemTrayIcon::ActivationReason reason);
   void messageClicked();
 };
 

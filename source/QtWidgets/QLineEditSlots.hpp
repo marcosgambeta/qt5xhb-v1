@@ -24,19 +24,19 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QLineEditSlots: public QObject
+class QLineEditSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QLineEditSlots( QObject *parent = 0 );
+public:
+  QLineEditSlots(QObject *parent = 0);
   ~QLineEditSlots();
-  public slots:
-  void cursorPositionChanged( int iold, int inew );
+public slots:
+  void cursorPositionChanged(int iold, int inew);
   void editingFinished();
   void returnPressed();
   void selectionChanged();
-  void textChanged( const QString & text );
-  void textEdited( const QString & text );
+  void textChanged(const QString &text);
+  void textEdited(const QString &text);
 };
 
 #endif /* QLINEEDITSLOTS_H */

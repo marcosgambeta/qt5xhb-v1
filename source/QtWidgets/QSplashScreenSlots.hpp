@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QSplashScreenSlots: public QObject
+class QSplashScreenSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSplashScreenSlots( QObject *parent = 0 );
+public:
+  QSplashScreenSlots(QObject *parent = 0);
   ~QSplashScreenSlots();
-  public slots:
-  void messageChanged( const QString & message );
+public slots:
+  void messageChanged(const QString &message);
 };
 
 #endif /* QSPLASHSCREENSLOTS_H */

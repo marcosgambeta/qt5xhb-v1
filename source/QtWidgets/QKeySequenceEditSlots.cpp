@@ -12,7 +12,7 @@
 
 #include "QKeySequenceEditSlots.hpp"
 
-QKeySequenceEditSlots::QKeySequenceEditSlots( QObject *parent ) : QObject( parent )
+QKeySequenceEditSlots::QKeySequenceEditSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QKeySequenceEditSlots::~QKeySequenceEditSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 void QKeySequenceEditSlots::editingFinished()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "editingFinished()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QKEYSEQUENCEEDIT");
 
@@ -38,36 +38,36 @@ void QKeySequenceEditSlots::editingFinished()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QKeySequenceEditSlots::keySequenceChanged( const QKeySequence & keySequence )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+void QKeySequenceEditSlots::keySequenceChanged(const QKeySequence &keySequence)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "keySequenceChanged(QKeySequence)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QKEYSEQUENCEEDIT");
-    PHB_ITEM pkeySequence = Qt5xHb::Signals_return_object( (void *) &keySequence, "QKEYSEQUENCE");
+    PHB_ITEM pkeySequence = Qt5xHb::Signals_return_object((void *)&keySequence, "QKEYSEQUENCE");
 
     hb_vmEvalBlockV(cb, 2, psender, pkeySequence);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pkeySequence );
+    hb_itemRelease(pkeySequence);
   }
 }
 #endif
 
-void QKeySequenceEditSlots_connect_signal(const QString & signal, const QString & slot)
+void QKeySequenceEditSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QKeySequenceEdit *obj = (QKeySequenceEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QKeySequenceEditSlots * s = QCoreApplication::instance()->findChild<QKeySequenceEditSlots*>();
+    QKeySequenceEditSlots *s = QCoreApplication::instance()->findChild<QKeySequenceEditSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QKeySequenceEditSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QWizardPageSlots: public QObject
+class QWizardPageSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWizardPageSlots( QObject *parent = 0 );
+public:
+  QWizardPageSlots(QObject *parent = 0);
   ~QWizardPageSlots();
-  public slots:
+public slots:
   void completeChanged();
 };
 

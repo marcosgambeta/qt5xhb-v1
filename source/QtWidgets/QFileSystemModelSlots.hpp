@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QFileSystemModelSlots: public QObject
+class QFileSystemModelSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QFileSystemModelSlots( QObject *parent = 0 );
+public:
+  QFileSystemModelSlots(QObject *parent = 0);
   ~QFileSystemModelSlots();
-  public slots:
-  void directoryLoaded( const QString & path );
-  void fileRenamed( const QString & path, const QString & oldName, const QString & newName );
-  void rootPathChanged( const QString & newPath );
+public slots:
+  void directoryLoaded(const QString &path);
+  void fileRenamed(const QString &path, const QString &oldName, const QString &newName);
+  void rootPathChanged(const QString &newPath);
 };
 
 #endif /* QFILESYSTEMMODELSLOTS_H */

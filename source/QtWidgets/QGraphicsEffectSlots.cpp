@@ -12,7 +12,7 @@
 
 #include "QGraphicsEffectSlots.hpp"
 
-QGraphicsEffectSlots::QGraphicsEffectSlots( QObject *parent ) : QObject( parent )
+QGraphicsEffectSlots::QGraphicsEffectSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QGraphicsEffectSlots::~QGraphicsEffectSlots()
 {
 }
 
-void QGraphicsEffectSlots::enabledChanged( bool enabled )
+void QGraphicsEffectSlots::enabledChanged(bool enabled)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "enabledChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSEFFECT");
-    PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
+    PHB_ITEM penabled = hb_itemPutL(NULL, enabled);
 
     hb_vmEvalBlockV(cb, 2, psender, penabled);
 
     hb_itemRelease(psender);
-    hb_itemRelease( penabled );
+    hb_itemRelease(penabled);
   }
 }
 
-void QGraphicsEffectSlots_connect_signal(const QString & signal, const QString & slot)
+void QGraphicsEffectSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect *obj = (QGraphicsEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QGraphicsEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsEffectSlots*>();
+    QGraphicsEffectSlots *s = QCoreApplication::instance()->findChild<QGraphicsEffectSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QGraphicsEffectSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

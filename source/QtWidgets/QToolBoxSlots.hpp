@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QToolBoxSlots: public QObject
+class QToolBoxSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QToolBoxSlots( QObject *parent = 0 );
+public:
+  QToolBoxSlots(QObject *parent = 0);
   ~QToolBoxSlots();
-  public slots:
-  void currentChanged( int index );
+public slots:
+  void currentChanged(int index);
 };
 
 #endif /* QTOOLBOXSLOTS_H */

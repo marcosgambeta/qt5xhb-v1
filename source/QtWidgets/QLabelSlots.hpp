@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QLabelSlots: public QObject
+class QLabelSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QLabelSlots( QObject *parent = 0 );
+public:
+  QLabelSlots(QObject *parent = 0);
   ~QLabelSlots();
-  public slots:
-  void linkActivated( const QString & link );
-  void linkHovered( const QString & link );
+public slots:
+  void linkActivated(const QString &link);
+  void linkHovered(const QString &link);
 };
 
 #endif /* QLABELSLOTS_H */

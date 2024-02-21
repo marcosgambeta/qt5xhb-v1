@@ -12,7 +12,7 @@
 
 #include "QMainWindowSlots.hpp"
 
-QMainWindowSlots::QMainWindowSlots( QObject *parent ) : QObject( parent )
+QMainWindowSlots::QMainWindowSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QMainWindowSlots::~QMainWindowSlots()
 {
 }
 
-void QMainWindowSlots::iconSizeChanged( const QSize & iconSize )
+void QMainWindowSlots::iconSizeChanged(const QSize &iconSize)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "iconSizeChanged(QSize)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMAINWINDOW");
-    PHB_ITEM piconSize = Qt5xHb::Signals_return_object( (void *) &iconSize, "QSIZE");
+    PHB_ITEM piconSize = Qt5xHb::Signals_return_object((void *)&iconSize, "QSIZE");
 
     hb_vmEvalBlockV(cb, 2, psender, piconSize);
 
     hb_itemRelease(psender);
-    hb_itemRelease( piconSize );
+    hb_itemRelease(piconSize);
   }
 }
 
-void QMainWindowSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
+void QMainWindowSlots::toolButtonStyleChanged(Qt::ToolButtonStyle toolButtonStyle)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "toolButtonStyleChanged(Qt::ToolButtonStyle)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMAINWINDOW");
-    PHB_ITEM ptoolButtonStyle = hb_itemPutNI( NULL, static_cast<int>(toolButtonStyle) );
+    PHB_ITEM ptoolButtonStyle = hb_itemPutNI(NULL, static_cast<int>(toolButtonStyle));
 
     hb_vmEvalBlockV(cb, 2, psender, ptoolButtonStyle);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ptoolButtonStyle );
+    hb_itemRelease(ptoolButtonStyle);
   }
 }
 
-void QMainWindowSlots_connect_signal(const QString & signal, const QString & slot)
+void QMainWindowSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMainWindow * obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMainWindow *obj = (QMainWindow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMainWindowSlots * s = QCoreApplication::instance()->findChild<QMainWindowSlots*>();
+    QMainWindowSlots *s = QCoreApplication::instance()->findChild<QMainWindowSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMainWindowSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

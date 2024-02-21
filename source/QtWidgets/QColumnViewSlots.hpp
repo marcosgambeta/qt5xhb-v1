@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QColumnViewSlots: public QObject
+class QColumnViewSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QColumnViewSlots( QObject *parent = 0 );
+public:
+  QColumnViewSlots(QObject *parent = 0);
   ~QColumnViewSlots();
-  public slots:
-  void updatePreviewWidget( const QModelIndex & index );
+public slots:
+  void updatePreviewWidget(const QModelIndex &index);
 };
 
 #endif /* QCOLUMNVIEWSLOTS_H */

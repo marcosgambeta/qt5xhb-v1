@@ -24,21 +24,21 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QWidgetSlots: public QObject
+class QWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWidgetSlots( QObject *parent = 0 );
+public:
+  QWidgetSlots(QObject *parent = 0);
   ~QWidgetSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void windowTitleChanged( const QString & title );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void windowTitleChanged(const QString &title);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void windowIconChanged( const QIcon & icon );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void windowIconChanged(const QIcon &icon);
 #endif
-  void windowIconTextChanged( const QString & iconText );
-  void customContextMenuRequested( const QPoint & pos );
+  void windowIconTextChanged(const QString &iconText);
+  void customContextMenuRequested(const QPoint &pos);
 };
 
 #endif /* QWIDGETSLOTS_H */

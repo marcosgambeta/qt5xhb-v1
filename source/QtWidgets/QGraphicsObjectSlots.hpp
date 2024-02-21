@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGraphicsObjectSlots: public QObject
+class QGraphicsObjectSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGraphicsObjectSlots( QObject *parent = 0 );
+public:
+  QGraphicsObjectSlots(QObject *parent = 0);
   ~QGraphicsObjectSlots();
-  public slots:
+public slots:
   void enabledChanged();
   void opacityChanged();
   void parentChanged();

@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QProgressBarSlots: public QObject
+class QProgressBarSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QProgressBarSlots( QObject *parent = 0 );
+public:
+  QProgressBarSlots(QObject *parent = 0);
   ~QProgressBarSlots();
-  public slots:
-  void valueChanged( int value );
+public slots:
+  void valueChanged(int value);
 };
 
 #endif /* QPROGRESSBARSLOTS_H */

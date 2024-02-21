@@ -12,7 +12,7 @@
 
 #include "QFontComboBoxSlots.hpp"
 
-QFontComboBoxSlots::QFontComboBoxSlots( QObject *parent ) : QObject( parent )
+QFontComboBoxSlots::QFontComboBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QFontComboBoxSlots::~QFontComboBoxSlots()
 {
 }
 
-void QFontComboBoxSlots::currentFontChanged( const QFont & font )
+void QFontComboBoxSlots::currentFontChanged(const QFont &font)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentFontChanged(QFont)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFONTCOMBOBOX");
-    PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT");
+    PHB_ITEM pfont = Qt5xHb::Signals_return_object((void *)&font, "QFONT");
 
     hb_vmEvalBlockV(cb, 2, psender, pfont);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfont );
+    hb_itemRelease(pfont);
   }
 }
 
-void QFontComboBoxSlots_connect_signal(const QString & signal, const QString & slot)
+void QFontComboBoxSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QFontComboBox * obj = (QFontComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QFontComboBox *obj = (QFontComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QFontComboBoxSlots * s = QCoreApplication::instance()->findChild<QFontComboBoxSlots*>();
+    QFontComboBoxSlots *s = QCoreApplication::instance()->findChild<QFontComboBoxSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QFontComboBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

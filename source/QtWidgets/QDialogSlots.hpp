@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDialogSlots: public QObject
+class QDialogSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDialogSlots( QObject *parent = 0 );
+public:
+  QDialogSlots(QObject *parent = 0);
   ~QDialogSlots();
-  public slots:
+public slots:
   void accepted();
-  void finished( int result );
+  void finished(int result);
   void rejected();
 };
 

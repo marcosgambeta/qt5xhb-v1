@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMainWindowSlots: public QObject
+class QMainWindowSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMainWindowSlots( QObject *parent = 0 );
+public:
+  QMainWindowSlots(QObject *parent = 0);
   ~QMainWindowSlots();
-  public slots:
-  void iconSizeChanged( const QSize & iconSize );
-  void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle );
+public slots:
+  void iconSizeChanged(const QSize &iconSize);
+  void toolButtonStyleChanged(Qt::ToolButtonStyle toolButtonStyle);
 };
 
 #endif /* QMAINWINDOWSLOTS_H */

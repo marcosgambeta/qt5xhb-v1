@@ -24,12 +24,12 @@
 #include <QtWidgets/QtWidgetsVersion>
 #endif
 
-HB_FUNC( QTWIDGETS_VERSION_STR )
+HB_FUNC(QTWIDGETS_VERSION_STR)
 {
-  hb_retc( (const char *) QTWIDGETS_VERSION_STR );
+  hb_retc((const char *)QTWIDGETS_VERSION_STR);
 }
 
-HB_FUNC( QTWIDGETS_VERSION )
+HB_FUNC(QTWIDGETS_VERSION)
 {
-  hb_retni( QTWIDGETS_VERSION );
+  hb_retni(QTWIDGETS_VERSION);
 }

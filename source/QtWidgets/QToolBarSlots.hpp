@@ -24,21 +24,21 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QToolBarSlots: public QObject
+class QToolBarSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QToolBarSlots( QObject *parent = 0 );
+public:
+  QToolBarSlots(QObject *parent = 0);
   ~QToolBarSlots();
-  public slots:
-  void actionTriggered( QAction * action );
-  void allowedAreasChanged( Qt::ToolBarAreas allowedAreas );
-  void iconSizeChanged( const QSize & iconSize );
-  void movableChanged( bool movable );
-  void orientationChanged( Qt::Orientation orientation );
-  void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle );
-  void topLevelChanged( bool topLevel );
-  void visibilityChanged( bool visible );
+public slots:
+  void actionTriggered(QAction *action);
+  void allowedAreasChanged(Qt::ToolBarAreas allowedAreas);
+  void iconSizeChanged(const QSize &iconSize);
+  void movableChanged(bool movable);
+  void orientationChanged(Qt::Orientation orientation);
+  void toolButtonStyleChanged(Qt::ToolButtonStyle toolButtonStyle);
+  void topLevelChanged(bool topLevel);
+  void visibilityChanged(bool visible);
 };
 
 #endif /* QTOOLBARSLOTS_H */

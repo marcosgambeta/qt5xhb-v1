@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGraphicsBlurEffectSlots: public QObject
+class QGraphicsBlurEffectSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGraphicsBlurEffectSlots( QObject *parent = 0 );
+public:
+  QGraphicsBlurEffectSlots(QObject *parent = 0);
   ~QGraphicsBlurEffectSlots();
-  public slots:
-  void blurHintsChanged( QGraphicsBlurEffect::BlurHints hints );
-  void blurRadiusChanged( qreal radius );
+public slots:
+  void blurHintsChanged(QGraphicsBlurEffect::BlurHints hints);
+  void blurRadiusChanged(qreal radius);
 };
 
 #endif /* QGRAPHICSBLUREFFECTSLOTS_H */

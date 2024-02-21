@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDateTimeEditSlots: public QObject
+class QDateTimeEditSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDateTimeEditSlots( QObject *parent = 0 );
+public:
+  QDateTimeEditSlots(QObject *parent = 0);
   ~QDateTimeEditSlots();
-  public slots:
-  void dateChanged( const QDate & date );
-  void dateTimeChanged( const QDateTime & datetime );
-  void timeChanged( const QTime & time );
+public slots:
+  void dateChanged(const QDate &date);
+  void dateTimeChanged(const QDateTime &datetime);
+  void timeChanged(const QTime &time);
 };
 
 #endif /* QDATETIMEEDITSLOTS_H */

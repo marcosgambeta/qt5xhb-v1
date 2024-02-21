@@ -12,7 +12,7 @@
 
 #include "QStackedLayoutSlots.hpp"
 
-QStackedLayoutSlots::QStackedLayoutSlots( QObject *parent ) : QObject( parent )
+QStackedLayoutSlots::QStackedLayoutSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QStackedLayoutSlots::~QStackedLayoutSlots()
 {
 }
 
-void QStackedLayoutSlots::setCurrentIndex( int index )
+void QStackedLayoutSlots::setCurrentIndex(int index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "setCurrentIndex(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTACKEDLAYOUT");
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindex );
+    hb_itemRelease(pindex);
   }
 }
 
-void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
+void QStackedLayoutSlots::setCurrentWidget(QWidget *widget)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "setCurrentWidget(QWidget*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTACKEDLAYOUT");
     PHB_ITEM pwidget = Qt5xHb::Signals_return_qobject(widget, "QWIDGET");
@@ -52,19 +52,19 @@ void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
     hb_vmEvalBlockV(cb, 2, psender, pwidget);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pwidget );
+    hb_itemRelease(pwidget);
   }
 }
 
-void QStackedLayoutSlots_connect_signal(const QString & signal, const QString & slot)
+void QStackedLayoutSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStackedLayout *obj = (QStackedLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QStackedLayoutSlots * s = QCoreApplication::instance()->findChild<QStackedLayoutSlots*>();
+    QStackedLayoutSlots *s = QCoreApplication::instance()->findChild<QStackedLayoutSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QStackedLayoutSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

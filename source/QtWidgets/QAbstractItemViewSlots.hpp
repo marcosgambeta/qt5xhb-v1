@@ -24,18 +24,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAbstractItemViewSlots: public QObject
+class QAbstractItemViewSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractItemViewSlots( QObject *parent = 0 );
+public:
+  QAbstractItemViewSlots(QObject *parent = 0);
   ~QAbstractItemViewSlots();
-  public slots:
-  void activated( const QModelIndex & index );
-  void clicked( const QModelIndex & index );
-  void doubleClicked( const QModelIndex & index );
-  void entered( const QModelIndex & index );
-  void pressed( const QModelIndex & index );
+public slots:
+  void activated(const QModelIndex &index);
+  void clicked(const QModelIndex &index);
+  void doubleClicked(const QModelIndex &index);
+  void entered(const QModelIndex &index);
+  void pressed(const QModelIndex &index);
   void viewportEntered();
 };
 

@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDesktopWidgetSlots: public QObject
+class QDesktopWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDesktopWidgetSlots( QObject *parent = 0 );
+public:
+  QDesktopWidgetSlots(QObject *parent = 0);
   ~QDesktopWidgetSlots();
-  public slots:
-  void resized( int screen );
-  void screenCountChanged( int newCount );
-  void workAreaResized( int screen );
+public slots:
+  void resized(int screen);
+  void screenCountChanged(int newCount);
+  void workAreaResized(int screen);
 };
 
 #endif /* QDESKTOPWIDGETSLOTS_H */

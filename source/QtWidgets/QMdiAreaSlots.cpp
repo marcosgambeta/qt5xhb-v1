@@ -12,7 +12,7 @@
 
 #include "QMdiAreaSlots.hpp"
 
-QMdiAreaSlots::QMdiAreaSlots( QObject *parent ) : QObject( parent )
+QMdiAreaSlots::QMdiAreaSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QMdiAreaSlots::~QMdiAreaSlots()
 {
 }
 
-void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
+void QMdiAreaSlots::subWindowActivated(QMdiSubWindow *window)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "subWindowActivated(QMdiSubWindow*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMDIAREA");
     PHB_ITEM pwindow = Qt5xHb::Signals_return_qobject(window, "QMDISUBWINDOW");
@@ -34,19 +34,19 @@ void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
     hb_vmEvalBlockV(cb, 2, psender, pwindow);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pwindow );
+    hb_itemRelease(pwindow);
   }
 }
 
-void QMdiAreaSlots_connect_signal(const QString & signal, const QString & slot)
+void QMdiAreaSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMdiArea * obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMdiArea *obj = (QMdiArea *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMdiAreaSlots * s = QCoreApplication::instance()->findChild<QMdiAreaSlots*>();
+    QMdiAreaSlots *s = QCoreApplication::instance()->findChild<QMdiAreaSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMdiAreaSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

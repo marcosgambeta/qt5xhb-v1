@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGraphicsColorizeEffectSlots: public QObject
+class QGraphicsColorizeEffectSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGraphicsColorizeEffectSlots( QObject *parent = 0 );
+public:
+  QGraphicsColorizeEffectSlots(QObject *parent = 0);
   ~QGraphicsColorizeEffectSlots();
-  public slots:
-  void colorChanged( const QColor & color );
-  void strengthChanged( qreal strength );
+public slots:
+  void colorChanged(const QColor &color);
+  void strengthChanged(qreal strength);
 };
 
 #endif /* QGRAPHICSCOLORIZEEFFECTSLOTS_H */

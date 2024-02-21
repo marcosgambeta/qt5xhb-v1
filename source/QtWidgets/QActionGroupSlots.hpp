@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QActionGroupSlots: public QObject
+class QActionGroupSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QActionGroupSlots( QObject *parent = 0 );
+public:
+  QActionGroupSlots(QObject *parent = 0);
   ~QActionGroupSlots();
-  public slots:
-  void hovered( QAction * action );
-  void triggered( QAction * action );
+public slots:
+  void hovered(QAction *action);
+  void triggered(QAction *action);
 };
 
 #endif /* QACTIONGROUPSLOTS_H */

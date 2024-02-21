@@ -24,22 +24,22 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QFileDialogSlots: public QObject
+class QFileDialogSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QFileDialogSlots( QObject *parent = 0 );
+public:
+  QFileDialogSlots(QObject *parent = 0);
   ~QFileDialogSlots();
-  public slots:
-  void currentChanged( const QString & path );
-  void directoryEntered( const QString & directory );
-  void fileSelected( const QString & file );
-  void filesSelected( const QStringList & selected );
-  void filterSelected( const QString & filter );
-  void urlSelected( const QUrl & url );
-  void urlsSelected( const QList<QUrl> & urls );
-  void currentUrlChanged( const QUrl & url );
-  void directoryUrlEntered( const QUrl & directory );
+public slots:
+  void currentChanged(const QString &path);
+  void directoryEntered(const QString &directory);
+  void fileSelected(const QString &file);
+  void filesSelected(const QStringList &selected);
+  void filterSelected(const QString &filter);
+  void urlSelected(const QUrl &url);
+  void urlsSelected(const QList<QUrl> &urls);
+  void currentUrlChanged(const QUrl &url);
+  void directoryUrlEntered(const QUrl &directory);
 };
 
 #endif /* QFILEDIALOGSLOTS_H */

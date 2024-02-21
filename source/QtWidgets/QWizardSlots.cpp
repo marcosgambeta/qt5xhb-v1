@@ -12,7 +12,7 @@
 
 #include "QWizardSlots.hpp"
 
-QWizardSlots::QWizardSlots( QObject *parent ) : QObject( parent )
+QWizardSlots::QWizardSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,49 +20,49 @@ QWizardSlots::~QWizardSlots()
 {
 }
 
-void QWizardSlots::currentIdChanged( int id )
+void QWizardSlots::currentIdChanged(int id)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentIdChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
-    PHB_ITEM pid = hb_itemPutNI( NULL, id );
+    PHB_ITEM pid = hb_itemPutNI(NULL, id);
 
     hb_vmEvalBlockV(cb, 2, psender, pid);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pid );
+    hb_itemRelease(pid);
   }
 }
 
-void QWizardSlots::customButtonClicked( int which )
+void QWizardSlots::customButtonClicked(int which)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "customButtonClicked(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
-    PHB_ITEM pwhich = hb_itemPutNI( NULL, which );
+    PHB_ITEM pwhich = hb_itemPutNI(NULL, which);
 
     hb_vmEvalBlockV(cb, 2, psender, pwhich);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pwhich );
+    hb_itemRelease(pwhich);
   }
 }
 
 void QWizardSlots::helpRequested()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "helpRequested()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
 
@@ -72,51 +72,51 @@ void QWizardSlots::helpRequested()
   }
 }
 
-void QWizardSlots::pageAdded( int id )
+void QWizardSlots::pageAdded(int id)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pageAdded(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
-    PHB_ITEM pid = hb_itemPutNI( NULL, id );
+    PHB_ITEM pid = hb_itemPutNI(NULL, id);
 
     hb_vmEvalBlockV(cb, 2, psender, pid);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pid );
+    hb_itemRelease(pid);
   }
 }
 
-void QWizardSlots::pageRemoved( int id )
+void QWizardSlots::pageRemoved(int id)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pageRemoved(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
-    PHB_ITEM pid = hb_itemPutNI( NULL, id );
+    PHB_ITEM pid = hb_itemPutNI(NULL, id);
 
     hb_vmEvalBlockV(cb, 2, psender, pid);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pid );
+    hb_itemRelease(pid);
   }
 }
 
-void QWizardSlots_connect_signal(const QString & signal, const QString & slot)
+void QWizardSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QWizard * obj = (QWizard *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWizard *obj = (QWizard *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWizardSlots * s = QCoreApplication::instance()->findChild<QWizardSlots*>();
+    QWizardSlots *s = QCoreApplication::instance()->findChild<QWizardSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWizardSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

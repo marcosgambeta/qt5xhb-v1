@@ -24,20 +24,20 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QComboBoxSlots: public QObject
+class QComboBoxSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QComboBoxSlots( QObject *parent = 0 );
+public:
+  QComboBoxSlots(QObject *parent = 0);
   ~QComboBoxSlots();
-  public slots:
-  void activated( int index );
-  void activated( const QString & text );
-  void currentIndexChanged( int index );
-  void currentIndexChanged( const QString & text );
-  void editTextChanged( const QString & text );
-  void highlighted( int index );
-  void highlighted( const QString & text );
+public slots:
+  void activated(int index);
+  void activated(const QString &text);
+  void currentIndexChanged(int index);
+  void currentIndexChanged(const QString &text);
+  void editTextChanged(const QString &text);
+  void highlighted(int index);
+  void highlighted(const QString &text);
 };
 
 #endif /* QCOMBOBOXSLOTS_H */

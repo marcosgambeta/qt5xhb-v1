@@ -12,7 +12,7 @@
 
 #include "QGraphicsRotationSlots.hpp"
 
-QGraphicsRotationSlots::QGraphicsRotationSlots( QObject *parent ) : QObject( parent )
+QGraphicsRotationSlots::QGraphicsRotationSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QGraphicsRotationSlots::~QGraphicsRotationSlots()
 
 void QGraphicsRotationSlots::angleChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "angleChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 
@@ -38,11 +38,11 @@ void QGraphicsRotationSlots::angleChanged()
 
 void QGraphicsRotationSlots::axisChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 
@@ -54,11 +54,11 @@ void QGraphicsRotationSlots::axisChanged()
 
 void QGraphicsRotationSlots::originChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "originChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 
@@ -68,15 +68,15 @@ void QGraphicsRotationSlots::originChanged()
   }
 }
 
-void QGraphicsRotationSlots_connect_signal(const QString & signal, const QString & slot)
+void QGraphicsRotationSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QGraphicsRotation * obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsRotation *obj = (QGraphicsRotation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QGraphicsRotationSlots * s = QCoreApplication::instance()->findChild<QGraphicsRotationSlots*>();
+    QGraphicsRotationSlots *s = QCoreApplication::instance()->findChild<QGraphicsRotationSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QGraphicsRotationSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

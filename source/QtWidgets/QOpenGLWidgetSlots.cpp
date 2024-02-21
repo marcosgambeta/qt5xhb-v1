@@ -12,7 +12,7 @@
 
 #include "QOpenGLWidgetSlots.hpp"
 
-QOpenGLWidgetSlots::QOpenGLWidgetSlots( QObject *parent ) : QObject( parent )
+QOpenGLWidgetSlots::QOpenGLWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QOpenGLWidgetSlots::~QOpenGLWidgetSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 void QOpenGLWidgetSlots::aboutToCompose()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToCompose()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLWIDGET");
 
@@ -38,14 +38,14 @@ void QOpenGLWidgetSlots::aboutToCompose()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 void QOpenGLWidgetSlots::frameSwapped()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "frameSwapped()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLWIDGET");
 
@@ -56,14 +56,14 @@ void QOpenGLWidgetSlots::frameSwapped()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 void QOpenGLWidgetSlots::aboutToResize()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToResize()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLWIDGET");
 
@@ -74,14 +74,14 @@ void QOpenGLWidgetSlots::aboutToResize()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 void QOpenGLWidgetSlots::resized()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "resized()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLWIDGET");
 
@@ -92,16 +92,16 @@ void QOpenGLWidgetSlots::resized()
 }
 #endif
 
-void QOpenGLWidgetSlots_connect_signal(const QString & signal, const QString & slot)
+void QOpenGLWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QOpenGLWidget * obj = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QOpenGLWidget *obj = (QOpenGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QOpenGLWidgetSlots * s = QCoreApplication::instance()->findChild<QOpenGLWidgetSlots*>();
+    QOpenGLWidgetSlots *s = QCoreApplication::instance()->findChild<QOpenGLWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QOpenGLWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

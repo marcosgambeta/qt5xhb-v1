@@ -25,20 +25,20 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QUndoGroupSlots: public QObject
+class QUndoGroupSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QUndoGroupSlots( QObject *parent = 0 );
+public:
+  QUndoGroupSlots(QObject *parent = 0);
   ~QUndoGroupSlots();
-  public slots:
-  void activeStackChanged( QUndoStack * stack );
-  void canRedoChanged( bool canRedo );
-  void canUndoChanged( bool canUndo );
-  void cleanChanged( bool clean );
-  void indexChanged( int idx );
-  void redoTextChanged( const QString & redoText );
-  void undoTextChanged( const QString & undoText );
+public slots:
+  void activeStackChanged(QUndoStack *stack);
+  void canRedoChanged(bool canRedo);
+  void canUndoChanged(bool canUndo);
+  void cleanChanged(bool clean);
+  void indexChanged(int idx);
+  void redoTextChanged(const QString &redoText);
+  void undoTextChanged(const QString &undoText);
 };
 
 #endif /* QUNDOGROUPSLOTS_H */

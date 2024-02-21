@@ -12,7 +12,7 @@
 
 #include "QWizardPageSlots.hpp"
 
-QWizardPageSlots::QWizardPageSlots( QObject *parent ) : QObject( parent )
+QWizardPageSlots::QWizardPageSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QWizardPageSlots::~QWizardPageSlots()
 
 void QWizardPageSlots::completeChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "completeChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARDPAGE");
 
@@ -36,15 +36,15 @@ void QWizardPageSlots::completeChanged()
   }
 }
 
-void QWizardPageSlots_connect_signal(const QString & signal, const QString & slot)
+void QWizardPageSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QWizardPage * obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWizardPage *obj = (QWizardPage *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWizardPageSlots * s = QCoreApplication::instance()->findChild<QWizardPageSlots*>();
+    QWizardPageSlots *s = QCoreApplication::instance()->findChild<QWizardPageSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWizardPageSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

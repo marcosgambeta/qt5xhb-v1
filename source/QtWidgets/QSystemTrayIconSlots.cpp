@@ -12,7 +12,7 @@
 
 #include "QSystemTrayIconSlots.hpp"
 
-QSystemTrayIconSlots::QSystemTrayIconSlots( QObject *parent ) : QObject( parent )
+QSystemTrayIconSlots::QSystemTrayIconSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QSystemTrayIconSlots::~QSystemTrayIconSlots()
 {
 }
 
-void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
+void QSystemTrayIconSlots::activated(QSystemTrayIcon::ActivationReason reason)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activated(QSystemTrayIcon::ActivationReason)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSYSTEMTRAYICON");
-    PHB_ITEM preason = hb_itemPutNI( NULL, static_cast<int>(reason) );
+    PHB_ITEM preason = hb_itemPutNI(NULL, static_cast<int>(reason));
 
     hb_vmEvalBlockV(cb, 2, psender, preason);
 
     hb_itemRelease(psender);
-    hb_itemRelease( preason );
+    hb_itemRelease(preason);
   }
 }
 
 void QSystemTrayIconSlots::messageClicked()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "messageClicked()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSYSTEMTRAYICON");
 
@@ -54,15 +54,15 @@ void QSystemTrayIconSlots::messageClicked()
   }
 }
 
-void QSystemTrayIconSlots_connect_signal(const QString & signal, const QString & slot)
+void QSystemTrayIconSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon *obj = (QSystemTrayIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QSystemTrayIconSlots * s = QCoreApplication::instance()->findChild<QSystemTrayIconSlots*>();
+    QSystemTrayIconSlots *s = QCoreApplication::instance()->findChild<QSystemTrayIconSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QSystemTrayIconSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QShortcutSlots: public QObject
+class QShortcutSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QShortcutSlots( QObject *parent = 0 );
+public:
+  QShortcutSlots(QObject *parent = 0);
   ~QShortcutSlots();
-  public slots:
+public slots:
   void activated();
   void activatedAmbiguously();
 };

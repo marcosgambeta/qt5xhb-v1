@@ -12,7 +12,7 @@
 
 #include "QTreeViewSlots.hpp"
 
-QTreeViewSlots::QTreeViewSlots( QObject *parent ) : QObject( parent )
+QTreeViewSlots::QTreeViewSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QTreeViewSlots::~QTreeViewSlots()
 {
 }
 
-void QTreeViewSlots::collapsed( const QModelIndex & index )
+void QTreeViewSlots::collapsed(const QModelIndex &index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "collapsed(QModelIndex)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEVIEW");
-    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX");
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindex );
+    hb_itemRelease(pindex);
   }
 }
 
-void QTreeViewSlots::expanded( const QModelIndex & index )
+void QTreeViewSlots::expanded(const QModelIndex &index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "expanded(QModelIndex)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEVIEW");
-    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX");
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindex );
+    hb_itemRelease(pindex);
   }
 }
 
-void QTreeViewSlots_connect_signal(const QString & signal, const QString & slot)
+void QTreeViewSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QTreeView * obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTreeView *obj = (QTreeView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QTreeViewSlots * s = QCoreApplication::instance()->findChild<QTreeViewSlots*>();
+    QTreeViewSlots *s = QCoreApplication::instance()->findChild<QTreeViewSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QTreeViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

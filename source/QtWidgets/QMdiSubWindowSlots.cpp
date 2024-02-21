@@ -12,7 +12,7 @@
 
 #include "QMdiSubWindowSlots.hpp"
 
-QMdiSubWindowSlots::QMdiSubWindowSlots( QObject *parent ) : QObject( parent )
+QMdiSubWindowSlots::QMdiSubWindowSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QMdiSubWindowSlots::~QMdiSubWindowSlots()
 
 void QMdiSubWindowSlots::aboutToActivate()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToActivate()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMDISUBWINDOW");
 
@@ -36,35 +36,35 @@ void QMdiSubWindowSlots::aboutToActivate()
   }
 }
 
-void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
+void QMdiSubWindowSlots::windowStateChanged(Qt::WindowStates oldState, Qt::WindowStates newState)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMDISUBWINDOW");
-    PHB_ITEM poldState = hb_itemPutNI( NULL, static_cast<int>(oldState) );
-    PHB_ITEM pnewState = hb_itemPutNI( NULL, static_cast<int>(newState) );
+    PHB_ITEM poldState = hb_itemPutNI(NULL, static_cast<int>(oldState));
+    PHB_ITEM pnewState = hb_itemPutNI(NULL, static_cast<int>(newState));
 
     hb_vmEvalBlockV(cb, 3, psender, poldState, pnewState);
 
     hb_itemRelease(psender);
-    hb_itemRelease( poldState );
-    hb_itemRelease( pnewState );
+    hb_itemRelease(poldState);
+    hb_itemRelease(pnewState);
   }
 }
 
-void QMdiSubWindowSlots_connect_signal(const QString & signal, const QString & slot)
+void QMdiSubWindowSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMdiSubWindow *obj = (QMdiSubWindow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMdiSubWindowSlots * s = QCoreApplication::instance()->findChild<QMdiSubWindowSlots*>();
+    QMdiSubWindowSlots *s = QCoreApplication::instance()->findChild<QMdiSubWindowSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMdiSubWindowSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

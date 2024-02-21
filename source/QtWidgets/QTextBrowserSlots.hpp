@@ -24,20 +24,20 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QTextBrowserSlots: public QObject
+class QTextBrowserSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTextBrowserSlots( QObject *parent = 0 );
+public:
+  QTextBrowserSlots(QObject *parent = 0);
   ~QTextBrowserSlots();
-  public slots:
-  void anchorClicked( const QUrl & link );
-  void backwardAvailable( bool available );
-  void forwardAvailable( bool available );
-  void highlighted( const QUrl & link );
-  void highlighted( const QString & link );
+public slots:
+  void anchorClicked(const QUrl &link);
+  void backwardAvailable(bool available);
+  void forwardAvailable(bool available);
+  void highlighted(const QUrl &link);
+  void highlighted(const QString &link);
   void historyChanged();
-  void sourceChanged( const QUrl & src );
+  void sourceChanged(const QUrl &src);
 };
 
 #endif /* QTEXTBROWSERSLOTS_H */

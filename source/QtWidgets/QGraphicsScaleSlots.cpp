@@ -12,7 +12,7 @@
 
 #include "QGraphicsScaleSlots.hpp"
 
-QGraphicsScaleSlots::QGraphicsScaleSlots( QObject *parent ) : QObject( parent )
+QGraphicsScaleSlots::QGraphicsScaleSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QGraphicsScaleSlots::~QGraphicsScaleSlots()
 
 void QGraphicsScaleSlots::originChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "originChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
@@ -38,11 +38,11 @@ void QGraphicsScaleSlots::originChanged()
 
 void QGraphicsScaleSlots::scaleChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "scaleChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
@@ -54,11 +54,11 @@ void QGraphicsScaleSlots::scaleChanged()
 
 void QGraphicsScaleSlots::xScaleChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xScaleChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
@@ -70,11 +70,11 @@ void QGraphicsScaleSlots::xScaleChanged()
 
 void QGraphicsScaleSlots::yScaleChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yScaleChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
@@ -86,11 +86,11 @@ void QGraphicsScaleSlots::yScaleChanged()
 
 void QGraphicsScaleSlots::zScaleChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "zScaleChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
@@ -100,15 +100,15 @@ void QGraphicsScaleSlots::zScaleChanged()
   }
 }
 
-void QGraphicsScaleSlots_connect_signal(const QString & signal, const QString & slot)
+void QGraphicsScaleSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QGraphicsScale * obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsScale *obj = (QGraphicsScale *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QGraphicsScaleSlots * s = QCoreApplication::instance()->findChild<QGraphicsScaleSlots*>();
+    QGraphicsScaleSlots *s = QCoreApplication::instance()->findChild<QGraphicsScaleSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QGraphicsScaleSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

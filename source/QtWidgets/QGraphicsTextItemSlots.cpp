@@ -12,7 +12,7 @@
 
 #include "QGraphicsTextItemSlots.hpp"
 
-QGraphicsTextItemSlots::QGraphicsTextItemSlots( QObject *parent ) : QObject( parent )
+QGraphicsTextItemSlots::QGraphicsTextItemSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QGraphicsTextItemSlots::~QGraphicsTextItemSlots()
 {
 }
 
-void QGraphicsTextItemSlots::linkActivated( const QString & link )
+void QGraphicsTextItemSlots::linkActivated(const QString &link)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "linkActivated(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSTEXTITEM");
-    PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
+    PHB_ITEM plink = hb_itemPutC(NULL, QSTRINGTOSTRING(link));
 
     hb_vmEvalBlockV(cb, 2, psender, plink);
 
     hb_itemRelease(psender);
-    hb_itemRelease( plink );
+    hb_itemRelease(plink);
   }
 }
 
-void QGraphicsTextItemSlots::linkHovered( const QString & link )
+void QGraphicsTextItemSlots::linkHovered(const QString &link)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "linkHovered(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSTEXTITEM");
-    PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
+    PHB_ITEM plink = hb_itemPutC(NULL, QSTRINGTOSTRING(link));
 
     hb_vmEvalBlockV(cb, 2, psender, plink);
 
     hb_itemRelease(psender);
-    hb_itemRelease( plink );
+    hb_itemRelease(plink);
   }
 }
 
-void QGraphicsTextItemSlots_connect_signal(const QString & signal, const QString & slot)
+void QGraphicsTextItemSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsTextItem *obj = (QGraphicsTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QGraphicsTextItemSlots * s = QCoreApplication::instance()->findChild<QGraphicsTextItemSlots*>();
+    QGraphicsTextItemSlots *s = QCoreApplication::instance()->findChild<QGraphicsTextItemSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QGraphicsTextItemSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

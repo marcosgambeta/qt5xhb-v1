@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QActionSlots: public QObject
+class QActionSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QActionSlots( QObject *parent = 0 );
+public:
+  QActionSlots(QObject *parent = 0);
   ~QActionSlots();
-  public slots:
+public slots:
   void changed();
   void hovered();
-  void toggled( bool checked );
-  void triggered( bool checked = false );
+  void toggled(bool checked);
+  void triggered(bool checked = false);
 };
 
 #endif /* QACTIONSLOTS_H */

@@ -12,7 +12,7 @@
 
 #include "QGraphicsSceneSlots.hpp"
 
-QGraphicsSceneSlots::QGraphicsSceneSlots( QObject *parent ) : QObject( parent )
+QGraphicsSceneSlots::QGraphicsSceneSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QGraphicsSceneSlots::~QGraphicsSceneSlots()
 {
 }
 
-void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
+void QGraphicsSceneSlots::changed(const QList<QRectF> &region)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "changed(QList<QRectF>)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCENE");
     PHB_DYNS pDynSym = hb_dynsymFindName("QRECTF");
     PHB_ITEM pregion = hb_itemArrayNew(0);
-    if( pDynSym != NULL )
+    if (pDynSym != NULL)
     {
-      for( int i = 0; i < region.count(); i++ )
+      for (int i = 0; i < region.count(); i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pTempObject = hb_itemNew( NULL );
-        hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QRectF( region [i] ) );
-        hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-        hb_arrayAddForward( pregion, pTempObject );
-        hb_itemRelease( pTempObject );
-        hb_itemRelease( pTempItem );
+        PHB_ITEM pTempObject = hb_itemNew(NULL);
+        hb_itemCopy(pTempObject, hb_stackReturnItem());
+        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, new QRectF(region[i]));
+        hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+        hb_arrayAddForward(pregion, pTempObject);
+        hb_itemRelease(pTempObject);
+        hb_itemRelease(pTempItem);
       }
     }
     else
@@ -55,35 +55,35 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
     hb_vmEvalBlockV(cb, 2, psender, pregion);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pregion );
+    hb_itemRelease(pregion);
   }
 }
 
-void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
+void QGraphicsSceneSlots::sceneRectChanged(const QRectF &rect)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sceneRectChanged(QRectF)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCENE");
-    PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECTF");
+    PHB_ITEM prect = Qt5xHb::Signals_return_object((void *)&rect, "QRECTF");
 
     hb_vmEvalBlockV(cb, 2, psender, prect);
 
     hb_itemRelease(psender);
-    hb_itemRelease( prect );
+    hb_itemRelease(prect);
   }
 }
 
 void QGraphicsSceneSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCENE");
 
@@ -93,15 +93,15 @@ void QGraphicsSceneSlots::selectionChanged()
   }
 }
 
-void QGraphicsSceneSlots_connect_signal(const QString & signal, const QString & slot)
+void QGraphicsSceneSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QGraphicsScene * obj = (QGraphicsScene *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QGraphicsSceneSlots * s = QCoreApplication::instance()->findChild<QGraphicsSceneSlots*>();
+    QGraphicsSceneSlots *s = QCoreApplication::instance()->findChild<QGraphicsSceneSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QGraphicsSceneSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

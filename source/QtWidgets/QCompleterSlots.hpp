@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QCompleterSlots: public QObject
+class QCompleterSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCompleterSlots( QObject *parent = 0 );
+public:
+  QCompleterSlots(QObject *parent = 0);
   ~QCompleterSlots();
-  public slots:
-  void activated( const QString & text );
-  void activated( const QModelIndex & index );
-  void highlighted( const QString & text );
-  void highlighted( const QModelIndex & index );
+public slots:
+  void activated(const QString &text);
+  void activated(const QModelIndex &index);
+  void highlighted(const QString &text);
+  void highlighted(const QModelIndex &index);
 };
 
 #endif /* QCOMPLETERSLOTS_H */

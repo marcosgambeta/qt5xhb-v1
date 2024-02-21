@@ -12,7 +12,7 @@
 
 #include "QActionSlots.hpp"
 
-QActionSlots::QActionSlots( QObject *parent ) : QObject( parent )
+QActionSlots::QActionSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QActionSlots::~QActionSlots()
 
 void QActionSlots::changed()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "changed()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
 
@@ -38,11 +38,11 @@ void QActionSlots::changed()
 
 void QActionSlots::hovered()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
 
@@ -52,51 +52,51 @@ void QActionSlots::hovered()
   }
 }
 
-void QActionSlots::toggled( bool checked )
+void QActionSlots::toggled(bool checked)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "toggled(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
-    PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
+    PHB_ITEM pchecked = hb_itemPutL(NULL, checked);
 
     hb_vmEvalBlockV(cb, 2, psender, pchecked);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pchecked );
+    hb_itemRelease(pchecked);
   }
 }
 
-void QActionSlots::triggered( bool checked )
+void QActionSlots::triggered(bool checked)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "triggered(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
-    PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
+    PHB_ITEM pchecked = hb_itemPutL(NULL, checked);
 
     hb_vmEvalBlockV(cb, 2, psender, pchecked);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pchecked );
+    hb_itemRelease(pchecked);
   }
 }
 
-void QActionSlots_connect_signal(const QString & signal, const QString & slot)
+void QActionSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAction * obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAction *obj = (QAction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QActionSlots * s = QCoreApplication::instance()->findChild<QActionSlots*>();
+    QActionSlots *s = QCoreApplication::instance()->findChild<QActionSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QActionSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

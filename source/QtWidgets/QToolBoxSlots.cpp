@@ -12,7 +12,7 @@
 
 #include "QToolBoxSlots.hpp"
 
-QToolBoxSlots::QToolBoxSlots( QObject *parent ) : QObject( parent )
+QToolBoxSlots::QToolBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QToolBoxSlots::~QToolBoxSlots()
 {
 }
 
-void QToolBoxSlots::currentChanged( int index )
+void QToolBoxSlots::currentChanged(int index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBOX");
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindex );
+    hb_itemRelease(pindex);
   }
 }
 
-void QToolBoxSlots_connect_signal(const QString & signal, const QString & slot)
+void QToolBoxSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QToolBox * obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QToolBox *obj = (QToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QToolBoxSlots * s = QCoreApplication::instance()->findChild<QToolBoxSlots*>();
+    QToolBoxSlots *s = QCoreApplication::instance()->findChild<QToolBoxSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QToolBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

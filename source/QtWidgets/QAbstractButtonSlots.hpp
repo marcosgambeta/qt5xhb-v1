@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAbstractButtonSlots: public QObject
+class QAbstractButtonSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractButtonSlots( QObject *parent = 0 );
+public:
+  QAbstractButtonSlots(QObject *parent = 0);
   ~QAbstractButtonSlots();
-  public slots:
-  void clicked( bool checked = false );
+public slots:
+  void clicked(bool checked = false);
   void pressed();
   void released();
-  void toggled( bool checked );
+  void toggled(bool checked);
 };
 
 #endif /* QABSTRACTBUTTONSLOTS_H */

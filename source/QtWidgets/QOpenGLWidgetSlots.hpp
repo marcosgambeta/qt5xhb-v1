@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWidgets/QOpenGLWidget>
 #endif
 
@@ -26,23 +26,23 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QOpenGLWidgetSlots: public QObject
+class QOpenGLWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QOpenGLWidgetSlots( QObject *parent = 0 );
+public:
+  QOpenGLWidgetSlots(QObject *parent = 0);
   ~QOpenGLWidgetSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   void aboutToCompose();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   void frameSwapped();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   void aboutToResize();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   void resized();
 #endif
 };

@@ -12,7 +12,7 @@
 
 #include "QFileDialogSlots.hpp"
 
-QFileDialogSlots::QFileDialogSlots( QObject *parent ) : QObject( parent )
+QFileDialogSlots::QFileDialogSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,145 +20,145 @@ QFileDialogSlots::~QFileDialogSlots()
 {
 }
 
-void QFileDialogSlots::currentChanged( const QString & path )
+void QFileDialogSlots::currentChanged(const QString &path)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILEDIALOG");
-    PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
+    PHB_ITEM ppath = hb_itemPutC(NULL, QSTRINGTOSTRING(path));
 
     hb_vmEvalBlockV(cb, 2, psender, ppath);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ppath );
+    hb_itemRelease(ppath);
   }
 }
 
-void QFileDialogSlots::directoryEntered( const QString & directory )
+void QFileDialogSlots::directoryEntered(const QString &directory)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "directoryEntered(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILEDIALOG");
-    PHB_ITEM pdirectory = hb_itemPutC( NULL, QSTRINGTOSTRING(directory) );
+    PHB_ITEM pdirectory = hb_itemPutC(NULL, QSTRINGTOSTRING(directory));
 
     hb_vmEvalBlockV(cb, 2, psender, pdirectory);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pdirectory );
+    hb_itemRelease(pdirectory);
   }
 }
 
-void QFileDialogSlots::fileSelected( const QString & file )
+void QFileDialogSlots::fileSelected(const QString &file)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fileSelected(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILEDIALOG");
-    PHB_ITEM pfile = hb_itemPutC( NULL, QSTRINGTOSTRING(file) );
+    PHB_ITEM pfile = hb_itemPutC(NULL, QSTRINGTOSTRING(file));
 
     hb_vmEvalBlockV(cb, 2, psender, pfile);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfile );
+    hb_itemRelease(pfile);
   }
 }
 
-void QFileDialogSlots::filesSelected( const QStringList & selected )
+void QFileDialogSlots::filesSelected(const QStringList &selected)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "filesSelected(QStringList)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILEDIALOG");
     PHB_ITEM pselected = hb_itemArrayNew(0);
-    for( int i = 0; i < selected.count(); i++ )
+    for (int i = 0; i < selected.count(); i++)
     {
-      PHB_ITEM pTempItem = hb_itemPutC( NULL, QSTRINGTOSTRING(selected [i]) );
-      hb_arrayAddForward( pselected, pTempItem );
+      PHB_ITEM pTempItem = hb_itemPutC(NULL, QSTRINGTOSTRING(selected[i]));
+      hb_arrayAddForward(pselected, pTempItem);
       hb_itemRelease(pTempItem);
     }
 
     hb_vmEvalBlockV(cb, 2, psender, pselected);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pselected );
+    hb_itemRelease(pselected);
   }
 }
 
-void QFileDialogSlots::filterSelected( const QString & filter )
+void QFileDialogSlots::filterSelected(const QString &filter)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "filterSelected(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILEDIALOG");
-    PHB_ITEM pfilter = hb_itemPutC( NULL, QSTRINGTOSTRING(filter) );
+    PHB_ITEM pfilter = hb_itemPutC(NULL, QSTRINGTOSTRING(filter));
 
     hb_vmEvalBlockV(cb, 2, psender, pfilter);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfilter );
+    hb_itemRelease(pfilter);
   }
 }
 
-void QFileDialogSlots::urlSelected( const QUrl & url )
+void QFileDialogSlots::urlSelected(const QUrl &url)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "urlSelected(QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILEDIALOG");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
+    PHB_ITEM purl = Qt5xHb::Signals_return_object((void *)&url, "QURL");
 
     hb_vmEvalBlockV(cb, 2, psender, purl);
 
     hb_itemRelease(psender);
-    hb_itemRelease( purl );
+    hb_itemRelease(purl);
   }
 }
 
-void QFileDialogSlots::urlsSelected( const QList<QUrl> & urls )
+void QFileDialogSlots::urlsSelected(const QList<QUrl> &urls)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "urlsSelected(QList<QUrl>)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILEDIALOG");
     PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
     PHB_ITEM purls = hb_itemArrayNew(0);
-    if( pDynSym != NULL )
+    if (pDynSym != NULL)
     {
-      for( int i = 0; i < urls.count(); i++ )
+      for (int i = 0; i < urls.count(); i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pTempObject = hb_itemNew( NULL );
-        hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QUrl( urls [i] ) );
-        hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-        hb_arrayAddForward( purls, pTempObject );
-        hb_itemRelease( pTempObject );
-        hb_itemRelease( pTempItem );
+        PHB_ITEM pTempObject = hb_itemNew(NULL);
+        hb_itemCopy(pTempObject, hb_stackReturnItem());
+        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, new QUrl(urls[i]));
+        hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+        hb_arrayAddForward(purls, pTempObject);
+        hb_itemRelease(pTempObject);
+        hb_itemRelease(pTempItem);
       }
     }
     else
@@ -169,55 +169,55 @@ void QFileDialogSlots::urlsSelected( const QList<QUrl> & urls )
     hb_vmEvalBlockV(cb, 2, psender, purls);
 
     hb_itemRelease(psender);
-    hb_itemRelease( purls );
+    hb_itemRelease(purls);
   }
 }
 
-void QFileDialogSlots::currentUrlChanged( const QUrl & url )
+void QFileDialogSlots::currentUrlChanged(const QUrl &url)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentUrlChanged(QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILEDIALOG");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
+    PHB_ITEM purl = Qt5xHb::Signals_return_object((void *)&url, "QURL");
 
     hb_vmEvalBlockV(cb, 2, psender, purl);
 
     hb_itemRelease(psender);
-    hb_itemRelease( purl );
+    hb_itemRelease(purl);
   }
 }
 
-void QFileDialogSlots::directoryUrlEntered( const QUrl & directory )
+void QFileDialogSlots::directoryUrlEntered(const QUrl &directory)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "directoryUrlEntered(QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILEDIALOG");
-    PHB_ITEM pdirectory = Qt5xHb::Signals_return_object( (void *) &directory, "QURL");
+    PHB_ITEM pdirectory = Qt5xHb::Signals_return_object((void *)&directory, "QURL");
 
     hb_vmEvalBlockV(cb, 2, psender, pdirectory);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pdirectory );
+    hb_itemRelease(pdirectory);
   }
 }
 
-void QFileDialogSlots_connect_signal(const QString & signal, const QString & slot)
+void QFileDialogSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QFileDialog * obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  QFileDialog *obj = (QFileDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QFileDialogSlots * s = QCoreApplication::instance()->findChild<QFileDialogSlots*>();
+    QFileDialogSlots *s = QCoreApplication::instance()->findChild<QFileDialogSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QFileDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

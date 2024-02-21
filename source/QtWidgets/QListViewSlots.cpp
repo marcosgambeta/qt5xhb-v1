@@ -12,7 +12,7 @@
 
 #include "QListViewSlots.hpp"
 
-QListViewSlots::QListViewSlots( QObject *parent ) : QObject( parent )
+QListViewSlots::QListViewSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QListViewSlots::~QListViewSlots()
 {
 }
 
-void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
+void QListViewSlots::indexesMoved(const QModelIndexList &indexes)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "indexesMoved(QModelIndexList)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTVIEW");
     PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
     PHB_ITEM pindexes = hb_itemArrayNew(0);
-    if( pDynSym != NULL )
+    if (pDynSym != NULL)
     {
-      for( int i = 0; i < indexes.count(); i++ )
+      for (int i = 0; i < indexes.count(); i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pTempObject = hb_itemNew( NULL );
-        hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QModelIndex( indexes [i] ) );
-        hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-        hb_arrayAddForward( pindexes, pTempObject );
-        hb_itemRelease( pTempObject );
-        hb_itemRelease( pTempItem );
+        PHB_ITEM pTempObject = hb_itemNew(NULL);
+        hb_itemCopy(pTempObject, hb_stackReturnItem());
+        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, new QModelIndex(indexes[i]));
+        hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+        hb_arrayAddForward(pindexes, pTempObject);
+        hb_itemRelease(pTempObject);
+        hb_itemRelease(pTempItem);
       }
     }
     else
@@ -55,19 +55,19 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
     hb_vmEvalBlockV(cb, 2, psender, pindexes);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindexes );
+    hb_itemRelease(pindexes);
   }
 }
 
-void QListViewSlots_connect_signal(const QString & signal, const QString & slot)
+void QListViewSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QListView * obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QListView *obj = (QListView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QListViewSlots * s = QCoreApplication::instance()->findChild<QListViewSlots*>();
+    QListViewSlots *s = QCoreApplication::instance()->findChild<QListViewSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QListViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMenuSlots: public QObject
+class QMenuSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMenuSlots( QObject *parent = 0 );
+public:
+  QMenuSlots(QObject *parent = 0);
   ~QMenuSlots();
-  public slots:
+public slots:
   void aboutToHide();
   void aboutToShow();
-  void hovered( QAction * action );
-  void triggered( QAction * action );
+  void hovered(QAction *action);
+  void triggered(QAction *action);
 };
 
 #endif /* QMENUSLOTS_H */

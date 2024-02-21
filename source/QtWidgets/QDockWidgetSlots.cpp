@@ -12,7 +12,7 @@
 
 #include "QDockWidgetSlots.hpp"
 
-QDockWidgetSlots::QDockWidgetSlots( QObject *parent ) : QObject( parent )
+QDockWidgetSlots::QDockWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,105 +20,105 @@ QDockWidgetSlots::~QDockWidgetSlots()
 {
 }
 
-void QDockWidgetSlots::allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
+void QDockWidgetSlots::allowedAreasChanged(Qt::DockWidgetAreas allowedAreas)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "allowedAreasChanged(Qt::DockWidgetAreas)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOCKWIDGET");
-    PHB_ITEM pallowedAreas = hb_itemPutNI( NULL, static_cast<int>(allowedAreas) );
+    PHB_ITEM pallowedAreas = hb_itemPutNI(NULL, static_cast<int>(allowedAreas));
 
     hb_vmEvalBlockV(cb, 2, psender, pallowedAreas);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pallowedAreas );
+    hb_itemRelease(pallowedAreas);
   }
 }
 
-void QDockWidgetSlots::dockLocationChanged( Qt::DockWidgetArea area )
+void QDockWidgetSlots::dockLocationChanged(Qt::DockWidgetArea area)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dockLocationChanged(Qt::DockWidgetArea)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOCKWIDGET");
-    PHB_ITEM parea = hb_itemPutNI( NULL, static_cast<int>(area) );
+    PHB_ITEM parea = hb_itemPutNI(NULL, static_cast<int>(area));
 
     hb_vmEvalBlockV(cb, 2, psender, parea);
 
     hb_itemRelease(psender);
-    hb_itemRelease( parea );
+    hb_itemRelease(parea);
   }
 }
 
-void QDockWidgetSlots::featuresChanged( QDockWidget::DockWidgetFeatures features )
+void QDockWidgetSlots::featuresChanged(QDockWidget::DockWidgetFeatures features)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "featuresChanged(QDockWidget::DockWidgetFeatures)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOCKWIDGET");
-    PHB_ITEM pfeatures = hb_itemPutNI( NULL, static_cast<int>(features) );
+    PHB_ITEM pfeatures = hb_itemPutNI(NULL, static_cast<int>(features));
 
     hb_vmEvalBlockV(cb, 2, psender, pfeatures);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfeatures );
+    hb_itemRelease(pfeatures);
   }
 }
 
-void QDockWidgetSlots::topLevelChanged( bool topLevel )
+void QDockWidgetSlots::topLevelChanged(bool topLevel)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "topLevelChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOCKWIDGET");
-    PHB_ITEM ptopLevel = hb_itemPutL( NULL, topLevel );
+    PHB_ITEM ptopLevel = hb_itemPutL(NULL, topLevel);
 
     hb_vmEvalBlockV(cb, 2, psender, ptopLevel);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ptopLevel );
+    hb_itemRelease(ptopLevel);
   }
 }
 
-void QDockWidgetSlots::visibilityChanged( bool visible )
+void QDockWidgetSlots::visibilityChanged(bool visible)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "visibilityChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOCKWIDGET");
-    PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+    PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
     hb_vmEvalBlockV(cb, 2, psender, pvisible);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvisible );
+    hb_itemRelease(pvisible);
   }
 }
 
-void QDockWidgetSlots_connect_signal(const QString & signal, const QString & slot)
+void QDockWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDockWidget * obj = (QDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDockWidgetSlots * s = QCoreApplication::instance()->findChild<QDockWidgetSlots*>();
+    QDockWidgetSlots *s = QCoreApplication::instance()->findChild<QDockWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDockWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

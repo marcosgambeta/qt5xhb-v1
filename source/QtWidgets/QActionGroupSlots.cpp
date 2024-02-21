@@ -12,7 +12,7 @@
 
 #include "QActionGroupSlots.hpp"
 
-QActionGroupSlots::QActionGroupSlots( QObject *parent ) : QObject( parent )
+QActionGroupSlots::QActionGroupSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,13 +20,13 @@ QActionGroupSlots::~QActionGroupSlots()
 {
 }
 
-void QActionGroupSlots::hovered( QAction * action )
+void QActionGroupSlots::hovered(QAction *action)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered(QAction*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTIONGROUP");
     PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
@@ -34,17 +34,17 @@ void QActionGroupSlots::hovered( QAction * action )
     hb_vmEvalBlockV(cb, 2, psender, paction);
 
     hb_itemRelease(psender);
-    hb_itemRelease( paction );
+    hb_itemRelease(paction);
   }
 }
 
-void QActionGroupSlots::triggered( QAction * action )
+void QActionGroupSlots::triggered(QAction *action)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "triggered(QAction*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTIONGROUP");
     PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
@@ -52,19 +52,19 @@ void QActionGroupSlots::triggered( QAction * action )
     hb_vmEvalBlockV(cb, 2, psender, paction);
 
     hb_itemRelease(psender);
-    hb_itemRelease( paction );
+    hb_itemRelease(paction);
   }
 }
 
-void QActionGroupSlots_connect_signal(const QString & signal, const QString & slot)
+void QActionGroupSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionGroup *obj = (QActionGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QActionGroupSlots * s = QCoreApplication::instance()->findChild<QActionGroupSlots*>();
+    QActionGroupSlots *s = QCoreApplication::instance()->findChild<QActionGroupSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QActionGroupSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -12,7 +12,7 @@
 
 #include "QColumnViewSlots.hpp"
 
-QColumnViewSlots::QColumnViewSlots( QObject *parent ) : QObject( parent )
+QColumnViewSlots::QColumnViewSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QColumnViewSlots::~QColumnViewSlots()
 {
 }
 
-void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
+void QColumnViewSlots::updatePreviewWidget(const QModelIndex &index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "updatePreviewWidget(QModelIndex)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOLUMNVIEW");
-    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX");
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindex );
+    hb_itemRelease(pindex);
   }
 }
 
-void QColumnViewSlots_connect_signal(const QString & signal, const QString & slot)
+void QColumnViewSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QColumnView * obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QColumnViewSlots * s = QCoreApplication::instance()->findChild<QColumnViewSlots*>();
+    QColumnViewSlots *s = QCoreApplication::instance()->findChild<QColumnViewSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QColumnViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

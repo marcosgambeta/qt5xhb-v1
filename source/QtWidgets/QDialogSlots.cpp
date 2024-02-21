@@ -12,7 +12,7 @@
 
 #include "QDialogSlots.hpp"
 
-QDialogSlots::QDialogSlots( QObject *parent ) : QObject( parent )
+QDialogSlots::QDialogSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QDialogSlots::~QDialogSlots()
 
 void QDialogSlots::accepted()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accepted()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
 
@@ -36,31 +36,31 @@ void QDialogSlots::accepted()
   }
 }
 
-void QDialogSlots::finished( int result )
+void QDialogSlots::finished(int result)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
-    PHB_ITEM presult = hb_itemPutNI( NULL, result );
+    PHB_ITEM presult = hb_itemPutNI(NULL, result);
 
     hb_vmEvalBlockV(cb, 2, psender, presult);
 
     hb_itemRelease(psender);
-    hb_itemRelease( presult );
+    hb_itemRelease(presult);
   }
 }
 
 void QDialogSlots::rejected()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rejected()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
 
@@ -70,15 +70,15 @@ void QDialogSlots::rejected()
   }
 }
 
-void QDialogSlots_connect_signal(const QString & signal, const QString & slot)
+void QDialogSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDialog * obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDialog *obj = (QDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDialogSlots * s = QCoreApplication::instance()->findChild<QDialogSlots*>();
+    QDialogSlots *s = QCoreApplication::instance()->findChild<QDialogSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,18 +24,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDockWidgetSlots: public QObject
+class QDockWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDockWidgetSlots( QObject *parent = 0 );
+public:
+  QDockWidgetSlots(QObject *parent = 0);
   ~QDockWidgetSlots();
-  public slots:
-  void allowedAreasChanged( Qt::DockWidgetAreas allowedAreas );
-  void dockLocationChanged( Qt::DockWidgetArea area );
-  void featuresChanged( QDockWidget::DockWidgetFeatures features );
-  void topLevelChanged( bool topLevel );
-  void visibilityChanged( bool visible );
+public slots:
+  void allowedAreasChanged(Qt::DockWidgetAreas allowedAreas);
+  void dockLocationChanged(Qt::DockWidgetArea area);
+  void featuresChanged(QDockWidget::DockWidgetFeatures features);
+  void topLevelChanged(bool topLevel);
+  void visibilityChanged(bool visible);
 };
 
 #endif /* QDOCKWIDGETSLOTS_H */

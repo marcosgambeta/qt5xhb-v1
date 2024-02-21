@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGraphicsTextItemSlots: public QObject
+class QGraphicsTextItemSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGraphicsTextItemSlots( QObject *parent = 0 );
+public:
+  QGraphicsTextItemSlots(QObject *parent = 0);
   ~QGraphicsTextItemSlots();
-  public slots:
-  void linkActivated( const QString & link );
-  void linkHovered( const QString & link );
+public slots:
+  void linkActivated(const QString &link);
+  void linkHovered(const QString &link);
 };
 
 #endif /* QGRAPHICSTEXTITEMSLOTS_H */

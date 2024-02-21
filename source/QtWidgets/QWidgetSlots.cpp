@@ -12,7 +12,7 @@
 
 #include "QWidgetSlots.hpp"
 
-QWidgetSlots::QWidgetSlots( QObject *parent ) : QObject( parent )
+QWidgetSlots::QWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,91 +20,91 @@ QWidgetSlots::~QWidgetSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QWidgetSlots::windowTitleChanged( const QString & title )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+void QWidgetSlots::windowTitleChanged(const QString &title)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "windowTitleChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIDGET");
-    PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
+    PHB_ITEM ptitle = hb_itemPutC(NULL, QSTRINGTOSTRING(title));
 
     hb_vmEvalBlockV(cb, 2, psender, ptitle);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ptitle );
+    hb_itemRelease(ptitle);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QWidgetSlots::windowIconChanged( const QIcon & icon )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+void QWidgetSlots::windowIconChanged(const QIcon &icon)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "windowIconChanged(QIcon)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIDGET");
-    PHB_ITEM picon = Qt5xHb::Signals_return_object( (void *) &icon, "QICON");
+    PHB_ITEM picon = Qt5xHb::Signals_return_object((void *)&icon, "QICON");
 
     hb_vmEvalBlockV(cb, 2, psender, picon);
 
     hb_itemRelease(psender);
-    hb_itemRelease( picon );
+    hb_itemRelease(picon);
   }
 }
 #endif
 
-void QWidgetSlots::windowIconTextChanged( const QString & iconText )
+void QWidgetSlots::windowIconTextChanged(const QString &iconText)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "windowIconTextChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIDGET");
-    PHB_ITEM piconText = hb_itemPutC( NULL, QSTRINGTOSTRING(iconText) );
+    PHB_ITEM piconText = hb_itemPutC(NULL, QSTRINGTOSTRING(iconText));
 
     hb_vmEvalBlockV(cb, 2, psender, piconText);
 
     hb_itemRelease(psender);
-    hb_itemRelease( piconText );
+    hb_itemRelease(piconText);
   }
 }
 
-void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
+void QWidgetSlots::customContextMenuRequested(const QPoint &pos)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "customContextMenuRequested(QPoint)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIDGET");
-    PHB_ITEM ppos = Qt5xHb::Signals_return_object( (void *) &pos, "QPOINT");
+    PHB_ITEM ppos = Qt5xHb::Signals_return_object((void *)&pos, "QPOINT");
 
     hb_vmEvalBlockV(cb, 2, psender, ppos);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ppos );
+    hb_itemRelease(ppos);
   }
 }
 
-void QWidgetSlots_connect_signal(const QString & signal, const QString & slot)
+void QWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QWidget * obj = (QWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWidget *obj = (QWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWidgetSlots * s = QCoreApplication::instance()->findChild<QWidgetSlots*>();
+    QWidgetSlots *s = QCoreApplication::instance()->findChild<QWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,19 +24,19 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAbstractSliderSlots: public QObject
+class QAbstractSliderSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractSliderSlots( QObject *parent = 0 );
+public:
+  QAbstractSliderSlots(QObject *parent = 0);
   ~QAbstractSliderSlots();
-  public slots:
-  void actionTriggered( int action );
-  void rangeChanged( int min, int max );
-  void sliderMoved( int value );
+public slots:
+  void actionTriggered(int action);
+  void rangeChanged(int min, int max);
+  void sliderMoved(int value);
   void sliderPressed();
   void sliderReleased();
-  void valueChanged( int value );
+  void valueChanged(int value);
 };
 
 #endif /* QABSTRACTSLIDERSLOTS_H */

@@ -12,7 +12,7 @@
 
 #include "QAbstractSpinBoxSlots.hpp"
 
-QAbstractSpinBoxSlots::QAbstractSpinBoxSlots( QObject *parent ) : QObject( parent )
+QAbstractSpinBoxSlots::QAbstractSpinBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QAbstractSpinBoxSlots::~QAbstractSpinBoxSlots()
 
 void QAbstractSpinBoxSlots::editingFinished()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "editingFinished()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSPINBOX");
 
@@ -36,15 +36,15 @@ void QAbstractSpinBoxSlots::editingFinished()
   }
 }
 
-void QAbstractSpinBoxSlots_connect_signal(const QString & signal, const QString & slot)
+void QAbstractSpinBoxSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox *obj = (QAbstractSpinBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAbstractSpinBoxSlots * s = QCoreApplication::instance()->findChild<QAbstractSpinBoxSlots*>();
+    QAbstractSpinBoxSlots *s = QCoreApplication::instance()->findChild<QAbstractSpinBoxSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAbstractSpinBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

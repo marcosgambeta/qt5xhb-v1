@@ -25,19 +25,19 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QButtonGroupSlots: public QObject
+class QButtonGroupSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QButtonGroupSlots( QObject *parent = 0 );
+public:
+  QButtonGroupSlots(QObject *parent = 0);
   ~QButtonGroupSlots();
-  public slots:
-  void buttonClicked( QAbstractButton * button );
-  void buttonClicked( int id );
-  void buttonPressed( QAbstractButton * button );
-  void buttonPressed( int id );
-  void buttonReleased( QAbstractButton * button );
-  void buttonReleased( int id );
+public slots:
+  void buttonClicked(QAbstractButton *button);
+  void buttonClicked(int id);
+  void buttonPressed(QAbstractButton *button);
+  void buttonPressed(int id);
+  void buttonReleased(QAbstractButton *button);
+  void buttonReleased(int id);
 };
 
 #endif /* QBUTTONGROUPSLOTS_H */

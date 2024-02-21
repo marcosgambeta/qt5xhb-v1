@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtWidgets/QKeySequenceEdit>
 #endif
 
@@ -26,18 +26,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QKeySequenceEditSlots: public QObject
+class QKeySequenceEditSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QKeySequenceEditSlots( QObject *parent = 0 );
+public:
+  QKeySequenceEditSlots(QObject *parent = 0);
   ~QKeySequenceEditSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   void editingFinished();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void keySequenceChanged( const QKeySequence & keySequence );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void keySequenceChanged(const QKeySequence &keySequence);
 #endif
 };
 

@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGraphicsRotationSlots: public QObject
+class QGraphicsRotationSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGraphicsRotationSlots( QObject *parent = 0 );
+public:
+  QGraphicsRotationSlots(QObject *parent = 0);
   ~QGraphicsRotationSlots();
-  public slots:
+public slots:
   void angleChanged();
   void axisChanged();
   void originChanged();

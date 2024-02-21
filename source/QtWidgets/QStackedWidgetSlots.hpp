@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QStackedWidgetSlots: public QObject
+class QStackedWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QStackedWidgetSlots( QObject *parent = 0 );
+public:
+  QStackedWidgetSlots(QObject *parent = 0);
   ~QStackedWidgetSlots();
-  public slots:
-  void currentChanged( int index );
-  void widgetRemoved( int index );
+public slots:
+  void currentChanged(int index);
+  void widgetRemoved(int index);
 };
 
 #endif /* QSTACKEDWIDGETSLOTS_H */

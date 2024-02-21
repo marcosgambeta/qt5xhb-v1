@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QCalendarWidgetSlots: public QObject
+class QCalendarWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCalendarWidgetSlots( QObject *parent = 0 );
+public:
+  QCalendarWidgetSlots(QObject *parent = 0);
   ~QCalendarWidgetSlots();
-  public slots:
-  void activated( const QDate & date );
-  void clicked( const QDate & date );
-  void currentPageChanged( int year, int month );
+public slots:
+  void activated(const QDate &date);
+  void clicked(const QDate &date);
+  void currentPageChanged(int year, int month);
   void selectionChanged();
 };
 

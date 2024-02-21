@@ -12,7 +12,7 @@
 
 #include "QDoubleSpinBoxSlots.hpp"
 
-QDoubleSpinBoxSlots::QDoubleSpinBoxSlots( QObject *parent ) : QObject( parent )
+QDoubleSpinBoxSlots::QDoubleSpinBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QDoubleSpinBoxSlots::~QDoubleSpinBoxSlots()
 {
 }
 
-void QDoubleSpinBoxSlots::valueChanged( double d )
+void QDoubleSpinBoxSlots::valueChanged(double d)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged(double)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOUBLESPINBOX");
-    PHB_ITEM pd = hb_itemPutND( NULL, d );
+    PHB_ITEM pd = hb_itemPutND(NULL, d);
 
     hb_vmEvalBlockV(cb, 2, psender, pd);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pd );
+    hb_itemRelease(pd);
   }
 }
 
-void QDoubleSpinBoxSlots::valueChanged( const QString & text )
+void QDoubleSpinBoxSlots::valueChanged(const QString &text)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDOUBLESPINBOX");
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
+    PHB_ITEM ptext = hb_itemPutC(NULL, QSTRINGTOSTRING(text));
 
     hb_vmEvalBlockV(cb, 2, psender, ptext);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ptext );
+    hb_itemRelease(ptext);
   }
 }
 
-void QDoubleSpinBoxSlots_connect_signal(const QString & signal, const QString & slot)
+void QDoubleSpinBoxSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDoubleSpinBox *obj = (QDoubleSpinBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDoubleSpinBoxSlots * s = QCoreApplication::instance()->findChild<QDoubleSpinBoxSlots*>();
+    QDoubleSpinBoxSlots *s = QCoreApplication::instance()->findChild<QDoubleSpinBoxSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDoubleSpinBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,20 +24,20 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QTextEditSlots: public QObject
+class QTextEditSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTextEditSlots( QObject *parent = 0 );
+public:
+  QTextEditSlots(QObject *parent = 0);
   ~QTextEditSlots();
-  public slots:
-  void copyAvailable( bool yes );
-  void currentCharFormatChanged( const QTextCharFormat & f );
+public slots:
+  void copyAvailable(bool yes);
+  void currentCharFormatChanged(const QTextCharFormat &f);
   void cursorPositionChanged();
-  void redoAvailable( bool available );
+  void redoAvailable(bool available);
   void selectionChanged();
   void textChanged();
-  void undoAvailable( bool available );
+  void undoAvailable(bool available);
 };
 
 #endif /* QTEXTEDITSLOTS_H */

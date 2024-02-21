@@ -12,7 +12,7 @@
 
 #include "QTabBarSlots.hpp"
 
-QTabBarSlots::QTabBarSlots( QObject *parent ) : QObject( parent )
+QTabBarSlots::QTabBarSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,71 +20,71 @@ QTabBarSlots::~QTabBarSlots()
 {
 }
 
-void QTabBarSlots::currentChanged( int index )
+void QTabBarSlots::currentChanged(int index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABBAR");
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindex );
+    hb_itemRelease(pindex);
   }
 }
 
-void QTabBarSlots::tabCloseRequested( int index )
+void QTabBarSlots::tabCloseRequested(int index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tabCloseRequested(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABBAR");
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindex );
+    hb_itemRelease(pindex);
   }
 }
 
-void QTabBarSlots::tabMoved( int from, int to )
+void QTabBarSlots::tabMoved(int from, int to)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tabMoved(int,int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABBAR");
-    PHB_ITEM pfrom = hb_itemPutNI( NULL, from );
-    PHB_ITEM pto = hb_itemPutNI( NULL, to );
+    PHB_ITEM pfrom = hb_itemPutNI(NULL, from);
+    PHB_ITEM pto = hb_itemPutNI(NULL, to);
 
     hb_vmEvalBlockV(cb, 3, psender, pfrom, pto);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfrom );
-    hb_itemRelease( pto );
+    hb_itemRelease(pfrom);
+    hb_itemRelease(pto);
   }
 }
 
-void QTabBarSlots_connect_signal(const QString & signal, const QString & slot)
+void QTabBarSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QTabBar * obj = (QTabBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QTabBarSlots * s = QCoreApplication::instance()->findChild<QTabBarSlots*>();
+    QTabBarSlots *s = QCoreApplication::instance()->findChild<QTabBarSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QTabBarSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

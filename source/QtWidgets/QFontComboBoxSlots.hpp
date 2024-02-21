@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QFontComboBoxSlots: public QObject
+class QFontComboBoxSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QFontComboBoxSlots( QObject *parent = 0 );
+public:
+  QFontComboBoxSlots(QObject *parent = 0);
   ~QFontComboBoxSlots();
-  public slots:
-  void currentFontChanged( const QFont & font );
+public slots:
+  void currentFontChanged(const QFont &font);
 };
 
 #endif /* QFONTCOMBOBOXSLOTS_H */

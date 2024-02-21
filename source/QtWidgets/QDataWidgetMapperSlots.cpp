@@ -12,7 +12,7 @@
 
 #include "QDataWidgetMapperSlots.hpp"
 
-QDataWidgetMapperSlots::QDataWidgetMapperSlots( QObject *parent ) : QObject( parent )
+QDataWidgetMapperSlots::QDataWidgetMapperSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QDataWidgetMapperSlots::~QDataWidgetMapperSlots()
 {
 }
 
-void QDataWidgetMapperSlots::currentIndexChanged( int index )
+void QDataWidgetMapperSlots::currentIndexChanged(int index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentIndexChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATAWIDGETMAPPER");
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindex );
+    hb_itemRelease(pindex);
   }
 }
 
-void QDataWidgetMapperSlots_connect_signal(const QString & signal, const QString & slot)
+void QDataWidgetMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDataWidgetMapper *obj = (QDataWidgetMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDataWidgetMapperSlots * s = QCoreApplication::instance()->findChild<QDataWidgetMapperSlots*>();
+    QDataWidgetMapperSlots *s = QCoreApplication::instance()->findChild<QDataWidgetMapperSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDataWidgetMapperSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

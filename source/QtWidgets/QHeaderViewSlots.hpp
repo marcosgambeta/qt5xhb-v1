@@ -24,24 +24,24 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QHeaderViewSlots: public QObject
+class QHeaderViewSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QHeaderViewSlots( QObject *parent = 0 );
+public:
+  QHeaderViewSlots(QObject *parent = 0);
   ~QHeaderViewSlots();
-  public slots:
+public slots:
   void geometriesChanged();
-  void sectionAutoResize( int logicalIndex, QHeaderView::ResizeMode mode );
-  void sectionClicked( int logicalIndex );
-  void sectionCountChanged( int oldCount, int newCount );
-  void sectionDoubleClicked( int logicalIndex );
-  void sectionEntered( int logicalIndex );
-  void sectionHandleDoubleClicked( int logicalIndex );
-  void sectionMoved( int logicalIndex, int oldVisualIndex, int newVisualIndex );
-  void sectionPressed( int logicalIndex );
-  void sectionResized( int logicalIndex, int oldSize, int newSize );
-  void sortIndicatorChanged( int logicalIndex, Qt::SortOrder order );
+  void sectionAutoResize(int logicalIndex, QHeaderView::ResizeMode mode);
+  void sectionClicked(int logicalIndex);
+  void sectionCountChanged(int oldCount, int newCount);
+  void sectionDoubleClicked(int logicalIndex);
+  void sectionEntered(int logicalIndex);
+  void sectionHandleDoubleClicked(int logicalIndex);
+  void sectionMoved(int logicalIndex, int oldVisualIndex, int newVisualIndex);
+  void sectionPressed(int logicalIndex);
+  void sectionResized(int logicalIndex, int oldSize, int newSize);
+  void sortIndicatorChanged(int logicalIndex, Qt::SortOrder order);
 };
 
 #endif /* QHEADERVIEWSLOTS_H */
