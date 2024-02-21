@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QVirtualKeyboardInputEngineSlots: public QObject
+class QVirtualKeyboardInputEngineSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QVirtualKeyboardInputEngineSlots( QObject *parent = 0 );
+public:
+  QVirtualKeyboardInputEngineSlots(QObject *parent = 0);
   ~QVirtualKeyboardInputEngineSlots();
-  public slots:
-  void virtualKeyClicked( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers, bool isAutoRepeat );
-  void activeKeyChanged( Qt::Key key );
-  void previousKeyChanged( Qt::Key key );
+public slots:
+  void virtualKeyClicked(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers, bool isAutoRepeat);
+  void activeKeyChanged(Qt::Key key);
+  void previousKeyChanged(Qt::Key key);
   void inputMethodChanged();
   void inputMethodReset();
   void inputMethodUpdate();

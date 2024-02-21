@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QVirtualKeyboardAbstractInputMethodSlots: public QObject
+class QVirtualKeyboardAbstractInputMethodSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QVirtualKeyboardAbstractInputMethodSlots( QObject *parent = 0 );
+public:
+  QVirtualKeyboardAbstractInputMethodSlots(QObject *parent = 0);
   ~QVirtualKeyboardAbstractInputMethodSlots();
-  public slots:
-  void selectionListChanged( QVirtualKeyboardSelectionListModel::Type type );
-  void selectionListActiveItemChanged( QVirtualKeyboardSelectionListModel::Type type, int index );
+public slots:
+  void selectionListChanged(QVirtualKeyboardSelectionListModel::Type type);
+  void selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type type, int index);
   void selectionListsChanged();
 };
 

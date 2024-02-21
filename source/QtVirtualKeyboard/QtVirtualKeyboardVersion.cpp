@@ -13,7 +13,7 @@
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtVirtualKeyboard/QtVirtualKeyboardVersion>
 #endif
 #endif
@@ -23,25 +23,25 @@
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtVirtualKeyboard/QtVirtualKeyboardVersion>
 #endif
 #endif
 
-HB_FUNC( QTVIRTUALKEYBOARD_VERSION_STR )
+HB_FUNC(QTVIRTUALKEYBOARD_VERSION_STR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  hb_retc( (const char *) QTVIRTUALKEYBOARD_VERSION_STR );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  hb_retc((const char *)QTVIRTUALKEYBOARD_VERSION_STR);
 #else
-  hb_retc( (const char *) "" );
+  hb_retc((const char *)"");
 #endif
 }
 
-HB_FUNC( QTVIRTUALKEYBOARD_VERSION )
+HB_FUNC(QTVIRTUALKEYBOARD_VERSION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  hb_retni( QTVIRTUALKEYBOARD_VERSION );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  hb_retni(QTVIRTUALKEYBOARD_VERSION);
 #else
-  hb_retni( 0 );
+  hb_retni(0);
 #endif
 }

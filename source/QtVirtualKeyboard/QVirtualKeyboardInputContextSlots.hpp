@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QVirtualKeyboardInputContextSlots: public QObject
+class QVirtualKeyboardInputContextSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QVirtualKeyboardInputContextSlots( QObject *parent = 0 );
+public:
+  QVirtualKeyboardInputContextSlots(QObject *parent = 0);
   ~QVirtualKeyboardInputContextSlots();
-  public slots:
+public slots:
   void preeditTextChanged();
   void inputMethodHintsChanged();
   void surroundingTextChanged();

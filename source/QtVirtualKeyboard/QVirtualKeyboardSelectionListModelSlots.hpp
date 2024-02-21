@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QVirtualKeyboardSelectionListModelSlots: public QObject
+class QVirtualKeyboardSelectionListModelSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QVirtualKeyboardSelectionListModelSlots( QObject *parent = 0 );
+public:
+  QVirtualKeyboardSelectionListModelSlots(QObject *parent = 0);
   ~QVirtualKeyboardSelectionListModelSlots();
-  public slots:
+public slots:
   void countChanged();
-  void activeItemChanged( int index );
-  void itemSelected( int index );
+  void activeItemChanged(int index);
+  void itemSelected(int index);
 };
 
 #endif /* QVIRTUALKEYBOARDSELECTIONLISTMODELSLOTS_H */

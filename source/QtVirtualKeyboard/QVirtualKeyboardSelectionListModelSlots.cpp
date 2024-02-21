@@ -12,7 +12,7 @@
 
 #include "QVirtualKeyboardSelectionListModelSlots.hpp"
 
-QVirtualKeyboardSelectionListModelSlots::QVirtualKeyboardSelectionListModelSlots( QObject *parent ) : QObject( parent )
+QVirtualKeyboardSelectionListModelSlots::QVirtualKeyboardSelectionListModelSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QVirtualKeyboardSelectionListModelSlots::~QVirtualKeyboardSelectionListModelSlot
 
 void QVirtualKeyboardSelectionListModelSlots::countChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "countChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDSELECTIONLISTMODEL");
 
@@ -36,51 +36,52 @@ void QVirtualKeyboardSelectionListModelSlots::countChanged()
   }
 }
 
-void QVirtualKeyboardSelectionListModelSlots::activeItemChanged( int index )
+void QVirtualKeyboardSelectionListModelSlots::activeItemChanged(int index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activeItemChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDSELECTIONLISTMODEL");
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindex );
+    hb_itemRelease(pindex);
   }
 }
 
-void QVirtualKeyboardSelectionListModelSlots::itemSelected( int index )
+void QVirtualKeyboardSelectionListModelSlots::itemSelected(int index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "itemSelected(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDSELECTIONLISTMODEL");
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pindex );
+    hb_itemRelease(pindex);
   }
 }
 
-void QVirtualKeyboardSelectionListModelSlots_connect_signal(const QString & signal, const QString & slot)
+void QVirtualKeyboardSelectionListModelSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QVirtualKeyboardSelectionListModel * obj = (QVirtualKeyboardSelectionListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVirtualKeyboardSelectionListModel *obj = (QVirtualKeyboardSelectionListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QVirtualKeyboardSelectionListModelSlots * s = QCoreApplication::instance()->findChild<QVirtualKeyboardSelectionListModelSlots*>();
+    QVirtualKeyboardSelectionListModelSlots *s =
+        QCoreApplication::instance()->findChild<QVirtualKeyboardSelectionListModelSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QVirtualKeyboardSelectionListModelSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

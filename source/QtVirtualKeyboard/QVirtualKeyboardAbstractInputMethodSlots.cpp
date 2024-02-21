@@ -12,7 +12,7 @@
 
 #include "QVirtualKeyboardAbstractInputMethodSlots.hpp"
 
-QVirtualKeyboardAbstractInputMethodSlots::QVirtualKeyboardAbstractInputMethodSlots( QObject *parent ) : QObject( parent )
+QVirtualKeyboardAbstractInputMethodSlots::QVirtualKeyboardAbstractInputMethodSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,54 @@ QVirtualKeyboardAbstractInputMethodSlots::~QVirtualKeyboardAbstractInputMethodSl
 {
 }
 
-void QVirtualKeyboardAbstractInputMethodSlots::selectionListChanged( QVirtualKeyboardSelectionListModel::Type type )
+void QVirtualKeyboardAbstractInputMethodSlots::selectionListChanged(QVirtualKeyboardSelectionListModel::Type type)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)");
+  PHB_ITEM cb =
+      Qt5xHb::Signals_return_codeblock(object, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD");
-    PHB_ITEM ptype = hb_itemPutNI( NULL, static_cast<int>(type) );
+    PHB_ITEM ptype = hb_itemPutNI(NULL, static_cast<int>(type));
 
     hb_vmEvalBlockV(cb, 2, psender, ptype);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ptype );
+    hb_itemRelease(ptype);
   }
 }
 
-void QVirtualKeyboardAbstractInputMethodSlots::selectionListActiveItemChanged( QVirtualKeyboardSelectionListModel::Type type, int index )
+void QVirtualKeyboardAbstractInputMethodSlots::selectionListActiveItemChanged(
+    QVirtualKeyboardSelectionListModel::Type type, int index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)");
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(
+      object, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD");
-    PHB_ITEM ptype = hb_itemPutNI( NULL, static_cast<int>(type) );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM ptype = hb_itemPutNI(NULL, static_cast<int>(type));
+    PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
     hb_vmEvalBlockV(cb, 3, psender, ptype, pindex);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ptype );
-    hb_itemRelease( pindex );
+    hb_itemRelease(ptype);
+    hb_itemRelease(pindex);
   }
 }
 
 void QVirtualKeyboardAbstractInputMethodSlots::selectionListsChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionListsChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD");
 
@@ -74,15 +77,16 @@ void QVirtualKeyboardAbstractInputMethodSlots::selectionListsChanged()
   }
 }
 
-void QVirtualKeyboardAbstractInputMethodSlots_connect_signal(const QString & signal, const QString & slot)
+void QVirtualKeyboardAbstractInputMethodSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QVirtualKeyboardAbstractInputMethod * obj = (QVirtualKeyboardAbstractInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVirtualKeyboardAbstractInputMethod *obj = (QVirtualKeyboardAbstractInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QVirtualKeyboardAbstractInputMethodSlots * s = QCoreApplication::instance()->findChild<QVirtualKeyboardAbstractInputMethodSlots*>();
+    QVirtualKeyboardAbstractInputMethodSlots *s =
+        QCoreApplication::instance()->findChild<QVirtualKeyboardAbstractInputMethodSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QVirtualKeyboardAbstractInputMethodSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

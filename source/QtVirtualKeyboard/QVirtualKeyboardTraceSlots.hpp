@@ -24,19 +24,19 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QVirtualKeyboardTraceSlots: public QObject
+class QVirtualKeyboardTraceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QVirtualKeyboardTraceSlots( QObject *parent = 0 );
+public:
+  QVirtualKeyboardTraceSlots(QObject *parent = 0);
   ~QVirtualKeyboardTraceSlots();
-  public slots:
-  void traceIdChanged( int traceId );
+public slots:
+  void traceIdChanged(int traceId);
   void channelsChanged();
-  void lengthChanged( int length );
-  void finalChanged( bool isFinal );
-  void canceledChanged( bool isCanceled );
-  void opacityChanged( qreal opacity );
+  void lengthChanged(int length);
+  void finalChanged(bool isFinal);
+  void canceledChanged(bool isCanceled);
+  void opacityChanged(qreal opacity);
 };
 
 #endif /* QVIRTUALKEYBOARDTRACESLOTS_H */
