@@ -24,19 +24,19 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QQuickWebEngineScriptSlots: public QObject
+class QQuickWebEngineScriptSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QQuickWebEngineScriptSlots( QObject *parent = 0 );
+public:
+  QQuickWebEngineScriptSlots(QObject *parent = 0);
   ~QQuickWebEngineScriptSlots();
-  public slots:
-  void injectionPointChanged( QQuickWebEngineScript::InjectionPoint injectionPoint );
-  void nameChanged( const QString & name );
-  void runOnSubframesChanged( bool on );
-  void sourceCodeChanged( const QString & code );
-  void sourceUrlChanged( const QUrl & url );
-  void worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId );
+public slots:
+  void injectionPointChanged(QQuickWebEngineScript::InjectionPoint injectionPoint);
+  void nameChanged(const QString &name);
+  void runOnSubframesChanged(bool on);
+  void sourceCodeChanged(const QString &code);
+  void sourceUrlChanged(const QUrl &url);
+  void worldIdChanged(QQuickWebEngineScript::ScriptWorldId scriptWorldId);
 };
 
 #endif /* QQUICKWEBENGINESCRIPTSLOTS_H */

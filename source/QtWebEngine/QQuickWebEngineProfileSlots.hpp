@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QQuickWebEngineProfileSlots: public QObject
+class QQuickWebEngineProfileSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QQuickWebEngineProfileSlots( QObject *parent = 0 );
+public:
+  QQuickWebEngineProfileSlots(QObject *parent = 0);
   ~QQuickWebEngineProfileSlots();
-  public slots:
+public slots:
   void cachePathChanged();
   void httpAcceptLanguageChanged();
   void httpCacheMaximumSizeChanged();

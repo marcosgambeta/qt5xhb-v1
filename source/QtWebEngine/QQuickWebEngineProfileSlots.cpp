@@ -12,7 +12,7 @@
 
 #include "QQuickWebEngineProfileSlots.hpp"
 
-QQuickWebEngineProfileSlots::QQuickWebEngineProfileSlots( QObject *parent ) : QObject( parent )
+QQuickWebEngineProfileSlots::QQuickWebEngineProfileSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QQuickWebEngineProfileSlots::~QQuickWebEngineProfileSlots()
 
 void QQuickWebEngineProfileSlots::cachePathChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "cachePathChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -38,11 +38,11 @@ void QQuickWebEngineProfileSlots::cachePathChanged()
 
 void QQuickWebEngineProfileSlots::httpAcceptLanguageChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "httpAcceptLanguageChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -54,11 +54,11 @@ void QQuickWebEngineProfileSlots::httpAcceptLanguageChanged()
 
 void QQuickWebEngineProfileSlots::httpCacheMaximumSizeChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "httpCacheMaximumSizeChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -70,11 +70,11 @@ void QQuickWebEngineProfileSlots::httpCacheMaximumSizeChanged()
 
 void QQuickWebEngineProfileSlots::httpCacheTypeChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "httpCacheTypeChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -86,11 +86,11 @@ void QQuickWebEngineProfileSlots::httpCacheTypeChanged()
 
 void QQuickWebEngineProfileSlots::httpUserAgentChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "httpUserAgentChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -102,11 +102,11 @@ void QQuickWebEngineProfileSlots::httpUserAgentChanged()
 
 void QQuickWebEngineProfileSlots::offTheRecordChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "offTheRecordChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -118,11 +118,11 @@ void QQuickWebEngineProfileSlots::offTheRecordChanged()
 
 void QQuickWebEngineProfileSlots::persistentCookiesPolicyChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "persistentCookiesPolicyChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -134,11 +134,11 @@ void QQuickWebEngineProfileSlots::persistentCookiesPolicyChanged()
 
 void QQuickWebEngineProfileSlots::persistentStoragePathChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "persistentStoragePathChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -150,11 +150,11 @@ void QQuickWebEngineProfileSlots::persistentStoragePathChanged()
 
 void QQuickWebEngineProfileSlots::spellCheckEnabledChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "spellCheckEnabledChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -166,11 +166,11 @@ void QQuickWebEngineProfileSlots::spellCheckEnabledChanged()
 
 void QQuickWebEngineProfileSlots::spellCheckLanguagesChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "spellCheckLanguagesChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -182,11 +182,11 @@ void QQuickWebEngineProfileSlots::spellCheckLanguagesChanged()
 
 void QQuickWebEngineProfileSlots::storageNameChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "storageNameChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINEPROFILE");
 
@@ -196,15 +196,15 @@ void QQuickWebEngineProfileSlots::storageNameChanged()
   }
 }
 
-void QQuickWebEngineProfileSlots_connect_signal(const QString & signal, const QString & slot)
+void QQuickWebEngineProfileSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile *obj = (QQuickWebEngineProfile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QQuickWebEngineProfileSlots * s = QCoreApplication::instance()->findChild<QQuickWebEngineProfileSlots*>();
+    QQuickWebEngineProfileSlots *s = QCoreApplication::instance()->findChild<QQuickWebEngineProfileSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QQuickWebEngineProfileSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
