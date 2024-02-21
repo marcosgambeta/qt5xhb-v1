@@ -12,7 +12,7 @@
 
 #include "QWinTaskbarProgressSlots.hpp"
 
-QWinTaskbarProgressSlots::QWinTaskbarProgressSlots( QObject *parent ) : QObject( parent )
+QWinTaskbarProgressSlots::QWinTaskbarProgressSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,136 +20,136 @@ QWinTaskbarProgressSlots::~QWinTaskbarProgressSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QWinTaskbarProgressSlots::valueChanged( int value )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+void QWinTaskbarProgressSlots::valueChanged(int value)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
-    PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
+    PHB_ITEM pvalue = hb_itemPutNI(NULL, value);
 
     hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvalue );
+    hb_itemRelease(pvalue);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QWinTaskbarProgressSlots::minimumChanged( int minimum )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+void QWinTaskbarProgressSlots::minimumChanged(int minimum)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minimumChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
-    PHB_ITEM pminimum = hb_itemPutNI( NULL, minimum );
+    PHB_ITEM pminimum = hb_itemPutNI(NULL, minimum);
 
     hb_vmEvalBlockV(cb, 2, psender, pminimum);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pminimum );
+    hb_itemRelease(pminimum);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QWinTaskbarProgressSlots::maximumChanged( int maximum )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+void QWinTaskbarProgressSlots::maximumChanged(int maximum)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maximumChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
-    PHB_ITEM pmaximum = hb_itemPutNI( NULL, maximum );
+    PHB_ITEM pmaximum = hb_itemPutNI(NULL, maximum);
 
     hb_vmEvalBlockV(cb, 2, psender, pmaximum);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pmaximum );
+    hb_itemRelease(pmaximum);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QWinTaskbarProgressSlots::visibilityChanged( bool visible )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+void QWinTaskbarProgressSlots::visibilityChanged(bool visible)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "visibilityChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
-    PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+    PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
     hb_vmEvalBlockV(cb, 2, psender, pvisible);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvisible );
+    hb_itemRelease(pvisible);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QWinTaskbarProgressSlots::pausedChanged( bool paused )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+void QWinTaskbarProgressSlots::pausedChanged(bool paused)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pausedChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
-    PHB_ITEM ppaused = hb_itemPutL( NULL, paused );
+    PHB_ITEM ppaused = hb_itemPutL(NULL, paused);
 
     hb_vmEvalBlockV(cb, 2, psender, ppaused);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ppaused );
+    hb_itemRelease(ppaused);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QWinTaskbarProgressSlots::stoppedChanged( bool stopped )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+void QWinTaskbarProgressSlots::stoppedChanged(bool stopped)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stoppedChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
-    PHB_ITEM pstopped = hb_itemPutL( NULL, stopped );
+    PHB_ITEM pstopped = hb_itemPutL(NULL, stopped);
 
     hb_vmEvalBlockV(cb, 2, psender, pstopped);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstopped );
+    hb_itemRelease(pstopped);
   }
 }
 #endif
 
-void QWinTaskbarProgressSlots_connect_signal(const QString & signal, const QString & slot)
+void QWinTaskbarProgressSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QWinTaskbarProgress *obj = (QWinTaskbarProgress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWinTaskbarProgressSlots * s = QCoreApplication::instance()->findChild<QWinTaskbarProgressSlots*>();
+    QWinTaskbarProgressSlots *s = QCoreApplication::instance()->findChild<QWinTaskbarProgressSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWinTaskbarProgressSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

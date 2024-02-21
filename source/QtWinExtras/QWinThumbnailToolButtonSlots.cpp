@@ -12,7 +12,7 @@
 
 #include "QWinThumbnailToolButtonSlots.hpp"
 
-QWinThumbnailToolButtonSlots::QWinThumbnailToolButtonSlots( QObject *parent ) : QObject( parent )
+QWinThumbnailToolButtonSlots::QWinThumbnailToolButtonSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QWinThumbnailToolButtonSlots::~QWinThumbnailToolButtonSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 void QWinThumbnailToolButtonSlots::clicked()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTHUMBNAILTOOLBUTTON");
 
@@ -38,14 +38,14 @@ void QWinThumbnailToolButtonSlots::clicked()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 void QWinThumbnailToolButtonSlots::changed()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "changed()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTHUMBNAILTOOLBUTTON");
 
@@ -56,16 +56,16 @@ void QWinThumbnailToolButtonSlots::changed()
 }
 #endif
 
-void QWinThumbnailToolButtonSlots_connect_signal(const QString & signal, const QString & slot)
+void QWinThumbnailToolButtonSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * obj = (QWinThumbnailToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QWinThumbnailToolButton *obj = (QWinThumbnailToolButton *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWinThumbnailToolButtonSlots * s = QCoreApplication::instance()->findChild<QWinThumbnailToolButtonSlots*>();
+    QWinThumbnailToolButtonSlots *s = QCoreApplication::instance()->findChild<QWinThumbnailToolButtonSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWinThumbnailToolButtonSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

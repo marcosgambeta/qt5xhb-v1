@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtWinExtras/QWinTaskbarProgress>
 #endif
 
@@ -26,30 +26,30 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QWinTaskbarProgressSlots: public QObject
+class QWinTaskbarProgressSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWinTaskbarProgressSlots( QObject *parent = 0 );
+public:
+  QWinTaskbarProgressSlots(QObject *parent = 0);
   ~QWinTaskbarProgressSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void valueChanged( int value );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void valueChanged(int value);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void minimumChanged( int minimum );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void minimumChanged(int minimum);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void maximumChanged( int maximum );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void maximumChanged(int maximum);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void visibilityChanged( bool visible );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void visibilityChanged(bool visible);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void pausedChanged( bool paused );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void pausedChanged(bool paused);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void stoppedChanged( bool stopped );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void stoppedChanged(bool stopped);
 #endif
 };
 
