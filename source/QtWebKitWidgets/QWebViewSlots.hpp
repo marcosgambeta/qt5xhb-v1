@@ -24,22 +24,22 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QWebViewSlots: public QObject
+class QWebViewSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWebViewSlots( QObject *parent = 0 );
+public:
+  QWebViewSlots(QObject *parent = 0);
   ~QWebViewSlots();
-  public slots:
+public slots:
   void iconChanged();
-  void linkClicked( const QUrl & url );
-  void loadFinished( bool ok );
-  void loadProgress( int progress );
+  void linkClicked(const QUrl &url);
+  void loadFinished(bool ok);
+  void loadProgress(int progress);
   void loadStarted();
   void selectionChanged();
-  void statusBarMessage( const QString & text );
-  void titleChanged( const QString & title );
-  void urlChanged( const QUrl & url );
+  void statusBarMessage(const QString &text);
+  void titleChanged(const QString &title);
+  void urlChanged(const QUrl &url);
 };
 
 #endif /* QWEBVIEWSLOTS_H */

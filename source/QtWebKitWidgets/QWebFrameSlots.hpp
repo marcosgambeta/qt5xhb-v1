@@ -24,22 +24,22 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QWebFrameSlots: public QObject
+class QWebFrameSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWebFrameSlots( QObject *parent = 0 );
+public:
+  QWebFrameSlots(QObject *parent = 0);
   ~QWebFrameSlots();
-  public slots:
-  void contentsSizeChanged( const QSize & size );
+public slots:
+  void contentsSizeChanged(const QSize &size);
   void iconChanged();
   void initialLayoutCompleted();
   void javaScriptWindowObjectCleared();
-  void loadFinished( bool ok );
+  void loadFinished(bool ok);
   void loadStarted();
   void pageChanged();
-  void titleChanged( const QString & title );
-  void urlChanged( const QUrl & url );
+  void titleChanged(const QString &title);
+  void urlChanged(const QUrl &url);
 };
 
 #endif /* QWEBFRAMESLOTS_H */
