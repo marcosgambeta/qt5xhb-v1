@@ -12,7 +12,7 @@
 
 #include "QDeclarativeComponentSlots.hpp"
 
-QDeclarativeComponentSlots::QDeclarativeComponentSlots( QObject *parent ) : QObject( parent )
+QDeclarativeComponentSlots::QDeclarativeComponentSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QDeclarativeComponentSlots::~QDeclarativeComponentSlots()
 {
 }
 
-void QDeclarativeComponentSlots::progressChanged( qreal progress )
+void QDeclarativeComponentSlots::progressChanged(qreal progress)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "progressChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVECOMPONENT");
-    PHB_ITEM pprogress = hb_itemPutND( NULL, progress );
+    PHB_ITEM pprogress = hb_itemPutND(NULL, progress);
 
     hb_vmEvalBlockV(cb, 2, psender, pprogress);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pprogress );
+    hb_itemRelease(pprogress);
   }
 }
 
-void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status status )
+void QDeclarativeComponentSlots::statusChanged(QDeclarativeComponent::Status status)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QDeclarativeComponent::Status)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVECOMPONENT");
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, static_cast<int>(status) );
+    PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
 
     hb_vmEvalBlockV(cb, 2, psender, pstatus);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstatus );
+    hb_itemRelease(pstatus);
   }
 }
 
-void QDeclarativeComponentSlots_connect_signal(const QString & signal, const QString & slot)
+void QDeclarativeComponentSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDeclarativeComponentSlots * s = QCoreApplication::instance()->findChild<QDeclarativeComponentSlots*>();
+    QDeclarativeComponentSlots *s = QCoreApplication::instance()->findChild<QDeclarativeComponentSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDeclarativeComponentSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -12,7 +12,7 @@
 
 #include "QDeclarativeEngineSlots.hpp"
 
-QDeclarativeEngineSlots::QDeclarativeEngineSlots( QObject *parent ) : QObject( parent )
+QDeclarativeEngineSlots::QDeclarativeEngineSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QDeclarativeEngineSlots::~QDeclarativeEngineSlots()
 
 void QDeclarativeEngineSlots::quit()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "quit()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVEENGINE");
 
@@ -36,31 +36,31 @@ void QDeclarativeEngineSlots::quit()
   }
 }
 
-void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warnings )
+void QDeclarativeEngineSlots::warnings(const QList<QDeclarativeError> &warnings)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "warnings(QList<QDeclarativeError>)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVEENGINE");
     PHB_DYNS pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
     PHB_ITEM pwarnings = hb_itemArrayNew(0);
-    if( pDynSym != NULL )
+    if (pDynSym != NULL)
     {
-      for( int i = 0; i < warnings.count(); i++ )
+      for (int i = 0; i < warnings.count(); i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pTempObject = hb_itemNew( NULL );
-        hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QDeclarativeError( warnings [i] ) );
-        hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-        hb_arrayAddForward( pwarnings, pTempObject );
-        hb_itemRelease( pTempObject );
-        hb_itemRelease( pTempItem );
+        PHB_ITEM pTempObject = hb_itemNew(NULL);
+        hb_itemCopy(pTempObject, hb_stackReturnItem());
+        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, new QDeclarativeError(warnings[i]));
+        hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
+        hb_arrayAddForward(pwarnings, pTempObject);
+        hb_itemRelease(pTempObject);
+        hb_itemRelease(pTempItem);
       }
     }
     else
@@ -71,19 +71,19 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
     hb_vmEvalBlockV(cb, 2, psender, pwarnings);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pwarnings );
+    hb_itemRelease(pwarnings);
   }
 }
 
-void QDeclarativeEngineSlots_connect_signal(const QString & signal, const QString & slot)
+void QDeclarativeEngineSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDeclarativeEngineSlots * s = QCoreApplication::instance()->findChild<QDeclarativeEngineSlots*>();
+    QDeclarativeEngineSlots *s = QCoreApplication::instance()->findChild<QDeclarativeEngineSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDeclarativeEngineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

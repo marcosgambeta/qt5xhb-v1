@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDeclarativeViewSlots: public QObject
+class QDeclarativeViewSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDeclarativeViewSlots( QObject *parent = 0 );
+public:
+  QDeclarativeViewSlots(QObject *parent = 0);
   ~QDeclarativeViewSlots();
-  public slots:
-  void sceneResized( QSize size );
-  void statusChanged( QDeclarativeView::Status status );
+public slots:
+  void sceneResized(QSize size);
+  void statusChanged(QDeclarativeView::Status status);
 };
 
 #endif /* QDECLARATIVEVIEWSLOTS_H */

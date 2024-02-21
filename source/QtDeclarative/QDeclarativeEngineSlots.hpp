@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QDeclarativeEngineSlots: public QObject
+class QDeclarativeEngineSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDeclarativeEngineSlots( QObject *parent = 0 );
+public:
+  QDeclarativeEngineSlots(QObject *parent = 0);
   ~QDeclarativeEngineSlots();
-  public slots:
+public slots:
   void quit();
-  void warnings( const QList<QDeclarativeError> & warnings );
+  void warnings(const QList<QDeclarativeError> &warnings);
 };
 
 #endif /* QDECLARATIVEENGINESLOTS_H */
