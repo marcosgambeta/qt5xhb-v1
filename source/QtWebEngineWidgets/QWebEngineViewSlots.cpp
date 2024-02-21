@@ -12,7 +12,7 @@
 
 #include "QWebEngineViewSlots.hpp"
 
-QWebEngineViewSlots::QWebEngineViewSlots( QObject *parent ) : QObject( parent )
+QWebEngineViewSlots::QWebEngineViewSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QWebEngineViewSlots::~QWebEngineViewSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 void QWebEngineViewSlots::loadStarted()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "loadStarted()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
 
@@ -38,74 +38,74 @@ void QWebEngineViewSlots::loadStarted()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-void QWebEngineViewSlots::loadProgress( int progress )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+void QWebEngineViewSlots::loadProgress(int progress)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "loadProgress(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
-    PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
+    PHB_ITEM pprogress = hb_itemPutNI(NULL, progress);
 
     hb_vmEvalBlockV(cb, 2, psender, pprogress);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pprogress );
+    hb_itemRelease(pprogress);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-void QWebEngineViewSlots::loadFinished( bool b )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+void QWebEngineViewSlots::loadFinished(bool b)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "loadFinished(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
-    PHB_ITEM pb = hb_itemPutL( NULL, b );
+    PHB_ITEM pb = hb_itemPutL(NULL, b);
 
     hb_vmEvalBlockV(cb, 2, psender, pb);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pb );
+    hb_itemRelease(pb);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-void QWebEngineViewSlots::titleChanged( const QString & title )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+void QWebEngineViewSlots::titleChanged(const QString &title)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "titleChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
-    PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
+    PHB_ITEM ptitle = hb_itemPutC(NULL, QSTRINGTOSTRING(title));
 
     hb_vmEvalBlockV(cb, 2, psender, ptitle);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ptitle );
+    hb_itemRelease(ptitle);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 void QWebEngineViewSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
 
@@ -116,56 +116,56 @@ void QWebEngineViewSlots::selectionChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-void QWebEngineViewSlots::urlChanged( const QUrl & url )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+void QWebEngineViewSlots::urlChanged(const QUrl &url)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "urlChanged(QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
+    PHB_ITEM purl = Qt5xHb::Signals_return_object((void *)&url, "QURL");
 
     hb_vmEvalBlockV(cb, 2, psender, purl);
 
     hb_itemRelease(psender);
-    hb_itemRelease( purl );
+    hb_itemRelease(purl);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-void QWebEngineViewSlots::iconUrlChanged( const QUrl & url )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+void QWebEngineViewSlots::iconUrlChanged(const QUrl &url)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "iconUrlChanged(QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
+    PHB_ITEM purl = Qt5xHb::Signals_return_object((void *)&url, "QURL");
 
     hb_vmEvalBlockV(cb, 2, psender, purl);
 
     hb_itemRelease(psender);
-    hb_itemRelease( purl );
+    hb_itemRelease(purl);
   }
 }
 #endif
 
-void QWebEngineViewSlots_connect_signal(const QString & signal, const QString & slot)
+void QWebEngineViewSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWebEngineViewSlots * s = QCoreApplication::instance()->findChild<QWebEngineViewSlots*>();
+    QWebEngineViewSlots *s = QCoreApplication::instance()->findChild<QWebEngineViewSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWebEngineViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

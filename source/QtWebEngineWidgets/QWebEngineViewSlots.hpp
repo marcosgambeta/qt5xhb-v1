@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWebEngineWidgets/QWebEngineView>
 #endif
 
@@ -26,33 +26,33 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QWebEngineViewSlots: public QObject
+class QWebEngineViewSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWebEngineViewSlots( QObject *parent = 0 );
+public:
+  QWebEngineViewSlots(QObject *parent = 0);
   ~QWebEngineViewSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   void loadStarted();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void loadProgress( int progress );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void loadProgress(int progress);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void loadFinished( bool b );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void loadFinished(bool b);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void titleChanged( const QString & title );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void titleChanged(const QString &title);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   void selectionChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void urlChanged( const QUrl & url );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void urlChanged(const QUrl &url);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void iconUrlChanged( const QUrl & url );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void iconUrlChanged(const QUrl &url);
 #endif
 };
 
