@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtBluetooth/QBluetoothServer>
 #endif
 
@@ -26,18 +26,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QBluetoothServerSlots: public QObject
+class QBluetoothServerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QBluetoothServerSlots( QObject *parent = 0 );
+public:
+  QBluetoothServerSlots(QObject *parent = 0);
   ~QBluetoothServerSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   void newConnection();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void error( QBluetoothServer::Error error );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void error(QBluetoothServer::Error error);
 #endif
 };
 

@@ -13,7 +13,7 @@
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtBluetooth/QtBluetoothVersion>
 #endif
 #endif
@@ -23,25 +23,25 @@
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtBluetooth/QtBluetoothVersion>
 #endif
 #endif
 
-HB_FUNC( QTBLUETOOTH_VERSION_STR )
+HB_FUNC(QTBLUETOOTH_VERSION_STR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retc( (const char *) QTBLUETOOTH_VERSION_STR );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  hb_retc((const char *)QTBLUETOOTH_VERSION_STR);
 #else
-  hb_retc( (const char *) "" );
+  hb_retc((const char *)"");
 #endif
 }
 
-HB_FUNC( QTBLUETOOTH_VERSION )
+HB_FUNC(QTBLUETOOTH_VERSION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retni( QTBLUETOOTH_VERSION );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  hb_retni(QTBLUETOOTH_VERSION);
 #else
-  hb_retni( 0 );
+  hb_retni(0);
 #endif
 }

@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtBluetooth/QBluetoothTransferManager>
 #include <QtBluetooth/QBluetoothTransferReply>
 #endif
@@ -27,15 +27,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QBluetoothTransferManagerSlots: public QObject
+class QBluetoothTransferManagerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QBluetoothTransferManagerSlots( QObject *parent = 0 );
+public:
+  QBluetoothTransferManagerSlots(QObject *parent = 0);
   ~QBluetoothTransferManagerSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void finished( QBluetoothTransferReply * reply );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void finished(QBluetoothTransferReply *reply);
 #endif
 };
 

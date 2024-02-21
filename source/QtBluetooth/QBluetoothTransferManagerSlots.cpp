@@ -12,7 +12,7 @@
 
 #include "QBluetoothTransferManagerSlots.hpp"
 
-QBluetoothTransferManagerSlots::QBluetoothTransferManagerSlots( QObject *parent ) : QObject( parent )
+QBluetoothTransferManagerSlots::QBluetoothTransferManagerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QBluetoothTransferManagerSlots::~QBluetoothTransferManagerSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QBluetoothTransferManagerSlots::finished( QBluetoothTransferReply * reply )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+void QBluetoothTransferManagerSlots::finished(QBluetoothTransferReply *reply)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(QBluetoothTransferReply*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHTRANSFERMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QBLUETOOTHTRANSFERREPLY");
@@ -40,16 +40,16 @@ void QBluetoothTransferManagerSlots::finished( QBluetoothTransferReply * reply )
 }
 #endif
 
-void QBluetoothTransferManagerSlots_connect_signal(const QString & signal, const QString & slot)
+void QBluetoothTransferManagerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferManager * obj = (QBluetoothTransferManager *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QBluetoothTransferManager *obj = (QBluetoothTransferManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QBluetoothTransferManagerSlots * s = QCoreApplication::instance()->findChild<QBluetoothTransferManagerSlots*>();
+    QBluetoothTransferManagerSlots *s = QCoreApplication::instance()->findChild<QBluetoothTransferManagerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QBluetoothTransferManagerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

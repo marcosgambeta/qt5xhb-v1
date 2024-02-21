@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtBluetooth/QBluetoothServiceDiscoveryAgent>
 #endif
 
@@ -26,24 +26,24 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QBluetoothServiceDiscoveryAgentSlots: public QObject
+class QBluetoothServiceDiscoveryAgentSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QBluetoothServiceDiscoveryAgentSlots( QObject *parent = 0 );
+public:
+  QBluetoothServiceDiscoveryAgentSlots(QObject *parent = 0);
   ~QBluetoothServiceDiscoveryAgentSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void serviceDiscovered( const QBluetoothServiceInfo & info );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void serviceDiscovered(const QBluetoothServiceInfo &info);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   void finished();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   void canceled();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void error( QBluetoothServiceDiscoveryAgent::Error error );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void error(QBluetoothServiceDiscoveryAgent::Error error);
 #endif
 };
 

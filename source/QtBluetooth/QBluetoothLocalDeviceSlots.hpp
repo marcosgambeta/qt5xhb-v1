@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtBluetooth/QBluetoothLocalDevice>
 #endif
 
@@ -26,27 +26,27 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QBluetoothLocalDeviceSlots: public QObject
+class QBluetoothLocalDeviceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QBluetoothLocalDeviceSlots( QObject *parent = 0 );
+public:
+  QBluetoothLocalDeviceSlots(QObject *parent = 0);
   ~QBluetoothLocalDeviceSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void hostModeStateChanged( QBluetoothLocalDevice::HostMode state );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void hostModeStateChanged(QBluetoothLocalDevice::HostMode state);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void pairingFinished( const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void pairingFinished(const QBluetoothAddress &address, QBluetoothLocalDevice::Pairing pairing);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void pairingDisplayPinCode( const QBluetoothAddress & address, QString pin );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void pairingDisplayPinCode(const QBluetoothAddress &address, QString pin);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void pairingDisplayConfirmation( const QBluetoothAddress & address, QString pin );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void pairingDisplayConfirmation(const QBluetoothAddress &address, QString pin);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void error( QBluetoothLocalDevice::Error error );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void error(QBluetoothLocalDevice::Error error);
 #endif
 };
 

@@ -12,7 +12,7 @@
 
 #include "QBluetoothServerSlots.hpp"
 
-QBluetoothServerSlots::QBluetoothServerSlots( QObject *parent ) : QObject( parent )
+QBluetoothServerSlots::QBluetoothServerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QBluetoothServerSlots::~QBluetoothServerSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 void QBluetoothServerSlots::newConnection()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "newConnection()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSERVER");
 
@@ -38,17 +38,17 @@ void QBluetoothServerSlots::newConnection()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-void QBluetoothServerSlots::error( QBluetoothServer::Error error )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+void QBluetoothServerSlots::error(QBluetoothServer::Error error)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QBluetoothServer::Error)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSERVER");
-    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
+    PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
     hb_vmEvalBlockV(cb, 2, psender, perror);
 
@@ -58,16 +58,16 @@ void QBluetoothServerSlots::error( QBluetoothServer::Error error )
 }
 #endif
 
-void QBluetoothServerSlots_connect_signal(const QString & signal, const QString & slot)
+void QBluetoothServerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServer * obj = (QBluetoothServer *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QBluetoothServer *obj = (QBluetoothServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QBluetoothServerSlots * s = QCoreApplication::instance()->findChild<QBluetoothServerSlots*>();
+    QBluetoothServerSlots *s = QCoreApplication::instance()->findChild<QBluetoothServerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QBluetoothServerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

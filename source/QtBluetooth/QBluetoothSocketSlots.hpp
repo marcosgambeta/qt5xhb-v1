@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtBluetooth/QBluetoothSocket>
 #endif
 
@@ -26,24 +26,24 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QBluetoothSocketSlots: public QObject
+class QBluetoothSocketSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QBluetoothSocketSlots( QObject *parent = 0 );
+public:
+  QBluetoothSocketSlots(QObject *parent = 0);
   ~QBluetoothSocketSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   void connected();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   void disconnected();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void error( QBluetoothSocket::SocketError error );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void error(QBluetoothSocket::SocketError error);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  void stateChanged( QBluetoothSocket::SocketState state );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  void stateChanged(QBluetoothSocket::SocketState state);
 #endif
 };
 
