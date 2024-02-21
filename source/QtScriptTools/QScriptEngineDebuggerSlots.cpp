@@ -12,7 +12,7 @@
 
 #include "QScriptEngineDebuggerSlots.hpp"
 
-QScriptEngineDebuggerSlots::QScriptEngineDebuggerSlots( QObject *parent ) : QObject( parent )
+QScriptEngineDebuggerSlots::QScriptEngineDebuggerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QScriptEngineDebuggerSlots::~QScriptEngineDebuggerSlots()
 
 void QScriptEngineDebuggerSlots::evaluationResumed()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "evaluationResumed()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCRIPTENGINEDEBUGGER");
 
@@ -38,11 +38,11 @@ void QScriptEngineDebuggerSlots::evaluationResumed()
 
 void QScriptEngineDebuggerSlots::evaluationSuspended()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "evaluationSuspended()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCRIPTENGINEDEBUGGER");
 
@@ -52,15 +52,15 @@ void QScriptEngineDebuggerSlots::evaluationSuspended()
   }
 }
 
-void QScriptEngineDebuggerSlots_connect_signal(const QString & signal, const QString & slot)
+void QScriptEngineDebuggerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptEngineDebugger *obj = (QScriptEngineDebugger *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QScriptEngineDebuggerSlots * s = QCoreApplication::instance()->findChild<QScriptEngineDebuggerSlots*>();
+    QScriptEngineDebuggerSlots *s = QCoreApplication::instance()->findChild<QScriptEngineDebuggerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QScriptEngineDebuggerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
