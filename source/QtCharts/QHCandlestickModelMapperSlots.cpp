@@ -12,7 +12,7 @@
 
 #include "QHCandlestickModelMapperSlots.hpp"
 
-QHCandlestickModelMapperSlots::QHCandlestickModelMapperSlots( QObject *parent ) : QObject( parent )
+QHCandlestickModelMapperSlots::QHCandlestickModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QHCandlestickModelMapperSlots::~QHCandlestickModelMapperSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 void QHCandlestickModelMapperSlots::closeColumnChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "closeColumnChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -38,14 +38,14 @@ void QHCandlestickModelMapperSlots::closeColumnChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 void QHCandlestickModelMapperSlots::firstSetRowChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "firstSetRowChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -56,14 +56,14 @@ void QHCandlestickModelMapperSlots::firstSetRowChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 void QHCandlestickModelMapperSlots::highColumnChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "highColumnChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -74,14 +74,14 @@ void QHCandlestickModelMapperSlots::highColumnChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 void QHCandlestickModelMapperSlots::lastSetRowChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lastSetRowChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -92,14 +92,14 @@ void QHCandlestickModelMapperSlots::lastSetRowChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 void QHCandlestickModelMapperSlots::lowColumnChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lowColumnChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -110,14 +110,14 @@ void QHCandlestickModelMapperSlots::lowColumnChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 void QHCandlestickModelMapperSlots::openColumnChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "openColumnChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -128,14 +128,14 @@ void QHCandlestickModelMapperSlots::openColumnChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 void QHCandlestickModelMapperSlots::timestampColumnChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "timestampColumnChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHCANDLESTICKMODELMAPPER");
 
@@ -146,16 +146,16 @@ void QHCandlestickModelMapperSlots::timestampColumnChanged()
 }
 #endif
 
-void QHCandlestickModelMapperSlots_connect_signal(const QString & signal, const QString & slot)
+void QHCandlestickModelMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QHCandlestickModelMapper * obj = (QHCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QHCandlestickModelMapperSlots * s = QCoreApplication::instance()->findChild<QHCandlestickModelMapperSlots*>();
+    QHCandlestickModelMapperSlots *s = QCoreApplication::instance()->findChild<QHCandlestickModelMapperSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QHCandlestickModelMapperSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

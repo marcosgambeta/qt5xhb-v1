@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QAbstractAxis>
 #endif
 
@@ -28,87 +28,87 @@
 
 using namespace QtCharts;
 
-class QAbstractAxisSlots: public QObject
+class QAbstractAxisSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractAxisSlots( QObject *parent = 0 );
+public:
+  QAbstractAxisSlots(QObject *parent = 0);
   ~QAbstractAxisSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void colorChanged( QColor color );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void colorChanged(QColor color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void gridLineColorChanged( const QColor & color );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void gridLineColorChanged(const QColor &color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void gridLinePenChanged( const QPen & pen );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void gridLinePenChanged(const QPen &pen);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void gridVisibleChanged( bool visible );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void gridVisibleChanged(bool visible);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void labelsAngleChanged( int angle );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void labelsAngleChanged(int angle);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void labelsBrushChanged( const QBrush & brush );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void labelsBrushChanged(const QBrush &brush);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void labelsColorChanged( QColor color );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void labelsColorChanged(QColor color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void labelsFontChanged( const QFont & pen );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void labelsFontChanged(const QFont &pen);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void labelsVisibleChanged( bool visible );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void labelsVisibleChanged(bool visible);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void linePenChanged( const QPen & pen );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void linePenChanged(const QPen &pen);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void lineVisibleChanged( bool visible );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void lineVisibleChanged(bool visible);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void minorGridLineColorChanged( const QColor & color );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void minorGridLineColorChanged(const QColor &color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void minorGridLinePenChanged( const QPen & pen );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void minorGridLinePenChanged(const QPen &pen);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void minorGridVisibleChanged( bool visible );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void minorGridVisibleChanged(bool visible);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void reverseChanged( bool reverse );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void reverseChanged(bool reverse);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void shadesBorderColorChanged( QColor color );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void shadesBorderColorChanged(QColor color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void shadesBrushChanged( const QBrush & brush );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void shadesBrushChanged(const QBrush &brush);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void shadesColorChanged( QColor color );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void shadesColorChanged(QColor color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void shadesPenChanged( const QPen & pen );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void shadesPenChanged(const QPen &pen);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void shadesVisibleChanged( bool visible );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void shadesVisibleChanged(bool visible);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void titleBrushChanged( const QBrush & brush );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void titleBrushChanged(const QBrush &brush);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void titleFontChanged( const QFont & font );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void titleFontChanged(const QFont &font);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void titleTextChanged( const QString & title );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void titleTextChanged(const QString &title);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void titleVisibleChanged( bool visible );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void titleVisibleChanged(bool visible);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void visibleChanged( bool visible );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void visibleChanged(bool visible);
 #endif
 };
 

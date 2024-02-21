@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QHBarModelMapper>
 #endif
 
@@ -28,29 +28,29 @@
 
 using namespace QtCharts;
 
-class QHBarModelMapperSlots: public QObject
+class QHBarModelMapperSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QHBarModelMapperSlots( QObject *parent = 0 );
+public:
+  QHBarModelMapperSlots(QObject *parent = 0);
   ~QHBarModelMapperSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void columnCountChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void firstBarSetRowChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void firstColumnChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void lastBarSetRowChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void modelReplaced();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void seriesReplaced();
 #endif
 };

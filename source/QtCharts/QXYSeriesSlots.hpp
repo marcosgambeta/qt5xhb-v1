@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QXYSeries>
 #endif
 
@@ -28,63 +28,63 @@
 
 using namespace QtCharts;
 
-class QXYSeriesSlots: public QObject
+class QXYSeriesSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QXYSeriesSlots( QObject *parent = 0 );
+public:
+  QXYSeriesSlots(QObject *parent = 0);
   ~QXYSeriesSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void clicked( const QPointF & point );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void clicked(const QPointF &point);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void colorChanged( QColor color );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void colorChanged(QColor color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void doubleClicked( const QPointF & point );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void doubleClicked(const QPointF &point);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void hovered( const QPointF & point, bool state );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void hovered(const QPointF &point, bool state);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void penChanged( const QPen & pen );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void penChanged(const QPen &pen);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pointAdded( int index );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pointAdded(int index);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pointLabelsClippingChanged( bool clipping );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pointLabelsClippingChanged(bool clipping);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pointLabelsColorChanged( const QColor & color );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pointLabelsColorChanged(const QColor &color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pointLabelsFontChanged( const QFont & font );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pointLabelsFontChanged(const QFont &font);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pointLabelsFormatChanged( const QString & format );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pointLabelsFormatChanged(const QString &format);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pointLabelsVisibilityChanged( bool visible );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pointLabelsVisibilityChanged(bool visible);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pointRemoved( int index );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pointRemoved(int index);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pointReplaced( int index );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pointReplaced(int index);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pointsRemoved( int index, int count );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pointsRemoved(int index, int count);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void pointsReplaced();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pressed( const QPointF & point );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pressed(const QPointF &point);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void released( const QPointF & point );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void released(const QPointF &point);
 #endif
 };
 

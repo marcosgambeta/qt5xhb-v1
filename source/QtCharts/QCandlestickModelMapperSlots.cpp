@@ -12,7 +12,7 @@
 
 #include "QCandlestickModelMapperSlots.hpp"
 
-QCandlestickModelMapperSlots::QCandlestickModelMapperSlots( QObject *parent ) : QObject( parent )
+QCandlestickModelMapperSlots::QCandlestickModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QCandlestickModelMapperSlots::~QCandlestickModelMapperSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 void QCandlestickModelMapperSlots::modelReplaced()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "modelReplaced()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKMODELMAPPER");
 
@@ -38,14 +38,14 @@ void QCandlestickModelMapperSlots::modelReplaced()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 void QCandlestickModelMapperSlots::seriesReplaced()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "seriesReplaced()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKMODELMAPPER");
 
@@ -56,16 +56,16 @@ void QCandlestickModelMapperSlots::seriesReplaced()
 }
 #endif
 
-void QCandlestickModelMapperSlots_connect_signal(const QString & signal, const QString & slot)
+void QCandlestickModelMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QCandlestickModelMapper *obj = (QCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QCandlestickModelMapperSlots * s = QCoreApplication::instance()->findChild<QCandlestickModelMapperSlots*>();
+    QCandlestickModelMapperSlots *s = QCoreApplication::instance()->findChild<QCandlestickModelMapperSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QCandlestickModelMapperSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

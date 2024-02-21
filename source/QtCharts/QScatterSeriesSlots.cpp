@@ -12,7 +12,7 @@
 
 #include "QScatterSeriesSlots.hpp"
 
-QScatterSeriesSlots::QScatterSeriesSlots( QObject *parent ) : QObject( parent )
+QScatterSeriesSlots::QScatterSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,17 +20,17 @@ QScatterSeriesSlots::~QScatterSeriesSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QScatterSeriesSlots::borderColorChanged( QColor color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QScatterSeriesSlots::borderColorChanged(QColor color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "borderColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
@@ -40,17 +40,17 @@ void QScatterSeriesSlots::borderColorChanged( QColor color )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QScatterSeriesSlots::colorChanged( QColor color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QScatterSeriesSlots::colorChanged(QColor color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
@@ -60,17 +60,17 @@ void QScatterSeriesSlots::colorChanged( QColor color )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QScatterSeriesSlots::markerShapeChanged( QScatterSeries::MarkerShape shape )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QScatterSeriesSlots::markerShapeChanged(QScatterSeries::MarkerShape shape)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "markerShapeChanged(QScatterSeries::MarkerShape)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
-    PHB_ITEM pshape = hb_itemPutNI( NULL, static_cast<int>(shape) );
+    PHB_ITEM pshape = hb_itemPutNI(NULL, static_cast<int>(shape));
 
     hb_vmEvalBlockV(cb, 2, psender, pshape);
 
@@ -80,17 +80,17 @@ void QScatterSeriesSlots::markerShapeChanged( QScatterSeries::MarkerShape shape 
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QScatterSeriesSlots::markerSizeChanged( qreal size )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QScatterSeriesSlots::markerSizeChanged(qreal size)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "markerSizeChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
-    PHB_ITEM psize = hb_itemPutND( NULL, size );
+    PHB_ITEM psize = hb_itemPutND(NULL, size);
 
     hb_vmEvalBlockV(cb, 2, psender, psize);
 
@@ -100,16 +100,16 @@ void QScatterSeriesSlots::markerSizeChanged( qreal size )
 }
 #endif
 
-void QScatterSeriesSlots_connect_signal(const QString & signal, const QString & slot)
+void QScatterSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QScatterSeries *obj = (QScatterSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QScatterSeriesSlots * s = QCoreApplication::instance()->findChild<QScatterSeriesSlots*>();
+    QScatterSeriesSlots *s = QCoreApplication::instance()->findChild<QScatterSeriesSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QScatterSeriesSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QBoxSet>
 #endif
 
@@ -28,41 +28,41 @@
 
 using namespace QtCharts;
 
-class QBoxSetSlots: public QObject
+class QBoxSetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QBoxSetSlots( QObject *parent = 0 );
+public:
+  QBoxSetSlots(QObject *parent = 0);
   ~QBoxSetSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void brushChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void cleared();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void clicked();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void doubleClicked();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void hovered( bool status );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void hovered(bool status);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void penChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void pressed();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void released();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void valueChanged( int index );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void valueChanged(int index);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void valuesChanged();
 #endif
 };

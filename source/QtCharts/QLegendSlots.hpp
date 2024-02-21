@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QLegend>
 #endif
 
@@ -28,36 +28,36 @@
 
 using namespace QtCharts;
 
-class QLegendSlots: public QObject
+class QLegendSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QLegendSlots( QObject *parent = 0 );
+public:
+  QLegendSlots(QObject *parent = 0);
   ~QLegendSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void backgroundVisibleChanged( bool visible );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void backgroundVisibleChanged(bool visible);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void borderColorChanged( QColor color );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void borderColorChanged(QColor color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void colorChanged( QColor color );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void colorChanged(QColor color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void fontChanged( QFont font );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void fontChanged(QFont font);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void labelColorChanged( QColor color );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void labelColorChanged(QColor color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void markerShapeChanged( QLegend::MarkerShape shape );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void markerShapeChanged(QLegend::MarkerShape shape);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void reverseMarkersChanged( bool reverseMarkers );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void reverseMarkersChanged(bool reverseMarkers);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void showToolTipsChanged( bool showToolTips );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void showToolTipsChanged(bool showToolTips);
 #endif
 };
 

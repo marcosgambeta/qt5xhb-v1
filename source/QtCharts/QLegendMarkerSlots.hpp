@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QLegendMarker>
 #endif
 
@@ -28,38 +28,38 @@
 
 using namespace QtCharts;
 
-class QLegendMarkerSlots: public QObject
+class QLegendMarkerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QLegendMarkerSlots( QObject *parent = 0 );
+public:
+  QLegendMarkerSlots(QObject *parent = 0);
   ~QLegendMarkerSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void brushChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void clicked();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void fontChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void hovered( bool status );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void hovered(bool status);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void labelBrushChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void labelChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void penChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   void shapeChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void visibleChanged();
 #endif
 };

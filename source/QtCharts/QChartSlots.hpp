@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QChart>
 #endif
 
@@ -28,15 +28,15 @@
 
 using namespace QtCharts;
 
-class QChartSlots: public QObject
+class QChartSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QChartSlots( QObject *parent = 0 );
+public:
+  QChartSlots(QObject *parent = 0);
   ~QChartSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void plotAreaChanged( const QRectF & plotArea );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void plotAreaChanged(const QRectF &plotArea);
 #endif
 };
 

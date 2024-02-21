@@ -12,7 +12,7 @@
 
 #include "QLogValueAxisSlots.hpp"
 
-QLogValueAxisSlots::QLogValueAxisSlots( QObject *parent ) : QObject( parent )
+QLogValueAxisSlots::QLogValueAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,17 +20,17 @@ QLogValueAxisSlots::~QLogValueAxisSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QLogValueAxisSlots::baseChanged( qreal base )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QLogValueAxisSlots::baseChanged(qreal base)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "baseChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
-    PHB_ITEM pbase = hb_itemPutND( NULL, base );
+    PHB_ITEM pbase = hb_itemPutND(NULL, base);
 
     hb_vmEvalBlockV(cb, 2, psender, pbase);
 
@@ -40,17 +40,17 @@ void QLogValueAxisSlots::baseChanged( qreal base )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QLogValueAxisSlots::labelFormatChanged( const QString & format )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QLogValueAxisSlots::labelFormatChanged(const QString &format)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelFormatChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
-    PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
+    PHB_ITEM pformat = hb_itemPutC(NULL, QSTRINGTOSTRING(format));
 
     hb_vmEvalBlockV(cb, 2, psender, pformat);
 
@@ -60,17 +60,17 @@ void QLogValueAxisSlots::labelFormatChanged( const QString & format )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QLogValueAxisSlots::maxChanged( qreal max )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QLogValueAxisSlots::maxChanged(qreal max)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
-    PHB_ITEM pmax = hb_itemPutND( NULL, max );
+    PHB_ITEM pmax = hb_itemPutND(NULL, max);
 
     hb_vmEvalBlockV(cb, 2, psender, pmax);
 
@@ -80,17 +80,17 @@ void QLogValueAxisSlots::maxChanged( qreal max )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QLogValueAxisSlots::minChanged( qreal min )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QLogValueAxisSlots::minChanged(qreal min)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
-    PHB_ITEM pmin = hb_itemPutND( NULL, min );
+    PHB_ITEM pmin = hb_itemPutND(NULL, min);
 
     hb_vmEvalBlockV(cb, 2, psender, pmin);
 
@@ -100,17 +100,17 @@ void QLogValueAxisSlots::minChanged( qreal min )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-void QLogValueAxisSlots::minorTickCountChanged( int minorTickCount )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+void QLogValueAxisSlots::minorTickCountChanged(int minorTickCount)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minorTickCountChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
-    PHB_ITEM pminorTickCount = hb_itemPutNI( NULL, minorTickCount );
+    PHB_ITEM pminorTickCount = hb_itemPutNI(NULL, minorTickCount);
 
     hb_vmEvalBlockV(cb, 2, psender, pminorTickCount);
 
@@ -120,18 +120,18 @@ void QLogValueAxisSlots::minorTickCountChanged( int minorTickCount )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QLogValueAxisSlots::rangeChanged( qreal min, qreal max )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QLogValueAxisSlots::rangeChanged(qreal min, qreal max)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rangeChanged(qreal,qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
-    PHB_ITEM pmin = hb_itemPutND( NULL, min );
-    PHB_ITEM pmax = hb_itemPutND( NULL, max );
+    PHB_ITEM pmin = hb_itemPutND(NULL, min);
+    PHB_ITEM pmax = hb_itemPutND(NULL, max);
 
     hb_vmEvalBlockV(cb, 3, psender, pmin, pmax);
 
@@ -142,17 +142,17 @@ void QLogValueAxisSlots::rangeChanged( qreal min, qreal max )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-void QLogValueAxisSlots::tickCountChanged( int tickCount )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+void QLogValueAxisSlots::tickCountChanged(int tickCount)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tickCountChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
-    PHB_ITEM ptickCount = hb_itemPutNI( NULL, tickCount );
+    PHB_ITEM ptickCount = hb_itemPutNI(NULL, tickCount);
 
     hb_vmEvalBlockV(cb, 2, psender, ptickCount);
 
@@ -162,16 +162,16 @@ void QLogValueAxisSlots::tickCountChanged( int tickCount )
 }
 #endif
 
-void QLogValueAxisSlots_connect_signal(const QString & signal, const QString & slot)
+void QLogValueAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLogValueAxis *obj = (QLogValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QLogValueAxisSlots * s = QCoreApplication::instance()->findChild<QLogValueAxisSlots*>();
+    QLogValueAxisSlots *s = QCoreApplication::instance()->findChild<QLogValueAxisSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QLogValueAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

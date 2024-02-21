@@ -12,7 +12,7 @@
 
 #include "QVBarModelMapperSlots.hpp"
 
-QVBarModelMapperSlots::QVBarModelMapperSlots( QObject *parent ) : QObject( parent )
+QVBarModelMapperSlots::QVBarModelMapperSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QVBarModelMapperSlots::~QVBarModelMapperSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QVBarModelMapperSlots::firstBarSetColumnChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "firstBarSetColumnChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
@@ -38,14 +38,14 @@ void QVBarModelMapperSlots::firstBarSetColumnChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QVBarModelMapperSlots::firstRowChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "firstRowChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
@@ -56,14 +56,14 @@ void QVBarModelMapperSlots::firstRowChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QVBarModelMapperSlots::lastBarSetColumnChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lastBarSetColumnChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
@@ -74,14 +74,14 @@ void QVBarModelMapperSlots::lastBarSetColumnChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QVBarModelMapperSlots::modelReplaced()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "modelReplaced()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
@@ -92,14 +92,14 @@ void QVBarModelMapperSlots::modelReplaced()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QVBarModelMapperSlots::rowCountChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowCountChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
@@ -110,14 +110,14 @@ void QVBarModelMapperSlots::rowCountChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QVBarModelMapperSlots::seriesReplaced()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "seriesReplaced()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
@@ -128,16 +128,16 @@ void QVBarModelMapperSlots::seriesReplaced()
 }
 #endif
 
-void QVBarModelMapperSlots_connect_signal(const QString & signal, const QString & slot)
+void QVBarModelMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QVBarModelMapperSlots * s = QCoreApplication::instance()->findChild<QVBarModelMapperSlots*>();
+    QVBarModelMapperSlots *s = QCoreApplication::instance()->findChild<QVBarModelMapperSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QVBarModelMapperSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

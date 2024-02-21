@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QLogValueAxis>
 #endif
 
@@ -28,33 +28,33 @@
 
 using namespace QtCharts;
 
-class QLogValueAxisSlots: public QObject
+class QLogValueAxisSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QLogValueAxisSlots( QObject *parent = 0 );
+public:
+  QLogValueAxisSlots(QObject *parent = 0);
   ~QLogValueAxisSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void baseChanged( qreal base );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void baseChanged(qreal base);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void labelFormatChanged( const QString & format );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void labelFormatChanged(const QString &format);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void maxChanged( qreal max );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void maxChanged(qreal max);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void minChanged( qreal min );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void minChanged(qreal min);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void minorTickCountChanged( int minorTickCount );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void minorTickCountChanged(int minorTickCount);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void rangeChanged( qreal min, qreal max );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void rangeChanged(qreal min, qreal max);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  void tickCountChanged( int tickCount );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  void tickCountChanged(int tickCount);
 #endif
 };
 

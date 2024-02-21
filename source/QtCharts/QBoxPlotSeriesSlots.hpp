@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QBoxPlotSeries>
 #endif
 
@@ -28,48 +28,48 @@
 
 using namespace QtCharts;
 
-class QBoxPlotSeriesSlots: public QObject
+class QBoxPlotSeriesSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QBoxPlotSeriesSlots( QObject *parent = 0 );
+public:
+  QBoxPlotSeriesSlots(QObject *parent = 0);
   ~QBoxPlotSeriesSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void boxOutlineVisibilityChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void boxsetsAdded( QList<QBoxSet*> sets );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void boxsetsAdded(QList<QBoxSet *> sets);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void boxsetsRemoved( QList<QBoxSet*> sets );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void boxsetsRemoved(QList<QBoxSet *> sets);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void boxWidthChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void brushChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void clicked( QBoxSet * boxset );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void clicked(QBoxSet *boxset);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void countChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void doubleClicked( QBoxSet * boxset );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void doubleClicked(QBoxSet *boxset);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void hovered( bool status, QBoxSet * boxset );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void hovered(bool status, QBoxSet *boxset);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void penChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pressed( QBoxSet * boxset );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pressed(QBoxSet *boxset);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void released( QBoxSet * boxset );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void released(QBoxSet *boxset);
 #endif
 };
 

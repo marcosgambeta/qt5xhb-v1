@@ -12,7 +12,7 @@
 
 #include "QAbstractSeriesSlots.hpp"
 
-QAbstractSeriesSlots::QAbstractSeriesSlots( QObject *parent ) : QObject( parent )
+QAbstractSeriesSlots::QAbstractSeriesSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QAbstractSeriesSlots::~QAbstractSeriesSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QAbstractSeriesSlots::nameChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "nameChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 
@@ -38,14 +38,14 @@ void QAbstractSeriesSlots::nameChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QAbstractSeriesSlots::opacityChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "opacityChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 
@@ -56,14 +56,14 @@ void QAbstractSeriesSlots::opacityChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QAbstractSeriesSlots::useOpenGLChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "useOpenGLChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 
@@ -74,14 +74,14 @@ void QAbstractSeriesSlots::useOpenGLChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QAbstractSeriesSlots::visibleChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "visibleChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 
@@ -92,16 +92,16 @@ void QAbstractSeriesSlots::visibleChanged()
 }
 #endif
 
-void QAbstractSeriesSlots_connect_signal(const QString & signal, const QString & slot)
+void QAbstractSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractSeries * obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAbstractSeriesSlots * s = QCoreApplication::instance()->findChild<QAbstractSeriesSlots*>();
+    QAbstractSeriesSlots *s = QCoreApplication::instance()->findChild<QAbstractSeriesSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAbstractSeriesSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

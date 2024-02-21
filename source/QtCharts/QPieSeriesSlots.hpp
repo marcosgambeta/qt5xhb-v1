@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QPieSeries>
 #endif
 
@@ -28,38 +28,38 @@
 
 using namespace QtCharts;
 
-class QPieSeriesSlots: public QObject
+class QPieSeriesSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QPieSeriesSlots( QObject *parent = 0 );
+public:
+  QPieSeriesSlots(QObject *parent = 0);
   ~QPieSeriesSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void added( QList<QPieSlice*> slices );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void added(QList<QPieSlice *> slices);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void clicked( QPieSlice * slice );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void clicked(QPieSlice *slice);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void countChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void doubleClicked( QPieSlice * slice );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void doubleClicked(QPieSlice *slice);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void hovered( QPieSlice * slice, bool state );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void hovered(QPieSlice *slice, bool state);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pressed( QPieSlice * slice );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pressed(QPieSlice *slice);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void released( QPieSlice * slice );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void released(QPieSlice *slice);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void removed( QList<QPieSlice*> slices );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void removed(QList<QPieSlice *> slices);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void sumChanged();
 #endif
 };

@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QBarCategoryAxis>
 #endif
 
@@ -28,27 +28,27 @@
 
 using namespace QtCharts;
 
-class QBarCategoryAxisSlots: public QObject
+class QBarCategoryAxisSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QBarCategoryAxisSlots( QObject *parent = 0 );
+public:
+  QBarCategoryAxisSlots(QObject *parent = 0);
   ~QBarCategoryAxisSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void categoriesChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void countChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void maxChanged( const QString & max );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void maxChanged(const QString &max);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void minChanged( const QString & min );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void minChanged(const QString &min);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void rangeChanged( const QString & min, const QString & max );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void rangeChanged(const QString &min, const QString &max);
 #endif
 };
 

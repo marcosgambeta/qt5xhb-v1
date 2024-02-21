@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QAbstractBarSeries>
 #include <QtCharts/QBarSet>
 #endif
@@ -29,48 +29,48 @@
 
 using namespace QtCharts;
 
-class QAbstractBarSeriesSlots: public QObject
+class QAbstractBarSeriesSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractBarSeriesSlots( QObject *parent = 0 );
+public:
+  QAbstractBarSeriesSlots(QObject *parent = 0);
   ~QAbstractBarSeriesSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void barsetsAdded( QList<QBarSet*> sets );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void barsetsAdded(QList<QBarSet *> sets);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void barsetsRemoved( QList<QBarSet*> sets );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void barsetsRemoved(QList<QBarSet *> sets);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void clicked( int index, QBarSet * barset );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void clicked(int index, QBarSet *barset);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void countChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void doubleClicked( int index, QBarSet * barset );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void doubleClicked(int index, QBarSet *barset);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void hovered( bool status, int index, QBarSet * barset );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void hovered(bool status, int index, QBarSet *barset);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void labelsAngleChanged( qreal angle );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void labelsAngleChanged(qreal angle);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void labelsFormatChanged( const QString & format );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void labelsFormatChanged(const QString &format);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void labelsPositionChanged( QAbstractBarSeries::LabelsPosition position );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void labelsPositionChanged(QAbstractBarSeries::LabelsPosition position);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void labelsVisibleChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void pressed( int index, QBarSet * barset );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void pressed(int index, QBarSet *barset);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void released( int index, QBarSet * barset );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void released(int index, QBarSet *barset);
 #endif
 };
 

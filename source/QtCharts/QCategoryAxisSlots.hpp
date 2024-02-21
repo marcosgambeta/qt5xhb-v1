@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QCategoryAxis>
 #endif
 
@@ -28,18 +28,18 @@
 
 using namespace QtCharts;
 
-class QCategoryAxisSlots: public QObject
+class QCategoryAxisSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCategoryAxisSlots( QObject *parent = 0 );
+public:
+  QCategoryAxisSlots(QObject *parent = 0);
   ~QCategoryAxisSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void categoriesChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void labelsPositionChanged(QCategoryAxis::AxisLabelsPosition position);
 #endif
 };
 

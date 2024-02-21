@@ -12,7 +12,7 @@
 
 #include "QBoxSetSlots.hpp"
 
-QBoxSetSlots::QBoxSetSlots( QObject *parent ) : QObject( parent )
+QBoxSetSlots::QBoxSetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QBoxSetSlots::~QBoxSetSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QBoxSetSlots::brushChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "brushChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -38,14 +38,14 @@ void QBoxSetSlots::brushChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QBoxSetSlots::cleared()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "cleared()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -56,14 +56,14 @@ void QBoxSetSlots::cleared()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QBoxSetSlots::clicked()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -74,14 +74,14 @@ void QBoxSetSlots::clicked()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QBoxSetSlots::doubleClicked()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "doubleClicked()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -92,17 +92,17 @@ void QBoxSetSlots::doubleClicked()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QBoxSetSlots::hovered( bool status )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QBoxSetSlots::hovered(bool status)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
-    PHB_ITEM pstatus = hb_itemPutL( NULL, status );
+    PHB_ITEM pstatus = hb_itemPutL(NULL, status);
 
     hb_vmEvalBlockV(cb, 2, psender, pstatus);
 
@@ -112,14 +112,14 @@ void QBoxSetSlots::hovered( bool status )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QBoxSetSlots::penChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "penChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -130,14 +130,14 @@ void QBoxSetSlots::penChanged()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QBoxSetSlots::pressed()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pressed()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -148,14 +148,14 @@ void QBoxSetSlots::pressed()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QBoxSetSlots::released()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "released()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -166,17 +166,17 @@ void QBoxSetSlots::released()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QBoxSetSlots::valueChanged( int index )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QBoxSetSlots::valueChanged(int index)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
     hb_vmEvalBlockV(cb, 2, psender, pindex);
 
@@ -186,14 +186,14 @@ void QBoxSetSlots::valueChanged( int index )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 void QBoxSetSlots::valuesChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valuesChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
@@ -204,16 +204,16 @@ void QBoxSetSlots::valuesChanged()
 }
 #endif
 
-void QBoxSetSlots_connect_signal(const QString & signal, const QString & slot)
+void QBoxSetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QBoxSetSlots * s = QCoreApplication::instance()->findChild<QBoxSetSlots*>();
+    QBoxSetSlots *s = QCoreApplication::instance()->findChild<QBoxSetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QBoxSetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

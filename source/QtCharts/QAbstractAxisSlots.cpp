@@ -12,7 +12,7 @@
 
 #include "QAbstractAxisSlots.hpp"
 
-QAbstractAxisSlots::QAbstractAxisSlots( QObject *parent ) : QObject( parent )
+QAbstractAxisSlots::QAbstractAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,17 +20,17 @@ QAbstractAxisSlots::~QAbstractAxisSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::colorChanged( QColor color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::colorChanged(QColor color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
@@ -40,17 +40,17 @@ void QAbstractAxisSlots::colorChanged( QColor color )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::gridLineColorChanged( const QColor & color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::gridLineColorChanged(const QColor &color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "gridLineColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
@@ -60,17 +60,17 @@ void QAbstractAxisSlots::gridLineColorChanged( const QColor & color )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::gridLinePenChanged( const QPen & pen )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::gridLinePenChanged(const QPen &pen)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "gridLinePenChanged(QPen)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM ppen = Qt5xHb::Signals_return_object( (void *) &pen, "QPEN");
+    PHB_ITEM ppen = Qt5xHb::Signals_return_object((void *)&pen, "QPEN");
 
     hb_vmEvalBlockV(cb, 2, psender, ppen);
 
@@ -80,17 +80,17 @@ void QAbstractAxisSlots::gridLinePenChanged( const QPen & pen )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::gridVisibleChanged( bool visible )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::gridVisibleChanged(bool visible)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "gridVisibleChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+    PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
     hb_vmEvalBlockV(cb, 2, psender, pvisible);
 
@@ -100,17 +100,17 @@ void QAbstractAxisSlots::gridVisibleChanged( bool visible )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::labelsAngleChanged( int angle )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::labelsAngleChanged(int angle)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelsAngleChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pangle = hb_itemPutNI( NULL, angle );
+    PHB_ITEM pangle = hb_itemPutNI(NULL, angle);
 
     hb_vmEvalBlockV(cb, 2, psender, pangle);
 
@@ -120,17 +120,17 @@ void QAbstractAxisSlots::labelsAngleChanged( int angle )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::labelsBrushChanged( const QBrush & brush )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::labelsBrushChanged(const QBrush &brush)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelsBrushChanged(QBrush)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pbrush = Qt5xHb::Signals_return_object( (void *) &brush, "QBRUSH");
+    PHB_ITEM pbrush = Qt5xHb::Signals_return_object((void *)&brush, "QBRUSH");
 
     hb_vmEvalBlockV(cb, 2, psender, pbrush);
 
@@ -140,17 +140,17 @@ void QAbstractAxisSlots::labelsBrushChanged( const QBrush & brush )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::labelsColorChanged( QColor color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::labelsColorChanged(QColor color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelsColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
@@ -160,17 +160,17 @@ void QAbstractAxisSlots::labelsColorChanged( QColor color )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::labelsFontChanged( const QFont & pen )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::labelsFontChanged(const QFont &pen)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelsFontChanged(QFont)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM ppen = Qt5xHb::Signals_return_object( (void *) &pen, "QFONT");
+    PHB_ITEM ppen = Qt5xHb::Signals_return_object((void *)&pen, "QFONT");
 
     hb_vmEvalBlockV(cb, 2, psender, ppen);
 
@@ -180,17 +180,17 @@ void QAbstractAxisSlots::labelsFontChanged( const QFont & pen )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::labelsVisibleChanged( bool visible )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::labelsVisibleChanged(bool visible)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelsVisibleChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+    PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
     hb_vmEvalBlockV(cb, 2, psender, pvisible);
 
@@ -200,17 +200,17 @@ void QAbstractAxisSlots::labelsVisibleChanged( bool visible )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::linePenChanged( const QPen & pen )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::linePenChanged(const QPen &pen)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "linePenChanged(QPen)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM ppen = Qt5xHb::Signals_return_object( (void *) &pen, "QPEN");
+    PHB_ITEM ppen = Qt5xHb::Signals_return_object((void *)&pen, "QPEN");
 
     hb_vmEvalBlockV(cb, 2, psender, ppen);
 
@@ -220,17 +220,17 @@ void QAbstractAxisSlots::linePenChanged( const QPen & pen )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::lineVisibleChanged( bool visible )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::lineVisibleChanged(bool visible)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lineVisibleChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+    PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
     hb_vmEvalBlockV(cb, 2, psender, pvisible);
 
@@ -240,17 +240,17 @@ void QAbstractAxisSlots::lineVisibleChanged( bool visible )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::minorGridLineColorChanged( const QColor & color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::minorGridLineColorChanged(const QColor &color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minorGridLineColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
@@ -260,17 +260,17 @@ void QAbstractAxisSlots::minorGridLineColorChanged( const QColor & color )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::minorGridLinePenChanged( const QPen & pen )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::minorGridLinePenChanged(const QPen &pen)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minorGridLinePenChanged(QPen)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM ppen = Qt5xHb::Signals_return_object( (void *) &pen, "QPEN");
+    PHB_ITEM ppen = Qt5xHb::Signals_return_object((void *)&pen, "QPEN");
 
     hb_vmEvalBlockV(cb, 2, psender, ppen);
 
@@ -280,17 +280,17 @@ void QAbstractAxisSlots::minorGridLinePenChanged( const QPen & pen )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::minorGridVisibleChanged( bool visible )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::minorGridVisibleChanged(bool visible)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minorGridVisibleChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+    PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
     hb_vmEvalBlockV(cb, 2, psender, pvisible);
 
@@ -300,17 +300,17 @@ void QAbstractAxisSlots::minorGridVisibleChanged( bool visible )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::reverseChanged( bool reverse )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::reverseChanged(bool reverse)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "reverseChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM preverse = hb_itemPutL( NULL, reverse );
+    PHB_ITEM preverse = hb_itemPutL(NULL, reverse);
 
     hb_vmEvalBlockV(cb, 2, psender, preverse);
 
@@ -320,17 +320,17 @@ void QAbstractAxisSlots::reverseChanged( bool reverse )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::shadesBorderColorChanged( QColor color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::shadesBorderColorChanged(QColor color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "shadesBorderColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
@@ -340,17 +340,17 @@ void QAbstractAxisSlots::shadesBorderColorChanged( QColor color )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::shadesBrushChanged( const QBrush & brush )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::shadesBrushChanged(const QBrush &brush)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "shadesBrushChanged(QBrush)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pbrush = Qt5xHb::Signals_return_object( (void *) &brush, "QBRUSH");
+    PHB_ITEM pbrush = Qt5xHb::Signals_return_object((void *)&brush, "QBRUSH");
 
     hb_vmEvalBlockV(cb, 2, psender, pbrush);
 
@@ -360,17 +360,17 @@ void QAbstractAxisSlots::shadesBrushChanged( const QBrush & brush )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::shadesColorChanged( QColor color )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::shadesColorChanged(QColor color)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "shadesColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR");
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
     hb_vmEvalBlockV(cb, 2, psender, pcolor);
 
@@ -380,17 +380,17 @@ void QAbstractAxisSlots::shadesColorChanged( QColor color )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::shadesPenChanged( const QPen & pen )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::shadesPenChanged(const QPen &pen)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "shadesPenChanged(QPen)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM ppen = Qt5xHb::Signals_return_object( (void *) &pen, "QPEN");
+    PHB_ITEM ppen = Qt5xHb::Signals_return_object((void *)&pen, "QPEN");
 
     hb_vmEvalBlockV(cb, 2, psender, ppen);
 
@@ -400,17 +400,17 @@ void QAbstractAxisSlots::shadesPenChanged( const QPen & pen )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::shadesVisibleChanged( bool visible )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::shadesVisibleChanged(bool visible)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "shadesVisibleChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+    PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
     hb_vmEvalBlockV(cb, 2, psender, pvisible);
 
@@ -420,17 +420,17 @@ void QAbstractAxisSlots::shadesVisibleChanged( bool visible )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::titleBrushChanged( const QBrush & brush )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::titleBrushChanged(const QBrush &brush)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "titleBrushChanged(QBrush)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pbrush = Qt5xHb::Signals_return_object( (void *) &brush, "QBRUSH");
+    PHB_ITEM pbrush = Qt5xHb::Signals_return_object((void *)&brush, "QBRUSH");
 
     hb_vmEvalBlockV(cb, 2, psender, pbrush);
 
@@ -440,17 +440,17 @@ void QAbstractAxisSlots::titleBrushChanged( const QBrush & brush )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::titleFontChanged( const QFont & font )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::titleFontChanged(const QFont &font)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "titleFontChanged(QFont)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT");
+    PHB_ITEM pfont = Qt5xHb::Signals_return_object((void *)&font, "QFONT");
 
     hb_vmEvalBlockV(cb, 2, psender, pfont);
 
@@ -460,17 +460,17 @@ void QAbstractAxisSlots::titleFontChanged( const QFont & font )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::titleTextChanged( const QString & title )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::titleTextChanged(const QString &title)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "titleTextChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
+    PHB_ITEM ptitle = hb_itemPutC(NULL, QSTRINGTOSTRING(title));
 
     hb_vmEvalBlockV(cb, 2, psender, ptitle);
 
@@ -480,17 +480,17 @@ void QAbstractAxisSlots::titleTextChanged( const QString & title )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::titleVisibleChanged( bool visible )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::titleVisibleChanged(bool visible)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "titleVisibleChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+    PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
     hb_vmEvalBlockV(cb, 2, psender, pvisible);
 
@@ -500,17 +500,17 @@ void QAbstractAxisSlots::titleVisibleChanged( bool visible )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QAbstractAxisSlots::visibleChanged( bool visible )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QAbstractAxisSlots::visibleChanged(bool visible)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "visibleChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAXIS");
-    PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+    PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
     hb_vmEvalBlockV(cb, 2, psender, pvisible);
 
@@ -520,16 +520,16 @@ void QAbstractAxisSlots::visibleChanged( bool visible )
 }
 #endif
 
-void QAbstractAxisSlots_connect_signal(const QString & signal, const QString & slot)
+void QAbstractAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractAxis * obj = (QAbstractAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAbstractAxisSlots * s = QCoreApplication::instance()->findChild<QAbstractAxisSlots*>();
+    QAbstractAxisSlots *s = QCoreApplication::instance()->findChild<QAbstractAxisSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAbstractAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

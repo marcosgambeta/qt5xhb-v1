@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QAbstractSeries>
 #endif
 
@@ -28,23 +28,23 @@
 
 using namespace QtCharts;
 
-class QAbstractSeriesSlots: public QObject
+class QAbstractSeriesSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractSeriesSlots( QObject *parent = 0 );
+public:
+  QAbstractSeriesSlots(QObject *parent = 0);
   ~QAbstractSeriesSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void nameChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void opacityChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void useOpenGLChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   void visibleChanged();
 #endif
 };

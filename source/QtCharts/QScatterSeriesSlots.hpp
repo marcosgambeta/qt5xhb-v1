@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QScatterSeries>
 #endif
 
@@ -28,24 +28,24 @@
 
 using namespace QtCharts;
 
-class QScatterSeriesSlots: public QObject
+class QScatterSeriesSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QScatterSeriesSlots( QObject *parent = 0 );
+public:
+  QScatterSeriesSlots(QObject *parent = 0);
   ~QScatterSeriesSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void borderColorChanged( QColor color );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void borderColorChanged(QColor color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void colorChanged( QColor color );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void colorChanged(QColor color);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void markerShapeChanged( QScatterSeries::MarkerShape shape );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void markerShapeChanged(QScatterSeries::MarkerShape shape);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void markerSizeChanged( qreal size );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void markerSizeChanged(qreal size);
 #endif
 };
 

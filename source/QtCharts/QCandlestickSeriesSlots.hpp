@@ -16,11 +16,11 @@
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtCharts/QCandlestickSet>
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtCharts/QCandlestickSeries>
 #endif
 
@@ -29,70 +29,70 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 using namespace QtCharts;
 #endif
 
-class QCandlestickSeriesSlots: public QObject
+class QCandlestickSeriesSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCandlestickSeriesSlots( QObject *parent = 0 );
+public:
+  QCandlestickSeriesSlots(QObject *parent = 0);
   ~QCandlestickSeriesSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void bodyOutlineVisibilityChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void bodyWidthChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void brushChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void candlestickSetsAdded( const QList<QCandlestickSet*> & sets );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void candlestickSetsAdded(const QList<QCandlestickSet *> &sets);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void candlestickSetsRemoved( const QList<QCandlestickSet*> & sets );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void candlestickSetsRemoved(const QList<QCandlestickSet *> &sets);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void capsVisibilityChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void capsWidthChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void clicked( QCandlestickSet * set );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void clicked(QCandlestickSet *set);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void countChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void decreasingColorChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void doubleClicked( QCandlestickSet * set );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void doubleClicked(QCandlestickSet *set);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void hovered( bool status, QCandlestickSet * set );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void hovered(bool status, QCandlestickSet *set);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void increasingColorChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void maximumColumnWidthChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void minimumColumnWidthChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void penChanged();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void pressed( QCandlestickSet * set );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void pressed(QCandlestickSet *set);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  void released( QCandlestickSet * set );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  void released(QCandlestickSet *set);
 #endif
 };
 

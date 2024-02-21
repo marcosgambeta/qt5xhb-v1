@@ -12,7 +12,7 @@
 
 #include "QDateTimeAxisSlots.hpp"
 
-QDateTimeAxisSlots::QDateTimeAxisSlots( QObject *parent ) : QObject( parent )
+QDateTimeAxisSlots::QDateTimeAxisSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,17 +20,17 @@ QDateTimeAxisSlots::~QDateTimeAxisSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QDateTimeAxisSlots::formatChanged( QString format )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QDateTimeAxisSlots::formatChanged(QString format)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "formatChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEAXIS");
-    PHB_ITEM pformat = hb_itemPutC( NULL, format.toLatin1().data() );
+    PHB_ITEM pformat = hb_itemPutC(NULL, format.toLatin1().data());
 
     hb_vmEvalBlockV(cb, 2, psender, pformat);
 
@@ -40,17 +40,17 @@ void QDateTimeAxisSlots::formatChanged( QString format )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QDateTimeAxisSlots::maxChanged( QDateTime max )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QDateTimeAxisSlots::maxChanged(QDateTime max)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxChanged(QDateTime)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEAXIS");
-    PHB_ITEM pmax = Qt5xHb::Signals_return_object( (void *) &max, "QDATETIME");
+    PHB_ITEM pmax = Qt5xHb::Signals_return_object((void *)&max, "QDATETIME");
 
     hb_vmEvalBlockV(cb, 2, psender, pmax);
 
@@ -60,17 +60,17 @@ void QDateTimeAxisSlots::maxChanged( QDateTime max )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QDateTimeAxisSlots::minChanged( QDateTime min )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QDateTimeAxisSlots::minChanged(QDateTime min)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minChanged(QDateTime)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEAXIS");
-    PHB_ITEM pmin = Qt5xHb::Signals_return_object( (void *) &min, "QDATETIME");
+    PHB_ITEM pmin = Qt5xHb::Signals_return_object((void *)&min, "QDATETIME");
 
     hb_vmEvalBlockV(cb, 2, psender, pmin);
 
@@ -80,18 +80,18 @@ void QDateTimeAxisSlots::minChanged( QDateTime min )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QDateTimeAxisSlots::rangeChanged( QDateTime min, QDateTime max )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QDateTimeAxisSlots::rangeChanged(QDateTime min, QDateTime max)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rangeChanged(QDateTime,QDateTime)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEAXIS");
-    PHB_ITEM pmin = Qt5xHb::Signals_return_object( (void *) &min, "QDATETIME");
-    PHB_ITEM pmax = Qt5xHb::Signals_return_object( (void *) &max, "QDATETIME");
+    PHB_ITEM pmin = Qt5xHb::Signals_return_object((void *)&min, "QDATETIME");
+    PHB_ITEM pmax = Qt5xHb::Signals_return_object((void *)&max, "QDATETIME");
 
     hb_vmEvalBlockV(cb, 3, psender, pmin, pmax);
 
@@ -102,17 +102,17 @@ void QDateTimeAxisSlots::rangeChanged( QDateTime min, QDateTime max )
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-void QDateTimeAxisSlots::tickCountChanged( int tick )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+void QDateTimeAxisSlots::tickCountChanged(int tick)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tickCountChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEAXIS");
-    PHB_ITEM ptick = hb_itemPutNI( NULL, tick );
+    PHB_ITEM ptick = hb_itemPutNI(NULL, tick);
 
     hb_vmEvalBlockV(cb, 2, psender, ptick);
 
@@ -122,16 +122,16 @@ void QDateTimeAxisSlots::tickCountChanged( int tick )
 }
 #endif
 
-void QDateTimeAxisSlots_connect_signal(const QString & signal, const QString & slot)
+void QDateTimeAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxis * obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QDateTimeAxis *obj = (QDateTimeAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDateTimeAxisSlots * s = QCoreApplication::instance()->findChild<QDateTimeAxisSlots*>();
+    QDateTimeAxisSlots *s = QCoreApplication::instance()->findChild<QDateTimeAxisSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDateTimeAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

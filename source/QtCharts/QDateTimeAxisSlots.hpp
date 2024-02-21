@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QDateTimeAxis>
 #endif
 
@@ -30,27 +30,27 @@
 
 using namespace QtCharts;
 
-class QDateTimeAxisSlots: public QObject
+class QDateTimeAxisSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDateTimeAxisSlots( QObject *parent = 0 );
+public:
+  QDateTimeAxisSlots(QObject *parent = 0);
   ~QDateTimeAxisSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void formatChanged( QString format );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void formatChanged(QString format);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void maxChanged( QDateTime max );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void maxChanged(QDateTime max);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void minChanged( QDateTime min );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void minChanged(QDateTime min);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void rangeChanged( QDateTime min, QDateTime max );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void rangeChanged(QDateTime min, QDateTime max);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  void tickCountChanged( int tick );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  void tickCountChanged(int tick);
 #endif
 };
 

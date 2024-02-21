@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtCharts/QCandlestickModelMapper>
 #endif
 
@@ -26,21 +26,21 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 using namespace QtCharts;
 #endif
 
-class QCandlestickModelMapperSlots: public QObject
+class QCandlestickModelMapperSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCandlestickModelMapperSlots( QObject *parent = 0 );
+public:
+  QCandlestickModelMapperSlots(QObject *parent = 0);
   ~QCandlestickModelMapperSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void modelReplaced();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   void seriesReplaced();
 #endif
 };
