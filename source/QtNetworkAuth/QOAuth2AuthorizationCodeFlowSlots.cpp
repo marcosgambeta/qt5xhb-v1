@@ -12,7 +12,7 @@
 
 #include "QOAuth2AuthorizationCodeFlowSlots.hpp"
 
-QOAuth2AuthorizationCodeFlowSlots::QOAuth2AuthorizationCodeFlowSlots( QObject *parent ) : QObject( parent )
+QOAuth2AuthorizationCodeFlowSlots::QOAuth2AuthorizationCodeFlowSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,36 +20,37 @@ QOAuth2AuthorizationCodeFlowSlots::~QOAuth2AuthorizationCodeFlowSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void QOAuth2AuthorizationCodeFlowSlots::accessTokenUrlChanged( const QUrl & accessTokenUrl )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+void QOAuth2AuthorizationCodeFlowSlots::accessTokenUrlChanged(const QUrl &accessTokenUrl)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accessTokenUrlChanged(QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH2AUTHORIZATIONCODEFLOW");
-    PHB_ITEM paccessTokenUrl = Qt5xHb::Signals_return_object( (void *) &accessTokenUrl, "QURL");
+    PHB_ITEM paccessTokenUrl = Qt5xHb::Signals_return_object((void *)&accessTokenUrl, "QURL");
 
     hb_vmEvalBlockV(cb, 2, psender, paccessTokenUrl);
 
     hb_itemRelease(psender);
-    hb_itemRelease( paccessTokenUrl );
+    hb_itemRelease(paccessTokenUrl);
   }
 }
 #endif
 
-void QOAuth2AuthorizationCodeFlowSlots_connect_signal(const QString & signal, const QString & slot)
+void QOAuth2AuthorizationCodeFlowSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  QOAuth2AuthorizationCodeFlow *obj = (QOAuth2AuthorizationCodeFlow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QOAuth2AuthorizationCodeFlowSlots * s = QCoreApplication::instance()->findChild<QOAuth2AuthorizationCodeFlowSlots*>();
+    QOAuth2AuthorizationCodeFlowSlots *s =
+        QCoreApplication::instance()->findChild<QOAuth2AuthorizationCodeFlowSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QOAuth2AuthorizationCodeFlowSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

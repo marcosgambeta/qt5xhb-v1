@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtNetworkAuth/QAbstractOAuthReplyHandler>
 #endif
 
@@ -26,18 +26,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAbstractOAuthReplyHandlerSlots: public QObject
+class QAbstractOAuthReplyHandlerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractOAuthReplyHandlerSlots( QObject *parent = 0 );
+public:
+  QAbstractOAuthReplyHandlerSlots(QObject *parent = 0);
   ~QAbstractOAuthReplyHandlerSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void callbackDataReceived( const QByteArray & data );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void callbackDataReceived(const QByteArray &data);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void replyDataReceived( const QByteArray & data );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void replyDataReceived(const QByteArray &data);
 #endif
 };
 

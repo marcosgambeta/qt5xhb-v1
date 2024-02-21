@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtNetworkAuth/QOAuth2AuthorizationCodeFlow>
 #endif
 
@@ -26,15 +26,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QOAuth2AuthorizationCodeFlowSlots: public QObject
+class QOAuth2AuthorizationCodeFlowSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QOAuth2AuthorizationCodeFlowSlots( QObject *parent = 0 );
+public:
+  QOAuth2AuthorizationCodeFlowSlots(QObject *parent = 0);
   ~QOAuth2AuthorizationCodeFlowSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void accessTokenUrlChanged( const QUrl & accessTokenUrl );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void accessTokenUrlChanged(const QUrl &accessTokenUrl);
 #endif
 };
 

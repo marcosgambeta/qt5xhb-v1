@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtNetworkAuth/QAbstractOAuth2>
 #endif
 
@@ -26,33 +26,33 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAbstractOAuth2Slots: public QObject
+class QAbstractOAuth2Slots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractOAuth2Slots( QObject *parent = 0 );
+public:
+  QAbstractOAuth2Slots(QObject *parent = 0);
   ~QAbstractOAuth2Slots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void clientIdentifierSharedKeyChanged(const QString &clientIdentifierSharedKey);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void error( const QString & error, const QString & errorDescription, const QUrl & uri );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void error(const QString &error, const QString &errorDescription, const QUrl &uri);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void expirationAtChanged( const QDateTime & expiration );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void expirationAtChanged(const QDateTime &expiration);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void responseTypeChanged( const QString & responseType );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void responseTypeChanged(const QString &responseType);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void scopeChanged( const QString & scope );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void scopeChanged(const QString &scope);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void stateChanged( const QString & state );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void stateChanged(const QString &state);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void userAgentChanged( const QString & userAgent );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void userAgentChanged(const QString &userAgent);
 #endif
 };
 

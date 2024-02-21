@@ -18,7 +18,7 @@
 #include <QtCore/QString>
 #include <QtNetwork/QNetworkReply>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtNetworkAuth/QAbstractOAuth>
 #endif
 
@@ -27,42 +27,42 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAbstractOAuthSlots: public QObject
+class QAbstractOAuthSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractOAuthSlots( QObject *parent = 0 );
+public:
+  QAbstractOAuthSlots(QObject *parent = 0);
   ~QAbstractOAuthSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void clientIdentifierChanged( const QString & clientIdentifier );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void clientIdentifierChanged(const QString &clientIdentifier);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void tokenChanged( const QString & token );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void tokenChanged(const QString &token);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void statusChanged( QAbstractOAuth::Status status );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void statusChanged(QAbstractOAuth::Status status);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void authorizationUrlChanged( const QUrl & url );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void authorizationUrlChanged(const QUrl &url);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void extraTokensChanged( const QVariantMap & tokens );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void extraTokensChanged(const QVariantMap &tokens);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void contentTypeChanged( QAbstractOAuth::ContentType contentType );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void contentTypeChanged(QAbstractOAuth::ContentType contentType);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void authorizeWithBrowser( const QUrl & url );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void authorizeWithBrowser(const QUrl &url);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   void granted();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void finished( QNetworkReply * reply );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void finished(QNetworkReply *reply);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void replyDataReceived( const QByteArray & data );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void replyDataReceived(const QByteArray &data);
 #endif
 };
 

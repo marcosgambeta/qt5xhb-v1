@@ -12,7 +12,7 @@
 
 #include "QOAuth1Slots.hpp"
 
-QOAuth1Slots::QOAuth1Slots( QObject *parent ) : QObject( parent )
+QOAuth1Slots::QOAuth1Slots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,116 +20,116 @@ QOAuth1Slots::~QOAuth1Slots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void QOAuth1Slots::clientSharedSecretChanged( const QString & credential )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+void QOAuth1Slots::clientSharedSecretChanged(const QString &credential)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clientSharedSecretChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH1");
-    PHB_ITEM pcredential = hb_itemPutC( NULL, QSTRINGTOSTRING(credential) );
+    PHB_ITEM pcredential = hb_itemPutC(NULL, QSTRINGTOSTRING(credential));
 
     hb_vmEvalBlockV(cb, 2, psender, pcredential);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcredential );
+    hb_itemRelease(pcredential);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void QOAuth1Slots::signatureMethodChanged( QOAuth1::SignatureMethod method )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+void QOAuth1Slots::signatureMethodChanged(QOAuth1::SignatureMethod method)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "signatureMethodChanged(QOAuth1::SignatureMethod)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH1");
-    PHB_ITEM pmethod = hb_itemPutNI( NULL, static_cast<int>(method) );
+    PHB_ITEM pmethod = hb_itemPutNI(NULL, static_cast<int>(method));
 
     hb_vmEvalBlockV(cb, 2, psender, pmethod);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pmethod );
+    hb_itemRelease(pmethod);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void QOAuth1Slots::temporaryCredentialsUrlChanged( const QUrl & url )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+void QOAuth1Slots::temporaryCredentialsUrlChanged(const QUrl &url)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "temporaryCredentialsUrlChanged(QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH1");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
+    PHB_ITEM purl = Qt5xHb::Signals_return_object((void *)&url, "QURL");
 
     hb_vmEvalBlockV(cb, 2, psender, purl);
 
     hb_itemRelease(psender);
-    hb_itemRelease( purl );
+    hb_itemRelease(purl);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void QOAuth1Slots::tokenCredentialsUrlChanged( const QUrl & url )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+void QOAuth1Slots::tokenCredentialsUrlChanged(const QUrl &url)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tokenCredentialsUrlChanged(QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH1");
-    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL");
+    PHB_ITEM purl = Qt5xHb::Signals_return_object((void *)&url, "QURL");
 
     hb_vmEvalBlockV(cb, 2, psender, purl);
 
     hb_itemRelease(psender);
-    hb_itemRelease( purl );
+    hb_itemRelease(purl);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void QOAuth1Slots::tokenSecretChanged( const QString & token )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+void QOAuth1Slots::tokenSecretChanged(const QString &token)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tokenSecretChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH1");
-    PHB_ITEM ptoken = hb_itemPutC( NULL, QSTRINGTOSTRING(token) );
+    PHB_ITEM ptoken = hb_itemPutC(NULL, QSTRINGTOSTRING(token));
 
     hb_vmEvalBlockV(cb, 2, psender, ptoken);
 
     hb_itemRelease(psender);
-    hb_itemRelease( ptoken );
+    hb_itemRelease(ptoken);
   }
 }
 #endif
 
-void QOAuth1Slots_connect_signal(const QString & signal, const QString & slot)
+void QOAuth1Slots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  QOAuth1 *obj = (QOAuth1 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QOAuth1Slots * s = QCoreApplication::instance()->findChild<QOAuth1Slots*>();
+    QOAuth1Slots *s = QCoreApplication::instance()->findChild<QOAuth1Slots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QOAuth1Slots();
       s->moveToThread(QCoreApplication::instance()->thread());
