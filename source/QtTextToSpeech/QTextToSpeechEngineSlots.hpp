@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtTextToSpeech/QTextToSpeechEngine>
 #endif
 
@@ -26,15 +26,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QTextToSpeechEngineSlots: public QObject
+class QTextToSpeechEngineSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTextToSpeechEngineSlots( QObject *parent = 0 );
+public:
+  QTextToSpeechEngineSlots(QObject *parent = 0);
   ~QTextToSpeechEngineSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void stateChanged( QTextToSpeech::State state );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void stateChanged(QTextToSpeech::State state);
 #endif
 };
 

@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtTextToSpeech/QTextToSpeech>
 #endif
 
@@ -26,30 +26,30 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QTextToSpeechSlots: public QObject
+class QTextToSpeechSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTextToSpeechSlots( QObject *parent = 0 );
+public:
+  QTextToSpeechSlots(QObject *parent = 0);
   ~QTextToSpeechSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void localeChanged( const QLocale & locale );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void localeChanged(const QLocale &locale);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void pitchChanged( double pitch );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void pitchChanged(double pitch);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void rateChanged( double rate );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void rateChanged(double rate);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void stateChanged( QTextToSpeech::State state );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void stateChanged(QTextToSpeech::State state);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void voiceChanged( const QVoice & voice );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void voiceChanged(const QVoice &voice);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  void volumeChanged( int volume );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  void volumeChanged(int volume);
 #endif
 };
 

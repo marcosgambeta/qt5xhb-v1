@@ -12,7 +12,7 @@
 
 #include "QTextToSpeechEngineSlots.hpp"
 
-QTextToSpeechEngineSlots::QTextToSpeechEngineSlots( QObject *parent ) : QObject( parent )
+QTextToSpeechEngineSlots::QTextToSpeechEngineSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,36 +20,36 @@ QTextToSpeechEngineSlots::~QTextToSpeechEngineSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-void QTextToSpeechEngineSlots::stateChanged( QTextToSpeech::State state )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+void QTextToSpeechEngineSlots::stateChanged(QTextToSpeech::State state)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QTextToSpeech::State)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECHENGINE");
-    PHB_ITEM pstate = hb_itemPutNI( NULL, static_cast<int>(state) );
+    PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
     hb_vmEvalBlockV(cb, 2, psender, pstate);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstate );
+    hb_itemRelease(pstate);
   }
 }
 #endif
 
-void QTextToSpeechEngineSlots_connect_signal(const QString & signal, const QString & slot)
+void QTextToSpeechEngineSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeechEngine * obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  QTextToSpeechEngine *obj = (QTextToSpeechEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QTextToSpeechEngineSlots * s = QCoreApplication::instance()->findChild<QTextToSpeechEngineSlots*>();
+    QTextToSpeechEngineSlots *s = QCoreApplication::instance()->findChild<QTextToSpeechEngineSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QTextToSpeechEngineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

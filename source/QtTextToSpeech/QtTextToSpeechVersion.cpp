@@ -13,7 +13,7 @@
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtTextToSpeech/QtTextToSpeechVersion>
 #endif
 #endif
@@ -23,25 +23,25 @@
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtTextToSpeech/QtTextToSpeechVersion>
 #endif
 #endif
 
-HB_FUNC( QTTEXTTOSPEECH_VERSION_STR )
+HB_FUNC(QTTEXTTOSPEECH_VERSION_STR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  hb_retc( (const char *) QTTEXTTOSPEECH_VERSION_STR );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  hb_retc((const char *)QTTEXTTOSPEECH_VERSION_STR);
 #else
-  hb_retc( (const char *) "" );
+  hb_retc((const char *)"");
 #endif
 }
 
-HB_FUNC( QTTEXTTOSPEECH_VERSION )
+HB_FUNC(QTTEXTTOSPEECH_VERSION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  hb_retni( QTTEXTTOSPEECH_VERSION );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  hb_retni(QTTEXTTOSPEECH_VERSION);
 #else
-  hb_retni( 0 );
+  hb_retni(0);
 #endif
 }
