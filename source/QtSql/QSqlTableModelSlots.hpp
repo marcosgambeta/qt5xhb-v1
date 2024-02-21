@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QSqlTableModelSlots: public QObject
+class QSqlTableModelSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSqlTableModelSlots( QObject *parent = 0 );
+public:
+  QSqlTableModelSlots(QObject *parent = 0);
   ~QSqlTableModelSlots();
-  public slots:
-  void beforeDelete( int row );
-  void beforeInsert( QSqlRecord & record );
-  void beforeUpdate( int row, QSqlRecord & record );
-  void primeInsert( int row, QSqlRecord & record );
+public slots:
+  void beforeDelete(int row);
+  void beforeInsert(QSqlRecord &record);
+  void beforeUpdate(int row, QSqlRecord &record);
+  void primeInsert(int row, QSqlRecord &record);
 };
 
 #endif /* QSQLTABLEMODELSLOTS_H */

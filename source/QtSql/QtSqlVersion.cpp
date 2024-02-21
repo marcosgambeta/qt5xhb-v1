@@ -24,12 +24,12 @@
 #include <QtSql/QtSqlVersion>
 #endif
 
-HB_FUNC( QTSQL_VERSION_STR )
+HB_FUNC(QTSQL_VERSION_STR)
 {
-  hb_retc( (const char *) QTSQL_VERSION_STR );
+  hb_retc((const char *)QTSQL_VERSION_STR);
 }
 
-HB_FUNC( QTSQL_VERSION )
+HB_FUNC(QTSQL_VERSION)
 {
-  hb_retni( QTSQL_VERSION );
+  hb_retni(QTSQL_VERSION);
 }

@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QSqlDriverSlots: public QObject
+class QSqlDriverSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSqlDriverSlots( QObject *parent = 0 );
+public:
+  QSqlDriverSlots(QObject *parent = 0);
   ~QSqlDriverSlots();
-  public slots:
-  void notification( const QString & name );
-  void notification( const QString & name, QSqlDriver::NotificationSource source, const QVariant & payload );
+public slots:
+  void notification(const QString &name);
+  void notification(const QString &name, QSqlDriver::NotificationSource source, const QVariant &payload);
 };
 
 #endif /* QSQLDRIVERSLOTS_H */
