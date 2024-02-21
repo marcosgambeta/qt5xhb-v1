@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #include <QtWebSockets/QWebSocketServer>
 #endif
 
@@ -26,32 +26,32 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QWebSocketServerSlots: public QObject
+class QWebSocketServerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWebSocketServerSlots( QObject *parent = 0 );
+public:
+  QWebSocketServerSlots(QObject *parent = 0);
   ~QWebSocketServerSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void acceptError( QAbstractSocket::SocketError socketError );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void acceptError(QAbstractSocket::SocketError socketError);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void serverError( QWebSocketProtocol::CloseCode closeCode );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void serverError(QWebSocketProtocol::CloseCode closeCode);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void originAuthenticationRequired(QWebSocketCorsAuthenticator *pAuthenticator);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   void newConnection();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void peerVerifyError( const QSslError & error );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void peerVerifyError(const QSslError &error);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void sslErrors( const QList<QSslError> & errors );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void sslErrors(const QList<QSslError> &errors);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   void closed();
 #endif
 };

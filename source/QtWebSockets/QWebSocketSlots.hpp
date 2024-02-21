@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #include <QtWebSockets/QWebSocket>
 #endif
 
@@ -26,54 +26,54 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QWebSocketSlots: public QObject
+class QWebSocketSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWebSocketSlots( QObject *parent = 0 );
+public:
+  QWebSocketSlots(QObject *parent = 0);
   ~QWebSocketSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   void aboutToClose();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   void connected();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   void disconnected();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void stateChanged( QAbstractSocket::SocketState state );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void stateChanged(QAbstractSocket::SocketState state);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * pAuthenticator );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator *pAuthenticator);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   void readChannelFinished();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void textFrameReceived( const QString & frame, bool isLastFrame );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void textFrameReceived(const QString &frame, bool isLastFrame);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void binaryFrameReceived( const QByteArray & frame, bool isLastFrame );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void binaryFrameReceived(const QByteArray &frame, bool isLastFrame);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void textMessageReceived( const QString & message );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void textMessageReceived(const QString &message);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void binaryMessageReceived( const QByteArray & message );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void binaryMessageReceived(const QByteArray &message);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void error( QAbstractSocket::SocketError error );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void error(QAbstractSocket::SocketError error);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void pong( quint64 elapsedTime, const QByteArray & payload );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void pong(quint64 elapsedTime, const QByteArray &payload);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void bytesWritten( qint64 bytes );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void bytesWritten(qint64 bytes);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  void sslErrors( const QList<QSslError> & errors );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  void sslErrors(const QList<QSslError> &errors);
 #endif
 };
 
