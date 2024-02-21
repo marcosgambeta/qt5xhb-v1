@@ -12,7 +12,7 @@
 
 #include "QMediaAudioProbeControlSlots.hpp"
 
-QMediaAudioProbeControlSlots::QMediaAudioProbeControlSlots( QObject *parent ) : QObject( parent )
+QMediaAudioProbeControlSlots::QMediaAudioProbeControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QMediaAudioProbeControlSlots::~QMediaAudioProbeControlSlots()
 {
 }
 
-void QMediaAudioProbeControlSlots::audioBufferProbed( const QAudioBuffer & buffer )
+void QMediaAudioProbeControlSlots::audioBufferProbed(const QAudioBuffer &buffer)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "audioBufferProbed(QAudioBuffer)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAAUDIOPROBECONTROL");
-    PHB_ITEM pbuffer = Qt5xHb::Signals_return_object( (void *) &buffer, "QAUDIOBUFFER");
+    PHB_ITEM pbuffer = Qt5xHb::Signals_return_object((void *)&buffer, "QAUDIOBUFFER");
 
     hb_vmEvalBlockV(cb, 2, psender, pbuffer);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pbuffer );
+    hb_itemRelease(pbuffer);
   }
 }
 
 void QMediaAudioProbeControlSlots::flush()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flush()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAAUDIOPROBECONTROL");
 
@@ -54,15 +54,15 @@ void QMediaAudioProbeControlSlots::flush()
   }
 }
 
-void QMediaAudioProbeControlSlots_connect_signal(const QString & signal, const QString & slot)
+void QMediaAudioProbeControlSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMediaAudioProbeControl * obj = (QMediaAudioProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaAudioProbeControl *obj = (QMediaAudioProbeControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMediaAudioProbeControlSlots * s = QCoreApplication::instance()->findChild<QMediaAudioProbeControlSlots*>();
+    QMediaAudioProbeControlSlots *s = QCoreApplication::instance()->findChild<QMediaAudioProbeControlSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMediaAudioProbeControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

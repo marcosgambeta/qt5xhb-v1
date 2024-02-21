@@ -12,7 +12,7 @@
 
 #include "QMetaDataWriterControlSlots.hpp"
 
-QMetaDataWriterControlSlots::QMetaDataWriterControlSlots( QObject *parent ) : QObject( parent )
+QMetaDataWriterControlSlots::QMetaDataWriterControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QMetaDataWriterControlSlots::~QMetaDataWriterControlSlots()
 
 void QMetaDataWriterControlSlots::metaDataChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMETADATAWRITERCONTROL");
 
@@ -36,71 +36,71 @@ void QMetaDataWriterControlSlots::metaDataChanged()
   }
 }
 
-void QMetaDataWriterControlSlots::metaDataChanged( const QString & key, const QVariant & value )
+void QMetaDataWriterControlSlots::metaDataChanged(const QString &key, const QVariant &value)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataChanged(QString,QVariant)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMETADATAWRITERCONTROL");
-    PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
-    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT");
+    PHB_ITEM pkey = hb_itemPutC(NULL, QSTRINGTOSTRING(key));
+    PHB_ITEM pvalue = Qt5xHb::Signals_return_object((void *)&value, "QVARIANT");
 
     hb_vmEvalBlockV(cb, 3, psender, pkey, pvalue);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pkey );
-    hb_itemRelease( pvalue );
+    hb_itemRelease(pkey);
+    hb_itemRelease(pvalue);
   }
 }
 
-void QMetaDataWriterControlSlots::writableChanged( bool writable )
+void QMetaDataWriterControlSlots::writableChanged(bool writable)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "writableChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMETADATAWRITERCONTROL");
-    PHB_ITEM pwritable = hb_itemPutL( NULL, writable );
+    PHB_ITEM pwritable = hb_itemPutL(NULL, writable);
 
     hb_vmEvalBlockV(cb, 2, psender, pwritable);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pwritable );
+    hb_itemRelease(pwritable);
   }
 }
 
-void QMetaDataWriterControlSlots::metaDataAvailableChanged( bool available )
+void QMetaDataWriterControlSlots::metaDataAvailableChanged(bool available)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataAvailableChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMETADATAWRITERCONTROL");
-    PHB_ITEM pavailable = hb_itemPutL( NULL, available );
+    PHB_ITEM pavailable = hb_itemPutL(NULL, available);
 
     hb_vmEvalBlockV(cb, 2, psender, pavailable);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pavailable );
+    hb_itemRelease(pavailable);
   }
 }
 
-void QMetaDataWriterControlSlots_connect_signal(const QString & signal, const QString & slot)
+void QMetaDataWriterControlSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMetaDataWriterControl * obj = (QMetaDataWriterControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaDataWriterControl *obj = (QMetaDataWriterControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMetaDataWriterControlSlots * s = QCoreApplication::instance()->findChild<QMetaDataWriterControlSlots*>();
+    QMetaDataWriterControlSlots *s = QCoreApplication::instance()->findChild<QMetaDataWriterControlSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMetaDataWriterControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

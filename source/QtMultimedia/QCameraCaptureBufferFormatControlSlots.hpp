@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QCameraCaptureBufferFormatControlSlots: public QObject
+class QCameraCaptureBufferFormatControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCameraCaptureBufferFormatControlSlots( QObject *parent = 0 );
+public:
+  QCameraCaptureBufferFormatControlSlots(QObject *parent = 0);
   ~QCameraCaptureBufferFormatControlSlots();
-  public slots:
-  void bufferFormatChanged( QVideoFrame::PixelFormat format );
+public slots:
+  void bufferFormatChanged(QVideoFrame::PixelFormat format);
 };
 
 #endif /* QCAMERACAPTUREBUFFERFORMATCONTROLSLOTS_H */

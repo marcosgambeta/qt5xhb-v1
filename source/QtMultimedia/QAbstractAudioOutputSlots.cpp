@@ -12,7 +12,7 @@
 
 #include "QAbstractAudioOutputSlots.hpp"
 
-QAbstractAudioOutputSlots::QAbstractAudioOutputSlots( QObject *parent ) : QObject( parent )
+QAbstractAudioOutputSlots::QAbstractAudioOutputSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,49 +20,49 @@ QAbstractAudioOutputSlots::~QAbstractAudioOutputSlots()
 {
 }
 
-void QAbstractAudioOutputSlots::errorChanged( QAudio::Error error )
+void QAbstractAudioOutputSlots::errorChanged(QAudio::Error error)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "errorChanged(QAudio::Error)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAUDIOOUTPUT");
-    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
+    PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
     hb_vmEvalBlockV(cb, 2, psender, perror);
 
     hb_itemRelease(psender);
-    hb_itemRelease( perror );
+    hb_itemRelease(perror);
   }
 }
 
-void QAbstractAudioOutputSlots::stateChanged( QAudio::State state )
+void QAbstractAudioOutputSlots::stateChanged(QAudio::State state)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QAudio::State)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAUDIOOUTPUT");
-    PHB_ITEM pstate = hb_itemPutNI( NULL, static_cast<int>(state) );
+    PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
     hb_vmEvalBlockV(cb, 2, psender, pstate);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstate );
+    hb_itemRelease(pstate);
   }
 }
 
 void QAbstractAudioOutputSlots::notify()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "notify()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAUDIOOUTPUT");
 
@@ -72,15 +72,15 @@ void QAbstractAudioOutputSlots::notify()
   }
 }
 
-void QAbstractAudioOutputSlots_connect_signal(const QString & signal, const QString & slot)
+void QAbstractAudioOutputSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractAudioOutput * obj = (QAbstractAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAudioOutput *obj = (QAbstractAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAbstractAudioOutputSlots * s = QCoreApplication::instance()->findChild<QAbstractAudioOutputSlots*>();
+    QAbstractAudioOutputSlots *s = QCoreApplication::instance()->findChild<QAbstractAudioOutputSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAbstractAudioOutputSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,27 +24,27 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMediaPlayerControlSlots: public QObject
+class QMediaPlayerControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMediaPlayerControlSlots( QObject *parent = 0 );
+public:
+  QMediaPlayerControlSlots(QObject *parent = 0);
   ~QMediaPlayerControlSlots();
-  public slots:
-  void audioAvailableChanged( bool audio );
-  void availablePlaybackRangesChanged( const QMediaTimeRange & ranges );
-  void bufferStatusChanged( int progress );
-  void durationChanged( qint64 duration );
-  void error( int error, const QString & errorString );
-  void mediaChanged( const QMediaContent & content );
-  void mediaStatusChanged( QMediaPlayer::MediaStatus status );
-  void mutedChanged( bool mute );
-  void playbackRateChanged( qreal rate );
-  void positionChanged( qint64 position );
-  void seekableChanged( bool seekable );
-  void stateChanged( QMediaPlayer::State state );
-  void videoAvailableChanged( bool video );
-  void volumeChanged( int volume );
+public slots:
+  void audioAvailableChanged(bool audio);
+  void availablePlaybackRangesChanged(const QMediaTimeRange &ranges);
+  void bufferStatusChanged(int progress);
+  void durationChanged(qint64 duration);
+  void error(int error, const QString &errorString);
+  void mediaChanged(const QMediaContent &content);
+  void mediaStatusChanged(QMediaPlayer::MediaStatus status);
+  void mutedChanged(bool mute);
+  void playbackRateChanged(qreal rate);
+  void positionChanged(qint64 position);
+  void seekableChanged(bool seekable);
+  void stateChanged(QMediaPlayer::State state);
+  void videoAvailableChanged(bool video);
+  void volumeChanged(int volume);
 };
 
 #endif /* QMEDIAPLAYERCONTROLSLOTS_H */

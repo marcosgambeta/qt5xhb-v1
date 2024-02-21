@@ -12,7 +12,7 @@
 
 #include "QMediaRecorderSlots.hpp"
 
-QMediaRecorderSlots::QMediaRecorderSlots( QObject *parent ) : QObject( parent )
+QMediaRecorderSlots::QMediaRecorderSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,121 +20,121 @@ QMediaRecorderSlots::~QMediaRecorderSlots()
 {
 }
 
-void QMediaRecorderSlots::actualLocationChanged( const QUrl & location )
+void QMediaRecorderSlots::actualLocationChanged(const QUrl &location)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "actualLocationChanged(QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM plocation = Qt5xHb::Signals_return_object( (void *) &location, "QURL");
+    PHB_ITEM plocation = Qt5xHb::Signals_return_object((void *)&location, "QURL");
 
     hb_vmEvalBlockV(cb, 2, psender, plocation);
 
     hb_itemRelease(psender);
-    hb_itemRelease( plocation );
+    hb_itemRelease(plocation);
   }
 }
 
-void QMediaRecorderSlots::availabilityChanged( bool available )
+void QMediaRecorderSlots::availabilityChanged(bool available)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availabilityChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM pavailable = hb_itemPutL( NULL, available );
+    PHB_ITEM pavailable = hb_itemPutL(NULL, available);
 
     hb_vmEvalBlockV(cb, 2, psender, pavailable);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pavailable );
+    hb_itemRelease(pavailable);
   }
 }
 
-void QMediaRecorderSlots::availabilityChanged( QMultimedia::AvailabilityStatus availability )
+void QMediaRecorderSlots::availabilityChanged(QMultimedia::AvailabilityStatus availability)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availabilityChanged(QMultimedia::AvailabilityStatus)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM pavailability = hb_itemPutNI( NULL, static_cast<int>(availability) );
+    PHB_ITEM pavailability = hb_itemPutNI(NULL, static_cast<int>(availability));
 
     hb_vmEvalBlockV(cb, 2, psender, pavailability);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pavailability );
+    hb_itemRelease(pavailability);
   }
 }
 
-void QMediaRecorderSlots::durationChanged( qint64 duration )
+void QMediaRecorderSlots::durationChanged(qint64 duration)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "durationChanged(qint64)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM pduration = hb_itemPutNLL( NULL, duration );
+    PHB_ITEM pduration = hb_itemPutNLL(NULL, duration);
 
     hb_vmEvalBlockV(cb, 2, psender, pduration);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pduration );
+    hb_itemRelease(pduration);
   }
 }
 
-void QMediaRecorderSlots::error( QMediaRecorder::Error error )
+void QMediaRecorderSlots::error(QMediaRecorder::Error error)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QMediaRecorder::Error)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
+    PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
     hb_vmEvalBlockV(cb, 2, psender, perror);
 
     hb_itemRelease(psender);
-    hb_itemRelease( perror );
+    hb_itemRelease(perror);
   }
 }
 
-void QMediaRecorderSlots::metaDataAvailableChanged( bool available )
+void QMediaRecorderSlots::metaDataAvailableChanged(bool available)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataAvailableChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM pavailable = hb_itemPutL( NULL, available );
+    PHB_ITEM pavailable = hb_itemPutL(NULL, available);
 
     hb_vmEvalBlockV(cb, 2, psender, pavailable);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pavailable );
+    hb_itemRelease(pavailable);
   }
 }
 
 void QMediaRecorderSlots::metaDataChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
 
@@ -144,125 +144,125 @@ void QMediaRecorderSlots::metaDataChanged()
   }
 }
 
-void QMediaRecorderSlots::metaDataChanged( const QString & key, const QVariant & value )
+void QMediaRecorderSlots::metaDataChanged(const QString &key, const QVariant &value)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataChanged(QString,QVariant)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
-    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT");
+    PHB_ITEM pkey = hb_itemPutC(NULL, QSTRINGTOSTRING(key));
+    PHB_ITEM pvalue = Qt5xHb::Signals_return_object((void *)&value, "QVARIANT");
 
     hb_vmEvalBlockV(cb, 3, psender, pkey, pvalue);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pkey );
-    hb_itemRelease( pvalue );
+    hb_itemRelease(pkey);
+    hb_itemRelease(pvalue);
   }
 }
 
-void QMediaRecorderSlots::metaDataWritableChanged( bool writable )
+void QMediaRecorderSlots::metaDataWritableChanged(bool writable)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataWritableChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM pwritable = hb_itemPutL( NULL, writable );
+    PHB_ITEM pwritable = hb_itemPutL(NULL, writable);
 
     hb_vmEvalBlockV(cb, 2, psender, pwritable);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pwritable );
+    hb_itemRelease(pwritable);
   }
 }
 
-void QMediaRecorderSlots::mutedChanged( bool muted )
+void QMediaRecorderSlots::mutedChanged(bool muted)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mutedChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
+    PHB_ITEM pmuted = hb_itemPutL(NULL, muted);
 
     hb_vmEvalBlockV(cb, 2, psender, pmuted);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pmuted );
+    hb_itemRelease(pmuted);
   }
 }
 
-void QMediaRecorderSlots::stateChanged( QMediaRecorder::State state )
+void QMediaRecorderSlots::stateChanged(QMediaRecorder::State state)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QMediaRecorder::State)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM pstate = hb_itemPutNI( NULL, static_cast<int>(state) );
+    PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
     hb_vmEvalBlockV(cb, 2, psender, pstate);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstate );
+    hb_itemRelease(pstate);
   }
 }
 
-void QMediaRecorderSlots::statusChanged( QMediaRecorder::Status status )
+void QMediaRecorderSlots::statusChanged(QMediaRecorder::Status status)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QMediaRecorder::Status)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, static_cast<int>(status) );
+    PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
 
     hb_vmEvalBlockV(cb, 2, psender, pstatus);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstatus );
+    hb_itemRelease(pstatus);
   }
 }
 
-void QMediaRecorderSlots::volumeChanged( qreal volume )
+void QMediaRecorderSlots::volumeChanged(qreal volume)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "volumeChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
-    PHB_ITEM pvolume = hb_itemPutND( NULL, volume );
+    PHB_ITEM pvolume = hb_itemPutND(NULL, volume);
 
     hb_vmEvalBlockV(cb, 2, psender, pvolume);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvolume );
+    hb_itemRelease(pvolume);
   }
 }
 
-void QMediaRecorderSlots_connect_signal(const QString & signal, const QString & slot)
+void QMediaRecorderSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorder *obj = (QMediaRecorder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMediaRecorderSlots * s = QCoreApplication::instance()->findChild<QMediaRecorderSlots*>();
+    QMediaRecorderSlots *s = QCoreApplication::instance()->findChild<QMediaRecorderSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMediaRecorderSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

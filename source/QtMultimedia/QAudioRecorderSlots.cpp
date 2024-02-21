@@ -12,7 +12,7 @@
 
 #include "QAudioRecorderSlots.hpp"
 
-QAudioRecorderSlots::QAudioRecorderSlots( QObject *parent ) : QObject( parent )
+QAudioRecorderSlots::QAudioRecorderSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QAudioRecorderSlots::~QAudioRecorderSlots()
 {
 }
 
-void QAudioRecorderSlots::audioInputChanged( const QString & name )
+void QAudioRecorderSlots::audioInputChanged(const QString &name)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "audioInputChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIORECORDER");
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
+    PHB_ITEM pname = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
 
     hb_vmEvalBlockV(cb, 2, psender, pname);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pname );
+    hb_itemRelease(pname);
   }
 }
 
 void QAudioRecorderSlots::availableAudioInputsChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availableAudioInputsChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIORECORDER");
 
@@ -54,15 +54,15 @@ void QAudioRecorderSlots::availableAudioInputsChanged()
   }
 }
 
-void QAudioRecorderSlots_connect_signal(const QString & signal, const QString & slot)
+void QAudioRecorderSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAudioRecorder * obj = (QAudioRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioRecorder *obj = (QAudioRecorder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAudioRecorderSlots * s = QCoreApplication::instance()->findChild<QAudioRecorderSlots*>();
+    QAudioRecorderSlots *s = QCoreApplication::instance()->findChild<QAudioRecorderSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAudioRecorderSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

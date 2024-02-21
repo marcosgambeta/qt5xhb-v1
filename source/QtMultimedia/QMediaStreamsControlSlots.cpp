@@ -12,7 +12,7 @@
 
 #include "QMediaStreamsControlSlots.hpp"
 
-QMediaStreamsControlSlots::QMediaStreamsControlSlots( QObject *parent ) : QObject( parent )
+QMediaStreamsControlSlots::QMediaStreamsControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QMediaStreamsControlSlots::~QMediaStreamsControlSlots()
 
 void QMediaStreamsControlSlots::activeStreamsChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activeStreamsChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIASTREAMSCONTROL");
 
@@ -38,11 +38,11 @@ void QMediaStreamsControlSlots::activeStreamsChanged()
 
 void QMediaStreamsControlSlots::streamsChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "streamsChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIASTREAMSCONTROL");
 
@@ -52,15 +52,15 @@ void QMediaStreamsControlSlots::streamsChanged()
   }
 }
 
-void QMediaStreamsControlSlots_connect_signal(const QString & signal, const QString & slot)
+void QMediaStreamsControlSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaStreamsControl *obj = (QMediaStreamsControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMediaStreamsControlSlots * s = QCoreApplication::instance()->findChild<QMediaStreamsControlSlots*>();
+    QMediaStreamsControlSlots *s = QCoreApplication::instance()->findChild<QMediaStreamsControlSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMediaStreamsControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

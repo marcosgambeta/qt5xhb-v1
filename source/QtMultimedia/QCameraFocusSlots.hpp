@@ -24,18 +24,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QCameraFocusSlots: public QObject
+class QCameraFocusSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCameraFocusSlots( QObject *parent = 0 );
+public:
+  QCameraFocusSlots(QObject *parent = 0);
   ~QCameraFocusSlots();
-  public slots:
-  void digitalZoomChanged( qreal value );
+public slots:
+  void digitalZoomChanged(qreal value);
   void focusZonesChanged();
-  void maximumDigitalZoomChanged( qreal zoom );
-  void maximumOpticalZoomChanged( qreal zoom );
-  void opticalZoomChanged( qreal value );
+  void maximumDigitalZoomChanged(qreal zoom);
+  void maximumOpticalZoomChanged(qreal zoom);
+  void opticalZoomChanged(qreal value);
 };
 
 #endif /* QCAMERAFOCUSSLOTS_H */

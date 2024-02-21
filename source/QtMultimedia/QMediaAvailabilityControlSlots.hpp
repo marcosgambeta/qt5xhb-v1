@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMediaAvailabilityControlSlots: public QObject
+class QMediaAvailabilityControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMediaAvailabilityControlSlots( QObject *parent = 0 );
+public:
+  QMediaAvailabilityControlSlots(QObject *parent = 0);
   ~QMediaAvailabilityControlSlots();
-  public slots:
-  void availabilityChanged( QMultimedia::AvailabilityStatus availability );
+public slots:
+  void availabilityChanged(QMultimedia::AvailabilityStatus availability);
 };
 
 #endif /* QMEDIAAVAILABILITYCONTROLSLOTS_H */

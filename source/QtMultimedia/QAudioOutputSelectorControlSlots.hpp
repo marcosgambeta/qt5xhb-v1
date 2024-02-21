@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAudioOutputSelectorControlSlots: public QObject
+class QAudioOutputSelectorControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAudioOutputSelectorControlSlots( QObject *parent = 0 );
+public:
+  QAudioOutputSelectorControlSlots(QObject *parent = 0);
   ~QAudioOutputSelectorControlSlots();
-  public slots:
-  void activeOutputChanged( const QString & name );
+public slots:
+  void activeOutputChanged(const QString &name);
   void availableOutputsChanged();
 };
 

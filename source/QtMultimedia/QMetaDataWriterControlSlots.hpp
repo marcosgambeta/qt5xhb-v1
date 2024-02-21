@@ -24,17 +24,17 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMetaDataWriterControlSlots: public QObject
+class QMetaDataWriterControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMetaDataWriterControlSlots( QObject *parent = 0 );
+public:
+  QMetaDataWriterControlSlots(QObject *parent = 0);
   ~QMetaDataWriterControlSlots();
-  public slots:
+public slots:
   void metaDataChanged();
-  void metaDataChanged( const QString & key, const QVariant & value );
-  void writableChanged( bool writable );
-  void metaDataAvailableChanged( bool available );
+  void metaDataChanged(const QString &key, const QVariant &value);
+  void writableChanged(bool writable);
+  void metaDataAvailableChanged(bool available);
 };
 
 #endif /* QMETADATAWRITERCONTROLSLOTS_H */

@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMetaDataReaderControlSlots: public QObject
+class QMetaDataReaderControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMetaDataReaderControlSlots( QObject *parent = 0 );
+public:
+  QMetaDataReaderControlSlots(QObject *parent = 0);
   ~QMetaDataReaderControlSlots();
-  public slots:
+public slots:
   void metaDataChanged();
-  void metaDataChanged( const QString & key, const QVariant & value );
-  void metaDataAvailableChanged( bool available );
+  void metaDataChanged(const QString &key, const QVariant &value);
+  void metaDataAvailableChanged(bool available);
 };
 
 #endif /* QMETADATAREADERCONTROLSLOTS_H */

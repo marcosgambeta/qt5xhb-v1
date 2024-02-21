@@ -12,7 +12,7 @@
 
 #include "QRadioDataSlots.hpp"
 
-QRadioDataSlots::QRadioDataSlots( QObject *parent ) : QObject( parent )
+QRadioDataSlots::QRadioDataSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,141 +20,141 @@ QRadioDataSlots::~QRadioDataSlots()
 {
 }
 
-void QRadioDataSlots::stationIdChanged( QString stationId )
+void QRadioDataSlots::stationIdChanged(QString stationId)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stationIdChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
-    PHB_ITEM pstationId = hb_itemPutC( NULL, stationId.toLatin1().data() );
+    PHB_ITEM pstationId = hb_itemPutC(NULL, stationId.toLatin1().data());
 
     hb_vmEvalBlockV(cb, 2, psender, pstationId);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstationId );
+    hb_itemRelease(pstationId);
   }
 }
 
-void QRadioDataSlots::programTypeChanged( QRadioData::ProgramType programType )
+void QRadioDataSlots::programTypeChanged(QRadioData::ProgramType programType)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "programTypeChanged(QRadioData::ProgramType)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
-    PHB_ITEM pprogramType = hb_itemPutNI( NULL, static_cast<int>(programType) );
+    PHB_ITEM pprogramType = hb_itemPutNI(NULL, static_cast<int>(programType));
 
     hb_vmEvalBlockV(cb, 2, psender, pprogramType);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pprogramType );
+    hb_itemRelease(pprogramType);
   }
 }
 
-void QRadioDataSlots::programTypeNameChanged( QString programTypeName )
+void QRadioDataSlots::programTypeNameChanged(QString programTypeName)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "programTypeNameChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
-    PHB_ITEM pprogramTypeName = hb_itemPutC( NULL, programTypeName.toLatin1().data() );
+    PHB_ITEM pprogramTypeName = hb_itemPutC(NULL, programTypeName.toLatin1().data());
 
     hb_vmEvalBlockV(cb, 2, psender, pprogramTypeName);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pprogramTypeName );
+    hb_itemRelease(pprogramTypeName);
   }
 }
 
-void QRadioDataSlots::stationNameChanged( QString stationName )
+void QRadioDataSlots::stationNameChanged(QString stationName)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stationNameChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
-    PHB_ITEM pstationName = hb_itemPutC( NULL, stationName.toLatin1().data() );
+    PHB_ITEM pstationName = hb_itemPutC(NULL, stationName.toLatin1().data());
 
     hb_vmEvalBlockV(cb, 2, psender, pstationName);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstationName );
+    hb_itemRelease(pstationName);
   }
 }
 
-void QRadioDataSlots::radioTextChanged( QString radioText )
+void QRadioDataSlots::radioTextChanged(QString radioText)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "radioTextChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
-    PHB_ITEM pradioText = hb_itemPutC( NULL, radioText.toLatin1().data() );
+    PHB_ITEM pradioText = hb_itemPutC(NULL, radioText.toLatin1().data());
 
     hb_vmEvalBlockV(cb, 2, psender, pradioText);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pradioText );
+    hb_itemRelease(pradioText);
   }
 }
 
-void QRadioDataSlots::alternativeFrequenciesEnabledChanged( bool enabled )
+void QRadioDataSlots::alternativeFrequenciesEnabledChanged(bool enabled)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "alternativeFrequenciesEnabledChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
-    PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
+    PHB_ITEM penabled = hb_itemPutL(NULL, enabled);
 
     hb_vmEvalBlockV(cb, 2, psender, penabled);
 
     hb_itemRelease(psender);
-    hb_itemRelease( penabled );
+    hb_itemRelease(penabled);
   }
 }
 
-void QRadioDataSlots::error( QRadioData::Error error )
+void QRadioDataSlots::error(QRadioData::Error error)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QRadioData::Error)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
-    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
+    PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
     hb_vmEvalBlockV(cb, 2, psender, perror);
 
     hb_itemRelease(psender);
-    hb_itemRelease( perror );
+    hb_itemRelease(perror);
   }
 }
 
-void QRadioDataSlots_connect_signal(const QString & signal, const QString & slot)
+void QRadioDataSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QRadioData * obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioData *obj = (QRadioData *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QRadioDataSlots * s = QCoreApplication::instance()->findChild<QRadioDataSlots*>();
+    QRadioDataSlots *s = QCoreApplication::instance()->findChild<QRadioDataSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QRadioDataSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -12,7 +12,7 @@
 
 #include "QCameraLocksControlSlots.hpp"
 
-QCameraLocksControlSlots::QCameraLocksControlSlots( QObject *parent ) : QObject( parent )
+QCameraLocksControlSlots::QCameraLocksControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,37 +20,39 @@ QCameraLocksControlSlots::~QCameraLocksControlSlots()
 {
 }
 
-void QCameraLocksControlSlots::lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason )
+void QCameraLocksControlSlots::lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status,
+                                                 QCamera::LockChangeReason reason)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)");
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(
+      object, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERALOCKSCONTROL");
-    PHB_ITEM plock = hb_itemPutNI( NULL, static_cast<int>(lock) );
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, static_cast<int>(status) );
-    PHB_ITEM preason = hb_itemPutNI( NULL, static_cast<int>(reason) );
+    PHB_ITEM plock = hb_itemPutNI(NULL, static_cast<int>(lock));
+    PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
+    PHB_ITEM preason = hb_itemPutNI(NULL, static_cast<int>(reason));
 
     hb_vmEvalBlockV(cb, 4, psender, plock, pstatus, preason);
 
     hb_itemRelease(psender);
-    hb_itemRelease( plock );
-    hb_itemRelease( pstatus );
-    hb_itemRelease( preason );
+    hb_itemRelease(plock);
+    hb_itemRelease(pstatus);
+    hb_itemRelease(preason);
   }
 }
 
-void QCameraLocksControlSlots_connect_signal(const QString & signal, const QString & slot)
+void QCameraLocksControlSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraLocksControl *obj = (QCameraLocksControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QCameraLocksControlSlots * s = QCoreApplication::instance()->findChild<QCameraLocksControlSlots*>();
+    QCameraLocksControlSlots *s = QCoreApplication::instance()->findChild<QCameraLocksControlSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QCameraLocksControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

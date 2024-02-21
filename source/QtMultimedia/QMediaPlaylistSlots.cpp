@@ -12,7 +12,7 @@
 
 #include "QMediaPlaylistSlots.hpp"
 
-QMediaPlaylistSlots::QMediaPlaylistSlots( QObject *parent ) : QObject( parent )
+QMediaPlaylistSlots::QMediaPlaylistSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,49 +20,49 @@ QMediaPlaylistSlots::~QMediaPlaylistSlots()
 {
 }
 
-void QMediaPlaylistSlots::currentIndexChanged( int position )
+void QMediaPlaylistSlots::currentIndexChanged(int position)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentIndexChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
-    PHB_ITEM pposition = hb_itemPutNI( NULL, position );
+    PHB_ITEM pposition = hb_itemPutNI(NULL, position);
 
     hb_vmEvalBlockV(cb, 2, psender, pposition);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pposition );
+    hb_itemRelease(pposition);
   }
 }
 
-void QMediaPlaylistSlots::currentMediaChanged( const QMediaContent & content )
+void QMediaPlaylistSlots::currentMediaChanged(const QMediaContent &content)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentMediaChanged(QMediaContent)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
-    PHB_ITEM pcontent = Qt5xHb::Signals_return_object( (void *) &content, "QMEDIACONTENT");
+    PHB_ITEM pcontent = Qt5xHb::Signals_return_object((void *)&content, "QMEDIACONTENT");
 
     hb_vmEvalBlockV(cb, 2, psender, pcontent);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pcontent );
+    hb_itemRelease(pcontent);
   }
 }
 
 void QMediaPlaylistSlots::loadFailed()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "loadFailed()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
 
@@ -74,11 +74,11 @@ void QMediaPlaylistSlots::loadFailed()
 
 void QMediaPlaylistSlots::loaded()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "loaded()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
 
@@ -88,133 +88,133 @@ void QMediaPlaylistSlots::loaded()
   }
 }
 
-void QMediaPlaylistSlots::mediaAboutToBeInserted( int start, int end )
+void QMediaPlaylistSlots::mediaAboutToBeInserted(int start, int end)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mediaAboutToBeInserted(int,int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
-    PHB_ITEM pstart = hb_itemPutNI( NULL, start );
-    PHB_ITEM pend = hb_itemPutNI( NULL, end );
+    PHB_ITEM pstart = hb_itemPutNI(NULL, start);
+    PHB_ITEM pend = hb_itemPutNI(NULL, end);
 
     hb_vmEvalBlockV(cb, 3, psender, pstart, pend);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstart );
-    hb_itemRelease( pend );
+    hb_itemRelease(pstart);
+    hb_itemRelease(pend);
   }
 }
 
-void QMediaPlaylistSlots::mediaAboutToBeRemoved( int start, int end )
+void QMediaPlaylistSlots::mediaAboutToBeRemoved(int start, int end)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mediaAboutToBeRemoved(int,int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
-    PHB_ITEM pstart = hb_itemPutNI( NULL, start );
-    PHB_ITEM pend = hb_itemPutNI( NULL, end );
+    PHB_ITEM pstart = hb_itemPutNI(NULL, start);
+    PHB_ITEM pend = hb_itemPutNI(NULL, end);
 
     hb_vmEvalBlockV(cb, 3, psender, pstart, pend);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstart );
-    hb_itemRelease( pend );
+    hb_itemRelease(pstart);
+    hb_itemRelease(pend);
   }
 }
 
-void QMediaPlaylistSlots::mediaChanged( int start, int end )
+void QMediaPlaylistSlots::mediaChanged(int start, int end)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mediaChanged(int,int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
-    PHB_ITEM pstart = hb_itemPutNI( NULL, start );
-    PHB_ITEM pend = hb_itemPutNI( NULL, end );
+    PHB_ITEM pstart = hb_itemPutNI(NULL, start);
+    PHB_ITEM pend = hb_itemPutNI(NULL, end);
 
     hb_vmEvalBlockV(cb, 3, psender, pstart, pend);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstart );
-    hb_itemRelease( pend );
+    hb_itemRelease(pstart);
+    hb_itemRelease(pend);
   }
 }
 
-void QMediaPlaylistSlots::mediaInserted( int start, int end )
+void QMediaPlaylistSlots::mediaInserted(int start, int end)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mediaInserted(int,int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
-    PHB_ITEM pstart = hb_itemPutNI( NULL, start );
-    PHB_ITEM pend = hb_itemPutNI( NULL, end );
+    PHB_ITEM pstart = hb_itemPutNI(NULL, start);
+    PHB_ITEM pend = hb_itemPutNI(NULL, end);
 
     hb_vmEvalBlockV(cb, 3, psender, pstart, pend);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstart );
-    hb_itemRelease( pend );
+    hb_itemRelease(pstart);
+    hb_itemRelease(pend);
   }
 }
 
-void QMediaPlaylistSlots::mediaRemoved( int start, int end )
+void QMediaPlaylistSlots::mediaRemoved(int start, int end)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mediaRemoved(int,int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
-    PHB_ITEM pstart = hb_itemPutNI( NULL, start );
-    PHB_ITEM pend = hb_itemPutNI( NULL, end );
+    PHB_ITEM pstart = hb_itemPutNI(NULL, start);
+    PHB_ITEM pend = hb_itemPutNI(NULL, end);
 
     hb_vmEvalBlockV(cb, 3, psender, pstart, pend);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstart );
-    hb_itemRelease( pend );
+    hb_itemRelease(pstart);
+    hb_itemRelease(pend);
   }
 }
 
-void QMediaPlaylistSlots::playbackModeChanged( QMediaPlaylist::PlaybackMode mode )
+void QMediaPlaylistSlots::playbackModeChanged(QMediaPlaylist::PlaybackMode mode)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "playbackModeChanged(QMediaPlaylist::PlaybackMode)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
-    PHB_ITEM pmode = hb_itemPutNI( NULL, static_cast<int>(mode) );
+    PHB_ITEM pmode = hb_itemPutNI(NULL, static_cast<int>(mode));
 
     hb_vmEvalBlockV(cb, 2, psender, pmode);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pmode );
+    hb_itemRelease(pmode);
   }
 }
 
-void QMediaPlaylistSlots_connect_signal(const QString & signal, const QString & slot)
+void QMediaPlaylistSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMediaPlaylist * obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaPlaylist *obj = (QMediaPlaylist *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMediaPlaylistSlots * s = QCoreApplication::instance()->findChild<QMediaPlaylistSlots*>();
+    QMediaPlaylistSlots *s = QCoreApplication::instance()->findChild<QMediaPlaylistSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMediaPlaylistSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QVideoDeviceSelectorControlSlots: public QObject
+class QVideoDeviceSelectorControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QVideoDeviceSelectorControlSlots( QObject *parent = 0 );
+public:
+  QVideoDeviceSelectorControlSlots(QObject *parent = 0);
   ~QVideoDeviceSelectorControlSlots();
-  public slots:
+public slots:
   void devicesChanged();
-  void selectedDeviceChanged( int index );
-  void selectedDeviceChanged( const QString & name );
+  void selectedDeviceChanged(int index);
+  void selectedDeviceChanged(const QString &name);
 };
 
 #endif /* QVIDEODEVICESELECTORCONTROLSLOTS_H */

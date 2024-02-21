@@ -12,7 +12,7 @@
 
 #include "QMediaVideoProbeControlSlots.hpp"
 
-QMediaVideoProbeControlSlots::QMediaVideoProbeControlSlots( QObject *parent ) : QObject( parent )
+QMediaVideoProbeControlSlots::QMediaVideoProbeControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,11 +22,11 @@ QMediaVideoProbeControlSlots::~QMediaVideoProbeControlSlots()
 
 void QMediaVideoProbeControlSlots::flush()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flush()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAVIDEOPROBECONTROL");
 
@@ -36,33 +36,33 @@ void QMediaVideoProbeControlSlots::flush()
   }
 }
 
-void QMediaVideoProbeControlSlots::videoFrameProbed( const QVideoFrame & frame )
+void QMediaVideoProbeControlSlots::videoFrameProbed(const QVideoFrame &frame)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "videoFrameProbed(QVideoFrame)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAVIDEOPROBECONTROL");
-    PHB_ITEM pframe = Qt5xHb::Signals_return_object( (void *) &frame, "QVIDEOFRAME");
+    PHB_ITEM pframe = Qt5xHb::Signals_return_object((void *)&frame, "QVIDEOFRAME");
 
     hb_vmEvalBlockV(cb, 2, psender, pframe);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pframe );
+    hb_itemRelease(pframe);
   }
 }
 
-void QMediaVideoProbeControlSlots_connect_signal(const QString & signal, const QString & slot)
+void QMediaVideoProbeControlSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMediaVideoProbeControl * obj = (QMediaVideoProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaVideoProbeControl *obj = (QMediaVideoProbeControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMediaVideoProbeControlSlots * s = QCoreApplication::instance()->findChild<QMediaVideoProbeControlSlots*>();
+    QMediaVideoProbeControlSlots *s = QCoreApplication::instance()->findChild<QMediaVideoProbeControlSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMediaVideoProbeControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -12,7 +12,7 @@
 
 #include "QCameraExposureControlSlots.hpp"
 
-QCameraExposureControlSlots::QCameraExposureControlSlots( QObject *parent ) : QObject( parent )
+QCameraExposureControlSlots::QCameraExposureControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,69 +20,69 @@ QCameraExposureControlSlots::~QCameraExposureControlSlots()
 {
 }
 
-void QCameraExposureControlSlots::actualValueChanged( int parameter )
+void QCameraExposureControlSlots::actualValueChanged(int parameter)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "actualValueChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURECONTROL");
-    PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
+    PHB_ITEM pparameter = hb_itemPutNI(NULL, parameter);
 
     hb_vmEvalBlockV(cb, 2, psender, pparameter);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pparameter );
+    hb_itemRelease(pparameter);
   }
 }
 
-void QCameraExposureControlSlots::parameterRangeChanged( int parameter )
+void QCameraExposureControlSlots::parameterRangeChanged(int parameter)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "parameterRangeChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURECONTROL");
-    PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
+    PHB_ITEM pparameter = hb_itemPutNI(NULL, parameter);
 
     hb_vmEvalBlockV(cb, 2, psender, pparameter);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pparameter );
+    hb_itemRelease(pparameter);
   }
 }
 
-void QCameraExposureControlSlots::requestedValueChanged( int parameter )
+void QCameraExposureControlSlots::requestedValueChanged(int parameter)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "requestedValueChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURECONTROL");
-    PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
+    PHB_ITEM pparameter = hb_itemPutNI(NULL, parameter);
 
     hb_vmEvalBlockV(cb, 2, psender, pparameter);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pparameter );
+    hb_itemRelease(pparameter);
   }
 }
 
-void QCameraExposureControlSlots_connect_signal(const QString & signal, const QString & slot)
+void QCameraExposureControlSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraExposureControl *obj = (QCameraExposureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QCameraExposureControlSlots * s = QCoreApplication::instance()->findChild<QCameraExposureControlSlots*>();
+    QCameraExposureControlSlots *s = QCoreApplication::instance()->findChild<QCameraExposureControlSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QCameraExposureControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

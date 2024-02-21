@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMediaNetworkAccessControlSlots: public QObject
+class QMediaNetworkAccessControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMediaNetworkAccessControlSlots( QObject *parent = 0 );
+public:
+  QMediaNetworkAccessControlSlots(QObject *parent = 0);
   ~QMediaNetworkAccessControlSlots();
-  public slots:
-  void configurationChanged( const QNetworkConfiguration & configuration );
+public slots:
+  void configurationChanged(const QNetworkConfiguration &configuration);
 };
 
 #endif /* QMEDIANETWORKACCESSCONTROLSLOTS_H */

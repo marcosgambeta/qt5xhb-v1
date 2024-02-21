@@ -24,16 +24,16 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMediaGaplessPlaybackControlSlots: public QObject
+class QMediaGaplessPlaybackControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMediaGaplessPlaybackControlSlots( QObject *parent = 0 );
+public:
+  QMediaGaplessPlaybackControlSlots(QObject *parent = 0);
   ~QMediaGaplessPlaybackControlSlots();
-  public slots:
+public slots:
   void advancedToNextMedia();
-  void crossfadeTimeChanged( qreal crossfadeTime );
-  void nextMediaChanged( const QMediaContent & media );
+  void crossfadeTimeChanged(qreal crossfadeTime);
+  void nextMediaChanged(const QMediaContent &media);
 };
 
 #endif /* QMEDIAGAPLESSPLAYBACKCONTROLSLOTS_H */

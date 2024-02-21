@@ -24,13 +24,13 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMediaStreamsControlSlots: public QObject
+class QMediaStreamsControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMediaStreamsControlSlots( QObject *parent = 0 );
+public:
+  QMediaStreamsControlSlots(QObject *parent = 0);
   ~QMediaStreamsControlSlots();
-  public slots:
+public slots:
   void activeStreamsChanged();
   void streamsChanged();
 };

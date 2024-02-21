@@ -24,21 +24,21 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QCameraSlots: public QObject
+class QCameraSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCameraSlots( QObject *parent = 0 );
+public:
+  QCameraSlots(QObject *parent = 0);
   ~QCameraSlots();
-  public slots:
-  void captureModeChanged( QCamera::CaptureModes mode );
-  void error( QCamera::Error value );
+public slots:
+  void captureModeChanged(QCamera::CaptureModes mode);
+  void error(QCamera::Error value);
   void lockFailed();
-  void lockStatusChanged( QCamera::LockStatus status, QCamera::LockChangeReason reason );
-  void lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason );
+  void lockStatusChanged(QCamera::LockStatus status, QCamera::LockChangeReason reason);
+  void lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason);
   void locked();
-  void stateChanged( QCamera::State state );
-  void statusChanged( QCamera::Status status );
+  void stateChanged(QCamera::State state);
+  void statusChanged(QCamera::Status status);
 };
 
 #endif /* QCAMERASLOTS_H */

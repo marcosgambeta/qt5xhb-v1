@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAbstractAudioInputSlots: public QObject
+class QAbstractAudioInputSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractAudioInputSlots( QObject *parent = 0 );
+public:
+  QAbstractAudioInputSlots(QObject *parent = 0);
   ~QAbstractAudioInputSlots();
-  public slots:
-  void errorChanged( QAudio::Error error );
-  void stateChanged( QAudio::State state );
+public slots:
+  void errorChanged(QAudio::Error error);
+  void stateChanged(QAudio::State state);
   void notify();
 };
 

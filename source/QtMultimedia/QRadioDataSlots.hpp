@@ -24,20 +24,20 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QRadioDataSlots: public QObject
+class QRadioDataSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QRadioDataSlots( QObject *parent = 0 );
+public:
+  QRadioDataSlots(QObject *parent = 0);
   ~QRadioDataSlots();
-  public slots:
-  void stationIdChanged( QString stationId );
-  void programTypeChanged( QRadioData::ProgramType programType );
-  void programTypeNameChanged( QString programTypeName );
-  void stationNameChanged( QString stationName );
-  void radioTextChanged( QString radioText );
-  void alternativeFrequenciesEnabledChanged( bool enabled );
-  void error( QRadioData::Error error );
+public slots:
+  void stationIdChanged(QString stationId);
+  void programTypeChanged(QRadioData::ProgramType programType);
+  void programTypeNameChanged(QString programTypeName);
+  void stationNameChanged(QString stationName);
+  void radioTextChanged(QString radioText);
+  void alternativeFrequenciesEnabledChanged(bool enabled);
+  void error(QRadioData::Error error);
 };
 
 #endif /* QRADIODATASLOTS_H */

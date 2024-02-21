@@ -24,15 +24,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMediaVideoProbeControlSlots: public QObject
+class QMediaVideoProbeControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMediaVideoProbeControlSlots( QObject *parent = 0 );
+public:
+  QMediaVideoProbeControlSlots(QObject *parent = 0);
   ~QMediaVideoProbeControlSlots();
-  public slots:
+public slots:
   void flush();
-  void videoFrameProbed( const QVideoFrame & frame );
+  void videoFrameProbed(const QVideoFrame &frame);
 };
 
 #endif /* QMEDIAVIDEOPROBECONTROLSLOTS_H */

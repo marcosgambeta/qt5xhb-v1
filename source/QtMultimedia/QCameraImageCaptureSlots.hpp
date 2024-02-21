@@ -24,22 +24,22 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QCameraImageCaptureSlots: public QObject
+class QCameraImageCaptureSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCameraImageCaptureSlots( QObject *parent = 0 );
+public:
+  QCameraImageCaptureSlots(QObject *parent = 0);
   ~QCameraImageCaptureSlots();
-  public slots:
-  void bufferFormatChanged( QVideoFrame::PixelFormat format );
-  void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination );
-  void error( int id, QCameraImageCapture::Error error, const QString & errorString );
-  void imageAvailable( int id, const QVideoFrame & buffer );
-  void imageCaptured( int id, const QImage & preview );
-  void imageExposed( int id );
-  void imageMetadataAvailable( int id, const QString & key, const QVariant & value );
-  void imageSaved( int id, const QString & fileName );
-  void readyForCaptureChanged( bool ready );
+public slots:
+  void bufferFormatChanged(QVideoFrame::PixelFormat format);
+  void captureDestinationChanged(QCameraImageCapture::CaptureDestinations destination);
+  void error(int id, QCameraImageCapture::Error error, const QString &errorString);
+  void imageAvailable(int id, const QVideoFrame &buffer);
+  void imageCaptured(int id, const QImage &preview);
+  void imageExposed(int id);
+  void imageMetadataAvailable(int id, const QString &key, const QVariant &value);
+  void imageSaved(int id, const QString &fileName);
+  void readyForCaptureChanged(bool ready);
 };
 
 #endif /* QCAMERAIMAGECAPTURESLOTS_H */

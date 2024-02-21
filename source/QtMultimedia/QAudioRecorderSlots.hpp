@@ -24,14 +24,14 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QAudioRecorderSlots: public QObject
+class QAudioRecorderSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAudioRecorderSlots( QObject *parent = 0 );
+public:
+  QAudioRecorderSlots(QObject *parent = 0);
   ~QAudioRecorderSlots();
-  public slots:
-  void audioInputChanged( const QString & name );
+public slots:
+  void audioInputChanged(const QString &name);
   void availableAudioInputsChanged();
 };
 

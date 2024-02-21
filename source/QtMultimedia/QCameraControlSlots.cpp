@@ -12,7 +12,7 @@
 
 #include "QCameraControlSlots.hpp"
 
-QCameraControlSlots::QCameraControlSlots( QObject *parent ) : QObject( parent )
+QCameraControlSlots::QCameraControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,89 +20,89 @@ QCameraControlSlots::~QCameraControlSlots()
 {
 }
 
-void QCameraControlSlots::captureModeChanged( QCamera::CaptureModes mode )
+void QCameraControlSlots::captureModeChanged(QCamera::CaptureModes mode)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "captureModeChanged(QCamera::CaptureModes)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERACONTROL");
-    PHB_ITEM pmode = hb_itemPutNI( NULL, static_cast<int>(mode) );
+    PHB_ITEM pmode = hb_itemPutNI(NULL, static_cast<int>(mode));
 
     hb_vmEvalBlockV(cb, 2, psender, pmode);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pmode );
+    hb_itemRelease(pmode);
   }
 }
 
-void QCameraControlSlots::error( int error, const QString & errorString )
+void QCameraControlSlots::error(int error, const QString &errorString)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(int,QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERACONTROL");
-    PHB_ITEM perror = hb_itemPutNI( NULL, error );
-    PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
+    PHB_ITEM perror = hb_itemPutNI(NULL, error);
+    PHB_ITEM perrorString = hb_itemPutC(NULL, QSTRINGTOSTRING(errorString));
 
     hb_vmEvalBlockV(cb, 3, psender, perror, perrorString);
 
     hb_itemRelease(psender);
-    hb_itemRelease( perror );
-    hb_itemRelease( perrorString );
+    hb_itemRelease(perror);
+    hb_itemRelease(perrorString);
   }
 }
 
-void QCameraControlSlots::stateChanged( QCamera::State state )
+void QCameraControlSlots::stateChanged(QCamera::State state)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QCamera::State)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERACONTROL");
-    PHB_ITEM pstate = hb_itemPutNI( NULL, static_cast<int>(state) );
+    PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
     hb_vmEvalBlockV(cb, 2, psender, pstate);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstate );
+    hb_itemRelease(pstate);
   }
 }
 
-void QCameraControlSlots::statusChanged( QCamera::Status status )
+void QCameraControlSlots::statusChanged(QCamera::Status status)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QCamera::Status)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERACONTROL");
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, static_cast<int>(status) );
+    PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
 
     hb_vmEvalBlockV(cb, 2, psender, pstatus);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstatus );
+    hb_itemRelease(pstatus);
   }
 }
 
-void QCameraControlSlots_connect_signal(const QString & signal, const QString & slot)
+void QCameraControlSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCameraControl * obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraControl *obj = (QCameraControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QCameraControlSlots * s = QCoreApplication::instance()->findChild<QCameraControlSlots*>();
+    QCameraControlSlots *s = QCoreApplication::instance()->findChild<QCameraControlSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QCameraControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

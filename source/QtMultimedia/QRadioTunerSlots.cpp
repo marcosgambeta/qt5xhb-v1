@@ -12,7 +12,7 @@
 
 #include "QRadioTunerSlots.hpp"
 
-QRadioTunerSlots::QRadioTunerSlots( QObject *parent ) : QObject( parent )
+QRadioTunerSlots::QRadioTunerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,215 +20,215 @@ QRadioTunerSlots::~QRadioTunerSlots()
 {
 }
 
-void QRadioTunerSlots::stateChanged( QRadioTuner::State state )
+void QRadioTunerSlots::stateChanged(QRadioTuner::State state)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QRadioTuner::State)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
-    PHB_ITEM pstate = hb_itemPutNI( NULL, static_cast<int>(state) );
+    PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
     hb_vmEvalBlockV(cb, 2, psender, pstate);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstate );
+    hb_itemRelease(pstate);
   }
 }
 
-void QRadioTunerSlots::bandChanged( QRadioTuner::Band band )
+void QRadioTunerSlots::bandChanged(QRadioTuner::Band band)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "bandChanged(QRadioTuner::Band)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
-    PHB_ITEM pband = hb_itemPutNI( NULL, static_cast<int>(band) );
+    PHB_ITEM pband = hb_itemPutNI(NULL, static_cast<int>(band));
 
     hb_vmEvalBlockV(cb, 2, psender, pband);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pband );
+    hb_itemRelease(pband);
   }
 }
 
-void QRadioTunerSlots::frequencyChanged( int frequency )
+void QRadioTunerSlots::frequencyChanged(int frequency)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "frequencyChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
-    PHB_ITEM pfrequency = hb_itemPutNI( NULL, frequency );
+    PHB_ITEM pfrequency = hb_itemPutNI(NULL, frequency);
 
     hb_vmEvalBlockV(cb, 2, psender, pfrequency);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfrequency );
+    hb_itemRelease(pfrequency);
   }
 }
 
-void QRadioTunerSlots::stereoStatusChanged( bool stereo )
+void QRadioTunerSlots::stereoStatusChanged(bool stereo)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stereoStatusChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
-    PHB_ITEM pstereo = hb_itemPutL( NULL, stereo );
+    PHB_ITEM pstereo = hb_itemPutL(NULL, stereo);
 
     hb_vmEvalBlockV(cb, 2, psender, pstereo);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pstereo );
+    hb_itemRelease(pstereo);
   }
 }
 
-void QRadioTunerSlots::searchingChanged( bool searching )
+void QRadioTunerSlots::searchingChanged(bool searching)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "searchingChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
-    PHB_ITEM psearching = hb_itemPutL( NULL, searching );
+    PHB_ITEM psearching = hb_itemPutL(NULL, searching);
 
     hb_vmEvalBlockV(cb, 2, psender, psearching);
 
     hb_itemRelease(psender);
-    hb_itemRelease( psearching );
+    hb_itemRelease(psearching);
   }
 }
 
-void QRadioTunerSlots::signalStrengthChanged( int signalStrength )
+void QRadioTunerSlots::signalStrengthChanged(int signalStrength)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "signalStrengthChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
-    PHB_ITEM psignalStrength = hb_itemPutNI( NULL, signalStrength );
+    PHB_ITEM psignalStrength = hb_itemPutNI(NULL, signalStrength);
 
     hb_vmEvalBlockV(cb, 2, psender, psignalStrength);
 
     hb_itemRelease(psender);
-    hb_itemRelease( psignalStrength );
+    hb_itemRelease(psignalStrength);
   }
 }
 
-void QRadioTunerSlots::volumeChanged( int volume )
+void QRadioTunerSlots::volumeChanged(int volume)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "volumeChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
-    PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );
+    PHB_ITEM pvolume = hb_itemPutNI(NULL, volume);
 
     hb_vmEvalBlockV(cb, 2, psender, pvolume);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvolume );
+    hb_itemRelease(pvolume);
   }
 }
 
-void QRadioTunerSlots::mutedChanged( bool muted )
+void QRadioTunerSlots::mutedChanged(bool muted)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mutedChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
-    PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
+    PHB_ITEM pmuted = hb_itemPutL(NULL, muted);
 
     hb_vmEvalBlockV(cb, 2, psender, pmuted);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pmuted );
+    hb_itemRelease(pmuted);
   }
 }
 
-void QRadioTunerSlots::stationFound( int frequency, QString stationId )
+void QRadioTunerSlots::stationFound(int frequency, QString stationId)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stationFound(int,QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
-    PHB_ITEM pfrequency = hb_itemPutNI( NULL, frequency );
-    PHB_ITEM pstationId = hb_itemPutC( NULL, stationId.toLatin1().data() );
+    PHB_ITEM pfrequency = hb_itemPutNI(NULL, frequency);
+    PHB_ITEM pstationId = hb_itemPutC(NULL, stationId.toLatin1().data());
 
     hb_vmEvalBlockV(cb, 3, psender, pfrequency, pstationId);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pfrequency );
-    hb_itemRelease( pstationId );
+    hb_itemRelease(pfrequency);
+    hb_itemRelease(pstationId);
   }
 }
 
-void QRadioTunerSlots::antennaConnectedChanged( bool connectionStatus )
+void QRadioTunerSlots::antennaConnectedChanged(bool connectionStatus)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "antennaConnectedChanged(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
-    PHB_ITEM pconnectionStatus = hb_itemPutL( NULL, connectionStatus );
+    PHB_ITEM pconnectionStatus = hb_itemPutL(NULL, connectionStatus);
 
     hb_vmEvalBlockV(cb, 2, psender, pconnectionStatus);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pconnectionStatus );
+    hb_itemRelease(pconnectionStatus);
   }
 }
 
-void QRadioTunerSlots::error( QRadioTuner::Error error )
+void QRadioTunerSlots::error(QRadioTuner::Error error)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QRadioTuner::Error)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIOTUNER");
-    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
+    PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
     hb_vmEvalBlockV(cb, 2, psender, perror);
 
     hb_itemRelease(psender);
-    hb_itemRelease( perror );
+    hb_itemRelease(perror);
   }
 }
 
-void QRadioTunerSlots_connect_signal(const QString & signal, const QString & slot)
+void QRadioTunerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QRadioTuner * obj = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioTuner *obj = (QRadioTuner *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QRadioTunerSlots * s = QCoreApplication::instance()->findChild<QRadioTunerSlots*>();
+    QRadioTunerSlots *s = QCoreApplication::instance()->findChild<QRadioTunerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QRadioTunerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -12,7 +12,7 @@
 
 #include "QAudioInputSelectorControlSlots.hpp"
 
-QAudioInputSelectorControlSlots::QAudioInputSelectorControlSlots( QObject *parent ) : QObject( parent )
+QAudioInputSelectorControlSlots::QAudioInputSelectorControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QAudioInputSelectorControlSlots::~QAudioInputSelectorControlSlots()
 {
 }
 
-void QAudioInputSelectorControlSlots::activeInputChanged( const QString & name )
+void QAudioInputSelectorControlSlots::activeInputChanged(const QString &name)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activeInputChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOINPUTSELECTORCONTROL");
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
+    PHB_ITEM pname = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
 
     hb_vmEvalBlockV(cb, 2, psender, pname);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pname );
+    hb_itemRelease(pname);
   }
 }
 
 void QAudioInputSelectorControlSlots::availableInputsChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availableInputsChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOINPUTSELECTORCONTROL");
 
@@ -54,15 +54,15 @@ void QAudioInputSelectorControlSlots::availableInputsChanged()
   }
 }
 
-void QAudioInputSelectorControlSlots_connect_signal(const QString & signal, const QString & slot)
+void QAudioInputSelectorControlSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl *obj = (QAudioInputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAudioInputSelectorControlSlots * s = QCoreApplication::instance()->findChild<QAudioInputSelectorControlSlots*>();
+    QAudioInputSelectorControlSlots *s = QCoreApplication::instance()->findChild<QAudioInputSelectorControlSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAudioInputSelectorControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

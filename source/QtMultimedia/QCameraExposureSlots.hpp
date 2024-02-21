@@ -24,19 +24,19 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QCameraExposureSlots: public QObject
+class QCameraExposureSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCameraExposureSlots( QObject *parent = 0 );
+public:
+  QCameraExposureSlots(QObject *parent = 0);
   ~QCameraExposureSlots();
-  public slots:
-  void apertureChanged( qreal value );
+public slots:
+  void apertureChanged(qreal value);
   void apertureRangeChanged();
-  void exposureCompensationChanged( qreal value );
-  void flashReady( bool ready );
-  void isoSensitivityChanged( int value );
-  void shutterSpeedChanged( qreal speed );
+  void exposureCompensationChanged(qreal value);
+  void flashReady(bool ready);
+  void isoSensitivityChanged(int value);
+  void shutterSpeedChanged(qreal speed);
   void shutterSpeedRangeChanged();
 };
 

@@ -12,7 +12,7 @@
 
 #include "QAudioProbeSlots.hpp"
 
-QAudioProbeSlots::QAudioProbeSlots( QObject *parent ) : QObject( parent )
+QAudioProbeSlots::QAudioProbeSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QAudioProbeSlots::~QAudioProbeSlots()
 {
 }
 
-void QAudioProbeSlots::audioBufferProbed( const QAudioBuffer & buffer )
+void QAudioProbeSlots::audioBufferProbed(const QAudioBuffer &buffer)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "audioBufferProbed(QAudioBuffer)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOPROBE");
-    PHB_ITEM pbuffer = Qt5xHb::Signals_return_object( (void *) &buffer, "QAUDIOBUFFER");
+    PHB_ITEM pbuffer = Qt5xHb::Signals_return_object((void *)&buffer, "QAUDIOBUFFER");
 
     hb_vmEvalBlockV(cb, 2, psender, pbuffer);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pbuffer );
+    hb_itemRelease(pbuffer);
   }
 }
 
 void QAudioProbeSlots::flush()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flush()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOPROBE");
 
@@ -54,15 +54,15 @@ void QAudioProbeSlots::flush()
   }
 }
 
-void QAudioProbeSlots_connect_signal(const QString & signal, const QString & slot)
+void QAudioProbeSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioProbe *obj = (QAudioProbe *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAudioProbeSlots * s = QCoreApplication::instance()->findChild<QAudioProbeSlots*>();
+    QAudioProbeSlots *s = QCoreApplication::instance()->findChild<QAudioProbeSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAudioProbeSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

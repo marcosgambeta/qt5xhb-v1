@@ -24,12 +24,12 @@
 #include <QtMultimedia/QtMultimediaVersion>
 #endif
 
-HB_FUNC( QTMULTIMEDIA_VERSION_STR )
+HB_FUNC(QTMULTIMEDIA_VERSION_STR)
 {
-  hb_retc( (const char *) QTMULTIMEDIA_VERSION_STR );
+  hb_retc((const char *)QTMULTIMEDIA_VERSION_STR);
 }
 
-HB_FUNC( QTMULTIMEDIA_VERSION )
+HB_FUNC(QTMULTIMEDIA_VERSION)
 {
-  hb_retni( QTMULTIMEDIA_VERSION );
+  hb_retni(QTMULTIMEDIA_VERSION);
 }

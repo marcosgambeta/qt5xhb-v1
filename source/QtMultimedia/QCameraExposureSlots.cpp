@@ -12,7 +12,7 @@
 
 #include "QCameraExposureSlots.hpp"
 
-QCameraExposureSlots::QCameraExposureSlots( QObject *parent ) : QObject( parent )
+QCameraExposureSlots::QCameraExposureSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QCameraExposureSlots::~QCameraExposureSlots()
 {
 }
 
-void QCameraExposureSlots::apertureChanged( qreal value )
+void QCameraExposureSlots::apertureChanged(qreal value)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "apertureChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
-    PHB_ITEM pvalue = hb_itemPutND( NULL, value );
+    PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
     hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvalue );
+    hb_itemRelease(pvalue);
   }
 }
 
 void QCameraExposureSlots::apertureRangeChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "apertureRangeChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
 
@@ -54,85 +54,85 @@ void QCameraExposureSlots::apertureRangeChanged()
   }
 }
 
-void QCameraExposureSlots::exposureCompensationChanged( qreal value )
+void QCameraExposureSlots::exposureCompensationChanged(qreal value)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "exposureCompensationChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
-    PHB_ITEM pvalue = hb_itemPutND( NULL, value );
+    PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
     hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvalue );
+    hb_itemRelease(pvalue);
   }
 }
 
-void QCameraExposureSlots::flashReady( bool ready )
+void QCameraExposureSlots::flashReady(bool ready)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flashReady(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
-    PHB_ITEM pready = hb_itemPutL( NULL, ready );
+    PHB_ITEM pready = hb_itemPutL(NULL, ready);
 
     hb_vmEvalBlockV(cb, 2, psender, pready);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pready );
+    hb_itemRelease(pready);
   }
 }
 
-void QCameraExposureSlots::isoSensitivityChanged( int value )
+void QCameraExposureSlots::isoSensitivityChanged(int value)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "isoSensitivityChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
-    PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
+    PHB_ITEM pvalue = hb_itemPutNI(NULL, value);
 
     hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvalue );
+    hb_itemRelease(pvalue);
   }
 }
 
-void QCameraExposureSlots::shutterSpeedChanged( qreal speed )
+void QCameraExposureSlots::shutterSpeedChanged(qreal speed)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "shutterSpeedChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
-    PHB_ITEM pspeed = hb_itemPutND( NULL, speed );
+    PHB_ITEM pspeed = hb_itemPutND(NULL, speed);
 
     hb_vmEvalBlockV(cb, 2, psender, pspeed);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pspeed );
+    hb_itemRelease(pspeed);
   }
 }
 
 void QCameraExposureSlots::shutterSpeedRangeChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "shutterSpeedRangeChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
 
@@ -142,15 +142,15 @@ void QCameraExposureSlots::shutterSpeedRangeChanged()
   }
 }
 
-void QCameraExposureSlots_connect_signal(const QString & signal, const QString & slot)
+void QCameraExposureSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCameraExposure * obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraExposure *obj = (QCameraExposure *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QCameraExposureSlots * s = QCoreApplication::instance()->findChild<QCameraExposureSlots*>();
+    QCameraExposureSlots *s = QCoreApplication::instance()->findChild<QCameraExposureSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QCameraExposureSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

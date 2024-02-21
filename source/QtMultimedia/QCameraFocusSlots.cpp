@@ -12,7 +12,7 @@
 
 #include "QCameraFocusSlots.hpp"
 
-QCameraFocusSlots::QCameraFocusSlots( QObject *parent ) : QObject( parent )
+QCameraFocusSlots::QCameraFocusSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,31 +20,31 @@ QCameraFocusSlots::~QCameraFocusSlots()
 {
 }
 
-void QCameraFocusSlots::digitalZoomChanged( qreal value )
+void QCameraFocusSlots::digitalZoomChanged(qreal value)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "digitalZoomChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
-    PHB_ITEM pvalue = hb_itemPutND( NULL, value );
+    PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
     hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvalue );
+    hb_itemRelease(pvalue);
   }
 }
 
 void QCameraFocusSlots::focusZonesChanged()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "focusZonesChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
 
@@ -54,69 +54,69 @@ void QCameraFocusSlots::focusZonesChanged()
   }
 }
 
-void QCameraFocusSlots::maximumDigitalZoomChanged( qreal zoom )
+void QCameraFocusSlots::maximumDigitalZoomChanged(qreal zoom)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maximumDigitalZoomChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
-    PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
+    PHB_ITEM pzoom = hb_itemPutND(NULL, zoom);
 
     hb_vmEvalBlockV(cb, 2, psender, pzoom);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pzoom );
+    hb_itemRelease(pzoom);
   }
 }
 
-void QCameraFocusSlots::maximumOpticalZoomChanged( qreal zoom )
+void QCameraFocusSlots::maximumOpticalZoomChanged(qreal zoom)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maximumOpticalZoomChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
-    PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
+    PHB_ITEM pzoom = hb_itemPutND(NULL, zoom);
 
     hb_vmEvalBlockV(cb, 2, psender, pzoom);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pzoom );
+    hb_itemRelease(pzoom);
   }
 }
 
-void QCameraFocusSlots::opticalZoomChanged( qreal value )
+void QCameraFocusSlots::opticalZoomChanged(qreal value)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "opticalZoomChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
-    PHB_ITEM pvalue = hb_itemPutND( NULL, value );
+    PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
     hb_vmEvalBlockV(cb, 2, psender, pvalue);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pvalue );
+    hb_itemRelease(pvalue);
   }
 }
 
-void QCameraFocusSlots_connect_signal(const QString & signal, const QString & slot)
+void QCameraFocusSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCameraFocus * obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFocus *obj = (QCameraFocus *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QCameraFocusSlots * s = QCoreApplication::instance()->findChild<QCameraFocusSlots*>();
+    QCameraFocusSlots *s = QCoreApplication::instance()->findChild<QCameraFocusSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QCameraFocusSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,20 +24,20 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QMediaRecorderControlSlots: public QObject
+class QMediaRecorderControlSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMediaRecorderControlSlots( QObject *parent = 0 );
+public:
+  QMediaRecorderControlSlots(QObject *parent = 0);
   ~QMediaRecorderControlSlots();
-  public slots:
-  void actualLocationChanged( const QUrl & location );
-  void durationChanged( qint64 duration );
-  void error( int error, const QString & errorString );
-  void mutedChanged( bool muted );
-  void stateChanged( QMediaRecorder::State state );
-  void statusChanged( QMediaRecorder::Status status );
-  void volumeChanged( qreal gain );
+public slots:
+  void actualLocationChanged(const QUrl &location);
+  void durationChanged(qint64 duration);
+  void error(int error, const QString &errorString);
+  void mutedChanged(bool muted);
+  void stateChanged(QMediaRecorder::State state);
+  void statusChanged(QMediaRecorder::Status status);
+  void volumeChanged(qreal gain);
 };
 
 #endif /* QMEDIARECORDERCONTROLSLOTS_H */

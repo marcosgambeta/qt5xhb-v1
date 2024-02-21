@@ -12,7 +12,7 @@
 
 #include "QMediaNetworkAccessControlSlots.hpp"
 
-QMediaNetworkAccessControlSlots::QMediaNetworkAccessControlSlots( QObject *parent ) : QObject( parent )
+QMediaNetworkAccessControlSlots::QMediaNetworkAccessControlSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QMediaNetworkAccessControlSlots::~QMediaNetworkAccessControlSlots()
 {
 }
 
-void QMediaNetworkAccessControlSlots::configurationChanged( const QNetworkConfiguration & configuration )
+void QMediaNetworkAccessControlSlots::configurationChanged(const QNetworkConfiguration &configuration)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "configurationChanged(QNetworkConfiguration)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIANETWORKACCESSCONTROL");
-    PHB_ITEM pconfiguration = Qt5xHb::Signals_return_object( (void *) &configuration, "QNETWORKCONFIGURATION");
+    PHB_ITEM pconfiguration = Qt5xHb::Signals_return_object((void *)&configuration, "QNETWORKCONFIGURATION");
 
     hb_vmEvalBlockV(cb, 2, psender, pconfiguration);
 
     hb_itemRelease(psender);
-    hb_itemRelease( pconfiguration );
+    hb_itemRelease(pconfiguration);
   }
 }
 
-void QMediaNetworkAccessControlSlots_connect_signal(const QString & signal, const QString & slot)
+void QMediaNetworkAccessControlSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMediaNetworkAccessControl * obj = (QMediaNetworkAccessControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaNetworkAccessControl *obj = (QMediaNetworkAccessControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMediaNetworkAccessControlSlots * s = QCoreApplication::instance()->findChild<QMediaNetworkAccessControlSlots*>();
+    QMediaNetworkAccessControlSlots *s = QCoreApplication::instance()->findChild<QMediaNetworkAccessControlSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMediaNetworkAccessControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
