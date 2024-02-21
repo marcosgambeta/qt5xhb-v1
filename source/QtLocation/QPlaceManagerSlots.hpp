@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceManager>
 #endif
 
@@ -26,38 +26,38 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QPlaceManagerSlots: public QObject
+class QPlaceManagerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QPlaceManagerSlots( QObject *parent = 0 );
+public:
+  QPlaceManagerSlots(QObject *parent = 0);
   ~QPlaceManagerSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void finished( QPlaceReply * reply );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void finished(QPlaceReply *reply);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void error( QPlaceReply * reply, QPlaceReply::Error error, const QString & errorString = QString() );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void error(QPlaceReply *reply, QPlaceReply::Error error, const QString &errorString = QString());
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void placeAdded( const QString & placeId );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void placeAdded(const QString &placeId);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void placeUpdated( const QString & placeId );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void placeUpdated(const QString &placeId);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void placeRemoved( const QString & placeId );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void placeRemoved(const QString &placeId);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void categoryAdded( const QPlaceCategory & category, const QString & parentId );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void categoryAdded(const QPlaceCategory &category, const QString &parentId);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void categoryUpdated( const QPlaceCategory & category, const QString & parentId );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void categoryUpdated(const QPlaceCategory &category, const QString &parentId);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void categoryRemoved( const QString & categoryId, const QString & parentId );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void categoryRemoved(const QString &categoryId, const QString &parentId);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   void dataChanged();
 #endif
 };

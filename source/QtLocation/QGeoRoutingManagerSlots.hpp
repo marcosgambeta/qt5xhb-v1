@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QGeoRoutingManager>
 #endif
 
@@ -26,18 +26,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGeoRoutingManagerSlots: public QObject
+class QGeoRoutingManagerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGeoRoutingManagerSlots( QObject *parent = 0 );
+public:
+  QGeoRoutingManagerSlots(QObject *parent = 0);
   ~QGeoRoutingManagerSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void finished( QGeoRouteReply * reply );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void finished(QGeoRouteReply *reply);
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorString = QString() );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void error(QGeoRouteReply *reply, QGeoRouteReply::Error error, QString errorString = QString());
 #endif
 };
 

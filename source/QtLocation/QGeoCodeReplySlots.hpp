@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QGeoCodeReply>
 #endif
 
@@ -26,18 +26,18 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QGeoCodeReplySlots: public QObject
+class QGeoCodeReplySlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGeoCodeReplySlots( QObject *parent = 0 );
+public:
+  QGeoCodeReplySlots(QObject *parent = 0);
   ~QGeoCodeReplySlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   void finished();
 #endif
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void error( QGeoCodeReply::Error error, const QString & errorString = QString() );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void error(QGeoCodeReply::Error error, const QString &errorString = QString());
 #endif
 };
 

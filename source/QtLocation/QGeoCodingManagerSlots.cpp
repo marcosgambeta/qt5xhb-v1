@@ -12,7 +12,7 @@
 
 #include "QGeoCodingManagerSlots.hpp"
 
-QGeoCodingManagerSlots::QGeoCodingManagerSlots( QObject *parent ) : QObject( parent )
+QGeoCodingManagerSlots::QGeoCodingManagerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QGeoCodingManagerSlots::~QGeoCodingManagerSlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-void QGeoCodingManagerSlots::finished( QGeoCodeReply * reply )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+void QGeoCodingManagerSlots::finished(QGeoCodeReply *reply)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(QGeoCodeReply*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOCODINGMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QGEOCODEREPLY");
@@ -35,45 +35,45 @@ void QGeoCodingManagerSlots::finished( QGeoCodeReply * reply )
     hb_vmEvalBlockV(cb, 2, psender, preply);
 
     hb_itemRelease(psender);
-    hb_itemRelease( preply );
+    hb_itemRelease(preply);
   }
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-void QGeoCodingManagerSlots::error( QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorString )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+void QGeoCodingManagerSlots::error(QGeoCodeReply *reply, QGeoCodeReply::Error error, QString errorString)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOCODINGMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QGEOCODEREPLY");
-    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
-    PHB_ITEM perrorString = hb_itemPutC( NULL, errorString.toLatin1().data() );
+    PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
+    PHB_ITEM perrorString = hb_itemPutC(NULL, errorString.toLatin1().data());
 
     hb_vmEvalBlockV(cb, 4, psender, preply, perror, perrorString);
 
     hb_itemRelease(psender);
-    hb_itemRelease( preply );
-    hb_itemRelease( perror );
-    hb_itemRelease( perrorString );
+    hb_itemRelease(preply);
+    hb_itemRelease(perror);
+    hb_itemRelease(perrorString);
   }
 }
 #endif
 
-void QGeoCodingManagerSlots_connect_signal(const QString & signal, const QString & slot)
+void QGeoCodingManagerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManager * obj = (QGeoCodingManager *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QGeoCodingManager *obj = (QGeoCodingManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QGeoCodingManagerSlots * s = QCoreApplication::instance()->findChild<QGeoCodingManagerSlots*>();
+    QGeoCodingManagerSlots *s = QCoreApplication::instance()->findChild<QGeoCodingManagerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QGeoCodingManagerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

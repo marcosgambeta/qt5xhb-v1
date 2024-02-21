@@ -12,7 +12,7 @@
 
 #include "QGeoCodeReplySlots.hpp"
 
-QGeoCodeReplySlots::QGeoCodeReplySlots( QObject *parent ) : QObject( parent )
+QGeoCodeReplySlots::QGeoCodeReplySlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,14 +20,14 @@ QGeoCodeReplySlots::~QGeoCodeReplySlots()
 {
 }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 void QGeoCodeReplySlots::finished()
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOCODEREPLY");
 
@@ -38,38 +38,38 @@ void QGeoCodeReplySlots::finished()
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-void QGeoCodeReplySlots::error( QGeoCodeReply::Error error, const QString & errorString )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+void QGeoCodeReplySlots::error(QGeoCodeReply::Error error, const QString &errorString)
 {
-  QObject *object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QGeoCodeReply::Error,QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOCODEREPLY");
-    PHB_ITEM perror = hb_itemPutNI( NULL, static_cast<int>(error) );
-    PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
+    PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
+    PHB_ITEM perrorString = hb_itemPutC(NULL, QSTRINGTOSTRING(errorString));
 
     hb_vmEvalBlockV(cb, 3, psender, perror, perrorString);
 
     hb_itemRelease(psender);
-    hb_itemRelease( perror );
-    hb_itemRelease( perrorString );
+    hb_itemRelease(perror);
+    hb_itemRelease(perrorString);
   }
 }
 #endif
 
-void QGeoCodeReplySlots_connect_signal(const QString & signal, const QString & slot)
+void QGeoCodeReplySlots_connect_signal(const QString &signal, const QString &slot)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodeReply * obj = (QGeoCodeReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QGeoCodeReply *obj = (QGeoCodeReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QGeoCodeReplySlots * s = QCoreApplication::instance()->findChild<QGeoCodeReplySlots*>();
+    QGeoCodeReplySlots *s = QCoreApplication::instance()->findChild<QGeoCodeReplySlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QGeoCodeReplySlots();
       s->moveToThread(QCoreApplication::instance()->thread());
