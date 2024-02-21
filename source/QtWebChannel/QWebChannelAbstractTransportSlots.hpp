@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWebChannel/QWebChannelAbstractTransport>
 #endif
 
@@ -26,15 +26,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QWebChannelAbstractTransportSlots: public QObject
+class QWebChannelAbstractTransportSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWebChannelAbstractTransportSlots( QObject *parent = 0 );
+public:
+  QWebChannelAbstractTransportSlots(QObject *parent = 0);
   ~QWebChannelAbstractTransportSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void messageReceived( const QJsonObject & message, QWebChannelAbstractTransport * transport );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void messageReceived(const QJsonObject &message, QWebChannelAbstractTransport *transport);
 #endif
 };
 

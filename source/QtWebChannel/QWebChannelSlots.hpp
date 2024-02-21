@@ -17,7 +17,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWebChannel/QWebChannel>
 #endif
 
@@ -26,15 +26,15 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-class QWebChannelSlots: public QObject
+class QWebChannelSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWebChannelSlots( QObject *parent = 0 );
+public:
+  QWebChannelSlots(QObject *parent = 0);
   ~QWebChannelSlots();
-  public slots:
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  void blockUpdatesChanged( bool block );
+public slots:
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  void blockUpdatesChanged(bool block);
 #endif
 };
 
