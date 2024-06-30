@@ -43,7 +43,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtNetworkAuth/QAbstractOAuthReplyHandler>
 #endif
 #endif
@@ -55,20 +55,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtNetworkAuth/QAbstractOAuthReplyHandler>
 #endif
 #endif
 
-/*
-virtual ~QAbstractOAuthReplyHandler()
-*/
-HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_DELETE )
+    /*
+    virtual ~QAbstractOAuthReplyHandler()
+    */
+HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  QAbstractOAuthReplyHandler *obj = (QAbstractOAuthReplyHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -86,18 +86,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_DELETE )
 /*
 virtual QString callback() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
+HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_CALLBACK)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  QAbstractOAuthReplyHandler *obj = (QAbstractOAuthReplyHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->callback() );
+      RQSTRING(obj->callback());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,18 +112,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
 /*
 virtual void networkReplyFinished( QNetworkReply * reply ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
+HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  QAbstractOAuthReplyHandler *obj = (QAbstractOAuthReplyHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQNETWORKREPLY(1) )
+    if (ISNUMPAR(1) && ISQNETWORKREPLY(1))
     {
 #endif
-      obj->networkReplyFinished( PQNETWORKREPLY(1) );
+      obj->networkReplyFinished(PQNETWORKREPLY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,20 +137,21 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 #endif
 }
 
-void QAbstractOAuthReplyHandlerSlots_connect_signal(const QString & signal, const QString & slot);
+void QAbstractOAuthReplyHandlerSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
+HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandlerSlots_connect_signal("callbackDataReceived(QByteArray)", "callbackDataReceived(QByteArray)");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  QAbstractOAuthReplyHandlerSlots_connect_signal("callbackDataReceived(QByteArray)",
+                                                 "callbackDataReceived(QByteArray)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
+HB_FUNC_STATIC(QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAbstractOAuthReplyHandlerSlots_connect_signal("replyDataReceived(QByteArray)", "replyDataReceived(QByteArray)");
 #else
   hb_retl(false);
