@@ -52,14 +52,14 @@ RETURN
 #include <QtQuick/QSGOpacityNode>
 #endif
 
-/*
-QSGOpacityNode()
-*/
-HB_FUNC_STATIC( QSGOPACITYNODE_NEW )
+    /*
+    QSGOpacityNode()
+    */
+HB_FUNC_STATIC(QSGOPACITYNODE_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QSGOpacityNode * obj = new QSGOpacityNode();
+    QSGOpacityNode *obj = new QSGOpacityNode();
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -68,11 +68,11 @@ HB_FUNC_STATIC( QSGOPACITYNODE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSGOPACITYNODE_DELETE )
+HB_FUNC_STATIC(QSGOPACITYNODE_DELETE)
 {
-  QSGOpacityNode * obj = (QSGOpacityNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGOpacityNode *obj = (QSGOpacityNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -87,17 +87,17 @@ HB_FUNC_STATIC( QSGOPACITYNODE_DELETE )
 /*
 qreal opacity() const
 */
-HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
+HB_FUNC_STATIC(QSGOPACITYNODE_OPACITY)
 {
-  QSGOpacityNode * obj = (QSGOpacityNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGOpacityNode *obj = (QSGOpacityNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->opacity() );
+      RQREAL(obj->opacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,17 +111,17 @@ HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
 /*
 void setOpacity( qreal opacity )
 */
-HB_FUNC_STATIC( QSGOPACITYNODE_SETOPACITY )
+HB_FUNC_STATIC(QSGOPACITYNODE_SETOPACITY)
 {
-  QSGOpacityNode * obj = (QSGOpacityNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGOpacityNode *obj = (QSGOpacityNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOpacity( PQREAL(1) );
+      obj->setOpacity(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

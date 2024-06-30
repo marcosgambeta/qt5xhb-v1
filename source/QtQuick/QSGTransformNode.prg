@@ -50,14 +50,14 @@ RETURN
 #include <QtQuick/QSGTransformNode>
 #endif
 
-/*
-QSGTransformNode()
-*/
-HB_FUNC_STATIC( QSGTRANSFORMNODE_NEW )
+    /*
+    QSGTransformNode()
+    */
+HB_FUNC_STATIC(QSGTRANSFORMNODE_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QSGTransformNode * obj = new QSGTransformNode();
+    QSGTransformNode *obj = new QSGTransformNode();
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -66,11 +66,11 @@ HB_FUNC_STATIC( QSGTRANSFORMNODE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSGTRANSFORMNODE_DELETE )
+HB_FUNC_STATIC(QSGTRANSFORMNODE_DELETE)
 {
-  QSGTransformNode * obj = (QSGTransformNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGTransformNode *obj = (QSGTransformNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

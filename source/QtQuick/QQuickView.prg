@@ -73,30 +73,30 @@ RETURN
 #include <QtQml/QQmlContext>
 #include <QtQuick/QQuickItem>
 
-HB_FUNC_STATIC( QQUICKVIEW_NEW )
+HB_FUNC_STATIC(QQUICKVIEW_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQWINDOW(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWINDOW(1) || HB_ISNIL(1)))
   {
     /*
     QQuickView( QWindow * parent = 0 )
     */
-    QQuickView * obj = new QQuickView( OPQWINDOW(1,0) );
+    QQuickView *obj = new QQuickView(OPQWINDOW(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISNUMPAR(2) && ISQQMLENGINE(1) && ISQWINDOW(2) )
+  else if (ISNUMPAR(2) && ISQQMLENGINE(1) && ISQWINDOW(2))
   {
     /*
     QQuickView( QQmlEngine * engine, QWindow * parent )
     */
-    QQuickView * obj = new QQuickView( PQQMLENGINE(1), PQWINDOW(2) );
+    QQuickView *obj = new QQuickView(PQQMLENGINE(1), PQWINDOW(2));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQWINDOW(2)||HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWINDOW(2) || HB_ISNIL(2)))
   {
     /*
     QQuickView( const QUrl & source, QWindow * parent = 0 )
     */
-    QQuickView * obj = new QQuickView( *PQURL(1), OPQWINDOW(2,0) );
+    QQuickView *obj = new QQuickView(*PQURL(1), OPQWINDOW(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -105,11 +105,11 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQUICKVIEW_DELETE )
+HB_FUNC_STATIC(QQUICKVIEW_DELETE)
 {
-  QQuickView * obj = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickView *obj = (QQuickView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -126,17 +126,17 @@ HB_FUNC_STATIC( QQUICKVIEW_DELETE )
 /*
 QQmlEngine * engine() const
 */
-HB_FUNC_STATIC( QQUICKVIEW_ENGINE )
+HB_FUNC_STATIC(QQUICKVIEW_ENGINE)
 {
-  QQuickView * obj = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickView *obj = (QQuickView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QQmlEngine * ptr = obj->engine();
+      QQmlEngine *ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -151,17 +151,17 @@ HB_FUNC_STATIC( QQUICKVIEW_ENGINE )
 /*
 QSize initialSize() const
 */
-HB_FUNC_STATIC( QQUICKVIEW_INITIALSIZE )
+HB_FUNC_STATIC(QQUICKVIEW_INITIALSIZE)
 {
-  QQuickView * obj = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickView *obj = (QQuickView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->initialSize() );
+      QSize *ptr = new QSize(obj->initialSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -176,17 +176,17 @@ HB_FUNC_STATIC( QQUICKVIEW_INITIALSIZE )
 /*
 QQuickView::ResizeMode resizeMode() const
 */
-HB_FUNC_STATIC( QQUICKVIEW_RESIZEMODE )
+HB_FUNC_STATIC(QQUICKVIEW_RESIZEMODE)
 {
-  QQuickView * obj = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickView *obj = (QQuickView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->resizeMode() );
+      RENUM(obj->resizeMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,17 +200,17 @@ HB_FUNC_STATIC( QQUICKVIEW_RESIZEMODE )
 /*
 QQmlContext * rootContext() const
 */
-HB_FUNC_STATIC( QQUICKVIEW_ROOTCONTEXT )
+HB_FUNC_STATIC(QQUICKVIEW_ROOTCONTEXT)
 {
-  QQuickView * obj = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickView *obj = (QQuickView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QQmlContext * ptr = obj->rootContext();
+      QQmlContext *ptr = obj->rootContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -225,17 +225,17 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTCONTEXT )
 /*
 QQuickItem * rootObject() const
 */
-HB_FUNC_STATIC( QQUICKVIEW_ROOTOBJECT )
+HB_FUNC_STATIC(QQUICKVIEW_ROOTOBJECT)
 {
-  QQuickView * obj = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickView *obj = (QQuickView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QQuickItem * ptr = obj->rootObject();
+      QQuickItem *ptr = obj->rootObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -250,17 +250,17 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTOBJECT )
 /*
 void setResizeMode( QQuickView::ResizeMode )
 */
-HB_FUNC_STATIC( QQUICKVIEW_SETRESIZEMODE )
+HB_FUNC_STATIC(QQUICKVIEW_SETRESIZEMODE)
 {
-  QQuickView * obj = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickView *obj = (QQuickView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setResizeMode( (QQuickView::ResizeMode) hb_parni(1) );
+      obj->setResizeMode((QQuickView::ResizeMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,17 +276,17 @@ HB_FUNC_STATIC( QQUICKVIEW_SETRESIZEMODE )
 /*
 QUrl source() const
 */
-HB_FUNC_STATIC( QQUICKVIEW_SOURCE )
+HB_FUNC_STATIC(QQUICKVIEW_SOURCE)
 {
-  QQuickView * obj = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickView *obj = (QQuickView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->source() );
+      QUrl *ptr = new QUrl(obj->source());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -301,17 +301,17 @@ HB_FUNC_STATIC( QQUICKVIEW_SOURCE )
 /*
 QQuickView::Status status() const
 */
-HB_FUNC_STATIC( QQUICKVIEW_STATUS )
+HB_FUNC_STATIC(QQUICKVIEW_STATUS)
 {
-  QQuickView * obj = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickView *obj = (QQuickView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->status() );
+      RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,17 +325,17 @@ HB_FUNC_STATIC( QQUICKVIEW_STATUS )
 /*
 void setSource( const QUrl & url )
 */
-HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
+HB_FUNC_STATIC(QQUICKVIEW_SETSOURCE)
 {
-  QQuickView * obj = (QQuickView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickView *obj = (QQuickView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setSource( *PQURL(1) );
+      obj->setSource(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,9 +348,9 @@ HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QQuickViewSlots_connect_signal(const QString & signal, const QString & slot);
+void QQuickViewSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QQUICKVIEW_ONSTATUSCHANGED )
+HB_FUNC_STATIC(QQUICKVIEW_ONSTATUSCHANGED)
 {
   QQuickViewSlots_connect_signal("statusChanged(QQuickView::Status)", "statusChanged(QQuickView::Status)");
 }

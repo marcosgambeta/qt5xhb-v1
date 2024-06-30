@@ -55,14 +55,14 @@ RETURN
 #include <QtQuick/QSGClipNode>
 #endif
 
-/*
-QSGClipNode()
-*/
-HB_FUNC_STATIC( QSGCLIPNODE_NEW )
+    /*
+    QSGClipNode()
+    */
+HB_FUNC_STATIC(QSGCLIPNODE_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QSGClipNode * obj = new QSGClipNode();
+    QSGClipNode *obj = new QSGClipNode();
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -71,11 +71,11 @@ HB_FUNC_STATIC( QSGCLIPNODE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSGCLIPNODE_DELETE )
+HB_FUNC_STATIC(QSGCLIPNODE_DELETE)
 {
-  QSGClipNode * obj = (QSGClipNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGClipNode *obj = (QSGClipNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -90,17 +90,17 @@ HB_FUNC_STATIC( QSGCLIPNODE_DELETE )
 /*
 QRectF clipRect() const
 */
-HB_FUNC_STATIC( QSGCLIPNODE_CLIPRECT )
+HB_FUNC_STATIC(QSGCLIPNODE_CLIPRECT)
 {
-  QSGClipNode * obj = (QSGClipNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGClipNode *obj = (QSGClipNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->clipRect() );
+      QRectF *ptr = new QRectF(obj->clipRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -115,17 +115,17 @@ HB_FUNC_STATIC( QSGCLIPNODE_CLIPRECT )
 /*
 bool isRectangular() const
 */
-HB_FUNC_STATIC( QSGCLIPNODE_ISRECTANGULAR )
+HB_FUNC_STATIC(QSGCLIPNODE_ISRECTANGULAR)
 {
-  QSGClipNode * obj = (QSGClipNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGClipNode *obj = (QSGClipNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isRectangular() );
+      RBOOL(obj->isRectangular());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,17 +139,17 @@ HB_FUNC_STATIC( QSGCLIPNODE_ISRECTANGULAR )
 /*
 void setClipRect( const QRectF & rect )
 */
-HB_FUNC_STATIC( QSGCLIPNODE_SETCLIPRECT )
+HB_FUNC_STATIC(QSGCLIPNODE_SETCLIPRECT)
 {
-  QSGClipNode * obj = (QSGClipNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGClipNode *obj = (QSGClipNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      obj->setClipRect( *PQRECTF(1) );
+      obj->setClipRect(*PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,17 +165,17 @@ HB_FUNC_STATIC( QSGCLIPNODE_SETCLIPRECT )
 /*
 void setIsRectangular( bool rectHint )
 */
-HB_FUNC_STATIC( QSGCLIPNODE_SETISRECTANGULAR )
+HB_FUNC_STATIC(QSGCLIPNODE_SETISRECTANGULAR)
 {
-  QSGClipNode * obj = (QSGClipNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGClipNode *obj = (QSGClipNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setIsRectangular( PBOOL(1) );
+      obj->setIsRectangular(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

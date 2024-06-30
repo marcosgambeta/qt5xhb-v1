@@ -51,20 +51,20 @@ RETURN
 #include <QtQuick/QSGDynamicTexture>
 #endif
 
-/*
-virtual bool updateTexture() = 0
-*/
-HB_FUNC_STATIC( QSGDYNAMICTEXTURE_UPDATETEXTURE )
+    /*
+    virtual bool updateTexture() = 0
+    */
+HB_FUNC_STATIC(QSGDYNAMICTEXTURE_UPDATETEXTURE)
 {
-  QSGDynamicTexture * obj = (QSGDynamicTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGDynamicTexture *obj = (QSGDynamicTexture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->updateTexture() );
+      RBOOL(obj->updateTexture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

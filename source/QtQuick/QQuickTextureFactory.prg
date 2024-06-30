@@ -60,11 +60,11 @@ RETURN
 
 #include <QtQuick/QSGTexture>
 
-HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_DELETE )
+HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_DELETE)
 {
-  QQuickTextureFactory * obj = (QQuickTextureFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickTextureFactory *obj = (QQuickTextureFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -81,17 +81,17 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_DELETE )
 /*
 virtual QSGTexture * createTexture( QQuickWindow * window ) const = 0
 */
-HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_CREATETEXTURE )
+HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_CREATETEXTURE)
 {
-  QQuickTextureFactory * obj = (QQuickTextureFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickTextureFactory *obj = (QQuickTextureFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQQUICKWINDOW(1) )
+    if (ISNUMPAR(1) && ISQQUICKWINDOW(1))
     {
 #endif
-      QSGTexture * ptr = obj->createTexture( PQQUICKWINDOW(1) );
+      QSGTexture *ptr = obj->createTexture(PQQUICKWINDOW(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -106,17 +106,17 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_CREATETEXTURE )
 /*
 virtual QImage image() const
 */
-HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_IMAGE )
+HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_IMAGE)
 {
-  QQuickTextureFactory * obj = (QQuickTextureFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickTextureFactory *obj = (QQuickTextureFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QImage * ptr = new QImage( obj->image() );
+      QImage *ptr = new QImage(obj->image());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -131,17 +131,17 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_IMAGE )
 /*
 virtual int textureByteCount() const = 0
 */
-HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT )
+HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT)
 {
-  QQuickTextureFactory * obj = (QQuickTextureFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickTextureFactory *obj = (QQuickTextureFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->textureByteCount() );
+      RINT(obj->textureByteCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,17 +155,17 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT )
 /*
 virtual QSize textureSize() const = 0
 */
-HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTURESIZE )
+HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTURESIZE)
 {
-  QQuickTextureFactory * obj = (QQuickTextureFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickTextureFactory *obj = (QQuickTextureFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->textureSize() );
+      QSize *ptr = new QSize(obj->textureSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

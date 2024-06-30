@@ -65,11 +65,11 @@ RETURN
 #include <QtQuick/QSGMaterial>
 #endif
 
-HB_FUNC_STATIC( QSGMATERIAL_DELETE )
+HB_FUNC_STATIC(QSGMATERIAL_DELETE)
 {
-  QSGMaterial * obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGMaterial *obj = (QSGMaterial *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -84,17 +84,17 @@ HB_FUNC_STATIC( QSGMATERIAL_DELETE )
 /*
 virtual int compare( const QSGMaterial * other ) const
 */
-HB_FUNC_STATIC( QSGMATERIAL_COMPARE )
+HB_FUNC_STATIC(QSGMATERIAL_COMPARE)
 {
-  QSGMaterial * obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGMaterial *obj = (QSGMaterial *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSGMATERIAL(1) )
+    if (ISNUMPAR(1) && ISQSGMATERIAL(1))
     {
 #endif
-      RINT( obj->compare( PQSGMATERIAL(1) ) );
+      RINT(obj->compare(PQSGMATERIAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,17 +108,17 @@ HB_FUNC_STATIC( QSGMATERIAL_COMPARE )
 /*
 virtual QSGMaterialShader * createShader() const = 0
 */
-HB_FUNC_STATIC( QSGMATERIAL_CREATESHADER )
+HB_FUNC_STATIC(QSGMATERIAL_CREATESHADER)
 {
-  QSGMaterial * obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGMaterial *obj = (QSGMaterial *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSGMaterialShader * ptr = obj->createShader();
+      QSGMaterialShader *ptr = obj->createShader();
       Qt5xHb::createReturnClass(ptr, "QSGMATERIALSHADER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -133,17 +133,17 @@ HB_FUNC_STATIC( QSGMATERIAL_CREATESHADER )
 /*
 QSGMaterial::Flags flags() const
 */
-HB_FUNC_STATIC( QSGMATERIAL_FLAGS )
+HB_FUNC_STATIC(QSGMATERIAL_FLAGS)
 {
-  QSGMaterial * obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGMaterial *obj = (QSGMaterial *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->flags() );
+      RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,17 +157,17 @@ HB_FUNC_STATIC( QSGMATERIAL_FLAGS )
 /*
 void setFlag( QSGMaterial::Flags flags, bool on = true )
 */
-HB_FUNC_STATIC( QSGMATERIAL_SETFLAG )
+HB_FUNC_STATIC(QSGMATERIAL_SETFLAG)
 {
-  QSGMaterial * obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGMaterial *obj = (QSGMaterial *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setFlag( (QSGMaterial::Flags) hb_parni(1), OPBOOL(2,true) );
+      obj->setFlag((QSGMaterial::Flags)hb_parni(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,17 +183,17 @@ HB_FUNC_STATIC( QSGMATERIAL_SETFLAG )
 /*
 virtual QSGMaterialType * type() const = 0
 */
-HB_FUNC_STATIC( QSGMATERIAL_TYPE )
+HB_FUNC_STATIC(QSGMATERIAL_TYPE)
 {
-  QSGMaterial * obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGMaterial *obj = (QSGMaterial *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSGMaterialType * ptr = obj->type();
+      QSGMaterialType *ptr = obj->type();
       Qt5xHb::createReturnClass(ptr, "QSGMATERIALTYPE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -205,11 +205,11 @@ HB_FUNC_STATIC( QSGMATERIAL_TYPE )
   }
 }
 
-HB_FUNC_STATIC( QSGMATERIAL_NEWFROM )
+HB_FUNC_STATIC(QSGMATERIAL_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSGMATERIAL_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -235,26 +235,26 @@ HB_FUNC_STATIC( QSGMATERIAL_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSGMATERIAL_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSGMATERIAL_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSGMATERIAL_NEWFROM );
+  HB_FUNC_EXEC(QSGMATERIAL_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSGMATERIAL_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSGMATERIAL_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSGMATERIAL_NEWFROM );
+  HB_FUNC_EXEC(QSGMATERIAL_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSGMATERIAL_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSGMATERIAL_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSGMATERIAL_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSGMATERIAL_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

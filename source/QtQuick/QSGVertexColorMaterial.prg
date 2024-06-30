@@ -50,14 +50,14 @@ RETURN
 #include <QtQuick/QSGVertexColorMaterial>
 #endif
 
-/*
-QSGVertexColorMaterial()
-*/
-HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_NEW )
+    /*
+    QSGVertexColorMaterial()
+    */
+HB_FUNC_STATIC(QSGVERTEXCOLORMATERIAL_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QSGVertexColorMaterial * obj = new QSGVertexColorMaterial();
+    QSGVertexColorMaterial *obj = new QSGVertexColorMaterial();
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -66,11 +66,11 @@ HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_DELETE )
+HB_FUNC_STATIC(QSGVERTEXCOLORMATERIAL_DELETE)
 {
-  QSGVertexColorMaterial * obj = (QSGVertexColorMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGVertexColorMaterial *obj = (QSGVertexColorMaterial *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

@@ -62,11 +62,11 @@ RETURN
 #include <QtQuick/QSGMaterialShader>
 #endif
 
-HB_FUNC_STATIC( QSGMATERIALSHADER_DELETE )
+HB_FUNC_STATIC(QSGMATERIALSHADER_DELETE)
 {
-  QSGMaterialShader * obj = (QSGMaterialShader *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGMaterialShader *obj = (QSGMaterialShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -81,14 +81,14 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_DELETE )
 /*
 virtual void activate()
 */
-HB_FUNC_STATIC( QSGMATERIALSHADER_ACTIVATE )
+HB_FUNC_STATIC(QSGMATERIALSHADER_ACTIVATE)
 {
-  QSGMaterialShader * obj = (QSGMaterialShader *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGMaterialShader *obj = (QSGMaterialShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->activate();
@@ -107,14 +107,14 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_ACTIVATE )
 /*
 virtual void deactivate()
 */
-HB_FUNC_STATIC( QSGMATERIALSHADER_DEACTIVATE )
+HB_FUNC_STATIC(QSGMATERIALSHADER_DEACTIVATE)
 {
-  QSGMaterialShader * obj = (QSGMaterialShader *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGMaterialShader *obj = (QSGMaterialShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->deactivate();
@@ -133,17 +133,17 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_DEACTIVATE )
 /*
 QOpenGLShaderProgram * program()
 */
-HB_FUNC_STATIC( QSGMATERIALSHADER_PROGRAM )
+HB_FUNC_STATIC(QSGMATERIALSHADER_PROGRAM)
 {
-  QSGMaterialShader * obj = (QSGMaterialShader *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGMaterialShader *obj = (QSGMaterialShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QOpenGLShaderProgram * ptr = obj->program();
+      QOpenGLShaderProgram *ptr = obj->program();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLSHADERPROGRAM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -155,11 +155,11 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_PROGRAM )
   }
 }
 
-HB_FUNC_STATIC( QSGMATERIALSHADER_NEWFROM )
+HB_FUNC_STATIC(QSGMATERIALSHADER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -185,26 +185,26 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSGMATERIALSHADER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSGMATERIALSHADER_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSGMATERIALSHADER_NEWFROM );
+  HB_FUNC_EXEC(QSGMATERIALSHADER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSGMATERIALSHADER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSGMATERIALSHADER_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSGMATERIALSHADER_NEWFROM );
+  HB_FUNC_EXEC(QSGMATERIALSHADER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSGMATERIALSHADER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSGMATERIALSHADER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSGMATERIALSHADER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSGMATERIALSHADER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

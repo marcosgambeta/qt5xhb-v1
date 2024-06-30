@@ -80,11 +80,11 @@ RETURN
 #include <QtQuick/QQuickPaintedItem>
 #endif
 
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_DELETE )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_DELETE)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -101,17 +101,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_DELETE )
 /*
 bool antialiasing() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_ANTIALIASING )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_ANTIALIASING)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->antialiasing() );
+      RBOOL(obj->antialiasing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,17 +125,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_ANTIALIASING )
 /*
 QRectF contentsBoundingRect() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSBOUNDINGRECT )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSBOUNDINGRECT)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->contentsBoundingRect() );
+      QRectF *ptr = new QRectF(obj->contentsBoundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -150,17 +150,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSBOUNDINGRECT )
 /*
 qreal contentsScale() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSSCALE )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSSCALE)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->contentsScale() );
+      RQREAL(obj->contentsScale());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,17 +174,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSSCALE )
 /*
 QSize contentsSize() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSSIZE )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSSIZE)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->contentsSize() );
+      QSize *ptr = new QSize(obj->contentsSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -199,17 +199,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSSIZE )
 /*
 QColor fillColor() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_FILLCOLOR )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_FILLCOLOR)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->fillColor() );
+      QColor *ptr = new QColor(obj->fillColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -224,17 +224,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_FILLCOLOR )
 /*
 bool mipmap() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_MIPMAP )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_MIPMAP)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->mipmap() );
+      RBOOL(obj->mipmap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,17 +248,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_MIPMAP )
 /*
 bool opaquePainting() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_OPAQUEPAINTING )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_OPAQUEPAINTING)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->opaquePainting() );
+      RBOOL(obj->opaquePainting());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,17 +272,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_OPAQUEPAINTING )
 /*
 virtual void paint( QPainter * painter ) = 0
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_PAINT )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_PAINT)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPAINTER(1) )
+    if (ISNUMPAR(1) && ISQPAINTER(1))
     {
 #endif
-      obj->paint( PQPAINTER(1) );
+      obj->paint(PQPAINTER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,17 +298,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_PAINT )
 /*
 QQuickPaintedItem::PerformanceHints performanceHints() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_PERFORMANCEHINTS )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_PERFORMANCEHINTS)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->performanceHints() );
+      RENUM(obj->performanceHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,17 +322,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_PERFORMANCEHINTS )
 /*
 QQuickPaintedItem::RenderTarget renderTarget() const
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_RENDERTARGET )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_RENDERTARGET)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->renderTarget() );
+      RENUM(obj->renderTarget());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,14 +346,14 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_RENDERTARGET )
 /*
 void resetContentsSize()
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_RESETCONTENTSSIZE )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_RESETCONTENTSSIZE)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->resetContentsSize();
@@ -372,17 +372,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_RESETCONTENTSSIZE )
 /*
 void setAntialiasing( bool enable )
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETANTIALIASING )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETANTIALIASING)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAntialiasing( PBOOL(1) );
+      obj->setAntialiasing(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,17 +398,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETANTIALIASING )
 /*
 void setContentsScale( qreal )
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSCALE )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETCONTENTSSCALE)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setContentsScale( PQREAL(1) );
+      obj->setContentsScale(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,17 +424,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSCALE )
 /*
 void setContentsSize( const QSize & )
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSIZE )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETCONTENTSSIZE)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setContentsSize( *PQSIZE(1) );
+      obj->setContentsSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,17 +450,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSIZE )
 /*
 void setFillColor( const QColor & )
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETFILLCOLOR )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETFILLCOLOR)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setFillColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setFillColor(HB_ISOBJECT(1) ? *(QColor *)Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,17 +476,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETFILLCOLOR )
 /*
 void setMipmap( bool enable )
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETMIPMAP )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETMIPMAP)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setMipmap( PBOOL(1) );
+      obj->setMipmap(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -502,17 +502,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETMIPMAP )
 /*
 void setOpaquePainting( bool opaque )
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETOPAQUEPAINTING )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETOPAQUEPAINTING)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setOpaquePainting( PBOOL(1) );
+      obj->setOpaquePainting(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -528,17 +528,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETOPAQUEPAINTING )
 /*
 void setPerformanceHint( QQuickPaintedItem::PerformanceHint hint, bool enabled = true )
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINT )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETPERFORMANCEHINT)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setPerformanceHint( (QQuickPaintedItem::PerformanceHint) hb_parni(1), OPBOOL(2,true) );
+      obj->setPerformanceHint((QQuickPaintedItem::PerformanceHint)hb_parni(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -554,17 +554,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINT )
 /*
 void setPerformanceHints( QQuickPaintedItem::PerformanceHints hints )
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINTS )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETPERFORMANCEHINTS)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPerformanceHints( (QQuickPaintedItem::PerformanceHints) hb_parni(1) );
+      obj->setPerformanceHints((QQuickPaintedItem::PerformanceHints)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -580,17 +580,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINTS )
 /*
 void setRenderTarget( QQuickPaintedItem::RenderTarget target )
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETRENDERTARGET )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETRENDERTARGET)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRenderTarget( (QQuickPaintedItem::RenderTarget) hb_parni(1) );
+      obj->setRenderTarget((QQuickPaintedItem::RenderTarget)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -606,17 +606,17 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETRENDERTARGET )
 /*
 void update( const QRect & rect = QRect() )
 */
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_UPDATE )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_UPDATE)
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQRECT(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->update( HB_ISNIL(1)? QRect() : *(QRect *) Qt5xHb::itemGetPtr(1) );
+      obj->update(HB_ISNIL(1) ? QRect() : *(QRect *)Qt5xHb::itemGetPtr(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -629,24 +629,24 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_UPDATE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QQuickPaintedItemSlots_connect_signal(const QString & signal, const QString & slot);
+void QQuickPaintedItemSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED)
 {
   QQuickPaintedItemSlots_connect_signal("contentsScaleChanged()", "contentsScaleChanged()");
 }
 
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED)
 {
   QQuickPaintedItemSlots_connect_signal("contentsSizeChanged()", "contentsSizeChanged()");
 }
 
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_ONFILLCOLORCHANGED)
 {
   QQuickPaintedItemSlots_connect_signal("fillColorChanged()", "fillColorChanged()");
 }
 
-HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
+HB_FUNC_STATIC(QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED)
 {
   QQuickPaintedItemSlots_connect_signal("renderTargetChanged()", "renderTargetChanged()");
 }

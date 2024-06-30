@@ -52,11 +52,11 @@ RETURN
 #include <QtQuick/QSGBasicGeometryNode>
 #endif
 
-HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_DELETE )
+HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_DELETE)
 {
-  QSGBasicGeometryNode * obj = (QSGBasicGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGBasicGeometryNode *obj = (QSGBasicGeometryNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -71,17 +71,17 @@ HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_DELETE )
 /*
 QSGGeometry * geometry()
 */
-HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_GEOMETRY )
+HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_GEOMETRY)
 {
-  QSGBasicGeometryNode * obj = (QSGBasicGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGBasicGeometryNode *obj = (QSGBasicGeometryNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSGGeometry * ptr = obj->geometry();
+      QSGGeometry *ptr = obj->geometry();
       Qt5xHb::createReturnClass(ptr, "QSGGEOMETRY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -96,17 +96,17 @@ HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_GEOMETRY )
 /*
 void setGeometry( QSGGeometry * geometry )
 */
-HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_SETGEOMETRY )
+HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_SETGEOMETRY)
 {
-  QSGBasicGeometryNode * obj = (QSGBasicGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSGBasicGeometryNode *obj = (QSGBasicGeometryNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSGGEOMETRY(1) )
+    if (ISNUMPAR(1) && ISQSGGEOMETRY(1))
     {
 #endif
-      obj->setGeometry( PQSGGEOMETRY(1) );
+      obj->setGeometry(PQSGGEOMETRY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
