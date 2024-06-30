@@ -62,16 +62,16 @@ RETURN
 
 #include <QtDataVisualization/Q3DScene>
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
 
 /*
 Q3DObject( QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( Q3DOBJECT_NEW )
+HB_FUNC_STATIC(Q3DOBJECT_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    Q3DObject * obj = new Q3DObject( OPQOBJECT(1,nullptr) );
+    Q3DObject *obj = new Q3DObject(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -83,11 +83,11 @@ HB_FUNC_STATIC( Q3DOBJECT_NEW )
 /*
 virtual ~Q3DObject()
 */
-HB_FUNC_STATIC( Q3DOBJECT_DELETE )
+HB_FUNC_STATIC(Q3DOBJECT_DELETE)
 {
-  Q3DObject * obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DObject *obj = (Q3DObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -104,17 +104,17 @@ HB_FUNC_STATIC( Q3DOBJECT_DELETE )
 /*
 Q3DScene * parentScene()
 */
-HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
+HB_FUNC_STATIC(Q3DOBJECT_PARENTSCENE)
 {
-  Q3DObject * obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DObject *obj = (Q3DObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      Q3DScene * ptr = obj->parentScene();
+      Q3DScene *ptr = obj->parentScene();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -129,17 +129,17 @@ HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
 /*
 QVector3D position() const
 */
-HB_FUNC_STATIC( Q3DOBJECT_POSITION )
+HB_FUNC_STATIC(Q3DOBJECT_POSITION)
 {
-  Q3DObject * obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DObject *obj = (Q3DObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->position() );
+      QVector3D *ptr = new QVector3D(obj->position());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -154,17 +154,17 @@ HB_FUNC_STATIC( Q3DOBJECT_POSITION )
 /*
 void setPosition( const QVector3D & position )
 */
-HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
+HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 {
-  Q3DObject * obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DObject *obj = (Q3DObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVECTOR3D(1) )
+    if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      obj->setPosition( *PQVECTOR3D(1) );
+      obj->setPosition(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,17 +180,17 @@ HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
 /*
 virtual void copyValuesFrom( const Q3DObject & source )
 */
-HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
+HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 {
-  Q3DObject * obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DObject *obj = (Q3DObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQ3DOBJECT(1) )
+    if (ISNUMPAR(1) && ISQ3DOBJECT(1))
     {
 #endif
-      obj->copyValuesFrom( *PQ3DOBJECT(1) );
+      obj->copyValuesFrom(*PQ3DOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,9 +203,9 @@ HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void Q3DObjectSlots_connect_signal(const QString & signal, const QString & slot);
+void Q3DObjectSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
+HB_FUNC_STATIC(Q3DOBJECT_ONPOSITIONCHANGED)
 {
   Q3DObjectSlots_connect_signal("positionChanged(QVector3D)", "positionChanged(QVector3D)");
 }

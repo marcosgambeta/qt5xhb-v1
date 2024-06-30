@@ -69,16 +69,16 @@ RETURN
 #include <QtDataVisualization/QAbstract3DInputHandler>
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
 
 /*
 virtual ~QAbstract3DInputHandler()
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_DELETE)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -95,17 +95,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
 /*
 QAbstract3DInputHandler::InputView inputView() const
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTVIEW)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->inputView() );
+      RENUM(obj->inputView());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,17 +119,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
 /*
 void setInputView( QAbstract3DInputHandler::InputView inputView )
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTVIEW)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setInputView( (QAbstract3DInputHandler::InputView) hb_parni(1) );
+      obj->setInputView((QAbstract3DInputHandler::InputView)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,17 +145,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
 /*
 QPoint inputPosition() const
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPoint * ptr = new QPoint( obj->inputPosition() );
+      QPoint *ptr = new QPoint(obj->inputPosition());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -170,17 +170,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
 /*
 void setInputPosition( const QPoint & position )
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->setInputPosition( *PQPOINT(1) );
+      obj->setInputPosition(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,17 +196,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
 /*
 Q3DScene * scene() const
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SCENE)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      Q3DScene * ptr = obj->scene();
+      Q3DScene *ptr = obj->scene();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -221,17 +221,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
 /*
 void setScene( Q3DScene * scene )
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETSCENE)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQ3DSCENE(1) )
+    if (ISNUMPAR(1) && ISQ3DSCENE(1))
     {
 #endif
-      obj->setScene( PQ3DSCENE(1) );
+      obj->setScene(PQ3DSCENE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,17 +247,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
 /*
 virtual void mouseDoubleClickEvent( QMouseEvent * event )
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_MOUSEDOUBLECLICKEVENT )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEDOUBLECLICKEVENT)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMOUSEEVENT(1) )
+    if (ISNUMPAR(1) && ISQMOUSEEVENT(1))
     {
 #endif
-      obj->mouseDoubleClickEvent( PQMOUSEEVENT(1) );
+      obj->mouseDoubleClickEvent(PQMOUSEEVENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,17 +273,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_MOUSEDOUBLECLICKEVENT )
 /*
 virtual void touchEvent( QTouchEvent * event )
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_TOUCHEVENT )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_TOUCHEVENT)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTOUCHEVENT(1) )
+    if (ISNUMPAR(1) && ISQTOUCHEVENT(1))
     {
 #endif
-      obj->touchEvent( PQTOUCHEVENT(1) );
+      obj->touchEvent(PQTOUCHEVENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,17 +299,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_TOUCHEVENT )
 /*
 virtual void mousePressEvent( QMouseEvent * event, const QPoint & mousePos )
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_MOUSEPRESSEVENT )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEPRESSEVENT)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQMOUSEEVENT(1) && ISQPOINT(2) )
+    if (ISNUMPAR(2) && ISQMOUSEEVENT(1) && ISQPOINT(2))
     {
 #endif
-      obj->mousePressEvent( PQMOUSEEVENT(1), *PQPOINT(2) );
+      obj->mousePressEvent(PQMOUSEEVENT(1), *PQPOINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,17 +325,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_MOUSEPRESSEVENT )
 /*
 virtual void mouseReleaseEvent( QMouseEvent * event, const QPoint & mousePos )
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_MOUSERELEASEEVENT )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSERELEASEEVENT)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQMOUSEEVENT(1) && ISQPOINT(2) )
+    if (ISNUMPAR(2) && ISQMOUSEEVENT(1) && ISQPOINT(2))
     {
 #endif
-      obj->mouseReleaseEvent( PQMOUSEEVENT(1), *PQPOINT(2) );
+      obj->mouseReleaseEvent(PQMOUSEEVENT(1), *PQPOINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,17 +351,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_MOUSERELEASEEVENT )
 /*
 virtual void mouseMoveEvent( QMouseEvent * event, const QPoint & mousePos )
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_MOUSEMOVEEVENT )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEMOVEEVENT)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQMOUSEEVENT(1) && ISQPOINT(2) )
+    if (ISNUMPAR(2) && ISQMOUSEEVENT(1) && ISQPOINT(2))
     {
 #endif
-      obj->mouseMoveEvent( PQMOUSEEVENT(1), *PQPOINT(2) );
+      obj->mouseMoveEvent(PQMOUSEEVENT(1), *PQPOINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,17 +377,17 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_MOUSEMOVEEVENT )
 /*
 virtual void wheelEvent( QWheelEvent * event )
 */
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_WHEELEVENT )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_WHEELEVENT)
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWHEELEVENT(1) )
+    if (ISNUMPAR(1) && ISQWHEELEVENT(1))
     {
 #endif
-      obj->wheelEvent( PQWHEELEVENT(1) );
+      obj->wheelEvent(PQWHEELEVENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,19 +400,20 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_WHEELEVENT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAbstract3DInputHandlerSlots_connect_signal(const QString & signal, const QString & slot);
+void QAbstract3DInputHandlerSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED)
 {
-  QAbstract3DInputHandlerSlots_connect_signal("inputViewChanged(QAbstract3DInputHandler::InputView)", "inputViewChanged(QAbstract3DInputHandler::InputView)");
+  QAbstract3DInputHandlerSlots_connect_signal("inputViewChanged(QAbstract3DInputHandler::InputView)",
+                                              "inputViewChanged(QAbstract3DInputHandler::InputView)");
 }
 
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED)
 {
   QAbstract3DInputHandlerSlots_connect_signal("positionChanged(QPoint)", "positionChanged(QPoint)");
 }
 
-HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
+HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_ONSCENECHANGED)
 {
   QAbstract3DInputHandlerSlots_connect_signal("sceneChanged(Q3DScene*)", "sceneChanged(Q3DScene*)");
 }

@@ -62,16 +62,16 @@ RETURN
 #include <QtDataVisualization/QLogValue3DAxisFormatter>
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
 
 /*
 QLogValue3DAxisFormatter( QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
+HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QLogValue3DAxisFormatter * obj = new QLogValue3DAxisFormatter( OPQOBJECT(1,nullptr) );
+    QLogValue3DAxisFormatter *obj = new QLogValue3DAxisFormatter(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -83,11 +83,11 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
 /*
 virtual ~QLogValue3DAxisFormatter()
 */
-HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_DELETE )
+HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_DELETE)
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter *obj = (QLogValue3DAxisFormatter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -104,17 +104,17 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_DELETE )
 /*
 qreal base() const
 */
-HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_BASE )
+HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_BASE)
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter *obj = (QLogValue3DAxisFormatter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->base() );
+      RQREAL(obj->base());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,17 +128,17 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_BASE )
 /*
 void setBase( qreal base )
 */
-HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
+HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETBASE)
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter *obj = (QLogValue3DAxisFormatter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBase( PQREAL(1) );
+      obj->setBase(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,17 +154,17 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
 /*
 bool autoSubGrid() const
 */
-HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID )
+HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID)
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter *obj = (QLogValue3DAxisFormatter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->autoSubGrid() );
+      RBOOL(obj->autoSubGrid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,17 +178,17 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID )
 /*
 void setAutoSubGrid( bool enabled )
 */
-HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
+HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID)
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter *obj = (QLogValue3DAxisFormatter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAutoSubGrid( PBOOL(1) );
+      obj->setAutoSubGrid(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,17 +204,17 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
 /*
 bool showEdgeLabels() const
 */
-HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS )
+HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS)
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter *obj = (QLogValue3DAxisFormatter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->showEdgeLabels() );
+      RBOOL(obj->showEdgeLabels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,17 +228,17 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS )
 /*
 void setShowEdgeLabels( bool enabled )
 */
-HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
+HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS)
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter *obj = (QLogValue3DAxisFormatter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setShowEdgeLabels( PBOOL(1) );
+      obj->setShowEdgeLabels(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,19 +251,19 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QLogValue3DAxisFormatterSlots_connect_signal(const QString & signal, const QString & slot);
+void QLogValue3DAxisFormatterSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
+HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED)
 {
   QLogValue3DAxisFormatterSlots_connect_signal("autoSubGridChanged(bool)", "autoSubGridChanged(bool)");
 }
 
-HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
+HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONBASECHANGED)
 {
   QLogValue3DAxisFormatterSlots_connect_signal("baseChanged(qreal)", "baseChanged(qreal)");
 }
 
-HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
+HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED)
 {
   QLogValue3DAxisFormatterSlots_connect_signal("showEdgeLabelsChanged(bool)", "showEdgeLabelsChanged(bool)");
 }

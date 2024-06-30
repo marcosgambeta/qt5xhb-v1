@@ -56,16 +56,16 @@ RETURN
 #include <QtDataVisualization/QCategory3DAxis>
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
 
 /*
 QCategory3DAxis( QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( QCATEGORY3DAXIS_NEW )
+HB_FUNC_STATIC(QCATEGORY3DAXIS_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QCategory3DAxis * obj = new QCategory3DAxis( OPQOBJECT(1,nullptr) );
+    QCategory3DAxis *obj = new QCategory3DAxis(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -77,11 +77,11 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_NEW )
 /*
 virtual ~QCategory3DAxis()
 */
-HB_FUNC_STATIC( QCATEGORY3DAXIS_DELETE )
+HB_FUNC_STATIC(QCATEGORY3DAXIS_DELETE)
 {
-  QCategory3DAxis * obj = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCategory3DAxis *obj = (QCategory3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -98,17 +98,17 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_DELETE )
 /*
 QStringList labels() const
 */
-HB_FUNC_STATIC( QCATEGORY3DAXIS_LABELS )
+HB_FUNC_STATIC(QCATEGORY3DAXIS_LABELS)
 {
-  QCategory3DAxis * obj = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCategory3DAxis *obj = (QCategory3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->labels() );
+      RQSTRINGLIST(obj->labels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,17 +122,17 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_LABELS )
 /*
 void setLabels( const QStringList & labels )
 */
-HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
+HB_FUNC_STATIC(QCATEGORY3DAXIS_SETLABELS)
 {
-  QCategory3DAxis * obj = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCategory3DAxis *obj = (QCategory3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setLabels( PQSTRINGLIST(1) );
+      obj->setLabels(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,9 +145,9 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCategory3DAxisSlots_connect_signal(const QString & signal, const QString & slot);
+void QCategory3DAxisSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
+HB_FUNC_STATIC(QCATEGORY3DAXIS_ONLABELSCHANGED)
 {
   QCategory3DAxisSlots_connect_signal("labelsChanged()", "labelsChanged()");
 }

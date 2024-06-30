@@ -53,16 +53,16 @@ RETURN
 #include <QtDataVisualization/QTouch3DInputHandler>
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
 
 /*
 QTouch3DInputHandler( QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_NEW )
+HB_FUNC_STATIC(QTOUCH3DINPUTHANDLER_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QTouch3DInputHandler * obj = new QTouch3DInputHandler( OPQOBJECT(1,nullptr) );
+    QTouch3DInputHandler *obj = new QTouch3DInputHandler(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -74,11 +74,11 @@ HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_NEW )
 /*
 virtual ~QTouch3DInputHandler()
 */
-HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_DELETE )
+HB_FUNC_STATIC(QTOUCH3DINPUTHANDLER_DELETE)
 {
-  QTouch3DInputHandler * obj = (QTouch3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTouch3DInputHandler *obj = (QTouch3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -95,17 +95,17 @@ HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_DELETE )
 /*
 virtual void touchEvent( QTouchEvent * event )
 */
-HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_TOUCHEVENT )
+HB_FUNC_STATIC(QTOUCH3DINPUTHANDLER_TOUCHEVENT)
 {
-  QTouch3DInputHandler * obj = (QTouch3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTouch3DInputHandler *obj = (QTouch3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTOUCHEVENT(1) )
+    if (ISNUMPAR(1) && ISQTOUCHEVENT(1))
     {
 #endif
-      obj->touchEvent( PQTOUCHEVENT(1) );
+      obj->touchEvent(PQTOUCHEVENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -52,16 +52,16 @@ RETURN
 #include <QtDataVisualization/QValue3DAxisFormatter>
 #endif
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
 
 /*
 QValue3DAxisFormatter( QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_NEW )
+HB_FUNC_STATIC(QVALUE3DAXISFORMATTER_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QValue3DAxisFormatter * obj = new QValue3DAxisFormatter( OPQOBJECT(1,nullptr) );
+    QValue3DAxisFormatter *obj = new QValue3DAxisFormatter(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -73,11 +73,11 @@ HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_NEW )
 /*
 virtual ~QValue3DAxisFormatter()
 */
-HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_DELETE )
+HB_FUNC_STATIC(QVALUE3DAXISFORMATTER_DELETE)
 {
-  QValue3DAxisFormatter * obj = (QValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxisFormatter *obj = (QValue3DAxisFormatter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

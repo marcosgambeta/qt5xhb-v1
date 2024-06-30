@@ -83,16 +83,16 @@ RETURN
 
 #include <QtDataVisualization/QBar3DSeries>
 
-using namespace QtDataVisualization;
+    using namespace QtDataVisualization;
 
 /*
 QBarDataProxy( QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( QBARDATAPROXY_NEW )
+HB_FUNC_STATIC(QBARDATAPROXY_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QBarDataProxy * obj = new QBarDataProxy( OPQOBJECT(1,nullptr) );
+    QBarDataProxy *obj = new QBarDataProxy(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -104,11 +104,11 @@ HB_FUNC_STATIC( QBARDATAPROXY_NEW )
 /*
 virtual ~QBarDataProxy()
 */
-HB_FUNC_STATIC( QBARDATAPROXY_DELETE )
+HB_FUNC_STATIC(QBARDATAPROXY_DELETE)
 {
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -125,17 +125,17 @@ HB_FUNC_STATIC( QBARDATAPROXY_DELETE )
 /*
 int rowCount() const
 */
-HB_FUNC_STATIC( QBARDATAPROXY_ROWCOUNT )
+HB_FUNC_STATIC(QBARDATAPROXY_ROWCOUNT)
 {
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->rowCount() );
+      RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,17 +149,17 @@ HB_FUNC_STATIC( QBARDATAPROXY_ROWCOUNT )
 /*
 QStringList rowLabels() const
 */
-HB_FUNC_STATIC( QBARDATAPROXY_ROWLABELS )
+HB_FUNC_STATIC(QBARDATAPROXY_ROWLABELS)
 {
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->rowLabels() );
+      RQSTRINGLIST(obj->rowLabels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,17 +173,17 @@ HB_FUNC_STATIC( QBARDATAPROXY_ROWLABELS )
 /*
 void setRowLabels( const QStringList & labels )
 */
-HB_FUNC_STATIC( QBARDATAPROXY_SETROWLABELS )
+HB_FUNC_STATIC(QBARDATAPROXY_SETROWLABELS)
 {
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setRowLabels( PQSTRINGLIST(1) );
+      obj->setRowLabels(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,17 +199,17 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROWLABELS )
 /*
 QStringList columnLabels() const
 */
-HB_FUNC_STATIC( QBARDATAPROXY_COLUMNLABELS )
+HB_FUNC_STATIC(QBARDATAPROXY_COLUMNLABELS)
 {
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->columnLabels() );
+      RQSTRINGLIST(obj->columnLabels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,17 +223,17 @@ HB_FUNC_STATIC( QBARDATAPROXY_COLUMNLABELS )
 /*
 void setColumnLabels( const QStringList & labels )
 */
-HB_FUNC_STATIC( QBARDATAPROXY_SETCOLUMNLABELS )
+HB_FUNC_STATIC(QBARDATAPROXY_SETCOLUMNLABELS)
 {
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setColumnLabels( PQSTRINGLIST(1) );
+      obj->setColumnLabels(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,17 +249,17 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETCOLUMNLABELS )
 /*
 QBar3DSeries * series() const
 */
-HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
+HB_FUNC_STATIC(QBARDATAPROXY_SERIES)
 {
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBar3DSeries * ptr = obj->series();
+      QBar3DSeries *ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QBAR3DSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -271,31 +271,31 @@ HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
   }
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
+HB_FUNC_STATIC(QBARDATAPROXY_ITEMAT)
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     const QBarDataItem * itemAt( int rowIndex, int columnIndex ) const
     */
-    QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      const QBarDataItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+      const QBarDataItem *ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QBARDATAITEM", false);
     }
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     const QBarDataItem * itemAt( const QPoint & position ) const
     */
-    QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      const QBarDataItem * ptr = obj->itemAt( *PQPOINT(1) );
+      const QBarDataItem *ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QBARDATAITEM", false);
     }
   }
@@ -305,46 +305,46 @@ HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
   }
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_RESETARRAY )
+HB_FUNC_STATIC(QBARDATAPROXY_RESETARRAY)
 {
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_SETROW )
+HB_FUNC_STATIC(QBARDATAPROXY_SETROW)
 {
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_SETROWS )
+HB_FUNC_STATIC(QBARDATAPROXY_SETROWS)
 {
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_SETITEM )
+HB_FUNC_STATIC(QBARDATAPROXY_SETITEM)
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBARDATAITEM(3) )
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBARDATAITEM(3))
   {
     /*
     void setItem( int rowIndex, int columnIndex, const QBarDataItem & item )
     */
-    QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->setItem( PINT(1), PINT(2), *PQBARDATAITEM(3) );
+      obj->setItem(PINT(1), PINT(2), *PQBARDATAITEM(3));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(2) && ISQPOINT(1) && ISQBARDATAITEM(2) )
+  else if (ISNUMPAR(2) && ISQPOINT(1) && ISQBARDATAITEM(2))
   {
     /*
     void setItem( const QPoint & position, const QBarDataItem & item )
     */
-    QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->setItem( *PQPOINT(1), *PQBARDATAITEM(2) );
+      obj->setItem(*PQPOINT(1), *PQBARDATAITEM(2));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
   else
@@ -353,36 +353,36 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETITEM )
   }
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ADDROW )
+HB_FUNC_STATIC(QBARDATAPROXY_ADDROW)
 {
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ADDROWS )
+HB_FUNC_STATIC(QBARDATAPROXY_ADDROWS)
 {
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_INSERTROW )
+HB_FUNC_STATIC(QBARDATAPROXY_INSERTROW)
 {
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_INSERTROWS )
+HB_FUNC_STATIC(QBARDATAPROXY_INSERTROWS)
 {
 }
 
 /*
 void removeRows( int rowIndex, int removeCount, bool removeLabels = true )
 */
-HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
+HB_FUNC_STATIC(QBARDATAPROXY_REMOVEROWS)
 {
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISLOG(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISLOG(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->removeRows( PINT(1), PINT(2), OPBOOL(3,true) );
+      obj->removeRows(PINT(1), PINT(2), OPBOOL(3, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,54 +395,54 @@ HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QBarDataProxySlots_connect_signal(const QString & signal, const QString & slot);
+void QBarDataProxySlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
+HB_FUNC_STATIC(QBARDATAPROXY_ONARRAYRESET)
 {
   QBarDataProxySlots_connect_signal("arrayReset()", "arrayReset()");
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
+HB_FUNC_STATIC(QBARDATAPROXY_ONCOLUMNLABELSCHANGED)
 {
   QBarDataProxySlots_connect_signal("columnLabelsChanged()", "columnLabelsChanged()");
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
+HB_FUNC_STATIC(QBARDATAPROXY_ONITEMCHANGED)
 {
   QBarDataProxySlots_connect_signal("itemChanged(int,int)", "itemChanged(int,int)");
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
+HB_FUNC_STATIC(QBARDATAPROXY_ONROWCOUNTCHANGED)
 {
   QBarDataProxySlots_connect_signal("rowCountChanged(int)", "rowCountChanged(int)");
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
+HB_FUNC_STATIC(QBARDATAPROXY_ONROWLABELSCHANGED)
 {
   QBarDataProxySlots_connect_signal("rowLabelsChanged()", "rowLabelsChanged()");
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
+HB_FUNC_STATIC(QBARDATAPROXY_ONROWSADDED)
 {
   QBarDataProxySlots_connect_signal("rowsAdded(int,int)", "rowsAdded(int,int)");
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
+HB_FUNC_STATIC(QBARDATAPROXY_ONROWSCHANGED)
 {
   QBarDataProxySlots_connect_signal("rowsChanged(int,int)", "rowsChanged(int,int)");
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
+HB_FUNC_STATIC(QBARDATAPROXY_ONROWSINSERTED)
 {
   QBarDataProxySlots_connect_signal("rowsInserted(int,int)", "rowsInserted(int,int)");
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
+HB_FUNC_STATIC(QBARDATAPROXY_ONROWSREMOVED)
 {
   QBarDataProxySlots_connect_signal("rowsRemoved(int,int)", "rowsRemoved(int,int)");
 }
 
-HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
+HB_FUNC_STATIC(QBARDATAPROXY_ONSERIESCHANGED)
 {
   QBarDataProxySlots_connect_signal("seriesChanged(QBar3DSeries*)", "seriesChanged(QBar3DSeries*)");
 }
