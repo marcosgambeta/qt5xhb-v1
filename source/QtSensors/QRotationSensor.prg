@@ -45,7 +45,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QRotationSensor>
 #endif
 #endif
@@ -57,20 +57,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QRotationSensor>
 #endif
 #endif
 
-/*
-QRotationSensor( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
+    /*
+    QRotationSensor( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QROTATIONSENSOR_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QRotationSensor * obj = new QRotationSensor( OPQOBJECT(1,0) );
+    QRotationSensor *obj = new QRotationSensor(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -80,12 +80,12 @@ HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QROTATIONSENSOR_DELETE )
+HB_FUNC_STATIC(QROTATIONSENSOR_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QRotationSensor *obj = (QRotationSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -103,18 +103,18 @@ HB_FUNC_STATIC( QROTATIONSENSOR_DELETE )
 /*
 QRotationReading * reading() const
 */
-HB_FUNC_STATIC( QROTATIONSENSOR_READING )
+HB_FUNC_STATIC(QROTATIONSENSOR_READING)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QRotationSensor *obj = (QRotationSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRotationReading * ptr = obj->reading();
+      QRotationReading *ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QROTATIONREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -130,18 +130,18 @@ HB_FUNC_STATIC( QROTATIONSENSOR_READING )
 /*
 bool hasZ() const
 */
-HB_FUNC_STATIC( QROTATIONSENSOR_HASZ )
+HB_FUNC_STATIC(QROTATIONSENSOR_HASZ)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QRotationSensor *obj = (QRotationSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasZ() );
+      RBOOL(obj->hasZ());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,18 +156,18 @@ HB_FUNC_STATIC( QROTATIONSENSOR_HASZ )
 /*
 void setHasZ( bool hasZ )
 */
-HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
+HB_FUNC_STATIC(QROTATIONSENSOR_SETHASZ)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QRotationSensor *obj = (QRotationSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setHasZ( PBOOL(1) );
+      obj->setHasZ(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,11 +181,11 @@ HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
 #endif
 }
 
-void QRotationSensorSlots_connect_signal(const QString & signal, const QString & slot);
+void QRotationSensorSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QROTATIONSENSOR_ONHASZCHANGED )
+HB_FUNC_STATIC(QROTATIONSENSOR_ONHASZCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QRotationSensorSlots_connect_signal("hasZChanged(bool)", "hasZChanged(bool)");
 #else
   hb_retl(false);

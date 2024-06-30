@@ -37,7 +37,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QLightReading>
 #endif
 #endif
@@ -49,17 +49,17 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QLightReading>
 #endif
 #endif
 
-HB_FUNC_STATIC( QLIGHTREADING_DELETE )
+HB_FUNC_STATIC(QLIGHTREADING_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightReading * obj = (QLightReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QLightReading *obj = (QLightReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -77,18 +77,18 @@ HB_FUNC_STATIC( QLIGHTREADING_DELETE )
 /*
 qreal lux() const
 */
-HB_FUNC_STATIC( QLIGHTREADING_LUX )
+HB_FUNC_STATIC(QLIGHTREADING_LUX)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightReading * obj = (QLightReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QLightReading *obj = (QLightReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->lux() );
+      RQREAL(obj->lux());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -103,18 +103,18 @@ HB_FUNC_STATIC( QLIGHTREADING_LUX )
 /*
 void setLux( qreal lux )
 */
-HB_FUNC_STATIC( QLIGHTREADING_SETLUX )
+HB_FUNC_STATIC(QLIGHTREADING_SETLUX)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightReading * obj = (QLightReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QLightReading *obj = (QLightReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLux( PQREAL(1) );
+      obj->setLux(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

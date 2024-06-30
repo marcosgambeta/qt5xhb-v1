@@ -41,7 +41,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QGyroscope>
 #endif
 #endif
@@ -53,20 +53,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QGyroscope>
 #endif
 #endif
 
-/*
-QGyroscope( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QGYROSCOPE_NEW )
+    /*
+    QGyroscope( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QGYROSCOPE_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QGyroscope * obj = new QGyroscope( OPQOBJECT(1,0) );
+    QGyroscope *obj = new QGyroscope(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,12 +76,12 @@ HB_FUNC_STATIC( QGYROSCOPE_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QGYROSCOPE_DELETE )
+HB_FUNC_STATIC(QGYROSCOPE_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscope * obj = (QGyroscope *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QGyroscope *obj = (QGyroscope *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -99,18 +99,18 @@ HB_FUNC_STATIC( QGYROSCOPE_DELETE )
 /*
 QGyroscopeReading * reading() const
 */
-HB_FUNC_STATIC( QGYROSCOPE_READING )
+HB_FUNC_STATIC(QGYROSCOPE_READING)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscope * obj = (QGyroscope *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QGyroscope *obj = (QGyroscope *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QGyroscopeReading * ptr = obj->reading();
+      QGyroscopeReading *ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QGYROSCOPEREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

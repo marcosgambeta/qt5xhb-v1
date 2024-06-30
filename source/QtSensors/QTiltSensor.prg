@@ -42,7 +42,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QTiltSensor>
 #endif
 #endif
@@ -54,20 +54,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QTiltSensor>
 #endif
 #endif
 
-/*
-QTiltSensor( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QTILTSENSOR_NEW )
+    /*
+    QTiltSensor( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QTILTSENSOR_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QTiltSensor * obj = new QTiltSensor( OPQOBJECT(1,0) );
+    QTiltSensor *obj = new QTiltSensor(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -77,12 +77,12 @@ HB_FUNC_STATIC( QTILTSENSOR_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QTILTSENSOR_DELETE )
+HB_FUNC_STATIC(QTILTSENSOR_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTiltSensor * obj = (QTiltSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTiltSensor *obj = (QTiltSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -100,18 +100,18 @@ HB_FUNC_STATIC( QTILTSENSOR_DELETE )
 /*
 QTiltReading * reading() const
 */
-HB_FUNC_STATIC( QTILTSENSOR_READING )
+HB_FUNC_STATIC(QTILTSENSOR_READING)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTiltSensor * obj = (QTiltSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTiltSensor *obj = (QTiltSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTiltReading * ptr = obj->reading();
+      QTiltReading *ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QTILTREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -127,15 +127,15 @@ HB_FUNC_STATIC( QTILTSENSOR_READING )
 /*
 void calibrate()
 */
-HB_FUNC_STATIC( QTILTSENSOR_CALIBRATE )
+HB_FUNC_STATIC(QTILTSENSOR_CALIBRATE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTiltSensor * obj = (QTiltSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTiltSensor *obj = (QTiltSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->calibrate();

@@ -39,7 +39,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QAmbientTemperatureFilter>
 #endif
 #endif
@@ -49,17 +49,17 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QAmbientTemperatureFilter>
 #endif
 #endif
 
-HB_FUNC_STATIC( QAMBIENTTEMPERATUREFILTER_DELETE )
+HB_FUNC_STATIC(QAMBIENTTEMPERATUREFILTER_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureFilter * obj = (QAmbientTemperatureFilter *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QAmbientTemperatureFilter *obj = (QAmbientTemperatureFilter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -75,18 +75,18 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATUREFILTER_DELETE )
 /*
 virtual bool filter( QAmbientTemperatureReading * reading ) = 0
 */
-HB_FUNC_STATIC( QAMBIENTTEMPERATUREFILTER_FILTER )
+HB_FUNC_STATIC(QAMBIENTTEMPERATUREFILTER_FILTER)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureFilter * obj = (QAmbientTemperatureFilter *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QAmbientTemperatureFilter *obj = (QAmbientTemperatureFilter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQAMBIENTTEMPERATUREREADING(1) )
+    if (ISNUMPAR(1) && ISQAMBIENTTEMPERATUREREADING(1))
     {
 #endif
-      RBOOL( obj->filter( PQAMBIENTTEMPERATUREREADING(1) ) );
+      RBOOL(obj->filter(PQAMBIENTTEMPERATUREREADING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

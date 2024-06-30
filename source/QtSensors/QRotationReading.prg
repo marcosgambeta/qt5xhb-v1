@@ -42,7 +42,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QRotationReading>
 #endif
 #endif
@@ -54,17 +54,17 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QRotationReading>
 #endif
 #endif
 
-HB_FUNC_STATIC( QROTATIONREADING_DELETE )
+HB_FUNC_STATIC(QROTATIONREADING_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QRotationReading *obj = (QRotationReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -82,18 +82,18 @@ HB_FUNC_STATIC( QROTATIONREADING_DELETE )
 /*
 qreal x() const
 */
-HB_FUNC_STATIC( QROTATIONREADING_X )
+HB_FUNC_STATIC(QROTATIONREADING_X)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QRotationReading *obj = (QRotationReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->x() );
+      RQREAL(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,18 +108,18 @@ HB_FUNC_STATIC( QROTATIONREADING_X )
 /*
 qreal y() const
 */
-HB_FUNC_STATIC( QROTATIONREADING_Y )
+HB_FUNC_STATIC(QROTATIONREADING_Y)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QRotationReading *obj = (QRotationReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->y() );
+      RQREAL(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,18 +134,18 @@ HB_FUNC_STATIC( QROTATIONREADING_Y )
 /*
 qreal z() const
 */
-HB_FUNC_STATIC( QROTATIONREADING_Z )
+HB_FUNC_STATIC(QROTATIONREADING_Z)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QRotationReading *obj = (QRotationReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->z() );
+      RQREAL(obj->z());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,18 +160,18 @@ HB_FUNC_STATIC( QROTATIONREADING_Z )
 /*
 void setFromEuler( qreal x, qreal y, qreal z )
 */
-HB_FUNC_STATIC( QROTATIONREADING_SETFROMEULER )
+HB_FUNC_STATIC(QROTATIONREADING_SETFROMEULER)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QRotationReading *obj = (QRotationReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      obj->setFromEuler( PQREAL(1), PQREAL(2), PQREAL(3) );
+      obj->setFromEuler(PQREAL(1), PQREAL(2), PQREAL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

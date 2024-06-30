@@ -43,7 +43,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QSensorReading>
 #endif
 #endif
@@ -55,17 +55,17 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QSensorReading>
 #endif
 #endif
 
-HB_FUNC_STATIC( QSENSORREADING_DELETE )
+HB_FUNC_STATIC(QSENSORREADING_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorReading * obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSensorReading *obj = (QSensorReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -83,18 +83,18 @@ HB_FUNC_STATIC( QSENSORREADING_DELETE )
 /*
 quint64 timestamp() const
 */
-HB_FUNC_STATIC( QSENSORREADING_TIMESTAMP )
+HB_FUNC_STATIC(QSENSORREADING_TIMESTAMP)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorReading * obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSensorReading *obj = (QSensorReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQUINT64( obj->timestamp() );
+      RQUINT64(obj->timestamp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,18 +109,18 @@ HB_FUNC_STATIC( QSENSORREADING_TIMESTAMP )
 /*
 void setTimestamp( quint64 timestamp )
 */
-HB_FUNC_STATIC( QSENSORREADING_SETTIMESTAMP )
+HB_FUNC_STATIC(QSENSORREADING_SETTIMESTAMP)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorReading * obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSensorReading *obj = (QSensorReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTimestamp( PQUINT64(1) );
+      obj->setTimestamp(PQUINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,18 +137,18 @@ HB_FUNC_STATIC( QSENSORREADING_SETTIMESTAMP )
 /*
 int valueCount() const
 */
-HB_FUNC_STATIC( QSENSORREADING_VALUECOUNT )
+HB_FUNC_STATIC(QSENSORREADING_VALUECOUNT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorReading * obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSensorReading *obj = (QSensorReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->valueCount() );
+      RINT(obj->valueCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,18 +163,18 @@ HB_FUNC_STATIC( QSENSORREADING_VALUECOUNT )
 /*
 QVariant value( int index ) const
 */
-HB_FUNC_STATIC( QSENSORREADING_VALUE )
+HB_FUNC_STATIC(QSENSORREADING_VALUE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorReading * obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSensorReading *obj = (QSensorReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value( PINT(1) ) );
+      QVariant *ptr = new QVariant(obj->value(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

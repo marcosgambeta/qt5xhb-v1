@@ -40,7 +40,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QHolsterReading>
 #endif
 #endif
@@ -52,17 +52,17 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QHolsterReading>
 #endif
 #endif
 
-HB_FUNC_STATIC( QHOLSTERREADING_DELETE )
+HB_FUNC_STATIC(QHOLSTERREADING_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterReading * obj = (QHolsterReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QHolsterReading *obj = (QHolsterReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -80,18 +80,18 @@ HB_FUNC_STATIC( QHOLSTERREADING_DELETE )
 /*
 bool holstered() const
 */
-HB_FUNC_STATIC( QHOLSTERREADING_HOLSTERED )
+HB_FUNC_STATIC(QHOLSTERREADING_HOLSTERED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterReading * obj = (QHolsterReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QHolsterReading *obj = (QHolsterReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->holstered() );
+      RBOOL(obj->holstered());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,18 +106,18 @@ HB_FUNC_STATIC( QHOLSTERREADING_HOLSTERED )
 /*
 void setHolstered( bool holstered )
 */
-HB_FUNC_STATIC( QHOLSTERREADING_SETHOLSTERED )
+HB_FUNC_STATIC(QHOLSTERREADING_SETHOLSTERED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterReading * obj = (QHolsterReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QHolsterReading *obj = (QHolsterReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setHolstered( PBOOL(1) );
+      obj->setHolstered(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

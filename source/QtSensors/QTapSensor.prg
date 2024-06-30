@@ -45,7 +45,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QTapSensor>
 #endif
 #endif
@@ -57,20 +57,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QTapSensor>
 #endif
 #endif
 
-/*
-QTapSensor( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QTAPSENSOR_NEW )
+    /*
+    QTapSensor( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QTAPSENSOR_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QTapSensor * obj = new QTapSensor( OPQOBJECT(1,0) );
+    QTapSensor *obj = new QTapSensor(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -80,12 +80,12 @@ HB_FUNC_STATIC( QTAPSENSOR_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QTAPSENSOR_DELETE )
+HB_FUNC_STATIC(QTAPSENSOR_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTapSensor *obj = (QTapSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -103,18 +103,18 @@ HB_FUNC_STATIC( QTAPSENSOR_DELETE )
 /*
 QTapReading * reading() const
 */
-HB_FUNC_STATIC( QTAPSENSOR_READING )
+HB_FUNC_STATIC(QTAPSENSOR_READING)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTapSensor *obj = (QTapSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTapReading * ptr = obj->reading();
+      QTapReading *ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QTAPREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -130,18 +130,18 @@ HB_FUNC_STATIC( QTAPSENSOR_READING )
 /*
 bool returnDoubleTapEvents() const
 */
-HB_FUNC_STATIC( QTAPSENSOR_RETURNDOUBLETAPEVENTS )
+HB_FUNC_STATIC(QTAPSENSOR_RETURNDOUBLETAPEVENTS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTapSensor *obj = (QTapSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->returnDoubleTapEvents() );
+      RBOOL(obj->returnDoubleTapEvents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,18 +156,18 @@ HB_FUNC_STATIC( QTAPSENSOR_RETURNDOUBLETAPEVENTS )
 /*
 void setReturnDoubleTapEvents( bool returnDoubleTapEvents )
 */
-HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
+HB_FUNC_STATIC(QTAPSENSOR_SETRETURNDOUBLETAPEVENTS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTapSensor *obj = (QTapSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setReturnDoubleTapEvents( PBOOL(1) );
+      obj->setReturnDoubleTapEvents(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,11 +181,11 @@ HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
 #endif
 }
 
-void QTapSensorSlots_connect_signal(const QString & signal, const QString & slot);
+void QTapSensorSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
+HB_FUNC_STATIC(QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QTapSensorSlots_connect_signal("returnDoubleTapEventsChanged(bool)", "returnDoubleTapEventsChanged(bool)");
 #else
   hb_retl(false);

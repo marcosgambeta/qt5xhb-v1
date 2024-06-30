@@ -40,7 +40,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QAmbientTemperatureReading>
 #endif
 #endif
@@ -52,17 +52,17 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QAmbientTemperatureReading>
 #endif
 #endif
 
-HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_DELETE )
+HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QAmbientTemperatureReading *obj = (QAmbientTemperatureReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -80,18 +80,18 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_DELETE )
 /*
 qreal temperature() const
 */
-HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_TEMPERATURE )
+HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_TEMPERATURE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QAmbientTemperatureReading *obj = (QAmbientTemperatureReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->temperature() );
+      RQREAL(obj->temperature());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,18 +106,18 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_TEMPERATURE )
 /*
 void setTemperature( qreal temperature )
 */
-HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_SETTEMPERATURE )
+HB_FUNC_STATIC(QAMBIENTTEMPERATUREREADING_SETTEMPERATURE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QAmbientTemperatureReading *obj = (QAmbientTemperatureReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTemperature( PQREAL(1) );
+      obj->setTemperature(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

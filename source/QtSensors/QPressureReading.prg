@@ -40,7 +40,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QPressureReading>
 #endif
 #endif
@@ -52,17 +52,17 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QPressureReading>
 #endif
 #endif
 
-HB_FUNC_STATIC( QPRESSUREREADING_DELETE )
+HB_FUNC_STATIC(QPRESSUREREADING_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QPressureReading * obj = (QPressureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QPressureReading *obj = (QPressureReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -80,18 +80,18 @@ HB_FUNC_STATIC( QPRESSUREREADING_DELETE )
 /*
 qreal pressure() const
 */
-HB_FUNC_STATIC( QPRESSUREREADING_PRESSURE )
+HB_FUNC_STATIC(QPRESSUREREADING_PRESSURE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QPressureReading * obj = (QPressureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QPressureReading *obj = (QPressureReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->pressure() );
+      RQREAL(obj->pressure());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,18 +106,18 @@ HB_FUNC_STATIC( QPRESSUREREADING_PRESSURE )
 /*
 void setPressure( qreal pressure )
 */
-HB_FUNC_STATIC( QPRESSUREREADING_SETPRESSURE )
+HB_FUNC_STATIC(QPRESSUREREADING_SETPRESSURE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QPressureReading * obj = (QPressureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QPressureReading *obj = (QPressureReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPressure( PQREAL(1) );
+      obj->setPressure(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -44,7 +44,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QGyroscopeReading>
 #endif
 #endif
@@ -56,17 +56,17 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QGyroscopeReading>
 #endif
 #endif
 
-HB_FUNC_STATIC( QGYROSCOPEREADING_DELETE )
+HB_FUNC_STATIC(QGYROSCOPEREADING_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QGyroscopeReading *obj = (QGyroscopeReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -84,18 +84,18 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_DELETE )
 /*
 qreal x() const
 */
-HB_FUNC_STATIC( QGYROSCOPEREADING_X )
+HB_FUNC_STATIC(QGYROSCOPEREADING_X)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QGyroscopeReading *obj = (QGyroscopeReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->x() );
+      RQREAL(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,18 +110,18 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_X )
 /*
 void setX( qreal x )
 */
-HB_FUNC_STATIC( QGYROSCOPEREADING_SETX )
+HB_FUNC_STATIC(QGYROSCOPEREADING_SETX)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QGyroscopeReading *obj = (QGyroscopeReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setX( PQREAL(1) );
+      obj->setX(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,18 +138,18 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_SETX )
 /*
 qreal y() const
 */
-HB_FUNC_STATIC( QGYROSCOPEREADING_Y )
+HB_FUNC_STATIC(QGYROSCOPEREADING_Y)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QGyroscopeReading *obj = (QGyroscopeReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->y() );
+      RQREAL(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,18 +164,18 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_Y )
 /*
 void setY( qreal y )
 */
-HB_FUNC_STATIC( QGYROSCOPEREADING_SETY )
+HB_FUNC_STATIC(QGYROSCOPEREADING_SETY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QGyroscopeReading *obj = (QGyroscopeReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setY( PQREAL(1) );
+      obj->setY(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,18 +192,18 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_SETY )
 /*
 qreal z() const
 */
-HB_FUNC_STATIC( QGYROSCOPEREADING_Z )
+HB_FUNC_STATIC(QGYROSCOPEREADING_Z)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QGyroscopeReading *obj = (QGyroscopeReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->z() );
+      RQREAL(obj->z());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,18 +218,18 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_Z )
 /*
 void setZ( qreal z )
 */
-HB_FUNC_STATIC( QGYROSCOPEREADING_SETZ )
+HB_FUNC_STATIC(QGYROSCOPEREADING_SETZ)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QGyroscopeReading *obj = (QGyroscopeReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setZ( PQREAL(1) );
+      obj->setZ(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

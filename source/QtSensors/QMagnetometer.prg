@@ -45,7 +45,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QMagnetometer>
 #endif
 #endif
@@ -57,20 +57,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QMagnetometer>
 #endif
 #endif
 
-/*
-QMagnetometer( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QMAGNETOMETER_NEW )
+    /*
+    QMagnetometer( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QMAGNETOMETER_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QMagnetometer * obj = new QMagnetometer( OPQOBJECT(1,0) );
+    QMagnetometer *obj = new QMagnetometer(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -80,12 +80,12 @@ HB_FUNC_STATIC( QMAGNETOMETER_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QMAGNETOMETER_DELETE )
+HB_FUNC_STATIC(QMAGNETOMETER_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QMagnetometer *obj = (QMagnetometer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -103,18 +103,18 @@ HB_FUNC_STATIC( QMAGNETOMETER_DELETE )
 /*
 QMagnetometerReading * reading() const
 */
-HB_FUNC_STATIC( QMAGNETOMETER_READING )
+HB_FUNC_STATIC(QMAGNETOMETER_READING)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QMagnetometer *obj = (QMagnetometer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QMagnetometerReading * ptr = obj->reading();
+      QMagnetometerReading *ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QMAGNETOMETERREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -130,18 +130,18 @@ HB_FUNC_STATIC( QMAGNETOMETER_READING )
 /*
 bool returnGeoValues() const
 */
-HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
+HB_FUNC_STATIC(QMAGNETOMETER_RETURNGEOVALUES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QMagnetometer *obj = (QMagnetometer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->returnGeoValues() );
+      RBOOL(obj->returnGeoValues());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,18 +156,18 @@ HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
 /*
 void setReturnGeoValues( bool returnGeoValues )
 */
-HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
+HB_FUNC_STATIC(QMAGNETOMETER_SETRETURNGEOVALUES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QMagnetometer *obj = (QMagnetometer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setReturnGeoValues( PBOOL(1) );
+      obj->setReturnGeoValues(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,11 +181,11 @@ HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
 #endif
 }
 
-void QMagnetometerSlots_connect_signal(const QString & signal, const QString & slot);
+void QMagnetometerSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
+HB_FUNC_STATIC(QMAGNETOMETER_ONRETURNGEOVALUESCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QMagnetometerSlots_connect_signal("returnGeoValuesChanged(bool)", "returnGeoValuesChanged(bool)");
 #else
   hb_retl(false);

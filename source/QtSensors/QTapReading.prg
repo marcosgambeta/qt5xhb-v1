@@ -42,7 +42,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QTapReading>
 #endif
 #endif
@@ -54,17 +54,17 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QTapReading>
 #endif
 #endif
 
-HB_FUNC_STATIC( QTAPREADING_DELETE )
+HB_FUNC_STATIC(QTAPREADING_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapReading * obj = (QTapReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTapReading *obj = (QTapReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -82,18 +82,18 @@ HB_FUNC_STATIC( QTAPREADING_DELETE )
 /*
 QTapReading::TapDirection tapDirection() const
 */
-HB_FUNC_STATIC( QTAPREADING_TAPDIRECTION )
+HB_FUNC_STATIC(QTAPREADING_TAPDIRECTION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapReading * obj = (QTapReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTapReading *obj = (QTapReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->tapDirection() );
+      RENUM(obj->tapDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,18 +108,18 @@ HB_FUNC_STATIC( QTAPREADING_TAPDIRECTION )
 /*
 void setTapDirection( QTapReading::TapDirection tapDirection )
 */
-HB_FUNC_STATIC( QTAPREADING_SETTAPDIRECTION )
+HB_FUNC_STATIC(QTAPREADING_SETTAPDIRECTION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapReading * obj = (QTapReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTapReading *obj = (QTapReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTapDirection( (QTapReading::TapDirection) hb_parni(1) );
+      obj->setTapDirection((QTapReading::TapDirection)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,18 +136,18 @@ HB_FUNC_STATIC( QTAPREADING_SETTAPDIRECTION )
 /*
 bool isDoubleTap() const
 */
-HB_FUNC_STATIC( QTAPREADING_ISDOUBLETAP )
+HB_FUNC_STATIC(QTAPREADING_ISDOUBLETAP)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapReading * obj = (QTapReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTapReading *obj = (QTapReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isDoubleTap() );
+      RBOOL(obj->isDoubleTap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,18 +162,18 @@ HB_FUNC_STATIC( QTAPREADING_ISDOUBLETAP )
 /*
 void setDoubleTap( bool doubleTap )
 */
-HB_FUNC_STATIC( QTAPREADING_SETDOUBLETAP )
+HB_FUNC_STATIC(QTAPREADING_SETDOUBLETAP)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapReading * obj = (QTapReading *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QTapReading *obj = (QTapReading *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setDoubleTap( PBOOL(1) );
+      obj->setDoubleTap(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

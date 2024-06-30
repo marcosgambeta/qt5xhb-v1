@@ -45,7 +45,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QLightSensor>
 #endif
 #endif
@@ -57,20 +57,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSensors/QLightSensor>
 #endif
 #endif
 
-/*
-QLightSensor( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
+    /*
+    QLightSensor( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QLIGHTSENSOR_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QLightSensor * obj = new QLightSensor( OPQOBJECT(1,0) );
+    QLightSensor *obj = new QLightSensor(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -80,12 +80,12 @@ HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QLIGHTSENSOR_DELETE )
+HB_FUNC_STATIC(QLIGHTSENSOR_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensor * obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QLightSensor *obj = (QLightSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -103,18 +103,18 @@ HB_FUNC_STATIC( QLIGHTSENSOR_DELETE )
 /*
 QLightReading * reading() const
 */
-HB_FUNC_STATIC( QLIGHTSENSOR_READING )
+HB_FUNC_STATIC(QLIGHTSENSOR_READING)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensor * obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QLightSensor *obj = (QLightSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QLightReading * ptr = obj->reading();
+      QLightReading *ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QLIGHTREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -130,18 +130,18 @@ HB_FUNC_STATIC( QLIGHTSENSOR_READING )
 /*
 qreal fieldOfView() const
 */
-HB_FUNC_STATIC( QLIGHTSENSOR_FIELDOFVIEW )
+HB_FUNC_STATIC(QLIGHTSENSOR_FIELDOFVIEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensor * obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QLightSensor *obj = (QLightSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->fieldOfView() );
+      RQREAL(obj->fieldOfView());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,18 +156,18 @@ HB_FUNC_STATIC( QLIGHTSENSOR_FIELDOFVIEW )
 /*
 void setFieldOfView( qreal fieldOfView )
 */
-HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
+HB_FUNC_STATIC(QLIGHTSENSOR_SETFIELDOFVIEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensor * obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QLightSensor *obj = (QLightSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFieldOfView( PQREAL(1) );
+      obj->setFieldOfView(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,11 +181,11 @@ HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
 #endif
 }
 
-void QLightSensorSlots_connect_signal(const QString & signal, const QString & slot);
+void QLightSensorSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
+HB_FUNC_STATIC(QLIGHTSENSOR_ONFIELDOFVIEWCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QLightSensorSlots_connect_signal("fieldOfViewChanged(qreal)", "fieldOfViewChanged(qreal)");
 #else
   hb_retl(false);
