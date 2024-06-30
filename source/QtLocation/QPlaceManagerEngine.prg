@@ -79,7 +79,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceManagerEngine>
 #endif
 #endif
@@ -91,19 +91,19 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceManagerEngine>
 #endif
 #endif
 
 #include <QtLocation/QPlaceSearchReply>
 
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_DELETE )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -121,18 +121,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_DELETE )
 /*
 QString managerName() const
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_MANAGERNAME )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_MANAGERNAME)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->managerName() );
+      RQSTRING(obj->managerName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,18 +147,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MANAGERNAME )
 /*
 int managerVersion() const
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_MANAGERVERSION )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_MANAGERVERSION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->managerVersion() );
+      RINT(obj->managerVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,18 +173,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MANAGERVERSION )
 /*
 virtual QPlaceDetailsReply * getPlaceDetails( const QString & placeId )
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_GETPLACEDETAILS )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_GETPLACEDETAILS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QPlaceDetailsReply * ptr = obj->getPlaceDetails( PQSTRING(1) );
+      QPlaceDetailsReply *ptr = obj->getPlaceDetails(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEDETAILSREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -200,18 +200,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_GETPLACEDETAILS )
 /*
 virtual QPlaceContentReply * getPlaceContent( const QPlaceContentRequest & request )
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_GETPLACECONTENT )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_GETPLACECONTENT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACECONTENTREQUEST(1) )
+    if (ISNUMPAR(1) && ISQPLACECONTENTREQUEST(1))
     {
 #endif
-      QPlaceContentReply * ptr = obj->getPlaceContent( *PQPLACECONTENTREQUEST(1) );
+      QPlaceContentReply *ptr = obj->getPlaceContent(*PQPLACECONTENTREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACECONTENTREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -227,18 +227,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_GETPLACECONTENT )
 /*
 virtual QPlaceSearchReply * search( const QPlaceSearchRequest & request )
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_SEARCH )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_SEARCH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1) )
+    if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1))
     {
 #endif
-      QPlaceSearchReply * ptr = obj->search( *PQPLACESEARCHREQUEST(1) );
+      QPlaceSearchReply *ptr = obj->search(*PQPLACESEARCHREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACESEARCHREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -254,18 +254,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SEARCH )
 /*
 virtual QPlaceSearchSuggestionReply * searchSuggestions( const QPlaceSearchRequest & request )
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_SEARCHSUGGESTIONS )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_SEARCHSUGGESTIONS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1) )
+    if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1))
     {
 #endif
-      QPlaceSearchSuggestionReply * ptr = obj->searchSuggestions( *PQPLACESEARCHREQUEST(1) );
+      QPlaceSearchSuggestionReply *ptr = obj->searchSuggestions(*PQPLACESEARCHREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACESEARCHSUGGESTIONREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -281,18 +281,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SEARCHSUGGESTIONS )
 /*
 virtual QPlaceIdReply * savePlace( const QPlace & place )
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_SAVEPLACE )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_SAVEPLACE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACE(1) )
+    if (ISNUMPAR(1) && ISQPLACE(1))
     {
 #endif
-      QPlaceIdReply * ptr = obj->savePlace( *PQPLACE(1) );
+      QPlaceIdReply *ptr = obj->savePlace(*PQPLACE(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -308,18 +308,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SAVEPLACE )
 /*
 virtual QPlaceIdReply * removePlace( const QString & placeId )
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_REMOVEPLACE )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_REMOVEPLACE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QPlaceIdReply * ptr = obj->removePlace( PQSTRING(1) );
+      QPlaceIdReply *ptr = obj->removePlace(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -335,18 +335,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_REMOVEPLACE )
 /*
 virtual QPlaceIdReply * saveCategory( const QPlaceCategory & category, const QString & parentId )
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_SAVECATEGORY )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_SAVECATEGORY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPLACECATEGORY(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQPLACECATEGORY(1) && HB_ISCHAR(2))
     {
 #endif
-      QPlaceIdReply * ptr = obj->saveCategory( *PQPLACECATEGORY(1), PQSTRING(2) );
+      QPlaceIdReply *ptr = obj->saveCategory(*PQPLACECATEGORY(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -362,18 +362,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SAVECATEGORY )
 /*
 virtual QPlaceIdReply * removeCategory( const QString & categoryId )
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_REMOVECATEGORY )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_REMOVECATEGORY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QPlaceIdReply * ptr = obj->removeCategory( PQSTRING(1) );
+      QPlaceIdReply *ptr = obj->removeCategory(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEIDREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -389,18 +389,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_REMOVECATEGORY )
 /*
 virtual QPlaceReply * initializeCategories()
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_INITIALIZECATEGORIES )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_INITIALIZECATEGORIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPlaceReply * ptr = obj->initializeCategories();
+      QPlaceReply *ptr = obj->initializeCategories();
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -416,18 +416,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_INITIALIZECATEGORIES )
 /*
 virtual QString parentCategoryId( const QString & categoryId ) const
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_PARENTCATEGORYID )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_PARENTCATEGORYID)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->parentCategoryId( PQSTRING(1) ) );
+      RQSTRING(obj->parentCategoryId(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,18 +442,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_PARENTCATEGORYID )
 /*
 virtual QStringList childCategoryIds( const QString & categoryId ) const
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_CHILDCATEGORYIDS )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_CHILDCATEGORYIDS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRINGLIST( obj->childCategoryIds( PQSTRING(1) ) );
+      RQSTRINGLIST(obj->childCategoryIds(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,18 +468,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CHILDCATEGORYIDS )
 /*
 virtual QPlaceCategory category( const QString & categoryId ) const
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_CATEGORY )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_CATEGORY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QPlaceCategory * ptr = new QPlaceCategory( obj->category( PQSTRING(1) ) );
+      QPlaceCategory *ptr = new QPlaceCategory(obj->category(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QPLACECATEGORY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -495,23 +495,23 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CATEGORY )
 /*
 virtual QList<QPlaceCategory> childCategories( const QString & parentId ) const
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_CHILDCATEGORIES )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_CHILDCATEGORIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QList<QPlaceCategory> list = obj->childCategories( PQSTRING(1) );
+      QList<QPlaceCategory> list = obj->childCategories(PQSTRING(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QPLACECATEGORY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
-        for( int i = 0; i < list.count(); i++ )
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -547,23 +547,23 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CHILDCATEGORIES )
 /*
 virtual QList<QLocale> locales() const
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_LOCALES )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_LOCALES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QLocale> list = obj->locales();
       PHB_DYNS pDynSym = hb_dynsymFindName("QLOCALE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
-        for( int i = 0; i < list.count(); i++ )
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -599,25 +599,25 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_LOCALES )
 /*
 virtual void setLocales( const QList<QLocale> & locales )
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_SETLOCALES )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_SETLOCALES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
       QList<QLocale> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for( int i1 = 0; i1 < nLen1; i1++ )
+      for (int i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *(QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << *(QLocale *)hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0));
       }
-      obj->setLocales( par1 );
+      obj->setLocales(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -634,18 +634,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SETLOCALES )
 /*
 virtual QUrl constructIconUrl( const QPlaceIcon & icon, const QSize & size ) const
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_CONSTRUCTICONURL )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_CONSTRUCTICONURL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPLACEICON(1) && ISQSIZE(2) )
+    if (ISNUMPAR(2) && ISQPLACEICON(1) && ISQSIZE(2))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->constructIconUrl( *PQPLACEICON(1), *PQSIZE(2) ) );
+      QUrl *ptr = new QUrl(obj->constructIconUrl(*PQPLACEICON(1), *PQSIZE(2)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -661,18 +661,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CONSTRUCTICONURL )
 /*
 virtual QPlace compatiblePlace( const QPlace & original ) const
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_COMPATIBLEPLACE )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_COMPATIBLEPLACE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACE(1) )
+    if (ISNUMPAR(1) && ISQPLACE(1))
     {
 #endif
-      QPlace * ptr = new QPlace( obj->compatiblePlace( *PQPLACE(1) ) );
+      QPlace *ptr = new QPlace(obj->compatiblePlace(*PQPLACE(1)));
       Qt5xHb::createReturnClass(ptr, "QPLACE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -688,18 +688,18 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_COMPATIBLEPLACE )
 /*
 virtual QPlaceMatchReply * matchingPlaces( const QPlaceMatchRequest & request )
 */
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_MATCHINGPLACES )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_MATCHINGPLACES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngine *obj = (QPlaceManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACEMATCHREQUEST(1) )
+    if (ISNUMPAR(1) && ISQPLACEMATCHREQUEST(1))
     {
 #endif
-      QPlaceMatchReply * ptr = obj->matchingPlaces( *PQPLACEMATCHREQUEST(1) );
+      QPlaceMatchReply *ptr = obj->matchingPlaces(*PQPLACEMATCHREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QPLACEMATCHREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -712,83 +712,86 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_MATCHINGPLACES )
 #endif
 }
 
-void QPlaceManagerEngineSlots_connect_signal(const QString & signal, const QString & slot);
+void QPlaceManagerEngineSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONFINISHED )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONFINISHED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceManagerEngineSlots_connect_signal("finished(QPlaceReply*)", "finished(QPlaceReply*)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONERROR )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONERROR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal("error(QPlaceReply*,QPlaceReply::Error,QString)", "error(QPlaceReply*,QPlaceReply::Error,QString)");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngineSlots_connect_signal("error(QPlaceReply*,QPlaceReply::Error,QString)",
+                                          "error(QPlaceReply*,QPlaceReply::Error,QString)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEADDED )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEADDED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceManagerEngineSlots_connect_signal("placeAdded(QString)", "placeAdded(QString)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEUPDATED )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEUPDATED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceManagerEngineSlots_connect_signal("placeUpdated(QString)", "placeUpdated(QString)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONPLACEREMOVED )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONPLACEREMOVED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceManagerEngineSlots_connect_signal("placeRemoved(QString)", "placeRemoved(QString)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYADDED )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYADDED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal("categoryAdded(QPlaceCategory,QString)", "categoryAdded(QPlaceCategory,QString)");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngineSlots_connect_signal("categoryAdded(QPlaceCategory,QString)",
+                                          "categoryAdded(QPlaceCategory,QString)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYUPDATED )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYUPDATED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngineSlots_connect_signal("categoryUpdated(QPlaceCategory,QString)", "categoryUpdated(QPlaceCategory,QString)");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceManagerEngineSlots_connect_signal("categoryUpdated(QPlaceCategory,QString)",
+                                          "categoryUpdated(QPlaceCategory,QString)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONCATEGORYREMOVED )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONCATEGORYREMOVED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceManagerEngineSlots_connect_signal("categoryRemoved(QString,QString)", "categoryRemoved(QString,QString)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEMANAGERENGINE_ONDATACHANGED )
+HB_FUNC_STATIC(QPLACEMANAGERENGINE_ONDATACHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceManagerEngineSlots_connect_signal("dataChanged()", "dataChanged()");
 #else
   hb_retl(false);

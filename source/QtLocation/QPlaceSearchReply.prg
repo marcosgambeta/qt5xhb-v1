@@ -46,7 +46,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceSearchReply>
 #endif
 #endif
@@ -58,22 +58,22 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceSearchReply>
 #endif
 #endif
 
 #include <QtLocation/QPlaceSearchRequest>
 
-/*
-QPlaceSearchReply( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QPLACESEARCHREPLY_NEW )
+    /*
+    QPlaceSearchReply( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QPLACESEARCHREPLY_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QPlaceSearchReply * obj = new QPlaceSearchReply( OPQOBJECT(1,0) );
+    QPlaceSearchReply *obj = new QPlaceSearchReply(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -83,12 +83,12 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACESEARCHREPLY_DELETE )
+HB_FUNC_STATIC(QPLACESEARCHREPLY_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -106,18 +106,18 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_DELETE )
 /*
 QPlaceReply::Type type() const
 */
-HB_FUNC_STATIC( QPLACESEARCHREPLY_TYPE )
+HB_FUNC_STATIC(QPLACESEARCHREPLY_TYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,23 +132,23 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_TYPE )
 /*
 QList<QPlaceSearchResult> results() const
 */
-HB_FUNC_STATIC( QPLACESEARCHREPLY_RESULTS )
+HB_FUNC_STATIC(QPLACESEARCHREPLY_RESULTS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QPlaceSearchResult> list = obj->results();
       PHB_DYNS pDynSym = hb_dynsymFindName("QPLACESEARCHRESULT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
-        for( int i = 0; i < list.count(); i++ )
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -184,18 +184,18 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_RESULTS )
 /*
 QPlaceSearchRequest request() const
 */
-HB_FUNC_STATIC( QPLACESEARCHREPLY_REQUEST )
+HB_FUNC_STATIC(QPLACESEARCHREPLY_REQUEST)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->request() );
+      QPlaceSearchRequest *ptr = new QPlaceSearchRequest(obj->request());
       Qt5xHb::createReturnClass(ptr, "QPLACESEARCHREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -211,18 +211,18 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_REQUEST )
 /*
 QPlaceSearchRequest previousPageRequest() const
 */
-HB_FUNC_STATIC( QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST )
+HB_FUNC_STATIC(QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->previousPageRequest() );
+      QPlaceSearchRequest *ptr = new QPlaceSearchRequest(obj->previousPageRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACESEARCHREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -238,18 +238,18 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST )
 /*
 QPlaceSearchRequest nextPageRequest() const
 */
-HB_FUNC_STATIC( QPLACESEARCHREPLY_NEXTPAGEREQUEST )
+HB_FUNC_STATIC(QPLACESEARCHREPLY_NEXTPAGEREQUEST)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->nextPageRequest() );
+      QPlaceSearchRequest *ptr = new QPlaceSearchRequest(obj->nextPageRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACESEARCHREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

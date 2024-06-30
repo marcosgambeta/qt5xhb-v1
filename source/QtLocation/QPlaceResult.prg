@@ -46,7 +46,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceResult>
 #endif
 #endif
@@ -56,20 +56,20 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceResult>
 #endif
 #endif
 
-/*
-QPlaceResult()
-*/
-HB_FUNC_STATIC( QPLACERESULT_NEW )
+    /*
+    QPlaceResult()
+    */
+HB_FUNC_STATIC(QPLACERESULT_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISNUMPAR(0) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  if (ISNUMPAR(0))
   {
-    QPlaceResult * obj = new QPlaceResult();
+    QPlaceResult *obj = new QPlaceResult();
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -79,12 +79,12 @@ HB_FUNC_STATIC( QPLACERESULT_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACERESULT_DELETE )
+HB_FUNC_STATIC(QPLACERESULT_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -100,18 +100,18 @@ HB_FUNC_STATIC( QPLACERESULT_DELETE )
 /*
 qreal distance() const
 */
-HB_FUNC_STATIC( QPLACERESULT_DISTANCE )
+HB_FUNC_STATIC(QPLACERESULT_DISTANCE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->distance() );
+      RQREAL(obj->distance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,18 +126,18 @@ HB_FUNC_STATIC( QPLACERESULT_DISTANCE )
 /*
 void setDistance( qreal distance )
 */
-HB_FUNC_STATIC( QPLACERESULT_SETDISTANCE )
+HB_FUNC_STATIC(QPLACERESULT_SETDISTANCE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDistance( PQREAL(1) );
+      obj->setDistance(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,18 +154,18 @@ HB_FUNC_STATIC( QPLACERESULT_SETDISTANCE )
 /*
 QPlace place() const
 */
-HB_FUNC_STATIC( QPLACERESULT_PLACE )
+HB_FUNC_STATIC(QPLACERESULT_PLACE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPlace * ptr = new QPlace( obj->place() );
+      QPlace *ptr = new QPlace(obj->place());
       Qt5xHb::createReturnClass(ptr, "QPLACE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -181,18 +181,18 @@ HB_FUNC_STATIC( QPLACERESULT_PLACE )
 /*
 void setPlace( const QPlace & place )
 */
-HB_FUNC_STATIC( QPLACERESULT_SETPLACE )
+HB_FUNC_STATIC(QPLACERESULT_SETPLACE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACE(1) )
+    if (ISNUMPAR(1) && ISQPLACE(1))
     {
 #endif
-      obj->setPlace( *PQPLACE(1) );
+      obj->setPlace(*PQPLACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,18 +209,18 @@ HB_FUNC_STATIC( QPLACERESULT_SETPLACE )
 /*
 bool isSponsored() const
 */
-HB_FUNC_STATIC( QPLACERESULT_ISSPONSORED )
+HB_FUNC_STATIC(QPLACERESULT_ISSPONSORED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSponsored() );
+      RBOOL(obj->isSponsored());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,18 +235,18 @@ HB_FUNC_STATIC( QPLACERESULT_ISSPONSORED )
 /*
 void setSponsored( bool sponsored )
 */
-HB_FUNC_STATIC( QPLACERESULT_SETSPONSORED )
+HB_FUNC_STATIC(QPLACERESULT_SETSPONSORED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSponsored( PBOOL(1) );
+      obj->setSponsored(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

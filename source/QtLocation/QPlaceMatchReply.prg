@@ -44,7 +44,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceMatchReply>
 #endif
 #endif
@@ -56,20 +56,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceMatchReply>
 #endif
 #endif
 
-/*
-QPlaceMatchReply( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QPLACEMATCHREPLY_NEW )
+    /*
+    QPlaceMatchReply( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QPLACEMATCHREPLY_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QPlaceMatchReply * obj = new QPlaceMatchReply( OPQOBJECT(1,0) );
+    QPlaceMatchReply *obj = new QPlaceMatchReply(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -79,12 +79,12 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEMATCHREPLY_DELETE )
+HB_FUNC_STATIC(QPLACEMATCHREPLY_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchReply * obj = (QPlaceMatchReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceMatchReply *obj = (QPlaceMatchReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -102,18 +102,18 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_DELETE )
 /*
 QPlaceReply::Type type() const
 */
-HB_FUNC_STATIC( QPLACEMATCHREPLY_TYPE )
+HB_FUNC_STATIC(QPLACEMATCHREPLY_TYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchReply * obj = (QPlaceMatchReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceMatchReply *obj = (QPlaceMatchReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,23 +128,23 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_TYPE )
 /*
 QList<QPlace> places() const
 */
-HB_FUNC_STATIC( QPLACEMATCHREPLY_PLACES )
+HB_FUNC_STATIC(QPLACEMATCHREPLY_PLACES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchReply * obj = (QPlaceMatchReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceMatchReply *obj = (QPlaceMatchReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QPlace> list = obj->places();
       PHB_DYNS pDynSym = hb_dynsymFindName("QPLACE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
-        for( int i = 0; i < list.count(); i++ )
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -180,18 +180,18 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_PLACES )
 /*
 QPlaceMatchRequest request() const
 */
-HB_FUNC_STATIC( QPLACEMATCHREPLY_REQUEST )
+HB_FUNC_STATIC(QPLACEMATCHREPLY_REQUEST)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchReply * obj = (QPlaceMatchReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceMatchReply *obj = (QPlaceMatchReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPlaceMatchRequest * ptr = new QPlaceMatchRequest( obj->request() );
+      QPlaceMatchRequest *ptr = new QPlaceMatchRequest(obj->request());
       Qt5xHb::createReturnClass(ptr, "QPLACEMATCHREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

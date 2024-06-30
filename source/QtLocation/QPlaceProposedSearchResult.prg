@@ -42,7 +42,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceProposedSearchResult>
 #endif
 #endif
@@ -52,22 +52,22 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceProposedSearchResult>
 #endif
 #endif
 
 #include <QtLocation/QPlaceSearchRequest>
 
-/*
-QPlaceProposedSearchResult()
-*/
-HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_NEW )
+    /*
+    QPlaceProposedSearchResult()
+    */
+HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISNUMPAR(0) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  if (ISNUMPAR(0))
   {
-    QPlaceProposedSearchResult * obj = new QPlaceProposedSearchResult();
+    QPlaceProposedSearchResult *obj = new QPlaceProposedSearchResult();
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -77,12 +77,12 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_DELETE )
+HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceProposedSearchResult * obj = (QPlaceProposedSearchResult *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceProposedSearchResult *obj = (QPlaceProposedSearchResult *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -98,18 +98,18 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_DELETE )
 /*
 QPlaceSearchRequest searchRequest() const
 */
-HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST )
+HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceProposedSearchResult * obj = (QPlaceProposedSearchResult *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceProposedSearchResult *obj = (QPlaceProposedSearchResult *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->searchRequest() );
+      QPlaceSearchRequest *ptr = new QPlaceSearchRequest(obj->searchRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACESEARCHREQUEST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -125,18 +125,18 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST )
 /*
 void setSearchRequest( const QPlaceSearchRequest & request )
 */
-HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SETSEARCHREQUEST )
+HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SETSEARCHREQUEST)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceProposedSearchResult * obj = (QPlaceProposedSearchResult *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceProposedSearchResult *obj = (QPlaceProposedSearchResult *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1) )
+    if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1))
     {
 #endif
-      obj->setSearchRequest( *PQPLACESEARCHREQUEST(1) );
+      obj->setSearchRequest(*PQPLACESEARCHREQUEST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

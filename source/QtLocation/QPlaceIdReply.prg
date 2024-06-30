@@ -42,7 +42,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceIdReply>
 #endif
 #endif
@@ -54,20 +54,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtLocation/QPlaceIdReply>
 #endif
 #endif
 
-/*
-QPlaceIdReply( QPlaceIdReply::OperationType operationType, QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
+    /*
+    QPlaceIdReply( QPlaceIdReply::OperationType operationType, QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QPLACEIDREPLY_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    QPlaceIdReply * obj = new QPlaceIdReply( (QPlaceIdReply::OperationType) hb_parni(1), OPQOBJECT(2,0) );
+    QPlaceIdReply *obj = new QPlaceIdReply((QPlaceIdReply::OperationType)hb_parni(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -77,12 +77,12 @@ HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QPLACEIDREPLY_DELETE )
+HB_FUNC_STATIC(QPLACEIDREPLY_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIdReply * obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceIdReply *obj = (QPlaceIdReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -100,18 +100,18 @@ HB_FUNC_STATIC( QPLACEIDREPLY_DELETE )
 /*
 QPlaceReply::Type type() const
 */
-HB_FUNC_STATIC( QPLACEIDREPLY_TYPE )
+HB_FUNC_STATIC(QPLACEIDREPLY_TYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIdReply * obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceIdReply *obj = (QPlaceIdReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,18 +126,18 @@ HB_FUNC_STATIC( QPLACEIDREPLY_TYPE )
 /*
 QPlaceIdReply::OperationType operationType() const
 */
-HB_FUNC_STATIC( QPLACEIDREPLY_OPERATIONTYPE )
+HB_FUNC_STATIC(QPLACEIDREPLY_OPERATIONTYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIdReply * obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceIdReply *obj = (QPlaceIdReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->operationType() );
+      RENUM(obj->operationType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,18 +152,18 @@ HB_FUNC_STATIC( QPLACEIDREPLY_OPERATIONTYPE )
 /*
 QString id() const
 */
-HB_FUNC_STATIC( QPLACEIDREPLY_ID )
+HB_FUNC_STATIC(QPLACEIDREPLY_ID)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIdReply * obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QPlaceIdReply *obj = (QPlaceIdReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->id() );
+      RQSTRING(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
