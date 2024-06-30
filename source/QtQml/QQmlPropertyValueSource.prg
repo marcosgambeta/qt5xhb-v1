@@ -59,11 +59,11 @@ RETURN
 #include <QtQml/QQmlPropertyValueSource>
 #endif
 
-HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_DELETE )
+HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_DELETE)
 {
-  QQmlPropertyValueSource * obj = (QQmlPropertyValueSource *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlPropertyValueSource *obj = (QQmlPropertyValueSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -78,17 +78,17 @@ HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_DELETE )
 /*
 virtual void setTarget( const QQmlProperty & property ) = 0
 */
-HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_SETTARGET )
+HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_SETTARGET)
 {
-  QQmlPropertyValueSource * obj = (QQmlPropertyValueSource *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlPropertyValueSource *obj = (QQmlPropertyValueSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQQMLPROPERTY(1) )
+    if (ISNUMPAR(1) && ISQQMLPROPERTY(1))
     {
 #endif
-      obj->setTarget( *PQQMLPROPERTY(1) );
+      obj->setTarget(*PQQMLPROPERTY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -101,11 +101,11 @@ HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_SETTARGET )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_NEWFROM )
+HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -131,26 +131,26 @@ HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QQMLPROPERTYVALUESOURCE_NEWFROM );
+  HB_FUNC_EXEC(QQMLPROPERTYVALUESOURCE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QQMLPROPERTYVALUESOURCE_NEWFROM );
+  HB_FUNC_EXEC(QQMLPROPERTYVALUESOURCE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLPROPERTYVALUESOURCE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -62,11 +62,11 @@ RETURN
 
 #include <QtNetwork/QNetworkAccessManager>
 
-HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_DELETE )
+HB_FUNC_STATIC(QQMLNETWORKACCESSMANAGERFACTORY_DELETE)
 {
-  QQmlNetworkAccessManagerFactory * obj = (QQmlNetworkAccessManagerFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlNetworkAccessManagerFactory *obj = (QQmlNetworkAccessManagerFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -81,17 +81,17 @@ HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_DELETE )
 /*
 virtual QNetworkAccessManager * create( QObject * parent ) = 0
 */
-HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_CREATE )
+HB_FUNC_STATIC(QQMLNETWORKACCESSMANAGERFACTORY_CREATE)
 {
-  QQmlNetworkAccessManagerFactory * obj = (QQmlNetworkAccessManagerFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlNetworkAccessManagerFactory *obj = (QQmlNetworkAccessManagerFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      QNetworkAccessManager * ptr = obj->create( PQOBJECT(1) );
+      QNetworkAccessManager *ptr = obj->create(PQOBJECT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -103,11 +103,11 @@ HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_CREATE )
   }
 }
 
-HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_NEWFROM )
+HB_FUNC_STATIC(QQMLNETWORKACCESSMANAGERFACTORY_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -133,26 +133,26 @@ HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QQMLNETWORKACCESSMANAGERFACTORY_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QQMLNETWORKACCESSMANAGERFACTORY_NEWFROM );
+  HB_FUNC_EXEC(QQMLNETWORKACCESSMANAGERFACTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QQMLNETWORKACCESSMANAGERFACTORY_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QQMLNETWORKACCESSMANAGERFACTORY_NEWFROM );
+  HB_FUNC_EXEC(QQMLNETWORKACCESSMANAGERFACTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLNETWORKACCESSMANAGERFACTORY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLNETWORKACCESSMANAGERFACTORY_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

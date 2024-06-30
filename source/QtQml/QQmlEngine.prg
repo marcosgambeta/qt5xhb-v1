@@ -92,14 +92,14 @@ RETURN
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtQml/QQmlContext>
 
-/*
-QQmlEngine( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QQMLENGINE_NEW )
+    /*
+    QQmlEngine( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QQMLENGINE_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QQmlEngine * obj = new QQmlEngine( OPQOBJECT(1,0) );
+    QQmlEngine *obj = new QQmlEngine(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -108,11 +108,11 @@ HB_FUNC_STATIC( QQMLENGINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQMLENGINE_DELETE )
+HB_FUNC_STATIC(QQMLENGINE_DELETE)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -129,17 +129,17 @@ HB_FUNC_STATIC( QQMLENGINE_DELETE )
 /*
 void addImageProvider( const QString & providerId, QQmlImageProviderBase * provider )
 */
-HB_FUNC_STATIC( QQMLENGINE_ADDIMAGEPROVIDER )
+HB_FUNC_STATIC(QQMLENGINE_ADDIMAGEPROVIDER)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQQMLIMAGEPROVIDERBASE(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQQMLIMAGEPROVIDERBASE(2))
     {
 #endif
-      obj->addImageProvider( PQSTRING(1), PQQMLIMAGEPROVIDERBASE(2) );
+      obj->addImageProvider(PQSTRING(1), PQQMLIMAGEPROVIDERBASE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,17 +155,17 @@ HB_FUNC_STATIC( QQMLENGINE_ADDIMAGEPROVIDER )
 /*
 void addImportPath( const QString & path )
 */
-HB_FUNC_STATIC( QQMLENGINE_ADDIMPORTPATH )
+HB_FUNC_STATIC(QQMLENGINE_ADDIMPORTPATH)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->addImportPath( PQSTRING(1) );
+      obj->addImportPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,17 +181,17 @@ HB_FUNC_STATIC( QQMLENGINE_ADDIMPORTPATH )
 /*
 bool addNamedBundle( const QString & name, const QString & fileName )
 */
-HB_FUNC_STATIC( QQMLENGINE_ADDNAMEDBUNDLE )
+HB_FUNC_STATIC(QQMLENGINE_ADDNAMEDBUNDLE)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      RBOOL( obj->addNamedBundle( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL(obj->addNamedBundle(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,17 +205,17 @@ HB_FUNC_STATIC( QQMLENGINE_ADDNAMEDBUNDLE )
 /*
 void addPluginPath( const QString & path )
 */
-HB_FUNC_STATIC( QQMLENGINE_ADDPLUGINPATH )
+HB_FUNC_STATIC(QQMLENGINE_ADDPLUGINPATH)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->addPluginPath( PQSTRING(1) );
+      obj->addPluginPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,17 +231,17 @@ HB_FUNC_STATIC( QQMLENGINE_ADDPLUGINPATH )
 /*
 QUrl baseUrl() const
 */
-HB_FUNC_STATIC( QQMLENGINE_BASEURL )
+HB_FUNC_STATIC(QQMLENGINE_BASEURL)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->baseUrl() );
+      QUrl *ptr = new QUrl(obj->baseUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -256,14 +256,14 @@ HB_FUNC_STATIC( QQMLENGINE_BASEURL )
 /*
 void clearComponentCache()
 */
-HB_FUNC_STATIC( QQMLENGINE_CLEARCOMPONENTCACHE )
+HB_FUNC_STATIC(QQMLENGINE_CLEARCOMPONENTCACHE)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearComponentCache();
@@ -282,17 +282,17 @@ HB_FUNC_STATIC( QQMLENGINE_CLEARCOMPONENTCACHE )
 /*
 QQmlImageProviderBase * imageProvider( const QString & providerId ) const
 */
-HB_FUNC_STATIC( QQMLENGINE_IMAGEPROVIDER )
+HB_FUNC_STATIC(QQMLENGINE_IMAGEPROVIDER)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QQmlImageProviderBase * ptr = obj->imageProvider( PQSTRING(1) );
+      QQmlImageProviderBase *ptr = obj->imageProvider(PQSTRING(1));
       Qt5xHb::createReturnClass(ptr, "QQMLIMAGEPROVIDERBASE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -307,17 +307,17 @@ HB_FUNC_STATIC( QQMLENGINE_IMAGEPROVIDER )
 /*
 QStringList importPathList() const
 */
-HB_FUNC_STATIC( QQMLENGINE_IMPORTPATHLIST )
+HB_FUNC_STATIC(QQMLENGINE_IMPORTPATHLIST)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->importPathList() );
+      RQSTRINGLIST(obj->importPathList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,17 +331,17 @@ HB_FUNC_STATIC( QQMLENGINE_IMPORTPATHLIST )
 /*
 QQmlIncubationController * incubationController() const
 */
-HB_FUNC_STATIC( QQMLENGINE_INCUBATIONCONTROLLER )
+HB_FUNC_STATIC(QQMLENGINE_INCUBATIONCONTROLLER)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QQmlIncubationController * ptr = obj->incubationController();
+      QQmlIncubationController *ptr = obj->incubationController();
       Qt5xHb::createReturnClass(ptr, "QQMLINCUBATIONCONTROLLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -356,17 +356,17 @@ HB_FUNC_STATIC( QQMLENGINE_INCUBATIONCONTROLLER )
 /*
 QNetworkAccessManager * networkAccessManager() const
 */
-HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGER )
+HB_FUNC_STATIC(QQMLENGINE_NETWORKACCESSMANAGER)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QNetworkAccessManager * ptr = obj->networkAccessManager();
+      QNetworkAccessManager *ptr = obj->networkAccessManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -381,17 +381,17 @@ HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGER )
 /*
 QQmlNetworkAccessManagerFactory * networkAccessManagerFactory() const
 */
-HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGERFACTORY )
+HB_FUNC_STATIC(QQMLENGINE_NETWORKACCESSMANAGERFACTORY)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QQmlNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory();
+      QQmlNetworkAccessManagerFactory *ptr = obj->networkAccessManagerFactory();
       Qt5xHb::createReturnClass(ptr, "QQMLNETWORKACCESSMANAGERFACTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -406,17 +406,17 @@ HB_FUNC_STATIC( QQMLENGINE_NETWORKACCESSMANAGERFACTORY )
 /*
 QString offlineStoragePath() const
 */
-HB_FUNC_STATIC( QQMLENGINE_OFFLINESTORAGEPATH )
+HB_FUNC_STATIC(QQMLENGINE_OFFLINESTORAGEPATH)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->offlineStoragePath() );
+      RQSTRING(obj->offlineStoragePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -430,17 +430,17 @@ HB_FUNC_STATIC( QQMLENGINE_OFFLINESTORAGEPATH )
 /*
 bool outputWarningsToStandardError() const
 */
-HB_FUNC_STATIC( QQMLENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
+HB_FUNC_STATIC(QQMLENGINE_OUTPUTWARNINGSTOSTANDARDERROR)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->outputWarningsToStandardError() );
+      RBOOL(obj->outputWarningsToStandardError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,17 +454,17 @@ HB_FUNC_STATIC( QQMLENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 /*
 QStringList pluginPathList() const
 */
-HB_FUNC_STATIC( QQMLENGINE_PLUGINPATHLIST )
+HB_FUNC_STATIC(QQMLENGINE_PLUGINPATHLIST)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->pluginPathList() );
+      RQSTRINGLIST(obj->pluginPathList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,17 +478,17 @@ HB_FUNC_STATIC( QQMLENGINE_PLUGINPATHLIST )
 /*
 void removeImageProvider( const QString & providerId )
 */
-HB_FUNC_STATIC( QQMLENGINE_REMOVEIMAGEPROVIDER )
+HB_FUNC_STATIC(QQMLENGINE_REMOVEIMAGEPROVIDER)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->removeImageProvider( PQSTRING(1) );
+      obj->removeImageProvider(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -504,17 +504,17 @@ HB_FUNC_STATIC( QQMLENGINE_REMOVEIMAGEPROVIDER )
 /*
 QQmlContext * rootContext() const
 */
-HB_FUNC_STATIC( QQMLENGINE_ROOTCONTEXT )
+HB_FUNC_STATIC(QQMLENGINE_ROOTCONTEXT)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QQmlContext * ptr = obj->rootContext();
+      QQmlContext *ptr = obj->rootContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -529,17 +529,17 @@ HB_FUNC_STATIC( QQMLENGINE_ROOTCONTEXT )
 /*
 void setBaseUrl( const QUrl & url )
 */
-HB_FUNC_STATIC( QQMLENGINE_SETBASEURL )
+HB_FUNC_STATIC(QQMLENGINE_SETBASEURL)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setBaseUrl( *PQURL(1) );
+      obj->setBaseUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -555,17 +555,17 @@ HB_FUNC_STATIC( QQMLENGINE_SETBASEURL )
 /*
 void setImportPathList( const QStringList & paths )
 */
-HB_FUNC_STATIC( QQMLENGINE_SETIMPORTPATHLIST )
+HB_FUNC_STATIC(QQMLENGINE_SETIMPORTPATHLIST)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setImportPathList( PQSTRINGLIST(1) );
+      obj->setImportPathList(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -581,17 +581,17 @@ HB_FUNC_STATIC( QQMLENGINE_SETIMPORTPATHLIST )
 /*
 void setIncubationController( QQmlIncubationController * controller )
 */
-HB_FUNC_STATIC( QQMLENGINE_SETINCUBATIONCONTROLLER )
+HB_FUNC_STATIC(QQMLENGINE_SETINCUBATIONCONTROLLER)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQQMLINCUBATIONCONTROLLER(1) )
+    if (ISNUMPAR(1) && ISQQMLINCUBATIONCONTROLLER(1))
     {
 #endif
-      obj->setIncubationController( PQQMLINCUBATIONCONTROLLER(1) );
+      obj->setIncubationController(PQQMLINCUBATIONCONTROLLER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -607,17 +607,17 @@ HB_FUNC_STATIC( QQMLENGINE_SETINCUBATIONCONTROLLER )
 /*
 void setNetworkAccessManagerFactory( QQmlNetworkAccessManagerFactory * factory )
 */
-HB_FUNC_STATIC( QQMLENGINE_SETNETWORKACCESSMANAGERFACTORY )
+HB_FUNC_STATIC(QQMLENGINE_SETNETWORKACCESSMANAGERFACTORY)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQQMLNETWORKACCESSMANAGERFACTORY(1) )
+    if (ISNUMPAR(1) && ISQQMLNETWORKACCESSMANAGERFACTORY(1))
     {
 #endif
-      obj->setNetworkAccessManagerFactory( PQQMLNETWORKACCESSMANAGERFACTORY(1) );
+      obj->setNetworkAccessManagerFactory(PQQMLNETWORKACCESSMANAGERFACTORY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -633,17 +633,17 @@ HB_FUNC_STATIC( QQMLENGINE_SETNETWORKACCESSMANAGERFACTORY )
 /*
 void setOfflineStoragePath( const QString & dir )
 */
-HB_FUNC_STATIC( QQMLENGINE_SETOFFLINESTORAGEPATH )
+HB_FUNC_STATIC(QQMLENGINE_SETOFFLINESTORAGEPATH)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setOfflineStoragePath( PQSTRING(1) );
+      obj->setOfflineStoragePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -659,17 +659,17 @@ HB_FUNC_STATIC( QQMLENGINE_SETOFFLINESTORAGEPATH )
 /*
 void setOutputWarningsToStandardError( bool enabled )
 */
-HB_FUNC_STATIC( QQMLENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
+HB_FUNC_STATIC(QQMLENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setOutputWarningsToStandardError( PBOOL(1) );
+      obj->setOutputWarningsToStandardError(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -685,17 +685,17 @@ HB_FUNC_STATIC( QQMLENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
 /*
 void setPluginPathList( const QStringList & paths )
 */
-HB_FUNC_STATIC( QQMLENGINE_SETPLUGINPATHLIST )
+HB_FUNC_STATIC(QQMLENGINE_SETPLUGINPATHLIST)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setPluginPathList( PQSTRINGLIST(1) );
+      obj->setPluginPathList(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -711,14 +711,14 @@ HB_FUNC_STATIC( QQMLENGINE_SETPLUGINPATHLIST )
 /*
 void trimComponentCache()
 */
-HB_FUNC_STATIC( QQMLENGINE_TRIMCOMPONENTCACHE )
+HB_FUNC_STATIC(QQMLENGINE_TRIMCOMPONENTCACHE)
 {
-  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->trimComponentCache();
@@ -737,13 +737,13 @@ HB_FUNC_STATIC( QQMLENGINE_TRIMCOMPONENTCACHE )
 /*
 static QQmlContext * contextForObject( const QObject * object )
 */
-HB_FUNC_STATIC( QQMLENGINE_CONTEXTFOROBJECT )
+HB_FUNC_STATIC(QQMLENGINE_CONTEXTFOROBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if (ISNUMPAR(1) && ISQOBJECT(1))
   {
 #endif
-    QQmlContext * ptr = QQmlEngine::contextForObject( PQOBJECT(1) );
+    QQmlContext *ptr = QQmlEngine::contextForObject(PQOBJECT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -757,13 +757,13 @@ HB_FUNC_STATIC( QQMLENGINE_CONTEXTFOROBJECT )
 /*
 static QQmlEngine::ObjectOwnership objectOwnership( QObject * object )
 */
-HB_FUNC_STATIC( QQMLENGINE_OBJECTOWNERSHIP )
+HB_FUNC_STATIC(QQMLENGINE_OBJECTOWNERSHIP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if (ISNUMPAR(1) && ISQOBJECT(1))
   {
 #endif
-    RENUM( QQmlEngine::objectOwnership( PQOBJECT(1) ) );
+    RENUM(QQmlEngine::objectOwnership(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -776,13 +776,13 @@ HB_FUNC_STATIC( QQMLENGINE_OBJECTOWNERSHIP )
 /*
 static void setContextForObject( QObject * object, QQmlContext * context )
 */
-HB_FUNC_STATIC( QQMLENGINE_SETCONTEXTFOROBJECT )
+HB_FUNC_STATIC(QQMLENGINE_SETCONTEXTFOROBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2) )
+  if (ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2))
   {
 #endif
-    QQmlEngine::setContextForObject( PQOBJECT(1), PQQMLCONTEXT(2) );
+    QQmlEngine::setContextForObject(PQOBJECT(1), PQQMLCONTEXT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -797,13 +797,13 @@ HB_FUNC_STATIC( QQMLENGINE_SETCONTEXTFOROBJECT )
 /*
 static void setObjectOwnership( QObject * object, QQmlEngine::ObjectOwnership ownership )
 */
-HB_FUNC_STATIC( QQMLENGINE_SETOBJECTOWNERSHIP )
+HB_FUNC_STATIC(QQMLENGINE_SETOBJECTOWNERSHIP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
   {
 #endif
-    QQmlEngine::setObjectOwnership( PQOBJECT(1), (QQmlEngine::ObjectOwnership) hb_parni(2) );
+    QQmlEngine::setObjectOwnership(PQOBJECT(1), (QQmlEngine::ObjectOwnership)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -815,9 +815,9 @@ HB_FUNC_STATIC( QQMLENGINE_SETOBJECTOWNERSHIP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QQmlEngineSlots_connect_signal(const QString & signal, const QString & slot);
+void QQmlEngineSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QQMLENGINE_ONQUIT )
+HB_FUNC_STATIC(QQMLENGINE_ONQUIT)
 {
   QQmlEngineSlots_connect_signal("quit()", "quit()");
 }

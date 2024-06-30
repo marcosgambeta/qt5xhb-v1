@@ -69,14 +69,15 @@ RETURN
 #include <QtQml/QQmlIncubator>
 #endif
 
-/*
-QQmlIncubator( QQmlIncubator::IncubationMode mode = QQmlIncubator::Asynchronous )
-*/
-HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
+    /*
+    QQmlIncubator( QQmlIncubator::IncubationMode mode = QQmlIncubator::Asynchronous )
+    */
+HB_FUNC_STATIC(QQMLINCUBATOR_NEW)
 {
-  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    QQmlIncubator * obj = new QQmlIncubator( HB_ISNIL(1)? (QQmlIncubator::IncubationMode) QQmlIncubator::Asynchronous : (QQmlIncubator::IncubationMode) hb_parni(1) );
+    QQmlIncubator *obj = new QQmlIncubator(HB_ISNIL(1) ? (QQmlIncubator::IncubationMode)QQmlIncubator::Asynchronous
+                                                       : (QQmlIncubator::IncubationMode)hb_parni(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -85,11 +86,11 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_DELETE )
+HB_FUNC_STATIC(QQMLINCUBATOR_DELETE)
 {
-  QQmlIncubator * obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlIncubator *obj = (QQmlIncubator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -104,14 +105,14 @@ HB_FUNC_STATIC( QQMLINCUBATOR_DELETE )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_CLEAR )
+HB_FUNC_STATIC(QQMLINCUBATOR_CLEAR)
 {
-  QQmlIncubator * obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlIncubator *obj = (QQmlIncubator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -130,14 +131,14 @@ HB_FUNC_STATIC( QQMLINCUBATOR_CLEAR )
 /*
 void forceCompletion()
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_FORCECOMPLETION )
+HB_FUNC_STATIC(QQMLINCUBATOR_FORCECOMPLETION)
 {
-  QQmlIncubator * obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlIncubator *obj = (QQmlIncubator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->forceCompletion();
@@ -156,17 +157,17 @@ HB_FUNC_STATIC( QQMLINCUBATOR_FORCECOMPLETION )
 /*
 QQmlIncubator::IncubationMode incubationMode() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_INCUBATIONMODE )
+HB_FUNC_STATIC(QQMLINCUBATOR_INCUBATIONMODE)
 {
-  QQmlIncubator * obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlIncubator *obj = (QQmlIncubator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->incubationMode() );
+      RENUM(obj->incubationMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,17 +181,17 @@ HB_FUNC_STATIC( QQMLINCUBATOR_INCUBATIONMODE )
 /*
 bool isError() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISERROR )
+HB_FUNC_STATIC(QQMLINCUBATOR_ISERROR)
 {
-  QQmlIncubator * obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlIncubator *obj = (QQmlIncubator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isError() );
+      RBOOL(obj->isError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,17 +205,17 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISERROR )
 /*
 bool isLoading() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISLOADING )
+HB_FUNC_STATIC(QQMLINCUBATOR_ISLOADING)
 {
-  QQmlIncubator * obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlIncubator *obj = (QQmlIncubator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isLoading() );
+      RBOOL(obj->isLoading());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,17 +229,17 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISLOADING )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISNULL )
+HB_FUNC_STATIC(QQMLINCUBATOR_ISNULL)
 {
-  QQmlIncubator * obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlIncubator *obj = (QQmlIncubator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,17 +253,17 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISNULL )
 /*
 bool isReady() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_ISREADY )
+HB_FUNC_STATIC(QQMLINCUBATOR_ISREADY)
 {
-  QQmlIncubator * obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlIncubator *obj = (QQmlIncubator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isReady() );
+      RBOOL(obj->isReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,17 +277,17 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISREADY )
 /*
 QObject * object() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_OBJECT )
+HB_FUNC_STATIC(QQMLINCUBATOR_OBJECT)
 {
-  QQmlIncubator * obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlIncubator *obj = (QQmlIncubator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QObject * ptr = obj->object();
+      QObject *ptr = obj->object();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -301,17 +302,17 @@ HB_FUNC_STATIC( QQMLINCUBATOR_OBJECT )
 /*
 QQmlIncubator::Status status() const
 */
-HB_FUNC_STATIC( QQMLINCUBATOR_STATUS )
+HB_FUNC_STATIC(QQMLINCUBATOR_STATUS)
 {
-  QQmlIncubator * obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlIncubator *obj = (QQmlIncubator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->status() );
+      RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,11 +323,11 @@ HB_FUNC_STATIC( QQMLINCUBATOR_STATUS )
   }
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_NEWFROM )
+HB_FUNC_STATIC(QQMLINCUBATOR_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -335,7 +336,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -352,26 +353,26 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QQMLINCUBATOR_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QQMLINCUBATOR_NEWFROM );
+  HB_FUNC_EXEC(QQMLINCUBATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QQMLINCUBATOR_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QQMLINCUBATOR_NEWFROM );
+  HB_FUNC_EXEC(QQMLINCUBATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLINCUBATOR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QQMLINCUBATOR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLINCUBATOR_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -63,14 +63,14 @@ RETURN
 #include <QtQml/QQmlPropertyMap>
 #endif
 
-/*
-QQmlPropertyMap( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QQMLPROPERTYMAP_NEW )
+    /*
+    QQmlPropertyMap( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QQMLPROPERTYMAP_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QQmlPropertyMap * obj = new QQmlPropertyMap( OPQOBJECT(1,0) );
+    QQmlPropertyMap *obj = new QQmlPropertyMap(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -79,11 +79,11 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQMLPROPERTYMAP_DELETE )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_DELETE)
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlPropertyMap *obj = (QQmlPropertyMap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -100,17 +100,17 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_DELETE )
 /*
 void clear( const QString & key )
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_CLEAR )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_CLEAR)
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlPropertyMap *obj = (QQmlPropertyMap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->clear( PQSTRING(1) );
+      obj->clear(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,17 +126,17 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_CLEAR )
 /*
 bool contains( const QString & key ) const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_CONTAINS )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_CONTAINS)
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlPropertyMap *obj = (QQmlPropertyMap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->contains( PQSTRING(1) ) );
+      RBOOL(obj->contains(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,17 +150,17 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_CONTAINS )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_COUNT )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_COUNT)
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlPropertyMap *obj = (QQmlPropertyMap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,17 +174,17 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_COUNT )
 /*
 void insert( const QString & key, const QVariant & value )
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_INSERT )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_INSERT)
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlPropertyMap *obj = (QQmlPropertyMap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
     {
 #endif
-      obj->insert( PQSTRING(1), *PQVARIANT(2) );
+      obj->insert(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,17 +200,17 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_INSERT )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_ISEMPTY )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_ISEMPTY)
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlPropertyMap *obj = (QQmlPropertyMap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,17 +224,17 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_ISEMPTY )
 /*
 QStringList keys() const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_KEYS )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_KEYS)
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlPropertyMap *obj = (QQmlPropertyMap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->keys() );
+      RQSTRINGLIST(obj->keys());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,17 +248,17 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_KEYS )
 /*
 int size() const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_SIZE )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_SIZE)
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlPropertyMap *obj = (QQmlPropertyMap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->size() );
+      RINT(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,17 +272,17 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_SIZE )
 /*
 QVariant value( const QString & key ) const
 */
-HB_FUNC_STATIC( QQMLPROPERTYMAP_VALUE )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_VALUE)
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlPropertyMap *obj = (QQmlPropertyMap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value( PQSTRING(1) ) );
+      QVariant *ptr = new QVariant(obj->value(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -294,9 +294,9 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_VALUE )
   }
 }
 
-void QQmlPropertyMapSlots_connect_signal(const QString & signal, const QString & slot);
+void QQmlPropertyMapSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
+HB_FUNC_STATIC(QQMLPROPERTYMAP_ONVALUECHANGED)
 {
   QQmlPropertyMapSlots_connect_signal("valueChanged(QString,QVariant)", "valueChanged(QString,QVariant)");
 }

@@ -77,30 +77,32 @@ RETURN
 #include <QtQml/QQmlContext>
 #include <QtQml/QQmlEngine>
 
-HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
+HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QQmlExpression()
     */
-    QQmlExpression * obj = new QQmlExpression();
+    QQmlExpression *obj = new QQmlExpression();
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(3,4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
+  else if (ISBETWEEN(3, 4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
     QQmlExpression( QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
     */
-    QQmlExpression * obj = new QQmlExpression( PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
+    QQmlExpression *obj = new QQmlExpression(PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1,4) && ISQQMLSCRIPTSTRING(1) && (ISQQMLCONTEXT(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) && (ISQOBJECT(4)||HB_ISNIL(4)) )
+  else if (ISBETWEEN(1, 4) && ISQQMLSCRIPTSTRING(1) && (ISQQMLCONTEXT(2) || HB_ISNIL(2)) &&
+           (ISQOBJECT(3) || HB_ISNIL(3)) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
     QQmlExpression( const QQmlScriptString & script, QQmlContext * ctxt = 0, QObject * scope = 0, QObject * parent = 0 )
     */
-    QQmlExpression * obj = new QQmlExpression( *PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2,0), OPQOBJECT(3,0), OPQOBJECT(4,0) );
+    QQmlExpression *obj =
+        new QQmlExpression(*PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2, 0), OPQOBJECT(3, 0), OPQOBJECT(4, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -109,11 +111,11 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQMLEXPRESSION_DELETE )
+HB_FUNC_STATIC(QQMLEXPRESSION_DELETE)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -130,14 +132,14 @@ HB_FUNC_STATIC( QQMLEXPRESSION_DELETE )
 /*
 void clearError()
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_CLEARERROR )
+HB_FUNC_STATIC(QQMLEXPRESSION_CLEARERROR)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearError();
@@ -156,17 +158,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_CLEARERROR )
 /*
 int columnNumber() const
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_COLUMNNUMBER )
+HB_FUNC_STATIC(QQMLEXPRESSION_COLUMNNUMBER)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->columnNumber() );
+      RINT(obj->columnNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,17 +182,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_COLUMNNUMBER )
 /*
 QQmlContext * context() const
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_CONTEXT )
+HB_FUNC_STATIC(QQMLEXPRESSION_CONTEXT)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QQmlContext * ptr = obj->context();
+      QQmlContext *ptr = obj->context();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -205,17 +207,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_CONTEXT )
 /*
 QQmlEngine * engine() const
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_ENGINE )
+HB_FUNC_STATIC(QQMLEXPRESSION_ENGINE)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QQmlEngine * ptr = obj->engine();
+      QQmlEngine *ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -230,17 +232,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ENGINE )
 /*
 QQmlError error() const
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_ERROR )
+HB_FUNC_STATIC(QQMLEXPRESSION_ERROR)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QQmlError * ptr = new QQmlError( obj->error() );
+      QQmlError *ptr = new QQmlError(obj->error());
       Qt5xHb::createReturnClass(ptr, "QQMLERROR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -255,20 +257,20 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ERROR )
 /*
 QVariant evaluate( bool * valueIsUndefined = 0 )
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
+HB_FUNC_STATIC(QQMLEXPRESSION_EVALUATE)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
       bool par1;
-      QVariant * ptr = new QVariant( obj->evaluate( &par1 ) );
+      QVariant *ptr = new QVariant(obj->evaluate(&par1));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
-      hb_storl( par1, 1 );
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,17 +284,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
 /*
 QString expression() const
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_EXPRESSION )
+HB_FUNC_STATIC(QQMLEXPRESSION_EXPRESSION)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->expression() );
+      RQSTRING(obj->expression());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,17 +308,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EXPRESSION )
 /*
 bool hasError() const
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_HASERROR )
+HB_FUNC_STATIC(QQMLEXPRESSION_HASERROR)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasError() );
+      RBOOL(obj->hasError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,17 +332,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_HASERROR )
 /*
 int lineNumber() const
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_LINENUMBER )
+HB_FUNC_STATIC(QQMLEXPRESSION_LINENUMBER)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lineNumber() );
+      RINT(obj->lineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,17 +356,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_LINENUMBER )
 /*
 bool notifyOnValueChanged() const
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_NOTIFYONVALUECHANGED )
+HB_FUNC_STATIC(QQMLEXPRESSION_NOTIFYONVALUECHANGED)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->notifyOnValueChanged() );
+      RBOOL(obj->notifyOnValueChanged());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,17 +380,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NOTIFYONVALUECHANGED )
 /*
 QObject * scopeObject() const
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_SCOPEOBJECT )
+HB_FUNC_STATIC(QQMLEXPRESSION_SCOPEOBJECT)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QObject * ptr = obj->scopeObject();
+      QObject *ptr = obj->scopeObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -403,17 +405,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SCOPEOBJECT )
 /*
 void setExpression( const QString & expression )
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_SETEXPRESSION )
+HB_FUNC_STATIC(QQMLEXPRESSION_SETEXPRESSION)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setExpression( PQSTRING(1) );
+      obj->setExpression(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,17 +431,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETEXPRESSION )
 /*
 void setNotifyOnValueChanged( bool notifyOnChange )
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_SETNOTIFYONVALUECHANGED )
+HB_FUNC_STATIC(QQMLEXPRESSION_SETNOTIFYONVALUECHANGED)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setNotifyOnValueChanged( PBOOL(1) );
+      obj->setNotifyOnValueChanged(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,17 +457,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETNOTIFYONVALUECHANGED )
 /*
 void setSourceLocation( const QString & url, int line, int column = 0 )
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
+HB_FUNC_STATIC(QQMLEXPRESSION_SETSOURCELOCATION)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setSourceLocation( PQSTRING(1), PINT(2), OPINT(3,0) );
+      obj->setSourceLocation(PQSTRING(1), PINT(2), OPINT(3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,17 +483,17 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
 /*
 QString sourceFile() const
 */
-HB_FUNC_STATIC( QQMLEXPRESSION_SOURCEFILE )
+HB_FUNC_STATIC(QQMLEXPRESSION_SOURCEFILE)
 {
-  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->sourceFile() );
+      RQSTRING(obj->sourceFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -502,9 +504,9 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SOURCEFILE )
   }
 }
 
-void QQmlExpressionSlots_connect_signal(const QString & signal, const QString & slot);
+void QQmlExpressionSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QQMLEXPRESSION_ONVALUECHANGED )
+HB_FUNC_STATIC(QQMLEXPRESSION_ONVALUECHANGED)
 {
   QQmlExpressionSlots_connect_signal("valueChanged()", "valueChanged()");
 }

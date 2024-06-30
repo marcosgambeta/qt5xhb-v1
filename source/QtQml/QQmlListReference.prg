@@ -72,22 +72,22 @@ RETURN
 #include <QtQml/QQmlListReference>
 #endif
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QQmlListReference()
     */
-    QQmlListReference * obj = new QQmlListReference();
+    QQmlListReference *obj = new QQmlListReference();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQQMLENGINE(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQQMLENGINE(3) || HB_ISNIL(3)))
   {
     /*
     QQmlListReference( QObject * object, const char * property, QQmlEngine * engine = 0 )
     */
-    QQmlListReference * obj = new QQmlListReference( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,0) );
+    QQmlListReference *obj = new QQmlListReference(PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3, 0));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -96,11 +96,11 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_DELETE )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_DELETE)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -115,17 +115,17 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_DELETE )
 /*
 bool append( QObject * object ) const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_APPEND)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      RBOOL( obj->append( PQOBJECT(1) ) );
+      RBOOL(obj->append(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,17 +139,17 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
 /*
 QObject * at( int index ) const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_AT)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QObject * ptr = obj->at( PINT(1) );
+      QObject *ptr = obj->at(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -164,17 +164,17 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
 /*
 bool canAppend() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAPPEND )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAPPEND)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canAppend() );
+      RBOOL(obj->canAppend());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,17 +188,17 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAPPEND )
 /*
 bool canAt() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAT)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canAt() );
+      RBOOL(obj->canAt());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,17 +212,17 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAT )
 /*
 bool canClear() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCLEAR )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCLEAR)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canClear() );
+      RBOOL(obj->canClear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,17 +236,17 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCLEAR )
 /*
 bool canCount() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCOUNT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCOUNT)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canCount() );
+      RBOOL(obj->canCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,17 +260,17 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCOUNT )
 /*
 bool clear() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_CLEAR )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_CLEAR)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->clear() );
+      RBOOL(obj->clear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,17 +284,17 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CLEAR )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_COUNT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_COUNT)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,17 +308,17 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_COUNT )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_ISVALID )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_ISVALID)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,17 +332,17 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_ISVALID )
 /*
 const QMetaObject * listElementType() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_LISTELEMENTTYPE )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_LISTELEMENTTYPE)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QMetaObject * ptr = obj->listElementType();
+      const QMetaObject *ptr = obj->listElementType();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -357,17 +357,17 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_LISTELEMENTTYPE )
 /*
 QObject * object() const
 */
-HB_FUNC_STATIC( QQMLLISTREFERENCE_OBJECT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_OBJECT)
 {
-  QQmlListReference * obj = (QQmlListReference *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQmlListReference *obj = (QQmlListReference *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QObject * ptr = obj->object();
+      QObject *ptr = obj->object();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -379,11 +379,11 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_OBJECT )
   }
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEWFROM )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -409,26 +409,26 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QQMLLISTREFERENCE_NEWFROM );
+  HB_FUNC_EXEC(QQMLLISTREFERENCE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QQMLLISTREFERENCE_NEWFROM );
+  HB_FUNC_EXEC(QQMLLISTREFERENCE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QQMLLISTREFERENCE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QQMLLISTREFERENCE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
