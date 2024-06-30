@@ -98,7 +98,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QPieSlice>
 #endif
 #endif
@@ -110,34 +110,34 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QPieSlice>
 #endif
 #endif
 
 #include <QtCharts/QPieSeries>
 
-using namespace QtCharts;
+    using namespace QtCharts;
 
-HB_FUNC_STATIC( QPIESLICE_NEW )
+HB_FUNC_STATIC(QPIESLICE_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QPieSlice( QObject * parent = nullptr )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    QPieSlice * obj = new QPieSlice( OPQOBJECT(1,nullptr) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+    QPieSlice *obj = new QPieSlice(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
     QPieSlice( QString label, qreal value, QObject * parent = nullptr )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    QPieSlice * obj = new QPieSlice( PQSTRING(1), PQREAL(2), OPQOBJECT(3,nullptr) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+    QPieSlice *obj = new QPieSlice(PQSTRING(1), PQREAL(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
@@ -150,12 +150,12 @@ HB_FUNC_STATIC( QPIESLICE_NEW )
 /*
 virtual ~QPieSlice();
 */
-HB_FUNC_STATIC( QPIESLICE_DELETE )
+HB_FUNC_STATIC(QPIESLICE_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -173,18 +173,18 @@ HB_FUNC_STATIC( QPIESLICE_DELETE )
 /*
 QString label() const
 */
-HB_FUNC_STATIC( QPIESLICE_LABEL )
+HB_FUNC_STATIC(QPIESLICE_LABEL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->label() );
+      RQSTRING(obj->label());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,18 +199,18 @@ HB_FUNC_STATIC( QPIESLICE_LABEL )
 /*
 void setLabel( QString label )
 */
-HB_FUNC_STATIC( QPIESLICE_SETLABEL )
+HB_FUNC_STATIC(QPIESLICE_SETLABEL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setLabel( PQSTRING(1) );
+      obj->setLabel(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,18 +227,18 @@ HB_FUNC_STATIC( QPIESLICE_SETLABEL )
 /*
 qreal value() const
 */
-HB_FUNC_STATIC( QPIESLICE_VALUE )
+HB_FUNC_STATIC(QPIESLICE_VALUE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->value() );
+      RQREAL(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,18 +253,18 @@ HB_FUNC_STATIC( QPIESLICE_VALUE )
 /*
 void setValue( qreal value )
 */
-HB_FUNC_STATIC( QPIESLICE_SETVALUE )
+HB_FUNC_STATIC(QPIESLICE_SETVALUE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setValue( PQREAL(1) );
+      obj->setValue(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,18 +281,18 @@ HB_FUNC_STATIC( QPIESLICE_SETVALUE )
 /*
 bool isLabelVisible() const
 */
-HB_FUNC_STATIC( QPIESLICE_ISLABELVISIBLE )
+HB_FUNC_STATIC(QPIESLICE_ISLABELVISIBLE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isLabelVisible() );
+      RBOOL(obj->isLabelVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,18 +307,18 @@ HB_FUNC_STATIC( QPIESLICE_ISLABELVISIBLE )
 /*
 void setLabelVisible( bool visible = true )
 */
-HB_FUNC_STATIC( QPIESLICE_SETLABELVISIBLE )
+HB_FUNC_STATIC(QPIESLICE_SETLABELVISIBLE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setLabelVisible( OPBOOL(1,true) );
+      obj->setLabelVisible(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,18 +335,18 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELVISIBLE )
 /*
 QPieSlice::LabelPosition labelPosition()
 */
-HB_FUNC_STATIC( QPIESLICE_LABELPOSITION )
+HB_FUNC_STATIC(QPIESLICE_LABELPOSITION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->labelPosition() );
+      RENUM(obj->labelPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,18 +361,18 @@ HB_FUNC_STATIC( QPIESLICE_LABELPOSITION )
 /*
 void setLabelPosition( QPieSlice::LabelPosition position )
 */
-HB_FUNC_STATIC( QPIESLICE_SETLABELPOSITION )
+HB_FUNC_STATIC(QPIESLICE_SETLABELPOSITION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLabelPosition( (QPieSlice::LabelPosition) hb_parni(1) );
+      obj->setLabelPosition((QPieSlice::LabelPosition)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,18 +389,18 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELPOSITION )
 /*
 bool isExploded() const
 */
-HB_FUNC_STATIC( QPIESLICE_ISEXPLODED )
+HB_FUNC_STATIC(QPIESLICE_ISEXPLODED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isExploded() );
+      RBOOL(obj->isExploded());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,18 +415,18 @@ HB_FUNC_STATIC( QPIESLICE_ISEXPLODED )
 /*
 void setExploded( bool exploded = true )
 */
-HB_FUNC_STATIC( QPIESLICE_SETEXPLODED )
+HB_FUNC_STATIC(QPIESLICE_SETEXPLODED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setExploded( OPBOOL(1,true) );
+      obj->setExploded(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,18 +443,18 @@ HB_FUNC_STATIC( QPIESLICE_SETEXPLODED )
 /*
 QPen pen() const
 */
-HB_FUNC_STATIC( QPIESLICE_PEN )
+HB_FUNC_STATIC(QPIESLICE_PEN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPen * ptr = new QPen( obj->pen() );
+      QPen *ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -470,18 +470,18 @@ HB_FUNC_STATIC( QPIESLICE_PEN )
 /*
 void setPen( const QPen & pen )
 */
-HB_FUNC_STATIC( QPIESLICE_SETPEN )
+HB_FUNC_STATIC(QPIESLICE_SETPEN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPEN(1) )
+    if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setPen( *PQPEN(1) );
+      obj->setPen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -498,18 +498,18 @@ HB_FUNC_STATIC( QPIESLICE_SETPEN )
 /*
 QColor borderColor()
 */
-HB_FUNC_STATIC( QPIESLICE_BORDERCOLOR )
+HB_FUNC_STATIC(QPIESLICE_BORDERCOLOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->borderColor() );
+      QColor *ptr = new QColor(obj->borderColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -525,18 +525,18 @@ HB_FUNC_STATIC( QPIESLICE_BORDERCOLOR )
 /*
 void setBorderColor( QColor color )
 */
-HB_FUNC_STATIC( QPIESLICE_SETBORDERCOLOR )
+HB_FUNC_STATIC(QPIESLICE_SETBORDERCOLOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setBorderColor( *PQCOLOR(1) );
+      obj->setBorderColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,18 +553,18 @@ HB_FUNC_STATIC( QPIESLICE_SETBORDERCOLOR )
 /*
 int borderWidth()
 */
-HB_FUNC_STATIC( QPIESLICE_BORDERWIDTH )
+HB_FUNC_STATIC(QPIESLICE_BORDERWIDTH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->borderWidth() );
+      RINT(obj->borderWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -579,18 +579,18 @@ HB_FUNC_STATIC( QPIESLICE_BORDERWIDTH )
 /*
 void setBorderWidth( int width )
 */
-HB_FUNC_STATIC( QPIESLICE_SETBORDERWIDTH )
+HB_FUNC_STATIC(QPIESLICE_SETBORDERWIDTH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBorderWidth( PINT(1) );
+      obj->setBorderWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -607,18 +607,18 @@ HB_FUNC_STATIC( QPIESLICE_SETBORDERWIDTH )
 /*
 QBrush brush() const
 */
-HB_FUNC_STATIC( QPIESLICE_BRUSH )
+HB_FUNC_STATIC(QPIESLICE_BRUSH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush() );
+      QBrush *ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -634,18 +634,18 @@ HB_FUNC_STATIC( QPIESLICE_BRUSH )
 /*
 void setBrush( const QBrush & brush )
 */
-HB_FUNC_STATIC( QPIESLICE_SETBRUSH )
+HB_FUNC_STATIC(QPIESLICE_SETBRUSH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBrush( *PQBRUSH(1) );
+      obj->setBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -662,18 +662,18 @@ HB_FUNC_STATIC( QPIESLICE_SETBRUSH )
 /*
 QColor color()
 */
-HB_FUNC_STATIC( QPIESLICE_COLOR )
+HB_FUNC_STATIC(QPIESLICE_COLOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->color() );
+      QColor *ptr = new QColor(obj->color());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -689,18 +689,18 @@ HB_FUNC_STATIC( QPIESLICE_COLOR )
 /*
 void setColor( QColor color )
 */
-HB_FUNC_STATIC( QPIESLICE_SETCOLOR )
+HB_FUNC_STATIC(QPIESLICE_SETCOLOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setColor( *PQCOLOR(1) );
+      obj->setColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -717,18 +717,18 @@ HB_FUNC_STATIC( QPIESLICE_SETCOLOR )
 /*
 QBrush labelBrush() const
 */
-HB_FUNC_STATIC( QPIESLICE_LABELBRUSH )
+HB_FUNC_STATIC(QPIESLICE_LABELBRUSH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBrush * ptr = new QBrush( obj->labelBrush() );
+      QBrush *ptr = new QBrush(obj->labelBrush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -744,18 +744,18 @@ HB_FUNC_STATIC( QPIESLICE_LABELBRUSH )
 /*
 void setLabelBrush( const QBrush & brush )
 */
-HB_FUNC_STATIC( QPIESLICE_SETLABELBRUSH )
+HB_FUNC_STATIC(QPIESLICE_SETLABELBRUSH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setLabelBrush( *PQBRUSH(1) );
+      obj->setLabelBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -772,18 +772,18 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELBRUSH )
 /*
 QColor labelColor()
 */
-HB_FUNC_STATIC( QPIESLICE_LABELCOLOR )
+HB_FUNC_STATIC(QPIESLICE_LABELCOLOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->labelColor() );
+      QColor *ptr = new QColor(obj->labelColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -799,18 +799,18 @@ HB_FUNC_STATIC( QPIESLICE_LABELCOLOR )
 /*
 void setLabelColor( QColor color )
 */
-HB_FUNC_STATIC( QPIESLICE_SETLABELCOLOR )
+HB_FUNC_STATIC(QPIESLICE_SETLABELCOLOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if (ISNUMPAR(1) && ISQCOLOR(1))
     {
 #endif
-      obj->setLabelColor( *PQCOLOR(1) );
+      obj->setLabelColor(*PQCOLOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -827,18 +827,18 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELCOLOR )
 /*
 QFont labelFont() const
 */
-HB_FUNC_STATIC( QPIESLICE_LABELFONT )
+HB_FUNC_STATIC(QPIESLICE_LABELFONT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QFont * ptr = new QFont( obj->labelFont() );
+      QFont *ptr = new QFont(obj->labelFont());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -854,18 +854,18 @@ HB_FUNC_STATIC( QPIESLICE_LABELFONT )
 /*
 void setLabelFont( const QFont & font )
 */
-HB_FUNC_STATIC( QPIESLICE_SETLABELFONT )
+HB_FUNC_STATIC(QPIESLICE_SETLABELFONT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setLabelFont( *PQFONT(1) );
+      obj->setLabelFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -882,18 +882,18 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELFONT )
 /*
 qreal labelArmLengthFactor() const
 */
-HB_FUNC_STATIC( QPIESLICE_LABELARMLENGTHFACTOR )
+HB_FUNC_STATIC(QPIESLICE_LABELARMLENGTHFACTOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->labelArmLengthFactor() );
+      RQREAL(obj->labelArmLengthFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -908,18 +908,18 @@ HB_FUNC_STATIC( QPIESLICE_LABELARMLENGTHFACTOR )
 /*
 void setLabelArmLengthFactor( qreal factor )
 */
-HB_FUNC_STATIC( QPIESLICE_SETLABELARMLENGTHFACTOR )
+HB_FUNC_STATIC(QPIESLICE_SETLABELARMLENGTHFACTOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLabelArmLengthFactor( PQREAL(1) );
+      obj->setLabelArmLengthFactor(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -936,18 +936,18 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELARMLENGTHFACTOR )
 /*
 qreal explodeDistanceFactor() const
 */
-HB_FUNC_STATIC( QPIESLICE_EXPLODEDISTANCEFACTOR )
+HB_FUNC_STATIC(QPIESLICE_EXPLODEDISTANCEFACTOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->explodeDistanceFactor() );
+      RQREAL(obj->explodeDistanceFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -962,18 +962,18 @@ HB_FUNC_STATIC( QPIESLICE_EXPLODEDISTANCEFACTOR )
 /*
 void setExplodeDistanceFactor( qreal factor )
 */
-HB_FUNC_STATIC( QPIESLICE_SETEXPLODEDISTANCEFACTOR )
+HB_FUNC_STATIC(QPIESLICE_SETEXPLODEDISTANCEFACTOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setExplodeDistanceFactor( PQREAL(1) );
+      obj->setExplodeDistanceFactor(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -990,18 +990,18 @@ HB_FUNC_STATIC( QPIESLICE_SETEXPLODEDISTANCEFACTOR )
 /*
 qreal percentage() const
 */
-HB_FUNC_STATIC( QPIESLICE_PERCENTAGE )
+HB_FUNC_STATIC(QPIESLICE_PERCENTAGE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->percentage() );
+      RQREAL(obj->percentage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1016,18 +1016,18 @@ HB_FUNC_STATIC( QPIESLICE_PERCENTAGE )
 /*
 qreal startAngle() const
 */
-HB_FUNC_STATIC( QPIESLICE_STARTANGLE )
+HB_FUNC_STATIC(QPIESLICE_STARTANGLE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->startAngle() );
+      RQREAL(obj->startAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1042,18 +1042,18 @@ HB_FUNC_STATIC( QPIESLICE_STARTANGLE )
 /*
 qreal angleSpan() const
 */
-HB_FUNC_STATIC( QPIESLICE_ANGLESPAN )
+HB_FUNC_STATIC(QPIESLICE_ANGLESPAN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->angleSpan() );
+      RQREAL(obj->angleSpan());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1068,18 +1068,18 @@ HB_FUNC_STATIC( QPIESLICE_ANGLESPAN )
 /*
 QPieSeries * series() const
 */
-HB_FUNC_STATIC( QPIESLICE_SERIES )
+HB_FUNC_STATIC(QPIESLICE_SERIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPieSlice *obj = (QPieSlice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPieSeries * ptr = obj->series();
+      QPieSeries *ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QPIESERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1092,173 +1092,173 @@ HB_FUNC_STATIC( QPIESLICE_SERIES )
 #endif
 }
 
-void QPieSliceSlots_connect_signal(const QString & signal, const QString & slot);
+void QPieSliceSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QPIESLICE_ONANGLESPANCHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONANGLESPANCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("angleSpanChanged()", "angleSpanChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONBORDERCOLORCHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONBORDERCOLORCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("borderColorChanged()", "borderColorChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONBORDERWIDTHCHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONBORDERWIDTHCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("borderWidthChanged()", "borderWidthChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONBRUSHCHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONBRUSHCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("brushChanged()", "brushChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONCLICKED )
+HB_FUNC_STATIC(QPIESLICE_ONCLICKED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("clicked()", "clicked()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONCOLORCHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONCOLORCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("colorChanged()", "colorChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONDOUBLECLICKED )
+HB_FUNC_STATIC(QPIESLICE_ONDOUBLECLICKED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("doubleClicked()", "doubleClicked()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONHOVERED )
+HB_FUNC_STATIC(QPIESLICE_ONHOVERED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("hovered(bool)", "hovered(bool)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONLABELBRUSHCHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONLABELBRUSHCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("labelBrushChanged()", "labelBrushChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONLABELCHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONLABELCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("labelChanged()", "labelChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONLABELCOLORCHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONLABELCOLORCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("labelColorChanged()", "labelColorChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONLABELFONTCHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONLABELFONTCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("labelFontChanged()", "labelFontChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONLABELVISIBLECHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONLABELVISIBLECHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("labelVisibleChanged()", "labelVisibleChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONPENCHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONPENCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("penChanged()", "penChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONPERCENTAGECHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONPERCENTAGECHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("percentageChanged()", "percentageChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONPRESSED )
+HB_FUNC_STATIC(QPIESLICE_ONPRESSED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("pressed()", "pressed()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONRELEASED )
+HB_FUNC_STATIC(QPIESLICE_ONRELEASED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("released()", "released()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONSTARTANGLECHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONSTARTANGLECHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("startAngleChanged()", "startAngleChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QPIESLICE_ONVALUECHANGED )
+HB_FUNC_STATIC(QPIESLICE_ONVALUECHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSliceSlots_connect_signal("valueChanged()", "valueChanged()");
 #else
   hb_retl(false);

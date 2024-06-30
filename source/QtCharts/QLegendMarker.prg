@@ -68,7 +68,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QLegendMarker>
 #endif
 #endif
@@ -80,24 +80,24 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QLegendMarker>
 #endif
 #endif
 
 #include <QtCharts/QAbstractSeries>
 
-using namespace QtCharts;
+    using namespace QtCharts;
 
 /*
 virtual ~QLegendMarker()
 */
-HB_FUNC_STATIC( QLEGENDMARKER_DELETE )
+HB_FUNC_STATIC(QLEGENDMARKER_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -115,18 +115,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_DELETE )
 /*
 QString label() const
 */
-HB_FUNC_STATIC( QLEGENDMARKER_LABEL )
+HB_FUNC_STATIC(QLEGENDMARKER_LABEL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->label() );
+      RQSTRING(obj->label());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,18 +141,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABEL )
 /*
 void setLabel( const QString & label )
 */
-HB_FUNC_STATIC( QLEGENDMARKER_SETLABEL )
+HB_FUNC_STATIC(QLEGENDMARKER_SETLABEL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setLabel( PQSTRING(1) );
+      obj->setLabel(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,18 +169,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETLABEL )
 /*
 QBrush labelBrush() const
 */
-HB_FUNC_STATIC( QLEGENDMARKER_LABELBRUSH )
+HB_FUNC_STATIC(QLEGENDMARKER_LABELBRUSH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBrush * ptr = new QBrush( obj->labelBrush() );
+      QBrush *ptr = new QBrush(obj->labelBrush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -196,18 +196,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABELBRUSH )
 /*
 void setLabelBrush( const QBrush & brush )
 */
-HB_FUNC_STATIC( QLEGENDMARKER_SETLABELBRUSH )
+HB_FUNC_STATIC(QLEGENDMARKER_SETLABELBRUSH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setLabelBrush( *PQBRUSH(1) );
+      obj->setLabelBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,18 +224,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETLABELBRUSH )
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QLEGENDMARKER_FONT )
+HB_FUNC_STATIC(QLEGENDMARKER_FONT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QFont * ptr = new QFont( obj->font() );
+      QFont *ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -251,18 +251,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_FONT )
 /*
 void setFont( const QFont & font )
 */
-HB_FUNC_STATIC( QLEGENDMARKER_SETFONT )
+HB_FUNC_STATIC(QLEGENDMARKER_SETFONT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1) );
+      obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,18 +279,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETFONT )
 /*
 QPen pen() const
 */
-HB_FUNC_STATIC( QLEGENDMARKER_PEN )
+HB_FUNC_STATIC(QLEGENDMARKER_PEN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPen * ptr = new QPen( obj->pen() );
+      QPen *ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -306,18 +306,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_PEN )
 /*
 void setPen( const QPen & pen )
 */
-HB_FUNC_STATIC( QLEGENDMARKER_SETPEN )
+HB_FUNC_STATIC(QLEGENDMARKER_SETPEN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPEN(1) )
+    if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setPen( *PQPEN(1) );
+      obj->setPen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,18 +334,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETPEN )
 /*
 QBrush brush() const
 */
-HB_FUNC_STATIC( QLEGENDMARKER_BRUSH )
+HB_FUNC_STATIC(QLEGENDMARKER_BRUSH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush() );
+      QBrush *ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -361,18 +361,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_BRUSH )
 /*
 void setBrush( const QBrush & brush )
 */
-HB_FUNC_STATIC( QLEGENDMARKER_SETBRUSH )
+HB_FUNC_STATIC(QLEGENDMARKER_SETBRUSH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBrush( *PQBRUSH(1) );
+      obj->setBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,18 +389,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETBRUSH )
 /*
 bool isVisible() const
 */
-HB_FUNC_STATIC( QLEGENDMARKER_ISVISIBLE )
+HB_FUNC_STATIC(QLEGENDMARKER_ISVISIBLE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isVisible() );
+      RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,18 +415,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_ISVISIBLE )
 /*
 void setVisible( bool visible )
 */
-HB_FUNC_STATIC( QLEGENDMARKER_SETVISIBLE )
+HB_FUNC_STATIC(QLEGENDMARKER_SETVISIBLE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,18 +443,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETVISIBLE )
 /*
 QLegend::MarkerShape shape() const
 */
-HB_FUNC_STATIC( QLEGENDMARKER_SHAPE )
+HB_FUNC_STATIC(QLEGENDMARKER_SHAPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->shape() );
+      RENUM(obj->shape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,18 +469,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_SHAPE )
 /*
 void setShape( QLegend::MarkerShape shape )
 */
-HB_FUNC_STATIC( QLEGENDMARKER_SETSHAPE )
+HB_FUNC_STATIC(QLEGENDMARKER_SETSHAPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setShape( (QLegend::MarkerShape) hb_parni(1) );
+      obj->setShape((QLegend::MarkerShape)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,18 +497,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETSHAPE )
 /*
 virtual QLegendMarker::LegendMarkerType type() = 0
 */
-HB_FUNC_STATIC( QLEGENDMARKER_TYPE )
+HB_FUNC_STATIC(QLEGENDMARKER_TYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -523,18 +523,18 @@ HB_FUNC_STATIC( QLEGENDMARKER_TYPE )
 /*
 virtual QAbstractSeries * series() = 0
 */
-HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
+HB_FUNC_STATIC(QLEGENDMARKER_SERIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAbstractSeries * ptr = obj->series();
+      QAbstractSeries *ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -547,83 +547,83 @@ HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
 #endif
 }
 
-void QLegendMarkerSlots_connect_signal(const QString & signal, const QString & slot);
+void QLegendMarkerSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
+HB_FUNC_STATIC(QLEGENDMARKER_ONBRUSHCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QLegendMarkerSlots_connect_signal("brushChanged()", "brushChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QLEGENDMARKER_ONCLICKED )
+HB_FUNC_STATIC(QLEGENDMARKER_ONCLICKED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QLegendMarkerSlots_connect_signal("clicked()", "clicked()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QLEGENDMARKER_ONFONTCHANGED )
+HB_FUNC_STATIC(QLEGENDMARKER_ONFONTCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QLegendMarkerSlots_connect_signal("fontChanged()", "fontChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QLEGENDMARKER_ONHOVERED )
+HB_FUNC_STATIC(QLEGENDMARKER_ONHOVERED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QLegendMarkerSlots_connect_signal("hovered(bool)", "hovered(bool)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
+HB_FUNC_STATIC(QLEGENDMARKER_ONLABELBRUSHCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QLegendMarkerSlots_connect_signal("labelBrushChanged()", "labelBrushChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QLEGENDMARKER_ONLABELCHANGED )
+HB_FUNC_STATIC(QLEGENDMARKER_ONLABELCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QLegendMarkerSlots_connect_signal("labelChanged()", "labelChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QLEGENDMARKER_ONPENCHANGED )
+HB_FUNC_STATIC(QLEGENDMARKER_ONPENCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QLegendMarkerSlots_connect_signal("penChanged()", "penChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QLEGENDMARKER_ONSHAPECHANGED )
+HB_FUNC_STATIC(QLEGENDMARKER_ONSHAPECHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   QLegendMarkerSlots_connect_signal("shapeChanged()", "shapeChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QLEGENDMARKER_ONVISIBLECHANGED )
+HB_FUNC_STATIC(QLEGENDMARKER_ONVISIBLECHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QLegendMarkerSlots_connect_signal("visibleChanged()", "visibleChanged()");
 #else
   hb_retl(false);

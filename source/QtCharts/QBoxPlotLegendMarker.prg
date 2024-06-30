@@ -42,7 +42,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QBoxPlotLegendMarker>
 #endif
 #endif
@@ -54,22 +54,22 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QBoxPlotLegendMarker>
 #endif
 #endif
 
-using namespace QtCharts;
+    using namespace QtCharts;
 
 /*
 QBoxPlotLegendMarker( QBoxPlotSeries * series, QLegend * legend, QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_NEW )
+HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(2,3) && ISQBOXPLOTSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  if (ISBETWEEN(2, 3) && ISQBOXPLOTSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    QBoxPlotLegendMarker * obj = new QBoxPlotLegendMarker( PQBOXPLOTSERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
+    QBoxPlotLegendMarker *obj = new QBoxPlotLegendMarker(PQBOXPLOTSERIES(1), PQLEGEND(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -82,12 +82,12 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_NEW )
 /*
 virtual ~QBoxPlotLegendMarker()
 */
-HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_DELETE )
+HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotLegendMarker * obj = (QBoxPlotLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxPlotLegendMarker *obj = (QBoxPlotLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -105,18 +105,18 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_DELETE )
 /*
 virtual QLegendMarker::LegendMarkerType type()
 */
-HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_TYPE )
+HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_TYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotLegendMarker * obj = (QBoxPlotLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxPlotLegendMarker *obj = (QBoxPlotLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,18 +131,18 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_TYPE )
 /*
 virtual QBoxPlotSeries * series()
 */
-HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_SERIES )
+HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_SERIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotLegendMarker * obj = (QBoxPlotLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxPlotLegendMarker *obj = (QBoxPlotLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBoxPlotSeries * ptr = obj->series();
+      QBoxPlotSeries *ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QBOXPLOTSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

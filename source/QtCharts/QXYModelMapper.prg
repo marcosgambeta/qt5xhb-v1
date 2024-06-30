@@ -36,7 +36,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QXYModelMapper>
 #endif
 #endif
@@ -48,7 +48,7 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QXYModelMapper>
 #endif
 #endif
@@ -56,6 +56,6 @@ RETURN
 #include <QtCore/QAbstractItemModel>
 #include <QtCharts/QXYSeries>
 
-using namespace QtCharts;
+    using namespace QtCharts;
 
 #pragma ENDDUMP

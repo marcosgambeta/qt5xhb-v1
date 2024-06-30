@@ -59,7 +59,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QVBarModelMapper>
 #endif
 #endif
@@ -71,7 +71,7 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QVBarModelMapper>
 #endif
 #endif
@@ -79,17 +79,17 @@ RETURN
 #include <QtCharts/QAbstractBarSeries>
 #include <QtCore/QAbstractItemModel>
 
-using namespace QtCharts;
+    using namespace QtCharts;
 
 /*
 QVBarModelMapper( QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_NEW )
+HB_FUNC_STATIC(QVBARMODELMAPPER_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QVBarModelMapper * obj = new QVBarModelMapper( OPQOBJECT(1,nullptr) );
+    QVBarModelMapper *obj = new QVBarModelMapper(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -102,18 +102,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_NEW )
 /*
 QAbstractBarSeries * series() const
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_SERIES )
+HB_FUNC_STATIC(QVBARMODELMAPPER_SERIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAbstractBarSeries * ptr = obj->series();
+      QAbstractBarSeries *ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTBARSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -129,18 +129,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SERIES )
 /*
 void setSeries( QAbstractBarSeries * series )
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_SETSERIES )
+HB_FUNC_STATIC(QVBARMODELMAPPER_SETSERIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTBARSERIES(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTBARSERIES(1))
     {
 #endif
-      obj->setSeries( PQABSTRACTBARSERIES(1) );
+      obj->setSeries(PQABSTRACTBARSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,18 +157,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETSERIES )
 /*
 QAbstractItemModel * model() const
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_MODEL )
+HB_FUNC_STATIC(QVBARMODELMAPPER_MODEL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAbstractItemModel * ptr = obj->model();
+      QAbstractItemModel *ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -184,18 +184,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_MODEL )
 /*
 void setModel( QAbstractItemModel * model )
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_SETMODEL )
+HB_FUNC_STATIC(QVBARMODELMAPPER_SETMODEL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
 #endif
-      obj->setModel( PQABSTRACTITEMMODEL(1) );
+      obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,18 +212,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETMODEL )
 /*
 int firstBarSetColumn() const
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_FIRSTBARSETCOLUMN )
+HB_FUNC_STATIC(QVBARMODELMAPPER_FIRSTBARSETCOLUMN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->firstBarSetColumn() );
+      RINT(obj->firstBarSetColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,18 +238,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_FIRSTBARSETCOLUMN )
 /*
 void setFirstBarSetColumn( int firstBarSetColumn )
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_SETFIRSTBARSETCOLUMN )
+HB_FUNC_STATIC(QVBARMODELMAPPER_SETFIRSTBARSETCOLUMN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFirstBarSetColumn( PINT(1) );
+      obj->setFirstBarSetColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,18 +266,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETFIRSTBARSETCOLUMN )
 /*
 int lastBarSetColumn() const
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_LASTBARSETCOLUMN )
+HB_FUNC_STATIC(QVBARMODELMAPPER_LASTBARSETCOLUMN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lastBarSetColumn() );
+      RINT(obj->lastBarSetColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,18 +292,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_LASTBARSETCOLUMN )
 /*
 void setLastBarSetColumn( int lastBarSetColumn )
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_SETLASTBARSETCOLUMN )
+HB_FUNC_STATIC(QVBARMODELMAPPER_SETLASTBARSETCOLUMN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLastBarSetColumn( PINT(1) );
+      obj->setLastBarSetColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,18 +320,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETLASTBARSETCOLUMN )
 /*
 int firstRow() const
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_FIRSTROW )
+HB_FUNC_STATIC(QVBARMODELMAPPER_FIRSTROW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->firstRow() );
+      RINT(obj->firstRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,18 +346,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_FIRSTROW )
 /*
 void setFirstRow( int firstRow )
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_SETFIRSTROW )
+HB_FUNC_STATIC(QVBARMODELMAPPER_SETFIRSTROW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFirstRow( PINT(1) );
+      obj->setFirstRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,18 +374,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETFIRSTROW )
 /*
 int rowCount() const
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_ROWCOUNT )
+HB_FUNC_STATIC(QVBARMODELMAPPER_ROWCOUNT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->rowCount() );
+      RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,18 +400,18 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ROWCOUNT )
 /*
 void setRowCount( int rowCount )
 */
-HB_FUNC_STATIC( QVBARMODELMAPPER_SETROWCOUNT )
+HB_FUNC_STATIC(QVBARMODELMAPPER_SETROWCOUNT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRowCount( PINT(1) );
+      obj->setRowCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -425,56 +425,56 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETROWCOUNT )
 #endif
 }
 
-void QVBarModelMapperSlots_connect_signal(const QString & signal, const QString & slot);
+void QVBarModelMapperSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED )
+HB_FUNC_STATIC(QVBARMODELMAPPER_ONFIRSTBARSETCOLUMNCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVBarModelMapperSlots_connect_signal("firstBarSetColumnChanged()", "firstBarSetColumnChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QVBARMODELMAPPER_ONFIRSTROWCHANGED )
+HB_FUNC_STATIC(QVBARMODELMAPPER_ONFIRSTROWCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVBarModelMapperSlots_connect_signal("firstRowChanged()", "firstRowChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED )
+HB_FUNC_STATIC(QVBARMODELMAPPER_ONLASTBARSETCOLUMNCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVBarModelMapperSlots_connect_signal("lastBarSetColumnChanged()", "lastBarSetColumnChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QVBARMODELMAPPER_ONMODELREPLACED )
+HB_FUNC_STATIC(QVBARMODELMAPPER_ONMODELREPLACED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVBarModelMapperSlots_connect_signal("modelReplaced()", "modelReplaced()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QVBARMODELMAPPER_ONROWCOUNTCHANGED )
+HB_FUNC_STATIC(QVBARMODELMAPPER_ONROWCOUNTCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVBarModelMapperSlots_connect_signal("rowCountChanged()", "rowCountChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QVBARMODELMAPPER_ONSERIESREPLACED )
+HB_FUNC_STATIC(QVBARMODELMAPPER_ONSERIESREPLACED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVBarModelMapperSlots_connect_signal("seriesReplaced()", "seriesReplaced()");
 #else
   hb_retl(false);

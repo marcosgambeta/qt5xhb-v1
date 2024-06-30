@@ -63,7 +63,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QBoxSet>
 #endif
 #endif
@@ -75,32 +75,35 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QBoxSet>
 #endif
 #endif
 
-using namespace QtCharts;
+    using namespace QtCharts;
 
-HB_FUNC_STATIC( QBOXSET_NEW )
+HB_FUNC_STATIC(QBOXSET_NEW)
 {
-  if( ISBETWEEN(0,2) && (HB_ISCHAR(1)||HB_ISNIL(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    QBoxSet * obj = new QBoxSet( OPQSTRING(1,QString()), OPQOBJECT(2,Q_NULLPTR) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+    QBoxSet *obj = new QBoxSet(OPQSTRING(1, QString()), OPQOBJECT(2, Q_NULLPTR));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if( ISBETWEEN(5,7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (HB_ISCHAR(6)||HB_ISNIL(6)) && (ISQOBJECT(7)||HB_ISNIL(7)) )
+  else if (ISBETWEEN(5, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
+           (HB_ISCHAR(6) || HB_ISNIL(6)) && (ISQOBJECT(7) || HB_ISNIL(7)))
   {
     /*
-    explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
+    explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label
+    = QString(), QObject *parent = Q_NULLPTR)
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    QBoxSet * obj = new QBoxSet( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,Q_NULLPTR) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+    QBoxSet *obj = new QBoxSet(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6, QString()),
+                               OPQOBJECT(7, Q_NULLPTR));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
@@ -113,12 +116,12 @@ HB_FUNC_STATIC( QBOXSET_NEW )
 /*
 virtual ~QBoxSet()
 */
-HB_FUNC_STATIC( QBOXSET_DELETE )
+HB_FUNC_STATIC(QBOXSET_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -136,18 +139,18 @@ HB_FUNC_STATIC( QBOXSET_DELETE )
 /*
 QPen pen() const
 */
-HB_FUNC_STATIC( QBOXSET_PEN )
+HB_FUNC_STATIC(QBOXSET_PEN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPen * ptr = new QPen( obj->pen() );
+      QPen *ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -163,18 +166,18 @@ HB_FUNC_STATIC( QBOXSET_PEN )
 /*
 void setPen(const QPen &pen)
 */
-HB_FUNC_STATIC( QBOXSET_SETPEN )
+HB_FUNC_STATIC(QBOXSET_SETPEN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPEN(1) )
+    if (ISNUMPAR(1) && ISQPEN(1))
     {
 #endif
-      obj->setPen( *PQPEN(1) );
+      obj->setPen(*PQPEN(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,18 +194,18 @@ HB_FUNC_STATIC( QBOXSET_SETPEN )
 /*
 QBrush brush() const
 */
-HB_FUNC_STATIC( QBOXSET_BRUSH )
+HB_FUNC_STATIC(QBOXSET_BRUSH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush() );
+      QBrush *ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -218,18 +221,18 @@ HB_FUNC_STATIC( QBOXSET_BRUSH )
 /*
 void setBrush(const QBrush &brush)
 */
-HB_FUNC_STATIC( QBOXSET_SETBRUSH )
+HB_FUNC_STATIC(QBOXSET_SETBRUSH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBrush( *PQBRUSH(1) );
+      obj->setBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,46 +246,46 @@ HB_FUNC_STATIC( QBOXSET_SETBRUSH )
 #endif
 }
 
-HB_FUNC_STATIC( QBOXSET_APPEND )
+HB_FUNC_STATIC(QBOXSET_APPEND)
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void append(const qreal value)
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+    QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->append( PQREAL(1) );
+      obj->append(PQREAL(1));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
 #endif
   }
-  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
     void append(const QList<qreal> &values)
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-    QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+    QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
       QList<qreal> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for( int i1 = 0; i1 < nLen1; i1++ )
+      for (int i1 = 0; i1 < nLen1; i1++)
       {
-        temp1 = hb_arrayGetND(aList1, i1+1);
+        temp1 = hb_arrayGetND(aList1, i1 + 1);
         par1 << temp1;
       }
-      obj->append( par1 );
+      obj->append(par1);
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
 #endif
   }
@@ -295,15 +298,15 @@ HB_FUNC_STATIC( QBOXSET_APPEND )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QBOXSET_CLEAR )
+HB_FUNC_STATIC(QBOXSET_CLEAR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -323,18 +326,18 @@ HB_FUNC_STATIC( QBOXSET_CLEAR )
 /*
 void setLabel(const QString label)
 */
-HB_FUNC_STATIC( QBOXSET_SETLABEL )
+HB_FUNC_STATIC(QBOXSET_SETLABEL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setLabel( PQSTRING(1) );
+      obj->setLabel(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,18 +354,18 @@ HB_FUNC_STATIC( QBOXSET_SETLABEL )
 /*
 QString label() const
 */
-HB_FUNC_STATIC( QBOXSET_LABEL )
+HB_FUNC_STATIC(QBOXSET_LABEL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->label() );
+      RQSTRING(obj->label());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,18 +380,18 @@ HB_FUNC_STATIC( QBOXSET_LABEL )
 /*
 void setValue(const int index, const qreal value)
 */
-HB_FUNC_STATIC( QBOXSET_SETVALUE )
+HB_FUNC_STATIC(QBOXSET_SETVALUE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setValue( PINT(1), PQREAL(2) );
+      obj->setValue(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,18 +408,18 @@ HB_FUNC_STATIC( QBOXSET_SETVALUE )
 /*
 qreal at(const int index) const
 */
-HB_FUNC_STATIC( QBOXSET_AT )
+HB_FUNC_STATIC(QBOXSET_AT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQREAL( obj->at( PINT(1) ) );
+      RQREAL(obj->at(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,18 +434,18 @@ HB_FUNC_STATIC( QBOXSET_AT )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QBOXSET_COUNT )
+HB_FUNC_STATIC(QBOXSET_COUNT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,92 +457,92 @@ HB_FUNC_STATIC( QBOXSET_COUNT )
 #endif
 }
 
-void QBoxSetSlots_connect_signal(const QString & signal, const QString & slot);
+void QBoxSetSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QBOXSET_ONBRUSHCHANGED )
+HB_FUNC_STATIC(QBOXSET_ONBRUSHCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBoxSetSlots_connect_signal("brushChanged()", "brushChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QBOXSET_ONCLEARED )
+HB_FUNC_STATIC(QBOXSET_ONCLEARED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBoxSetSlots_connect_signal("cleared()", "cleared()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QBOXSET_ONCLICKED )
+HB_FUNC_STATIC(QBOXSET_ONCLICKED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBoxSetSlots_connect_signal("clicked()", "clicked()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QBOXSET_ONDOUBLECLICKED )
+HB_FUNC_STATIC(QBOXSET_ONDOUBLECLICKED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBoxSetSlots_connect_signal("doubleClicked()", "doubleClicked()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QBOXSET_ONHOVERED )
+HB_FUNC_STATIC(QBOXSET_ONHOVERED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBoxSetSlots_connect_signal("hovered(bool)", "hovered(bool)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QBOXSET_ONPENCHANGED )
+HB_FUNC_STATIC(QBOXSET_ONPENCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBoxSetSlots_connect_signal("penChanged()", "penChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QBOXSET_ONPRESSED )
+HB_FUNC_STATIC(QBOXSET_ONPRESSED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBoxSetSlots_connect_signal("pressed()", "pressed()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QBOXSET_ONRELEASED )
+HB_FUNC_STATIC(QBOXSET_ONRELEASED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBoxSetSlots_connect_signal("released()", "released()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QBOXSET_ONVALUECHANGED )
+HB_FUNC_STATIC(QBOXSET_ONVALUECHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBoxSetSlots_connect_signal("valueChanged(int)", "valueChanged(int)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QBOXSET_ONVALUESCHANGED )
+HB_FUNC_STATIC(QBOXSET_ONVALUESCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBoxSetSlots_connect_signal("valuesChanged()", "valuesChanged()");
 #else
   hb_retl(false);

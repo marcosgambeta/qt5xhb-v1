@@ -59,7 +59,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QVPieModelMapper>
 #endif
 #endif
@@ -71,7 +71,7 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QVPieModelMapper>
 #endif
 #endif
@@ -79,17 +79,17 @@ RETURN
 #include <QtCharts/QPieSeries>
 #include <QtCore/QAbstractItemModel>
 
-using namespace QtCharts;
+    using namespace QtCharts;
 
 /*
 QVPieModelMapper( QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_NEW )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QVPieModelMapper * obj = new QVPieModelMapper( OPQOBJECT(1,nullptr) );
+    QVPieModelMapper *obj = new QVPieModelMapper(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -102,18 +102,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_NEW )
 /*
 QPieSeries * series() const
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_SERIES )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_SERIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPieSeries * ptr = obj->series();
+      QPieSeries *ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QPIESERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -129,18 +129,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SERIES )
 /*
 void setSeries( QPieSeries * series )
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_SETSERIES )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_SETSERIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPIESERIES(1) )
+    if (ISNUMPAR(1) && ISQPIESERIES(1))
     {
 #endif
-      obj->setSeries( PQPIESERIES(1) );
+      obj->setSeries(PQPIESERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,18 +157,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SETSERIES )
 /*
 QAbstractItemModel * model() const
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_MODEL )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_MODEL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAbstractItemModel * ptr = obj->model();
+      QAbstractItemModel *ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -184,18 +184,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_MODEL )
 /*
 void setModel( QAbstractItemModel * model )
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_SETMODEL )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_SETMODEL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
 #endif
-      obj->setModel( PQABSTRACTITEMMODEL(1) );
+      obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,18 +212,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SETMODEL )
 /*
 int valuesColumn() const
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_VALUESCOLUMN )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_VALUESCOLUMN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->valuesColumn() );
+      RINT(obj->valuesColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,18 +238,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_VALUESCOLUMN )
 /*
 void setValuesColumn( int valuesColumn )
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_SETVALUESCOLUMN )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_SETVALUESCOLUMN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setValuesColumn( PINT(1) );
+      obj->setValuesColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,18 +266,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SETVALUESCOLUMN )
 /*
 int labelsColumn() const
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_LABELSCOLUMN )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_LABELSCOLUMN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->labelsColumn() );
+      RINT(obj->labelsColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,18 +292,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_LABELSCOLUMN )
 /*
 void setLabelsColumn( int labelsColumn )
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_SETLABELSCOLUMN )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_SETLABELSCOLUMN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLabelsColumn( PINT(1) );
+      obj->setLabelsColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,18 +320,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SETLABELSCOLUMN )
 /*
 int firstRow() const
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_FIRSTROW )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_FIRSTROW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->firstRow() );
+      RINT(obj->firstRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,18 +346,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_FIRSTROW )
 /*
 void setFirstRow( int firstRow )
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_SETFIRSTROW )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_SETFIRSTROW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFirstRow( PINT(1) );
+      obj->setFirstRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,18 +374,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SETFIRSTROW )
 /*
 int rowCount() const
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_ROWCOUNT )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_ROWCOUNT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->rowCount() );
+      RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,18 +400,18 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_ROWCOUNT )
 /*
 void setRowCount( int rowCount )
 */
-HB_FUNC_STATIC( QVPIEMODELMAPPER_SETROWCOUNT )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_SETROWCOUNT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QVPieModelMapper *obj = (QVPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRowCount( PINT(1) );
+      obj->setRowCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -425,56 +425,56 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SETROWCOUNT )
 #endif
 }
 
-void QVPieModelMapperSlots_connect_signal(const QString & signal, const QString & slot);
+void QVPieModelMapperSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QVPIEMODELMAPPER_ONFIRSTROWCHANGED )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_ONFIRSTROWCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVPieModelMapperSlots_connect_signal("firstRowChanged()", "firstRowChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QVPIEMODELMAPPER_ONLABELSCOLUMNCHANGED )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_ONLABELSCOLUMNCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVPieModelMapperSlots_connect_signal("labelsColumnChanged()", "labelsColumnChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QVPIEMODELMAPPER_ONMODELREPLACED )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_ONMODELREPLACED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVPieModelMapperSlots_connect_signal("modelReplaced()", "modelReplaced()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QVPIEMODELMAPPER_ONROWCOUNTCHANGED )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_ONROWCOUNTCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVPieModelMapperSlots_connect_signal("rowCountChanged()", "rowCountChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QVPIEMODELMAPPER_ONSERIESREPLACED )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_ONSERIESREPLACED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVPieModelMapperSlots_connect_signal("seriesReplaced()", "seriesReplaced()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QVPIEMODELMAPPER_ONVALUESCOLUMNCHANGED )
+HB_FUNC_STATIC(QVPIEMODELMAPPER_ONVALUESCOLUMNCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVPieModelMapperSlots_connect_signal("valuesColumnChanged()", "valuesColumnChanged()");
 #else
   hb_retl(false);

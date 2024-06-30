@@ -40,7 +40,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QBarSeries>
 #endif
 #endif
@@ -52,22 +52,22 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QBarSeries>
 #endif
 #endif
 
-using namespace QtCharts;
+    using namespace QtCharts;
 
 /*
 QBarSeries( QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( QBARSERIES_NEW )
+HB_FUNC_STATIC(QBARSERIES_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QBarSeries * obj = new QBarSeries( OPQOBJECT(1,nullptr) );
+    QBarSeries *obj = new QBarSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -80,12 +80,12 @@ HB_FUNC_STATIC( QBARSERIES_NEW )
 /*
 ~QBarSeries()
 */
-HB_FUNC_STATIC( QBARSERIES_DELETE )
+HB_FUNC_STATIC(QBARSERIES_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSeries * obj = (QBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBarSeries *obj = (QBarSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -103,18 +103,18 @@ HB_FUNC_STATIC( QBARSERIES_DELETE )
 /*
 QAbstractSeries::SeriesType type() const
 */
-HB_FUNC_STATIC( QBARSERIES_TYPE )
+HB_FUNC_STATIC(QBARSERIES_TYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSeries * obj = (QBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QBarSeries *obj = (QBarSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

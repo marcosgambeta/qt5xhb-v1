@@ -53,7 +53,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QCategoryAxis>
 #endif
 #endif
@@ -65,22 +65,22 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QCategoryAxis>
 #endif
 #endif
 
-using namespace QtCharts;
+    using namespace QtCharts;
 
 /*
 QCategoryAxis( QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_NEW )
+HB_FUNC_STATIC(QCATEGORYAXIS_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QCategoryAxis * obj = new QCategoryAxis( OPQOBJECT(1,nullptr) );
+    QCategoryAxis *obj = new QCategoryAxis(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -93,12 +93,12 @@ HB_FUNC_STATIC( QCATEGORYAXIS_NEW )
 /*
 ~QCategoryAxis()
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_DELETE )
+HB_FUNC_STATIC(QCATEGORYAXIS_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -116,18 +116,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_DELETE )
 /*
 qreal startValue( const QString & categoryLabel = QString() ) const
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
+HB_FUNC_STATIC(QCATEGORYAXIS_STARTVALUE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
     {
 #endif
-      RQREAL( obj->startValue( OPQSTRING(1,QString()) ) );
+      RQREAL(obj->startValue(OPQSTRING(1, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,18 +142,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
 /*
 void setStartValue( qreal min )
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_SETSTARTVALUE )
+HB_FUNC_STATIC(QCATEGORYAXIS_SETSTARTVALUE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setStartValue( PQREAL(1) );
+      obj->setStartValue(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,18 +170,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_SETSTARTVALUE )
 /*
 QStringList categoriesLabels()
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_CATEGORIESLABELS )
+HB_FUNC_STATIC(QCATEGORYAXIS_CATEGORIESLABELS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->categoriesLabels() );
+      RQSTRINGLIST(obj->categoriesLabels());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,18 +196,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_CATEGORIESLABELS )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_COUNT )
+HB_FUNC_STATIC(QCATEGORYAXIS_COUNT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,18 +222,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_COUNT )
 /*
 QCategoryAxis::AxisLabelsPosition labelsPosition() const
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_LABELSPOSITION )
+HB_FUNC_STATIC(QCATEGORYAXIS_LABELSPOSITION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->labelsPosition() );
+      RENUM(obj->labelsPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,18 +248,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_LABELSPOSITION )
 /*
 void setLabelsPosition( QCategoryAxis::AxisLabelsPosition position )
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_SETLABELSPOSITION )
+HB_FUNC_STATIC(QCATEGORYAXIS_SETLABELSPOSITION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLabelsPosition( (QCategoryAxis::AxisLabelsPosition) hb_parni(1) );
+      obj->setLabelsPosition((QCategoryAxis::AxisLabelsPosition)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,18 +276,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_SETLABELSPOSITION )
 /*
 QAbstractAxis::AxisType type() const
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_TYPE )
+HB_FUNC_STATIC(QCATEGORYAXIS_TYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,18 +302,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_TYPE )
 /*
 void append( const QString & label, qreal categoryEndValue )
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_APPEND )
+HB_FUNC_STATIC(QCATEGORYAXIS_APPEND)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      obj->append( PQSTRING(1), PQREAL(2) );
+      obj->append(PQSTRING(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,18 +330,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_APPEND )
 /*
 void remove( const QString & label )
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_REMOVE )
+HB_FUNC_STATIC(QCATEGORYAXIS_REMOVE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->remove( PQSTRING(1) );
+      obj->remove(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,18 +358,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_REMOVE )
 /*
 void replaceLabel( const QString & oldLabel, const QString & newLabel )
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_REPLACELABEL )
+HB_FUNC_STATIC(QCATEGORYAXIS_REPLACELABEL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->replaceLabel( PQSTRING(1), PQSTRING(2) );
+      obj->replaceLabel(PQSTRING(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,18 +386,18 @@ HB_FUNC_STATIC( QCATEGORYAXIS_REPLACELABEL )
 /*
 qreal endValue( const QString & categoryLabel ) const
 */
-HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
+HB_FUNC_STATIC(QCATEGORYAXIS_ENDVALUE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQREAL( obj->endValue( PQSTRING(1) ) );
+      RQREAL(obj->endValue(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,21 +409,22 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
 #endif
 }
 
-void QCategoryAxisSlots_connect_signal(const QString & signal, const QString & slot);
+void QCategoryAxisSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
+HB_FUNC_STATIC(QCATEGORYAXIS_ONCATEGORIESCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QCategoryAxisSlots_connect_signal("categoriesChanged()", "categoriesChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
+HB_FUNC_STATIC(QCATEGORYAXIS_ONLABELSPOSITIONCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxisSlots_connect_signal("labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)", "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QCategoryAxisSlots_connect_signal("labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)",
+                                    "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)");
 #else
   hb_retl(false);
 #endif

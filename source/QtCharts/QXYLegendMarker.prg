@@ -42,7 +42,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QXYLegendMarker>
 #endif
 #endif
@@ -54,22 +54,22 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QXYLegendMarker>
 #endif
 #endif
 
-using namespace QtCharts;
+    using namespace QtCharts;
 
 /*
 QXYLegendMarker( QXYSeries * series, QLegend * legend, QObject * parent = nullptr )
 */
-HB_FUNC_STATIC( QXYLEGENDMARKER_NEW )
+HB_FUNC_STATIC(QXYLEGENDMARKER_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(2,3) && ISQXYSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  if (ISBETWEEN(2, 3) && ISQXYSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    QXYLegendMarker * obj = new QXYLegendMarker( PQXYSERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
+    QXYLegendMarker *obj = new QXYLegendMarker(PQXYSERIES(1), PQLEGEND(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -82,12 +82,12 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_NEW )
 /*
 virtual ~QXYLegendMarker()
 */
-HB_FUNC_STATIC( QXYLEGENDMARKER_DELETE )
+HB_FUNC_STATIC(QXYLEGENDMARKER_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYLegendMarker * obj = (QXYLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QXYLegendMarker *obj = (QXYLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -105,18 +105,18 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_DELETE )
 /*
 virtual QLegendMarker::LegendMarkerType type()
 */
-HB_FUNC_STATIC( QXYLEGENDMARKER_TYPE )
+HB_FUNC_STATIC(QXYLEGENDMARKER_TYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYLegendMarker * obj = (QXYLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QXYLegendMarker *obj = (QXYLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,18 +131,18 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_TYPE )
 /*
 virtual QXYSeries * series()
 */
-HB_FUNC_STATIC( QXYLEGENDMARKER_SERIES )
+HB_FUNC_STATIC(QXYLEGENDMARKER_SERIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYLegendMarker * obj = (QXYLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QXYLegendMarker *obj = (QXYLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QXYSeries * ptr = obj->series();
+      QXYSeries *ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QXYSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -41,7 +41,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QPolarChart>
 #endif
 #endif
@@ -53,22 +53,23 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtCharts/QPolarChart>
 #endif
 #endif
 
-using namespace QtCharts;
+    using namespace QtCharts;
 
 /*
 QPolarChart( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags() )
 */
-HB_FUNC_STATIC( QPOLARCHART_NEW )
+HB_FUNC_STATIC(QPOLARCHART_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  if (ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    QPolarChart * obj = new QPolarChart( HB_ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
+    QPolarChart *obj = new QPolarChart(HB_ISNIL(1) ? nullptr : (QGraphicsItem *)Qt5xHb::itemGetPtr(1),
+                                       HB_ISNIL(2) ? (Qt::WindowFlags)Qt::WindowFlags() : (Qt::WindowFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -81,12 +82,12 @@ HB_FUNC_STATIC( QPOLARCHART_NEW )
 /*
 ~QPolarChart()
 */
-HB_FUNC_STATIC( QPOLARCHART_DELETE )
+HB_FUNC_STATIC(QPOLARCHART_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPolarChart * obj = (QPolarChart *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPolarChart *obj = (QPolarChart *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -104,18 +105,18 @@ HB_FUNC_STATIC( QPOLARCHART_DELETE )
 /*
 void addAxis( QAbstractAxis * axis, QPolarChart::PolarOrientation polarOrientation )
 */
-HB_FUNC_STATIC( QPOLARCHART_ADDAXIS )
+HB_FUNC_STATIC(QPOLARCHART_ADDAXIS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPolarChart * obj = (QPolarChart *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+  QPolarChart *obj = (QPolarChart *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQABSTRACTAXIS(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && ISQABSTRACTAXIS(1) && HB_ISNUM(2))
     {
 #endif
-      obj->addAxis( PQABSTRACTAXIS(1), (QPolarChart::PolarOrientation) hb_parni(2) );
+      obj->addAxis(PQABSTRACTAXIS(1), (QPolarChart::PolarOrientation)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,14 +133,14 @@ HB_FUNC_STATIC( QPOLARCHART_ADDAXIS )
 /*
 static QPolarChart::PolarOrientation axisPolarOrientation( QAbstractAxis * axis )
 */
-HB_FUNC_STATIC( QPOLARCHART_AXISPOLARORIENTATION )
+HB_FUNC_STATIC(QPOLARCHART_AXISPOLARORIENTATION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQABSTRACTAXIS(1) )
+  if (ISNUMPAR(1) && ISQABSTRACTAXIS(1))
   {
 #endif
-    RENUM( QPolarChart::axisPolarOrientation( PQABSTRACTAXIS(1) ) );
+    RENUM(QPolarChart::axisPolarOrientation(PQABSTRACTAXIS(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
