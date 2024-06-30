@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -34,6 +36,8 @@ PROCEDURE destroyObject() CLASS HUiLoader
       ::delete()
    ENDIF
 RETURN
+
+// clang-format on
 
 #pragma BEGINDUMP
 
