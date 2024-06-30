@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 CLASS HStyledItemDelegate INHERIT QStyledItemDelegate
@@ -34,6 +36,8 @@ PROCEDURE destroyObject() CLASS HStyledItemDelegate
       ::delete()
    ENDIF
 RETURN
+
+// clang-format on
 
 #pragma BEGINDUMP
 
