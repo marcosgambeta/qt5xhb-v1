@@ -60,11 +60,11 @@ RETURN
 #include <QtGui/QAbstractUndoItem>
 #endif
 
-HB_FUNC_STATIC( QABSTRACTUNDOITEM_DELETE )
+HB_FUNC_STATIC(QABSTRACTUNDOITEM_DELETE)
 {
-  QAbstractUndoItem * obj = (QAbstractUndoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractUndoItem *obj = (QAbstractUndoItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -79,14 +79,14 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_DELETE )
 /*
 virtual void undo() = 0
 */
-HB_FUNC_STATIC( QABSTRACTUNDOITEM_UNDO )
+HB_FUNC_STATIC(QABSTRACTUNDOITEM_UNDO)
 {
-  QAbstractUndoItem * obj = (QAbstractUndoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractUndoItem *obj = (QAbstractUndoItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->undo();
@@ -105,14 +105,14 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_UNDO )
 /*
 virtual void redo() = 0
 */
-HB_FUNC_STATIC( QABSTRACTUNDOITEM_REDO )
+HB_FUNC_STATIC(QABSTRACTUNDOITEM_REDO)
 {
-  QAbstractUndoItem * obj = (QAbstractUndoItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractUndoItem *obj = (QAbstractUndoItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->redo();
@@ -128,11 +128,11 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_REDO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QABSTRACTUNDOITEM_NEWFROM )
+HB_FUNC_STATIC(QABSTRACTUNDOITEM_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -158,26 +158,26 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QABSTRACTUNDOITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QABSTRACTUNDOITEM_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QABSTRACTUNDOITEM_NEWFROM );
+  HB_FUNC_EXEC(QABSTRACTUNDOITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QABSTRACTUNDOITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QABSTRACTUNDOITEM_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QABSTRACTUNDOITEM_NEWFROM );
+  HB_FUNC_EXEC(QABSTRACTUNDOITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QABSTRACTUNDOITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QABSTRACTUNDOITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QABSTRACTUNDOITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QABSTRACTUNDOITEM_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

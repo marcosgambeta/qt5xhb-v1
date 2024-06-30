@@ -49,11 +49,11 @@ RETURN
 #include <QtGui/QAccessibleStateChangeEvent>
 #endif
 
-HB_FUNC_STATIC( QACCESSIBLESTATECHANGEEVENT_DELETE )
+HB_FUNC_STATIC(QACCESSIBLESTATECHANGEEVENT_DELETE)
 {
-  QAccessibleStateChangeEvent * obj = (QAccessibleStateChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleStateChangeEvent *obj = (QAccessibleStateChangeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

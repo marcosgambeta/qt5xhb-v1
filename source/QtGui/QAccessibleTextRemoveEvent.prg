@@ -52,14 +52,14 @@ RETURN
 #include <QtGui/QAccessibleTextRemoveEvent>
 #endif
 
-/*
-QAccessibleTextRemoveEvent( QObject * obj, int position, const QString & text )
-*/
-HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_NEW )
+    /*
+    QAccessibleTextRemoveEvent( QObject * obj, int position, const QString & text )
+    */
+HB_FUNC_STATIC(QACCESSIBLETEXTREMOVEEVENT_NEW)
 {
-  if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) )
+  if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISCHAR(3))
   {
-    QAccessibleTextRemoveEvent * obj = new QAccessibleTextRemoveEvent( PQOBJECT(1), PINT(2), PQSTRING(3) );
+    QAccessibleTextRemoveEvent *obj = new QAccessibleTextRemoveEvent(PQOBJECT(1), PINT(2), PQSTRING(3));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -68,11 +68,11 @@ HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_DELETE )
+HB_FUNC_STATIC(QACCESSIBLETEXTREMOVEEVENT_DELETE)
 {
-  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTextRemoveEvent *obj = (QAccessibleTextRemoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -87,17 +87,17 @@ HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_DELETE )
 /*
 QString textRemoved() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_TEXTREMOVED )
+HB_FUNC_STATIC(QACCESSIBLETEXTREMOVEEVENT_TEXTREMOVED)
 {
-  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTextRemoveEvent *obj = (QAccessibleTextRemoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->textRemoved() );
+      RQSTRING(obj->textRemoved());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,17 +111,17 @@ HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_TEXTREMOVED )
 /*
 int changePosition() const
 */
-HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_CHANGEPOSITION )
+HB_FUNC_STATIC(QACCESSIBLETEXTREMOVEEVENT_CHANGEPOSITION)
 {
-  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTextRemoveEvent *obj = (QAccessibleTextRemoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->changePosition() );
+      RINT(obj->changePosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

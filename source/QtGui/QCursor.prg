@@ -72,46 +72,47 @@ RETURN
 
 #include <QtGui/QPixmap>
 
-HB_FUNC_STATIC( QCURSOR_NEW )
+HB_FUNC_STATIC(QCURSOR_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QCursor()
     */
-    QCursor * obj = new QCursor();
+    QCursor *obj = new QCursor();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QCursor( Qt::CursorShape shape )
     */
-    QCursor * obj = new QCursor( (Qt::CursorShape) hb_parni(1) );
+    QCursor *obj = new QCursor((Qt::CursorShape)hb_parni(1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(2,4) && ISQBITMAP(1) && ISQBITMAP(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
+  else if (ISBETWEEN(2, 4) && ISQBITMAP(1) && ISQBITMAP(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
+           (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
     QCursor( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
     */
-    QCursor * obj = new QCursor( *PQBITMAP(1), *PQBITMAP(2), OPINT(3,-1), OPINT(4,-1) );
+    QCursor *obj = new QCursor(*PQBITMAP(1), *PQBITMAP(2), OPINT(3, -1), OPINT(4, -1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QCursor( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
     */
-    QCursor * obj = new QCursor( *PQPIXMAP(1), OPINT(2,-1), OPINT(3,-1) );
+    QCursor *obj = new QCursor(*PQPIXMAP(1), OPINT(2, -1), OPINT(3, -1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQCURSOR(1) )
+  else if (ISNUMPAR(1) && ISQCURSOR(1))
   {
     /*
     QCursor( const QCursor & c )
     */
-    QCursor * obj = new QCursor( *PQCURSOR(1) );
+    QCursor *obj = new QCursor(*PQCURSOR(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -120,11 +121,11 @@ HB_FUNC_STATIC( QCURSOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCURSOR_DELETE )
+HB_FUNC_STATIC(QCURSOR_DELETE)
 {
-  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCursor *obj = (QCursor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -139,17 +140,17 @@ HB_FUNC_STATIC( QCURSOR_DELETE )
 /*
 const QBitmap * bitmap() const
 */
-HB_FUNC_STATIC( QCURSOR_BITMAP )
+HB_FUNC_STATIC(QCURSOR_BITMAP)
 {
-  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCursor *obj = (QCursor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QBitmap * ptr = obj->bitmap();
+      const QBitmap *ptr = obj->bitmap();
       Qt5xHb::createReturnClass(ptr, "QBITMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -164,17 +165,17 @@ HB_FUNC_STATIC( QCURSOR_BITMAP )
 /*
 QPoint hotSpot() const
 */
-HB_FUNC_STATIC( QCURSOR_HOTSPOT )
+HB_FUNC_STATIC(QCURSOR_HOTSPOT)
 {
-  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCursor *obj = (QCursor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPoint * ptr = new QPoint( obj->hotSpot() );
+      QPoint *ptr = new QPoint(obj->hotSpot());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -189,17 +190,17 @@ HB_FUNC_STATIC( QCURSOR_HOTSPOT )
 /*
 const QBitmap * mask() const
 */
-HB_FUNC_STATIC( QCURSOR_MASK )
+HB_FUNC_STATIC(QCURSOR_MASK)
 {
-  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCursor *obj = (QCursor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QBitmap * ptr = obj->mask();
+      const QBitmap *ptr = obj->mask();
       Qt5xHb::createReturnClass(ptr, "QBITMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -214,17 +215,17 @@ HB_FUNC_STATIC( QCURSOR_MASK )
 /*
 QPixmap pixmap() const
 */
-HB_FUNC_STATIC( QCURSOR_PIXMAP )
+HB_FUNC_STATIC(QCURSOR_PIXMAP)
 {
-  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCursor *obj = (QCursor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap() );
+      QPixmap *ptr = new QPixmap(obj->pixmap());
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -239,17 +240,17 @@ HB_FUNC_STATIC( QCURSOR_PIXMAP )
 /*
 void setShape( Qt::CursorShape shape )
 */
-HB_FUNC_STATIC( QCURSOR_SETSHAPE )
+HB_FUNC_STATIC(QCURSOR_SETSHAPE)
 {
-  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCursor *obj = (QCursor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setShape( (Qt::CursorShape) hb_parni(1) );
+      obj->setShape((Qt::CursorShape)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,17 +266,17 @@ HB_FUNC_STATIC( QCURSOR_SETSHAPE )
 /*
 Qt::CursorShape shape() const
 */
-HB_FUNC_STATIC( QCURSOR_SHAPE )
+HB_FUNC_STATIC(QCURSOR_SHAPE)
 {
-  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCursor *obj = (QCursor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->shape() );
+      RENUM(obj->shape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,13 +290,13 @@ HB_FUNC_STATIC( QCURSOR_SHAPE )
 /*
 static QPoint pos()
 */
-HB_FUNC_STATIC( QCURSOR_POS )
+HB_FUNC_STATIC(QCURSOR_POS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    QPoint * ptr = new QPoint( QCursor::pos() );
+    QPoint *ptr = new QPoint(QCursor::pos());
     Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -306,24 +307,24 @@ HB_FUNC_STATIC( QCURSOR_POS )
 #endif
 }
 
-HB_FUNC_STATIC( QCURSOR_SETPOS )
+HB_FUNC_STATIC(QCURSOR_SETPOS)
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     static void setPos( int x, int y )
     */
-    QCursor::setPos( PINT(1), PINT(2) );
-  
+    QCursor::setPos(PINT(1), PINT(2));
+
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     static void setPos( const QPoint & p )
     */
-    QCursor::setPos( *PQPOINT(1) );
-  
+    QCursor::setPos(*PQPOINT(1));
+
     hb_itemReturn(hb_stackSelfItem());
   }
   else
@@ -332,11 +333,11 @@ HB_FUNC_STATIC( QCURSOR_SETPOS )
   }
 }
 
-HB_FUNC_STATIC( QCURSOR_NEWFROM )
+HB_FUNC_STATIC(QCURSOR_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -345,7 +346,7 @@ HB_FUNC_STATIC( QCURSOR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -362,26 +363,26 @@ HB_FUNC_STATIC( QCURSOR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QCURSOR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QCURSOR_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QCURSOR_NEWFROM );
+  HB_FUNC_EXEC(QCURSOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QCURSOR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QCURSOR_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QCURSOR_NEWFROM );
+  HB_FUNC_EXEC(QCURSOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QCURSOR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QCURSOR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QCURSOR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QCURSOR_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

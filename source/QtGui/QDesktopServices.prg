@@ -61,11 +61,11 @@ RETURN
 #include <QtGui/QDesktopServices>
 #endif
 
-HB_FUNC_STATIC( QDESKTOPSERVICES_DELETE )
+HB_FUNC_STATIC(QDESKTOPSERVICES_DELETE)
 {
-  QDesktopServices * obj = (QDesktopServices *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesktopServices *obj = (QDesktopServices *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -80,13 +80,13 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_DELETE )
 /*
 static bool openUrl( const QUrl & url )
 */
-HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
+HB_FUNC_STATIC(QDESKTOPSERVICES_OPENURL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQURL(1) )
+  if (ISNUMPAR(1) && ISQURL(1))
   {
 #endif
-    RBOOL( QDesktopServices::openUrl( *PQURL(1) ) );
+    RBOOL(QDesktopServices::openUrl(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -99,13 +99,13 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
 /*
 static void setUrlHandler( const QString & scheme, QObject * receiver, const char * method )
 */
-HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
+HB_FUNC_STATIC(QDESKTOPSERVICES_SETURLHANDLER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3) )
+  if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3))
   {
 #endif
-    QDesktopServices::setUrlHandler( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
+    QDesktopServices::setUrlHandler(PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -120,13 +120,13 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
 /*
 static void unsetUrlHandler( const QString & scheme )
 */
-HB_FUNC_STATIC( QDESKTOPSERVICES_UNSETURLHANDLER )
+HB_FUNC_STATIC(QDESKTOPSERVICES_UNSETURLHANDLER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    QDesktopServices::unsetUrlHandler( PQSTRING(1) );
+    QDesktopServices::unsetUrlHandler(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -138,11 +138,11 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_UNSETURLHANDLER )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDESKTOPSERVICES_NEWFROM )
+HB_FUNC_STATIC(QDESKTOPSERVICES_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -168,26 +168,26 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDESKTOPSERVICES_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDESKTOPSERVICES_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QDESKTOPSERVICES_NEWFROM );
+  HB_FUNC_EXEC(QDESKTOPSERVICES_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESKTOPSERVICES_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDESKTOPSERVICES_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QDESKTOPSERVICES_NEWFROM );
+  HB_FUNC_EXEC(QDESKTOPSERVICES_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESKTOPSERVICES_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDESKTOPSERVICES_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDESKTOPSERVICES_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDESKTOPSERVICES_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

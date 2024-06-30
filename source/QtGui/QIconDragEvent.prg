@@ -50,14 +50,14 @@ RETURN
 #include <QtGui/QIconDragEvent>
 #endif
 
-/*
-QIconDragEvent()
-*/
-HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
+    /*
+    QIconDragEvent()
+    */
+HB_FUNC_STATIC(QICONDRAGEVENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QIconDragEvent * obj = new QIconDragEvent();
+    QIconDragEvent *obj = new QIconDragEvent();
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -66,11 +66,11 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QICONDRAGEVENT_DELETE )
+HB_FUNC_STATIC(QICONDRAGEVENT_DELETE)
 {
-  QIconDragEvent * obj = (QIconDragEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIconDragEvent *obj = (QIconDragEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

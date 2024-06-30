@@ -83,38 +83,38 @@ RETURN
 #include <QtGui/QQuaternion>
 #endif
 
-HB_FUNC_STATIC( QQUATERNION_NEW )
+HB_FUNC_STATIC(QQUATERNION_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QQuaternion()
     */
-    QQuaternion * obj = new QQuaternion();
+    QQuaternion *obj = new QQuaternion();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
     QQuaternion( float scalar, float xpos, float ypos, float zpos )
     */
-    QQuaternion * obj = new QQuaternion( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
+    QQuaternion *obj = new QQuaternion(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISOBJECT(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISOBJECT(2))
   {
     /*
     QQuaternion( float scalar, const QVector3D & vector )
     */
-    QQuaternion * obj = new QQuaternion( PFLOAT(1), *PQVECTOR3D(2) );
+    QQuaternion *obj = new QQuaternion(PFLOAT(1), *PQVECTOR3D(2));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && HB_ISOBJECT(1) )
+  else if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
     /*
     QQuaternion( const QVector4D & vector )
     */
-    QQuaternion * obj = new QQuaternion( *PQVECTOR4D(1) );
+    QQuaternion *obj = new QQuaternion(*PQVECTOR4D(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -123,11 +123,11 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QQUATERNION_DELETE )
+HB_FUNC_STATIC(QQUATERNION_DELETE)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -142,17 +142,17 @@ HB_FUNC_STATIC( QQUATERNION_DELETE )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QQUATERNION_ISNULL )
+HB_FUNC_STATIC(QQUATERNION_ISNULL)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,17 +166,17 @@ HB_FUNC_STATIC( QQUATERNION_ISNULL )
 /*
 bool isIdentity() const
 */
-HB_FUNC_STATIC( QQUATERNION_ISIDENTITY )
+HB_FUNC_STATIC(QQUATERNION_ISIDENTITY)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isIdentity() );
+      RBOOL(obj->isIdentity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,17 +190,17 @@ HB_FUNC_STATIC( QQUATERNION_ISIDENTITY )
 /*
 QVector3D vector() const
 */
-HB_FUNC_STATIC( QQUATERNION_VECTOR )
+HB_FUNC_STATIC(QQUATERNION_VECTOR)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->vector() );
+      QVector3D *ptr = new QVector3D(obj->vector());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -212,34 +212,34 @@ HB_FUNC_STATIC( QQUATERNION_VECTOR )
   }
 }
 
-HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
+HB_FUNC_STATIC(QQUATERNION_SETVECTOR)
 {
-  if( ISNUMPAR(1) && ISQVECTOR3D(1) )
+  if (ISNUMPAR(1) && ISQVECTOR3D(1))
   {
     /*
     void setVector( const QVector3D & vector )
     */
-    QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->setVector( *PQVECTOR3D(1) );
+      obj->setVector(*PQVECTOR3D(1));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
     void setVector( float x, float y, float z )
     */
-    QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->setVector( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
+      obj->setVector(PFLOAT(1), PFLOAT(2), PFLOAT(3));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
   else
@@ -251,17 +251,17 @@ HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
 /*
 float x() const
 */
-HB_FUNC_STATIC( QQUATERNION_X )
+HB_FUNC_STATIC(QQUATERNION_X)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->x() );
+      RFLOAT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,17 +275,17 @@ HB_FUNC_STATIC( QQUATERNION_X )
 /*
 float y() const
 */
-HB_FUNC_STATIC( QQUATERNION_Y )
+HB_FUNC_STATIC(QQUATERNION_Y)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->y() );
+      RFLOAT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,17 +299,17 @@ HB_FUNC_STATIC( QQUATERNION_Y )
 /*
 float z() const
 */
-HB_FUNC_STATIC( QQUATERNION_Z )
+HB_FUNC_STATIC(QQUATERNION_Z)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->z() );
+      RFLOAT(obj->z());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,17 +323,17 @@ HB_FUNC_STATIC( QQUATERNION_Z )
 /*
 float scalar() const
 */
-HB_FUNC_STATIC( QQUATERNION_SCALAR )
+HB_FUNC_STATIC(QQUATERNION_SCALAR)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->scalar() );
+      RFLOAT(obj->scalar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,17 +347,17 @@ HB_FUNC_STATIC( QQUATERNION_SCALAR )
 /*
 void setX( float x )
 */
-HB_FUNC_STATIC( QQUATERNION_SETX )
+HB_FUNC_STATIC(QQUATERNION_SETX)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setX( PFLOAT(1) );
+      obj->setX(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,17 +373,17 @@ HB_FUNC_STATIC( QQUATERNION_SETX )
 /*
 void setY( float y )
 */
-HB_FUNC_STATIC( QQUATERNION_SETY )
+HB_FUNC_STATIC(QQUATERNION_SETY)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setY( PFLOAT(1) );
+      obj->setY(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,17 +399,17 @@ HB_FUNC_STATIC( QQUATERNION_SETY )
 /*
 void setZ( float z )
 */
-HB_FUNC_STATIC( QQUATERNION_SETZ )
+HB_FUNC_STATIC(QQUATERNION_SETZ)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setZ( PFLOAT(1) );
+      obj->setZ(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -425,17 +425,17 @@ HB_FUNC_STATIC( QQUATERNION_SETZ )
 /*
 void setScalar( float scalar )
 */
-HB_FUNC_STATIC( QQUATERNION_SETSCALAR )
+HB_FUNC_STATIC(QQUATERNION_SETSCALAR)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setScalar( PFLOAT(1) );
+      obj->setScalar(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,17 +451,17 @@ HB_FUNC_STATIC( QQUATERNION_SETSCALAR )
 /*
 float length() const
 */
-HB_FUNC_STATIC( QQUATERNION_LENGTH )
+HB_FUNC_STATIC(QQUATERNION_LENGTH)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->length() );
+      RFLOAT(obj->length());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -475,17 +475,17 @@ HB_FUNC_STATIC( QQUATERNION_LENGTH )
 /*
 float lengthSquared() const
 */
-HB_FUNC_STATIC( QQUATERNION_LENGTHSQUARED )
+HB_FUNC_STATIC(QQUATERNION_LENGTHSQUARED)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->lengthSquared() );
+      RFLOAT(obj->lengthSquared());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,17 +499,17 @@ HB_FUNC_STATIC( QQUATERNION_LENGTHSQUARED )
 /*
 QQuaternion normalized() const
 */
-HB_FUNC_STATIC( QQUATERNION_NORMALIZED )
+HB_FUNC_STATIC(QQUATERNION_NORMALIZED)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QQuaternion * ptr = new QQuaternion( obj->normalized() );
+      QQuaternion *ptr = new QQuaternion(obj->normalized());
       Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -524,14 +524,14 @@ HB_FUNC_STATIC( QQUATERNION_NORMALIZED )
 /*
 void normalize()
 */
-HB_FUNC_STATIC( QQUATERNION_NORMALIZE )
+HB_FUNC_STATIC(QQUATERNION_NORMALIZE)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->normalize();
@@ -550,17 +550,17 @@ HB_FUNC_STATIC( QQUATERNION_NORMALIZE )
 /*
 QQuaternion conjugate() const
 */
-HB_FUNC_STATIC( QQUATERNION_CONJUGATE )
+HB_FUNC_STATIC(QQUATERNION_CONJUGATE)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QQuaternion * ptr = new QQuaternion( obj->conjugate() );
+      QQuaternion *ptr = new QQuaternion(obj->conjugate());
       Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -575,17 +575,17 @@ HB_FUNC_STATIC( QQUATERNION_CONJUGATE )
 /*
 QVector3D rotatedVector( const QVector3D & vector ) const
 */
-HB_FUNC_STATIC( QQUATERNION_ROTATEDVECTOR )
+HB_FUNC_STATIC(QQUATERNION_ROTATEDVECTOR)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVECTOR3D(1) )
+    if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->rotatedVector( *PQVECTOR3D(1) ) );
+      QVector3D *ptr = new QVector3D(obj->rotatedVector(*PQVECTOR3D(1)));
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -600,17 +600,17 @@ HB_FUNC_STATIC( QQUATERNION_ROTATEDVECTOR )
 /*
 QVector4D toVector4D() const
 */
-HB_FUNC_STATIC( QQUATERNION_TOVECTOR4D )
+HB_FUNC_STATIC(QQUATERNION_TOVECTOR4D)
 {
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QVector4D * ptr = new QVector4D( obj->toVector4D() );
+      QVector4D *ptr = new QVector4D(obj->toVector4D());
       Qt5xHb::createReturnClass(ptr, "QVECTOR4D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -622,22 +622,22 @@ HB_FUNC_STATIC( QQUATERNION_TOVECTOR4D )
   }
 }
 
-HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE )
+HB_FUNC_STATIC(QQUATERNION_FROMAXISANDANGLE)
 {
-  if( ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2))
   {
     /*
     static QQuaternion fromAxisAndAngle( const QVector3D & axis, float angle )
     */
-    QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2) ) );
+    QQuaternion *ptr = new QQuaternion(QQuaternion::fromAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
     static QQuaternion fromAxisAndAngle( float x, float y, float z, float angle )
     */
-    QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) ) );
+    QQuaternion *ptr = new QQuaternion(QQuaternion::fromAxisAndAngle(PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
   }
   else
@@ -649,13 +649,13 @@ HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE )
 /*
 static QQuaternion slerp( const QQuaternion & q1, const QQuaternion & q2, float t )
 */
-HB_FUNC_STATIC( QQUATERNION_SLERP )
+HB_FUNC_STATIC(QQUATERNION_SLERP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && HB_ISNUM(3))
   {
 #endif
-    QQuaternion * ptr = new QQuaternion( QQuaternion::slerp( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3) ) );
+    QQuaternion *ptr = new QQuaternion(QQuaternion::slerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -669,13 +669,13 @@ HB_FUNC_STATIC( QQUATERNION_SLERP )
 /*
 static QQuaternion nlerp( const QQuaternion & q1, const QQuaternion & q2, float t )
 */
-HB_FUNC_STATIC( QQUATERNION_NLERP )
+HB_FUNC_STATIC(QQUATERNION_NLERP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && HB_ISNUM(3))
   {
 #endif
-    QQuaternion * ptr = new QQuaternion( QQuaternion::nlerp( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3) ) );
+    QQuaternion *ptr = new QQuaternion(QQuaternion::nlerp(*PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -686,11 +686,11 @@ HB_FUNC_STATIC( QQUATERNION_NLERP )
 #endif
 }
 
-HB_FUNC_STATIC( QQUATERNION_NEWFROM )
+HB_FUNC_STATIC(QQUATERNION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QQUATERNION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -716,26 +716,26 @@ HB_FUNC_STATIC( QQUATERNION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QQUATERNION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QQUATERNION_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QQUATERNION_NEWFROM );
+  HB_FUNC_EXEC(QQUATERNION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQUATERNION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QQUATERNION_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QQUATERNION_NEWFROM );
+  HB_FUNC_EXEC(QQUATERNION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QQUATERNION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QQUATERNION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QQUATERNION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QQUATERNION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

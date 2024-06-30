@@ -60,11 +60,11 @@ RETURN
 #include <QtGui/QPagedPaintDevice>
 #endif
 
-HB_FUNC_STATIC( QPAGEDPAINTDEVICE_DELETE )
+HB_FUNC_STATIC(QPAGEDPAINTDEVICE_DELETE)
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPagedPaintDevice *obj = (QPagedPaintDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -79,17 +79,17 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_DELETE )
 /*
 virtual bool newPage() = 0
 */
-HB_FUNC_STATIC( QPAGEDPAINTDEVICE_NEWPAGE )
+HB_FUNC_STATIC(QPAGEDPAINTDEVICE_NEWPAGE)
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPagedPaintDevice *obj = (QPagedPaintDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->newPage() );
+      RBOOL(obj->newPage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -103,17 +103,17 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_NEWPAGE )
 /*
 QPagedPaintDevice::PageSize pageSize() const
 */
-HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZE )
+HB_FUNC_STATIC(QPAGEDPAINTDEVICE_PAGESIZE)
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPagedPaintDevice *obj = (QPagedPaintDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->pageSize() );
+      RENUM(obj->pageSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,18 +127,18 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZE )
 /*
 virtual void setPageSize( QPagedPaintDevice::PageSize size )
 */
-HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZE )
+HB_FUNC_STATIC(QPAGEDPAINTDEVICE_SETPAGESIZE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QPagedPaintDevice *obj = (QPagedPaintDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPageSize( (QPagedPaintDevice::PageSize) hb_parni(1) );
+      obj->setPageSize((QPagedPaintDevice::PageSize)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,17 +155,17 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZE )
 /*
 QSizeF pageSizeMM() const
 */
-HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZEMM )
+HB_FUNC_STATIC(QPAGEDPAINTDEVICE_PAGESIZEMM)
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPagedPaintDevice *obj = (QPagedPaintDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->pageSizeMM() );
+      QSizeF *ptr = new QSizeF(obj->pageSizeMM());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -180,17 +180,17 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZEMM )
 /*
 virtual void setPageSizeMM( const QSizeF & size )
 */
-HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZEMM )
+HB_FUNC_STATIC(QPAGEDPAINTDEVICE_SETPAGESIZEMM)
 {
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPagedPaintDevice *obj = (QPagedPaintDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZEF(1) )
+    if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
-      obj->setPageSizeMM( *PQSIZEF(1) );
+      obj->setPageSizeMM(*PQSIZEF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,18 +206,18 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZEMM )
 /*
 QPageLayout pageLayout() const
 */
-HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGELAYOUT )
+HB_FUNC_STATIC(QPAGEDPAINTDEVICE_PAGELAYOUT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QPagedPaintDevice *obj = (QPagedPaintDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPageLayout * ptr = new QPageLayout( obj->pageLayout() );
+      QPageLayout *ptr = new QPageLayout(obj->pageLayout());
       Qt5xHb::createReturnClass(ptr, "QPAGELAYOUT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -233,18 +233,18 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGELAYOUT )
 /*
 bool setPageLayout( const QPageLayout & pageLayout )
 */
-HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGELAYOUT )
+HB_FUNC_STATIC(QPAGEDPAINTDEVICE_SETPAGELAYOUT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QPagedPaintDevice *obj = (QPagedPaintDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPAGELAYOUT(1) )
+    if (ISNUMPAR(1) && ISQPAGELAYOUT(1))
     {
 #endif
-      RBOOL( obj->setPageLayout( *PQPAGELAYOUT(1) ) );
+      RBOOL(obj->setPageLayout(*PQPAGELAYOUT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,18 +259,18 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGELAYOUT )
 /*
 bool setPageOrientation( QPageLayout::Orientation orientation )
 */
-HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
+HB_FUNC_STATIC(QPAGEDPAINTDEVICE_SETPAGEORIENTATION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPagedPaintDevice * obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QPagedPaintDevice *obj = (QPagedPaintDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->setPageOrientation( (QPageLayout::Orientation) hb_parni(1) ) );
+      RBOOL(obj->setPageOrientation((QPageLayout::Orientation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,33 +282,33 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
 #endif
 }
 
-HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS )
+HB_FUNC_STATIC(QPAGEDPAINTDEVICE_SETPAGEMARGINS)
 {
-  if( ISNUMPAR(1) && ISQMARGINSF(1) )
+  if (ISNUMPAR(1) && ISQMARGINSF(1))
   {
     /*
     bool setPageMargins( const QMarginsF & margins )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    QPagedPaintDevice * obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+    QPagedPaintDevice *obj = (QPagedPaintDevice *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RBOOL( obj->setPageMargins( *PQMARGINSF(1) ) );
+      RBOOL(obj->setPageMargins(*PQMARGINSF(1)));
     }
 #endif
   }
-  else if( ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2))
   {
     /*
     bool setPageMargins( const QMarginsF & margins, QPageLayout::Unit units )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    QPagedPaintDevice * obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+    QPagedPaintDevice *obj = (QPagedPaintDevice *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RBOOL( obj->setPageMargins( *PQMARGINSF(1), (QPageLayout::Unit) hb_parni(2) ) );
+      RBOOL(obj->setPageMargins(*PQMARGINSF(1), (QPageLayout::Unit)hb_parni(2)));
     }
 #endif
   }

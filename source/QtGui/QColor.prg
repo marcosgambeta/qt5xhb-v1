@@ -148,74 +148,74 @@ RETURN
 
 #include <QtCore/QVariant>
 
-/*
-QColor( QRgb color )
-*/
-HB_FUNC_STATIC( QCOLOR_NEW3 )
+    /*
+    QColor( QRgb color )
+    */
+HB_FUNC_STATIC(QCOLOR_NEW3)
 {
-  QColor * obj = new QColor( PQRGB(1) );
+  QColor *obj = new QColor(PQRGB(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QColor( const QString & name )
 */
-HB_FUNC_STATIC( QCOLOR_NEW4 )
+HB_FUNC_STATIC(QCOLOR_NEW4)
 {
-  QColor * obj = new QColor( PQSTRING(1) );
+  QColor *obj = new QColor(PQSTRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QColor( const char * name )
 */
-HB_FUNC_STATIC( QCOLOR_NEW5 )
+HB_FUNC_STATIC(QCOLOR_NEW5)
 {
-  QColor * obj = new QColor( PCONSTCHAR(1) );
+  QColor *obj = new QColor(PCONSTCHAR(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QColor( Qt::GlobalColor color )
 */
-HB_FUNC_STATIC( QCOLOR_NEW7 )
+HB_FUNC_STATIC(QCOLOR_NEW7)
 {
-  QColor * obj = new QColor( (Qt::GlobalColor) hb_parni(1) );
+  QColor *obj = new QColor((Qt::GlobalColor)hb_parni(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
-HB_FUNC_STATIC( QCOLOR_NEW )
+HB_FUNC_STATIC(QCOLOR_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QColor()
     */
-    QColor * obj = new QColor();
+    QColor *obj = new QColor();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
+  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
     QColor( int r, int g, int b, int a = 255 )
     */
-    QColor * obj = new QColor( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
+    QColor *obj = new QColor(PINT(1), PINT(2), PINT(3), OPINT(4, 255));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    HB_FUNC_EXEC( QCOLOR_NEW3 );
+    HB_FUNC_EXEC(QCOLOR_NEW3);
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    HB_FUNC_EXEC( QCOLOR_NEW4 );
+    HB_FUNC_EXEC(QCOLOR_NEW4);
   }
-  else if( ISNUMPAR(1) && ISQCOLOR(1) )
+  else if (ISNUMPAR(1) && ISQCOLOR(1))
   {
     /*
     QColor( const QColor & color )
     */
-    QColor * obj = new QColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+    QColor *obj = new QColor(HB_ISOBJECT(1) ? *(QColor *)Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -224,11 +224,11 @@ HB_FUNC_STATIC( QCOLOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCOLOR_DELETE )
+HB_FUNC_STATIC(QCOLOR_DELETE)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -243,17 +243,17 @@ HB_FUNC_STATIC( QCOLOR_DELETE )
 /*
 int alpha() const
 */
-HB_FUNC_STATIC( QCOLOR_ALPHA )
+HB_FUNC_STATIC(QCOLOR_ALPHA)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->alpha() );
+      RINT(obj->alpha());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,17 +267,17 @@ HB_FUNC_STATIC( QCOLOR_ALPHA )
 /*
 qreal alphaF() const
 */
-HB_FUNC_STATIC( QCOLOR_ALPHAF )
+HB_FUNC_STATIC(QCOLOR_ALPHAF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->alphaF() );
+      RQREAL(obj->alphaF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,17 +291,17 @@ HB_FUNC_STATIC( QCOLOR_ALPHAF )
 /*
 int black() const
 */
-HB_FUNC_STATIC( QCOLOR_BLACK )
+HB_FUNC_STATIC(QCOLOR_BLACK)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->black() );
+      RINT(obj->black());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,17 +315,17 @@ HB_FUNC_STATIC( QCOLOR_BLACK )
 /*
 qreal blackF() const
 */
-HB_FUNC_STATIC( QCOLOR_BLACKF )
+HB_FUNC_STATIC(QCOLOR_BLACKF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->blackF() );
+      RQREAL(obj->blackF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,17 +339,17 @@ HB_FUNC_STATIC( QCOLOR_BLACKF )
 /*
 int blue() const
 */
-HB_FUNC_STATIC( QCOLOR_BLUE )
+HB_FUNC_STATIC(QCOLOR_BLUE)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->blue() );
+      RINT(obj->blue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,17 +363,17 @@ HB_FUNC_STATIC( QCOLOR_BLUE )
 /*
 qreal blueF() const
 */
-HB_FUNC_STATIC( QCOLOR_BLUEF )
+HB_FUNC_STATIC(QCOLOR_BLUEF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->blueF() );
+      RQREAL(obj->blueF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,17 +387,17 @@ HB_FUNC_STATIC( QCOLOR_BLUEF )
 /*
 QColor convertTo( QColor::Spec colorSpec ) const
 */
-HB_FUNC_STATIC( QCOLOR_CONVERTTO )
+HB_FUNC_STATIC(QCOLOR_CONVERTTO)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QColor * ptr = new QColor( obj->convertTo( (QColor::Spec) hb_parni(1) ) );
+      QColor *ptr = new QColor(obj->convertTo((QColor::Spec)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -412,17 +412,17 @@ HB_FUNC_STATIC( QCOLOR_CONVERTTO )
 /*
 int cyan() const
 */
-HB_FUNC_STATIC( QCOLOR_CYAN )
+HB_FUNC_STATIC(QCOLOR_CYAN)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->cyan() );
+      RINT(obj->cyan());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,17 +436,17 @@ HB_FUNC_STATIC( QCOLOR_CYAN )
 /*
 qreal cyanF() const
 */
-HB_FUNC_STATIC( QCOLOR_CYANF )
+HB_FUNC_STATIC(QCOLOR_CYANF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->cyanF() );
+      RQREAL(obj->cyanF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,17 +460,17 @@ HB_FUNC_STATIC( QCOLOR_CYANF )
 /*
 QColor darker( int factor = 200 ) const
 */
-HB_FUNC_STATIC( QCOLOR_DARKER )
+HB_FUNC_STATIC(QCOLOR_DARKER)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      QColor * ptr = new QColor( obj->darker( OPINT(1,200) ) );
+      QColor *ptr = new QColor(obj->darker(OPINT(1, 200)));
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -485,14 +485,14 @@ HB_FUNC_STATIC( QCOLOR_DARKER )
 /*
 void getCmyk( int * c, int * m, int * y, int * k, int * a = 0 )
 */
-HB_FUNC_STATIC( QCOLOR_GETCMYK )
+HB_FUNC_STATIC(QCOLOR_GETCMYK)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5)||HB_ISNIL(5)) )
+    if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
     {
 #endif
       int par1;
@@ -500,12 +500,12 @@ HB_FUNC_STATIC( QCOLOR_GETCMYK )
       int par3;
       int par4;
       int par5;
-      obj->getCmyk( &par1, &par2, &par3, &par4, &par5 );
-      hb_storni( par1, 1 );
-      hb_storni( par2, 2 );
-      hb_storni( par3, 3 );
-      hb_storni( par4, 4 );
-      hb_storni( par5, 5 );
+      obj->getCmyk(&par1, &par2, &par3, &par4, &par5);
+      hb_storni(par1, 1);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
+      hb_storni(par4, 4);
+      hb_storni(par5, 5);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,14 +521,14 @@ HB_FUNC_STATIC( QCOLOR_GETCMYK )
 /*
 void getCmykF( qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = 0 )
 */
-HB_FUNC_STATIC( QCOLOR_GETCMYKF )
+HB_FUNC_STATIC(QCOLOR_GETCMYKF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5)||HB_ISNIL(5)) )
+    if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
     {
 #endif
       qreal par1;
@@ -536,12 +536,12 @@ HB_FUNC_STATIC( QCOLOR_GETCMYKF )
       qreal par3;
       qreal par4;
       qreal par5;
-      obj->getCmykF( &par1, &par2, &par3, &par4, &par5 );
-      hb_stornd( par1, 1 );
-      hb_stornd( par2, 2 );
-      hb_stornd( par3, 3 );
-      hb_stornd( par4, 4 );
-      hb_stornd( par5, 5 );
+      obj->getCmykF(&par1, &par2, &par3, &par4, &par5);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
+      hb_stornd(par5, 5);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,25 +557,25 @@ HB_FUNC_STATIC( QCOLOR_GETCMYKF )
 /*
 void getHsl( int * h, int * s, int * l, int * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSL )
+HB_FUNC_STATIC(QCOLOR_GETHSL)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
       int par1;
       int par2;
       int par3;
       int par4;
-      obj->getHsl( &par1, &par2, &par3, &par4 );
-      hb_storni( par1, 1 );
-      hb_storni( par2, 2 );
-      hb_storni( par3, 3 );
-      hb_storni( par4, 4 );
+      obj->getHsl(&par1, &par2, &par3, &par4);
+      hb_storni(par1, 1);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
+      hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -591,25 +591,25 @@ HB_FUNC_STATIC( QCOLOR_GETHSL )
 /*
 void getHslF( qreal * h, qreal * s, qreal * l, qreal * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSLF )
+HB_FUNC_STATIC(QCOLOR_GETHSLF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
       qreal par1;
       qreal par2;
       qreal par3;
       qreal par4;
-      obj->getHslF( &par1, &par2, &par3, &par4 );
-      hb_stornd( par1, 1 );
-      hb_stornd( par2, 2 );
-      hb_stornd( par3, 3 );
-      hb_stornd( par4, 4 );
+      obj->getHslF(&par1, &par2, &par3, &par4);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -625,25 +625,25 @@ HB_FUNC_STATIC( QCOLOR_GETHSLF )
 /*
 void getHsv( int * h, int * s, int * v, int * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSV )
+HB_FUNC_STATIC(QCOLOR_GETHSV)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
       int par1;
       int par2;
       int par3;
       int par4;
-      obj->getHsv( &par1, &par2, &par3, &par4 );
-      hb_storni( par1, 1 );
-      hb_storni( par2, 2 );
-      hb_storni( par3, 3 );
-      hb_storni( par4, 4 );
+      obj->getHsv(&par1, &par2, &par3, &par4);
+      hb_storni(par1, 1);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
+      hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -659,25 +659,25 @@ HB_FUNC_STATIC( QCOLOR_GETHSV )
 /*
 void getHsvF( qreal * h, qreal * s, qreal * v, qreal * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETHSVF )
+HB_FUNC_STATIC(QCOLOR_GETHSVF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
       qreal par1;
       qreal par2;
       qreal par3;
       qreal par4;
-      obj->getHsvF( &par1, &par2, &par3, &par4 );
-      hb_stornd( par1, 1 );
-      hb_stornd( par2, 2 );
-      hb_stornd( par3, 3 );
-      hb_stornd( par4, 4 );
+      obj->getHsvF(&par1, &par2, &par3, &par4);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -693,25 +693,25 @@ HB_FUNC_STATIC( QCOLOR_GETHSVF )
 /*
 void getRgb( int * r, int * g, int * b, int * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETRGB )
+HB_FUNC_STATIC(QCOLOR_GETRGB)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
       int par1;
       int par2;
       int par3;
       int par4;
-      obj->getRgb( &par1, &par2, &par3, &par4 );
-      hb_storni( par1, 1 );
-      hb_storni( par2, 2 );
-      hb_storni( par3, 3 );
-      hb_storni( par4, 4 );
+      obj->getRgb(&par1, &par2, &par3, &par4);
+      hb_storni(par1, 1);
+      hb_storni(par2, 2);
+      hb_storni(par3, 3);
+      hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -727,25 +727,25 @@ HB_FUNC_STATIC( QCOLOR_GETRGB )
 /*
 void getRgbF( qreal * r, qreal * g, qreal * b, qreal * a = 0 ) const
 */
-HB_FUNC_STATIC( QCOLOR_GETRGBF )
+HB_FUNC_STATIC(QCOLOR_GETRGBF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
       qreal par1;
       qreal par2;
       qreal par3;
       qreal par4;
-      obj->getRgbF( &par1, &par2, &par3, &par4 );
-      hb_stornd( par1, 1 );
-      hb_stornd( par2, 2 );
-      hb_stornd( par3, 3 );
-      hb_stornd( par4, 4 );
+      obj->getRgbF(&par1, &par2, &par3, &par4);
+      hb_stornd(par1, 1);
+      hb_stornd(par2, 2);
+      hb_stornd(par3, 3);
+      hb_stornd(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -761,17 +761,17 @@ HB_FUNC_STATIC( QCOLOR_GETRGBF )
 /*
 int green() const
 */
-HB_FUNC_STATIC( QCOLOR_GREEN )
+HB_FUNC_STATIC(QCOLOR_GREEN)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->green() );
+      RINT(obj->green());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -785,17 +785,17 @@ HB_FUNC_STATIC( QCOLOR_GREEN )
 /*
 qreal greenF() const
 */
-HB_FUNC_STATIC( QCOLOR_GREENF )
+HB_FUNC_STATIC(QCOLOR_GREENF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->greenF() );
+      RQREAL(obj->greenF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -809,17 +809,17 @@ HB_FUNC_STATIC( QCOLOR_GREENF )
 /*
 int hslHue() const
 */
-HB_FUNC_STATIC( QCOLOR_HSLHUE )
+HB_FUNC_STATIC(QCOLOR_HSLHUE)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->hslHue() );
+      RINT(obj->hslHue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -833,17 +833,17 @@ HB_FUNC_STATIC( QCOLOR_HSLHUE )
 /*
 qreal hslHueF() const
 */
-HB_FUNC_STATIC( QCOLOR_HSLHUEF )
+HB_FUNC_STATIC(QCOLOR_HSLHUEF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->hslHueF() );
+      RQREAL(obj->hslHueF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -857,17 +857,17 @@ HB_FUNC_STATIC( QCOLOR_HSLHUEF )
 /*
 int hslSaturation() const
 */
-HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
+HB_FUNC_STATIC(QCOLOR_HSLSATURATION)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->hslSaturation() );
+      RINT(obj->hslSaturation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -881,17 +881,17 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
 /*
 qreal hslSaturationF() const
 */
-HB_FUNC_STATIC( QCOLOR_HSLSATURATIONF )
+HB_FUNC_STATIC(QCOLOR_HSLSATURATIONF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->hslSaturationF() );
+      RQREAL(obj->hslSaturationF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -905,17 +905,17 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATIONF )
 /*
 int hsvHue() const
 */
-HB_FUNC_STATIC( QCOLOR_HSVHUE )
+HB_FUNC_STATIC(QCOLOR_HSVHUE)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->hsvHue() );
+      RINT(obj->hsvHue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -929,17 +929,17 @@ HB_FUNC_STATIC( QCOLOR_HSVHUE )
 /*
 qreal hsvHueF() const
 */
-HB_FUNC_STATIC( QCOLOR_HSVHUEF )
+HB_FUNC_STATIC(QCOLOR_HSVHUEF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->hsvHueF() );
+      RQREAL(obj->hsvHueF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -953,17 +953,17 @@ HB_FUNC_STATIC( QCOLOR_HSVHUEF )
 /*
 int hsvSaturation() const
 */
-HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
+HB_FUNC_STATIC(QCOLOR_HSVSATURATION)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->hsvSaturation() );
+      RINT(obj->hsvSaturation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -977,17 +977,17 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
 /*
 qreal hsvSaturationF() const
 */
-HB_FUNC_STATIC( QCOLOR_HSVSATURATIONF )
+HB_FUNC_STATIC(QCOLOR_HSVSATURATIONF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->hsvSaturationF() );
+      RQREAL(obj->hsvSaturationF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1001,17 +1001,17 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATIONF )
 /*
 int hue() const
 */
-HB_FUNC_STATIC( QCOLOR_HUE )
+HB_FUNC_STATIC(QCOLOR_HUE)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->hue() );
+      RINT(obj->hue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1025,17 +1025,17 @@ HB_FUNC_STATIC( QCOLOR_HUE )
 /*
 qreal hueF() const
 */
-HB_FUNC_STATIC( QCOLOR_HUEF )
+HB_FUNC_STATIC(QCOLOR_HUEF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->hueF() );
+      RQREAL(obj->hueF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1049,17 +1049,17 @@ HB_FUNC_STATIC( QCOLOR_HUEF )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QCOLOR_ISVALID )
+HB_FUNC_STATIC(QCOLOR_ISVALID)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1073,17 +1073,17 @@ HB_FUNC_STATIC( QCOLOR_ISVALID )
 /*
 QColor lighter( int factor = 150 ) const
 */
-HB_FUNC_STATIC( QCOLOR_LIGHTER )
+HB_FUNC_STATIC(QCOLOR_LIGHTER)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      QColor * ptr = new QColor( obj->lighter( OPINT(1,150) ) );
+      QColor *ptr = new QColor(obj->lighter(OPINT(1, 150)));
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1098,17 +1098,17 @@ HB_FUNC_STATIC( QCOLOR_LIGHTER )
 /*
 int lightness() const
 */
-HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
+HB_FUNC_STATIC(QCOLOR_LIGHTNESS)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lightness() );
+      RINT(obj->lightness());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1122,17 +1122,17 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
 /*
 qreal lightnessF() const
 */
-HB_FUNC_STATIC( QCOLOR_LIGHTNESSF )
+HB_FUNC_STATIC(QCOLOR_LIGHTNESSF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->lightnessF() );
+      RQREAL(obj->lightnessF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1146,17 +1146,17 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESSF )
 /*
 int magenta() const
 */
-HB_FUNC_STATIC( QCOLOR_MAGENTA )
+HB_FUNC_STATIC(QCOLOR_MAGENTA)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->magenta() );
+      RINT(obj->magenta());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1170,17 +1170,17 @@ HB_FUNC_STATIC( QCOLOR_MAGENTA )
 /*
 qreal magentaF() const
 */
-HB_FUNC_STATIC( QCOLOR_MAGENTAF )
+HB_FUNC_STATIC(QCOLOR_MAGENTAF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->magentaF() );
+      RQREAL(obj->magentaF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1194,17 +1194,17 @@ HB_FUNC_STATIC( QCOLOR_MAGENTAF )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QCOLOR_NAME )
+HB_FUNC_STATIC(QCOLOR_NAME)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1218,17 +1218,17 @@ HB_FUNC_STATIC( QCOLOR_NAME )
 /*
 int red() const
 */
-HB_FUNC_STATIC( QCOLOR_RED )
+HB_FUNC_STATIC(QCOLOR_RED)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->red() );
+      RINT(obj->red());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1242,17 +1242,17 @@ HB_FUNC_STATIC( QCOLOR_RED )
 /*
 qreal redF() const
 */
-HB_FUNC_STATIC( QCOLOR_REDF )
+HB_FUNC_STATIC(QCOLOR_REDF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->redF() );
+      RQREAL(obj->redF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1266,17 +1266,17 @@ HB_FUNC_STATIC( QCOLOR_REDF )
 /*
 QRgb rgb() const
 */
-HB_FUNC_STATIC( QCOLOR_RGB )
+HB_FUNC_STATIC(QCOLOR_RGB)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQRGB( obj->rgb() );
+      RQRGB(obj->rgb());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1290,17 +1290,17 @@ HB_FUNC_STATIC( QCOLOR_RGB )
 /*
 QRgb rgba() const
 */
-HB_FUNC_STATIC( QCOLOR_RGBA )
+HB_FUNC_STATIC(QCOLOR_RGBA)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQRGB( obj->rgba() );
+      RQRGB(obj->rgba());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1314,17 +1314,17 @@ HB_FUNC_STATIC( QCOLOR_RGBA )
 /*
 int saturation() const
 */
-HB_FUNC_STATIC( QCOLOR_SATURATION )
+HB_FUNC_STATIC(QCOLOR_SATURATION)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->saturation() );
+      RINT(obj->saturation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1338,17 +1338,17 @@ HB_FUNC_STATIC( QCOLOR_SATURATION )
 /*
 qreal saturationF() const
 */
-HB_FUNC_STATIC( QCOLOR_SATURATIONF )
+HB_FUNC_STATIC(QCOLOR_SATURATIONF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->saturationF() );
+      RQREAL(obj->saturationF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1362,17 +1362,17 @@ HB_FUNC_STATIC( QCOLOR_SATURATIONF )
 /*
 void setAlpha( int alpha )
 */
-HB_FUNC_STATIC( QCOLOR_SETALPHA )
+HB_FUNC_STATIC(QCOLOR_SETALPHA)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlpha( PINT(1) );
+      obj->setAlpha(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1388,17 +1388,17 @@ HB_FUNC_STATIC( QCOLOR_SETALPHA )
 /*
 void setAlphaF( qreal alpha )
 */
-HB_FUNC_STATIC( QCOLOR_SETALPHAF )
+HB_FUNC_STATIC(QCOLOR_SETALPHAF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlphaF( PQREAL(1) );
+      obj->setAlphaF(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1414,17 +1414,17 @@ HB_FUNC_STATIC( QCOLOR_SETALPHAF )
 /*
 void setBlue( int blue )
 */
-HB_FUNC_STATIC( QCOLOR_SETBLUE )
+HB_FUNC_STATIC(QCOLOR_SETBLUE)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBlue( PINT(1) );
+      obj->setBlue(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1440,17 +1440,17 @@ HB_FUNC_STATIC( QCOLOR_SETBLUE )
 /*
 void setBlueF( qreal blue )
 */
-HB_FUNC_STATIC( QCOLOR_SETBLUEF )
+HB_FUNC_STATIC(QCOLOR_SETBLUEF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBlueF( PQREAL(1) );
+      obj->setBlueF(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1466,17 +1466,17 @@ HB_FUNC_STATIC( QCOLOR_SETBLUEF )
 /*
 void setCmyk( int c, int m, int y, int k, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_SETCMYK )
+HB_FUNC_STATIC(QCOLOR_SETCMYK)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5)||HB_ISNIL(5)) )
+    if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
     {
 #endif
-      obj->setCmyk( PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5,255) );
+      obj->setCmyk(PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5, 255));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1492,17 +1492,17 @@ HB_FUNC_STATIC( QCOLOR_SETCMYK )
 /*
 void setCmykF( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETCMYKF )
+HB_FUNC_STATIC(QCOLOR_SETCMYKF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5)||HB_ISNIL(5)) )
+    if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
     {
 #endif
-      obj->setCmykF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,1.0) );
+      obj->setCmykF(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5, 1.0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1518,17 +1518,17 @@ HB_FUNC_STATIC( QCOLOR_SETCMYKF )
 /*
 void setGreen( int green )
 */
-HB_FUNC_STATIC( QCOLOR_SETGREEN )
+HB_FUNC_STATIC(QCOLOR_SETGREEN)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setGreen( PINT(1) );
+      obj->setGreen(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1544,17 +1544,17 @@ HB_FUNC_STATIC( QCOLOR_SETGREEN )
 /*
 void setGreenF( qreal green )
 */
-HB_FUNC_STATIC( QCOLOR_SETGREENF )
+HB_FUNC_STATIC(QCOLOR_SETGREENF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setGreenF( PQREAL(1) );
+      obj->setGreenF(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1570,17 +1570,17 @@ HB_FUNC_STATIC( QCOLOR_SETGREENF )
 /*
 void setHsl( int h, int s, int l, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSL )
+HB_FUNC_STATIC(QCOLOR_SETHSL)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->setHsl( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
+      obj->setHsl(PINT(1), PINT(2), PINT(3), OPINT(4, 255));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1596,17 +1596,17 @@ HB_FUNC_STATIC( QCOLOR_SETHSL )
 /*
 void setHslF( qreal h, qreal s, qreal l, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSLF )
+HB_FUNC_STATIC(QCOLOR_SETHSLF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->setHslF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) );
+      obj->setHslF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1622,17 +1622,17 @@ HB_FUNC_STATIC( QCOLOR_SETHSLF )
 /*
 void setHsv( int h, int s, int v, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSV )
+HB_FUNC_STATIC(QCOLOR_SETHSV)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->setHsv( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
+      obj->setHsv(PINT(1), PINT(2), PINT(3), OPINT(4, 255));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1648,17 +1648,17 @@ HB_FUNC_STATIC( QCOLOR_SETHSV )
 /*
 void setHsvF( qreal h, qreal s, qreal v, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETHSVF )
+HB_FUNC_STATIC(QCOLOR_SETHSVF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->setHsvF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) );
+      obj->setHsvF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1674,17 +1674,17 @@ HB_FUNC_STATIC( QCOLOR_SETHSVF )
 /*
 void setNamedColor( const QString & name )
 */
-HB_FUNC_STATIC( QCOLOR_SETNAMEDCOLOR )
+HB_FUNC_STATIC(QCOLOR_SETNAMEDCOLOR)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setNamedColor( PQSTRING(1) );
+      obj->setNamedColor(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1700,17 +1700,17 @@ HB_FUNC_STATIC( QCOLOR_SETNAMEDCOLOR )
 /*
 void setRed( int red )
 */
-HB_FUNC_STATIC( QCOLOR_SETRED )
+HB_FUNC_STATIC(QCOLOR_SETRED)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRed( PINT(1) );
+      obj->setRed(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1726,17 +1726,17 @@ HB_FUNC_STATIC( QCOLOR_SETRED )
 /*
 void setRedF( qreal red )
 */
-HB_FUNC_STATIC( QCOLOR_SETREDF )
+HB_FUNC_STATIC(QCOLOR_SETREDF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRedF( PQREAL(1) );
+      obj->setRedF(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1749,34 +1749,34 @@ HB_FUNC_STATIC( QCOLOR_SETREDF )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QCOLOR_SETRGB )
+HB_FUNC_STATIC(QCOLOR_SETRGB)
 {
-  if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
+  if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
     void setRgb( int r, int g, int b, int a = 255 )
     */
-    QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->setRgb( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
+      obj->setRgb(PINT(1), PINT(2), PINT(3), OPINT(4, 255));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void setRgb( QRgb rgb )
     */
-    QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->setRgb( PQRGB(1) );
+      obj->setRgb(PQRGB(1));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
   else
@@ -1788,17 +1788,17 @@ HB_FUNC_STATIC( QCOLOR_SETRGB )
 /*
 void setRgbF( qreal r, qreal g, qreal b, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_SETRGBF )
+HB_FUNC_STATIC(QCOLOR_SETRGBF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->setRgbF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) );
+      obj->setRgbF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1814,17 +1814,17 @@ HB_FUNC_STATIC( QCOLOR_SETRGBF )
 /*
 void setRgba( QRgb rgba )
 */
-HB_FUNC_STATIC( QCOLOR_SETRGBA )
+HB_FUNC_STATIC(QCOLOR_SETRGBA)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRgba( PQRGB(1) );
+      obj->setRgba(PQRGB(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1840,17 +1840,17 @@ HB_FUNC_STATIC( QCOLOR_SETRGBA )
 /*
 QColor::Spec spec() const
 */
-HB_FUNC_STATIC( QCOLOR_SPEC )
+HB_FUNC_STATIC(QCOLOR_SPEC)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->spec() );
+      RENUM(obj->spec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1864,17 +1864,17 @@ HB_FUNC_STATIC( QCOLOR_SPEC )
 /*
 QColor toCmyk() const
 */
-HB_FUNC_STATIC( QCOLOR_TOCMYK )
+HB_FUNC_STATIC(QCOLOR_TOCMYK)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->toCmyk() );
+      QColor *ptr = new QColor(obj->toCmyk());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1889,17 +1889,17 @@ HB_FUNC_STATIC( QCOLOR_TOCMYK )
 /*
 QColor toHsl() const
 */
-HB_FUNC_STATIC( QCOLOR_TOHSL )
+HB_FUNC_STATIC(QCOLOR_TOHSL)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->toHsl() );
+      QColor *ptr = new QColor(obj->toHsl());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1914,17 +1914,17 @@ HB_FUNC_STATIC( QCOLOR_TOHSL )
 /*
 QColor toHsv() const
 */
-HB_FUNC_STATIC( QCOLOR_TOHSV )
+HB_FUNC_STATIC(QCOLOR_TOHSV)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->toHsv() );
+      QColor *ptr = new QColor(obj->toHsv());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1939,17 +1939,17 @@ HB_FUNC_STATIC( QCOLOR_TOHSV )
 /*
 QColor toRgb() const
 */
-HB_FUNC_STATIC( QCOLOR_TORGB )
+HB_FUNC_STATIC(QCOLOR_TORGB)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->toRgb() );
+      QColor *ptr = new QColor(obj->toRgb());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1964,17 +1964,17 @@ HB_FUNC_STATIC( QCOLOR_TORGB )
 /*
 int value() const
 */
-HB_FUNC_STATIC( QCOLOR_VALUE )
+HB_FUNC_STATIC(QCOLOR_VALUE)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->value() );
+      RINT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1988,17 +1988,17 @@ HB_FUNC_STATIC( QCOLOR_VALUE )
 /*
 qreal valueF() const
 */
-HB_FUNC_STATIC( QCOLOR_VALUEF )
+HB_FUNC_STATIC(QCOLOR_VALUEF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->valueF() );
+      RQREAL(obj->valueF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2012,17 +2012,17 @@ HB_FUNC_STATIC( QCOLOR_VALUEF )
 /*
 int yellow() const
 */
-HB_FUNC_STATIC( QCOLOR_YELLOW )
+HB_FUNC_STATIC(QCOLOR_YELLOW)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->yellow() );
+      RINT(obj->yellow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2036,17 +2036,17 @@ HB_FUNC_STATIC( QCOLOR_YELLOW )
 /*
 qreal yellowF() const
 */
-HB_FUNC_STATIC( QCOLOR_YELLOWF )
+HB_FUNC_STATIC(QCOLOR_YELLOWF)
 {
-  QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+  QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->yellowF() );
+      RQREAL(obj->yellowF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2060,13 +2060,13 @@ HB_FUNC_STATIC( QCOLOR_YELLOWF )
 /*
 static QStringList colorNames()
 */
-HB_FUNC_STATIC( QCOLOR_COLORNAMES )
+HB_FUNC_STATIC(QCOLOR_COLORNAMES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRINGLIST( QColor::colorNames() );
+    RQSTRINGLIST(QColor::colorNames());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2079,13 +2079,13 @@ HB_FUNC_STATIC( QCOLOR_COLORNAMES )
 /*
 static QColor fromCmyk( int c, int m, int y, int k, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMCMYK )
+HB_FUNC_STATIC(QCOLOR_FROMCMYK)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5)||HB_ISNIL(5)) )
+  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
 #endif
-    QColor * ptr = new QColor( QColor::fromCmyk( PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5,255) ) );
+    QColor *ptr = new QColor(QColor::fromCmyk(PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5, 255)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -2099,13 +2099,13 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYK )
 /*
 static QColor fromCmykF( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMCMYKF )
+HB_FUNC_STATIC(QCOLOR_FROMCMYKF)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5)||HB_ISNIL(5)) )
+  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
 #endif
-    QColor * ptr = new QColor( QColor::fromCmykF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,1.0) ) );
+    QColor *ptr = new QColor(QColor::fromCmykF(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5, 1.0)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -2119,13 +2119,13 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYKF )
 /*
 static QColor fromHsl( int h, int s, int l, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMHSL )
+HB_FUNC_STATIC(QCOLOR_FROMHSL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+  if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
 #endif
-    QColor * ptr = new QColor( QColor::fromHsl( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
+    QColor *ptr = new QColor(QColor::fromHsl(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -2139,13 +2139,13 @@ HB_FUNC_STATIC( QCOLOR_FROMHSL )
 /*
 static QColor fromHslF( qreal h, qreal s, qreal l, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMHSLF )
+HB_FUNC_STATIC(QCOLOR_FROMHSLF)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+  if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
 #endif
-    QColor * ptr = new QColor( QColor::fromHslF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
+    QColor *ptr = new QColor(QColor::fromHslF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -2159,13 +2159,13 @@ HB_FUNC_STATIC( QCOLOR_FROMHSLF )
 /*
 static QColor fromHsv( int h, int s, int v, int a = 255 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMHSV )
+HB_FUNC_STATIC(QCOLOR_FROMHSV)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+  if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
 #endif
-    QColor * ptr = new QColor( QColor::fromHsv( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
+    QColor *ptr = new QColor(QColor::fromHsv(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -2179,13 +2179,13 @@ HB_FUNC_STATIC( QCOLOR_FROMHSV )
 /*
 static QColor fromHsvF( qreal h, qreal s, qreal v, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMHSVF )
+HB_FUNC_STATIC(QCOLOR_FROMHSVF)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+  if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
 #endif
-    QColor * ptr = new QColor( QColor::fromHsvF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
+    QColor *ptr = new QColor(QColor::fromHsvF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -2196,22 +2196,22 @@ HB_FUNC_STATIC( QCOLOR_FROMHSVF )
 #endif
 }
 
-HB_FUNC_STATIC( QCOLOR_FROMRGB )
+HB_FUNC_STATIC(QCOLOR_FROMRGB)
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     static QColor fromRgb( QRgb rgb )
     */
-    QColor * ptr = new QColor( QColor::fromRgb( PQRGB(1) ) );
+    QColor *ptr = new QColor(QColor::fromRgb(PQRGB(1)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
   }
-  else if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
+  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
     static QColor fromRgb( int r, int g, int b, int a = 255 )
     */
-    QColor * ptr = new QColor( QColor::fromRgb( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
+    QColor *ptr = new QColor(QColor::fromRgb(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
   }
   else
@@ -2223,13 +2223,13 @@ HB_FUNC_STATIC( QCOLOR_FROMRGB )
 /*
 static QColor fromRgbF( qreal r, qreal g, qreal b, qreal a = 1.0 )
 */
-HB_FUNC_STATIC( QCOLOR_FROMRGBF )
+HB_FUNC_STATIC(QCOLOR_FROMRGBF)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
+  if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
 #endif
-    QColor * ptr = new QColor( QColor::fromRgbF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
+    QColor *ptr = new QColor(QColor::fromRgbF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -2243,13 +2243,13 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBF )
 /*
 static QColor fromRgba( QRgb rgba )
 */
-HB_FUNC_STATIC( QCOLOR_FROMRGBA )
+HB_FUNC_STATIC(QCOLOR_FROMRGBA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QColor * ptr = new QColor( QColor::fromRgba( PQRGB(1) ) );
+    QColor *ptr = new QColor(QColor::fromRgba(PQRGB(1)));
     Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -2263,13 +2263,13 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBA )
 /*
 static bool isValidColor( const QString & name )
 */
-HB_FUNC_STATIC( QCOLOR_ISVALIDCOLOR )
+HB_FUNC_STATIC(QCOLOR_ISVALIDCOLOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    RBOOL( QColor::isValidColor( PQSTRING(1) ) );
+    RBOOL(QColor::isValidColor(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2282,11 +2282,11 @@ HB_FUNC_STATIC( QCOLOR_ISVALIDCOLOR )
 /*
 int qAlpha( QRgb rgba )
 */
-HB_FUNC( QALPHA )
+HB_FUNC(QALPHA)
 {
-  if( HB_ISNUM(1) )
+  if (HB_ISNUM(1))
   {
-    RINT( qAlpha ( (QRgb) hb_parni(1) ) );
+    RINT(qAlpha((QRgb)hb_parni(1)));
   }
   else
   {
@@ -2297,11 +2297,11 @@ HB_FUNC( QALPHA )
 /*
 int qBlue( QRgb rgb )
 */
-HB_FUNC( QBLUE )
+HB_FUNC(QBLUE)
 {
-  if( HB_ISNUM(1) )
+  if (HB_ISNUM(1))
   {
-    RINT( qBlue ( (QRgb) hb_parni(1) ) );
+    RINT(qBlue((QRgb)hb_parni(1)));
   }
   else
   {
@@ -2312,11 +2312,11 @@ HB_FUNC( QBLUE )
 /*
 int qGray( int r, int g, int b )
 */
-HB_FUNC( QGRAY1 )
+HB_FUNC(QGRAY1)
 {
-  if( HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  if (HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    RINT( qGray ( hb_parni(1), hb_parni(2), hb_parni(3) ) );
+    RINT(qGray(hb_parni(1), hb_parni(2), hb_parni(3)));
   }
   else
   {
@@ -2327,11 +2327,11 @@ HB_FUNC( QGRAY1 )
 /*
 int qGray( QRgb rgb )
 */
-HB_FUNC( QGRAY2 )
+HB_FUNC(QGRAY2)
 {
-  if( HB_ISNUM(1) )
+  if (HB_ISNUM(1))
   {
-    RINT( qGray ( (QRgb) hb_parni(1) ) );
+    RINT(qGray((QRgb)hb_parni(1)));
   }
   else
   {
@@ -2344,15 +2344,15 @@ HB_FUNC( QGRAY2 )
 [2]int qGray ( QRgb rgb )
 */
 
-HB_FUNC( QGRAY )
+HB_FUNC(QGRAY)
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    HB_FUNC_EXEC( QGRAY1 );
+    HB_FUNC_EXEC(QGRAY1);
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    HB_FUNC_EXEC( QGRAY2 );
+    HB_FUNC_EXEC(QGRAY2);
   }
   else
   {
@@ -2363,11 +2363,11 @@ HB_FUNC( QGRAY )
 /*
 int qGreen( QRgb rgb )
 */
-HB_FUNC( QGREEN )
+HB_FUNC(QGREEN)
 {
-  if( HB_ISNUM(1) )
+  if (HB_ISNUM(1))
   {
-    RINT( qGreen ( (QRgb) hb_parni(1) ) );
+    RINT(qGreen((QRgb)hb_parni(1)));
   }
   else
   {
@@ -2378,11 +2378,11 @@ HB_FUNC( QGREEN )
 /*
 int qRed( QRgb rgb )
 */
-HB_FUNC( QRED )
+HB_FUNC(QRED)
 {
-  if( HB_ISNUM(1) )
+  if (HB_ISNUM(1))
   {
-    RINT( qRed ( (QRgb) hb_parni(1) ) );
+    RINT(qRed((QRgb)hb_parni(1)));
   }
   else
   {
@@ -2393,11 +2393,11 @@ HB_FUNC( QRED )
 /*
 QRgb qRgb( int r, int g, int b )
 */
-HB_FUNC( QRGB )
+HB_FUNC(QRGB)
 {
-  if( HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  if (HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    hb_retni( qRgb ( hb_parni(1), hb_parni(2), hb_parni(3) ) );
+    hb_retni(qRgb(hb_parni(1), hb_parni(2), hb_parni(3)));
   }
   else
   {
@@ -2408,11 +2408,11 @@ HB_FUNC( QRGB )
 /*
 QRgb qRgba( int r, int g, int b, int a )
 */
-HB_FUNC( QRGBA )
+HB_FUNC(QRGBA)
 {
-  if( HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  if (HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
-    hb_retni( qRgba ( hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4) ) );
+    hb_retni(qRgba(hb_parni(1), hb_parni(2), hb_parni(3), hb_parni(4)));
   }
   else
   {
@@ -2420,31 +2420,31 @@ HB_FUNC( QRGBA )
   }
 }
 
-HB_FUNC_STATIC( QCOLOR_TOVARIANT )
+HB_FUNC_STATIC(QCOLOR_TOVARIANT)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QVariant toVariant()
     */
-    QColor * obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
+    QColor *obj = (QColor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QVariant * variant = new QVariant();
-      variant->setValue<QColor>( *obj );
-      Qt5xHb::createReturnClass( variant, "QVARIANT", true);
+      QVariant *variant = new QVariant();
+      variant->setValue<QColor>(*obj);
+      Qt5xHb::createReturnClass(variant, "QVARIANT", true);
     }
   }
-  else if( ISNUMPAR(1) && ISQCOLOR(1) )
+  else if (ISNUMPAR(1) && ISQCOLOR(1))
   {
     /*
     static QVariant toVariant( const QColor & )
     */
-    QColor * color = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QVariant * variant = new QVariant();
-    variant->setValue<QColor>( *color );
-    Qt5xHb::createReturnClass( variant, "QVARIANT", true);
+    QColor *color = (QColor *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
+    QVariant *variant = new QVariant();
+    variant->setValue<QColor>(*color);
+    Qt5xHb::createReturnClass(variant, "QVARIANT", true);
   }
   else
   {
@@ -2455,13 +2455,13 @@ HB_FUNC_STATIC( QCOLOR_TOVARIANT )
 /*
 static QColor fromVariant( const QVariant & )
 */
-HB_FUNC_STATIC( QCOLOR_FROMVARIANT )
+HB_FUNC_STATIC(QCOLOR_FROMVARIANT)
 {
-  if( ISNUMPAR(1) && ISQVARIANT(1) )
+  if (ISNUMPAR(1) && ISQVARIANT(1))
   {
-    QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QColor * color = new QColor( variant->value<QColor>() );
-    Qt5xHb::createReturnClass( color, "QCOLOR", true);
+    QVariant *variant = (QVariant *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
+    QColor *color = new QColor(variant->value<QColor>());
+    Qt5xHb::createReturnClass(color, "QCOLOR", true);
   }
   else
   {
@@ -2469,11 +2469,11 @@ HB_FUNC_STATIC( QCOLOR_FROMVARIANT )
   }
 }
 
-HB_FUNC_STATIC( QCOLOR_NEWFROM )
+HB_FUNC_STATIC(QCOLOR_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -2482,7 +2482,7 @@ HB_FUNC_STATIC( QCOLOR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -2499,26 +2499,26 @@ HB_FUNC_STATIC( QCOLOR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QCOLOR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QCOLOR_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QCOLOR_NEWFROM );
+  HB_FUNC_EXEC(QCOLOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QCOLOR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QCOLOR_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QCOLOR_NEWFROM );
+  HB_FUNC_EXEC(QCOLOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QCOLOR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QCOLOR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QCOLOR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QCOLOR_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

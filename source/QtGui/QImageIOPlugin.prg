@@ -54,11 +54,11 @@ RETURN
 #include <QtGui/QImageIOPlugin>
 #endif
 
-HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
+HB_FUNC_STATIC(QIMAGEIOPLUGIN_DELETE)
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QImageIOPlugin *obj = (QImageIOPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -75,17 +75,17 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 /*
 virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QByteArray & format ) const = 0
 */
-HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
+HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QImageIOPlugin *obj = (QImageIOPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
+    if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2))
     {
 #endif
-      RENUM( obj->capabilities( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
+      RENUM(obj->capabilities(PQIODEVICE(1), *PQBYTEARRAY(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,17 +99,18 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 /*
 virtual QImageIOHandler * create( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
 */
-HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
+HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QImageIOPlugin *obj = (QImageIOPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
     {
 #endif
-      QImageIOHandler * ptr = obj->create( PQIODEVICE(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+      QImageIOHandler *ptr =
+          obj->create(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
       Qt5xHb::createReturnClass(ptr, "QIMAGEIOHANDLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

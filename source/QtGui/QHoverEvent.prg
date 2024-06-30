@@ -50,14 +50,14 @@ RETURN
 #include <QtGui/QHoverEvent>
 #endif
 
-/*
-QHoverEvent( QEvent::Type type, const QPoint & pos, const QPoint & oldPos )
-*/
-HB_FUNC_STATIC( QHOVEREVENT_NEW )
+    /*
+    QHoverEvent( QEvent::Type type, const QPoint & pos, const QPoint & oldPos )
+    */
+HB_FUNC_STATIC(QHOVEREVENT_NEW)
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
+  if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3))
   {
-    QHoverEvent * obj = new QHoverEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
+    QHoverEvent *obj = new QHoverEvent((QEvent::Type)hb_parni(1), *PQPOINT(2), *PQPOINT(3));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -66,11 +66,11 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHOVEREVENT_DELETE )
+HB_FUNC_STATIC(QHOVEREVENT_DELETE)
 {
-  QHoverEvent * obj = (QHoverEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHoverEvent *obj = (QHoverEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

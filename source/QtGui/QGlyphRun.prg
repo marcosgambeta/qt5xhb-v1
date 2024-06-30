@@ -69,22 +69,22 @@ RETURN
 #include <QtGui/QGlyphRun>
 #endif
 
-HB_FUNC_STATIC( QGLYPHRUN_NEW )
+HB_FUNC_STATIC(QGLYPHRUN_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QGlyphRun()
     */
-    QGlyphRun * obj = new QGlyphRun();
+    QGlyphRun *obj = new QGlyphRun();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQGLYPHRUN(1) )
+  else if (ISNUMPAR(1) && ISQGLYPHRUN(1))
   {
     /*
     QGlyphRun( const QGlyphRun & other )
     */
-    QGlyphRun * obj = new QGlyphRun( *PQGLYPHRUN(1) );
+    QGlyphRun *obj = new QGlyphRun(*PQGLYPHRUN(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -93,11 +93,11 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_DELETE )
+HB_FUNC_STATIC(QGLYPHRUN_DELETE)
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -112,14 +112,14 @@ HB_FUNC_STATIC( QGLYPHRUN_DELETE )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
+HB_FUNC_STATIC(QGLYPHRUN_CLEAR)
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -138,17 +138,17 @@ HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
 /*
 bool overline() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_OVERLINE)
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->overline() );
+      RBOOL(obj->overline());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,17 +162,17 @@ HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
 /*
 QRawFont rawFont() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
+HB_FUNC_STATIC(QGLYPHRUN_RAWFONT)
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRawFont * ptr = new QRawFont( obj->rawFont() );
+      QRawFont *ptr = new QRawFont(obj->rawFont());
       Qt5xHb::createReturnClass(ptr, "QRAWFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -187,17 +187,17 @@ HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
 /*
 void setOverline( bool overline )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_SETOVERLINE)
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setOverline( PBOOL(1) );
+      obj->setOverline(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,17 +213,17 @@ HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
 /*
 void setRawFont( const QRawFont & rawFont )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
+HB_FUNC_STATIC(QGLYPHRUN_SETRAWFONT)
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRAWFONT(1) )
+    if (ISNUMPAR(1) && ISQRAWFONT(1))
     {
 #endif
-      obj->setRawFont( *PQRAWFONT(1) );
+      obj->setRawFont(*PQRAWFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,17 +239,17 @@ HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
 /*
 void setStrikeOut( bool strikeOut )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
+HB_FUNC_STATIC(QGLYPHRUN_SETSTRIKEOUT)
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setStrikeOut( PBOOL(1) );
+      obj->setStrikeOut(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,17 +265,17 @@ HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
 /*
 void setUnderline( bool underline )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_SETUNDERLINE)
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setUnderline( PBOOL(1) );
+      obj->setUnderline(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,17 +291,17 @@ HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
 /*
 bool strikeOut() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
+HB_FUNC_STATIC(QGLYPHRUN_STRIKEOUT)
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->strikeOut() );
+      RBOOL(obj->strikeOut());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,17 +315,17 @@ HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
 /*
 bool underline() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_UNDERLINE)
 {
-  QGlyphRun * obj = (QGlyphRun *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->underline() );
+      RBOOL(obj->underline());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,11 +336,11 @@ HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
   }
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_NEWFROM )
+HB_FUNC_STATIC(QGLYPHRUN_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -366,26 +366,26 @@ HB_FUNC_STATIC( QGLYPHRUN_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGLYPHRUN_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QGLYPHRUN_NEWFROM );
+  HB_FUNC_EXEC(QGLYPHRUN_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGLYPHRUN_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QGLYPHRUN_NEWFROM );
+  HB_FUNC_EXEC(QGLYPHRUN_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGLYPHRUN_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGLYPHRUN_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

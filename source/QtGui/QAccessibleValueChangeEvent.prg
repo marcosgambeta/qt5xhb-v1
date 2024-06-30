@@ -53,14 +53,14 @@ RETURN
 #include <QtGui/QAccessibleValueChangeEvent>
 #endif
 
-/*
-QAccessibleValueChangeEvent( QObject * obj, const QVariant & val )
-*/
-HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_NEW )
+    /*
+    QAccessibleValueChangeEvent( QObject * obj, const QVariant & val )
+    */
+HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_NEW)
 {
-  if( ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2) )
+  if (ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2))
   {
-    QAccessibleValueChangeEvent * obj = new QAccessibleValueChangeEvent( PQOBJECT(1), *PQVARIANT(2) );
+    QAccessibleValueChangeEvent *obj = new QAccessibleValueChangeEvent(PQOBJECT(1), *PQVARIANT(2));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -69,11 +69,11 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_DELETE )
+HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_DELETE)
 {
-  QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleValueChangeEvent *obj = (QAccessibleValueChangeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -88,17 +88,17 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_DELETE )
 /*
 void setValue( const QVariant & val )
 */
-HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_SETVALUE )
+HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_SETVALUE)
 {
-  QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleValueChangeEvent *obj = (QAccessibleValueChangeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->setValue( *PQVARIANT(1) );
+      obj->setValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,17 +114,17 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_SETVALUE )
 /*
 QVariant value() const
 */
-HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_VALUE )
+HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_VALUE)
 {
-  QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleValueChangeEvent *obj = (QAccessibleValueChangeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value() );
+      QVariant *ptr = new QVariant(obj->value());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

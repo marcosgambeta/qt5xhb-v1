@@ -57,14 +57,14 @@ RETURN
 #include <QtGui/QHelpEvent>
 #endif
 
-/*
-QHelpEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos )
-*/
-HB_FUNC_STATIC( QHELPEVENT_NEW )
+    /*
+    QHelpEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos )
+    */
+HB_FUNC_STATIC(QHELPEVENT_NEW)
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
+  if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3))
   {
-    QHelpEvent * obj = new QHelpEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
+    QHelpEvent *obj = new QHelpEvent((QEvent::Type)hb_parni(1), *PQPOINT(2), *PQPOINT(3));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -73,11 +73,11 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHELPEVENT_DELETE )
+HB_FUNC_STATIC(QHELPEVENT_DELETE)
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -92,17 +92,17 @@ HB_FUNC_STATIC( QHELPEVENT_DELETE )
 /*
 const QPoint & globalPos() const
 */
-HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
+HB_FUNC_STATIC(QHELPEVENT_GLOBALPOS)
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPoint * ptr = &obj->globalPos();
+      const QPoint *ptr = &obj->globalPos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -117,17 +117,17 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
 /*
 int globalX() const
 */
-HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
+HB_FUNC_STATIC(QHELPEVENT_GLOBALX)
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->globalX() );
+      RINT(obj->globalX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,17 +141,17 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
 /*
 int globalY() const
 */
-HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
+HB_FUNC_STATIC(QHELPEVENT_GLOBALY)
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->globalY() );
+      RINT(obj->globalY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,17 +165,17 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
 /*
 const QPoint & pos() const
 */
-HB_FUNC_STATIC( QHELPEVENT_POS )
+HB_FUNC_STATIC(QHELPEVENT_POS)
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPoint * ptr = &obj->pos();
+      const QPoint *ptr = &obj->pos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -190,17 +190,17 @@ HB_FUNC_STATIC( QHELPEVENT_POS )
 /*
 int x() const
 */
-HB_FUNC_STATIC( QHELPEVENT_X )
+HB_FUNC_STATIC(QHELPEVENT_X)
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->x() );
+      RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,17 +214,17 @@ HB_FUNC_STATIC( QHELPEVENT_X )
 /*
 int y() const
 */
-HB_FUNC_STATIC( QHELPEVENT_Y )
+HB_FUNC_STATIC(QHELPEVENT_Y)
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->y() );
+      RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

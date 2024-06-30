@@ -145,22 +145,22 @@ RETURN
 #include <QtGui/QTextBlock>
 #include <QtGui/QAbstractTextDocumentLayout>
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
+HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QTextDocument( QObject * parent = 0 )
     */
-    QTextDocument * obj = new QTextDocument( OPQOBJECT(1,0) );
+    QTextDocument *obj = new QTextDocument(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QTextDocument( const QString & text, QObject * parent = 0 )
     */
-    QTextDocument * obj = new QTextDocument( PQSTRING(1), OPQOBJECT(2,0) );
+    QTextDocument *obj = new QTextDocument(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -169,11 +169,11 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_DELETE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_DELETE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -190,17 +190,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DELETE )
 /*
 QTextDocument * clone( QObject * parent = 0 ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_CLONE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
     {
 #endif
-      QTextDocument * ptr = obj->clone( OPQOBJECT(1,0) );
+      QTextDocument *ptr = obj->clone(OPQOBJECT(1, 0));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -215,17 +215,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ISEMPTY )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ISEMPTY)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,14 +239,14 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISEMPTY )
 /*
 virtual void clear()
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_CLEAR )
+HB_FUNC_STATIC(QTEXTDOCUMENT_CLEAR)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -265,17 +265,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLEAR )
 /*
 void setUndoRedoEnabled( bool enable )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETUNDOREDOENABLED )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETUNDOREDOENABLED)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setUndoRedoEnabled( PBOOL(1) );
+      obj->setUndoRedoEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,17 +291,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETUNDOREDOENABLED )
 /*
 bool isUndoRedoEnabled() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOREDOENABLED )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOREDOENABLED)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isUndoRedoEnabled() );
+      RBOOL(obj->isUndoRedoEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,17 +315,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOREDOENABLED )
 /*
 bool isUndoAvailable() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOAVAILABLE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOAVAILABLE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isUndoAvailable() );
+      RBOOL(obj->isUndoAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,17 +339,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOAVAILABLE )
 /*
 bool isRedoAvailable() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ISREDOAVAILABLE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ISREDOAVAILABLE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isRedoAvailable() );
+      RBOOL(obj->isRedoAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,17 +363,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISREDOAVAILABLE )
 /*
 int availableUndoSteps() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEUNDOSTEPS )
+HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEUNDOSTEPS)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->availableUndoSteps() );
+      RINT(obj->availableUndoSteps());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,17 +387,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEUNDOSTEPS )
 /*
 int availableRedoSteps() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEREDOSTEPS )
+HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEREDOSTEPS)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->availableRedoSteps() );
+      RINT(obj->availableRedoSteps());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,17 +411,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEREDOSTEPS )
 /*
 int revision() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_REVISION )
+HB_FUNC_STATIC(QTEXTDOCUMENT_REVISION)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->revision() );
+      RINT(obj->revision());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,17 +435,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REVISION )
 /*
 void setDocumentLayout( QAbstractTextDocumentLayout * layout )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTLAYOUT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTLAYOUT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTTEXTDOCUMENTLAYOUT(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTTEXTDOCUMENTLAYOUT(1))
     {
 #endif
-      obj->setDocumentLayout( PQABSTRACTTEXTDOCUMENTLAYOUT(1) );
+      obj->setDocumentLayout(PQABSTRACTTEXTDOCUMENTLAYOUT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,17 +461,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTLAYOUT )
 /*
 QAbstractTextDocumentLayout * documentLayout() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTLAYOUT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAbstractTextDocumentLayout * ptr = obj->documentLayout();
+      QAbstractTextDocumentLayout *ptr = obj->documentLayout();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTTEXTDOCUMENTLAYOUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -486,17 +486,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
 /*
 void setMetaInformation( QTextDocument::MetaInformation info, const QString & )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETMETAINFORMATION)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setMetaInformation( (QTextDocument::MetaInformation) hb_parni(1), PQSTRING(2) );
+      obj->setMetaInformation((QTextDocument::MetaInformation)hb_parni(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -512,17 +512,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
 /*
 QString metaInformation( QTextDocument::MetaInformation info ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
+HB_FUNC_STATIC(QTEXTDOCUMENT_METAINFORMATION)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->metaInformation( (QTextDocument::MetaInformation) hb_parni(1) ) );
+      RQSTRING(obj->metaInformation((QTextDocument::MetaInformation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -536,17 +536,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
 /*
 QString toHtml( const QByteArray & encoding = QByteArray() ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
+HB_FUNC_STATIC(QTEXTDOCUMENT_TOHTML)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQBYTEARRAY(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING( obj->toHtml( HB_ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) ) );
+      RQSTRING(obj->toHtml(HB_ISNIL(1) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -560,17 +560,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
 /*
 void setHtml( const QString & html )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETHTML )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETHTML)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setHtml( PQSTRING(1) );
+      obj->setHtml(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -586,17 +586,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETHTML )
 /*
 QString toPlainText() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_TOPLAINTEXT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_TOPLAINTEXT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toPlainText() );
+      RQSTRING(obj->toPlainText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -610,17 +610,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOPLAINTEXT )
 /*
 void setPlainText( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETPLAINTEXT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETPLAINTEXT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setPlainText( PQSTRING(1) );
+      obj->setPlainText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -636,17 +636,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETPLAINTEXT )
 /*
 QChar characterAt( int pos ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERAT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QChar * ptr = new QChar( obj->characterAt( PINT(1) ) );
+      QChar *ptr = new QChar(obj->characterAt(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -658,57 +658,64 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
   }
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
+HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
 {
-  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QTextCursor find( const QString & subString, int from = 0, QTextDocument::FindFlags options = 0 ) const
     */
-    QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      QTextCursor * ptr = new QTextCursor( obj->find( PQSTRING(1), OPINT(2,0), HB_ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+      QTextCursor *ptr = new QTextCursor(obj->find(
+          PQSTRING(1), OPINT(2, 0), HB_ISNIL(3) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(3)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   }
-  else if( ISBETWEEN(2,3) && HB_ISCHAR(1) && ISQTEXTCURSOR(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQTEXTCURSOR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QTextCursor find( const QString & subString, const QTextCursor & from, QTextDocument::FindFlags options = 0 ) const
     */
-    QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      QTextCursor * ptr = new QTextCursor( obj->find( PQSTRING(1), *PQTEXTCURSOR(2), HB_ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+      QTextCursor *ptr =
+          new QTextCursor(obj->find(PQSTRING(1), *PQTEXTCURSOR(2),
+                                    HB_ISNIL(3) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(3)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   }
-  else if( ISBETWEEN(1,3) && ISQREGEXP(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(1, 3) && ISQREGEXP(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QTextCursor find( const QRegExp & expr, int from = 0, QTextDocument::FindFlags options = 0 ) const
     */
-    QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      QTextCursor * ptr = new QTextCursor( obj->find( *PQREGEXP(1), OPINT(2,0), HB_ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+      QTextCursor *ptr =
+          new QTextCursor(obj->find(*PQREGEXP(1), OPINT(2, 0),
+                                    HB_ISNIL(3) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(3)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   }
-  else if( ISBETWEEN(2,3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QTextCursor find( const QRegExp & expr, const QTextCursor & from, QTextDocument::FindFlags options = 0 ) const
     */
-    QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      QTextCursor * ptr = new QTextCursor( obj->find( *PQREGEXP(1), *PQTEXTCURSOR(2), HB_ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+      QTextCursor *ptr =
+          new QTextCursor(obj->find(*PQREGEXP(1), *PQTEXTCURSOR(2),
+                                    HB_ISNIL(3) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(3)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   }
@@ -721,17 +728,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 /*
 QTextFrame * frameAt( int pos ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FRAMEAT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_FRAMEAT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QTextFrame * ptr = obj->frameAt( PINT(1) );
+      QTextFrame *ptr = obj->frameAt(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -746,17 +753,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FRAMEAT )
 /*
 QTextFrame * rootFrame() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ROOTFRAME)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextFrame * ptr = obj->rootFrame();
+      QTextFrame *ptr = obj->rootFrame();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -771,17 +778,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
 /*
 QTextObject * object( int objectIndex ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QTextObject * ptr = obj->object( PINT(1) );
+      QTextObject *ptr = obj->object(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -796,17 +803,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
 /*
 QTextObject * objectForFormat( const QTextFormat & ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECTFORFORMAT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTFORMAT(1) )
+    if (ISNUMPAR(1) && ISQTEXTFORMAT(1))
     {
 #endif
-      QTextObject * ptr = obj->objectForFormat( *PQTEXTFORMAT(1) );
+      QTextObject *ptr = obj->objectForFormat(*PQTEXTFORMAT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -821,17 +828,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
 /*
 QTextBlock findBlock( int pos ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCK )
+HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCK)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->findBlock( PINT(1) ) );
+      QTextBlock *ptr = new QTextBlock(obj->findBlock(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -846,17 +853,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCK )
 /*
 QTextBlock findBlockByNumber( int blockNumber ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYNUMBER )
+HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYNUMBER)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->findBlockByNumber( PINT(1) ) );
+      QTextBlock *ptr = new QTextBlock(obj->findBlockByNumber(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -871,17 +878,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYNUMBER )
 /*
 QTextBlock findBlockByLineNumber( int blockNumber ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER )
+HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->findBlockByLineNumber( PINT(1) ) );
+      QTextBlock *ptr = new QTextBlock(obj->findBlockByLineNumber(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -896,17 +903,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER )
 /*
 QTextBlock begin() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_BEGIN )
+HB_FUNC_STATIC(QTEXTDOCUMENT_BEGIN)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->begin() );
+      QTextBlock *ptr = new QTextBlock(obj->begin());
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -921,17 +928,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_BEGIN )
 /*
 QTextBlock end() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_END )
+HB_FUNC_STATIC(QTEXTDOCUMENT_END)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->end() );
+      QTextBlock *ptr = new QTextBlock(obj->end());
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -946,17 +953,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_END )
 /*
 QTextBlock firstBlock() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_FIRSTBLOCK )
+HB_FUNC_STATIC(QTEXTDOCUMENT_FIRSTBLOCK)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->firstBlock() );
+      QTextBlock *ptr = new QTextBlock(obj->firstBlock());
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -971,17 +978,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIRSTBLOCK )
 /*
 QTextBlock lastBlock() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_LASTBLOCK )
+HB_FUNC_STATIC(QTEXTDOCUMENT_LASTBLOCK)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->lastBlock() );
+      QTextBlock *ptr = new QTextBlock(obj->lastBlock());
       Qt5xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -996,17 +1003,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_LASTBLOCK )
 /*
 void setPageSize( const QSizeF & size )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETPAGESIZE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETPAGESIZE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZEF(1) )
+    if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
-      obj->setPageSize( *PQSIZEF(1) );
+      obj->setPageSize(*PQSIZEF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1022,17 +1029,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETPAGESIZE )
 /*
 QSizeF pageSize() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_PAGESIZE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_PAGESIZE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->pageSize() );
+      QSizeF *ptr = new QSizeF(obj->pageSize());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1047,17 +1054,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PAGESIZE )
 /*
 void setDefaultFont( const QFont & font )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTFONT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTFONT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setDefaultFont( *PQFONT(1) );
+      obj->setDefaultFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1073,17 +1080,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTFONT )
 /*
 QFont defaultFont() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTFONT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTFONT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QFont * ptr = new QFont( obj->defaultFont() );
+      QFont *ptr = new QFont(obj->defaultFont());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1098,17 +1105,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTFONT )
 /*
 int pageCount() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_PAGECOUNT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_PAGECOUNT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->pageCount() );
+      RINT(obj->pageCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1122,17 +1129,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PAGECOUNT )
 /*
 bool isModified() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ISMODIFIED )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ISMODIFIED)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isModified() );
+      RBOOL(obj->isModified());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1146,17 +1153,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISMODIFIED )
 /*
 void print( QPagedPaintDevice * printer ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_PRINT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_PRINT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPAGEDPAINTDEVICE(1) )
+    if (ISNUMPAR(1) && ISQPAGEDPAINTDEVICE(1))
     {
 #endif
-      obj->print( PQPAGEDPAINTDEVICE(1) );
+      obj->print(PQPAGEDPAINTDEVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1172,17 +1179,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PRINT )
 /*
 QVariant resource( int type, const QUrl & name ) const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_RESOURCE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->resource( PINT(1), *PQURL(2) ) );
+      QVariant *ptr = new QVariant(obj->resource(PINT(1), *PQURL(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1197,17 +1204,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
 /*
 void addResource( int type, const QUrl & name, const QVariant & resource )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ADDRESOURCE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ADDRESOURCE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && ISQURL(2) && ISQVARIANT(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQURL(2) && ISQVARIANT(3))
     {
 #endif
-      obj->addResource( PINT(1), *PQURL(2), *PQVARIANT(3) );
+      obj->addResource(PINT(1), *PQURL(2), *PQVARIANT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1223,17 +1230,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ADDRESOURCE )
 /*
 void markContentsDirty( int from, int length )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_MARKCONTENTSDIRTY )
+HB_FUNC_STATIC(QTEXTDOCUMENT_MARKCONTENTSDIRTY)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->markContentsDirty( PINT(1), PINT(2) );
+      obj->markContentsDirty(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1249,17 +1256,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_MARKCONTENTSDIRTY )
 /*
 void setUseDesignMetrics( bool b )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETUSEDESIGNMETRICS )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETUSEDESIGNMETRICS)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setUseDesignMetrics( PBOOL(1) );
+      obj->setUseDesignMetrics(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1275,17 +1282,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETUSEDESIGNMETRICS )
 /*
 bool useDesignMetrics() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_USEDESIGNMETRICS )
+HB_FUNC_STATIC(QTEXTDOCUMENT_USEDESIGNMETRICS)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->useDesignMetrics() );
+      RBOOL(obj->useDesignMetrics());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1299,17 +1306,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_USEDESIGNMETRICS )
 /*
 void drawContents( QPainter * painter, const QRectF & rect = QRectF() )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DRAWCONTENTS )
+HB_FUNC_STATIC(QTEXTDOCUMENT_DRAWCONTENTS)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQPAINTER(1) && (ISQRECTF(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->drawContents( PQPAINTER(1), HB_ISNIL(2)? QRectF() : *(QRectF *) Qt5xHb::itemGetPtr(2) );
+      obj->drawContents(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *(QRectF *)Qt5xHb::itemGetPtr(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1325,17 +1332,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DRAWCONTENTS )
 /*
 void setTextWidth( qreal width )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETTEXTWIDTH )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETTEXTWIDTH)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextWidth( PQREAL(1) );
+      obj->setTextWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1351,17 +1358,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETTEXTWIDTH )
 /*
 qreal textWidth() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_TEXTWIDTH )
+HB_FUNC_STATIC(QTEXTDOCUMENT_TEXTWIDTH)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->textWidth() );
+      RQREAL(obj->textWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1375,17 +1382,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TEXTWIDTH )
 /*
 qreal idealWidth() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_IDEALWIDTH )
+HB_FUNC_STATIC(QTEXTDOCUMENT_IDEALWIDTH)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->idealWidth() );
+      RQREAL(obj->idealWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1399,17 +1406,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_IDEALWIDTH )
 /*
 qreal indentWidth() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_INDENTWIDTH )
+HB_FUNC_STATIC(QTEXTDOCUMENT_INDENTWIDTH)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->indentWidth() );
+      RQREAL(obj->indentWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1423,17 +1430,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_INDENTWIDTH )
 /*
 void setIndentWidth( qreal width )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETINDENTWIDTH )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETINDENTWIDTH)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setIndentWidth( PQREAL(1) );
+      obj->setIndentWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1449,17 +1456,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETINDENTWIDTH )
 /*
 qreal documentMargin() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTMARGIN )
+HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTMARGIN)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->documentMargin() );
+      RQREAL(obj->documentMargin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1473,17 +1480,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTMARGIN )
 /*
 void setDocumentMargin( qreal margin )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTMARGIN )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTMARGIN)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDocumentMargin( PQREAL(1) );
+      obj->setDocumentMargin(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1499,14 +1506,14 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTMARGIN )
 /*
 void adjustSize()
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_ADJUSTSIZE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ADJUSTSIZE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->adjustSize();
@@ -1525,17 +1532,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ADJUSTSIZE )
 /*
 QSizeF size() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SIZE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SIZE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->size() );
+      QSizeF *ptr = new QSizeF(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1550,17 +1557,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SIZE )
 /*
 int blockCount() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_BLOCKCOUNT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_BLOCKCOUNT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->blockCount() );
+      RINT(obj->blockCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1574,17 +1581,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_BLOCKCOUNT )
 /*
 int lineCount() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_LINECOUNT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_LINECOUNT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lineCount() );
+      RINT(obj->lineCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1598,17 +1605,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_LINECOUNT )
 /*
 int characterCount() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERCOUNT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERCOUNT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->characterCount() );
+      RINT(obj->characterCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1622,17 +1629,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERCOUNT )
 /*
 void setDefaultStyleSheet( const QString & sheet )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTSTYLESHEET )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTSTYLESHEET)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setDefaultStyleSheet( PQSTRING(1) );
+      obj->setDefaultStyleSheet(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1648,17 +1655,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTSTYLESHEET )
 /*
 QString defaultStyleSheet() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTSTYLESHEET )
+HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTSTYLESHEET)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->defaultStyleSheet() );
+      RQSTRING(obj->defaultStyleSheet());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1672,17 +1679,18 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTSTYLESHEET )
 /*
 void clearUndoRedoStacks( QTextDocument::Stacks historyToClear = QTextDocument::UndoAndRedoStacks )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
+HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->clearUndoRedoStacks( HB_ISNIL(1)? (QTextDocument::Stacks) QTextDocument::UndoAndRedoStacks : (QTextDocument::Stacks) hb_parni(1) );
+      obj->clearUndoRedoStacks(HB_ISNIL(1) ? (QTextDocument::Stacks)QTextDocument::UndoAndRedoStacks
+                                           : (QTextDocument::Stacks)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1698,17 +1706,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
 /*
 int maximumBlockCount() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximumBlockCount() );
+      RINT(obj->maximumBlockCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1722,17 +1730,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT )
 /*
 void setMaximumBlockCount( int maximum )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximumBlockCount( PINT(1) );
+      obj->setMaximumBlockCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1748,17 +1756,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT )
 /*
 QTextOption defaultTextOption() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTTEXTOPTION )
+HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTTEXTOPTION)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextOption * ptr = new QTextOption( obj->defaultTextOption() );
+      QTextOption *ptr = new QTextOption(obj->defaultTextOption());
       Qt5xHb::createReturnClass(ptr, "QTEXTOPTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1773,17 +1781,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTTEXTOPTION )
 /*
 void setDefaultTextOption( const QTextOption & option )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTTEXTOPTION )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTTEXTOPTION)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTOPTION(1) )
+    if (ISNUMPAR(1) && ISQTEXTOPTION(1))
     {
 #endif
-      obj->setDefaultTextOption( *PQTEXTOPTION(1) );
+      obj->setDefaultTextOption(*PQTEXTOPTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1799,17 +1807,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTTEXTOPTION )
 /*
 Qt::CursorMoveStyle defaultCursorMoveStyle() const
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->defaultCursorMoveStyle() );
+      RENUM(obj->defaultCursorMoveStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1823,17 +1831,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE )
 /*
 void setDefaultCursorMoveStyle( Qt::CursorMoveStyle style )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDefaultCursorMoveStyle( (Qt::CursorMoveStyle) hb_parni(1) );
+      obj->setDefaultCursorMoveStyle((Qt::CursorMoveStyle)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1846,34 +1854,34 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
+HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
 {
-  if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+  if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
     void undo( QTextCursor * cursor )
     */
-    QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->undo( PQTEXTCURSOR(1) );
+      obj->undo(PQTEXTCURSOR(1));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     void undo()
     */
-    QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
       obj->undo();
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
   else
@@ -1882,34 +1890,34 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
   }
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
+HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
 {
-  if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+  if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
     void redo( QTextCursor * cursor )
     */
-    QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->redo( PQTEXTCURSOR(1) );
+      obj->redo(PQTEXTCURSOR(1));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     void redo()
     */
-    QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
       obj->redo();
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
   else
@@ -1921,17 +1929,17 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 /*
 void setModified( bool m = true )
 */
-HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
+HB_FUNC_STATIC(QTEXTDOCUMENT_SETMODIFIED)
 {
-  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setModified( OPBOOL(1,true) );
+      obj->setModified(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1944,49 +1952,49 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTextDocumentSlots_connect_signal(const QString & signal, const QString & slot);
+void QTextDocumentSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGE)
 {
   QTextDocumentSlots_connect_signal("contentsChange(int,int,int)", "contentsChange(int,int,int)");
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_ONCONTENTSCHANGED )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGED)
 {
   QTextDocumentSlots_connect_signal("contentsChanged()", "contentsChanged()");
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOAVAILABLE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOAVAILABLE)
 {
   QTextDocumentSlots_connect_signal("undoAvailable(bool)", "undoAvailable(bool)");
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_ONREDOAVAILABLE )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ONREDOAVAILABLE)
 {
   QTextDocumentSlots_connect_signal("redoAvailable(bool)", "redoAvailable(bool)");
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_ONUNDOCOMMANDADDED )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOCOMMANDADDED)
 {
   QTextDocumentSlots_connect_signal("undoCommandAdded()", "undoCommandAdded()");
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_ONMODIFICATIONCHANGED )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ONMODIFICATIONCHANGED)
 {
   QTextDocumentSlots_connect_signal("modificationChanged(bool)", "modificationChanged(bool)");
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED)
 {
   QTextDocumentSlots_connect_signal("cursorPositionChanged(QTextCursor)", "cursorPositionChanged(QTextCursor)");
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED)
 {
   QTextDocumentSlots_connect_signal("blockCountChanged(int)", "blockCountChanged(int)");
 }
 
-HB_FUNC_STATIC( QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED )
+HB_FUNC_STATIC(QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED)
 {
   QTextDocumentSlots_connect_signal("documentLayoutChanged()", "documentLayoutChanged()");
 }

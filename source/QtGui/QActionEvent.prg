@@ -55,14 +55,14 @@ RETURN
 
 #include <QtWidgets/QAction>
 
-/*
-QActionEvent( int type, QAction * action, QAction * before = 0 )
-*/
-HB_FUNC_STATIC( QACTIONEVENT_NEW )
+    /*
+    QActionEvent( int type, QAction * action, QAction * before = 0 )
+    */
+HB_FUNC_STATIC(QACTIONEVENT_NEW)
 {
-  if( ISBETWEEN(2,3) && HB_ISNUM(1) && ISQACTION(2) && (ISQACTION(3)||HB_ISNIL(3)) )
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQACTION(2) && (ISQACTION(3) || HB_ISNIL(3)))
   {
-    QActionEvent * obj = new QActionEvent( PINT(1), PQACTION(2), OPQACTION(3,0) );
+    QActionEvent *obj = new QActionEvent(PINT(1), PQACTION(2), OPQACTION(3, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -71,11 +71,11 @@ HB_FUNC_STATIC( QACTIONEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QACTIONEVENT_DELETE )
+HB_FUNC_STATIC(QACTIONEVENT_DELETE)
 {
-  QActionEvent * obj = (QActionEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionEvent *obj = (QActionEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -90,17 +90,17 @@ HB_FUNC_STATIC( QACTIONEVENT_DELETE )
 /*
 QAction * action() const
 */
-HB_FUNC_STATIC( QACTIONEVENT_ACTION )
+HB_FUNC_STATIC(QACTIONEVENT_ACTION)
 {
-  QActionEvent * obj = (QActionEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionEvent *obj = (QActionEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->action();
+      QAction *ptr = obj->action();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -115,17 +115,17 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 /*
 QAction * before() const
 */
-HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
+HB_FUNC_STATIC(QACTIONEVENT_BEFORE)
 {
-  QActionEvent * obj = (QActionEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionEvent *obj = (QActionEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->before();
+      QAction *ptr = obj->before();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

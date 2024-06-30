@@ -50,14 +50,14 @@ RETURN
 #include <QtGui/QCloseEvent>
 #endif
 
-/*
-QCloseEvent()
-*/
-HB_FUNC_STATIC( QCLOSEEVENT_NEW )
+    /*
+    QCloseEvent()
+    */
+HB_FUNC_STATIC(QCLOSEEVENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QCloseEvent * obj = new QCloseEvent();
+    QCloseEvent *obj = new QCloseEvent();
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -66,11 +66,11 @@ HB_FUNC_STATIC( QCLOSEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCLOSEEVENT_DELETE )
+HB_FUNC_STATIC(QCLOSEEVENT_DELETE)
 {
-  QCloseEvent * obj = (QCloseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCloseEvent *obj = (QCloseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

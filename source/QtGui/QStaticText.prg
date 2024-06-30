@@ -74,30 +74,30 @@ RETURN
 #include <QtGui/QStaticText>
 #endif
 
-HB_FUNC_STATIC( QSTATICTEXT_NEW )
+HB_FUNC_STATIC(QSTATICTEXT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStaticText()
     */
-    QStaticText * obj = new QStaticText();
+    QStaticText *obj = new QStaticText();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     QStaticText( const QString & text )
     */
-    QStaticText * obj = new QStaticText( PQSTRING(1) );
+    QStaticText *obj = new QStaticText(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSTATICTEXT(1) )
+  else if (ISNUMPAR(1) && ISQSTATICTEXT(1))
   {
     /*
     QStaticText( const QStaticText & other )
     */
-    QStaticText * obj = new QStaticText( *PQSTATICTEXT(1) );
+    QStaticText *obj = new QStaticText(*PQSTATICTEXT(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -106,11 +106,11 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTATICTEXT_DELETE )
+HB_FUNC_STATIC(QSTATICTEXT_DELETE)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -125,17 +125,17 @@ HB_FUNC_STATIC( QSTATICTEXT_DELETE )
 /*
 void swap( QStaticText & other )
 */
-HB_FUNC_STATIC( QSTATICTEXT_SWAP )
+HB_FUNC_STATIC(QSTATICTEXT_SWAP)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSTATICTEXT(1) )
+    if (ISNUMPAR(1) && ISQSTATICTEXT(1))
     {
 #endif
-      obj->swap( *PQSTATICTEXT(1) );
+      obj->swap(*PQSTATICTEXT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,17 +151,17 @@ HB_FUNC_STATIC( QSTATICTEXT_SWAP )
 /*
 void setText( const QString & text )
 */
-HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
+HB_FUNC_STATIC(QSTATICTEXT_SETTEXT)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setText( PQSTRING(1) );
+      obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,17 +177,17 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QSTATICTEXT_TEXT )
+HB_FUNC_STATIC(QSTATICTEXT_TEXT)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->text() );
+      RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,17 +201,17 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXT )
 /*
 void setTextFormat( Qt::TextFormat textFormat )
 */
-HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
+HB_FUNC_STATIC(QSTATICTEXT_SETTEXTFORMAT)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextFormat( (Qt::TextFormat) hb_parni(1) );
+      obj->setTextFormat((Qt::TextFormat)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,17 +227,17 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
 /*
 Qt::TextFormat textFormat() const
 */
-HB_FUNC_STATIC( QSTATICTEXT_TEXTFORMAT )
+HB_FUNC_STATIC(QSTATICTEXT_TEXTFORMAT)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->textFormat() );
+      RENUM(obj->textFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,17 +251,17 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTFORMAT )
 /*
 void setTextWidth( qreal textWidth )
 */
-HB_FUNC_STATIC( QSTATICTEXT_SETTEXTWIDTH )
+HB_FUNC_STATIC(QSTATICTEXT_SETTEXTWIDTH)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextWidth( PQREAL(1) );
+      obj->setTextWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,17 +277,17 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTWIDTH )
 /*
 qreal textWidth() const
 */
-HB_FUNC_STATIC( QSTATICTEXT_TEXTWIDTH )
+HB_FUNC_STATIC(QSTATICTEXT_TEXTWIDTH)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->textWidth() );
+      RQREAL(obj->textWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,17 +301,17 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTWIDTH )
 /*
 void setTextOption( const QTextOption & textOption )
 */
-HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
+HB_FUNC_STATIC(QSTATICTEXT_SETTEXTOPTION)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTOPTION(1) )
+    if (ISNUMPAR(1) && ISQTEXTOPTION(1))
     {
 #endif
-      obj->setTextOption( *PQTEXTOPTION(1) );
+      obj->setTextOption(*PQTEXTOPTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,17 +327,17 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
 /*
 QTextOption textOption() const
 */
-HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
+HB_FUNC_STATIC(QSTATICTEXT_TEXTOPTION)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextOption * ptr = new QTextOption( obj->textOption() );
+      QTextOption *ptr = new QTextOption(obj->textOption());
       Qt5xHb::createReturnClass(ptr, "QTEXTOPTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -352,17 +352,17 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
 /*
 QSizeF size() const
 */
-HB_FUNC_STATIC( QSTATICTEXT_SIZE )
+HB_FUNC_STATIC(QSTATICTEXT_SIZE)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->size() );
+      QSizeF *ptr = new QSizeF(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -377,17 +377,18 @@ HB_FUNC_STATIC( QSTATICTEXT_SIZE )
 /*
 void prepare( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
 */
-HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
+HB_FUNC_STATIC(QSTATICTEXT_PREPARE)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQTRANSFORM(1)||HB_ISNIL(1)) && (ISQFONT(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(0, 2) && (ISQTRANSFORM(1) || HB_ISNIL(1)) && (ISQFONT(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->prepare( HB_ISNIL(1)? QTransform() : *(QTransform *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? QFont() : *(QFont *) Qt5xHb::itemGetPtr(2) );
+      obj->prepare(HB_ISNIL(1) ? QTransform() : *(QTransform *)Qt5xHb::itemGetPtr(1),
+                   HB_ISNIL(2) ? QFont() : *(QFont *)Qt5xHb::itemGetPtr(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,17 +404,17 @@ HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
 /*
 void setPerformanceHint( QStaticText::PerformanceHint performanceHint )
 */
-HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
+HB_FUNC_STATIC(QSTATICTEXT_SETPERFORMANCEHINT)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPerformanceHint( (QStaticText::PerformanceHint) hb_parni(1) );
+      obj->setPerformanceHint((QStaticText::PerformanceHint)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,17 +430,17 @@ HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
 /*
 QStaticText::PerformanceHint performanceHint() const
 */
-HB_FUNC_STATIC( QSTATICTEXT_PERFORMANCEHINT )
+HB_FUNC_STATIC(QSTATICTEXT_PERFORMANCEHINT)
 {
-  QStaticText * obj = (QStaticText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->performanceHint() );
+      RENUM(obj->performanceHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,11 +451,11 @@ HB_FUNC_STATIC( QSTATICTEXT_PERFORMANCEHINT )
   }
 }
 
-HB_FUNC_STATIC( QSTATICTEXT_NEWFROM )
+HB_FUNC_STATIC(QSTATICTEXT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -463,7 +464,7 @@ HB_FUNC_STATIC( QSTATICTEXT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -480,26 +481,26 @@ HB_FUNC_STATIC( QSTATICTEXT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSTATICTEXT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSTATICTEXT_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSTATICTEXT_NEWFROM );
+  HB_FUNC_EXEC(QSTATICTEXT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSTATICTEXT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSTATICTEXT_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSTATICTEXT_NEWFROM );
+  HB_FUNC_EXEC(QSTATICTEXT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSTATICTEXT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSTATICTEXT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSTATICTEXT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSTATICTEXT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -50,14 +50,14 @@ RETURN
 #include <QtGui/QShowEvent>
 #endif
 
-/*
-QShowEvent()
-*/
-HB_FUNC_STATIC( QSHOWEVENT_NEW )
+    /*
+    QShowEvent()
+    */
+HB_FUNC_STATIC(QSHOWEVENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QShowEvent * obj = new QShowEvent();
+    QShowEvent *obj = new QShowEvent();
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -66,11 +66,11 @@ HB_FUNC_STATIC( QSHOWEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSHOWEVENT_DELETE )
+HB_FUNC_STATIC(QSHOWEVENT_DELETE)
 {
-  QShowEvent * obj = (QShowEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QShowEvent *obj = (QShowEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

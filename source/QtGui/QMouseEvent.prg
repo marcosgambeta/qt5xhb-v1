@@ -60,30 +60,39 @@ RETURN
 #include <QtGui/QMouseEvent>
 #endif
 
-HB_FUNC_STATIC( QMOUSEEVENT_NEW )
+HB_FUNC_STATIC(QMOUSEEVENT_NEW)
 {
-  if( ISNUMPAR(5) && HB_ISNUM(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) )
+  if (ISNUMPAR(5) && HB_ISNUM(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     /*
-    QMouseEvent( QEvent::Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
+    QMouseEvent( QEvent::Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons,
+    Qt::KeyboardModifiers modifiers )
     */
-    QMouseEvent * obj = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), (Qt::MouseButton) hb_parni(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5) );
+    QMouseEvent *obj = new QMouseEvent((QEvent::Type)hb_parni(1), *PQPOINTF(2), (Qt::MouseButton)hb_parni(3),
+                                       (Qt::MouseButtons)hb_parni(4), (Qt::KeyboardModifiers)hb_parni(5));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISNUMPAR(6) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
+  else if (ISNUMPAR(6) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6))
   {
     /*
-    QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
+    QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button,
+    Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
-    QMouseEvent * obj = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), (Qt::MouseButton) hb_parni(4), (Qt::MouseButtons) hb_parni(5), (Qt::KeyboardModifiers) hb_parni(6) );
+    QMouseEvent *obj =
+        new QMouseEvent((QEvent::Type)hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), (Qt::MouseButton)hb_parni(4),
+                        (Qt::MouseButtons)hb_parni(5), (Qt::KeyboardModifiers)hb_parni(6));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISNUMPAR(7) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) )
+  else if (ISNUMPAR(7) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
+           HB_ISNUM(7))
   {
     /*
-    QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
+    QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos,
+    Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
-    QMouseEvent * obj = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), (Qt::MouseButton) hb_parni(5), (Qt::MouseButtons) hb_parni(6), (Qt::KeyboardModifiers) hb_parni(7) );
+    QMouseEvent *obj = new QMouseEvent((QEvent::Type)hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4),
+                                       (Qt::MouseButton)hb_parni(5), (Qt::MouseButtons)hb_parni(6),
+                                       (Qt::KeyboardModifiers)hb_parni(7));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -92,11 +101,11 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
+HB_FUNC_STATIC(QMOUSEEVENT_DELETE)
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -111,17 +120,17 @@ HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
 /*
 Qt::MouseButton button() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
+HB_FUNC_STATIC(QMOUSEEVENT_BUTTON)
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->button() );
+      RENUM(obj->button());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,17 +144,17 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
 /*
 Qt::MouseButtons buttons() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
+HB_FUNC_STATIC(QMOUSEEVENT_BUTTONS)
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->buttons() );
+      RENUM(obj->buttons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,17 +168,17 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 /*
 int globalX() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
+HB_FUNC_STATIC(QMOUSEEVENT_GLOBALX)
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->globalX() );
+      RINT(obj->globalX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,17 +192,17 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
 /*
 int globalY() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
+HB_FUNC_STATIC(QMOUSEEVENT_GLOBALY)
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->globalY() );
+      RINT(obj->globalY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,17 +216,17 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
 /*
 const QPointF & localPos() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_LOCALPOS )
+HB_FUNC_STATIC(QMOUSEEVENT_LOCALPOS)
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPointF * ptr = &obj->localPos();
+      const QPointF *ptr = &obj->localPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -232,17 +241,17 @@ HB_FUNC_STATIC( QMOUSEEVENT_LOCALPOS )
 /*
 const QPointF & screenPos() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_SCREENPOS )
+HB_FUNC_STATIC(QMOUSEEVENT_SCREENPOS)
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPointF * ptr = &obj->screenPos();
+      const QPointF *ptr = &obj->screenPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -257,17 +266,17 @@ HB_FUNC_STATIC( QMOUSEEVENT_SCREENPOS )
 /*
 const QPointF & windowPos() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
+HB_FUNC_STATIC(QMOUSEEVENT_WINDOWPOS)
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPointF * ptr = &obj->windowPos();
+      const QPointF *ptr = &obj->windowPos();
       Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -282,17 +291,17 @@ HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
 /*
 int x() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_X )
+HB_FUNC_STATIC(QMOUSEEVENT_X)
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->x() );
+      RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,17 +315,17 @@ HB_FUNC_STATIC( QMOUSEEVENT_X )
 /*
 int y() const
 */
-HB_FUNC_STATIC( QMOUSEEVENT_Y )
+HB_FUNC_STATIC(QMOUSEEVENT_Y)
 {
-  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->y() );
+      RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

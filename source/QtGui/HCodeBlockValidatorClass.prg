@@ -39,23 +39,23 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
+HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     explicit HCodeBlockValidator( QObject *parent = 0 )
     */
-    HCodeBlockValidator * o = new HCodeBlockValidator( OPQOBJECT(1,0) );
-    Qt5xHb::returnNewObject( o, false );
+    HCodeBlockValidator *o = new HCodeBlockValidator(OPQOBJECT(1, 0));
+    Qt5xHb::returnNewObject(o, false);
   }
-  else if( ISBETWEEN(1,2) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = 0 )
     */
-    HCodeBlockValidator * o = new HCodeBlockValidator( PBLOCKORSYMBOL(1), OPQOBJECT(2,0) );
-    Qt5xHb::returnNewObject( o, false );
+    HCodeBlockValidator *o = new HCodeBlockValidator(PBLOCKORSYMBOL(1), OPQOBJECT(2, 0));
+    Qt5xHb::returnNewObject(o, false);
   }
   else
   {
@@ -66,11 +66,11 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
 /*
 ~HCodeBlockValidator()
 */
-HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_DELETE )
+HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_DELETE)
 {
-  HCodeBlockValidator * obj = (HCodeBlockValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  HCodeBlockValidator *obj = (HCodeBlockValidator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -87,14 +87,14 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_DELETE )
 /*
 QValidator::State validate( QString & input, int & pos ) const
 */
-HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_VALIDATE )
+HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_VALIDATE)
 {
 }
 
 /*
 void fixup( QString & input ) const
 */
-HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_FIXUP )
+HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_FIXUP)
 {
 }
 

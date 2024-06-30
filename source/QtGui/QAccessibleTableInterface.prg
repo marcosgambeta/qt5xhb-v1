@@ -78,11 +78,11 @@ RETURN
 #include <QtGui/QAccessibleTableInterface>
 #endif
 
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_DELETE )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_DELETE)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -97,17 +97,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_DELETE )
 /*
 virtual QAccessibleInterface * cellAt( int row, int column ) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CELLAT )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_CELLAT)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      QAccessibleInterface * ptr = obj->cellAt( PINT(1), PINT(2) );
+      QAccessibleInterface *ptr = obj->cellAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -122,17 +122,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CELLAT )
 /*
 virtual QAccessibleInterface * caption() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_CAPTION)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAccessibleInterface * ptr = obj->caption();
+      QAccessibleInterface *ptr = obj->caption();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -147,17 +147,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
 /*
 virtual QString columnDescription( int column ) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNDESCRIPTION )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_COLUMNDESCRIPTION)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->columnDescription( PINT(1) ) );
+      RQSTRING(obj->columnDescription(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,17 +171,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNDESCRIPTION )
 /*
 virtual int columnCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNCOUNT )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_COLUMNCOUNT)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->columnCount() );
+      RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,17 +195,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNCOUNT )
 /*
 virtual int rowCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWCOUNT )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_ROWCOUNT)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->rowCount() );
+      RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,17 +219,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWCOUNT )
 /*
 virtual int selectedCellCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLCOUNT )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCELLCOUNT)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->selectedCellCount() );
+      RINT(obj->selectedCellCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,17 +243,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLCOUNT )
 /*
 virtual int selectedColumnCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNCOUNT )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNCOUNT)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->selectedColumnCount() );
+      RINT(obj->selectedColumnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,17 +267,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNCOUNT )
 /*
 virtual int selectedRowCount() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->selectedRowCount() );
+      RINT(obj->selectedRowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,17 +291,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT )
 /*
 virtual QString rowDescription( int row ) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->rowDescription( PINT(1) ) );
+      RQSTRING(obj->rowDescription(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,22 +315,22 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
 /*
 virtual QList<QAccessibleInterface*> selectedCells() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCELLS)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QList<QAccessibleInterface*> list = obj->selectedCells();
+      QList<QAccessibleInterface *> list = obj->selectedCells();
       PHB_DYNS pDynSym = hb_dynsymFindName("QACCESSIBLEINTERFACE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
-        for( int i = 0; i < list.count(); i++ )
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -362,14 +362,14 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS )
 /*
 virtual QList<int> selectedColumns() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<int> list = obj->selectedColumns();
@@ -387,14 +387,14 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS )
 /*
 virtual QList<int> selectedRows() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWS )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTEDROWS)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<int> list = obj->selectedRows();
@@ -412,17 +412,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWS )
 /*
 virtual QAccessibleInterface * summary() const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SUMMARY)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAccessibleInterface * ptr = obj->summary();
+      QAccessibleInterface *ptr = obj->summary();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -437,17 +437,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
 /*
 virtual bool isColumnSelected( int column ) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISCOLUMNSELECTED )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_ISCOLUMNSELECTED)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isColumnSelected( PINT(1) ) );
+      RBOOL(obj->isColumnSelected(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,17 +461,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISCOLUMNSELECTED )
 /*
 virtual bool isRowSelected( int row ) const = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISROWSELECTED )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_ISROWSELECTED)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isRowSelected( PINT(1) ) );
+      RBOOL(obj->isRowSelected(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -485,17 +485,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISROWSELECTED )
 /*
 virtual bool selectRow( int row ) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTROW )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTROW)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->selectRow( PINT(1) ) );
+      RBOOL(obj->selectRow(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,17 +509,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTROW )
 /*
 virtual bool selectColumn( int column ) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTCOLUMN )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELECTCOLUMN)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->selectColumn( PINT(1) ) );
+      RBOOL(obj->selectColumn(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -533,17 +533,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTCOLUMN )
 /*
 virtual bool unselectRow( int row ) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTROW )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_UNSELECTROW)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->unselectRow( PINT(1) ) );
+      RBOOL(obj->unselectRow(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,17 +557,17 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTROW )
 /*
 virtual bool unselectColumn( int column ) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTCOLUMN )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_UNSELECTCOLUMN)
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleTableInterface *obj = (QAccessibleTableInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->unselectColumn( PINT(1) ) );
+      RBOOL(obj->unselectColumn(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -578,11 +578,11 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTCOLUMN )
   }
 }
 
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_NEWFROM )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -608,26 +608,26 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QACCESSIBLETABLEINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLETABLEINTERFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QACCESSIBLETABLEINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLETABLEINTERFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QACCESSIBLETABLEINTERFACE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -53,11 +53,11 @@ RETURN
 #include <QtGui/QAccessiblePlugin>
 #endif
 
-HB_FUNC_STATIC( QACCESSIBLEPLUGIN_DELETE )
+HB_FUNC_STATIC(QACCESSIBLEPLUGIN_DELETE)
 {
-  QAccessiblePlugin * obj = (QAccessiblePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessiblePlugin *obj = (QAccessiblePlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -74,17 +74,17 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_DELETE )
 /*
 virtual QAccessibleInterface * create( const QString & key, QObject * object ) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
+HB_FUNC_STATIC(QACCESSIBLEPLUGIN_CREATE)
 {
-  QAccessiblePlugin * obj = (QAccessiblePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessiblePlugin *obj = (QAccessiblePlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
     {
 #endif
-      QAccessibleInterface * ptr = obj->create( PQSTRING(1), PQOBJECT(2) );
+      QAccessibleInterface *ptr = obj->create(PQSTRING(1), PQOBJECT(2));
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

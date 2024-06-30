@@ -53,11 +53,11 @@ RETURN
 #include <QtGui/QGenericPlugin>
 #endif
 
-HB_FUNC_STATIC( QGENERICPLUGIN_DELETE )
+HB_FUNC_STATIC(QGENERICPLUGIN_DELETE)
 {
-  QGenericPlugin * obj = (QGenericPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGenericPlugin *obj = (QGenericPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -74,17 +74,17 @@ HB_FUNC_STATIC( QGENERICPLUGIN_DELETE )
 /*
 virtual QObject * create( const QString & key, const QString & specification ) = 0
 */
-HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
+HB_FUNC_STATIC(QGENERICPLUGIN_CREATE)
 {
-  QGenericPlugin * obj = (QGenericPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGenericPlugin *obj = (QGenericPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      QObject * ptr = obj->create( PQSTRING(1), PQSTRING(2) );
+      QObject *ptr = obj->create(PQSTRING(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

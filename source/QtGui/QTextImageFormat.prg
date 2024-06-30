@@ -59,14 +59,14 @@ RETURN
 #include <QtGui/QTextImageFormat>
 #endif
 
-/*
-QTextImageFormat()
-*/
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
+    /*
+    QTextImageFormat()
+    */
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QTextImageFormat * obj = new QTextImageFormat();
+    QTextImageFormat *obj = new QTextImageFormat();
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -75,11 +75,11 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_DELETE)
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat *obj = (QTextImageFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -94,17 +94,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_ISVALID)
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat *obj = (QTextImageFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,17 +118,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
 /*
 void setName( const QString & name )
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETNAME)
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat *obj = (QTextImageFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setName( PQSTRING(1) );
+      obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,17 +144,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NAME)
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat *obj = (QTextImageFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,17 +168,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
 /*
 void setWidth( qreal width )
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETWIDTH)
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat *obj = (QTextImageFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWidth( PQREAL(1) );
+      obj->setWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,17 +194,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
 /*
 qreal width() const
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_WIDTH)
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat *obj = (QTextImageFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->width() );
+      RQREAL(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,17 +218,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
 /*
 void setHeight( qreal height )
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETHEIGHT)
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat *obj = (QTextImageFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHeight( PQREAL(1) );
+      obj->setHeight(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,17 +244,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
 /*
 qreal height() const
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_HEIGHT)
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat *obj = (QTextImageFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->height() );
+      RQREAL(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,18 +268,18 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
 /*
 int quality() const
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_QUALITY )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_QUALITY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  QTextImageFormat * obj = (QTextImageFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
+  QTextImageFormat *obj = (QTextImageFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->quality() );
+      RINT(obj->quality());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,18 +294,18 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_QUALITY )
 /*
 void setQuality( int quality = 100 )
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETQUALITY )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETQUALITY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  QTextImageFormat * obj = (QTextImageFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
+  QTextImageFormat *obj = (QTextImageFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setQuality( OPINT(1,100) );
+      obj->setQuality(OPINT(1, 100));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

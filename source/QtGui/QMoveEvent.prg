@@ -53,14 +53,14 @@ RETURN
 #include <QtGui/QMoveEvent>
 #endif
 
-/*
-QMoveEvent( const QPoint & pos, const QPoint & oldPos )
-*/
-HB_FUNC_STATIC( QMOVEEVENT_NEW )
+    /*
+    QMoveEvent( const QPoint & pos, const QPoint & oldPos )
+    */
+HB_FUNC_STATIC(QMOVEEVENT_NEW)
 {
-  if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
+  if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2))
   {
-    QMoveEvent * obj = new QMoveEvent( *PQPOINT(1), *PQPOINT(2) );
+    QMoveEvent *obj = new QMoveEvent(*PQPOINT(1), *PQPOINT(2));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -69,11 +69,11 @@ HB_FUNC_STATIC( QMOVEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMOVEEVENT_DELETE )
+HB_FUNC_STATIC(QMOVEEVENT_DELETE)
 {
-  QMoveEvent * obj = (QMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMoveEvent *obj = (QMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -88,17 +88,17 @@ HB_FUNC_STATIC( QMOVEEVENT_DELETE )
 /*
 const QPoint & oldPos() const
 */
-HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
+HB_FUNC_STATIC(QMOVEEVENT_OLDPOS)
 {
-  QMoveEvent * obj = (QMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMoveEvent *obj = (QMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPoint * ptr = &obj->oldPos();
+      const QPoint *ptr = &obj->oldPos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -113,17 +113,17 @@ HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
 /*
 const QPoint & pos() const
 */
-HB_FUNC_STATIC( QMOVEEVENT_POS )
+HB_FUNC_STATIC(QMOVEEVENT_POS)
 {
-  QMoveEvent * obj = (QMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMoveEvent *obj = (QMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPoint * ptr = &obj->pos();
+      const QPoint *ptr = &obj->pos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

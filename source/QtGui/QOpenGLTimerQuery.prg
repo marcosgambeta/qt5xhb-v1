@@ -49,7 +49,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtGui/QOpenGLTimerQuery>
 #endif
 #endif
@@ -61,21 +61,21 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtGui/QOpenGLTimerQuery>
 #endif
 #endif
 
-/*
-explicit QOpenGLTimerQuery(QObject *parent = 0)
-*/
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_NEW )
+    /*
+    explicit QOpenGLTimerQuery(QObject *parent = 0)
+    */
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QOpenGLTimerQuery * obj = new QOpenGLTimerQuery( OPQOBJECT(1,0) );
+    QOpenGLTimerQuery *obj = new QOpenGLTimerQuery(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -86,13 +86,13 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_DELETE )
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery *obj = (QOpenGLTimerQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -111,19 +111,19 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_DELETE )
 /*
 bool create()
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_CREATE )
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_CREATE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery *obj = (QOpenGLTimerQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->create() );
+      RBOOL(obj->create());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,16 +139,16 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_CREATE )
 /*
 void destroy()
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_DESTROY )
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_DESTROY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery *obj = (QOpenGLTimerQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->destroy();
@@ -169,19 +169,19 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_DESTROY )
 /*
 bool isCreated() const
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISCREATED )
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_ISCREATED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery *obj = (QOpenGLTimerQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isCreated() );
+      RBOOL(obj->isCreated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,19 +197,19 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISCREATED )
 /*
 GLuint objectId() const
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_OBJECTID )
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_OBJECTID)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery *obj = (QOpenGLTimerQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT( obj->objectId() );
+      RGLUINT(obj->objectId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,16 +225,16 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_OBJECTID )
 /*
 void begin()
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_BEGIN )
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_BEGIN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery *obj = (QOpenGLTimerQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->begin();
@@ -255,16 +255,16 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_BEGIN )
 /*
 void end()
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_END )
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_END)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery *obj = (QOpenGLTimerQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->end();
@@ -285,19 +285,19 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_END )
 /*
 GLuint64 waitForTimestamp() const
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORTIMESTAMP )
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_WAITFORTIMESTAMP)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery *obj = (QOpenGLTimerQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT64( obj->waitForTimestamp() );
+      RGLUINT64(obj->waitForTimestamp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,16 +313,16 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORTIMESTAMP )
 /*
 void recordTimestamp()
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_RECORDTIMESTAMP )
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_RECORDTIMESTAMP)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery *obj = (QOpenGLTimerQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->recordTimestamp();
@@ -343,19 +343,19 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_RECORDTIMESTAMP )
 /*
 bool isResultAvailable() const
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISRESULTAVAILABLE )
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_ISRESULTAVAILABLE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery *obj = (QOpenGLTimerQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isResultAvailable() );
+      RBOOL(obj->isResultAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,19 +371,19 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_ISRESULTAVAILABLE )
 /*
 GLuint64 waitForResult() const
 */
-HB_FUNC_STATIC( QOPENGLTIMERQUERY_WAITFORRESULT )
+HB_FUNC_STATIC(QOPENGLTIMERQUERY_WAITFORRESULT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimerQuery * obj = (QOpenGLTimerQuery *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLTimerQuery *obj = (QOpenGLTimerQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT64( obj->waitForResult() );
+      RGLUINT64(obj->waitForResult());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

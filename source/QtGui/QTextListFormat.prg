@@ -59,14 +59,14 @@ RETURN
 #include <QtGui/QTextListFormat>
 #endif
 
-/*
-QTextListFormat()
-*/
-HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
+    /*
+    QTextListFormat()
+    */
+HB_FUNC_STATIC(QTEXTLISTFORMAT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QTextListFormat * obj = new QTextListFormat();
+    QTextListFormat *obj = new QTextListFormat();
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -75,11 +75,11 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTLISTFORMAT_DELETE )
+HB_FUNC_STATIC(QTEXTLISTFORMAT_DELETE)
 {
-  QTextListFormat * obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextListFormat *obj = (QTextListFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -94,17 +94,17 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_DELETE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
+HB_FUNC_STATIC(QTEXTLISTFORMAT_ISVALID)
 {
-  QTextListFormat * obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextListFormat *obj = (QTextListFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,17 +118,17 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
 /*
 void setStyle( QTextListFormat::Style style )
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
+HB_FUNC_STATIC(QTEXTLISTFORMAT_SETSTYLE)
 {
-  QTextListFormat * obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextListFormat *obj = (QTextListFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setStyle( (QTextListFormat::Style) hb_parni(1) );
+      obj->setStyle((QTextListFormat::Style)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,17 +144,17 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
 /*
 QTextListFormat::Style style() const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
+HB_FUNC_STATIC(QTEXTLISTFORMAT_STYLE)
 {
-  QTextListFormat * obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextListFormat *obj = (QTextListFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->style() );
+      RENUM(obj->style());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,17 +168,17 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
 /*
 void setIndent( int indent )
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
+HB_FUNC_STATIC(QTEXTLISTFORMAT_SETINDENT)
 {
-  QTextListFormat * obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextListFormat *obj = (QTextListFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setIndent( PINT(1) );
+      obj->setIndent(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,17 +194,17 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
 /*
 int indent() const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
+HB_FUNC_STATIC(QTEXTLISTFORMAT_INDENT)
 {
-  QTextListFormat * obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextListFormat *obj = (QTextListFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->indent() );
+      RINT(obj->indent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,17 +218,17 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
 /*
 void setNumberPrefix( const QString & numberPrefix )
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
+HB_FUNC_STATIC(QTEXTLISTFORMAT_SETNUMBERPREFIX)
 {
-  QTextListFormat * obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextListFormat *obj = (QTextListFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setNumberPrefix( PQSTRING(1) );
+      obj->setNumberPrefix(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,17 +244,17 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
 /*
 QString numberPrefix() const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
+HB_FUNC_STATIC(QTEXTLISTFORMAT_NUMBERPREFIX)
 {
-  QTextListFormat * obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextListFormat *obj = (QTextListFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->numberPrefix() );
+      RQSTRING(obj->numberPrefix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,17 +268,17 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
 /*
 void setNumberSuffix( const QString & numberSuffix )
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
+HB_FUNC_STATIC(QTEXTLISTFORMAT_SETNUMBERSUFFIX)
 {
-  QTextListFormat * obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextListFormat *obj = (QTextListFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setNumberSuffix( PQSTRING(1) );
+      obj->setNumberSuffix(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,17 +294,17 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
 /*
 QString numberSuffix() const
 */
-HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
+HB_FUNC_STATIC(QTEXTLISTFORMAT_NUMBERSUFFIX)
 {
-  QTextListFormat * obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTextListFormat *obj = (QTextListFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->numberSuffix() );
+      RQSTRING(obj->numberSuffix());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

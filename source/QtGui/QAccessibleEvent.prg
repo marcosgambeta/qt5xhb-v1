@@ -66,14 +66,14 @@ RETURN
 #include <QtGui/QAccessibleEvent>
 #endif
 
-/*
-QAccessibleEvent( QObject * obj, QAccessible::Event typ )
-*/
-HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
+    /*
+    QAccessibleEvent( QObject * obj, QAccessible::Event typ )
+    */
+HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 {
-  if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
   {
-    QAccessibleEvent * obj = new QAccessibleEvent( PQOBJECT(1), (QAccessible::Event) hb_parni(2) );
+    QAccessibleEvent *obj = new QAccessibleEvent(PQOBJECT(1), (QAccessible::Event)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -82,11 +82,11 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QACCESSIBLEEVENT_DELETE )
+HB_FUNC_STATIC(QACCESSIBLEEVENT_DELETE)
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -101,17 +101,17 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_DELETE )
 /*
 QAccessible::Event type() const
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_TYPE )
+HB_FUNC_STATIC(QACCESSIBLEEVENT_TYPE)
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,17 +125,17 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_TYPE )
 /*
 QObject * object() const
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
+HB_FUNC_STATIC(QACCESSIBLEEVENT_OBJECT)
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QObject * ptr = obj->object();
+      QObject *ptr = obj->object();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -150,17 +150,17 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
 /*
 void setChild( int chld )
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_SETCHILD )
+HB_FUNC_STATIC(QACCESSIBLEEVENT_SETCHILD)
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setChild( PINT(1) );
+      obj->setChild(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,17 +176,17 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_SETCHILD )
 /*
 int child() const
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
+HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->child() );
+      RINT(obj->child());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,17 +200,17 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 /*
 virtual QAccessibleInterface * accessibleInterface() const
 */
-HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
+HB_FUNC_STATIC(QACCESSIBLEEVENT_ACCESSIBLEINTERFACE)
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAccessibleInterface * ptr = obj->accessibleInterface();
+      QAccessibleInterface *ptr = obj->accessibleInterface();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -222,11 +222,11 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
   }
 }
 
-HB_FUNC_STATIC( QACCESSIBLEEVENT_NEWFROM )
+HB_FUNC_STATIC(QACCESSIBLEEVENT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -252,26 +252,26 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QACCESSIBLEEVENT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QACCESSIBLEEVENT_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QACCESSIBLEEVENT_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLEEVENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QACCESSIBLEEVENT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QACCESSIBLEEVENT_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QACCESSIBLEEVENT_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLEEVENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QACCESSIBLEEVENT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QACCESSIBLEEVENT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QACCESSIBLEEVENT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QACCESSIBLEEVENT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -63,14 +63,18 @@ RETURN
 
 #include <QtCore/QMimeData>
 
-/*
-QDropEvent( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop )
-*/
-HB_FUNC_STATIC( QDROPEVENT_NEW )
+    /*
+    QDropEvent( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons,
+    Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop )
+    */
+HB_FUNC_STATIC(QDROPEVENT_NEW)
 {
-  if( ISBETWEEN(5,6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && (HB_ISNUM(6)||HB_ISNIL(6)) )
+  if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
+      (HB_ISNUM(6) || HB_ISNIL(6)))
   {
-    QDropEvent * obj = new QDropEvent( *PQPOINT(1), (Qt::DropActions) hb_parni(2), PQMIMEDATA(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), HB_ISNIL(6)? (QEvent::Type) QEvent::Drop : (QEvent::Type) hb_parni(6) );
+    QDropEvent *obj = new QDropEvent(*PQPOINT(1), (Qt::DropActions)hb_parni(2), PQMIMEDATA(3),
+                                     (Qt::MouseButtons)hb_parni(4), (Qt::KeyboardModifiers)hb_parni(5),
+                                     HB_ISNIL(6) ? (QEvent::Type)QEvent::Drop : (QEvent::Type)hb_parni(6));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -79,11 +83,11 @@ HB_FUNC_STATIC( QDROPEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDROPEVENT_DELETE )
+HB_FUNC_STATIC(QDROPEVENT_DELETE)
 {
-  QDropEvent * obj = (QDropEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -98,14 +102,14 @@ HB_FUNC_STATIC( QDROPEVENT_DELETE )
 /*
 void acceptProposedAction()
 */
-HB_FUNC_STATIC( QDROPEVENT_ACCEPTPROPOSEDACTION )
+HB_FUNC_STATIC(QDROPEVENT_ACCEPTPROPOSEDACTION)
 {
-  QDropEvent * obj = (QDropEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->acceptProposedAction();
@@ -124,17 +128,17 @@ HB_FUNC_STATIC( QDROPEVENT_ACCEPTPROPOSEDACTION )
 /*
 Qt::DropAction dropAction() const
 */
-HB_FUNC_STATIC( QDROPEVENT_DROPACTION )
+HB_FUNC_STATIC(QDROPEVENT_DROPACTION)
 {
-  QDropEvent * obj = (QDropEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->dropAction() );
+      RENUM(obj->dropAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,17 +152,17 @@ HB_FUNC_STATIC( QDROPEVENT_DROPACTION )
 /*
 Qt::KeyboardModifiers keyboardModifiers() const
 */
-HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
+HB_FUNC_STATIC(QDROPEVENT_KEYBOARDMODIFIERS)
 {
-  QDropEvent * obj = (QDropEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->keyboardModifiers() );
+      RENUM(obj->keyboardModifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,17 +176,17 @@ HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
 /*
 const QMimeData * mimeData() const
 */
-HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
+HB_FUNC_STATIC(QDROPEVENT_MIMEDATA)
 {
-  QDropEvent * obj = (QDropEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QMimeData * ptr = obj->mimeData();
+      const QMimeData *ptr = obj->mimeData();
       Qt5xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -197,17 +201,17 @@ HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
 /*
 Qt::MouseButtons mouseButtons() const
 */
-HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
+HB_FUNC_STATIC(QDROPEVENT_MOUSEBUTTONS)
 {
-  QDropEvent * obj = (QDropEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->mouseButtons() );
+      RENUM(obj->mouseButtons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,17 +225,17 @@ HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
 /*
 Qt::DropActions possibleActions() const
 */
-HB_FUNC_STATIC( QDROPEVENT_POSSIBLEACTIONS )
+HB_FUNC_STATIC(QDROPEVENT_POSSIBLEACTIONS)
 {
-  QDropEvent * obj = (QDropEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->possibleActions() );
+      RENUM(obj->possibleActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,17 +249,17 @@ HB_FUNC_STATIC( QDROPEVENT_POSSIBLEACTIONS )
 /*
 Qt::DropAction proposedAction() const
 */
-HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
+HB_FUNC_STATIC(QDROPEVENT_PROPOSEDACTION)
 {
-  QDropEvent * obj = (QDropEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->proposedAction() );
+      RENUM(obj->proposedAction());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,17 +273,17 @@ HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
 /*
 void setDropAction( Qt::DropAction action )
 */
-HB_FUNC_STATIC( QDROPEVENT_SETDROPACTION )
+HB_FUNC_STATIC(QDROPEVENT_SETDROPACTION)
 {
-  QDropEvent * obj = (QDropEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDropAction( (Qt::DropAction) hb_parni(1) );
+      obj->setDropAction((Qt::DropAction)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,17 +299,17 @@ HB_FUNC_STATIC( QDROPEVENT_SETDROPACTION )
 /*
 QObject * source() const
 */
-HB_FUNC_STATIC( QDROPEVENT_SOURCE )
+HB_FUNC_STATIC(QDROPEVENT_SOURCE)
 {
-  QDropEvent * obj = (QDropEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QObject * ptr = obj->source();
+      QObject *ptr = obj->source();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

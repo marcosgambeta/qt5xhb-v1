@@ -86,11 +86,11 @@ RETURN
 
 #include <QtGui/QPainterPath>
 
-HB_FUNC_STATIC( QPAINTENGINESTATE_DELETE )
+HB_FUNC_STATIC(QPAINTENGINESTATE_DELETE)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -105,17 +105,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_DELETE )
 /*
 QBrush backgroundBrush() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
+HB_FUNC_STATIC(QPAINTENGINESTATE_BACKGROUNDBRUSH)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBrush * ptr = new QBrush( obj->backgroundBrush() );
+      QBrush *ptr = new QBrush(obj->backgroundBrush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -130,17 +130,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
 /*
 Qt::BGMode backgroundMode() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
+HB_FUNC_STATIC(QPAINTENGINESTATE_BACKGROUNDMODE)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->backgroundMode() );
+      RENUM(obj->backgroundMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,17 +154,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
 /*
 QBrush brush() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
+HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSH)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush() );
+      QBrush *ptr = new QBrush(obj->brush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -179,17 +179,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
 /*
 bool brushNeedsResolving() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
+HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSHNEEDSRESOLVING)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->brushNeedsResolving() );
+      RBOOL(obj->brushNeedsResolving());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,17 +203,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
 /*
 QPointF brushOrigin() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
+HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSHORIGIN)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->brushOrigin() );
+      QPointF *ptr = new QPointF(obj->brushOrigin());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -228,17 +228,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
 /*
 Qt::ClipOperation clipOperation() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
+HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPOPERATION)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->clipOperation() );
+      RENUM(obj->clipOperation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,17 +252,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
 /*
 QPainterPath clipPath() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
+HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPPATH)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->clipPath() );
+      QPainterPath *ptr = new QPainterPath(obj->clipPath());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -277,17 +277,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
 /*
 QRegion clipRegion() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
+HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPREGION)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRegion * ptr = new QRegion( obj->clipRegion() );
+      QRegion *ptr = new QRegion(obj->clipRegion());
       Qt5xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -302,17 +302,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
 /*
 QPainter::CompositionMode compositionMode() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
+HB_FUNC_STATIC(QPAINTENGINESTATE_COMPOSITIONMODE)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->compositionMode() );
+      RENUM(obj->compositionMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,17 +326,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
+HB_FUNC_STATIC(QPAINTENGINESTATE_FONT)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QFont * ptr = new QFont( obj->font() );
+      QFont *ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -351,17 +351,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
 /*
 bool isClipEnabled() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
+HB_FUNC_STATIC(QPAINTENGINESTATE_ISCLIPENABLED)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isClipEnabled() );
+      RBOOL(obj->isClipEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,17 +375,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
 /*
 qreal opacity() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
+HB_FUNC_STATIC(QPAINTENGINESTATE_OPACITY)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->opacity() );
+      RQREAL(obj->opacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,17 +399,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
 /*
 QPainter * painter() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
+HB_FUNC_STATIC(QPAINTENGINESTATE_PAINTER)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPainter * ptr = obj->painter();
+      QPainter *ptr = obj->painter();
       Qt5xHb::createReturnClass(ptr, "QPAINTER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -424,17 +424,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
 /*
 QPen pen() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
+HB_FUNC_STATIC(QPAINTENGINESTATE_PEN)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPen * ptr = new QPen( obj->pen() );
+      QPen *ptr = new QPen(obj->pen());
       Qt5xHb::createReturnClass(ptr, "QPEN", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -449,17 +449,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
 /*
 bool penNeedsResolving() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
+HB_FUNC_STATIC(QPAINTENGINESTATE_PENNEEDSRESOLVING)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->penNeedsResolving() );
+      RBOOL(obj->penNeedsResolving());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,17 +473,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
 /*
 QPainter::RenderHints renderHints() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
+HB_FUNC_STATIC(QPAINTENGINESTATE_RENDERHINTS)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->renderHints() );
+      RENUM(obj->renderHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,17 +497,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
 /*
 QPaintEngine::DirtyFlags state() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
+HB_FUNC_STATIC(QPAINTENGINESTATE_STATE)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,17 +521,17 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
 /*
 QTransform transform() const
 */
-HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
+HB_FUNC_STATIC(QPAINTENGINESTATE_TRANSFORM)
 {
-  QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QPaintEngineState *obj = (QPaintEngineState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTransform * ptr = new QTransform( obj->transform() );
+      QTransform *ptr = new QTransform(obj->transform());
       Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -543,11 +543,11 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
   }
 }
 
-HB_FUNC_STATIC( QPAINTENGINESTATE_NEWFROM )
+HB_FUNC_STATIC(QPAINTENGINESTATE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -573,26 +573,26 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QPAINTENGINESTATE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QPAINTENGINESTATE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QPAINTENGINESTATE_NEWFROM );
+  HB_FUNC_EXEC(QPAINTENGINESTATE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPAINTENGINESTATE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QPAINTENGINESTATE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QPAINTENGINESTATE_NEWFROM );
+  HB_FUNC_EXEC(QPAINTENGINESTATE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPAINTENGINESTATE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QPAINTENGINESTATE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QPAINTENGINESTATE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QPAINTENGINESTATE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
