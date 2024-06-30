@@ -52,20 +52,20 @@ RETURN
 #include <QtDeclarative/QDeclarativeExtensionPlugin>
 #endif
 
-/*
-virtual void initializeEngine( QDeclarativeEngine * engine, const char * uri )
-*/
-HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
+    /*
+    virtual void initializeEngine( QDeclarativeEngine * engine, const char * uri )
+    */
+HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE)
 {
-  QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeExtensionPlugin *obj = (QDeclarativeExtensionPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->initializeEngine( PQDECLARATIVEENGINE(1), PCONSTCHAR(2) );
+      obj->initializeEngine(PQDECLARATIVEENGINE(1), PCONSTCHAR(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -81,17 +81,17 @@ HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
 /*
 virtual void registerTypes( const char * uri ) = 0
 */
-HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
+HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES)
 {
-  QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeExtensionPlugin *obj = (QDeclarativeExtensionPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->registerTypes( PCONSTCHAR(1) );
+      obj->registerTypes(PCONSTCHAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

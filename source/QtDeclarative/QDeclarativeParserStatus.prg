@@ -59,17 +59,17 @@ RETURN
 #include <QtDeclarative/QDeclarativeParserStatus>
 #endif
 
-/*
-virtual void classBegin() = 0
-*/
-HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_CLASSBEGIN )
+    /*
+    virtual void classBegin() = 0
+    */
+HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_CLASSBEGIN)
 {
-  QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeParserStatus *obj = (QDeclarativeParserStatus *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->classBegin();
@@ -88,14 +88,14 @@ HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_CLASSBEGIN )
 /*
 virtual void componentComplete() = 0
 */
-HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE )
+HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE)
 {
-  QDeclarativeParserStatus * obj = (QDeclarativeParserStatus *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeParserStatus *obj = (QDeclarativeParserStatus *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->componentComplete();
@@ -111,11 +111,11 @@ HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_NEWFROM )
+HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -141,26 +141,26 @@ HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QDECLARATIVEPARSERSTATUS_NEWFROM );
+  HB_FUNC_EXEC(QDECLARATIVEPARSERSTATUS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QDECLARATIVEPARSERSTATUS_NEWFROM );
+  HB_FUNC_EXEC(QDECLARATIVEPARSERSTATUS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
