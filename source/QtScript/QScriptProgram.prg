@@ -63,22 +63,22 @@ RETURN
 #include <QtScript/QScriptProgram>
 #endif
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QScriptProgram()
     */
-    QScriptProgram * obj = new QScriptProgram();
+    QScriptProgram *obj = new QScriptProgram();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSCRIPTPROGRAM(1) )
+  else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1))
   {
     /*
     QScriptProgram( const QScriptProgram & other )
     */
-    QScriptProgram * obj = new QScriptProgram( *PQSCRIPTPROGRAM(1) );
+    QScriptProgram *obj = new QScriptProgram(*PQSCRIPTPROGRAM(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -87,11 +87,11 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_DELETE )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_DELETE)
 {
-  QScriptProgram * obj = (QScriptProgram *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptProgram *obj = (QScriptProgram *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -106,17 +106,17 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_DELETE )
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_FILENAME)
 {
-  QScriptProgram * obj = (QScriptProgram *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptProgram *obj = (QScriptProgram *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->fileName() );
+      RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,17 +130,17 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
 /*
 int firstLineNumber() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_FIRSTLINENUMBER)
 {
-  QScriptProgram * obj = (QScriptProgram *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptProgram *obj = (QScriptProgram *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->firstLineNumber() );
+      RINT(obj->firstLineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,17 +154,17 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_ISNULL)
 {
-  QScriptProgram * obj = (QScriptProgram *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptProgram *obj = (QScriptProgram *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,17 +178,17 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
 /*
 QString sourceCode() const
 */
-HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_SOURCECODE)
 {
-  QScriptProgram * obj = (QScriptProgram *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptProgram *obj = (QScriptProgram *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->sourceCode() );
+      RQSTRING(obj->sourceCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,11 +199,11 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEWFROM )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -229,26 +229,26 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSCRIPTPROGRAM_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTPROGRAM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSCRIPTPROGRAM_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTPROGRAM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSCRIPTPROGRAM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTPROGRAM_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

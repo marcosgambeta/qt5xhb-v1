@@ -69,11 +69,11 @@ RETURN
 #include <QtScript/QScriptValue>
 #include <QtScript/QScriptEngine>
 
-HB_FUNC_STATIC( QSCRIPTABLE_DELETE )
+HB_FUNC_STATIC(QSCRIPTABLE_DELETE)
 {
-  QScriptable * obj = (QScriptable *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptable *obj = (QScriptable *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -88,17 +88,17 @@ HB_FUNC_STATIC( QSCRIPTABLE_DELETE )
 /*
 QScriptValue argument( int index ) const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
+HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENT)
 {
-  QScriptable * obj = (QScriptable *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptable *obj = (QScriptable *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->argument( PINT(1) ) );
+      QScriptValue *ptr = new QScriptValue(obj->argument(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -113,17 +113,17 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
 /*
 int argumentCount() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
+HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENTCOUNT)
 {
-  QScriptable * obj = (QScriptable *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptable *obj = (QScriptable *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->argumentCount() );
+      RINT(obj->argumentCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,17 +137,17 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
 /*
 QScriptContext * context() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
+HB_FUNC_STATIC(QSCRIPTABLE_CONTEXT)
 {
-  QScriptable * obj = (QScriptable *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptable *obj = (QScriptable *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QScriptContext * ptr = obj->context();
+      QScriptContext *ptr = obj->context();
       Qt5xHb::createReturnClass(ptr, "QSCRIPTCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -162,17 +162,17 @@ HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
 /*
 QScriptEngine * engine() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
+HB_FUNC_STATIC(QSCRIPTABLE_ENGINE)
 {
-  QScriptable * obj = (QScriptable *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptable *obj = (QScriptable *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QScriptEngine * ptr = obj->engine();
+      QScriptEngine *ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCRIPTENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -187,17 +187,17 @@ HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
 /*
 QScriptValue thisObject() const
 */
-HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
+HB_FUNC_STATIC(QSCRIPTABLE_THISOBJECT)
 {
-  QScriptable * obj = (QScriptable *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptable *obj = (QScriptable *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->thisObject() );
+      QScriptValue *ptr = new QScriptValue(obj->thisObject());
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -209,11 +209,11 @@ HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTABLE_NEWFROM )
+HB_FUNC_STATIC(QSCRIPTABLE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -239,26 +239,26 @@ HB_FUNC_STATIC( QSCRIPTABLE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSCRIPTABLE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSCRIPTABLE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSCRIPTABLE_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTABLE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTABLE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSCRIPTABLE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSCRIPTABLE_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTABLE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTABLE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTABLE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSCRIPTABLE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTABLE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

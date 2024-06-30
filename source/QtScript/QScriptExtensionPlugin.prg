@@ -57,11 +57,11 @@ RETURN
 
 #include <QtScript/QScriptValue>
 
-HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_DELETE )
+HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_DELETE)
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptExtensionPlugin *obj = (QScriptExtensionPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -78,17 +78,17 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_DELETE )
 /*
 QScriptValue setupPackage( const QString & key, QScriptEngine * engine ) const
 */
-HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
+HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE)
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptExtensionPlugin *obj = (QScriptExtensionPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2))
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->setupPackage( PQSTRING(1), PQSCRIPTENGINE(2) ) );
+      QScriptValue *ptr = new QScriptValue(obj->setupPackage(PQSTRING(1), PQSCRIPTENGINE(2)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -103,17 +103,17 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
 /*
 virtual void initialize( const QString & key, QScriptEngine * engine ) = 0
 */
-HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
+HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_INITIALIZE)
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptExtensionPlugin *obj = (QScriptExtensionPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2))
     {
 #endif
-      obj->initialize( PQSTRING(1), PQSCRIPTENGINE(2) );
+      obj->initialize(PQSTRING(1), PQSCRIPTENGINE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,17 +129,17 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
 /*
 virtual QStringList keys() const = 0
 */
-HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
+HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_KEYS)
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QScriptExtensionPlugin *obj = (QScriptExtensionPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->keys() );
+      RQSTRINGLIST(obj->keys());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
