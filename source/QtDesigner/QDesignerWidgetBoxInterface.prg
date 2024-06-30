@@ -55,11 +55,11 @@ RETURN
 #include <QtDesigner/QDesignerWidgetBoxInterface>
 #endif
 
-HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
+HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_DELETE)
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface *obj = (QDesignerWidgetBoxInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -76,17 +76,17 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
 /*
 virtual QString fileName() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
+HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_FILENAME)
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface *obj = (QDesignerWidgetBoxInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->fileName() );
+      RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -100,17 +100,17 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
 /*
 virtual bool load() = 0
 */
-HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
+HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_LOAD)
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface *obj = (QDesignerWidgetBoxInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->load() );
+      RBOOL(obj->load());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,17 +124,17 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
 /*
 virtual bool save() = 0
 */
-HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
+HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SAVE)
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface *obj = (QDesignerWidgetBoxInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->save() );
+      RBOOL(obj->save());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,17 +148,17 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
 /*
 virtual void setFileName( const QString & fileName ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
+HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SETFILENAME)
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface *obj = (QDesignerWidgetBoxInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setFileName( PQSTRING(1) );
+      obj->setFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -56,11 +56,11 @@ RETURN
 
 #include <QtDesigner/QDesignerFormEditorInterface>
 
-HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
+HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_DELETE)
 {
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerObjectInspectorInterface *obj = (QDesignerObjectInspectorInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -77,17 +77,17 @@ HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
 /*
 virtual QDesignerFormEditorInterface * core() const
 */
-HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
+HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_CORE)
 {
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerObjectInspectorInterface *obj = (QDesignerObjectInspectorInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDesignerFormEditorInterface * ptr = obj->core();
+      QDesignerFormEditorInterface *ptr = obj->core();
       Qt5xHb::createReturnQObjectClass(ptr, "QDESIGNERFORMEDITORINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -102,17 +102,17 @@ HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
 /*
 virtual void setFormWindow( QDesignerFormWindowInterface * formWindow ) = 0
 */
-HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW )
+HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW)
 {
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerObjectInspectorInterface *obj = (QDesignerObjectInspectorInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {
 #endif
-      obj->setFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->setFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

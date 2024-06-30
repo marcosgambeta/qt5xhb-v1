@@ -63,11 +63,12 @@ RETURN
 #include <QtDesigner/QDesignerDynamicPropertySheetExtension>
 #endif
 
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DELETE )
+HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DELETE)
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension *obj =
+      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -82,17 +83,18 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DELETE )
 /*
 virtual int addDynamicProperty( const QString & propertyName, const QVariant & value ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
+HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY)
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension *obj =
+      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
     {
 #endif
-      RINT( obj->addDynamicProperty( PQSTRING(1), *PQVARIANT(2) ) );
+      RINT(obj->addDynamicProperty(PQSTRING(1), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,17 +108,18 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
 /*
 virtual bool canAddDynamicProperty( const QString & propertyName ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
+HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY)
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension *obj =
+      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->canAddDynamicProperty( PQSTRING(1) ) );
+      RBOOL(obj->canAddDynamicProperty(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,17 +133,18 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
 /*
 virtual bool dynamicPropertiesAllowed() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED )
+HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED)
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension *obj =
+      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->dynamicPropertiesAllowed() );
+      RBOOL(obj->dynamicPropertiesAllowed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,17 +158,18 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED 
 /*
 virtual bool isDynamicProperty( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
+HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY)
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension *obj =
+      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isDynamicProperty( PINT(1) ) );
+      RBOOL(obj->isDynamicProperty(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,17 +183,18 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
 /*
 virtual bool removeDynamicProperty( int index ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
+HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY)
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension *obj =
+      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->removeDynamicProperty( PINT(1) ) );
+      RBOOL(obj->removeDynamicProperty(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,11 +205,11 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
   }
 }
 
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROM )
+HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -212,7 +218,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -229,26 +235,26 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

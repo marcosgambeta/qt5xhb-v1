@@ -57,11 +57,11 @@ RETURN
 
 #include <QtDesigner/QDesignerFormEditorInterface>
 
-HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
+HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_DELETE)
 {
-  QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerActionEditorInterface *obj = (QDesignerActionEditorInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -78,17 +78,17 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
 /*
 virtual QDesignerFormEditorInterface * core() const
 */
-HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
+HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_CORE)
 {
-  QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerActionEditorInterface *obj = (QDesignerActionEditorInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDesignerFormEditorInterface * ptr = obj->core();
+      QDesignerFormEditorInterface *ptr = obj->core();
       Qt5xHb::createReturnQObjectClass(ptr, "QDESIGNERFORMEDITORINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -103,17 +103,17 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
 /*
 virtual void manageAction( QAction * action ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION )
+HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION)
 {
-  QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerActionEditorInterface *obj = (QDesignerActionEditorInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQACTION(1) )
+    if (ISNUMPAR(1) && ISQACTION(1))
     {
 #endif
-      obj->manageAction( PQACTION(1) );
+      obj->manageAction(PQACTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,17 +129,17 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION )
 /*
 virtual void setFormWindow( QDesignerFormWindowInterface * formWindow ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW )
+HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW)
 {
-  QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerActionEditorInterface *obj = (QDesignerActionEditorInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {
 #endif
-      obj->setFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->setFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

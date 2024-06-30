@@ -49,7 +49,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
 #else
 #include <QtDesigner/QDesignerCustomWidgetCollectionInterface>
@@ -61,18 +61,19 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
 #else
 #include <QtDesigner/QDesignerCustomWidgetCollectionInterface>
 #endif
 #endif
 
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE )
+HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE)
 {
-  QDesignerCustomWidgetCollectionInterface * obj = (QDesignerCustomWidgetCollectionInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetCollectionInterface *obj =
+      (QDesignerCustomWidgetCollectionInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -87,22 +88,23 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE )
 /*
 virtual QList<QDesignerCustomWidgetInterface*> customWidgets() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
+HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS)
 {
-  QDesignerCustomWidgetCollectionInterface * obj = (QDesignerCustomWidgetCollectionInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetCollectionInterface *obj =
+      (QDesignerCustomWidgetCollectionInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QList<QDesignerCustomWidgetInterface*> list = obj->customWidgets();
+      QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets();
       PHB_DYNS pDynSym = hb_dynsymFindName("QDESIGNERCUSTOMWIDGETINTERFACE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
-        for( int i = 0; i < list.count(); i++ )
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -131,11 +133,11 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
   }
 }
 
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROM )
+HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -144,7 +146,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -161,26 +163,26 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
