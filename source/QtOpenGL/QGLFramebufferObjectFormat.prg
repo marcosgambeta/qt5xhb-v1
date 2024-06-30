@@ -58,22 +58,22 @@ RETURN
 #include <QtOpenGL/QGLFramebufferObjectFormat>
 #endif
 
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QGLFramebufferObjectFormat()
     */
-    QGLFramebufferObjectFormat * obj = new QGLFramebufferObjectFormat();
+    QGLFramebufferObjectFormat *obj = new QGLFramebufferObjectFormat();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(1) )
+  else if (ISNUMPAR(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(1))
   {
     /*
     QGLFramebufferObjectFormat( const QGLFramebufferObjectFormat & other )
     */
-    QGLFramebufferObjectFormat * obj = new QGLFramebufferObjectFormat( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
+    QGLFramebufferObjectFormat *obj = new QGLFramebufferObjectFormat(*PQGLFRAMEBUFFEROBJECTFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -82,11 +82,11 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_DELETE )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_DELETE)
 {
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGLFramebufferObjectFormat *obj = (QGLFramebufferObjectFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -101,17 +101,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_DELETE )
 /*
 QGLFramebufferObject::Attachment attachment() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT)
 {
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGLFramebufferObjectFormat *obj = (QGLFramebufferObjectFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->attachment() );
+      RENUM(obj->attachment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,17 +125,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
 /*
 GLenum internalTextureFormat() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT)
 {
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGLFramebufferObjectFormat *obj = (QGLFramebufferObjectFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLENUM( obj->internalTextureFormat() );
+      RGLENUM(obj->internalTextureFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,17 +149,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
 /*
 int samples() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES)
 {
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGLFramebufferObjectFormat *obj = (QGLFramebufferObjectFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->samples() );
+      RINT(obj->samples());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,17 +173,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
 /*
 void setAttachment( QGLFramebufferObject::Attachment attachment )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT)
 {
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGLFramebufferObjectFormat *obj = (QGLFramebufferObjectFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAttachment( (QGLFramebufferObject::Attachment) hb_parni(1) );
+      obj->setAttachment((QGLFramebufferObject::Attachment)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,17 +199,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
 /*
 void setInternalTextureFormat( GLenum internalTextureFormat )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT)
 {
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGLFramebufferObjectFormat *obj = (QGLFramebufferObjectFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setInternalTextureFormat( PGLENUM(1) );
+      obj->setInternalTextureFormat(PGLENUM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,17 +225,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
 /*
 void setSamples( int samples )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES)
 {
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGLFramebufferObjectFormat *obj = (QGLFramebufferObjectFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSamples( PINT(1) );
+      obj->setSamples(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,17 +251,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
 /*
 void setTextureTarget( GLenum target )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET)
 {
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGLFramebufferObjectFormat *obj = (QGLFramebufferObjectFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextureTarget( PGLENUM(1) );
+      obj->setTextureTarget(PGLENUM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,17 +277,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
 /*
 GLenum textureTarget() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET)
 {
-  QGLFramebufferObjectFormat * obj = (QGLFramebufferObjectFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGLFramebufferObjectFormat *obj = (QGLFramebufferObjectFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLENUM( obj->textureTarget() );
+      RGLENUM(obj->textureTarget());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
