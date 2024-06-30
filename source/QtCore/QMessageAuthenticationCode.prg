@@ -65,14 +65,15 @@ RETURN
 #include <QtCore/QMessageAuthenticationCode>
 #endif
 
-/*
-QMessageAuthenticationCode( QCryptographicHash::Algorithm method, const QByteArray & key = QByteArray() )
-*/
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
+    /*
+    QMessageAuthenticationCode( QCryptographicHash::Algorithm method, const QByteArray & key = QByteArray() )
+    */
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_NEW)
 {
-  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
-    QMessageAuthenticationCode * obj = new QMessageAuthenticationCode( (QCryptographicHash::Algorithm) hb_parni(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+    QMessageAuthenticationCode *obj = new QMessageAuthenticationCode(
+        (QCryptographicHash::Algorithm)hb_parni(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -81,11 +82,11 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_DELETE )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_DELETE)
 {
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -100,14 +101,14 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_DELETE )
 /*
 void reset()
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESET )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_RESET)
 {
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reset();
@@ -126,17 +127,17 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESET )
 /*
 void setKey( const QByteArray & key )
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETKEY )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_SETKEY)
 {
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setKey( *PQBYTEARRAY(1) );
+      obj->setKey(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,46 +150,46 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETKEY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_ADDDATA)
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
     void addData( const char * data, int length )
     */
-    QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->addData( PCONSTCHAR(1), PINT(2) );
+      obj->addData(PCONSTCHAR(1), PINT(2));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
     void addData( const QByteArray & data )
     */
-    QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->addData( *PQBYTEARRAY(1) );
+      obj->addData(*PQBYTEARRAY(1));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && ISQIODEVICE(1) )
+  else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
     bool addData( QIODevice * device )
     */
-    QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RBOOL( obj->addData( PQIODEVICE(1) ) );
+      RBOOL(obj->addData(PQIODEVICE(1)));
     }
   }
   else
@@ -200,17 +201,17 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
 /*
 QByteArray result() const
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESULT )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_RESULT)
 {
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->result() );
+      QByteArray *ptr = new QByteArray(obj->result());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -225,13 +226,14 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESULT )
 /*
 static QByteArray hash( const QByteArray & message, const QByteArray & key, QCryptographicHash::Algorithm method )
 */
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_HASH )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_HASH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) && HB_ISNUM(3))
   {
 #endif
-    QByteArray * ptr = new QByteArray( QMessageAuthenticationCode::hash( *PQBYTEARRAY(1), *PQBYTEARRAY(2), (QCryptographicHash::Algorithm) hb_parni(3) ) );
+    QByteArray *ptr = new QByteArray(
+        QMessageAuthenticationCode::hash(*PQBYTEARRAY(1), *PQBYTEARRAY(2), (QCryptographicHash::Algorithm)hb_parni(3)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -242,11 +244,11 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_HASH )
 #endif
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEWFROM )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -255,7 +257,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -272,26 +274,26 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QMESSAGEAUTHENTICATIONCODE_NEWFROM );
+  HB_FUNC_EXEC(QMESSAGEAUTHENTICATIONCODE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QMESSAGEAUTHENTICATIONCODE_NEWFROM );
+  HB_FUNC_EXEC(QMESSAGEAUTHENTICATIONCODE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

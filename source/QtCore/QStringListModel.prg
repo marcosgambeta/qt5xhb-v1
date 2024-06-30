@@ -64,22 +64,22 @@ RETURN
 #include <QtCore/QStringListModel>
 #endif
 
-HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QStringListModel( QObject * parent = 0 )
     */
-    QStringListModel * obj = new QStringListModel( OPQOBJECT(1,0) );
+    QStringListModel *obj = new QStringListModel(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1,2) && HB_ISARRAY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QStringListModel( const QStringList & strings, QObject * parent = 0)
     */
-    QStringListModel * obj = new QStringListModel( PQSTRINGLIST(1), OPQOBJECT(2,0) );
+    QStringListModel *obj = new QStringListModel(PQSTRINGLIST(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -91,17 +91,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 /*
 void setStringList( const QStringList & strings )
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_SETSTRINGLIST)
 {
-  QStringListModel * obj = (QStringListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setStringList( PQSTRINGLIST(1) );
+      obj->setStringList(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,17 +117,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
 /*
 QStringList stringList() const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_STRINGLIST)
 {
-  QStringListModel * obj = (QStringListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->stringList() );
+      RQSTRINGLIST(obj->stringList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,17 +141,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
 /*
 virtual QVariant data( const QModelIndex & index, int role ) const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_DATA)
 {
-  QStringListModel * obj = (QStringListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), PINT(2) ) );
+      QVariant *ptr = new QVariant(obj->data(*PQMODELINDEX(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -166,17 +166,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
 /*
 virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_FLAGS)
 {
-  QStringListModel * obj = (QStringListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RENUM( obj->flags( *PQMODELINDEX(1) ) );
+      RENUM(obj->flags(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,17 +190,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
 /*
 virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_INSERTROWS)
 {
-  QStringListModel * obj = (QStringListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL( obj->insertRows( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL(obj->insertRows(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,17 +214,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
 /*
 virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_REMOVEROWS)
 {
-  QStringListModel * obj = (QStringListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL( obj->removeRows( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL(obj->removeRows(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,17 +238,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
 /*
 virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_ROWCOUNT)
 {
-  QStringListModel * obj = (QStringListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT( obj->rowCount( HB_ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
+      RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,17 +262,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
 /*
 virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_SETDATA)
 {
-  QStringListModel * obj = (QStringListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,17 +286,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
 /*
 virtual QModelIndex sibling( int row, int column, const QModelIndex & idx ) const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_SIBLING )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_SIBLING)
 {
-  QStringListModel * obj = (QStringListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3))
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->sibling( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
+      QModelIndex *ptr = new QModelIndex(obj->sibling(PINT(1), PINT(2), *PQMODELINDEX(3)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -311,17 +311,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SIBLING )
 /*
 virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_SORT)
 {
-  QStringListModel * obj = (QStringListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->sort( PINT(1), HB_ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );
+      obj->sort(PINT(1), HB_ISNIL(2) ? (Qt::SortOrder)Qt::AscendingOrder : (Qt::SortOrder)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,17 +337,17 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
 /*
 virtual Qt::DropActions supportedDropActions() const
 */
-HB_FUNC_STATIC( QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS )
+HB_FUNC_STATIC(QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS)
 {
-  QStringListModel * obj = (QStringListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->supportedDropActions() );
+      RENUM(obj->supportedDropActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

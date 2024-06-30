@@ -46,7 +46,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtCore/QSaveFile>
 #endif
 #endif
@@ -58,41 +58,41 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtCore/QSaveFile>
 #endif
 #endif
 
-HB_FUNC_STATIC( QSAVEFILE_NEW )
+HB_FUNC_STATIC(QSAVEFILE_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     QSaveFile( const QString & name )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    QSaveFile * obj = new QSaveFile( PQSTRING(1) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+    QSaveFile *obj = new QSaveFile(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QSaveFile( QObject * parent = 0 )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    QSaveFile * obj = new QSaveFile( OPQOBJECT(1,0) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+    QSaveFile *obj = new QSaveFile(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
     QSaveFile( const QString & name, QObject * parent )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    QSaveFile * obj = new QSaveFile( PQSTRING(1), PQOBJECT(2) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+    QSaveFile *obj = new QSaveFile(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
@@ -103,12 +103,12 @@ HB_FUNC_STATIC( QSAVEFILE_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QSAVEFILE_DELETE )
+HB_FUNC_STATIC(QSAVEFILE_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -126,18 +126,18 @@ HB_FUNC_STATIC( QSAVEFILE_DELETE )
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QSAVEFILE_FILENAME )
+HB_FUNC_STATIC(QSAVEFILE_FILENAME)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->fileName() );
+      RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,18 +152,18 @@ HB_FUNC_STATIC( QSAVEFILE_FILENAME )
 /*
 void setFileName( const QString & name )
 */
-HB_FUNC_STATIC( QSAVEFILE_SETFILENAME )
+HB_FUNC_STATIC(QSAVEFILE_SETFILENAME)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setFileName( PQSTRING(1) );
+      obj->setFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,18 +180,18 @@ HB_FUNC_STATIC( QSAVEFILE_SETFILENAME )
 /*
 bool open( QIODevice::OpenMode flags )
 */
-HB_FUNC_STATIC( QSAVEFILE_OPEN )
+HB_FUNC_STATIC(QSAVEFILE_OPEN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->open( (QIODevice::OpenMode) hb_parni(1) ) );
+      RBOOL(obj->open((QIODevice::OpenMode)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,18 +206,18 @@ HB_FUNC_STATIC( QSAVEFILE_OPEN )
 /*
 bool commit()
 */
-HB_FUNC_STATIC( QSAVEFILE_COMMIT )
+HB_FUNC_STATIC(QSAVEFILE_COMMIT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->commit() );
+      RBOOL(obj->commit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,15 +232,15 @@ HB_FUNC_STATIC( QSAVEFILE_COMMIT )
 /*
 void cancelWriting()
 */
-HB_FUNC_STATIC( QSAVEFILE_CANCELWRITING )
+HB_FUNC_STATIC(QSAVEFILE_CANCELWRITING)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->cancelWriting();
@@ -260,18 +260,18 @@ HB_FUNC_STATIC( QSAVEFILE_CANCELWRITING )
 /*
 void setDirectWriteFallback( bool enabled )
 */
-HB_FUNC_STATIC( QSAVEFILE_SETDIRECTWRITEFALLBACK )
+HB_FUNC_STATIC(QSAVEFILE_SETDIRECTWRITEFALLBACK)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setDirectWriteFallback( PBOOL(1) );
+      obj->setDirectWriteFallback(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,18 +288,18 @@ HB_FUNC_STATIC( QSAVEFILE_SETDIRECTWRITEFALLBACK )
 /*
 bool directWriteFallback() const
 */
-HB_FUNC_STATIC( QSAVEFILE_DIRECTWRITEFALLBACK )
+HB_FUNC_STATIC(QSAVEFILE_DIRECTWRITEFALLBACK)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->directWriteFallback() );
+      RBOOL(obj->directWriteFallback());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

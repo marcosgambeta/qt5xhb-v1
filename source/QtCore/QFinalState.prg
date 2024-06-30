@@ -52,14 +52,14 @@ RETURN
 #include <QtCore/QFinalState>
 #endif
 
-/*
-QFinalState( QState * parent = 0 )
-*/
-HB_FUNC_STATIC( QFINALSTATE_NEW )
+    /*
+    QFinalState( QState * parent = 0 )
+    */
+HB_FUNC_STATIC(QFINALSTATE_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQSTATE(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
-    QFinalState * obj = new QFinalState( OPQSTATE(1,0) );
+    QFinalState *obj = new QFinalState(OPQSTATE(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -68,11 +68,11 @@ HB_FUNC_STATIC( QFINALSTATE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFINALSTATE_DELETE )
+HB_FUNC_STATIC(QFINALSTATE_DELETE)
 {
-  QFinalState * obj = (QFinalState *) Qt5xHb::itemGetPtrStackSelfItem();
+  QFinalState *obj = (QFinalState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

@@ -73,11 +73,11 @@ RETURN
 #include <QtCore/QAbstractEventDispatcher>
 #endif
 
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_DELETE )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_DELETE)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -94,19 +94,19 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_DELETE )
 /*
 bool filterNativeEvent( const QByteArray & eventType, void * message, long * result )
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQBYTEARRAY(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && ISQBYTEARRAY(1) && HB_ISPOINTER(2) && HB_ISNUM(3))
     {
 #endif
       long par3;
-      RBOOL( obj->filterNativeEvent( *PQBYTEARRAY(1), (void *) hb_parptr(2), &par3 ) );
-      hb_stornl( par3, 3 );
+      RBOOL(obj->filterNativeEvent(*PQBYTEARRAY(1), (void *)hb_parptr(2), &par3));
+      hb_stornl(par3, 3);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,14 +120,14 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT )
 /*
 virtual void flush() = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_FLUSH)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->flush();
@@ -146,17 +146,17 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
 /*
 virtual bool hasPendingEvents() = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasPendingEvents() );
+      RBOOL(obj->hasPendingEvents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,17 +170,17 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
 /*
 void installNativeEventFilter( QAbstractNativeEventFilter * filterObj )
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTALLNATIVEEVENTFILTER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INSTALLNATIVEEVENTFILTER)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTNATIVEEVENTFILTER(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTNATIVEEVENTFILTER(1))
     {
 #endif
-      obj->installNativeEventFilter( PQABSTRACTNATIVEEVENTFILTER(1) );
+      obj->installNativeEventFilter(PQABSTRACTNATIVEEVENTFILTER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,14 +196,14 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTALLNATIVEEVENTFILTER )
 /*
 virtual void interrupt() = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INTERRUPT)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->interrupt();
@@ -222,17 +222,17 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
 /*
 virtual bool processEvents( QEventLoop::ProcessEventsFlags flags ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_PROCESSEVENTS)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->processEvents( (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
+      RBOOL(obj->processEvents((QEventLoop::ProcessEventsFlags)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,18 +246,18 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
 /*
 virtual bool registerEventNotifier( QWinEventNotifier * notifier ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTEREVENTNOTIFIER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTEREVENTNOTIFIER)
 {
 #ifdef Q_OS_WIN
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWINEVENTNOTIFIER(1) )
+    if (ISNUMPAR(1) && ISQWINEVENTNOTIFIER(1))
     {
 #endif
-      RBOOL( obj->registerEventNotifier( PQWINEVENTNOTIFIER(1) ) );
+      RBOOL(obj->registerEventNotifier(PQWINEVENTNOTIFIER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,17 +272,17 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTEREVENTNOTIFIER )
 /*
 virtual void registerSocketNotifier( QSocketNotifier * notifier ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSOCKETNOTIFIER(1) )
+    if (ISNUMPAR(1) && ISQSOCKETNOTIFIER(1))
     {
 #endif
-      obj->registerSocketNotifier( PQSOCKETNOTIFIER(1) );
+      obj->registerSocketNotifier(PQSOCKETNOTIFIER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,32 +295,32 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERTIMER)
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3) )
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3))
   {
     /*
     int registerTimer( int interval, Qt::TimerType timerType, QObject * object )
     */
-    QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RINT( obj->registerTimer( PINT(1), (Qt::TimerType) hb_parni(2), PQOBJECT(3) ) );
+      RINT(obj->registerTimer(PINT(1), (Qt::TimerType)hb_parni(2), PQOBJECT(3)));
     }
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQOBJECT(4) )
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQOBJECT(4))
   {
     /*
     virtual void registerTimer( int timerId, int interval, Qt::TimerType timerType, QObject * object ) = 0
     */
-    QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->registerTimer( PINT(1), PINT(2), (Qt::TimerType) hb_parni(3), PQOBJECT(4) );
+      obj->registerTimer(PINT(1), PINT(2), (Qt::TimerType)hb_parni(3), PQOBJECT(4));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
   else
@@ -332,17 +332,17 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 /*
 virtual int remainingTime( int timerId ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMAININGTIME )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REMAININGTIME)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->remainingTime( PINT(1) ) );
+      RINT(obj->remainingTime(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,17 +356,17 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMAININGTIME )
 /*
 void removeNativeEventFilter( QAbstractNativeEventFilter * filter )
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMOVENATIVEEVENTFILTER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REMOVENATIVEEVENTFILTER)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTNATIVEEVENTFILTER(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTNATIVEEVENTFILTER(1))
     {
 #endif
-      obj->removeNativeEventFilter( PQABSTRACTNATIVEEVENTFILTER(1) );
+      obj->removeNativeEventFilter(PQABSTRACTNATIVEEVENTFILTER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,18 +382,18 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMOVENATIVEEVENTFILTER )
 /*
 virtual void unregisterEventNotifier( QWinEventNotifier * notifier ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTEREVENTNOTIFIER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTEREVENTNOTIFIER)
 {
 #ifdef Q_OS_WIN
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWINEVENTNOTIFIER(1) )
+    if (ISNUMPAR(1) && ISQWINEVENTNOTIFIER(1))
     {
 #endif
-      obj->unregisterEventNotifier( PQWINEVENTNOTIFIER(1) );
+      obj->unregisterEventNotifier(PQWINEVENTNOTIFIER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,17 +410,17 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTEREVENTNOTIFIER )
 /*
 virtual void unregisterSocketNotifier( QSocketNotifier * notifier ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSOCKETNOTIFIER(1) )
+    if (ISNUMPAR(1) && ISQSOCKETNOTIFIER(1))
     {
 #endif
-      obj->unregisterSocketNotifier( PQSOCKETNOTIFIER(1) );
+      obj->unregisterSocketNotifier(PQSOCKETNOTIFIER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,17 +436,17 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
 /*
 virtual bool unregisterTimer( int timerId ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->unregisterTimer( PINT(1) ) );
+      RBOOL(obj->unregisterTimer(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,17 +460,17 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
 /*
 virtual bool unregisterTimers( QObject * object ) = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      RBOOL( obj->unregisterTimers( PQOBJECT(1) ) );
+      RBOOL(obj->unregisterTimers(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,14 +484,14 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
 /*
 virtual void wakeUp() = 0
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_WAKEUP)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->wakeUp();
@@ -510,13 +510,13 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
 /*
 static QAbstractEventDispatcher * instance( QThread * thread = 0 )
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INSTANCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISQTHREAD(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQTHREAD(1) || HB_ISNIL(1)))
   {
 #endif
-    QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance( OPQTHREAD(1,0) );
+    QAbstractEventDispatcher *ptr = QAbstractEventDispatcher::instance(OPQTHREAD(1, 0));
     Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTEVENTDISPATCHER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -530,14 +530,14 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 /*
 virtual void startingUp()
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_STARTINGUP )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_STARTINGUP)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->startingUp();
@@ -556,14 +556,14 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_STARTINGUP )
 /*
 virtual void closingDown()
 */
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_CLOSINGDOWN )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_CLOSINGDOWN)
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->closingDown();
@@ -579,14 +579,14 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_CLOSINGDOWN )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAbstractEventDispatcherSlots_connect_signal(const QString & signal, const QString & slot);
+void QAbstractEventDispatcherSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK)
 {
   QAbstractEventDispatcherSlots_connect_signal("aboutToBlock()", "aboutToBlock()");
 }
 
-HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
+HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_ONAWAKE)
 {
   QAbstractEventDispatcherSlots_connect_signal("awake()", "awake()");
 }

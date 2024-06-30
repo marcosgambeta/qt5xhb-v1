@@ -54,11 +54,11 @@ RETURN
 #include <QtCore/QSocketNotifier>
 #endif
 
-HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
+HB_FUNC_STATIC(QSOCKETNOTIFIER_DELETE)
 {
-  QSocketNotifier * obj = (QSocketNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier *obj = (QSocketNotifier *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -75,17 +75,17 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 /*
 QSocketNotifier::Type type() const
 */
-HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
+HB_FUNC_STATIC(QSOCKETNOTIFIER_TYPE)
 {
-  QSocketNotifier * obj = (QSocketNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier *obj = (QSocketNotifier *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,17 +99,17 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
+HB_FUNC_STATIC(QSOCKETNOTIFIER_ISENABLED)
 {
-  QSocketNotifier * obj = (QSocketNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier *obj = (QSocketNotifier *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEnabled() );
+      RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,17 +123,17 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 /*
 void setEnabled( bool )
 */
-HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
+HB_FUNC_STATIC(QSOCKETNOTIFIER_SETENABLED)
 {
-  QSocketNotifier * obj = (QSocketNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier *obj = (QSocketNotifier *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setEnabled( PBOOL(1) );
+      obj->setEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

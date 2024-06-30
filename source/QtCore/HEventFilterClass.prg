@@ -42,14 +42,14 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-/*
-HEventFilter( QObject *parent = NULL )
-*/
-HB_FUNC_STATIC( HEVENTFILTER_NEW )
+    /*
+    HEventFilter( QObject *parent = NULL )
+    */
+HB_FUNC_STATIC(HEVENTFILTER_NEW)
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    HEventFilter * obj = new HEventFilter( OPQOBJECT( 1, NULL ) );
+    HEventFilter *obj = new HEventFilter(OPQOBJECT(1, NULL));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -61,11 +61,11 @@ HB_FUNC_STATIC( HEVENTFILTER_NEW )
 /*
 ~HEventFilter()
 */
-HB_FUNC_STATIC( HEVENTFILTER_DELETE )
+HB_FUNC_STATIC(HEVENTFILTER_DELETE)
 {
-  HEventFilter * obj = qobject_cast<HEventFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HEventFilter *obj = qobject_cast<HEventFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -82,17 +82,17 @@ HB_FUNC_STATIC( HEVENTFILTER_DELETE )
 /*
 void setEventFilterCB ( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HEVENTFILTER_SETEVENTFILTERCB )
+HB_FUNC_STATIC(HEVENTFILTER_SETEVENTFILTERCB)
 {
-  HEventFilter * obj = qobject_cast<HEventFilter*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HEventFilter *obj = qobject_cast<HEventFilter *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setEventFilterCB( PBLOCKORSYMBOL(1) );
+      obj->setEventFilterCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

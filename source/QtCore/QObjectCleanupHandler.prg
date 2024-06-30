@@ -57,14 +57,14 @@ RETURN
 #include <QtCore/QObjectCleanupHandler>
 #endif
 
-/*
-QObjectCleanupHandler()
-*/
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
+    /*
+    QObjectCleanupHandler()
+    */
+HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QObjectCleanupHandler * obj = new QObjectCleanupHandler();
+    QObjectCleanupHandler *obj = new QObjectCleanupHandler();
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -73,11 +73,11 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_DELETE )
+HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_DELETE)
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -94,17 +94,17 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_DELETE )
 /*
 QObject * add( QObject * object )
 */
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
+HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      QObject * ptr = obj->add( PQOBJECT(1) );
+      QObject *ptr = obj->add(PQOBJECT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -119,17 +119,17 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
 /*
 void remove( QObject * object )
 */
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_REMOVE )
+HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->remove( PQOBJECT(1) );
+      obj->remove(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,17 +145,17 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_REMOVE )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
+HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ISEMPTY)
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,14 +169,14 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_CLEAR )
+HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_CLEAR)
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt5xHb::itemGetPtrStackSelfItem();
+  QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();

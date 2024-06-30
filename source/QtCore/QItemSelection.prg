@@ -65,22 +65,22 @@ RETURN
 #include <QtCore/QItemSelection>
 #endif
 
-HB_FUNC_STATIC( QITEMSELECTION_NEW )
+HB_FUNC_STATIC(QITEMSELECTION_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QItemSelection()
     */
-    QItemSelection * obj = new QItemSelection();
+    QItemSelection *obj = new QItemSelection();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2) )
+  else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2))
   {
     /*
     QItemSelection( const QModelIndex & topLeft, const QModelIndex & bottomRight )
     */
-    QItemSelection * obj = new QItemSelection( *PQMODELINDEX(1), *PQMODELINDEX(2) );
+    QItemSelection *obj = new QItemSelection(*PQMODELINDEX(1), *PQMODELINDEX(2));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -89,11 +89,11 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QITEMSELECTION_DELETE )
+HB_FUNC_STATIC(QITEMSELECTION_DELETE)
 {
-  QItemSelection * obj = (QItemSelection *) Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelection *obj = (QItemSelection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -108,17 +108,17 @@ HB_FUNC_STATIC( QITEMSELECTION_DELETE )
 /*
 void select( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
-HB_FUNC_STATIC( QITEMSELECTION_SELECT )
+HB_FUNC_STATIC(QITEMSELECTION_SELECT)
 {
-  QItemSelection * obj = (QItemSelection *) Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelection *obj = (QItemSelection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2) )
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2))
     {
 #endif
-      obj->select( *PQMODELINDEX(1), *PQMODELINDEX(2) );
+      obj->select(*PQMODELINDEX(1), *PQMODELINDEX(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,17 +134,17 @@ HB_FUNC_STATIC( QITEMSELECTION_SELECT )
 /*
 bool contains( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
+HB_FUNC_STATIC(QITEMSELECTION_CONTAINS)
 {
-  QItemSelection * obj = (QItemSelection *) Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelection *obj = (QItemSelection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RBOOL( obj->contains( *PQMODELINDEX(1) ) );
+      RBOOL(obj->contains(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,22 +158,22 @@ HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
 /*
 QModelIndexList indexes() const
 */
-HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
+HB_FUNC_STATIC(QITEMSELECTION_INDEXES)
 {
-  QItemSelection * obj = (QItemSelection *) Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelection *obj = (QItemSelection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QModelIndexList list = obj->indexes();
       PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
-        for( int i = 0; i < list.count(); i++ )
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -208,17 +208,17 @@ HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
 /*
 void merge( const QItemSelection & other, QItemSelectionModel::SelectionFlags command )
 */
-HB_FUNC_STATIC( QITEMSELECTION_MERGE )
+HB_FUNC_STATIC(QITEMSELECTION_MERGE)
 {
-  QItemSelection * obj = (QItemSelection *) Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelection *obj = (QItemSelection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2))
     {
 #endif
-      obj->merge( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
+      obj->merge(*PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,13 +234,13 @@ HB_FUNC_STATIC( QITEMSELECTION_MERGE )
 /*
 static void split( const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result )
 */
-HB_FUNC_STATIC( QITEMSELECTION_SPLIT )
+HB_FUNC_STATIC(QITEMSELECTION_SPLIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISQITEMSELECTIONRANGE(1) && ISQITEMSELECTIONRANGE(2) && ISQITEMSELECTION(3) )
+  if (ISNUMPAR(3) && ISQITEMSELECTIONRANGE(1) && ISQITEMSELECTIONRANGE(2) && ISQITEMSELECTION(3))
   {
 #endif
-    QItemSelection::split( *PQITEMSELECTIONRANGE(1), *PQITEMSELECTIONRANGE(2), PQITEMSELECTION(3) );
+    QItemSelection::split(*PQITEMSELECTIONRANGE(1), *PQITEMSELECTIONRANGE(2), PQITEMSELECTION(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -252,11 +252,11 @@ HB_FUNC_STATIC( QITEMSELECTION_SPLIT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QITEMSELECTION_NEWFROM )
+HB_FUNC_STATIC(QITEMSELECTION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QITEMSELECTION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -282,26 +282,26 @@ HB_FUNC_STATIC( QITEMSELECTION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QITEMSELECTION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QITEMSELECTION_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QITEMSELECTION_NEWFROM );
+  HB_FUNC_EXEC(QITEMSELECTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QITEMSELECTION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QITEMSELECTION_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QITEMSELECTION_NEWFROM );
+  HB_FUNC_EXEC(QITEMSELECTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QITEMSELECTION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QITEMSELECTION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QITEMSELECTION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QITEMSELECTION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

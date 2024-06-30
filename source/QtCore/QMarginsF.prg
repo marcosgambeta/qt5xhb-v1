@@ -59,7 +59,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #include <QtCore/QMarginsF>
 #endif
 #endif
@@ -69,40 +69,40 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #include <QtCore/QMarginsF>
 #endif
 #endif
 
-HB_FUNC_STATIC( QMARGINSF_NEW )
+HB_FUNC_STATIC(QMARGINSF_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QMarginsF()
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    QMarginsF * obj = new QMarginsF();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+    QMarginsF *obj = new QMarginsF();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
     QMarginsF( qreal left, qreal top, qreal right, qreal bottom )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    QMarginsF * obj = new QMarginsF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+    QMarginsF *obj = new QMarginsF(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if( ISNUMPAR(1) && ISQMARGINSF(1) )
+  else if (ISNUMPAR(1) && ISQMARGINSF(1))
   {
     /*
     QMarginsF( const QMargins & margins )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-    QMarginsF * obj = new QMarginsF( *PQMARGINS(1) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+    QMarginsF *obj = new QMarginsF(*PQMARGINS(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
@@ -112,12 +112,12 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMARGINSF_DELETE )
+HB_FUNC_STATIC(QMARGINSF_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QMarginsF *obj = (QMarginsF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -133,18 +133,18 @@ HB_FUNC_STATIC( QMARGINSF_DELETE )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QMARGINSF_ISNULL )
+HB_FUNC_STATIC(QMARGINSF_ISNULL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QMarginsF *obj = (QMarginsF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,18 +159,18 @@ HB_FUNC_STATIC( QMARGINSF_ISNULL )
 /*
 qreal left() const
 */
-HB_FUNC_STATIC( QMARGINSF_LEFT )
+HB_FUNC_STATIC(QMARGINSF_LEFT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QMarginsF *obj = (QMarginsF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->left() );
+      RQREAL(obj->left());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,18 +185,18 @@ HB_FUNC_STATIC( QMARGINSF_LEFT )
 /*
 qreal top() const
 */
-HB_FUNC_STATIC( QMARGINSF_TOP )
+HB_FUNC_STATIC(QMARGINSF_TOP)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QMarginsF *obj = (QMarginsF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->top() );
+      RQREAL(obj->top());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,18 +211,18 @@ HB_FUNC_STATIC( QMARGINSF_TOP )
 /*
 qreal right() const
 */
-HB_FUNC_STATIC( QMARGINSF_RIGHT )
+HB_FUNC_STATIC(QMARGINSF_RIGHT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QMarginsF *obj = (QMarginsF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->right() );
+      RQREAL(obj->right());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,18 +237,18 @@ HB_FUNC_STATIC( QMARGINSF_RIGHT )
 /*
 qreal bottom() const
 */
-HB_FUNC_STATIC( QMARGINSF_BOTTOM )
+HB_FUNC_STATIC(QMARGINSF_BOTTOM)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QMarginsF *obj = (QMarginsF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->bottom() );
+      RQREAL(obj->bottom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,18 +263,18 @@ HB_FUNC_STATIC( QMARGINSF_BOTTOM )
 /*
 void setLeft( qreal left )
 */
-HB_FUNC_STATIC( QMARGINSF_SETLEFT )
+HB_FUNC_STATIC(QMARGINSF_SETLEFT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QMarginsF *obj = (QMarginsF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLeft( PQREAL(1) );
+      obj->setLeft(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,18 +291,18 @@ HB_FUNC_STATIC( QMARGINSF_SETLEFT )
 /*
 void setTop( qreal top )
 */
-HB_FUNC_STATIC( QMARGINSF_SETTOP )
+HB_FUNC_STATIC(QMARGINSF_SETTOP)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QMarginsF *obj = (QMarginsF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTop( PQREAL(1) );
+      obj->setTop(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,18 +319,18 @@ HB_FUNC_STATIC( QMARGINSF_SETTOP )
 /*
 void setRight( qreal right )
 */
-HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
+HB_FUNC_STATIC(QMARGINSF_SETRIGHT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QMarginsF *obj = (QMarginsF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRight( PQREAL(1) );
+      obj->setRight(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,18 +347,18 @@ HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
 /*
 void setBottom( qreal bottom )
 */
-HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
+HB_FUNC_STATIC(QMARGINSF_SETBOTTOM)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QMarginsF *obj = (QMarginsF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBottom( PQREAL(1) );
+      obj->setBottom(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,18 +375,18 @@ HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
 /*
 QMargins toMargins() const
 */
-HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
+HB_FUNC_STATIC(QMARGINSF_TOMARGINS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
+  QMarginsF *obj = (QMarginsF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QMargins * ptr = new QMargins( obj->toMargins() );
+      QMargins *ptr = new QMargins(obj->toMargins());
       Qt5xHb::createReturnClass(ptr, "QMARGINS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -399,11 +399,11 @@ HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
 #endif
 }
 
-HB_FUNC_STATIC( QMARGINSF_NEWFROM )
+HB_FUNC_STATIC(QMARGINSF_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QMARGINSF_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -429,26 +429,26 @@ HB_FUNC_STATIC( QMARGINSF_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMARGINSF_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMARGINSF_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QMARGINSF_NEWFROM );
+  HB_FUNC_EXEC(QMARGINSF_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMARGINSF_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMARGINSF_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QMARGINSF_NEWFROM );
+  HB_FUNC_EXEC(QMARGINSF_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMARGINSF_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMARGINSF_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMARGINSF_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMARGINSF_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

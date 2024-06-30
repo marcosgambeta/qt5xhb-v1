@@ -63,14 +63,14 @@ RETURN
 #include <QtCore/QBasicTimer>
 #endif
 
-/*
-QBasicTimer()
-*/
-HB_FUNC_STATIC( QBASICTIMER_NEW )
+    /*
+    QBasicTimer()
+    */
+HB_FUNC_STATIC(QBASICTIMER_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QBasicTimer * obj = new QBasicTimer();
+    QBasicTimer *obj = new QBasicTimer();
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -79,11 +79,11 @@ HB_FUNC_STATIC( QBASICTIMER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QBASICTIMER_DELETE )
+HB_FUNC_STATIC(QBASICTIMER_DELETE)
 {
-  QBasicTimer * obj = (QBasicTimer *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBasicTimer *obj = (QBasicTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -98,17 +98,17 @@ HB_FUNC_STATIC( QBASICTIMER_DELETE )
 /*
 bool isActive() const
 */
-HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
+HB_FUNC_STATIC(QBASICTIMER_ISACTIVE)
 {
-  QBasicTimer * obj = (QBasicTimer *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBasicTimer *obj = (QBasicTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isActive() );
+      RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,17 +122,17 @@ HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
 /*
 void start( int msec, QObject * object )
 */
-HB_FUNC_STATIC( QBASICTIMER_START )
+HB_FUNC_STATIC(QBASICTIMER_START)
 {
-  QBasicTimer * obj = (QBasicTimer *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBasicTimer *obj = (QBasicTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2))
     {
 #endif
-      obj->start( PINT(1), PQOBJECT(2) );
+      obj->start(PINT(1), PQOBJECT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,14 +148,14 @@ HB_FUNC_STATIC( QBASICTIMER_START )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QBASICTIMER_STOP )
+HB_FUNC_STATIC(QBASICTIMER_STOP)
 {
-  QBasicTimer * obj = (QBasicTimer *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBasicTimer *obj = (QBasicTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -174,17 +174,17 @@ HB_FUNC_STATIC( QBASICTIMER_STOP )
 /*
 int timerId() const
 */
-HB_FUNC_STATIC( QBASICTIMER_TIMERID )
+HB_FUNC_STATIC(QBASICTIMER_TIMERID)
 {
-  QBasicTimer * obj = (QBasicTimer *) Qt5xHb::itemGetPtrStackSelfItem();
+  QBasicTimer *obj = (QBasicTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->timerId() );
+      RINT(obj->timerId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,11 +195,11 @@ HB_FUNC_STATIC( QBASICTIMER_TIMERID )
   }
 }
 
-HB_FUNC_STATIC( QBASICTIMER_NEWFROM )
+HB_FUNC_STATIC(QBASICTIMER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QBASICTIMER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -225,26 +225,26 @@ HB_FUNC_STATIC( QBASICTIMER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QBASICTIMER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QBASICTIMER_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QBASICTIMER_NEWFROM );
+  HB_FUNC_EXEC(QBASICTIMER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QBASICTIMER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QBASICTIMER_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QBASICTIMER_NEWFROM );
+  HB_FUNC_EXEC(QBASICTIMER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QBASICTIMER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QBASICTIMER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QBASICTIMER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QBASICTIMER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

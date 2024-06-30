@@ -180,76 +180,76 @@ RETURN
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonDocument>
 
-/*
-QVariant( QVariant::Type type )
-*/
-HB_FUNC_STATIC( QVARIANT_NEW2 )
+    /*
+    QVariant( QVariant::Type type )
+    */
+HB_FUNC_STATIC(QVARIANT_NEW2)
 {
-  QVariant * obj = new QVariant( (QVariant::Type) hb_parni(1) );
+  QVariant *obj = new QVariant((QVariant::Type)hb_parni(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QVariant( int i )
 */
-HB_FUNC_STATIC( QVARIANT_NEW7 )
+HB_FUNC_STATIC(QVARIANT_NEW7)
 {
-  QVariant * obj = new QVariant( PINT(1) );
+  QVariant *obj = new QVariant(PINT(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QVariant( uint ui )
 */
-HB_FUNC_STATIC( QVARIANT_NEW8 )
+HB_FUNC_STATIC(QVARIANT_NEW8)
 {
-  QVariant * obj = new QVariant( PUINT(1) );
+  QVariant *obj = new QVariant(PUINT(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QVariant( qlonglong ll )
 */
-HB_FUNC_STATIC( QVARIANT_NEW9 )
+HB_FUNC_STATIC(QVARIANT_NEW9)
 {
-  QVariant * obj = new QVariant( PQLONGLONG(1) );
+  QVariant *obj = new QVariant(PQLONGLONG(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QVariant( qulonglong ull )
 */
-HB_FUNC_STATIC( QVARIANT_NEW10 )
+HB_FUNC_STATIC(QVARIANT_NEW10)
 {
-  QVariant * obj = new QVariant( PQULONGLONG(1) );
+  QVariant *obj = new QVariant(PQULONGLONG(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QVariant( double d )
 */
-HB_FUNC_STATIC( QVARIANT_NEW12 )
+HB_FUNC_STATIC(QVARIANT_NEW12)
 {
-  QVariant * obj = new QVariant( PDOUBLE(1) );
+  QVariant *obj = new QVariant(PDOUBLE(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QVariant( float f )
 */
-HB_FUNC_STATIC( QVARIANT_NEW13 )
+HB_FUNC_STATIC(QVARIANT_NEW13)
 {
-  QVariant * obj = new QVariant( PFLOAT(1) );
+  QVariant *obj = new QVariant(PFLOAT(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QVariant(const char *str)
 */
-HB_FUNC_STATIC( QVARIANT_NEW14 )
+HB_FUNC_STATIC(QVARIANT_NEW14)
 {
 #ifndef QT_NO_CAST_FROM_ASCII
-  QVariant * obj = new QVariant( PCONSTCHAR(1) );
+  QVariant *obj = new QVariant(PCONSTCHAR(1));
   Qt5xHb::returnNewObject(obj, true);
 #endif
 }
@@ -257,294 +257,294 @@ HB_FUNC_STATIC( QVARIANT_NEW14 )
 /*
 QVariant( const QString & string )
 */
-HB_FUNC_STATIC( QVARIANT_NEW17 )
+HB_FUNC_STATIC(QVARIANT_NEW17)
 {
-  QVariant * obj = new QVariant( PQSTRING(1) );
+  QVariant *obj = new QVariant(PQSTRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QVariant( const QStringList & stringlist )
 */
-HB_FUNC_STATIC( QVARIANT_NEW19 )
+HB_FUNC_STATIC(QVARIANT_NEW19)
 {
-  QVariant * obj = new QVariant( PQSTRINGLIST(1) );
+  QVariant *obj = new QVariant(PQSTRINGLIST(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QVariant( const QList<QVariant> & list )
 */
-HB_FUNC_STATIC( QVARIANT_NEW24 )
+HB_FUNC_STATIC(QVARIANT_NEW24)
 {
   QList<QVariant> par1;
   PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
   int nLen1 = hb_arrayLen(aList1);
-  for( int i1 = 0; i1 < nLen1; i1++ )
+  for (int i1 = 0; i1 < nLen1; i1++)
   {
-    par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    par1 << *(QVariant *)hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0));
   }
-  QVariant * obj = new QVariant( par1 );
+  QVariant *obj = new QVariant(par1);
   Qt5xHb::returnNewObject(obj, true);
 }
 
-HB_FUNC_STATIC( QVARIANT_NEW )
+HB_FUNC_STATIC(QVARIANT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QVariant()
     */
-    QVariant * obj = new QVariant();
+    QVariant *obj = new QVariant();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && HB_ISOBJECT(1) )
+  else if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
-    if( ISQVARIANT(1) )
+    if (ISQVARIANT(1))
     {
       /*
       QVariant( const QVariant & other )
       */
-      QVariant * obj = new QVariant( *PQVARIANT(1) );
+      QVariant *obj = new QVariant(*PQVARIANT(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQDATASTREAM(1) )
+    else if (ISQDATASTREAM(1))
     {
       /*
       QVariant(QDataStream &s)
       */
 #ifndef QT_NO_DATASTREAM
-      QDataStream * par1 = (QDataStream *) Qt5xHb::itemGetPtr(1);
-      QVariant * o = new QVariant ( *par1 );
-      Qt5xHb::returnNewObject( o, true );
+      QDataStream *par1 = (QDataStream *)Qt5xHb::itemGetPtr(1);
+      QVariant *o = new QVariant(*par1);
+      Qt5xHb::returnNewObject(o, true);
 #endif
     }
-    else if( ISQBYTEARRAY(1) )
+    else if (ISQBYTEARRAY(1))
     {
       /*
       QVariant( const QByteArray & bytearray )
       */
-      QVariant * obj = new QVariant( *PQBYTEARRAY(1) );
+      QVariant *obj = new QVariant(*PQBYTEARRAY(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQBITARRAY(1) )
+    else if (ISQBITARRAY(1))
     {
       /*
       QVariant( const QBitArray & bitarray )
       */
-      QVariant * obj = new QVariant( *PQBITARRAY(1) );
+      QVariant *obj = new QVariant(*PQBITARRAY(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQLATIN1STRING(1) )
+    else if (ISQLATIN1STRING(1))
     {
       /*
       QVariant( QLatin1String string )
       */
-      QVariant * obj = new QVariant( *PQLATIN1STRING(1) );
+      QVariant *obj = new QVariant(*PQLATIN1STRING(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQCHAR(1) )
+    else if (ISQCHAR(1))
     {
       /*
       QVariant( QChar qchar )
       */
-      QVariant * obj = new QVariant( *PQCHAR(1) );
+      QVariant *obj = new QVariant(*PQCHAR(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQDATE(1) )
+    else if (ISQDATE(1))
     {
       /*
       QVariant( const QDate & date )
       */
-      QVariant * obj = new QVariant( *PQDATE(1) );
+      QVariant *obj = new QVariant(*PQDATE(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQTIME(1) )
+    else if (ISQTIME(1))
     {
       /*
       QVariant( const QTime & time )
       */
-      QVariant * obj = new QVariant( *PQTIME(1) );
+      QVariant *obj = new QVariant(*PQTIME(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQDATETIME(1) )
+    else if (ISQDATETIME(1))
     {
       /*
       QVariant( const QDateTime & datetime )
       */
-      QVariant * obj = new QVariant( *PQDATETIME(1) );
+      QVariant *obj = new QVariant(*PQDATETIME(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQSIZE(1) )
+    else if (ISQSIZE(1))
     {
       /*
       QVariant(const QSize &size)
       */
 #ifndef QT_NO_GEOM_VARIANT
-      QVariant * obj = new QVariant( *PQSIZE(1) );
+      QVariant *obj = new QVariant(*PQSIZE(1));
       Qt5xHb::returnNewObject(obj, true);
 #endif
     }
-    else if( ISQSIZEF(1) )
+    else if (ISQSIZEF(1))
     {
       /*
       QVariant(const QSizeF &size)
       */
 #ifndef QT_NO_GEOM_VARIANT
-      QVariant * obj = new QVariant( *PQSIZEF(1) );
+      QVariant *obj = new QVariant(*PQSIZEF(1));
       Qt5xHb::returnNewObject(obj, true);
 #endif
     }
-    else if( ISQPOINT(1) )
+    else if (ISQPOINT(1))
     {
       /*
       QVariant(const QPoint &pt)
       */
 #ifndef QT_NO_GEOM_VARIANT
-      QVariant * obj = new QVariant( *PQPOINT(1) );
+      QVariant *obj = new QVariant(*PQPOINT(1));
       Qt5xHb::returnNewObject(obj, true);
 #endif
     }
-    else if( ISQPOINTF(1) )
+    else if (ISQPOINTF(1))
     {
       /*
       QVariant(const QPointF &pt)
       */
 #ifndef QT_NO_GEOM_VARIANT
-      QVariant * obj = new QVariant( *PQPOINTF(1) );
+      QVariant *obj = new QVariant(*PQPOINTF(1));
       Qt5xHb::returnNewObject(obj, true);
 #endif
     }
-    else if( ISQLINE(1) )
+    else if (ISQLINE(1))
     {
       /*
       QVariant(const QLine &line)
       */
 #ifndef QT_NO_GEOM_VARIANT
-      QVariant * obj = new QVariant( *PQLINE(1) );
+      QVariant *obj = new QVariant(*PQLINE(1));
       Qt5xHb::returnNewObject(obj, true);
 #endif
     }
-    else if( ISQLINEF(1) )
+    else if (ISQLINEF(1))
     {
       /*
       QVariant(const QLineF &line)
       */
 #ifndef QT_NO_GEOM_VARIANT
-      QVariant * obj = new QVariant( *PQLINEF(1) );
+      QVariant *obj = new QVariant(*PQLINEF(1));
       Qt5xHb::returnNewObject(obj, true);
 #endif
     }
-    else if( ISQRECT(1) )
+    else if (ISQRECT(1))
     {
       /*
       QVariant(const QRect &rect)
       */
 #ifndef QT_NO_GEOM_VARIANT
-      QVariant * obj = new QVariant( *PQRECT(1) );
+      QVariant *obj = new QVariant(*PQRECT(1));
       Qt5xHb::returnNewObject(obj, true);
 #endif
     }
-    else if( ISQRECTF(1) )
+    else if (ISQRECTF(1))
     {
       /*
       QVariant(const QRectF &rect)
       */
 #ifndef QT_NO_GEOM_VARIANT
-      QVariant * obj = new QVariant( *PQRECTF(1) );
+      QVariant *obj = new QVariant(*PQRECTF(1));
       Qt5xHb::returnNewObject(obj, true);
 #endif
     }
-    else if( ISQLOCALE(1) )
+    else if (ISQLOCALE(1))
     {
       /*
       QVariant( const QLocale & locale )
       */
-      QVariant * obj = new QVariant( *PQLOCALE(1) );
+      QVariant *obj = new QVariant(*PQLOCALE(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQREGEXP(1) )
+    else if (ISQREGEXP(1))
     {
       /*
       QVariant(const QRegExp &regExp)
       */
 #ifndef QT_NO_REGEXP
-      QVariant * obj = new QVariant( *PQREGEXP(1) );
+      QVariant *obj = new QVariant(*PQREGEXP(1));
       Qt5xHb::returnNewObject(obj, true);
 #endif
     }
-    else if( ISQREGULAREXPRESSION(1) )
+    else if (ISQREGULAREXPRESSION(1))
     {
       /*
       QVariant(const QRegularExpression &re)
       */
 #ifndef QT_NO_REGULAREXPRESSION
-      QVariant * obj = new QVariant( *PQREGULAREXPRESSION(1) );
+      QVariant *obj = new QVariant(*PQREGULAREXPRESSION(1));
       Qt5xHb::returnNewObject(obj, true);
 #endif
     }
-    else if( ISQURL(1) )
+    else if (ISQURL(1))
     {
       /*
       QVariant( const QUrl & url )
       */
-      QVariant * obj = new QVariant( *PQURL(1) );
+      QVariant *obj = new QVariant(*PQURL(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQEASINGCURVE(1) )
+    else if (ISQEASINGCURVE(1))
     {
       /*
       QVariant( const QEasingCurve & easing )
       */
-      QVariant * obj = new QVariant( *PQEASINGCURVE(1) );
+      QVariant *obj = new QVariant(*PQEASINGCURVE(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQUUID(1) )
+    else if (ISQUUID(1))
     {
       /*
       QVariant( const QUuid & uuid )
       */
-      QVariant * obj = new QVariant( *PQUUID(1) );
+      QVariant *obj = new QVariant(*PQUUID(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQMODELINDEX(1) )
+    else if (ISQMODELINDEX(1))
     {
       /*
       QVariant( const QModelIndex & modelIndex )
       */
-      QVariant * obj = new QVariant( *PQMODELINDEX(1) );
+      QVariant *obj = new QVariant(*PQMODELINDEX(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQJSONVALUE(1) )
+    else if (ISQJSONVALUE(1))
     {
       /*
       QVariant( const QJsonValue & jsonValue )
       */
-      QVariant * obj = new QVariant( *PQJSONVALUE(1) );
+      QVariant *obj = new QVariant(*PQJSONVALUE(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQJSONOBJECT(1) )
+    else if (ISQJSONOBJECT(1))
     {
       /*
       QVariant( const QJsonObject & jsonObject )
       */
-      QVariant * obj = new QVariant( *PQJSONOBJECT(1) );
+      QVariant *obj = new QVariant(*PQJSONOBJECT(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQJSONARRAY(1) )
+    else if (ISQJSONARRAY(1))
     {
       /*
       QVariant( const QJsonArray & jsonArray )
       */
-      QVariant * obj = new QVariant( *PQJSONARRAY(1) );
+      QVariant *obj = new QVariant(*PQJSONARRAY(1));
       Qt5xHb::returnNewObject(obj, true);
     }
-    else if( ISQJSONDOCUMENT(1) )
+    else if (ISQJSONDOCUMENT(1))
     {
       /*
       QVariant( const QJsonDocument & jsonDocument )
       */
-      QVariant * obj = new QVariant( *PQJSONDOCUMENT(1) );
+      QVariant *obj = new QVariant(*PQJSONDOCUMENT(1));
       Qt5xHb::returnNewObject(obj, true);
     }
     else
@@ -552,60 +552,60 @@ HB_FUNC_STATIC( QVARIANT_NEW )
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    if( hb_param( 1, HB_IT_DOUBLE ) != NULL )
+    if (hb_param(1, HB_IT_DOUBLE) != NULL)
     {
-      HB_FUNC_EXEC( QVARIANT_NEW12 );
+      HB_FUNC_EXEC(QVARIANT_NEW12);
     }
-    else if( hb_param( 1, HB_IT_LONG ) != NULL )
+    else if (hb_param(1, HB_IT_LONG) != NULL)
     {
-      HB_FUNC_EXEC( QVARIANT_NEW9 );
+      HB_FUNC_EXEC(QVARIANT_NEW9);
     }
     else
     {
-      HB_FUNC_EXEC( QVARIANT_NEW7 );
+      HB_FUNC_EXEC(QVARIANT_NEW7);
     }
   }
-  else if( ISNUMPAR(1) && HB_ISLOG(1) )
+  else if (ISNUMPAR(1) && HB_ISLOG(1))
   {
     /*
     QVariant( bool b )
     */
-    QVariant * obj = new QVariant( PBOOL(1) );
+    QVariant *obj = new QVariant(PBOOL(1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    HB_FUNC_EXEC( QVARIANT_NEW17 );
+    HB_FUNC_EXEC(QVARIANT_NEW17);
   }
-  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
+  else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
-    HB_FUNC_EXEC( QVARIANT_NEW19 );
+    HB_FUNC_EXEC(QVARIANT_NEW19);
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2))
   {
     /*
     QVariant( int typeId, const void * copy )
     */
-    QVariant * obj = new QVariant( PINT(1), (const void *) hb_parptr(2) );
+    QVariant *obj = new QVariant(PINT(1), (const void *)hb_parptr(2));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )
+  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3))
   {
     /*
     QVariant( int typeId, const void * copy, uint flags )
     */
-    QVariant * obj = new QVariant( PINT(1), (const void *) hb_parptr(2), PUINT(3) );
+    QVariant *obj = new QVariant(PINT(1), (const void *)hb_parptr(2), PUINT(3));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && hb_param( 1, HB_IT_DATE ) != NULL )
+  else if (ISNUMPAR(1) && hb_param(1, HB_IT_DATE) != NULL)
   {
     int y, m, d;
-    hb_dateDecode( hb_itemGetDL( hb_param( 1, HB_IT_DATE ) ), &y, &m, &d );
+    hb_dateDecode(hb_itemGetDL(hb_param(1, HB_IT_DATE)), &y, &m, &d);
     QDate date(y, m, d);
-    QVariant * o = new QVariant ( date );
-    Qt5xHb::returnNewObject( o, true );
+    QVariant *o = new QVariant(date);
+    Qt5xHb::returnNewObject(o, true);
   }
   else
   {
@@ -613,11 +613,11 @@ HB_FUNC_STATIC( QVARIANT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QVARIANT_DELETE )
+HB_FUNC_STATIC(QVARIANT_DELETE)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -632,17 +632,17 @@ HB_FUNC_STATIC( QVARIANT_DELETE )
 /*
 void swap( QVariant & other )
 */
-HB_FUNC_STATIC( QVARIANT_SWAP )
+HB_FUNC_STATIC(QVARIANT_SWAP)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->swap( *PQVARIANT(1) );
+      obj->swap(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -658,17 +658,17 @@ HB_FUNC_STATIC( QVARIANT_SWAP )
 /*
 QVariant::Type type() const
 */
-HB_FUNC_STATIC( QVARIANT_TYPE )
+HB_FUNC_STATIC(QVARIANT_TYPE)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -682,17 +682,17 @@ HB_FUNC_STATIC( QVARIANT_TYPE )
 /*
 int userType() const
 */
-HB_FUNC_STATIC( QVARIANT_USERTYPE )
+HB_FUNC_STATIC(QVARIANT_USERTYPE)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->userType() );
+      RINT(obj->userType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -706,17 +706,17 @@ HB_FUNC_STATIC( QVARIANT_USERTYPE )
 /*
 const char * typeName() const
 */
-HB_FUNC_STATIC( QVARIANT_TYPENAME )
+HB_FUNC_STATIC(QVARIANT_TYPENAME)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( obj->typeName() );
+      hb_retc(obj->typeName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -730,17 +730,17 @@ HB_FUNC_STATIC( QVARIANT_TYPENAME )
 /*
 bool canConvert( int targetTypeId ) const
 */
-HB_FUNC_STATIC( QVARIANT_CANCONVERT )
+HB_FUNC_STATIC(QVARIANT_CANCONVERT)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->canConvert( PINT(1) ) );
+      RBOOL(obj->canConvert(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -754,17 +754,17 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
 /*
 bool convert( int targetTypeId )
 */
-HB_FUNC_STATIC( QVARIANT_CONVERT )
+HB_FUNC_STATIC(QVARIANT_CONVERT)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->convert( PINT(1) ) );
+      RBOOL(obj->convert(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -778,17 +778,17 @@ HB_FUNC_STATIC( QVARIANT_CONVERT )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QVARIANT_ISVALID )
+HB_FUNC_STATIC(QVARIANT_ISVALID)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -802,17 +802,17 @@ HB_FUNC_STATIC( QVARIANT_ISVALID )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QVARIANT_ISNULL )
+HB_FUNC_STATIC(QVARIANT_ISNULL)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -826,14 +826,14 @@ HB_FUNC_STATIC( QVARIANT_ISNULL )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QVARIANT_CLEAR )
+HB_FUNC_STATIC(QVARIANT_CLEAR)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -852,14 +852,14 @@ HB_FUNC_STATIC( QVARIANT_CLEAR )
 /*
 void detach()
 */
-HB_FUNC_STATIC( QVARIANT_DETACH )
+HB_FUNC_STATIC(QVARIANT_DETACH)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->detach();
@@ -878,17 +878,17 @@ HB_FUNC_STATIC( QVARIANT_DETACH )
 /*
 bool isDetached() const
 */
-HB_FUNC_STATIC( QVARIANT_ISDETACHED )
+HB_FUNC_STATIC(QVARIANT_ISDETACHED)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isDetached() );
+      RBOOL(obj->isDetached());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -902,19 +902,19 @@ HB_FUNC_STATIC( QVARIANT_ISDETACHED )
 /*
 int toInt( bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QVARIANT_TOINT )
+HB_FUNC_STATIC(QVARIANT_TOINT)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
       bool par1;
-      RINT( obj->toInt( &par1 ) );
-      hb_storl( par1, 1 );
+      RINT(obj->toInt(&par1));
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -928,19 +928,19 @@ HB_FUNC_STATIC( QVARIANT_TOINT )
 /*
 uint toUInt( bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QVARIANT_TOUINT )
+HB_FUNC_STATIC(QVARIANT_TOUINT)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
       bool par1;
-      RUINT( obj->toUInt( &par1 ) );
-      hb_storl( par1, 1 );
+      RUINT(obj->toUInt(&par1));
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -954,19 +954,19 @@ HB_FUNC_STATIC( QVARIANT_TOUINT )
 /*
 qlonglong toLongLong( bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
+HB_FUNC_STATIC(QVARIANT_TOLONGLONG)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
       bool par1;
-      RQLONGLONG( obj->toLongLong( &par1 ) );
-      hb_storl( par1, 1 );
+      RQLONGLONG(obj->toLongLong(&par1));
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -980,19 +980,19 @@ HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
 /*
 qulonglong toULongLong( bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QVARIANT_TOULONGLONG )
+HB_FUNC_STATIC(QVARIANT_TOULONGLONG)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
       bool par1;
-      RQULONGLONG( obj->toULongLong( &par1 ) );
-      hb_storl( par1, 1 );
+      RQULONGLONG(obj->toULongLong(&par1));
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1006,17 +1006,17 @@ HB_FUNC_STATIC( QVARIANT_TOULONGLONG )
 /*
 bool toBool() const
 */
-HB_FUNC_STATIC( QVARIANT_TOBOOL )
+HB_FUNC_STATIC(QVARIANT_TOBOOL)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->toBool() );
+      RBOOL(obj->toBool());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1030,19 +1030,19 @@ HB_FUNC_STATIC( QVARIANT_TOBOOL )
 /*
 double toDouble( bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QVARIANT_TODOUBLE )
+HB_FUNC_STATIC(QVARIANT_TODOUBLE)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
       bool par1;
-      RDOUBLE( obj->toDouble( &par1 ) );
-      hb_storl( par1, 1 );
+      RDOUBLE(obj->toDouble(&par1));
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1056,19 +1056,19 @@ HB_FUNC_STATIC( QVARIANT_TODOUBLE )
 /*
 float toFloat( bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QVARIANT_TOFLOAT )
+HB_FUNC_STATIC(QVARIANT_TOFLOAT)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
       bool par1;
-      RFLOAT( obj->toFloat( &par1 ) );
-      hb_storl( par1, 1 );
+      RFLOAT(obj->toFloat(&par1));
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1082,19 +1082,19 @@ HB_FUNC_STATIC( QVARIANT_TOFLOAT )
 /*
 qreal toReal( bool * ok = 0 ) const
 */
-HB_FUNC_STATIC( QVARIANT_TOREAL )
+HB_FUNC_STATIC(QVARIANT_TOREAL)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
       bool par1;
-      RQREAL( obj->toReal( &par1 ) );
-      hb_storl( par1, 1 );
+      RQREAL(obj->toReal(&par1));
+      hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1108,17 +1108,17 @@ HB_FUNC_STATIC( QVARIANT_TOREAL )
 /*
 QByteArray toByteArray() const
 */
-HB_FUNC_STATIC( QVARIANT_TOBYTEARRAY )
+HB_FUNC_STATIC(QVARIANT_TOBYTEARRAY)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toByteArray() );
+      QByteArray *ptr = new QByteArray(obj->toByteArray());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1133,17 +1133,17 @@ HB_FUNC_STATIC( QVARIANT_TOBYTEARRAY )
 /*
 QBitArray toBitArray() const
 */
-HB_FUNC_STATIC( QVARIANT_TOBITARRAY )
+HB_FUNC_STATIC(QVARIANT_TOBITARRAY)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBitArray * ptr = new QBitArray( obj->toBitArray() );
+      QBitArray *ptr = new QBitArray(obj->toBitArray());
       Qt5xHb::createReturnClass(ptr, "QBITARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1158,17 +1158,17 @@ HB_FUNC_STATIC( QVARIANT_TOBITARRAY )
 /*
 QString toString() const
 */
-HB_FUNC_STATIC( QVARIANT_TOSTRING )
+HB_FUNC_STATIC(QVARIANT_TOSTRING)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toString() );
+      RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1182,17 +1182,17 @@ HB_FUNC_STATIC( QVARIANT_TOSTRING )
 /*
 QStringList toStringList() const
 */
-HB_FUNC_STATIC( QVARIANT_TOSTRINGLIST )
+HB_FUNC_STATIC(QVARIANT_TOSTRINGLIST)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->toStringList() );
+      RQSTRINGLIST(obj->toStringList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1206,17 +1206,17 @@ HB_FUNC_STATIC( QVARIANT_TOSTRINGLIST )
 /*
 QChar toChar() const
 */
-HB_FUNC_STATIC( QVARIANT_TOCHAR )
+HB_FUNC_STATIC(QVARIANT_TOCHAR)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QChar * ptr = new QChar( obj->toChar() );
+      QChar *ptr = new QChar(obj->toChar());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1231,17 +1231,17 @@ HB_FUNC_STATIC( QVARIANT_TOCHAR )
 /*
 QDate toDate() const
 */
-HB_FUNC_STATIC( QVARIANT_TODATE )
+HB_FUNC_STATIC(QVARIANT_TODATE)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDate * ptr = new QDate( obj->toDate() );
+      QDate *ptr = new QDate(obj->toDate());
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1256,17 +1256,17 @@ HB_FUNC_STATIC( QVARIANT_TODATE )
 /*
 QTime toTime() const
 */
-HB_FUNC_STATIC( QVARIANT_TOTIME )
+HB_FUNC_STATIC(QVARIANT_TOTIME)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTime * ptr = new QTime( obj->toTime() );
+      QTime *ptr = new QTime(obj->toTime());
       Qt5xHb::createReturnClass(ptr, "QTIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1281,17 +1281,17 @@ HB_FUNC_STATIC( QVARIANT_TOTIME )
 /*
 QDateTime toDateTime() const
 */
-HB_FUNC_STATIC( QVARIANT_TODATETIME )
+HB_FUNC_STATIC(QVARIANT_TODATETIME)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->toDateTime() );
+      QDateTime *ptr = new QDateTime(obj->toDateTime());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1306,17 +1306,17 @@ HB_FUNC_STATIC( QVARIANT_TODATETIME )
 /*
 QList<QVariant> toList() const
 */
-HB_FUNC_STATIC( QVARIANT_TOLIST )
+HB_FUNC_STATIC(QVARIANT_TOLIST)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      Qt5xHb::convert_qvariantlist_to_array( obj->toList() );
+      Qt5xHb::convert_qvariantlist_to_array(obj->toList());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1330,18 +1330,18 @@ HB_FUNC_STATIC( QVARIANT_TOLIST )
 /*
 QPoint toPoint() const
 */
-HB_FUNC_STATIC( QVARIANT_TOPOINT )
+HB_FUNC_STATIC(QVARIANT_TOPOINT)
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPoint * ptr = new QPoint( obj->toPoint() );
+      QPoint *ptr = new QPoint(obj->toPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1357,18 +1357,18 @@ HB_FUNC_STATIC( QVARIANT_TOPOINT )
 /*
 QPointF toPointF() const
 */
-HB_FUNC_STATIC( QVARIANT_TOPOINTF )
+HB_FUNC_STATIC(QVARIANT_TOPOINTF)
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->toPointF() );
+      QPointF *ptr = new QPointF(obj->toPointF());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1384,18 +1384,18 @@ HB_FUNC_STATIC( QVARIANT_TOPOINTF )
 /*
 QRect toRect() const
 */
-HB_FUNC_STATIC( QVARIANT_TORECT )
+HB_FUNC_STATIC(QVARIANT_TORECT)
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRect * ptr = new QRect( obj->toRect() );
+      QRect *ptr = new QRect(obj->toRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1411,18 +1411,18 @@ HB_FUNC_STATIC( QVARIANT_TORECT )
 /*
 QRectF toRectF() const
 */
-HB_FUNC_STATIC( QVARIANT_TORECTF )
+HB_FUNC_STATIC(QVARIANT_TORECTF)
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->toRectF() );
+      QRectF *ptr = new QRectF(obj->toRectF());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1438,18 +1438,18 @@ HB_FUNC_STATIC( QVARIANT_TORECTF )
 /*
 QSize toSize() const
 */
-HB_FUNC_STATIC( QVARIANT_TOSIZE )
+HB_FUNC_STATIC(QVARIANT_TOSIZE)
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->toSize() );
+      QSize *ptr = new QSize(obj->toSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1465,18 +1465,18 @@ HB_FUNC_STATIC( QVARIANT_TOSIZE )
 /*
 QSizeF toSizeF() const
 */
-HB_FUNC_STATIC( QVARIANT_TOSIZEF )
+HB_FUNC_STATIC(QVARIANT_TOSIZEF)
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->toSizeF() );
+      QSizeF *ptr = new QSizeF(obj->toSizeF());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1492,18 +1492,18 @@ HB_FUNC_STATIC( QVARIANT_TOSIZEF )
 /*
 QLine toLine() const
 */
-HB_FUNC_STATIC( QVARIANT_TOLINE )
+HB_FUNC_STATIC(QVARIANT_TOLINE)
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QLine * ptr = new QLine( obj->toLine() );
+      QLine *ptr = new QLine(obj->toLine());
       Qt5xHb::createReturnClass(ptr, "QLINE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1519,18 +1519,18 @@ HB_FUNC_STATIC( QVARIANT_TOLINE )
 /*
 QLineF toLineF() const
 */
-HB_FUNC_STATIC( QVARIANT_TOLINEF )
+HB_FUNC_STATIC(QVARIANT_TOLINEF)
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QLineF * ptr = new QLineF( obj->toLineF() );
+      QLineF *ptr = new QLineF(obj->toLineF());
       Qt5xHb::createReturnClass(ptr, "QLINEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1546,17 +1546,17 @@ HB_FUNC_STATIC( QVARIANT_TOLINEF )
 /*
 QLocale toLocale() const
 */
-HB_FUNC_STATIC( QVARIANT_TOLOCALE )
+HB_FUNC_STATIC(QVARIANT_TOLOCALE)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QLocale * ptr = new QLocale( obj->toLocale() );
+      QLocale *ptr = new QLocale(obj->toLocale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1571,18 +1571,18 @@ HB_FUNC_STATIC( QVARIANT_TOLOCALE )
 /*
 QRegExp toRegExp() const
 */
-HB_FUNC_STATIC( QVARIANT_TOREGEXP )
+HB_FUNC_STATIC(QVARIANT_TOREGEXP)
 {
 #ifndef QT_NO_REGEXP
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRegExp * ptr = new QRegExp( obj->toRegExp() );
+      QRegExp *ptr = new QRegExp(obj->toRegExp());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1598,18 +1598,18 @@ HB_FUNC_STATIC( QVARIANT_TOREGEXP )
 /*
 QRegularExpression toRegularExpression() const
 */
-HB_FUNC_STATIC( QVARIANT_TOREGULAREXPRESSION )
+HB_FUNC_STATIC(QVARIANT_TOREGULAREXPRESSION)
 {
 #ifndef QT_NO_REGULAREXPRESSION
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRegularExpression * ptr = new QRegularExpression( obj->toRegularExpression() );
+      QRegularExpression *ptr = new QRegularExpression(obj->toRegularExpression());
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1625,17 +1625,17 @@ HB_FUNC_STATIC( QVARIANT_TOREGULAREXPRESSION )
 /*
 QUrl toUrl() const
 */
-HB_FUNC_STATIC( QVARIANT_TOURL )
+HB_FUNC_STATIC(QVARIANT_TOURL)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->toUrl() );
+      QUrl *ptr = new QUrl(obj->toUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1650,17 +1650,17 @@ HB_FUNC_STATIC( QVARIANT_TOURL )
 /*
 QEasingCurve toEasingCurve() const
 */
-HB_FUNC_STATIC( QVARIANT_TOEASINGCURVE )
+HB_FUNC_STATIC(QVARIANT_TOEASINGCURVE)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QEasingCurve * ptr = new QEasingCurve( obj->toEasingCurve() );
+      QEasingCurve *ptr = new QEasingCurve(obj->toEasingCurve());
       Qt5xHb::createReturnClass(ptr, "QEASINGCURVE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1675,17 +1675,17 @@ HB_FUNC_STATIC( QVARIANT_TOEASINGCURVE )
 /*
 QUuid toUuid() const
 */
-HB_FUNC_STATIC( QVARIANT_TOUUID )
+HB_FUNC_STATIC(QVARIANT_TOUUID)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUuid * ptr = new QUuid( obj->toUuid() );
+      QUuid *ptr = new QUuid(obj->toUuid());
       Qt5xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1700,17 +1700,17 @@ HB_FUNC_STATIC( QVARIANT_TOUUID )
 /*
 QModelIndex toModelIndex() const
 */
-HB_FUNC_STATIC( QVARIANT_TOMODELINDEX )
+HB_FUNC_STATIC(QVARIANT_TOMODELINDEX)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->toModelIndex() );
+      QModelIndex *ptr = new QModelIndex(obj->toModelIndex());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1725,17 +1725,17 @@ HB_FUNC_STATIC( QVARIANT_TOMODELINDEX )
 /*
 QJsonValue toJsonValue() const
 */
-HB_FUNC_STATIC( QVARIANT_TOJSONVALUE )
+HB_FUNC_STATIC(QVARIANT_TOJSONVALUE)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QJsonValue * ptr = new QJsonValue( obj->toJsonValue() );
+      QJsonValue *ptr = new QJsonValue(obj->toJsonValue());
       Qt5xHb::createReturnClass(ptr, "QJSONVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1750,17 +1750,17 @@ HB_FUNC_STATIC( QVARIANT_TOJSONVALUE )
 /*
 QJsonObject toJsonObject() const
 */
-HB_FUNC_STATIC( QVARIANT_TOJSONOBJECT )
+HB_FUNC_STATIC(QVARIANT_TOJSONOBJECT)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QJsonObject * ptr = new QJsonObject( obj->toJsonObject() );
+      QJsonObject *ptr = new QJsonObject(obj->toJsonObject());
       Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1775,17 +1775,17 @@ HB_FUNC_STATIC( QVARIANT_TOJSONOBJECT )
 /*
 QJsonArray toJsonArray() const
 */
-HB_FUNC_STATIC( QVARIANT_TOJSONARRAY )
+HB_FUNC_STATIC(QVARIANT_TOJSONARRAY)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QJsonArray * ptr = new QJsonArray( obj->toJsonArray() );
+      QJsonArray *ptr = new QJsonArray(obj->toJsonArray());
       Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1800,17 +1800,17 @@ HB_FUNC_STATIC( QVARIANT_TOJSONARRAY )
 /*
 QJsonDocument toJsonDocument() const
 */
-HB_FUNC_STATIC( QVARIANT_TOJSONDOCUMENT )
+HB_FUNC_STATIC(QVARIANT_TOJSONDOCUMENT)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QJsonDocument * ptr = new QJsonDocument( obj->toJsonDocument() );
+      QJsonDocument *ptr = new QJsonDocument(obj->toJsonDocument());
       Qt5xHb::createReturnClass(ptr, "QJSONDOCUMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1825,18 +1825,18 @@ HB_FUNC_STATIC( QVARIANT_TOJSONDOCUMENT )
 /*
 void load(QDataStream &ds)
 */
-HB_FUNC_STATIC( QVARIANT_LOAD )
+HB_FUNC_STATIC(QVARIANT_LOAD)
 {
 #ifndef QT_NO_DATASTREAM
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
+    if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      obj->load( *PQDATASTREAM(1) );
+      obj->load(*PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1853,18 +1853,18 @@ HB_FUNC_STATIC( QVARIANT_LOAD )
 /*
 void save(QDataStream &ds) const
 */
-HB_FUNC_STATIC( QVARIANT_SAVE )
+HB_FUNC_STATIC(QVARIANT_SAVE)
 {
 #ifndef QT_NO_DATASTREAM
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
+    if (ISNUMPAR(1) && ISQDATASTREAM(1))
     {
 #endif
-      obj->save( *PQDATASTREAM(1) );
+      obj->save(*PQDATASTREAM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1881,17 +1881,17 @@ HB_FUNC_STATIC( QVARIANT_SAVE )
 /*
 void * data()
 */
-HB_FUNC_STATIC( QVARIANT_DATA )
+HB_FUNC_STATIC(QVARIANT_DATA)
 {
-  QVariant * obj = (QVariant *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVariant *obj = (QVariant *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( (void *) obj->data() );
+      hb_retptr((void *)obj->data());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1905,13 +1905,13 @@ HB_FUNC_STATIC( QVARIANT_DATA )
 /*
 static const char * typeToName( int typeId )
 */
-HB_FUNC_STATIC( QVARIANT_TYPETONAME )
+HB_FUNC_STATIC(QVARIANT_TYPETONAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    hb_retc( QVariant::typeToName( PINT(1) ) );
+    hb_retc(QVariant::typeToName(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1924,13 +1924,13 @@ HB_FUNC_STATIC( QVARIANT_TYPETONAME )
 /*
 static QVariant::Type nameToType( const char * name )
 */
-HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
+HB_FUNC_STATIC(QVARIANT_NAMETOTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    RENUM( QVariant::nameToType( PCONSTCHAR(1) ) );
+    RENUM(QVariant::nameToType(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1940,11 +1940,11 @@ HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 #endif
 }
 
-HB_FUNC_STATIC( QVARIANT_NEWFROM )
+HB_FUNC_STATIC(QVARIANT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -1953,7 +1953,7 @@ HB_FUNC_STATIC( QVARIANT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -1970,26 +1970,26 @@ HB_FUNC_STATIC( QVARIANT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QVARIANT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QVARIANT_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QVARIANT_NEWFROM );
+  HB_FUNC_EXEC(QVARIANT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QVARIANT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QVARIANT_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QVARIANT_NEWFROM );
+  HB_FUNC_EXEC(QVARIANT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QVARIANT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QVARIANT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QVARIANT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QVARIANT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

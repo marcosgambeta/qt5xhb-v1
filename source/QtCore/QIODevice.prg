@@ -85,11 +85,11 @@ RETURN
 #include <QtCore/QIODevice>
 #endif
 
-HB_FUNC_STATIC( QIODEVICE_DELETE )
+HB_FUNC_STATIC(QIODEVICE_DELETE)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -106,17 +106,17 @@ HB_FUNC_STATIC( QIODEVICE_DELETE )
 /*
 virtual bool atEnd() const
 */
-HB_FUNC_STATIC( QIODEVICE_ATEND )
+HB_FUNC_STATIC(QIODEVICE_ATEND)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->atEnd() );
+      RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,17 +130,17 @@ HB_FUNC_STATIC( QIODEVICE_ATEND )
 /*
 virtual qint64 bytesAvailable() const
 */
-HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
+HB_FUNC_STATIC(QIODEVICE_BYTESAVAILABLE)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->bytesAvailable() );
+      RQINT64(obj->bytesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,17 +154,17 @@ HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
 /*
 virtual qint64 bytesToWrite() const
 */
-HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
+HB_FUNC_STATIC(QIODEVICE_BYTESTOWRITE)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->bytesToWrite() );
+      RQINT64(obj->bytesToWrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,17 +178,17 @@ HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
 /*
 virtual bool canReadLine() const
 */
-HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
+HB_FUNC_STATIC(QIODEVICE_CANREADLINE)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canReadLine() );
+      RBOOL(obj->canReadLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,14 +202,14 @@ HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
 /*
 virtual void close()
 */
-HB_FUNC_STATIC( QIODEVICE_CLOSE )
+HB_FUNC_STATIC(QIODEVICE_CLOSE)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->close();
@@ -228,17 +228,17 @@ HB_FUNC_STATIC( QIODEVICE_CLOSE )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QIODEVICE_ERRORSTRING )
+HB_FUNC_STATIC(QIODEVICE_ERRORSTRING)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,17 +252,17 @@ HB_FUNC_STATIC( QIODEVICE_ERRORSTRING )
 /*
 bool getChar( char * c )
 */
-HB_FUNC_STATIC( QIODEVICE_GETCHAR )
+HB_FUNC_STATIC(QIODEVICE_GETCHAR)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->getChar( (char *) hb_parc(1) ) );
+      RBOOL(obj->getChar((char *)hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,17 +276,17 @@ HB_FUNC_STATIC( QIODEVICE_GETCHAR )
 /*
 bool isOpen() const
 */
-HB_FUNC_STATIC( QIODEVICE_ISOPEN )
+HB_FUNC_STATIC(QIODEVICE_ISOPEN)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isOpen() );
+      RBOOL(obj->isOpen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,17 +300,17 @@ HB_FUNC_STATIC( QIODEVICE_ISOPEN )
 /*
 bool isReadable() const
 */
-HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
+HB_FUNC_STATIC(QIODEVICE_ISREADABLE)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isReadable() );
+      RBOOL(obj->isReadable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,17 +324,17 @@ HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
 /*
 virtual bool isSequential() const
 */
-HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
+HB_FUNC_STATIC(QIODEVICE_ISSEQUENTIAL)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSequential() );
+      RBOOL(obj->isSequential());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,17 +348,17 @@ HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
 /*
 bool isTextModeEnabled() const
 */
-HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
+HB_FUNC_STATIC(QIODEVICE_ISTEXTMODEENABLED)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isTextModeEnabled() );
+      RBOOL(obj->isTextModeEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,17 +372,17 @@ HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
 /*
 bool isWritable() const
 */
-HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
+HB_FUNC_STATIC(QIODEVICE_ISWRITABLE)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isWritable() );
+      RBOOL(obj->isWritable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,17 +396,17 @@ HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
 /*
 virtual bool open( QIODevice::OpenMode mode )
 */
-HB_FUNC_STATIC( QIODEVICE_OPEN )
+HB_FUNC_STATIC(QIODEVICE_OPEN)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->open( (QIODevice::OpenMode) hb_parni(1) ) );
+      RBOOL(obj->open((QIODevice::OpenMode)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,17 +420,17 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
 /*
 QIODevice::OpenMode openMode() const
 */
-HB_FUNC_STATIC( QIODEVICE_OPENMODE )
+HB_FUNC_STATIC(QIODEVICE_OPENMODE)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->openMode() );
+      RENUM(obj->openMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,30 +441,30 @@ HB_FUNC_STATIC( QIODEVICE_OPENMODE )
   }
 }
 
-HB_FUNC_STATIC( QIODEVICE_PEEK )
+HB_FUNC_STATIC(QIODEVICE_PEEK)
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
     qint64 peek( char * data, qint64 maxSize )
     */
-    QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RQINT64( obj->peek( (char *) hb_parc(1), PQINT64(2) ) );
+      RQINT64(obj->peek((char *)hb_parc(1), PQINT64(2)));
     }
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QByteArray peek( qint64 maxSize )
     */
-    QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      QByteArray * ptr = new QByteArray( obj->peek( PQINT64(1) ) );
+      QByteArray *ptr = new QByteArray(obj->peek(PQINT64(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   }
@@ -477,17 +477,17 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
 /*
 virtual qint64 pos() const
 */
-HB_FUNC_STATIC( QIODEVICE_POS )
+HB_FUNC_STATIC(QIODEVICE_POS)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->pos() );
+      RQINT64(obj->pos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,17 +501,17 @@ HB_FUNC_STATIC( QIODEVICE_POS )
 /*
 bool putChar( char c )
 */
-HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
+HB_FUNC_STATIC(QIODEVICE_PUTCHAR)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->putChar( PCHAR(1) ) );
+      RBOOL(obj->putChar(PCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -522,30 +522,30 @@ HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
   }
 }
 
-HB_FUNC_STATIC( QIODEVICE_READ )
+HB_FUNC_STATIC(QIODEVICE_READ)
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
     qint64 read( char * data, qint64 maxSize )
     */
-    QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RQINT64( obj->read( (char *) hb_parc(1), PQINT64(2) ) );
+      RQINT64(obj->read((char *)hb_parc(1), PQINT64(2)));
     }
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QByteArray read( qint64 maxSize )
     */
-    QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      QByteArray * ptr = new QByteArray( obj->read( PQINT64(1) ) );
+      QByteArray *ptr = new QByteArray(obj->read(PQINT64(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   }
@@ -558,17 +558,17 @@ HB_FUNC_STATIC( QIODEVICE_READ )
 /*
 QByteArray readAll()
 */
-HB_FUNC_STATIC( QIODEVICE_READALL )
+HB_FUNC_STATIC(QIODEVICE_READALL)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->readAll() );
+      QByteArray *ptr = new QByteArray(obj->readAll());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -580,30 +580,30 @@ HB_FUNC_STATIC( QIODEVICE_READALL )
   }
 }
 
-HB_FUNC_STATIC( QIODEVICE_READLINE )
+HB_FUNC_STATIC(QIODEVICE_READLINE)
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
     qint64 readLine( char * data, qint64 maxSize )
     */
-    QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RQINT64( obj->readLine( (char *) hb_parc(1), PQINT64(2) ) );
+      RQINT64(obj->readLine((char *)hb_parc(1), PQINT64(2)));
     }
   }
-  else if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
+  else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
     QByteArray readLine( qint64 maxSize = 0 )
     */
-    QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      QByteArray * ptr = new QByteArray( obj->readLine( OPQINT64(1,0) ) );
+      QByteArray *ptr = new QByteArray(obj->readLine(OPQINT64(1, 0)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   }
@@ -616,17 +616,17 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
 /*
 virtual bool reset()
 */
-HB_FUNC_STATIC( QIODEVICE_RESET )
+HB_FUNC_STATIC(QIODEVICE_RESET)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->reset() );
+      RBOOL(obj->reset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -640,17 +640,17 @@ HB_FUNC_STATIC( QIODEVICE_RESET )
 /*
 virtual bool seek( qint64 pos )
 */
-HB_FUNC_STATIC( QIODEVICE_SEEK )
+HB_FUNC_STATIC(QIODEVICE_SEEK)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->seek( PQINT64(1) ) );
+      RBOOL(obj->seek(PQINT64(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -664,17 +664,17 @@ HB_FUNC_STATIC( QIODEVICE_SEEK )
 /*
 void setTextModeEnabled( bool enabled )
 */
-HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
+HB_FUNC_STATIC(QIODEVICE_SETTEXTMODEENABLED)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setTextModeEnabled( PBOOL(1) );
+      obj->setTextModeEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -690,17 +690,17 @@ HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
 /*
 virtual qint64 size() const
 */
-HB_FUNC_STATIC( QIODEVICE_SIZE )
+HB_FUNC_STATIC(QIODEVICE_SIZE)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->size() );
+      RQINT64(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -714,17 +714,17 @@ HB_FUNC_STATIC( QIODEVICE_SIZE )
 /*
 void ungetChar( char c )
 */
-HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
+HB_FUNC_STATIC(QIODEVICE_UNGETCHAR)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->ungetChar( PCHAR(1) );
+      obj->ungetChar(PCHAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -740,17 +740,17 @@ HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
 /*
 virtual bool waitForBytesWritten( int msecs )
 */
-HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
+HB_FUNC_STATIC(QIODEVICE_WAITFORBYTESWRITTEN)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->waitForBytesWritten( PINT(1) ) );
+      RBOOL(obj->waitForBytesWritten(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -764,17 +764,17 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
 /*
 virtual bool waitForReadyRead( int msecs )
 */
-HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
+HB_FUNC_STATIC(QIODEVICE_WAITFORREADYREAD)
 {
-  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->waitForReadyRead( PINT(1) ) );
+      RBOOL(obj->waitForReadyRead(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -785,42 +785,42 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
   }
 }
 
-HB_FUNC_STATIC( QIODEVICE_WRITE )
+HB_FUNC_STATIC(QIODEVICE_WRITE)
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
     qint64 write( const char * data, qint64 maxSize )
     */
-    QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RQINT64( obj->write( PCONSTCHAR(1), PQINT64(2) ) );
+      RQINT64(obj->write(PCONSTCHAR(1), PQINT64(2)));
     }
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     qint64 write( const char * data )
     */
-    QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RQINT64( obj->write( PCONSTCHAR(1) ) );
+      RQINT64(obj->write(PCONSTCHAR(1)));
     }
   }
-  else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
     qint64 write( const QByteArray & byteArray )
     */
-    QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RQINT64( obj->write( *PQBYTEARRAY(1) ) );
+      RQINT64(obj->write(*PQBYTEARRAY(1)));
     }
   }
   else
@@ -829,24 +829,24 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
   }
 }
 
-void QIODeviceSlots_connect_signal(const QString & signal, const QString & slot);
+void QIODeviceSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
+HB_FUNC_STATIC(QIODEVICE_ONABOUTTOCLOSE)
 {
   QIODeviceSlots_connect_signal("aboutToClose()", "aboutToClose()");
 }
 
-HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
+HB_FUNC_STATIC(QIODEVICE_ONBYTESWRITTEN)
 {
   QIODeviceSlots_connect_signal("bytesWritten(qint64)", "bytesWritten(qint64)");
 }
 
-HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
+HB_FUNC_STATIC(QIODEVICE_ONREADCHANNELFINISHED)
 {
   QIODeviceSlots_connect_signal("readChannelFinished()", "readChannelFinished()");
 }
 
-HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
+HB_FUNC_STATIC(QIODEVICE_ONREADYREAD)
 {
   QIODeviceSlots_connect_signal("readyRead()", "readyRead()");
 }

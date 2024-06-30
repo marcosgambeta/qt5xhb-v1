@@ -86,14 +86,14 @@ END CLASS
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-/*
-HAbstractListModel( QObject * parent = NULL )
-*/
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_NEW )
+    /*
+    HAbstractListModel( QObject * parent = NULL )
+    */
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_NEW)
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    HAbstractListModel * obj = new HAbstractListModel( OPQOBJECT( 1, NULL ) );
+    HAbstractListModel *obj = new HAbstractListModel(OPQOBJECT(1, NULL));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -105,11 +105,11 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_NEW )
 /*
 virtual ~HAbstractListModel()
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_DELETE )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_DELETE)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -130,17 +130,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_DELETE )
 /*
 void setRowCountCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETROWCOUNTCB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETROWCOUNTCB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setRowCountCB( PBLOCKORSYMBOL(1) );
+      obj->setRowCountCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,17 +160,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETROWCOUNTCB )
 /*
 void setCB( int role, PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETCB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETCB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ( HB_ISBLOCK(2) || HB_ISSYMBOL(2) ) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISBLOCK(2) || HB_ISSYMBOL(2)))
     {
 #endif
-      obj->setCB( PINT(1), PBLOCKORSYMBOL(2) );
+      obj->setCB(PINT(1), PBLOCKORSYMBOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,17 +186,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETCB )
 /*
 void setDisplayRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETDISPLAYROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETDISPLAYROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setDisplayRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setDisplayRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,17 +212,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETDISPLAYROLECB )
 /*
 void setDecorationRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETDECORATIONROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETDECORATIONROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setDecorationRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setDecorationRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,17 +238,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETDECORATIONROLECB )
 /*
 void setEditRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETEDITROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETEDITROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setEditRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setEditRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,17 +264,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETEDITROLECB )
 /*
 void setToolTipRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETTOOLTIPROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETTOOLTIPROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setToolTipRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setToolTipRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,17 +290,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETTOOLTIPROLECB )
 /*
 void setStatusTipRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETSTATUSTIPROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETSTATUSTIPROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setStatusTipRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setStatusTipRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,17 +316,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETSTATUSTIPROLECB )
 /*
 void setWhatsThisRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETWHATSTHISROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETWHATSTHISROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setWhatsThisRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setWhatsThisRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,17 +342,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETWHATSTHISROLECB )
 /*
 void setSizeHintRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETSIZEHINTROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETSIZEHINTROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setSizeHintRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setSizeHintRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,17 +368,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETSIZEHINTROLECB )
 /*
 void setFontRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETFONTROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETFONTROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setFontRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setFontRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,17 +394,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETFONTROLECB )
 /*
 void setTextAlignmentRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETTEXTALIGNMENTROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETTEXTALIGNMENTROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setTextAlignmentRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setTextAlignmentRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,17 +420,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETTEXTALIGNMENTROLECB )
 /*
 void setBackgroundRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETBACKGROUNDROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETBACKGROUNDROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setBackgroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setBackgroundRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,17 +446,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETBACKGROUNDROLECB )
 /*
 void setForegroundRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETFOREGROUNDROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETFOREGROUNDROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setForegroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setForegroundRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -472,17 +472,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETFOREGROUNDROLECB )
 /*
 void setCheckStateRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETCHECKSTATEROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETCHECKSTATEROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setCheckStateRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setCheckStateRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -498,17 +498,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETCHECKSTATEROLECB )
 /*
 void setAcccessibleTextRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETACCESSIBLETEXTROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETACCESSIBLETEXTROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setAccessibleTextRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setAccessibleTextRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -524,17 +524,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETACCESSIBLETEXTROLECB )
 /*
 void setAcccessibleDescriptionRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETACCESSIBLEDESCRIPTIONROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETACCESSIBLEDESCRIPTIONROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setAccessibleDescriptionRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setAccessibleDescriptionRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -554,17 +554,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETACCESSIBLEDESCRIPTIONROLECB )
 /*
 void setHorizontalHeaderCB( int role, PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERCB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERCB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ( HB_ISBLOCK(2) || HB_ISSYMBOL(2) ) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISBLOCK(2) || HB_ISSYMBOL(2)))
     {
 #endif
-      obj->setHorizontalHeaderCB( PINT(1), PBLOCKORSYMBOL(2) );
+      obj->setHorizontalHeaderCB(PINT(1), PBLOCKORSYMBOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -580,17 +580,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERCB )
 /*
 void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERDISPLAYROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERDISPLAYROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setHorizontalHeaderDisplayRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderDisplayRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -606,17 +606,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERDISPLAYROLECB )
 /*
 void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERDECORATIONROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERDECORATIONROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setHorizontalHeaderDecorationRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderDecorationRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -632,17 +632,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERDECORATIONROLECB )
 /*
 void setHorizontalHeaderToolTipRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERTOOLTIPROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERTOOLTIPROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setHorizontalHeaderToolTipRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderToolTipRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -658,17 +658,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERTOOLTIPROLECB )
 /*
 void setHorizontalHeaderSizeHintRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERSIZEHINTROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERSIZEHINTROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setHorizontalHeaderSizeHintRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderSizeHintRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -684,17 +684,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERSIZEHINTROLECB )
 /*
 void setHorizontalHeaderFontRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERFONTROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERFONTROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setHorizontalHeaderFontRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderFontRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -710,17 +710,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERFONTROLECB )
 /*
 void setHorizontalHeaderTextAlignmentRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setHorizontalHeaderTextAlignmentRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderTextAlignmentRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -736,17 +736,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB )
 /*
 void setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setHorizontalHeaderBackgroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderBackgroundRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -762,17 +762,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB )
 /*
 void setHorizontalHeaderForegroundRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setHorizontalHeaderForegroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderForegroundRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -792,17 +792,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB )
 /*
 void setverticalHeaderCB( int role, PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERCB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERCB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ( HB_ISBLOCK(2) || HB_ISSYMBOL(2) ) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISBLOCK(2) || HB_ISSYMBOL(2)))
     {
 #endif
-      obj->setVerticalHeaderCB( PINT(1), PBLOCKORSYMBOL(2) );
+      obj->setVerticalHeaderCB(PINT(1), PBLOCKORSYMBOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -818,17 +818,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERCB )
 /*
 void setVerticalHeaderDisplayRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERDISPLAYROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERDISPLAYROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setVerticalHeaderDisplayRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderDisplayRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -844,17 +844,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERDISPLAYROLECB )
 /*
 void setVerticalHeaderDecorationRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERDECORATIONROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERDECORATIONROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setVerticalHeaderDecorationRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderDecorationRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -870,17 +870,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERDECORATIONROLECB )
 /*
 void setVerticalHeaderToolTipRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERTOOLTIPROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERTOOLTIPROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setVerticalHeaderToolTipRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderToolTipRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -896,17 +896,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERTOOLTIPROLECB )
 /*
 void setVerticalHeaderSizeHintRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERSIZEHINTROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERSIZEHINTROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setVerticalHeaderSizeHintRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderSizeHintRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -922,17 +922,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERSIZEHINTROLECB )
 /*
 void setVerticalHeaderFontRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERFONTROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERFONTROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setVerticalHeaderFontRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderFontRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -948,17 +948,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERFONTROLECB )
 /*
 void setVerticalHeaderTextAlignmentRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setVerticalHeaderTextAlignmentRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderTextAlignmentRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -974,17 +974,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB )
 /*
 void setVerticalHeaderBackgroundRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERBACKGROUNDROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERBACKGROUNDROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setVerticalHeaderBackgroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderBackgroundRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1000,17 +1000,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERBACKGROUNDROLECB )
 /*
 void setVerticalHeaderForegroundRoleCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERFOREGROUNDROLECB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETVERTICALHEADERFOREGROUNDROLECB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setVerticalHeaderForegroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderForegroundRoleCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1026,17 +1026,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERFOREGROUNDROLECB )
 /*
 void setFlagsCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETFLAGSCB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETFLAGSCB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setFlagsCB( PBLOCKORSYMBOL(1) );
+      obj->setFlagsCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1052,17 +1052,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETFLAGSCB )
 /*
 void setSetDataCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETSETDATACB )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_SETSETDATACB)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setSetDataCB( PBLOCKORSYMBOL(1) );
+      obj->setSetDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1090,14 +1090,14 @@ int rowCount( const QModelIndex & parent = QModelIndex() ) const
 /*
 void reloadData()
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODEL_RELOADDATA )
+HB_FUNC_STATIC(HABSTRACTLISTMODEL_RELOADDATA)
 {
-  HAbstractListModel * obj = qobject_cast<HAbstractListModel*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModel *obj = qobject_cast<HAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reloadData();

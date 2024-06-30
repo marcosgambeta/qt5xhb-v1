@@ -66,14 +66,14 @@ RETURN
 #include <QtCore/QEvent>
 #endif
 
-/*
-QEvent( QEvent::Type type )
-*/
-HB_FUNC_STATIC( QEVENT_NEW )
+    /*
+    QEvent( QEvent::Type type )
+    */
+HB_FUNC_STATIC(QEVENT_NEW)
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    QEvent * obj = new QEvent( (QEvent::Type) hb_parni(1) );
+    QEvent *obj = new QEvent((QEvent::Type)hb_parni(1));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -82,11 +82,11 @@ HB_FUNC_STATIC( QEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QEVENT_DELETE )
+HB_FUNC_STATIC(QEVENT_DELETE)
 {
-  QEvent * obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEvent *obj = (QEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -101,14 +101,14 @@ HB_FUNC_STATIC( QEVENT_DELETE )
 /*
 void accept()
 */
-HB_FUNC_STATIC( QEVENT_ACCEPT )
+HB_FUNC_STATIC(QEVENT_ACCEPT)
 {
-  QEvent * obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEvent *obj = (QEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->accept();
@@ -127,14 +127,14 @@ HB_FUNC_STATIC( QEVENT_ACCEPT )
 /*
 void ignore()
 */
-HB_FUNC_STATIC( QEVENT_IGNORE )
+HB_FUNC_STATIC(QEVENT_IGNORE)
 {
-  QEvent * obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEvent *obj = (QEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->ignore();
@@ -153,17 +153,17 @@ HB_FUNC_STATIC( QEVENT_IGNORE )
 /*
 bool isAccepted() const
 */
-HB_FUNC_STATIC( QEVENT_ISACCEPTED )
+HB_FUNC_STATIC(QEVENT_ISACCEPTED)
 {
-  QEvent * obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEvent *obj = (QEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isAccepted() );
+      RBOOL(obj->isAccepted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,17 +177,17 @@ HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 /*
 void setAccepted( bool accepted )
 */
-HB_FUNC_STATIC( QEVENT_SETACCEPTED )
+HB_FUNC_STATIC(QEVENT_SETACCEPTED)
 {
-  QEvent * obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEvent *obj = (QEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAccepted( PBOOL(1) );
+      obj->setAccepted(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,17 +203,17 @@ HB_FUNC_STATIC( QEVENT_SETACCEPTED )
 /*
 bool spontaneous() const
 */
-HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
+HB_FUNC_STATIC(QEVENT_SPONTANEOUS)
 {
-  QEvent * obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEvent *obj = (QEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->spontaneous() );
+      RBOOL(obj->spontaneous());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,17 +227,17 @@ HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 /*
 QEvent::Type type() const
 */
-HB_FUNC_STATIC( QEVENT_TYPE )
+HB_FUNC_STATIC(QEVENT_TYPE)
 {
-  QEvent * obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEvent *obj = (QEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,13 +251,13 @@ HB_FUNC_STATIC( QEVENT_TYPE )
 /*
 static int registerEventType( int hint = -1 )
 */
-HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
+HB_FUNC_STATIC(QEVENT_REGISTEREVENTTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
 #endif
-    RINT( QEvent::registerEventType( OPINT(1,-1) ) );
+    RINT(QEvent::registerEventType(OPINT(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -267,11 +267,11 @@ HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 #endif
 }
 
-HB_FUNC_STATIC( QEVENT_NEWFROM )
+HB_FUNC_STATIC(QEVENT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QEVENT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -297,26 +297,26 @@ HB_FUNC_STATIC( QEVENT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QEVENT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QEVENT_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QEVENT_NEWFROM );
+  HB_FUNC_EXEC(QEVENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QEVENT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QEVENT_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QEVENT_NEWFROM );
+  HB_FUNC_EXEC(QEVENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QEVENT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QEVENT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QEVENT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QEVENT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

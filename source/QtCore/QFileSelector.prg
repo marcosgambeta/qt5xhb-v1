@@ -59,14 +59,14 @@ RETURN
 
 #include <QtCore/QUrl>
 
-/*
-QFileSelector( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QFILESELECTOR_NEW )
+    /*
+    QFileSelector( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QFILESELECTOR_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QFileSelector * obj = new QFileSelector( OPQOBJECT(1,0) );
+    QFileSelector *obj = new QFileSelector(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -75,11 +75,11 @@ HB_FUNC_STATIC( QFILESELECTOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFILESELECTOR_DELETE )
+HB_FUNC_STATIC(QFILESELECTOR_DELETE)
 {
-  QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
+  QFileSelector *obj = (QFileSelector *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -93,30 +93,30 @@ HB_FUNC_STATIC( QFILESELECTOR_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QFILESELECTOR_SELECT )
+HB_FUNC_STATIC(QFILESELECTOR_SELECT)
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     QString select( const QString & filePath ) const
     */
-    QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QFileSelector *obj = (QFileSelector *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RQSTRING( obj->select( PQSTRING(1) ) );
+      RQSTRING(obj->select(PQSTRING(1)));
     }
   }
-  else if( ISNUMPAR(1) && ISQURL(1) )
+  else if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
     QUrl select( const QUrl & filePath ) const
     */
-    QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QFileSelector *obj = (QFileSelector *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      QUrl * ptr = new QUrl( obj->select( *PQURL(1) ) );
+      QUrl *ptr = new QUrl(obj->select(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
     }
   }
@@ -129,17 +129,17 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT )
 /*
 QStringList extraSelectors() const
 */
-HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
+HB_FUNC_STATIC(QFILESELECTOR_EXTRASELECTORS)
 {
-  QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
+  QFileSelector *obj = (QFileSelector *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->extraSelectors() );
+      RQSTRINGLIST(obj->extraSelectors());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,17 +153,17 @@ HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
 /*
 void setExtraSelectors( const QStringList & list )
 */
-HB_FUNC_STATIC( QFILESELECTOR_SETEXTRASELECTORS )
+HB_FUNC_STATIC(QFILESELECTOR_SETEXTRASELECTORS)
 {
-  QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
+  QFileSelector *obj = (QFileSelector *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setExtraSelectors( PQSTRINGLIST(1) );
+      obj->setExtraSelectors(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,17 +179,17 @@ HB_FUNC_STATIC( QFILESELECTOR_SETEXTRASELECTORS )
 /*
 QStringList allSelectors() const
 */
-HB_FUNC_STATIC( QFILESELECTOR_ALLSELECTORS )
+HB_FUNC_STATIC(QFILESELECTOR_ALLSELECTORS)
 {
-  QFileSelector * obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
+  QFileSelector *obj = (QFileSelector *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->allSelectors() );
+      RQSTRINGLIST(obj->allSelectors());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

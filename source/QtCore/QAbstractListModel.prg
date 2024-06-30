@@ -54,11 +54,11 @@ RETURN
 #include <QtCore/QAbstractListModel>
 #endif
 
-HB_FUNC_STATIC( QABSTRACTLISTMODEL_DELETE )
+HB_FUNC_STATIC(QABSTRACTLISTMODEL_DELETE)
 {
-  QAbstractListModel * obj = (QAbstractListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractListModel *obj = (QAbstractListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -73,19 +73,20 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_DELETE )
 }
 
 /*
-virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
+virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
+parent )
 */
-HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
+HB_FUNC_STATIC(QABSTRACTLISTMODEL_DROPMIMEDATA)
 {
-  QAbstractListModel * obj = (QAbstractListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractListModel *obj = (QAbstractListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5) )
+    if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
     {
 #endif
-      RBOOL( obj->dropMimeData( PQMIMEDATA(1), (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+      RBOOL(obj->dropMimeData(PQMIMEDATA(1), (Qt::DropAction)hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,17 +100,18 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
 /*
 virtual QModelIndex index( int row, int column = 0, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QABSTRACTLISTMODEL_INDEX )
+HB_FUNC_STATIC(QABSTRACTLISTMODEL_INDEX)
 {
-  QAbstractListModel * obj = (QAbstractListModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractListModel *obj = (QAbstractListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), OPINT(2,0), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      QModelIndex *ptr = new QModelIndex(
+          obj->index(PINT(1), OPINT(2, 0), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

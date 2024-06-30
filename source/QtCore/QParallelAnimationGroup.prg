@@ -53,14 +53,14 @@ RETURN
 #include <QtCore/QParallelAnimationGroup>
 #endif
 
-/*
-QParallelAnimationGroup( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
+    /*
+    QParallelAnimationGroup( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QParallelAnimationGroup * obj = new QParallelAnimationGroup( OPQOBJECT(1,0) );
+    QParallelAnimationGroup *obj = new QParallelAnimationGroup(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -69,11 +69,11 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
+HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_DELETE)
 {
-  QParallelAnimationGroup * obj = (QParallelAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QParallelAnimationGroup *obj = (QParallelAnimationGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -90,17 +90,17 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
 /*
 virtual int duration() const
 */
-HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
+HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_DURATION)
 {
-  QParallelAnimationGroup * obj = (QParallelAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QParallelAnimationGroup *obj = (QParallelAnimationGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->duration() );
+      RINT(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

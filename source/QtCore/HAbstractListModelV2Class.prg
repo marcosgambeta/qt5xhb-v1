@@ -50,14 +50,14 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-/*
-HAbstractListModelV2( QObject * parent = NULL )
-*/
-HB_FUNC_STATIC( HABSTRACTLISTMODELV2_NEW )
+    /*
+    HAbstractListModelV2( QObject * parent = NULL )
+    */
+HB_FUNC_STATIC(HABSTRACTLISTMODELV2_NEW)
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    HAbstractListModelV2 * obj = new HAbstractListModelV2( OPQOBJECT( 1, NULL ) );
+    HAbstractListModelV2 *obj = new HAbstractListModelV2(OPQOBJECT(1, NULL));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -69,11 +69,11 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_NEW )
 /*
 virtual ~HAbstractListModelV2()
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODELV2_DELETE )
+HB_FUNC_STATIC(HABSTRACTLISTMODELV2_DELETE)
 {
-  HAbstractListModelV2 * obj = qobject_cast<HAbstractListModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -90,17 +90,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_DELETE )
 /*
 void setRowCountCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETROWCOUNTCB )
+HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETROWCOUNTCB)
 {
-  HAbstractListModelV2 * obj = qobject_cast<HAbstractListModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setRowCountCB( PBLOCKORSYMBOL(1) );
+      obj->setRowCountCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,17 +116,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETROWCOUNTCB )
 /*
 void setDataCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETDATACB )
+HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETDATACB)
 {
-  HAbstractListModelV2 * obj = qobject_cast<HAbstractListModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setDataCB( PBLOCKORSYMBOL(1) );
+      obj->setDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,17 +142,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETDATACB )
 /*
 void setHeaderDataCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETHEADERDATACB )
+HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETHEADERDATACB)
 {
-  HAbstractListModelV2 * obj = qobject_cast<HAbstractListModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setHeaderDataCB( PBLOCKORSYMBOL(1) );
+      obj->setHeaderDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,17 +168,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETHEADERDATACB )
 /*
 void setFlagsCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETFLAGSCB )
+HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETFLAGSCB)
 {
-  HAbstractListModelV2 * obj = qobject_cast<HAbstractListModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setFlagsCB( PBLOCKORSYMBOL(1) );
+      obj->setFlagsCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,17 +194,17 @@ HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETFLAGSCB )
 /*
 void setSetDataCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODELV2_SETSETDATACB )
+HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETSETDATACB)
 {
-  HAbstractListModelV2 * obj = qobject_cast<HAbstractListModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( HB_ISBLOCK(1) || HB_ISSYMBOL(1) ) )
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
 #endif
-      obj->setSetDataCB( PBLOCKORSYMBOL(1)  );
+      obj->setSetDataCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,14 +244,14 @@ bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::Ed
 /*
 void reloadData()
 */
-HB_FUNC_STATIC( HABSTRACTLISTMODELV2_RELOADDATA )
+HB_FUNC_STATIC(HABSTRACTLISTMODELV2_RELOADDATA)
 {
-  HAbstractListModelV2 * obj = qobject_cast<HAbstractListModelV2*>(Qt5xHb::getQObjectPointerFromSelfItem());
+  HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reloadData();

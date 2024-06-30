@@ -57,22 +57,22 @@ RETURN
 #include <QtCore/QEventTransition>
 #endif
 
-HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
+HB_FUNC_STATIC(QEVENTTRANSITION_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQSTATE(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
     /*
     QEventTransition( QState * sourceState = 0 )
     */
-    QEventTransition * obj = new QEventTransition( OPQSTATE(1,0) );
+    QEventTransition *obj = new QEventTransition(OPQSTATE(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && HB_ISNUM(2) && (ISQSTATE(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && (ISQSTATE(3) || HB_ISNIL(3)))
   {
     /*
     QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = 0 )
     */
-    QEventTransition * obj = new QEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), OPQSTATE(3,0) );
+    QEventTransition *obj = new QEventTransition(PQOBJECT(1), (QEvent::Type)hb_parni(2), OPQSTATE(3, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -81,11 +81,11 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
+HB_FUNC_STATIC(QEVENTTRANSITION_DELETE)
 {
-  QEventTransition * obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEventTransition *obj = (QEventTransition *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -102,17 +102,17 @@ HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
 /*
 QObject * eventSource() const
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
+HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
 {
-  QEventTransition * obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEventTransition *obj = (QEventTransition *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QObject * ptr = obj->eventSource();
+      QObject *ptr = obj->eventSource();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -127,17 +127,17 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
 /*
 QEvent::Type eventType() const
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
+HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
 {
-  QEventTransition * obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEventTransition *obj = (QEventTransition *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->eventType() );
+      RENUM(obj->eventType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,17 +151,17 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
 /*
 void setEventSource( QObject * object )
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
+HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 {
-  QEventTransition * obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEventTransition *obj = (QEventTransition *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->setEventSource( PQOBJECT(1) );
+      obj->setEventSource(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,17 +177,17 @@ HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 /*
 void setEventType( QEvent::Type type )
 */
-HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
+HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTTYPE)
 {
-  QEventTransition * obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
+  QEventTransition *obj = (QEventTransition *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setEventType( (QEvent::Type) hb_parni(1) );
+      obj->setEventType((QEvent::Type)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
