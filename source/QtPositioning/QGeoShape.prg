@@ -52,7 +52,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtPositioning/QGeoShape>
 #endif
 #endif
@@ -62,30 +62,30 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtPositioning/QGeoShape>
 #endif
 #endif
 
-HB_FUNC_STATIC( QGEOSHAPE_NEW )
+HB_FUNC_STATIC(QGEOSHAPE_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QGeoShape()
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    QGeoShape * obj = new QGeoShape();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+    QGeoShape *obj = new QGeoShape();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
+  else if (ISNUMPAR(1) && ISQGEOSHAPE(1))
   {
     /*
     QGeoShape( const QGeoShape & other )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    QGeoShape * obj = new QGeoShape( *PQGEOSHAPE(1) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+    QGeoShape *obj = new QGeoShape(*PQGEOSHAPE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
@@ -95,12 +95,12 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_DELETE )
+HB_FUNC_STATIC(QGEOSHAPE_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoShape *obj = (QGeoShape *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -116,18 +116,18 @@ HB_FUNC_STATIC( QGEOSHAPE_DELETE )
 /*
 QGeoShape::ShapeType type() const
 */
-HB_FUNC_STATIC( QGEOSHAPE_TYPE )
+HB_FUNC_STATIC(QGEOSHAPE_TYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoShape *obj = (QGeoShape *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,18 +142,18 @@ HB_FUNC_STATIC( QGEOSHAPE_TYPE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QGEOSHAPE_ISVALID )
+HB_FUNC_STATIC(QGEOSHAPE_ISVALID)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoShape *obj = (QGeoShape *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,18 +168,18 @@ HB_FUNC_STATIC( QGEOSHAPE_ISVALID )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
+HB_FUNC_STATIC(QGEOSHAPE_ISEMPTY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoShape *obj = (QGeoShape *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,18 +194,18 @@ HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
 /*
 bool contains( const QGeoCoordinate & coordinate ) const
 */
-HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
+HB_FUNC_STATIC(QGEOSHAPE_CONTAINS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoShape *obj = (QGeoShape *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
+    if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      RBOOL( obj->contains( *PQGEOCOORDINATE(1) ) );
+      RBOOL(obj->contains(*PQGEOCOORDINATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,11 +217,11 @@ HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
 #endif
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_NEWFROM )
+HB_FUNC_STATIC(QGEOSHAPE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QGEOSHAPE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -247,26 +247,26 @@ HB_FUNC_STATIC( QGEOSHAPE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGEOSHAPE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QGEOSHAPE_NEWFROM );
+  HB_FUNC_EXEC(QGEOSHAPE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGEOSHAPE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QGEOSHAPE_NEWFROM );
+  HB_FUNC_EXEC(QGEOSHAPE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOSHAPE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGEOSHAPE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOSHAPE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

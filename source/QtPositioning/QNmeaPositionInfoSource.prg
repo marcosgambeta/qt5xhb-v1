@@ -52,7 +52,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtPositioning/QNmeaPositionInfoSource>
 #endif
 #endif
@@ -62,22 +62,23 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtPositioning/QNmeaPositionInfoSource>
 #endif
 #endif
 
 #include <QtCore/QIODevice>
 
-/*
-QNmeaPositionInfoSource( QNmeaPositionInfoSource::UpdateMode updateMode, QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_NEW )
+    /*
+    QNmeaPositionInfoSource( QNmeaPositionInfoSource::UpdateMode updateMode, QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    QNmeaPositionInfoSource * obj = new QNmeaPositionInfoSource( (QNmeaPositionInfoSource::UpdateMode) hb_parni(1), OPQOBJECT(2,0) );
+    QNmeaPositionInfoSource *obj =
+        new QNmeaPositionInfoSource((QNmeaPositionInfoSource::UpdateMode)hb_parni(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -87,12 +88,12 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_DELETE )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -108,18 +109,18 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_DELETE )
 /*
 QNmeaPositionInfoSource::UpdateMode updateMode() const
 */
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_UPDATEMODE )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_UPDATEMODE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->updateMode() );
+      RENUM(obj->updateMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,18 +135,18 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_UPDATEMODE )
 /*
 void setDevice( QIODevice * source )
 */
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_SETDEVICE )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SETDEVICE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIODEVICE(1) )
+    if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
 #endif
-      obj->setDevice( PQIODEVICE(1) );
+      obj->setDevice(PQIODEVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,18 +163,18 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_SETDEVICE )
 /*
 QIODevice * device() const
 */
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_DEVICE )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_DEVICE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QIODevice * ptr = obj->device();
+      QIODevice *ptr = obj->device();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -189,18 +190,18 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_DEVICE )
 /*
 void setUpdateInterval( int msec )
 */
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_SETUPDATEINTERVAL )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SETUPDATEINTERVAL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setUpdateInterval( PINT(1) );
+      obj->setUpdateInterval(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,18 +218,18 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_SETUPDATEINTERVAL )
 /*
 QGeoPositionInfo lastKnownPosition( bool fromSatellitePositioningMethodsOnly = false ) const
 */
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_LASTKNOWNPOSITION )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_LASTKNOWNPOSITION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
-      QGeoPositionInfo * ptr = new QGeoPositionInfo( obj->lastKnownPosition( OPBOOL(1,false) ) );
+      QGeoPositionInfo *ptr = new QGeoPositionInfo(obj->lastKnownPosition(OPBOOL(1, false)));
       Qt5xHb::createReturnClass(ptr, "QGEOPOSITIONINFO", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -244,18 +245,18 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_LASTKNOWNPOSITION )
 /*
 QGeoPositionInfoSource::PositioningMethods supportedPositioningMethods() const
 */
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->supportedPositioningMethods() );
+      RENUM(obj->supportedPositioningMethods());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,18 +271,18 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS )
 /*
 int minimumUpdateInterval() const
 */
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_MINIMUMUPDATEINTERVAL )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_MINIMUMUPDATEINTERVAL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimumUpdateInterval() );
+      RINT(obj->minimumUpdateInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,18 +297,18 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_MINIMUMUPDATEINTERVAL )
 /*
 QGeoPositionInfoSource::Error error() const
 */
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_ERROR )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_ERROR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,15 +323,15 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_ERROR )
 /*
 void startUpdates()
 */
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_STARTUPDATES )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_STARTUPDATES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->startUpdates();
@@ -350,15 +351,15 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_STARTUPDATES )
 /*
 void stopUpdates()
 */
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_STOPUPDATES )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_STOPUPDATES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stopUpdates();
@@ -378,18 +379,18 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_STOPUPDATES )
 /*
 void requestUpdate( int timeout = 0 )
 */
-HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_REQUESTUPDATE )
+HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_REQUESTUPDATE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QNmeaPositionInfoSource *obj = (QNmeaPositionInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->requestUpdate( OPINT(1,0) );
+      obj->requestUpdate(OPINT(1, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

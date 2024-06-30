@@ -60,7 +60,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtPositioning/QGeoCoordinate>
 #endif
 #endif
@@ -70,50 +70,50 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtPositioning/QGeoCoordinate>
 #endif
 #endif
 
-HB_FUNC_STATIC( QGEOCOORDINATE_NEW )
+HB_FUNC_STATIC(QGEOCOORDINATE_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QGeoCoordinate()
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    QGeoCoordinate * obj = new QGeoCoordinate();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+    QGeoCoordinate *obj = new QGeoCoordinate();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     QGeoCoordinate( double latitude, double longitude )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    QGeoCoordinate * obj = new QGeoCoordinate( PDOUBLE(1), PDOUBLE(2) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+    QGeoCoordinate *obj = new QGeoCoordinate(PDOUBLE(1), PDOUBLE(2));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
     QGeoCoordinate( double latitude, double longitude, double altitude )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    QGeoCoordinate * obj = new QGeoCoordinate( PDOUBLE(1), PDOUBLE(2), PDOUBLE(3) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+    QGeoCoordinate *obj = new QGeoCoordinate(PDOUBLE(1), PDOUBLE(2), PDOUBLE(3));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
+  else if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
   {
     /*
     QGeoCoordinate( const QGeoCoordinate & other )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-    QGeoCoordinate * obj = new QGeoCoordinate( *PQGEOCOORDINATE(1) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+    QGeoCoordinate *obj = new QGeoCoordinate(*PQGEOCOORDINATE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
@@ -123,12 +123,12 @@ HB_FUNC_STATIC( QGEOCOORDINATE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGEOCOORDINATE_DELETE )
+HB_FUNC_STATIC(QGEOCOORDINATE_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -144,18 +144,18 @@ HB_FUNC_STATIC( QGEOCOORDINATE_DELETE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_ISVALID )
+HB_FUNC_STATIC(QGEOCOORDINATE_ISVALID)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,18 +170,18 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ISVALID )
 /*
 QGeoCoordinate::CoordinateType type() const
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_TYPE )
+HB_FUNC_STATIC(QGEOCOORDINATE_TYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,18 +196,18 @@ HB_FUNC_STATIC( QGEOCOORDINATE_TYPE )
 /*
 void setLatitude( double latitude )
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_SETLATITUDE )
+HB_FUNC_STATIC(QGEOCOORDINATE_SETLATITUDE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLatitude( PDOUBLE(1) );
+      obj->setLatitude(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,18 +224,18 @@ HB_FUNC_STATIC( QGEOCOORDINATE_SETLATITUDE )
 /*
 double latitude() const
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_LATITUDE )
+HB_FUNC_STATIC(QGEOCOORDINATE_LATITUDE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RDOUBLE( obj->latitude() );
+      RDOUBLE(obj->latitude());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,18 +250,18 @@ HB_FUNC_STATIC( QGEOCOORDINATE_LATITUDE )
 /*
 void setLongitude( double longitude )
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_SETLONGITUDE )
+HB_FUNC_STATIC(QGEOCOORDINATE_SETLONGITUDE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLongitude( PDOUBLE(1) );
+      obj->setLongitude(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,18 +278,18 @@ HB_FUNC_STATIC( QGEOCOORDINATE_SETLONGITUDE )
 /*
 double longitude() const
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_LONGITUDE )
+HB_FUNC_STATIC(QGEOCOORDINATE_LONGITUDE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RDOUBLE( obj->longitude() );
+      RDOUBLE(obj->longitude());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,18 +304,18 @@ HB_FUNC_STATIC( QGEOCOORDINATE_LONGITUDE )
 /*
 void setAltitude( double altitude )
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_SETALTITUDE )
+HB_FUNC_STATIC(QGEOCOORDINATE_SETALTITUDE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAltitude( PDOUBLE(1) );
+      obj->setAltitude(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,18 +332,18 @@ HB_FUNC_STATIC( QGEOCOORDINATE_SETALTITUDE )
 /*
 double altitude() const
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_ALTITUDE )
+HB_FUNC_STATIC(QGEOCOORDINATE_ALTITUDE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RDOUBLE( obj->altitude() );
+      RDOUBLE(obj->altitude());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,18 +358,18 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ALTITUDE )
 /*
 qreal distanceTo( const QGeoCoordinate & other ) const
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_DISTANCETO )
+HB_FUNC_STATIC(QGEOCOORDINATE_DISTANCETO)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
+    if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      RQREAL( obj->distanceTo( *PQGEOCOORDINATE(1) ) );
+      RQREAL(obj->distanceTo(*PQGEOCOORDINATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,18 +384,18 @@ HB_FUNC_STATIC( QGEOCOORDINATE_DISTANCETO )
 /*
 qreal azimuthTo( const QGeoCoordinate & other ) const
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_AZIMUTHTO )
+HB_FUNC_STATIC(QGEOCOORDINATE_AZIMUTHTO)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
+    if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
 #endif
-      RQREAL( obj->azimuthTo( *PQGEOCOORDINATE(1) ) );
+      RQREAL(obj->azimuthTo(*PQGEOCOORDINATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,18 +410,18 @@ HB_FUNC_STATIC( QGEOCOORDINATE_AZIMUTHTO )
 /*
 QGeoCoordinate atDistanceAndAzimuth( qreal distance, qreal azimuth, qreal distanceUp = 0.0 ) const
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_ATDISTANCEANDAZIMUTH )
+HB_FUNC_STATIC(QGEOCOORDINATE_ATDISTANCEANDAZIMUTH)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      QGeoCoordinate * ptr = new QGeoCoordinate( obj->atDistanceAndAzimuth( PQREAL(1), PQREAL(2), OPQREAL(3,0.0) ) );
+      QGeoCoordinate *ptr = new QGeoCoordinate(obj->atDistanceAndAzimuth(PQREAL(1), PQREAL(2), OPQREAL(3, 0.0)));
       Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -437,18 +437,20 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ATDISTANCEANDAZIMUTH )
 /*
 QString toString( QGeoCoordinate::CoordinateFormat format = QGeoCoordinate::DegreesMinutesSecondsWithHemisphere ) const
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_TOSTRING )
+HB_FUNC_STATIC(QGEOCOORDINATE_TOSTRING)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = (QGeoCoordinate *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QGeoCoordinate *obj = (QGeoCoordinate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING( obj->toString( HB_ISNIL(1)? (QGeoCoordinate::CoordinateFormat) QGeoCoordinate::DegreesMinutesSecondsWithHemisphere : (QGeoCoordinate::CoordinateFormat) hb_parni(1) ) );
+      RQSTRING(obj->toString(HB_ISNIL(1)
+                                 ? (QGeoCoordinate::CoordinateFormat)QGeoCoordinate::DegreesMinutesSecondsWithHemisphere
+                                 : (QGeoCoordinate::CoordinateFormat)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,11 +462,11 @@ HB_FUNC_STATIC( QGEOCOORDINATE_TOSTRING )
 #endif
 }
 
-HB_FUNC_STATIC( QGEOCOORDINATE_NEWFROM )
+HB_FUNC_STATIC(QGEOCOORDINATE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -473,7 +475,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -490,26 +492,26 @@ HB_FUNC_STATIC( QGEOCOORDINATE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGEOCOORDINATE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGEOCOORDINATE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QGEOCOORDINATE_NEWFROM );
+  HB_FUNC_EXEC(QGEOCOORDINATE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOCOORDINATE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGEOCOORDINATE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QGEOCOORDINATE_NEWFROM );
+  HB_FUNC_EXEC(QGEOCOORDINATE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGEOCOORDINATE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOCOORDINATE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGEOCOORDINATE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGEOCOORDINATE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
