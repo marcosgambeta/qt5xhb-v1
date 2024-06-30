@@ -55,11 +55,11 @@ RETURN
 #include <QtHelp/QHelpContentWidget>
 #endif
 
-HB_FUNC_STATIC( QHELPCONTENTWIDGET_DELETE )
+HB_FUNC_STATIC(QHELPCONTENTWIDGET_DELETE)
 {
-  QHelpContentWidget * obj = (QHelpContentWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentWidget *obj = (QHelpContentWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -76,17 +76,17 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_DELETE )
 /*
 QModelIndex indexOf( const QUrl & link )
 */
-HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
+HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
 {
-  QHelpContentWidget * obj = (QHelpContentWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentWidget *obj = (QHelpContentWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexOf( *PQURL(1) ) );
+      QModelIndex *ptr = new QModelIndex(obj->indexOf(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -98,9 +98,9 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
   }
 }
 
-void QHelpContentWidgetSlots_connect_signal(const QString & signal, const QString & slot);
+void QHelpContentWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
+HB_FUNC_STATIC(QHELPCONTENTWIDGET_ONLINKACTIVATED)
 {
   QHelpContentWidgetSlots_connect_signal("linkActivated(QUrl)", "linkActivated(QUrl)");
 }

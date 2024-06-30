@@ -68,11 +68,11 @@ RETURN
 
 #include <QtCore/QUrl>
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_DELETE )
+HB_FUNC_STATIC(QHELPCONTENTITEM_DELETE)
 {
-  QHelpContentItem * obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem *obj = (QHelpContentItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -87,17 +87,17 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_DELETE )
 /*
 QHelpContentItem * child( int row ) const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
+HB_FUNC_STATIC(QHELPCONTENTITEM_CHILD)
 {
-  QHelpContentItem * obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem *obj = (QHelpContentItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QHelpContentItem * ptr = obj->child( PINT(1) );
+      QHelpContentItem *ptr = obj->child(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QHELPCONTENTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -112,17 +112,17 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
 /*
 int childCount() const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
+HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDCOUNT)
 {
-  QHelpContentItem * obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem *obj = (QHelpContentItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->childCount() );
+      RINT(obj->childCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,17 +136,17 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
 /*
 int childPosition( QHelpContentItem * child ) const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
+HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDPOSITION)
 {
-  QHelpContentItem * obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem *obj = (QHelpContentItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHELPCONTENTITEM(1) )
+    if (ISNUMPAR(1) && ISQHELPCONTENTITEM(1))
     {
 #endif
-      RINT( obj->childPosition( PQHELPCONTENTITEM(1) ) );
+      RINT(obj->childPosition(PQHELPCONTENTITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,17 +160,17 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
 /*
 QHelpContentItem * parent() const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
+HB_FUNC_STATIC(QHELPCONTENTITEM_PARENT)
 {
-  QHelpContentItem * obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem *obj = (QHelpContentItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QHelpContentItem * ptr = obj->parent();
+      QHelpContentItem *ptr = obj->parent();
       Qt5xHb::createReturnClass(ptr, "QHELPCONTENTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -185,17 +185,17 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 /*
 int row() const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
+HB_FUNC_STATIC(QHELPCONTENTITEM_ROW)
 {
-  QHelpContentItem * obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem *obj = (QHelpContentItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->row() );
+      RINT(obj->row());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,17 +209,17 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
+HB_FUNC_STATIC(QHELPCONTENTITEM_TITLE)
 {
-  QHelpContentItem * obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem *obj = (QHelpContentItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,17 +233,17 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
+HB_FUNC_STATIC(QHELPCONTENTITEM_URL)
 {
-  QHelpContentItem * obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem *obj = (QHelpContentItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url() );
+      QUrl *ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -255,11 +255,11 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
   }
 }
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROM )
+HB_FUNC_STATIC(QHELPCONTENTITEM_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -285,26 +285,26 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QHELPCONTENTITEM_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QHELPCONTENTITEM_NEWFROM );
+  HB_FUNC_EXEC(QHELPCONTENTITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QHELPCONTENTITEM_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QHELPCONTENTITEM_NEWFROM );
+  HB_FUNC_EXEC(QHELPCONTENTITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QHELPCONTENTITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QHELPCONTENTITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QHELPCONTENTITEM_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
