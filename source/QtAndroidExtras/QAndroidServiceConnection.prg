@@ -50,7 +50,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtAndroidExtras/QAndroidServiceConnection>
 #endif
 #endif
@@ -60,30 +60,30 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #include <QtAndroidExtras/QAndroidServiceConnection>
 #endif
 #endif
 
-HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEW )
+HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QAndroidServiceConnection()
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    QAndroidServiceConnection * obj = new QAndroidServiceConnection();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+    QAndroidServiceConnection *obj = new QAndroidServiceConnection();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if( ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1) )
+  else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
   {
     /*
     QAndroidServiceConnection( const QAndroidJniObject & serviceConnection )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-    QAndroidServiceConnection * obj = new QAndroidServiceConnection( *PQANDROIDJNIOBJECT(1) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+    QAndroidServiceConnection *obj = new QAndroidServiceConnection(*PQANDROIDJNIOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
@@ -96,12 +96,12 @@ HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEW )
 /*
 virtual ~QAndroidServiceConnection()
 */
-HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_DELETE )
+HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidServiceConnection * obj = (QAndroidServiceConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  QAndroidServiceConnection *obj = (QAndroidServiceConnection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -117,18 +117,18 @@ HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_DELETE )
 /*
 QAndroidJniObject handle() const
 */
-HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_HANDLE )
+HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_HANDLE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidServiceConnection * obj = (QAndroidServiceConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
+  QAndroidServiceConnection *obj = (QAndroidServiceConnection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAndroidJniObject * ptr = new QAndroidJniObject( obj->handle() );
+      QAndroidJniObject *ptr = new QAndroidJniObject(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -141,11 +141,11 @@ HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_HANDLE )
 #endif
 }
 
-HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEWFROM )
+HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -171,26 +171,26 @@ HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QANDROIDSERVICECONNECTION_NEWFROM );
+  HB_FUNC_EXEC(QANDROIDSERVICECONNECTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QANDROIDSERVICECONNECTION_NEWFROM );
+  HB_FUNC_EXEC(QANDROIDSERVICECONNECTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

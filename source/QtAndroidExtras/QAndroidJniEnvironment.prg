@@ -50,7 +50,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtAndroidExtras/QAndroidJniEnvironment>
 #endif
 #endif
@@ -60,20 +60,20 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtAndroidExtras/QAndroidJniEnvironment>
 #endif
 #endif
 
-/*
-QAndroidJniEnvironment()
-*/
-HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEW )
+    /*
+    QAndroidJniEnvironment()
+    */
+HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISNUMPAR(0) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  if (ISNUMPAR(0))
   {
-    QAndroidJniEnvironment * obj = new QAndroidJniEnvironment();
+    QAndroidJniEnvironment *obj = new QAndroidJniEnvironment();
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -86,12 +86,12 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEW )
 /*
 ~QAndroidJniEnvironment()
 */
-HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_DELETE )
+HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniEnvironment * obj = (QAndroidJniEnvironment *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QAndroidJniEnvironment *obj = (QAndroidJniEnvironment *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -107,14 +107,14 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_DELETE )
 /*
 static JavaVM * javaVM()
 */
-HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_JAVAVM )
+HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_JAVAVM)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    hb_retptr( (JavaVM *) QAndroidJniEnvironment::javaVM() );
+    hb_retptr((JavaVM *)QAndroidJniEnvironment::javaVM());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -128,18 +128,18 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_JAVAVM )
 /*
 jclass findClass( const char * className )
 */
-HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_FINDCLASS )
+HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_FINDCLASS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  QAndroidJniEnvironment * obj = (QAndroidJniEnvironment *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
+  QAndroidJniEnvironment *obj = (QAndroidJniEnvironment *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      hb_retptr( (jclass) obj->findClass( PCONSTCHAR(1) ) );
+      hb_retptr((jclass)obj->findClass(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,11 +151,11 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_FINDCLASS )
 #endif
 }
 
-HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEWFROM )
+HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -181,26 +181,26 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QANDROIDJNIENVIRONMENT_NEWFROM );
+  HB_FUNC_EXEC(QANDROIDJNIENVIRONMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QANDROIDJNIENVIRONMENT_NEWFROM );
+  HB_FUNC_EXEC(QANDROIDJNIENVIRONMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QANDROIDJNIENVIRONMENT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
