@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -35,6 +37,8 @@ PROCEDURE destroyObject() CLASS HAbstractListModelV2
       ::delete()
    ENDIF
 RETURN
+
+// clang-format on
 
 #pragma BEGINDUMP
 

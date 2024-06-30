@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
@@ -63,6 +65,8 @@ END CLASS
 
 CLASS HArrayTableModel INHERIT HAbstractTableModel
 END CLASS
+
+// clang-format on
 
 #pragma BEGINDUMP
 
