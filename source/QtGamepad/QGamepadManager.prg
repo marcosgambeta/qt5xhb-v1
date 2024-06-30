@@ -55,7 +55,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #include <QtGamepad/QGamepadManager>
 #endif
 #endif
@@ -67,22 +67,22 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #include <QtGamepad/QGamepadManager>
 #endif
 #endif
 
-/*
-static QGamepadManager * instance()
-*/
-HB_FUNC_STATIC( QGAMEPADMANAGER_INSTANCE )
+    /*
+    static QGamepadManager * instance()
+    */
+HB_FUNC_STATIC(QGAMEPADMANAGER_INSTANCE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    QGamepadManager * ptr = QGamepadManager::instance();
+    QGamepadManager *ptr = QGamepadManager::instance();
     Qt5xHb::createReturnQObjectClass(ptr, "QGAMEPADMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -97,18 +97,18 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_INSTANCE )
 /*
 bool isGamepadConnected( int deviceId ) const
 */
-HB_FUNC_STATIC( QGAMEPADMANAGER_ISGAMEPADCONNECTED )
+HB_FUNC_STATIC(QGAMEPADMANAGER_ISGAMEPADCONNECTED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManager * obj = (QGamepadManager *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManager *obj = (QGamepadManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isGamepadConnected( PINT(1) ) );
+      RBOOL(obj->isGamepadConnected(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,18 +123,18 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ISGAMEPADCONNECTED )
 /*
 bool isConfigurationNeeded( int deviceId ) const
 */
-HB_FUNC_STATIC( QGAMEPADMANAGER_ISCONFIGURATIONNEEDED )
+HB_FUNC_STATIC(QGAMEPADMANAGER_ISCONFIGURATIONNEEDED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManager * obj = (QGamepadManager *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManager *obj = (QGamepadManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isConfigurationNeeded( PINT(1) ) );
+      RBOOL(obj->isConfigurationNeeded(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,18 +149,18 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ISCONFIGURATIONNEEDED )
 /*
 bool configureButton( int deviceId, QGamepadManager::GamepadButton button )
 */
-HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREBUTTON )
+HB_FUNC_STATIC(QGAMEPADMANAGER_CONFIGUREBUTTON)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManager * obj = (QGamepadManager *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManager *obj = (QGamepadManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL( obj->configureButton( PINT(1), (QGamepadManager::GamepadButton) hb_parni(2) ) );
+      RBOOL(obj->configureButton(PINT(1), (QGamepadManager::GamepadButton)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,18 +175,18 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREBUTTON )
 /*
 bool configureAxis( int deviceId, QGamepadManager::GamepadAxis axis )
 */
-HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREAXIS )
+HB_FUNC_STATIC(QGAMEPADMANAGER_CONFIGUREAXIS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManager * obj = (QGamepadManager *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManager *obj = (QGamepadManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL( obj->configureAxis( PINT(1), (QGamepadManager::GamepadAxis) hb_parni(2) ) );
+      RBOOL(obj->configureAxis(PINT(1), (QGamepadManager::GamepadAxis)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,18 +201,18 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREAXIS )
 /*
 bool setCancelConfigureButton( int deviceId, QGamepadManager::GamepadButton button )
 */
-HB_FUNC_STATIC( QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON )
+HB_FUNC_STATIC(QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManager * obj = (QGamepadManager *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManager *obj = (QGamepadManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL( obj->setCancelConfigureButton( PINT(1), (QGamepadManager::GamepadButton) hb_parni(2) ) );
+      RBOOL(obj->setCancelConfigureButton(PINT(1), (QGamepadManager::GamepadButton)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,18 +227,18 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON )
 /*
 void resetConfiguration( int deviceId )
 */
-HB_FUNC_STATIC( QGAMEPADMANAGER_RESETCONFIGURATION )
+HB_FUNC_STATIC(QGAMEPADMANAGER_RESETCONFIGURATION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManager * obj = (QGamepadManager *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManager *obj = (QGamepadManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->resetConfiguration( PINT(1) );
+      obj->resetConfiguration(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,18 +255,18 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_RESETCONFIGURATION )
 /*
 void setSettingsFile( const QString & file )
 */
-HB_FUNC_STATIC( QGAMEPADMANAGER_SETSETTINGSFILE )
+HB_FUNC_STATIC(QGAMEPADMANAGER_SETSETTINGSFILE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManager * obj = (QGamepadManager *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManager *obj = (QGamepadManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setSettingsFile( PQSTRING(1) );
+      obj->setSettingsFile(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,83 +280,88 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_SETSETTINGSFILE )
 #endif
 }
 
-void QGamepadManagerSlots_connect_signal(const QString & signal, const QString & slot);
+void QGamepadManagerSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
+HB_FUNC_STATIC(QGAMEPADMANAGER_ONAXISCONFIGURED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal("axisConfigured(int,QGamepadManager::GamepadAxis)", "axisConfigured(int,QGamepadManager::GamepadAxis)");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManagerSlots_connect_signal("axisConfigured(int,QGamepadManager::GamepadAxis)",
+                                      "axisConfigured(int,QGamepadManager::GamepadAxis)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
+HB_FUNC_STATIC(QGAMEPADMANAGER_ONBUTTONCONFIGURED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal("buttonConfigured(int,QGamepadManager::GamepadButton)", "buttonConfigured(int,QGamepadManager::GamepadButton)");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManagerSlots_connect_signal("buttonConfigured(int,QGamepadManager::GamepadButton)",
+                                      "buttonConfigured(int,QGamepadManager::GamepadButton)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
+HB_FUNC_STATIC(QGAMEPADMANAGER_ONCONFIGURATIONCANCELED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   QGamepadManagerSlots_connect_signal("configurationCanceled(int)", "configurationCanceled(int)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED )
+HB_FUNC_STATIC(QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   QGamepadManagerSlots_connect_signal("connectedGamepadsChanged()", "connectedGamepadsChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
+HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADAXISEVENT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal("gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)", "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManagerSlots_connect_signal("gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)",
+                                      "gamepadAxisEvent(int,QGamepadManager::GamepadAxis,double)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
+HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal("gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)", "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManagerSlots_connect_signal("gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)",
+                                      "gamepadButtonPressEvent(int,QGamepadManager::GamepadButton,double)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
+HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadManagerSlots_connect_signal("gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)", "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QGamepadManagerSlots_connect_signal("gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)",
+                                      "gamepadButtonReleaseEvent(int,QGamepadManager::GamepadButton)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADCONNECTED )
+HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADCONNECTED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   QGamepadManagerSlots_connect_signal("gamepadConnected(int)", "gamepadConnected(int)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADDISCONNECTED )
+HB_FUNC_STATIC(QGAMEPADMANAGER_ONGAMEPADDISCONNECTED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
   QGamepadManagerSlots_connect_signal("gamepadDisconnected(int)", "gamepadDisconnected(int)");
 #else
   hb_retl(false);
