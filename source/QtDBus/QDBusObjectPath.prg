@@ -64,59 +64,59 @@ RETURN
 #include <QtDBus/QDBusObjectPath>
 #endif
 
-/*
-QDBusObjectPath()
-*/
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW1 )
+    /*
+    QDBusObjectPath()
+    */
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW1)
 {
-  QDBusObjectPath * obj = new QDBusObjectPath();
+  QDBusObjectPath *obj = new QDBusObjectPath();
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QDBusObjectPath( const char * path )
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW2 )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW2)
 {
-  QDBusObjectPath * obj = new QDBusObjectPath( PCONSTCHAR(1) );
+  QDBusObjectPath *obj = new QDBusObjectPath(PCONSTCHAR(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QDBusObjectPath( QLatin1String path )
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW3)
 {
-  QDBusObjectPath * obj = new QDBusObjectPath( *PQLATIN1STRING(1) );
+  QDBusObjectPath *obj = new QDBusObjectPath(*PQLATIN1STRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
 QDBusObjectPath( const QString & path )
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW4 )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW4)
 {
-  QDBusObjectPath * obj = new QDBusObjectPath( PQSTRING(1) );
+  QDBusObjectPath *obj = new QDBusObjectPath(PQSTRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
-HB_FUNC( QDBUSOBJECTPATH_NEW )
+HB_FUNC(QDBUSOBJECTPATH_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    HB_FUNC_EXEC( QDBUSOBJECTPATH_NEW1 );
+    HB_FUNC_EXEC(QDBUSOBJECTPATH_NEW1);
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    HB_FUNC_EXEC( QDBUSOBJECTPATH_NEW2 );
+    HB_FUNC_EXEC(QDBUSOBJECTPATH_NEW2);
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    HB_FUNC_EXEC( QDBUSOBJECTPATH_NEW3 );
+    HB_FUNC_EXEC(QDBUSOBJECTPATH_NEW3);
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    HB_FUNC_EXEC( QDBUSOBJECTPATH_NEW4 );
+    HB_FUNC_EXEC(QDBUSOBJECTPATH_NEW4);
   }
   else
   {
@@ -124,11 +124,11 @@ HB_FUNC( QDBUSOBJECTPATH_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_DELETE )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_DELETE)
 {
-  QDBusObjectPath * obj = (QDBusObjectPath *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusObjectPath *obj = (QDBusObjectPath *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -143,17 +143,17 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_DELETE )
 /*
 QString path() const
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_PATH)
 {
-  QDBusObjectPath * obj = (QDBusObjectPath *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusObjectPath *obj = (QDBusObjectPath *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->path() );
+      RQSTRING(obj->path());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,17 +167,17 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
 /*
 void setPath( const QString & path )
 */
-HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_SETPATH)
 {
-  QDBusObjectPath * obj = (QDBusObjectPath *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusObjectPath *obj = (QDBusObjectPath *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setPath( PQSTRING(1) );
+      obj->setPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,11 +190,11 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEWFROM )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -220,26 +220,26 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QDBUSOBJECTPATH_NEWFROM );
+  HB_FUNC_EXEC(QDBUSOBJECTPATH_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QDBUSOBJECTPATH_NEWFROM );
+  HB_FUNC_EXEC(QDBUSOBJECTPATH_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDBUSOBJECTPATH_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDBUSOBJECTPATH_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
