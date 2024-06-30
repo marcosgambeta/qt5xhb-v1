@@ -63,14 +63,14 @@ RETURN
 
 #include <QtPurchasing/QInAppProduct>
 
-/*
-~QInAppTransaction()
-*/
-HB_FUNC_STATIC( QINAPPTRANSACTION_DELETE )
+    /*
+    ~QInAppTransaction()
+    */
+HB_FUNC_STATIC(QINAPPTRANSACTION_DELETE)
 {
-  QInAppTransaction * obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppTransaction *obj = (QInAppTransaction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -87,17 +87,17 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_DELETE )
 /*
 QInAppTransaction::TransactionStatus status() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_STATUS )
+HB_FUNC_STATIC(QINAPPTRANSACTION_STATUS)
 {
-  QInAppTransaction * obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppTransaction *obj = (QInAppTransaction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->status() );
+      RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,17 +111,17 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_STATUS )
 /*
 QInAppProduct * product() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_PRODUCT )
+HB_FUNC_STATIC(QINAPPTRANSACTION_PRODUCT)
 {
-  QInAppTransaction * obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppTransaction *obj = (QInAppTransaction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QInAppProduct * ptr = obj->product();
+      QInAppProduct *ptr = obj->product();
       Qt5xHb::createReturnQObjectClass(ptr, "QINAPPPRODUCT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -136,17 +136,17 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_PRODUCT )
 /*
 virtual QString orderId() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_ORDERID )
+HB_FUNC_STATIC(QINAPPTRANSACTION_ORDERID)
 {
-  QInAppTransaction * obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppTransaction *obj = (QInAppTransaction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->orderId() );
+      RQSTRING(obj->orderId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,17 +160,17 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_ORDERID )
 /*
 virtual QInAppTransaction::FailureReason failureReason() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_FAILUREREASON )
+HB_FUNC_STATIC(QINAPPTRANSACTION_FAILUREREASON)
 {
-  QInAppTransaction * obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppTransaction *obj = (QInAppTransaction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->failureReason() );
+      RENUM(obj->failureReason());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,17 +184,17 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_FAILUREREASON )
 /*
 virtual QString errorString() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_ERRORSTRING )
+HB_FUNC_STATIC(QINAPPTRANSACTION_ERRORSTRING)
 {
-  QInAppTransaction * obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppTransaction *obj = (QInAppTransaction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,17 +208,17 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_ERRORSTRING )
 /*
 virtual QDateTime timestamp() const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_TIMESTAMP )
+HB_FUNC_STATIC(QINAPPTRANSACTION_TIMESTAMP)
 {
-  QInAppTransaction * obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppTransaction *obj = (QInAppTransaction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->timestamp() );
+      QDateTime *ptr = new QDateTime(obj->timestamp());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -233,14 +233,14 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_TIMESTAMP )
 /*
 Q_INVOKABLE virtual void finalize() = 0
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_FINALIZE )
+HB_FUNC_STATIC(QINAPPTRANSACTION_FINALIZE)
 {
-  QInAppTransaction * obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppTransaction *obj = (QInAppTransaction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->finalize();
@@ -259,17 +259,17 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_FINALIZE )
 /*
 Q_INVOKABLE virtual QString platformProperty( const QString & propertyName ) const
 */
-HB_FUNC_STATIC( QINAPPTRANSACTION_PLATFORMPROPERTY )
+HB_FUNC_STATIC(QINAPPTRANSACTION_PLATFORMPROPERTY)
 {
-  QInAppTransaction * obj = (QInAppTransaction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppTransaction *obj = (QInAppTransaction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->platformProperty( PQSTRING(1) ) );
+      RQSTRING(obj->platformProperty(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -57,14 +57,14 @@ RETURN
 #include <QtPurchasing/QInAppProduct>
 #endif
 
-/*
-~QInAppProduct()
-*/
-HB_FUNC_STATIC( QINAPPPRODUCT_DELETE )
+    /*
+    ~QInAppProduct()
+    */
+HB_FUNC_STATIC(QINAPPPRODUCT_DELETE)
 {
-  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppProduct *obj = (QInAppProduct *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -81,17 +81,17 @@ HB_FUNC_STATIC( QINAPPPRODUCT_DELETE )
 /*
 QString identifier() const
 */
-HB_FUNC_STATIC( QINAPPPRODUCT_IDENTIFIER )
+HB_FUNC_STATIC(QINAPPPRODUCT_IDENTIFIER)
 {
-  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppProduct *obj = (QInAppProduct *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->identifier() );
+      RQSTRING(obj->identifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,17 +105,17 @@ HB_FUNC_STATIC( QINAPPPRODUCT_IDENTIFIER )
 /*
 QInAppProduct::ProductType productType() const
 */
-HB_FUNC_STATIC( QINAPPPRODUCT_PRODUCTTYPE )
+HB_FUNC_STATIC(QINAPPPRODUCT_PRODUCTTYPE)
 {
-  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppProduct *obj = (QInAppProduct *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->productType() );
+      RENUM(obj->productType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,17 +129,17 @@ HB_FUNC_STATIC( QINAPPPRODUCT_PRODUCTTYPE )
 /*
 QString price() const
 */
-HB_FUNC_STATIC( QINAPPPRODUCT_PRICE )
+HB_FUNC_STATIC(QINAPPPRODUCT_PRICE)
 {
-  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppProduct *obj = (QInAppProduct *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->price() );
+      RQSTRING(obj->price());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,17 +153,17 @@ HB_FUNC_STATIC( QINAPPPRODUCT_PRICE )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QINAPPPRODUCT_TITLE )
+HB_FUNC_STATIC(QINAPPPRODUCT_TITLE)
 {
-  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppProduct *obj = (QInAppProduct *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,17 +177,17 @@ HB_FUNC_STATIC( QINAPPPRODUCT_TITLE )
 /*
 QString description() const
 */
-HB_FUNC_STATIC( QINAPPPRODUCT_DESCRIPTION )
+HB_FUNC_STATIC(QINAPPPRODUCT_DESCRIPTION)
 {
-  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppProduct *obj = (QInAppProduct *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->description() );
+      RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,14 +201,14 @@ HB_FUNC_STATIC( QINAPPPRODUCT_DESCRIPTION )
 /*
 Q_INVOKABLE virtual void purchase() = 0
 */
-HB_FUNC_STATIC( QINAPPPRODUCT_PURCHASE )
+HB_FUNC_STATIC(QINAPPPRODUCT_PURCHASE)
 {
-  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppProduct *obj = (QInAppProduct *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->purchase();

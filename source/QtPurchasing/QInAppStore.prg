@@ -61,14 +61,14 @@ RETURN
 #include <QtPurchasing/QInAppStore>
 #endif
 
-/*
-QInAppStore( QObject * parent = nullptr )
-*/
-HB_FUNC_STATIC( QINAPPSTORE_NEW )
+    /*
+    QInAppStore( QObject * parent = nullptr )
+    */
+HB_FUNC_STATIC(QINAPPSTORE_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QInAppStore * obj = new QInAppStore( OPQOBJECT(1,nullptr) );
+    QInAppStore *obj = new QInAppStore(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -80,11 +80,11 @@ HB_FUNC_STATIC( QINAPPSTORE_NEW )
 /*
 ~QInAppStore()
 */
-HB_FUNC_STATIC( QINAPPSTORE_DELETE )
+HB_FUNC_STATIC(QINAPPSTORE_DELETE)
 {
-  QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppStore *obj = (QInAppStore *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -101,14 +101,14 @@ HB_FUNC_STATIC( QINAPPSTORE_DELETE )
 /*
 Q_INVOKABLE void restorePurchases()
 */
-HB_FUNC_STATIC( QINAPPSTORE_RESTOREPURCHASES )
+HB_FUNC_STATIC(QINAPPSTORE_RESTOREPURCHASES)
 {
-  QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppStore *obj = (QInAppStore *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->restorePurchases();
@@ -127,17 +127,17 @@ HB_FUNC_STATIC( QINAPPSTORE_RESTOREPURCHASES )
 /*
 Q_INVOKABLE void registerProduct( QInAppProduct::ProductType productType, const QString & identifier )
 */
-HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
+HB_FUNC_STATIC(QINAPPSTORE_REGISTERPRODUCT)
 {
-  QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppStore *obj = (QInAppStore *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->registerProduct( (QInAppProduct::ProductType) hb_parni(1), PQSTRING(2) );
+      obj->registerProduct((QInAppProduct::ProductType)hb_parni(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,17 +153,17 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
 /*
 Q_INVOKABLE QInAppProduct * registeredProduct( const QString & identifier ) const
 */
-HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
+HB_FUNC_STATIC(QINAPPSTORE_REGISTEREDPRODUCT)
 {
-  QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppStore *obj = (QInAppStore *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QInAppProduct * ptr = obj->registeredProduct( PQSTRING(1) );
+      QInAppProduct *ptr = obj->registeredProduct(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QINAPPPRODUCT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -178,17 +178,17 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
 /*
 Q_INVOKABLE void setPlatformProperty( const QString & propertyName, const QString & value )
 */
-HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
+HB_FUNC_STATIC(QINAPPSTORE_SETPLATFORMPROPERTY)
 {
-  QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
+  QInAppStore *obj = (QInAppStore *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setPlatformProperty( PQSTRING(1), PQSTRING(2) );
+      obj->setPlatformProperty(PQSTRING(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,19 +201,20 @@ HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QInAppStoreSlots_connect_signal(const QString & signal, const QString & slot);
+void QInAppStoreSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
+HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTREGISTERED)
 {
   QInAppStoreSlots_connect_signal("productRegistered(QInAppProduct*)", "productRegistered(QInAppProduct*)");
 }
 
-HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
+HB_FUNC_STATIC(QINAPPSTORE_ONPRODUCTUNKNOWN)
 {
-  QInAppStoreSlots_connect_signal("productUnknown(QInAppProduct::ProductType,QString)", "productUnknown(QInAppProduct::ProductType,QString)");
+  QInAppStoreSlots_connect_signal("productUnknown(QInAppProduct::ProductType,QString)",
+                                  "productUnknown(QInAppProduct::ProductType,QString)");
 }
 
-HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
+HB_FUNC_STATIC(QINAPPSTORE_ONTRANSACTIONREADY)
 {
   QInAppStoreSlots_connect_signal("transactionReady(QInAppTransaction*)", "transactionReady(QInAppTransaction*)");
 }
