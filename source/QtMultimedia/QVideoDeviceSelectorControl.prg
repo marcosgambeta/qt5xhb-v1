@@ -61,14 +61,14 @@ RETURN
 #include <QtMultimedia/QVideoDeviceSelectorControl>
 #endif
 
-/*
-virtual ~QVideoDeviceSelectorControl()
-*/
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DELETE )
+    /*
+    virtual ~QVideoDeviceSelectorControl()
+    */
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DELETE)
 {
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVideoDeviceSelectorControl *obj = (QVideoDeviceSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -85,17 +85,17 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DELETE )
 /*
 virtual int defaultDevice() const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE)
 {
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVideoDeviceSelectorControl *obj = (QVideoDeviceSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->defaultDevice() );
+      RINT(obj->defaultDevice());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,17 +109,17 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE )
 /*
 virtual int deviceCount() const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICECOUNT )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEVICECOUNT)
 {
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVideoDeviceSelectorControl *obj = (QVideoDeviceSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->deviceCount() );
+      RINT(obj->deviceCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,17 +133,17 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICECOUNT )
 /*
 virtual QString deviceDescription( int index ) const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION)
 {
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVideoDeviceSelectorControl *obj = (QVideoDeviceSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->deviceDescription( PINT(1) ) );
+      RQSTRING(obj->deviceDescription(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,17 +157,17 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION )
 /*
 virtual QString deviceName( int index ) const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICENAME )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_DEVICENAME)
 {
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVideoDeviceSelectorControl *obj = (QVideoDeviceSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->deviceName( PINT(1) ) );
+      RQSTRING(obj->deviceName(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,17 +181,17 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICENAME )
 /*
 virtual int selectedDevice() const = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE)
 {
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVideoDeviceSelectorControl *obj = (QVideoDeviceSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->selectedDevice() );
+      RINT(obj->selectedDevice());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,17 +205,17 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE )
 /*
 virtual void setSelectedDevice( int index ) = 0
 */
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE)
 {
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVideoDeviceSelectorControl *obj = (QVideoDeviceSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSelectedDevice( PINT(1) );
+      obj->setSelectedDevice(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,19 +228,19 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QVideoDeviceSelectorControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QVideoDeviceSelectorControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED)
 {
   QVideoDeviceSelectorControlSlots_connect_signal("devicesChanged()", "devicesChanged()");
 }
 
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1)
 {
   QVideoDeviceSelectorControlSlots_connect_signal("selectedDeviceChanged(int)", "selectedDeviceChanged(int)");
 }
 
-HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
+HB_FUNC_STATIC(QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2)
 {
   QVideoDeviceSelectorControlSlots_connect_signal("selectedDeviceChanged(QString)", "selectedDeviceChanged(QString)");
 }

@@ -54,14 +54,14 @@ RETURN
 #include <QtMultimedia/QMediaService>
 #endif
 
-/*
-~QMediaService()
-*/
-HB_FUNC_STATIC( QMEDIASERVICE_DELETE )
+    /*
+    ~QMediaService()
+    */
+HB_FUNC_STATIC(QMEDIASERVICE_DELETE)
 {
-  QMediaService * obj = (QMediaService *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaService *obj = (QMediaService *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -78,17 +78,17 @@ HB_FUNC_STATIC( QMEDIASERVICE_DELETE )
 /*
 virtual void releaseControl( QMediaControl * control ) = 0
 */
-HB_FUNC_STATIC( QMEDIASERVICE_RELEASECONTROL )
+HB_FUNC_STATIC(QMEDIASERVICE_RELEASECONTROL)
 {
-  QMediaService * obj = (QMediaService *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaService *obj = (QMediaService *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMEDIACONTROL(1) )
+    if (ISNUMPAR(1) && ISQMEDIACONTROL(1))
     {
 #endif
-      obj->releaseControl( PQMEDIACONTROL(1) );
+      obj->releaseControl(PQMEDIACONTROL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,17 +104,17 @@ HB_FUNC_STATIC( QMEDIASERVICE_RELEASECONTROL )
 /*
 virtual QMediaControl * requestControl( const char * interface ) = 0
 */
-HB_FUNC_STATIC( QMEDIASERVICE_REQUESTCONTROL )
+HB_FUNC_STATIC(QMEDIASERVICE_REQUESTCONTROL)
 {
-  QMediaService * obj = (QMediaService *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaService *obj = (QMediaService *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QMediaControl * ptr = obj->requestControl( PCONSTCHAR(1) );
+      QMediaControl *ptr = obj->requestControl(PCONSTCHAR(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIACONTROL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

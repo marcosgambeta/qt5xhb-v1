@@ -41,7 +41,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
 #include <QtMultimedia/QAudioRoleControl>
 #endif
 #endif
@@ -53,20 +53,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
 #include <QtMultimedia/QAudioRoleControl>
 #endif
 #endif
 
-/*
-virtual ~QAudioRoleControl()
-*/
-HB_FUNC_STATIC( QAUDIOROLECONTROL_DELETE )
+    /*
+    virtual ~QAudioRoleControl()
+    */
+HB_FUNC_STATIC(QAUDIOROLECONTROL_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QAudioRoleControl * obj = (QAudioRoleControl *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+  QAudioRoleControl *obj = (QAudioRoleControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -84,18 +84,18 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_DELETE )
 /*
 virtual QAudio::Role audioRole() const = 0
 */
-HB_FUNC_STATIC( QAUDIOROLECONTROL_AUDIOROLE )
+HB_FUNC_STATIC(QAUDIOROLECONTROL_AUDIOROLE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QAudioRoleControl * obj = (QAudioRoleControl *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+  QAudioRoleControl *obj = (QAudioRoleControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->audioRole() );
+      RENUM(obj->audioRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,18 +110,18 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_AUDIOROLE )
 /*
 virtual void setAudioRole( QAudio::Role role ) = 0
 */
-HB_FUNC_STATIC( QAUDIOROLECONTROL_SETAUDIOROLE )
+HB_FUNC_STATIC(QAUDIOROLECONTROL_SETAUDIOROLE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QAudioRoleControl * obj = (QAudioRoleControl *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+  QAudioRoleControl *obj = (QAudioRoleControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAudioRole( (QAudio::Role) hb_parni(1) );
+      obj->setAudioRole((QAudio::Role)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,23 +138,23 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SETAUDIOROLE )
 /*
 virtual QList<QAudio::Role> supportedAudioRoles() const = 0
 */
-HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
+HB_FUNC_STATIC(QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QAudioRoleControl * obj = (QAudioRoleControl *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+  QAudioRoleControl *obj = (QAudioRoleControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QAudio::Role> list = obj->supportedAudioRoles();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      for (int i = 0; i < list.count(); i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
@@ -170,4 +170,3 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
 }
 
 #pragma ENDDUMP
-

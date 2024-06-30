@@ -56,14 +56,14 @@ RETURN
 #include <QtMultimedia/QCameraFeedbackControl>
 #endif
 
-/*
-~QCameraFeedbackControl()
-*/
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_DELETE )
+    /*
+    ~QCameraFeedbackControl()
+    */
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_DELETE)
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFeedbackControl *obj = (QCameraFeedbackControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -80,17 +80,17 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_DELETE )
 /*
 virtual bool isEventFeedbackEnabled( QCameraFeedbackControl::EventType event ) const = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED )
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED)
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFeedbackControl *obj = (QCameraFeedbackControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isEventFeedbackEnabled( (QCameraFeedbackControl::EventType) hb_parni(1) ) );
+      RBOOL(obj->isEventFeedbackEnabled((QCameraFeedbackControl::EventType)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,17 +104,17 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED )
 /*
 virtual bool isEventFeedbackLocked( QCameraFeedbackControl::EventType event ) const = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED )
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED)
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFeedbackControl *obj = (QCameraFeedbackControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isEventFeedbackLocked( (QCameraFeedbackControl::EventType) hb_parni(1) ) );
+      RBOOL(obj->isEventFeedbackLocked((QCameraFeedbackControl::EventType)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,17 +128,17 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED )
 /*
 virtual void resetEventFeedback( QCameraFeedbackControl::EventType event ) = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK )
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK)
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFeedbackControl *obj = (QCameraFeedbackControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->resetEventFeedback( (QCameraFeedbackControl::EventType) hb_parni(1) );
+      obj->resetEventFeedback((QCameraFeedbackControl::EventType)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,17 +154,17 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK )
 /*
 virtual bool setEventFeedbackEnabled( QCameraFeedbackControl::EventType event, bool enabled ) = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED)
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFeedbackControl *obj = (QCameraFeedbackControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
-      RBOOL( obj->setEventFeedbackEnabled( (QCameraFeedbackControl::EventType) hb_parni(1), PBOOL(2) ) );
+      RBOOL(obj->setEventFeedbackEnabled((QCameraFeedbackControl::EventType)hb_parni(1), PBOOL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,17 +178,17 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
 /*
 virtual bool setEventFeedbackSound( QCameraFeedbackControl::EventType event, const QString & filePath ) = 0
 */
-HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND )
+HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND)
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFeedbackControl *obj = (QCameraFeedbackControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      RBOOL( obj->setEventFeedbackSound( (QCameraFeedbackControl::EventType) hb_parni(1), PQSTRING(2) ) );
+      RBOOL(obj->setEventFeedbackSound((QCameraFeedbackControl::EventType)hb_parni(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

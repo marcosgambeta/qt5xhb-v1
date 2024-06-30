@@ -57,14 +57,14 @@ RETURN
 #include <QtMultimedia/QVideoProbe>
 #endif
 
-/*
-QVideoProbe( QObject * parent = nullptr )
-*/
-HB_FUNC_STATIC( QVIDEOPROBE_NEW )
+    /*
+    QVideoProbe( QObject * parent = nullptr )
+    */
+HB_FUNC_STATIC(QVIDEOPROBE_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QVideoProbe * obj = new QVideoProbe( OPQOBJECT(1,nullptr) );
+    QVideoProbe *obj = new QVideoProbe(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,11 +76,11 @@ HB_FUNC_STATIC( QVIDEOPROBE_NEW )
 /*
 ~QVideoProbe()
 */
-HB_FUNC_STATIC( QVIDEOPROBE_DELETE )
+HB_FUNC_STATIC(QVIDEOPROBE_DELETE)
 {
-  QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVideoProbe *obj = (QVideoProbe *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -97,17 +97,17 @@ HB_FUNC_STATIC( QVIDEOPROBE_DELETE )
 /*
 bool isActive() const
 */
-HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
+HB_FUNC_STATIC(QVIDEOPROBE_ISACTIVE)
 {
-  QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVideoProbe *obj = (QVideoProbe *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isActive() );
+      RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,30 +118,30 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
   }
 }
 
-HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
+HB_FUNC_STATIC(QVIDEOPROBE_SETSOURCE)
 {
-  if( ISNUMPAR(1) && ISQMEDIAOBJECT(1) )
+  if (ISNUMPAR(1) && ISQMEDIAOBJECT(1))
   {
     /*
     bool setSource( QMediaObject * source )
     */
-    QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QVideoProbe *obj = (QVideoProbe *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
+      RBOOL(obj->setSource(PQMEDIAOBJECT(1)));
     }
   }
-  else if( ISNUMPAR(1) && ISQMEDIARECORDER(1) )
+  else if (ISNUMPAR(1) && ISQMEDIARECORDER(1))
   {
     /*
     bool setSource( QMediaRecorder * source )
     */
-    QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QVideoProbe *obj = (QVideoProbe *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
+      RBOOL(obj->setSource(PQMEDIARECORDER(1)));
     }
   }
   else
@@ -150,14 +150,14 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
   }
 }
 
-void QVideoProbeSlots_connect_signal(const QString & signal, const QString & slot);
+void QVideoProbeSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
+HB_FUNC_STATIC(QVIDEOPROBE_ONFLUSH)
 {
   QVideoProbeSlots_connect_signal("flush()", "flush()");
 }
 
-HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
+HB_FUNC_STATIC(QVIDEOPROBE_ONVIDEOFRAMEPROBED)
 {
   QVideoProbeSlots_connect_signal("videoFrameProbed(QVideoFrame)", "videoFrameProbed(QVideoFrame)");
 }

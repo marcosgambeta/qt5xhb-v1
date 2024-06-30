@@ -51,14 +51,14 @@ RETURN
 #include <QtMultimedia/QMediaControl>
 #endif
 
-/*
-~QMediaControl()
-*/
-HB_FUNC_STATIC( QMEDIACONTROL_DELETE )
+    /*
+    ~QMediaControl()
+    */
+HB_FUNC_STATIC(QMEDIACONTROL_DELETE)
 {
-  QMediaControl * obj = (QMediaControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaControl *obj = (QMediaControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

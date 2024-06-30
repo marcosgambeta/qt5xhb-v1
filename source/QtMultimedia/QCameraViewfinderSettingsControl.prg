@@ -55,14 +55,14 @@ RETURN
 #include <QtMultimedia/QCameraViewfinderSettingsControl>
 #endif
 
-/*
-~QCameraViewfinderSettingsControl()
-*/
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_DELETE )
+    /*
+    ~QCameraViewfinderSettingsControl()
+    */
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL_DELETE)
 {
-  QCameraViewfinderSettingsControl * obj = (QCameraViewfinderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraViewfinderSettingsControl *obj = (QCameraViewfinderSettingsControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -79,17 +79,17 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_DELETE )
 /*
 virtual bool isViewfinderParameterSupported( QCameraViewfinderSettingsControl::ViewfinderParameter parameter ) const = 0
 */
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED )
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED)
 {
-  QCameraViewfinderSettingsControl * obj = (QCameraViewfinderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraViewfinderSettingsControl *obj = (QCameraViewfinderSettingsControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isViewfinderParameterSupported( (QCameraViewfinderSettingsControl::ViewfinderParameter) hb_parni(1) ) );
+      RBOOL(obj->isViewfinderParameterSupported((QCameraViewfinderSettingsControl::ViewfinderParameter)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -101,19 +101,20 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED 
 }
 
 /*
-virtual void setViewfinderParameter( QCameraViewfinderSettingsControl::ViewfinderParameter parameter, const QVariant & value ) = 0
+virtual void setViewfinderParameter( QCameraViewfinderSettingsControl::ViewfinderParameter parameter, const QVariant &
+value ) = 0
 */
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER )
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER)
 {
-  QCameraViewfinderSettingsControl * obj = (QCameraViewfinderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraViewfinderSettingsControl *obj = (QCameraViewfinderSettingsControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setViewfinderParameter( (QCameraViewfinderSettingsControl::ViewfinderParameter) hb_parni(1), *PQVARIANT(2) );
+      obj->setViewfinderParameter((QCameraViewfinderSettingsControl::ViewfinderParameter)hb_parni(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,17 +130,18 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER )
 /*
 virtual QVariant viewfinderParameter( QCameraViewfinderSettingsControl::ViewfinderParameter parameter ) const = 0
 */
-HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_VIEWFINDERPARAMETER )
+HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGSCONTROL_VIEWFINDERPARAMETER)
 {
-  QCameraViewfinderSettingsControl * obj = (QCameraViewfinderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraViewfinderSettingsControl *obj = (QCameraViewfinderSettingsControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->viewfinderParameter( (QCameraViewfinderSettingsControl::ViewfinderParameter) hb_parni(1) ) );
+      QVariant *ptr =
+          new QVariant(obj->viewfinderParameter((QCameraViewfinderSettingsControl::ViewfinderParameter)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

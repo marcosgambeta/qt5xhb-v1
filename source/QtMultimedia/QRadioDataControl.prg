@@ -68,14 +68,14 @@ RETURN
 #include <QtMultimedia/QRadioDataControl>
 #endif
 
-/*
-~QRadioDataControl()
-*/
-HB_FUNC_STATIC( QRADIODATACONTROL_DELETE )
+    /*
+    ~QRadioDataControl()
+    */
+HB_FUNC_STATIC(QRADIODATACONTROL_DELETE)
 {
-  QRadioDataControl * obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioDataControl *obj = (QRadioDataControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -92,17 +92,17 @@ HB_FUNC_STATIC( QRADIODATACONTROL_DELETE )
 /*
 virtual QString stationId() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_STATIONID )
+HB_FUNC_STATIC(QRADIODATACONTROL_STATIONID)
 {
-  QRadioDataControl * obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioDataControl *obj = (QRadioDataControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->stationId() );
+      RQSTRING(obj->stationId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,17 +116,17 @@ HB_FUNC_STATIC( QRADIODATACONTROL_STATIONID )
 /*
 virtual QRadioData::ProgramType programType() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPE )
+HB_FUNC_STATIC(QRADIODATACONTROL_PROGRAMTYPE)
 {
-  QRadioDataControl * obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioDataControl *obj = (QRadioDataControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->programType() );
+      RENUM(obj->programType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,17 +140,17 @@ HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPE )
 /*
 virtual QString programTypeName() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPENAME )
+HB_FUNC_STATIC(QRADIODATACONTROL_PROGRAMTYPENAME)
 {
-  QRadioDataControl * obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioDataControl *obj = (QRadioDataControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->programTypeName() );
+      RQSTRING(obj->programTypeName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,17 +164,17 @@ HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPENAME )
 /*
 virtual QString stationName() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_STATIONNAME )
+HB_FUNC_STATIC(QRADIODATACONTROL_STATIONNAME)
 {
-  QRadioDataControl * obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioDataControl *obj = (QRadioDataControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->stationName() );
+      RQSTRING(obj->stationName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,17 +188,17 @@ HB_FUNC_STATIC( QRADIODATACONTROL_STATIONNAME )
 /*
 virtual QString radioText() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_RADIOTEXT )
+HB_FUNC_STATIC(QRADIODATACONTROL_RADIOTEXT)
 {
-  QRadioDataControl * obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioDataControl *obj = (QRadioDataControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->radioText() );
+      RQSTRING(obj->radioText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,17 +212,17 @@ HB_FUNC_STATIC( QRADIODATACONTROL_RADIOTEXT )
 /*
 virtual void setAlternativeFrequenciesEnabled( bool enabled ) = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_SETALTERNATIVEFREQUENCIESENABLED )
+HB_FUNC_STATIC(QRADIODATACONTROL_SETALTERNATIVEFREQUENCIESENABLED)
 {
-  QRadioDataControl * obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioDataControl *obj = (QRadioDataControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAlternativeFrequenciesEnabled( PBOOL(1) );
+      obj->setAlternativeFrequenciesEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,17 +238,17 @@ HB_FUNC_STATIC( QRADIODATACONTROL_SETALTERNATIVEFREQUENCIESENABLED )
 /*
 virtual bool isAlternativeFrequenciesEnabled() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_ISALTERNATIVEFREQUENCIESENABLED )
+HB_FUNC_STATIC(QRADIODATACONTROL_ISALTERNATIVEFREQUENCIESENABLED)
 {
-  QRadioDataControl * obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioDataControl *obj = (QRadioDataControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isAlternativeFrequenciesEnabled() );
+      RBOOL(obj->isAlternativeFrequenciesEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,17 +262,17 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ISALTERNATIVEFREQUENCIESENABLED )
 /*
 virtual QRadioData::Error error() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_ERROR )
+HB_FUNC_STATIC(QRADIODATACONTROL_ERROR)
 {
-  QRadioDataControl * obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioDataControl *obj = (QRadioDataControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,17 +286,17 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ERROR )
 /*
 virtual QString errorString() const = 0
 */
-HB_FUNC_STATIC( QRADIODATACONTROL_ERRORSTRING )
+HB_FUNC_STATIC(QRADIODATACONTROL_ERRORSTRING)
 {
-  QRadioDataControl * obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QRadioDataControl *obj = (QRadioDataControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,39 +307,41 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ERRORSTRING )
   }
 }
 
-void QRadioDataControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QRadioDataControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QRADIODATACONTROL_ONSTATIONIDCHANGED )
+HB_FUNC_STATIC(QRADIODATACONTROL_ONSTATIONIDCHANGED)
 {
   QRadioDataControlSlots_connect_signal("stationIdChanged(QString)", "stationIdChanged(QString)");
 }
 
-HB_FUNC_STATIC( QRADIODATACONTROL_ONPROGRAMTYPECHANGED )
+HB_FUNC_STATIC(QRADIODATACONTROL_ONPROGRAMTYPECHANGED)
 {
-  QRadioDataControlSlots_connect_signal("programTypeChanged(QRadioData::ProgramType)", "programTypeChanged(QRadioData::ProgramType)");
+  QRadioDataControlSlots_connect_signal("programTypeChanged(QRadioData::ProgramType)",
+                                        "programTypeChanged(QRadioData::ProgramType)");
 }
 
-HB_FUNC_STATIC( QRADIODATACONTROL_ONPROGRAMTYPENAMECHANGED )
+HB_FUNC_STATIC(QRADIODATACONTROL_ONPROGRAMTYPENAMECHANGED)
 {
   QRadioDataControlSlots_connect_signal("programTypeNameChanged(QString)", "programTypeNameChanged(QString)");
 }
 
-HB_FUNC_STATIC( QRADIODATACONTROL_ONSTATIONNAMECHANGED )
+HB_FUNC_STATIC(QRADIODATACONTROL_ONSTATIONNAMECHANGED)
 {
   QRadioDataControlSlots_connect_signal("stationNameChanged(QString)", "stationNameChanged(QString)");
 }
 
-HB_FUNC_STATIC( QRADIODATACONTROL_ONRADIOTEXTCHANGED )
+HB_FUNC_STATIC(QRADIODATACONTROL_ONRADIOTEXTCHANGED)
 {
   QRadioDataControlSlots_connect_signal("radioTextChanged(QString)", "radioTextChanged(QString)");
 }
 
-HB_FUNC_STATIC( QRADIODATACONTROL_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
+HB_FUNC_STATIC(QRADIODATACONTROL_ONALTERNATIVEFREQUENCIESENABLEDCHANGED)
 {
-  QRadioDataControlSlots_connect_signal("alternativeFrequenciesEnabledChanged(bool)", "alternativeFrequenciesEnabledChanged(bool)");
+  QRadioDataControlSlots_connect_signal("alternativeFrequenciesEnabledChanged(bool)",
+                                        "alternativeFrequenciesEnabledChanged(bool)");
 }
 
-HB_FUNC_STATIC( QRADIODATACONTROL_ONERROR )
+HB_FUNC_STATIC(QRADIODATACONTROL_ONERROR)
 {
   QRadioDataControlSlots_connect_signal("error(QRadioData::Error)", "error(QRadioData::Error)");
 }

@@ -54,14 +54,14 @@ RETURN
 #include <QtMultimedia/QMediaAvailabilityControl>
 #endif
 
-/*
-~QMediaAvailabilityControl()
-*/
-HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_DELETE )
+    /*
+    ~QMediaAvailabilityControl()
+    */
+HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_DELETE)
 {
-  QMediaAvailabilityControl * obj = (QMediaAvailabilityControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaAvailabilityControl *obj = (QMediaAvailabilityControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -78,17 +78,17 @@ HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_DELETE )
 /*
 virtual QMultimedia::AvailabilityStatus availability() const = 0
 */
-HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_AVAILABILITY )
+HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_AVAILABILITY)
 {
-  QMediaAvailabilityControl * obj = (QMediaAvailabilityControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaAvailabilityControl *obj = (QMediaAvailabilityControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->availability() );
+      RENUM(obj->availability());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,11 +99,12 @@ HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_AVAILABILITY )
   }
 }
 
-void QMediaAvailabilityControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QMediaAvailabilityControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
+HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED)
 {
-  QMediaAvailabilityControlSlots_connect_signal("availabilityChanged(QMultimedia::AvailabilityStatus)", "availabilityChanged(QMultimedia::AvailabilityStatus)");
+  QMediaAvailabilityControlSlots_connect_signal("availabilityChanged(QMultimedia::AvailabilityStatus)",
+                                                "availabilityChanged(QMultimedia::AvailabilityStatus)");
 }
 
 #pragma ENDDUMP

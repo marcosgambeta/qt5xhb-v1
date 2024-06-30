@@ -59,14 +59,14 @@ RETURN
 #include <QtMultimedia/QMediaServiceFeaturesInterface>
 #endif
 
-/*
-virtual ~QMediaServiceFeaturesInterface()
-*/
-HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_DELETE )
+    /*
+    virtual ~QMediaServiceFeaturesInterface()
+    */
+HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_DELETE)
 {
-  QMediaServiceFeaturesInterface * obj = (QMediaServiceFeaturesInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaServiceFeaturesInterface *obj = (QMediaServiceFeaturesInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -81,17 +81,17 @@ HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_DELETE )
 /*
 virtual QMediaServiceProviderHint::Features supportedFeatures( const QByteArray & service ) const = 0
 */
-HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES )
+HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES)
 {
-  QMediaServiceFeaturesInterface * obj = (QMediaServiceFeaturesInterface *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaServiceFeaturesInterface *obj = (QMediaServiceFeaturesInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      RENUM( obj->supportedFeatures( *PQBYTEARRAY(1) ) );
+      RENUM(obj->supportedFeatures(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -102,11 +102,11 @@ HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES )
   }
 }
 
-HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_NEWFROM )
+HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -132,26 +132,26 @@ HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QMEDIASERVICEFEATURESINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QMEDIASERVICEFEATURESINTERFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QMEDIASERVICEFEATURESINTERFACE_NEWFROM );
+  HB_FUNC_EXEC(QMEDIASERVICEFEATURESINTERFACE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMEDIASERVICEFEATURESINTERFACE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

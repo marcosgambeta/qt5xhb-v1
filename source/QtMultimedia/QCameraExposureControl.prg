@@ -61,14 +61,14 @@ RETURN
 #include <QtMultimedia/QCameraExposureControl>
 #endif
 
-/*
-~QCameraExposureControl()
-*/
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_DELETE )
+    /*
+    ~QCameraExposureControl()
+    */
+HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_DELETE)
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraExposureControl *obj = (QCameraExposureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -85,17 +85,17 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_DELETE )
 /*
 virtual QVariant actualValue( QCameraExposureControl::ExposureParameter parameter ) const = 0
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ACTUALVALUE )
+HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ACTUALVALUE)
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraExposureControl *obj = (QCameraExposureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->actualValue( (QCameraExposureControl::ExposureParameter) hb_parni(1) ) );
+      QVariant *ptr = new QVariant(obj->actualValue((QCameraExposureControl::ExposureParameter)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -110,17 +110,17 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ACTUALVALUE )
 /*
 virtual bool isParameterSupported( QCameraExposureControl::ExposureParameter parameter ) const = 0
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED )
+HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED)
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraExposureControl *obj = (QCameraExposureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isParameterSupported( (QCameraExposureControl::ExposureParameter) hb_parni(1) ) );
+      RBOOL(obj->isParameterSupported((QCameraExposureControl::ExposureParameter)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,17 +134,17 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED )
 /*
 virtual QVariant requestedValue( QCameraExposureControl::ExposureParameter parameter ) const = 0
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_REQUESTEDVALUE )
+HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_REQUESTEDVALUE)
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraExposureControl *obj = (QCameraExposureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->requestedValue( (QCameraExposureControl::ExposureParameter) hb_parni(1) ) );
+      QVariant *ptr = new QVariant(obj->requestedValue((QCameraExposureControl::ExposureParameter)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -159,17 +159,17 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_REQUESTEDVALUE )
 /*
 virtual bool setValue( QCameraExposureControl::ExposureParameter parameter, const QVariant & value ) = 0
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SETVALUE )
+HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SETVALUE)
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraExposureControl *obj = (QCameraExposureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      RBOOL( obj->setValue( (QCameraExposureControl::ExposureParameter) hb_parni(1), *PQVARIANT(2) ) );
+      RBOOL(obj->setValue((QCameraExposureControl::ExposureParameter)hb_parni(1), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,25 +181,26 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SETVALUE )
 }
 
 /*
-virtual QVariantList supportedParameterRange( QCameraExposureControl::ExposureParameter parameter, bool * continuous ) const = 0
+virtual QVariantList supportedParameterRange( QCameraExposureControl::ExposureParameter parameter, bool * continuous )
+const = 0
 */
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
+HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE)
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraExposureControl *obj = (QCameraExposureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
       bool par2;
-      QVariantList list = obj->supportedParameterRange( (QCameraExposureControl::ExposureParameter) hb_parni(1), &par2 );
+      QVariantList list = obj->supportedParameterRange((QCameraExposureControl::ExposureParameter)hb_parni(1), &par2);
       PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
-        for( int i = 0; i < list.count(); i++ )
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -221,7 +222,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
-      hb_storl( par2, 2 );
+      hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,19 +233,19 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
   }
 }
 
-void QCameraExposureControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QCameraExposureControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
+HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED)
 {
   QCameraExposureControlSlots_connect_signal("actualValueChanged(int)", "actualValueChanged(int)");
 }
 
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
+HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED)
 {
   QCameraExposureControlSlots_connect_signal("parameterRangeChanged(int)", "parameterRangeChanged(int)");
 }
 
-HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
+HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED)
 {
   QCameraExposureControlSlots_connect_signal("requestedValueChanged(int)", "requestedValueChanged(int)");
 }

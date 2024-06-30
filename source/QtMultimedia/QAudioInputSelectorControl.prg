@@ -59,14 +59,14 @@ RETURN
 #include <QtMultimedia/QAudioInputSelectorControl>
 #endif
 
-/*
-virtual ~QAudioInputSelectorControl()
-*/
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DELETE )
+    /*
+    virtual ~QAudioInputSelectorControl()
+    */
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_DELETE)
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl *obj = (QAudioInputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -83,17 +83,17 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DELETE )
 /*
 virtual QString activeInput() const = 0
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT)
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl *obj = (QAudioInputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->activeInput() );
+      RQSTRING(obj->activeInput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -107,22 +107,22 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT )
 /*
 virtual QList<QString> availableInputs() const = 0
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS)
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl *obj = (QAudioInputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QString> list = obj->availableInputs();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      for (int i = 0; i < list.count(); i++)
       {
-        PHB_ITEM pItem = hb_itemPutC( NULL, list[i].toLatin1().data() );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutC(NULL, list[i].toLatin1().data());
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
@@ -139,17 +139,17 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS )
 /*
 virtual QString defaultInput() const = 0
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT)
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl *obj = (QAudioInputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->defaultInput() );
+      RQSTRING(obj->defaultInput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,17 +163,17 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT )
 /*
 virtual QString inputDescription( const QString & name ) const = 0
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION)
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl *obj = (QAudioInputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->inputDescription( PQSTRING(1) ) );
+      RQSTRING(obj->inputDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,17 +187,17 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION )
 /*
 virtual void setActiveInput( const QString & name ) = 0
 */
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT)
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl *obj = (QAudioInputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setActiveInput( PQSTRING(1) );
+      obj->setActiveInput(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,14 +210,14 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAudioInputSelectorControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QAudioInputSelectorControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONACTIVEINPUTCHANGED )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_ONACTIVEINPUTCHANGED)
 {
   QAudioInputSelectorControlSlots_connect_signal("activeInputChanged(QString)", "activeInputChanged(QString)");
 }
 
-HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONAVAILABLEINPUTSCHANGED )
+HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_ONAVAILABLEINPUTSCHANGED)
 {
   QAudioInputSelectorControlSlots_connect_signal("availableInputsChanged()", "availableInputsChanged()");
 }

@@ -49,7 +49,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
 #include <QtMultimedia/QVideoFilterRunnable>
 #endif
 #endif
@@ -59,20 +59,20 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
 #include <QtMultimedia/QVideoFilterRunnable>
 #endif
 #endif
 
-/*
-virtual ~QVideoFilterRunnable()
-*/
-HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_DELETE )
+    /*
+    virtual ~QVideoFilterRunnable()
+    */
+HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QVideoFilterRunnable * obj = (QVideoFilterRunnable *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+  QVideoFilterRunnable *obj = (QVideoFilterRunnable *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -86,20 +86,22 @@ HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_DELETE )
 }
 
 /*
-virtual QVideoFrame run( QVideoFrame * input, const QVideoSurfaceFormat & surfaceFormat, QVideoFilterRunnable::RunFlags flags ) = 0
+virtual QVideoFrame run( QVideoFrame * input, const QVideoSurfaceFormat & surfaceFormat, QVideoFilterRunnable::RunFlags
+flags ) = 0
 */
-HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_RUN )
+HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_RUN)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QVideoFilterRunnable * obj = (QVideoFilterRunnable *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+  QVideoFilterRunnable *obj = (QVideoFilterRunnable *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQVIDEOFRAME(1) && ISQVIDEOSURFACEFORMAT(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && ISQVIDEOFRAME(1) && ISQVIDEOSURFACEFORMAT(2) && HB_ISNUM(3))
     {
 #endif
-      QVideoFrame * ptr = new QVideoFrame( obj->run( PQVIDEOFRAME(1), *PQVIDEOSURFACEFORMAT(2), (QVideoFilterRunnable::RunFlags) hb_parni(3) ) );
+      QVideoFrame *ptr = new QVideoFrame(
+          obj->run(PQVIDEOFRAME(1), *PQVIDEOSURFACEFORMAT(2), (QVideoFilterRunnable::RunFlags)hb_parni(3)));
       Qt5xHb::createReturnClass(ptr, "QVIDEOFRAME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -80,14 +80,14 @@ RETURN
 #include <QtMultimedia/QSoundEffect>
 #endif
 
-/*
-QSoundEffect( QObject * parent = nullptr )
-*/
-HB_FUNC_STATIC( QSOUNDEFFECT_NEW )
+    /*
+    QSoundEffect( QObject * parent = nullptr )
+    */
+HB_FUNC_STATIC(QSOUNDEFFECT_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QSoundEffect * obj = new QSoundEffect( OPQOBJECT(1,nullptr) );
+    QSoundEffect *obj = new QSoundEffect(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -99,11 +99,11 @@ HB_FUNC_STATIC( QSOUNDEFFECT_NEW )
 /*
 ~QSoundEffect()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_DELETE )
+HB_FUNC_STATIC(QSOUNDEFFECT_DELETE)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -120,17 +120,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_DELETE )
 /*
 QUrl source() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
+HB_FUNC_STATIC(QSOUNDEFFECT_SOURCE)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->source() );
+      QUrl *ptr = new QUrl(obj->source());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -145,17 +145,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
 /*
 void setSource( const QUrl & url )
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SETSOURCE )
+HB_FUNC_STATIC(QSOUNDEFFECT_SETSOURCE)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setSource( *PQURL(1) );
+      obj->setSource(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,17 +171,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETSOURCE )
 /*
 int loopCount() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_LOOPCOUNT )
+HB_FUNC_STATIC(QSOUNDEFFECT_LOOPCOUNT)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->loopCount() );
+      RINT(obj->loopCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,17 +195,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPCOUNT )
 /*
 void setLoopCount( int loopCount )
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SETLOOPCOUNT )
+HB_FUNC_STATIC(QSOUNDEFFECT_SETLOOPCOUNT)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLoopCount( PINT(1) );
+      obj->setLoopCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,17 +221,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETLOOPCOUNT )
 /*
 int loopsRemaining() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_LOOPSREMAINING )
+HB_FUNC_STATIC(QSOUNDEFFECT_LOOPSREMAINING)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->loopsRemaining() );
+      RINT(obj->loopsRemaining());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,17 +245,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPSREMAINING )
 /*
 qreal volume() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_VOLUME )
+HB_FUNC_STATIC(QSOUNDEFFECT_VOLUME)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->volume() );
+      RQREAL(obj->volume());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,17 +269,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_VOLUME )
 /*
 void setVolume( qreal volume )
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SETVOLUME )
+HB_FUNC_STATIC(QSOUNDEFFECT_SETVOLUME)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVolume( PQREAL(1) );
+      obj->setVolume(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,17 +295,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETVOLUME )
 /*
 bool isMuted() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ISMUTED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ISMUTED)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isMuted() );
+      RBOOL(obj->isMuted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,17 +319,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISMUTED )
 /*
 void setMuted( bool muted )
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SETMUTED )
+HB_FUNC_STATIC(QSOUNDEFFECT_SETMUTED)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setMuted( PBOOL(1) );
+      obj->setMuted(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,17 +345,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETMUTED )
 /*
 bool isPlaying() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ISPLAYING )
+HB_FUNC_STATIC(QSOUNDEFFECT_ISPLAYING)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isPlaying() );
+      RBOOL(obj->isPlaying());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,17 +369,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISPLAYING )
 /*
 QSoundEffect::Status status() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_STATUS )
+HB_FUNC_STATIC(QSOUNDEFFECT_STATUS)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->status() );
+      RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,17 +393,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_STATUS )
 /*
 QString category() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_CATEGORY )
+HB_FUNC_STATIC(QSOUNDEFFECT_CATEGORY)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->category() );
+      RQSTRING(obj->category());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -417,17 +417,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_CATEGORY )
 /*
 void setCategory( const QString & category )
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SETCATEGORY )
+HB_FUNC_STATIC(QSOUNDEFFECT_SETCATEGORY)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setCategory( PQSTRING(1) );
+      obj->setCategory(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,17 +443,17 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETCATEGORY )
 /*
 bool isLoaded() const
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_ISLOADED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ISLOADED)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isLoaded() );
+      RBOOL(obj->isLoaded());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,14 +467,14 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISLOADED )
 /*
 void play()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_PLAY )
+HB_FUNC_STATIC(QSOUNDEFFECT_PLAY)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->play();
@@ -493,14 +493,14 @@ HB_FUNC_STATIC( QSOUNDEFFECT_PLAY )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_STOP )
+HB_FUNC_STATIC(QSOUNDEFFECT_STOP)
 {
-  QSoundEffect * obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSoundEffect *obj = (QSoundEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -519,13 +519,13 @@ HB_FUNC_STATIC( QSOUNDEFFECT_STOP )
 /*
 static QStringList supportedMimeTypes()
 */
-HB_FUNC_STATIC( QSOUNDEFFECT_SUPPORTEDMIMETYPES )
+HB_FUNC_STATIC(QSOUNDEFFECT_SUPPORTEDMIMETYPES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRINGLIST( QSoundEffect::supportedMimeTypes() );
+    RQSTRINGLIST(QSoundEffect::supportedMimeTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -535,49 +535,49 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SUPPORTEDMIMETYPES )
 #endif
 }
 
-void QSoundEffectSlots_connect_signal(const QString & signal, const QString & slot);
+void QSoundEffectSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONSOURCECHANGED)
 {
   QSoundEffectSlots_connect_signal("sourceChanged()", "sourceChanged()");
 }
 
-HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONLOOPCOUNTCHANGED)
 {
   QSoundEffectSlots_connect_signal("loopCountChanged()", "loopCountChanged()");
 }
 
-HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONLOOPSREMAININGCHANGED)
 {
   QSoundEffectSlots_connect_signal("loopsRemainingChanged()", "loopsRemainingChanged()");
 }
 
-HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONVOLUMECHANGED)
 {
   QSoundEffectSlots_connect_signal("volumeChanged()", "volumeChanged()");
 }
 
-HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONMUTEDCHANGED)
 {
   QSoundEffectSlots_connect_signal("mutedChanged()", "mutedChanged()");
 }
 
-HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONLOADEDCHANGED)
 {
   QSoundEffectSlots_connect_signal("loadedChanged()", "loadedChanged()");
 }
 
-HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONPLAYINGCHANGED)
 {
   QSoundEffectSlots_connect_signal("playingChanged()", "playingChanged()");
 }
 
-HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONSTATUSCHANGED)
 {
   QSoundEffectSlots_connect_signal("statusChanged()", "statusChanged()");
 }
 
-HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
+HB_FUNC_STATIC(QSOUNDEFFECT_ONCATEGORYCHANGED)
 {
   QSoundEffectSlots_connect_signal("categoryChanged()", "categoryChanged()");
 }

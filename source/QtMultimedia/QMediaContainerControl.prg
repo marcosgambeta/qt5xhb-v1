@@ -57,14 +57,14 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-virtual ~QMediaContainerControl()
-*/
-HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_DELETE )
+    /*
+    virtual ~QMediaContainerControl()
+    */
+HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_DELETE)
 {
-  QMediaContainerControl * obj = (QMediaContainerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaContainerControl *obj = (QMediaContainerControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -81,17 +81,17 @@ HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_DELETE )
 /*
 virtual QString containerDescription( const QString & formatMimeType ) const = 0
 */
-HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_CONTAINERDESCRIPTION )
+HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_CONTAINERDESCRIPTION)
 {
-  QMediaContainerControl * obj = (QMediaContainerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaContainerControl *obj = (QMediaContainerControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->containerDescription( PQSTRING(1) ) );
+      RQSTRING(obj->containerDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,17 +105,17 @@ HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_CONTAINERDESCRIPTION )
 /*
 virtual QString containerFormat() const = 0
 */
-HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_CONTAINERFORMAT )
+HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_CONTAINERFORMAT)
 {
-  QMediaContainerControl * obj = (QMediaContainerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaContainerControl *obj = (QMediaContainerControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->containerFormat() );
+      RQSTRING(obj->containerFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,17 +129,17 @@ HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_CONTAINERFORMAT )
 /*
 virtual void setContainerFormat( const QString & format ) = 0
 */
-HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_SETCONTAINERFORMAT )
+HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_SETCONTAINERFORMAT)
 {
-  QMediaContainerControl * obj = (QMediaContainerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaContainerControl *obj = (QMediaContainerControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setContainerFormat( PQSTRING(1) );
+      obj->setContainerFormat(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,17 +155,17 @@ HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_SETCONTAINERFORMAT )
 /*
 virtual QStringList supportedContainers() const = 0
 */
-HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_SUPPORTEDCONTAINERS )
+HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_SUPPORTEDCONTAINERS)
 {
-  QMediaContainerControl * obj = (QMediaContainerControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaContainerControl *obj = (QMediaContainerControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->supportedContainers() );
+      RQSTRINGLIST(obj->supportedContainers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

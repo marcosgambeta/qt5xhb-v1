@@ -59,14 +59,14 @@ RETURN
 #include <QtMultimedia/QAudioOutputSelectorControl>
 #endif
 
-/*
-virtual ~QAudioOutputSelectorControl()
-*/
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_DELETE )
+    /*
+    virtual ~QAudioOutputSelectorControl()
+    */
+HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_DELETE)
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutputSelectorControl *obj = (QAudioOutputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -83,17 +83,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_DELETE )
 /*
 virtual QString activeOutput() const = 0
 */
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ACTIVEOUTPUT )
+HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_ACTIVEOUTPUT)
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutputSelectorControl *obj = (QAudioOutputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->activeOutput() );
+      RQSTRING(obj->activeOutput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -107,22 +107,22 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ACTIVEOUTPUT )
 /*
 virtual QList<QString> availableOutputs() const = 0
 */
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS )
+HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS)
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutputSelectorControl *obj = (QAudioOutputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QString> list = obj->availableOutputs();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      for (int i = 0; i < list.count(); i++)
       {
-        PHB_ITEM pItem = hb_itemPutC( NULL, list[i].toLatin1().data() );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutC(NULL, list[i].toLatin1().data());
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
@@ -139,17 +139,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS )
 /*
 virtual QString defaultOutput() const = 0
 */
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_DEFAULTOUTPUT )
+HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_DEFAULTOUTPUT)
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutputSelectorControl *obj = (QAudioOutputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->defaultOutput() );
+      RQSTRING(obj->defaultOutput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,17 +163,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_DEFAULTOUTPUT )
 /*
 virtual QString outputDescription( const QString & name ) const = 0
 */
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_OUTPUTDESCRIPTION )
+HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_OUTPUTDESCRIPTION)
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutputSelectorControl *obj = (QAudioOutputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RQSTRING( obj->outputDescription( PQSTRING(1) ) );
+      RQSTRING(obj->outputDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,17 +187,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_OUTPUTDESCRIPTION )
 /*
 virtual void setActiveOutput( const QString & name ) = 0
 */
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_SETACTIVEOUTPUT )
+HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_SETACTIVEOUTPUT)
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutputSelectorControl *obj = (QAudioOutputSelectorControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setActiveOutput( PQSTRING(1) );
+      obj->setActiveOutput(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,14 +210,14 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_SETACTIVEOUTPUT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAudioOutputSelectorControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QAudioOutputSelectorControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED )
+HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED)
 {
   QAudioOutputSelectorControlSlots_connect_signal("activeOutputChanged(QString)", "activeOutputChanged(QString)");
 }
 
-HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED )
+HB_FUNC_STATIC(QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED)
 {
   QAudioOutputSelectorControlSlots_connect_signal("availableOutputsChanged()", "availableOutputsChanged()");
 }

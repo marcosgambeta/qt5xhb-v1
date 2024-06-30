@@ -57,14 +57,14 @@ RETURN
 #include <QtMultimedia/QCameraFlashControl>
 #endif
 
-/*
-~QCameraFlashControl()
-*/
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_DELETE )
+    /*
+    ~QCameraFlashControl()
+    */
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_DELETE)
 {
-  QCameraFlashControl * obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFlashControl *obj = (QCameraFlashControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -81,17 +81,17 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_DELETE )
 /*
 virtual QCameraExposure::FlashModes flashMode() const = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_FLASHMODE )
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_FLASHMODE)
 {
-  QCameraFlashControl * obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFlashControl *obj = (QCameraFlashControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->flashMode() );
+      RENUM(obj->flashMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,17 +105,17 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_FLASHMODE )
 /*
 virtual bool isFlashModeSupported( QCameraExposure::FlashModes mode ) const = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED )
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED)
 {
-  QCameraFlashControl * obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFlashControl *obj = (QCameraFlashControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isFlashModeSupported( (QCameraExposure::FlashModes) hb_parni(1) ) );
+      RBOOL(obj->isFlashModeSupported((QCameraExposure::FlashModes)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,17 +129,17 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED )
 /*
 virtual bool isFlashReady() const = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHREADY )
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ISFLASHREADY)
 {
-  QCameraFlashControl * obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFlashControl *obj = (QCameraFlashControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFlashReady() );
+      RBOOL(obj->isFlashReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,17 +153,17 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHREADY )
 /*
 virtual void setFlashMode( QCameraExposure::FlashModes mode ) = 0
 */
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_SETFLASHMODE)
 {
-  QCameraFlashControl * obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraFlashControl *obj = (QCameraFlashControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFlashMode( (QCameraExposure::FlashModes) hb_parni(1) );
+      obj->setFlashMode((QCameraExposure::FlashModes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,9 +176,9 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCameraFlashControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QCameraFlashControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
+HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ONFLASHREADY)
 {
   QCameraFlashControlSlots_connect_signal("flashReady(bool)", "flashReady(bool)");
 }

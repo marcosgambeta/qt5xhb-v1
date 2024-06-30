@@ -64,14 +64,14 @@ RETURN
 #include <QtMultimedia/QCameraImageCaptureControl>
 #endif
 
-/*
-~QCameraImageCaptureControl()
-*/
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DELETE )
+    /*
+    ~QCameraImageCaptureControl()
+    */
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DELETE)
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraImageCaptureControl *obj = (QCameraImageCaptureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -88,14 +88,14 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DELETE )
 /*
 virtual void cancelCapture() = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE)
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraImageCaptureControl *obj = (QCameraImageCaptureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->cancelCapture();
@@ -114,17 +114,17 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE )
 /*
 virtual int capture( const QString & fileName ) = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CAPTURE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CAPTURE)
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraImageCaptureControl *obj = (QCameraImageCaptureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RINT( obj->capture( PQSTRING(1) ) );
+      RINT(obj->capture(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,17 +138,17 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CAPTURE )
 /*
 virtual QCameraImageCapture::DriveMode driveMode() const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DRIVEMODE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DRIVEMODE)
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraImageCaptureControl *obj = (QCameraImageCaptureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->driveMode() );
+      RENUM(obj->driveMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,17 +162,17 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DRIVEMODE )
 /*
 virtual bool isReadyForCapture() const = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE)
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraImageCaptureControl *obj = (QCameraImageCaptureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isReadyForCapture() );
+      RBOOL(obj->isReadyForCapture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,17 +186,17 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE )
 /*
 virtual void setDriveMode( QCameraImageCapture::DriveMode mode ) = 0
 */
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE)
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraImageCaptureControl *obj = (QCameraImageCaptureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDriveMode( (QCameraImageCapture::DriveMode) hb_parni(1) );
+      obj->setDriveMode((QCameraImageCapture::DriveMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,39 +209,40 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCameraImageCaptureControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QCameraImageCaptureControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONERROR)
 {
   QCameraImageCaptureControlSlots_connect_signal("error(int,int,QString)", "error(int,int,QString)");
 }
 
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE)
 {
   QCameraImageCaptureControlSlots_connect_signal("imageAvailable(int,QVideoFrame)", "imageAvailable(int,QVideoFrame)");
 }
 
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED)
 {
   QCameraImageCaptureControlSlots_connect_signal("imageCaptured(int,QImage)", "imageCaptured(int,QImage)");
 }
 
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED)
 {
   QCameraImageCaptureControlSlots_connect_signal("imageExposed(int)", "imageExposed(int)");
 }
 
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE)
 {
-  QCameraImageCaptureControlSlots_connect_signal("imageMetadataAvailable(int,QString,QVariant)", "imageMetadataAvailable(int,QString,QVariant)");
+  QCameraImageCaptureControlSlots_connect_signal("imageMetadataAvailable(int,QString,QVariant)",
+                                                 "imageMetadataAvailable(int,QString,QVariant)");
 }
 
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED)
 {
   QCameraImageCaptureControlSlots_connect_signal("imageSaved(int,QString)", "imageSaved(int,QString)");
 }
 
-HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
+HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED)
 {
   QCameraImageCaptureControlSlots_connect_signal("readyForCaptureChanged(bool)", "readyForCaptureChanged(bool)");
 }

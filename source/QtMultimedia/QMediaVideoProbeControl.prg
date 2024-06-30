@@ -54,14 +54,14 @@ RETURN
 #include <QtMultimedia/QMediaVideoProbeControl>
 #endif
 
-/*
-virtual ~QMediaVideoProbeControl()
-*/
-HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_DELETE )
+    /*
+    virtual ~QMediaVideoProbeControl()
+    */
+HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_DELETE)
 {
-  QMediaVideoProbeControl * obj = (QMediaVideoProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaVideoProbeControl *obj = (QMediaVideoProbeControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -75,14 +75,14 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMediaVideoProbeControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QMediaVideoProbeControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
+HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONFLUSH)
 {
   QMediaVideoProbeControlSlots_connect_signal("flush()", "flush()");
 }
 
-HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
+HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED)
 {
   QMediaVideoProbeControlSlots_connect_signal("videoFrameProbed(QVideoFrame)", "videoFrameProbed(QVideoFrame)");
 }

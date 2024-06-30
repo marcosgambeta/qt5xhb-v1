@@ -56,11 +56,11 @@ RETURN
 
 #include <QtMultimedia/QMediaService>
 
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_DELETE )
+HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_DELETE)
 {
-  QMediaServiceProviderPlugin * obj = (QMediaServiceProviderPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaServiceProviderPlugin *obj = (QMediaServiceProviderPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -77,17 +77,17 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_DELETE )
 /*
 virtual QMediaService * create( const QString & key ) override = 0
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_CREATE )
+HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_CREATE)
 {
-  QMediaServiceProviderPlugin * obj = (QMediaServiceProviderPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaServiceProviderPlugin *obj = (QMediaServiceProviderPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QMediaService * ptr = obj->create( PQSTRING(1) );
+      QMediaService *ptr = obj->create(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIASERVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -102,17 +102,17 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_CREATE )
 /*
 virtual void release( QMediaService * service ) override = 0
 */
-HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_RELEASE )
+HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_RELEASE)
 {
-  QMediaServiceProviderPlugin * obj = (QMediaServiceProviderPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaServiceProviderPlugin *obj = (QMediaServiceProviderPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMEDIASERVICE(1) )
+    if (ISNUMPAR(1) && ISQMEDIASERVICE(1))
     {
 #endif
-      obj->release( PQMEDIASERVICE(1) );
+      obj->release(PQMEDIASERVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

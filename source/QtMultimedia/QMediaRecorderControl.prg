@@ -73,14 +73,14 @@ RETURN
 
 #include <QtCore/QUrl>
 
-/*
-virtual ~QMediaRecorderControl()
-*/
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_DELETE )
+    /*
+    virtual ~QMediaRecorderControl()
+    */
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_DELETE)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -97,14 +97,14 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_DELETE )
 /*
 virtual void applySettings() = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_APPLYSETTINGS )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_APPLYSETTINGS)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->applySettings();
@@ -123,17 +123,17 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_APPLYSETTINGS )
 /*
 virtual qint64 duration() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_DURATION )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_DURATION)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->duration() );
+      RQINT64(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,17 +147,17 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_DURATION )
 /*
 virtual bool isMuted() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ISMUTED )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ISMUTED)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isMuted() );
+      RBOOL(obj->isMuted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,17 +171,17 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ISMUTED )
 /*
 virtual QUrl outputLocation() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_OUTPUTLOCATION )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_OUTPUTLOCATION)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->outputLocation() );
+      QUrl *ptr = new QUrl(obj->outputLocation());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -196,17 +196,17 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_OUTPUTLOCATION )
 /*
 virtual bool setOutputLocation( const QUrl & location ) = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETOUTPUTLOCATION )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETOUTPUTLOCATION)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      RBOOL( obj->setOutputLocation( *PQURL(1) ) );
+      RBOOL(obj->setOutputLocation(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,17 +220,17 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETOUTPUTLOCATION )
 /*
 virtual QMediaRecorder::State state() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATE )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_STATE)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,17 +244,17 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATE )
 /*
 virtual QMediaRecorder::Status status() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATUS )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_STATUS)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->status() );
+      RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,17 +268,17 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_STATUS )
 /*
 virtual qreal volume() const = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_VOLUME )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_VOLUME)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->volume() );
+      RQREAL(obj->volume());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,17 +292,17 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_VOLUME )
 /*
 virtual void setMuted( bool muted ) = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETMUTED )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETMUTED)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setMuted( PBOOL(1) );
+      obj->setMuted(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,17 +318,17 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETMUTED )
 /*
 virtual void setState( QMediaRecorder::State state ) = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETSTATE )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETSTATE)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setState( (QMediaRecorder::State) hb_parni(1) );
+      obj->setState((QMediaRecorder::State)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -344,17 +344,17 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETSTATE )
 /*
 virtual void setVolume( qreal gain ) = 0
 */
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETVOLUME )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETVOLUME)
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVolume( PQREAL(1) );
+      obj->setVolume(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,39 +367,41 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETVOLUME )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMediaRecorderControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QMediaRecorderControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONACTUALLOCATIONCHANGED )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONACTUALLOCATIONCHANGED)
 {
   QMediaRecorderControlSlots_connect_signal("actualLocationChanged(QUrl)", "actualLocationChanged(QUrl)");
 }
 
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONDURATIONCHANGED )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONDURATIONCHANGED)
 {
   QMediaRecorderControlSlots_connect_signal("durationChanged(qint64)", "durationChanged(qint64)");
 }
 
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONERROR )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONERROR)
 {
   QMediaRecorderControlSlots_connect_signal("error(int,QString)", "error(int,QString)");
 }
 
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONMUTEDCHANGED )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONMUTEDCHANGED)
 {
   QMediaRecorderControlSlots_connect_signal("mutedChanged(bool)", "mutedChanged(bool)");
 }
 
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATECHANGED )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONSTATECHANGED)
 {
-  QMediaRecorderControlSlots_connect_signal("stateChanged(QMediaRecorder::State)", "stateChanged(QMediaRecorder::State)");
+  QMediaRecorderControlSlots_connect_signal("stateChanged(QMediaRecorder::State)",
+                                            "stateChanged(QMediaRecorder::State)");
 }
 
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATUSCHANGED )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONSTATUSCHANGED)
 {
-  QMediaRecorderControlSlots_connect_signal("statusChanged(QMediaRecorder::Status)", "statusChanged(QMediaRecorder::Status)");
+  QMediaRecorderControlSlots_connect_signal("statusChanged(QMediaRecorder::Status)",
+                                            "statusChanged(QMediaRecorder::Status)");
 }
 
-HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONVOLUMECHANGED )
+HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ONVOLUMECHANGED)
 {
   QMediaRecorderControlSlots_connect_signal("volumeChanged(qreal)", "volumeChanged(qreal)");
 }

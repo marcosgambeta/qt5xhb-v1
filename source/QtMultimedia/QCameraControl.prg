@@ -63,14 +63,14 @@ RETURN
 #include <QtMultimedia/QCameraControl>
 #endif
 
-/*
-~QCameraControl()
-*/
-HB_FUNC_STATIC( QCAMERACONTROL_DELETE )
+    /*
+    ~QCameraControl()
+    */
+HB_FUNC_STATIC(QCAMERACONTROL_DELETE)
 {
-  QCameraControl * obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraControl *obj = (QCameraControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -87,17 +87,17 @@ HB_FUNC_STATIC( QCAMERACONTROL_DELETE )
 /*
 virtual bool canChangeProperty( QCameraControl::PropertyChangeType changeType, QCamera::Status status ) const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
+HB_FUNC_STATIC(QCAMERACONTROL_CANCHANGEPROPERTY)
 {
-  QCameraControl * obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraControl *obj = (QCameraControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL( obj->canChangeProperty( (QCameraControl::PropertyChangeType) hb_parni(1), (QCamera::Status) hb_parni(2) ) );
+      RBOOL(obj->canChangeProperty((QCameraControl::PropertyChangeType)hb_parni(1), (QCamera::Status)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,17 +111,17 @@ HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
 /*
 virtual QCamera::CaptureModes captureMode() const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_CAPTUREMODE )
+HB_FUNC_STATIC(QCAMERACONTROL_CAPTUREMODE)
 {
-  QCameraControl * obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraControl *obj = (QCameraControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->captureMode() );
+      RENUM(obj->captureMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,17 +135,17 @@ HB_FUNC_STATIC( QCAMERACONTROL_CAPTUREMODE )
 /*
 virtual bool isCaptureModeSupported( QCamera::CaptureModes mode ) const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
+HB_FUNC_STATIC(QCAMERACONTROL_ISCAPTUREMODESUPPORTED)
 {
-  QCameraControl * obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraControl *obj = (QCameraControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isCaptureModeSupported( (QCamera::CaptureModes) hb_parni(1) ) );
+      RBOOL(obj->isCaptureModeSupported((QCamera::CaptureModes)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,17 +159,17 @@ HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
 /*
 virtual void setCaptureMode( QCamera::CaptureModes mode ) = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_SETCAPTUREMODE )
+HB_FUNC_STATIC(QCAMERACONTROL_SETCAPTUREMODE)
 {
-  QCameraControl * obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraControl *obj = (QCameraControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCaptureMode( (QCamera::CaptureModes) hb_parni(1) );
+      obj->setCaptureMode((QCamera::CaptureModes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,17 +185,17 @@ HB_FUNC_STATIC( QCAMERACONTROL_SETCAPTUREMODE )
 /*
 virtual void setState( QCamera::State state ) = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_SETSTATE )
+HB_FUNC_STATIC(QCAMERACONTROL_SETSTATE)
 {
-  QCameraControl * obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraControl *obj = (QCameraControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setState( (QCamera::State) hb_parni(1) );
+      obj->setState((QCamera::State)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,17 +211,17 @@ HB_FUNC_STATIC( QCAMERACONTROL_SETSTATE )
 /*
 virtual QCamera::State state() const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_STATE )
+HB_FUNC_STATIC(QCAMERACONTROL_STATE)
 {
-  QCameraControl * obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraControl *obj = (QCameraControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,17 +235,17 @@ HB_FUNC_STATIC( QCAMERACONTROL_STATE )
 /*
 virtual QCamera::Status status() const = 0
 */
-HB_FUNC_STATIC( QCAMERACONTROL_STATUS )
+HB_FUNC_STATIC(QCAMERACONTROL_STATUS)
 {
-  QCameraControl * obj = (QCameraControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraControl *obj = (QCameraControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->status() );
+      RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,24 +256,25 @@ HB_FUNC_STATIC( QCAMERACONTROL_STATUS )
   }
 }
 
-void QCameraControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QCameraControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
+HB_FUNC_STATIC(QCAMERACONTROL_ONCAPTUREMODECHANGED)
 {
-  QCameraControlSlots_connect_signal("captureModeChanged(QCamera::CaptureModes)", "captureModeChanged(QCamera::CaptureModes)");
+  QCameraControlSlots_connect_signal("captureModeChanged(QCamera::CaptureModes)",
+                                     "captureModeChanged(QCamera::CaptureModes)");
 }
 
-HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
+HB_FUNC_STATIC(QCAMERACONTROL_ONERROR)
 {
   QCameraControlSlots_connect_signal("error(int,QString)", "error(int,QString)");
 }
 
-HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
+HB_FUNC_STATIC(QCAMERACONTROL_ONSTATECHANGED)
 {
   QCameraControlSlots_connect_signal("stateChanged(QCamera::State)", "stateChanged(QCamera::State)");
 }
 
-HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
+HB_FUNC_STATIC(QCAMERACONTROL_ONSTATUSCHANGED)
 {
   QCameraControlSlots_connect_signal("statusChanged(QCamera::Status)", "statusChanged(QCamera::Status)");
 }

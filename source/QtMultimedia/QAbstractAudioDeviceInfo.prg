@@ -61,11 +61,11 @@ RETURN
 #include <QtMultimedia/QAbstractAudioDeviceInfo>
 #endif
 
-HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_DELETE )
+HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_DELETE)
 {
-  QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAudioDeviceInfo *obj = (QAbstractAudioDeviceInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -82,17 +82,17 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_DELETE )
 /*
 virtual QAudioFormat preferredFormat() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_PREFERREDFORMAT )
+HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_PREFERREDFORMAT)
 {
-  QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAudioDeviceInfo *obj = (QAbstractAudioDeviceInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAudioFormat * ptr = new QAudioFormat( obj->preferredFormat() );
+      QAudioFormat *ptr = new QAudioFormat(obj->preferredFormat());
       Qt5xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -107,17 +107,17 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_PREFERREDFORMAT )
 /*
 virtual bool isFormatSupported( const QAudioFormat & format ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_ISFORMATSUPPORTED )
+HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_ISFORMATSUPPORTED)
 {
-  QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAudioDeviceInfo *obj = (QAbstractAudioDeviceInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQAUDIOFORMAT(1) )
+    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
     {
 #endif
-      RBOOL( obj->isFormatSupported( *PQAUDIOFORMAT(1) ) );
+      RBOOL(obj->isFormatSupported(*PQAUDIOFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,17 +131,17 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_ISFORMATSUPPORTED )
 /*
 virtual QString deviceName() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_DEVICENAME )
+HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_DEVICENAME)
 {
-  QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAudioDeviceInfo *obj = (QAbstractAudioDeviceInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->deviceName() );
+      RQSTRING(obj->deviceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,17 +155,17 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_DEVICENAME )
 /*
 virtual QStringList supportedCodecs() = 0
 */
-HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDCODECS )
+HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDCODECS)
 {
-  QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAudioDeviceInfo *obj = (QAbstractAudioDeviceInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->supportedCodecs() );
+      RQSTRINGLIST(obj->supportedCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,14 +179,14 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDCODECS )
 /*
 virtual QList<int> supportedSampleRates() = 0
 */
-HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
+HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLERATES)
 {
-  QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAudioDeviceInfo *obj = (QAbstractAudioDeviceInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<int> list = obj->supportedSampleRates();
@@ -204,14 +204,14 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
 /*
 virtual QList<int> supportedChannelCounts() = 0
 */
-HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
+HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS)
 {
-  QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAudioDeviceInfo *obj = (QAbstractAudioDeviceInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<int> list = obj->supportedChannelCounts();
@@ -229,14 +229,14 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
 /*
 virtual QList<int> supportedSampleSizes() = 0
 */
-HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
+HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES)
 {
-  QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAudioDeviceInfo *obj = (QAbstractAudioDeviceInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<int> list = obj->supportedSampleSizes();
@@ -254,22 +254,22 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
 /*
 virtual QList<QAudioFormat::Endian> supportedByteOrders() = 0
 */
-HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
+HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDBYTEORDERS)
 {
-  QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAudioDeviceInfo *obj = (QAbstractAudioDeviceInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QAudioFormat::Endian> list = obj->supportedByteOrders();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      for (int i = 0; i < list.count(); i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
@@ -286,22 +286,22 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
 /*
 virtual QList<QAudioFormat::SampleType> supportedSampleTypes() = 0
 */
-HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
+HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES)
 {
-  QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAudioDeviceInfo *obj = (QAbstractAudioDeviceInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QAudioFormat::SampleType> list = obj->supportedSampleTypes();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      for (int i = 0; i < list.count(); i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);

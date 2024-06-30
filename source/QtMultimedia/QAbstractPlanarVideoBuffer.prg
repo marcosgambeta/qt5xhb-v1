@@ -38,7 +38,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtMultimedia/QAbstractPlanarVideoBuffer>
 #endif
 #endif
@@ -48,20 +48,20 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtMultimedia/QAbstractPlanarVideoBuffer>
 #endif
 #endif
 
-/*
-virtual ~QAbstractPlanarVideoBuffer()
-*/
-HB_FUNC_STATIC( QABSTRACTPLANARVIDEOBUFFER_DELETE )
+    /*
+    virtual ~QAbstractPlanarVideoBuffer()
+    */
+HB_FUNC_STATIC(QABSTRACTPLANARVIDEOBUFFER_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QAbstractPlanarVideoBuffer * obj = (QAbstractPlanarVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QAbstractPlanarVideoBuffer *obj = (QAbstractPlanarVideoBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

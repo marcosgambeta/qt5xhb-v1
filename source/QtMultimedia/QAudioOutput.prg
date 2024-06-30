@@ -77,22 +77,26 @@ RETURN
 #include <QtMultimedia/QAudioOutput>
 #endif
 
-HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
+HB_FUNC_STATIC(QAUDIOOUTPUT_NEW)
 {
-  if( ISBETWEEN(0,2) && (ISQAUDIOFORMAT(1)||HB_ISNIL(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if (ISBETWEEN(0, 2) && (ISQAUDIOFORMAT(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QAudioOutput( const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr )
     */
-    QAudioOutput * obj = new QAudioOutput( HB_ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(1), OPQOBJECT(2,nullptr) );
+    QAudioOutput *obj =
+        new QAudioOutput(HB_ISNIL(1) ? QAudioFormat() : *(QAudioFormat *)Qt5xHb::itemGetPtr(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1,3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2) || HB_ISNIL(2)) &&
+           (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QAudioOutput( const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
+    QAudioOutput( const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject *
+    parent = 0 )
     */
-    QAudioOutput * obj = new QAudioOutput( *PQAUDIODEVICEINFO(1), HB_ISNIL(2)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+    QAudioOutput *obj = new QAudioOutput(
+        *PQAUDIODEVICEINFO(1), HB_ISNIL(2) ? QAudioFormat() : *(QAudioFormat *)Qt5xHb::itemGetPtr(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -104,11 +108,11 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
 /*
 ~QAudioOutput()
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_DELETE )
+HB_FUNC_STATIC(QAUDIOOUTPUT_DELETE)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -125,17 +129,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_DELETE )
 /*
 int bufferSize() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_BUFFERSIZE )
+HB_FUNC_STATIC(QAUDIOOUTPUT_BUFFERSIZE)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->bufferSize() );
+      RINT(obj->bufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,17 +153,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BUFFERSIZE )
 /*
 int bytesFree() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_BYTESFREE )
+HB_FUNC_STATIC(QAUDIOOUTPUT_BYTESFREE)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->bytesFree() );
+      RINT(obj->bytesFree());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,17 +177,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BYTESFREE )
 /*
 QString category() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_CATEGORY )
+HB_FUNC_STATIC(QAUDIOOUTPUT_CATEGORY)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->category() );
+      RQSTRING(obj->category());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,17 +201,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_CATEGORY )
 /*
 qint64 elapsedUSecs() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_ELAPSEDUSECS )
+HB_FUNC_STATIC(QAUDIOOUTPUT_ELAPSEDUSECS)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->elapsedUSecs() );
+      RQINT64(obj->elapsedUSecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,17 +225,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ELAPSEDUSECS )
 /*
 QAudio::Error error() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_ERROR )
+HB_FUNC_STATIC(QAUDIOOUTPUT_ERROR)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,17 +249,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ERROR )
 /*
 QAudioFormat format() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_FORMAT )
+HB_FUNC_STATIC(QAUDIOOUTPUT_FORMAT)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAudioFormat * ptr = new QAudioFormat( obj->format() );
+      QAudioFormat *ptr = new QAudioFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -270,17 +274,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_FORMAT )
 /*
 int notifyInterval() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_NOTIFYINTERVAL )
+HB_FUNC_STATIC(QAUDIOOUTPUT_NOTIFYINTERVAL)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->notifyInterval() );
+      RINT(obj->notifyInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,17 +298,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NOTIFYINTERVAL )
 /*
 int periodSize() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_PERIODSIZE )
+HB_FUNC_STATIC(QAUDIOOUTPUT_PERIODSIZE)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->periodSize() );
+      RINT(obj->periodSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,17 +322,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_PERIODSIZE )
 /*
 qint64 processedUSecs() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_PROCESSEDUSECS )
+HB_FUNC_STATIC(QAUDIOOUTPUT_PROCESSEDUSECS)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->processedUSecs() );
+      RQINT64(obj->processedUSecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,14 +346,14 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_PROCESSEDUSECS )
 /*
 void reset()
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_RESET )
+HB_FUNC_STATIC(QAUDIOOUTPUT_RESET)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reset();
@@ -368,14 +372,14 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_RESET )
 /*
 void resume()
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_RESUME )
+HB_FUNC_STATIC(QAUDIOOUTPUT_RESUME)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->resume();
@@ -394,17 +398,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_RESUME )
 /*
 void setBufferSize( int bytes )
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_SETBUFFERSIZE )
+HB_FUNC_STATIC(QAUDIOOUTPUT_SETBUFFERSIZE)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBufferSize( PINT(1) );
+      obj->setBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,17 +424,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETBUFFERSIZE )
 /*
 void setCategory( const QString & category )
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_SETCATEGORY )
+HB_FUNC_STATIC(QAUDIOOUTPUT_SETCATEGORY)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setCategory( PQSTRING(1) );
+      obj->setCategory(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,17 +450,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETCATEGORY )
 /*
 void setNotifyInterval( int milliSeconds )
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
+HB_FUNC_STATIC(QAUDIOOUTPUT_SETNOTIFYINTERVAL)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setNotifyInterval( PINT(1) );
+      obj->setNotifyInterval(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -472,17 +476,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
 /*
 void setVolume( qreal volume )
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_SETVOLUME )
+HB_FUNC_STATIC(QAUDIOOUTPUT_SETVOLUME)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setVolume( PQREAL(1) );
+      obj->setVolume(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,32 +499,32 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETVOLUME )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QAUDIOOUTPUT_START )
+HB_FUNC_STATIC(QAUDIOOUTPUT_START)
 {
-  if( ISNUMPAR(1) && ISQIODEVICE(1) )
+  if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
     void start( QIODevice * device )
     */
-    QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->start( PQIODEVICE(1) );
+      obj->start(PQIODEVICE(1));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     QIODevice * start()
     */
-    QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      QIODevice * ptr = obj->start();
+      QIODevice *ptr = obj->start();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
     }
   }
@@ -533,17 +537,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_START )
 /*
 QAudio::State state() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_STATE )
+HB_FUNC_STATIC(QAUDIOOUTPUT_STATE)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,14 +561,14 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_STATE )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_STOP )
+HB_FUNC_STATIC(QAUDIOOUTPUT_STOP)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -583,14 +587,14 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_STOP )
 /*
 void suspend()
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_SUSPEND )
+HB_FUNC_STATIC(QAUDIOOUTPUT_SUSPEND)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->suspend();
@@ -609,17 +613,17 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SUSPEND )
 /*
 qreal volume() const
 */
-HB_FUNC_STATIC( QAUDIOOUTPUT_VOLUME )
+HB_FUNC_STATIC(QAUDIOOUTPUT_VOLUME)
 {
-  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioOutput *obj = (QAudioOutput *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->volume() );
+      RQREAL(obj->volume());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -630,14 +634,14 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_VOLUME )
   }
 }
 
-void QAudioOutputSlots_connect_signal(const QString & signal, const QString & slot);
+void QAudioOutputSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QAUDIOOUTPUT_ONNOTIFY )
+HB_FUNC_STATIC(QAUDIOOUTPUT_ONNOTIFY)
 {
   QAudioOutputSlots_connect_signal("notify()", "notify()");
 }
 
-HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
+HB_FUNC_STATIC(QAUDIOOUTPUT_ONSTATECHANGED)
 {
   QAudioOutputSlots_connect_signal("stateChanged(QAudio::State)", "stateChanged(QAudio::State)");
 }

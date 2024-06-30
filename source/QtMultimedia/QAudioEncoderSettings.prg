@@ -75,22 +75,22 @@ RETURN
 #include <QtMultimedia/QAudioEncoderSettings>
 #endif
 
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QAudioEncoderSettings()
     */
-    QAudioEncoderSettings * obj = new QAudioEncoderSettings();
+    QAudioEncoderSettings *obj = new QAudioEncoderSettings();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQAUDIOENCODERSETTINGS(1) )
+  else if (ISNUMPAR(1) && ISQAUDIOENCODERSETTINGS(1))
   {
     /*
     QAudioEncoderSettings( const QAudioEncoderSettings & other )
     */
-    QAudioEncoderSettings * obj = new QAudioEncoderSettings( *PQAUDIOENCODERSETTINGS(1) );
+    QAudioEncoderSettings *obj = new QAudioEncoderSettings(*PQAUDIOENCODERSETTINGS(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -102,11 +102,11 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
 /*
 ~QAudioEncoderSettings()
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_DELETE )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_DELETE)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -121,17 +121,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_DELETE )
 /*
 int bitRate() const
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_BITRATE )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_BITRATE)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->bitRate() );
+      RINT(obj->bitRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,17 +145,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_BITRATE )
 /*
 int channelCount() const
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_CHANNELCOUNT )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_CHANNELCOUNT)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->channelCount() );
+      RINT(obj->channelCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,17 +169,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_CHANNELCOUNT )
 /*
 QString codec() const
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_CODEC )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_CODEC)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->codec() );
+      RQSTRING(obj->codec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,17 +193,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_CODEC )
 /*
 QMultimedia::EncodingMode encodingMode() const
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ENCODINGMODE )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_ENCODINGMODE)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->encodingMode() );
+      RENUM(obj->encodingMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,17 +217,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ENCODINGMODE )
 /*
 QVariant encodingOption( const QString & option ) const
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ENCODINGOPTION )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_ENCODINGOPTION)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->encodingOption( PQSTRING(1) ) );
+      QVariant *ptr = new QVariant(obj->encodingOption(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -242,17 +242,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ENCODINGOPTION )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ISNULL )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_ISNULL)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,17 +266,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ISNULL )
 /*
 QMultimedia::EncodingQuality quality() const
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_QUALITY )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_QUALITY)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->quality() );
+      RENUM(obj->quality());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,17 +290,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_QUALITY )
 /*
 int sampleRate() const
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SAMPLERATE )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SAMPLERATE)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->sampleRate() );
+      RINT(obj->sampleRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,17 +314,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SAMPLERATE )
 /*
 void setBitRate( int bitrate )
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETBITRATE )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETBITRATE)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBitRate( PINT(1) );
+      obj->setBitRate(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,17 +340,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETBITRATE )
 /*
 void setChannelCount( int channels )
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETCHANNELCOUNT )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETCHANNELCOUNT)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setChannelCount( PINT(1) );
+      obj->setChannelCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,17 +366,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETCHANNELCOUNT )
 /*
 void setCodec( const QString & codec )
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETCODEC )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETCODEC)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setCodec( PQSTRING(1) );
+      obj->setCodec(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,17 +392,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETCODEC )
 /*
 void setEncodingMode( QMultimedia::EncodingMode mode )
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGMODE )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETENCODINGMODE)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setEncodingMode( (QMultimedia::EncodingMode) hb_parni(1) );
+      obj->setEncodingMode((QMultimedia::EncodingMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,17 +418,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGMODE )
 /*
 void setEncodingOption( const QString & option, const QVariant & value )
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGOPTION )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETENCODINGOPTION)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setEncodingOption( PQSTRING(1), *PQVARIANT(2) );
+      obj->setEncodingOption(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -444,17 +444,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGOPTION )
 /*
 void setQuality( QMultimedia::EncodingQuality quality )
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETQUALITY )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETQUALITY)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setQuality( (QMultimedia::EncodingQuality) hb_parni(1) );
+      obj->setQuality((QMultimedia::EncodingQuality)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,17 +470,17 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETQUALITY )
 /*
 void setSampleRate( int rate )
 */
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETSAMPLERATE )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETSAMPLERATE)
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAudioEncoderSettings *obj = (QAudioEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSampleRate( PINT(1) );
+      obj->setSampleRate(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,11 +493,11 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETSAMPLERATE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEWFROM )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -523,26 +523,26 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEWFROMOBJECT )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QAUDIOENCODERSETTINGS_NEWFROM );
+  HB_FUNC_EXEC(QAUDIOENCODERSETTINGS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEWFROMPOINTER )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QAUDIOENCODERSETTINGS_NEWFROM );
+  HB_FUNC_EXEC(QAUDIOENCODERSETTINGS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SELFDESTRUCTION )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

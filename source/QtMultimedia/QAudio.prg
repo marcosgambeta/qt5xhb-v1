@@ -58,17 +58,18 @@ RETURN
 #include <QtMultimedia/QAudio>
 #endif
 
-/*
-static qreal convertVolume( qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to )
-*/
-HB_FUNC_STATIC( QAUDIO_CONVERTVOLUME )
+    /*
+    static qreal convertVolume( qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to )
+    */
+HB_FUNC_STATIC(QAUDIO_CONVERTVOLUME)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
 #endif
-    RQREAL( QAudio::convertVolume( PQREAL(1), static_cast<QAudio::VolumeScale>( hb_parni(2) ), static_cast<QAudio::VolumeScale>( hb_parni(3) ) ) );
+    RQREAL(QAudio::convertVolume(PQREAL(1), static_cast<QAudio::VolumeScale>(hb_parni(2)),
+                                 static_cast<QAudio::VolumeScale>(hb_parni(3))));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -79,11 +80,11 @@ HB_FUNC_STATIC( QAUDIO_CONVERTVOLUME )
 #endif
 }
 
-HB_FUNC_STATIC( QAUDIO_NEWFROM )
+HB_FUNC_STATIC(QAUDIO_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -92,7 +93,7 @@ HB_FUNC_STATIC( QAUDIO_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -109,26 +110,26 @@ HB_FUNC_STATIC( QAUDIO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QAUDIO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QAUDIO_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QAUDIO_NEWFROM );
+  HB_FUNC_EXEC(QAUDIO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QAUDIO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QAUDIO_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QAUDIO_NEWFROM );
+  HB_FUNC_EXEC(QAUDIO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QAUDIO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QAUDIO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QAUDIO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QAUDIO_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

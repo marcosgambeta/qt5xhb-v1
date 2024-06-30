@@ -57,14 +57,14 @@ RETURN
 #include <QtMultimedia/QCameraLocksControl>
 #endif
 
-/*
-~QCameraLocksControl()
-*/
-HB_FUNC_STATIC( QCAMERALOCKSCONTROL_DELETE )
+    /*
+    ~QCameraLocksControl()
+    */
+HB_FUNC_STATIC(QCAMERALOCKSCONTROL_DELETE)
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraLocksControl *obj = (QCameraLocksControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -81,17 +81,17 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_DELETE )
 /*
 virtual QCamera::LockStatus lockStatus( QCamera::LockType lock ) const = 0
 */
-HB_FUNC_STATIC( QCAMERALOCKSCONTROL_LOCKSTATUS )
+HB_FUNC_STATIC(QCAMERALOCKSCONTROL_LOCKSTATUS)
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraLocksControl *obj = (QCameraLocksControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RENUM( obj->lockStatus( (QCamera::LockType) hb_parni(1) ) );
+      RENUM(obj->lockStatus((QCamera::LockType)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,17 +105,17 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_LOCKSTATUS )
 /*
 virtual void searchAndLock( QCamera::LockTypes locks ) = 0
 */
-HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SEARCHANDLOCK )
+HB_FUNC_STATIC(QCAMERALOCKSCONTROL_SEARCHANDLOCK)
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraLocksControl *obj = (QCameraLocksControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->searchAndLock( (QCamera::LockTypes) hb_parni(1) );
+      obj->searchAndLock((QCamera::LockTypes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,17 +131,17 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SEARCHANDLOCK )
 /*
 virtual QCamera::LockTypes supportedLocks() const = 0
 */
-HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SUPPORTEDLOCKS )
+HB_FUNC_STATIC(QCAMERALOCKSCONTROL_SUPPORTEDLOCKS)
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraLocksControl *obj = (QCameraLocksControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->supportedLocks() );
+      RENUM(obj->supportedLocks());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,17 +155,17 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SUPPORTEDLOCKS )
 /*
 virtual void unlock( QCamera::LockTypes locks ) = 0
 */
-HB_FUNC_STATIC( QCAMERALOCKSCONTROL_UNLOCK )
+HB_FUNC_STATIC(QCAMERALOCKSCONTROL_UNLOCK)
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraLocksControl *obj = (QCameraLocksControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->unlock( (QCamera::LockTypes) hb_parni(1) );
+      obj->unlock((QCamera::LockTypes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,11 +178,13 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_UNLOCK )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCameraLocksControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QCameraLocksControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
+HB_FUNC_STATIC(QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED)
 {
-  QCameraLocksControlSlots_connect_signal("lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)", "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)");
+  QCameraLocksControlSlots_connect_signal(
+      "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)",
+      "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)");
 }
 
 #pragma ENDDUMP

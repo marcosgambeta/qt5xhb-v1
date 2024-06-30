@@ -54,14 +54,14 @@ RETURN
 #include <QtMultimedia/QMediaAudioProbeControl>
 #endif
 
-/*
-virtual ~QMediaAudioProbeControl()
-*/
-HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_DELETE )
+    /*
+    virtual ~QMediaAudioProbeControl()
+    */
+HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_DELETE)
 {
-  QMediaAudioProbeControl * obj = (QMediaAudioProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QMediaAudioProbeControl *obj = (QMediaAudioProbeControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -75,14 +75,14 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMediaAudioProbeControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QMediaAudioProbeControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
+HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED)
 {
   QMediaAudioProbeControlSlots_connect_signal("audioBufferProbed(QAudioBuffer)", "audioBufferProbed(QAudioBuffer)");
 }
 
-HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
+HB_FUNC_STATIC(QMEDIAAUDIOPROBECONTROL_ONFLUSH)
 {
   QMediaAudioProbeControlSlots_connect_signal("flush()", "flush()");
 }

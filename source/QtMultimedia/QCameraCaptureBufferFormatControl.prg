@@ -56,14 +56,14 @@ RETURN
 #include <QtMultimedia/QCameraCaptureBufferFormatControl>
 #endif
 
-/*
-~QCameraCaptureBufferFormatControl()
-*/
-HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE )
+    /*
+    ~QCameraCaptureBufferFormatControl()
+    */
+HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE)
 {
-  QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraCaptureBufferFormatControl *obj = (QCameraCaptureBufferFormatControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -80,17 +80,17 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE )
 /*
 virtual QVideoFrame::PixelFormat bufferFormat() const = 0
 */
-HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT )
+HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT)
 {
-  QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraCaptureBufferFormatControl *obj = (QCameraCaptureBufferFormatControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->bufferFormat() );
+      RENUM(obj->bufferFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,17 +104,17 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT )
 /*
 virtual void setBufferFormat( QVideoFrame::PixelFormat format ) = 0
 */
-HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT )
+HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT)
 {
-  QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraCaptureBufferFormatControl *obj = (QCameraCaptureBufferFormatControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBufferFormat( (QVideoFrame::PixelFormat) hb_parni(1) );
+      obj->setBufferFormat((QVideoFrame::PixelFormat)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,22 +130,22 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT )
 /*
 virtual QList<QVideoFrame::PixelFormat> supportedBufferFormats() const = 0
 */
-HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS )
+HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS)
 {
-  QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCameraCaptureBufferFormatControl *obj = (QCameraCaptureBufferFormatControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      for (int i = 0; i < list.count(); i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
@@ -159,11 +159,12 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS )
   }
 }
 
-void QCameraCaptureBufferFormatControlSlots_connect_signal(const QString & signal, const QString & slot);
+void QCameraCaptureBufferFormatControlSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
+HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED)
 {
-  QCameraCaptureBufferFormatControlSlots_connect_signal("bufferFormatChanged(QVideoFrame::PixelFormat)", "bufferFormatChanged(QVideoFrame::PixelFormat)");
+  QCameraCaptureBufferFormatControlSlots_connect_signal("bufferFormatChanged(QVideoFrame::PixelFormat)",
+                                                        "bufferFormatChanged(QVideoFrame::PixelFormat)");
 }
 
 #pragma ENDDUMP
