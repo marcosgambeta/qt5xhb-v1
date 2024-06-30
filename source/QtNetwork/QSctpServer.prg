@@ -43,7 +43,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtNetwork/QSctpServer>
 #endif
 #endif
@@ -55,27 +55,27 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtNetwork/QSctpServer>
 #endif
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
 #include <QtNetwork/QSctpSocket>
 #endif
 #endif
 
-/*
-explicit QSctpServer(QObject *parent = nullptr)
-*/
-HB_FUNC_STATIC( QSCTPSERVER_NEW )
+    /*
+    explicit QSctpServer(QObject *parent = nullptr)
+    */
+HB_FUNC_STATIC(QSCTPSERVER_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QSctpServer * obj = new QSctpServer( OPQOBJECT(1,0) );
+    QSctpServer *obj = new QSctpServer(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -89,13 +89,13 @@ HB_FUNC_STATIC( QSCTPSERVER_NEW )
 /*
 virtual ~QSctpServer()
 */
-HB_FUNC_STATIC( QSCTPSERVER_DELETE )
+HB_FUNC_STATIC(QSCTPSERVER_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpServer * obj = (QSctpServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpServer *obj = (QSctpServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -114,19 +114,19 @@ HB_FUNC_STATIC( QSCTPSERVER_DELETE )
 /*
 void setMaximumChannelCount(int count)
 */
-HB_FUNC_STATIC( QSCTPSERVER_SETMAXIMUMCHANNELCOUNT )
+HB_FUNC_STATIC(QSCTPSERVER_SETMAXIMUMCHANNELCOUNT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpServer * obj = (QSctpServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpServer *obj = (QSctpServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximumChannelCount( PINT(1) );
+      obj->setMaximumChannelCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,19 +144,19 @@ HB_FUNC_STATIC( QSCTPSERVER_SETMAXIMUMCHANNELCOUNT )
 /*
 int maximumChannelCount() const
 */
-HB_FUNC_STATIC( QSCTPSERVER_MAXIMUMCHANNELCOUNT )
+HB_FUNC_STATIC(QSCTPSERVER_MAXIMUMCHANNELCOUNT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpServer * obj = (QSctpServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpServer *obj = (QSctpServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximumChannelCount() );
+      RINT(obj->maximumChannelCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,19 +172,19 @@ HB_FUNC_STATIC( QSCTPSERVER_MAXIMUMCHANNELCOUNT )
 /*
 QSctpSocket *nextPendingDatagramConnection()
 */
-HB_FUNC_STATIC( QSCTPSERVER_NEXTPENDINGDATAGRAMCONNECTION )
+HB_FUNC_STATIC(QSCTPSERVER_NEXTPENDINGDATAGRAMCONNECTION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpServer * obj = (QSctpServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpServer *obj = (QSctpServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSctpSocket * ptr = obj->nextPendingDatagramConnection();
+      QSctpSocket *ptr = obj->nextPendingDatagramConnection();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCTPSOCKET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

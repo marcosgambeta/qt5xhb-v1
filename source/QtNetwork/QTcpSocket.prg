@@ -52,14 +52,14 @@ RETURN
 #include <QtNetwork/QTcpSocket>
 #endif
 
-/*
-QTcpSocket( QObject * parent = nullptr )
-*/
-HB_FUNC_STATIC( QTCPSOCKET_NEW )
+    /*
+    QTcpSocket( QObject * parent = nullptr )
+    */
+HB_FUNC_STATIC(QTCPSOCKET_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QTcpSocket * obj = new QTcpSocket( OPQOBJECT(1,nullptr) );
+    QTcpSocket *obj = new QTcpSocket(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -71,11 +71,11 @@ HB_FUNC_STATIC( QTCPSOCKET_NEW )
 /*
 virtual ~QTcpSocket()
 */
-HB_FUNC_STATIC( QTCPSOCKET_DELETE )
+HB_FUNC_STATIC(QTCPSOCKET_DELETE)
 {
-  QTcpSocket * obj = (QTcpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTcpSocket *obj = (QTcpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

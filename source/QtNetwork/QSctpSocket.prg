@@ -47,7 +47,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtNetwork/QSctpSocket>
 #endif
 #endif
@@ -59,21 +59,21 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtNetwork/QSctpSocket>
 #endif
 #endif
 
-/*
-explicit QSctpSocket(QObject *parent = nullptr)
-*/
-HB_FUNC_STATIC( QSCTPSOCKET_NEW )
+    /*
+    explicit QSctpSocket(QObject *parent = nullptr)
+    */
+HB_FUNC_STATIC(QSCTPSOCKET_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QSctpSocket * obj = new QSctpSocket( OPQOBJECT(1,0) );
+    QSctpSocket *obj = new QSctpSocket(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -87,13 +87,13 @@ HB_FUNC_STATIC( QSCTPSOCKET_NEW )
 /*
 virtual ~QSctpSocket()
 */
-HB_FUNC_STATIC( QSCTPSOCKET_DELETE )
+HB_FUNC_STATIC(QSCTPSOCKET_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpSocket *obj = (QSctpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -112,16 +112,16 @@ HB_FUNC_STATIC( QSCTPSOCKET_DELETE )
 /*
 void close() Q_DECL_OVERRIDE
 */
-HB_FUNC_STATIC( QSCTPSOCKET_CLOSE )
+HB_FUNC_STATIC(QSCTPSOCKET_CLOSE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpSocket *obj = (QSctpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->close();
@@ -142,16 +142,16 @@ HB_FUNC_STATIC( QSCTPSOCKET_CLOSE )
 /*
 void disconnectFromHost() Q_DECL_OVERRIDE
 */
-HB_FUNC_STATIC( QSCTPSOCKET_DISCONNECTFROMHOST )
+HB_FUNC_STATIC(QSCTPSOCKET_DISCONNECTFROMHOST)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpSocket *obj = (QSctpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->disconnectFromHost();
@@ -172,19 +172,19 @@ HB_FUNC_STATIC( QSCTPSOCKET_DISCONNECTFROMHOST )
 /*
 void setMaximumChannelCount(int count)
 */
-HB_FUNC_STATIC( QSCTPSOCKET_SETMAXIMUMCHANNELCOUNT )
+HB_FUNC_STATIC(QSCTPSOCKET_SETMAXIMUMCHANNELCOUNT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpSocket *obj = (QSctpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximumChannelCount( PINT(1) );
+      obj->setMaximumChannelCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,19 +202,19 @@ HB_FUNC_STATIC( QSCTPSOCKET_SETMAXIMUMCHANNELCOUNT )
 /*
 int maximumChannelCount() const
 */
-HB_FUNC_STATIC( QSCTPSOCKET_MAXIMUMCHANNELCOUNT )
+HB_FUNC_STATIC(QSCTPSOCKET_MAXIMUMCHANNELCOUNT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpSocket *obj = (QSctpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximumChannelCount() );
+      RINT(obj->maximumChannelCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,19 +230,19 @@ HB_FUNC_STATIC( QSCTPSOCKET_MAXIMUMCHANNELCOUNT )
 /*
 bool isInDatagramMode() const
 */
-HB_FUNC_STATIC( QSCTPSOCKET_ISINDATAGRAMMODE )
+HB_FUNC_STATIC(QSCTPSOCKET_ISINDATAGRAMMODE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpSocket *obj = (QSctpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isInDatagramMode() );
+      RBOOL(obj->isInDatagramMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,19 +258,19 @@ HB_FUNC_STATIC( QSCTPSOCKET_ISINDATAGRAMMODE )
 /*
 QNetworkDatagram readDatagram()
 */
-HB_FUNC_STATIC( QSCTPSOCKET_READDATAGRAM )
+HB_FUNC_STATIC(QSCTPSOCKET_READDATAGRAM)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpSocket *obj = (QSctpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QNetworkDatagram * ptr = new QNetworkDatagram( obj->readDatagram() );
+      QNetworkDatagram *ptr = new QNetworkDatagram(obj->readDatagram());
       Qt5xHb::createReturnClass(ptr, "QNETWORKDATAGRAM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -287,19 +287,19 @@ HB_FUNC_STATIC( QSCTPSOCKET_READDATAGRAM )
 /*
 bool writeDatagram(const QNetworkDatagram &datagram)
 */
-HB_FUNC_STATIC( QSCTPSOCKET_WRITEDATAGRAM )
+HB_FUNC_STATIC(QSCTPSOCKET_WRITEDATAGRAM)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSctpSocket *obj = (QSctpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQNETWORKDATAGRAM(1) )
+    if (ISNUMPAR(1) && ISQNETWORKDATAGRAM(1))
     {
 #endif
-      RBOOL( obj->writeDatagram( *PQNETWORKDATAGRAM(1) ) );
+      RBOOL(obj->writeDatagram(*PQNETWORKDATAGRAM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

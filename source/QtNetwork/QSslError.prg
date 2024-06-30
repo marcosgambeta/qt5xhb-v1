@@ -64,38 +64,38 @@ RETURN
 #include <QtNetwork/QSslError>
 #endif
 
-HB_FUNC_STATIC( QSSLERROR_NEW )
+HB_FUNC_STATIC(QSSLERROR_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QSslError()
     */
-    QSslError * obj = new QSslError();
+    QSslError *obj = new QSslError();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QSslError( QSslError::SslError error )
     */
-    QSslError * obj = new QSslError( (QSslError::SslError) hb_parni(1) );
+    QSslError *obj = new QSslError((QSslError::SslError)hb_parni(1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSSLCERTIFICATE(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSSLCERTIFICATE(2))
   {
     /*
     QSslError( QSslError::SslError error, const QSslCertificate & certificate )
     */
-    QSslError * obj = new QSslError( (QSslError::SslError) hb_parni(1), *PQSSLCERTIFICATE(2) );
+    QSslError *obj = new QSslError((QSslError::SslError)hb_parni(1), *PQSSLCERTIFICATE(2));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSSLERROR(1) )
+  else if (ISNUMPAR(1) && ISQSSLERROR(1))
   {
     /*
     QSslError( const QSslError & other )
     */
-    QSslError * obj = new QSslError( *PQSSLERROR(1) );
+    QSslError *obj = new QSslError(*PQSSLERROR(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -107,11 +107,11 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 /*
 ~QSslError()
 */
-HB_FUNC_STATIC( QSSLERROR_DELETE )
+HB_FUNC_STATIC(QSSLERROR_DELETE)
 {
-  QSslError * obj = (QSslError *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSslError *obj = (QSslError *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -126,17 +126,17 @@ HB_FUNC_STATIC( QSSLERROR_DELETE )
 /*
 QSslCertificate certificate() const
 */
-HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
+HB_FUNC_STATIC(QSSLERROR_CERTIFICATE)
 {
-  QSslError * obj = (QSslError *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSslError *obj = (QSslError *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSslCertificate * ptr = new QSslCertificate( obj->certificate() );
+      QSslCertificate *ptr = new QSslCertificate(obj->certificate());
       Qt5xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -151,17 +151,17 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
 /*
 QSslError::SslError error() const
 */
-HB_FUNC_STATIC( QSSLERROR_ERROR )
+HB_FUNC_STATIC(QSSLERROR_ERROR)
 {
-  QSslError * obj = (QSslError *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSslError *obj = (QSslError *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,17 +175,17 @@ HB_FUNC_STATIC( QSSLERROR_ERROR )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
+HB_FUNC_STATIC(QSSLERROR_ERRORSTRING)
 {
-  QSslError * obj = (QSslError *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSslError *obj = (QSslError *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,17 +199,17 @@ HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
 /*
 void swap( QSslError & other ) Q_DECL_NOTHROW
 */
-HB_FUNC_STATIC( QSSLERROR_SWAP )
+HB_FUNC_STATIC(QSSLERROR_SWAP)
 {
-  QSslError * obj = (QSslError *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSslError *obj = (QSslError *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSSLERROR(1) )
+    if (ISNUMPAR(1) && ISQSSLERROR(1))
     {
 #endif
-      obj->swap( *PQSSLERROR(1) );
+      obj->swap(*PQSSLERROR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,11 +222,11 @@ HB_FUNC_STATIC( QSSLERROR_SWAP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QSSLERROR_NEWFROM )
+HB_FUNC_STATIC(QSSLERROR_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QSSLERROR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -252,26 +252,26 @@ HB_FUNC_STATIC( QSSLERROR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSSLERROR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSSLERROR_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSSLERROR_NEWFROM );
+  HB_FUNC_EXEC(QSSLERROR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSSLERROR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSSLERROR_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSSLERROR_NEWFROM );
+  HB_FUNC_EXEC(QSSLERROR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSSLERROR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSSLERROR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSSLERROR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSSLERROR_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
