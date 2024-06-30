@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 CLASS HCodeBlockValidator INHERIT QValidator
@@ -24,6 +26,8 @@ PROCEDURE destroyObject() CLASS HCodeBlockValidator
       ::delete()
    ENDIF
 RETURN
+
+// clang-format on
 
 #pragma BEGINDUMP
 
