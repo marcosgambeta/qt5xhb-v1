@@ -41,7 +41,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWebChannel/QWebChannelAbstractTransport>
 #endif
 #endif
@@ -53,17 +53,17 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWebChannel/QWebChannelAbstractTransport>
 #endif
 #endif
 
-HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_DELETE )
+HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannelAbstractTransport * obj = (QWebChannelAbstractTransport *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebChannelAbstractTransport *obj = (QWebChannelAbstractTransport *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -81,18 +81,18 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_DELETE )
 /*
 virtual void sendMessage( const QJsonObject & message ) = 0
 */
-HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
+HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannelAbstractTransport * obj = (QWebChannelAbstractTransport *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebChannelAbstractTransport *obj = (QWebChannelAbstractTransport *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQJSONOBJECT(1) )
+    if (ISNUMPAR(1) && ISQJSONOBJECT(1))
     {
 #endif
-      obj->sendMessage( *PQJSONOBJECT(1) );
+      obj->sendMessage(*PQJSONOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,12 +106,13 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
 #endif
 }
 
-void QWebChannelAbstractTransportSlots_connect_signal(const QString & signal, const QString & slot);
+void QWebChannelAbstractTransportSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
+HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannelAbstractTransportSlots_connect_signal("messageReceived(QJsonObject,QWebChannelAbstractTransport*)", "messageReceived(QJsonObject,QWebChannelAbstractTransport*)");
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebChannelAbstractTransportSlots_connect_signal("messageReceived(QJsonObject,QWebChannelAbstractTransport*)",
+                                                   "messageReceived(QJsonObject,QWebChannelAbstractTransport*)");
 #else
   hb_retl(false);
 #endif
