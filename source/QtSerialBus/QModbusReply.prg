@@ -48,7 +48,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusReply>
 #endif
 #endif
@@ -60,20 +60,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusReply>
 #endif
 #endif
 
-/*
-QModbusReply( QModbusReply::ReplyType type, int serverAddress, QObject * parent = nullptr )
-*/
-HB_FUNC_STATIC( QMODBUSREPLY_NEW )
+    /*
+    QModbusReply( QModbusReply::ReplyType type, int serverAddress, QObject * parent = nullptr )
+    */
+HB_FUNC_STATIC(QMODBUSREPLY_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    QModbusReply * obj = new QModbusReply( (QModbusReply::ReplyType) hb_parni(1), PINT(2), OPQOBJECT(3,nullptr) );
+    QModbusReply *obj = new QModbusReply((QModbusReply::ReplyType)hb_parni(1), PINT(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -86,18 +86,18 @@ HB_FUNC_STATIC( QMODBUSREPLY_NEW )
 /*
 QModbusReply::ReplyType type() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_TYPE )
+HB_FUNC_STATIC(QMODBUSREPLY_TYPE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReply * obj = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,18 +112,18 @@ HB_FUNC_STATIC( QMODBUSREPLY_TYPE )
 /*
 int serverAddress() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_SERVERADDRESS )
+HB_FUNC_STATIC(QMODBUSREPLY_SERVERADDRESS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReply * obj = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->serverAddress() );
+      RINT(obj->serverAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,18 +138,18 @@ HB_FUNC_STATIC( QMODBUSREPLY_SERVERADDRESS )
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_ISFINISHED )
+HB_FUNC_STATIC(QMODBUSREPLY_ISFINISHED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReply * obj = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFinished() );
+      RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,18 +164,18 @@ HB_FUNC_STATIC( QMODBUSREPLY_ISFINISHED )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_ERRORSTRING )
+HB_FUNC_STATIC(QMODBUSREPLY_ERRORSTRING)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReply * obj = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,18 +190,18 @@ HB_FUNC_STATIC( QMODBUSREPLY_ERRORSTRING )
 /*
 QModbusDevice::Error error() const
 */
-HB_FUNC_STATIC( QMODBUSREPLY_ERROR )
+HB_FUNC_STATIC(QMODBUSREPLY_ERROR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReply * obj = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,18 +216,18 @@ HB_FUNC_STATIC( QMODBUSREPLY_ERROR )
 /*
 void setFinished( bool isFinished )
 */
-HB_FUNC_STATIC( QMODBUSREPLY_SETFINISHED )
+HB_FUNC_STATIC(QMODBUSREPLY_SETFINISHED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReply * obj = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setFinished( PBOOL(1) );
+      obj->setFinished(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,18 +244,18 @@ HB_FUNC_STATIC( QMODBUSREPLY_SETFINISHED )
 /*
 void setError( QModbusDevice::Error error, const QString & errorText )
 */
-HB_FUNC_STATIC( QMODBUSREPLY_SETERROR )
+HB_FUNC_STATIC(QMODBUSREPLY_SETERROR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReply * obj = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setError( (QModbusDevice::Error) hb_parni(1), PQSTRING(2) );
+      obj->setError((QModbusDevice::Error)hb_parni(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,20 +269,20 @@ HB_FUNC_STATIC( QMODBUSREPLY_SETERROR )
 #endif
 }
 
-void QModbusReplySlots_connect_signal(const QString & signal, const QString & slot);
+void QModbusReplySlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
+HB_FUNC_STATIC(QMODBUSREPLY_ONFINISHED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusReplySlots_connect_signal("finished()", "finished()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QMODBUSREPLY_ONERROROCCURRED )
+HB_FUNC_STATIC(QMODBUSREPLY_ONERROROCCURRED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusReplySlots_connect_signal("errorOccurred(QModbusDevice::Error)", "errorOccurred(QModbusDevice::Error)");
 #else
   hb_retl(false);

@@ -41,7 +41,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusRtuSerialMaster>
 #endif
 #endif
@@ -53,20 +53,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusRtuSerialMaster>
 #endif
 #endif
 
-/*
-QModbusRtuSerialMaster( QObject * parent = nullptr )
-*/
-HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_NEW )
+    /*
+    QModbusRtuSerialMaster( QObject * parent = nullptr )
+    */
+HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QModbusRtuSerialMaster * obj = new QModbusRtuSerialMaster( OPQOBJECT(1,nullptr) );
+    QModbusRtuSerialMaster *obj = new QModbusRtuSerialMaster(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -79,12 +79,12 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_NEW )
 /*
 ~QModbusRtuSerialMaster()
 */
-HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_DELETE )
+HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusRtuSerialMaster * obj = (QModbusRtuSerialMaster *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusRtuSerialMaster *obj = (QModbusRtuSerialMaster *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -102,18 +102,18 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_DELETE )
 /*
 int interFrameDelay() const
 */
-HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY )
+HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusRtuSerialMaster * obj = (QModbusRtuSerialMaster *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusRtuSerialMaster *obj = (QModbusRtuSerialMaster *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->interFrameDelay() );
+      RINT(obj->interFrameDelay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,18 +128,18 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY )
 /*
 void setInterFrameDelay( int microseconds )
 */
-HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_SETINTERFRAMEDELAY )
+HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_SETINTERFRAMEDELAY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusRtuSerialMaster * obj = (QModbusRtuSerialMaster *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusRtuSerialMaster *obj = (QModbusRtuSerialMaster *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setInterFrameDelay( PINT(1) );
+      obj->setInterFrameDelay(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

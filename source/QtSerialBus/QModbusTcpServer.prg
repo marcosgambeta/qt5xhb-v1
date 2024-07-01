@@ -39,7 +39,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusTcpServer>
 #endif
 #endif
@@ -51,20 +51,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusTcpServer>
 #endif
 #endif
 
-/*
-QModbusTcpServer( QObject * parent = nullptr )
-*/
-HB_FUNC_STATIC( QMODBUSTCPSERVER_NEW )
+    /*
+    QModbusTcpServer( QObject * parent = nullptr )
+    */
+HB_FUNC_STATIC(QMODBUSTCPSERVER_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QModbusTcpServer * obj = new QModbusTcpServer( OPQOBJECT(1,nullptr) );
+    QModbusTcpServer *obj = new QModbusTcpServer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -77,12 +77,12 @@ HB_FUNC_STATIC( QMODBUSTCPSERVER_NEW )
 /*
 ~QModbusTcpServer()
 */
-HB_FUNC_STATIC( QMODBUSTCPSERVER_DELETE )
+HB_FUNC_STATIC(QMODBUSTCPSERVER_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusTcpServer * obj = (QModbusTcpServer *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusTcpServer *obj = (QModbusTcpServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

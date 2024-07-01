@@ -36,7 +36,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #include <QtSerialBus/QCanBusFactoryV2>
 #endif
 #endif
@@ -46,7 +46,7 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #include <QtSerialBus/QCanBusFactoryV2>
 #endif
 #endif

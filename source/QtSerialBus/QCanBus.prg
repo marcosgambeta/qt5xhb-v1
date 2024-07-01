@@ -43,7 +43,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QCanBus>
 #endif
 #endif
@@ -55,22 +55,22 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QCanBus>
 #endif
 #endif
 
-/*
-static QCanBus * instance()
-*/
-HB_FUNC_STATIC( QCANBUS_INSTANCE )
+    /*
+    static QCanBus * instance()
+    */
+HB_FUNC_STATIC(QCANBUS_INSTANCE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    QCanBus * ptr = QCanBus::instance();
+    QCanBus *ptr = QCanBus::instance();
     Qt5xHb::createReturnQObjectClass(ptr, "QCANBUS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -85,18 +85,18 @@ HB_FUNC_STATIC( QCANBUS_INSTANCE )
 /*
 QStringList plugins() const
 */
-HB_FUNC_STATIC( QCANBUS_PLUGINS )
+HB_FUNC_STATIC(QCANBUS_PLUGINS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBus * obj = (QCanBus *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QCanBus *obj = (QCanBus *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->plugins() );
+      RQSTRINGLIST(obj->plugins());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,23 +111,23 @@ HB_FUNC_STATIC( QCANBUS_PLUGINS )
 /*
 QList<QCanBusDeviceInfo> availableDevices( const QString & plugin, QString * errorMessage = nullptr ) const
 */
-HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
+HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QCanBus * obj = (QCanBus *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
+  QCanBus *obj = (QCanBus *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      QList<QCanBusDeviceInfo> list = obj->availableDevices( PQSTRING(1), NULL );
+      QList<QCanBusDeviceInfo> list = obj->availableDevices(PQSTRING(1), NULL);
       PHB_DYNS pDynSym = hb_dynsymFindName("QCANBUSDEVICEINFO");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
-        for( int i = 0; i < list.count(); i++ )
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -161,20 +161,21 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
 }
 
 /*
-QCanBusDevice * createDevice( const QString & plugin, const QString & interfaceName, QString * errorMessage = nullptr ) const
+QCanBusDevice * createDevice( const QString & plugin, const QString & interfaceName, QString * errorMessage = nullptr )
+const
 */
-HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
+HB_FUNC_STATIC(QCANBUS_CREATEDEVICE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBus * obj = (QCanBus *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QCanBus *obj = (QCanBus *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)))
     {
 #endif
-      QCanBusDevice * ptr = obj->createDevice( PQSTRING(1), PQSTRING(2), NULL );
+      QCanBusDevice *ptr = obj->createDevice(PQSTRING(1), PQSTRING(2), NULL);
       Qt5xHb::createReturnQObjectClass(ptr, "QCANBUSDEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

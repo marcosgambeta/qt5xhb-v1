@@ -40,7 +40,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusRtuSerialSlave>
 #endif
 #endif
@@ -52,20 +52,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusRtuSerialSlave>
 #endif
 #endif
 
-/*
-QModbusRtuSerialSlave( QObject * parent = nullptr )
-*/
-HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_NEW )
+    /*
+    QModbusRtuSerialSlave( QObject * parent = nullptr )
+    */
+HB_FUNC_STATIC(QMODBUSRTUSERIALSLAVE_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QModbusRtuSerialSlave * obj = new QModbusRtuSerialSlave( OPQOBJECT(1,nullptr) );
+    QModbusRtuSerialSlave *obj = new QModbusRtuSerialSlave(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -78,12 +78,12 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_NEW )
 /*
 ~QModbusRtuSerialSlave()
 */
-HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_DELETE )
+HB_FUNC_STATIC(QMODBUSRTUSERIALSLAVE_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusRtuSerialSlave * obj = (QModbusRtuSerialSlave *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusRtuSerialSlave *obj = (QModbusRtuSerialSlave *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -101,18 +101,18 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_DELETE )
 /*
 bool processesBroadcast() const override
 */
-HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_PROCESSESBROADCAST )
+HB_FUNC_STATIC(QMODBUSRTUSERIALSLAVE_PROCESSESBROADCAST)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusRtuSerialSlave * obj = (QModbusRtuSerialSlave *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusRtuSerialSlave *obj = (QModbusRtuSerialSlave *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->processesBroadcast() );
+      RBOOL(obj->processesBroadcast());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

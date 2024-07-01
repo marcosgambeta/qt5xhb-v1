@@ -45,7 +45,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusClient>
 #endif
 #endif
@@ -57,20 +57,20 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #include <QtSerialBus/QModbusClient>
 #endif
 #endif
 
-/*
-QModbusClient( QObject * parent = nullptr )
-*/
-HB_FUNC_STATIC( QMODBUSCLIENT_NEW )
+    /*
+    QModbusClient( QObject * parent = nullptr )
+    */
+HB_FUNC_STATIC(QMODBUSCLIENT_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QModbusClient * obj = new QModbusClient( OPQOBJECT(1,nullptr) );
+    QModbusClient *obj = new QModbusClient(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -83,12 +83,12 @@ HB_FUNC_STATIC( QMODBUSCLIENT_NEW )
 /*
 ~QModbusClient()
 */
-HB_FUNC_STATIC( QMODBUSCLIENT_DELETE )
+HB_FUNC_STATIC(QMODBUSCLIENT_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusClient * obj = (QModbusClient *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusClient *obj = (QModbusClient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -106,18 +106,18 @@ HB_FUNC_STATIC( QMODBUSCLIENT_DELETE )
 /*
 int timeout() const
 */
-HB_FUNC_STATIC( QMODBUSCLIENT_TIMEOUT )
+HB_FUNC_STATIC(QMODBUSCLIENT_TIMEOUT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusClient * obj = (QModbusClient *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusClient *obj = (QModbusClient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->timeout() );
+      RINT(obj->timeout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,18 +132,18 @@ HB_FUNC_STATIC( QMODBUSCLIENT_TIMEOUT )
 /*
 void setTimeout( int newTimeout )
 */
-HB_FUNC_STATIC( QMODBUSCLIENT_SETTIMEOUT )
+HB_FUNC_STATIC(QMODBUSCLIENT_SETTIMEOUT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusClient * obj = (QModbusClient *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusClient *obj = (QModbusClient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTimeout( PINT(1) );
+      obj->setTimeout(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,18 +160,18 @@ HB_FUNC_STATIC( QMODBUSCLIENT_SETTIMEOUT )
 /*
 int numberOfRetries() const
 */
-HB_FUNC_STATIC( QMODBUSCLIENT_NUMBEROFRETRIES )
+HB_FUNC_STATIC(QMODBUSCLIENT_NUMBEROFRETRIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusClient * obj = (QModbusClient *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusClient *obj = (QModbusClient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->numberOfRetries() );
+      RINT(obj->numberOfRetries());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,18 +186,18 @@ HB_FUNC_STATIC( QMODBUSCLIENT_NUMBEROFRETRIES )
 /*
 void setNumberOfRetries( int number )
 */
-HB_FUNC_STATIC( QMODBUSCLIENT_SETNUMBEROFRETRIES )
+HB_FUNC_STATIC(QMODBUSCLIENT_SETNUMBEROFRETRIES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusClient * obj = (QModbusClient *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
+  QModbusClient *obj = (QModbusClient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setNumberOfRetries( PINT(1) );
+      obj->setNumberOfRetries(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,11 +211,11 @@ HB_FUNC_STATIC( QMODBUSCLIENT_SETNUMBEROFRETRIES )
 #endif
 }
 
-void QModbusClientSlots_connect_signal(const QString & signal, const QString & slot);
+void QModbusClientSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
+HB_FUNC_STATIC(QMODBUSCLIENT_ONTIMEOUTCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusClientSlots_connect_signal("timeoutChanged(int)", "timeoutChanged(int)");
 #else
   hb_retl(false);
