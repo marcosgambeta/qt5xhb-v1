@@ -87,7 +87,7 @@ http://www.mediafire.com/file/82yql0w5t6a388u/harbour320dev-qt551-mingw492-32bit
 
 ## To contact the developer
 
-Send you message to: marcosgambeta AT outlook DOT com
+Send your message to: marcosgambeta AT outlook DOT com
 
 ## More info and extra content
 
