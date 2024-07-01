@@ -62,7 +62,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSerialPort/QSerialPortInfo>
 #endif
 #endif
@@ -72,53 +72,53 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #include <QtSerialPort/QSerialPortInfo>
 #endif
 #endif
 
 #include <QtCore/QString>
 
-HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
+HB_FUNC_STATIC(QSERIALPORTINFO_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISNUMPAR(0) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  if (ISNUMPAR(0))
   {
     /*
     QSerialPortInfo()
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    QSerialPortInfo * obj = new QSerialPortInfo();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+    QSerialPortInfo *obj = new QSerialPortInfo();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if( ISNUMPAR(1) && ISQSERIALPORT(1) )
+  else if (ISNUMPAR(1) && ISQSERIALPORT(1))
   {
     /*
     QSerialPortInfo( const QSerialPort & port )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    QSerialPortInfo * obj = new QSerialPortInfo( *PQSERIALPORT(1) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+    QSerialPortInfo *obj = new QSerialPortInfo(*PQSERIALPORT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     QSerialPortInfo( const QString & name )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    QSerialPortInfo * obj = new QSerialPortInfo( PQSTRING(1) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+    QSerialPortInfo *obj = new QSerialPortInfo(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if( ISNUMPAR(1) && ISQSERIALPORTINFO(1) )
+  else if (ISNUMPAR(1) && ISQSERIALPORTINFO(1))
   {
     /*
     QSerialPortInfo( const QSerialPortInfo & other )
     */
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-    QSerialPortInfo * obj = new QSerialPortInfo( *PQSERIALPORTINFO(1) );
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+    QSerialPortInfo *obj = new QSerialPortInfo(*PQSERIALPORTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
@@ -129,12 +129,12 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QSERIALPORTINFO_DELETE )
+HB_FUNC_STATIC(QSERIALPORTINFO_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -150,18 +150,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_DELETE )
 /*
 void swap( QSerialPortInfo & other )
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_SWAP )
+HB_FUNC_STATIC(QSERIALPORTINFO_SWAP)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSERIALPORTINFO(1) )
+    if (ISNUMPAR(1) && ISQSERIALPORTINFO(1))
     {
 #endif
-      obj->swap( *PQSERIALPORTINFO(1) );
+      obj->swap(*PQSERIALPORTINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,18 +178,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_SWAP )
 /*
 QString portName() const
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_PORTNAME )
+HB_FUNC_STATIC(QSERIALPORTINFO_PORTNAME)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->portName() );
+      RQSTRING(obj->portName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,18 +204,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_PORTNAME )
 /*
 QString systemLocation() const
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_SYSTEMLOCATION )
+HB_FUNC_STATIC(QSERIALPORTINFO_SYSTEMLOCATION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->systemLocation() );
+      RQSTRING(obj->systemLocation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,18 +230,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_SYSTEMLOCATION )
 /*
 QString description() const
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_DESCRIPTION )
+HB_FUNC_STATIC(QSERIALPORTINFO_DESCRIPTION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->description() );
+      RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,18 +256,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_DESCRIPTION )
 /*
 QString manufacturer() const
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_MANUFACTURER )
+HB_FUNC_STATIC(QSERIALPORTINFO_MANUFACTURER)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->manufacturer() );
+      RQSTRING(obj->manufacturer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,18 +282,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_MANUFACTURER )
 /*
 quint16 vendorIdentifier() const
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_VENDORIDENTIFIER )
+HB_FUNC_STATIC(QSERIALPORTINFO_VENDORIDENTIFIER)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQUINT16( obj->vendorIdentifier() );
+      RQUINT16(obj->vendorIdentifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,18 +308,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_VENDORIDENTIFIER )
 /*
 quint16 productIdentifier() const
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_PRODUCTIDENTIFIER )
+HB_FUNC_STATIC(QSERIALPORTINFO_PRODUCTIDENTIFIER)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQUINT16( obj->productIdentifier() );
+      RQUINT16(obj->productIdentifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,18 +334,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_PRODUCTIDENTIFIER )
 /*
 bool hasVendorIdentifier() const
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_HASVENDORIDENTIFIER )
+HB_FUNC_STATIC(QSERIALPORTINFO_HASVENDORIDENTIFIER)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasVendorIdentifier() );
+      RBOOL(obj->hasVendorIdentifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,18 +360,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_HASVENDORIDENTIFIER )
 /*
 bool hasProductIdentifier() const
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_HASPRODUCTIDENTIFIER )
+HB_FUNC_STATIC(QSERIALPORTINFO_HASPRODUCTIDENTIFIER)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasProductIdentifier() );
+      RBOOL(obj->hasProductIdentifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,18 +386,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_HASPRODUCTIDENTIFIER )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_ISNULL )
+HB_FUNC_STATIC(QSERIALPORTINFO_ISNULL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,18 +412,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_ISNULL )
 /*
 bool isBusy() const
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_ISBUSY )
+HB_FUNC_STATIC(QSERIALPORTINFO_ISBUSY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isBusy() );
+      RBOOL(obj->isBusy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -438,18 +438,18 @@ HB_FUNC_STATIC( QSERIALPORTINFO_ISBUSY )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_ISVALID )
+HB_FUNC_STATIC(QSERIALPORTINFO_ISVALID)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = (QSerialPortInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
+  QSerialPortInfo *obj = (QSerialPortInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,11 +464,11 @@ HB_FUNC_STATIC( QSERIALPORTINFO_ISVALID )
 /*
 static QList<qint32> standardBaudRates()
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_STANDARDBAUDRATES )
+HB_FUNC_STATIC(QSERIALPORTINFO_STANDARDBAUDRATES)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     QList<qint32> list = QSerialPortInfo::standardBaudRates();
@@ -486,19 +486,19 @@ HB_FUNC_STATIC( QSERIALPORTINFO_STANDARDBAUDRATES )
 /*
 static QList<QSerialPortInfo> availablePorts()
 */
-HB_FUNC_STATIC( QSERIALPORTINFO_AVAILABLEPORTS )
+HB_FUNC_STATIC(QSERIALPORTINFO_AVAILABLEPORTS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     QList<QSerialPortInfo> list = QSerialPortInfo::availablePorts();
     PHB_DYNS pDynSym = hb_dynsymFindName("QSERIALPORTINFO");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym != NULL )
+    if (pDynSym != NULL)
     {
-      for( int i = 0; i < list.count(); i++ )
+      for (int i = 0; i < list.count(); i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -530,11 +530,11 @@ HB_FUNC_STATIC( QSERIALPORTINFO_AVAILABLEPORTS )
 #endif
 }
 
-HB_FUNC_STATIC( QSERIALPORTINFO_NEWFROM )
+HB_FUNC_STATIC(QSERIALPORTINFO_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -560,26 +560,26 @@ HB_FUNC_STATIC( QSERIALPORTINFO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSERIALPORTINFO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSERIALPORTINFO_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSERIALPORTINFO_NEWFROM );
+  HB_FUNC_EXEC(QSERIALPORTINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSERIALPORTINFO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSERIALPORTINFO_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSERIALPORTINFO_NEWFROM );
+  HB_FUNC_EXEC(QSERIALPORTINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSERIALPORTINFO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSERIALPORTINFO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSERIALPORTINFO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSERIALPORTINFO_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
