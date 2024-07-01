@@ -52,14 +52,14 @@ RETURN
 #include <QtVirtualKeyboard/QVirtualKeyboardExtensionPlugin>
 #endif
 
-/*
-virtual ~QVirtualKeyboardExtensionPlugin()
-*/
-HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE )
+    /*
+    virtual ~QVirtualKeyboardExtensionPlugin()
+    */
+HB_FUNC_STATIC(QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE)
 {
-  QVirtualKeyboardExtensionPlugin * obj = (QVirtualKeyboardExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVirtualKeyboardExtensionPlugin *obj = (QVirtualKeyboardExtensionPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -76,17 +76,17 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE )
 /*
 virtual void registerTypes( const char * uri ) const
 */
-HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES )
+HB_FUNC_STATIC(QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES)
 {
-  QVirtualKeyboardExtensionPlugin * obj = (QVirtualKeyboardExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QVirtualKeyboardExtensionPlugin *obj = (QVirtualKeyboardExtensionPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->registerTypes( PCONSTCHAR(1) );
+      obj->registerTypes(PCONSTCHAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
