@@ -56,7 +56,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWebEngineWidgets/QWebEngineHistoryItem>
 #endif
 #endif
@@ -66,20 +66,20 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWebEngineWidgets/QWebEngineHistoryItem>
 #endif
 #endif
 
-/*
-QWebEngineHistoryItem( const QWebEngineHistoryItem & other )
-*/
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEW )
+    /*
+    QWebEngineHistoryItem( const QWebEngineHistoryItem & other )
+    */
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISNUMPAR(1) && ISQWEBENGINEHISTORYITEM(1) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  if (ISNUMPAR(1) && ISQWEBENGINEHISTORYITEM(1))
   {
-    QWebEngineHistoryItem * obj = new QWebEngineHistoryItem( *PQWEBENGINEHISTORYITEM(1) );
+    QWebEngineHistoryItem *obj = new QWebEngineHistoryItem(*PQWEBENGINEHISTORYITEM(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -89,12 +89,12 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_DELETE )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineHistoryItem *obj = (QWebEngineHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -110,18 +110,18 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_DELETE )
 /*
 QUrl originalUrl() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ORIGINALURL )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ORIGINALURL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineHistoryItem *obj = (QWebEngineHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->originalUrl() );
+      QUrl *ptr = new QUrl(obj->originalUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -137,18 +137,18 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ORIGINALURL )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_URL )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_URL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineHistoryItem *obj = (QWebEngineHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url() );
+      QUrl *ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -164,18 +164,18 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_URL )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_TITLE )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_TITLE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineHistoryItem *obj = (QWebEngineHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,18 +190,18 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_TITLE )
 /*
 QDateTime lastVisited() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_LASTVISITED )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_LASTVISITED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineHistoryItem *obj = (QWebEngineHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->lastVisited() );
+      QDateTime *ptr = new QDateTime(obj->lastVisited());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -217,18 +217,18 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_LASTVISITED )
 /*
 QUrl iconUrl() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ICONURL )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ICONURL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineHistoryItem *obj = (QWebEngineHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->iconUrl() );
+      QUrl *ptr = new QUrl(obj->iconUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -244,18 +244,18 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ICONURL )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ISVALID )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_ISVALID)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineHistoryItem *obj = (QWebEngineHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,11 +267,11 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ISVALID )
 #endif
 }
 
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEWFROM )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -297,26 +297,26 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QWEBENGINEHISTORYITEM_NEWFROM );
+  HB_FUNC_EXEC(QWEBENGINEHISTORYITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QWEBENGINEHISTORYITEM_NEWFROM );
+  HB_FUNC_EXEC(QWEBENGINEHISTORYITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

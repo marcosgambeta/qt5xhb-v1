@@ -73,7 +73,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWebEngineWidgets/QWebEngineView>
 #endif
 #endif
@@ -85,22 +85,22 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWebEngineWidgets/QWebEngineView>
 #endif
 #endif
 
 #include <QtWidgets/QAction>
 
-/*
-QWebEngineView( QWidget * parent = 0 )
-*/
-HB_FUNC_STATIC( QWEBENGINEVIEW_NEW )
+    /*
+    QWebEngineView( QWidget * parent = 0 )
+    */
+HB_FUNC_STATIC(QWEBENGINEVIEW_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    QWebEngineView * obj = new QWebEngineView( OPQWIDGET(1,0) );
+    QWebEngineView *obj = new QWebEngineView(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -110,12 +110,12 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QWEBENGINEVIEW_DELETE )
+HB_FUNC_STATIC(QWEBENGINEVIEW_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -133,18 +133,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_DELETE )
 /*
 QWebEnginePage * page() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_PAGE )
+HB_FUNC_STATIC(QWEBENGINEVIEW_PAGE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebEnginePage * ptr = obj->page();
+      QWebEnginePage *ptr = obj->page();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBENGINEPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -160,18 +160,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGE )
 /*
 void setPage( QWebEnginePage * page )
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SETPAGE )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SETPAGE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBENGINEPAGE(1) )
+    if (ISNUMPAR(1) && ISQWEBENGINEPAGE(1))
     {
 #endif
-      obj->setPage( PQWEBENGINEPAGE(1) );
+      obj->setPage(PQWEBENGINEPAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,18 +188,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETPAGE )
 /*
 void load( const QUrl & url )
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_LOAD )
+HB_FUNC_STATIC(QWEBENGINEVIEW_LOAD)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->load( *PQURL(1) );
+      obj->load(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,18 +216,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_LOAD )
 /*
 void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SETHTML )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SETHTML)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQURL(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQURL(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setHtml( PQSTRING(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+      obj->setHtml(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,18 +244,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETHTML )
 /*
 void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SETCONTENT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2,QString()), HB_ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3) );
+      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,18 +272,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
 /*
 QWebEngineHistory * history() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_HISTORY )
+HB_FUNC_STATIC(QWEBENGINEVIEW_HISTORY)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebEngineHistory * ptr = obj->history();
+      QWebEngineHistory *ptr = obj->history();
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -299,18 +299,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_HISTORY )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_TITLE )
+HB_FUNC_STATIC(QWEBENGINEVIEW_TITLE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,18 +325,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_TITLE )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_URL )
+HB_FUNC_STATIC(QWEBENGINEVIEW_URL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url() );
+      QUrl *ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -352,18 +352,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_URL )
 /*
 void setUrl( const QUrl & url )
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SETURL )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SETURL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1) );
+      obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,18 +380,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETURL )
 /*
 QUrl iconUrl() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_ICONURL )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ICONURL)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->iconUrl() );
+      QUrl *ptr = new QUrl(obj->iconUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -407,18 +407,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ICONURL )
 /*
 bool hasSelection() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_HASSELECTION )
+HB_FUNC_STATIC(QWEBENGINEVIEW_HASSELECTION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasSelection() );
+      RBOOL(obj->hasSelection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,18 +433,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_HASSELECTION )
 /*
 QString selectedText() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SELECTEDTEXT )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SELECTEDTEXT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->selectedText() );
+      RQSTRING(obj->selectedText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,19 +459,19 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SELECTEDTEXT )
 /*
 QAction* pageAction(QWebEnginePage::WebAction action) const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
+HB_FUNC_STATIC(QWEBENGINEVIEW_PAGEACTION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_ACTION
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QAction * ptr = obj->pageAction( (QWebEnginePage::WebAction) hb_parni(1) );
+      QAction *ptr = obj->pageAction((QWebEnginePage::WebAction)hb_parni(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -488,18 +488,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
 /*
 void triggerPageAction( QWebEnginePage::WebAction action, bool checked = false )
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
+HB_FUNC_STATIC(QWEBENGINEVIEW_TRIGGERPAGEACTION)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->triggerPageAction( (QWebEnginePage::WebAction) hb_parni(1), OPBOOL(2,false) );
+      obj->triggerPageAction((QWebEnginePage::WebAction)hb_parni(1), OPBOOL(2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -516,18 +516,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
 /*
 qreal zoomFactor() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_ZOOMFACTOR )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ZOOMFACTOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->zoomFactor() );
+      RQREAL(obj->zoomFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -542,18 +542,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ZOOMFACTOR )
 /*
 void setZoomFactor( qreal factor )
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SETZOOMFACTOR )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SETZOOMFACTOR)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setZoomFactor( PQREAL(1) );
+      obj->setZoomFactor(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -570,18 +570,18 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETZOOMFACTOR )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_SIZEHINT )
+HB_FUNC_STATIC(QWEBENGINEVIEW_SIZEHINT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint() );
+      QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -597,15 +597,15 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SIZEHINT )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_STOP )
+HB_FUNC_STATIC(QWEBENGINEVIEW_STOP)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -625,15 +625,15 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_STOP )
 /*
 void back()
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_BACK )
+HB_FUNC_STATIC(QWEBENGINEVIEW_BACK)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->back();
@@ -653,15 +653,15 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_BACK )
 /*
 void forward()
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_FORWARD )
+HB_FUNC_STATIC(QWEBENGINEVIEW_FORWARD)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->forward();
@@ -681,15 +681,15 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_FORWARD )
 /*
 void reload()
 */
-HB_FUNC_STATIC( QWEBENGINEVIEW_RELOAD )
+HB_FUNC_STATIC(QWEBENGINEVIEW_RELOAD)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * obj = (QWebEngineView *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+  QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reload();
@@ -706,65 +706,65 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_RELOAD )
 #endif
 }
 
-void QWebEngineViewSlots_connect_signal(const QString & signal, const QString & slot);
+void QWebEngineViewSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADSTARTED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADSTARTED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QWebEngineViewSlots_connect_signal("loadStarted()", "loadStarted()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADPROGRESS )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADPROGRESS)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QWebEngineViewSlots_connect_signal("loadProgress(int)", "loadProgress(int)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADFINISHED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONLOADFINISHED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QWebEngineViewSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONTITLECHANGED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONTITLECHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QWebEngineViewSlots_connect_signal("titleChanged(QString)", "titleChanged(QString)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONSELECTIONCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QWebEngineViewSlots_connect_signal("selectionChanged()", "selectionChanged()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONURLCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QWebEngineViewSlots_connect_signal("urlChanged(QUrl)", "urlChanged(QUrl)");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QWEBENGINEVIEW_ONICONURLCHANGED )
+HB_FUNC_STATIC(QWEBENGINEVIEW_ONICONURLCHANGED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QWebEngineViewSlots_connect_signal("iconUrlChanged(QUrl)", "iconUrlChanged(QUrl)");
 #else
   hb_retl(false);
