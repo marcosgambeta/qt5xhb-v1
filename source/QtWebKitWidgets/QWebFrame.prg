@@ -120,20 +120,20 @@ RETURN
 #include <QtWebKitWidgets/QWebPage>
 #include <QtWebKit/QWebSecurityOrigin>
 
-/*
-qreal textSizeMultiplier() const
-*/
-HB_FUNC_STATIC( QWEBFRAME_TEXTSIZEMULTIPLIER )
+    /*
+    qreal textSizeMultiplier() const
+    */
+HB_FUNC_STATIC(QWEBFRAME_TEXTSIZEMULTIPLIER)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->textSizeMultiplier() );
+      RQREAL(obj->textSizeMultiplier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,17 +147,17 @@ HB_FUNC_STATIC( QWEBFRAME_TEXTSIZEMULTIPLIER )
 /*
 void setTextSizeMultiplier( qreal factor )
 */
-HB_FUNC_STATIC( QWEBFRAME_SETTEXTSIZEMULTIPLIER )
+HB_FUNC_STATIC(QWEBFRAME_SETTEXTSIZEMULTIPLIER)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextSizeMultiplier( PQREAL(1) );
+      obj->setTextSizeMultiplier(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,17 +173,17 @@ HB_FUNC_STATIC( QWEBFRAME_SETTEXTSIZEMULTIPLIER )
 /*
 qreal zoomFactor() const
 */
-HB_FUNC_STATIC( QWEBFRAME_ZOOMFACTOR )
+HB_FUNC_STATIC(QWEBFRAME_ZOOMFACTOR)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->zoomFactor() );
+      RQREAL(obj->zoomFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,17 +197,17 @@ HB_FUNC_STATIC( QWEBFRAME_ZOOMFACTOR )
 /*
 void setZoomFactor( qreal factor )
 */
-HB_FUNC_STATIC( QWEBFRAME_SETZOOMFACTOR )
+HB_FUNC_STATIC(QWEBFRAME_SETZOOMFACTOR)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setZoomFactor( PQREAL(1) );
+      obj->setZoomFactor(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,17 +223,17 @@ HB_FUNC_STATIC( QWEBFRAME_SETZOOMFACTOR )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QWEBFRAME_TITLE )
+HB_FUNC_STATIC(QWEBFRAME_TITLE)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,17 +247,17 @@ HB_FUNC_STATIC( QWEBFRAME_TITLE )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QWEBFRAME_URL )
+HB_FUNC_STATIC(QWEBFRAME_URL)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url() );
+      QUrl *ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -272,17 +272,17 @@ HB_FUNC_STATIC( QWEBFRAME_URL )
 /*
 void setUrl( const QUrl & url )
 */
-HB_FUNC_STATIC( QWEBFRAME_SETURL )
+HB_FUNC_STATIC(QWEBFRAME_SETURL)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUrl( *PQURL(1) );
+      obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,17 +298,17 @@ HB_FUNC_STATIC( QWEBFRAME_SETURL )
 /*
 QUrl requestedUrl() const
 */
-HB_FUNC_STATIC( QWEBFRAME_REQUESTEDURL )
+HB_FUNC_STATIC(QWEBFRAME_REQUESTEDURL)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->requestedUrl() );
+      QUrl *ptr = new QUrl(obj->requestedUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -323,17 +323,17 @@ HB_FUNC_STATIC( QWEBFRAME_REQUESTEDURL )
 /*
 QUrl baseUrl() const
 */
-HB_FUNC_STATIC( QWEBFRAME_BASEURL )
+HB_FUNC_STATIC(QWEBFRAME_BASEURL)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->baseUrl() );
+      QUrl *ptr = new QUrl(obj->baseUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -348,17 +348,17 @@ HB_FUNC_STATIC( QWEBFRAME_BASEURL )
 /*
 QIcon icon() const
 */
-HB_FUNC_STATIC( QWEBFRAME_ICON )
+HB_FUNC_STATIC(QWEBFRAME_ICON)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon() );
+      QIcon *ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -373,17 +373,17 @@ HB_FUNC_STATIC( QWEBFRAME_ICON )
 /*
 QSize contentsSize() const
 */
-HB_FUNC_STATIC( QWEBFRAME_CONTENTSSIZE )
+HB_FUNC_STATIC(QWEBFRAME_CONTENTSSIZE)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->contentsSize() );
+      QSize *ptr = new QSize(obj->contentsSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -398,17 +398,17 @@ HB_FUNC_STATIC( QWEBFRAME_CONTENTSSIZE )
 /*
 QPoint scrollPosition() const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLPOSITION )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLPOSITION)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPoint * ptr = new QPoint( obj->scrollPosition() );
+      QPoint *ptr = new QPoint(obj->scrollPosition());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -423,17 +423,17 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLPOSITION )
 /*
 void setScrollPosition( const QPoint & pos )
 */
-HB_FUNC_STATIC( QWEBFRAME_SETSCROLLPOSITION )
+HB_FUNC_STATIC(QWEBFRAME_SETSCROLLPOSITION)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->setScrollPosition( *PQPOINT(1) );
+      obj->setScrollPosition(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,17 +449,17 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLPOSITION )
 /*
 bool hasFocus() const
 */
-HB_FUNC_STATIC( QWEBFRAME_HASFOCUS )
+HB_FUNC_STATIC(QWEBFRAME_HASFOCUS)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasFocus() );
+      RBOOL(obj->hasFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,19 +471,22 @@ HB_FUNC_STATIC( QWEBFRAME_HASFOCUS )
 }
 
 /*
-void addToJavaScriptWindowObject( const QString & name, QObject * object, QWebFrame::ValueOwnership ownership = QWebFrame::QtOwnership )
+void addToJavaScriptWindowObject( const QString & name, QObject * object, QWebFrame::ValueOwnership ownership =
+QWebFrame::QtOwnership )
 */
-HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
+HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISCHAR(1) && ISQOBJECT(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQOBJECT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->addToJavaScriptWindowObject( PQSTRING(1), PQOBJECT(2), HB_ISNIL(3)? (QWebFrame::ValueOwnership) QWebFrame::QtOwnership : (QWebFrame::ValueOwnership) hb_parni(3) );
+      obj->addToJavaScriptWindowObject(PQSTRING(1), PQOBJECT(2),
+                                       HB_ISNIL(3) ? (QWebFrame::ValueOwnership)QWebFrame::QtOwnership
+                                                   : (QWebFrame::ValueOwnership)hb_parni(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,22 +502,22 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
 /*
 QList<QWebFrame*> childFrames() const
 */
-HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
+HB_FUNC_STATIC(QWEBFRAME_CHILDFRAMES)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QList<QWebFrame*> list = obj->childFrames();
+      QList<QWebFrame *> list = obj->childFrames();
       PHB_DYNS pDynSym = hb_dynsymFindName("QWEBFRAME");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
-        for( int i = 0; i < list.count(); i++ )
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -546,17 +549,17 @@ HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
 /*
 QWebElement documentElement() const
 */
-HB_FUNC_STATIC( QWEBFRAME_DOCUMENTELEMENT )
+HB_FUNC_STATIC(QWEBFRAME_DOCUMENTELEMENT)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->documentElement() );
+      QWebElement *ptr = new QWebElement(obj->documentElement());
       Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -571,17 +574,17 @@ HB_FUNC_STATIC( QWEBFRAME_DOCUMENTELEMENT )
 /*
 QWebElementCollection findAllElements( const QString & selectorQuery ) const
 */
-HB_FUNC_STATIC( QWEBFRAME_FINDALLELEMENTS )
+HB_FUNC_STATIC(QWEBFRAME_FINDALLELEMENTS)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QWebElementCollection * ptr = new QWebElementCollection( obj->findAllElements( PQSTRING(1) ) );
+      QWebElementCollection *ptr = new QWebElementCollection(obj->findAllElements(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QWEBELEMENTCOLLECTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -596,17 +599,17 @@ HB_FUNC_STATIC( QWEBFRAME_FINDALLELEMENTS )
 /*
 QWebElement findFirstElement( const QString & selectorQuery ) const
 */
-HB_FUNC_STATIC( QWEBFRAME_FINDFIRSTELEMENT )
+HB_FUNC_STATIC(QWEBFRAME_FINDFIRSTELEMENT)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->findFirstElement( PQSTRING(1) ) );
+      QWebElement *ptr = new QWebElement(obj->findFirstElement(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -621,17 +624,17 @@ HB_FUNC_STATIC( QWEBFRAME_FINDFIRSTELEMENT )
 /*
 QString frameName() const
 */
-HB_FUNC_STATIC( QWEBFRAME_FRAMENAME )
+HB_FUNC_STATIC(QWEBFRAME_FRAMENAME)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->frameName() );
+      RQSTRING(obj->frameName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -645,17 +648,17 @@ HB_FUNC_STATIC( QWEBFRAME_FRAMENAME )
 /*
 QRect geometry() const
 */
-HB_FUNC_STATIC( QWEBFRAME_GEOMETRY )
+HB_FUNC_STATIC(QWEBFRAME_GEOMETRY)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRect * ptr = new QRect( obj->geometry() );
+      QRect *ptr = new QRect(obj->geometry());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -670,17 +673,17 @@ HB_FUNC_STATIC( QWEBFRAME_GEOMETRY )
 /*
 QWebHitTestResult hitTestContent( const QPoint & pos ) const
 */
-HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
+HB_FUNC_STATIC(QWEBFRAME_HITTESTCONTENT)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      QWebHitTestResult * ptr = new QWebHitTestResult( obj->hitTestContent( *PQPOINT(1) ) );
+      QWebHitTestResult *ptr = new QWebHitTestResult(obj->hitTestContent(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QWEBHITTESTRESULT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -692,34 +695,38 @@ HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
   }
 }
 
-HB_FUNC_STATIC( QWEBFRAME_LOAD )
+HB_FUNC_STATIC(QWEBFRAME_LOAD)
 {
-  if( ISNUMPAR(1) && ISQURL(1) )
+  if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
     void load( const QUrl & url )
     */
-    QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->load( *PQURL(1) );
+      obj->load(*PQURL(1));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && (ISQBYTEARRAY(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQBYTEARRAY(3) || HB_ISNIL(3)))
   {
     /*
-    void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+    void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation =
+    QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
     */
-    QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->load( *PQNETWORKREQUEST(1), HB_ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), HB_ISNIL(3)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(3) );
+      obj->load(*PQNETWORKREQUEST(1),
+                HB_ISNIL(2) ? (QNetworkAccessManager::Operation)QNetworkAccessManager::GetOperation
+                            : (QNetworkAccessManager::Operation)hb_parni(2),
+                HB_ISNIL(3) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(3));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
   else
@@ -731,17 +738,17 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
 /*
 QWebPage * page() const
 */
-HB_FUNC_STATIC( QWEBFRAME_PAGE )
+HB_FUNC_STATIC(QWEBFRAME_PAGE)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebPage * ptr = obj->page();
+      QWebPage *ptr = obj->page();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -756,17 +763,17 @@ HB_FUNC_STATIC( QWEBFRAME_PAGE )
 /*
 QWebFrame * parentFrame() const
 */
-HB_FUNC_STATIC( QWEBFRAME_PARENTFRAME )
+HB_FUNC_STATIC(QWEBFRAME_PARENTFRAME)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebFrame * ptr = obj->parentFrame();
+      QWebFrame *ptr = obj->parentFrame();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -781,17 +788,17 @@ HB_FUNC_STATIC( QWEBFRAME_PARENTFRAME )
 /*
 QPoint pos() const
 */
-HB_FUNC_STATIC( QWEBFRAME_POS )
+HB_FUNC_STATIC(QWEBFRAME_POS)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPoint * ptr = new QPoint( obj->pos() );
+      QPoint *ptr = new QPoint(obj->pos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -803,34 +810,35 @@ HB_FUNC_STATIC( QWEBFRAME_POS )
   }
 }
 
-HB_FUNC_STATIC( QWEBFRAME_RENDER )
+HB_FUNC_STATIC(QWEBFRAME_RENDER)
 {
-  if( ISBETWEEN(1,2) && ISQPAINTER(1) && (ISQREGION(2)||HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && ISQPAINTER(1) && (ISQREGION(2) || HB_ISNIL(2)))
   {
     /*
     void render( QPainter *, const QRegion & clip = QRegion() )
     */
-    QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->render( PQPAINTER(1), HB_ISNIL(2)? QRegion() : *(QRegion *) Qt5xHb::itemGetPtr(2) );
+      obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRegion() : *(QRegion *)Qt5xHb::itemGetPtr(2));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(2,3) && ISQPAINTER(1) && HB_ISNUM(2) && (ISQREGION(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISNUM(2) && (ISQREGION(3) || HB_ISNIL(3)))
   {
     /*
     void render( QPainter *, QWebFrame::RenderLayers layer, const QRegion & clip = QRegion() )
     */
-    QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
-  
-    if( obj != NULL )
+    QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
+
+    if (obj != NULL)
     {
-      obj->render( PQPAINTER(1), (QWebFrame::RenderLayers) hb_parni(2), HB_ISNIL(3)? QRegion() : *(QRegion *) Qt5xHb::itemGetPtr(3) );
+      obj->render(PQPAINTER(1), (QWebFrame::RenderLayers)hb_parni(2),
+                  HB_ISNIL(3) ? QRegion() : *(QRegion *)Qt5xHb::itemGetPtr(3));
     }
-  
+
     hb_itemReturn(hb_stackSelfItem());
   }
   else
@@ -842,17 +850,17 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER )
 /*
 void scroll( int dx, int dy )
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLL )
+HB_FUNC_STATIC(QWEBFRAME_SCROLL)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->scroll( PINT(1), PINT(2) );
+      obj->scroll(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -868,17 +876,17 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLL )
 /*
 QRect scrollBarGeometry( Qt::Orientation orientation ) const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLBARGEOMETRY)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QRect * ptr = new QRect( obj->scrollBarGeometry( (Qt::Orientation) hb_parni(1) ) );
+      QRect *ptr = new QRect(obj->scrollBarGeometry((Qt::Orientation)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -893,17 +901,17 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
 /*
 int scrollBarMaximum( Qt::Orientation orientation ) const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLBARMAXIMUM)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->scrollBarMaximum( (Qt::Orientation) hb_parni(1) ) );
+      RINT(obj->scrollBarMaximum((Qt::Orientation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -917,17 +925,17 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
 /*
 int scrollBarMinimum( Qt::Orientation orientation ) const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLBARMINIMUM)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->scrollBarMinimum( (Qt::Orientation) hb_parni(1) ) );
+      RINT(obj->scrollBarMinimum((Qt::Orientation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -941,17 +949,17 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
 /*
 Qt::ScrollBarPolicy scrollBarPolicy( Qt::Orientation orientation ) const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLBARPOLICY)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RENUM( obj->scrollBarPolicy( (Qt::Orientation) hb_parni(1) ) );
+      RENUM(obj->scrollBarPolicy((Qt::Orientation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -965,17 +973,17 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
 /*
 int scrollBarValue( Qt::Orientation orientation ) const
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLBARVALUE)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->scrollBarValue( (Qt::Orientation) hb_parni(1) ) );
+      RINT(obj->scrollBarValue((Qt::Orientation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -989,17 +997,17 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
 /*
 void scrollToAnchor( const QString & anchor )
 */
-HB_FUNC_STATIC( QWEBFRAME_SCROLLTOANCHOR )
+HB_FUNC_STATIC(QWEBFRAME_SCROLLTOANCHOR)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->scrollToAnchor( PQSTRING(1) );
+      obj->scrollToAnchor(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1015,17 +1023,17 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLTOANCHOR )
 /*
 QWebSecurityOrigin securityOrigin() const
 */
-HB_FUNC_STATIC( QWEBFRAME_SECURITYORIGIN )
+HB_FUNC_STATIC(QWEBFRAME_SECURITYORIGIN)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->securityOrigin() );
+      QWebSecurityOrigin *ptr = new QWebSecurityOrigin(obj->securityOrigin());
       Qt5xHb::createReturnClass(ptr, "QWEBSECURITYORIGIN", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1040,17 +1048,17 @@ HB_FUNC_STATIC( QWEBFRAME_SECURITYORIGIN )
 /*
 void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
-HB_FUNC_STATIC( QWEBFRAME_SETCONTENT )
+HB_FUNC_STATIC(QWEBFRAME_SETCONTENT)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)))
     {
 #endif
-      obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2,QString()), HB_ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3) );
+      obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1066,14 +1074,14 @@ HB_FUNC_STATIC( QWEBFRAME_SETCONTENT )
 /*
 void setFocus()
 */
-HB_FUNC_STATIC( QWEBFRAME_SETFOCUS )
+HB_FUNC_STATIC(QWEBFRAME_SETFOCUS)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->setFocus();
@@ -1092,17 +1100,17 @@ HB_FUNC_STATIC( QWEBFRAME_SETFOCUS )
 /*
 void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 */
-HB_FUNC_STATIC( QWEBFRAME_SETHTML )
+HB_FUNC_STATIC(QWEBFRAME_SETHTML)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQURL(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQURL(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setHtml( PQSTRING(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+      obj->setHtml(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1118,17 +1126,17 @@ HB_FUNC_STATIC( QWEBFRAME_SETHTML )
 /*
 void setScrollBarPolicy( Qt::Orientation orientation, Qt::ScrollBarPolicy policy )
 */
-HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARPOLICY )
+HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARPOLICY)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setScrollBarPolicy( (Qt::Orientation) hb_parni(1), (Qt::ScrollBarPolicy) hb_parni(2) );
+      obj->setScrollBarPolicy((Qt::Orientation)hb_parni(1), (Qt::ScrollBarPolicy)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1144,17 +1152,17 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARPOLICY )
 /*
 void setScrollBarValue( Qt::Orientation orientation, int value )
 */
-HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
+HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARVALUE)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setScrollBarValue( (Qt::Orientation) hb_parni(1), PINT(2) );
+      obj->setScrollBarValue((Qt::Orientation)hb_parni(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1170,17 +1178,17 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
 /*
 QString toHtml() const
 */
-HB_FUNC_STATIC( QWEBFRAME_TOHTML )
+HB_FUNC_STATIC(QWEBFRAME_TOHTML)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toHtml() );
+      RQSTRING(obj->toHtml());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1194,17 +1202,17 @@ HB_FUNC_STATIC( QWEBFRAME_TOHTML )
 /*
 QString toPlainText() const
 */
-HB_FUNC_STATIC( QWEBFRAME_TOPLAINTEXT )
+HB_FUNC_STATIC(QWEBFRAME_TOPLAINTEXT)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toPlainText() );
+      RQSTRING(obj->toPlainText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1218,17 +1226,17 @@ HB_FUNC_STATIC( QWEBFRAME_TOPLAINTEXT )
 /*
 QVariant evaluateJavaScript( const QString & scriptSource )
 */
-HB_FUNC_STATIC( QWEBFRAME_EVALUATEJAVASCRIPT )
+HB_FUNC_STATIC(QWEBFRAME_EVALUATEJAVASCRIPT)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->evaluateJavaScript( PQSTRING(1) ) );
+      QVariant *ptr = new QVariant(obj->evaluateJavaScript(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1243,18 +1251,18 @@ HB_FUNC_STATIC( QWEBFRAME_EVALUATEJAVASCRIPT )
 /*
 void print( QPrinter * printer ) const
 */
-HB_FUNC_STATIC( QWEBFRAME_PRINT )
+HB_FUNC_STATIC(QWEBFRAME_PRINT)
 {
 #ifndef QT_NO_PRINTER
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPRINTER(1) )
+    if (ISNUMPAR(1) && ISQPRINTER(1))
     {
 #endif
-      obj->print( PQPRINTER(1) );
+      obj->print(PQPRINTER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1271,17 +1279,17 @@ HB_FUNC_STATIC( QWEBFRAME_PRINT )
 /*
 virtual bool event( QEvent * )
 */
-HB_FUNC_STATIC( QWEBFRAME_EVENT )
+HB_FUNC_STATIC(QWEBFRAME_EVENT)
 {
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if (ISNUMPAR(1) && ISQEVENT(1))
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1292,49 +1300,49 @@ HB_FUNC_STATIC( QWEBFRAME_EVENT )
   }
 }
 
-void QWebFrameSlots_connect_signal(const QString & signal, const QString & slot);
+void QWebFrameSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
+HB_FUNC_STATIC(QWEBFRAME_ONCONTENTSSIZECHANGED)
 {
   QWebFrameSlots_connect_signal("contentsSizeChanged(QSize)", "contentsSizeChanged(QSize)");
 }
 
-HB_FUNC_STATIC( QWEBFRAME_ONICONCHANGED )
+HB_FUNC_STATIC(QWEBFRAME_ONICONCHANGED)
 {
   QWebFrameSlots_connect_signal("iconChanged()", "iconChanged()");
 }
 
-HB_FUNC_STATIC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
+HB_FUNC_STATIC(QWEBFRAME_ONINITIALLAYOUTCOMPLETED)
 {
   QWebFrameSlots_connect_signal("initialLayoutCompleted()", "initialLayoutCompleted()");
 }
 
-HB_FUNC_STATIC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
+HB_FUNC_STATIC(QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED)
 {
   QWebFrameSlots_connect_signal("javaScriptWindowObjectCleared()", "javaScriptWindowObjectCleared()");
 }
 
-HB_FUNC_STATIC( QWEBFRAME_ONLOADFINISHED )
+HB_FUNC_STATIC(QWEBFRAME_ONLOADFINISHED)
 {
   QWebFrameSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
 }
 
-HB_FUNC_STATIC( QWEBFRAME_ONLOADSTARTED )
+HB_FUNC_STATIC(QWEBFRAME_ONLOADSTARTED)
 {
   QWebFrameSlots_connect_signal("loadStarted()", "loadStarted()");
 }
 
-HB_FUNC_STATIC( QWEBFRAME_ONPAGECHANGED )
+HB_FUNC_STATIC(QWEBFRAME_ONPAGECHANGED)
 {
   QWebFrameSlots_connect_signal("pageChanged()", "pageChanged()");
 }
 
-HB_FUNC_STATIC( QWEBFRAME_ONTITLECHANGED )
+HB_FUNC_STATIC(QWEBFRAME_ONTITLECHANGED)
 {
   QWebFrameSlots_connect_signal("titleChanged(QString)", "titleChanged(QString)");
 }
 
-HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
+HB_FUNC_STATIC(QWEBFRAME_ONURLCHANGED)
 {
   QWebFrameSlots_connect_signal("urlChanged(QUrl)", "urlChanged(QUrl)");
 }
