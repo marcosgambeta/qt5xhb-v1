@@ -73,14 +73,14 @@ RETURN
 
 #include <QtCore/QVariant>
 
-/*
-QWebHistoryItem( const QWebHistoryItem & other )
-*/
-HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
+    /*
+    QWebHistoryItem( const QWebHistoryItem & other )
+    */
+HB_FUNC_STATIC(QWEBHISTORYITEM_NEW)
 {
-  if( ISNUMPAR(1) && ISQWEBHISTORYITEM(1) )
+  if (ISNUMPAR(1) && ISQWEBHISTORYITEM(1))
   {
-    QWebHistoryItem * obj = new QWebHistoryItem( *PQWEBHISTORYITEM(1) );
+    QWebHistoryItem *obj = new QWebHistoryItem(*PQWEBHISTORYITEM(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -89,11 +89,11 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWEBHISTORYITEM_DELETE )
+HB_FUNC_STATIC(QWEBHISTORYITEM_DELETE)
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebHistoryItem *obj = (QWebHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -108,17 +108,17 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_DELETE )
 /*
 QIcon icon() const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
+HB_FUNC_STATIC(QWEBHISTORYITEM_ICON)
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebHistoryItem *obj = (QWebHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon() );
+      QIcon *ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -133,17 +133,17 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
+HB_FUNC_STATIC(QWEBHISTORYITEM_ISVALID)
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebHistoryItem *obj = (QWebHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,17 +157,17 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
 /*
 QDateTime lastVisited() const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
+HB_FUNC_STATIC(QWEBHISTORYITEM_LASTVISITED)
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebHistoryItem *obj = (QWebHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->lastVisited() );
+      QDateTime *ptr = new QDateTime(obj->lastVisited());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -182,17 +182,17 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
 /*
 QUrl originalUrl() const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
+HB_FUNC_STATIC(QWEBHISTORYITEM_ORIGINALURL)
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebHistoryItem *obj = (QWebHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->originalUrl() );
+      QUrl *ptr = new QUrl(obj->originalUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -207,17 +207,17 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
 /*
 void setUserData( const QVariant & userData )
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
+HB_FUNC_STATIC(QWEBHISTORYITEM_SETUSERDATA)
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebHistoryItem *obj = (QWebHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->setUserData( *PQVARIANT(1) );
+      obj->setUserData(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,17 +233,17 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
+HB_FUNC_STATIC(QWEBHISTORYITEM_TITLE)
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebHistoryItem *obj = (QWebHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,17 +257,17 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
 /*
 QUrl url() const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
+HB_FUNC_STATIC(QWEBHISTORYITEM_URL)
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebHistoryItem *obj = (QWebHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url() );
+      QUrl *ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -282,17 +282,17 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
 /*
 QVariant userData() const
 */
-HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
+HB_FUNC_STATIC(QWEBHISTORYITEM_USERDATA)
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebHistoryItem *obj = (QWebHistoryItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->userData() );
+      QVariant *ptr = new QVariant(obj->userData());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -304,11 +304,11 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
   }
 }
 
-HB_FUNC_STATIC( QWEBHISTORYITEM_NEWFROM )
+HB_FUNC_STATIC(QWEBHISTORYITEM_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -334,26 +334,26 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWEBHISTORYITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWEBHISTORYITEM_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QWEBHISTORYITEM_NEWFROM );
+  HB_FUNC_EXEC(QWEBHISTORYITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBHISTORYITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWEBHISTORYITEM_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QWEBHISTORYITEM_NEWFROM );
+  HB_FUNC_EXEC(QWEBHISTORYITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBHISTORYITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBHISTORYITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWEBHISTORYITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBHISTORYITEM_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

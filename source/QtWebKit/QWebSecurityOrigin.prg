@@ -74,14 +74,14 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtWebKit/QWebDatabase>
 
-/*
-QWebSecurityOrigin( const QWebSecurityOrigin & other )
-*/
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
+    /*
+    QWebSecurityOrigin( const QWebSecurityOrigin & other )
+    */
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_NEW)
 {
-  if( ISNUMPAR(1) && ISQWEBSECURITYORIGIN(1) )
+  if (ISNUMPAR(1) && ISQWEBSECURITYORIGIN(1))
   {
-    QWebSecurityOrigin * obj = new QWebSecurityOrigin( *PQWEBSECURITYORIGIN(1) );
+    QWebSecurityOrigin *obj = new QWebSecurityOrigin(*PQWEBSECURITYORIGIN(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -90,11 +90,11 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_DELETE )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_DELETE)
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin *obj = (QWebSecurityOrigin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -109,17 +109,17 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DELETE )
 /*
 qint64 databaseQuota() const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_DATABASEQUOTA)
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin *obj = (QWebSecurityOrigin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->databaseQuota() );
+      RQINT64(obj->databaseQuota());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,17 +133,17 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
 /*
 qint64 databaseUsage() const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_DATABASEUSAGE)
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin *obj = (QWebSecurityOrigin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->databaseUsage() );
+      RQINT64(obj->databaseUsage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,22 +157,22 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
 /*
 QList<QWebDatabase> databases() const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_DATABASES)
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin *obj = (QWebSecurityOrigin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QWebDatabase> list = obj->databases();
       PHB_DYNS pDynSym = hb_dynsymFindName("QWEBDATABASE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
-        for( int i = 0; i < list.count(); i++ )
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -207,17 +207,17 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
 /*
 QString host() const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_HOST)
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin *obj = (QWebSecurityOrigin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->host() );
+      RQSTRING(obj->host());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,17 +231,17 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
 /*
 int port() const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_PORT)
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin *obj = (QWebSecurityOrigin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->port() );
+      RINT(obj->port());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,17 +255,17 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
 /*
 QString scheme() const
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_SCHEME)
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin *obj = (QWebSecurityOrigin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->scheme() );
+      RQSTRING(obj->scheme());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,17 +279,17 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
 /*
 void setDatabaseQuota( qint64 quota )
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_SETDATABASEQUOTA)
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin *obj = (QWebSecurityOrigin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDatabaseQuota( PQINT64(1) );
+      obj->setDatabaseQuota(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,13 +305,13 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
 /*
 static void addLocalScheme( const QString & scheme )
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_ADDLOCALSCHEME )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_ADDLOCALSCHEME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    QWebSecurityOrigin::addLocalScheme( PQSTRING(1) );
+    QWebSecurityOrigin::addLocalScheme(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -326,18 +326,18 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ADDLOCALSCHEME )
 /*
 static QList<QWebSecurityOrigin> allOrigins()
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_ALLORIGINS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     QList<QWebSecurityOrigin> list = QWebSecurityOrigin::allOrigins();
     PHB_DYNS pDynSym = hb_dynsymFindName("QWEBSECURITYORIGIN");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym != NULL )
+    if (pDynSym != NULL)
     {
-      for( int i = 0; i < list.count(); i++ )
+      for (int i = 0; i < list.count(); i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
@@ -371,13 +371,13 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
 /*
 static QStringList localSchemes()
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_LOCALSCHEMES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRINGLIST( QWebSecurityOrigin::localSchemes() );
+    RQSTRINGLIST(QWebSecurityOrigin::localSchemes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -390,13 +390,13 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
 /*
 static void removeLocalScheme( const QString & scheme )
 */
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_REMOVELOCALSCHEME )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_REMOVELOCALSCHEME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    QWebSecurityOrigin::removeLocalScheme( PQSTRING(1) );
+    QWebSecurityOrigin::removeLocalScheme(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -408,11 +408,11 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_REMOVELOCALSCHEME )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEWFROM )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -438,26 +438,26 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QWEBSECURITYORIGIN_NEWFROM );
+  HB_FUNC_EXEC(QWEBSECURITYORIGIN_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QWEBSECURITYORIGIN_NEWFROM );
+  HB_FUNC_EXEC(QWEBSECURITYORIGIN_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBSECURITYORIGIN_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
