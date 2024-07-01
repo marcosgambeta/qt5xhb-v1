@@ -67,30 +67,30 @@ RETURN
 #include <QtXmlPatterns/QSourceLocation>
 #endif
 
-HB_FUNC_STATIC( QSOURCELOCATION_NEW )
+HB_FUNC_STATIC(QSOURCELOCATION_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QSourceLocation()
     */
-    QSourceLocation * obj = new QSourceLocation();
+    QSourceLocation *obj = new QSourceLocation();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSOURCELOCATION(1) )
+  else if (ISNUMPAR(1) && ISQSOURCELOCATION(1))
   {
     /*
     QSourceLocation( const QSourceLocation & other )
     */
-    QSourceLocation * obj = new QSourceLocation( *PQSOURCELOCATION(1) );
+    QSourceLocation *obj = new QSourceLocation(*PQSOURCELOCATION(1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1,3) && ISQURL(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
+  else if (ISBETWEEN(1, 3) && ISQURL(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QSourceLocation( const QUrl & u, int l = -1, int c = -1 )
     */
-    QSourceLocation * obj = new QSourceLocation( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
+    QSourceLocation *obj = new QSourceLocation(*PQURL(1), OPINT(2, -1), OPINT(3, -1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -99,11 +99,11 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_DELETE )
+HB_FUNC_STATIC(QSOURCELOCATION_DELETE)
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSourceLocation *obj = (QSourceLocation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -118,17 +118,17 @@ HB_FUNC_STATIC( QSOURCELOCATION_DELETE )
 /*
 qint64 column() const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
+HB_FUNC_STATIC(QSOURCELOCATION_COLUMN)
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSourceLocation *obj = (QSourceLocation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->column() );
+      RQINT64(obj->column());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,17 +142,17 @@ HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
+HB_FUNC_STATIC(QSOURCELOCATION_ISNULL)
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSourceLocation *obj = (QSourceLocation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,17 +166,17 @@ HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
 /*
 qint64 line() const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_LINE )
+HB_FUNC_STATIC(QSOURCELOCATION_LINE)
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSourceLocation *obj = (QSourceLocation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->line() );
+      RQINT64(obj->line());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,17 +190,17 @@ HB_FUNC_STATIC( QSOURCELOCATION_LINE )
 /*
 void setColumn( qint64 newColumn )
 */
-HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
+HB_FUNC_STATIC(QSOURCELOCATION_SETCOLUMN)
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSourceLocation *obj = (QSourceLocation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setColumn( PQINT64(1) );
+      obj->setColumn(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,17 +216,17 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
 /*
 void setLine( qint64 newLine )
 */
-HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
+HB_FUNC_STATIC(QSOURCELOCATION_SETLINE)
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSourceLocation *obj = (QSourceLocation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLine( PQINT64(1) );
+      obj->setLine(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,17 +242,17 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
 /*
 void setUri( const QUrl & newUri )
 */
-HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
+HB_FUNC_STATIC(QSOURCELOCATION_SETURI)
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSourceLocation *obj = (QSourceLocation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUri( *PQURL(1) );
+      obj->setUri(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,17 +268,17 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
 /*
 QUrl uri() const
 */
-HB_FUNC_STATIC( QSOURCELOCATION_URI )
+HB_FUNC_STATIC(QSOURCELOCATION_URI)
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSourceLocation *obj = (QSourceLocation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->uri() );
+      QUrl *ptr = new QUrl(obj->uri());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -290,11 +290,11 @@ HB_FUNC_STATIC( QSOURCELOCATION_URI )
   }
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_NEWFROM )
+HB_FUNC_STATIC(QSOURCELOCATION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -320,26 +320,26 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSOURCELOCATION_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSOURCELOCATION_NEWFROM );
+  HB_FUNC_EXEC(QSOURCELOCATION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSOURCELOCATION_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSOURCELOCATION_NEWFROM );
+  HB_FUNC_EXEC(QSOURCELOCATION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSOURCELOCATION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSOURCELOCATION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSOURCELOCATION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
