@@ -54,22 +54,22 @@ RETURN
 #include <QtXml/QDomProcessingInstruction>
 #endif
 
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomProcessingInstruction()
     */
-    QDomProcessingInstruction * obj = new QDomProcessingInstruction();
+    QDomProcessingInstruction *obj = new QDomProcessingInstruction();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1) )
+  else if (ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1))
   {
     /*
     QDomProcessingInstruction( const QDomProcessingInstruction & x )
     */
-    QDomProcessingInstruction * obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1) );
+    QDomProcessingInstruction *obj = new QDomProcessingInstruction(*PQDOMPROCESSINGINSTRUCTION(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -78,11 +78,11 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DELETE )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_DELETE)
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomProcessingInstruction *obj = (QDomProcessingInstruction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -97,17 +97,17 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DELETE )
 /*
 QString data() const
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_DATA)
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomProcessingInstruction *obj = (QDomProcessingInstruction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->data() );
+      RQSTRING(obj->data());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,17 +121,17 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NODETYPE)
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomProcessingInstruction *obj = (QDomProcessingInstruction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,17 +145,17 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 /*
 void setData( const QString & d )
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_SETDATA)
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomProcessingInstruction *obj = (QDomProcessingInstruction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setData( PQSTRING(1) );
+      obj->setData(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,17 +171,17 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 /*
 QString target() const
 */
-HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
+HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_TARGET)
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomProcessingInstruction *obj = (QDomProcessingInstruction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->target() );
+      RQSTRING(obj->target());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

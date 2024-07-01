@@ -53,22 +53,22 @@ RETURN
 #include <QtXml/QDomNotation>
 #endif
 
-HB_FUNC_STATIC( QDOMNOTATION_NEW )
+HB_FUNC_STATIC(QDOMNOTATION_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomNotation()
     */
-    QDomNotation * obj = new QDomNotation();
+    QDomNotation *obj = new QDomNotation();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQDOMNOTATION(1) )
+  else if (ISNUMPAR(1) && ISQDOMNOTATION(1))
   {
     /*
     QDomNotation( const QDomNotation & x )
     */
-    QDomNotation * obj = new QDomNotation( *PQDOMNOTATION(1) );
+    QDomNotation *obj = new QDomNotation(*PQDOMNOTATION(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -77,11 +77,11 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMNOTATION_DELETE )
+HB_FUNC_STATIC(QDOMNOTATION_DELETE)
 {
-  QDomNotation * obj = (QDomNotation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomNotation *obj = (QDomNotation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -96,17 +96,17 @@ HB_FUNC_STATIC( QDOMNOTATION_DELETE )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
+HB_FUNC_STATIC(QDOMNOTATION_NODETYPE)
 {
-  QDomNotation * obj = (QDomNotation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomNotation *obj = (QDomNotation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,17 +120,17 @@ HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
 /*
 QString publicId() const
 */
-HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
+HB_FUNC_STATIC(QDOMNOTATION_PUBLICID)
 {
-  QDomNotation * obj = (QDomNotation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomNotation *obj = (QDomNotation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->publicId() );
+      RQSTRING(obj->publicId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,17 +144,17 @@ HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
 /*
 QString systemId() const
 */
-HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
+HB_FUNC_STATIC(QDOMNOTATION_SYSTEMID)
 {
-  QDomNotation * obj = (QDomNotation *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomNotation *obj = (QDomNotation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->systemId() );
+      RQSTRING(obj->systemId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

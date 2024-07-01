@@ -52,22 +52,22 @@ RETURN
 #include <QtXml/QDomText>
 #endif
 
-HB_FUNC_STATIC( QDOMTEXT_NEW )
+HB_FUNC_STATIC(QDOMTEXT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomText()
     */
-    QDomText * obj = new QDomText();
+    QDomText *obj = new QDomText();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQDOMTEXT(1) )
+  else if (ISNUMPAR(1) && ISQDOMTEXT(1))
   {
     /*
     QDomText( const QDomText & x )
     */
-    QDomText * obj = new QDomText( *PQDOMTEXT(1) );
+    QDomText *obj = new QDomText(*PQDOMTEXT(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -76,11 +76,11 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMTEXT_DELETE )
+HB_FUNC_STATIC(QDOMTEXT_DELETE)
 {
-  QDomText * obj = (QDomText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomText *obj = (QDomText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -95,17 +95,17 @@ HB_FUNC_STATIC( QDOMTEXT_DELETE )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
+HB_FUNC_STATIC(QDOMTEXT_NODETYPE)
 {
-  QDomText * obj = (QDomText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomText *obj = (QDomText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,17 +119,17 @@ HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 /*
 QDomText splitText( int offset )
 */
-HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
+HB_FUNC_STATIC(QDOMTEXT_SPLITTEXT)
 {
-  QDomText * obj = (QDomText *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomText *obj = (QDomText *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QDomText * ptr = new QDomText( obj->splitText( PINT(1) ) );
+      QDomText *ptr = new QDomText(obj->splitText(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMTEXT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

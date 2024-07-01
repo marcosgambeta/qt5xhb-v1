@@ -51,22 +51,22 @@ RETURN
 #include <QtXml/QDomCDATASection>
 #endif
 
-HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
+HB_FUNC_STATIC(QDOMCDATASECTION_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomCDATASection()
     */
-    QDomCDATASection * obj = new QDomCDATASection();
+    QDomCDATASection *obj = new QDomCDATASection();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQDOMCDATASECTION(1) )
+  else if (ISNUMPAR(1) && ISQDOMCDATASECTION(1))
   {
     /*
     QDomCDATASection( const QDomCDATASection & x )
     */
-    QDomCDATASection * obj = new QDomCDATASection( *PQDOMCDATASECTION(1) );
+    QDomCDATASection *obj = new QDomCDATASection(*PQDOMCDATASECTION(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -75,11 +75,11 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDOMCDATASECTION_DELETE )
+HB_FUNC_STATIC(QDOMCDATASECTION_DELETE)
 {
-  QDomCDATASection * obj = (QDomCDATASection *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomCDATASection *obj = (QDomCDATASection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -94,17 +94,17 @@ HB_FUNC_STATIC( QDOMCDATASECTION_DELETE )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
+HB_FUNC_STATIC(QDOMCDATASECTION_NODETYPE)
 {
-  QDomCDATASection * obj = (QDomCDATASection *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDomCDATASection *obj = (QDomCDATASection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
