@@ -55,7 +55,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWidgets/QOpenGLWidget>
 #endif
 #endif
@@ -67,23 +67,24 @@ RETURN
 #include "qt5xhb_signals.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #include <QtWidgets/QOpenGLWidget>
 #endif
 #endif
 
 #include <QtGui/QOpenGLContext>
 
-/*
-explicit QOpenGLWidget(QWidget* parent = 0, Qt::WindowFlags f = 0)
-*/
-HB_FUNC_STATIC( QOPENGLWIDGET_NEW )
+    /*
+    explicit QOpenGLWidget(QWidget* parent = 0, Qt::WindowFlags f = 0)
+    */
+HB_FUNC_STATIC(QOPENGLWIDGET_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    QOpenGLWidget * obj = new QOpenGLWidget( OPQWIDGET(1,0), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    QOpenGLWidget *obj =
+        new QOpenGLWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -94,13 +95,13 @@ HB_FUNC_STATIC( QOPENGLWIDGET_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QOPENGLWIDGET_DELETE )
+HB_FUNC_STATIC(QOPENGLWIDGET_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLWidget *obj = (QOpenGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -119,19 +120,19 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DELETE )
 /*
 QSurfaceFormat format() const
 */
-HB_FUNC_STATIC( QOPENGLWIDGET_FORMAT )
+HB_FUNC_STATIC(QOPENGLWIDGET_FORMAT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLWidget *obj = (QOpenGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSurfaceFormat * ptr = new QSurfaceFormat( obj->format() );
+      QSurfaceFormat *ptr = new QSurfaceFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -148,19 +149,19 @@ HB_FUNC_STATIC( QOPENGLWIDGET_FORMAT )
 /*
 void setFormat(const QSurfaceFormat &format)
 */
-HB_FUNC_STATIC( QOPENGLWIDGET_SETFORMAT )
+HB_FUNC_STATIC(QOPENGLWIDGET_SETFORMAT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLWidget *obj = (QOpenGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
+    if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQSURFACEFORMAT(1) );
+      obj->setFormat(*PQSURFACEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,19 +179,19 @@ HB_FUNC_STATIC( QOPENGLWIDGET_SETFORMAT )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QOPENGLWIDGET_ISVALID )
+HB_FUNC_STATIC(QOPENGLWIDGET_ISVALID)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLWidget *obj = (QOpenGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,16 +207,16 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ISVALID )
 /*
 void makeCurrent()
 */
-HB_FUNC_STATIC( QOPENGLWIDGET_MAKECURRENT )
+HB_FUNC_STATIC(QOPENGLWIDGET_MAKECURRENT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLWidget *obj = (QOpenGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->makeCurrent();
@@ -236,16 +237,16 @@ HB_FUNC_STATIC( QOPENGLWIDGET_MAKECURRENT )
 /*
 void doneCurrent()
 */
-HB_FUNC_STATIC( QOPENGLWIDGET_DONECURRENT )
+HB_FUNC_STATIC(QOPENGLWIDGET_DONECURRENT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLWidget *obj = (QOpenGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->doneCurrent();
@@ -266,19 +267,19 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DONECURRENT )
 /*
 QOpenGLContext *context() const
 */
-HB_FUNC_STATIC( QOPENGLWIDGET_CONTEXT )
+HB_FUNC_STATIC(QOPENGLWIDGET_CONTEXT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLWidget *obj = (QOpenGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QOpenGLContext * ptr = obj->context();
+      QOpenGLContext *ptr = obj->context();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -295,19 +296,19 @@ HB_FUNC_STATIC( QOPENGLWIDGET_CONTEXT )
 /*
 GLuint defaultFramebufferObject() const
 */
-HB_FUNC_STATIC( QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT )
+HB_FUNC_STATIC(QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLWidget *obj = (QOpenGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT( obj->defaultFramebufferObject() );
+      RGLUINT(obj->defaultFramebufferObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,19 +324,19 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT )
 /*
 QImage grabFramebuffer()
 */
-HB_FUNC_STATIC( QOPENGLWIDGET_GRABFRAMEBUFFER )
+HB_FUNC_STATIC(QOPENGLWIDGET_GRABFRAMEBUFFER)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  QOpenGLWidget * obj = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QOpenGLWidget *obj = (QOpenGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QImage * ptr = new QImage( obj->grabFramebuffer() );
+      QImage *ptr = new QImage(obj->grabFramebuffer());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -349,38 +350,38 @@ HB_FUNC_STATIC( QOPENGLWIDGET_GRABFRAMEBUFFER )
 #endif
 }
 
-void QOpenGLWidgetSlots_connect_signal(const QString & signal, const QString & slot);
+void QOpenGLWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
+HB_FUNC_STATIC(QOPENGLWIDGET_ONABOUTTOCOMPOSE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QOpenGLWidgetSlots_connect_signal("aboutToCompose()", "aboutToCompose()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
+HB_FUNC_STATIC(QOPENGLWIDGET_ONFRAMESWAPPED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QOpenGLWidgetSlots_connect_signal("frameSwapped()", "frameSwapped()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
+HB_FUNC_STATIC(QOPENGLWIDGET_ONABOUTTORESIZE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QOpenGLWidgetSlots_connect_signal("aboutToResize()", "aboutToResize()");
 #else
   hb_retl(false);
 #endif
 }
 
-HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
+HB_FUNC_STATIC(QOPENGLWIDGET_ONRESIZED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QOpenGLWidgetSlots_connect_signal("resized()", "resized()");
 #else
   hb_retl(false);

@@ -54,14 +54,14 @@ RETURN
 #include <QtWidgets/QErrorMessage>
 #endif
 
-/*
-QErrorMessage( QWidget * parent = 0 )
-*/
-HB_FUNC_STATIC( QERRORMESSAGE_NEW )
+    /*
+    QErrorMessage( QWidget * parent = 0 )
+    */
+HB_FUNC_STATIC(QERRORMESSAGE_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    QErrorMessage * obj = new QErrorMessage( OPQWIDGET(1,0) );
+    QErrorMessage *obj = new QErrorMessage(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -70,11 +70,11 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
+HB_FUNC_STATIC(QERRORMESSAGE_DELETE)
 {
-  QErrorMessage * obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
+  QErrorMessage *obj = (QErrorMessage *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -88,32 +88,32 @@ HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
+HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     void showMessage( const QString & message )
     */
-    QErrorMessage * obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
+    QErrorMessage *obj = (QErrorMessage *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->showMessage( PQSTRING(1) );
+      obj->showMessage(PQSTRING(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
     void showMessage( const QString & message, const QString & type )
     */
-    QErrorMessage * obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
+    QErrorMessage *obj = (QErrorMessage *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->showMessage( PQSTRING(1), PQSTRING(2) );
+      obj->showMessage(PQSTRING(1), PQSTRING(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -127,14 +127,14 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 /*
 static QErrorMessage * qtHandler()
 */
-HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
+HB_FUNC_STATIC(QERRORMESSAGE_QTHANDLER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    QErrorMessage * ptr = QErrorMessage::qtHandler();
-    Qt5xHb::createReturnQWidgetClass( ptr, "QERRORMESSAGE");
+    QErrorMessage *ptr = QErrorMessage::qtHandler();
+    Qt5xHb::createReturnQWidgetClass(ptr, "QERRORMESSAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

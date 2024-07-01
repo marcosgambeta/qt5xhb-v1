@@ -92,22 +92,23 @@ RETURN
 #include <QtWidgets/QDirModel>
 #endif
 
-HB_FUNC_STATIC( QDIRMODEL_NEW )
+HB_FUNC_STATIC(QDIRMODEL_NEW)
 {
-  if( ISBETWEEN(3,4) && HB_ISARRAY(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
+  if (ISBETWEEN(3, 4) && HB_ISARRAY(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
     QDirModel( const QStringList & nameFilters, QDir::Filters filters, QDir::SortFlags sort, QObject * parent = 0 )
     */
-    QDirModel * obj = new QDirModel( PQSTRINGLIST(1), (QDir::Filters) hb_parni(2), (QDir::SortFlags) hb_parni(3), OPQOBJECT(4,0) );
+    QDirModel *obj =
+        new QDirModel(PQSTRINGLIST(1), (QDir::Filters)hb_parni(2), (QDir::SortFlags)hb_parni(3), OPQOBJECT(4, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QDirModel( QObject * parent = 0 )
     */
-    QDirModel * obj = new QDirModel( OPQOBJECT(1,0) );
+    QDirModel *obj = new QDirModel(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -116,11 +117,11 @@ HB_FUNC_STATIC( QDIRMODEL_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDIRMODEL_DELETE )
+HB_FUNC_STATIC(QDIRMODEL_DELETE)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -134,31 +135,32 @@ HB_FUNC_STATIC( QDIRMODEL_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDIRMODEL_INDEX )
+HB_FUNC_STATIC(QDIRMODEL_INDEX)
 {
-  if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
   {
     /*
     QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
     */
-    QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+    QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      QModelIndex *ptr = new QModelIndex(
+          obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     QModelIndex index( const QString & path, int column = 0 ) const
     */
-    QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+    QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QModelIndex * ptr = new QModelIndex( obj->index( PQSTRING(1), OPINT(2,0) ) );
+      QModelIndex *ptr = new QModelIndex(obj->index(PQSTRING(1), OPINT(2, 0)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
   }
@@ -171,17 +173,17 @@ HB_FUNC_STATIC( QDIRMODEL_INDEX )
 /*
 QModelIndex parent( const QModelIndex & child ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_PARENT )
+HB_FUNC_STATIC(QDIRMODEL_PARENT)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
+      QModelIndex *ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -196,17 +198,17 @@ HB_FUNC_STATIC( QDIRMODEL_PARENT )
 /*
 int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_ROWCOUNT )
+HB_FUNC_STATIC(QDIRMODEL_ROWCOUNT)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT( obj->rowCount( HB_ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
+      RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,17 +222,17 @@ HB_FUNC_STATIC( QDIRMODEL_ROWCOUNT )
 /*
 int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_COLUMNCOUNT )
+HB_FUNC_STATIC(QDIRMODEL_COLUMNCOUNT)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT( obj->columnCount( HB_ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
+      RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,17 +246,17 @@ HB_FUNC_STATIC( QDIRMODEL_COLUMNCOUNT )
 /*
 QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_DATA )
+HB_FUNC_STATIC(QDIRMODEL_DATA)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      QVariant *ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -269,17 +271,17 @@ HB_FUNC_STATIC( QDIRMODEL_DATA )
 /*
 bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
-HB_FUNC_STATIC( QDIRMODEL_SETDATA )
+HB_FUNC_STATIC(QDIRMODEL_SETDATA)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,17 +295,17 @@ HB_FUNC_STATIC( QDIRMODEL_SETDATA )
 /*
 QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_HEADERDATA )
+HB_FUNC_STATIC(QDIRMODEL_HEADERDATA)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+      QVariant *ptr = new QVariant(obj->headerData(PINT(1), (Qt::Orientation)hb_parni(2), OPINT(3, Qt::DisplayRole)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -318,17 +320,17 @@ HB_FUNC_STATIC( QDIRMODEL_HEADERDATA )
 /*
 bool hasChildren( const QModelIndex & index = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_HASCHILDREN )
+HB_FUNC_STATIC(QDIRMODEL_HASCHILDREN)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL( obj->hasChildren( HB_ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
+      RBOOL(obj->hasChildren(HB_ISNIL(1) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,17 +344,17 @@ HB_FUNC_STATIC( QDIRMODEL_HASCHILDREN )
 /*
 Qt::ItemFlags flags( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_FLAGS )
+HB_FUNC_STATIC(QDIRMODEL_FLAGS)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RENUM( obj->flags( *PQMODELINDEX(1) ) );
+      RENUM(obj->flags(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,17 +368,17 @@ HB_FUNC_STATIC( QDIRMODEL_FLAGS )
 /*
 void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
-HB_FUNC_STATIC( QDIRMODEL_SORT )
+HB_FUNC_STATIC(QDIRMODEL_SORT)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->sort( PINT(1), HB_ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );
+      obj->sort(PINT(1), HB_ISNIL(2) ? (Qt::SortOrder)Qt::AscendingOrder : (Qt::SortOrder)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,17 +394,17 @@ HB_FUNC_STATIC( QDIRMODEL_SORT )
 /*
 QStringList mimeTypes() const
 */
-HB_FUNC_STATIC( QDIRMODEL_MIMETYPES )
+HB_FUNC_STATIC(QDIRMODEL_MIMETYPES)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->mimeTypes() );
+      RQSTRINGLIST(obj->mimeTypes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,17 +418,17 @@ HB_FUNC_STATIC( QDIRMODEL_MIMETYPES )
 /*
 Qt::DropActions supportedDropActions() const
 */
-HB_FUNC_STATIC( QDIRMODEL_SUPPORTEDDROPACTIONS )
+HB_FUNC_STATIC(QDIRMODEL_SUPPORTEDDROPACTIONS)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->supportedDropActions() );
+      RENUM(obj->supportedDropActions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,17 +442,17 @@ HB_FUNC_STATIC( QDIRMODEL_SUPPORTEDDROPACTIONS )
 /*
 void setIconProvider( QFileIconProvider * provider )
 */
-HB_FUNC_STATIC( QDIRMODEL_SETICONPROVIDER )
+HB_FUNC_STATIC(QDIRMODEL_SETICONPROVIDER)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFILEICONPROVIDER(1) )
+    if (ISNUMPAR(1) && ISQFILEICONPROVIDER(1))
     {
 #endif
-      obj->setIconProvider( PQFILEICONPROVIDER(1) );
+      obj->setIconProvider(PQFILEICONPROVIDER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,17 +468,17 @@ HB_FUNC_STATIC( QDIRMODEL_SETICONPROVIDER )
 /*
 QFileIconProvider * iconProvider() const
 */
-HB_FUNC_STATIC( QDIRMODEL_ICONPROVIDER )
+HB_FUNC_STATIC(QDIRMODEL_ICONPROVIDER)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QFileIconProvider * ptr = obj->iconProvider();
+      QFileIconProvider *ptr = obj->iconProvider();
       Qt5xHb::createReturnClass(ptr, "QFILEICONPROVIDER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -491,17 +493,17 @@ HB_FUNC_STATIC( QDIRMODEL_ICONPROVIDER )
 /*
 void setNameFilters( const QStringList & filters )
 */
-HB_FUNC_STATIC( QDIRMODEL_SETNAMEFILTERS )
+HB_FUNC_STATIC(QDIRMODEL_SETNAMEFILTERS)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setNameFilters( PQSTRINGLIST(1) );
+      obj->setNameFilters(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,17 +519,17 @@ HB_FUNC_STATIC( QDIRMODEL_SETNAMEFILTERS )
 /*
 QStringList nameFilters() const
 */
-HB_FUNC_STATIC( QDIRMODEL_NAMEFILTERS )
+HB_FUNC_STATIC(QDIRMODEL_NAMEFILTERS)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->nameFilters() );
+      RQSTRINGLIST(obj->nameFilters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,17 +543,17 @@ HB_FUNC_STATIC( QDIRMODEL_NAMEFILTERS )
 /*
 void setFilter( QDir::Filters filters )
 */
-HB_FUNC_STATIC( QDIRMODEL_SETFILTER )
+HB_FUNC_STATIC(QDIRMODEL_SETFILTER)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFilter( (QDir::Filters) hb_parni(1) );
+      obj->setFilter((QDir::Filters)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -567,17 +569,17 @@ HB_FUNC_STATIC( QDIRMODEL_SETFILTER )
 /*
 QDir::Filters filter() const
 */
-HB_FUNC_STATIC( QDIRMODEL_FILTER )
+HB_FUNC_STATIC(QDIRMODEL_FILTER)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->filter() );
+      RENUM(obj->filter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -591,17 +593,17 @@ HB_FUNC_STATIC( QDIRMODEL_FILTER )
 /*
 void setSorting( QDir::SortFlags sort )
 */
-HB_FUNC_STATIC( QDIRMODEL_SETSORTING )
+HB_FUNC_STATIC(QDIRMODEL_SETSORTING)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSorting( (QDir::SortFlags) hb_parni(1) );
+      obj->setSorting((QDir::SortFlags)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -617,17 +619,17 @@ HB_FUNC_STATIC( QDIRMODEL_SETSORTING )
 /*
 QDir::SortFlags sorting() const
 */
-HB_FUNC_STATIC( QDIRMODEL_SORTING )
+HB_FUNC_STATIC(QDIRMODEL_SORTING)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->sorting() );
+      RENUM(obj->sorting());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -641,17 +643,17 @@ HB_FUNC_STATIC( QDIRMODEL_SORTING )
 /*
 void setResolveSymlinks( bool enable )
 */
-HB_FUNC_STATIC( QDIRMODEL_SETRESOLVESYMLINKS )
+HB_FUNC_STATIC(QDIRMODEL_SETRESOLVESYMLINKS)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setResolveSymlinks( PBOOL(1) );
+      obj->setResolveSymlinks(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -667,17 +669,17 @@ HB_FUNC_STATIC( QDIRMODEL_SETRESOLVESYMLINKS )
 /*
 bool resolveSymlinks() const
 */
-HB_FUNC_STATIC( QDIRMODEL_RESOLVESYMLINKS )
+HB_FUNC_STATIC(QDIRMODEL_RESOLVESYMLINKS)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->resolveSymlinks() );
+      RBOOL(obj->resolveSymlinks());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -691,17 +693,17 @@ HB_FUNC_STATIC( QDIRMODEL_RESOLVESYMLINKS )
 /*
 void setReadOnly( bool enable )
 */
-HB_FUNC_STATIC( QDIRMODEL_SETREADONLY )
+HB_FUNC_STATIC(QDIRMODEL_SETREADONLY)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setReadOnly( PBOOL(1) );
+      obj->setReadOnly(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -717,17 +719,17 @@ HB_FUNC_STATIC( QDIRMODEL_SETREADONLY )
 /*
 bool isReadOnly() const
 */
-HB_FUNC_STATIC( QDIRMODEL_ISREADONLY )
+HB_FUNC_STATIC(QDIRMODEL_ISREADONLY)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isReadOnly() );
+      RBOOL(obj->isReadOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -741,17 +743,17 @@ HB_FUNC_STATIC( QDIRMODEL_ISREADONLY )
 /*
 void setLazyChildCount( bool enable )
 */
-HB_FUNC_STATIC( QDIRMODEL_SETLAZYCHILDCOUNT )
+HB_FUNC_STATIC(QDIRMODEL_SETLAZYCHILDCOUNT)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setLazyChildCount( PBOOL(1) );
+      obj->setLazyChildCount(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -767,17 +769,17 @@ HB_FUNC_STATIC( QDIRMODEL_SETLAZYCHILDCOUNT )
 /*
 bool lazyChildCount() const
 */
-HB_FUNC_STATIC( QDIRMODEL_LAZYCHILDCOUNT )
+HB_FUNC_STATIC(QDIRMODEL_LAZYCHILDCOUNT)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->lazyChildCount() );
+      RBOOL(obj->lazyChildCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -791,17 +793,17 @@ HB_FUNC_STATIC( QDIRMODEL_LAZYCHILDCOUNT )
 /*
 bool isDir( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_ISDIR )
+HB_FUNC_STATIC(QDIRMODEL_ISDIR)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RBOOL( obj->isDir( *PQMODELINDEX(1) ) );
+      RBOOL(obj->isDir(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -815,17 +817,17 @@ HB_FUNC_STATIC( QDIRMODEL_ISDIR )
 /*
 QModelIndex mkdir( const QModelIndex & parent, const QString & name )
 */
-HB_FUNC_STATIC( QDIRMODEL_MKDIR )
+HB_FUNC_STATIC(QDIRMODEL_MKDIR)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISCHAR(2))
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->mkdir( *PQMODELINDEX(1), PQSTRING(2) ) );
+      QModelIndex *ptr = new QModelIndex(obj->mkdir(*PQMODELINDEX(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -840,17 +842,17 @@ HB_FUNC_STATIC( QDIRMODEL_MKDIR )
 /*
 bool rmdir( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QDIRMODEL_RMDIR )
+HB_FUNC_STATIC(QDIRMODEL_RMDIR)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RBOOL( obj->rmdir( *PQMODELINDEX(1) ) );
+      RBOOL(obj->rmdir(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -864,17 +866,17 @@ HB_FUNC_STATIC( QDIRMODEL_RMDIR )
 /*
 bool remove( const QModelIndex & index )
 */
-HB_FUNC_STATIC( QDIRMODEL_REMOVE )
+HB_FUNC_STATIC(QDIRMODEL_REMOVE)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RBOOL( obj->remove( *PQMODELINDEX(1) ) );
+      RBOOL(obj->remove(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -888,17 +890,17 @@ HB_FUNC_STATIC( QDIRMODEL_REMOVE )
 /*
 QString filePath( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_FILEPATH )
+HB_FUNC_STATIC(QDIRMODEL_FILEPATH)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RQSTRING( obj->filePath( *PQMODELINDEX(1) ) );
+      RQSTRING(obj->filePath(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -912,17 +914,17 @@ HB_FUNC_STATIC( QDIRMODEL_FILEPATH )
 /*
 QString fileName( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_FILENAME )
+HB_FUNC_STATIC(QDIRMODEL_FILENAME)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      RQSTRING( obj->fileName( *PQMODELINDEX(1) ) );
+      RQSTRING(obj->fileName(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -936,17 +938,17 @@ HB_FUNC_STATIC( QDIRMODEL_FILENAME )
 /*
 QIcon fileIcon( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_FILEICON )
+HB_FUNC_STATIC(QDIRMODEL_FILEICON)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      QIcon * ptr = new QIcon( obj->fileIcon( *PQMODELINDEX(1) ) );
+      QIcon *ptr = new QIcon(obj->fileIcon(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -961,17 +963,17 @@ HB_FUNC_STATIC( QDIRMODEL_FILEICON )
 /*
 QFileInfo fileInfo( const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QDIRMODEL_FILEINFO )
+HB_FUNC_STATIC(QDIRMODEL_FILEINFO)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
-      QFileInfo * ptr = new QFileInfo( obj->fileInfo( *PQMODELINDEX(1) ) );
+      QFileInfo *ptr = new QFileInfo(obj->fileInfo(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QFILEINFO", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -986,17 +988,17 @@ HB_FUNC_STATIC( QDIRMODEL_FILEINFO )
 /*
 void refresh( const QModelIndex & parent = QModelIndex() )
 */
-HB_FUNC_STATIC( QDIRMODEL_REFRESH )
+HB_FUNC_STATIC(QDIRMODEL_REFRESH)
 {
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDirModel *obj = (QDirModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->refresh( HB_ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) );
+      obj->refresh(HB_ISNIL(1) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

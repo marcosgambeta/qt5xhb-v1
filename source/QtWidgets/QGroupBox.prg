@@ -67,23 +67,22 @@ RETURN
 #include <QtWidgets/QGroupBox>
 #endif
 
-
-HB_FUNC_STATIC( QGROUPBOX_NEW )
+HB_FUNC_STATIC(QGROUPBOX_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QGroupBox( QWidget * parent = 0 )
     */
-    QGroupBox * obj = new QGroupBox( OPQWIDGET(1,0) );
+    QGroupBox *obj = new QGroupBox(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QGroupBox( const QString & title, QWidget * parent = 0 )
     */
-    QGroupBox * obj = new QGroupBox( PQSTRING(1), OPQWIDGET(2,0) );
+    QGroupBox *obj = new QGroupBox(PQSTRING(1), OPQWIDGET(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -92,11 +91,11 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGROUPBOX_DELETE )
+HB_FUNC_STATIC(QGROUPBOX_DELETE)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -113,17 +112,17 @@ HB_FUNC_STATIC( QGROUPBOX_DELETE )
 /*
 Qt::Alignment alignment() const
 */
-HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
+HB_FUNC_STATIC(QGROUPBOX_ALIGNMENT)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->alignment() );
+      RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,17 +136,17 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 /*
 bool isCheckable() const
 */
-HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
+HB_FUNC_STATIC(QGROUPBOX_ISCHECKABLE)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isCheckable() );
+      RBOOL(obj->isCheckable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,17 +160,17 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 /*
 bool isChecked() const
 */
-HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
+HB_FUNC_STATIC(QGROUPBOX_ISCHECKED)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isChecked() );
+      RBOOL(obj->isChecked());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,17 +184,17 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 /*
 bool isFlat() const
 */
-HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
+HB_FUNC_STATIC(QGROUPBOX_ISFLAT)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFlat() );
+      RBOOL(obj->isFlat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,17 +208,17 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 /*
 void setAlignment( int alignment )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
+HB_FUNC_STATIC(QGROUPBOX_SETALIGNMENT)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( PINT(1) );
+      obj->setAlignment(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,17 +234,17 @@ HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
 /*
 void setCheckable( bool checkable )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
+HB_FUNC_STATIC(QGROUPBOX_SETCHECKABLE)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setCheckable( PBOOL(1) );
+      obj->setCheckable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,17 +260,17 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
 /*
 void setFlat( bool flat )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
+HB_FUNC_STATIC(QGROUPBOX_SETFLAT)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setFlat( PBOOL(1) );
+      obj->setFlat(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,17 +286,17 @@ HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
 /*
 void setTitle( const QString & title )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
+HB_FUNC_STATIC(QGROUPBOX_SETTITLE)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setTitle( PQSTRING(1) );
+      obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,17 +312,17 @@ HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
 /*
 QString title() const
 */
-HB_FUNC_STATIC( QGROUPBOX_TITLE )
+HB_FUNC_STATIC(QGROUPBOX_TITLE)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->title() );
+      RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,17 +336,17 @@ HB_FUNC_STATIC( QGROUPBOX_TITLE )
 /*
 virtual QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QGROUPBOX_MINIMUMSIZEHINT)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      QSize *ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -362,17 +361,17 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 /*
 void setChecked( bool checked )
 */
-HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
+HB_FUNC_STATIC(QGROUPBOX_SETCHECKED)
 {
-  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setChecked( PBOOL(1) );
+      obj->setChecked(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,14 +384,14 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGroupBoxSlots_connect_signal(const QString & signal, const QString & slot);
+void QGroupBoxSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
+HB_FUNC_STATIC(QGROUPBOX_ONCLICKED)
 {
   QGroupBoxSlots_connect_signal("clicked(bool)", "clicked(bool)");
 }
 
-HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
+HB_FUNC_STATIC(QGROUPBOX_ONTOGGLED)
 {
   QGroupBoxSlots_connect_signal("toggled(bool)", "toggled(bool)");
 }

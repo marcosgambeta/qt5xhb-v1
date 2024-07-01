@@ -52,14 +52,14 @@ RETURN
 #include <QtWidgets/QCommonStyle>
 #endif
 
-/*
-QCommonStyle()
-*/
-HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
+    /*
+    QCommonStyle()
+    */
+HB_FUNC_STATIC(QCOMMONSTYLE_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QCommonStyle * obj = new QCommonStyle();
+    QCommonStyle *obj = new QCommonStyle();
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -68,11 +68,11 @@ HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
+HB_FUNC_STATIC(QCOMMONSTYLE_DELETE)
 {
-  QCommonStyle * obj = (QCommonStyle *) Qt5xHb::itemGetPtrStackSelfItem();
+  QCommonStyle *obj = (QCommonStyle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

@@ -52,22 +52,22 @@ RETURN
 #include <QtWidgets/QHBoxLayout>
 #endif
 
-HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
+HB_FUNC_STATIC(QHBOXLAYOUT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QHBoxLayout()
     */
-    QHBoxLayout * obj = new QHBoxLayout();
+    QHBoxLayout *obj = new QHBoxLayout();
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
     QHBoxLayout( QWidget * parent )
     */
-    QHBoxLayout * obj = new QHBoxLayout( PQWIDGET(1) );
+    QHBoxLayout *obj = new QHBoxLayout(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,11 +76,11 @@ HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHBOXLAYOUT_DELETE )
+HB_FUNC_STATIC(QHBOXLAYOUT_DELETE)
 {
-  QHBoxLayout * obj = (QHBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+  QHBoxLayout *obj = (QHBoxLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

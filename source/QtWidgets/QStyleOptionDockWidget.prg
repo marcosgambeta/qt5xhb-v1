@@ -59,22 +59,22 @@ RETURN
 #include <QtWidgets/QStyleOptionDockWidget>
 #endif
 
-HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
+HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionDockWidget()
     */
-    QStyleOptionDockWidget * obj = new QStyleOptionDockWidget();
+    QStyleOptionDockWidget *obj = new QStyleOptionDockWidget();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONDOCKWIDGET(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONDOCKWIDGET(1))
   {
     /*
     QStyleOptionDockWidget( const QStyleOptionDockWidget & other )
     */
-    QStyleOptionDockWidget * obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET(1) );
+    QStyleOptionDockWidget *obj = new QStyleOptionDockWidget(*PQSTYLEOPTIONDOCKWIDGET(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -86,15 +86,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
 /*
 QString title
 */
-HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_TITLE )
+HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_TITLE)
 {
-  QStyleOptionDockWidget * obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget *obj = (QStyleOptionDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RQSTRING( obj->title );
+      RQSTRING(obj->title);
     }
     else
     {
@@ -102,15 +102,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_TITLE )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETTITLE )
+HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETTITLE)
 {
-  QStyleOptionDockWidget * obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget *obj = (QStyleOptionDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->title= PQSTRING(1);
+      obj->title = PQSTRING(1);
     }
     else
     {
@@ -124,15 +124,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETTITLE )
 /*
 bool closable
 */
-HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_CLOSABLE )
+HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_CLOSABLE)
 {
-  QStyleOptionDockWidget * obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget *obj = (QStyleOptionDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->closable );
+      RBOOL(obj->closable);
     }
     else
     {
@@ -140,15 +140,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_CLOSABLE )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE )
+HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE)
 {
-  QStyleOptionDockWidget * obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget *obj = (QStyleOptionDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->closable= PBOOL(1);
+      obj->closable = PBOOL(1);
     }
     else
     {
@@ -162,15 +162,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE )
 /*
 bool movable
 */
-HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_MOVABLE )
+HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_MOVABLE)
 {
-  QStyleOptionDockWidget * obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget *obj = (QStyleOptionDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->movable );
+      RBOOL(obj->movable);
     }
     else
     {
@@ -178,15 +178,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_MOVABLE )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETMOVABLE )
+HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETMOVABLE)
 {
-  QStyleOptionDockWidget * obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget *obj = (QStyleOptionDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->movable= PBOOL(1);
+      obj->movable = PBOOL(1);
     }
     else
     {
@@ -200,15 +200,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETMOVABLE )
 /*
 bool floatable
 */
-HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_FLOATABLE )
+HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_FLOATABLE)
 {
-  QStyleOptionDockWidget * obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget *obj = (QStyleOptionDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->floatable );
+      RBOOL(obj->floatable);
     }
     else
     {
@@ -216,15 +216,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_FLOATABLE )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE )
+HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE)
 {
-  QStyleOptionDockWidget * obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget *obj = (QStyleOptionDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->floatable= PBOOL(1);
+      obj->floatable = PBOOL(1);
     }
     else
     {
@@ -238,15 +238,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE )
 /*
 bool verticalTitleBar
 */
-HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_VERTICALTITLEBAR )
+HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_VERTICALTITLEBAR)
 {
-  QStyleOptionDockWidget * obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget *obj = (QStyleOptionDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->verticalTitleBar );
+      RBOOL(obj->verticalTitleBar);
     }
     else
     {
@@ -254,15 +254,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_VERTICALTITLEBAR )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETVERTICALTITLEBAR )
+HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETVERTICALTITLEBAR)
 {
-  QStyleOptionDockWidget * obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget *obj = (QStyleOptionDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->verticalTitleBar= PBOOL(1);
+      obj->verticalTitleBar = PBOOL(1);
     }
     else
     {

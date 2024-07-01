@@ -78,14 +78,14 @@ RETURN
 #include <QtWidgets/QProgressBar>
 #endif
 
-/*
-QProgressBar( QWidget * parent = 0 )
-*/
-HB_FUNC_STATIC( QPROGRESSBAR_NEW )
+    /*
+    QProgressBar( QWidget * parent = 0 )
+    */
+HB_FUNC_STATIC(QPROGRESSBAR_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    QProgressBar * obj = new QProgressBar( OPQWIDGET(1,0) );
+    QProgressBar *obj = new QProgressBar(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -94,11 +94,11 @@ HB_FUNC_STATIC( QPROGRESSBAR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPROGRESSBAR_DELETE )
+HB_FUNC_STATIC(QPROGRESSBAR_DELETE)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -115,17 +115,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_DELETE )
 /*
 Qt::Alignment alignment() const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
+HB_FUNC_STATIC(QPROGRESSBAR_ALIGNMENT)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->alignment() );
+      RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,17 +139,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
 /*
 QString format() const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
+HB_FUNC_STATIC(QPROGRESSBAR_FORMAT)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->format() );
+      RQSTRING(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,17 +163,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
 /*
 bool invertedAppearance()
 */
-HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
+HB_FUNC_STATIC(QPROGRESSBAR_INVERTEDAPPEARANCE)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->invertedAppearance() );
+      RBOOL(obj->invertedAppearance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,17 +187,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
 /*
 bool isTextVisible() const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
+HB_FUNC_STATIC(QPROGRESSBAR_ISTEXTVISIBLE)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isTextVisible() );
+      RBOOL(obj->isTextVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,17 +211,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
 /*
 int maximum() const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
+HB_FUNC_STATIC(QPROGRESSBAR_MAXIMUM)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximum() );
+      RINT(obj->maximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,17 +235,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
 /*
 int minimum() const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
+HB_FUNC_STATIC(QPROGRESSBAR_MINIMUM)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimum() );
+      RINT(obj->minimum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,17 +259,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
+HB_FUNC_STATIC(QPROGRESSBAR_ORIENTATION)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->orientation() );
+      RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,17 +283,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
 /*
 void setAlignment( Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SETALIGNMENT )
+HB_FUNC_STATIC(QPROGRESSBAR_SETALIGNMENT)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment((Qt::Alignment)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,17 +309,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETALIGNMENT )
 /*
 void setFormat( const QString & format )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SETFORMAT )
+HB_FUNC_STATIC(QPROGRESSBAR_SETFORMAT)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setFormat( PQSTRING(1) );
+      obj->setFormat(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,17 +335,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETFORMAT )
 /*
 void setInvertedAppearance( bool invert )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SETINVERTEDAPPEARANCE )
+HB_FUNC_STATIC(QPROGRESSBAR_SETINVERTEDAPPEARANCE)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setInvertedAppearance( PBOOL(1) );
+      obj->setInvertedAppearance(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,17 +361,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETINVERTEDAPPEARANCE )
 /*
 void setTextDirection( QProgressBar::Direction textDirection )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTDIRECTION )
+HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTDIRECTION)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextDirection( (QProgressBar::Direction) hb_parni(1) );
+      obj->setTextDirection((QProgressBar::Direction)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,17 +387,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTDIRECTION )
 /*
 void setTextVisible( bool visible )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTVISIBLE )
+HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTVISIBLE)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setTextVisible( PBOOL(1) );
+      obj->setTextVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,17 +413,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTVISIBLE )
 /*
 virtual QString text() const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
+HB_FUNC_STATIC(QPROGRESSBAR_TEXT)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->text() );
+      RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,17 +437,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
 /*
 QProgressBar::Direction textDirection()
 */
-HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
+HB_FUNC_STATIC(QPROGRESSBAR_TEXTDIRECTION)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->textDirection() );
+      RENUM(obj->textDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,17 +461,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
 /*
 int value() const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
+HB_FUNC_STATIC(QPROGRESSBAR_VALUE)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->value() );
+      RINT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -485,17 +485,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
 /*
 virtual QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QPROGRESSBAR_MINIMUMSIZEHINT)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      QSize *ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -510,17 +510,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
+HB_FUNC_STATIC(QPROGRESSBAR_SIZEHINT)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint() );
+      QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -535,14 +535,14 @@ HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
 /*
 void reset()
 */
-HB_FUNC_STATIC( QPROGRESSBAR_RESET )
+HB_FUNC_STATIC(QPROGRESSBAR_RESET)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reset();
@@ -561,17 +561,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_RESET )
 /*
 void setMaximum( int maximum )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SETMAXIMUM )
+HB_FUNC_STATIC(QPROGRESSBAR_SETMAXIMUM)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximum( PINT(1) );
+      obj->setMaximum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -587,17 +587,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETMAXIMUM )
 /*
 void setMinimum( int minimum )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SETMINIMUM )
+HB_FUNC_STATIC(QPROGRESSBAR_SETMINIMUM)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimum( PINT(1) );
+      obj->setMinimum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -613,17 +613,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETMINIMUM )
 /*
 void setOrientation( Qt::Orientation )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SETORIENTATION )
+HB_FUNC_STATIC(QPROGRESSBAR_SETORIENTATION)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation((Qt::Orientation)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,17 +639,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETORIENTATION )
 /*
 void setRange( int minimum, int maximum )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SETRANGE )
+HB_FUNC_STATIC(QPROGRESSBAR_SETRANGE)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -665,17 +665,17 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETRANGE )
 /*
 void setValue( int value )
 */
-HB_FUNC_STATIC( QPROGRESSBAR_SETVALUE )
+HB_FUNC_STATIC(QPROGRESSBAR_SETVALUE)
 {
-  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
+  QProgressBar *obj = (QProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setValue( PINT(1) );
+      obj->setValue(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -688,9 +688,9 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETVALUE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QProgressBarSlots_connect_signal(const QString & signal, const QString & slot);
+void QProgressBarSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QPROGRESSBAR_ONVALUECHANGED )
+HB_FUNC_STATIC(QPROGRESSBAR_ONVALUECHANGED)
 {
   QProgressBarSlots_connect_signal("valueChanged(int)", "valueChanged(int)");
 }

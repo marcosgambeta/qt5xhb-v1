@@ -55,11 +55,11 @@ RETURN
 
 #include <QtWidgets/QStyle>
 
-HB_FUNC_STATIC( QSTYLEPLUGIN_DELETE )
+HB_FUNC_STATIC(QSTYLEPLUGIN_DELETE)
 {
-  QStylePlugin * obj = (QStylePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStylePlugin *obj = (QStylePlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -76,17 +76,17 @@ HB_FUNC_STATIC( QSTYLEPLUGIN_DELETE )
 /*
 virtual QStyle * create( const QString & key ) = 0
 */
-HB_FUNC_STATIC( QSTYLEPLUGIN_CREATE )
+HB_FUNC_STATIC(QSTYLEPLUGIN_CREATE)
 {
-  QStylePlugin * obj = (QStylePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStylePlugin *obj = (QStylePlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QStyle * ptr = obj->create( PQSTRING(1) );
+      QStyle *ptr = obj->create(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -82,11 +82,11 @@ RETURN
 #include <QtWidgets/QAbstractSlider>
 #endif
 
-HB_FUNC_STATIC( QABSTRACTSLIDER_DELETE )
+HB_FUNC_STATIC(QABSTRACTSLIDER_DELETE)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -103,17 +103,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_DELETE )
 /*
 int maximum() const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
+HB_FUNC_STATIC(QABSTRACTSLIDER_MAXIMUM)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximum() );
+      RINT(obj->maximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,17 +127,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
 /*
 void setMaximum( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETMAXIMUM)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximum( PINT(1) );
+      obj->setMaximum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,17 +153,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
 /*
 int minimum() const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
+HB_FUNC_STATIC(QABSTRACTSLIDER_MINIMUM)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimum() );
+      RINT(obj->minimum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,17 +177,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
 /*
 void setMinimum( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETMINIMUM)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimum( PINT(1) );
+      obj->setMinimum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,17 +203,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
+HB_FUNC_STATIC(QABSTRACTSLIDER_ORIENTATION)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->orientation() );
+      RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,17 +227,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
 /*
 void setOrientation( Qt::Orientation )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETORIENTATION)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation((Qt::Orientation)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,17 +253,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
 /*
 int pageStep() const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
+HB_FUNC_STATIC(QABSTRACTSLIDER_PAGESTEP)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->pageStep() );
+      RINT(obj->pageStep());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,17 +277,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
 /*
 void setPageStep( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETPAGESTEP)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPageStep( PINT(1) );
+      obj->setPageStep(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,17 +303,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
 /*
 bool invertedAppearance() const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
+HB_FUNC_STATIC(QABSTRACTSLIDER_INVERTEDAPPEARANCE)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->invertedAppearance() );
+      RBOOL(obj->invertedAppearance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,17 +327,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
 /*
 void setInvertedAppearance( bool )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDAPPEARANCE)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setInvertedAppearance( PBOOL(1) );
+      obj->setInvertedAppearance(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,17 +353,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
 /*
 bool invertedControls() const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
+HB_FUNC_STATIC(QABSTRACTSLIDER_INVERTEDCONTROLS)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->invertedControls() );
+      RBOOL(obj->invertedControls());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,17 +377,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
 /*
 void setInvertedControls( bool )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDCONTROLS)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setInvertedControls( PBOOL(1) );
+      obj->setInvertedControls(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,17 +403,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
 /*
 void setRange( int min, int max )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETRANGE)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,17 +429,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
 /*
 bool isSliderDown() const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
+HB_FUNC_STATIC(QABSTRACTSLIDER_ISSLIDERDOWN)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSliderDown() );
+      RBOOL(obj->isSliderDown());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,17 +453,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
 /*
 void setSliderDown( bool )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERDOWN)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSliderDown( PBOOL(1) );
+      obj->setSliderDown(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,17 +479,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
 /*
 int singleStep() const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SINGLESTEP)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->singleStep() );
+      RINT(obj->singleStep());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -503,17 +503,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
 /*
 void setSingleStep( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETSINGLESTEP)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSingleStep( PINT(1) );
+      obj->setSingleStep(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -529,17 +529,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
 /*
 int sliderPosition() const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SLIDERPOSITION)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->sliderPosition() );
+      RINT(obj->sliderPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,17 +553,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
 /*
 void setSliderPosition( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERPOSITION)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSliderPosition( PINT(1) );
+      obj->setSliderPosition(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -579,17 +579,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
 /*
 void triggerAction( QAbstractSlider::SliderAction action )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
+HB_FUNC_STATIC(QABSTRACTSLIDER_TRIGGERACTION)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->triggerAction( (QAbstractSlider::SliderAction) hb_parni(1) );
+      obj->triggerAction((QAbstractSlider::SliderAction)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -605,17 +605,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
 /*
 int value() const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
+HB_FUNC_STATIC(QABSTRACTSLIDER_VALUE)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->value() );
+      RINT(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -629,17 +629,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
 /*
 void setValue( int )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETVALUE )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETVALUE)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setValue( PINT(1) );
+      obj->setValue(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -655,17 +655,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETVALUE )
 /*
 bool hasTracking() const
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
+HB_FUNC_STATIC(QABSTRACTSLIDER_HASTRACKING)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasTracking() );
+      RBOOL(obj->hasTracking());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -679,17 +679,17 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
 /*
 void setTracking( bool enable )
 */
-HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
+HB_FUNC_STATIC(QABSTRACTSLIDER_SETTRACKING)
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider *obj = (QAbstractSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setTracking( PBOOL(1) );
+      obj->setTracking(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -702,34 +702,34 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAbstractSliderSlots_connect_signal(const QString & signal, const QString & slot);
+void QAbstractSliderSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
+HB_FUNC_STATIC(QABSTRACTSLIDER_ONACTIONTRIGGERED)
 {
   QAbstractSliderSlots_connect_signal("actionTriggered(int)", "actionTriggered(int)");
 }
 
-HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
+HB_FUNC_STATIC(QABSTRACTSLIDER_ONRANGECHANGED)
 {
   QAbstractSliderSlots_connect_signal("rangeChanged(int,int)", "rangeChanged(int,int)");
 }
 
-HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
+HB_FUNC_STATIC(QABSTRACTSLIDER_ONSLIDERMOVED)
 {
   QAbstractSliderSlots_connect_signal("sliderMoved(int)", "sliderMoved(int)");
 }
 
-HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
+HB_FUNC_STATIC(QABSTRACTSLIDER_ONSLIDERPRESSED)
 {
   QAbstractSliderSlots_connect_signal("sliderPressed()", "sliderPressed()");
 }
 
-HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
+HB_FUNC_STATIC(QABSTRACTSLIDER_ONSLIDERRELEASED)
 {
   QAbstractSliderSlots_connect_signal("sliderReleased()", "sliderReleased()");
 }
 
-HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
+HB_FUNC_STATIC(QABSTRACTSLIDER_ONVALUECHANGED)
 {
   QAbstractSliderSlots_connect_signal("valueChanged(int)", "valueChanged(int)");
 }

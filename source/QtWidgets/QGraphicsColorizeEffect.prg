@@ -60,14 +60,14 @@ RETURN
 #include <QtWidgets/QGraphicsColorizeEffect>
 #endif
 
-/*
-QGraphicsColorizeEffect( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
+    /*
+    QGraphicsColorizeEffect( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QGraphicsColorizeEffect * obj = new QGraphicsColorizeEffect( OPQOBJECT(1,0) );
+    QGraphicsColorizeEffect *obj = new QGraphicsColorizeEffect(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,11 +76,11 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_DELETE)
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect *obj = (QGraphicsColorizeEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -97,17 +97,17 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
 /*
 QColor color() const
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_COLOR)
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect *obj = (QGraphicsColorizeEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->color() );
+      QColor *ptr = new QColor(obj->color());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -122,17 +122,17 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 /*
 qreal strength() const
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_STRENGTH)
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect *obj = (QGraphicsColorizeEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->strength() );
+      RQREAL(obj->strength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,17 +146,17 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 /*
 void setColor( const QColor & c )
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_SETCOLOR)
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect *obj = (QGraphicsColorizeEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor(HB_ISOBJECT(1) ? *(QColor *)Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,17 +172,17 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 /*
 void setStrength( qreal strength )
 */
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH)
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect *obj = (QGraphicsColorizeEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setStrength( PQREAL(1) );
+      obj->setStrength(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,14 +195,14 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsColorizeEffectSlots_connect_signal(const QString & signal, const QString & slot);
+void QGraphicsColorizeEffectSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED)
 {
   QGraphicsColorizeEffectSlots_connect_signal("colorChanged(QColor)", "colorChanged(QColor)");
 }
 
-HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
+HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED)
 {
   QGraphicsColorizeEffectSlots_connect_signal("strengthChanged(qreal)", "strengthChanged(qreal)");
 }

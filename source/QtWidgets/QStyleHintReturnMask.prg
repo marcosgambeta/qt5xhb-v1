@@ -50,14 +50,14 @@ RETURN
 #include <QtWidgets/QStyleHintReturnMask>
 #endif
 
-/*
-QStyleHintReturnMask()
-*/
-HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
+    /*
+    QStyleHintReturnMask()
+    */
+HB_FUNC_STATIC(QSTYLEHINTRETURNMASK_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QStyleHintReturnMask * obj = new QStyleHintReturnMask();
+    QStyleHintReturnMask *obj = new QStyleHintReturnMask();
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -66,11 +66,11 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_DELETE )
+HB_FUNC_STATIC(QSTYLEHINTRETURNMASK_DELETE)
 {
-  QStyleHintReturnMask * obj = (QStyleHintReturnMask *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleHintReturnMask *obj = (QStyleHintReturnMask *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

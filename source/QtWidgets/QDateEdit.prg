@@ -52,22 +52,22 @@ RETURN
 #include <QtWidgets/QDateEdit>
 #endif
 
-HB_FUNC_STATIC( QDATEEDIT_NEW )
+HB_FUNC_STATIC(QDATEEDIT_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QDateEdit( QWidget * parent = 0 )
     */
-    QDateEdit * obj = new QDateEdit( OPQWIDGET(1,0) );
+    QDateEdit *obj = new QDateEdit(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1,2) && ISQDATE(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && ISQDATE(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QDateEdit( const QDate & date, QWidget * parent = 0 )
     */
-    QDateEdit * obj = new QDateEdit( *PQDATE(1), OPQWIDGET(2,0) );
+    QDateEdit *obj = new QDateEdit(*PQDATE(1), OPQWIDGET(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,11 +76,11 @@ HB_FUNC_STATIC( QDATEEDIT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDATEEDIT_DELETE )
+HB_FUNC_STATIC(QDATEEDIT_DELETE)
 {
-  QDateEdit * obj = (QDateEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDateEdit *obj = (QDateEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

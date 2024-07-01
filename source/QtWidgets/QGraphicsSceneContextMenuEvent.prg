@@ -56,11 +56,11 @@ RETURN
 #include <QtWidgets/QGraphicsSceneContextMenuEvent>
 #endif
 
-HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_DELETE )
+HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_DELETE)
 {
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent *obj = (QGraphicsSceneContextMenuEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -75,17 +75,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_DELETE )
 /*
 Qt::KeyboardModifiers modifiers() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
+HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS)
 {
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent *obj = (QGraphicsSceneContextMenuEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->modifiers() );
+      RENUM(obj->modifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,17 +99,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
 /*
 QPointF pos() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
+HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_POS)
 {
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent *obj = (QGraphicsSceneContextMenuEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->pos() );
+      QPointF *ptr = new QPointF(obj->pos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -124,17 +124,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
 /*
 QGraphicsSceneContextMenuEvent::Reason reason() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
+HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_REASON)
 {
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent *obj = (QGraphicsSceneContextMenuEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->reason() );
+      RENUM(obj->reason());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,17 +148,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
 /*
 QPointF scenePos() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
+HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS)
 {
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent *obj = (QGraphicsSceneContextMenuEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->scenePos() );
+      QPointF *ptr = new QPointF(obj->scenePos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -173,17 +173,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
 /*
 QPoint screenPos() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS )
+HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS)
 {
-  QGraphicsSceneContextMenuEvent * obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent *obj = (QGraphicsSceneContextMenuEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPoint * ptr = new QPoint( obj->screenPos() );
+      QPoint *ptr = new QPoint(obj->screenPos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

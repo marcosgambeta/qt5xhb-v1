@@ -55,11 +55,11 @@ RETURN
 #include <QtWidgets/QSwipeGesture>
 #endif
 
-HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
+HB_FUNC_STATIC(QSWIPEGESTURE_DELETE)
 {
-  QSwipeGesture * obj = (QSwipeGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSwipeGesture *obj = (QSwipeGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -76,17 +76,17 @@ HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
 /*
 QSwipeGesture::SwipeDirection horizontalDirection() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
+HB_FUNC_STATIC(QSWIPEGESTURE_HORIZONTALDIRECTION)
 {
-  QSwipeGesture * obj = (QSwipeGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSwipeGesture *obj = (QSwipeGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->horizontalDirection() );
+      RENUM(obj->horizontalDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -100,17 +100,17 @@ HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
 /*
 void setSwipeAngle( qreal value )
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
+HB_FUNC_STATIC(QSWIPEGESTURE_SETSWIPEANGLE)
 {
-  QSwipeGesture * obj = (QSwipeGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSwipeGesture *obj = (QSwipeGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSwipeAngle( PQREAL(1) );
+      obj->setSwipeAngle(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,17 +126,17 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
 /*
 qreal swipeAngle() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
+HB_FUNC_STATIC(QSWIPEGESTURE_SWIPEANGLE)
 {
-  QSwipeGesture * obj = (QSwipeGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSwipeGesture *obj = (QSwipeGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->swipeAngle() );
+      RQREAL(obj->swipeAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,17 +150,17 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
 /*
 QSwipeGesture::SwipeDirection verticalDirection() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
+HB_FUNC_STATIC(QSWIPEGESTURE_VERTICALDIRECTION)
 {
-  QSwipeGesture * obj = (QSwipeGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSwipeGesture *obj = (QSwipeGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->verticalDirection() );
+      RENUM(obj->verticalDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

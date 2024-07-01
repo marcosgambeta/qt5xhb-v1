@@ -54,22 +54,23 @@ RETURN
 #include <QtWidgets/QStyleOptionComplex>
 #endif
 
-HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
+HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_NEW)
 {
-  if( ISBETWEEN(0,2) && ( HB_ISNUM(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
+  if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     QStyleOptionComplex( int version = QStyleOptionComplex::Version, int type = QStyleOptionComplex::SO_Complex )
     */
-    QStyleOptionComplex * obj = new QStyleOptionComplex( OPINT(1,QStyleOptionComplex::Version), OPINT(2,QStyleOptionComplex::SO_Complex) );
+    QStyleOptionComplex *obj =
+        new QStyleOptionComplex(OPINT(1, QStyleOptionComplex::Version), OPINT(2, QStyleOptionComplex::SO_Complex));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONCOMPLEX(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONCOMPLEX(1))
   {
     /*
     QStyleOptionComplex( const QStyleOptionComplex & other )
     */
-    QStyleOptionComplex * obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1) );
+    QStyleOptionComplex *obj = new QStyleOptionComplex(*PQSTYLEOPTIONCOMPLEX(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -78,11 +79,11 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_DELETE )
+HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_DELETE)
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionComplex *obj = (QStyleOptionComplex *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -97,15 +98,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_DELETE )
 /*
 QStyle::SubControls subControls
 */
-HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
+HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SUBCONTROLS)
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionComplex *obj = (QStyleOptionComplex *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->subControls );
+      RENUM(obj->subControls);
     }
     else
     {
@@ -113,15 +114,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
+HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS)
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionComplex *obj = (QStyleOptionComplex *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->subControls= (QStyle::SubControls) hb_parni(1);
+      obj->subControls = (QStyle::SubControls)hb_parni(1);
     }
     else
     {
@@ -135,15 +136,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
 /*
 QStyle::SubControls activeSubControls
 */
-HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
+HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS)
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionComplex *obj = (QStyleOptionComplex *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->activeSubControls );
+      RENUM(obj->activeSubControls);
     }
     else
     {
@@ -151,15 +152,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS )
+HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS)
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionComplex *obj = (QStyleOptionComplex *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->activeSubControls= (QStyle::SubControls) hb_parni(1);
+      obj->activeSubControls = (QStyle::SubControls)hb_parni(1);
     }
     else
     {

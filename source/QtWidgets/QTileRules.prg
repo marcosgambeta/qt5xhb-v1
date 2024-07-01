@@ -59,22 +59,22 @@ RETURN
 #include <QtWidgets/QTileRules>
 #endif
 
-HB_FUNC_STATIC( QTILERULES_NEW )
+HB_FUNC_STATIC(QTILERULES_NEW)
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     QTileRules( Qt::TileRule horizontalRule, Qt::TileRule verticalRule )
     */
-    QTileRules * obj = new QTileRules( (Qt::TileRule) hb_parni(1), (Qt::TileRule) hb_parni(2) );
+    QTileRules *obj = new QTileRules((Qt::TileRule)hb_parni(1), (Qt::TileRule)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
+  else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
     QTileRules( Qt::TileRule rule = Qt::StretchTile )
     */
-    QTileRules * obj = new QTileRules( HB_ISNIL(1)? (Qt::TileRule) Qt::StretchTile : (Qt::TileRule) hb_parni(1) );
+    QTileRules *obj = new QTileRules(HB_ISNIL(1) ? (Qt::TileRule)Qt::StretchTile : (Qt::TileRule)hb_parni(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -83,11 +83,11 @@ HB_FUNC_STATIC( QTILERULES_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTILERULES_DELETE )
+HB_FUNC_STATIC(QTILERULES_DELETE)
 {
-  QTileRules * obj = (QTileRules *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTileRules *obj = (QTileRules *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -99,11 +99,11 @@ HB_FUNC_STATIC( QTILERULES_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QTILERULES_NEWFROM )
+HB_FUNC_STATIC(QTILERULES_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTILERULES_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -129,26 +129,26 @@ HB_FUNC_STATIC( QTILERULES_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTILERULES_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTILERULES_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QTILERULES_NEWFROM );
+  HB_FUNC_EXEC(QTILERULES_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTILERULES_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTILERULES_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QTILERULES_NEWFROM );
+  HB_FUNC_EXEC(QTILERULES_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTILERULES_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTILERULES_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTILERULES_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTILERULES_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

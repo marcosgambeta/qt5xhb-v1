@@ -52,22 +52,22 @@ RETURN
 #include <QtWidgets/QTimeEdit>
 #endif
 
-HB_FUNC_STATIC( QTIMEEDIT_NEW )
+HB_FUNC_STATIC(QTIMEEDIT_NEW)
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QTimeEdit( QWidget * parent = 0 )
     */
-    QTimeEdit * obj = new QTimeEdit( OPQWIDGET(1,0) );
+    QTimeEdit *obj = new QTimeEdit(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1,2) && ISQTIME(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && ISQTIME(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QTimeEdit( const QTime & time, QWidget * parent = 0 )
     */
-    QTimeEdit * obj = new QTimeEdit( *PQTIME(1), OPQWIDGET(2,0) );
+    QTimeEdit *obj = new QTimeEdit(*PQTIME(1), OPQWIDGET(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -76,11 +76,11 @@ HB_FUNC_STATIC( QTIMEEDIT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTIMEEDIT_DELETE )
+HB_FUNC_STATIC(QTIMEEDIT_DELETE)
 {
-  QTimeEdit * obj = (QTimeEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeEdit *obj = (QTimeEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);

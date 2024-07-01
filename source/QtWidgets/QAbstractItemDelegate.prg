@@ -68,11 +68,11 @@ RETURN
 #include <QtWidgets/QAbstractItemDelegate>
 #endif
 
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_DELETE)
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -89,18 +89,18 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 /*
 virtual QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_CREATEEDITOR)
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if (ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
 #endif
-      QWidget * ptr = obj->createEditor( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      QWidget *ptr = obj->createEditor(PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3));
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,19 +112,20 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 }
 
 /*
-virtual bool editorEvent( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
+virtual bool editorEvent( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const
+QModelIndex & index )
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_EDITOREVENT)
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQEVENT(1) && ISQABSTRACTITEMMODEL(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4) )
+    if (ISNUMPAR(4) && ISQEVENT(1) && ISQABSTRACTITEMMODEL(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4))
     {
 #endif
-      RBOOL( obj->editorEvent( PQEVENT(1), PQABSTRACTITEMMODEL(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
+      RBOOL(obj->editorEvent(PQEVENT(1), PQABSTRACTITEMMODEL(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,17 +139,17 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 /*
 virtual void paint( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_PAINT)
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
 #endif
-      obj->paint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      obj->paint(PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,17 +165,17 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 /*
 virtual void setEditorData( QWidget * editor, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_SETEDITORDATA)
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2) )
+    if (ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2))
     {
 #endif
-      obj->setEditorData( PQWIDGET(1), *PQMODELINDEX(2) );
+      obj->setEditorData(PQWIDGET(1), *PQMODELINDEX(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,17 +191,17 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 /*
 virtual void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_SETMODELDATA)
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3) )
+    if (ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3))
     {
 #endif
-      obj->setModelData( PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3) );
+      obj->setModelData(PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,17 +217,17 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 /*
 virtual QSize sizeHint( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_SIZEHINT)
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2) )
+    if (ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
+      QSize *ptr = new QSize(obj->sizeHint(*PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2)));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -239,19 +240,20 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 }
 
 /*
-virtual void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
+virtual void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index )
+const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY)
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if (ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
 #endif
-      obj->updateEditorGeometry( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      obj->updateEditorGeometry(PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,19 +267,20 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 }
 
 /*
-virtual bool helpEvent( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
+virtual bool helpEvent( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const
+QModelIndex & index )
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_HELPEVENT)
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQHELPEVENT(1) && ISQABSTRACTITEMVIEW(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4) )
+    if (ISNUMPAR(4) && ISQHELPEVENT(1) && ISQABSTRACTITEMVIEW(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4))
     {
 #endif
-      RBOOL( obj->helpEvent( PQHELPEVENT(1), PQABSTRACTITEMVIEW(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
+      RBOOL(obj->helpEvent(PQHELPEVENT(1), PQABSTRACTITEMVIEW(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,17 +294,17 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 /*
 virtual void destroyEditor( QWidget * editor, const QModelIndex & index ) const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_DESTROYEDITOR)
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2) )
+    if (ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2))
     {
 #endif
-      obj->destroyEditor( PQWIDGET(1), *PQMODELINDEX(2) );
+      obj->destroyEditor(PQWIDGET(1), *PQMODELINDEX(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,13 +320,14 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
 /*
 static QString elidedText( const QFontMetrics & fontMetrics, int width, Qt::TextElideMode mode, const QString & text )
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ELIDEDTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(4) && ISQFONTMETRICS(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISCHAR(4) )
+  if (ISNUMPAR(4) && ISQFONTMETRICS(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISCHAR(4))
   {
 #endif
-    RQSTRING( QAbstractItemDelegate::elidedText( *PQFONTMETRICS(1), PINT(2), (Qt::TextElideMode) hb_parni(3), PQSTRING(4) ) );
+    RQSTRING(
+        QAbstractItemDelegate::elidedText(*PQFONTMETRICS(1), PINT(2), (Qt::TextElideMode)hb_parni(3), PQSTRING(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -336,22 +340,22 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
 /*
 virtual QVector<int> paintingRoles() const
 */
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_PAINTINGROLES)
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QVector<int> list = obj->paintingRoles();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      for (int i = 0; i < list.count(); i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(NULL, list[i]);
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
@@ -365,19 +369,20 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
   }
 }
 
-void QAbstractItemDelegateSlots_connect_signal(const QString & signal, const QString & slot);
+void QAbstractItemDelegateSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONCLOSEEDITOR)
 {
-  QAbstractItemDelegateSlots_connect_signal("closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)", "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)");
+  QAbstractItemDelegateSlots_connect_signal("closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)",
+                                            "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)");
 }
 
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONCOMMITDATA)
 {
   QAbstractItemDelegateSlots_connect_signal("commitData(QWidget*)", "commitData(QWidget*)");
 }
 
-HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
+HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED)
 {
   QAbstractItemDelegateSlots_connect_signal("sizeHintChanged(QModelIndex)", "sizeHintChanged(QModelIndex)");
 }

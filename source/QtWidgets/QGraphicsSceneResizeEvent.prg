@@ -53,14 +53,14 @@ RETURN
 #include <QtWidgets/QGraphicsSceneResizeEvent>
 #endif
 
-/*
-QGraphicsSceneResizeEvent()
-*/
-HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
+    /*
+    QGraphicsSceneResizeEvent()
+    */
+HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QGraphicsSceneResizeEvent * obj = new QGraphicsSceneResizeEvent();
+    QGraphicsSceneResizeEvent *obj = new QGraphicsSceneResizeEvent();
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -72,11 +72,11 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 /*
 virtual ~QGraphicsSceneResizeEvent()
 */
-HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_DELETE )
+HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_DELETE)
 {
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneResizeEvent *obj = (QGraphicsSceneResizeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -91,17 +91,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_DELETE )
 /*
 QSizeF newSize() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
+HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEWSIZE)
 {
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneResizeEvent *obj = (QGraphicsSceneResizeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->newSize() );
+      QSizeF *ptr = new QSizeF(obj->newSize());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -116,17 +116,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
 /*
 QSizeF oldSize() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
+HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_OLDSIZE)
 {
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneResizeEvent *obj = (QGraphicsSceneResizeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->oldSize() );
+      QSizeF *ptr = new QSizeF(obj->oldSize());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

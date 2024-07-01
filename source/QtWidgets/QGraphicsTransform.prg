@@ -52,11 +52,11 @@ RETURN
 #include <QtWidgets/QGraphicsTransform>
 #endif
 
-HB_FUNC_STATIC( QGRAPHICSTRANSFORM_DELETE )
+HB_FUNC_STATIC(QGRAPHICSTRANSFORM_DELETE)
 {
-  QGraphicsTransform * obj = (QGraphicsTransform *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsTransform *obj = (QGraphicsTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -73,17 +73,17 @@ HB_FUNC_STATIC( QGRAPHICSTRANSFORM_DELETE )
 /*
 virtual void applyTo( QMatrix4x4 * matrix ) const = 0
 */
-HB_FUNC_STATIC( QGRAPHICSTRANSFORM_APPLYTO )
+HB_FUNC_STATIC(QGRAPHICSTRANSFORM_APPLYTO)
 {
-  QGraphicsTransform * obj = (QGraphicsTransform *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsTransform *obj = (QGraphicsTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMATRIX4X4(1) )
+    if (ISNUMPAR(1) && ISQMATRIX4X4(1))
     {
 #endif
-      obj->applyTo( PQMATRIX4X4(1) );
+      obj->applyTo(PQMATRIX4X4(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

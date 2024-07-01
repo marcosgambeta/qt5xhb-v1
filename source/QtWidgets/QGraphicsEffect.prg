@@ -59,11 +59,11 @@ RETURN
 #include <QtWidgets/QGraphicsEffect>
 #endif
 
-HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_DELETE)
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect *obj = (QGraphicsEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -80,17 +80,17 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 /*
 QRectF boundingRect() const
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECT)
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect *obj = (QGraphicsEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect() );
+      QRectF *ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -105,17 +105,17 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 /*
 virtual QRectF boundingRectFor( const QRectF & rect ) const
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECTFOR)
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect *obj = (QGraphicsEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
+      QRectF *ptr = new QRectF(obj->boundingRectFor(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -130,17 +130,17 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 /*
 bool isEnabled() const
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_ISENABLED)
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect *obj = (QGraphicsEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEnabled() );
+      RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,17 +154,17 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
 /*
 void setEnabled( bool enable )
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_SETENABLED)
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect *obj = (QGraphicsEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setEnabled( PBOOL(1) );
+      obj->setEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,14 +180,14 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 /*
 void update()
 */
-HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_UPDATE)
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect *obj = (QGraphicsEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->update();
@@ -203,9 +203,9 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsEffectSlots_connect_signal(const QString & signal, const QString & slot);
+void QGraphicsEffectSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
+HB_FUNC_STATIC(QGRAPHICSEFFECT_ONENABLEDCHANGED)
 {
   QGraphicsEffectSlots_connect_signal("enabledChanged(bool)", "enabledChanged(bool)");
 }

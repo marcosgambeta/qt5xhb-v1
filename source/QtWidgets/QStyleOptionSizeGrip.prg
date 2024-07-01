@@ -51,22 +51,22 @@ RETURN
 #include <QtWidgets/QStyleOptionSizeGrip>
 #endif
 
-HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
+HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionSizeGrip()
     */
-    QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip();
+    QStyleOptionSizeGrip *obj = new QStyleOptionSizeGrip();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1))
   {
     /*
     QStyleOptionSizeGrip( const QStyleOptionSizeGrip & other )
     */
-    QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
+    QStyleOptionSizeGrip *obj = new QStyleOptionSizeGrip(*PQSTYLEOPTIONSIZEGRIP(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -78,15 +78,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
 /*
 Qt::Corner corner
 */
-HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
+HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_CORNER)
 {
-  QStyleOptionSizeGrip * obj = (QStyleOptionSizeGrip *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSizeGrip *obj = (QStyleOptionSizeGrip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->corner );
+      RENUM(obj->corner);
     }
     else
     {
@@ -94,15 +94,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_SETCORNER )
+HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_SETCORNER)
 {
-  QStyleOptionSizeGrip * obj = (QStyleOptionSizeGrip *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSizeGrip *obj = (QStyleOptionSizeGrip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->corner= (Qt::Corner) hb_parni(1);
+      obj->corner = (Qt::Corner)hb_parni(1);
     }
     else
     {

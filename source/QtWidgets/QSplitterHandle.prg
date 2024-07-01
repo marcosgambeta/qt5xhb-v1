@@ -59,14 +59,14 @@ RETURN
 #include <QtWidgets/QSplitterHandle>
 #endif
 
-/*
-QSplitterHandle( Qt::Orientation orientation, QSplitter * parent )
-*/
-HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
+    /*
+    QSplitterHandle( Qt::Orientation orientation, QSplitter * parent )
+    */
+HB_FUNC_STATIC(QSPLITTERHANDLE_NEW)
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSPLITTER(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSPLITTER(2))
   {
-    QSplitterHandle * obj = new QSplitterHandle( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
+    QSplitterHandle *obj = new QSplitterHandle((Qt::Orientation)hb_parni(1), PQSPLITTER(2));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -75,11 +75,11 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSPLITTERHANDLE_DELETE )
+HB_FUNC_STATIC(QSPLITTERHANDLE_DELETE)
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle *obj = (QSplitterHandle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -96,17 +96,17 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_DELETE )
 /*
 bool opaqueResize() const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
+HB_FUNC_STATIC(QSPLITTERHANDLE_OPAQUERESIZE)
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle *obj = (QSplitterHandle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->opaqueResize() );
+      RBOOL(obj->opaqueResize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,17 +120,17 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
+HB_FUNC_STATIC(QSPLITTERHANDLE_ORIENTATION)
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle *obj = (QSplitterHandle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->orientation() );
+      RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,17 +144,17 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
 /*
 void setOrientation( Qt::Orientation orientation )
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
+HB_FUNC_STATIC(QSPLITTERHANDLE_SETORIENTATION)
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle *obj = (QSplitterHandle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation((Qt::Orientation)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,18 +170,18 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
 /*
 QSplitter * splitter() const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
+HB_FUNC_STATIC(QSPLITTERHANDLE_SPLITTER)
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle *obj = (QSplitterHandle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSplitter * ptr = obj->splitter();
-      Qt5xHb::createReturnQWidgetClass( ptr, "QSPLITTER");
+      QSplitter *ptr = obj->splitter();
+      Qt5xHb::createReturnQWidgetClass(ptr, "QSPLITTER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,17 +195,17 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
+HB_FUNC_STATIC(QSPLITTERHANDLE_SIZEHINT)
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt5xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle *obj = (QSplitterHandle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint() );
+      QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

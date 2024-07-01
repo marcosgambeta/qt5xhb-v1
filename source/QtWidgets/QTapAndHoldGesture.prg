@@ -56,11 +56,11 @@ RETURN
 #include <QtWidgets/QTapAndHoldGesture>
 #endif
 
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
+HB_FUNC_STATIC(QTAPANDHOLDGESTURE_DELETE)
 {
-  QTapAndHoldGesture * obj = (QTapAndHoldGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTapAndHoldGesture *obj = (QTapAndHoldGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -77,17 +77,17 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
 /*
 QPointF position() const
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
+HB_FUNC_STATIC(QTAPANDHOLDGESTURE_POSITION)
 {
-  QTapAndHoldGesture * obj = (QTapAndHoldGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTapAndHoldGesture *obj = (QTapAndHoldGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->position() );
+      QPointF *ptr = new QPointF(obj->position());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -102,17 +102,17 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
 /*
 void setPosition( const QPointF & pos )
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
+HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETPOSITION)
 {
-  QTapAndHoldGesture * obj = (QTapAndHoldGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTapAndHoldGesture *obj = (QTapAndHoldGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setPosition( *PQPOINTF(1) );
+      obj->setPosition(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,13 +128,13 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
 /*
 static void setTimeout( int msecs )
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
+HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETTIMEOUT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QTapAndHoldGesture::setTimeout( PINT(1) );
+    QTapAndHoldGesture::setTimeout(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -149,13 +149,13 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
 /*
 static int timeout()
 */
-HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
+HB_FUNC_STATIC(QTAPANDHOLDGESTURE_TIMEOUT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RINT( QTapAndHoldGesture::timeout() );
+    RINT(QTapAndHoldGesture::timeout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

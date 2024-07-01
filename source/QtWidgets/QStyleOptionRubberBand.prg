@@ -53,22 +53,22 @@ RETURN
 #include <QtWidgets/QStyleOptionRubberBand>
 #endif
 
-HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_NEW )
+HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionRubberBand()
     */
-    QStyleOptionRubberBand * obj = new QStyleOptionRubberBand();
+    QStyleOptionRubberBand *obj = new QStyleOptionRubberBand();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONRUBBERBAND(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONRUBBERBAND(1))
   {
     /*
     QStyleOptionRubberBand( const QStyleOptionRubberBand & other )
     */
-    QStyleOptionRubberBand * obj = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND(1) );
+    QStyleOptionRubberBand *obj = new QStyleOptionRubberBand(*PQSTYLEOPTIONRUBBERBAND(1));
     Qt5xHb::returnNewObject(obj, true);
   }
   else
@@ -80,15 +80,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_NEW )
 /*
 QRubberBand::Shape shape
 */
-HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SHAPE )
+HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SHAPE)
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand *obj = (QStyleOptionRubberBand *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RENUM( obj->shape );
+      RENUM(obj->shape);
     }
     else
     {
@@ -96,15 +96,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SHAPE )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETSHAPE )
+HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETSHAPE)
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand *obj = (QStyleOptionRubberBand *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->shape= (QRubberBand::Shape) hb_parni(1);
+      obj->shape = (QRubberBand::Shape)hb_parni(1);
     }
     else
     {
@@ -118,15 +118,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETSHAPE )
 /*
 bool opaque
 */
-HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_OPAQUE )
+HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_OPAQUE)
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand *obj = (QStyleOptionRubberBand *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RBOOL( obj->opaque );
+      RBOOL(obj->opaque);
     }
     else
     {
@@ -134,15 +134,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_OPAQUE )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETOPAQUE )
+HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETOPAQUE)
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand *obj = (QStyleOptionRubberBand *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->opaque= PBOOL(1);
+      obj->opaque = PBOOL(1);
     }
     else
     {

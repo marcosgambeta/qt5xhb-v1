@@ -67,11 +67,11 @@ RETURN
 
 #include <QtWidgets/QAction>
 
-HB_FUNC_STATIC( QWHATSTHIS_DELETE )
+HB_FUNC_STATIC(QWHATSTHIS_DELETE)
 {
-  QWhatsThis * obj = (QWhatsThis *) Qt5xHb::itemGetPtrStackSelfItem();
+  QWhatsThis *obj = (QWhatsThis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -86,13 +86,13 @@ HB_FUNC_STATIC( QWHATSTHIS_DELETE )
 /*
 static QAction * createAction( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
+HB_FUNC_STATIC(QWHATSTHIS_CREATEACTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
 #endif
-    QAction * ptr = QWhatsThis::createAction( OPQOBJECT(1,0) );
+    QAction *ptr = QWhatsThis::createAction(OPQOBJECT(1, 0));
     Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -106,10 +106,10 @@ HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
 /*
 static void enterWhatsThisMode()
 */
-HB_FUNC_STATIC( QWHATSTHIS_ENTERWHATSTHISMODE )
+HB_FUNC_STATIC(QWHATSTHIS_ENTERWHATSTHISMODE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     QWhatsThis::enterWhatsThisMode();
@@ -127,10 +127,10 @@ HB_FUNC_STATIC( QWHATSTHIS_ENTERWHATSTHISMODE )
 /*
 static void hideText()
 */
-HB_FUNC_STATIC( QWHATSTHIS_HIDETEXT )
+HB_FUNC_STATIC(QWHATSTHIS_HIDETEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     QWhatsThis::hideText();
@@ -148,13 +148,13 @@ HB_FUNC_STATIC( QWHATSTHIS_HIDETEXT )
 /*
 static bool inWhatsThisMode()
 */
-HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
+HB_FUNC_STATIC(QWHATSTHIS_INWHATSTHISMODE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QWhatsThis::inWhatsThisMode() );
+    RBOOL(QWhatsThis::inWhatsThisMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -167,10 +167,10 @@ HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
 /*
 static void leaveWhatsThisMode()
 */
-HB_FUNC_STATIC( QWHATSTHIS_LEAVEWHATSTHISMODE )
+HB_FUNC_STATIC(QWHATSTHIS_LEAVEWHATSTHISMODE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     QWhatsThis::leaveWhatsThisMode();
@@ -188,13 +188,13 @@ HB_FUNC_STATIC( QWHATSTHIS_LEAVEWHATSTHISMODE )
 /*
 static void showText( const QPoint & pos, const QString & text, QWidget * w = 0 )
 */
-HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
+HB_FUNC_STATIC(QWHATSTHIS_SHOWTEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2,3) && ISQPOINT(1) && HB_ISCHAR(2) && (ISQWIDGET(3)||HB_ISNIL(3)) )
+  if (ISBETWEEN(2, 3) && ISQPOINT(1) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
 #endif
-    QWhatsThis::showText( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
+    QWhatsThis::showText(*PQPOINT(1), PQSTRING(2), OPQWIDGET(3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -206,11 +206,11 @@ HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QWHATSTHIS_NEWFROM )
+HB_FUNC_STATIC(QWHATSTHIS_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QWHATSTHIS_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -236,26 +236,26 @@ HB_FUNC_STATIC( QWHATSTHIS_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWHATSTHIS_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWHATSTHIS_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QWHATSTHIS_NEWFROM );
+  HB_FUNC_EXEC(QWHATSTHIS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWHATSTHIS_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWHATSTHIS_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QWHATSTHIS_NEWFROM );
+  HB_FUNC_EXEC(QWHATSTHIS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWHATSTHIS_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWHATSTHIS_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWHATSTHIS_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWHATSTHIS_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

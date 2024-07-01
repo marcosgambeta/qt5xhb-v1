@@ -64,11 +64,11 @@ RETURN
 #include <QtWidgets/QDesktopWidget>
 #endif
 
-HB_FUNC_STATIC( QDESKTOPWIDGET_DELETE )
+HB_FUNC_STATIC(QDESKTOPWIDGET_DELETE)
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -82,44 +82,44 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
+HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
 {
-  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
     const QRect availableGeometry( int screen = -1 ) const
     */
-    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+    QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QRect * ptr = new QRect( obj->availableGeometry( OPINT(1,-1) ) );
+      QRect *ptr = new QRect(obj->availableGeometry(OPINT(1, -1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
     const QRect availableGeometry( const QWidget * widget ) const
     */
-    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+    QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QRect * ptr = new QRect( obj->availableGeometry( PQWIDGET(1) ) );
+      QRect *ptr = new QRect(obj->availableGeometry(PQWIDGET(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     const QRect availableGeometry( const QPoint & p ) const
     */
-    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+    QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QRect * ptr = new QRect( obj->availableGeometry( *PQPOINT(1) ) );
+      QRect *ptr = new QRect(obj->availableGeometry(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
@@ -132,17 +132,17 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 /*
 bool isVirtualDesktop() const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
+HB_FUNC_STATIC(QDESKTOPWIDGET_ISVIRTUALDESKTOP)
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isVirtualDesktop() );
+      RBOOL(obj->isVirtualDesktop());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,17 +156,17 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 /*
 int primaryScreen() const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
+HB_FUNC_STATIC(QDESKTOPWIDGET_PRIMARYSCREEN)
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->primaryScreen() );
+      RINT(obj->primaryScreen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,18 +180,18 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 /*
 QWidget * screen( int screen = -1 )
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
+HB_FUNC_STATIC(QDESKTOPWIDGET_SCREEN)
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      QWidget * ptr = obj->screen( OPINT(1,-1) );
-      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      QWidget *ptr = obj->screen(OPINT(1, -1));
+      Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,17 +205,17 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 /*
 int screenCount() const
 */
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
+HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENCOUNT)
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->screenCount() );
+      RINT(obj->screenCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,44 +226,44 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
   }
 }
 
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
+HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
 {
-  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
     const QRect screenGeometry( int screen = -1 ) const
     */
-    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+    QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QRect * ptr = new QRect( obj->screenGeometry( OPINT(1,-1) ) );
+      QRect *ptr = new QRect(obj->screenGeometry(OPINT(1, -1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
     const QRect screenGeometry( const QWidget * widget ) const
     */
-    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+    QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QRect * ptr = new QRect( obj->screenGeometry( PQWIDGET(1) ) );
+      QRect *ptr = new QRect(obj->screenGeometry(PQWIDGET(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     const QRect screenGeometry( const QPoint & p ) const
     */
-    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+    QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QRect * ptr = new QRect( obj->screenGeometry( *PQPOINT(1) ) );
+      QRect *ptr = new QRect(obj->screenGeometry(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
@@ -273,30 +273,30 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
   }
 }
 
-HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
+HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     int screenNumber( const QWidget * widget = 0 ) const
     */
-    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+    QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      RINT( obj->screenNumber( OPQWIDGET(1,0) ) );
+      RINT(obj->screenNumber(OPQWIDGET(1, 0)));
     }
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     int screenNumber( const QPoint & point ) const
     */
-    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+    QDesktopWidget *obj = (QDesktopWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      RINT( obj->screenNumber( *PQPOINT(1) ) );
+      RINT(obj->screenNumber(*PQPOINT(1)));
     }
   }
   else
@@ -305,19 +305,19 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
   }
 }
 
-void QDesktopWidgetSlots_connect_signal(const QString & signal, const QString & slot);
+void QDesktopWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
+HB_FUNC_STATIC(QDESKTOPWIDGET_ONRESIZED)
 {
   QDesktopWidgetSlots_connect_signal("resized(int)", "resized(int)");
 }
 
-HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
+HB_FUNC_STATIC(QDESKTOPWIDGET_ONSCREENCOUNTCHANGED)
 {
   QDesktopWidgetSlots_connect_signal("screenCountChanged(int)", "screenCountChanged(int)");
 }
 
-HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
+HB_FUNC_STATIC(QDESKTOPWIDGET_ONWORKAREARESIZED)
 {
   QDesktopWidgetSlots_connect_signal("workAreaResized(int)", "workAreaResized(int)");
 }

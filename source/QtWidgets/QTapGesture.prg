@@ -54,11 +54,11 @@ RETURN
 #include <QtWidgets/QTapGesture>
 #endif
 
-HB_FUNC_STATIC( QTAPGESTURE_DELETE )
+HB_FUNC_STATIC(QTAPGESTURE_DELETE)
 {
-  QTapGesture * obj = (QTapGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTapGesture *obj = (QTapGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
@@ -75,17 +75,17 @@ HB_FUNC_STATIC( QTAPGESTURE_DELETE )
 /*
 QPointF position() const
 */
-HB_FUNC_STATIC( QTAPGESTURE_POSITION )
+HB_FUNC_STATIC(QTAPGESTURE_POSITION)
 {
-  QTapGesture * obj = (QTapGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTapGesture *obj = (QTapGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->position() );
+      QPointF *ptr = new QPointF(obj->position());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -100,17 +100,17 @@ HB_FUNC_STATIC( QTAPGESTURE_POSITION )
 /*
 void setPosition( const QPointF & pos )
 */
-HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
+HB_FUNC_STATIC(QTAPGESTURE_SETPOSITION)
 {
-  QTapGesture * obj = (QTapGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  QTapGesture *obj = (QTapGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setPosition( *PQPOINTF(1) );
+      obj->setPosition(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
