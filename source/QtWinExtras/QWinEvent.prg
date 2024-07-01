@@ -39,7 +39,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtWinExtras/QWinEvent>
 #endif
 #endif
@@ -49,20 +49,20 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtWinExtras/QWinEvent>
 #endif
 #endif
 
-/*
-QWinEvent( int type )
-*/
-HB_FUNC_STATIC( QWINEVENT_NEW )
+    /*
+    QWinEvent( int type )
+    */
+HB_FUNC_STATIC(QWINEVENT_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    QWinEvent * obj = new QWinEvent( PINT(1) );
+    QWinEvent *obj = new QWinEvent(PINT(1));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -72,12 +72,12 @@ HB_FUNC_STATIC( QWINEVENT_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QWINEVENT_DELETE )
+HB_FUNC_STATIC(QWINEVENT_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinEvent * obj = (QWinEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QWinEvent *obj = (QWinEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

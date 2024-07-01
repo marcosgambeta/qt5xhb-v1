@@ -40,7 +40,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtWinExtras/QWinCompositionChangeEvent>
 #endif
 #endif
@@ -50,20 +50,20 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #include <QtWinExtras/QWinCompositionChangeEvent>
 #endif
 #endif
 
-/*
-QWinCompositionChangeEvent( bool enabled )
-*/
-HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_NEW )
+    /*
+    QWinCompositionChangeEvent( bool enabled )
+    */
+HB_FUNC_STATIC(QWINCOMPOSITIONCHANGEEVENT_NEW)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISNUMPAR(1) && HB_ISLOG(1) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  if (ISNUMPAR(1) && HB_ISLOG(1))
   {
-    QWinCompositionChangeEvent * obj = new QWinCompositionChangeEvent( PBOOL(1) );
+    QWinCompositionChangeEvent *obj = new QWinCompositionChangeEvent(PBOOL(1));
     Qt5xHb::returnNewObject(obj, false);
   }
   else
@@ -73,12 +73,12 @@ HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_NEW )
 #endif
 }
 
-HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_DELETE )
+HB_FUNC_STATIC(QWINCOMPOSITIONCHANGEEVENT_DELETE)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinCompositionChangeEvent * obj = (QWinCompositionChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QWinCompositionChangeEvent *obj = (QWinCompositionChangeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -94,18 +94,18 @@ HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_DELETE )
 /*
 bool isCompositionEnabled() const
 */
-HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_ISCOMPOSITIONENABLED )
+HB_FUNC_STATIC(QWINCOMPOSITIONCHANGEEVENT_ISCOMPOSITIONENABLED)
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinCompositionChangeEvent * obj = (QWinCompositionChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
+  QWinCompositionChangeEvent *obj = (QWinCompositionChangeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isCompositionEnabled() );
+      RBOOL(obj->isCompositionEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
