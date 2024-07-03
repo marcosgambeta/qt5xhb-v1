@@ -1,10 +1,8 @@
-/*
-
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
-
-  Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
+//
+// Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+//
+// Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+//
 
 #ifndef HCODEBLOCKVALIDATOR_H
 #define HCODEBLOCKVALIDATOR_H
@@ -30,4 +28,4 @@ private:
   PHB_ITEM m_block;
 };
 
-#endif /* HCODEBLOCKVALIDATOR_H */
+#endif // HCODEBLOCKVALIDATOR_H
