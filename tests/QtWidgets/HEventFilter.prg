@@ -1,16 +1,8 @@
-/*
-
-  Qt5xHb Project - Test Program
-
-  Copyright (c) 2024 Marcos Antonio Gambeta
-
-  E-mail:
-  marcosgambeta AT outlook DOT com
-
-  Website:
-  https://github.com/magsoftinfo/qt5xhb-v1-v1
-
-*/
+//
+// Qt5xHb Project - Test Program
+//
+// Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+//
 
 #include "qt5xhb.ch"
 
