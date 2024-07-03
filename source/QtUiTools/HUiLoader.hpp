@@ -1,10 +1,8 @@
-/*
-
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
-
-  Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
+//
+// Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+//
+// Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+//
 
 #ifndef HUILOADER_H
 #define HUILOADER_H
@@ -42,4 +40,4 @@ public:
   void setCreateWidgetCB(PHB_ITEM block);
 };
 
-#endif /* HUILOADER_H */
+#endif // HUILOADER_H
