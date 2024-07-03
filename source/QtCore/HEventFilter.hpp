@@ -1,10 +1,8 @@
-/*
-
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
-
-  Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
+//
+// Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+//
+// Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+//
 
 #ifndef HEVENTFILTER_H
 #define HEVENTFILTER_H
@@ -37,4 +35,4 @@ public:
   PHB_ITEM returnQObject(QObject *ptr, const char *classname);
 };
 
-#endif /* HEVENTFILTER_H */
+#endif // HEVENTFILTER_H

@@ -1,10 +1,8 @@
-/*
-
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
-
-  Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
+//
+// Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+//
+// Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+//
 
 #ifndef HABSTRACTLISTMODELV2_H
 #define HABSTRACTLISTMODELV2_H
@@ -45,4 +43,4 @@ public:
   void reloadData();
 };
 
-#endif /* HABSTRACTLISTMODELV2_H */
+#endif // HABSTRACTLISTMODELV2_H

@@ -1,10 +1,8 @@
-/*
-
-  Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
-
-  Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
+//
+// Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+//
+// Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+//
 
 #ifndef HABSTRACTLISTMODEL_H
 #define HABSTRACTLISTMODEL_H
@@ -175,4 +173,4 @@ public:
   bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
 };
 
-#endif /* HABSTRACTLISTMODEL_H */
+#endif // HABSTRACTLISTMODEL_H
