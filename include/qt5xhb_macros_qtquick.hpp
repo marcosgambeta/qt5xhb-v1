@@ -81,4 +81,4 @@
 #define OPQSGTRANSFORMNODE(n, v)                            HB_ISNIL(n) ? v : static_cast<QSGTransformNode*>(Qt5xHb::itemGetPtr(n))
 #define OPQSGVERTEXCOLORMATERIAL(n, v)                      HB_ISNIL(n) ? v : static_cast<QSGVertexColorMaterial*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTQUICK_H */
+#endif // QT5XHB_MACROS_QTQUICK_H

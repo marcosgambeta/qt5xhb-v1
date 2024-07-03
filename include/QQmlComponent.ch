@@ -23,4 +23,4 @@ enum QQmlComponent::Status
 #define QQmlComponent_Loading                                        2
 #define QQmlComponent_Error                                          3
 
-#endif /* QQMLCOMPONENT_CH */
+#endif // QQMLCOMPONENT_CH

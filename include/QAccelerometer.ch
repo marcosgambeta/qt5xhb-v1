@@ -16,4 +16,4 @@ enum QAccelerometer::AccelerationMode
 #define QAccelerometer_Gravity                                       1
 #define QAccelerometer_User                                          2
 
-#endif /* QACCELEROMETER_CH */
+#endif // QACCELEROMETER_CH

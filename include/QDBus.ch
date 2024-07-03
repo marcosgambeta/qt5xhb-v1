@@ -17,4 +17,4 @@ enum QDBus::CallMode
 #define QDBus_BlockWithGui                                           2
 #define QDBus_AutoDetect                                             3
 
-#endif /* QDBUS_CH */
+#endif // QDBUS_CH

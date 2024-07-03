@@ -16,4 +16,4 @@ enum QLineF::IntersectType
 #define QLineF_UnboundedIntersection                                 2
 #define QLineF_BoundedIntersection                                   1
 
-#endif /* QLINEF_CH */
+#endif // QLINEF_CH

@@ -19,4 +19,4 @@ enum QNetworkProxyQuery::QueryType
 #define QNetworkProxyQuery_UrlRequest                                101
 #define QNetworkProxyQuery_SctpServer                                102
 
-#endif /* QNETWORKPROXYQUERY_CH */
+#endif // QNETWORKPROXYQUERY_CH

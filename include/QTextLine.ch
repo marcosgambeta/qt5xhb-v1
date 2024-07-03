@@ -21,4 +21,4 @@ enum QTextLine::CursorPosition
 #define QTextLine_CursorBetweenCharacters                            0
 #define QTextLine_CursorOnCharacter                                  1
 
-#endif /* QTEXTLINE_CH */
+#endif // QTEXTLINE_CH

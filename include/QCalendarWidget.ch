@@ -29,4 +29,4 @@ enum QCalendarWidget::VerticalHeaderFormat
 #define QCalendarWidget_ISOWeekNumbers                               1
 #define QCalendarWidget_NoVerticalHeader                             0
 
-#endif /* QCALENDARWIDGET_CH */
+#endif // QCALENDARWIDGET_CH

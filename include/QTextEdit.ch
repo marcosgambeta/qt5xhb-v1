@@ -25,4 +25,4 @@ enum QTextEdit::LineWrapMode
 #define QTextEdit_FixedPixelWidth                                    2
 #define QTextEdit_FixedColumnWidth                                   3
 
-#endif /* QTEXTEDIT_CH */
+#endif // QTEXTEDIT_CH

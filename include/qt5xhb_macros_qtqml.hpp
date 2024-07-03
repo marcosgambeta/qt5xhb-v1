@@ -75,4 +75,4 @@
 #define OPQQMLPROPERTYVALUESOURCE(n, v)                     HB_ISNIL(n) ? v : static_cast<QQmlPropertyValueSource*>(Qt5xHb::itemGetPtr(n))
 #define OPQQMLSCRIPTSTRING(n, v)                            HB_ISNIL(n) ? v : static_cast<QQmlScriptString*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTQML_H */
+#endif // QT5XHB_MACROS_QTQML_H

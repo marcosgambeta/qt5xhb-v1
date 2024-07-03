@@ -29,4 +29,4 @@ enum QSettings::Status
 #define QSettings_AccessError                                        1
 #define QSettings_FormatError                                        2
 
-#endif /* QSETTINGS_CH */
+#endif // QSETTINGS_CH

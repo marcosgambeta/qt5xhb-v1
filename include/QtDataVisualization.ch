@@ -20,4 +20,4 @@
 #include "QItemModelSurfaceDataProxy.ch"
 #include "QSurface3DSeries.ch"
 
-#endif /* QTDATAVISUALIZATION_CH */
+#endif // QTDATAVISUALIZATION_CH

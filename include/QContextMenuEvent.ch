@@ -16,4 +16,4 @@ enum QContextMenuEvent::Reason
 #define QContextMenuEvent_Keyboard                                   1
 #define QContextMenuEvent_Other                                      2
 
-#endif /* QCONTEXTMENUEVENT_CH */
+#endif // QCONTEXTMENUEVENT_CH

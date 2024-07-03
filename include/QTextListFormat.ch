@@ -22,4 +22,4 @@ enum QTextListFormat::Style
 #define QTextListFormat_ListUpperRoman                               -8
 #define QTextListFormat_ListStyleUndefined                           0
 
-#endif /* QTEXTLISTFORMAT_CH */
+#endif // QTEXTLISTFORMAT_CH

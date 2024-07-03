@@ -34,4 +34,4 @@ enum QDnsLookup::Type
 #define QDnsLookup_SRV                                               33
 #define QDnsLookup_TXT                                               16
 
-#endif /* QDNSLOOKUP_CH */
+#endif // QDNSLOOKUP_CH

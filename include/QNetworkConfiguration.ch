@@ -51,4 +51,4 @@ enum QNetworkConfiguration::BearerType
 #define QNetworkConfiguration_Bearer3G                               11
 #define QNetworkConfiguration_Bearer4G                               12
 
-#endif /* QNETWORKCONFIGURATION_CH */
+#endif // QNETWORKCONFIGURATION_CH

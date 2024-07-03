@@ -14,4 +14,4 @@ enum QScriptEngineAgent::Extension
 */
 #define QScriptEngineAgent_DebuggerInvocationRequest                 0
 
-#endif /* QSCRIPTENGINEAGENT_CH */
+#endif // QSCRIPTENGINEAGENT_CH

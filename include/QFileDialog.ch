@@ -52,4 +52,4 @@ enum QFileDialog::ViewMode
 #define QFileDialog_Detail                                           0
 #define QFileDialog_List                                             1
 
-#endif /* QFILEDIALOG_CH */
+#endif // QFILEDIALOG_CH

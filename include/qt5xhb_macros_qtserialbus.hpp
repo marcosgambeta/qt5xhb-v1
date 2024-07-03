@@ -54,4 +54,4 @@
 #define OPQMODBUSTCPCLIENT(n, v)                            HB_ISNIL(n) ? v : static_cast<QModbusTcpClient*>(Qt5xHb::itemGetPtr(n))
 #define OPQMODBUSTCPSERVER(n, v)                            HB_ISNIL(n) ? v : static_cast<QModbusTcpServer*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTSERIALBUS_H */
+#endif // QT5XHB_MACROS_QTSERIALBUS_H

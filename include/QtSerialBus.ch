@@ -15,4 +15,4 @@
 #include "QModbusReply.ch"
 #include "QModbusServer.ch"
 
-#endif /* QTSERIALBUS_CH */
+#endif // QTSERIALBUS_CH

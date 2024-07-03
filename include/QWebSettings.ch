@@ -63,4 +63,4 @@ enum QWebSettings::WebGraphic
 #define QWebSettings_DefaultFrameIconGraphic                         2
 #define QWebSettings_TextAreaSizeGripCornerGraphic                   3
 
-#endif /* QWEBSETTINGS_CH */
+#endif // QWEBSETTINGS_CH

@@ -621,4 +621,4 @@
 #define OPQWIZARD(n, v)                                     HB_ISNIL(n) ? v : static_cast<QWizard*>(Qt5xHb::itemGetPtr(n))
 #define OPQWIZARDPAGE(n, v)                                 HB_ISNIL(n) ? v : static_cast<QWizardPage*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTWIDGETS_H */
+#endif // QT5XHB_MACROS_QTWIDGETS_H

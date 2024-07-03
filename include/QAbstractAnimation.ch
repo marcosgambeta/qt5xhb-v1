@@ -28,4 +28,4 @@ enum QAbstractAnimation::State
 #define QAbstractAnimation_Paused                                    1
 #define QAbstractAnimation_Running                                   2
 
-#endif /* QABSTRACTANIMATION_CH */
+#endif // QABSTRACTANIMATION_CH

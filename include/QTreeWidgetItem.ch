@@ -22,4 +22,4 @@ enum QTreeWidgetItem::ItemType
 #define QTreeWidgetItem_Type                                         0
 #define QTreeWidgetItem_UserType                                     1000
 
-#endif /* QTREEWIDGETITEM_CH */
+#endif // QTREEWIDGETITEM_CH

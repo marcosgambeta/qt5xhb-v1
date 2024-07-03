@@ -17,4 +17,4 @@ enum QPlaceIdReply::OperationType
 #define QPlaceIdReply_RemovePlace                                    2
 #define QPlaceIdReply_RemoveCategory                                 3
 
-#endif /* QPLACEIDREPLY_CH */
+#endif // QPLACEIDREPLY_CH

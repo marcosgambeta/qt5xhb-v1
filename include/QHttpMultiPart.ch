@@ -17,4 +17,4 @@ enum QHttpMultiPart::ContentType
 #define QHttpMultiPart_FormDataType                                  2
 #define QHttpMultiPart_AlternativeType                               3
 
-#endif /* QHTTPMULTIPART_CH */
+#endif // QHTTPMULTIPART_CH

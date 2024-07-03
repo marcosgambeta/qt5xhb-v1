@@ -24,4 +24,4 @@ enum QDeclarativeProperty::Type
 #define QDeclarativeProperty_Property                                1
 #define QDeclarativeProperty_SignalProperty                          2
 
-#endif /* QDECLARATIVEPROPERTY_CH */
+#endif // QDECLARATIVEPROPERTY_CH

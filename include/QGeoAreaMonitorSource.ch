@@ -23,4 +23,4 @@ flags QGeoAreaMonitorSource::AreaMonitorFeatures
 #define QGeoAreaMonitorSource_PersistentAreaMonitorFeature           0x00000001
 #define QGeoAreaMonitorSource_AnyAreaMonitorFeature                  0xffffffff
 
-#endif /* QGEOAREAMONITORSOURCE_CH */
+#endif // QGEOAREAMONITORSOURCE_CH

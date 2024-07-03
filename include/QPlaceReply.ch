@@ -34,4 +34,4 @@ enum QPlaceReply::Type
 #define QPlaceReply_IdReply                                          5
 #define QPlaceReply_MatchReply                                       6
 
-#endif /* QPLACEREPLY_CH */
+#endif // QPLACEREPLY_CH

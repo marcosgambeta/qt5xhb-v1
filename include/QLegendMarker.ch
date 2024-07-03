@@ -19,4 +19,4 @@ enum QLegendMarker::LegendMarkerType
 #define QLegendMarker_LegendMarkerTypeBoxPlot                        4
 #define QLegendMarker_LegendMarkerTypeCandlestick                    5
 
-#endif /* QLEGENDMARKER_CH */
+#endif // QLEGENDMARKER_CH

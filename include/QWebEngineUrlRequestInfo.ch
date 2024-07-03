@@ -43,4 +43,4 @@ enum QWebEngineUrlRequestInfo::NavigationType
 #define QWebEngineUrlRequestInfo_NavigationTypeReload                4
 #define QWebEngineUrlRequestInfo_NavigationTypeOther                 5
 
-#endif /* QWEBENGINEURLREQUESTINFO_CH */
+#endif // QWEBENGINEURLREQUESTINFO_CH

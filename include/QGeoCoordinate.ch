@@ -26,4 +26,4 @@ enum QGeoCoordinate::CoordinateFormat
 #define QGeoCoordinate_DegreesMinutesSeconds                         4
 #define QGeoCoordinate_DegreesMinutesSecondsWithHemisphere           5
 
-#endif /* QGEOCOORDINATE_CH */
+#endif // QGEOCOORDINATE_CH

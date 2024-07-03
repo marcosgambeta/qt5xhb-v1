@@ -62,4 +62,4 @@ flags QPainter::RenderHints
 #define QPainter_HighQualityAntialiasing                             0x08
 #define QPainter_NonCosmeticDefaultPen                               0x10
 
-#endif /* QPAINTER_CH */
+#endif // QPAINTER_CH

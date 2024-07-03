@@ -26,4 +26,4 @@ enum QSystemTrayIcon::MessageIcon
 #define QSystemTrayIcon_Warning                                      2
 #define QSystemTrayIcon_Critical                                     3
 
-#endif /* QSYSTEMTRAYICON_CH */
+#endif // QSYSTEMTRAYICON_CH

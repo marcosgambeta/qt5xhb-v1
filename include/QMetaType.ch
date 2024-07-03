@@ -123,4 +123,4 @@ enum QMetaType::TypeFlag
 #define QMetaType_TrackingPointerToQObject                           0x80
 #define QMetaType_WasDeclaredAsMetaType                              0x100
 
-#endif /* QMETATYPE_CH */
+#endif // QMETATYPE_CH

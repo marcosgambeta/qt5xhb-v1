@@ -126,4 +126,4 @@ enum QTextFormat::PageBreakFlag
 #define QTextFormat_PageBreak_AlwaysAfter                            0x010
 #define QTextFormat_PageBreak_AlwaysInside                           0x100
 
-#endif /* QTEXTFORMAT_CH */
+#endif // QTEXTFORMAT_CH

@@ -25,4 +25,4 @@ enum QGeoManeuver::InstructionDirection
 #define QGeoManeuver_DirectionLightLeft                              10
 #define QGeoManeuver_DirectionBearLeft                               11
 
-#endif /* QGEOMANEUVER_CH */
+#endif // QGEOMANEUVER_CH

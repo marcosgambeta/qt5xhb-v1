@@ -31,4 +31,4 @@
 #include "QVideoFrame.ch"
 #include "QVideoSurfaceFormat.ch"
 
-#endif /* QTMULTIMEDIA_CH */
+#endif // QTMULTIMEDIA_CH

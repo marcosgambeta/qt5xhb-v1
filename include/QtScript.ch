@@ -17,4 +17,4 @@
 #include "QScriptSyntaxCheckResult.ch"
 #include "QScriptValue.ch"
 
-#endif /* QTSCRIPT_CH */
+#endif // QTSCRIPT_CH

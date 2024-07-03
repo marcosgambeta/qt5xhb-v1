@@ -15,4 +15,4 @@ enum QCommandLineParser::SingleDashWordOptionMode
 #define QCommandLineParser_ParseAsCompactedShortOptions              0
 #define QCommandLineParser_ParseAsLongOptions                        1
 
-#endif /* QCOMMANDLINEPARSER_CH */
+#endif // QCOMMANDLINEPARSER_CH

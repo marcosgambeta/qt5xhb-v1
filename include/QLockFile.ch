@@ -17,4 +17,4 @@ enum QLockFile::LockError
 #define QLockFile_PermissionError                                    2
 #define QLockFile_UnknownError                                       3
 
-#endif /* QLOCKFILE_CH */
+#endif // QLOCKFILE_CH

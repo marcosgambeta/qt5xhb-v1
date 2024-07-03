@@ -20,4 +20,4 @@ enum QGeoCodeReply::Error
 #define QGeoCodeReply_CombinationError                               5
 #define QGeoCodeReply_UnknownError                                   6
 
-#endif /* QGEOCODEREPLY_CH */
+#endif // QGEOCODEREPLY_CH

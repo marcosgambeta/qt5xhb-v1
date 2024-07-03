@@ -23,4 +23,4 @@ REQUEST QScriptSyntaxCheckResult
 REQUEST QScriptValue
 REQUEST QScriptValueIterator
 
-#endif /* QTSCRIPTREQUESTS_CH */
+#endif // QTSCRIPTREQUESTS_CH

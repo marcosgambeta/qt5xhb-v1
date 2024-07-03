@@ -16,4 +16,4 @@ enum QTextLength::Type
 #define QTextLength_FixedLength                                      1
 #define QTextLength_PercentageLength                                 2
 
-#endif /* QTEXTLENGTH_CH */
+#endif // QTEXTLENGTH_CH

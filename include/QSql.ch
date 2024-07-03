@@ -40,4 +40,4 @@ enum QSql::TableType
 #define QSql_Views                                         0x04
 #define QSql_AllTables                                     0xff
 
-#endif /* QSQL_CH */
+#endif // QSQL_CH

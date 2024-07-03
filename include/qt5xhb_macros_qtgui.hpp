@@ -561,4 +561,4 @@
 #define OPQWINDOW(n, v)                                     HB_ISNIL(n) ? v : static_cast<QWindow*>(Qt5xHb::itemGetPtr(n))
 #define OPQWINDOWSTATECHANGEEVENT(n, v)                     HB_ISNIL(n) ? v : static_cast<QWindowStateChangeEvent*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTGUI_H */
+#endif // QT5XHB_MACROS_QTGUI_H

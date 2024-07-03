@@ -16,4 +16,4 @@ enum QAbstractScrollArea::SizeAdjustPolicy
 #define QAbstractScrollArea_AdjustToContentsOnFirstShow              1
 #define QAbstractScrollArea_AdjustToContents                         2
 
-#endif /* QABSTRACTSCROLLAREA_CH */
+#endif // QABSTRACTSCROLLAREA_CH

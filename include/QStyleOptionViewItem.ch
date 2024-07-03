@@ -47,4 +47,4 @@ enum QStyleOptionViewItem::ViewItemPosition
 #define QStyleOptionViewItem_End                                     3
 #define QStyleOptionViewItem_OnlyOne                                 4
 
-#endif /* QSTYLEOPTIONVIEWITEM_CH */
+#endif // QSTYLEOPTIONVIEWITEM_CH

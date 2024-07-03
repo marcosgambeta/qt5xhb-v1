@@ -285,4 +285,4 @@
 #define OPQVIDEOSURFACEFORMAT(n, v)                         HB_ISNIL(n) ? v : static_cast<QVideoSurfaceFormat*>(Qt5xHb::itemGetPtr(n))
 #define OPQVIDEOWINDOWCONTROL(n, v)                         HB_ISNIL(n) ? v : static_cast<QVideoWindowControl*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTMULTIMEDIA_H */
+#endif // QT5XHB_MACROS_QTMULTIMEDIA_H

@@ -17,4 +17,4 @@ enum QCameraFocusZone::FocusZoneStatus
 #define QCameraFocusZone_Selected                                    2
 #define QCameraFocusZone_Focused                                     3
 
-#endif /* QCAMERAFOCUSZONE_CH */
+#endif // QCAMERAFOCUSZONE_CH

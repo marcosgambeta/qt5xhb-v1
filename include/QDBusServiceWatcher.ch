@@ -17,4 +17,4 @@ flags QDBusServiceWatcher::WatchMode
 #define QDBusServiceWatcher_WatchForUnregistration                   0x02
 #define QDBusServiceWatcher_WatchForOwnerChange                      0x03
 
-#endif /* QDBUSSERVICEWATCHER_CH */
+#endif // QDBUSSERVICEWATCHER_CH

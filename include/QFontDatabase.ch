@@ -48,4 +48,4 @@ enum QFontDatabase::WritingSystem
 #define QFontDatabase_Runic                                          ?
 #define QFontDatabase_Nko                                            ?
 
-#endif /* QFONTDATABASE_CH */
+#endif // QFONTDATABASE_CH

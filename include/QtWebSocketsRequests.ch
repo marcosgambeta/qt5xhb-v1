@@ -15,4 +15,4 @@ REQUEST QWebSocket
 REQUEST QWebSocketCorsAuthenticator
 REQUEST QWebSocketServer
 
-#endif /* QTWEBSOCKETSREQUESTS_CH */
+#endif // QTWEBSOCKETSREQUESTS_CH

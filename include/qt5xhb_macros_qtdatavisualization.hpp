@@ -117,4 +117,4 @@
 #define OPQVALUE3DAXIS(n, v)                                HB_ISNIL(n) ? v : static_cast<QValue3DAxis*>(Qt5xHb::itemGetPtr(n))
 #define OPQVALUE3DAXISFORMATTER(n, v)                       HB_ISNIL(n) ? v : static_cast<QValue3DAxisFormatter*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTDATAVISUALIZATION_H */
+#endif // QT5XHB_MACROS_QTDATAVISUALIZATION_H

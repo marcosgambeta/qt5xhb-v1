@@ -9,4 +9,4 @@
 #ifndef QTMACEXTRAS_CH
 #define QTMACEXTRAS_CH
 
-#endif /* QTMACEXTRAS_CH */
+#endif // QTMACEXTRAS_CH

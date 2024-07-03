@@ -17,4 +17,4 @@ enum QItemModelSurfaceDataProxy::MultiMatchBehavior
 #define QItemModelSurfaceDataProxy_MMBAverage                        2
 #define QItemModelSurfaceDataProxy_MMBCumulativeY                    3
 
-#endif /* QITEMMODELSURFACEDATAPROXY_CH */
+#endif // QITEMMODELSURFACEDATAPROXY_CH

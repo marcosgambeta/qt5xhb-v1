@@ -21,4 +21,4 @@ enum QThread::Priority
 #define QThread_TimeCriticalPriority                                 6
 #define QThread_InheritPriority                                      7
 
-#endif /* QTHREAD_CH */
+#endif // QTHREAD_CH

@@ -20,4 +20,4 @@ enum QDBusArgument::ElementType
 #define QDBusArgument_MapEntryType                                   5
 #define QDBusArgument_UnknownType                                    -1
 
-#endif /* QDBUSARGUMENT_CH */
+#endif // QDBUSARGUMENT_CH

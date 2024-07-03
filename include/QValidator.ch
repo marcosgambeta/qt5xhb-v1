@@ -16,4 +16,4 @@ enum QValidator::State
 #define QValidator_Intermediate                                      1
 #define QValidator_Acceptable                                        2
 
-#endif /* QVALIDATOR_CH */
+#endif // QVALIDATOR_CH

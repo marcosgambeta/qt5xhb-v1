@@ -19,4 +19,4 @@ enum QTransform::TransformationType
 #define QTransform_TxShear                                           0x08
 #define QTransform_TxProject                                         0x10
 
-#endif /* QTRANSFORM_CH */
+#endif // QTRANSFORM_CH

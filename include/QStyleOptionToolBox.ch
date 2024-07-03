@@ -34,4 +34,4 @@ enum QStyleOptionToolBox::SelectedPosition
 #define QStyleOptionToolBox_NextIsSelected                           1
 #define QStyleOptionToolBox_PreviousIsSelected                       2
 
-#endif /* QSTYLEOPTIONTOOLBOX_CH */
+#endif // QSTYLEOPTIONTOOLBOX_CH

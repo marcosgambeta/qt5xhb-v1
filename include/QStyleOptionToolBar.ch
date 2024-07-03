@@ -34,4 +34,4 @@ flags QStyleOptionToolBar::ToolBarFeatures
 #define QStyleOptionToolBar_None                                     0x0
 #define QStyleOptionToolBar_Movable                                  0x1
 
-#endif /* QSTYLEOPTIONTOOLBAR_CH */
+#endif // QSTYLEOPTIONTOOLBAR_CH

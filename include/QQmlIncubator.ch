@@ -24,4 +24,4 @@ enum QQmlIncubator::Status
 #define QQmlIncubator_Loading                                        2
 #define QQmlIncubator_Error                                          3
 
-#endif /* QQMLINCUBATOR_CH */
+#endif // QQMLINCUBATOR_CH

@@ -31,4 +31,4 @@ enum QMetaMethod::Attributes
 #define QMetaMethod_Cloned                                           0x2
 #define QMetaMethod_Scriptable                                       0x4
 
-#endif /* QMETAMETHOD_CH */
+#endif // QMETAMETHOD_CH

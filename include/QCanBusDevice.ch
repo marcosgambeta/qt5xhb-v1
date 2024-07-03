@@ -47,4 +47,4 @@ flags QCanBusDevice::Directions
 #define QCanBusDevice_Output                                         2
 #define QCanBusDevice_AllDirections                                  hb_bitor(QCanBusDevice_Input, QCanBusDevice_Output)
 
-#endif /* QCANBUSDEVICE_CH */
+#endif // QCANBUSDEVICE_CH

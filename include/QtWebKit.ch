@@ -12,4 +12,4 @@
 #include "QWebElement.ch"
 #include "QWebSettings.ch"
 
-#endif /* QTWEBKIT_CH */
+#endif // QTWEBKIT_CH

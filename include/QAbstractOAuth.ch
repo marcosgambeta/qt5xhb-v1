@@ -41,4 +41,4 @@ enum class QAbstractOAuth::ContentType
 #define QAbstractOAuth_WwwFormUrlEncoded                             0
 #define QAbstractOAuth_Json                                          1
 
-#endif /* QABSTRACTOAUTH_CH */
+#endif // QABSTRACTOAUTH_CH

@@ -22,4 +22,4 @@ enum QPixmap::ShareMode
 #define QPixmap_ImplicitlyShared                                     0
 #define QPixmap_ExplicitlyShared                                     1
 
-#endif /* QPIXMAP_CH */
+#endif // QPIXMAP_CH

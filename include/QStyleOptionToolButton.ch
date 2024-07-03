@@ -30,4 +30,4 @@ flags QStyleOptionToolButton::ToolButtonFeatures
 #define QStyleOptionToolButton_PopupDelay                            0x08
 #define QStyleOptionToolButton_HasMenu                               0x10
 
-#endif /* QSTYLEOPTIONTOOLBUTTON_CH */
+#endif // QSTYLEOPTIONTOOLBUTTON_CH

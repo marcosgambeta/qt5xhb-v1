@@ -161,4 +161,4 @@ enum QWebPage::VisibilityState
 #define QWebPage_VisibilityStatePrerender                            2
 #define QWebPage_VisibilityStateUnloaded                             3
 
-#endif /* QWEBPAGE_CH */
+#endif // QWEBPAGE_CH

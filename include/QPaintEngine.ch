@@ -84,4 +84,4 @@ enum QPaintEngine::Type
 #define QPaintEngine_PaintBuffer                                     15
 #define QPaintEngine_Blitter                                         16
 
-#endif /* QPAINTENGINE_CH */
+#endif // QPAINTENGINE_CH

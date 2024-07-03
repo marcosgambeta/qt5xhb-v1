@@ -23,4 +23,4 @@ enum QTabWidget::TabShape
 #define QTabWidget_Rounded                                           0
 #define QTabWidget_Triangular                                        1
 
-#endif /* QTABWIDGET_CH */
+#endif // QTABWIDGET_CH

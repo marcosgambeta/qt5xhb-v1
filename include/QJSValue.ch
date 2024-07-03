@@ -15,4 +15,4 @@ enum QJSValue::SpecialValue
 #define QJSValue_UndefinedValue                                      1
 #define QJSValue_NullValue                                           0
 
-#endif /* QJSVALUE_CH */
+#endif // QJSVALUE_CH

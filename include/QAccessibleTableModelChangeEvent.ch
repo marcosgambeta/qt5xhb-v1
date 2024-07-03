@@ -19,4 +19,4 @@ enum QAccessibleTableModelChangeEvent::ModelChangeType
 #define QAccessibleTableModelChangeEvent_RowsRemoved                 4
 #define QAccessibleTableModelChangeEvent_ColumnsRemoved              5
 
-#endif /* QACCESSIBLETABLEMODELCHANGEEVENT_CH */
+#endif // QACCESSIBLETABLEMODELCHANGEEVENT_CH

@@ -92,4 +92,4 @@ REQUEST QVideoRendererControl
 REQUEST QVideoSurfaceFormat
 REQUEST QVideoWindowControl
 
-#endif /* QTMULTIMEDIAREQUESTS_CH */
+#endif // QTMULTIMEDIAREQUESTS_CH

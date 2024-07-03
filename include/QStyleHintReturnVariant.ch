@@ -19,4 +19,4 @@ enum QStyleHintReturnVariant::StyleOptionVersion
 */
 #define QStyleHintReturnVariant_Version                              1
 
-#endif /* QSTYLEHINTRETURNVARIANT_CH */
+#endif // QSTYLEHINTRETURNVARIANT_CH

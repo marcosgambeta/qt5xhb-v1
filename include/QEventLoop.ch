@@ -19,4 +19,4 @@ flags QEventLoop::ProcessEventsFlags
 #define QEventLoop_WaitForMoreEvents                                 0x04
 #define QEventLoop_DeferredDeletion                                  0x10
 
-#endif /* QEVENTLOOP_CH */
+#endif // QEVENTLOOP_CH

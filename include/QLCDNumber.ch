@@ -24,4 +24,4 @@ enum QLCDNumber::SegmentStyle
 #define QLCDNumber_Filled                                            1
 #define QLCDNumber_Flat                                              2
 
-#endif /* QLCDNUMBER_CH */
+#endif // QLCDNUMBER_CH

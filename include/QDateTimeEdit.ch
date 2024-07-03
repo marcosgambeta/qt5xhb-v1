@@ -23,4 +23,4 @@ flags QDateTimeEdit::Sections
 #define QDateTimeEdit_MonthSection                                   0x0200
 #define QDateTimeEdit_YearSection                                    0x0400
 
-#endif /* QDATETIMEEDIT_CH */
+#endif // QDATETIMEEDIT_CH

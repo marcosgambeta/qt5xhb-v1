@@ -33,4 +33,4 @@ REQUEST QSGTexture
 REQUEST QSGTransformNode
 REQUEST QSGVertexColorMaterial
 
-#endif /* QTQUICKREQUESTS_CH */
+#endif // QTQUICKREQUESTS_CH

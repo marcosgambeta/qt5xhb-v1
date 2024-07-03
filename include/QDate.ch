@@ -15,4 +15,4 @@ enum QDate::MonthNameType
 #define QDate_DateFormat                                             0
 #define QDate_StandaloneFormat                                       1
 
-#endif /* QDATE_CH */
+#endif // QDATE_CH

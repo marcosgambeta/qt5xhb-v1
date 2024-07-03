@@ -25,4 +25,4 @@ enum QTouchDevice::CapabilityFlag
 #define QTouchDevice_RawPositions                                    0x0010
 #define QTouchDevice_NormalizedPosition                              0x0020
 
-#endif /* QTOUCHDEVICE_CH */
+#endif // QTOUCHDEVICE_CH

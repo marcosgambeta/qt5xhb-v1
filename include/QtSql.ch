@@ -18,4 +18,4 @@
 #include "QSqlResult.ch"
 #include "QSqlTableModel.ch"
 
-#endif /* QTSQL_CH */
+#endif // QTSQL_CH

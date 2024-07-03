@@ -34,4 +34,4 @@ flags QTreeWidgetItemIterator::IteratorFlags
 #define QTreeWidgetItemIterator_NotEditable                          0x00020000
 #define QTreeWidgetItemIterator_UserFlag                             0x01000000
 
-#endif /* QTREEWIDGETITEMITERATOR_CH */
+#endif // QTREEWIDGETITEMITERATOR_CH

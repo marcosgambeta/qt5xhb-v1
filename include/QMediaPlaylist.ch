@@ -27,4 +27,4 @@ enum QMediaPlaylist::PlaybackMode
 #define QMediaPlaylist_Loop                                          3
 #define QMediaPlaylist_Random                                        4
 
-#endif /* QMEDIAPLAYLIST_CH */
+#endif // QMEDIAPLAYLIST_CH

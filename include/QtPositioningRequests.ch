@@ -24,4 +24,4 @@ REQUEST QGeoSatelliteInfoSource
 REQUEST QGeoShape
 REQUEST QNmeaPositionInfoSource
 
-#endif /* QTPOSITIONINGREQUESTS_CH */
+#endif // QTPOSITIONINGREQUESTS_CH

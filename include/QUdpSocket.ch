@@ -18,4 +18,4 @@ flags QUdpSocket::BindMode
 #define QUdpSocket_ReuseAddressHint                                  0x4
 #define QUdpSocket_DefaultForPlatform                                0x0
 
-#endif /* QUDPSOCKET_CH */
+#endif // QUDPSOCKET_CH

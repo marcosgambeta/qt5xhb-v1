@@ -11,4 +11,4 @@
 
 #include "QGamepadManager.ch"
 
-#endif /* QTGAMEPAD_CH */
+#endif // QTGAMEPAD_CH

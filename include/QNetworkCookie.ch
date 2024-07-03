@@ -15,4 +15,4 @@ enum QNetworkCookie::RawForm
 #define QNetworkCookie_NameAndValueOnly                              0
 #define QNetworkCookie_Full                                          1
 
-#endif /* QNETWORKCOOKIE_CH */
+#endif // QNETWORKCOOKIE_CH

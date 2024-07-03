@@ -21,4 +21,4 @@ REQUEST QHelpSearchQuery
 REQUEST QHelpSearchQueryWidget
 REQUEST QHelpSearchResultWidget
 
-#endif /* QTHELPREQUESTS_CH */
+#endif // QTHELPREQUESTS_CH

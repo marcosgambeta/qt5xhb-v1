@@ -24,4 +24,4 @@ enum QInputDialog::InputMode
 #define QInputDialog_IntInput                                        1
 #define QInputDialog_DoubleInput                                     2
 
-#endif /* QINPUTDIALOG_CH */
+#endif // QINPUTDIALOG_CH

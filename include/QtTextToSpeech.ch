@@ -12,4 +12,4 @@
 #include "QTextToSpeech.ch"
 #include "QVoice.ch"
 
-#endif /* QTTEXTTOSPEECH_CH */
+#endif // QTTEXTTOSPEECH_CH

@@ -49,4 +49,4 @@ enum QScrollerProperties::ScrollMetric
 #define QScrollerProperties_FrameRate                                19
 #define QScrollerProperties_ScrollMetricCount                        20
 
-#endif /* QSCROLLERPROPERTIES_CH */
+#endif // QSCROLLERPROPERTIES_CH

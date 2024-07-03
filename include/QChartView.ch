@@ -18,4 +18,4 @@ flags QChartView::RubberBands
 #define QChartView_HorizontalRubberBand                              0x2
 #define QChartView_RectangleRubberBand                               0x3
 
-#endif /* QCHARTVIEW_CH */
+#endif // QCHARTVIEW_CH

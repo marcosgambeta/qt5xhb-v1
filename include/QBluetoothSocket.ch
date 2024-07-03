@@ -30,4 +30,4 @@ enum QBluetoothSocket::SocketError
 #define QBluetoothSocket_NetworkError                                QAbstractSocket_NetworkError
 #define QBluetoothSocket_UnsupportedProtocolError                    QAbstractSocket_NetworkError+1
 
-#endif /* QBLUETOOTHSOCKET_CH */
+#endif // QBLUETOOTHSOCKET_CH

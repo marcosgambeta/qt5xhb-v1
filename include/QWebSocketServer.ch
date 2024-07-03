@@ -18,4 +18,4 @@ enum QWebSocketServer::SslMode
 //#endif
 #define QWebSocketServer_NonSecureMode                               1
 
-#endif /* QWEBSOCKETSERVER_CH */
+#endif // QWEBSOCKETSERVER_CH

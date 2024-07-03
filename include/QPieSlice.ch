@@ -17,4 +17,4 @@ enum QPieSlice::LabelPosition
 #define QPieSlice_LabelInsideTangential                              2
 #define QPieSlice_LabelInsideNormal                                  3
 
-#endif /* QPIESLICE_CH */
+#endif // QPIESLICE_CH

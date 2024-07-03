@@ -30,4 +30,4 @@ flags QStyleOptionButton::ButtonFeatures
 #define QStyleOptionButton_AutoDefaultButton                         0x08
 #define QStyleOptionButton_CommandLinkButton                         0x10
 
-#endif /* QSTYLEOPTIONBUTTON_CH */
+#endif // QSTYLEOPTIONBUTTON_CH

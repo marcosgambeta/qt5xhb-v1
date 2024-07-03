@@ -289,4 +289,4 @@ enum QOpenGLTexture::CoordinateDirection
 #define QOpenGLTexture_DirectionT                                    0x2803 // GL_TEXTURE_WRAP_T
 #define QOpenGLTexture_DirectionR                                    0x8072 // GL_TEXTURE_WRAP_R
 
-#endif /* QOPENGLTEXTURE_CH */
+#endif // QOPENGLTEXTURE_CH

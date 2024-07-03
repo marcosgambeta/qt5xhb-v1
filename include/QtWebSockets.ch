@@ -12,4 +12,4 @@
 #include "QWebSocketProtocol.ch"
 #include "QWebSocketServer.ch"
 
-#endif /* QTWEBSOCKETS_CH */
+#endif // QTWEBSOCKETS_CH

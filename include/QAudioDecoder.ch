@@ -24,4 +24,4 @@ enum QAudioDecoder::State
 #define QAudioDecoder_StoppedState                                   0
 #define QAudioDecoder_DecodingState                                  1
 
-#endif /* QAUDIODECODER_CH */
+#endif // QAUDIODECODER_CH

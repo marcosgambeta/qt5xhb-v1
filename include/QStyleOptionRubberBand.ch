@@ -19,4 +19,4 @@ enum QStyleOptionRubberBand::StyleOptionVersion
 */
 #define QStyleOptionRubberBand_Version                               1
 
-#endif /* QSTYLEOPTIONRUBBERBAND_CH */
+#endif // QSTYLEOPTIONRUBBERBAND_CH

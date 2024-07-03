@@ -19,4 +19,4 @@ REQUEST QWebPluginFactory
 REQUEST QWebSecurityOrigin
 REQUEST QWebSettings
 
-#endif /* QTWEBKITREQUESTS_CH */
+#endif // QTWEBKITREQUESTS_CH

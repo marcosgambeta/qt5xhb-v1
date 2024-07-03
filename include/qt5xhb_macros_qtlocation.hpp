@@ -129,4 +129,4 @@
 #define OPQPLACESUPPLIER(n, v)                              HB_ISNIL(n) ? v : static_cast<QPlaceSupplier*>(Qt5xHb::itemGetPtr(n))
 #define OPQPLACEUSER(n, v)                                  HB_ISNIL(n) ? v : static_cast<QPlaceUser*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTLOCATION_H */
+#endif // QT5XHB_MACROS_QTLOCATION_H

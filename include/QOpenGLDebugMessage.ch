@@ -52,4 +52,4 @@ flags QOpenGLDebugMessage::Severities
 #define QOpenGLDebugMessage_LastSeverity                             QOpenGLDebugMessage_NotificationSeverity
 #define QOpenGLDebugMessage_AnySeverity                              0xffffffff
 
-#endif /* QOPENGLDEBUGMESSAGE_CH */
+#endif // QOPENGLDEBUGMESSAGE_CH

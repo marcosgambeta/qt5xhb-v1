@@ -72,4 +72,4 @@
 #define OPQDBUSUNIXFILEDESCRIPTOR(n, v)                     HB_ISNIL(n) ? v : static_cast<QDBusUnixFileDescriptor*>(Qt5xHb::itemGetPtr(n))
 #define OPQDBUSVIRTUALOBJECT(n, v)                          HB_ISNIL(n) ? v : static_cast<QDBusVirtualObject*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTDBUS_H */
+#endif // QT5XHB_MACROS_QTDBUS_H

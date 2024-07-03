@@ -22,4 +22,4 @@ enum QSslCertificate::SubjectInfo
 #define QSslCertificate_SerialNumber                                 7
 #define QSslCertificate_EmailAddress                                 8
 
-#endif /* QSSLCERTIFICATE_CH */
+#endif // QSSLCERTIFICATE_CH

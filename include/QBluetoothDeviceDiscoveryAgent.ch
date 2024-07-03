@@ -23,4 +23,4 @@ enum QBluetoothDeviceDiscoveryAgent::InquiryType
 #define QBluetoothDeviceDiscoveryAgent_GeneralUnlimitedInquiry       0
 #define QBluetoothDeviceDiscoveryAgent_LimitedInquiry                1
 
-#endif /* QBLUETOOTHDEVICEDISCOVERYAGENT_CH */
+#endif // QBLUETOOTHDEVICEDISCOVERYAGENT_CH

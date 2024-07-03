@@ -16,4 +16,4 @@ enum QClipboard::Mode
 #define QClipboard_Selection                                         1
 #define QClipboard_FindBuffer                                        2
 
-#endif /* QCLIPBOARD_CH */
+#endif // QCLIPBOARD_CH

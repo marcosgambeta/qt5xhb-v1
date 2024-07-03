@@ -29,4 +29,4 @@ enum Q3DTheme::Theme
 #define Q3DTheme_ThemeIsabelle                                       7
 #define Q3DTheme_ThemeUserDefined                                    8
 
-#endif /* Q3DTHEME_CH */
+#endif // Q3DTHEME_CH

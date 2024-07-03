@@ -74,4 +74,4 @@ enum QVariant::Type
 #define QVariant_UserType                                            QMetaType_User
 #define QVariant_LastType                                            0xffffffff
 
-#endif /* QVARIANT_CH */
+#endif // QVARIANT_CH

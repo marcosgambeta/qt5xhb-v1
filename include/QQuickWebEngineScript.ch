@@ -23,4 +23,4 @@ enum QQuickWebEngineScript::ScriptWorldId
 #define QQuickWebEngineScript_ApplicationWorld                       1
 #define QQuickWebEngineScript_UserWorld                              2
 
-#endif /* QQUICKWEBENGINESCRIPT_CH */
+#endif // QQUICKWEBENGINESCRIPT_CH

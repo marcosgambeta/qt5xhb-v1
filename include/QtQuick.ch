@@ -17,4 +17,4 @@
 #include "QSGMaterial.ch"
 #include "QSGNode.ch"
 
-#endif /* QTQUICK_CH */
+#endif // QTQUICK_CH

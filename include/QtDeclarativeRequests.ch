@@ -26,4 +26,4 @@ REQUEST QDeclarativePropertyValueSource
 REQUEST QDeclarativeScriptString
 REQUEST QDeclarativeView
 
-#endif /* QTDECLARATIVEREQUESTS_CH */
+#endif // QTDECLARATIVEREQUESTS_CH

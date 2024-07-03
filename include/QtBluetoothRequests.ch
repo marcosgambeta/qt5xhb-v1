@@ -23,4 +23,4 @@ REQUEST QBluetoothTransferReply
 REQUEST QBluetoothTransferRequest
 REQUEST QBluetoothUuid
 
-#endif /* QTBLUETOOTHREQUESTS_CH */
+#endif // QTBLUETOOTHREQUESTS_CH

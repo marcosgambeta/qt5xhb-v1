@@ -18,4 +18,4 @@ enum QTextBlockFormat::LineHeightTypes
 #define QTextBlockFormat_MinimumHeight                               3
 #define QTextBlockFormat_LineDistanceHeight                          4
 
-#endif /* QTEXTBLOCKFORMAT_CH */
+#endif // QTEXTBLOCKFORMAT_CH

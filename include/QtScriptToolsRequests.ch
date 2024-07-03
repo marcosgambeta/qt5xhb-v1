@@ -11,4 +11,4 @@
 
 REQUEST QScriptEngineDebugger
 
-#endif /* QTSCRIPTTOOLSREQUESTS_CH */
+#endif // QTSCRIPTTOOLSREQUESTS_CH

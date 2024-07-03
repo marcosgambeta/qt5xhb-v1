@@ -12,4 +12,4 @@
 #include "QQuickWebEngineProfile.ch"
 #include "QQuickWebEngineScript.ch"
 
-#endif /* QTWEBENGINE_CH */
+#endif // QTWEBENGINE_CH

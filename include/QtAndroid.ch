@@ -30,4 +30,4 @@ enum class QtAndroid::PermissionResult
 #define QtAndroid_PermissionResult_Granted                           0
 #define QtAndroid_PermissionResult_Denied                            1
 
-#endif /* QTANDROID_CH */
+#endif // QTANDROID_CH

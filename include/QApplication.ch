@@ -23,4 +23,4 @@ enum QApplication::Type
 #define QApplication_GuiClient                                       1
 #define QApplication_GuiServer                                       2
 
-#endif /* QAPPLICATION_CH */
+#endif // QAPPLICATION_CH

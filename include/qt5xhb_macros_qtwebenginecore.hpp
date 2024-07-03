@@ -30,4 +30,4 @@
 #define OPQWEBENGINEURLREQUESTJOB(n, v)                     HB_ISNIL(n) ? v : static_cast<QWebEngineUrlRequestJob*>(Qt5xHb::itemGetPtr(n))
 #define OPQWEBENGINEURLSCHEMEHANDLER(n, v)                  HB_ISNIL(n) ? v : static_cast<QWebEngineUrlSchemeHandler*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTWEBENGINECORE_H */
+#endif // QT5XHB_MACROS_QTWEBENGINECORE_H

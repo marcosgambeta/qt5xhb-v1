@@ -33,4 +33,4 @@ enum QScriptValue::SpecialValue
 #define QScriptValue_UndefinedValue                                  1
 #define QScriptValue_NullValue                                       0
 
-#endif /* QSCRIPTVALUE_CH */
+#endif // QSCRIPTVALUE_CH

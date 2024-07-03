@@ -18,4 +18,4 @@
 #define OPQSERIALPORT(n, v)                                 HB_ISNIL(n) ? v : static_cast<QSerialPort*>(Qt5xHb::itemGetPtr(n))
 #define OPQSERIALPORTINFO(n, v)                             HB_ISNIL(n) ? v : static_cast<QSerialPortInfo*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTSERIALPORT_H */
+#endif // QT5XHB_MACROS_QTSERIALPORT_H

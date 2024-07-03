@@ -32,4 +32,4 @@ enum QTextCharFormat::UnderlineStyle
 #define QTextCharFormat_WaveUnderline                                6
 #define QTextCharFormat_SpellCheckUnderline                          7
 
-#endif /* QTEXTCHARFORMAT_CH */
+#endif // QTEXTCHARFORMAT_CH

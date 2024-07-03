@@ -18,4 +18,4 @@ enum QCameraControl::PropertyChangeType
 #define QCameraControl_Viewfinder                                    4
 #define QCameraControl_ViewfinderSettings                            5
 
-#endif /* QCAMERACONTROL_CH */
+#endif // QCAMERACONTROL_CH

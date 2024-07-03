@@ -39,4 +39,4 @@ enum QSurfaceFormat::OpenGLContextProfile
 #define QSurfaceFormat_CoreProfile                                   1
 #define QSurfaceFormat_CompatibilityProfile                          2
 
-#endif /* QSURFACEFORMAT_CH */
+#endif // QSURFACEFORMAT_CH

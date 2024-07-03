@@ -17,4 +17,4 @@ flags QSurface3DSeries::DrawFlags
 #define QSurface3DSeries_DrawSurface                                 2
 #define QSurface3DSeries_DrawSurfaceAndWireframe                     hb_bitor( QSurface3DSeries_DrawWireframe, QSurface3DSeries_DrawSurface )
 
-#endif /* QSURFACE3DSERIES_CH */
+#endif // QSURFACE3DSERIES_CH

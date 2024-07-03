@@ -15,4 +15,4 @@ enum QDialog::DialogCode
 #define QDialog_Rejected                                             0
 #define QDialog_Accepted                                             1
 
-#endif /* QDIALOG_CH */
+#endif // QDIALOG_CH

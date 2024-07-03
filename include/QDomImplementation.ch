@@ -16,4 +16,4 @@ enum QDomImplementation::InvalidDataPolicy
 #define QDomImplementation_DropInvalidChars                          1
 #define QDomImplementation_ReturnNullNode                            2
 
-#endif /* QDOMIMPLEMENTATION_CH */
+#endif // QDOMIMPLEMENTATION_CH

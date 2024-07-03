@@ -24,4 +24,4 @@ enum QInAppTransaction::FailureReason
 #define QInAppTransaction_CanceledByUser                             1
 #define QInAppTransaction_ErrorOccurred                              2
 
-#endif /* QINAPPTRANSACTION_CH */
+#endif // QINAPPTRANSACTION_CH

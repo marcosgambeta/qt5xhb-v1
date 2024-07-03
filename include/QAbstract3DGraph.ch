@@ -52,4 +52,4 @@ flags QAbstract3DGraph::OptimizationHints
 #define QAbstract3DGraph_OptimizationDefault                         0
 #define QAbstract3DGraph_OptimizationStatic                          1
 
-#endif /* QABSTRACT3DGRAPH_CH */
+#endif // QABSTRACT3DGRAPH_CH

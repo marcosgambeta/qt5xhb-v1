@@ -65,4 +65,4 @@ flags QSsl::SslOptions
 #define QSsl_SslOptionDisableSessionPersistence                      0x40
 #define QSsl_SslOptionDisableServerCipherPreference                  0x80
 
-#endif /* QSSL_CH */
+#endif // QSSL_CH

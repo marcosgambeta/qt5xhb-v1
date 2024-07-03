@@ -86,4 +86,4 @@ enum QSysInfo::Sizes
 */
 #define QSysInfo_WordSize                                            ( sizeof( void * ) <<3 ) // TODO: implementar (se possível)
 
-#endif /* QSYSINFO_CH */
+#endif // QSYSINFO_CH

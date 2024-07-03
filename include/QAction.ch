@@ -41,4 +41,4 @@ enum QAction::SoftKeyRole
 #define QAction_NegativeSoftKey                                      2
 #define QAction_SelectSoftKey                                        3
 
-#endif /* QACTION_CH */
+#endif // QACTION_CH

@@ -228,4 +228,4 @@ enum QPrinter::Unit
 #define QPrinter_Cicero                                              5
 #define QPrinter_DevicePixel                                         6
 
-#endif /* QPRINTER_CH */
+#endif // QPRINTER_CH

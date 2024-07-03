@@ -16,4 +16,4 @@ enum QToolButton::ToolButtonPopupMode
 #define QToolButton_MenuButtonPopup                                  1
 #define QToolButton_InstantPopup                                     2
 
-#endif /* QTOOLBUTTON_CH */
+#endif // QTOOLBUTTON_CH

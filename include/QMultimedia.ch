@@ -42,4 +42,4 @@ enum QMultimedia::AvailabilityStatus
 #define QMultimedia_Busy                                             2
 #define QMultimedia_ResourceError                                    3
 
-#endif /* QMULTIMEDIA_CH */
+#endif // QMULTIMEDIA_CH

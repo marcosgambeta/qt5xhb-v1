@@ -33,4 +33,4 @@ enum QDomNode::NodeType
 #define QDomNode_BaseNode                                            21
 #define QDomNode_CharacterDataNode                                   22
 
-#endif /* QDOMNODE_CH */
+#endif // QDOMNODE_CH

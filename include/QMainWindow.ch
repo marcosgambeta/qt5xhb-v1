@@ -19,4 +19,4 @@ flags QMainWindow::DockOptions
 #define QMainWindow_ForceTabbedDocks                                 0x08
 #define QMainWindow_VerticalTabs                                     0x10
 
-#endif /* QMAINWINDOW_CH */
+#endif // QMAINWINDOW_CH

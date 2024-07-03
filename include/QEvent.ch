@@ -180,4 +180,4 @@ enum QEvent::Type
 #define QEvent_User                                                  1000
 #define QEvent_MaxUser                                               65535
 
-#endif /* QEVENT_CH */
+#endif // QEVENT_CH

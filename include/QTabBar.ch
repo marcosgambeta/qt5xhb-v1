@@ -34,4 +34,4 @@ enum QTabBar::Shape
 #define QTabBar_TriangularWest                                       6
 #define QTabBar_TriangularEast                                       7
 
-#endif /* QTABBAR_CH */
+#endif // QTABBAR_CH

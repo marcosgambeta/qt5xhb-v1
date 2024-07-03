@@ -24,4 +24,4 @@ enum QQmlProperty::Type
 #define QQmlProperty_Property                                        1
 #define QQmlProperty_SignalProperty                                  2
 
-#endif /* QQMLPROPERTY_CH */
+#endif // QQMLPROPERTY_CH

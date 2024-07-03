@@ -19,4 +19,4 @@ enum QStyleOptionFocusRect::StyleOptionVersion
 */
 #define QStyleOptionFocusRect_Version                                1
 
-#endif /* QSTYLEOPTIONFOCUSRECT_CH */
+#endif // QSTYLEOPTIONFOCUSRECT_CH

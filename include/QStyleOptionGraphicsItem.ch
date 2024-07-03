@@ -19,4 +19,4 @@ enum QStyleOptionGraphicsItem::StyleOptionVersion
 */
 #define QStyleOptionGraphicsItem_Version                             1
 
-#endif /* QSTYLEOPTIONGRAPHICSITEM_CH */
+#endif // QSTYLEOPTIONGRAPHICSITEM_CH

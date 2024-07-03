@@ -37,4 +37,4 @@ flags QChart::AnimationOptions
 #define QChart_SeriesAnimations                                      0x2
 #define QChart_AllAnimations                                         0x3
 
-#endif /* QCHART_CH */
+#endif // QCHART_CH

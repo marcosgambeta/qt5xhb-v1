@@ -17,4 +17,4 @@ flags QWidget::RenderFlags
 #define QWidget_DrawChildren                                         0x2
 #define QWidget_IgnoreMask                                           0x4
 
-#endif /* QWIDGET_CH */
+#endif // QWIDGET_CH

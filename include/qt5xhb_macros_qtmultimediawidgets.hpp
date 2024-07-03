@@ -24,4 +24,4 @@
 #define OPQVIDEOWIDGET(n, v)                                HB_ISNIL(n) ? v : static_cast<QVideoWidget*>(Qt5xHb::itemGetPtr(n))
 #define OPQVIDEOWIDGETCONTROL(n, v)                         HB_ISNIL(n) ? v : static_cast<QVideoWidgetControl*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTMULTIMEDIAWIDGETS_H */
+#endif // QT5XHB_MACROS_QTMULTIMEDIAWIDGETS_H

@@ -86,4 +86,4 @@ enum QFont::Weight
 #define QFont_Bold                                                   75
 #define QFont_Black                                                  87
 
-#endif /* QFONT_CH */
+#endif // QFONT_CH

@@ -15,4 +15,4 @@ enum QRawFont::AntialiasingType
 #define QRawFont_PixelAntialiasing                                   0
 #define QRawFont_SubPixelAntialiasing                                1
 
-#endif /* QRAWFONT_CH */
+#endif // QRAWFONT_CH

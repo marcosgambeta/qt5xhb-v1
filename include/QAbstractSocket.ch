@@ -91,4 +91,4 @@ flags QAbstractSocket::PauseModes
 #define QAbstractSocket_PauseNever                                   0x0
 #define QAbstractSocket_PauseOnSslErrors                             0x1
 
-#endif /* QABSTRACTSOCKET_CH */
+#endif // QABSTRACTSOCKET_CH

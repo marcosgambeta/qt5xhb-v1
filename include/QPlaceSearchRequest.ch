@@ -16,4 +16,4 @@ enum QPlaceSearchRequest::RelevanceHint
 #define QPlaceSearchRequest_DistanceHint                             1
 #define QPlaceSearchRequest_LexicalPlaceNameHint                     2
 
-#endif /* QPLACESEARCHREQUEST_CH */
+#endif // QPLACESEARCHREQUEST_CH

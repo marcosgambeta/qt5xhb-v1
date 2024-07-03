@@ -55,4 +55,4 @@ flags QDialogButtonBox::StandardButtons
 #define QDialogButtonBox_Ignore                                      0x00100000
 #define QDialogButtonBox_NoButton                                    0x00000000
 
-#endif /* QDIALOGBUTTONBOX_CH */
+#endif // QDIALOGBUTTONBOX_CH

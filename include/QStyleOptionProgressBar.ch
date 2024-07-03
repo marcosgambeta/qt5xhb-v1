@@ -19,4 +19,4 @@ enum QStyleOptionProgressBar::StyleOptionVersion
 */
 #define QStyleOptionProgressBar_Version                              2
 
-#endif /* QSTYLEOPTIONPROGRESSBAR_CH */
+#endif // QSTYLEOPTIONPROGRESSBAR_CH

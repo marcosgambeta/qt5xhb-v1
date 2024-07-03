@@ -9,4 +9,4 @@
 #ifndef QTSVG_CH
 #define QTSVG_CH
 
-#endif /* QTSVG_CH */
+#endif // QTSVG_CH

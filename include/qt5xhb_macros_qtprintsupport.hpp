@@ -36,4 +36,4 @@
 #define OPQPRINTPREVIEWDIALOG(n, v)                         HB_ISNIL(n) ? v : static_cast<QPrintPreviewDialog*>(Qt5xHb::itemGetPtr(n))
 #define OPQPRINTPREVIEWWIDGET(n, v)                         HB_ISNIL(n) ? v : static_cast<QPrintPreviewWidget*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTPRINTSUPPORT_H */
+#endif // QT5XHB_MACROS_QTPRINTSUPPORT_H

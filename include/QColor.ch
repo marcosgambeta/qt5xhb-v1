@@ -18,4 +18,4 @@ enum QColor::Spec
 #define QColor_Hsl                                                   4
 #define QColor_Invalid                                               0
 
-#endif /* QCOLOR_CH */
+#endif // QCOLOR_CH

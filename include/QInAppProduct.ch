@@ -15,4 +15,4 @@ enum QInAppProduct::ProductType
 #define QInAppProduct_Consumable                                     0
 #define QInAppProduct_Unlockable                                     1
 
-#endif /* QINAPPPRODUCT_CH */
+#endif // QINAPPPRODUCT_CH

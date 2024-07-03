@@ -38,4 +38,4 @@ enum Q3DCamera::CameraPreset
 #define Q3DCamera_CameraPresetBehindBelow                            22
 #define Q3DCamera_CameraPresetDirectlyBelow                          23
 
-#endif /* Q3DCAMERA_CH */
+#endif // Q3DCAMERA_CH

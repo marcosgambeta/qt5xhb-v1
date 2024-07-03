@@ -43,4 +43,4 @@ enum QPalette::ColorRole
 #define QPalette_LinkVisited                                         15
 #define QPalette_NoRole                                              17
 
-#endif /* QPALETTE_CH */
+#endif // QPALETTE_CH

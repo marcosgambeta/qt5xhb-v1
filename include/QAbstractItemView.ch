@@ -93,4 +93,4 @@ enum QAbstractItemView::DropIndicatorPosition (protected)
 #define QAbstractItemView_BelowItem                                  2
 #define QAbstractItemView_OnViewport                                 3
 
-#endif /* QABSTRACTITEMVIEW_CH */
+#endif // QABSTRACTITEMVIEW_CH

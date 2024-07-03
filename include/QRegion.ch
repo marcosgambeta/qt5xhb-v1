@@ -15,4 +15,4 @@ enum QRegion::RegionType
 #define QRegion_Rectangle                                            0
 #define QRegion_Ellipse                                              1
 
-#endif /* QREGION_CH */
+#endif // QREGION_CH

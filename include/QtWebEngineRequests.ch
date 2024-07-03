@@ -14,4 +14,4 @@ REQUEST QQuickWebEngineScript
 REQUEST QtWebEngine
 REQUEST QtWebEngineVersion
 
-#endif /* QTWEBENGINEREQUESTS_CH */
+#endif // QTWEBENGINEREQUESTS_CH

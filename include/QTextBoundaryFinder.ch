@@ -28,4 +28,4 @@ flags QTextBoundaryFinder::BoundaryReasons
 #define QTextBoundaryFinder_MandatoryBreak                           0x80
 #define QTextBoundaryFinder_SoftHyphen                               0x100
 
-#endif /* QTEXTBOUNDARYFINDER_CH */
+#endif // QTEXTBOUNDARYFINDER_CH

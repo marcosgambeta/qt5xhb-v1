@@ -15,4 +15,4 @@
 
 #define OPQX11INFO(n, v)                                    HB_ISNIL(n) ? v : static_cast<QX11Info*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTX11EXTRAS_H */
+#endif // QT5XHB_MACROS_QTX11EXTRAS_H

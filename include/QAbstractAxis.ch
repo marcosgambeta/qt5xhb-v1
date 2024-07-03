@@ -20,4 +20,4 @@ flags QAbstractAxis::AxisTypes
 #define QAbstractAxis_AxisTypeDateTime                               0x8
 #define QAbstractAxis_AxisTypeLogValue                               0x10
 
-#endif /* QABSTRACTAXIS_CH */
+#endif // QABSTRACTAXIS_CH

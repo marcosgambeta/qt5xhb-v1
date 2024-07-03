@@ -13,4 +13,4 @@
 #include "QOAuth1.ch"
 #include "QOAuth1Signature.ch"
 
-#endif /* QTNETWORKAUTH_CH */
+#endif // QTNETWORKAUTH_CH

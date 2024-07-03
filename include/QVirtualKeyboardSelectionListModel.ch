@@ -30,4 +30,4 @@ enum class QVirtualKeyboardSelectionListModel::DictionaryType
 #define QVirtualKeyboardSelectionListModel_Default                   0
 #define QVirtualKeyboardSelectionListModel_User                      1
 
-#endif /* QVIRTUALKEYBOARDSELECTIONLISTMODEL_CH */
+#endif // QVIRTUALKEYBOARDSELECTIONLISTMODEL_CH

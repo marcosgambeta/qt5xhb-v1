@@ -43,4 +43,4 @@ flags QGamepadManager::GamepadAxes
 #define QGamepadManager_AxisRightX                                   2
 #define QGamepadManager_AxisRightY                                   3
 
-#endif /* QGAMEPADMANAGER_CH */
+#endif // QGAMEPADMANAGER_CH

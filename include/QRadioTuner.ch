@@ -45,4 +45,4 @@ enum QRadioTuner::SearchMode
 #define QRadioTuner_SearchFast                                       0
 #define QRadioTuner_SearchGetStationId                               1
 
-#endif /* QRADIOTUNER_CH */
+#endif // QRADIOTUNER_CH

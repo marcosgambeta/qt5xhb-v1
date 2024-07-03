@@ -15,4 +15,4 @@ enum QWebEngineHttpRequest::Method
 #define QWebEngineHttpRequest_Get                                    0
 #define QWebEngineHttpRequest_Post                                   1
 
-#endif /* QWEBENGINEHTTPREQUEST_CH */
+#endif // QWEBENGINEHTTPREQUEST_CH

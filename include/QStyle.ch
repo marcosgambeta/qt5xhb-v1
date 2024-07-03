@@ -586,4 +586,4 @@ enum QStyle::SubElement
 #define QStyle_SE_TabBarTabText                                      ?
 #define QStyle_SE_ToolBarHandle                                      ?
 
-#endif /* QSTYLE_CH */
+#endif // QSTYLE_CH

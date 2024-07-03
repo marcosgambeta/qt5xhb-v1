@@ -24,4 +24,4 @@ enum QSslSocket::SslMode
 #define QSslSocket_SslClientMode                                     1
 #define QSslSocket_SslServerMode                                     2
 
-#endif /* QSSLSOCKET_CH */
+#endif // QSSLSOCKET_CH

@@ -16,4 +16,4 @@ enum QScriptSyntaxCheckResult::State
 #define QScriptSyntaxCheckResult_Intermediate                        1
 #define QScriptSyntaxCheckResult_Valid                               2
 
-#endif /* QSCRIPTSYNTAXCHECKRESULT_CH */
+#endif // QSCRIPTSYNTAXCHECKRESULT_CH

@@ -26,4 +26,4 @@ enum QWebEngineCertificateError::Error
 #define QWebEngineCertificateError_CertificateWeakKey                 -211
 #define QWebEngineCertificateError_CertificateNameConstraintViolation -212
 
-#endif /* QWEBENGINECERTIFICATEERROR_CH */
+#endif // QWEBENGINECERTIFICATEERROR_CH

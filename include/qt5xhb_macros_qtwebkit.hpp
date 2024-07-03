@@ -39,4 +39,4 @@
 #define OPQWEBSECURITYORIGIN(n, v)                          HB_ISNIL(n) ? v : static_cast<QWebSecurityOrigin*>(Qt5xHb::itemGetPtr(n))
 #define OPQWEBSETTINGS(n, v)                                HB_ISNIL(n) ? v : static_cast<QWebSettings*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTWEBKIT_H */
+#endif // QT5XHB_MACROS_QTWEBKIT_H

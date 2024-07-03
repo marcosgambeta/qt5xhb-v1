@@ -157,4 +157,4 @@ enum QPageSize::SizeMatchPolicy
 #define QPageSize_FuzzyOrientationMatch                              1
 #define QPageSize_ExactMatch                                         2
 
-#endif /* QPAGESIZE_CH */
+#endif // QPAGESIZE_CH

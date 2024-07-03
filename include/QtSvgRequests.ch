@@ -14,4 +14,4 @@ REQUEST QSvgGenerator
 REQUEST QSvgRenderer
 REQUEST QSvgWidget
 
-#endif /* QTSVGREQUESTS_CH */
+#endif // QTSVGREQUESTS_CH

@@ -9,4 +9,4 @@
 #ifndef QTWEBCHANNEL_CH
 #define QTWEBCHANNEL_CH
 
-#endif /* QTWEBCHANNEL_CH */
+#endif // QTWEBCHANNEL_CH

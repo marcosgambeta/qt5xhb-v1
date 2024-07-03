@@ -106,4 +106,4 @@ enum QSerialPort::SerialPortError
 #define QSerialPort_UnsupportedOperationError                        10
 #define QSerialPort_UnknownError                                     11
 
-#endif /* QSERIALPORT_CH */
+#endif // QSERIALPORT_CH

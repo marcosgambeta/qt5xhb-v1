@@ -33,4 +33,4 @@ enum QAbstract3DSeries::Mesh
 #define QAbstract3DSeries_MeshArrow                                  10
 #define QAbstract3DSeries_MeshPoint                                  11
 
-#endif /* QABSTRACT3DSERIES_CH */
+#endif // QABSTRACT3DSERIES_CH

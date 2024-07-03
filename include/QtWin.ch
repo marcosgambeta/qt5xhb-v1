@@ -23,4 +23,4 @@ enum QtWin::WindowFlip3DPolicy
 #define QtWin_FlipExcludeBelow                                       1
 #define QtWin_FlipExcludeAbove                                       2
 
-#endif /* QTWIN_CH */
+#endif // QTWIN_CH

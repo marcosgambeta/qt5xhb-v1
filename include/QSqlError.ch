@@ -18,4 +18,4 @@ enum QSqlError::ErrorType
 #define QSqlError_TransactionError                                   3
 #define QSqlError_UnknownError                                       4
 
-#endif /* QSQLERROR_CH */
+#endif // QSQLERROR_CH

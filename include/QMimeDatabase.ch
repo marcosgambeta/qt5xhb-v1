@@ -16,4 +16,4 @@ enum QMimeDatabase::MatchMode
 #define QMimeDatabase_MatchExtension                                 0x1
 #define QMimeDatabase_MatchContent                                   0x2
 
-#endif /* QMIMEDATABASE_CH */
+#endif // QMIMEDATABASE_CH

@@ -78,4 +78,4 @@ enum QCamera::Position
 #define QCamera_BackFace                                             1
 #define QCamera_FrontFace                                            2
 
-#endif /* QCAMERA_CH */
+#endif // QCAMERA_CH

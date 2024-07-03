@@ -15,4 +15,4 @@
 
 #define OPQQUICKWIDGET(n, v)                                HB_ISNIL(n) ? v : static_cast<QQuickWidget*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTQUICKWIDGETS_H */
+#endif // QT5XHB_MACROS_QTQUICKWIDGETS_H

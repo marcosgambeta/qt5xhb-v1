@@ -19,4 +19,4 @@ enum QGeoRouteReply::Error
 #define QGeoRouteReply_UnsupportedOptionError                        4
 #define QGeoRouteReply_UnknownError                                  5
 
-#endif /* QGEOROUTEREPLY_CH */
+#endif // QGEOROUTEREPLY_CH

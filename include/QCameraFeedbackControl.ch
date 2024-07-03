@@ -24,4 +24,4 @@ enum QCameraFeedbackControl::EventType
 #define QCameraFeedbackControl_AutoFocusLocked                       10
 #define QCameraFeedbackControl_AutoFocusFailed                       11
 
-#endif /* QCAMERAFEEDBACKCONTROL_CH */
+#endif // QCAMERAFEEDBACKCONTROL_CH

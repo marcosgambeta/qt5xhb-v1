@@ -47,4 +47,4 @@ enum QScriptEngineDebugger::DebuggerWidget
 #define QScriptEngineDebugger_DebugOutputWidget                      7
 #define QScriptEngineDebugger_ErrorLogWidget                         8
 
-#endif /* QSCRIPTENGINEDEBUGGER_CH */
+#endif // QSCRIPTENGINEDEBUGGER_CH

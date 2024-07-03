@@ -17,4 +17,4 @@ flags QGLShader::ShaderType
 #define QGLShader_Fragment                                           0x0002
 #define QGLShader_Geometry                                           0x0004
 
-#endif /* QGLSHADER_CH */
+#endif // QGLSHADER_CH

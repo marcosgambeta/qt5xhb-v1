@@ -50,4 +50,4 @@ enum QSqlDriver::NotificationSource
 #define QSqlDriver_SelfSource                                        1
 #define QSqlDriver_OtherSource                                       2
 
-#endif /* QSQLDRIVER_CH */
+#endif // QSQLDRIVER_CH

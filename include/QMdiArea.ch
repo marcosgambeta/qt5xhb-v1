@@ -28,4 +28,4 @@ enum QMdiArea::WindowOrder
 #define QMdiArea_StackingOrder                                       1
 #define QMdiArea_ActivationHistoryOrder                              2
 
-#endif /* QMDIAREA_CH */
+#endif // QMDIAREA_CH

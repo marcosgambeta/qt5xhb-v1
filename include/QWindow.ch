@@ -15,4 +15,4 @@ enum QWindow::AncestorMode
 #define QWindow_ExcludeTransients                                    0
 #define QWindow_IncludeTransients                                    1
 
-#endif /* QWINDOW_CH */
+#endif // QWINDOW_CH

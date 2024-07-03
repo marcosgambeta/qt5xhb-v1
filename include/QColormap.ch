@@ -16,4 +16,4 @@ enum QColormap::Mode
 #define QColormap_Indexed                                            1
 #define QColormap_Gray                                               2
 
-#endif /* QCOLORMAP_CH */
+#endif // QCOLORMAP_CH

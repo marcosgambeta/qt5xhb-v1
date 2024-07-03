@@ -52,4 +52,4 @@ flags QVirtualKeyboardInputEngine::ReselectFlags
 #define QVirtualKeyboardInputEngine_WordAfterCursor                  0x2
 #define QVirtualKeyboardInputEngine_WordAtCursor                     hb_bitor(QVirtualKeyboardInputEngine_WordBeforeCursor, QVirtualKeyboardInputEngine_WordAfterCursor)
 
-#endif /* QVIRTUALKEYBOARDINPUTENGINE_CH */
+#endif // QVIRTUALKEYBOARDINPUTENGINE_CH

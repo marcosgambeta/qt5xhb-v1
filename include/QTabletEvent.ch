@@ -27,4 +27,4 @@ enum QTabletEvent::TabletDevice
 #define QTabletEvent_FourDMouse                                      4
 #define QTabletEvent_RotationStylus                                  6
 
-#endif /* QTABLETEVENT_CH */
+#endif // QTABLETEVENT_CH

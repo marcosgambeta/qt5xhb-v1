@@ -16,4 +16,4 @@
 #include "QDeclarativeProperty.ch"
 #include "QDeclarativeView.ch"
 
-#endif /* QTDECLARATIVE_CH */
+#endif // QTDECLARATIVE_CH

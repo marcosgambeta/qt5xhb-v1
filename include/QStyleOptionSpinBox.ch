@@ -19,4 +19,4 @@ enum QStyleOptionSpinBoxStyleOptionVersion
 */
 #define QStyleOptionSpinBox_Version                                  1
 
-#endif /* QSTYLEOPTIONSPINBOX_CH */
+#endif // QSTYLEOPTIONSPINBOX_CH

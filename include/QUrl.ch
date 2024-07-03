@@ -30,4 +30,4 @@ enum QUrl::ParsingMode
 #define QUrl_TolerantMode                                            0
 #define QUrl_StrictMode                                              1
 
-#endif /* QURL_CH */
+#endif // QURL_CH

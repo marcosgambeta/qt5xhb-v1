@@ -24,4 +24,4 @@ enum QTimeZone::NameType
 #define QTimeZone_ShortName                                          2
 #define QTimeZone_OffsetName                                         3
 
-#endif /* QTIMEZONE_CH */
+#endif // QTIMEZONE_CH

@@ -11,4 +11,4 @@
 
 #include "QSerialPort.ch"
 
-#endif /* QTSERIALPORT_CH */
+#endif // QTSERIALPORT_CH

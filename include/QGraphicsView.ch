@@ -48,4 +48,4 @@ enum QGraphicsView::ViewportUpdateMode
 #define QGraphicsView_BoundingRectViewportUpdate                     4
 #define QGraphicsView_NoViewportUpdate                               3
 
-#endif /* QGRAPHICSVIEW_CH */
+#endif // QGRAPHICSVIEW_CH

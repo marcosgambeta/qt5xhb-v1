@@ -24,4 +24,4 @@ flags QGraphicsScene::SceneLayers
 #define QGraphicsScene_ForegroundLayer                               0x4
 #define QGraphicsScene_AllLayers                                     0xffff
 
-#endif /* QGRAPHICSSCENE_CH */
+#endif // QGRAPHICSSCENE_CH

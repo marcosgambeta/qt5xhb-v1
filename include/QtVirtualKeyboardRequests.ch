@@ -16,4 +16,4 @@ REQUEST QVirtualKeyboardInputEngine
 REQUEST QVirtualKeyboardSelectionListModel
 REQUEST QVirtualKeyboardTrace
 
-#endif /* QTVIRTUALKEYBOARDREQUESTS_CH */
+#endif // QTVIRTUALKEYBOARDREQUESTS_CH

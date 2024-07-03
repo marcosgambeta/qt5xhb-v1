@@ -54,4 +54,4 @@
 #define OPQGEOSHAPE(n, v)                                   HB_ISNIL(n) ? v : static_cast<QGeoShape*>(Qt5xHb::itemGetPtr(n))
 #define OPQNMEAPOSITIONINFOSOURCE(n, v)                     HB_ISNIL(n) ? v : static_cast<QNmeaPositionInfoSource*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTPOSITIONING_H */
+#endif // QT5XHB_MACROS_QTPOSITIONING_H

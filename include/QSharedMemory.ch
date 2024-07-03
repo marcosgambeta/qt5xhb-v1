@@ -28,4 +28,4 @@ enum QSharedMemory::SharedMemoryError
 #define QSharedMemory_OutOfResources                                 7
 #define QSharedMemory_UnknownError                                   8
 
-#endif /* QSHAREDMEMORY_CH */
+#endif // QSHAREDMEMORY_CH

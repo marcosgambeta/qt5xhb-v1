@@ -11,4 +11,4 @@
 
 #include "QQuickWidget.ch"
 
-#endif /* QTQUICKWIDGETS_CH */
+#endif // QTQUICKWIDGETS_CH

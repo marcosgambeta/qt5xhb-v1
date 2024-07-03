@@ -17,4 +17,4 @@ enum QWinJumpListCategory::Type
 #define QWinJumpListCategory_Frequent                                2
 #define QWinJumpListCategory_Tasks                                   3
 
-#endif /* QWINJUMPLISTCATEGORY_CH */
+#endif // QWINJUMPLISTCATEGORY_CH

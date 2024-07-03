@@ -21,4 +21,4 @@ flags QNetworkConfigurationManager::Capabilities
 #define QNetworkConfigurationManager_DataStatistics                  0x00000020
 #define QNetworkConfigurationManager_NetworkSessionRequired          0x00000040
 
-#endif /* QNETWORKCONFIGURATIONMANAGER_CH */
+#endif // QNETWORKCONFIGURATIONMANAGER_CH

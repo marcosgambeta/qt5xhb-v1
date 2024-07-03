@@ -24,4 +24,4 @@ enum QAbstract3DAxis::AxisType
 #define QAbstract3DAxis_AxisTypeCategory                             1
 #define QAbstract3DAxis_AxisTypeValue                                2
 
-#endif /* QABSTRACT3DAXIS_CH */
+#endif // QABSTRACT3DAXIS_CH

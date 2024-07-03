@@ -15,4 +15,4 @@
 
 #define OPQSCRIPTENGINEDEBUGGER(n, v)                       HB_ISNIL(n) ? v : static_cast<QScriptEngineDebugger*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTSCRIPTTOOLS_H */
+#endif // QT5XHB_MACROS_QTSCRIPTTOOLS_H

@@ -30,4 +30,4 @@ enum QFormLayout::RowWrapPolicy
 #define QFormLayout_WrapLongRows                                     1
 #define QFormLayout_WrapAllRows                                      2
 
-#endif /* QFORMLAYOUT_CH */
+#endif // QFORMLAYOUT_CH

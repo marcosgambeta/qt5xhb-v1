@@ -32,4 +32,4 @@ enum QQuickItem::TransformOrigin
 #define QQuickItem_Bottom                                            7
 #define QQuickItem_BottomRight                                       8
 
-#endif /* QQUICKITEM_CH */
+#endif // QQUICKITEM_CH

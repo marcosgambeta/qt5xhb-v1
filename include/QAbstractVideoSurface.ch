@@ -18,4 +18,4 @@ enum QAbstractVideoSurface::Error
 #define QAbstractVideoSurface_StoppedError                           3
 #define QAbstractVideoSurface_ResourceError                          4
 
-#endif /* QABSTRACTVIDEOSURFACE_CH */
+#endif // QABSTRACTVIDEOSURFACE_CH

@@ -17,4 +17,4 @@ enum QItemModelBarDataProxy::MultiMatchBehavior
 #define QItemModelBarDataProxy_MMBAverage                            2
 #define QItemModelBarDataProxy_MMBCumulative                         3
 
-#endif /* QITEMMODELBARDATAPROXY_CH */
+#endif // QITEMMODELBARDATAPROXY_CH

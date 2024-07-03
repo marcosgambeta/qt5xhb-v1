@@ -28,4 +28,4 @@ enum QAbstractVideoBuffer::MapMode
 #define QAbstractVideoBuffer_WriteOnly                               0x02
 #define QAbstractVideoBuffer_ReadWrite                               hb_bitor(QAbstractVideoBuffer_ReadOnly,QAbstractVideoBuffer_WriteOnly)
 
-#endif /* QABSTRACTVIDEOBUFFER_CH */
+#endif // QABSTRACTVIDEOBUFFER_CH

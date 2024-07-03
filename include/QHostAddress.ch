@@ -31,4 +31,4 @@ flags QHostAddress::ConversionMode
 #define QHostAddress_TolerantConversion                              0xff
 #define QHostAddress_StrictConversion                                0
 
-#endif /* QHOSTADDRESS_CH */
+#endif // QHOSTADDRESS_CH

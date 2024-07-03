@@ -66,4 +66,4 @@ flags QGeoRouteRequest::ManeuverDetails
 #define QGeoRouteRequest_NoManeuvers                                 0x0000
 #define QGeoRouteRequest_BasicManeuvers                              0x0001
 
-#endif /* QGEOROUTEREQUEST_CH */
+#endif // QGEOROUTEREQUEST_CH

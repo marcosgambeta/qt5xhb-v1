@@ -17,4 +17,4 @@ enum QLegend::MarkerShape
 #define QLegend_MarkerShapeCircle                                    2
 #define QLegend_MarkerShapeFromSeries                                3
 
-#endif /* QLEGEND_CH */
+#endif // QLEGEND_CH

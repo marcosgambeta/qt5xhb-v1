@@ -462,4 +462,4 @@
 #define OPQXMLSTREAMREADER(n, v)                            HB_ISNIL(n) ? v : static_cast<QXmlStreamReader*>(Qt5xHb::itemGetPtr(n))
 #define OPQXMLSTREAMWRITER(n, v)                            HB_ISNIL(n) ? v : static_cast<QXmlStreamWriter*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTCORE_H */
+#endif // QT5XHB_MACROS_QTCORE_H

@@ -16,4 +16,4 @@ enum QWinJumpListItem::Type
 #define QWinJumpListItem_Link                                        1
 #define QWinJumpListItem_Separator                                   2
 
-#endif /* QWINJUMPLISTITEM_CH */
+#endif // QWINJUMPLISTITEM_CH

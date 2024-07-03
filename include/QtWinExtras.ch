@@ -13,4 +13,4 @@
 #include "QWinJumpListCategory.ch"
 #include "QWinJumpListItem.ch"
 
-#endif /* QTWINEXTRAS_CH */
+#endif // QTWINEXTRAS_CH

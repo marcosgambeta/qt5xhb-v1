@@ -144,4 +144,4 @@
 #define OPQTCPSOCKET(n, v)                                  HB_ISNIL(n) ? v : static_cast<QTcpSocket*>(Qt5xHb::itemGetPtr(n))
 #define OPQUDPSOCKET(n, v)                                  HB_ISNIL(n) ? v : static_cast<QUdpSocket*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTNETWORK_H */
+#endif // QT5XHB_MACROS_QTNETWORK_H

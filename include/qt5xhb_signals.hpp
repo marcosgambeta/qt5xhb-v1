@@ -21,4 +21,4 @@ namespace Qt5xHb
   PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname );
 }
 
-#endif /* QT5XHB_SIGNALS_H */
+#endif // QT5XHB_SIGNALS_H

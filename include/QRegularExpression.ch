@@ -40,4 +40,4 @@ flags QRegularExpression::PatternOptions
 #define QRegularExpression_OptimizeOnFirstUsageOption                0x0080
 #define QRegularExpression_DontAutomaticallyOptimizeOption           0x0100
 
-#endif /* QREGULAREXPRESSION_CH */
+#endif // QREGULAREXPRESSION_CH

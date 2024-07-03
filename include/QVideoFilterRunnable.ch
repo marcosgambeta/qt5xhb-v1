@@ -15,4 +15,4 @@ flags QVideoFilterRunnable::RunFlags
 */
 #define QVideoFilterRunnable_LastInChain                             0x01
 
-#endif /* QVIDEOFILTERRUNNABLE_CH */
+#endif // QVIDEOFILTERRUNNABLE_CH

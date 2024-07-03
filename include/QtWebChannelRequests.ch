@@ -14,4 +14,4 @@ REQUEST QtWebChannelVersion
 REQUEST QWebChannel
 REQUEST QWebChannelAbstractTransport
 
-#endif /* QTWEBCHANNELREQUESTS_CH */
+#endif // QTWEBCHANNELREQUESTS_CH

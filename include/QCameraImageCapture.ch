@@ -31,4 +31,4 @@ enum QCameraImageCapture::Error
 #define QCameraImageCapture_NotSupportedFeatureError                 4
 #define QCameraImageCapture_FormatError                              5
 
-#endif /* QCAMERAIMAGECAPTURE_CH */
+#endif // QCAMERAIMAGECAPTURE_CH

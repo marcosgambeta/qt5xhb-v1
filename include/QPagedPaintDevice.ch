@@ -140,4 +140,4 @@ enum QPagedPaintDevice::PageSize
 #define QPagedPaintDevice_EnvelopeDL                                 QPagedPaintDevice_DLE          // 125
 #define QPagedPaintDevice_Envelope10                                 QPagedPaintDevice_Comm10E      // 126
 
-#endif /* QPAGEDPAINTDEVICE_CH */
+#endif // QPAGEDPAINTDEVICE_CH

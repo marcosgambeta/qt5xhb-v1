@@ -54,4 +54,4 @@ enum QAudio::VolumeScale
 #define QAudio_LogarithmicVolumeScale                                2
 #define QAudio_DecibelVolumeScale                                    3
 
-#endif /* QAUDIO_CH */
+#endif // QAUDIO_CH

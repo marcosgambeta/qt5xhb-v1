@@ -21,4 +21,4 @@
 #include "QBluetoothTransferRequest.ch"
 #include "QBluetoothUuid.ch"
 
-#endif /* QTBLUETOOTH_CH */
+#endif // QTBLUETOOTH_CH

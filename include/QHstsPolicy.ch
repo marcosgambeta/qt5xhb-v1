@@ -15,4 +15,4 @@ flags QHstsPolicy::PolicyFlags
 */
 #define QHstsPolicy_IncludeSubDomains                                1
 
-#endif /* QHSTSPOLICY_CH */
+#endif // QHSTSPOLICY_CH

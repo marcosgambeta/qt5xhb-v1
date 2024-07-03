@@ -16,4 +16,4 @@ enum QSqlField::RequiredStatus
 #define QSqlField_Optional                                           0
 #define QSqlField_Required                                           1
 
-#endif /* QSQLFIELD_CH */
+#endif // QSQLFIELD_CH

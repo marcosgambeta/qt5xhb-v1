@@ -27,4 +27,4 @@ flags QStyleOptionFrame::FrameFeatures
 #define QStyleOptionFrame_Flat                                       0x01
 #define QStyleOptionFrame_Rounded                                    0x02
 
-#endif /* QSTYLEOPTIONFRAME_CH */
+#endif // QSTYLEOPTIONFRAME_CH

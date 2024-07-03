@@ -160,4 +160,4 @@ REQUEST QXmlStreamNotationDeclaration
 REQUEST QXmlStreamReader
 REQUEST QXmlStreamWriter
 
-#endif /* QTCOREREQUESTS_CH */
+#endif // QTCOREREQUESTS_CH

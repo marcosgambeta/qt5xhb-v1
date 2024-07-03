@@ -42,4 +42,4 @@ enum QCanBusFrame::Version
 #define QCanBusFrame_Qt_5_9                                          0x1
 #define QCanBusFrame_Qt_5_10                                         0x2
 
-#endif /* QCANBUSFRAME_CH */
+#endif // QCANBUSFRAME_CH

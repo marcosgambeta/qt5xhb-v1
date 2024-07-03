@@ -30,4 +30,4 @@ enum QUuid::Version
 #define QUuid_Sha1                                                   5
 #define QUuid_Name                                                   QUuid_Md5
 
-#endif /* QUUID_CH */
+#endif // QUUID_CH

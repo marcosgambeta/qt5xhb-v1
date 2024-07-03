@@ -19,4 +19,4 @@ enum QWebEngineUrlRequestJob::Error
 #define QWebEngineUrlRequestJob_RequestDenied                        4
 #define QWebEngineUrlRequestJob_RequestFailed                        5
 
-#endif /* QWEBENGINEURLREQUESTJOB_CH */
+#endif // QWEBENGINEURLREQUESTJOB_CH

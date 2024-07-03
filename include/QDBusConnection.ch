@@ -62,4 +62,4 @@ flags QDBusConnection::ConnectionCapabilities
 */
 #define QDBusConnection_UnixFileDescriptorPassing                    0x0001
 
-#endif /* QDBUSCONNECTION_CH */
+#endif // QDBUSCONNECTION_CH

@@ -27,4 +27,4 @@ enum QCameraImageProcessingControl::ProcessingParameter
 #define QCameraImageProcessingControl_ColorFilter                    12
 #define QCameraImageProcessingControl_ExtendedParameter              1000
 
-#endif /* QCAMERAIMAGEPROCESSINGCONTROL_CH */
+#endif // QCAMERAIMAGEPROCESSINGCONTROL_CH

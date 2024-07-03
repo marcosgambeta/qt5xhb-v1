@@ -19,4 +19,4 @@ enum QSlider::TickPosition
 #define QSlider_TicksLeft                                            QSlider_TicksAbove
 #define QSlider_TicksRight                                           QSlider_TicksBelow
 
-#endif /* QSLIDER_CH */
+#endif // QSLIDER_CH

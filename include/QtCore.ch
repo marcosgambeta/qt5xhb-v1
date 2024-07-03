@@ -63,4 +63,4 @@
 #include "QVariant.ch"
 #include "QXmlStreamReader.ch"
 
-#endif /* QTCORE_CH */
+#endif // QTCORE_CH

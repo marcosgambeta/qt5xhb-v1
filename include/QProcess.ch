@@ -53,4 +53,4 @@ enum QProcess::InputChannelMode
 #define QProcess_ManagedInputChannel                                 0
 #define QProcess_ForwardedInputChannel                               1
 
-#endif /* QPROCESS_CH */
+#endif // QPROCESS_CH

@@ -30,4 +30,4 @@ REQUEST QQmlPropertyMap
 REQUEST QQmlPropertyValueSource
 REQUEST QQmlScriptString
 
-#endif /* QTQMLREQUESTS_CH */
+#endif // QTQMLREQUESTS_CH

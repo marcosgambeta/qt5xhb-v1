@@ -23,4 +23,4 @@ enum QLineEdit::EchoMode
 #define QLineEdit_Password                                           2
 #define QLineEdit_PasswordEchoOnEdit                                 3
 
-#endif /* QLINEEDIT_CH */
+#endif // QLINEEDIT_CH

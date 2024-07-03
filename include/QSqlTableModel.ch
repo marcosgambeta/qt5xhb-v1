@@ -16,4 +16,4 @@ enum QSqlTableModel::EditStrategy
 #define QSqlTableModel_OnRowChange                                   1
 #define QSqlTableModel_OnManualSubmit                                2
 
-#endif /* QSQLTABLEMODEL_CH */
+#endif // QSQLTABLEMODEL_CH

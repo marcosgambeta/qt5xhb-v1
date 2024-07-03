@@ -15,4 +15,4 @@ enum QTextLayout::CursorMode
 #define QTextLayout_SkipCharacters                                   0
 #define QTextLayout_SkipWords                                        1
 
-#endif /* QTEXTLAYOUT_CH */
+#endif // QTEXTLAYOUT_CH

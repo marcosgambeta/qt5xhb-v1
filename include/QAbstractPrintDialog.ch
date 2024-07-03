@@ -30,4 +30,4 @@ enum QAbstractPrintDialog::PrintRange
 #define QAbstractPrintDialog_PageRange                               2
 #define QAbstractPrintDialog_CurrentPage                             3
 
-#endif /* QABSTRACTPRINTDIALOG_CH */
+#endif // QABSTRACTPRINTDIALOG_CH

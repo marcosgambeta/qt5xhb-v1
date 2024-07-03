@@ -37,4 +37,4 @@ enum QOpenGLBuffer::UsagePattern
 #define QOpenGLBuffer_DynamicRead                                    0x88E9
 #define QOpenGLBuffer_DynamicCopy                                    0x88EA
 
-#endif /* QOPENGLBUFFER_CH */
+#endif // QOPENGLBUFFER_CH

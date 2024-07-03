@@ -23,4 +23,4 @@ enum QIcon::State
 #define QIcon_Off                                                    1
 #define QIcon_On                                                     0
 
-#endif /* QICON_CH */
+#endif // QICON_CH

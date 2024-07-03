@@ -15,4 +15,4 @@ enum QDeclarativeEngine::ObjectOwnership
 #define QDeclarativeEngine_CppOwnership                              0
 #define QDeclarativeEngine_JavaScriptOwnership                       1
 
-#endif /* QDECLARATIVEENGINE_CH */
+#endif // QDECLARATIVEENGINE_CH

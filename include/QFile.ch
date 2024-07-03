@@ -57,4 +57,4 @@ flags QFile::Permissions
 #define QFile_WriteOther                                             0x0002
 #define QFile_ExeOther                                               0x0001
 
-#endif /* QFILE_CH */
+#endif // QFILE_CH

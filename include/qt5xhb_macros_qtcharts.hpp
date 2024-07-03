@@ -168,4 +168,4 @@
 #define OPQXYMODELMAPPER(n, v)                              HB_ISNIL(n) ? v : static_cast<QXYModelMapper*>(Qt5xHb::itemGetPtr(n))
 #define OPQXYSERIES(n, v)                                   HB_ISNIL(n) ? v : static_cast<QXYSeries*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTCHARTS_H */
+#endif // QT5XHB_MACROS_QTCHARTS_H

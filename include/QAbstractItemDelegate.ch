@@ -18,4 +18,4 @@ enum QAbstractItemDelegate::EndEditHint
 #define QAbstractItemDelegate_SubmitModelCache                       3
 #define QAbstractItemDelegate_RevertModelCache                       4
 
-#endif /* QABSTRACTITEMDELEGATE_CH */
+#endif // QABSTRACTITEMDELEGATE_CH

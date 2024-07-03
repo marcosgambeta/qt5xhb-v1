@@ -23,4 +23,4 @@ enum QQuickWebEngineProfile::PersistentCookiesPolicy
 #define QQuickWebEngineProfile_AllowPersistentCookies                1
 #define QQuickWebEngineProfile_ForcePersistentCookies                2
 
-#endif /* QQUICKWEBENGINEPROFILE_CH */
+#endif // QQUICKWEBENGINEPROFILE_CH

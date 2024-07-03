@@ -22,4 +22,4 @@ enum QSoundEffect::Status
 #define QSoundEffect_Ready                                           2
 #define QSoundEffect_Error                                           3
 
-#endif /* QSOUNDEFFECT_CH */
+#endif // QSOUNDEFFECT_CH

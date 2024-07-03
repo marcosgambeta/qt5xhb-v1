@@ -29,4 +29,4 @@ enum QDBusConnectionInterface::RegisterServiceReply
 #define QDBusConnectionInterface_ServiceRegistered                   1
 #define QDBusConnectionInterface_ServiceQueued                       2
 
-#endif /* QDBUSCONNECTIONINTERFACE_CH */
+#endif // QDBUSCONNECTIONINTERFACE_CH

@@ -35,4 +35,4 @@ enum QImage::InvertMode
 #define QImage_InvertRgb                                             0
 #define QImage_InvertRgba                                            1
 
-#endif /* QIMAGE_CH */
+#endif // QIMAGE_CH

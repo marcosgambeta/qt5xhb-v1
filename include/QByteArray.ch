@@ -19,4 +19,4 @@ flags QByteArray::Base64Options
 #define QByteArray_KeepTrailingEquals                                0
 #define QByteArray_OmitTrailingEquals                                2
 
-#endif /* QBYTEARRAY_CH */
+#endif // QBYTEARRAY_CH

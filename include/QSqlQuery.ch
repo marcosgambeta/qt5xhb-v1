@@ -15,4 +15,4 @@ enum QSqlQuery::BatchExecutionMode
 #define QSqlQuery_ValuesAsRows                                       0
 #define QSqlQuery_ValuesAsColumns                                    1
 
-#endif /* QSQLQUERY_CH */
+#endif // QSQLQUERY_CH

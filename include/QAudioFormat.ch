@@ -23,4 +23,4 @@ enum QAudioFormat::SampleType
 #define QAudioFormat_UnSignedInt                                     2
 #define QAudioFormat_Float                                           3
 
-#endif /* QAUDIOFORMAT_CH */
+#endif // QAUDIOFORMAT_CH

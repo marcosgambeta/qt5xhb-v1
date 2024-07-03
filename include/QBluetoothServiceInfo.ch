@@ -38,4 +38,4 @@ enum QBluetoothServiceInfo::Protocol
 #define QBluetoothServiceInfo_L2capProtocol                          1
 #define QBluetoothServiceInfo_RfcommProtocol                         2
 
-#endif /* QBLUETOOTHSERVICEINFO_CH */
+#endif // QBLUETOOTHSERVICEINFO_CH

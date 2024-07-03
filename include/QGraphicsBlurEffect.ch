@@ -17,4 +17,4 @@ flags QGraphicsBlurEffect::BlurHints
 #define QGraphicsBlurEffect_QualityHint                              0x01
 #define QGraphicsBlurEffect_AnimationHint                            0x02
 
-#endif /* QGRAPHICSBLUREFFECT_CH */
+#endif // QGRAPHICSBLUREFFECT_CH

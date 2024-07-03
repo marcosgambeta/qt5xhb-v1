@@ -41,4 +41,4 @@ REQUEST QXmlParseException
 REQUEST QXmlReader
 REQUEST QXmlSimpleReader
 
-#endif /* QTXMLREQUESTS_CH */
+#endif // QTXMLREQUESTS_CH

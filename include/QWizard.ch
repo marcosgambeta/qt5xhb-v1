@@ -66,4 +66,4 @@ enum QWizard::WizardStyle
 #define QWizard_AeroStyle                                            3
 #define QWizard_NStyles                                              4
 
-#endif /* QWIZARD_CH */
+#endif // QWIZARD_CH

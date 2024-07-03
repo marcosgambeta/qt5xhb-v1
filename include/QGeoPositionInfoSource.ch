@@ -24,4 +24,4 @@ flags QGeoPositionInfoSource::PositioningMethod2
 #define QGeoPositionInfoSource_NonSatellitePositioningMethods        0xffffff00
 #define QGeoPositionInfoSource_AllPositioningMethods                 0xffffffff
 
-#endif /* QGEOPOSITIONINFOSOURCE_CH */
+#endif // QGEOPOSITIONINFOSOURCE_CH

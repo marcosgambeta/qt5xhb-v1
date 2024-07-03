@@ -42,4 +42,4 @@ enum QModbusDevice::ConnectionParameter
 #define QModbusDevice_NetworkAddressParameter                        6
 #define QModbusDevice_UserParameter                                  0x100
 
-#endif /* QMODBUSDEVICE_CH */
+#endif // QMODBUSDEVICE_CH

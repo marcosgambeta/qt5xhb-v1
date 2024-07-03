@@ -12,4 +12,4 @@
 #include "QDomImplementation.ch"
 #include "QDomNode.ch"
 
-#endif /* QTXML_CH */
+#endif // QTXML_CH

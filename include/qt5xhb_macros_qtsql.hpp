@@ -60,4 +60,4 @@
 #define OPQSQLRESULT(n, v)                                  HB_ISNIL(n) ? v : static_cast<QSqlResult*>(Qt5xHb::itemGetPtr(n))
 #define OPQSQLTABLEMODEL(n, v)                              HB_ISNIL(n) ? v : static_cast<QSqlTableModel*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTSQL_H */
+#endif // QT5XHB_MACROS_QTSQL_H

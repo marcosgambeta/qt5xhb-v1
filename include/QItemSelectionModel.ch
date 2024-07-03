@@ -25,4 +25,4 @@ flags QItemSelectionModel::SelectionFlags
 #define QItemSelectionModel_ToggleCurrent                            hb_bitor(QItemSelectionModel_Toggle,QItemSelectionModel_Current)
 #define QItemSelectionModel_ClearAndSelect                           hb_bitor(QItemSelectionModel_Clear,QItemSelectionModel_Select)
 
-#endif /* QITEMSELECTIONMODEL_CH */
+#endif // QITEMSELECTIONMODEL_CH

@@ -19,4 +19,4 @@ enum QStyleOptionDockWidget::StyleOptionVersion
 */
 #define QStyleOptionDockWidget_Version                               2
 
-#endif /* QSTYLEOPTIONDOCKWIDGET_CH */
+#endif // QSTYLEOPTIONDOCKWIDGET_CH

@@ -16,4 +16,4 @@ enum QImageWriter::ImageWriterError
 #define QImageWriter_UnsupportedFormatError                          2
 #define QImageWriter_UnknownError                                    0
 
-#endif /* QIMAGEWRITER_CH */
+#endif // QIMAGEWRITER_CH

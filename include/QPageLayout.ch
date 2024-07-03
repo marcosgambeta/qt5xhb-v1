@@ -31,4 +31,4 @@ enum QPageLayout::Mode
 #define QPageLayout_StandardMode                                     0
 #define QPageLayout_FullPageMode                                     1
 
-#endif /* QPAGELAYOUT_CH */
+#endif // QPAGELAYOUT_CH

@@ -21,4 +21,4 @@
 #define OPQQUICKWEBENGINESCRIPT(n, v)                       HB_ISNIL(n) ? v : static_cast<QQuickWebEngineScript*>(Qt5xHb::itemGetPtr(n))
 #define OPQTWEBENGINE(n, v)                                 HB_ISNIL(n) ? v : static_cast<QtWebEngine*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTWEBENGINE_H */
+#endif // QT5XHB_MACROS_QTWEBENGINE_H

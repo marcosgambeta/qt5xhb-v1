@@ -18,4 +18,4 @@ enum QHeaderView::ResizeMode
 #define QHeaderView_ResizeToContents                                 3
 #define QHeaderView_Custom                                           QHeaderView_Fixed // TODO: obsolete ?
 
-#endif /* QHEADERVIEW_CH */
+#endif // QHEADERVIEW_CH

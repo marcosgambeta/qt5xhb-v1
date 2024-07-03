@@ -20,4 +20,4 @@ enum class QOAuth1Signature::HttpRequestMethod
 #define QOAuth1Signature_Custom                                      6
 #define QOAuth1Signature_Unknown                                     0
 
-#endif /* QOAUTH1SIGNATURE_CH */
+#endif // QOAUTH1SIGNATURE_CH

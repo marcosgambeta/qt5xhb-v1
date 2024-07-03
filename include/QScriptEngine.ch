@@ -30,4 +30,4 @@ enum QScriptEngine::ValueOwnership
 #define QScriptEngine_ScriptOwnership                                1
 #define QScriptEngine_AutoOwnership                                  2
 
-#endif /* QSCRIPTENGINE_CH */
+#endif // QSCRIPTENGINE_CH

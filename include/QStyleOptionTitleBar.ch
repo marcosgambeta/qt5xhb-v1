@@ -19,4 +19,4 @@ enum QStyleOptionTitleBar::StyleOptionVersion
 */
 #define QStyleOptionTitleBar_Version                                 1
 
-#endif /* QSTYLEOPTIONTITLEBAR_CH */
+#endif // QSTYLEOPTIONTITLEBAR_CH

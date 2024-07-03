@@ -26,4 +26,4 @@ enum QRegExp::PatternSyntax
 #define QRegExp_FixedString                                          2
 #define QRegExp_W3CXmlSchema11                                       5
 
-#endif /* QREGEXP_CH */
+#endif // QREGEXP_CH

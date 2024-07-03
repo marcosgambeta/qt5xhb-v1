@@ -18,4 +18,4 @@ enum QMediaStreamsControl::StreamType
 #define QMediaStreamsControl_SubPictureStream                        3
 #define QMediaStreamsControl_DataStream                              4
 
-#endif /* QMEDIASTREAMSCONTROL_CH */
+#endif // QMEDIASTREAMSCONTROL_CH

@@ -123,4 +123,4 @@ enum QChar::UnicodeVersion
 #define QChar_Unicode_5_0                                            9
 #define QChar_Unicode_Unassigned                                     0
 
-#endif /* QCHAR_CH */
+#endif // QCHAR_CH

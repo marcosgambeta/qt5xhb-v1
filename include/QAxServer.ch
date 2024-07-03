@@ -11,4 +11,4 @@
 
 #include "QAxFactory.ch"
 
-#endif /* QAXSERVER_CH */
+#endif // QAXSERVER_CH

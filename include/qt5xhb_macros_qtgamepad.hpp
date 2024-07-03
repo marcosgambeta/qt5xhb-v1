@@ -21,4 +21,4 @@
 #define OPQGAMEPADKEYNAVIGATION(n, v)                       HB_ISNIL(n) ? v : static_cast<QGamepadKeyNavigation*>(Qt5xHb::itemGetPtr(n))
 #define OPQGAMEPADMANAGER(n, v)                             HB_ISNIL(n) ? v : static_cast<QGamepadManager*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTGAMEPAD_H */
+#endif // QT5XHB_MACROS_QTGAMEPAD_H

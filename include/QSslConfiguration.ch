@@ -16,4 +16,4 @@ enum QSslConfiguration::NextProtocolNegotiationStatus
 #define QSslConfiguration_NextProtocolNegotiationNegotiated          1
 #define QSslConfiguration_NextProtocolNegotiationUnsupported         2
 
-#endif /* QSSLCONFIGURATION_CH */
+#endif // QSSLCONFIGURATION_CH

@@ -25,4 +25,4 @@ enum QGraphicsEffect::PixmapPadMode
 #define QGraphicsEffect_PadToTransparentBorder                       1
 #define QGraphicsEffect_PadToEffectiveBoundingRect                   2
 
-#endif /* QGRAPHICSEFFECT_CH */
+#endif // QGRAPHICSEFFECT_CH

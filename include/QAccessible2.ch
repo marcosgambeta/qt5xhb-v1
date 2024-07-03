@@ -19,4 +19,4 @@ enum QAccessible2::BoundaryType
 #define QAccessible2_LineBoundary                                    4
 #define QAccessible2_NoBoundary                                      5
 
-#endif /* QACCESSIBLE2_CH */
+#endif // QACCESSIBLE2_CH

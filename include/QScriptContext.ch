@@ -25,4 +25,4 @@ enum QScriptContext::ExecutionState
 #define QScriptContext_NormalState                                   0
 #define QScriptContext_ExceptionState                                1
 
-#endif /* QSCRIPTCONTEXT_CH */
+#endif // QSCRIPTCONTEXT_CH

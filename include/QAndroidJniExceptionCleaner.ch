@@ -15,4 +15,4 @@ enum class QAndroidJniExceptionCleaner::OutputMode
 #define QAndroidJniExceptionCleaner_Silent                           0
 #define QAndroidJniExceptionCleaner_Verbose                          1
 
-#endif /* QANDROIDJNIEXCEPTIONCLEANER_CH */
+#endif // QANDROIDJNIEXCEPTIONCLEANER_CH

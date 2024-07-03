@@ -9,4 +9,4 @@
 #ifndef QTHELP_CH
 #define QTHELP_CH
 
-#endif /* QTHELP_CH */
+#endif // QTHELP_CH

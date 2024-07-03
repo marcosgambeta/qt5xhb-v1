@@ -22,4 +22,4 @@ enum QMovie::MovieState
 #define QMovie_Paused                                                1
 #define QMovie_Running                                               2
 
-#endif /* QMOVIE_CH */
+#endif // QMOVIE_CH

@@ -12,4 +12,4 @@
 #include "QAxScript.ch"
 #include "QAxScriptEngine.ch"
 
-#endif /* QAXCONTAINER_CH */
+#endif // QAXCONTAINER_CH

@@ -11,4 +11,4 @@
 
 #include "QDesignerFormWindowCursorInterface.ch"
 
-#endif /* QTDESIGNER_CH */
+#endif // QTDESIGNER_CH

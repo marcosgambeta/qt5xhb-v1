@@ -23,4 +23,4 @@ enum QDeclarativeView::Status
 #define QDeclarativeView_Loading                                     2
 #define QDeclarativeView_Error                                       3
 
-#endif /* QDECLARATIVEVIEW_CH */
+#endif // QDECLARATIVEVIEW_CH

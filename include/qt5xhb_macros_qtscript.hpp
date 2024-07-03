@@ -51,4 +51,4 @@
 #define OPQSCRIPTVALUE(n, v)                                HB_ISNIL(n) ? v : static_cast<QScriptValue*>(Qt5xHb::itemGetPtr(n))
 #define OPQSCRIPTVALUEITERATOR(n, v)                        HB_ISNIL(n) ? v : static_cast<QScriptValueIterator*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTSCRIPT_H */
+#endif // QT5XHB_MACROS_QTSCRIPT_H

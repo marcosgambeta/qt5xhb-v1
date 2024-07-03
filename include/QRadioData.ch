@@ -69,4 +69,4 @@ enum QRadioData::ProgramType
 #define QRadioData_Public                                            46
 #define QRadioData_College                                           47
 
-#endif /* QRADIODATA_CH */
+#endif // QRADIODATA_CH

@@ -28,4 +28,4 @@ enum QCameraFocus::FocusPointMode
 #define QCameraFocus_FocusPointFaceDetection                         2
 #define QCameraFocus_FocusPointCustom                                3
 
-#endif /* QCAMERAFOCUS_CH */
+#endif // QCAMERAFOCUS_CH

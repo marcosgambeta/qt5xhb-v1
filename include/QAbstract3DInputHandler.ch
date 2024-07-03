@@ -16,4 +16,4 @@ enum QAbstract3DInputHandler::InputView
 #define QAbstract3DInputHandler_InputViewOnPrimary                   1
 #define QAbstract3DInputHandler_InputViewOnSecondary                 2
 
-#endif /* QABSTRACT3DINPUTHANDLER_CH */
+#endif // QABSTRACT3DINPUTHANDLER_CH

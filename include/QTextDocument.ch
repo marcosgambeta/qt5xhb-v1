@@ -37,4 +37,4 @@ enum QTextDocument::Stacks
 #define QTextDocument_RedoStack                                      0x02
 #define QTextDocument_UndoAndRedoStacks                              hb_bitor(QTextDocument_UndoStack,QTextDocument_RedoStack)
 
-#endif /* QTEXTDOCUMENT_CH */
+#endif // QTEXTDOCUMENT_CH

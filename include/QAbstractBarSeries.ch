@@ -17,4 +17,4 @@ enum QAbstractBarSeries::LabelsPosition
 #define QAbstractBarSeries_LabelsInsideBase                          2
 #define QAbstractBarSeries_LabelsOutsideEnd                          3
 
-#endif /* QABSTRACTBARSERIES_CH */
+#endif // QABSTRACTBARSERIES_CH

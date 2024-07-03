@@ -17,4 +17,4 @@ flags QDirIterator::IteratorFlags
 #define QDirIterator_Subdirectories                                  0x2
 #define QDirIterator_FollowSymlinks                                  0x1
 
-#endif /* QDIRITERATOR_CH */
+#endif // QDIRITERATOR_CH

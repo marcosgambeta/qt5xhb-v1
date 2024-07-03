@@ -25,4 +25,4 @@ enum QWebFrame::ValueOwnership
 #define QWebFrame_ScriptOwnership                                    1
 #define QWebFrame_AutoOwnership                                      2
 
-#endif /* QWEBFRAME_CH */
+#endif // QWEBFRAME_CH

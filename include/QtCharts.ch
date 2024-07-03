@@ -21,4 +21,4 @@
 #include "QPolarChart.ch"
 #include "QScatterSeries.ch"
 
-#endif /* QTCHARTS_CH */
+#endif // QTCHARTS_CH

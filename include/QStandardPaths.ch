@@ -37,4 +37,4 @@ flags QStandardPaths::LocateOptions
 #define QStandardPaths_LocateFile                                    0x0
 #define QStandardPaths_LocateDirectory                               0x1
 
-#endif /* QSTANDARDPATHS_CH */
+#endif // QSTANDARDPATHS_CH

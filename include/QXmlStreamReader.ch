@@ -40,4 +40,4 @@ enum QXmlStreamReader::TokenType
 #define QXmlStreamReader_EntityReference                             9
 #define QXmlStreamReader_ProcessingInstruction                       10
 
-#endif /* QXMLSTREAMREADER_CH */
+#endif // QXMLSTREAMREADER_CH

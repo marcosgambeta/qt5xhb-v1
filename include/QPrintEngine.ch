@@ -45,4 +45,4 @@ enum QPrintEngine::PrintEnginePropertyKey
 #define QPrintEngine_PPK_PaperSize                                   QPrintEngine_PPK_PageSize
 #define QPrintEngine_PPK_CustomBase                                  0xff00
 
-#endif /* QPRINTENGINE_CH */
+#endif // QPRINTENGINE_CH

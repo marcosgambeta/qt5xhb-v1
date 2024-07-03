@@ -16,4 +16,4 @@ enum QAbstractItemModel::LayoutChangeHint
 #define QAbstractItemModel_VerticalSortHint                          1
 #define QAbstractItemModel_HorizontalSortHint                        2
 
-#endif /* QABSTRACTITEMMODEL_CH */
+#endif // QABSTRACTITEMMODEL_CH

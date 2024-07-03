@@ -23,4 +23,4 @@ enum QQuickView::Status
 #define QQuickView_Loading                                           2
 #define QQuickView_Error                                             3
 
-#endif /* QQUICKVIEW_CH */
+#endif // QQUICKVIEW_CH

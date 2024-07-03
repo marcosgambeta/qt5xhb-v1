@@ -36,4 +36,4 @@ flags QNetworkSession::UsagePolicies
 #define QNetworkSession_NoPolicy                                     0
 #define QNetworkSession_NoBackgroundTrafficPolicy                    1
 
-#endif /* QNETWORKSESSION_CH */
+#endif // QNETWORKSESSION_CH

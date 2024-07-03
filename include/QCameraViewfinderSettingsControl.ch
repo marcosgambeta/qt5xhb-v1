@@ -19,4 +19,4 @@ enum QCameraViewfinderSettingsControl::ViewfinderParameter
 #define QCameraViewfinderSettingsControl_PixelFormat                 4
 #define QCameraViewfinderSettingsControl_UserParameter               1000
 
-#endif /* QCAMERAVIEWFINDERSETTINGSCONTROL_CH */
+#endif // QCAMERAVIEWFINDERSETTINGSCONTROL_CH

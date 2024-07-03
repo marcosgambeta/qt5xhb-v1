@@ -23,4 +23,4 @@ enum QCoreApplication::Encoding
 //#define QCoreApplication_UnicodeUTF8                                 1
 //#define QCoreApplication_DefaultCodec                                QCoreApplication_CodecForTr
 
-#endif /* QCOREAPPLICATION_CH */
+#endif // QCOREAPPLICATION_CH

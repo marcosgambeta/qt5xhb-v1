@@ -15,4 +15,4 @@ enum QModbusReply::ReplyType
 #define QModbusReply_Raw                                             0
 #define QModbusReply_Common                                          1
 
-#endif /* QMODBUSREPLY_CH */
+#endif // QMODBUSREPLY_CH

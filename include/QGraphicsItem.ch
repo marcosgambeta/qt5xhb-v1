@@ -82,4 +82,4 @@ enum QGraphicsItem::PanelModality
 #define QGraphicsItem_PanelModal                                     1
 #define QGraphicsItem_SceneModal                                     2
 
-#endif /* QGRAPHICSITEM_CH */
+#endif // QGRAPHICSITEM_CH

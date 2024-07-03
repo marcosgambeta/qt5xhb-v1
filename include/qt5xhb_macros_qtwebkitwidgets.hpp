@@ -30,4 +30,4 @@
 #define OPQWEBPAGE(n, v)                                    HB_ISNIL(n) ? v : static_cast<QWebPage*>(Qt5xHb::itemGetPtr(n))
 #define OPQWEBVIEW(n, v)                                    HB_ISNIL(n) ? v : static_cast<QWebView*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTWEBKITWIDGETS_H */
+#endif // QT5XHB_MACROS_QTWEBKITWIDGETS_H

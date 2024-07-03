@@ -35,4 +35,4 @@
 #include "QSslSocket.ch"
 #include "QUdpSocket.ch"
 
-#endif /* QTNETWORK_CH */
+#endif // QTNETWORK_CH

@@ -27,4 +27,4 @@ flags QGLFunctions::OpenGLFeatures
 #define QGLFunctions_StencilSeparate                                 0x0800
 #define QGLFunctions_NPOTTextures                                    0x1000
 
-#endif /* QGLFUNCTIONS_CH */
+#endif // QGLFUNCTIONS_CH

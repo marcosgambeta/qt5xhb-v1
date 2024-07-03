@@ -11,4 +11,4 @@
 
 #include "QScriptEngineDebugger.ch"
 
-#endif /* QTSCRIPTTOOLS_CH */
+#endif // QTSCRIPTTOOLS_CH

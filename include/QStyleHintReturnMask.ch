@@ -19,4 +19,4 @@ enum QStyleHintReturnMask::StyleOptionVersion
 */
 #define QStyleHintReturnMask_Version                                 1
 
-#endif /* QSTYLEHINTRETURNMASK_CH */
+#endif // QSTYLEHINTRETURNMASK_CH

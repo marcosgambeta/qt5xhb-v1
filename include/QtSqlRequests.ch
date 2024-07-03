@@ -27,4 +27,4 @@ REQUEST QSqlResult
 REQUEST QSqlTableModel
 REQUEST QtSqlVersion
 
-#endif /* QTSQLREQUESTS_CH */
+#endif // QTSQLREQUESTS_CH

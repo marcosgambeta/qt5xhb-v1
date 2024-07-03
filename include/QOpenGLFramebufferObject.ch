@@ -16,4 +16,4 @@ enum QOpenGLFramebufferObject::Attachment
 #define QOpenGLFramebufferObject_CombinedDepthStencil                1
 #define QOpenGLFramebufferObject_Depth                               2
 
-#endif /* QOPENGLFRAMEBUFFEROBJECT_CH */
+#endif // QOPENGLFRAMEBUFFEROBJECT_CH

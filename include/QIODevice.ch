@@ -22,4 +22,4 @@ flags QIODevice::OpenMode
 #define QIODevice_Text                                               0x0010
 #define QIODevice_Unbuffered                                         0x0020
 
-#endif /* QIODEVICE_CH */
+#endif // QIODEVICE_CH

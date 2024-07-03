@@ -19,4 +19,4 @@ enum QStyleOptionGroupBox::StyleOptionVersion
 */
 #define QStyleOptionGroupBox_Version                                 1
 
-#endif /* QSTYLEOPTIONGROUPBOX_CH */
+#endif // QSTYLEOPTIONGROUPBOX_CH

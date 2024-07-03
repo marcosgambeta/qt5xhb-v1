@@ -30,4 +30,4 @@ REQUEST QExtensionFactory
 REQUEST QExtensionManager
 REQUEST QFormBuilder
 
-#endif /* QTDESIGNERREQUESTS_CH */
+#endif // QTDESIGNERREQUESTS_CH

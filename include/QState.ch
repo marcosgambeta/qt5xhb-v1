@@ -21,4 +21,4 @@ enum QState::RestorePolicy
 #define QState_DontRestoreProperties                                 0
 #define QState_RestoreProperties                                     1
 
-#endif /* QSTATE_CH */
+#endif // QSTATE_CH

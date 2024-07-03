@@ -11,4 +11,4 @@
 
 REQUEST QtWebViewVersion
 
-#endif /* QTWEBVIEWREQUESTS_CH */
+#endif // QTWEBVIEWREQUESTS_CH

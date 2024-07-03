@@ -18,4 +18,4 @@ enum QElapsedTimer::ClockType
 #define QElapsedTimer_MachAbsoluteTime                               3
 #define QElapsedTimer_PerformanceCounter                             4
 
-#endif /* QELAPSEDTIMER_CH */
+#endif // QELAPSEDTIMER_CH

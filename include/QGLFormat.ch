@@ -39,4 +39,4 @@ flags QGLFormat::OpenGLVersionFlags
 #define QGLFormat_OpenGL_ES_Common_Version_1_1                       0x00000200
 #define QGLFormat_OpenGL_ES_Version_2_0                              0x00000800
 
-#endif /* QGLFORMAT_CH */
+#endif // QGLFORMAT_CH

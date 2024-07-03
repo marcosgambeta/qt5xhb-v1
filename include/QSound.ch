@@ -14,4 +14,4 @@ enum QSound::Loop
 */
 #define QSound_Infinite                                              -1
 
-#endif /* QSOUND_CH */
+#endif // QSOUND_CH

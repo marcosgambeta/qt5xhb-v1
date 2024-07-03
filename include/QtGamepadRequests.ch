@@ -13,4 +13,4 @@ REQUEST QGamepad
 REQUEST QGamepadKeyNavigation
 REQUEST QGamepadManager
 
-#endif /* QTGAMEPADREQUESTS_CH */
+#endif // QTGAMEPADREQUESTS_CH

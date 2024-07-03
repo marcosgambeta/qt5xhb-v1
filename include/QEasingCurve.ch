@@ -57,4 +57,4 @@ enum QEasingCurve::Type
 #define QEasingCurve_TCBSpline                                       46
 #define QEasingCurve_Custom                                          47
 
-#endif /* QEASINGCURVE_CH */
+#endif // QEASINGCURVE_CH

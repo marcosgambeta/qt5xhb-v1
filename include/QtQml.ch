@@ -16,4 +16,4 @@
 #include "QQmlIncubator.ch"
 #include "QQmlProperty.ch"
 
-#endif /* QTQML_CH */
+#endif // QTQML_CH

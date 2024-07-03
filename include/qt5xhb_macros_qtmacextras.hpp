@@ -15,4 +15,4 @@
 
 #define OPQMACPASTEBOARDMIME(n, v)                          HB_ISNIL(n) ? v : static_cast<QMacPasteboardMime*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTMACEXTRAS_H */
+#endif // QT5XHB_MACROS_QTMACEXTRAS_H

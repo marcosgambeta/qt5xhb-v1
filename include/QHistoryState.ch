@@ -15,4 +15,4 @@ enum QHistoryState::HistoryType
 #define QHistoryState_ShallowHistory                                 0
 #define QHistoryState_DeepHistory                                    1
 
-#endif /* QHISTORYSTATE_CH */
+#endif // QHISTORYSTATE_CH

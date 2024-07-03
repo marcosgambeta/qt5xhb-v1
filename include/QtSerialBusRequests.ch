@@ -24,4 +24,4 @@ REQUEST QModbusServer
 REQUEST QModbusTcpClient
 REQUEST QModbusTcpServer
 
-#endif /* QTSERIALBUSREQUESTS_CH */
+#endif // QTSERIALBUSREQUESTS_CH

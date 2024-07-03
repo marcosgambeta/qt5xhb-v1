@@ -26,4 +26,4 @@ enum QJsonParseError::ParseError
 #define QJsonParseError_MissingObject                                11
 #define QJsonParseError_DeepNesting                                  12
 
-#endif /* QJSONPARSEERROR_CH */
+#endif // QJSONPARSEERROR_CH

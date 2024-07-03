@@ -39,4 +39,4 @@ enum QSGNode::NodeType
 #define QSGNode_ClipNodeType                                         3
 #define QSGNode_OpacityNodeType                                      4
 
-#endif /* QSGNODE_CH */
+#endif // QSGNODE_CH

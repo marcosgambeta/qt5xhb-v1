@@ -83,4 +83,4 @@ enum QNetworkRequest::RedirectPolicy
 #define QNetworkRequest_SameOriginRedirectPolicy                     2
 #define QNetworkRequest_UserVerifiedRedirectPolicy                   3
 
-#endif /* QNETWORKREQUEST_CH */
+#endif // QNETWORKREQUEST_CH

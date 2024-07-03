@@ -19,4 +19,4 @@ enum QStyleOptionComplex::StyleOptionVersion
 */
 #define QStyleOptionComplex_Version                                  1
 
-#endif /* QSTYLEOPTIONCOMPLEX_CH */
+#endif // QSTYLEOPTIONCOMPLEX_CH

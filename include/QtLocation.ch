@@ -21,4 +21,4 @@
 #include "QPlaceSearchRequest.ch"
 #include "QPlaceSearchResult.ch"
 
-#endif /* QTLOCATION_CH */
+#endif // QTLOCATION_CH

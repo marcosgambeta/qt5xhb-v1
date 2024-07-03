@@ -31,4 +31,4 @@ enum QTextFrameFormat::BorderStyle
 #define QTextFrameFormat_BorderStyle_Inset                           9
 #define QTextFrameFormat_BorderStyle_Outset                          10
 
-#endif /* QTEXTFRAMEFORMAT_CH */
+#endif // QTEXTFRAMEFORMAT_CH

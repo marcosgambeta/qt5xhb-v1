@@ -15,4 +15,4 @@ enum class QAndroidBinder::CallType
 #define QAndroidBinder_Normal                                        0
 #define QAndroidBinder_OneWay                                        1
 
-#endif /* QANDROIDBINDER_CH */
+#endif // QANDROIDBINDER_CH

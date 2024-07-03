@@ -15,4 +15,4 @@ enum QInputMethod::Action
 #define QInputMethod_Click                                           0
 #define QInputMethod_ContextMenu                                     1
 
-#endif /* QINPUTMETHOD_CH */
+#endif // QINPUTMETHOD_CH

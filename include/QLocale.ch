@@ -534,4 +534,4 @@ enum QLocale::Script
 #define QLocale_MongolianScript                                      8
 #define QLocale_TifinaghScript                                       9
 
-#endif /* QLOCALE_CH */
+#endif // QLOCALE_CH

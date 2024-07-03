@@ -186,4 +186,4 @@ enum QAccessible::InterfaceType
 #define QAccessible_TableInterface                                   5
 #define QAccessible_TableCellInterface                               6
 
-#endif /* QACCESSIBLE_CH */
+#endif // QACCESSIBLE_CH

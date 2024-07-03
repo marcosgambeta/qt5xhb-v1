@@ -16,4 +16,4 @@ enum class QOAuth1::SignatureMethod
 #define QOAuth1_Rsa_Sha1                                             1
 #define QOAuth1_PlainText                                            2
 
-#endif /* QOAUTH1_CH */
+#endif // QOAUTH1_CH

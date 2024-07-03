@@ -22,4 +22,4 @@ enum QQuickPaintedItem::RenderTarget
 #define QQuickPaintedItem_FramebufferObject                          1
 #define QQuickPaintedItem_InvertedYFramebufferObject                 2
 
-#endif /* QQUICKPAINTEDITEM_CH */
+#endif // QQUICKPAINTEDITEM_CH

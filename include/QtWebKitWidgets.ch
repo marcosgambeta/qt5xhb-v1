@@ -12,4 +12,4 @@
 #include "QWebFrame.ch"
 #include "QWebPage.ch"
 
-#endif /* QTWEBKITWIDGETS_CH */
+#endif // QTWEBKITWIDGETS_CH

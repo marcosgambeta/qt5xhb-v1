@@ -43,4 +43,4 @@ enum QWebEngineSettings::FontSize
 #define QWebEngineSettings_DefaultFontSize                           2
 #define QWebEngineSettings_DefaultFixedFontSize                      3
 
-#endif /* QWEBENGINESETTINGS_CH */
+#endif // QWEBENGINESETTINGS_CH

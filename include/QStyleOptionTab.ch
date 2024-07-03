@@ -49,4 +49,4 @@ flags QStyleOptionTab::TabFeatures
 #define QStyleOptionTab_None                                         0x00
 #define QStyleOptionTab_HasFrame                                     0x01
 
-#endif /* QSTYLEOPTIONTAB_CH */
+#endif // QSTYLEOPTIONTAB_CH

@@ -28,4 +28,4 @@ enum QDesignerFormWindowCursorInterface::MoveOperation
 #define QDesignerFormWindowCursorInterface_Up                        7
 #define QDesignerFormWindowCursorInterface_Down                      8
 
-#endif /* QDESIGNERFORMWINDOWCURSORINTERFACE_CH */
+#endif // QDESIGNERFORMWINDOWCURSORINTERFACE_CH

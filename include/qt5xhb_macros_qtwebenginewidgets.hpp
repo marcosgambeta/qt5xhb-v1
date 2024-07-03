@@ -30,4 +30,4 @@
 #define OPQWEBENGINESETTINGS(n, v)                          HB_ISNIL(n) ? v : static_cast<QWebEngineSettings*>(Qt5xHb::itemGetPtr(n))
 #define OPQWEBENGINEVIEW(n, v)                              HB_ISNIL(n) ? v : static_cast<QWebEngineView*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTWEBENGINEWIDGETS_H */
+#endif // QT5XHB_MACROS_QTWEBENGINEWIDGETS_H

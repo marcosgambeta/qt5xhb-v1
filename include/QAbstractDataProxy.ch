@@ -17,4 +17,4 @@ enum QAbstractDataProxy::DataType
 #define QAbstractDataProxy_DataTypeScatter                           2
 #define QAbstractDataProxy_DataTypeSurface                           4
 
-#endif /* QABSTRACTDATAPROXY_CH */
+#endif // QABSTRACTDATAPROXY_CH

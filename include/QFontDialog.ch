@@ -20,4 +20,4 @@ flags QFontDialog::FontDialogOptions
 #define QFontDialog_MonospacedFonts                                  0x00000010
 #define QFontDialog_ProportionalFonts                                0x00000020
 
-#endif /* QFONTDIALOG_CH */
+#endif // QFONTDIALOG_CH

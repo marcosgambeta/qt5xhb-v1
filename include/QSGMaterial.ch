@@ -17,4 +17,4 @@ flags QSGMaterial::Flags
 #define QSGMaterial_RequiresDeterminant                              0x0002
 #define QSGMaterial_RequiresFullMatrix                               hb_bitor(0x0008,QSGMaterial_RequiresFullMatrixExceptTranslate)
 
-#endif /* QSGMATERIAL_CH */
+#endif // QSGMATERIAL_CH

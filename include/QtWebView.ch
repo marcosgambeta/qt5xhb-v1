@@ -9,4 +9,4 @@
 #ifndef QTWEBVIEW_CH
 #define QTWEBVIEW_CH
 
-#endif /* QTWEBVIEW_CH */
+#endif // QTWEBVIEW_CH

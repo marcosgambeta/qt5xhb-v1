@@ -18,4 +18,4 @@ enum QBoxSet::ValuePositions
 #define QBoxSet_UpperQuartile                                        3
 #define QBoxSet_UpperExtreme                                         4
 
-#endif /* QBOXSET_CH */
+#endif // QBOXSET_CH

@@ -24,4 +24,4 @@
 #define OPQWEBSOCKETCORSAUTHENTICATOR(n, v)                 HB_ISNIL(n) ? v : static_cast<QWebSocketCorsAuthenticator*>(Qt5xHb::itemGetPtr(n))
 #define OPQWEBSOCKETSERVER(n, v)                            HB_ISNIL(n) ? v : static_cast<QWebSocketServer*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTWEBSOCKETS_H */
+#endif // QT5XHB_MACROS_QTWEBSOCKETS_H

@@ -42,4 +42,4 @@
 #define OPQANDROIDSERVICECONNECTION(n, v)                   HB_ISNIL(n) ? v : static_cast<QAndroidServiceConnection*>(Qt5xHb::itemGetPtr(n))
 #define OPQTANDROID(n, v)                                   HB_ISNIL(n) ? v : static_cast<QtAndroid*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTANDROIDEXTRAS_H */
+#endif // QT5XHB_MACROS_QTANDROIDEXTRAS_H

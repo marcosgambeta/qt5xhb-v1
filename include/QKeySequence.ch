@@ -92,4 +92,4 @@ enum QKeySequence::StandardKey
 #define QKeySequence_ZoomIn                                          16
 #define QKeySequence_ZoomOut                                         17
 
-#endif /* QKEYSEQUENCE_CH */
+#endif // QKEYSEQUENCE_CH

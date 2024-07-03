@@ -30,4 +30,4 @@ flags QAbstractSpinBox::StepEnabled
 #define QAbstractSpinBox_StepUpEnabled                               0x01
 #define QAbstractSpinBox_StepDownEnabled                             0x02
 
-#endif /* QABSTRACTSPINBOX_CH */
+#endif // QABSTRACTSPINBOX_CH

@@ -17,4 +17,4 @@ flags QImageIOPlugin::Capabilities
 #define QImageIOPlugin_CanWrite                                      0x2
 #define QImageIOPlugin_CanReadIncremental                            0x4
 
-#endif /* QIMAGEIOPLUGIN_CH */
+#endif // QIMAGEIOPLUGIN_CH

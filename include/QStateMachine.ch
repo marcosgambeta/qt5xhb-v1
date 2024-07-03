@@ -23,4 +23,4 @@ enum QStateMachine::Error
 #define QStateMachine_NoDefaultStateInHistoryStateError              2
 #define QStateMachine_NoCommonAncestorForTransitionError             3
 
-#endif /* QSTATEMACHINE_CH */
+#endif // QSTATEMACHINE_CH

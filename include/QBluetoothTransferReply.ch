@@ -18,4 +18,4 @@ enum QBluetoothTransferReply::TransferError
 #define QBluetoothTransferReply_HostNotFoundError                    3
 #define QBluetoothTransferReply_UserCanceledTransferError            4
 
-#endif /* QBLUETOOTHTRANSFERREPLY_CH */
+#endif // QBLUETOOTHTRANSFERREPLY_CH

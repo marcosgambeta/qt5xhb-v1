@@ -48,4 +48,4 @@ enum QMediaPlayer::Error
 #define QMediaPlayer_ServiceMissingError                             5
 #define QMediaPlayer_MediaIsPlaylist                                 6
 
-#endif /* QMEDIAPLAYER_CH */
+#endif // QMEDIAPLAYER_CH

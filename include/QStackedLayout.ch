@@ -15,4 +15,4 @@ enum QStackedLayout::StackingMode
 #define QStackedLayout_StackOne                                      0
 #define QStackedLayout_StackAll                                      1
 
-#endif /* QSTACKEDLAYOUT_CH */
+#endif // QSTACKEDLAYOUT_CH

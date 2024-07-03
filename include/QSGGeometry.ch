@@ -17,4 +17,4 @@ enum QSGGeometry::DataPattern
 #define QSGGeometry_StaticPattern                                    3
 #define QSGGeometry_StreamPattern                                    1
 
-#endif /* QSGGEOMETRY_CH */
+#endif // QSGGEOMETRY_CH

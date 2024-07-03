@@ -72,4 +72,4 @@ flags QGeoServiceProvider::PlacesFeatures
 #define QGeoServiceProvider_PlaceMatchingFeature                     (1<<10)
 #define QGeoServiceProvider_AnyPlacesFeatures                        ~(0)
 
-#endif /* QGEOSERVICEPROVIDER_CH */
+#endif // QGEOSERVICEPROVIDER_CH

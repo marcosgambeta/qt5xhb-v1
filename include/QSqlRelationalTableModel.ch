@@ -15,4 +15,4 @@ enum QSqlRelationalTableModel::JoinMode
 #define QSqlRelationalTableModel_InnerJoin                           0
 #define QSqlRelationalTableModel_LeftJoin                            1
 
-#endif /* QSQLRELATIONALTABLEMODEL_CH */
+#endif // QSQLRELATIONALTABLEMODEL_CH

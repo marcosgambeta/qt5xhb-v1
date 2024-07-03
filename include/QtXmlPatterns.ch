@@ -9,4 +9,4 @@
 #ifndef QTXMLPATTERNS_CH
 #define QTXMLPATTERNS_CH
 
-#endif /* QTXMLPATTERNS_CH */
+#endif // QTXMLPATTERNS_CH

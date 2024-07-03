@@ -19,4 +19,4 @@ enum QStyleOptionTabWidgetFrame::StyleOptionVersion
 */
 #define QStyleOptionTabWidgetFrame_Version                           2
 
-#endif /* QSTYLEOPTIONTABWIDGETFRAME_CH */
+#endif // QSTYLEOPTIONTABWIDGETFRAME_CH

@@ -22,4 +22,4 @@ enum QQmlImageProviderBase::ImageType
 #define QQmlImageProviderBase_Pixmap                                 1
 #define QQmlImageProviderBase_Texture                                2
 
-#endif /* QQMLIMAGEPROVIDERBASE_CH */
+#endif // QQMLIMAGEPROVIDERBASE_CH

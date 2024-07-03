@@ -23,4 +23,4 @@ enum QCompleter::ModelSorting
 #define QCompleter_CaseSensitivelySortedModel                        1
 #define QCompleter_CaseInsensitivelySortedModel                      2
 
-#endif /* QCOMPLETER_CH */
+#endif // QCOMPLETER_CH

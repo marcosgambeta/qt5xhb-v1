@@ -19,4 +19,4 @@ enum QStyleOptionSizeGrip::StyleOptionVersion
 */
 #define QStyleOptionSizeGrip_Version                                 1
 
-#endif /* QSTYLEOPTIONSIZEGRIP_CH */
+#endif // QSTYLEOPTIONSIZEGRIP_CH

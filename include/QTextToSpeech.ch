@@ -17,4 +17,4 @@ enum QTextToSpeech::State
 #define QTextToSpeech_Paused                                        2
 #define QTextToSpeech_BackendError                                  3
 
-#endif /* QTEXTTOSPEECH_CH */
+#endif // QTEXTTOSPEECH_CH

@@ -42,4 +42,4 @@ enum QDBusError::ErrorType
 #define QDBusError_InvalidMember                                     27
 #define QDBusError_LastErrorType                                     QDBusError_InvalidMember
 
-#endif /* QDBUSERROR_CH */
+#endif // QDBUSERROR_CH

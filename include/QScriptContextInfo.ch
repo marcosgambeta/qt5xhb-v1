@@ -17,4 +17,4 @@ enum QScriptContextInfo::FunctionType
 #define QScriptContextInfo_QtPropertyFunction                        2
 #define QScriptContextInfo_NativeFunction                            3
 
-#endif /* QSCRIPTCONTEXTINFO_CH */
+#endif // QSCRIPTCONTEXTINFO_CH

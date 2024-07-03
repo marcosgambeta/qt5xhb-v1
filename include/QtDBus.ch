@@ -17,4 +17,4 @@
 #include "QDBusMessage.ch"
 #include "QDBusServiceWatcher.ch"
 
-#endif /* QTDBUS_CH */
+#endif // QTDBUS_CH

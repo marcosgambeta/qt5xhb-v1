@@ -12,4 +12,4 @@
 #include "QInAppProduct.ch"
 #include "QInAppTransaction.ch"
 
-#endif /* QTPURCHASING_CH */
+#endif // QTPURCHASING_CH

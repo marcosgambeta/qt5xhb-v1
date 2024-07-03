@@ -27,4 +27,4 @@ enum QNetworkAccessManager::Operation
 #define QNetworkAccessManager_CustomOperation                        6
 #define QNetworkAccessManager_UnknownOperation                       0
 
-#endif /* QNETWORKACCESSMANAGER_CH */
+#endif // QNETWORKACCESSMANAGER_CH

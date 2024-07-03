@@ -19,4 +19,4 @@ enum QStyleOptionComboBox::StyleOptionVersion
 */
 #define QStyleOptionComboBox_Version                                 1
 
-#endif /* QSTYLEOPTIONCOMBOBOX_CH */
+#endif // QSTYLEOPTIONCOMBOBOX_CH

@@ -17,4 +17,4 @@ enum QPainterPath::ElementType
 #define QPainterPath_CurveToElement                                  2
 #define QPainterPath_CurveToDataElement                              3
 
-#endif /* QPAINTERPATH_CH */
+#endif // QPAINTERPATH_CH

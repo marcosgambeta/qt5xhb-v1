@@ -52,4 +52,4 @@ enum QDataStream::FloatingPointPrecision
 #define QDataStream_SinglePrecision                                  0
 #define QDataStream_DoublePrecision                                  1
 
-#endif /* QDATASTREAM_CH */
+#endif // QDATASTREAM_CH

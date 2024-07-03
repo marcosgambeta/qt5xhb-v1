@@ -17,4 +17,4 @@ enum QDeclarativeComponent::Status
 #define QDeclarativeComponent_Loading                                2
 #define QDeclarativeComponent_Error                                  3
 
-#endif /* QDECLARATIVECOMPONENT_CH */
+#endif // QDECLARATIVECOMPONENT_CH

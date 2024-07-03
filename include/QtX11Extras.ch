@@ -9,4 +9,4 @@
 #ifndef QTX11EXTRAS_CH
 #define QTX11EXTRAS_CH
 
-#endif /* QTX11EXTRAS_CH */
+#endif // QTX11EXTRAS_CH

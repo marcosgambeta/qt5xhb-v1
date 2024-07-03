@@ -17,4 +17,4 @@ flags QColorDialog::ColorDialogOptions
 #define QColorDialog_NoButtons                                       0x00000002
 #define QColorDialog_DontUseNativeDialog                             0x00000004
 
-#endif /* QCOLORDIALOG_CH */
+#endif // QCOLORDIALOG_CH

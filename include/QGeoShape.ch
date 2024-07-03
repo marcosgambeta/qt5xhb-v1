@@ -16,4 +16,4 @@ enum QGeoShape::ShapeType
 #define QGeoShape_RectangleType                                      1
 #define QGeoShape_CircleType                                         2
 
-#endif /* QGEOSHAPE_CH */
+#endif // QGEOSHAPE_CH

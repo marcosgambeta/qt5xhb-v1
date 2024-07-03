@@ -51,4 +51,4 @@
 #define OPQBLUETOOTHTRANSFERREQUEST(n, v)                   HB_ISNIL(n) ? v : static_cast<QBluetoothTransferRequest*>(Qt5xHb::itemGetPtr(n))
 #define OPQBLUETOOTHUUID(n, v)                              HB_ISNIL(n) ? v : static_cast<QBluetoothUuid*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTBLUETOOTH_H */
+#endif // QT5XHB_MACROS_QTBLUETOOTH_H

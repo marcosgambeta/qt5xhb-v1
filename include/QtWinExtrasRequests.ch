@@ -22,4 +22,4 @@ REQUEST QWinTaskbarProgress
 REQUEST QWinThumbnailToolBar
 REQUEST QWinThumbnailToolButton
 
-#endif /* QTWINEXTRASREQUESTS_CH */
+#endif // QTWINEXTRASREQUESTS_CH

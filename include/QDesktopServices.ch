@@ -24,4 +24,4 @@ enum QDesktopServices::StandardLocation
 #define QDesktopServices_DataLocation                                9
 #define QDesktopServices_CacheLocation                               10
 
-#endif /* QDESKTOPSERVICES_CH */
+#endif // QDESKTOPSERVICES_CH

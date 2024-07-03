@@ -17,4 +17,4 @@ flags QPinchGesture::ChangeFlags
 #define QPinchGesture_RotationAngleChanged                           0x2
 #define QPinchGesture_CenterPointChanged                             0x4
 
-#endif /* QPINCHGESTURE_CH */
+#endif // QPINCHGESTURE_CH

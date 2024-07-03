@@ -192,4 +192,4 @@
 #define OPQTILTREADING(n, v)                                HB_ISNIL(n) ? v : static_cast<QTiltReading*>(Qt5xHb::itemGetPtr(n))
 #define OPQTILTSENSOR(n, v)                                 HB_ISNIL(n) ? v : static_cast<QTiltSensor*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTSENSORS_H */
+#endif // QT5XHB_MACROS_QTSENSORS_H

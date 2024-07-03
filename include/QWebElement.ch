@@ -16,4 +16,4 @@ enum QWebElement::StyleResolveStrategy
 #define QWebElement_CascadedStyle                                    1
 #define QWebElement_ComputedStyle                                    2
 
-#endif /* QWEBELEMENT_CH */
+#endif // QWEBELEMENT_CH

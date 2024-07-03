@@ -19,4 +19,4 @@ enum QGeoPositionInfo::Attribute
 #define QGeoPositionInfo_HorizontalAccuracy                          4
 #define QGeoPositionInfo_VerticalAccuracy                            5
 
-#endif /* QGEOPOSITIONINFO_CH */
+#endif // QGEOPOSITIONINFO_CH

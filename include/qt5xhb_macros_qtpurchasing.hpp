@@ -21,4 +21,4 @@
 #define OPQINAPPSTORE(n, v)                                 HB_ISNIL(n) ? v : static_cast<QInAppStore*>(Qt5xHb::itemGetPtr(n))
 #define OPQINAPPTRANSACTION(n, v)                           HB_ISNIL(n) ? v : static_cast<QInAppTransaction*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTPURCHASING_H */
+#endif // QT5XHB_MACROS_QTPURCHASING_H

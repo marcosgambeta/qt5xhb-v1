@@ -18,4 +18,4 @@ enum QTextItem::RenderFlag
 #define QTextItem_StrikeOut                                          0x40
 #define QTextItem_Dummy                                              0xffffffff
 
-#endif /* QTEXTITEM_CH */
+#endif // QTEXTITEM_CH

@@ -16,4 +16,4 @@ enum QGeoSatelliteInfoSource::Error
 #define QGeoSatelliteInfoSource_ClosedError                          1
 #define QGeoSatelliteInfoSource_UnknownSourceError                   -1
 
-#endif /* QGEOSATELLITEINFOSOURCE_CH */
+#endif // QGEOSATELLITEINFOSOURCE_CH

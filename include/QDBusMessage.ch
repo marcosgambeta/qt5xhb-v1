@@ -18,4 +18,4 @@ enum QDBusMessage::MessageType
 #define QDBusMessage_ErrorMessage                                    3
 #define QDBusMessage_SignalMessage                                   4
 
-#endif /* QDBUSMESSAGE_CH */
+#endif // QDBUSMESSAGE_CH

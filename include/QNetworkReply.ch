@@ -47,4 +47,4 @@ enum QNetworkReply::NetworkError
 #define QNetworkReply_ServiceUnavailableError                        403
 #define QNetworkReply_UnknownServerError                             499
 
-#endif /* QNETWORKREPLY_CH */
+#endif // QNETWORKREPLY_CH

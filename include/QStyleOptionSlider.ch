@@ -19,4 +19,4 @@ enum QStyleOptionSlider::StyleOptionVersion
 */
 #define QStyleOptionSlider_Version                                   1
 
-#endif /* QSTYLEOPTIONSLIDER_CH */
+#endif // QSTYLEOPTIONSLIDER_CH

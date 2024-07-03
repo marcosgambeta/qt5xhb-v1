@@ -97,4 +97,4 @@ enum QBluetoothUuid::ServiceClassUuid
 #define QBluetoothUuid_HDPSource                                     0x1401
 #define QBluetoothUuid_HDPSink                                       0x1402
 
-#endif /* QBLUETOOTHUUID_CH */
+#endif // QBLUETOOTHUUID_CH

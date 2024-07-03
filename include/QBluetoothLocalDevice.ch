@@ -31,4 +31,4 @@ enum QBluetoothLocalDevice::Error
 #define QBluetoothLocalDevice_PairingError                           1
 #define QBluetoothLocalDevice_UnknownError                           100
 
-#endif /* QBLUETOOTHLOCALDEVICE_CH */
+#endif // QBLUETOOTHLOCALDEVICE_CH

@@ -13,4 +13,4 @@
 #include "QWebEngineSettings.ch"
 #include "QWebEngineCertificateError.ch"
 
-#endif /* QTWEBENGINEWIDGETS_CH */
+#endif // QTWEBENGINEWIDGETS_CH

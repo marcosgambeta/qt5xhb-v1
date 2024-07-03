@@ -43,4 +43,4 @@ enum QLibraryInfo::PathGroup
 #define QLibraryInfo_EffectivePaths                                  1
 #define QLibraryInfo_EffectiveSourcePaths                            2
 
-#endif /* QLIBRARYINFO_CH */
+#endif // QLIBRARYINFO_CH

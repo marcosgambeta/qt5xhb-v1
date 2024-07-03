@@ -37,4 +37,4 @@ enum QCameraImageProcessing::WhiteBalanceMode
 #define QCameraImageProcessing_WhiteBalanceSunset                    8
 #define QCameraImageProcessing_WhiteBalanceVendor                    1000
 
-#endif /* QCAMERAIMAGEPROCESSING_CH */
+#endif // QCAMERAIMAGEPROCESSING_CH

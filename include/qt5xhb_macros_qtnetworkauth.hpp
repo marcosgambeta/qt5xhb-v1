@@ -36,4 +36,4 @@
 #define OPQOAUTHHTTPSERVERREPLYHANDLER(n, v)                HB_ISNIL(n) ? v : static_cast<QOAuthHttpServerReplyHandler*>(Qt5xHb::itemGetPtr(n))
 #define OPQOAUTHOOBREPLYHANDLER(n, v)                       HB_ISNIL(n) ? v : static_cast<QOAuthOobReplyHandler*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTNETWORKAUTH_H */
+#endif // QT5XHB_MACROS_QTNETWORKAUTH_H

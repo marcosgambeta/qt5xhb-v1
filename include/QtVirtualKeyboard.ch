@@ -12,4 +12,4 @@
 #include "QVirtualKeyboardInputEngine.ch"
 #include "QVirtualKeyboardSelectionListModel.ch"
 
-#endif /* QTVIRTUALKEYBOARD_CH */
+#endif // QTVIRTUALKEYBOARD_CH

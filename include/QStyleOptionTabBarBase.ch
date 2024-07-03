@@ -19,4 +19,4 @@ enum QStyleOptionTabBarBase::StyleOptionVersion
 */
 #define QStyleOptionTabBarBase_Version                               2
 
-#endif /* QSTYLEOPTIONTABBARBASE_CH */
+#endif // QSTYLEOPTIONTABBARBASE_CH

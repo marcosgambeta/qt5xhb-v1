@@ -19,4 +19,4 @@ flags QFontComboBox::FontFilters
 #define QFontComboBox_MonospacedFonts                                0x4
 #define QFontComboBox_ProportionalFonts                              0x8
 
-#endif /* QFONTCOMBOBOX_CH */
+#endif // QFONTCOMBOBOX_CH

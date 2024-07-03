@@ -16,4 +16,4 @@ enum QHostInfo::HostInfoError
 #define QHostInfo_HostNotFound                                       1
 #define QHostInfo_UnknownError                                       2
 
-#endif /* QHOSTINFO_CH */
+#endif // QHOSTINFO_CH

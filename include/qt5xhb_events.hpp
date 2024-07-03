@@ -16,4 +16,4 @@ namespace Qt5xHb
   PHB_ITEM Events_return_qobject ( QObject * ptr, const char * classname );
 }
 
-#endif /* QT5XHB_EVENTS_H */
+#endif // QT5XHB_EVENTS_H

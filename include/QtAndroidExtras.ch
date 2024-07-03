@@ -13,4 +13,4 @@
 #include "QAndroidBinder.ch"
 #include "QAndroidJniExceptionCleaner.ch"
 
-#endif /* QTANDROIDEXTRAS_CH */
+#endif // QTANDROIDEXTRAS_CH

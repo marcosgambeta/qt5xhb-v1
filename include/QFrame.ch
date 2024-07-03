@@ -33,4 +33,4 @@ enum QFrame::StyleMask
 #define QFrame_Shadow_Mask                                           0x00f0
 #define QFrame_Shape_Mask                                            0x000f
 
-#endif /* QFRAME_CH */
+#endif // QFRAME_CH

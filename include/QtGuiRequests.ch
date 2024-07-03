@@ -190,4 +190,4 @@ REQUEST QWheelEvent
 REQUEST QWindow
 REQUEST QWindowStateChangeEvent
 
-#endif /* QTGUIREQUESTS_CH */
+#endif // QTGUIREQUESTS_CH

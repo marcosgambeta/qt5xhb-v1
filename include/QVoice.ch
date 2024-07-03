@@ -25,4 +25,4 @@ enum QVoice::Age
 #define QVoice_Senior                                                3
 #define QVoice_Other                                                 4
 
-#endif /* QVOICE_CH */
+#endif // QVOICE_CH

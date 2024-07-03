@@ -42,4 +42,4 @@ enum QStyleOptionHeader::SortIndicator
 #define QStyleOptionHeader_SortUp                                    1
 #define QStyleOptionHeader_SortDown                                  2
 
-#endif /* QSTYLEOPTIONHEADER_CH */
+#endif // QSTYLEOPTIONHEADER_CH

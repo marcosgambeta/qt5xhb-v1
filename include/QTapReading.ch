@@ -26,4 +26,4 @@ enum QTapReading::TapDirection
 #define QTapReading_Y_Both                                           0x0222
 #define QTapReading_Z_Both                                           0x0444
 
-#endif /* QTAPREADING_CH */
+#endif // QTAPREADING_CH

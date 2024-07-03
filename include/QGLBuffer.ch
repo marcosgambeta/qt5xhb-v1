@@ -37,4 +37,4 @@ enum QGLBuffer::UsagePattern
 #define QGLBuffer_DynamicRead                                        0x88E9
 #define QGLBuffer_DynamicCopy                                        0x88EA
 
-#endif /* QGLBUFFER_CH */
+#endif // QGLBUFFER_CH

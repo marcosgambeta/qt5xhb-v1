@@ -210,4 +210,4 @@ enum QGradient::Preset
 #define QGradient_FabledSunset                                       179
 #define QGradient_PerfectBlue                                        180
 
-#endif /* QGRADIENT_CH */
+#endif // QGRADIENT_CH

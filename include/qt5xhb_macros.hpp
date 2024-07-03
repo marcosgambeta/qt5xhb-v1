@@ -191,4 +191,4 @@
 #define QSTRINGTOSTRING( x )                                ( const char * ) x.toLatin1().data()
 //#define QSTRINGTOSTRING( x )                              ( const char * ) x.toUtf8().data()
 
-#endif /* QT5XHB_MACROS_H */
+#endif // QT5XHB_MACROS_H

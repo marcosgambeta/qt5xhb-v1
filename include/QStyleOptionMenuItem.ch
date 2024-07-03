@@ -38,4 +38,4 @@ enum QStyleOptionMenuItem::CheckType
 #define QStyleOptionMenuItem_Exclusive                               1
 #define QStyleOptionMenuItem_NonExclusive                            2
 
-#endif /* QSTYLEOPTIONMENUITEM_CH */
+#endif // QSTYLEOPTIONMENUITEM_CH

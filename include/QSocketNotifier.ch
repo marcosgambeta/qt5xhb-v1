@@ -16,4 +16,4 @@ enum QSocketNotifier::Type
 #define QSocketNotifier_Write                                        1
 #define QSocketNotifier_Exception                                    2
 
-#endif /* QSOCKETNOTIFIER_CH */
+#endif // QSOCKETNOTIFIER_CH

@@ -26,4 +26,4 @@ enum QSystemSemaphore::SystemSemaphoreError
 #define QSystemSemaphore_OutOfResources                              5
 #define QSystemSemaphore_UnknownError                                6
 
-#endif /* QSYSTEMSEMAPHORE_CH */
+#endif // QSYSTEMSEMAPHORE_CH

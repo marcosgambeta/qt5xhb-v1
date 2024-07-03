@@ -22,4 +22,4 @@ enum QGeoSatelliteInfo::SatelliteSystem
 #define QGeoSatelliteInfo_GPS                                        0x01
 #define QGeoSatelliteInfo_GLONASS                                    0x02
 
-#endif /* QGEOSATELLITEINFO_CH */
+#endif // QGEOSATELLITEINFO_CH

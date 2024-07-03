@@ -28,4 +28,4 @@ enum QSensor::AxesOrientationMode
 #define QSensor_AutomaticOrientation                                 1
 #define QSensor_UserOrientation                                      2
 
-#endif /* QSENSOR_CH */
+#endif // QSENSOR_CH

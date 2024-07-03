@@ -20,4 +20,4 @@ enum QJsonValue::Type
 #define QJsonValue_Object                                            0x5
 #define QJsonValue_Undefined                                         0x80
 
-#endif /* QJSONVALUE_CH */
+#endif // QJSONVALUE_CH

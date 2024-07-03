@@ -16,4 +16,4 @@
 #include "QAccelerometer.ch"
 #include "QAmbientLightSensor.ch"
 
-#endif /* QTSENSORS_CH */
+#endif // QTSENSORS_CH

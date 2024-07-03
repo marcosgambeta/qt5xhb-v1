@@ -18,4 +18,4 @@
 #include "QGeoShape.ch"
 #include "QNmeaPositionInfoSource.ch"
 
-#endif /* QTPOSITIONING_CH */
+#endif // QTPOSITIONING_CH

@@ -180,4 +180,4 @@ flags QBluetoothDeviceInfo::CoreConfigurations
 #define QBluetoothDeviceInfo_BaseRateCoreConfiguration               0x02
 #define QBluetoothDeviceInfo_BaseRateAndLowEnergyCoreConfiguration   0x03
 
-#endif /* QBLUETOOTHDEVICEINFO_CH */
+#endif // QBLUETOOTHDEVICEINFO_CH

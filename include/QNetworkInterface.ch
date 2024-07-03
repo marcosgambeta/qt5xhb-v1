@@ -20,4 +20,4 @@ flags QNetworkInterface::InterfaceFlags
 #define QNetworkInterface_IsPointToPoint                             0x10
 #define QNetworkInterface_CanMulticast                               0x20
 
-#endif /* QNETWORKINTERFACE_CH */
+#endif // QNETWORKINTERFACE_CH

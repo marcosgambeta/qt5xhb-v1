@@ -15,4 +15,4 @@ enum QAxScript::FunctionFlags
 #define QAxScript_FunctionNames                                      0
 #define QAxScript_FunctionSignatures                                 1
 
-#endif /* QAXSCRIPT_CH */
+#endif // QAXSCRIPT_CH

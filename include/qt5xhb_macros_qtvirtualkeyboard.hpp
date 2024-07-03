@@ -30,4 +30,4 @@
 #define OPQVIRTUALKEYBOARDSELECTIONLISTMODEL(n, v)          HB_ISNIL(n) ? v : static_cast<QVirtualKeyboardSelectionListModel*>(Qt5xHb::itemGetPtr(n))
 #define OPQVIRTUALKEYBOARDTRACE(n, v)                       HB_ISNIL(n) ? v : static_cast<QVirtualKeyboardTrace*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTVIRTUALKEYBOARD_H */
+#endif // QT5XHB_MACROS_QTVIRTUALKEYBOARD_H

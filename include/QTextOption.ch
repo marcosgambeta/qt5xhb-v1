@@ -35,4 +35,4 @@ enum QTextOption::Flag
 #define QTextOption_SuppressColors                                   0x8
 #define QTextOption_IncludeTrailingSpaces                            0x80000000
 
-#endif /* QTEXTOPTION_CH */
+#endif // QTEXTOPTION_CH

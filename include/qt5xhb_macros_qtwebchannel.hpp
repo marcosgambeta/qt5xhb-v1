@@ -21,4 +21,4 @@
 #define OPQWEBCHANNEL(n, v)                                 HB_ISNIL(n) ? v : static_cast<QWebChannel*>(Qt5xHb::itemGetPtr(n))
 #define OPQWEBCHANNELABSTRACTTRANSPORT(n, v)                HB_ISNIL(n) ? v : static_cast<QWebChannelAbstractTransport*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTWEBCHANNEL_H */
+#endif // QT5XHB_MACROS_QTWEBCHANNEL_H

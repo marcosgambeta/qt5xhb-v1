@@ -57,4 +57,4 @@ flags QFileDevice::Permissions
 #define QFileDevice_WriteOther                                       0x0002
 #define QFileDevice_ExeOther                                         0x0001
 
-#endif /* QFILEDEVICE_CH */
+#endif // QFILEDEVICE_CH

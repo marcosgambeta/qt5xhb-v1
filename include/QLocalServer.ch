@@ -19,4 +19,4 @@ flags QLocalServer::SocketOptions
 #define QLocalServer_OtherAccessOption                               0x4
 #define QLocalServer_WorldAccessOption                               0x7
 
-#endif /* QLOCALSERVER_CH */
+#endif // QLOCALSERVER_CH

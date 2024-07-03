@@ -70,4 +70,4 @@ REQUEST QTiltFilter
 REQUEST QTiltReading
 REQUEST QTiltSensor
 
-#endif /* QTSENSORSREQUESTS_CH */
+#endif // QTSENSORSREQUESTS_CH

@@ -9,4 +9,4 @@
 #ifndef QTUITOOLS_CH
 #define QTUITOOLS_CH
 
-#endif /* QTUITOOLS_CH */
+#endif // QTUITOOLS_CH

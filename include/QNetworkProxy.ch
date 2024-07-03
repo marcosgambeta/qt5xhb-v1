@@ -31,4 +31,4 @@ enum QNetworkProxy::ProxyType
 #define QNetworkProxy_HttpCachingProxy                               4
 #define QNetworkProxy_FtpCachingProxy                                5
 
-#endif /* QNETWORKPROXY_CH */
+#endif // QNETWORKPROXY_CH

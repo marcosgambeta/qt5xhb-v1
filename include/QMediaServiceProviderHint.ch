@@ -27,4 +27,4 @@ flags QMediaServiceProviderHint::Features
 #define QMediaServiceProviderHint_StreamPlayback                     0x04
 #define QMediaServiceProviderHint_VideoSurface                       0x08
 
-#endif /* QMEDIASERVICEPROVIDERHINT_CH */
+#endif // QMEDIASERVICEPROVIDERHINT_CH

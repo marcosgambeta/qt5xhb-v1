@@ -23,4 +23,4 @@ enum QQuickWidget::Status
 #define QQuickWidget_Loading                                         2
 #define QQuickWidget_Error                                           3
 
-#endif /* QQUICKWIDGET_CH */
+#endif // QQUICKWIDGET_CH

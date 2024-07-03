@@ -46,4 +46,4 @@ flags QDir::SortFlags
 #define QDir_IgnoreCase                                              0x10
 #define QDir_LocaleAware                                             0x40
 
-#endif /* QDIR_CH */
+#endif // QDIR_CH

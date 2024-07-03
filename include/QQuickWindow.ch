@@ -17,4 +17,4 @@ flags QQuickWindow::CreateTextureOptions
 #define QQuickWindow_TextureHasMipmaps                               0x0002
 #define QQuickWindow_TextureOwnsGLTexture                            0x0004
 
-#endif /* QQUICKWINDOW_CH */
+#endif // QQUICKWINDOW_CH

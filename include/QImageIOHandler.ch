@@ -28,4 +28,4 @@ enum QImageIOHandler::ImageOption
 #define QImageIOHandler_BackgroundColor                              13
 #define QImageIOHandler_ImageFormat                                  14
 
-#endif /* QIMAGEIOHANDLER_CH */
+#endif // QIMAGEIOHANDLER_CH

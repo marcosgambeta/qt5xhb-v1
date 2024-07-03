@@ -23,4 +23,4 @@ enum QModbusServer::Option
 #define QModbusServer_DeviceIdentification                           8
 #define QModbusServer_UserOption                                     0x100
 
-#endif /* QMODBUSSERVER_CH */
+#endif // QMODBUSSERVER_CH

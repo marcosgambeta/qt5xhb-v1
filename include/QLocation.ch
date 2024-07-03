@@ -18,4 +18,4 @@ flags QLocation::VisibilityScope
 #define QLocation_PrivateVisibility                                  0x02
 #define QLocation_PublicVisibility                                   0x04
 
-#endif /* QLOCATION_CH */
+#endif // QLOCATION_CH

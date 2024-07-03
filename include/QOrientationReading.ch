@@ -20,4 +20,4 @@ enum QOrientationReading::Orientation
 #define QOrientationReading_FaceUp                                   5
 #define QOrientationReading_FaceDown                                 6
 
-#endif /* QORIENTATIONREADING_CH */
+#endif // QORIENTATIONREADING_CH

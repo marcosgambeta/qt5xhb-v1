@@ -20,4 +20,4 @@ flags QOpenGLShader::ShaderType
 #define QOpenGLShader_TessellationEvaluation                         0x0010
 #define QOpenGLShader_Compute                                        0x0020
 
-#endif /* QOPENGLSHADER_CH */
+#endif // QOPENGLSHADER_CH

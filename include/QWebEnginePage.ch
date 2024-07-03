@@ -70,4 +70,4 @@ enum QWebEnginePage::JavaScriptConsoleMessageLevel
 #define QWebEnginePage_WarningMessageLevel                           1
 #define QWebEnginePage_ErrorMessageLevel                             2
 
-#endif /* QWEBENGINEPAGE_CH */
+#endif // QWEBENGINEPAGE_CH

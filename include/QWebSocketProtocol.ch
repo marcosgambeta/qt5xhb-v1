@@ -39,4 +39,4 @@ enum QWebSocketProtocol::CloseCode
 #define QWebSocketProtocol_CloseCodeBadOperation                     1011
 #define QWebSocketProtocol_CloseCodeTlsHandshakeFailed               1015
 
-#endif /* QWEBSOCKETPROTOCOL_CH */
+#endif // QWEBSOCKETPROTOCOL_CH

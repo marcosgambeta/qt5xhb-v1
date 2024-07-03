@@ -25,4 +25,4 @@ enum QMediaResource::Property
 #define QMediaResource_ChannelCount                                  10
 #define QMediaResource_Resolution                                    11
 
-#endif /* QMEDIARESOURCE_CH */
+#endif // QMEDIARESOURCE_CH

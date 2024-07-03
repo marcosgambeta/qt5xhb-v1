@@ -26,4 +26,4 @@ enum QAbstractSeries::SeriesType
 #define QAbstractSeries_SeriesTypeBoxPlot                            11
 #define QAbstractSeries_SeriesTypeCandlestick                        12
 
-#endif /* QABSTRACTSERIES_CH */
+#endif // QABSTRACTSERIES_CH

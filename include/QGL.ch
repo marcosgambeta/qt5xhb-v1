@@ -135,4 +135,4 @@ enum QGL::VertexAttribute
 #define QGL_CustomVertex1                                            7
 #define QGL_UserVertex                                               8
 
-#endif /* QGL_CH */
+#endif // QGL_CH

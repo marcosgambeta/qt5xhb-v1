@@ -16,4 +16,4 @@ enum QGraphicsSceneContextMenuEvent::Reason
 #define QGraphicsSceneContextMenuEvent_Keyboard                      1
 #define QGraphicsSceneContextMenuEvent_Other                         2
 
-#endif /* QGRAPHICSSCENECONTEXTMENUEVENT_CH */
+#endif // QGRAPHICSSCENECONTEXTMENUEVENT_CH

@@ -71,4 +71,4 @@
 #include "QValidator.ch"
 #include "QWindow.ch"
 
-#endif /* QTGUI_CH */
+#endif // QTGUI_CH

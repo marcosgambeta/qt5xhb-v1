@@ -20,4 +20,4 @@ flags QGestureRecognizer::Result
 #define QGestureRecognizer_CancelGesture                             0x0010
 #define QGestureRecognizer_ConsumeEventHint                          0x0100
 
-#endif /* QGESTURERECOGNIZER_CH */
+#endif // QGESTURERECOGNIZER_CH

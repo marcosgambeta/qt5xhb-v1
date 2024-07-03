@@ -16,4 +16,4 @@ enum QPlaceSearchResult::SearchResultType
 #define QPlaceSearchResult_PlaceResult                               1
 #define QPlaceSearchResult_ProposedSearchResult                      2
 
-#endif /* QPLACESEARCHRESULT_CH */
+#endif // QPLACESEARCHRESULT_CH

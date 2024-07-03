@@ -18,4 +18,4 @@ enum QSwipeGesture::SwipeDirection
 #define QSwipeGesture_Up                                             3
 #define QSwipeGesture_Down                                           4
 
-#endif /* QSWIPEGESTURE_CH */
+#endif // QSWIPEGESTURE_CH

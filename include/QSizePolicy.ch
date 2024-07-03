@@ -48,4 +48,4 @@ enum QSizePolicy::Policy
 #define QSizePolicy_MinimumExpanding                                 hb_bitor(QSizePolicy_GrowFlag,QSizePolicy_ExpandFlag)
 #define QSizePolicy_Ignored                                          hb_bitor(hb_bitor(QSizePolicy_ShrinkFlag,QSizePolicy_GrowFlag),QSizePolicy_IgnoreFlag)
 
-#endif /* QSIZEPOLICY_CH */
+#endif // QSIZEPOLICY_CH

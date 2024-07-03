@@ -45,4 +45,4 @@
 #define OPQWINTHUMBNAILTOOLBAR(n, v)                        HB_ISNIL(n) ? v : static_cast<QWinThumbnailToolBar*>(Qt5xHb::itemGetPtr(n))
 #define OPQWINTHUMBNAILTOOLBUTTON(n, v)                     HB_ISNIL(n) ? v : static_cast<QWinThumbnailToolButton*>(Qt5xHb::itemGetPtr(n))
 
-#endif /* QT5XHB_MACROS_QTWINEXTRAS_H */
+#endif // QT5XHB_MACROS_QTWINEXTRAS_H

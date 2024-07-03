@@ -17,4 +17,4 @@ enum QBoxLayout::Direction
 #define QBoxLayout_TopToBottom                                       2
 #define QBoxLayout_BottomToTop                                       3
 
-#endif /* QBOXLAYOUT_CH */
+#endif // QBOXLAYOUT_CH

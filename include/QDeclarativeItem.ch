@@ -22,4 +22,4 @@ enum QDeclarativeItem::TransformOrigin
 #define QDeclarativeItem_Bottom                                      7
 #define QDeclarativeItem_BottomRight                                 8
 
-#endif /* QDECLARATIVEITEM_CH */
+#endif // QDECLARATIVEITEM_CH
