@@ -1,16 +1,8 @@
-/*
-
-  Qt5xHb Project - Example Program
-
-  Copyright (c) 2024 Marcos Antonio Gambeta
-
-  E-mail:
-  marcosgambeta AT outlook DOT com
-
-  Website:
-  https://github.com/magsoftinfo/qt5xhb-v1
-
-*/
+//
+// Qt5xHb Project - Example Program
+//
+// Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+//
 
 /*
   Exemplo de criação da janela principal de uma aplicação
