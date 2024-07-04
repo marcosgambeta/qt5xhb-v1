@@ -15,11 +15,11 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Teste" )
-   oWindow:resize( 640, 480 )
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640, 480)
 
-   oPTE := QPlainTextEdit():new( oWindow )
-   oPTE:move( 10, 10 )
+   oPTE := QPlainTextEdit():new(oWindow)
+   oPTE:move(10, 10)
 
    oWindow:show()
 

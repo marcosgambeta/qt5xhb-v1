@@ -45,55 +45,55 @@ PROCEDURE Main()
 
    oFormLayoutA := QFormLayout():new()
 
-   oLabelA1 := QLabel():new( "Campo A1" )
-   oLabelA2 := QLabel():new( "Campo A2" )
-   oLabelA3 := QLabel():new( "Campo A3" )
-   oLabelA4 := QLabel():new( "Campo A4" )
-   oLabelA5 := QLabel():new( "Campo A5" )
+   oLabelA1 := QLabel():new("Campo A1")
+   oLabelA2 := QLabel():new("Campo A2")
+   oLabelA3 := QLabel():new("Campo A3")
+   oLabelA4 := QLabel():new("Campo A4")
+   oLabelA5 := QLabel():new("Campo A5")
 
-   oEditA1 := QLineEdit():new( "" )
-   oEditA2 := QLineEdit():new( "" )
-   oEditA3 := QLineEdit():new( "" )
-   oEditA4 := QLineEdit():new( "" )
-   oEditA5 := QLineEdit():new( "" )
+   oEditA1 := QLineEdit():new("")
+   oEditA2 := QLineEdit():new("")
+   oEditA3 := QLineEdit():new("")
+   oEditA4 := QLineEdit():new("")
+   oEditA5 := QLineEdit():new("")
 
-   oFormLayoutA:addRow( oLabelA1, oEditA1 )
-   oFormLayoutA:addRow( oLabelA2, oEditA2 )
-   oFormLayoutA:addRow( oLabelA3, oEditA3 )
-   oFormLayoutA:addRow( oLabelA4, oEditA4 )
-   oFormLayoutA:addRow( oLabelA5, oEditA5 )
+   oFormLayoutA:addRow(oLabelA1, oEditA1)
+   oFormLayoutA:addRow(oLabelA2, oEditA2)
+   oFormLayoutA:addRow(oLabelA3, oEditA3)
+   oFormLayoutA:addRow(oLabelA4, oEditA4)
+   oFormLayoutA:addRow(oLabelA5, oEditA5)
 
    // montagem do objeto oFormLayoutB
 
    oFormLayoutB := QFormLayout():new()
 
-   oLabelB1 := QLabel():new( "Campo B1" )
-   oLabelB2 := QLabel():new( "Campo B2" )
-   oLabelB3 := QLabel():new( "Campo B3" )
-   oLabelB4 := QLabel():new( "Campo B4" )
-   oLabelB5 := QLabel():new( "Campo B5" )
+   oLabelB1 := QLabel():new("Campo B1")
+   oLabelB2 := QLabel():new("Campo B2")
+   oLabelB3 := QLabel():new("Campo B3")
+   oLabelB4 := QLabel():new("Campo B4")
+   oLabelB5 := QLabel():new("Campo B5")
 
-   oEditB1 := QLineEdit():new( "" )
-   oEditB2 := QLineEdit():new( "" )
-   oEditB3 := QLineEdit():new( "" )
-   oEditB4 := QLineEdit():new( "" )
-   oEditB5 := QLineEdit():new( "" )
+   oEditB1 := QLineEdit():new("")
+   oEditB2 := QLineEdit():new("")
+   oEditB3 := QLineEdit():new("")
+   oEditB4 := QLineEdit():new("")
+   oEditB5 := QLineEdit():new("")
 
-   oFormLayoutB:addRow( oLabelB1, oEditB1 )
-   oFormLayoutB:addRow( oLabelB2, oEditB2 )
-   oFormLayoutB:addRow( oLabelB3, oEditB3 )
-   oFormLayoutB:addRow( oLabelB4, oEditB4 )
-   oFormLayoutB:addRow( oLabelB5, oEditB5 )
+   oFormLayoutB:addRow(oLabelB1, oEditB1)
+   oFormLayoutB:addRow(oLabelB2, oEditB2)
+   oFormLayoutB:addRow(oLabelB3, oEditB3)
+   oFormLayoutB:addRow(oLabelB4, oEditB4)
+   oFormLayoutB:addRow(oLabelB5, oEditB5)
 
    // montagem do layout horizontal
 
    oLayout := QHBoxLayout():new()
-   oLayout:addLayout( oFormLayoutA )
-   oLayout:addLayout( oFormLayoutB )
+   oLayout:addLayout(oFormLayoutA)
+   oLayout:addLayout(oFormLayoutB)
 
    // ligação do layout horizontal com a janela
 
-   oWindow:setLayout( oLayout )
+   oWindow:setLayout(oLayout)
 
    oWindow:show()
 

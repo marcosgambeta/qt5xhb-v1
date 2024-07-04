@@ -15,12 +15,12 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Teste" )
-   oWindow:resize( 640, 480 )
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640, 480)
 
-   oLabel := QLabel():new( "Label", oWindow )
-   oLabel:move( 20, 20 )
-   oLabel:setTooltip( "Eu sou um QLabel" )
+   oLabel := QLabel():new("Label", oWindow)
+   oLabel:move(20, 20)
+   oLabel:setTooltip("Eu sou um QLabel")
 
    oWindow:show()
 

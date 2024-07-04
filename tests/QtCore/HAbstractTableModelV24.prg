@@ -16,15 +16,15 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Teste" )
-   oWindow:resize( 800, 600 )
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(800, 600)
 
    oModel := myModel():new()
 
-   oView := QTableView():new( oWindow )
-   oView:move( 10, 10 )
-   oView:resize( 800 - 20, 600 - 20 )
-   oView:setModel( oModel )
+   oView := QTableView():new(oWindow)
+   oView:move(10, 10)
+   oView:resize(800 - 20, 600 - 20)
+   oView:setModel(oModel)
 
    oWindow:show()
 
@@ -50,14 +50,14 @@ CLASS myModel INHERIT HAbstractTableModelV2
 
 END CLASS
 
-METHOD new( ... ) CLASS myModel
+METHOD new(...) CLASS myModel
 
-   ::super:new( ... )
+   ::super:new(...)
 
-   ::setRowCountCB( {|...|::rowCount(...)} )
-   ::setColumnCountCB( {|...|::columnCount(...)} )
-   ::setDataCB( {|...|::data(...)} )
-   ::setHeaderDataCB( {|...|::headerData(...)} )
+   ::setRowCountCB({|...|::rowCount(...)})
+   ::setColumnCountCB({|...|::columnCount(...)})
+   ::setDataCB({|...|::data(...)})
+   ::setHeaderDataCB({|...|::headerData(...)})
 
 RETURN self
 
@@ -67,31 +67,31 @@ RETURN 100
 METHOD columnCount() CLASS myModel
 RETURN 10
 
-METHOD data( pIndex, nRole ) CLASS myModel
+METHOD data(pIndex, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
-   LOCAL oIndex := QModelIndex():newFrom( pIndex )
+   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL nRow := oIndex:row()
    LOCAL nColumn := oIndex:column()
 
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new( "Célula " + alltrim( str( nRow ) ) + "," + alltrim( str( nColumn ) ) )
+         oVariant := QVariant():new("Célula " + alltrim(str(nRow)) + "," + alltrim(str(nColumn)))
       ENDIF
 
    ENDIF
 
 RETURN oVariant
 
-METHOD headerData( nSection, nOrientation, nRole ) CLASS myModel
+METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new( "Coluna " + alltrim( str( nSection ) ) )
+      oVariant := QVariant():new("Coluna " + alltrim(str(nSection)))
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new( "Linha " + alltrim( str( nSection ) ) )
+      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant

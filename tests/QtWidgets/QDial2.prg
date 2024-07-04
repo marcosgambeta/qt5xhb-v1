@@ -19,15 +19,15 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Teste" )
-   oWindow:resize( 640, 480 )
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640, 480)
 
-   oDial := QDial():new( oWindow )
-   oDial:move( 20, 20 )
-   oDial:setTooltip( "Eu sou um QDial" )
-   ? oDial:onActionTriggered( {|oSender,nAction|test( oSender, nAction )} )
-   ? oDial:onSliderPressed( {|oSender|test2( oSender )} )
-   ? oDial:onSliderReleased( {|oSender|test3( oSender )} )
+   oDial := QDial():new(oWindow)
+   oDial:move(20, 20)
+   oDial:setTooltip("Eu sou um QDial")
+   ? oDial:onActionTriggered({|oSender,nAction|test(oSender, nAction)})
+   ? oDial:onSliderPressed({|oSender|test2(oSender)})
+   ? oDial:onSliderReleased({|oSender|test3(oSender)})
 
    oWindow:show()
 
@@ -39,24 +39,24 @@ PROCEDURE Main()
 
 RETURN
 
-STATIC FUNCTION test( oSender, nAction )
+STATIC FUNCTION test(oSender, nAction)
 
-   qout( "action triggered" )
-   qout( oSender:classname() )
-   qout( nAction )
-
-RETURN NIL
-
-STATIC FUNCTION test2( oSender )
-
-   qout( "slider pressed" )
-   qout( oSender:classname() )
+   qout("action triggered")
+   qout(oSender:classname())
+   qout(nAction)
 
 RETURN NIL
 
-STATIC FUNCTION test3( oSender )
+STATIC FUNCTION test2(oSender)
 
-   qout( "slider released" )
-   qout( oSender:classname() )
+   qout("slider pressed")
+   qout(oSender:classname())
+
+RETURN NIL
+
+STATIC FUNCTION test3(oSender)
+
+   qout("slider released")
+   qout(oSender:classname())
 
 RETURN NIL

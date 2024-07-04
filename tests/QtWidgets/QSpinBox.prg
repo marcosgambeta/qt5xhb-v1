@@ -15,12 +15,12 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Teste" )
-   oWindow:resize( 640, 480 )
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640, 480)
 
-   oSpinBox := QSpinBox():new( oWindow )
-   oSpinBox:move( 20, 20 )
-   oSpinBox:setTooltip( "Eu sou um QSpinBox" )
+   oSpinBox := QSpinBox():new(oWindow)
+   oSpinBox:move(20, 20)
+   oSpinBox:setTooltip("Eu sou um QSpinBox")
 
    oWindow:show()
 

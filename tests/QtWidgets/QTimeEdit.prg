@@ -15,12 +15,12 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Teste" )
-   oWindow:resize( 640, 480 )
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640, 480)
 
-   oTimeEdit := QTimeEdit():new( oWindow )
-   oTimeEdit:move( 20, 20 )
-   oTimeEdit:setTooltip( "Eu sou um QTimeEdit" )
+   oTimeEdit := QTimeEdit():new(oWindow)
+   oTimeEdit:move(20, 20)
+   oTimeEdit:setTooltip("Eu sou um QTimeEdit")
 
    oWindow:show()
 

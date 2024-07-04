@@ -21,21 +21,21 @@ PROCEDURE Main()
 
    oWindow := QWidget():new()
 
-   oButton1 := QPushButton():new( "Um" )
-   oButton2 := QPushButton():new( "Dois" )
-   oButton3 := QPushButton():new( "Três" )
-   oButton4 := QPushButton():new( "Quatro" )
-   oButton5 := QPushButton():new( "Cinco" )
+   oButton1 := QPushButton():new("Um")
+   oButton2 := QPushButton():new("Dois")
+   oButton3 := QPushButton():new("Três")
+   oButton4 := QPushButton():new("Quatro")
+   oButton5 := QPushButton():new("Cinco")
 
-   oLayout := QBoxLayout():new( QBoxLayout_RightToLeft )
+   oLayout := QBoxLayout():new(QBoxLayout_RightToLeft)
 
-   oLayout:addWidget( oButton1 )
-   oLayout:addWidget( oButton2 )
-   oLayout:addWidget( oButton3 )
-   oLayout:addWidget( oButton4 )
-   oLayout:addWidget( oButton5 )
+   oLayout:addWidget(oButton1)
+   oLayout:addWidget(oButton2)
+   oLayout:addWidget(oButton3)
+   oLayout:addWidget(oButton4)
+   oLayout:addWidget(oButton5)
 
-   oWindow:setLayout( oLayout )
+   oWindow:setLayout(oLayout)
 
    oWindow:show()
 

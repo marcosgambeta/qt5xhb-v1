@@ -17,7 +17,7 @@ PROCEDURE Main()
    oMainWindow := QMainWindow():new()
 
    oStatusBar := oMainWindow:statusBar()
-   oStatusBar:showMessage( "teste" )
+   oStatusBar:showMessage("teste")
 
    oMainWindow:show()
 

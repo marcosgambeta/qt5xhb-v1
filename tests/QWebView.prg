@@ -15,12 +15,12 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Teste da classe QWebView" )
-   oWindow:resize( 800, 600 )
+   oWindow:setWindowTitle("Teste da classe QWebView")
+   oWindow:resize(800, 600)
    oWindow:show()
 
-   oWebView := QWebView():new( oWindow )
-   oWebView:setUrl( QUrl():new( "https://github.com/magsoftinfo/qt5xhb-v1" ) )
+   oWebView := QWebView():new(oWindow)
+   oWebView:setUrl(QUrl():new("https://github.com/magsoftinfo/qt5xhb-v1"))
    oWebView:show()
 
    oApp:exec()

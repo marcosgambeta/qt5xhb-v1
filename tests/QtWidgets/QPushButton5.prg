@@ -21,22 +21,22 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:resize( 320, 240 )
+   oWindow:resize(320, 240)
 
-   oButton1 := QPushButton():new( "PushButton 1", oWindow )
-   oButton1:move( 20, 20 )
-   oButton1:setObjectName( "button1" )
-   ? oButton1:onClicked( @buttonClicked() )
+   oButton1 := QPushButton():new("PushButton 1", oWindow)
+   oButton1:move(20, 20)
+   oButton1:setObjectName("button1")
+   ? oButton1:onClicked(@buttonClicked())
 
-   oButton2 := QPushButton():new( "PushButton 2", oWindow )
-   oButton2:move( 20, 70 )
-   oButton2:setObjectName( "button2" )
-   ? oButton2:onClicked( @buttonClicked() )
+   oButton2 := QPushButton():new("PushButton 2", oWindow)
+   oButton2:move(20, 70)
+   oButton2:setObjectName("button2")
+   ? oButton2:onClicked(@buttonClicked())
 
-   oButton3 := QPushButton():new( "PushButton 3", oWindow )
-   oButton3:move( 20, 120 )
-   oButton3:setObjectName( "button3" )
-   ? oButton3:onClicked( @buttonClicked() )
+   oButton3 := QPushButton():new("PushButton 3", oWindow)
+   oButton3:move(20, 120)
+   oButton3:setObjectName("button3")
+   ? oButton3:onClicked(@buttonClicked())
 
    oWindow:show()
 
@@ -48,7 +48,7 @@ PROCEDURE Main()
 
 RETURN
 
-STATIC FUNCTION buttonClicked( oButton )
+STATIC FUNCTION buttonClicked(oButton)
 
    IF oButton:objectName() == "button1"
       ? "button 1 clicked"

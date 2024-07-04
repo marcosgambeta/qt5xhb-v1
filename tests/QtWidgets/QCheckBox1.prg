@@ -20,12 +20,12 @@ PROCEDURE Main()
 
    oWindow := QWidget():new()
 
-   oCheckBox := QCheckBox():new( "CheckBox", oWindow )
-   oCheckBox:move( 20, 20 )
-   ? oCheckBox:onClicked( {||qout( "clicked" )} )
-   ? oCheckBox:onPressed( {||qout( "pressed" )} )
-   ? oCheckBox:onReleased ({||qout( "released" )} )
-   ? oCheckBox:onStateChanged( {||qout( "stateChanged=" + alltrim( str( oCheckBox:checkState() ) ) )} )
+   oCheckBox := QCheckBox():new("CheckBox", oWindow)
+   oCheckBox:move(20, 20)
+   ? oCheckBox:onClicked({||qout("clicked")})
+   ? oCheckBox:onPressed({||qout("pressed")})
+   ? oCheckBox:onReleased ({||qout("released")})
+   ? oCheckBox:onStateChanged({||qout("stateChanged=" + alltrim(str(oCheckBox:checkState())))})
 
    oWindow:show()
 

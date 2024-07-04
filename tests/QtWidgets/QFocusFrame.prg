@@ -17,11 +17,11 @@ PROCEDURE Main()
 
    oWindow := QWidget():new()
 
-   oLabel := QLabel():new( "QLabel", oWindow )
-   oLabel:move( 20, 20 )
+   oLabel := QLabel():new("QLabel", oWindow)
+   oLabel:move(20, 20)
 
    oFocusFrame := QFocusFrame():new()
-   oFocusFrame:setWidget( oLabel )
+   oFocusFrame:setWidget(oLabel)
 
    oWindow:show()
 

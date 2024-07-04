@@ -20,11 +20,11 @@ PROCEDURE Main()
 
    oWindow := QWidget():new()
 
-   oButton := QToolButton():new( oWindow )
-   oButton:move( 20, 20 )
-   ? oButton:onClicked( {||qout( "clicked" )} )
-   ? oButton:onPressed( {||qout( "pressed" )} )
-   ? oButton:onReleased( {||qout( "released" )} )
+   oButton := QToolButton():new(oWindow)
+   oButton:move(20, 20)
+   ? oButton:onClicked({||qout("clicked")})
+   ? oButton:onPressed({||qout("pressed")})
+   ? oButton:onReleased({||qout("released")})
 
    oWindow:show()
 
