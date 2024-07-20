@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QGLBUFFER_NEW)
   else if (ISNUMPAR(1) && ISQGLBUFFER(1))
   {
     /*
-    QGLBuffer( const QGLBuffer & other )
+    QGLBuffer( const QGLBuffer &other )
     */
     QGLBuffer *obj = new QGLBuffer(*PQGLBUFFER(1));
     Qt5xHb::returnNewObject(obj, true);

@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_NEW)
   else if (ISNUMPAR(1) && ISQGLCOLORMAP(1))
   {
     /*
-    QGLColormap( const QGLColormap & map )
+    QGLColormap( const QGLColormap &map )
     */
     QGLColormap *obj = new QGLColormap(*PQGLCOLORMAP(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
   {
     /*
-    void setEntry( int idx, const QColor & color )
+    void setEntry( int idx, const QColor &color )
     */
     QGLColormap *obj = (QGLColormap *)Qt5xHb::itemGetPtrStackSelfItem();
 

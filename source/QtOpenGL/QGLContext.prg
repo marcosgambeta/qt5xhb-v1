@@ -77,7 +77,7 @@ RETURN
 #endif
 
     /*
-    QGLContext( const QGLFormat & format )
+    QGLContext( const QGLFormat &format )
     */
 HB_FUNC_STATIC(QGLCONTEXT_NEW)
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
   if (ISNUMPAR(4) && ISQIMAGE(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    GLuint bindTexture( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
+    GLuint bindTexture( const QImage &image, GLenum target, GLint format, QGLContext::BindOptions options )
     */
     QGLContext *obj = (QGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    GLuint bindTexture( const QString & fileName )
+    GLuint bindTexture( const QString &fileName )
     */
     QGLContext *obj = (QGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
   else if (ISBETWEEN(1, 3) && ISQIMAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+    GLuint bindTexture( const QImage &image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
     */
     QGLContext *obj = (QGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
   else if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+    GLuint bindTexture( const QPixmap &pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
     */
     QGLContext *obj = (QGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
   else if (ISNUMPAR(4) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    GLuint bindTexture( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
+    GLuint bindTexture( const QPixmap &pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
     */
     QGLContext *obj = (QGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
   if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+    void drawTexture( const QRectF &target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
     */
     QGLContext *obj = (QGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
   else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+    void drawTexture( const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
     */
     QGLContext *obj = (QGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QGLCONTEXT_RESET)
 }
 
 /*
-void setFormat( const QGLFormat & format )
+void setFormat( const QGLFormat &format )
 */
 HB_FUNC_STATIC(QGLCONTEXT_SETFORMAT)
 {

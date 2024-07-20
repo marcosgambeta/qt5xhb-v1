@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QGLFORMAT_NEW)
   else if (ISNUMPAR(1) && ISQGLFORMAT(1))
   {
     /*
-    QGLFormat( const QGLFormat & other )
+    QGLFormat( const QGLFormat &other )
     */
     QGLFormat *obj = new QGLFormat(*PQGLFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -1429,7 +1429,7 @@ HB_FUNC_STATIC(QGLFORMAT_OPENGLVERSIONFLAGS)
 }
 
 /*
-static void setDefaultFormat( const QGLFormat & f )
+static void setDefaultFormat( const QGLFormat &f )
 */
 HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTFORMAT)
 {
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTFORMAT)
 }
 
 /*
-static void setDefaultOverlayFormat( const QGLFormat & f )
+static void setDefaultOverlayFormat( const QGLFormat &f )
 */
 HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTOVERLAYFORMAT)
 {
