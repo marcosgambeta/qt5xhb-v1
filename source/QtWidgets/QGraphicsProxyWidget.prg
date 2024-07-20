@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_PAINT)
 }
 
 /*
-virtual void setGeometry( const QRectF & rect )
+virtual void setGeometry( const QRectF &rect )
 */
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETGEOMETRY)
 {

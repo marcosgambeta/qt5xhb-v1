@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONFRAME(1))
   {
     /*
-    QStyleOptionFrame( const QStyleOptionFrame & other )
+    QStyleOptionFrame( const QStyleOptionFrame &other )
     */
     QStyleOptionFrame *obj = new QStyleOptionFrame(*PQSTYLEOPTIONFRAME(1));
     Qt5xHb::returnNewObject(obj, true);

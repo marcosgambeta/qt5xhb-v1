@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QTABLEVIEW_SETMODEL)
 }
 
 /*
-void setRootIndex( const QModelIndex & index ) override
+void setRootIndex( const QModelIndex &index ) override
 */
 HB_FUNC_STATIC(QTABLEVIEW_SETROOTINDEX)
 {
@@ -891,7 +891,7 @@ HB_FUNC_STATIC(QTABLEVIEW_SETCOLUMNHIDDEN)
 }
 
 /*
-QRect visualRect( const QModelIndex & index ) const override
+QRect visualRect( const QModelIndex &index ) const override
 */
 HB_FUNC_STATIC(QTABLEVIEW_VISUALRECT)
 {
@@ -916,7 +916,7 @@ HB_FUNC_STATIC(QTABLEVIEW_VISUALRECT)
 }
 
 /*
-void scrollTo( const QModelIndex & index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible )
+void scrollTo( const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible )
 override
 */
 HB_FUNC_STATIC(QTABLEVIEW_SCROLLTO)
@@ -944,7 +944,7 @@ HB_FUNC_STATIC(QTABLEVIEW_SCROLLTO)
 }
 
 /*
-QModelIndex indexAt( const QPoint & p ) const override
+QModelIndex indexAt( const QPoint &p ) const override
 */
 HB_FUNC_STATIC(QTABLEVIEW_INDEXAT)
 {

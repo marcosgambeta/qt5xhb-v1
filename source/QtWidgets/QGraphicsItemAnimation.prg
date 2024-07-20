@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETITEM)
 }
 
 /*
-void setPosAt( qreal step, const QPointF & point )
+void setPosAt( qreal step, const QPointF &point )
 */
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETPOSAT)
 {

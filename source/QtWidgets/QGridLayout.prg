@@ -989,7 +989,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_MINIMUMSIZE)
 }
 
 /*
-virtual void setGeometry( const QRect & rect )
+virtual void setGeometry( const QRect &rect )
 */
 HB_FUNC_STATIC(QGRIDLAYOUT_SETGEOMETRY)
 {

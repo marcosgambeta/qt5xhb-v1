@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANUNDO)
 }
 
 /*
-QAction * createRedoAction( QObject * parent, const QString & prefix = QString() ) const
+QAction * createRedoAction( QObject * parent, const QString &prefix = QString() ) const
 */
 HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
 }
 
 /*
-QAction * createUndoAction( QObject * parent, const QString & prefix = QString() ) const
+QAction * createUndoAction( QObject * parent, const QString &prefix = QString() ) const
 */
 HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
 {

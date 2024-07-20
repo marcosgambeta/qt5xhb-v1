@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETALIGNMENT)
 }
 
 /*
-void setFormat( const QString & format )
+void setFormat( const QString &format )
 */
 HB_FUNC_STATIC(QPROGRESSBAR_SETFORMAT)
 {

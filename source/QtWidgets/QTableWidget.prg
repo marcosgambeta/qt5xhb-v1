@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_ITEMAT)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QTableWidgetItem * itemAt( const QPoint & point ) const
+    QTableWidgetItem * itemAt( const QPoint &point ) const
     */
     QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -684,7 +684,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETHORIZONTALHEADERITEM)
 }
 
 /*
-void setHorizontalHeaderLabels( const QStringList & labels )
+void setHorizontalHeaderLabels( const QStringList &labels )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_SETHORIZONTALHEADERLABELS)
 {
@@ -762,7 +762,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETITEMPROTOTYPE)
 }
 
 /*
-void setRangeSelected( const QTableWidgetSelectionRange & range, bool select )
+void setRangeSelected( const QTableWidgetSelectionRange &range, bool select )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_SETRANGESELECTED)
 {
@@ -840,7 +840,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETVERTICALHEADERITEM)
 }
 
 /*
-void setVerticalHeaderLabels( const QStringList & labels )
+void setVerticalHeaderLabels( const QStringList &labels )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_SETVERTICALHEADERLABELS)
 {

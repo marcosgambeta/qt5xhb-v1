@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QAction * addAction( const QString & text )
+    QAction * addAction( const QString &text )
     */
     QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QAction * addAction( const QIcon & icon, const QString & text )
+    QAction * addAction( const QIcon &icon, const QString &text )
     */
     QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 

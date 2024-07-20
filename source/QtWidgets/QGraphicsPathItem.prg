@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_NEW)
   else if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsPathItem( const QPainterPath & path, QGraphicsItem * parent = 0 )
+    QGraphicsPathItem( const QPainterPath &path, QGraphicsItem * parent = 0 )
     */
     QGraphicsPathItem *obj =
         new QGraphicsPathItem(*PQPAINTERPATH(1), HB_ISNIL(2) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(2));
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_PATH)
 }
 
 /*
-void setPath( const QPainterPath & path )
+void setPath( const QPainterPath &path )
 */
 HB_FUNC_STATIC(QGRAPHICSPATHITEM_SETPATH)
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_BOUNDINGRECT)
 }
 
 /*
-virtual bool contains( const QPointF & point ) const
+virtual bool contains( const QPointF &point ) const
 */
 HB_FUNC_STATIC(QGRAPHICSPATHITEM_CONTAINS)
 {

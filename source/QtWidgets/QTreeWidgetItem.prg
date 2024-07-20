@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QTreeWidgetItem( const QStringList & strings, int type = QTreeWidgetItem::Type )
+    QTreeWidgetItem( const QStringList &strings, int type = QTreeWidgetItem::Type )
     */
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQSTRINGLIST(1), OPINT(2, QTreeWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_NEW)
   else if (ISBETWEEN(2, 3) && ISQTREEWIDGET(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QTreeWidgetItem( QTreeWidget * view, const QStringList & strings, int type = QTreeWidgetItem::Type )
+    QTreeWidgetItem( QTreeWidget * view, const QStringList &strings, int type = QTreeWidgetItem::Type )
     */
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGET(1), PQSTRINGLIST(2), OPINT(3, QTreeWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_NEW)
   else if (ISBETWEEN(2, 3) && ISQTREEWIDGETITEM(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QTreeWidgetItem( QTreeWidgetItem * parent, const QStringList & strings, int type = QTreeWidgetItem::Type )
+    QTreeWidgetItem( QTreeWidgetItem * parent, const QStringList &strings, int type = QTreeWidgetItem::Type )
     */
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGETITEM(1), PQSTRINGLIST(2), OPINT(3, QTreeWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_NEW)
   else if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1))
   {
     /*
-    QTreeWidgetItem( const QTreeWidgetItem & other )
+    QTreeWidgetItem( const QTreeWidgetItem &other )
     */
     QTreeWidgetItem *obj = new QTreeWidgetItem(*PQTREEWIDGETITEM(1));
     Qt5xHb::returnNewObject(obj, false);
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ADDCHILD)
 }
 
 /*
-void addChildren( const QList<QTreeWidgetItem*> & children )
+void addChildren( const QList<QTreeWidgetItem*> &children )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_ADDCHILDREN)
 {
@@ -624,7 +624,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_INSERTCHILD)
 }
 
 /*
-void insertChildren( int index, const QList<QTreeWidgetItem*> & children )
+void insertChildren( int index, const QList<QTreeWidgetItem*> &children )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_INSERTCHILDREN)
 {
@@ -803,7 +803,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_PARENT)
 }
 
 /*
-virtual void read( QDataStream & in )
+virtual void read( QDataStream &in )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_READ)
 {
@@ -855,7 +855,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_REMOVECHILD)
 }
 
 /*
-void setBackground( int column, const QBrush & brush )
+void setBackground( int column, const QBrush &brush )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETBACKGROUND)
 {
@@ -933,7 +933,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETCHILDINDICATORPOLICY)
 }
 
 /*
-virtual void setData( int column, int role, const QVariant & value )
+virtual void setData( int column, int role, const QVariant &value )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETDATA)
 {
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFLAGS)
 }
 
 /*
-void setFont( int column, const QFont & font )
+void setFont( int column, const QFont &font )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETFONT)
 {
@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFONT)
 }
 
 /*
-void setForeground( int column, const QBrush & brush )
+void setForeground( int column, const QBrush &brush )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETFOREGROUND)
 {
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETHIDDEN)
 }
 
 /*
-void setIcon( int column, const QIcon & icon )
+void setIcon( int column, const QIcon &icon )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETICON)
 {
@@ -1193,7 +1193,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSELECTED)
 }
 
 /*
-void setSizeHint( int column, const QSize & size )
+void setSizeHint( int column, const QSize &size )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETSIZEHINT)
 {
@@ -1219,7 +1219,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSIZEHINT)
 }
 
 /*
-void setStatusTip( int column, const QString & statusTip )
+void setStatusTip( int column, const QString &statusTip )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETSTATUSTIP)
 {
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSTATUSTIP)
 }
 
 /*
-void setText( int column, const QString & text )
+void setText( int column, const QString &text )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETTEXT)
 {
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETTEXTALIGNMENT)
 }
 
 /*
-void setToolTip( int column, const QString & toolTip )
+void setToolTip( int column, const QString &toolTip )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETTOOLTIP)
 {
@@ -1323,7 +1323,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETTOOLTIP)
 }
 
 /*
-void setWhatsThis( int column, const QString & whatsThis )
+void setWhatsThis( int column, const QString &whatsThis )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETWHATSTHIS)
 {
@@ -1641,7 +1641,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_WHATSTHIS)
 }
 
 /*
-virtual void write( QDataStream & out ) const
+virtual void write( QDataStream &out ) const
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_WRITE)
 {
@@ -1692,7 +1692,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_BACKGROUNDCOLOR)
 }
 
 /*
-void setBackgroundColor( int column, const QColor & color )
+void setBackgroundColor( int column, const QColor &color )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETBACKGROUNDCOLOR)
 {
@@ -1743,7 +1743,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_TEXTCOLOR)
 }
 
 /*
-void setTextColor( int column, const QColor & color )
+void setTextColor( int column, const QColor &color )
 */
 HB_FUNC_STATIC(QTREEWIDGETITEM_SETTEXTCOLOR)
 {

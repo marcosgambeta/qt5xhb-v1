@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURRADIUS)
 }
 
 /*
-virtual QRectF boundingRectFor( const QRectF & rect ) const
+virtual QRectF boundingRectFor( const QRectF &rect ) const
 */
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR)
 {

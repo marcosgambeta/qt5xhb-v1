@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QSTYLEFACTORY_DELETE)
 }
 
 /*
-static QStyle * create( const QString & key )
+static QStyle * create( const QString &key )
 */
 HB_FUNC_STATIC(QSTYLEFACTORY_CREATE)
 {

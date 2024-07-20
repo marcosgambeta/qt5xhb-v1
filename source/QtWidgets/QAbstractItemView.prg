@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CURRENTINDEX)
 }
 
 /*
-void setCurrentIndex( const QModelIndex & index )
+void setCurrentIndex( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETCURRENTINDEX)
 {
@@ -673,7 +673,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ICONSIZE)
 }
 
 /*
-void setIconSize( const QSize & size )
+void setIconSize( const QSize &size )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETICONSIZE)
 {
@@ -699,7 +699,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETICONSIZE)
 }
 
 /*
-QWidget * indexWidget( const QModelIndex & index ) const
+QWidget * indexWidget( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXWIDGET)
 {
@@ -724,7 +724,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXWIDGET)
 }
 
 /*
-void setIndexWidget( const QModelIndex & index, QWidget * widget )
+void setIndexWidget( const QModelIndex &index, QWidget * widget )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETINDEXWIDGET)
 {
@@ -750,7 +750,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETINDEXWIDGET)
 }
 
 /*
-void closePersistentEditor( const QModelIndex & index )
+void closePersistentEditor( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR)
 {
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR)
 }
 
 /*
-virtual QModelIndex indexAt( const QPoint & point ) const = 0
+virtual QModelIndex indexAt( const QPoint &point ) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXAT)
 {
@@ -818,7 +818,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
   else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
-    QAbstractItemDelegate * itemDelegate( const QModelIndex & index ) const
+    QAbstractItemDelegate * itemDelegate( const QModelIndex &index ) const
     */
     QAbstractItemView *obj = (QAbstractItemView *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -963,7 +963,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW)
 }
 
 /*
-virtual void keyboardSearch( const QString & search )
+virtual void keyboardSearch( const QString &search )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_KEYBOARDSEARCH)
 {
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETMODEL)
 }
 
 /*
-void openPersistentEditor( const QModelIndex & index )
+void openPersistentEditor( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_OPENPERSISTENTEDITOR)
 {
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ROOTINDEX)
 }
 
 /*
-virtual void setRootIndex( const QModelIndex & index )
+virtual void setRootIndex( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETROOTINDEX)
 {
@@ -1117,7 +1117,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETROOTINDEX)
 }
 
 /*
-virtual void scrollTo( const QModelIndex & index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible
+virtual void scrollTo( const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible
 ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTO)
@@ -1520,7 +1520,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN)
 }
 
 /*
-QSize sizeHintForIndex( const QModelIndex & index ) const
+QSize sizeHintForIndex( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORINDEX)
 {
@@ -1569,7 +1569,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORROW)
 }
 
 /*
-virtual QRect visualRect( const QModelIndex & index ) const = 0
+virtual QRect visualRect( const QModelIndex &index ) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_VISUALRECT)
 {
@@ -1645,7 +1645,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLEARSELECTION)
 }
 
 /*
-void edit( const QModelIndex & index )
+void edit( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_EDIT)
 {
@@ -1793,7 +1793,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void update( const QRect & rect )
+    void update( const QRect &rect )
     */
     QAbstractItemView *obj = (QAbstractItemView *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1807,7 +1807,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
   else if (ISNUMPAR(1) && ISQREGION(1))
   {
     /*
-    void update( const QRegion & rgn )
+    void update( const QRegion &rgn )
     */
     QAbstractItemView *obj = (QAbstractItemView *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1835,7 +1835,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
   else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
-    void update( const QModelIndex & index )
+    void update( const QModelIndex &index )
     */
     QAbstractItemView *obj = (QAbstractItemView *)Qt5xHb::itemGetPtrStackSelfItem();
 

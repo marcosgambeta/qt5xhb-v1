@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
     if (HB_ISCHAR(1))
     {
       /*
-      void display( const QString & s )
+      void display( const QString &s )
       */
       QLCDNumber *obj = (QLCDNumber *)Qt5xHb::itemGetPtrStackSelfItem();
 

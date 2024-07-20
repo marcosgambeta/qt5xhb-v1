@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QLABEL_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QLabel( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    QLabel( const QString &text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
     QLabel *obj =
         new QLabel(PQSTRING(1), OPQWIDGET(2, 0), HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
@@ -934,7 +934,7 @@ HB_FUNC_STATIC(QLABEL_SETNUM)
 }
 
 /*
-void setPicture( const QPicture & picture )
+void setPicture( const QPicture &picture )
 */
 HB_FUNC_STATIC(QLABEL_SETPICTURE)
 {
@@ -960,7 +960,7 @@ HB_FUNC_STATIC(QLABEL_SETPICTURE)
 }
 
 /*
-void setPixmap( const QPixmap & )
+void setPixmap( const QPixmap &)
 */
 HB_FUNC_STATIC(QLABEL_SETPIXMAP)
 {
@@ -986,7 +986,7 @@ HB_FUNC_STATIC(QLABEL_SETPIXMAP)
 }
 
 /*
-void setText( const QString & )
+void setText( const QString &)
 */
 HB_FUNC_STATIC(QLABEL_SETTEXT)
 {

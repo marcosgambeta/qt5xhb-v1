@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_SETALIGNMENT)
 }
 
 /*
-virtual void setGeometry( const QRect & r ) = 0
+virtual void setGeometry( const QRect &r ) = 0
 */
 HB_FUNC_STATIC(QLAYOUTITEM_SETGEOMETRY)
 {

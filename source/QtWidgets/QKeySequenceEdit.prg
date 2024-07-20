@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_NEW)
   else if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QKeySequenceEdit( const QKeySequence & keySequence, QWidget * parent = 0 )
+    QKeySequenceEdit( const QKeySequence &keySequence, QWidget * parent = 0 )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QKeySequenceEdit *obj = new QKeySequenceEdit(*PQKEYSEQUENCE(1), OPQWIDGET(2, 0));
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_KEYSEQUENCE)
 }
 
 /*
-void setKeySequence( const QKeySequence & keySequence )
+void setKeySequence( const QKeySequence &keySequence )
 */
 HB_FUNC_STATIC(QKEYSEQUENCEEDIT_SETKEYSEQUENCE)
 {

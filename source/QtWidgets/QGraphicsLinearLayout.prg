@@ -593,7 +593,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_REMOVEAT)
 }
 
 /*
-virtual void setGeometry( const QRectF & rect )
+virtual void setGeometry( const QRectF &rect )
 */
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETGEOMETRY)
 {
@@ -619,7 +619,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETGEOMETRY)
 }
 
 /*
-virtual QSizeF sizeHint( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
+virtual QSizeF sizeHint( Qt::SizeHint which, const QSizeF &constraint = QSizeF() ) const
 */
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SIZEHINT)
 {

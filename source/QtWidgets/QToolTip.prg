@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QTOOLTIP_PALETTE)
 }
 
 /*
-void setFont( const QFont & font )
+void setFont( const QFont &font )
 */
 HB_FUNC_STATIC(QTOOLTIP_SETFONT)
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QTOOLTIP_SETFONT)
 }
 
 /*
-void setPalette( const QPalette & palette )
+void setPalette( const QPalette &palette )
 */
 HB_FUNC_STATIC(QTOOLTIP_SETPALETTE)
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
   if (ISNUMPAR(4) && ISQPOINT(1) && HB_ISCHAR(2) && ISQWIDGET(3) && ISQRECT(4))
   {
     /*
-    void showText( const QPoint & pos, const QString & text, QWidget * w, const QRect & rect )
+    void showText( const QPoint &pos, const QString &text, QWidget * w, const QRect &rect )
     */
     QToolTip *obj = (QToolTip *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
   else if (ISBETWEEN(2, 3) && ISQPOINT(1) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
     /*
-    void showText( const QPoint & pos, const QString & text, QWidget * w = 0 )
+    void showText( const QPoint &pos, const QString &text, QWidget * w = 0 )
     */
     QToolTip *obj = (QToolTip *)Qt5xHb::itemGetPtrStackSelfItem();
 

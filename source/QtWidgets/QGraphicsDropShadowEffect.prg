@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_YOFFSET)
 }
 
 /*
-virtual QRectF boundingRectFor( const QRectF & rect ) const
+virtual QRectF boundingRectFor( const QRectF &rect ) const
 */
 HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR)
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS)
 }
 
 /*
-void setColor( const QColor & color )
+void setColor( const QColor &color )
 */
 HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETCOLOR)
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETOFFSET)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void setOffset( const QPointF & ofs )
+    void setOffset( const QPointF &ofs )
     */
     QGraphicsDropShadowEffect *obj = (QGraphicsDropShadowEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 

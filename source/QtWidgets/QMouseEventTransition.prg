@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETBUTTON)
 }
 
 /*
-void setHitTestPath( const QPainterPath & path )
+void setHitTestPath( const QPainterPath &path )
 */
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETHITTESTPATH)
 {

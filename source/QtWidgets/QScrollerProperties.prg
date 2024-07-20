@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_NEW)
   else if (ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1))
   {
     /*
-    QScrollerProperties( const QScrollerProperties & sp )
+    QScrollerProperties( const QScrollerProperties &sp )
     */
     QScrollerProperties *obj = new QScrollerProperties(*PQSCROLLERPROPERTIES(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_SCROLLMETRIC)
 }
 
 /*
-void setScrollMetric( QScrollerProperties::ScrollMetric metric, const QVariant & value )
+void setScrollMetric( QScrollerProperties::ScrollMetric metric, const QVariant &value )
 */
 HB_FUNC_STATIC(QSCROLLERPROPERTIES_SETSCROLLMETRIC)
 {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_SETSCROLLMETRIC)
 }
 
 /*
-void setDefaultScrollerProperties( const QScrollerProperties & sp )
+void setDefaultScrollerProperties( const QScrollerProperties &sp )
 */
 HB_FUNC_STATIC(QSCROLLERPROPERTIES_SETDEFAULTSCROLLERPROPERTIES)
 {

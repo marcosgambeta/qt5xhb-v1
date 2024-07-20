@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QTableWidgetItem( const QString & text, int type = QTableWidgetItem::Type )
+    QTableWidgetItem( const QString &text, int type = QTableWidgetItem::Type )
     */
     QTableWidgetItem *obj = new QTableWidgetItem(PQSTRING(1), OPINT(2, QTableWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_NEW)
   else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QTableWidgetItem( const QIcon & icon, const QString & text, int type = QTableWidgetItem::Type )
+    QTableWidgetItem( const QIcon &icon, const QString &text, int type = QTableWidgetItem::Type )
     */
     QTableWidgetItem *obj = new QTableWidgetItem(HB_ISOBJECT(1) ? *(QIcon *)Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)),
                                                  PQSTRING(2), OPINT(3, QTableWidgetItem::Type));
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_NEW)
   else if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1))
   {
     /*
-    QTableWidgetItem( const QTableWidgetItem & other )
+    QTableWidgetItem( const QTableWidgetItem &other )
     */
     QTableWidgetItem *obj = new QTableWidgetItem(*PQTABLEWIDGETITEM(1));
     Qt5xHb::returnNewObject(obj, false);
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_ISSELECTED)
 }
 
 /*
-virtual void read( QDataStream & in )
+virtual void read( QDataStream &in )
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_READ)
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_ROW)
 }
 
 /*
-void setBackground( const QBrush & brush )
+void setBackground( const QBrush &brush )
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_SETBACKGROUND)
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETCHECKSTATE)
 }
 
 /*
-virtual void setData( int role, const QVariant & value )
+virtual void setData( int role, const QVariant &value )
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_SETDATA)
 {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETFLAGS)
 }
 
 /*
-void setFont( const QFont & font )
+void setFont( const QFont &font )
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_SETFONT)
 {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETFONT)
 }
 
 /*
-void setForeground( const QBrush & brush )
+void setForeground( const QBrush &brush )
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_SETFOREGROUND)
 {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETFOREGROUND)
 }
 
 /*
-void setIcon( const QIcon & icon )
+void setIcon( const QIcon &icon )
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_SETICON)
 {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETSELECTED)
 }
 
 /*
-void setSizeHint( const QSize & size )
+void setSizeHint( const QSize &size )
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_SETSIZEHINT)
 {
@@ -684,7 +684,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETSIZEHINT)
 }
 
 /*
-void setStatusTip( const QString & statusTip )
+void setStatusTip( const QString &statusTip )
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_SETSTATUSTIP)
 {
@@ -710,7 +710,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETSTATUSTIP)
 }
 
 /*
-void setText( const QString & text )
+void setText( const QString &text )
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_SETTEXT)
 {
@@ -762,7 +762,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETTEXTALIGNMENT)
 }
 
 /*
-void setToolTip( const QString & toolTip )
+void setToolTip( const QString &toolTip )
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_SETTOOLTIP)
 {
@@ -788,7 +788,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETTOOLTIP)
 }
 
 /*
-void setWhatsThis( const QString & whatsThis )
+void setWhatsThis( const QString &whatsThis )
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_SETWHATSTHIS)
 {
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_WHATSTHIS)
 }
 
 /*
-virtual void write( QDataStream & out ) const
+virtual void write( QDataStream &out ) const
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_WRITE)
 {

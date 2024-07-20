@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1))
   {
     /*
-    QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
+    QStyleOptionFocusRect( const QStyleOptionFocusRect &other )
     */
     QStyleOptionFocusRect *obj = new QStyleOptionFocusRect(*PQSTYLEOPTIONFOCUSRECT(1));
     Qt5xHb::returnNewObject(obj, true);

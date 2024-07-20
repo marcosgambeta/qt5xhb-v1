@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_NEW)
   else if (ISBETWEEN(1, 2) && ISQLINEF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsLineItem( const QLineF & line, QGraphicsItem * parent = 0 )
+    QGraphicsLineItem( const QLineF &line, QGraphicsItem * parent = 0 )
     */
     QGraphicsLineItem *obj =
         new QGraphicsLineItem(*PQLINEF(1), HB_ISNIL(2) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(2));
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
   if (ISNUMPAR(1) && ISQLINEF(1))
   {
     /*
-    void setLine( const QLineF & line )
+    void setLine( const QLineF &line )
     */
     QGraphicsLineItem *obj = (QGraphicsLineItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
 }
 
 /*
-void setPen( const QPen & pen )
+void setPen( const QPen &pen )
 */
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETPEN)
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_BOUNDINGRECT)
 }
 
 /*
-virtual bool contains( const QPointF & point ) const
+virtual bool contains( const QPointF &point ) const
 */
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_CONTAINS)
 {

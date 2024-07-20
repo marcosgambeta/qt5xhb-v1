@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_POSITION)
 }
 
 /*
-void setPosition( const QPointF & pos )
+void setPosition( const QPointF &pos )
 */
 HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETPOSITION)
 {

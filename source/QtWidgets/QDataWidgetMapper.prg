@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
   else if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3))
   {
     /*
-    void addMapping( QWidget * widget, int section, const QByteArray & propertyName )
+    void addMapping( QWidget * widget, int section, const QByteArray &propertyName )
     */
     QDataWidgetMapper *obj = (QDataWidgetMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETORIENTATION)
 }
 
 /*
-void setRootIndex( const QModelIndex & index )
+void setRootIndex( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETROOTINDEX)
 {
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTINDEX)
 }
 
 /*
-void setCurrentModelIndex( const QModelIndex & index )
+void setCurrentModelIndex( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTMODELINDEX)
 {

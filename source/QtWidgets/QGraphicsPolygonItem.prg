@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_NEW)
   else if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsPolygonItem( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
+    QGraphicsPolygonItem( const QPolygonF &polygon, QGraphicsItem * parent = 0 )
     */
     QGraphicsPolygonItem *obj =
         new QGraphicsPolygonItem(*PQPOLYGONF(1), HB_ISNIL(2) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(2));
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETFILLRULE)
 }
 
 /*
-void setPolygon( const QPolygonF & polygon )
+void setPolygon( const QPolygonF &polygon )
 */
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETPOLYGON)
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_BOUNDINGRECT)
 }
 
 /*
-virtual bool contains( const QPointF & point ) const
+virtual bool contains( const QPointF &point ) const
 */
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_CONTAINS)
 {

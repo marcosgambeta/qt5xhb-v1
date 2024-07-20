@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1))
   {
     /*
-    QStyleOptionSizeGrip( const QStyleOptionSizeGrip & other )
+    QStyleOptionSizeGrip( const QStyleOptionSizeGrip &other )
     */
     QStyleOptionSizeGrip *obj = new QStyleOptionSizeGrip(*PQSTYLEOPTIONSIZEGRIP(1));
     Qt5xHb::returnNewObject(obj, true);

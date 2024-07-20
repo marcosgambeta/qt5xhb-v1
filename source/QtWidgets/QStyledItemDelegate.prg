@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_DELETE)
 }
 
 /*
-void paint( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const
+void paint( QPainter * painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_PAINT)
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_PAINT)
 }
 
 /*
-QSize sizeHint( const QStyleOptionViewItem & option, const QModelIndex & index ) const
+QSize sizeHint( const QStyleOptionViewItem &option, const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SIZEHINT)
 {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SIZEHINT)
 }
 
 /*
-QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
+QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_CREATEEDITOR)
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_CREATEEDITOR)
 }
 
 /*
-void setEditorData( QWidget * editor, const QModelIndex & index ) const
+void setEditorData( QWidget * editor, const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETEDITORDATA)
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETEDITORDATA)
 }
 
 /*
-void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
+void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETMODELDATA)
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETMODELDATA)
 }
 
 /*
-void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
+void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_UPDATEEDITORGEOMETRY)
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY)
 }
 
 /*
-virtual QString displayText( const QVariant & value, const QLocale & locale ) const
+virtual QString displayText( const QVariant &value, const QLocale &locale ) const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_DISPLAYTEXT)
 {

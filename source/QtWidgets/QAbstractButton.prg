@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_TEXT)
 }
 
 /*
-void setText( const QString & text )
+void setText( const QString &text )
 */
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETTEXT)
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ICON)
 }
 
 /*
-void setIcon( const QIcon & icon )
+void setIcon( const QIcon &icon )
 */
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETICON)
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ICONSIZE)
 }
 
 /*
-void setIconSize( const QSize & size )
+void setIconSize( const QSize &size )
 */
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETICONSIZE)
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SHORTCUT)
 }
 
 /*
-void setShortcut ( const QKeySequence & key )
+void setShortcut ( const QKeySequence &key )
 */
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETSHORTCUT)
 {

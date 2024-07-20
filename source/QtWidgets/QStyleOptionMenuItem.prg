@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONMENUITEM(1))
   {
     /*
-    QStyleOptionMenuItem( const QStyleOptionMenuItem & other )
+    QStyleOptionMenuItem( const QStyleOptionMenuItem &other )
     */
     QStyleOptionMenuItem *obj = new QStyleOptionMenuItem(*PQSTYLEOPTIONMENUITEM(1));
     Qt5xHb::returnNewObject(obj, true);

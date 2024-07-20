@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_BUTTONTEXT)
 }
 
 /*
-void setButtonText( QWizard::WizardButton which, const QString & text )
+void setButtonText( QWizard::WizardButton which, const QString &text )
 */
 HB_FUNC_STATIC(QWIZARDPAGE_SETBUTTONTEXT)
 {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_PIXMAP)
 }
 
 /*
-void setPixmap( QWizard::WizardPixmap which, const QPixmap & pixmap )
+void setPixmap( QWizard::WizardPixmap which, const QPixmap &pixmap )
 */
 HB_FUNC_STATIC(QWIZARDPAGE_SETPIXMAP)
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SUBTITLE)
 }
 
 /*
-void setSubTitle( const QString & subTitle )
+void setSubTitle( const QString &subTitle )
 */
 HB_FUNC_STATIC(QWIZARDPAGE_SETSUBTITLE)
 {
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_TITLE)
 }
 
 /*
-void setTitle( const QString & title )
+void setTitle( const QString &title )
 */
 HB_FUNC_STATIC(QWIZARDPAGE_SETTITLE)
 {

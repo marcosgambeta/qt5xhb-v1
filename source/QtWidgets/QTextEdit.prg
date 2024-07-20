@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QTEXTEDIT_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QTextEdit( const QString & text, QWidget * parent = 0 )
+    QTextEdit( const QString &text, QWidget * parent = 0 )
     */
     QTextEdit *obj = new QTextEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ALIGNMENT)
 }
 
 /*
-QString anchorAt( const QPoint & pos ) const
+QString anchorAt( const QPoint &pos ) const
 */
 HB_FUNC_STATIC(QTEXTEDIT_ANCHORAT)
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QMenu * createStandardContextMenu( const QPoint & position )
+    QMenu * createStandardContextMenu( const QPoint &position )
     */
     QTextEdit *obj = (QTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURRENTFONT)
 }
 
 /*
-QTextCursor cursorForPosition( const QPoint & pos ) const
+QTextCursor cursorForPosition( const QPoint &pos ) const
 */
 HB_FUNC_STATIC(QTEXTEDIT_CURSORFORPOSITION)
 {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
   if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
-    QRect cursorRect( const QTextCursor & cursor ) const
+    QRect cursorRect( const QTextCursor &cursor ) const
     */
     QTextEdit *obj = (QTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -551,7 +551,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ENSURECURSORVISIBLE)
 }
 
 /*
-bool find( const QString & exp, QTextDocument::FindFlags options = 0 )
+bool find( const QString &exp, QTextDocument::FindFlags options = 0 )
 */
 HB_FUNC_STATIC(QTEXTEDIT_FIND)
 {
@@ -791,7 +791,7 @@ HB_FUNC_STATIC(QTEXTEDIT_LINEWRAPMODE)
 }
 
 /*
-virtual QVariant loadResource( int type, const QUrl & name )
+virtual QVariant loadResource( int type, const QUrl &name )
 */
 HB_FUNC_STATIC(QTEXTEDIT_LOADRESOURCE)
 {
@@ -816,7 +816,7 @@ HB_FUNC_STATIC(QTEXTEDIT_LOADRESOURCE)
 }
 
 /*
-void mergeCurrentCharFormat( const QTextCharFormat & modifier )
+void mergeCurrentCharFormat( const QTextCharFormat &modifier )
 */
 HB_FUNC_STATIC(QTEXTEDIT_MERGECURRENTCHARFORMAT)
 {
@@ -972,7 +972,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETAUTOFORMATTING)
 }
 
 /*
-void setCurrentCharFormat( const QTextCharFormat & format )
+void setCurrentCharFormat( const QTextCharFormat &format )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SETCURRENTCHARFORMAT)
 {
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENT)
 }
 
 /*
-void setDocumentTitle( const QString & title )
+void setDocumentTitle( const QString &title )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENTTITLE)
 {
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTABSTOPWIDTH)
 }
 
 /*
-void setTextCursor( const QTextCursor & cursor )
+void setTextCursor( const QTextCursor &cursor )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SETTEXTCURSOR)
 {
@@ -1555,7 +1555,7 @@ HB_FUNC_STATIC(QTEXTEDIT_WORDWRAPMODE)
 }
 
 /*
-void append( const QString & text )
+void append( const QString &text )
 */
 HB_FUNC_STATIC(QTEXTEDIT_APPEND)
 {
@@ -1659,7 +1659,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CUT)
 }
 
 /*
-void insertHtml( const QString & text )
+void insertHtml( const QString &text )
 */
 HB_FUNC_STATIC(QTEXTEDIT_INSERTHTML)
 {
@@ -1685,7 +1685,7 @@ HB_FUNC_STATIC(QTEXTEDIT_INSERTHTML)
 }
 
 /*
-void insertPlainText( const QString & text )
+void insertPlainText( const QString &text )
 */
 HB_FUNC_STATIC(QTEXTEDIT_INSERTPLAINTEXT)
 {
@@ -1763,7 +1763,7 @@ HB_FUNC_STATIC(QTEXTEDIT_REDO)
 }
 
 /*
-void scrollToAnchor( const QString & name )
+void scrollToAnchor( const QString &name )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SCROLLTOANCHOR)
 {
@@ -1841,7 +1841,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETALIGNMENT)
 }
 
 /*
-void setCurrentFont( const QFont & f )
+void setCurrentFont( const QFont &f )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SETCURRENTFONT)
 {
@@ -1867,7 +1867,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETCURRENTFONT)
 }
 
 /*
-void setFontFamily( const QString & fontFamily )
+void setFontFamily( const QString &fontFamily )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SETFONTFAMILY)
 {
@@ -1997,7 +1997,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTWEIGHT)
 }
 
 /*
-void setHtml( const QString & text )
+void setHtml( const QString &text )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SETHTML)
 {
@@ -2023,7 +2023,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETHTML)
 }
 
 /*
-void setPlainText( const QString & text )
+void setPlainText( const QString &text )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SETPLAINTEXT)
 {
@@ -2049,7 +2049,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETPLAINTEXT)
 }
 
 /*
-void setText( const QString & text )
+void setText( const QString &text )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SETTEXT)
 {
@@ -2075,7 +2075,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXT)
 }
 
 /*
-void setTextBackgroundColor( const QColor & c )
+void setTextBackgroundColor( const QColor &c )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SETTEXTBACKGROUNDCOLOR)
 {
@@ -2101,7 +2101,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXTBACKGROUNDCOLOR)
 }
 
 /*
-void setTextColor( const QColor & c )
+void setTextColor( const QColor &c )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SETTEXTCOLOR)
 {

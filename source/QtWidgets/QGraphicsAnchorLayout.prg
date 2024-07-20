@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_REMOVEAT)
 }
 
 /*
-virtual void setGeometry( const QRectF & geom )
+virtual void setGeometry( const QRectF &geom )
 */
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETGEOMETRY)
 {

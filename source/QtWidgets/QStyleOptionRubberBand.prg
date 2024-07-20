@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONRUBBERBAND(1))
   {
     /*
-    QStyleOptionRubberBand( const QStyleOptionRubberBand & other )
+    QStyleOptionRubberBand( const QStyleOptionRubberBand &other )
     */
     QStyleOptionRubberBand *obj = new QStyleOptionRubberBand(*PQSTYLEOPTIONRUBBERBAND(1));
     Qt5xHb::returnNewObject(obj, true);

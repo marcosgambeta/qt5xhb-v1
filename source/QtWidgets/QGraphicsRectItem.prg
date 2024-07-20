@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QGRAPHICSRECTITEM_NEW)
   if (ISBETWEEN(1, 2) && ISQRECTF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsRectItem( const QRectF & rect, QGraphicsItem * parent = 0 )
+    QGraphicsRectItem( const QRectF &rect, QGraphicsItem * parent = 0 )
     */
     QGraphicsRectItem *obj =
         new QGraphicsRectItem(*PQRECTF(1), HB_ISNIL(2) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(2));
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QGRAPHICSRECTITEM_SETRECT)
   if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void setRect( const QRectF & rect )
+    void setRect( const QRectF &rect )
     */
     QGraphicsRectItem *obj = (QGraphicsRectItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QGRAPHICSRECTITEM_BOUNDINGRECT)
 }
 
 /*
-virtual bool contains( const QPointF & point ) const
+virtual bool contains( const QPointF &point ) const
 */
 HB_FUNC_STATIC(QGRAPHICSRECTITEM_CONTAINS)
 {

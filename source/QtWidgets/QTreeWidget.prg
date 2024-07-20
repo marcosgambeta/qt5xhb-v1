@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ITEMAT)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QTreeWidgetItem * itemAt( const QPoint & p ) const
+    QTreeWidgetItem * itemAt( const QPoint &p ) const
     */
     QTreeWidget *obj = (QTreeWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -723,7 +723,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETHEADERITEM)
 }
 
 /*
-void setHeaderLabel( const QString & label )
+void setHeaderLabel( const QString &label )
 */
 HB_FUNC_STATIC(QTREEWIDGET_SETHEADERLABEL)
 {
@@ -749,7 +749,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETHEADERLABEL)
 }
 
 /*
-void setHeaderLabels( const QStringList & labels )
+void setHeaderLabels( const QStringList &labels )
 */
 HB_FUNC_STATIC(QTREEWIDGET_SETHEADERLABELS)
 {

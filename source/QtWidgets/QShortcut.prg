@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
            (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    QShortcut( const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0,
+    QShortcut( const QKeySequence &key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0,
     Qt::ShortcutContext context = Qt::WindowShortcut )
     */
     QShortcut *obj =
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETENABLED)
 }
 
 /*
-void setKey( const QKeySequence & key )
+void setKey( const QKeySequence &key )
 */
 HB_FUNC_STATIC(QSHORTCUT_SETKEY)
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETKEY)
 }
 
 /*
-void setWhatsThis( const QString & text )
+void setWhatsThis( const QString &text )
 */
 HB_FUNC_STATIC(QSHORTCUT_SETWHATSTHIS)
 {

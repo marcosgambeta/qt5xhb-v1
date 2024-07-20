@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QWHATSTHIS_LEAVEWHATSTHISMODE)
 }
 
 /*
-static void showText( const QPoint & pos, const QString & text, QWidget * w = 0 )
+static void showText( const QPoint &pos, const QString &text, QWidget * w = 0 )
 */
 HB_FUNC_STATIC(QWHATSTHIS_SHOWTEXT)
 {

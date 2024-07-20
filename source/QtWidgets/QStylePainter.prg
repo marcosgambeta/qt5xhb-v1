@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_BEGIN)
 }
 
 /*
-void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption & opt )
+void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption &opt )
 */
 HB_FUNC_STATIC(QSTYLEPAINTER_DRAWPRIMITIVE)
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWPRIMITIVE)
 }
 
 /*
-void drawControl( QStyle::ControlElement ce, const QStyleOption & opt )
+void drawControl( QStyle::ControlElement ce, const QStyleOption &opt )
 */
 HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCONTROL)
 {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCONTROL)
 }
 
 /*
-void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex & opt )
+void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex &opt )
 */
 HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCOMPLEXCONTROL)
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCOMPLEXCONTROL)
 }
 
 /*
-void drawItemText( const QRect & r, int flags, const QPalette & pal, bool enabled, const QString & text,
+void drawItemText( const QRect &r, int flags, const QPalette &pal, bool enabled, const QString &text,
 QPalette::ColorRole textRole = QPalette::NoRole )
 */
 HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMTEXT)
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMTEXT)
 }
 
 /*
-void drawItemPixmap( const QRect & r, int flags, const QPixmap & pixmap )
+void drawItemPixmap( const QRect &r, int flags, const QPixmap &pixmap )
 */
 HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMPIXMAP)
 {

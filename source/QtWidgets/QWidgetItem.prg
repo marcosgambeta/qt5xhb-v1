@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QWIDGETITEM_MINIMUMSIZE)
 }
 
 /*
-virtual void setGeometry( const QRect & rect )
+virtual void setGeometry( const QRect &rect )
 */
 HB_FUNC_STATIC(QWIDGETITEM_SETGEOMETRY)
 {

@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_CANCELBUTTONTEXT)
 }
 
 /*
-void setCancelButtonText( const QString & text )
+void setCancelButtonText( const QString &text )
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETCANCELBUTTONTEXT)
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_COMBOBOXITEMS)
 }
 
 /*
-void setComboBoxItems( const QStringList & items )
+void setComboBoxItems( const QStringList &items )
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXITEMS)
 {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_LABELTEXT)
 }
 
 /*
-void setLabelText( const QString & text )
+void setLabelText( const QString &text )
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETLABELTEXT)
 {
@@ -814,7 +814,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OKBUTTONTEXT)
 }
 
 /*
-void setOkButtonText( const QString & text )
+void setOkButtonText( const QString &text )
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETOKBUTTONTEXT)
 {
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TEXTVALUE)
 }
 
 /*
-void setTextValue( const QString & text )
+void setTextValue( const QString &text )
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTVALUE)
 {
@@ -1220,7 +1220,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SIZEHINT)
 }
 
 /*
-static double getDouble( QWidget * parent, const QString & title, const QString & label, double value = 0, double
+static double getDouble( QWidget * parent, const QString &title, const QString &label, double value = 0, double
 minValue = -2147483647, double maxValue = 2147483647, int decimals = 1, bool * ok = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
@@ -1246,7 +1246,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
 }
 
 /*
-static int getInt( QWidget * parent, const QString & title, const QString & label, int value = 0, int minValue =
+static int getInt( QWidget * parent, const QString &title, const QString &label, int value = 0, int minValue =
 -2147483647, int maxValue = 2147483647, int step = 1, bool * ok = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
@@ -1272,7 +1272,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
 }
 
 /*
-static QString getItem( QWidget * parent, const QString & title, const QString & label, const QStringList & items, int
+static QString getItem( QWidget * parent, const QString &title, const QString &label, const QStringList &items, int
 current = 0, bool editable = true, bool * ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints =
 Qt::ImhNone )
 */
@@ -1300,8 +1300,8 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETITEM)
 }
 
 /*
-static QString getText( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode echo =
-QLineEdit::Normal, const QString & text = QString(), bool * ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints
+static QString getText( QWidget * parent, const QString &title, const QString &label, QLineEdit::EchoMode echo =
+QLineEdit::Normal, const QString &text = QString(), bool * ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints
 inputMethodHints = Qt::ImhNone )
 */
 HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
 }
 
 /*
-static QString getMultiLineText( QWidget * parent, const QString & title, const QString & label, const QString & text =
+static QString getMultiLineText( QWidget * parent, const QString &title, const QString &label, const QString &text =
 QString(), bool * ok = 0, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone )
 */
 HB_FUNC_STATIC(QINPUTDIALOG_GETMULTILINETEXT)

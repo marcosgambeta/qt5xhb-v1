@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH)
 }
 
 /*
-void ensureBlockLayout( const QTextBlock & block ) const
+void ensureBlockLayout( const QTextBlock &block ) const
 */
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT)
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH)
 }
 
 /*
-virtual QRectF blockBoundingRect( const QTextBlock & block ) const
+virtual QRectF blockBoundingRect( const QTextBlock &block ) const
 */
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {

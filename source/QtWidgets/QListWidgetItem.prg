@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQLISTWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QListWidgetItem( const QString & text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
+    QListWidgetItem( const QString &text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
     */
     QListWidgetItem *obj = new QListWidgetItem(PQSTRING(1), OPQLISTWIDGET(2, 0), OPINT(3, QListWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QListWidgetItem( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type =
+    QListWidgetItem( const QIcon &icon, const QString &text, QListWidget * parent = 0, int type =
     QListWidgetItem::Type )
     */
     QListWidgetItem *obj = new QListWidgetItem(HB_ISOBJECT(1) ? *(QIcon *)Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)),
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
   else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
   {
     /*
-    QListWidgetItem( const QListWidgetItem & other )
+    QListWidgetItem( const QListWidgetItem &other )
     */
     QListWidgetItem *obj = new QListWidgetItem(*PQLISTWIDGETITEM(1));
     Qt5xHb::returnNewObject(obj, false);
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_BACKGROUND)
 }
 
 /*
-void setBackground( const QBrush & brush )
+void setBackground( const QBrush &brush )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETBACKGROUND)
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_DATA)
 }
 
 /*
-virtual void setData( int role, const QVariant & value )
+virtual void setData( int role, const QVariant &value )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETDATA)
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_FONT)
 }
 
 /*
-void setFont( const QFont & font )
+void setFont( const QFont &font )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETFONT)
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_FOREGROUND)
 }
 
 /*
-void setForeground( const QBrush & brush )
+void setForeground( const QBrush &brush )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETFOREGROUND)
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_ICON)
 }
 
 /*
-void setIcon( const QIcon & icon )
+void setIcon( const QIcon &icon )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETICON)
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_LISTWIDGET)
 }
 
 /*
-virtual void read( QDataStream & in )
+virtual void read( QDataStream &in )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_READ)
 {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SIZEHINT)
 }
 
 /*
-void setSizeHint( const QSize & size )
+void setSizeHint( const QSize &size )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETSIZEHINT)
 {
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_STATUSTIP)
 }
 
 /*
-void setStatusTip( const QString & statusTip )
+void setStatusTip( const QString &statusTip )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETSTATUSTIP)
 {
@@ -817,7 +817,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_TEXT)
 }
 
 /*
-void setText( const QString & text )
+void setText( const QString &text )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXT)
 {
@@ -917,7 +917,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_TOOLTIP)
 }
 
 /*
-void setToolTip( const QString & toolTip )
+void setToolTip( const QString &toolTip )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETTOOLTIP)
 {
@@ -991,7 +991,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_WHATSTHIS)
 }
 
 /*
-void setWhatsThis( const QString & whatsThis )
+void setWhatsThis( const QString &whatsThis )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETWHATSTHIS)
 {
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETWHATSTHIS)
 }
 
 /*
-virtual void write( QDataStream & out ) const
+virtual void write( QDataStream &out ) const
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_WRITE)
 {
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_BACKGROUNDCOLOR)
 }
 
 /*
-virtual void setBackgroundColor( const QColor & color )
+virtual void setBackgroundColor( const QColor &color )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETBACKGROUNDCOLOR)
 {
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_TEXTCOLOR)
 }
 
 /*
-void setTextColor( const QColor & color )
+void setTextColor( const QColor &color )
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXTCOLOR)
 {

@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONTITLEBAR(1))
   {
     /*
-    QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
+    QStyleOptionTitleBar( const QStyleOptionTitleBar &other )
     */
     QStyleOptionTitleBar *obj = new QStyleOptionTitleBar(*PQSTYLEOPTIONTITLEBAR(1));
     Qt5xHb::returnNewObject(obj, true);

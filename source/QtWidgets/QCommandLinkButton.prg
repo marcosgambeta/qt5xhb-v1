@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QCommandLinkButton( const QString & text, QWidget * parent = 0 )
+    QCommandLinkButton( const QString &text, QWidget * parent = 0 )
     */
     QCommandLinkButton *obj = new QCommandLinkButton(PQSTRING(1), OPQWIDGET(2, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_NEW)
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
     /*
-    QCommandLinkButton( const QString & text, const QString & description, QWidget * parent = 0 )
+    QCommandLinkButton( const QString &text, const QString &description, QWidget * parent = 0 )
     */
     QCommandLinkButton *obj = new QCommandLinkButton(PQSTRING(1), PQSTRING(2), OPQWIDGET(3, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_DESCRIPTION)
 }
 
 /*
-void setDescription( const QString & description )
+void setDescription( const QString &description )
 */
 HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETDESCRIPTION)
 {

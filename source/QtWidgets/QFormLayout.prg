@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQWIDGET(2))
   {
     /*
-    void addRow( const QString & labelText, QWidget * field )
+    void addRow( const QString &labelText, QWidget * field )
     */
     QFormLayout *obj = (QFormLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQLAYOUT(2))
   {
     /*
-    void addRow( const QString & labelText, QLayout * field )
+    void addRow( const QString &labelText, QLayout * field )
     */
     QFormLayout *obj = (QFormLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQWIDGET(3))
   {
     /*
-    void insertRow( int row, const QString & labelText, QWidget * field )
+    void insertRow( int row, const QString &labelText, QWidget * field )
     */
     QFormLayout *obj = (QFormLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQLAYOUT(3))
   {
     /*
-    void insertRow( int row, const QString & labelText, QLayout * field )
+    void insertRow( int row, const QString &labelText, QLayout * field )
     */
     QFormLayout *obj = (QFormLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -995,7 +995,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_MINIMUMSIZE)
 }
 
 /*
-virtual void setGeometry( const QRect & rect )
+virtual void setGeometry( const QRect &rect )
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETGEOMETRY)
 {

@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QWIZARD_BUTTONTEXT)
 }
 
 /*
-void setButtonText( QWizard::WizardButton which, const QString & text )
+void setButtonText( QWizard::WizardButton which, const QString &text )
 */
 HB_FUNC_STATIC(QWIZARD_SETBUTTONTEXT)
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QWIZARD_CURRENTPAGE)
 }
 
 /*
-QVariant field( const QString & name ) const
+QVariant field( const QString &name ) const
 */
 HB_FUNC_STATIC(QWIZARD_FIELD)
 {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC(QWIZARD_REMOVEPAGE)
 }
 
 /*
-void setButtonLayout( const QList<QWizard::WizardButton> & layout )
+void setButtonLayout( const QList<QWizard::WizardButton> &layout )
 */
 HB_FUNC_STATIC(QWIZARD_SETBUTTONLAYOUT)
 {
@@ -595,7 +595,7 @@ HB_FUNC_STATIC(QWIZARD_SETDEFAULTPROPERTY)
 }
 
 /*
-void setField( const QString & name, const QVariant & value )
+void setField( const QString &name, const QVariant &value )
 */
 HB_FUNC_STATIC(QWIZARD_SETFIELD)
 {
@@ -673,7 +673,7 @@ HB_FUNC_STATIC(QWIZARD_SETPAGE)
 }
 
 /*
-void setPixmap( QWizard::WizardPixmap which, const QPixmap & pixmap )
+void setPixmap( QWizard::WizardPixmap which, const QPixmap &pixmap )
 */
 HB_FUNC_STATIC(QWIZARD_SETPIXMAP)
 {

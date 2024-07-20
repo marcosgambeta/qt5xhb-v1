@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SCALEFACTOR)
 }
 
 /*
-void setCenterPoint( const QPointF & value )
+void setCenterPoint( const QPointF &value )
 */
 HB_FUNC_STATIC(QPINCHGESTURE_SETCENTERPOINT)
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETCHANGEFLAGS)
 }
 
 /*
-void setLastCenterPoint( const QPointF & value )
+void setLastCenterPoint( const QPointF &value )
 */
 HB_FUNC_STATIC(QPINCHGESTURE_SETLASTCENTERPOINT)
 {
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QPINCHGESTURE_SETSCALEFACTOR)
 }
 
 /*
-void setStartCenterPoint( const QPointF & value )
+void setStartCenterPoint( const QPointF &value )
 */
 HB_FUNC_STATIC(QPINCHGESTURE_SETSTARTCENTERPOINT)
 {

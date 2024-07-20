@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONBUTTON(1))
   {
     /*
-    QStyleOptionButton( const QStyleOptionButton & other )
+    QStyleOptionButton( const QStyleOptionButton &other )
     */
     QStyleOptionButton *obj = new QStyleOptionButton(*PQSTYLEOPTIONBUTTON(1));
     Qt5xHb::returnNewObject(obj, true);

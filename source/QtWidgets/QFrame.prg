@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QFRAME_MIDLINEWIDTH)
 }
 
 /*
-void setFrameRect( const QRect & )
+void setFrameRect( const QRect &)
 */
 HB_FUNC_STATIC(QFRAME_SETFRAMERECT)
 {

@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QCOMPLETER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QCompleter( const QStringList & list, QObject * parent = 0 )
+    QCompleter( const QStringList &list, QObject * parent = 0 )
     */
 #ifndef QT_NO_STRINGLISTMODEL
     QCompleter *obj = new QCompleter(PQSTRINGLIST(1), OPQOBJECT(2, 0));
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QCOMPLETER_MODELSORTING)
 }
 
 /*
-virtual QString pathFromIndex( const QModelIndex & index ) const
+virtual QString pathFromIndex( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QCOMPLETER_PATHFROMINDEX)
 {
@@ -773,7 +773,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETWIDGET)
 }
 
 /*
-virtual QStringList splitPath( const QString & path ) const
+virtual QStringList splitPath( const QString &path ) const
 */
 HB_FUNC_STATIC(QCOMPLETER_SPLITPATH)
 {
@@ -846,7 +846,7 @@ HB_FUNC_STATIC(QCOMPLETER_WRAPAROUND)
 }
 
 /*
-void complete( const QRect & rect = QRect() )
+void complete( const QRect &rect = QRect() )
 */
 HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 {
@@ -872,7 +872,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 }
 
 /*
-void setCompletionPrefix( const QString & prefix )
+void setCompletionPrefix( const QString &prefix )
 */
 HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONPREFIX)
 {
