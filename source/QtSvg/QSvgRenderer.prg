@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QSVGRENDERER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QSvgRenderer( const QString & filename, QObject * parent = 0 )
+    QSvgRenderer( const QString &filename, QObject * parent = 0 )
     */
     QSvgRenderer *obj = new QSvgRenderer(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QSVGRENDERER_NEW)
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QSvgRenderer( const QByteArray & contents, QObject * parent = 0 )
+    QSvgRenderer( const QByteArray &contents, QObject * parent = 0 )
     */
     QSvgRenderer *obj = new QSvgRenderer(*PQBYTEARRAY(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ANIMATED)
 }
 
 /*
-QRectF boundsOnElement( const QString & id ) const
+QRectF boundsOnElement( const QString &id ) const
 */
 HB_FUNC_STATIC(QSVGRENDERER_BOUNDSONELEMENT)
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QSVGRENDERER_DEFAULTSIZE)
 }
 
 /*
-bool elementExists( const QString & id ) const
+bool elementExists( const QString &id ) const
 */
 HB_FUNC_STATIC(QSVGRENDERER_ELEMENTEXISTS)
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ISVALID)
 }
 
 /*
-QMatrix matrixForElement( const QString & id ) const
+QMatrix matrixForElement( const QString &id ) const
 */
 HB_FUNC_STATIC(QSVGRENDERER_MATRIXFORELEMENT)
 {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void setViewBox( const QRect & viewbox )
+    void setViewBox( const QRect &viewbox )
     */
     QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void setViewBox( const QRectF & viewbox )
+    void setViewBox( const QRectF &viewbox )
     */
     QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool load( const QString & filename )
+    bool load( const QString &filename )
     */
     QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -425,7 +425,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    bool load( const QByteArray & contents )
+    bool load( const QByteArray &contents )
     */
     QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
   else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQRECTF(2))
   {
     /*
-    void render( QPainter * painter, const QRectF & bounds )
+    void render( QPainter * painter, const QRectF &bounds )
     */
     QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
   else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && (ISQRECTF(3) || HB_ISNIL(3)))
   {
     /*
-    void render( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
+    void render( QPainter * painter, const QString &elementId, const QRectF &bounds = QRectF() )
     */
     QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsSvgItem( const QString & fileName, QGraphicsItem * parent = 0 )
+    QGraphicsSvgItem( const QString &fileName, QGraphicsItem * parent = 0 )
     */
     QGraphicsSvgItem *obj = new QGraphicsSvgItem(PQSTRING(1), HB_ISNIL(2) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_RENDERER)
 }
 
 /*
-void setElementId( const QString & id )
+void setElementId( const QString &id )
 */
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETELEMENTID)
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETELEMENTID)
 }
 
 /*
-void setMaximumCacheSize( const QSize & size )
+void setMaximumCacheSize( const QSize &size )
 */
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE)
 {
