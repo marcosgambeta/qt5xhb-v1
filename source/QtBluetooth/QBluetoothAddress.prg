@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QBLUETOOTHADDRESS_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QBluetoothAddress( const QString & address )
+    QBluetoothAddress( const QString &address )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothAddress *obj = new QBluetoothAddress(PQSTRING(1));
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QBLUETOOTHADDRESS_NEW)
   else if (ISNUMPAR(1) && ISQBLUETOOTHADDRESS(1))
   {
     /*
-    QBluetoothAddress( const QBluetoothAddress & other )
+    QBluetoothAddress( const QBluetoothAddress &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothAddress *obj = new QBluetoothAddress(*PQBLUETOOTHADDRESS(1));

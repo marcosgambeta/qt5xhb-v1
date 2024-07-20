@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QBluetoothUuid( const QString & uuid )
+    QBluetoothUuid( const QString &uuid )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothUuid *obj = new QBluetoothUuid(PQSTRING(1));
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_NEW)
   else if (ISNUMPAR(1) && ISQBLUETOOTHUUID(1))
   {
     /*
-    QBluetoothUuid( const QBluetoothUuid & uuid )
+    QBluetoothUuid( const QBluetoothUuid &uuid )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothUuid *obj = new QBluetoothUuid(*PQBLUETOOTHUUID(1));
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_NEW)
   else if (ISNUMPAR(1) && ISQUUID(1))
   {
     /*
-    QBluetoothUuid( const QUuid & uuid )
+    QBluetoothUuid( const QUuid &uuid )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothUuid *obj = new QBluetoothUuid(*PQUUID(1));

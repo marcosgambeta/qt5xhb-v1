@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_NEW)
   else if (ISBETWEEN(1, 2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QBluetoothServiceDiscoveryAgent( const QBluetoothAddress & deviceAdapter, QObject * parent = 0 )
+    QBluetoothServiceDiscoveryAgent( const QBluetoothAddress &deviceAdapter, QObject * parent = 0 )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothServiceDiscoveryAgent *obj = new QBluetoothServiceDiscoveryAgent(*PQBLUETOOTHADDRESS(1), OPQOBJECT(2, 0));
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_SETUUIDFILTER)
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void setUuidFilter( const QList<QBluetoothUuid> & uuids )
+    void setUuidFilter( const QList<QBluetoothUuid> &uuids )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothServiceDiscoveryAgent *obj = (QBluetoothServiceDiscoveryAgent *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_SETUUIDFILTER)
   else if (ISNUMPAR(1) && ISQBLUETOOTHUUID(1))
   {
     /*
-    void setUuidFilter( const QBluetoothUuid & uuid )
+    void setUuidFilter( const QBluetoothUuid &uuid )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothServiceDiscoveryAgent *obj = (QBluetoothServiceDiscoveryAgent *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_UUIDFILTER)
 }
 
 /*
-bool setRemoteAddress( const QBluetoothAddress & address )
+bool setRemoteAddress( const QBluetoothAddress &address )
 */
 HB_FUNC_STATIC(QBLUETOOTHSERVICEDISCOVERYAGENT_SETREMOTEADDRESS)
 {

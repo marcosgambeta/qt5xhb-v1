@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREQUEST_NEW)
   if (ISBETWEEN(0, 1) && (ISQBLUETOOTHADDRESS(1) || HB_ISNIL(1)))
   {
     /*
-    QBluetoothTransferRequest( const QBluetoothAddress & address = QBluetoothAddress() )
+    QBluetoothTransferRequest( const QBluetoothAddress &address = QBluetoothAddress() )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothTransferRequest *obj =
@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREQUEST_NEW)
   else if (ISNUMPAR(1) && ISQBLUETOOTHTRANSFERREQUEST(1))
   {
     /*
-    QBluetoothTransferRequest( const QBluetoothTransferRequest & other )
+    QBluetoothTransferRequest( const QBluetoothTransferRequest &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothTransferRequest *obj = new QBluetoothTransferRequest(*PQBLUETOOTHTRANSFERREQUEST(1));
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREQUEST_DELETE)
 }
 
 /*
-QVariant attribute( QBluetoothTransferRequest::Attribute code, const QVariant & defaultValue = QVariant() ) const
+QVariant attribute( QBluetoothTransferRequest::Attribute code, const QVariant &defaultValue = QVariant() ) const
 */
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREQUEST_ATTRIBUTE)
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREQUEST_ATTRIBUTE)
 }
 
 /*
-void setAttribute( QBluetoothTransferRequest::Attribute code, const QVariant & value )
+void setAttribute( QBluetoothTransferRequest::Attribute code, const QVariant &value )
 */
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREQUEST_SETATTRIBUTE)
 {

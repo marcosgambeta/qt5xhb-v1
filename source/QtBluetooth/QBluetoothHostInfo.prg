@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_NEW)
   else if (ISNUMPAR(1) && ISQBLUETOOTHHOSTINFO(1))
   {
     /*
-    QBluetoothHostInfo( const QBluetoothHostInfo & other )
+    QBluetoothHostInfo( const QBluetoothHostInfo &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothHostInfo *obj = new QBluetoothHostInfo(*PQBLUETOOTHHOSTINFO(1));
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_ADDRESS)
 }
 
 /*
-void setAddress( const QBluetoothAddress & address )
+void setAddress( const QBluetoothAddress &address )
 */
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_SETADDRESS)
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_NAME)
 }
 
 /*
-void setName( const QString & name )
+void setName( const QString &name )
 */
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_SETNAME)
 {

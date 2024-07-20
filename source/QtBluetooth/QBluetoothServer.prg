@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
   if (ISBETWEEN(0, 2) && (ISQBLUETOOTHADDRESS(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    bool listen( const QBluetoothAddress & address = QBluetoothAddress(), quint16 port = 0 )
+    bool listen( const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0 )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothServer *obj = (QBluetoothServer *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
   else if (ISBETWEEN(1, 2) && ISQBLUETOOTHUUID(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    QBluetoothServiceInfo listen( const QBluetoothUuid & uuid, const QString & serviceName = QString() )
+    QBluetoothServiceInfo listen( const QBluetoothUuid &uuid, const QString &serviceName = QString() )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothServer *obj = (QBluetoothServer *)Qt5xHb::itemGetPtrStackSelfItem();

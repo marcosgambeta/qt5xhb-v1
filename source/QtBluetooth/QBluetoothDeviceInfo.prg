@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_NEW)
   else if (ISNUMPAR(3) && ISQBLUETOOTHADDRESS(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     /*
-    QBluetoothDeviceInfo( const QBluetoothAddress & address, const QString & name, quint32 classOfDevice )
+    QBluetoothDeviceInfo( const QBluetoothAddress &address, const QString &name, quint32 classOfDevice )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothDeviceInfo *obj = new QBluetoothDeviceInfo(*PQBLUETOOTHADDRESS(1), PQSTRING(2), PQUINT32(3));
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_NEW)
   else if (ISNUMPAR(3) && ISQBLUETOOTHUUID(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     /*
-    QBluetoothDeviceInfo( const QBluetoothUuid & uuid, const QString & name, quint32 classOfDevice )
+    QBluetoothDeviceInfo( const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     QBluetoothDeviceInfo *obj = new QBluetoothDeviceInfo(*PQBLUETOOTHUUID(1), PQSTRING(2), PQUINT32(3));
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_NEW)
   else if (ISNUMPAR(1) && ISQBLUETOOTHDEVICEINFO(1))
   {
     /*
-    QBluetoothDeviceInfo( const QBluetoothDeviceInfo & other )
+    QBluetoothDeviceInfo( const QBluetoothDeviceInfo &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothDeviceInfo *obj = new QBluetoothDeviceInfo(*PQBLUETOOTHDEVICEINFO(1));
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETRSSI)
 }
 
 /*
-void setServiceUuids( const QList<QBluetoothUuid> & uuids, QBluetoothDeviceInfo::DataCompleteness completeness )
+void setServiceUuids( const QList<QBluetoothUuid> &uuids, QBluetoothDeviceInfo::DataCompleteness completeness )
 */
 HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS)
 {
@@ -560,7 +560,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_DEVICEUUID)
 }
 
 /*
-void setDeviceUuid( const QBluetoothUuid & uuid )
+void setDeviceUuid( const QBluetoothUuid &uuid )
 */
 HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETDEVICEUUID)
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_MANUFACTURERDATA)
 }
 
 /*
-bool setManufacturerData( quint16 manufacturerId, const QByteArray & data )
+bool setManufacturerData( quint16 manufacturerId, const QByteArray &data )
 */
 HB_FUNC_STATIC(QBLUETOOTHDEVICEINFO_SETMANUFACTURERDATA)
 {

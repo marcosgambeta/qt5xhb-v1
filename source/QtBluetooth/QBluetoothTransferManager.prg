@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_DELETE)
 }
 
 /*
-QBluetoothTransferReply * put( const QBluetoothTransferRequest & request, QIODevice * data )
+QBluetoothTransferReply * put( const QBluetoothTransferRequest &request, QIODevice * data )
 */
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_PUT)
 {

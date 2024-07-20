@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_NEW)
   else if (ISBETWEEN(1, 2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QBluetoothLocalDevice( const QBluetoothAddress & address, QObject * parent = 0 )
+    QBluetoothLocalDevice( const QBluetoothAddress &address, QObject * parent = 0 )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothLocalDevice *obj = new QBluetoothLocalDevice(*PQBLUETOOTHADDRESS(1), OPQOBJECT(2, 0));
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_ISVALID)
 }
 
 /*
-void requestPairing( const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing )
+void requestPairing( const QBluetoothAddress &address, QBluetoothLocalDevice::Pairing pairing )
 */
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_REQUESTPAIRING)
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_REQUESTPAIRING)
 }
 
 /*
-QBluetoothLocalDevice::Pairing pairingStatus( const QBluetoothAddress & address ) const
+QBluetoothLocalDevice::Pairing pairingStatus( const QBluetoothAddress &address ) const
 */
 HB_FUNC_STATIC(QBLUETOOTHLOCALDEVICE_PAIRINGSTATUS)
 {
