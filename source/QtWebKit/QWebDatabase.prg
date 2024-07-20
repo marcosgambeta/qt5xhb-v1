@@ -67,7 +67,7 @@ RETURN
 #include <QtWebKit/QWebSecurityOrigin>
 
     /*
-    QWebDatabase( const QWebDatabase & other )
+    QWebDatabase( const QWebDatabase &other )
     */
 HB_FUNC_STATIC(QWEBDATABASE_NEW)
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QWEBDATABASE_REMOVEALLDATABASES)
 }
 
 /*
-static void removeDatabase( const QWebDatabase & db )
+static void removeDatabase( const QWebDatabase &db )
 */
 HB_FUNC_STATIC(QWEBDATABASE_REMOVEDATABASE)
 {

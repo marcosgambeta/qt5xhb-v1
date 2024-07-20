@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEW)
   else if (ISNUMPAR(2) && ISQWEBELEMENT(1) && HB_ISCHAR(2))
   {
     /*
-    QWebElementCollection( const QWebElement & contextElement, const QString & query )
+    QWebElementCollection( const QWebElement &contextElement, const QString &query )
     */
     QWebElementCollection *obj = new QWebElementCollection(*PQWEBELEMENT(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEW)
   else if (ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1))
   {
     /*
-    QWebElementCollection( const QWebElementCollection & other )
+    QWebElementCollection( const QWebElementCollection &other )
     */
     QWebElementCollection *obj = new QWebElementCollection(*PQWEBELEMENTCOLLECTION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_DELETE)
 }
 
 /*
-void append( const QWebElementCollection & other )
+void append( const QWebElementCollection &other )
 */
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_APPEND)
 {

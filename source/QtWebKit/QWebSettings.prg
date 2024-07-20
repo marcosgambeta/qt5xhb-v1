@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETATTRIBUTE)
 }
 
 /*
-void setDefaultTextEncoding( const QString & encoding )
+void setDefaultTextEncoding( const QString &encoding )
 */
 HB_FUNC_STATIC(QWEBSETTINGS_SETDEFAULTTEXTENCODING)
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETDEFAULTTEXTENCODING)
 }
 
 /*
-void setFontFamily( QWebSettings::FontFamily which, const QString & family )
+void setFontFamily( QWebSettings::FontFamily which, const QString &family )
 */
 HB_FUNC_STATIC(QWEBSETTINGS_SETFONTFAMILY)
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTSIZE)
 }
 
 /*
-void setLocalStoragePath( const QString & path )
+void setLocalStoragePath( const QString &path )
 */
 HB_FUNC_STATIC(QWEBSETTINGS_SETLOCALSTORAGEPATH)
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETLOCALSTORAGEPATH)
 }
 
 /*
-void setUserStyleSheetUrl( const QUrl & location )
+void setUserStyleSheetUrl( const QUrl &location )
 */
 HB_FUNC_STATIC(QWEBSETTINGS_SETUSERSTYLESHEETURL)
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_CLEARMEMORYCACHES)
 }
 
 /*
-static void enablePersistentStorage( const QString & path = QString() )
+static void enablePersistentStorage( const QString &path = QString() )
 */
 HB_FUNC_STATIC(QWEBSETTINGS_ENABLEPERSISTENTSTORAGE)
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_ICONDATABASEPATH)
 }
 
 /*
-static QIcon iconForUrl( const QUrl & url )
+static QIcon iconForUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QWEBSETTINGS_ICONFORURL)
 {
@@ -690,7 +690,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA)
 }
 
 /*
-static void setIconDatabasePath( const QString & path )
+static void setIconDatabasePath( const QString &path )
 */
 HB_FUNC_STATIC(QWEBSETTINGS_SETICONDATABASEPATH)
 {
@@ -774,7 +774,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA)
 }
 
 /*
-static void setOfflineStoragePath( const QString & path )
+static void setOfflineStoragePath( const QString &path )
 */
 HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINESTORAGEPATH)
 {
@@ -795,7 +795,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINESTORAGEPATH)
 }
 
 /*
-static void setOfflineWebApplicationCachePath( const QString & path )
+static void setOfflineWebApplicationCachePath( const QString &path )
 */
 HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEPATH)
 {
@@ -837,7 +837,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA)
 }
 
 /*
-static void setWebGraphic( QWebSettings::WebGraphic type, const QPixmap & graphic )
+static void setWebGraphic( QWebSettings::WebGraphic type, const QPixmap &graphic )
 */
 HB_FUNC_STATIC(QWEBSETTINGS_SETWEBGRAPHIC)
 {

@@ -69,8 +69,8 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_DELETE)
 }
 
 /*
-virtual QObject * create( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const
-QStringList & argumentValues ) const = 0
+virtual QObject * create( const QString &mimeType, const QUrl &url, const QStringList &argumentNames, const
+QStringList &argumentValues ) const = 0
 */
 HB_FUNC_STATIC(QWEBPLUGINFACTORY_CREATE)
 {
