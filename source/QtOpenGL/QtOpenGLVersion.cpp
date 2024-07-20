@@ -22,7 +22,7 @@
 
 HB_FUNC(QTOPENGL_VERSION_STR)
 {
-  hb_retc((const char *)QTOPENGL_VERSION_STR);
+  hb_retc(static_cast<const char *>(QTOPENGL_VERSION_STR));
 }
 
 HB_FUNC(QTOPENGL_VERSION)

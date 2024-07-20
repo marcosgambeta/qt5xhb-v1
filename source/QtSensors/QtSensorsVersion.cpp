@@ -27,9 +27,9 @@
 HB_FUNC(QTSENSORS_VERSION_STR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  hb_retc((const char *)QTSENSORS_VERSION_STR);
+  hb_retc(static_cast<const char *>(QTSENSORS_VERSION_STR));
 #else
-  hb_retc((const char *)"");
+  hb_retc(static_cast<const char *>(""));
 #endif
 }
 

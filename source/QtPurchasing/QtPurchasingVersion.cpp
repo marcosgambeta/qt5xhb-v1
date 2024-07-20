@@ -22,7 +22,7 @@
 
 HB_FUNC(QTPURCHASING_VERSION_STR)
 {
-  hb_retc((const char *)QTPURCHASING_VERSION_STR);
+  hb_retc(static_cast<const char *>(QTPURCHASING_VERSION_STR));
 }
 
 HB_FUNC(QTPURCHASING_VERSION)

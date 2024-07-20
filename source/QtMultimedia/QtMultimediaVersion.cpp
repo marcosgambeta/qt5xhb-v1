@@ -22,7 +22,7 @@
 
 HB_FUNC(QTMULTIMEDIA_VERSION_STR)
 {
-  hb_retc((const char *)QTMULTIMEDIA_VERSION_STR);
+  hb_retc(static_cast<const char *>(QTMULTIMEDIA_VERSION_STR));
 }
 
 HB_FUNC(QTMULTIMEDIA_VERSION)

@@ -27,9 +27,9 @@
 HB_FUNC(QTWEBENGINECORE_VERSION_STR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-  hb_retc((const char *)QTWEBENGINECORE_VERSION_STR);
+  hb_retc(static_cast<const char *>(QTWEBENGINECORE_VERSION_STR));
 #else
-  hb_retc((const char *)"");
+  hb_retc(static_cast<const char *>(""));
 #endif
 }
 

@@ -22,7 +22,7 @@
 
 HB_FUNC(QTXML_VERSION_STR)
 {
-  hb_retc((const char *)QTXML_VERSION_STR);
+  hb_retc(static_cast<const char *>(QTXML_VERSION_STR));
 }
 
 HB_FUNC(QTXML_VERSION)

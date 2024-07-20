@@ -313,7 +313,7 @@ PHB_ITEM Signals::returnQObject(QObject *ptr, const char *classname)
 
   if (ptr)
   {
-    pDynSym = hb_dynsymFindName((const char *)ptr->metaObject()->className());
+    pDynSym = hb_dynsymFindName(static_cast<const char *>(ptr->metaObject()->className()));
   }
 
   if (!pDynSym)

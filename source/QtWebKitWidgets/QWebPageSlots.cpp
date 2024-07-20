@@ -66,7 +66,7 @@ void QWebPageSlots::databaseQuotaExceeded(QWebFrame *frame, QString databaseName
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBPAGE");
     PHB_ITEM pframe = Qt5xHb::Signals_return_qobject(frame, "QWEBFRAME");
-    PHB_ITEM pdatabaseName = hb_itemPutC(NULL, (const char *)databaseName.toLatin1().data());
+    PHB_ITEM pdatabaseName = hb_itemPutC(NULL, static_cast<const char *>(databaseName.toLatin1().data()));
 
     hb_vmEvalBlockV(cb, 3, psender, pframe, pdatabaseName);
 

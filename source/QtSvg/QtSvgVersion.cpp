@@ -22,7 +22,7 @@
 
 HB_FUNC(QTSVG_VERSION_STR)
 {
-  hb_retc((const char *)QTSVG_VERSION_STR);
+  hb_retc(static_cast<const char *>(QTSVG_VERSION_STR));
 }
 
 HB_FUNC(QTSVG_VERSION)

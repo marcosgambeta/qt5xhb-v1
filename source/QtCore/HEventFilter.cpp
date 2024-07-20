@@ -141,7 +141,7 @@ PHB_ITEM HEventFilter::returnQEvent(QEvent *event, const char *classname)
 
   PHB_DYNS pDynSym = NULL;
 
-  pDynSym = hb_dynsymFindName((const char *)eventname.toUpper().toLatin1().data());
+  pDynSym = hb_dynsymFindName(static_cast<const char *>(eventname.toUpper().toLatin1().data()));
 
   if (pDynSym == NULL)
   {
@@ -175,7 +175,7 @@ PHB_ITEM HEventFilter::returnQObject(QObject *object, const char *classname)
 
   if (object != NULL)
   {
-    pDynSym = hb_dynsymFindName((const char *)object->metaObject()->className());
+    pDynSym = hb_dynsymFindName(static_cast<const char *>(object->metaObject()->className()));
   }
 
   if (pDynSym == NULL)

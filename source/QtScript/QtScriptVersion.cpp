@@ -22,7 +22,7 @@
 
 HB_FUNC(QTSCRIPT_VERSION_STR)
 {
-  hb_retc((const char *)QTSCRIPT_VERSION_STR);
+  hb_retc(static_cast<const char *>(QTSCRIPT_VERSION_STR));
 }
 
 HB_FUNC(QTSCRIPT_VERSION)

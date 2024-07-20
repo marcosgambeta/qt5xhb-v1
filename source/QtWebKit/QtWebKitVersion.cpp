@@ -22,7 +22,7 @@
 
 HB_FUNC(QTWEBKIT_VERSION_STR)
 {
-  hb_retc((const char *)QTWEBKIT_VERSION_STR);
+  hb_retc(static_cast<const char *>(QTWEBKIT_VERSION_STR));
 }
 
 HB_FUNC(QTWEBKIT_VERSION)

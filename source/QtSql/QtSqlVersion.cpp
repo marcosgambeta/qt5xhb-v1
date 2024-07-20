@@ -22,7 +22,7 @@
 
 HB_FUNC(QTSQL_VERSION_STR)
 {
-  hb_retc((const char *)QTSQL_VERSION_STR);
+  hb_retc(static_cast<const char *>(QTSQL_VERSION_STR));
 }
 
 HB_FUNC(QTSQL_VERSION)

@@ -27,9 +27,9 @@
 HB_FUNC(QTVIRTUALKEYBOARD_VERSION_STR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  hb_retc((const char *)QTVIRTUALKEYBOARD_VERSION_STR);
+  hb_retc(static_cast<const char *>(QTVIRTUALKEYBOARD_VERSION_STR));
 #else
-  hb_retc((const char *)"");
+  hb_retc(static_cast<const char *>(""));
 #endif
 }
 
