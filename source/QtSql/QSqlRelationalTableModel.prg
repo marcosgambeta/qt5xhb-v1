@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
 }
 
 /*
-virtual void setRelation( int column, const QSqlRelation & relation )
+virtual void setRelation( int column, const QSqlRelation &relation )
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
 }
 
 /*
-QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
+QVariant data( const QModelIndex &index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
 }
 
 /*
-bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
+bool removeColumns( int column, int count, const QModelIndex &parent = QModelIndex() )
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SELECT)
 }
 
 /*
-bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
 {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
 }
 
 /*
-void setTable( const QString & table )
+void setTable( const QString &table )
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
 {

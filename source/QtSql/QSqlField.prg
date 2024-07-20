@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QSQLFIELD_NEW)
   if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QSqlField( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
+    QSqlField( const QString &fieldName = QString(), QVariant::Type type = QVariant::Invalid )
     */
     QSqlField *obj = new QSqlField(OPQSTRING(1, QString()),
                                    HB_ISNIL(2) ? (QVariant::Type)QVariant::Invalid : (QVariant::Type)hb_parni(2));
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSQLFIELD_NEW)
   else if (ISNUMPAR(1) && ISQSQLFIELD(1))
   {
     /*
-    QSqlField( const QSqlField & other )
+    QSqlField( const QSqlField &other )
     */
     QSqlField *obj = new QSqlField(*PQSQLFIELD(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QSQLFIELD_DEFAULTVALUE)
 }
 
 /*
-void setDefaultValue( const QVariant & value )
+void setDefaultValue( const QVariant &value )
 */
 HB_FUNC_STATIC(QSQLFIELD_SETDEFAULTVALUE)
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QSQLFIELD_NAME)
 }
 
 /*
-void setName( const QString & name )
+void setName( const QString &name )
 */
 HB_FUNC_STATIC(QSQLFIELD_SETNAME)
 {
@@ -700,7 +700,7 @@ HB_FUNC_STATIC(QSQLFIELD_VALUE)
 }
 
 /*
-void setValue( const QVariant & value )
+void setValue( const QVariant &value )
 */
 HB_FUNC_STATIC(QSQLFIELD_SETVALUE)
 {

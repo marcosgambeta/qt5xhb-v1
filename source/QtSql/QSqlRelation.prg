@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QSQLRELATION_NEW)
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
     /*
-    QSqlRelation( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
+    QSqlRelation( const QString &tableName, const QString &indexColumn, const QString &displayColumn )
     */
     QSqlRelation *obj = new QSqlRelation(PQSTRING(1), PQSTRING(2), PQSTRING(3));
     Qt5xHb::returnNewObject(obj, true);
