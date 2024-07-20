@@ -61,7 +61,7 @@ RETURN
 #endif
 
     /*
-    QSensorGesture( const QStringList & ids, QObject * parent = 0 )
+    QSensorGesture( const QStringList &ids, QObject * parent = 0 )
     */
 HB_FUNC_STATIC(QSENSORGESTURE_NEW)
 {

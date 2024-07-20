@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QSENSORBACKEND_ADDOUTPUTRANGE)
 }
 
 /*
-void setDescription( const QString & description )
+void setDescription( const QString &description )
 */
 HB_FUNC_STATIC(QSENSORBACKEND_SETDESCRIPTION)
 {

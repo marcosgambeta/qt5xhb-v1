@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_GESTUREIDS)
 }
 
 /*
-QStringList recognizerSignals( const QString & recognizerId ) const
+QStringList recognizerSignals( const QString &recognizerId ) const
 */
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS)
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS)
 }
 
 /*
-static QSensorGestureRecognizer * sensorGestureRecognizer( const QString & id )
+static QSensorGestureRecognizer * sensorGestureRecognizer( const QString &id )
 */
 HB_FUNC_STATIC(QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER)
 {
