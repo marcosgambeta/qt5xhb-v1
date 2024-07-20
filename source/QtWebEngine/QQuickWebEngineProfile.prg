@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_STORAGENAME)
 }
 
 /*
-void setStorageName( const QString & name )
+void setStorageName( const QString &name )
 */
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETSTORAGENAME)
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_PERSISTENTSTORAGEPATH)
 }
 
 /*
-void setPersistentStoragePath( const QString & path )
+void setPersistentStoragePath( const QString &path )
 */
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETPERSISTENTSTORAGEPATH)
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_CACHEPATH)
 }
 
 /*
-void setCachePath( const QString & path )
+void setCachePath( const QString &path )
 */
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETCACHEPATH)
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_HTTPUSERAGENT)
 }
 
 /*
-void setHttpUserAgent( const QString & userAgent )
+void setHttpUserAgent( const QString &userAgent )
 */
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETHTTPUSERAGENT)
 {
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_HTTPACCEPTLANGUAGE)
 }
 
 /*
-void setHttpAcceptLanguage( const QString & httpAcceptLanguage )
+void setHttpAcceptLanguage( const QString &httpAcceptLanguage )
 */
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETHTTPACCEPTLANGUAGE)
 {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SPELLCHECKLANGUAGES)
 }
 
 /*
-void setSpellCheckLanguages( const QStringList & languages )
+void setSpellCheckLanguages( const QStringList &languages )
 */
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETSPELLCHECKLANGUAGES)
 {
@@ -795,7 +795,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_SETREQUESTINTERCEPTOR)
 }
 
 /*
-const QWebEngineUrlSchemeHandler * urlSchemeHandler( const QByteArray & ) const
+const QWebEngineUrlSchemeHandler * urlSchemeHandler( const QByteArray &) const
 */
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER)
 {
@@ -822,7 +822,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER)
 }
 
 /*
-void installUrlSchemeHandler( const QByteArray & scheme, QWebEngineUrlSchemeHandler * )
+void installUrlSchemeHandler( const QByteArray &scheme, QWebEngineUrlSchemeHandler * )
 */
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_INSTALLURLSCHEMEHANDLER)
 {
@@ -850,7 +850,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_INSTALLURLSCHEMEHANDLER)
 }
 
 /*
-void removeUrlScheme( const QByteArray & scheme )
+void removeUrlScheme( const QByteArray &scheme )
 */
 HB_FUNC_STATIC(QQUICKWEBENGINEPROFILE_REMOVEURLSCHEME)
 {
