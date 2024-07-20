@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_CHANNELS)
 }
 
 /*
-void setChannels( const QStringList & channels )
+void setChannels( const QStringList &channels )
 */
 HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCHANNELS)
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_POINTS)
 }
 
 /*
-Q_INVOKABLE int addPoint( const QPointF & point )
+Q_INVOKABLE int addPoint( const QPointF &point )
 */
 HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ADDPOINT)
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ADDPOINT)
 }
 
 /*
-Q_INVOKABLE void setChannelData( const QString & channel, int index, const QVariant & data )
+Q_INVOKABLE void setChannelData( const QString &channel, int index, const QVariant &data )
 */
 HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCHANNELDATA)
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCHANNELDATA)
 }
 
 /*
-Q_INVOKABLE QVariantList channelData( const QString & channel, int pos = 0, int count = -1 ) const
+Q_INVOKABLE QVariantList channelData( const QString &channel, int pos = 0, int count = -1 ) const
 */
 HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_CHANNELDATA)
 {
