@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_REINDEXDOCUMENTATION)
 }
 
 /*
-void search( const QList<QHelpSearchQuery> & queryList )
+void search( const QList<QHelpSearchQuery> &queryList )
 */
 HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
 {

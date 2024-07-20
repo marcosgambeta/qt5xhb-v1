@@ -83,7 +83,7 @@ RETURN
 #include <QtCore/QStringList>
 
     /*
-    QHelpEngineCore( const QString & collectionFile, QObject * parent = 0 )
+    QHelpEngineCore( const QString &collectionFile, QObject * parent = 0 )
     */
 HB_FUNC_STATIC(QHELPENGINECORE_NEW)
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_DELETE)
 }
 
 /*
-bool addCustomFilter( const QString & filterName, const QStringList & attributes )
+bool addCustomFilter( const QString &filterName, const QStringList &attributes )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_ADDCUSTOMFILTER)
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_COLLECTIONFILE)
 }
 
 /*
-bool copyCollectionFile( const QString & fileName )
+bool copyCollectionFile( const QString &fileName )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_COPYCOLLECTIONFILE)
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMFILTERS)
 }
 
 /*
-QVariant customValue( const QString & key, const QVariant & defaultValue = QVariant() ) const
+QVariant customValue( const QString &key, const QVariant &defaultValue = QVariant() ) const
 */
 HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMVALUE)
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMVALUE)
 }
 
 /*
-QString documentationFileName( const QString & namespaceName )
+QString documentationFileName( const QString &namespaceName )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_DOCUMENTATIONFILENAME)
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_ERROR)
 }
 
 /*
-QByteArray fileData( const QUrl & url ) const
+QByteArray fileData( const QUrl &url ) const
 */
 HB_FUNC_STATIC(QHELPENGINECORE_FILEDATA)
 {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QStringList filterAttributes( const QString & filterName ) const
+    QStringList filterAttributes( const QString &filterName ) const
     */
     QHelpEngineCore *obj = (QHelpEngineCore *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
 }
 
 /*
-QUrl findFile( const QUrl & url ) const
+QUrl findFile( const QUrl &url ) const
 */
 HB_FUNC_STATIC(QHELPENGINECORE_FINDFILE)
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FINDFILE)
 }
 
 /*
-bool registerDocumentation( const QString & documentationFileName )
+bool registerDocumentation( const QString &documentationFileName )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_REGISTERDOCUMENTATION)
 {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REGISTEREDDOCUMENTATIONS)
 }
 
 /*
-bool removeCustomFilter( const QString & filterName )
+bool removeCustomFilter( const QString &filterName )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMFILTER)
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMFILTER)
 }
 
 /*
-bool removeCustomValue( const QString & key )
+bool removeCustomValue( const QString &key )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMVALUE)
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETAUTOSAVEFILTER)
 }
 
 /*
-void setCollectionFile( const QString & fileName )
+void setCollectionFile( const QString &fileName )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_SETCOLLECTIONFILE)
 {
@@ -565,7 +565,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCOLLECTIONFILE)
 }
 
 /*
-void setCurrentFilter( const QString & filterName )
+void setCurrentFilter( const QString &filterName )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_SETCURRENTFILTER)
 {
@@ -591,7 +591,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCURRENTFILTER)
 }
 
 /*
-bool setCustomValue( const QString & key, const QVariant & value )
+bool setCustomValue( const QString &key, const QVariant &value )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_SETCUSTOMVALUE)
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETUPDATA)
 }
 
 /*
-bool unregisterDocumentation( const QString & namespaceName )
+bool unregisterDocumentation( const QString &namespaceName )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_UNREGISTERDOCUMENTATION)
 {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_UNREGISTERDOCUMENTATION)
 }
 
 /*
-static QVariant metaData( const QString & documentationFileName, const QString & name )
+static QVariant metaData( const QString &documentationFileName, const QString &name )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_METADATA)
 {
@@ -683,7 +683,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_METADATA)
 }
 
 /*
-static QString namespaceName( const QString & documentationFileName )
+static QString namespaceName( const QString &documentationFileName )
 */
 HB_FUNC_STATIC(QHELPENGINECORE_NAMESPACENAME)
 {
