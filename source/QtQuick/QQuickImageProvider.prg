@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_IMAGETYPE)
 }
 
 /*
-virtual QImage requestImage( const QString & id, QSize * size, const QSize & requestedSize )
+virtual QImage requestImage( const QString &id, QSize * size, const QSize &requestedSize )
 */
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
 }
 
 /*
-virtual QPixmap requestPixmap( const QString & id, QSize * size, const QSize & requestedSize )
+virtual QPixmap requestPixmap( const QString &id, QSize * size, const QSize &requestedSize )
 */
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
 }
 
 /*
-virtual QQuickTextureFactory * requestTexture( const QString & id, QSize * size, const QSize & requestedSize )
+virtual QQuickTextureFactory * requestTexture( const QString &id, QSize * size, const QSize &requestedSize )
 */
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTTEXTURE)
 {

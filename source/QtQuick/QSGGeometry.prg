@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXDATAPATTERN)
 }
 
 /*
-static void updateRectGeometry( QSGGeometry * g, const QRectF & rect )
+static void updateRectGeometry( QSGGeometry * g, const QRectF &rect )
 */
 HB_FUNC_STATIC(QSGGEOMETRY_UPDATERECTGEOMETRY)
 {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_UPDATERECTGEOMETRY)
 }
 
 /*
-static void updateTexturedRectGeometry( QSGGeometry * g, const QRectF & rect, const QRectF & textureRect )
+static void updateTexturedRectGeometry( QSGGeometry * g, const QRectF &rect, const QRectF &textureRect )
 */
 HB_FUNC_STATIC(QSGGEOMETRY_UPDATETEXTUREDRECTGEOMETRY)
 {

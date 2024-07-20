@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QSGTEXTURE_BIND)
 }
 
 /*
-QRectF convertToNormalizedSourceRect( const QRectF & rect ) const
+QRectF convertToNormalizedSourceRect( const QRectF &rect ) const
 */
 HB_FUNC_STATIC(QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT)
 {

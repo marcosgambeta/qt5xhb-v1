@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QQUICKITEM_CLIP)
 }
 
 /*
-virtual bool contains( const QPointF & point ) const
+virtual bool contains( const QPointF &point ) const
 */
 HB_FUNC_STATIC(QQUICKITEM_CONTAINS)
 {
@@ -785,7 +785,7 @@ HB_FUNC_STATIC(QQUICKITEM_KEEPTOUCHGRAB)
 }
 
 /*
-QPointF mapFromItem( const QQuickItem * item, const QPointF & point ) const
+QPointF mapFromItem( const QQuickItem * item, const QPointF &point ) const
 */
 HB_FUNC_STATIC(QQUICKITEM_MAPFROMITEM)
 {
@@ -810,7 +810,7 @@ HB_FUNC_STATIC(QQUICKITEM_MAPFROMITEM)
 }
 
 /*
-QPointF mapFromScene( const QPointF & point ) const
+QPointF mapFromScene( const QPointF &point ) const
 */
 HB_FUNC_STATIC(QQUICKITEM_MAPFROMSCENE)
 {
@@ -835,7 +835,7 @@ HB_FUNC_STATIC(QQUICKITEM_MAPFROMSCENE)
 }
 
 /*
-QRectF mapRectFromItem( const QQuickItem * item, const QRectF & rect ) const
+QRectF mapRectFromItem( const QQuickItem * item, const QRectF &rect ) const
 */
 HB_FUNC_STATIC(QQUICKITEM_MAPRECTFROMITEM)
 {
@@ -860,7 +860,7 @@ HB_FUNC_STATIC(QQUICKITEM_MAPRECTFROMITEM)
 }
 
 /*
-QRectF mapRectFromScene( const QRectF & rect ) const
+QRectF mapRectFromScene( const QRectF &rect ) const
 */
 HB_FUNC_STATIC(QQUICKITEM_MAPRECTFROMSCENE)
 {
@@ -885,7 +885,7 @@ HB_FUNC_STATIC(QQUICKITEM_MAPRECTFROMSCENE)
 }
 
 /*
-QRectF mapRectToItem( const QQuickItem * item, const QRectF & rect ) const
+QRectF mapRectToItem( const QQuickItem * item, const QRectF &rect ) const
 */
 HB_FUNC_STATIC(QQUICKITEM_MAPRECTTOITEM)
 {
@@ -910,7 +910,7 @@ HB_FUNC_STATIC(QQUICKITEM_MAPRECTTOITEM)
 }
 
 /*
-QRectF mapRectToScene( const QRectF & rect ) const
+QRectF mapRectToScene( const QRectF &rect ) const
 */
 HB_FUNC_STATIC(QQUICKITEM_MAPRECTTOSCENE)
 {
@@ -935,7 +935,7 @@ HB_FUNC_STATIC(QQUICKITEM_MAPRECTTOSCENE)
 }
 
 /*
-QPointF mapToItem( const QQuickItem * item, const QPointF & point ) const
+QPointF mapToItem( const QQuickItem * item, const QPointF &point ) const
 */
 HB_FUNC_STATIC(QQUICKITEM_MAPTOITEM)
 {
@@ -960,7 +960,7 @@ HB_FUNC_STATIC(QQUICKITEM_MAPTOITEM)
 }
 
 /*
-QPointF mapToScene( const QPointF & point ) const
+QPointF mapToScene( const QPointF &point ) const
 */
 HB_FUNC_STATIC(QQUICKITEM_MAPTOSCENE)
 {
@@ -1315,7 +1315,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETCLIP)
 }
 
 /*
-void setCursor( const QCursor & cursor )
+void setCursor( const QCursor &cursor )
 */
 HB_FUNC_STATIC(QQUICKITEM_SETCURSOR)
 {
@@ -1731,7 +1731,7 @@ HB_FUNC_STATIC(QQUICKITEM_SETSMOOTH)
 }
 
 /*
-void setState( const QString & )
+void setState( const QString &)
 */
 HB_FUNC_STATIC(QQUICKITEM_SETSTATE)
 {

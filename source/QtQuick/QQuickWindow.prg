@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CONTENTITEM)
 }
 
 /*
-QSGTexture * createTextureFromId( uint id, const QSize & size, QQuickWindow::CreateTextureOptions options =
+QSGTexture * createTextureFromId( uint id, const QSize &size, QQuickWindow::CreateTextureOptions options =
 QQuickWindow::CreateTextureOption( 0 ) ) const
 */
 HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMID)
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMID)
 }
 
 /*
-QSGTexture * createTextureFromImage( const QImage & image ) const
+QSGTexture * createTextureFromImage( const QImage &image ) const
 */
 HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMIMAGE)
 {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETCLEARBEFORERENDERING)
 }
 
 /*
-void setColor( const QColor & color )
+void setColor( const QColor &color )
 */
 HB_FUNC_STATIC(QQUICKWINDOW_SETCOLOR)
 {
@@ -649,7 +649,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETRENDERTARGET)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZE(2))
   {
     /*
-    void setRenderTarget( uint fboId, const QSize & size )
+    void setRenderTarget( uint fboId, const QSize &size )
     */
     QQuickWindow *obj = (QQuickWindow *)Qt5xHb::itemGetPtrStackSelfItem();
 

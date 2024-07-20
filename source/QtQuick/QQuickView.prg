@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QQUICKVIEW_NEW)
   else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWINDOW(2) || HB_ISNIL(2)))
   {
     /*
-    QQuickView( const QUrl & source, QWindow * parent = 0 )
+    QQuickView( const QUrl &source, QWindow * parent = 0 )
     */
     QQuickView *obj = new QQuickView(*PQURL(1), OPQWINDOW(2, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QQUICKVIEW_STATUS)
 }
 
 /*
-void setSource( const QUrl & url )
+void setSource( const QUrl &url )
 */
 HB_FUNC_STATIC(QQUICKVIEW_SETSOURCE)
 {

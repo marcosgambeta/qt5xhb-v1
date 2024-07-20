@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETCONTENTSSCALE)
 }
 
 /*
-void setContentsSize( const QSize & )
+void setContentsSize( const QSize &)
 */
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETCONTENTSSIZE)
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETCONTENTSSIZE)
 }
 
 /*
-void setFillColor( const QColor & )
+void setFillColor( const QColor &)
 */
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETFILLCOLOR)
 {
@@ -600,7 +600,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETRENDERTARGET)
 }
 
 /*
-void update( const QRect & rect = QRect() )
+void update( const QRect &rect = QRect() )
 */
 HB_FUNC_STATIC(QQUICKPAINTEDITEM_UPDATE)
 {
