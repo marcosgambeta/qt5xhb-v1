@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_OFFSET)
 }
 
 /*
-void setOffset( const QPointF & offset )
+void setOffset( const QPointF &offset )
 */
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SETOFFSET)
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SIZE)
 }
 
 /*
-void setSize( const QSizeF & size )
+void setSize( const QSizeF &size )
 */
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_SETSIZE)
 {
