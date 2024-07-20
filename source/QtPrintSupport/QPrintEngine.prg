@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QPRINTENGINE_PROPERTY)
 }
 
 /*
-virtual void setProperty( QPrintEngine::PrintEnginePropertyKey key, const QVariant & value ) = 0
+virtual void setProperty( QPrintEngine::PrintEnginePropertyKey key, const QVariant &value ) = 0
 */
 HB_FUNC_STATIC(QPRINTENGINE_SETPROPERTY)
 {

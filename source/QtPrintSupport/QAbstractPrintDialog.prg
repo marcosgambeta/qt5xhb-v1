@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETMINMAX)
 }
 
 /*
-void setOptionTabs( const QList<QWidget*> & tabs )
+void setOptionTabs( const QList<QWidget*> &tabs )
 */
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETOPTIONTABS)
 {

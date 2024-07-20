@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QPRINTERINFO_NEW)
   else if (ISNUMPAR(1) && ISQPRINTERINFO(1))
   {
     /*
-    QPrinterInfo( const QPrinterInfo & src )
+    QPrinterInfo( const QPrinterInfo &src )
     */
     QPrinterInfo *obj = new QPrinterInfo(*PQPRINTERINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QPRINTERINFO_NEW)
   else if (ISNUMPAR(1) && ISQPRINTER(1))
   {
     /*
-    QPrinterInfo( const QPrinter & printer )
+    QPrinterInfo( const QPrinter &printer )
     */
     QPrinterInfo *obj = new QPrinterInfo(*PQPRINTER(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -650,7 +650,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPRINTERNAME)
 }
 
 /*
-static QPrinterInfo printerInfo( const QString & printerName )
+static QPrinterInfo printerInfo( const QString &printerName )
 */
 HB_FUNC_STATIC(QPRINTERINFO_PRINTERINFO)
 {

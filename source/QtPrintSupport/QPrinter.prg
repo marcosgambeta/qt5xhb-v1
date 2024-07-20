@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QPRINTER_NEW)
   else if (ISBETWEEN(1, 2) && ISQPRINTERINFO(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QPrinter( const QPrinterInfo & printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
+    QPrinter( const QPrinterInfo &printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
     */
     QPrinter *obj = new QPrinter(*PQPRINTERINFO(1), HB_ISNIL(2) ? (QPrinter::PrinterMode)QPrinter::ScreenResolution
                                                                 : (QPrinter::PrinterMode)hb_parni(2));
@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QPRINTER_CREATOR)
 }
 
 /*
-void setCreator( const QString & creator )
+void setCreator( const QString &creator )
 */
 HB_FUNC_STATIC(QPRINTER_SETCREATOR)
 {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QPRINTER_DOCNAME)
 }
 
 /*
-void setDocName( const QString & name )
+void setDocName( const QString &name )
 */
 HB_FUNC_STATIC(QPRINTER_SETDOCNAME)
 {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGEMARGINS)
   else if (ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2))
   {
     /*
-    bool setPageMargins(const QMarginsF & margins, QPageLayout::Unit units )
+    bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QPrinter *obj = (QPrinter *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -857,7 +857,7 @@ HB_FUNC_STATIC(QPRINTER_OUTPUTFILENAME)
 }
 
 /*
-void setOutputFileName( const QString & fileName )
+void setOutputFileName( const QString &fileName )
 */
 HB_FUNC_STATIC(QPRINTER_SETOUTPUTFILENAME)
 {
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC(QPRINTER_PRINTPROGRAM)
 }
 
 /*
-void setPrintProgram( const QString & printProg )
+void setPrintProgram( const QString &printProg )
 */
 HB_FUNC_STATIC(QPRINTER_SETPRINTPROGRAM)
 {
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC(QPRINTER_PRINTERNAME)
 }
 
 /*
-void setPrinterName( const QString & name )
+void setPrinterName( const QString &name )
 */
 HB_FUNC_STATIC(QPRINTER_SETPRINTERNAME)
 {
@@ -1453,7 +1453,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
   else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2))
   {
     /*
-    void setPaperSize( const QSizeF & paperSize, QPrinter::Unit unit )
+    void setPaperSize( const QSizeF &paperSize, QPrinter::Unit unit )
     */
     QPrinter *obj = (QPrinter *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1471,7 +1471,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
 }
 
 /*
-void setPrinterSelectionOption ( const QString & option )
+void setPrinterSelectionOption ( const QString &option )
 */
 HB_FUNC_STATIC(QPRINTER_SETPRINTERSELECTIONOPTION)
 {
@@ -1751,7 +1751,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGESIZE)
   else if (ISNUMPAR(1) && ISQPAGESIZE(1))
   {
     /*
-    bool setPageSize( const QPageSize & pageSize )
+    bool setPageSize( const QPageSize &pageSize )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QPrinter *obj = (QPrinter *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1769,7 +1769,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGESIZE)
 }
 
 /*
-void setPageSizeMM( const QSizeF & size )
+void setPageSizeMM( const QSizeF &size )
 */
 HB_FUNC_STATIC(QPRINTER_SETPAGESIZEMM)
 {
@@ -1819,7 +1819,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERNAME)
 }
 
 /*
-void setPaperName( const QString & paperName )
+void setPaperName( const QString &paperName )
 */
 HB_FUNC_STATIC(QPRINTER_SETPAPERNAME)
 {
@@ -1972,7 +1972,7 @@ HB_FUNC_STATIC(QPRINTER_PDFVERSION)
 }
 
 /*
-bool setPageLayout( const QPageLayout & newLayout )
+bool setPageLayout( const QPageLayout &newLayout )
 */
 HB_FUNC_STATIC(QPRINTER_SETPAGELAYOUT)
 {
