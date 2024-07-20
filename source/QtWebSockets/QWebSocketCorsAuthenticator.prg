@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_NEW)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QWebSocketCorsAuthenticator( const QString & origin )
+    QWebSocketCorsAuthenticator( const QString &origin )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QWebSocketCorsAuthenticator *obj = new QWebSocketCorsAuthenticator(PQSTRING(1));
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_NEW)
   else if (ISNUMPAR(1) && ISQWEBSOCKETCORSAUTHENTICATOR(1))
   {
     /*
-    QWebSocketCorsAuthenticator( const QWebSocketCorsAuthenticator & other )
+    QWebSocketCorsAuthenticator( const QWebSocketCorsAuthenticator &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QWebSocketCorsAuthenticator *obj = new QWebSocketCorsAuthenticator(*PQWEBSOCKETCORSAUTHENTICATOR(1));
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_DELETE)
 }
 
 /*
-void swap( QWebSocketCorsAuthenticator & other )
+void swap( QWebSocketCorsAuthenticator &other )
 */
 HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_SWAP)
 {

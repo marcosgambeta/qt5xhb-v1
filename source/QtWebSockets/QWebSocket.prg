@@ -109,7 +109,7 @@ RETURN
 #include <QtWebSockets/QMaskGenerator>
 
     /*
-    QWebSocket( const QString & origin = QString(), QWebSocketProtocol::Version version =
+    QWebSocket( const QString &origin = QString(), QWebSocketProtocol::Version version =
     QWebSocketProtocol::VersionLatest, QObject * parent = nullptr )
     */
 HB_FUNC_STATIC(QWEBSOCKET_NEW)
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PROXY)
 }
 
 /*
-void setProxy( const QNetworkProxy & networkProxy )
+void setProxy( const QNetworkProxy &networkProxy )
 */
 HB_FUNC_STATIC(QWEBSOCKET_SETPROXY)
 {
@@ -844,7 +844,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSEREASON)
 }
 
 /*
-qint64 sendTextMessage( const QString & message )
+qint64 sendTextMessage( const QString &message )
 */
 HB_FUNC_STATIC(QWEBSOCKET_SENDTEXTMESSAGE)
 {
@@ -870,7 +870,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SENDTEXTMESSAGE)
 }
 
 /*
-qint64 sendBinaryMessage( const QByteArray & data )
+qint64 sendBinaryMessage( const QByteArray &data )
 */
 HB_FUNC_STATIC(QWEBSOCKET_SENDBINARYMESSAGE)
 {
@@ -900,7 +900,7 @@ HB_FUNC_STATIC(QWEBSOCKET_IGNORESSLERRORS)
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void ignoreSslErrors( const QList<QSslError> & errors )
+    void ignoreSslErrors( const QList<QSslError> &errors )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QWebSocket *obj = (QWebSocket *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -970,7 +970,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SSLCONFIGURATION)
 }
 
 /*
-void setSslConfiguration( const QSslConfiguration & sslConfiguration )
+void setSslConfiguration( const QSslConfiguration &sslConfiguration )
 */
 HB_FUNC_STATIC(QWEBSOCKET_SETSSLCONFIGURATION)
 {
@@ -998,7 +998,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETSSLCONFIGURATION)
 }
 
 /*
-void close( QWebSocketProtocol::CloseCode closeCode = QWebSocketProtocol::CloseCodeNormal, const QString & reason =
+void close( QWebSocketProtocol::CloseCode closeCode = QWebSocketProtocol::CloseCodeNormal, const QString &reason =
 QString() )
 */
 HB_FUNC_STATIC(QWEBSOCKET_CLOSE)
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSE)
 }
 
 /*
-void open( const QUrl & url )
+void open( const QUrl &url )
 */
 HB_FUNC_STATIC(QWEBSOCKET_OPEN)
 {
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC(QWEBSOCKET_OPEN)
 }
 
 /*
-void ping( const QByteArray & payload = QByteArray() )
+void ping( const QByteArray &payload = QByteArray() )
 */
 HB_FUNC_STATIC(QWEBSOCKET_PING)
 {
