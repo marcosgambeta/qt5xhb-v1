@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_SETFINISHED)
 }
 
 /*
-void setError( QModbusDevice::Error error, const QString & errorText )
+void setError( QModbusDevice::Error error, const QString &errorText )
 */
 HB_FUNC_STATIC(QMODBUSREPLY_SETERROR)
 {

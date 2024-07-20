@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_NEW)
   else if (ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1))
   {
     /*
-    QCanBusDeviceInfo( const QCanBusDeviceInfo & other )
+    QCanBusDeviceInfo( const QCanBusDeviceInfo &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     QCanBusDeviceInfo *obj = new QCanBusDeviceInfo(*PQCANBUSDEVICEINFO(1));
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_DELETE)
 }
 
 /*
-void swap( QCanBusDeviceInfo & other ) Q_DECL_NOTHROW
+void swap( QCanBusDeviceInfo &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_SWAP)
 {

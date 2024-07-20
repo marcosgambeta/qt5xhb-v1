@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QMODBUSSERVER_VALUE)
 }
 
 /*
-virtual bool setValue( int option, const QVariant & value )
+virtual bool setValue( int option, const QVariant &value )
 */
 HB_FUNC_STATIC(QMODBUSSERVER_SETVALUE)
 {

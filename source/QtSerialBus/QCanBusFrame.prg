@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_NEW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2))
   {
     /*
-    QCanBusFrame( quint32 identifier, const QByteArray & data )
+    QCanBusFrame( quint32 identifier, const QByteArray &data )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     QCanBusFrame *obj = new QCanBusFrame(PQUINT32(1), *PQBYTEARRAY(2));
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QCANBUSFRAME_SETFRAMEID)
 }
 
 /*
-void setPayload( const QByteArray & data )
+void setPayload( const QByteArray &data )
 */
 HB_FUNC_STATIC(QCANBUSFRAME_SETPAYLOAD)
 {

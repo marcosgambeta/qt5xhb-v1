@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_CONNECTIONPARAMETER)
 }
 
 /*
-void setConnectionParameter( int parameter, const QVariant & value )
+void setConnectionParameter( int parameter, const QVariant &value )
 */
 HB_FUNC_STATIC(QMODBUSDEVICE_SETCONNECTIONPARAMETER)
 {

@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QCANBUS_PLUGINS)
 }
 
 /*
-QList<QCanBusDeviceInfo> availableDevices( const QString & plugin, QString * errorMessage = nullptr ) const
+QList<QCanBusDeviceInfo> availableDevices( const QString &plugin, QString * errorMessage = nullptr ) const
 */
 HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
 }
 
 /*
-QCanBusDevice * createDevice( const QString & plugin, const QString & interfaceName, QString * errorMessage = nullptr )
+QCanBusDevice * createDevice( const QString &plugin, const QString &interfaceName, QString * errorMessage = nullptr )
 const
 */
 HB_FUNC_STATIC(QCANBUS_CREATEDEVICE)
