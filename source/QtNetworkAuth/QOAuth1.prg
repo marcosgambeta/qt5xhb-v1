@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QOAUTH1_CLIENTSHAREDSECRET)
 }
 
 /*
-void setClientSharedSecret( const QString & clientSharedSecret )
+void setClientSharedSecret( const QString &clientSharedSecret )
 */
 HB_FUNC_STATIC(QOAUTH1_SETCLIENTSHAREDSECRET)
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QOAUTH1_SETCLIENTSHAREDSECRET)
 }
 
 /*
-void setClientCredentials( const QString & clientIdentifier, const QString & clientSharedSecret )
+void setClientCredentials( const QString &clientIdentifier, const QString &clientSharedSecret )
 */
 HB_FUNC_STATIC(QOAUTH1_SETCLIENTCREDENTIALS)
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QOAUTH1_TOKENSECRET)
 }
 
 /*
-void setTokenSecret( const QString & tokenSecret )
+void setTokenSecret( const QString &tokenSecret )
 */
 HB_FUNC_STATIC(QOAUTH1_SETTOKENSECRET)
 {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QOAUTH1_SETTOKENSECRET)
 }
 
 /*
-void setTokenCredentials( const QString & token, const QString & tokenSecret )
+void setTokenCredentials( const QString &token, const QString &tokenSecret )
 */
 HB_FUNC_STATIC(QOAUTH1_SETTOKENCREDENTIALS)
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QOAUTH1_TEMPORARYCREDENTIALSURL)
 }
 
 /*
-void setTemporaryCredentialsUrl( const QUrl & url )
+void setTemporaryCredentialsUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QOAUTH1_SETTEMPORARYCREDENTIALSURL)
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QOAUTH1_TOKENCREDENTIALSURL)
 }
 
 /*
-void setTokenCredentialsUrl( const QUrl & url )
+void setTokenCredentialsUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QOAUTH1_SETTOKENCREDENTIALSURL)
 {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC(QOAUTH1_GRANT)
 }
 
 /*
-void continueGrantWithVerifier( const QString & verifier )
+void continueGrantWithVerifier( const QString &verifier )
 */
 HB_FUNC_STATIC(QOAUTH1_CONTINUEGRANTWITHVERIFIER)
 {

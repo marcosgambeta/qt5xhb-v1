@@ -79,7 +79,7 @@ RETURN
 #endif
 
     /*
-    QOAuth1Signature( const QOAuth1Signature & other )
+    QOAuth1Signature( const QOAuth1Signature &other )
     */
     void QOAuth1Signature_new3()
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_URL)
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETURL)
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETURL)
 }
 
 /*
-void addRequestBody( const QUrlQuery & body )
+void addRequestBody( const QUrlQuery &body )
 */
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_ADDREQUESTBODY)
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_ADDREQUESTBODY)
 }
 
 /*
-void insert( const QString & key, const QVariant & value )
+void insert( const QString &key, const QVariant &value )
 */
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_INSERT)
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_KEYS)
 }
 
 /*
-QVariant take( const QString & key )
+QVariant take( const QString &key )
 */
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_TAKE)
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_TAKE)
 }
 
 /*
-QVariant value( const QString & key, const QVariant & defaultValue = QVariant() ) const
+QVariant value( const QString &key, const QVariant &defaultValue = QVariant() ) const
 */
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_VALUE)
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_CLIENTSHAREDKEY)
 }
 
 /*
-void setClientSharedKey( const QString & secret )
+void setClientSharedKey( const QString &secret )
 */
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETCLIENTSHAREDKEY)
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_TOKENSECRET)
 }
 
 /*
-void setTokenSecret( const QString & secret )
+void setTokenSecret( const QString &secret )
 */
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETTOKENSECRET)
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_PLAINTEXT)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    static QByteArray plainText( const QString & clientSharedSecret, const QString & tokenSecret )
+    static QByteArray plainText( const QString &clientSharedSecret, const QString &tokenSecret )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     QByteArray *ptr = new QByteArray(QOAuth1Signature::plainText(PQSTRING(1), PQSTRING(2)));
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_PLAINTEXT)
 }
 
 /*
-void swap( QOAuth1Signature & other )
+void swap( QOAuth1Signature &other )
 */
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_SWAP)
 {

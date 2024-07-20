@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_NEW)
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQNETWORKACCESSMANAGER(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QOAuth2AuthorizationCodeFlow( const QString & clientIdentifier, QNetworkAccessManager * manager, QObject * parent =
+    QOAuth2AuthorizationCodeFlow( const QString &clientIdentifier, QNetworkAccessManager * manager, QObject * parent =
     nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_NEW)
   else if (ISBETWEEN(3, 4) && ISQURL(1) && ISQURL(2) && ISQNETWORKACCESSMANAGER(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QOAuth2AuthorizationCodeFlow( const QUrl & authorizationUrl, const QUrl & accessTokenUrl, QNetworkAccessManager *
+    QOAuth2AuthorizationCodeFlow( const QUrl &authorizationUrl, const QUrl &accessTokenUrl, QNetworkAccessManager *
     manager, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_NEW)
            (ISQOBJECT(5) || HB_ISNIL(5)))
   {
     /*
-    QOAuth2AuthorizationCodeFlow( const QString & clientIdentifier, const QUrl & authorizationUrl, const QUrl &
+    QOAuth2AuthorizationCodeFlow( const QString &clientIdentifier, const QUrl &authorizationUrl, const QUrl &
     accessTokenUrl, QNetworkAccessManager * manager, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_ACCESSTOKENURL)
 }
 
 /*
-void setAccessTokenUrl( const QUrl & accessTokenUrl )
+void setAccessTokenUrl( const QUrl &accessTokenUrl )
 */
 HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL)
 {

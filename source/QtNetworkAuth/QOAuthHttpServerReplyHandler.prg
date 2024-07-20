@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_NEW)
   else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QOAuthHttpServerReplyHandler( const QHostAddress & address, quint16 port, QObject * parent = nullptr )
+    QOAuthHttpServerReplyHandler( const QHostAddress &address, quint16 port, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     QOAuthHttpServerReplyHandler *obj =
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKPATH)
 }
 
 /*
-void setCallbackPath( const QString & path )
+void setCallbackPath( const QString &path )
 */
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKPATH)
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKTEXT)
 }
 
 /*
-void setCallbackText( const QString & text )
+void setCallbackText( const QString &text )
 */
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKTEXT)
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_PORT)
 }
 
 /*
-bool listen( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
+bool listen( const QHostAddress &address = QHostAddress::Any, quint16 port = 0 )
 */
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_LISTEN)
 {

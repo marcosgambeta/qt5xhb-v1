@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_CLIENTIDENTIFIER)
 }
 
 /*
-void setClientIdentifier( const QString & clientIdentifier )
+void setClientIdentifier( const QString &clientIdentifier )
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETCLIENTIDENTIFIER)
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_TOKEN)
 }
 
 /*
-void setToken( const QString & token )
+void setToken( const QString &token )
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETTOKEN)
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_AUTHORIZATIONURL)
 }
 
 /*
-void setAuthorizationUrl( const QUrl & url )
+void setAuthorizationUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QABSTRACTOAUTH_SETAUTHORIZATIONURL)
 {
