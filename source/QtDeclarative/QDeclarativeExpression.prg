@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_NEW)
   else if (ISBETWEEN(3, 4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QDeclarativeExpression( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent =
+    QDeclarativeExpression( QDeclarativeContext * ctxt, QObject * scope, const QString &expression, QObject * parent =
     0 )
     */
     QDeclarativeExpression *obj =
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SCOPEOBJECT)
 }
 
 /*
-void setExpression( const QString & expression )
+void setExpression( const QString &expression )
 */
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETEXPRESSION)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED)
 }
 
 /*
-void setSourceLocation( const QString & url, int line )
+void setSourceLocation( const QString &url, int line )
 */
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETSOURCELOCATION)
 {

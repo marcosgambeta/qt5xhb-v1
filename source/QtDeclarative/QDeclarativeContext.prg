@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_CONTEXTOBJECT)
 }
 
 /*
-QVariant contextProperty( const QString & name ) const
+QVariant contextProperty( const QString &name ) const
 */
 HB_FUNC_STATIC(QDECLARATIVECONTEXT_CONTEXTPROPERTY)
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_PARENTCONTEXT)
 }
 
 /*
-QUrl resolvedUrl( const QUrl & src )
+QUrl resolvedUrl( const QUrl &src )
 */
 HB_FUNC_STATIC(QDECLARATIVECONTEXT_RESOLVEDURL)
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_RESOLVEDURL)
 }
 
 /*
-void setBaseUrl( const QUrl & baseUrl )
+void setBaseUrl( const QUrl &baseUrl )
 */
 HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETBASEURL)
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETCONTEXTPROPERTY)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    void setContextProperty( const QString & name, QObject * value )
+    void setContextProperty( const QString &name, QObject * value )
     */
     QDeclarativeContext *obj = (QDeclarativeContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETCONTEXTPROPERTY)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
   {
     /*
-    void setContextProperty( const QString & name, const QVariant & value )
+    void setContextProperty( const QString &name, const QVariant &value )
     */
     QDeclarativeContext *obj = (QDeclarativeContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
