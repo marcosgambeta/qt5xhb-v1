@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_CREATEDEFAULTSOURCE)
 }
 
 /*
-static QGeoSatelliteInfoSource * createSource( const QString & sourceName, QObject * parent )
+static QGeoSatelliteInfoSource * createSource( const QString &sourceName, QObject * parent )
 */
 HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_CREATESOURCE)
 {

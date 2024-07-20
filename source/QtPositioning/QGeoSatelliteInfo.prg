@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_NEW)
   else if (ISNUMPAR(1) && ISQGEOSATELLITEINFO(1))
   {
     /*
-    QGeoSatelliteInfo( const QGeoSatelliteInfo & other )
+    QGeoSatelliteInfo( const QGeoSatelliteInfo &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoSatelliteInfo *obj = new QGeoSatelliteInfo(*PQGEOSATELLITEINFO(1));

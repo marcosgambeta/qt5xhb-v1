@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_NEW)
   else if (ISBETWEEN(1, 2) && ISQGEOCOORDINATE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QGeoCircle( const QGeoCoordinate & center, qreal radius = -1.0 )
+    QGeoCircle( const QGeoCoordinate &center, qreal radius = -1.0 )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoCircle *obj = new QGeoCircle(*PQGEOCOORDINATE(1), OPQREAL(2, -1.0));
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_NEW)
   else if (ISNUMPAR(1) && ISQGEOCIRCLE(1))
   {
     /*
-    QGeoCircle( const QGeoCircle & other )
+    QGeoCircle( const QGeoCircle &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoCircle *obj = new QGeoCircle(*PQGEOCIRCLE(1));
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_NEW)
   else if (ISNUMPAR(1) && ISQGEOSHAPE(1))
   {
     /*
-    QGeoCircle( const QGeoShape & other )
+    QGeoCircle( const QGeoShape &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoCircle *obj = new QGeoCircle(*PQGEOSHAPE(1));
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_DELETE)
 }
 
 /*
-void setCenter( const QGeoCoordinate & center )
+void setCenter( const QGeoCoordinate &center )
 */
 HB_FUNC_STATIC(QGEOCIRCLE_SETCENTER)
 {

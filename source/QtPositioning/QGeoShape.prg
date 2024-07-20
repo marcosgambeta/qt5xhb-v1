@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QGEOSHAPE_NEW)
   else if (ISNUMPAR(1) && ISQGEOSHAPE(1))
   {
     /*
-    QGeoShape( const QGeoShape & other )
+    QGeoShape( const QGeoShape &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoShape *obj = new QGeoShape(*PQGEOSHAPE(1));
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QGEOSHAPE_ISEMPTY)
 }
 
 /*
-bool contains( const QGeoCoordinate & coordinate ) const
+bool contains( const QGeoCoordinate &coordinate ) const
 */
 HB_FUNC_STATIC(QGEOSHAPE_CONTAINS)
 {

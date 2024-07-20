@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_NEW)
   else if (ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQDATETIME(2))
   {
     /*
-    QGeoPositionInfo( const QGeoCoordinate & coordinate, const QDateTime & updateTime )
+    QGeoPositionInfo( const QGeoCoordinate &coordinate, const QDateTime &updateTime )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoPositionInfo *obj = new QGeoPositionInfo(*PQGEOCOORDINATE(1), *PQDATETIME(2));
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_NEW)
   else if (ISNUMPAR(1) && ISQGEOPOSITIONINFO(1))
   {
     /*
-    QGeoPositionInfo( const QGeoPositionInfo & other )
+    QGeoPositionInfo( const QGeoPositionInfo &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoPositionInfo *obj = new QGeoPositionInfo(*PQGEOPOSITIONINFO(1));
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_ISVALID)
 }
 
 /*
-void setTimestamp( const QDateTime & timestamp )
+void setTimestamp( const QDateTime &timestamp )
 */
 HB_FUNC_STATIC(QGEOPOSITIONINFO_SETTIMESTAMP)
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFO_TIMESTAMP)
 }
 
 /*
-void setCoordinate( const QGeoCoordinate & coordinate )
+void setCoordinate( const QGeoCoordinate &coordinate )
 */
 HB_FUNC_STATIC(QGEOPOSITIONINFO_SETCOORDINATE)
 {

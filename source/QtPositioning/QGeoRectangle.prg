@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_NEW)
   else if (ISNUMPAR(3) && ISQGEOCOORDINATE(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    QGeoRectangle( const QGeoCoordinate & center, double degreesWidth, double degreesHeight )
+    QGeoRectangle( const QGeoCoordinate &center, double degreesWidth, double degreesHeight )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoRectangle *obj = new QGeoRectangle(*PQGEOCOORDINATE(1), PDOUBLE(2), PDOUBLE(3));
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_NEW)
   else if (ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQGEOCOORDINATE(2))
   {
     /*
-    QGeoRectangle( const QGeoCoordinate & topLeft, const QGeoCoordinate & bottomRight )
+    QGeoRectangle( const QGeoCoordinate &topLeft, const QGeoCoordinate &bottomRight )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoRectangle *obj = new QGeoRectangle(*PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2));
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_NEW)
   else if (ISNUMPAR(1) && ISQGEORECTANGLE(1))
   {
     /*
-    QGeoRectangle( const QGeoRectangle & other )
+    QGeoRectangle( const QGeoRectangle &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoRectangle *obj = new QGeoRectangle(*PQGEORECTANGLE(1));
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_NEW)
   else if (ISNUMPAR(1) && ISQGEOSHAPE(1))
   {
     /*
-    QGeoRectangle( const QGeoShape & other )
+    QGeoRectangle( const QGeoShape &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoRectangle *obj = new QGeoRectangle(*PQGEOSHAPE(1));
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_DELETE)
 }
 
 /*
-void setTopLeft( const QGeoCoordinate & topLeft )
+void setTopLeft( const QGeoCoordinate &topLeft )
 */
 HB_FUNC_STATIC(QGEORECTANGLE_SETTOPLEFT)
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TOPLEFT)
 }
 
 /*
-void setTopRight( const QGeoCoordinate & topRight )
+void setTopRight( const QGeoCoordinate &topRight )
 */
 HB_FUNC_STATIC(QGEORECTANGLE_SETTOPRIGHT)
 {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TOPRIGHT)
 }
 
 /*
-void setBottomLeft( const QGeoCoordinate & bottomLeft )
+void setBottomLeft( const QGeoCoordinate &bottomLeft )
 */
 HB_FUNC_STATIC(QGEORECTANGLE_SETBOTTOMLEFT)
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_BOTTOMLEFT)
 }
 
 /*
-void setBottomRight( const QGeoCoordinate & bottomRight )
+void setBottomRight( const QGeoCoordinate &bottomRight )
 */
 HB_FUNC_STATIC(QGEORECTANGLE_SETBOTTOMRIGHT)
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_BOTTOMRIGHT)
 }
 
 /*
-void setCenter( const QGeoCoordinate & center )
+void setCenter( const QGeoCoordinate &center )
 */
 HB_FUNC_STATIC(QGEORECTANGLE_SETCENTER)
 {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_CONTAINS)
   if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
   {
     /*
-    bool contains( const QGeoCoordinate & coordinate ) const
+    bool contains( const QGeoCoordinate &coordinate ) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -548,7 +548,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_CONTAINS)
   else if (ISNUMPAR(1) && ISQGEORECTANGLE(1))
   {
     /*
-    bool contains( const QGeoRectangle & rectangle ) const
+    bool contains( const QGeoRectangle &rectangle ) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -566,7 +566,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_CONTAINS)
 }
 
 /*
-bool intersects( const QGeoRectangle & rectangle ) const
+bool intersects( const QGeoRectangle &rectangle ) const
 */
 HB_FUNC_STATIC(QGEORECTANGLE_INTERSECTS)
 {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TRANSLATED)
 }
 
 /*
-QGeoRectangle united( const QGeoRectangle & rectangle ) const
+QGeoRectangle united( const QGeoRectangle &rectangle ) const
 */
 HB_FUNC_STATIC(QGEORECTANGLE_UNITED)
 {

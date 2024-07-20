@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_NEW)
   else if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
   {
     /*
-    QGeoCoordinate( const QGeoCoordinate & other )
+    QGeoCoordinate( const QGeoCoordinate &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QGeoCoordinate *obj = new QGeoCoordinate(*PQGEOCOORDINATE(1));
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_ALTITUDE)
 }
 
 /*
-qreal distanceTo( const QGeoCoordinate & other ) const
+qreal distanceTo( const QGeoCoordinate &other ) const
 */
 HB_FUNC_STATIC(QGEOCOORDINATE_DISTANCETO)
 {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_DISTANCETO)
 }
 
 /*
-qreal azimuthTo( const QGeoCoordinate & other ) const
+qreal azimuthTo( const QGeoCoordinate &other ) const
 */
 HB_FUNC_STATIC(QGEOCOORDINATE_AZIMUTHTO)
 {
