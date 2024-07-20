@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_FINALIZE)
 }
 
 /*
-Q_INVOKABLE virtual QString platformProperty( const QString & propertyName ) const
+Q_INVOKABLE virtual QString platformProperty( const QString &propertyName ) const
 */
 HB_FUNC_STATIC(QINAPPTRANSACTION_PLATFORMPROPERTY)
 {
