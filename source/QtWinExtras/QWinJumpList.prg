@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QWINJUMPLIST_IDENTIFIER)
 }
 
 /*
-void setIdentifier( const QString & identifier )
+void setIdentifier( const QString &identifier )
 */
 HB_FUNC_STATIC(QWINJUMPLIST_SETIDENTIFIER)
 {

@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_TOOLTIP)
 }
 
 /*
-void setToolTip( const QString & toolTip )
+void setToolTip( const QString &toolTip )
 */
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETTOOLTIP)
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_ICON)
 }
 
 /*
-void setIcon( const QIcon & icon )
+void setIcon( const QIcon &icon )
 */
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBUTTON_SETICON)
 {

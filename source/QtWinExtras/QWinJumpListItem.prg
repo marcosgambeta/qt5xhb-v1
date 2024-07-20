@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_FILEPATH)
 }
 
 /*
-void setFilePath( const QString & filePath )
+void setFilePath( const QString &filePath )
 */
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETFILEPATH)
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_WORKINGDIRECTORY)
 }
 
 /*
-void setWorkingDirectory( const QString & workingDirectory )
+void setWorkingDirectory( const QString &workingDirectory )
 */
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETWORKINGDIRECTORY)
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_ICON)
 }
 
 /*
-void setIcon( const QIcon & icon )
+void setIcon( const QIcon &icon )
 */
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETICON)
 {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_TITLE)
 }
 
 /*
-void setTitle( const QString & title )
+void setTitle( const QString &title )
 */
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETTITLE)
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_DESCRIPTION)
 }
 
 /*
-void setDescription( const QString & description )
+void setDescription( const QString &description )
 */
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETDESCRIPTION)
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QWINJUMPLISTITEM_ARGUMENTS)
 }
 
 /*
-void setArguments( const QStringList & arguments )
+void setArguments( const QStringList &arguments )
 */
 HB_FUNC_STATIC(QWINJUMPLISTITEM_SETARGUMENTS)
 {

@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_REMOVEBUTTON)
 }
 
 /*
-void setButtons( const QList<QWinThumbnailToolButton*> & buttons )
+void setButtons( const QList<QWinThumbnailToolButton*> &buttons )
 */
 HB_FUNC_STATIC(QWINTHUMBNAILTOOLBAR_SETBUTTONS)
 {

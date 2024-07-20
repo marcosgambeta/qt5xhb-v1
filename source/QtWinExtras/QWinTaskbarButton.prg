@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYICON)
 }
 
 /*
-void setOverlayIcon( const QIcon & icon )
+void setOverlayIcon( const QIcon &icon )
 */
 HB_FUNC_STATIC(QWINTASKBARBUTTON_SETOVERLAYICON)
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION)
 }
 
 /*
-void setOverlayAccessibleDescription( const QString & description )
+void setOverlayAccessibleDescription( const QString &description )
 */
 HB_FUNC_STATIC(QWINTASKBARBUTTON_SETOVERLAYACCESSIBLEDESCRIPTION)
 {

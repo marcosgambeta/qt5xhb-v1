@@ -74,7 +74,7 @@ RETURN
 #endif
 
     /*
-    QWinJumpListCategory( const QString & title = QString() )
+    QWinJumpListCategory( const QString &title = QString() )
     */
 HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_NEW)
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_TITLE)
 }
 
 /*
-void setTitle( const QString & title )
+void setTitle( const QString &title )
 */
 HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_SETTITLE)
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDITEM)
 }
 
 /*
-QWinJumpListItem * addDestination( const QString & filePath )
+QWinJumpListItem * addDestination( const QString &filePath )
 */
 HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDDESTINATION)
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDLINK)
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISARRAY(3) || HB_ISNIL(3)))
   {
     /*
-    QWinJumpListItem * addLink( const QString & title, const QString & executablePath, const QStringList & arguments =
+    QWinJumpListItem * addLink( const QString &title, const QString &executablePath, const QStringList &arguments =
     QStringList() )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -420,8 +420,8 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDLINK)
   else if (ISBETWEEN(3, 4) && ISQICON(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISARRAY(4) || HB_ISNIL(4)))
   {
     /*
-    QWinJumpListItem * addLink( const QIcon & icon, const QString & title, const QString & executablePath, const
-    QStringList & arguments = QStringList() )
+    QWinJumpListItem * addLink( const QIcon &icon, const QString &title, const QString &executablePath, const
+    QStringList &arguments = QStringList() )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();

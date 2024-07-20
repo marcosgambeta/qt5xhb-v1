@@ -93,7 +93,7 @@ RETURN
 #endif
 
     /*
-    static HBITMAP createMask( const QBitmap & bitmap )
+    static HBITMAP createMask( const QBitmap &bitmap )
     */
 HB_FUNC_STATIC(QTWIN_CREATEMASK)
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QTWIN_CREATEMASK)
 }
 
 /*
-static HBITMAP toHBITMAP( const QPixmap & p, QtWin::HBitmapFormat format = QtWin::HBitmapNoAlpha )
+static HBITMAP toHBITMAP( const QPixmap &p, QtWin::HBitmapFormat format = QtWin::HBitmapNoAlpha )
 */
 HB_FUNC_STATIC(QTWIN_TOHBITMAP)
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QTWIN_FROMHBITMAP)
 }
 
 /*
-static HICON toHICON( const QPixmap & p )
+static HICON toHICON( const QPixmap &p )
 */
 HB_FUNC_STATIC(QTWIN_TOHICON)
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QTWIN_FROMHICON)
 }
 
 /*
-static HRGN toHRGN( const QRegion & region )
+static HRGN toHRGN( const QRegion &region )
 */
 HB_FUNC_STATIC(QTWIN_TOHRGN)
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QTWIN_EXTENDFRAMEINTOCLIENTAREA)
   else if (ISNUMPAR(2) && ISQWINDOW(1) && ISQMARGINS(2))
   {
     /*
-    static void extendFrameIntoClientArea( QWindow * window, const QMargins & margins )
+    static void extendFrameIntoClientArea( QWindow * window, const QMargins &margins )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QtWin::extendFrameIntoClientArea(PQWINDOW(1), *PQMARGINS(2));
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QTWIN_ENABLEBLURBEHINDWINDOW)
   if (ISNUMPAR(1) && ISQWINDOW(1) && ISQREGION(2))
   {
     /*
-    static void enableBlurBehindWindow( QWindow * window, const QRegion & region )
+    static void enableBlurBehindWindow( QWindow * window, const QRegion &region )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QtWin::enableBlurBehindWindow(PQWINDOW(1), *PQREGION(2));
@@ -663,7 +663,7 @@ HB_FUNC_STATIC(QTWIN_ISCOMPOSITIONOPAQUE)
 }
 
 /*
-static void setCurrentProcessExplicitAppUserModelID( const QString & id )
+static void setCurrentProcessExplicitAppUserModelID( const QString &id )
 */
 HB_FUNC_STATIC(QTWIN_SETCURRENTPROCESSEXPLICITAPPUSERMODELID)
 {
