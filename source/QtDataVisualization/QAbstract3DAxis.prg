@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_TITLE)
 }
 
 /*
-void setTitle( const QString & title )
+void setTitle( const QString &title )
 */
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLE)
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELS)
 }
 
 /*
-void setLabels( const QStringList & labels )
+void setLabels( const QStringList &labels )
 */
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELS)
 {

@@ -255,7 +255,7 @@ HB_FUNC_STATIC(Q3DBARS_BARSPACING)
 }
 
 /*
-void setBarSpacing( const QSizeF & spacing )
+void setBarSpacing( const QSizeF &spacing )
 */
 HB_FUNC_STATIC(Q3DBARS_SETBARSPACING)
 {

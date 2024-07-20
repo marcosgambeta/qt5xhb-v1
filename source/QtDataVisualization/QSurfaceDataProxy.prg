@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_ITEMAT)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    const QSurfaceDataItem * itemAt( const QPoint & position ) const
+    const QSurfaceDataItem * itemAt( const QPoint &position ) const
     */
     QSurfaceDataProxy *obj = (QSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSURFACEDATAITEM(3))
   {
     /*
-    void setItem( int rowIndex, int columnIndex, const QSurfaceDataItem & item )
+    void setItem( int rowIndex, int columnIndex, const QSurfaceDataItem &item )
     */
     QSurfaceDataProxy *obj = (QSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QSURFACEDATAPROXY_SETITEM)
   else if (ISNUMPAR(2) && ISQPOINT(1) && ISQSURFACEDATAITEM(2))
   {
     /*
-    void setItem( const QPoint & position, const QSurfaceDataItem & item )
+    void setItem( const QPoint &position, const QSurfaceDataItem &item )
     */
     QSurfaceDataProxy *obj = (QSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 

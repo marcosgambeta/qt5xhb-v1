@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_SELECTEDPOINT)
 }
 
 /*
-void setSelectedPoint( const QPoint & position )
+void setSelectedPoint( const QPoint &position )
 */
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETSELECTEDPOINT)
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTURE)
 }
 
 /*
-void setTexture( const QImage & texture )
+void setTexture( const QImage &texture )
 */
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTURE)
 {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QSURFACE3DSERIES_TEXTUREFILE)
 }
 
 /*
-void setTextureFile( const QString & filename )
+void setTextureFile( const QString &filename )
 */
 HB_FUNC_STATIC(QSURFACE3DSERIES_SETTEXTUREFILE)
 {

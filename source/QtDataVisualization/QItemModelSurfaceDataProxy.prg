@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
   else if (ISBETWEEN(2, 3) && ISQABSTRACTITEMMODEL(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & yPosRole, QObject * parent = nullptr )
+    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString &yPosRole, QObject * parent = nullptr )
     */
     QItemModelSurfaceDataProxy *obj =
         new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3, nullptr));
@@ -153,8 +153,8 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
            (ISQOBJECT(5) || HB_ISNIL(5)))
   {
     /*
-    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole,
-    const QString & yPosRole, QObject * parent = nullptr )
+    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole,
+    const QString &yPosRole, QObject * parent = nullptr )
     */
     QItemModelSurfaceDataProxy *obj = new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3),
                                                                      PQSTRING(4), OPQOBJECT(5, nullptr));
@@ -164,8 +164,8 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
            HB_ISCHAR(6) && (ISQOBJECT(7) || HB_ISNIL(7)))
   {
     /*
-    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole,
-    const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, QObject * parent = nullptr )
+    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole,
+    const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject * parent = nullptr )
     */
     QItemModelSurfaceDataProxy *obj = new QItemModelSurfaceDataProxy(
         PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), OPQOBJECT(7, nullptr));
@@ -175,8 +175,8 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
            HB_ISARRAY(5) && HB_ISARRAY(6) && (ISQOBJECT(7) || HB_ISNIL(7)))
   {
     /*
-    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole,
-    const QString & yPosRole, const QStringList & rowCategories, const QStringList & columnCategories, QObject * parent
+    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole,
+    const QString &yPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject * parent
     = nullptr )
     */
     QItemModelSurfaceDataProxy *obj =
@@ -188,9 +188,9 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
            HB_ISCHAR(6) && HB_ISARRAY(7) && HB_ISARRAY(8) && (ISQOBJECT(9) || HB_ISNIL(9)))
   {
     /*
-    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole,
-    const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QStringList & rowCategories,
-    const QStringList & columnCategories, QObject * parent = nullptr )
+    QItemModelSurfaceDataProxy( QAbstractItemModel * itemModel, const QString &rowRole, const QString &columnRole,
+    const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QStringList &rowCategories,
+    const QStringList &columnCategories, QObject * parent = nullptr )
     */
     QItemModelSurfaceDataProxy *obj =
         new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5),
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLE)
 }
 
 /*
-void setRowRole( const QString & role )
+void setRowRole( const QString &role )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLE)
 {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLE)
 }
 
 /*
-void setColumnRole( const QString & role )
+void setColumnRole( const QString &role )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLE)
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLE)
 }
 
 /*
-void setXPosRole( const QString & role )
+void setXPosRole( const QString &role )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLE)
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLE)
 }
 
 /*
-void setYPosRole( const QString & role )
+void setYPosRole( const QString &role )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLE)
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLE)
 }
 
 /*
-void setZPosRole( const QString & role )
+void setZPosRole( const QString &role )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLE)
 {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORIES)
 }
 
 /*
-void setRowCategories( const QStringList & categories )
+void setRowCategories( const QStringList &categories )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWCATEGORIES)
 {
@@ -600,7 +600,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORIES)
 }
 
 /*
-void setColumnCategories( const QStringList & categories )
+void setColumnCategories( const QStringList &categories )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNCATEGORIES)
 {
@@ -801,7 +801,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEPATTERN)
 }
 
 /*
-void setRowRolePattern( const QRegExp & pattern )
+void setRowRolePattern( const QRegExp &pattern )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEPATTERN)
 {
@@ -852,7 +852,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEPATTERN)
 }
 
 /*
-void setColumnRolePattern( const QRegExp & pattern )
+void setColumnRolePattern( const QRegExp &pattern )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEPATTERN)
 {
@@ -903,7 +903,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEPATTERN)
 }
 
 /*
-void setXPosRolePattern( const QRegExp & pattern )
+void setXPosRolePattern( const QRegExp &pattern )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEPATTERN)
 {
@@ -954,7 +954,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEPATTERN)
 }
 
 /*
-void setYPosRolePattern( const QRegExp & pattern )
+void setYPosRolePattern( const QRegExp &pattern )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEPATTERN)
 {
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEPATTERN)
 }
 
 /*
-void setZPosRolePattern( const QRegExp & pattern )
+void setZPosRolePattern( const QRegExp &pattern )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEPATTERN)
 {
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEREPLACE)
 }
 
 /*
-void setRowRoleReplace( const QString & replace )
+void setRowRoleReplace( const QString &replace )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEREPLACE)
 {
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEREPLACE)
 }
 
 /*
-void setColumnRoleReplace( const QString & replace )
+void setColumnRoleReplace( const QString &replace )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEREPLACE)
 {
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEREPLACE)
 }
 
 /*
-void setXPosRoleReplace( const QString & replace )
+void setXPosRoleReplace( const QString &replace )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEREPLACE)
 {
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEREPLACE)
 }
 
 /*
-void setYPosRoleReplace( const QString & replace )
+void setYPosRoleReplace( const QString &replace )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEREPLACE)
 {
@@ -1255,7 +1255,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEREPLACE)
 }
 
 /*
-void setZPosRoleReplace( const QString & replace )
+void setZPosRoleReplace( const QString &replace )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEREPLACE)
 {
@@ -1331,8 +1331,8 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETMULTIMATCHBEHAVIOR)
 }
 
 /*
-void remap( const QString & rowRole, const QString & columnRole, const QString & xPosRole, const QString & yPosRole,
-const QString & zPosRole, const QStringList & rowCategories, const QStringList & columnCategories )
+void remap( const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole,
+const QString &zPosRole, const QStringList &rowCategories, const QStringList &columnCategories )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_REMAP)
 {
@@ -1359,7 +1359,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_REMAP)
 }
 
 /*
-Q_INVOKABLE int rowCategoryIndex( const QString & category )
+Q_INVOKABLE int rowCategoryIndex( const QString &category )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORYINDEX)
 {
@@ -1383,7 +1383,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORYINDEX)
 }
 
 /*
-Q_INVOKABLE int columnCategoryIndex( const QString & category )
+Q_INVOKABLE int columnCategoryIndex( const QString &category )
 */
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORYINDEX)
 {

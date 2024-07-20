@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 }
 
 /*
-void setInputPosition( const QPoint & position )
+void setInputPosition( const QPoint &position )
 */
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_TOUCHEVENT)
 }
 
 /*
-virtual void mousePressEvent( QMouseEvent * event, const QPoint & mousePos )
+virtual void mousePressEvent( QMouseEvent * event, const QPoint &mousePos )
 */
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEPRESSEVENT)
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEPRESSEVENT)
 }
 
 /*
-virtual void mouseReleaseEvent( QMouseEvent * event, const QPoint & mousePos )
+virtual void mouseReleaseEvent( QMouseEvent * event, const QPoint &mousePos )
 */
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSERELEASEEVENT)
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSERELEASEEVENT)
 }
 
 /*
-virtual void mouseMoveEvent( QMouseEvent * event, const QPoint & mousePos )
+virtual void mouseMoveEvent( QMouseEvent * event, const QPoint &mousePos )
 */
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEMOVEEVENT)
 {

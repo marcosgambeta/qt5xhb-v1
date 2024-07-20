@@ -444,7 +444,7 @@ HB_FUNC_STATIC(Q3DCAMERA_TARGET)
 }
 
 /*
-void setTarget( const QVector3D & target )
+void setTarget( const QVector3D &target )
 */
 HB_FUNC_STATIC(Q3DCAMERA_SETTARGET)
 {
@@ -570,7 +570,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETMAXZOOMLEVEL)
 }
 
 /*
-virtual void copyValuesFrom( const Q3DObject & source )
+virtual void copyValuesFrom( const Q3DObject &source )
 */
 HB_FUNC_STATIC(Q3DCAMERA_COPYVALUESFROM)
 {

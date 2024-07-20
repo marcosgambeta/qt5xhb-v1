@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABELFORMAT)
 }
 
 /*
-void setItemLabelFormat( const QString & format )
+void setItemLabelFormat( const QString &format )
 */
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELFORMAT)
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MESHROTATION)
 }
 
 /*
-void setMeshRotation( const QQuaternion & rotation )
+void setMeshRotation( const QQuaternion &rotation )
 */
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHROTATION)
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_USERDEFINEDMESH)
 }
 
 /*
-void setUserDefinedMesh( const QString & fileName )
+void setUserDefinedMesh( const QString &fileName )
 */
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETUSERDEFINEDMESH)
 {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_BASECOLOR)
 }
 
 /*
-void setBaseColor( const QColor & color )
+void setBaseColor( const QColor &color )
 */
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASECOLOR)
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_BASEGRADIENT)
 }
 
 /*
-void setBaseGradient( const QLinearGradient & gradient )
+void setBaseGradient( const QLinearGradient &gradient )
 */
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASEGRADIENT)
 {
@@ -626,7 +626,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR)
 }
 
 /*
-void setSingleHighlightColor( const QColor & color )
+void setSingleHighlightColor( const QColor &color )
 */
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR)
 {
@@ -677,7 +677,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT)
 }
 
 /*
-void setSingleHighlightGradient( const QLinearGradient & gradient )
+void setSingleHighlightGradient( const QLinearGradient &gradient )
 */
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT)
 {
@@ -728,7 +728,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR)
 }
 
 /*
-void setMultiHighlightColor( const QColor & color )
+void setMultiHighlightColor( const QColor &color )
 */
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR)
 {
@@ -779,7 +779,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT)
 }
 
 /*
-void setMultiHighlightGradient( const QLinearGradient & gradient )
+void setMultiHighlightGradient( const QLinearGradient &gradient )
 */
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT)
 {
@@ -829,7 +829,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_NAME)
 }
 
 /*
-void setName( const QString & name )
+void setName( const QString &name )
 */
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETNAME)
 {
@@ -929,7 +929,7 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELVISIBLE)
 }
 
 /*
-Q_INVOKABLE void setMeshAxisAndAngle( const QVector3D & axis, float angle )
+Q_INVOKABLE void setMeshAxisAndAngle( const QVector3D &axis, float angle )
 */
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHAXISANDANGLE)
 {
