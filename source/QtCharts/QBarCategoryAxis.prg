@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_CATEGORIES)
 }
 
 /*
-void setCategories( const QStringList & categories )
+void setCategories( const QStringList &categories )
 */
 HB_FUNC_STATIC(QBARCATEGORYAXIS_SETCATEGORIES)
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_MIN)
 }
 
 /*
-void setMin( const QString & minCategory )
+void setMin( const QString &minCategory )
 */
 HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMIN)
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_MAX)
 }
 
 /*
-void setMax( const QString & maxCategory )
+void setMax( const QString &maxCategory )
 */
 HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMAX)
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void append( const QStringList & categories )
+    void append( const QStringList &categories )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void append( const QString & category )
+    void append( const QString &category )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_APPEND)
 }
 
 /*
-void remove( const QString & category )
+void remove( const QString &category )
 */
 HB_FUNC_STATIC(QBARCATEGORYAXIS_REMOVE)
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_REMOVE)
 }
 
 /*
-void insert( int index, const QString & category )
+void insert( int index, const QString &category )
 */
 HB_FUNC_STATIC(QBARCATEGORYAXIS_INSERT)
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_INSERT)
 }
 
 /*
-void replace( const QString & oldCategory, const QString & newCategory )
+void replace( const QString &oldCategory, const QString &newCategory )
 */
 HB_FUNC_STATIC(QBARCATEGORYAXIS_REPLACE)
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_AT)
 }
 
 /*
-void setRange( const QString & minCategory, const QString & maxCategory )
+void setRange( const QString &minCategory, const QString &maxCategory )
 */
 HB_FUNC_STATIC(QBARCATEGORYAXIS_SETRANGE)
 {

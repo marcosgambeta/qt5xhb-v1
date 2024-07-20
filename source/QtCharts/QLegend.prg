@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QLEGEND_FONT)
 }
 
 /*
-void setFont( const QFont & font )
+void setFont( const QFont &font )
 */
 HB_FUNC_STATIC(QLEGEND_SETFONT)
 {
@@ -610,7 +610,7 @@ HB_FUNC_STATIC(QLEGEND_PAINT)
 }
 
 /*
-void setBrush( const QBrush & brush )
+void setBrush( const QBrush &brush )
 */
 HB_FUNC_STATIC(QLEGEND_SETBRUSH)
 {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC(QLEGEND_BRUSH)
 }
 
 /*
-void setPen( const QPen & pen )
+void setPen( const QPen &pen )
 */
 HB_FUNC_STATIC(QLEGEND_SETPEN)
 {
@@ -720,7 +720,7 @@ HB_FUNC_STATIC(QLEGEND_PEN)
 }
 
 /*
-void setLabelBrush( const QBrush & brush )
+void setLabelBrush( const QBrush &brush )
 */
 HB_FUNC_STATIC(QLEGEND_SETLABELBRUSH)
 {

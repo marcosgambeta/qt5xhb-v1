@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_NAME)
 }
 
 /*
-void setName( const QString & name )
+void setName( const QString &name )
 */
 HB_FUNC_STATIC(QABSTRACTSERIES_SETNAME)
 {

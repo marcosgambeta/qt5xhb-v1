@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSFORMAT)
 }
 
 /*
-void setLabelsFormat( const QString & format )
+void setLabelsFormat( const QString &format )
 */
 HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSFORMAT)
 {

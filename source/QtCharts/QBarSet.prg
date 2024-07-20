@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QBARSET_PEN)
 }
 
 /*
-void setPen( const QPen & pen )
+void setPen( const QPen &pen )
 */
 HB_FUNC_STATIC(QBARSET_SETPEN)
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QBARSET_BRUSH)
 }
 
 /*
-void setBrush( const QBrush & brush )
+void setBrush( const QBrush &brush )
 */
 HB_FUNC_STATIC(QBARSET_SETBRUSH)
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QBARSET_LABELBRUSH)
 }
 
 /*
-void setLabelBrush( const QBrush & brush )
+void setLabelBrush( const QBrush &brush )
 */
 HB_FUNC_STATIC(QBARSET_SETLABELBRUSH)
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QBARSET_LABELFONT)
 }
 
 /*
-void setLabelFont( const QFont & font )
+void setLabelFont( const QFont &font )
 */
 HB_FUNC_STATIC(QBARSET_SETLABELFONT)
 {
@@ -599,7 +599,7 @@ HB_FUNC_STATIC(QBARSET_APPEND)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void append( const QList<qreal> & values )
+    void append( const QList<qreal> &values )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     QBarSet *obj = (QBarSet *)Qt5xHb::itemGetPtrStackSelfItem();

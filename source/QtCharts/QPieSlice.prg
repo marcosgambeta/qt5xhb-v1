@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QPIESLICE_PEN)
 }
 
 /*
-void setPen( const QPen & pen )
+void setPen( const QPen &pen )
 */
 HB_FUNC_STATIC(QPIESLICE_SETPEN)
 {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC(QPIESLICE_BRUSH)
 }
 
 /*
-void setBrush( const QBrush & brush )
+void setBrush( const QBrush &brush )
 */
 HB_FUNC_STATIC(QPIESLICE_SETBRUSH)
 {
@@ -738,7 +738,7 @@ HB_FUNC_STATIC(QPIESLICE_LABELBRUSH)
 }
 
 /*
-void setLabelBrush( const QBrush & brush )
+void setLabelBrush( const QBrush &brush )
 */
 HB_FUNC_STATIC(QPIESLICE_SETLABELBRUSH)
 {
@@ -848,7 +848,7 @@ HB_FUNC_STATIC(QPIESLICE_LABELFONT)
 }
 
 /*
-void setLabelFont( const QFont & font )
+void setLabelFont( const QFont &font )
 */
 HB_FUNC_STATIC(QPIESLICE_SETLABELFONT)
 {

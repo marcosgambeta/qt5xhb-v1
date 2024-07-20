@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_BRUSH)
 }
 
 /*
-void setBrush( const QBrush & brush )
+void setBrush( const QBrush &brush )
 */
 HB_FUNC_STATIC(QBOXPLOTSERIES_SETBRUSH)
 {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QBOXPLOTSERIES_PEN)
 }
 
 /*
-void setPen( const QPen & pen )
+void setPen( const QPen &pen )
 */
 HB_FUNC_STATIC(QBOXPLOTSERIES_SETPEN)
 {

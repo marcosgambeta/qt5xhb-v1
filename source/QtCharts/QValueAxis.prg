@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QVALUEAXIS_LABELFORMAT)
 }
 
 /*
-void setLabelFormat( const QString & format )
+void setLabelFormat( const QString &format )
 */
 HB_FUNC_STATIC(QVALUEAXIS_SETLABELFORMAT)
 {
