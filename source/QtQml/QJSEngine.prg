@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QJSENGINE_COLLECTGARBAGE)
 }
 
 /*
-QJSValue evaluate( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
+QJSValue evaluate( const QString &program, const QString &fileName = QString(), int lineNumber = 1 )
 */
 HB_FUNC_STATIC(QJSENGINE_EVALUATE)
 {

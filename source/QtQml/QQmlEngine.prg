@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QQMLENGINE_DELETE)
 }
 
 /*
-void addImageProvider( const QString & providerId, QQmlImageProviderBase * provider )
+void addImageProvider( const QString &providerId, QQmlImageProviderBase * provider )
 */
 HB_FUNC_STATIC(QQMLENGINE_ADDIMAGEPROVIDER)
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDIMAGEPROVIDER)
 }
 
 /*
-void addImportPath( const QString & path )
+void addImportPath( const QString &path )
 */
 HB_FUNC_STATIC(QQMLENGINE_ADDIMPORTPATH)
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDIMPORTPATH)
 }
 
 /*
-bool addNamedBundle( const QString & name, const QString & fileName )
+bool addNamedBundle( const QString &name, const QString &fileName )
 */
 HB_FUNC_STATIC(QQMLENGINE_ADDNAMEDBUNDLE)
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QQMLENGINE_ADDNAMEDBUNDLE)
 }
 
 /*
-void addPluginPath( const QString & path )
+void addPluginPath( const QString &path )
 */
 HB_FUNC_STATIC(QQMLENGINE_ADDPLUGINPATH)
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QQMLENGINE_CLEARCOMPONENTCACHE)
 }
 
 /*
-QQmlImageProviderBase * imageProvider( const QString & providerId ) const
+QQmlImageProviderBase * imageProvider( const QString &providerId ) const
 */
 HB_FUNC_STATIC(QQMLENGINE_IMAGEPROVIDER)
 {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QQMLENGINE_PLUGINPATHLIST)
 }
 
 /*
-void removeImageProvider( const QString & providerId )
+void removeImageProvider( const QString &providerId )
 */
 HB_FUNC_STATIC(QQMLENGINE_REMOVEIMAGEPROVIDER)
 {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC(QQMLENGINE_ROOTCONTEXT)
 }
 
 /*
-void setBaseUrl( const QUrl & url )
+void setBaseUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QQMLENGINE_SETBASEURL)
 {
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETBASEURL)
 }
 
 /*
-void setImportPathList( const QStringList & paths )
+void setImportPathList( const QStringList &paths )
 */
 HB_FUNC_STATIC(QQMLENGINE_SETIMPORTPATHLIST)
 {
@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETNETWORKACCESSMANAGERFACTORY)
 }
 
 /*
-void setOfflineStoragePath( const QString & dir )
+void setOfflineStoragePath( const QString &dir )
 */
 HB_FUNC_STATIC(QQMLENGINE_SETOFFLINESTORAGEPATH)
 {
@@ -679,7 +679,7 @@ HB_FUNC_STATIC(QQMLENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR)
 }
 
 /*
-void setPluginPathList( const QStringList & paths )
+void setPluginPathList( const QStringList &paths )
 */
 HB_FUNC_STATIC(QQMLENGINE_SETPLUGINPATHLIST)
 {

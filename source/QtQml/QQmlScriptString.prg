@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_NEW)
   else if (ISNUMPAR(1) && ISQQMLSCRIPTSTRING(1))
   {
     /*
-    QQmlScriptString( const QQmlScriptString & other )
+    QQmlScriptString( const QQmlScriptString &other )
     */
     QQmlScriptString *obj = new QQmlScriptString(*PQQMLSCRIPTSTRING(1));
     Qt5xHb::returnNewObject(obj, true);

@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QJSVALUE_NEW1)
 }
 
 /*
-QJSValue( const QJSValue & other )
+QJSValue( const QJSValue &other )
 */
 void QJSValue_new2()
 {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QJSVALUE_NEW6)
 }
 
 /*
-QJSValue( const QString & value )
+QJSValue( const QString &value )
 */
 HB_FUNC_STATIC(QJSVALUE_NEW7)
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QJSVALUE_NEW7)
 }
 
 /*
-QJSValue( const QLatin1String & value )
+QJSValue( const QLatin1String &value )
 */
 void QJSValue_new8()
 {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QJSVALUE_DELETE)
 }
 
 /*
-bool deleteProperty( const QString & name )
+bool deleteProperty( const QString &name )
 */
 HB_FUNC_STATIC(QJSVALUE_DELETEPROPERTY)
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QJSVALUE_DELETEPROPERTY)
 }
 
 /*
-bool equals( const QJSValue & other ) const
+bool equals( const QJSValue &other ) const
 */
 HB_FUNC_STATIC(QJSVALUE_EQUALS)
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QJSVALUE_EQUALS)
 }
 
 /*
-bool hasOwnProperty( const QString & name ) const
+bool hasOwnProperty( const QString &name ) const
 */
 HB_FUNC_STATIC(QJSVALUE_HASOWNPROPERTY)
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QJSVALUE_HASOWNPROPERTY)
 }
 
 /*
-bool hasProperty( const QString & name ) const
+bool hasProperty( const QString &name ) const
 */
 HB_FUNC_STATIC(QJSVALUE_HASPROPERTY)
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC(QJSVALUE_PROPERTY)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QJSValue property( const QString & name ) const
+    QJSValue property( const QString &name ) const
     */
     QJSValue *obj = (QJSValue *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -698,7 +698,7 @@ HB_FUNC_STATIC(QJSVALUE_SETPROPERTY)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQJSVALUE(2))
   {
     /*
-    void setProperty( const QString & name, const QJSValue & value )
+    void setProperty( const QString &name, const QJSValue &value )
     */
     QJSValue *obj = (QJSValue *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -712,7 +712,7 @@ HB_FUNC_STATIC(QJSVALUE_SETPROPERTY)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQJSVALUE(2))
   {
     /*
-    void setProperty( quint32 arrayIndex, const QJSValue & value )
+    void setProperty( quint32 arrayIndex, const QJSValue &value )
     */
     QJSValue *obj = (QJSValue *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -730,7 +730,7 @@ HB_FUNC_STATIC(QJSVALUE_SETPROPERTY)
 }
 
 /*
-void setPrototype( const QJSValue & prototype )
+void setPrototype( const QJSValue &prototype )
 */
 HB_FUNC_STATIC(QJSVALUE_SETPROTOTYPE)
 {
@@ -756,7 +756,7 @@ HB_FUNC_STATIC(QJSVALUE_SETPROTOTYPE)
 }
 
 /*
-bool strictlyEquals( const QJSValue & other ) const
+bool strictlyEquals( const QJSValue &other ) const
 */
 HB_FUNC_STATIC(QJSVALUE_STRICTLYEQUALS)
 {

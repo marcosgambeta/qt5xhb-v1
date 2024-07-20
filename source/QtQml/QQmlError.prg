@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QQMLERROR_NEW)
   else if (ISNUMPAR(1) && ISQQMLERROR(1))
   {
     /*
-    QQmlError( const QQmlError & other )
+    QQmlError( const QQmlError &other )
     */
     QQmlError *obj = new QQmlError(*PQQMLERROR(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QQMLERROR_SETCOLUMN)
 }
 
 /*
-void setDescription( const QString & description )
+void setDescription( const QString &description )
 */
 HB_FUNC_STATIC(QQMLERROR_SETDESCRIPTION)
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QQMLERROR_SETLINE)
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QQMLERROR_SETURL)
 {

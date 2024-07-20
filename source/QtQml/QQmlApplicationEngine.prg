@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
   else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QQmlApplicationEngine( const QUrl & url, QObject * parent = 0 )
+    QQmlApplicationEngine( const QUrl &url, QObject * parent = 0 )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QQmlApplicationEngine *obj = new QQmlApplicationEngine(*PQURL(1), OPQOBJECT(2, 0));
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QQmlApplicationEngine( const QString & filePath, QObject * parent = 0 )
+    QQmlApplicationEngine( const QString &filePath, QObject * parent = 0 )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QQmlApplicationEngine *obj = new QQmlApplicationEngine(PQSTRING(1), OPQOBJECT(2, 0));
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    void load( const QUrl & url )
+    void load( const QUrl &url )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QQmlApplicationEngine *obj = (QQmlApplicationEngine *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void load( const QString & filePath )
+    void load( const QString &filePath )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QQmlApplicationEngine *obj = (QQmlApplicationEngine *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
 }
 
 /*
-void loadData( const QByteArray & data, const QUrl & url = QUrl() )
+void loadData( const QByteArray &data, const QUrl &url = QUrl() )
 */
 HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOADDATA)
 {

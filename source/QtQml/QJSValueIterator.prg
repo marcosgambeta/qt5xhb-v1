@@ -61,7 +61,7 @@ RETURN
 #endif
 
     /*
-    QJSValueIterator( const QJSValue & object )
+    QJSValueIterator( const QJSValue &object )
     */
 HB_FUNC_STATIC(QJSVALUEITERATOR_NEW)
 {

@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_NEW)
   else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
   {
     /*
-    QQmlProperty( QObject * obj, const QString & name )
+    QQmlProperty( QObject * obj, const QString &name )
     */
     QQmlProperty *obj = new QQmlProperty(PQOBJECT(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_NEW)
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3))
   {
     /*
-    QQmlProperty( QObject * obj, const QString & name, QQmlContext * ctxt )
+    QQmlProperty( QObject * obj, const QString &name, QQmlContext * ctxt )
     */
     QQmlProperty *obj = new QQmlProperty(PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3));
     Qt5xHb::returnNewObject(obj, true);
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_NEW)
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3))
   {
     /*
-    QQmlProperty( QObject * obj, const QString & name, QQmlEngine * engine )
+    QQmlProperty( QObject * obj, const QString &name, QQmlEngine * engine )
     */
     QQmlProperty *obj = new QQmlProperty(PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3));
     Qt5xHb::returnNewObject(obj, true);
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_NEW)
   else if (ISNUMPAR(1) && ISQQMLPROPERTY(1))
   {
     /*
-    QQmlProperty( const QQmlProperty & other )
+    QQmlProperty( const QQmlProperty &other )
     */
     QQmlProperty *obj = new QQmlProperty(*PQQMLPROPERTY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -605,7 +605,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
   else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
   {
     /*
-    static QVariant read( QObject * object, const QString & name )
+    static QVariant read( QObject * object, const QString &name )
     */
     QVariant *ptr = new QVariant(QQmlProperty::read(PQOBJECT(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3))
   {
     /*
-    static QVariant read( QObject * object, const QString & name, QQmlContext * ctxt )
+    static QVariant read( QObject * object, const QString &name, QQmlContext * ctxt )
     */
     QVariant *ptr = new QVariant(QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3)));
     Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -621,7 +621,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3))
   {
     /*
-    static QVariant read( QObject * object, const QString & name, QQmlEngine * engine )
+    static QVariant read( QObject * object, const QString &name, QQmlEngine * engine )
     */
     QVariant *ptr = new QVariant(QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3)));
     Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -685,7 +685,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_WRITE)
   if (ISNUMPAR(1) && ISQVARIANT(1))
   {
     /*
-    bool write( const QVariant & value ) const
+    bool write( const QVariant &value ) const
     */
     QQmlProperty *obj = (QQmlProperty *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -697,21 +697,21 @@ HB_FUNC_STATIC(QQMLPROPERTY_WRITE)
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3))
   {
     /*
-    static bool write( QObject * object, const QString & name, const QVariant & value )
+    static bool write( QObject * object, const QString &name, const QVariant &value )
     */
     RBOOL(QQmlProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3)));
   }
   else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLCONTEXT(4))
   {
     /*
-    static bool write( QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt )
+    static bool write( QObject * object, const QString &name, const QVariant &value, QQmlContext * ctxt )
     */
     RBOOL(QQmlProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLCONTEXT(4)));
   }
   else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLENGINE(4))
   {
     /*
-    static bool write( QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine )
+    static bool write( QObject * object, const QString &name, const QVariant &value, QQmlEngine * engine )
     */
     RBOOL(QQmlProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLENGINE(4)));
   }

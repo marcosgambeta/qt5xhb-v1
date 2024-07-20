@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
   else if (ISBETWEEN(2, 3) && ISQQMLENGINE(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QQmlComponent( QQmlEngine * engine, const QString & fileName, QObject * parent = 0 )
+    QQmlComponent( QQmlEngine * engine, const QString &fileName, QObject * parent = 0 )
     */
     QQmlComponent *obj = new QQmlComponent(PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
   else if (ISBETWEEN(3, 4) && ISQQMLENGINE(1) && HB_ISCHAR(2) && HB_ISNUM(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QQmlComponent( QQmlEngine * engine, const QString & fileName, QQmlComponent::CompilationMode mode, QObject * parent
+    QQmlComponent( QQmlEngine * engine, const QString &fileName, QQmlComponent::CompilationMode mode, QObject * parent
     = 0)
     */
     QQmlComponent *obj =
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
   else if (ISBETWEEN(2, 3) && ISQQMLENGINE(1) && ISQURL(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QQmlComponent( QQmlEngine * engine, const QUrl & url, QObject * parent = 0 )
+    QQmlComponent( QQmlEngine * engine, const QUrl &url, QObject * parent = 0 )
     */
     QQmlComponent *obj = new QQmlComponent(PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_NEW)
   else if (ISBETWEEN(3, 4) && ISQQMLENGINE(1) && ISQURL(2) && HB_ISNUM(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QQmlComponent( QQmlEngine * engine, const QUrl & url, QQmlComponent::CompilationMode mode, QObject * parent = 0 )
+    QQmlComponent( QQmlEngine * engine, const QUrl &url, QQmlComponent::CompilationMode mode, QObject * parent = 0 )
     */
     QQmlComponent *obj =
         new QQmlComponent(PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode)hb_parni(3), OPQOBJECT(4, 0));
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_CREATE)
            (ISQQMLCONTEXT(3) || HB_ISNIL(3)))
   {
     /*
-    void create( QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0 )
+    void create( QQmlIncubator &incubator, QQmlContext * context = 0, QQmlContext * forContext = 0 )
     */
     QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_LOADURL)
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    void loadUrl( const QUrl & url )
+    void loadUrl( const QUrl &url )
     */
     QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_LOADURL)
   else if (ISNUMPAR(2) && ISQURL(1) && HB_ISNUM(2))
   {
     /*
-    void loadUrl( const QUrl & url, QQmlComponent::CompilationMode mode )
+    void loadUrl( const QUrl &url, QQmlComponent::CompilationMode mode )
     */
     QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_LOADURL)
 }
 
 /*
-void setData( const QByteArray & data, const QUrl & url )
+void setData( const QByteArray &data, const QUrl &url )
 */
 HB_FUNC_STATIC(QQMLCOMPONENT_SETDATA)
 {
