@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU)
 }
 
 /*
-void setFeaturePermission( const QUrl & securityOrigin, QWebEnginePage::Feature feature,
+void setFeaturePermission( const QUrl &securityOrigin, QWebEnginePage::Feature feature,
 QWebEnginePage::PermissionPolicy policy )
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETFEATUREPERMISSION)
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETFEATUREPERMISSION)
 }
 
 /*
-void load( const QUrl & url )
+void load( const QUrl &url )
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_LOAD)
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_LOAD)
 }
 
 /*
-void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml( const QString &html, const QUrl &baseUrl = QUrl() )
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETHTML)
 {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_SETHTML)
 }
 
 /*
-void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent( const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl() )
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETCONTENT)
 {
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QWEBENGINEPAGE_URL)
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QWEBENGINEPAGE_SETURL)
 {
@@ -686,7 +686,7 @@ HB_FUNC(QWEBENGINEPAGE_RUNJAVASCRIPT)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void runJavaScript( const QString & scriptSource )
+    void runJavaScript( const QString &scriptSource )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QWebEnginePage *obj = (QWebEnginePage *)Qt5xHb::itemGetPtrStackSelfItem();

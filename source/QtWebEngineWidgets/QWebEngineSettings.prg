@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTFAMILY)
 }
 
 /*
-void setFontFamily( QWebEngineSettings::FontFamily which, const QString & family )
+void setFontFamily( QWebEngineSettings::FontFamily which, const QString &family )
 */
 HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTFAMILY)
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_DEFAULTTEXTENCODING)
 }
 
 /*
-void setDefaultTextEncoding( const QString & encoding )
+void setDefaultTextEncoding( const QString &encoding )
 */
 HB_FUNC_STATIC(QWEBENGINESETTINGS_SETDEFAULTTEXTENCODING)
 {

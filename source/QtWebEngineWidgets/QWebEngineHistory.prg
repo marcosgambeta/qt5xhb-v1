@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARD)
 }
 
 /*
-void goToItem( const QWebEngineHistoryItem & item )
+void goToItem( const QWebEngineHistoryItem &item )
 */
 HB_FUNC_STATIC(QWEBENGINEHISTORY_GOTOITEM)
 {

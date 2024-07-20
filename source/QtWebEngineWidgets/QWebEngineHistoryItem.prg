@@ -68,7 +68,7 @@ RETURN
 #endif
 
     /*
-    QWebEngineHistoryItem( const QWebEngineHistoryItem & other )
+    QWebEngineHistoryItem( const QWebEngineHistoryItem &other )
     */
 HB_FUNC_STATIC(QWEBENGINEHISTORYITEM_NEW)
 {
