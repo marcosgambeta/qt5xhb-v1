@@ -66,8 +66,8 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
       (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    QXmlParseException( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const
-    QString & s = QString() )
+    QXmlParseException( const QString &name = QString(), int c = -1, int l = -1, const QString &p = QString(), const
+    QString &s = QString() )
     */
     QXmlParseException *obj = new QXmlParseException(OPQSTRING(1, QString()), OPINT(2, -1), OPINT(3, -1),
                                                      OPQSTRING(4, QString()), OPQSTRING(5, QString()));
@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
   else if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1))
   {
     /*
-    QXmlParseException( const QXmlParseException & other )
+    QXmlParseException( const QXmlParseException &other )
     */
     QXmlParseException *obj = new QXmlParseException(*PQXMLPARSEEXCEPTION(1));
     Qt5xHb::returnNewObject(obj, true);

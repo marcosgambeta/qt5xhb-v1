@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_DELETE)
 }
 
 /*
-virtual bool comment( const QString & ch ) = 0
+virtual bool comment( const QString &ch ) = 0
 */
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_COMMENT)
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_ENDDTD)
 }
 
 /*
-virtual bool endEntity( const QString & name ) = 0
+virtual bool endEntity( const QString &name ) = 0
 */
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_ENDENTITY)
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_STARTCDATA)
 }
 
 /*
-virtual bool startDTD( const QString & name, const QString & publicId, const QString & systemId ) = 0
+virtual bool startDTD( const QString &name, const QString &publicId, const QString &systemId ) = 0
 */
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_STARTDTD)
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_STARTDTD)
 }
 
 /*
-virtual bool startEntity( const QString & name ) = 0
+virtual bool startEntity( const QString &name ) = 0
 */
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_STARTENTITY)
 {

@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QDOMELEMENT_NEW)
   else if (ISNUMPAR(1) && ISQDOMELEMENT(1))
   {
     /*
-    QDomElement( const QDomElement & x )
+    QDomElement( const QDomElement &x )
     */
     QDomElement *obj = new QDomElement(*PQDOMELEMENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QDOMELEMENT_DELETE)
 }
 
 /*
-QString attribute( const QString & name, const QString & defValue = QString() ) const
+QString attribute( const QString &name, const QString &defValue = QString() ) const
 */
 HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTE)
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTE)
 }
 
 /*
-QString attributeNS( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
+QString attributeNS( const QString nsURI, const QString &localName, const QString &defValue = QString() ) const
 */
 HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENS)
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENS)
 }
 
 /*
-QDomAttr attributeNode( const QString & name )
+QDomAttr attributeNode( const QString &name )
 */
 HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENODE)
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENODE)
 }
 
 /*
-QDomAttr attributeNodeNS( const QString & nsURI, const QString & localName )
+QDomAttr attributeNodeNS( const QString &nsURI, const QString &localName )
 */
 HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENODENS)
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTES)
 }
 
 /*
-QDomNodeList elementsByTagName( const QString & tagname ) const
+QDomNodeList elementsByTagName( const QString &tagname ) const
 */
 HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAME)
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAME)
 }
 
 /*
-QDomNodeList elementsByTagNameNS( const QString & nsURI, const QString & localName ) const
+QDomNodeList elementsByTagNameNS( const QString &nsURI, const QString &localName ) const
 */
 HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAMENS)
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAMENS)
 }
 
 /*
-bool hasAttribute( const QString & name ) const
+bool hasAttribute( const QString &name ) const
 */
 HB_FUNC_STATIC(QDOMELEMENT_HASATTRIBUTE)
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QDOMELEMENT_HASATTRIBUTE)
 }
 
 /*
-bool hasAttributeNS( const QString & nsURI, const QString & localName ) const
+bool hasAttributeNS( const QString &nsURI, const QString &localName ) const
 */
 HB_FUNC_STATIC(QDOMELEMENT_HASATTRIBUTENS)
 {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QDOMELEMENT_NODETYPE)
 }
 
 /*
-void removeAttribute( const QString & name )
+void removeAttribute( const QString &name )
 */
 HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTE)
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTE)
 }
 
 /*
-void removeAttributeNS( const QString & nsURI, const QString & localName )
+void removeAttributeNS( const QString &nsURI, const QString &localName )
 */
 HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENS)
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENS)
 }
 
 /*
-QDomAttr removeAttributeNode( const QDomAttr & oldAttr )
+QDomAttr removeAttributeNode( const QDomAttr &oldAttr )
 */
 HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENODE)
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENODE)
 }
 
 /*
-void setAttribute( const QString & name, const QString & value )
+void setAttribute( const QString &name, const QString &value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE1)
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE1)
 }
 
 /*
-void setAttribute( const QString & name, int value )
+void setAttribute( const QString &name, int value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE2)
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE2)
 }
 
 /*
-void setAttribute( const QString & name, uint value )
+void setAttribute( const QString &name, uint value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE3)
 {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE3)
 }
 
 /*
-void setAttribute( const QString & name, qlonglong value )
+void setAttribute( const QString &name, qlonglong value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE4)
 {
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE4)
 }
 
 /*
-void setAttribute( const QString & name, qulonglong value )
+void setAttribute( const QString &name, qulonglong value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE5)
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE5)
 }
 
 /*
-void setAttribute( const QString & name, float value )
+void setAttribute( const QString &name, float value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE6)
 {
@@ -601,7 +601,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE6)
 }
 
 /*
-void setAttribute( const QString & name, double value )
+void setAttribute( const QString &name, double value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE7)
 {
@@ -643,7 +643,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE)
 }
 
 /*
-void setAttributeNS( const QString nsURI, const QString & qName, const QString & value )
+void setAttributeNS( const QString nsURI, const QString &qName, const QString &value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS1)
 {
@@ -669,7 +669,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS1)
 }
 
 /*
-void setAttributeNS( const QString nsURI, const QString & qName, int value )
+void setAttributeNS( const QString nsURI, const QString &qName, int value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS2)
 {
@@ -695,7 +695,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS2)
 }
 
 /*
-void setAttributeNS( const QString nsURI, const QString & qName, uint value )
+void setAttributeNS( const QString nsURI, const QString &qName, uint value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS3)
 {
@@ -721,7 +721,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS3)
 }
 
 /*
-void setAttributeNS( const QString nsURI, const QString & qName, qlonglong value )
+void setAttributeNS( const QString nsURI, const QString &qName, qlonglong value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS4)
 {
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS4)
 }
 
 /*
-void setAttributeNS( const QString nsURI, const QString & qName, qulonglong value )
+void setAttributeNS( const QString nsURI, const QString &qName, qulonglong value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS5)
 {
@@ -773,7 +773,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS5)
 }
 
 /*
-void setAttributeNS( const QString nsURI, const QString & qName, double value )
+void setAttributeNS( const QString nsURI, const QString &qName, double value )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS6)
 {
@@ -815,7 +815,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS)
 }
 
 /*
-QDomAttr setAttributeNode( const QDomAttr & newAttr )
+QDomAttr setAttributeNode( const QDomAttr &newAttr )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODE)
 {
@@ -840,7 +840,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODE)
 }
 
 /*
-QDomAttr setAttributeNodeNS( const QDomAttr & newAttr )
+QDomAttr setAttributeNodeNS( const QDomAttr &newAttr )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODENS)
 {
@@ -865,7 +865,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODENS)
 }
 
 /*
-void setTagName( const QString & name )
+void setTagName( const QString &name )
 */
 HB_FUNC_STATIC(QDOMELEMENT_SETTAGNAME)
 {

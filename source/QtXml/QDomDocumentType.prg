@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NEW)
   else if (ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1))
   {
     /*
-    QDomDocumentType( const QDomDocumentType & n )
+    QDomDocumentType( const QDomDocumentType &n )
     */
     QDomDocumentType *obj = new QDomDocumentType(*PQDOMDOCUMENTTYPE(1));
     Qt5xHb::returnNewObject(obj, true);

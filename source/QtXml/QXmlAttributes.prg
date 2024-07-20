@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_DELETE)
 }
 
 /*
-void append( const QString & qName, const QString & uri, const QString & localPart, const QString & value )
+void append( const QString &qName, const QString &uri, const QString &localPart, const QString &value )
 */
 HB_FUNC_STATIC(QXMLATTRIBUTES_APPEND)
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    int index( const QString & qName ) const
+    int index( const QString &qName ) const
     */
     QXmlAttributes *obj = (QXmlAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
   else if (ISNUMPAR(1) && ISQLATIN1STRING(1))
   {
     /*
-    int index( const QLatin1String & qName ) const
+    int index( const QLatin1String &qName ) const
     */
     QXmlAttributes *obj = (QXmlAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    int index( const QString & uri, const QString & localPart ) const
+    int index( const QString &uri, const QString &localPart ) const
     */
     QXmlAttributes *obj = (QXmlAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QString type( const QString & qName ) const
+    QString type( const QString &qName ) const
     */
     QXmlAttributes *obj = (QXmlAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    QString type( const QString & uri, const QString & localName ) const
+    QString type( const QString &uri, const QString &localName ) const
     */
     QXmlAttributes *obj = (QXmlAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QString value( const QString & qName ) const
+    QString value( const QString &qName ) const
     */
     QXmlAttributes *obj = (QXmlAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
   else if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
     /*
-    QString value( const QLatin1String & qName ) const
+    QString value( const QLatin1String &qName ) const
     */
     QXmlAttributes *obj = (QXmlAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    QString value( const QString & uri, const QString & localName ) const
+    QString value( const QString &uri, const QString &localName ) const
     */
     QXmlAttributes *obj = (QXmlAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
 

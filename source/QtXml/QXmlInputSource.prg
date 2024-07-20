@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    virtual void setData( const QString & dat )
+    virtual void setData( const QString &dat )
     */
     QXmlInputSource *obj = (QXmlInputSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    virtual void setData( const QByteArray & dat )
+    virtual void setData( const QByteArray &dat )
     */
     QXmlInputSource *obj = (QXmlInputSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
