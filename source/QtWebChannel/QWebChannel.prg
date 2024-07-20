@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QWEBCHANNEL_DELETE)
 }
 
 /*
-Q_INVOKABLE void registerObject( const QString & id, QObject * object )
+Q_INVOKABLE void registerObject( const QString &id, QObject * object )
 */
 HB_FUNC_STATIC(QWEBCHANNEL_REGISTEROBJECT)
 {

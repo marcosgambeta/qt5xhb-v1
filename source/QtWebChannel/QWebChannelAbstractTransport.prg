@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_DELETE)
 }
 
 /*
-virtual void sendMessage( const QJsonObject & message ) = 0
+virtual void sendMessage( const QJsonObject &message ) = 0
 */
 HB_FUNC_STATIC(QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE)
 {
