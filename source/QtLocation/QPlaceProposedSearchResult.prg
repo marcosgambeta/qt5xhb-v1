@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST)
 }
 
 /*
-void setSearchRequest( const QPlaceSearchRequest & request )
+void setSearchRequest( const QPlaceSearchRequest &request )
 */
 HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SETSEARCHREQUEST)
 {

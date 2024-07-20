@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_NEW)
   else if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1))
   {
     /*
-    QPlaceSearchRequest( const QPlaceSearchRequest & other )
+    QPlaceSearchRequest( const QPlaceSearchRequest &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceSearchRequest *obj = new QPlaceSearchRequest(*PQPLACESEARCHREQUEST(1));
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHTERM)
 }
 
 /*
-void setSearchTerm( const QString & term )
+void setSearchTerm( const QString &term )
 */
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHTERM)
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_CATEGORIES)
 }
 
 /*
-void setCategory(const QPlaceCategory & category)
+void setCategory(const QPlaceCategory &category)
 */
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORY)
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORY)
 }
 
 /*
-void setCategories( const QList<QPlaceCategory> & categories )
+void setCategories( const QList<QPlaceCategory> &categories )
 */
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETCATEGORIES)
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHAREA)
 }
 
 /*
-void setSearchArea( const QGeoShape & area )
+void setSearchArea( const QGeoShape &area )
 */
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHAREA)
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_RECOMMENDATIONID)
 }
 
 /*
-void setRecommendationId( const QString & recommendationId )
+void setRecommendationId( const QString &recommendationId )
 */
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETRECOMMENDATIONID)
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QPLACESEARCHREQUEST_SEARCHCONTEXT)
 }
 
 /*
-void setSearchContext( const QVariant & context )
+void setSearchContext( const QVariant &context )
 */
 HB_FUNC_STATIC(QPLACESEARCHREQUEST_SETSEARCHCONTEXT)
 {

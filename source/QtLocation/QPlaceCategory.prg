@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_NEW)
   else if (ISNUMPAR(1) && ISQPLACECATEGORY(1))
   {
     /*
-    QPlaceCategory( const QPlaceCategory & other )
+    QPlaceCategory( const QPlaceCategory &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceCategory *obj = new QPlaceCategory(*PQPLACECATEGORY(1));
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_CATEGORYID)
 }
 
 /*
-void setCategoryId( const QString & identifier )
+void setCategoryId( const QString &identifier )
 */
 HB_FUNC_STATIC(QPLACECATEGORY_SETCATEGORYID)
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_NAME)
 }
 
 /*
-void setName( const QString & name )
+void setName( const QString &name )
 */
 HB_FUNC_STATIC(QPLACECATEGORY_SETNAME)
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QPLACECATEGORY_ICON)
 }
 
 /*
-void setIcon( const QPlaceIcon & icon )
+void setIcon( const QPlaceIcon &icon )
 */
 HB_FUNC_STATIC(QPLACECATEGORY_SETICON)
 {

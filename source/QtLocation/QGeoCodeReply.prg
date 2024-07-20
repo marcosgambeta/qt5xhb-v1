@@ -68,7 +68,7 @@ RETURN
 #include <QtPositioning/QGeoShape>
 
     /*
-    QGeoCodeReply( QGeoCodeReply::Error error, const QString & errorString, QObject * parent = 0 )
+    QGeoCodeReply( QGeoCodeReply::Error error, const QString &errorString, QObject * parent = 0 )
     */
 HB_FUNC_STATIC(QGEOCODEREPLY_NEW)
 {

@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_NEW)
   else if (ISNUMPAR(1) && ISQPLACEMATCHREQUEST(1))
   {
     /*
-    QPlaceMatchRequest( const QPlaceMatchRequest & other )
+    QPlaceMatchRequest( const QPlaceMatchRequest &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceMatchRequest *obj = new QPlaceMatchRequest(*PQPLACEMATCHREQUEST(1));
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_DELETE)
 }
 
 /*
-void setResults( const QList<QPlaceSearchResult> & results )
+void setResults( const QList<QPlaceSearchResult> &results )
 */
 HB_FUNC_STATIC(QPLACEMATCHREQUEST_SETRESULTS)
 {

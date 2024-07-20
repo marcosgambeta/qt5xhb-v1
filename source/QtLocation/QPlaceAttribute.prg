@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_NEW)
   else if (ISNUMPAR(1) && ISQPLACEATTRIBUTE(1))
   {
     /*
-    QPlaceAttribute( const QPlaceAttribute & other )
+    QPlaceAttribute( const QPlaceAttribute &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceAttribute *obj = new QPlaceAttribute(*PQPLACEATTRIBUTE(1));
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_LABEL)
 }
 
 /*
-void setLabel( const QString & label )
+void setLabel( const QString &label )
 */
 HB_FUNC_STATIC(QPLACEATTRIBUTE_SETLABEL)
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_TEXT)
 }
 
 /*
-void setText( const QString & text )
+void setText( const QString &text )
 */
 HB_FUNC_STATIC(QPLACEATTRIBUTE_SETTEXT)
 {

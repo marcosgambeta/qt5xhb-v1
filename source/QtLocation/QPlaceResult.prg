@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QPLACERESULT_PLACE)
 }
 
 /*
-void setPlace( const QPlace & place )
+void setPlace( const QPlace &place )
 */
 HB_FUNC_STATIC(QPLACERESULT_SETPLACE)
 {

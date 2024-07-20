@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QGEOROUTE_NEW)
   else if (ISNUMPAR(1) && ISQGEOMANEUVER(1))
   {
     /*
-    QGeoRoute( const QGeoRoute & other )
+    QGeoRoute( const QGeoRoute &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QGeoRoute *obj = new QGeoRoute(*PQGEOROUTE(1));
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QGEOROUTE_DELETE)
 }
 
 /*
-void setRouteId( const QString & id )
+void setRouteId( const QString &id )
 */
 HB_FUNC_STATIC(QGEOROUTE_SETROUTEID)
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QGEOROUTE_ROUTEID)
 }
 
 /*
-void setRequest( const QGeoRouteRequest & request )
+void setRequest( const QGeoRouteRequest &request )
 */
 HB_FUNC_STATIC(QGEOROUTE_SETREQUEST)
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QGEOROUTE_REQUEST)
 }
 
 /*
-void setBounds( const QGeoRectangle & bounds )
+void setBounds( const QGeoRectangle &bounds )
 */
 HB_FUNC_STATIC(QGEOROUTE_SETBOUNDS)
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QGEOROUTE_BOUNDS)
 }
 
 /*
-void setFirstRouteSegment( const QGeoRouteSegment & routeSegment )
+void setFirstRouteSegment( const QGeoRouteSegment &routeSegment )
 */
 HB_FUNC_STATIC(QGEOROUTE_SETFIRSTROUTESEGMENT)
 {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(QGEOROUTE_TRAVELMODE)
 }
 
 /*
-void setPath( const QList<QGeoCoordinate> & path )
+void setPath( const QList<QGeoCoordinate> &path )
 */
 HB_FUNC_STATIC(QGEOROUTE_SETPATH)
 {

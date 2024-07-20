@@ -81,7 +81,7 @@ RETURN
 #include <QtPositioning/QGeoRectangle>
 
     /*
-    QGeoRouteRequest( const QGeoCoordinate & origin, const QGeoCoordinate & destination )
+    QGeoRouteRequest( const QGeoCoordinate &origin, const QGeoCoordinate &destination )
     */
     void QGeoRouteRequest_new2()
 {
@@ -92,7 +92,7 @@ RETURN
 }
 
 /*
-QGeoRouteRequest( const QGeoRouteRequest & other )
+QGeoRouteRequest( const QGeoRouteRequest &other )
 */
 void QGeoRouteRequest_new3()
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_DELETE)
 }
 
 /*
-void setWaypoints( const QList<QGeoCoordinate> & waypoints )
+void setWaypoints( const QList<QGeoCoordinate> &waypoints )
 */
 HB_FUNC_STATIC(QGEOROUTEREQUEST_SETWAYPOINTS)
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QGEOROUTEREQUEST_WAYPOINTS)
 }
 
 /*
-void setExcludeAreas( const QList<QGeoRectangle> & areas )
+void setExcludeAreas( const QList<QGeoRectangle> &areas )
 */
 HB_FUNC_STATIC(QGEOROUTEREQUEST_SETEXCLUDEAREAS)
 {

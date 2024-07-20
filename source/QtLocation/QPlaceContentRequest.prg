@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_NEW)
   else if (ISNUMPAR(1) && ISQPLACECONTENTREQUEST(1))
   {
     /*
-    QPlaceContentRequest( const QPlaceContentRequest & other )
+    QPlaceContentRequest( const QPlaceContentRequest &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceContentRequest *obj = new QPlaceContentRequest(*PQPLACECONTENTREQUEST(1));
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_PLACEID)
 }
 
 /*
-void setPlaceId( const QString & identifier )
+void setPlaceId( const QString &identifier )
 */
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_SETPLACEID)
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_CONTENTCONTEXT)
 }
 
 /*
-void setContentContext( const QVariant & context )
+void setContentContext( const QVariant &context )
 */
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_SETCONTENTCONTEXT)
 {

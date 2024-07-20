@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QPLACEUSER_NEW)
   else if (ISNUMPAR(1) && ISQPLACEUSER(1))
   {
     /*
-    QPlaceUser( const QPlaceUser & other )
+    QPlaceUser( const QPlaceUser &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceUser *obj = new QPlaceUser(*PQPLACEUSER(1));
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QPLACEUSER_USERID)
 }
 
 /*
-void setUserId( const QString & identifier )
+void setUserId( const QString &identifier )
 */
 HB_FUNC_STATIC(QPLACEUSER_SETUSERID)
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QPLACEUSER_NAME)
 }
 
 /*
-void setName( const QString & name )
+void setName( const QString &name )
 */
 HB_FUNC_STATIC(QPLACEUSER_SETNAME)
 {

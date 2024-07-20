@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QPLACEICON_NEW)
   else if (ISNUMPAR(1) && ISQPLACEICON(1))
   {
     /*
-    QPlaceIcon( const QPlaceIcon & other )
+    QPlaceIcon( const QPlaceIcon &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceIcon *obj = new QPlaceIcon(*PQPLACEICON(1));
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QPLACEICON_DELETE)
 }
 
 /*
-QUrl url( const QSize & size = QSize() ) const
+QUrl url( const QSize &size = QSize() ) const
 */
 HB_FUNC_STATIC(QPLACEICON_URL)
 {

@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_NEW)
   else if (ISNUMPAR(1) && ISQPLACECONTENT(1))
   {
     /*
-    QPlaceEditorial( const QPlaceContent & other )
+    QPlaceEditorial( const QPlaceContent &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceEditorial *obj = new QPlaceEditorial(*PQPLACECONTENT(1));
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_TEXT)
 }
 
 /*
-void setText( const QString & text )
+void setText( const QString &text )
 */
 HB_FUNC_STATIC(QPLACEEDITORIAL_SETTEXT)
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_TITLE)
 }
 
 /*
-void setTitle( const QString & data )
+void setTitle( const QString &data )
 */
 HB_FUNC_STATIC(QPLACEEDITORIAL_SETTITLE)
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_LANGUAGE)
 }
 
 /*
-void setLanguage( const QString & data )
+void setLanguage( const QString &data )
 */
 HB_FUNC_STATIC(QPLACEEDITORIAL_SETLANGUAGE)
 {

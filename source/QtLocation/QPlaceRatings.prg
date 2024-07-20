@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QPLACERATINGS_NEW)
   else if (ISNUMPAR(1) && ISQPLACERATINGS(1))
   {
     /*
-    QPlaceRatings( const QPlaceRatings & other )
+    QPlaceRatings( const QPlaceRatings &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceRatings *obj = new QPlaceRatings(*PQPLACERATINGS(1));

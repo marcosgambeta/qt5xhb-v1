@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_MANAGERVERSION)
 }
 
 /*
-QGeoRouteReply * calculateRoute( const QGeoRouteRequest & request )
+QGeoRouteReply * calculateRoute( const QGeoRouteRequest &request )
 */
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_CALCULATEROUTE)
 {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_CALCULATEROUTE)
 }
 
 /*
-QGeoRouteReply * updateRoute( const QGeoRoute & route, const QGeoCoordinate & position )
+QGeoRouteReply * updateRoute( const QGeoRoute &route, const QGeoCoordinate &position )
 */
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_UPDATEROUTE)
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QGEOROUTINGMANAGER_SUPPORTEDMANEUVERDETAILS)
 }
 
 /*
-void setLocale( const QLocale & locale )
+void setLocale( const QLocale &locale )
 */
 HB_FUNC_STATIC(QGEOROUTINGMANAGER_SETLOCALE)
 {

@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_NEW)
   else if (ISNUMPAR(1) && ISQPLACESUPPLIER(1))
   {
     /*
-    QPlaceSupplier( const QPlaceSupplier & other )
+    QPlaceSupplier( const QPlaceSupplier &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceSupplier *obj = new QPlaceSupplier(*PQPLACESUPPLIER(1));
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_NAME)
 }
 
 /*
-void setName( const QString & data )
+void setName( const QString &data )
 */
 HB_FUNC_STATIC(QPLACESUPPLIER_SETNAME)
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_SUPPLIERID)
 }
 
 /*
-void setSupplierId( const QString & identifier )
+void setSupplierId( const QString &identifier )
 */
 HB_FUNC_STATIC(QPLACESUPPLIER_SETSUPPLIERID)
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_URL)
 }
 
 /*
-void setUrl( const QUrl & data )
+void setUrl( const QUrl &data )
 */
 HB_FUNC_STATIC(QPLACESUPPLIER_SETURL)
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QPLACESUPPLIER_ICON)
 }
 
 /*
-void setIcon( const QPlaceIcon & icon )
+void setIcon( const QPlaceIcon &icon )
 */
 HB_FUNC_STATIC(QPLACESUPPLIER_SETICON)
 {

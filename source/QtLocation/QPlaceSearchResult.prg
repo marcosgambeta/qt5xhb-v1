@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_NEW)
   else if (ISNUMPAR(1) && ISQPLACESEARCHRESULT(1))
   {
     /*
-    QPlaceSearchResult( const QPlaceSearchResult & other )
+    QPlaceSearchResult( const QPlaceSearchResult &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceSearchResult *obj = new QPlaceSearchResult(*PQPLACESEARCHRESULT(1));
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_TITLE)
 }
 
 /*
-void setTitle( const QString & title )
+void setTitle( const QString &title )
 */
 HB_FUNC_STATIC(QPLACESEARCHRESULT_SETTITLE)
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_ICON)
 }
 
 /*
-void setIcon( const QPlaceIcon & icon )
+void setIcon( const QPlaceIcon &icon )
 */
 HB_FUNC_STATIC(QPLACESEARCHRESULT_SETICON)
 {

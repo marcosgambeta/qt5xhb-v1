@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_GEOCODE)
   if (ISNUMPAR(2) && ISQGEOADDRESS(1) && ISQGEOSHAPE(2))
   {
     /*
-    virtual QGeoCodeReply * geocode( const QGeoAddress & address, const QGeoShape & bounds )
+    virtual QGeoCodeReply * geocode( const QGeoAddress &address, const QGeoShape &bounds )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QGeoCodingManagerEngine *obj = (QGeoCodingManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_GEOCODE)
   else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQGEOSHAPE(4))
   {
     /*
-    virtual QGeoCodeReply * geocode( const QString & address, int limit, int offset, const QGeoShape & bounds )
+    virtual QGeoCodeReply * geocode( const QString &address, int limit, int offset, const QGeoShape &bounds )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QGeoCodingManagerEngine *obj = (QGeoCodingManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_GEOCODE)
 }
 
 /*
-virtual QGeoCodeReply * reverseGeocode( const QGeoCoordinate & coordinate, const QGeoShape & bounds )
+virtual QGeoCodeReply * reverseGeocode( const QGeoCoordinate &coordinate, const QGeoShape &bounds )
 */
 HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_REVERSEGEOCODE)
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_REVERSEGEOCODE)
 }
 
 /*
-void setLocale( const QLocale & locale )
+void setLocale( const QLocale &locale )
 */
 HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_SETLOCALE)
 {
