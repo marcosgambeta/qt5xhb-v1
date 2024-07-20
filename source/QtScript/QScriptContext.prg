@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_PARENTCONTEXT)
 }
 
 /*
-void setActivationObject( const QScriptValue & activation )
+void setActivationObject( const QScriptValue &activation )
 */
 HB_FUNC_STATIC(QSCRIPTCONTEXT_SETACTIVATIONOBJECT)
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_SETACTIVATIONOBJECT)
 }
 
 /*
-void setThisObject( const QScriptValue & thisObject )
+void setThisObject( const QScriptValue &thisObject )
 */
 HB_FUNC_STATIC(QSCRIPTCONTEXT_SETTHISOBJECT)
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
   {
     /*
-    QScriptValue throwError( QScriptContext::Error error, const QString & text )
+    QScriptValue throwError( QScriptContext::Error error, const QString &text )
     */
     QScriptContext *obj = (QScriptContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QScriptValue throwError( const QString & text )
+    QScriptValue throwError( const QString &text )
     */
     QScriptContext *obj = (QScriptContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
 }
 
 /*
-QScriptValue throwValue( const QScriptValue & value )
+QScriptValue throwValue( const QScriptValue &value )
 */
 HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWVALUE)
 {

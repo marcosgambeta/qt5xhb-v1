@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_NEW)
   else if (ISNUMPAR(1) && ISQSCRIPTCONTEXTINFO(1))
   {
     /*
-    QScriptContextInfo( const QScriptContextInfo & other )
+    QScriptContextInfo( const QScriptContextInfo &other )
     */
     QScriptContextInfo *obj = new QScriptContextInfo(*PQSCRIPTCONTEXTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
