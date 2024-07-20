@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QX11INFO_NEXTSTARTUPID)
 }
 
 /*
-static void setNextStartupId( const QByteArray & id )
+static void setNextStartupId( const QByteArray &id )
 */
 HB_FUNC_STATIC(QX11INFO_SETNEXTSTARTUPID)
 {
