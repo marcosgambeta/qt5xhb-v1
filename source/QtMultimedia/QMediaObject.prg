@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QMEDIAOBJECT_ISMETADATAAVAILABLE)
 }
 
 /*
-QVariant metaData( const QString & key ) const
+QVariant metaData( const QString &key ) const
 */
 HB_FUNC_STATIC(QMEDIAOBJECT_METADATA)
 {

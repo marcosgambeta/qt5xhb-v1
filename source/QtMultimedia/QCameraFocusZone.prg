@@ -60,7 +60,7 @@ RETURN
 #endif
 
     /*
-    QCameraFocusZone( const QCameraFocusZone & other )
+    QCameraFocusZone( const QCameraFocusZone &other )
     */
 HB_FUNC_STATIC(QCAMERAFOCUSZONE_NEW)
 {

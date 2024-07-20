@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NEW)
   else if (ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1))
   {
     /*
-    QMediaTimeInterval( const QMediaTimeInterval & other )
+    QMediaTimeInterval( const QMediaTimeInterval &other )
     */
     QMediaTimeInterval *obj = new QMediaTimeInterval(*PQMEDIATIMEINTERVAL(1));
     Qt5xHb::returnNewObject(obj, true);

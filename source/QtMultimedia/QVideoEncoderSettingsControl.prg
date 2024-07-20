@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_DELETE)
 }
 
 /*
-virtual void setVideoSettings( const QVideoEncoderSettings & settings ) = 0
+virtual void setVideoSettings( const QVideoEncoderSettings &settings ) = 0
 */
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS)
 {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS)
 }
 
 /*
-virtual QList<qreal> supportedFrameRates( const QVideoEncoderSettings & settings, bool * continuous = nullptr ) const =
+virtual QList<qreal> supportedFrameRates( const QVideoEncoderSettings &settings, bool * continuous = nullptr ) const =
 0
 */
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES)
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES)
 }
 
 /*
-virtual QList<QSize> supportedResolutions( const QVideoEncoderSettings & settings, bool * continuous = nullptr ) const =
+virtual QList<QSize> supportedResolutions( const QVideoEncoderSettings &settings, bool * continuous = nullptr ) const =
 0
 */
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS)
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS)
 }
 
 /*
-virtual QString videoCodecDescription( const QString & codecName ) const = 0
+virtual QString videoCodecDescription( const QString &codecName ) const = 0
 */
 HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION)
 {

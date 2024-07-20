@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_POSITION)
 }
 
 /*
-virtual void setMedia( const QMediaContent & media, QIODevice * stream ) = 0
+virtual void setMedia( const QMediaContent &media, QIODevice * stream ) = 0
 */
 HB_FUNC_STATIC(QMEDIAPLAYERCONTROL_SETMEDIA)
 {

@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_AUDIOSETTINGS)
 }
 
 /*
-virtual QString codecDescription( const QString & codecName ) const = 0
+virtual QString codecDescription( const QString &codecName ) const = 0
 */
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_CODECDESCRIPTION)
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_CODECDESCRIPTION)
 }
 
 /*
-virtual void setAudioSettings( const QAudioEncoderSettings & settings ) = 0
+virtual void setAudioSettings( const QAudioEncoderSettings &settings ) = 0
 */
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_SETAUDIOSETTINGS)
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDAUDIOCODECS)
 }
 
 /*
-virtual QList<int> supportedSampleRates( const QAudioEncoderSettings & settings, bool * continuous = nullptr ) const = 0
+virtual QList<int> supportedSampleRates( const QAudioEncoderSettings &settings, bool * continuous = nullptr ) const = 0
 */
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDSAMPLERATES)
 {

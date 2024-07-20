@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_NEW)
   else if (ISBETWEEN(1, 2) && ISQURL(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    QMediaResource( const QUrl & url, const QString & mimeType = QString() )
+    QMediaResource( const QUrl &url, const QString &mimeType = QString() )
     */
     QMediaResource *obj = new QMediaResource(*PQURL(1), OPQSTRING(2, QString()));
     Qt5xHb::returnNewObject(obj, true);
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_NEW)
   else if (ISBETWEEN(1, 2) && ISQNETWORKREQUEST(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    QMediaResource( const QNetworkRequest & request, const QString & mimeType = QString() )
+    QMediaResource( const QNetworkRequest &request, const QString &mimeType = QString() )
     */
     QMediaResource *obj = new QMediaResource(*PQNETWORKREQUEST(1), OPQSTRING(2, QString()));
     Qt5xHb::returnNewObject(obj, true);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_NEW)
   else if (ISNUMPAR(1) && ISQMEDIARESOURCE(1))
   {
     /*
-    QMediaResource( const QMediaResource & other )
+    QMediaResource( const QMediaResource &other )
     */
     QMediaResource *obj = new QMediaResource(*PQMEDIARESOURCE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETAUDIOBITRATE)
 }
 
 /*
-void setAudioCodec( const QString & codec )
+void setAudioCodec( const QString &codec )
 */
 HB_FUNC_STATIC(QMEDIARESOURCE_SETAUDIOCODEC)
 {
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETDATASIZE)
 }
 
 /*
-void setLanguage( const QString & language )
+void setLanguage( const QString &language )
 */
 HB_FUNC_STATIC(QMEDIARESOURCE_SETLANGUAGE)
 {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETRESOLUTION)
   if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    void setResolution( const QSize & resolution )
+    void setResolution( const QSize &resolution )
     */
     QMediaResource *obj = (QMediaResource *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -602,7 +602,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_SETVIDEOBITRATE)
 }
 
 /*
-void setVideoCodec( const QString & codec )
+void setVideoCodec( const QString &codec )
 */
 HB_FUNC_STATIC(QMEDIARESOURCE_SETVIDEOCODEC)
 {

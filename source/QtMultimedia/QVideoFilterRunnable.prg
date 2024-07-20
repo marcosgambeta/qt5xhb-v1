@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_DELETE)
 }
 
 /*
-virtual QVideoFrame run( QVideoFrame * input, const QVideoSurfaceFormat & surfaceFormat, QVideoFilterRunnable::RunFlags
+virtual QVideoFrame run( QVideoFrame * input, const QVideoSurfaceFormat &surfaceFormat, QVideoFilterRunnable::RunFlags
 flags ) = 0
 */
 HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_RUN)

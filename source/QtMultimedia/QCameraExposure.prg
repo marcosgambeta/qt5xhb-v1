@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_REQUESTEDSHUTTERSPEED)
 }
 
 /*
-void setSpotMeteringPoint( const QPointF & point )
+void setSpotMeteringPoint( const QPointF &point )
 */
 HB_FUNC_STATIC(QCAMERAEXPOSURE_SETSPOTMETERINGPOINT)
 {

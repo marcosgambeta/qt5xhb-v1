@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DELETE)
 }
 
 /*
-virtual QString deviceDescription( const QByteArray & service, const QByteArray & device ) = 0
+virtual QString deviceDescription( const QByteArray &service, const QByteArray &device ) = 0
 */
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICEDESCRIPTION)
 {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICEDESCRIPTION)
 }
 
 /*
-virtual QList<QByteArray> devices( const QByteArray & service ) const = 0
+virtual QList<QByteArray> devices( const QByteArray &service ) const = 0
 */
 HB_FUNC_STATIC(QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICES)
 {

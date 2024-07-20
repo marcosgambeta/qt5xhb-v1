@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED)
 }
 
 /*
-virtual bool setEventFeedbackSound( QCameraFeedbackControl::EventType event, const QString & filePath ) = 0
+virtual bool setEventFeedbackSound( QCameraFeedbackControl::EventType event, const QString &filePath ) = 0
 */
 HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND)
 {

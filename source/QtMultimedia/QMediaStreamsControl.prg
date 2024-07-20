@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_ISACTIVE)
 }
 
 /*
-virtual QVariant metaData( int streamNumber, const QString & key ) = 0
+virtual QVariant metaData( int streamNumber, const QString &key ) = 0
 */
 HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_METADATA)
 {

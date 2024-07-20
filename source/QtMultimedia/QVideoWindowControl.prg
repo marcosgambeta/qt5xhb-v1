@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_DISPLAYRECT)
 }
 
 /*
-virtual void setDisplayRect( const QRect & rect ) = 0
+virtual void setDisplayRect( const QRect &rect ) = 0
 */
 HB_FUNC_STATIC(QVIDEOWINDOWCONTROL_SETDISPLAYRECT)
 {

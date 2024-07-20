@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_DELETE)
 }
 
 /*
-virtual QString containerDescription( const QString & formatMimeType ) const = 0
+virtual QString containerDescription( const QString &formatMimeType ) const = 0
 */
 HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_CONTAINERDESCRIPTION)
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_CONTAINERFORMAT)
 }
 
 /*
-virtual void setContainerFormat( const QString & format ) = 0
+virtual void setContainerFormat( const QString &format ) = 0
 */
 HB_FUNC_STATIC(QMEDIACONTAINERCONTROL_SETCONTAINERFORMAT)
 {

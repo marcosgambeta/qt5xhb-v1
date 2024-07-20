@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_STATE)
 }
 
 /*
-virtual void setFormat( const QAudioFormat & fmt ) = 0
+virtual void setFormat( const QAudioFormat &fmt ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_SETFORMAT)
 {
@@ -603,7 +603,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_CATEGORY)
 }
 
 /*
-virtual void setCategory( const QString & )
+virtual void setCategory( const QString &)
 */
 HB_FUNC_STATIC(QABSTRACTAUDIOOUTPUT_SETCATEGORY)
 {

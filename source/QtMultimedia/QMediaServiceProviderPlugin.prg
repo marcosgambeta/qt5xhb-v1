@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_DELETE)
 }
 
 /*
-virtual QMediaService * create( const QString & key ) override = 0
+virtual QMediaService * create( const QString &key ) override = 0
 */
 HB_FUNC_STATIC(QMEDIASERVICEPROVIDERPLUGIN_CREATE)
 {

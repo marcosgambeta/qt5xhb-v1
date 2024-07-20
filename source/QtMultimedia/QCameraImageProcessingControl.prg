@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER)
 }
 
 /*
-virtual void setParameter( QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant & value ) = 0
+virtual void setParameter( QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant &value ) = 0
 */
 HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER)
 {

@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_NEW)
   else if (ISNUMPAR(1) && ISQAUDIOENCODERSETTINGS(1))
   {
     /*
-    QAudioEncoderSettings( const QAudioEncoderSettings & other )
+    QAudioEncoderSettings( const QAudioEncoderSettings &other )
     */
     QAudioEncoderSettings *obj = new QAudioEncoderSettings(*PQAUDIOENCODERSETTINGS(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_ENCODINGMODE)
 }
 
 /*
-QVariant encodingOption( const QString & option ) const
+QVariant encodingOption( const QString &option ) const
 */
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_ENCODINGOPTION)
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETCHANNELCOUNT)
 }
 
 /*
-void setCodec( const QString & codec )
+void setCodec( const QString &codec )
 */
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETCODEC)
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETENCODINGMODE)
 }
 
 /*
-void setEncodingOption( const QString & option, const QVariant & value )
+void setEncodingOption( const QString &option, const QVariant &value )
 */
 HB_FUNC_STATIC(QAUDIOENCODERSETTINGS_SETENCODINGOPTION)
 {

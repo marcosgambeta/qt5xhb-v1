@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_NEW)
   else if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
   {
     /*
-    QAudioFormat( const QAudioFormat & other )
+    QAudioFormat( const QAudioFormat &other )
     */
     QAudioFormat *obj = new QAudioFormat(*PQAUDIOFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETCHANNELCOUNT)
 }
 
 /*
-void setCodec( const QString & codec )
+void setCodec( const QString &codec )
 */
 HB_FUNC_STATIC(QAUDIOFORMAT_SETCODEC)
 {

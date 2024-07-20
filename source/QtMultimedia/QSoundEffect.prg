@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_SOURCE)
 }
 
 /*
-void setSource( const QUrl & url )
+void setSource( const QUrl &url )
 */
 HB_FUNC_STATIC(QSOUNDEFFECT_SETSOURCE)
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QSOUNDEFFECT_CATEGORY)
 }
 
 /*
-void setCategory( const QString & category )
+void setCategory( const QString &category )
 */
 HB_FUNC_STATIC(QSOUNDEFFECT_SETCATEGORY)
 {

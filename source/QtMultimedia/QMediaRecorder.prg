@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_OUTPUTLOCATION)
 }
 
 /*
-bool setOutputLocation( const QUrl & location )
+bool setOutputLocation( const QUrl &location )
 */
 HB_FUNC_STATIC(QMEDIARECORDER_SETOUTPUTLOCATION)
 {
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_ISMETADATAWRITABLE)
 }
 
 /*
-QString audioCodecDescription( const QString & codecName ) const
+QString audioCodecDescription( const QString &codecName ) const
 */
 HB_FUNC_STATIC(QMEDIARECORDER_AUDIOCODECDESCRIPTION)
 {
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_AVAILABLEMETADATA)
 }
 
 /*
-QString containerDescription( const QString & format ) const
+QString containerDescription( const QString &format ) const
 */
 HB_FUNC_STATIC(QMEDIARECORDER_CONTAINERDESCRIPTION)
 {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_ISAVAILABLE)
 }
 
 /*
-QVariant metaData( const QString & key ) const
+QVariant metaData( const QString &key ) const
 */
 HB_FUNC_STATIC(QMEDIARECORDER_METADATA)
 {
@@ -683,7 +683,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_METADATA)
 }
 
 /*
-void setAudioSettings( const QAudioEncoderSettings & audioSettings )
+void setAudioSettings( const QAudioEncoderSettings &audioSettings )
 */
 HB_FUNC_STATIC(QMEDIARECORDER_SETAUDIOSETTINGS)
 {
@@ -709,7 +709,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETAUDIOSETTINGS)
 }
 
 /*
-void setContainerFormat( const QString & container )
+void setContainerFormat( const QString &container )
 */
 HB_FUNC_STATIC(QMEDIARECORDER_SETCONTAINERFORMAT)
 {
@@ -735,8 +735,8 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETCONTAINERFORMAT)
 }
 
 /*
-void setEncodingSettings( const QAudioEncoderSettings & audioSettings, const QVideoEncoderSettings & videoSettings =
-QVideoEncoderSettings(), const QString & containerMimeType = QString() )
+void setEncodingSettings( const QAudioEncoderSettings &audioSettings, const QVideoEncoderSettings &videoSettings =
+QVideoEncoderSettings(), const QString &containerMimeType = QString() )
 */
 HB_FUNC_STATIC(QMEDIARECORDER_SETENCODINGSETTINGS)
 {
@@ -765,7 +765,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETENCODINGSETTINGS)
 }
 
 /*
-void setMetaData( const QString & key, const QVariant & value )
+void setMetaData( const QString &key, const QVariant &value )
 */
 HB_FUNC_STATIC(QMEDIARECORDER_SETMETADATA)
 {
@@ -791,7 +791,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SETMETADATA)
 }
 
 /*
-void setVideoSettings( const QVideoEncoderSettings & videoSettings )
+void setVideoSettings( const QVideoEncoderSettings &videoSettings )
 */
 HB_FUNC_STATIC(QMEDIARECORDER_SETVIDEOSETTINGS)
 {
@@ -841,7 +841,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDAUDIOCODECS)
 }
 
 /*
-QList<int> supportedAudioSampleRates( const QAudioEncoderSettings & settings = QAudioEncoderSettings(), bool *
+QList<int> supportedAudioSampleRates( const QAudioEncoderSettings &settings = QAudioEncoderSettings(), bool *
 continuous = nullptr ) const
 */
 HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDAUDIOSAMPLERATES)
@@ -894,7 +894,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDCONTAINERS)
 }
 
 /*
-QList<qreal> supportedFrameRates( const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous =
+QList<qreal> supportedFrameRates( const QVideoEncoderSettings &settings = QVideoEncoderSettings(), bool * continuous =
 nullptr ) const
 */
 HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDFRAMERATES)
@@ -923,7 +923,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDFRAMERATES)
 }
 
 /*
-QList<QSize> supportedResolutions( const QVideoEncoderSettings & settings = QVideoEncoderSettings(), bool * continuous =
+QList<QSize> supportedResolutions( const QVideoEncoderSettings &settings = QVideoEncoderSettings(), bool * continuous =
 nullptr ) const
 */
 HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDRESOLUTIONS)
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC(QMEDIARECORDER_SUPPORTEDVIDEOCODECS)
 }
 
 /*
-QString videoCodecDescription( const QString & codecName ) const
+QString videoCodecDescription( const QString &codecName ) const
 */
 HB_FUNC_STATIC(QMEDIARECORDER_VIDEOCODECDESCRIPTION)
 {

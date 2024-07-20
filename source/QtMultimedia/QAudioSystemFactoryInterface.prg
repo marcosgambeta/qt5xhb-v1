@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_AVAILABLEDEVICES)
 }
 
 /*
-virtual QAbstractAudioInput * createInput( const QByteArray & device ) = 0
+virtual QAbstractAudioInput * createInput( const QByteArray &device ) = 0
 */
 HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_CREATEINPUT)
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_CREATEINPUT)
 }
 
 /*
-virtual QAbstractAudioOutput * createOutput( const QByteArray & device ) = 0
+virtual QAbstractAudioOutput * createOutput( const QByteArray &device ) = 0
 */
 HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_CREATEOUTPUT)
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_CREATEOUTPUT)
 }
 
 /*
-virtual QAbstractAudioDeviceInfo * createDeviceInfo( const QByteArray & device, QAudio::Mode mode ) = 0
+virtual QAbstractAudioDeviceInfo * createDeviceInfo( const QByteArray &device, QAudio::Mode mode ) = 0
 */
 HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_CREATEDEVICEINFO)
 {

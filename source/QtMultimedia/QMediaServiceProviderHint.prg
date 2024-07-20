@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW1)
 }
 
 /*
-QMediaServiceProviderHint( const QString & mimeType, const QStringList & codecs )
+QMediaServiceProviderHint( const QString &mimeType, const QStringList &codecs )
 */
 HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW2)
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW2)
 }
 
 /*
-QMediaServiceProviderHint( const QByteArray & device )
+QMediaServiceProviderHint( const QByteArray &device )
 */
 HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW3)
 {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW5)
 }
 
 /*
-QMediaServiceProviderHint( const QMediaServiceProviderHint & other )
+QMediaServiceProviderHint( const QMediaServiceProviderHint &other )
 */
 HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW6)
 {

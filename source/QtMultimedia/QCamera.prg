@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QCAMERA_NEW)
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QCamera( const QByteArray & deviceName, QObject * parent = nullptr )
+    QCamera( const QByteArray &deviceName, QObject * parent = nullptr )
     */
     QCamera *obj = new QCamera(*PQBYTEARRAY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QCAMERA_NEW)
   else if (ISBETWEEN(1, 2) && ISQCAMERAINFO(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QCamera( const QCameraInfo & cameraInfo, QObject * parent = nullptr )
+    QCamera( const QCameraInfo &cameraInfo, QObject * parent = nullptr )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QCamera *obj = new QCamera(*PQCAMERAINFO(1), OPQOBJECT(2, nullptr));
@@ -759,7 +759,7 @@ HB_FUNC_STATIC(QCAMERA_VIEWFINDERSETTINGS)
 }
 
 /*
-void setViewfinderSettings( const QCameraViewfinderSettings & settings )
+void setViewfinderSettings( const QCameraViewfinderSettings &settings )
 */
 HB_FUNC_STATIC(QCAMERA_SETVIEWFINDERSETTINGS)
 {
@@ -787,7 +787,7 @@ HB_FUNC_STATIC(QCAMERA_SETVIEWFINDERSETTINGS)
 }
 
 /*
-QList<QCameraViewfinderSettings> supportedViewfinderSettings( const QCameraViewfinderSettings & settings =
+QList<QCameraViewfinderSettings> supportedViewfinderSettings( const QCameraViewfinderSettings &settings =
 QCameraViewfinderSettings() ) const
 */
 HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERSETTINGS)
@@ -841,7 +841,7 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERSETTINGS)
 }
 
 /*
-QList<QSize> supportedViewfinderResolutions( const QCameraViewfinderSettings & settings = QCameraViewfinderSettings() )
+QList<QSize> supportedViewfinderResolutions( const QCameraViewfinderSettings &settings = QCameraViewfinderSettings() )
 const
 */
 HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS)
@@ -895,7 +895,7 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS)
 }
 
 /*
-QList<QVideoFrame::PixelFormat> supportedViewfinderPixelFormats( const QCameraViewfinderSettings & settings =
+QList<QVideoFrame::PixelFormat> supportedViewfinderPixelFormats( const QCameraViewfinderSettings &settings =
 QCameraViewfinderSettings() ) const
 */
 HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS)
@@ -976,7 +976,7 @@ HB_FUNC_STATIC(QCAMERA_AVAILABLEDEVICES)
 }
 
 /*
-static QString deviceDescription( const QByteArray & device )
+static QString deviceDescription( const QByteArray &device )
 */
 HB_FUNC_STATIC(QCAMERA_DEVICEDESCRIPTION)
 {

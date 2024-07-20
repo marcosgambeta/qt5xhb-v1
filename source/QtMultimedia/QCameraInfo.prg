@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QCAMERAINFO_NEW)
   if (ISBETWEEN(0, 1) && ISQBYTEARRAY(1))
   {
     /*
-    QCameraInfo( const QByteArray & name = QByteArray() )
+    QCameraInfo( const QByteArray &name = QByteArray() )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QCameraInfo *obj = new QCameraInfo(HB_ISNIL(1) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(1));
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QCAMERAINFO_NEW)
   else if (ISNUMPAR(1) && ISQCAMERA(1))
   {
     /*
-    QCameraInfo( const QCamera & camera )
+    QCameraInfo( const QCamera &camera )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QCameraInfo *obj = new QCameraInfo(*PQCAMERA(1));
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QCAMERAINFO_NEW)
   else if (ISNUMPAR(1) && ISQCAMERAINFO(1))
   {
     /*
-    QCameraInfo( const QCameraInfo & other )
+    QCameraInfo( const QCameraInfo &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QCameraInfo *obj = new QCameraInfo(*PQCAMERAINFO(1));

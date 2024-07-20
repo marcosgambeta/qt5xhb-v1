@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ISFOCUSPOINTMODESUPPORTED)
 }
 
 /*
-virtual void setCustomFocusPoint( const QPointF & point ) = 0
+virtual void setCustomFocusPoint( const QPointF &point ) = 0
 */
 HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_SETCUSTOMFOCUSPOINT)
 {

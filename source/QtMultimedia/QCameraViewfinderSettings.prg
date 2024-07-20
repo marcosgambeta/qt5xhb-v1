@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_NEW)
   else if (ISNUMPAR(1) && ISQCAMERAVIEWFINDERSETTINGS(1))
   {
     /*
-    QCameraViewfinderSettings( const QCameraViewfinderSettings & other )
+    QCameraViewfinderSettings( const QCameraViewfinderSettings &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     QCameraViewfinderSettings *obj = new QCameraViewfinderSettings(*PQCAMERAVIEWFINDERSETTINGS(1));
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_DELETE)
 }
 
 /*
-void swap( QCameraViewfinderSettings & other ) Q_DECL_NOTHROW
+void swap( QCameraViewfinderSettings &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SWAP)
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION)
   if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    void setResolution( const QSize & )
+    void setResolution( const QSize &)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     QCameraViewfinderSettings *obj = (QCameraViewfinderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETPIXELASPECTRATIO)
   if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    void setPixelAspectRatio( const QSize & ratio )
+    void setPixelAspectRatio( const QSize &ratio )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     QCameraViewfinderSettings *obj = (QCameraViewfinderSettings *)Qt5xHb::itemGetPtrStackSelfItem();

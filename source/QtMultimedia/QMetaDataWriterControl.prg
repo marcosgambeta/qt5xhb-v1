@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_ISMETADATAAVAILABLE)
 }
 
 /*
-virtual QVariant metaData( const QString & key ) const = 0
+virtual QVariant metaData( const QString &key ) const = 0
 */
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_METADATA)
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QMETADATAWRITERCONTROL_METADATA)
 }
 
 /*
-virtual void setMetaData( const QString & key, const QVariant & value ) = 0
+virtual void setMetaData( const QString &key, const QVariant &value ) = 0
 */
 HB_FUNC_STATIC(QMETADATAWRITERCONTROL_SETMETADATA)
 {

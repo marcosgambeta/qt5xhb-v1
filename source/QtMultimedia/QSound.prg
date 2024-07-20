@@ -56,7 +56,7 @@ RETURN
 #endif
 
     /*
-    QSound( const QString & filename, QObject * parent = nullptr )
+    QSound( const QString &filename, QObject * parent = nullptr )
     */
 HB_FUNC_STATIC(QSOUND_NEW)
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QSOUND_PLAY)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static void play( const QString & filename )
+    static void play( const QString &filename )
     */
     QSound::play(PQSTRING(1));
     hb_itemReturn(hb_stackSelfItem());

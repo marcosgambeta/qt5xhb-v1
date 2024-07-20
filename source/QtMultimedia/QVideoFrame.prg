@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_NEW)
   else if (ISNUMPAR(3) && ISQABSTRACTVIDEOBUFFER(1) && ISQSIZE(2) && HB_ISNUM(3))
   {
     /*
-    QVideoFrame( QAbstractVideoBuffer * buffer, const QSize & size, QVideoFrame::PixelFormat format )
+    QVideoFrame( QAbstractVideoBuffer * buffer, const QSize &size, QVideoFrame::PixelFormat format )
     */
     QVideoFrame *obj = new QVideoFrame(PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat)hb_parni(3));
     Qt5xHb::returnNewObject(obj, true);
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_NEW)
   else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QVideoFrame( int bytes, const QSize & size, int bytesPerLine, QVideoFrame::PixelFormat format )
+    QVideoFrame( int bytes, const QSize &size, int bytesPerLine, QVideoFrame::PixelFormat format )
     */
     QVideoFrame *obj = new QVideoFrame(PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat)hb_parni(4));
     Qt5xHb::returnNewObject(obj, true);
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_NEW)
   else if (ISNUMPAR(1) && ISQIMAGE(1))
   {
     /*
-    QVideoFrame( const QImage & image )
+    QVideoFrame( const QImage &image )
     */
     QVideoFrame *obj = new QVideoFrame(*PQIMAGE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_NEW)
   else if (ISNUMPAR(1) && ISQVIDEOFRAME(1))
   {
     /*
-    QVideoFrame( const QVideoFrame & other )
+    QVideoFrame( const QVideoFrame &other )
     */
     QVideoFrame *obj = new QVideoFrame(*PQVIDEOFRAME(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -699,7 +699,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_PLANECOUNT)
 }
 
 /*
-QVariant metaData( const QString & key ) const
+QVariant metaData( const QString &key ) const
 */
 HB_FUNC_STATIC(QVIDEOFRAME_METADATA)
 {
@@ -724,7 +724,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_METADATA)
 }
 
 /*
-void setMetaData( const QString & key, const QVariant & value )
+void setMetaData( const QString &key, const QVariant &value )
 */
 HB_FUNC_STATIC(QVIDEOFRAME_SETMETADATA)
 {

@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIOINPUT_STATE)
 }
 
 /*
-virtual void setFormat( const QAudioFormat & fmt ) = 0
+virtual void setFormat( const QAudioFormat &fmt ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTAUDIOINPUT_SETFORMAT)
 {
