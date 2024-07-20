@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_DELETE)
 }
 
 /*
-virtual QList<QNetworkProxy> queryProxy( const QNetworkProxyQuery & query = QNetworkProxyQuery() ) = 0
+virtual QList<QNetworkProxy> queryProxy( const QNetworkProxyQuery &query = QNetworkProxyQuery() ) = 0
 */
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_QUERYPROXY)
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_QUERYPROXY)
 }
 
 /*
-static QList<QNetworkProxy> proxyForQuery( const QNetworkProxyQuery & query )
+static QList<QNetworkProxy> proxyForQuery( const QNetworkProxyQuery &query )
 */
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_PROXYFORQUERY)
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION)
 }
 
 /*
-static QList<QNetworkProxy> systemProxyForQuery( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
+static QList<QNetworkProxy> systemProxyForQuery( const QNetworkProxyQuery &query = QNetworkProxyQuery() )
 */
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY)
 {

@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NEW)
   else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QDnsLookup( QDnsLookup::Type type, const QString & name, QObject * parent = nullptr )
+    QDnsLookup( QDnsLookup::Type type, const QString &name, QObject * parent = nullptr )
     */
     QDnsLookup *obj = new QDnsLookup((QDnsLookup::Type)hb_parni(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NEW)
   else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQHOSTADDRESS(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QDnsLookup( QDnsLookup::Type type, const QString & name, const QHostAddress & nameserver, QObject * parent = nullptr
+    QDnsLookup( QDnsLookup::Type type, const QString &name, const QHostAddress &nameserver, QObject * parent = nullptr
     )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAME)
 }
 
 /*
-void setName( const QString & name )
+void setName( const QString &name )
 */
 HB_FUNC_STATIC(QDNSLOOKUP_SETNAME)
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVER)
 }
 
 /*
-void setNameserver( const QHostAddress & nameserver )
+void setNameserver( const QHostAddress &nameserver )
 */
 HB_FUNC_STATIC(QDNSLOOKUP_SETNAMESERVER)
 {

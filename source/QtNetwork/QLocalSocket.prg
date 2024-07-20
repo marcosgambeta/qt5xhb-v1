@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    void connectToServer( const QString & name, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    void connectToServer( const QString &name, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
     */
     QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_DISCONNECTFROMSERVER)
 }
 
 /*
-void setServerName( const QString & name )
+void setServerName( const QString &name )
 */
 HB_FUNC_STATIC(QLOCALSOCKET_SETSERVERNAME)
 {

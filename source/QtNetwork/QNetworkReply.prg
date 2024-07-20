@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_HEADER)
 }
 
 /*
-bool hasRawHeader( const QByteArray & headerName ) const
+bool hasRawHeader( const QByteArray &headerName ) const
 */
 HB_FUNC_STATIC(QNETWORKREPLY_HASRAWHEADER)
 {
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADERLIST)
 }
 
 /*
-QByteArray rawHeader( const QByteArray & headerName ) const
+QByteArray rawHeader( const QByteArray &headerName ) const
 */
 HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADER)
 {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SSLCONFIGURATION)
 }
 
 /*
-void setSslConfiguration( const QSslConfiguration & configuration )
+void setSslConfiguration( const QSslConfiguration &configuration )
 */
 HB_FUNC_STATIC(QNETWORKREPLY_SETSSLCONFIGURATION)
 {
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void ignoreSslErrors( const QList<QSslError> & errors )
+    void ignoreSslErrors( const QList<QSslError> &errors )
     */
     QNetworkReply *obj = (QNetworkReply *)Qt5xHb::itemGetPtrStackSelfItem();
 

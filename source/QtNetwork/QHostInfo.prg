@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QHOSTINFO_NEW)
   else if (ISNUMPAR(1) && ISQHOSTINFO(1))
   {
     /*
-    QHostInfo( const QHostInfo & other )
+    QHostInfo( const QHostInfo &other )
     */
     QHostInfo *obj = new QHostInfo(*PQHOSTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QHOSTINFO_DELETE)
 }
 
 /*
-void swap( QHostInfo & other ) Q_DECL_NOTHROW
+void swap( QHostInfo &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QHOSTINFO_SWAP)
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QHOSTINFO_HOSTNAME)
 }
 
 /*
-void setHostName( const QString & name )
+void setHostName( const QString &name )
 */
 HB_FUNC_STATIC(QHOSTINFO_SETHOSTNAME)
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QHOSTINFO_ADDRESSES)
 }
 
 /*
-void setAddresses( const QList<QHostAddress> & addresses )
+void setAddresses( const QList<QHostAddress> &addresses )
 */
 HB_FUNC_STATIC(QHOSTINFO_SETADDRESSES)
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QHOSTINFO_ERRORSTRING)
 }
 
 /*
-void setErrorString( const QString & errorString )
+void setErrorString( const QString &errorString )
 */
 HB_FUNC_STATIC(QHOSTINFO_SETERRORSTRING)
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QHOSTINFO_LOOKUPID)
 }
 
 /*
-static int lookupHost( const QString & name, QObject * receiver, const char * member )
+static int lookupHost( const QString &name, QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC(QHOSTINFO_LOOKUPHOST)
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QHOSTINFO_ABORTHOSTLOOKUP)
 }
 
 /*
-static QHostInfo fromName( const QString & name )
+static QHostInfo fromName( const QString &name )
 */
 HB_FUNC_STATIC(QHOSTINFO_FROMNAME)
 {

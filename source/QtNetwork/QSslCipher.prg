@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QSslCipher( const QString & name )
+    QSslCipher( const QString &name )
     */
     QSslCipher *obj = new QSslCipher(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    QSslCipher(  const QString & name, QSsl::SslProtocol protocol )
+    QSslCipher(  const QString &name, QSsl::SslProtocol protocol )
     */
     QSslCipher *obj = new QSslCipher(PQSTRING(1), (QSsl::SslProtocol)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NEW)
   else if (ISNUMPAR(1) && ISQSSLCIPHER(1))
   {
     /*
-    QSslCipher( const QSslCipher & other )
+    QSslCipher( const QSslCipher &other )
     */
     QSslCipher *obj = new QSslCipher(*PQSSLCIPHER(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QSSLCIPHER_USEDBITS)
 }
 
 /*
-void swap( QSslCipher & other ) Q_DECL_NOTHROW
+void swap( QSslCipher &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QSSLCIPHER_SWAP)
 {

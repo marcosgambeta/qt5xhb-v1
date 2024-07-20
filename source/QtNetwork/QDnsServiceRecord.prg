@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_NEW)
   else if (ISNUMPAR(1) && ISQDNSSERVICERECORD(1))
   {
     /*
-    QDnsServiceRecord( const QDnsServiceRecord & other )
+    QDnsServiceRecord( const QDnsServiceRecord &other )
     */
     QDnsServiceRecord *obj = new QDnsServiceRecord(*PQDNSSERVICERECORD(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QDNSSERVICERECORD_PRIORITY)
 }
 
 /*
-void swap( QDnsServiceRecord & other ) Q_DECL_NOTHROW
+void swap( QDnsServiceRecord &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QDNSSERVICERECORD_SWAP)
 {

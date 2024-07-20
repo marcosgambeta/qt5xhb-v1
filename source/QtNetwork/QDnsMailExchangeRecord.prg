@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_NEW)
   else if (ISNUMPAR(1) && ISQDNSMAILEXCHANGERECORD(1))
   {
     /*
-    QDnsMailExchangeRecord( const QDnsMailExchangeRecord & other )
+    QDnsMailExchangeRecord( const QDnsMailExchangeRecord &other )
     */
     QDnsMailExchangeRecord *obj = new QDnsMailExchangeRecord(*PQDNSMAILEXCHANGERECORD(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_PREFERENCE)
 }
 
 /*
-void swap( QDnsMailExchangeRecord & other ) Q_DECL_NOTHROW
+void swap( QDnsMailExchangeRecord &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_SWAP)
 {

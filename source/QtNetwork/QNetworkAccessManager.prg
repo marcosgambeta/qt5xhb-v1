@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PROXY)
 }
 
 /*
-void setProxy( const QNetworkProxy & proxy )
+void setProxy( const QNetworkProxy &proxy )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXY)
 {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ISSTRICTTRANSPORTSECURITYENABLED)
 }
 
 /*
-void enableStrictTransportSecurityStore( bool enabled, const QString & storeDir = QString() )
+void enableStrictTransportSecurityStore( bool enabled, const QString &storeDir = QString() )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ENABLESTRICTTRANSPORTSECURITYSTORE)
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ISSTRICTTRANSPORTSECURITYSTOREENABLED)
 }
 
 /*
-void addStrictTransportSecurityHosts( const QVector<QHstsPolicy> & knownHosts )
+void addStrictTransportSecurityHosts( const QVector<QHstsPolicy> &knownHosts )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ADDSTRICTTRANSPORTSECURITYHOSTS)
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_STRICTTRANSPORTSECURITYHOSTS)
 }
 
 /*
-QNetworkReply * head( const QNetworkRequest & request )
+QNetworkReply * head( const QNetworkRequest &request )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_HEAD)
 {
@@ -699,7 +699,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_HEAD)
 }
 
 /*
-QNetworkReply * get( const QNetworkRequest & request )
+QNetworkReply * get( const QNetworkRequest &request )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_GET)
 {
@@ -728,7 +728,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
   if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2))
   {
     /*
-    QNetworkReply * post( const QNetworkRequest & request, QIODevice * data )
+    QNetworkReply * post( const QNetworkRequest &request, QIODevice * data )
     */
     QNetworkAccessManager *obj = (QNetworkAccessManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -741,7 +741,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
   else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2))
   {
     /*
-    QNetworkReply * post( const QNetworkRequest & request, const QByteArray & data )
+    QNetworkReply * post( const QNetworkRequest &request, const QByteArray &data )
     */
     QNetworkAccessManager *obj = (QNetworkAccessManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -754,7 +754,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
   else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQHTTPMULTIPART(2))
   {
     /*
-    QNetworkReply * post( const QNetworkRequest & request, QHttpMultiPart * multiPart )
+    QNetworkReply * post( const QNetworkRequest &request, QHttpMultiPart * multiPart )
     */
     QNetworkAccessManager *obj = (QNetworkAccessManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -775,7 +775,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
   if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2))
   {
     /*
-    QNetworkReply * put( const QNetworkRequest & request, QIODevice * data )
+    QNetworkReply * put( const QNetworkRequest &request, QIODevice * data )
     */
     QNetworkAccessManager *obj = (QNetworkAccessManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -788,7 +788,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
   else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2))
   {
     /*
-    QNetworkReply * put( const QNetworkRequest & request, const QByteArray & data )
+    QNetworkReply * put( const QNetworkRequest &request, const QByteArray &data )
     */
     QNetworkAccessManager *obj = (QNetworkAccessManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -801,7 +801,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
   else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQHTTPMULTIPART(2))
   {
     /*
-    QNetworkReply * put( const QNetworkRequest & request, QHttpMultiPart * multiPart )
+    QNetworkReply * put( const QNetworkRequest &request, QHttpMultiPart * multiPart )
     */
     QNetworkAccessManager *obj = (QNetworkAccessManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -818,7 +818,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
 }
 
 /*
-QNetworkReply * deleteResource( const QNetworkRequest & request )
+QNetworkReply * deleteResource( const QNetworkRequest &request )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETERESOURCE)
 {
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
   if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && (ISQIODEVICE(3) || HB_ISNIL(3)))
   {
     /*
-    QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data =
+    QNetworkReply * sendCustomRequest( const QNetworkRequest &request, const QByteArray &verb, QIODevice * data =
     nullptr )
     */
     QNetworkAccessManager *obj = (QNetworkAccessManager *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -861,7 +861,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
   else if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && (ISQBYTEARRAY(3) || HB_ISNIL(3)))
   {
     /*
-    QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, const QByteArray & data
+    QNetworkReply * sendCustomRequest( const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data
     )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -877,7 +877,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
   else if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && (ISQHTTPMULTIPART(3) || HB_ISNIL(3)))
   {
     /*
-    QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, QHttpMultiPart *
+    QNetworkReply * sendCustomRequest( const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *
     multiPart )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -897,7 +897,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
 }
 
 /*
-void setConfiguration( const QNetworkConfiguration & config )
+void setConfiguration( const QNetworkConfiguration &config )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCONFIGURATION)
 {
@@ -973,7 +973,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ACTIVECONFIGURATION)
 }
 
 /*
-void connectToHostEncrypted( const QString & hostName, quint16 port = 443, const QSslConfiguration & sslConfiguration =
+void connectToHostEncrypted( const QString &hostName, quint16 port = 443, const QSslConfiguration &sslConfiguration =
 QSslConfiguration::defaultConfiguration() )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED)
@@ -1004,7 +1004,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED)
 }
 
 /*
-void connectToHost( const QString & hostName, quint16 port = 80 )
+void connectToHost( const QString &hostName, quint16 port = 80 )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONNECTTOHOST)
 {

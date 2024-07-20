@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
   if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
     /*
-    QNetworkCookie( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
+    QNetworkCookie( const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray() )
     */
     QNetworkCookie *obj = new QNetworkCookie(HB_ISNIL(1) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(1),
                                              HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
   else if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
   {
     /*
-    QNetworkCookie( const QNetworkCookie & other )
+    QNetworkCookie( const QNetworkCookie &other )
     */
     QNetworkCookie *obj = new QNetworkCookie(*PQNETWORKCOOKIE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_PATH)
 }
 
 /*
-void setDomain( const QString & domain )
+void setDomain( const QString &domain )
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETDOMAIN)
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETDOMAIN)
 }
 
 /*
-void setExpirationDate( const QDateTime & date )
+void setExpirationDate( const QDateTime &date )
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETEXPIRATIONDATE)
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETHTTPONLY)
 }
 
 /*
-void setName( const QByteArray & cookieName )
+void setName( const QByteArray &cookieName )
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETNAME)
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETNAME)
 }
 
 /*
-void setPath( const QString & path )
+void setPath( const QString &path )
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETPATH)
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETSECURE)
 }
 
 /*
-void setValue( const QByteArray & value )
+void setValue( const QByteArray &value )
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETVALUE)
 {
@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_VALUE)
 }
 
 /*
-static QList<QNetworkCookie> parseCookies( const QByteArray & cookieString )
+static QList<QNetworkCookie> parseCookies( const QByteArray &cookieString )
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_PARSECOOKIES)
 {
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_PARSECOOKIES)
 }
 
 /*
-void swap( QNetworkCookie & other ) Q_DECL_NOTHROW
+void swap( QNetworkCookie &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SWAP)
 {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SWAP)
 }
 
 /*
-bool hasSameIdentifier( const QNetworkCookie & other ) const
+bool hasSameIdentifier( const QNetworkCookie &other ) const
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_HASSAMEIDENTIFIER)
 {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_HASSAMEIDENTIFIER)
 }
 
 /*
-void normalize( const QUrl & url )
+void normalize( const QUrl &url )
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_NORMALIZE)
 {

@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_NEW)
   else if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1))
   {
     /*
-    QNetworkCacheMetaData( const QNetworkCacheMetaData & other )
+    QNetworkCacheMetaData( const QNetworkCacheMetaData &other )
     */
     QNetworkCacheMetaData *obj = new QNetworkCacheMetaData(*PQNETWORKCACHEMETADATA(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_DELETE)
 }
 
 /*
-void swap( QNetworkCacheMetaData & other ) Q_DECL_NOTHROW
+void swap( QNetworkCacheMetaData &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SWAP)
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_URL)
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETURL)
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_LASTMODIFIED)
 }
 
 /*
-void setLastModified( const QDateTime & dateTime )
+void setLastModified( const QDateTime &dateTime )
 */
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETLASTMODIFIED)
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_EXPIRATIONDATE)
 }
 
 /*
-void setExpirationDate( const QDateTime & dateTime )
+void setExpirationDate( const QDateTime &dateTime )
 */
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETEXPIRATIONDATE)
 {

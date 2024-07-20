@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_NEW)
   else if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QSslCertificate( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
+    QSslCertificate( const QByteArray &data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
     */
     QSslCertificate *obj =
         new QSslCertificate(HB_ISNIL(1) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(1),
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_NEW)
   else if (ISNUMPAR(1) && ISQSSLCERTIFICATE(1))
   {
     /*
-    QSslCertificate( const QSslCertificate & other )
+    QSslCertificate( const QSslCertificate &other )
     */
     QSslCertificate *obj = new QSslCertificate(*PQSSLCERTIFICATE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_DELETE)
 }
 
 /*
-void swap( QSslCertificate & other ) Q_DECL_NOTHROW
+void swap( QSslCertificate &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QSSLCERTIFICATE_SWAP)
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISSUERINFO)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QStringList issuerInfo( const QByteArray & attribute ) const
+    QStringList issuerInfo( const QByteArray &attribute ) const
     */
     QSslCertificate *obj = (QSslCertificate *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SUBJECTINFO)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QStringList subjectInfo( const QByteArray & attribute ) const
+    QStringList subjectInfo( const QByteArray &attribute ) const
     */
     QSslCertificate *obj = (QSslCertificate *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -737,7 +737,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_TOTEXT)
 }
 
 /*
-static QList<QSslCertificate> fromPath( const QString & path, QSsl::EncodingFormat format = QSsl::Pem,
+static QList<QSslCertificate> fromPath( const QString &path, QSsl::EncodingFormat format = QSsl::Pem,
 QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 */
 HB_FUNC_STATIC(QSSLCERTIFICATE_FROMPATH)
@@ -831,7 +831,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDEVICE)
 }
 
 /*
-static QList<QSslCertificate> fromData( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
+static QList<QSslCertificate> fromData( const QByteArray &data, QSsl::EncodingFormat format = QSsl::Pem )
 */
 HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDATA)
 {
@@ -877,7 +877,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDATA)
 }
 
 /*
-static QList<QSslError> verify( QList<QSslCertificate> certificateChain, const QString & hostName = QString() )
+static QList<QSslError> verify( QList<QSslCertificate> certificateChain, const QString &hostName = QString() )
 */
 HB_FUNC_STATIC(QSSLCERTIFICATE_VERIFY)
 {

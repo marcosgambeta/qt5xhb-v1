@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_NEW)
   else if (ISNUMPAR(1) && ISQDNSTEXTRECORD(1))
   {
     /*
-    QDnsTextRecord( const QDnsTextRecord & other )
+    QDnsTextRecord( const QDnsTextRecord &other )
     */
     QDnsTextRecord *obj = new QDnsTextRecord(*PQDNSTEXTRECORD(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QDNSTEXTRECORD_NAME)
 }
 
 /*
-void swap( QDnsTextRecord & other ) Q_DECL_NOTHROW
+void swap( QDnsTextRecord &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QDNSTEXTRECORD_SWAP)
 {

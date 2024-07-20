@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QHostAddress( const QString & address )
+    QHostAddress( const QString &address )
     */
     QHostAddress *obj = new QHostAddress(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW)
   else if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
   {
     /*
-    QHostAddress( const QHostAddress & copy )
+    QHostAddress( const QHostAddress &copy )
     */
     QHostAddress *obj = new QHostAddress(*PQHOSTADDRESS(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_DELETE)
 }
 
 /*
-void swap( QHostAddress & other ) Q_DECL_NOTHROW
+void swap( QHostAddress &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QHOSTADDRESS_SWAP)
 {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool setAddress( const QString & address )
+    bool setAddress( const QString &address )
     */
     QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SCOPEID)
 }
 
 /*
-void setScopeId( const QString & id )
+void setScopeId( const QString &id )
 */
 HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 }
 
 /*
-bool isEqual( const QHostAddress & address, QHostAddress::ConversionMode mode = QHostAddress::TolerantConversion ) const
+bool isEqual( const QHostAddress &address, QHostAddress::ConversionMode mode = QHostAddress::TolerantConversion ) const
 */
 HB_FUNC_STATIC(QHOSTADDRESS_ISEQUAL)
 {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISINSUBNET)
   if (ISNUMPAR(2) && ISQHOSTADDRESS(1) && HB_ISNUM(2))
   {
     /*
-    bool isInSubnet( const QHostAddress & subnet, int netmask ) const
+    bool isInSubnet( const QHostAddress &subnet, int netmask ) const
     */
     QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 

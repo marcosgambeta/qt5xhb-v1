@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_NEW)
   else if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1))
   {
     /*
-    QNetworkConfiguration( const QNetworkConfiguration & other )
+    QNetworkConfiguration( const QNetworkConfiguration &other )
     */
     QNetworkConfiguration *obj = new QNetworkConfiguration(*PQNETWORKCONFIGURATION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_TYPE)
 }
 
 /*
-void swap( QNetworkConfiguration & other ) Q_DECL_NOTHROW
+void swap( QNetworkConfiguration &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_SWAP)
 {

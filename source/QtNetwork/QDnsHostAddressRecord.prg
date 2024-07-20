@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_NEW)
   else if (ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1))
   {
     /*
-    QDnsHostAddressRecord( const QDnsHostAddressRecord & other )
+    QDnsHostAddressRecord( const QDnsHostAddressRecord &other )
     */
     QDnsHostAddressRecord *obj = new QDnsHostAddressRecord(*PQDNSHOSTADDRESSRECORD(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_NAME)
 }
 
 /*
-void swap( QDnsHostAddressRecord & other ) Q_DECL_NOTHROW
+void swap( QDnsHostAddressRecord &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QDNSHOSTADDRESSRECORD_SWAP)
 {

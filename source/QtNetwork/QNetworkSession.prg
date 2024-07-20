@@ -80,7 +80,7 @@ RETURN
 #endif
 
     /*
-    QNetworkSession( const QNetworkConfiguration & connConfig, QObject * parent = nullptr )
+    QNetworkSession( const QNetworkConfiguration &connConfig, QObject * parent = nullptr )
     */
 HB_FUNC_STATIC(QNETWORKSESSION_NEW)
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ISOPEN)
 }
 
 /*
-QVariant sessionProperty( const QString & key ) const
+QVariant sessionProperty( const QString &key ) const
 */
 HB_FUNC_STATIC(QNETWORKSESSION_SESSIONPROPERTY)
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_SESSIONPROPERTY)
 }
 
 /*
-void setSessionProperty( const QString & key, const QVariant & value )
+void setSessionProperty( const QString &key, const QVariant &value )
 */
 HB_FUNC_STATIC(QNETWORKSESSION_SETSESSIONPROPERTY)
 {

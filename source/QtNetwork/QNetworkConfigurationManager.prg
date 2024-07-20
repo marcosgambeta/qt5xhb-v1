@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
 }
 
 /*
-QNetworkConfiguration configurationFromIdentifier( const QString & identifier ) const
+QNetworkConfiguration configurationFromIdentifier( const QString &identifier ) const
 */
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
 {

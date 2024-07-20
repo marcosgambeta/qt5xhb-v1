@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_NEW)
   else if (ISBETWEEN(3, 4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QHstsPolicy( const QDateTime & expiry, QHstsPolicy::PolicyFlags flags, const QString & host, QUrl::ParsingMode mode
+    QHstsPolicy( const QDateTime &expiry, QHstsPolicy::PolicyFlags flags, const QString &host, QUrl::ParsingMode mode
     = QUrl::DecodedMode )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_NEW)
   else if (ISNUMPAR(1) && ISQHSTSPOLICY(1))
   {
     /*
-    QHstsPolicy( const QHstsPolicy & rhs )
+    QHstsPolicy( const QHstsPolicy &rhs )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     QHstsPolicy *obj = new QHstsPolicy(*PQHSTSPOLICY(1));
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_DELETE)
 }
 
 /*
-void swap( QHstsPolicy & other ) Q_DECL_NOTHROW
+void swap( QHstsPolicy &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QHSTSPOLICY_SWAP)
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SWAP)
 }
 
 /*
-void setHost( const QString & host, QUrl::ParsingMode mode = QUrl::DecodedMode )
+void setHost( const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode )
 */
 HB_FUNC_STATIC(QHSTSPOLICY_SETHOST)
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_HOST)
 }
 
 /*
-void setExpiry( const QDateTime & expiry )
+void setExpiry( const QDateTime &expiry )
 */
 HB_FUNC_STATIC(QHSTSPOLICY_SETEXPIRY)
 {

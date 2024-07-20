@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_DELETE)
 }
 
 /*
-void append( const QHttpPart & httpPart )
+void append( const QHttpPart &httpPart )
 */
 HB_FUNC_STATIC(QHTTPMULTIPART_APPEND)
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_BOUNDARY)
 }
 
 /*
-void setBoundary( const QByteArray & boundary )
+void setBoundary( const QByteArray &boundary )
 */
 HB_FUNC_STATIC(QHTTPMULTIPART_SETBOUNDARY)
 {

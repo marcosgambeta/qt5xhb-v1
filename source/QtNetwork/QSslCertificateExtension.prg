@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_NEW)
   else if (ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1))
   {
     /*
-    QSslCertificateExtension( const QSslCertificateExtension & other )
+    QSslCertificateExtension( const QSslCertificateExtension &other )
     */
     QSslCertificateExtension *obj = new QSslCertificateExtension(*PQSSLCERTIFICATEEXTENSION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_DELETE)
 }
 
 /*
-void swap( QSslCertificateExtension & other ) Q_DECL_NOTHROW
+void swap( QSslCertificateExtension &other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC(QSSLCERTIFICATEEXTENSION_SWAP)
 {
