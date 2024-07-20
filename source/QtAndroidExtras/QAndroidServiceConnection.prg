@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_NEW)
   else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
   {
     /*
-    QAndroidServiceConnection( const QAndroidJniObject & serviceConnection )
+    QAndroidServiceConnection( const QAndroidJniObject &serviceConnection )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     QAndroidServiceConnection *obj = new QAndroidServiceConnection(*PQANDROIDJNIOBJECT(1));

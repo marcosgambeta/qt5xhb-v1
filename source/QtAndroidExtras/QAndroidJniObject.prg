@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QANDROIDJNIOBJECT_FROMLOCALREF)
 }
 
 /*
-static QAndroidJniObject fromString( const QString & string )
+static QAndroidJniObject fromString( const QString &string )
 */
 HB_FUNC_STATIC(QANDROIDJNIOBJECT_FROMSTRING)
 {

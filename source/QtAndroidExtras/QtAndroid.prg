@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDSDKVERSION)
 }
 
 /*
-static void startIntentSender( const QAndroidJniObject & intentSender, int receiverRequestCode,
+static void startIntentSender( const QAndroidJniObject &intentSender, int receiverRequestCode,
 QAndroidActivityResultReceiver * resultReceiver = nullptr )
 */
 HB_FUNC_STATIC(QTANDROID_STARTINTENTSENDER)
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QTANDROID_STARTINTENTSENDER)
 }
 
 /*
-static void startActivity( const QAndroidJniObject & intent, int receiverRequestCode, QAndroidActivityResultReceiver *
+static void startActivity( const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver *
 resultReceiver = nullptr )
 */
 HB_FUNC_STATIC(QTANDROID_STARTACTIVITY)
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QTANDROID_ANDROIDCONTEXT)
 }
 
 /*
-static bool bindService( const QAndroidIntent & serviceIntent, const QAndroidServiceConnection & serviceConnection,
+static bool bindService( const QAndroidIntent &serviceIntent, const QAndroidServiceConnection &serviceConnection,
 QtAndroid::BindFlags flags = QtAndroid::BindFlag::None )
 */
 HB_FUNC_STATIC(QTANDROID_BINDSERVICE)
@@ -259,7 +259,7 @@ else
 }
 
 /*
-static QtAndroid::PermissionResult checkPermission( const QString & permission )
+static QtAndroid::PermissionResult checkPermission( const QString &permission )
 */
 HB_FUNC_STATIC(QTANDROID_CHECKPERMISSION)
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QTANDROID_CHECKPERMISSION)
 }
 
 /*
-static bool shouldShowRequestPermissionRationale( const QString & permission )
+static bool shouldShowRequestPermissionRationale( const QString &permission )
 */
 HB_FUNC_STATIC(QTANDROID_SHOULDSHOWREQUESTPERMISSIONRATIONALE)
 {

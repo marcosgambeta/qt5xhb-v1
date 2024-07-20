@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_NEW)
   else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
   {
     /*
-    QAndroidParcel( const QAndroidJniObject & parcel )
+    QAndroidParcel( const QAndroidJniObject &parcel )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     QAndroidParcel *obj = new QAndroidParcel(*PQANDROIDJNIOBJECT(1));
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_DELETE)
 }
 
 /*
-void writeData( const QByteArray & data ) const
+void writeData( const QByteArray &data ) const
 */
 HB_FUNC_STATIC(QANDROIDPARCEL_WRITEDATA)
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEDATA)
 }
 
 /*
-void writeVariant( const QVariant & value ) const
+void writeVariant( const QVariant &value ) const
 */
 HB_FUNC_STATIC(QANDROIDPARCEL_WRITEVARIANT)
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEVARIANT)
 }
 
 /*
-void writeBinder( const QAndroidBinder & binder ) const
+void writeBinder( const QAndroidBinder &binder ) const
 */
 HB_FUNC_STATIC(QANDROIDPARCEL_WRITEBINDER)
 {

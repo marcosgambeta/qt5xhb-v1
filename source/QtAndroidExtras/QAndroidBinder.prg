@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_NEW)
   else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
   {
     /*
-    QAndroidBinder( const QAndroidJniObject & binder )
+    QAndroidBinder( const QAndroidJniObject &binder )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     QAndroidBinder *obj = new QAndroidBinder(*PQANDROIDJNIOBJECT(1));
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_DELETE)
 }
 
 /*
-virtual bool onTransact( int code, const QAndroidParcel & data, const QAndroidParcel & reply, QAndroidBinder::CallType
+virtual bool onTransact( int code, const QAndroidParcel &data, const QAndroidParcel &reply, QAndroidBinder::CallType
 flags )
 */
 HB_FUNC_STATIC(QANDROIDBINDER_ONTRANSACT)
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_ONTRANSACT)
 }
 
 /*
-bool transact( int code, const QAndroidParcel & data, QAndroidParcel * reply = nullptr, QAndroidBinder::CallType flags =
+bool transact( int code, const QAndroidParcel &data, QAndroidParcel * reply = nullptr, QAndroidBinder::CallType flags =
 QAndroidBinder::CallType::Normal ) const
 */
 HB_FUNC_STATIC(QANDROIDBINDER_TRANSACT)

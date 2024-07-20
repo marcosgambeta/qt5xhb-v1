@@ -55,7 +55,7 @@ RETURN
 #endif
 
     /*
-    QAndroidService( int & argc, char ** argv )
+    QAndroidService( int &argc, char ** argv )
     */
 
 HB_FUNC_STATIC(QANDROIDSERVICE_NEW)
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QANDROIDSERVICE_DELETE)
 }
 
 /*
-virtual QAndroidBinder * onBind( const QAndroidIntent & intent )
+virtual QAndroidBinder * onBind( const QAndroidIntent &intent )
 */
 HB_FUNC_STATIC(QANDROIDSERVICE_ONBIND)
 {

@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_DELETE)
 }
 
 /*
-virtual void handleActivityResult( int receiverRequestCode, int resultCode, const QAndroidJniObject & data ) = 0
+virtual void handleActivityResult( int receiverRequestCode, int resultCode, const QAndroidJniObject &data ) = 0
 */
 HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_HANDLEACTIVITYRESULT)
 {
