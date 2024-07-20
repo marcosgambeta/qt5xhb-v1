@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SAVE)
 }
 
 /*
-virtual void setFileName( const QString & fileName ) = 0
+virtual void setFileName( const QString &fileName ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SETFILENAME)
 {

@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_HASRESET)
 }
 
 /*
-virtual int indexOf( const QString & name ) const = 0
+virtual int indexOf( const QString &name ) const = 0
 */
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF)
 {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED)
 }
 
 /*
-virtual void setProperty( int index, const QVariant & value ) = 0
+virtual void setProperty( int index, const QVariant &value ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY)
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY)
 }
 
 /*
-virtual void setPropertyGroup( int index, const QString & group ) = 0
+virtual void setPropertyGroup( int index, const QString &group ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP)
 {

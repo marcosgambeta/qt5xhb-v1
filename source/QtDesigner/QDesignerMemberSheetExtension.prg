@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS)
 }
 
 /*
-virtual int indexOf( const QString & name ) const = 0
+virtual int indexOf( const QString &name ) const = 0
 */
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INDEXOF)
 {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES)
 }
 
 /*
-virtual void setMemberGroup( int index, const QString & group ) = 0
+virtual void setMemberGroup( int index, const QString &group ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP)
 {

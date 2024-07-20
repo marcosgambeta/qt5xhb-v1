@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QFORMBUILDER_DELETE)
 }
 
 /*
-void addPluginPath( const QString & pluginPath )
+void addPluginPath( const QString &pluginPath )
 */
 HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
 }
 
 /*
-void setPluginPath( const QStringList & pluginPaths )
+void setPluginPath( const QStringList &pluginPaths )
 */
 HB_FUNC_STATIC(QFORMBUILDER_SETPLUGINPATH)
 {

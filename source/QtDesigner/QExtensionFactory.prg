@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
 }
 
 /*
-virtual QObject * extension( QObject * object, const QString & iid ) const
+virtual QObject * extension( QObject * object, const QString &iid ) const
 */
 HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSION)
 {
