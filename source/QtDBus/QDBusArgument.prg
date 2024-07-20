@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_NEW)
   else if (ISNUMPAR(1) && ISQDBUSARGUMENT(1))
   {
     /*
-    QDBusArgument( const QDBusArgument & other )
+    QDBusArgument( const QDBusArgument &other )
     */
     QDBusArgument *obj = new QDBusArgument(*PQDBUSARGUMENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QDBUSARGUMENT_ENDMAPENTRY)
 }
 
 /*
-void appendVariant( const QVariant & v )
+void appendVariant( const QVariant &v )
 */
 HB_FUNC_STATIC(QDBUSARGUMENT_APPENDVARIANT)
 {

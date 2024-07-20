@@ -52,8 +52,8 @@ RETURN
 #endif
 
     /*
-    QDBusInterface( const QString & service, const QString & path, const QString & interface = QString(), const
-    QDBusConnection & connection = QDBusConnection::sessionBus(), QObject * parent = 0 )
+    QDBusInterface( const QString &service, const QString &path, const QString &interface = QString(), const
+    QDBusConnection &connection = QDBusConnection::sessionBus(), QObject * parent = 0 )
     */
 HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
 {

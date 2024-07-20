@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_CONNECTION)
 }
 
 /*
-const QDBusMessage & message() const
+const QDBusMessage &message() const
 */
 HB_FUNC_STATIC(QDBUSCONTEXT_MESSAGE)
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SENDERRORREPLY)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    void sendErrorReply( const QString & name, const QString & msg = QString() ) const
+    void sendErrorReply( const QString &name, const QString &msg = QString() ) const
     */
     QDBusContext *obj = (QDBusContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SENDERRORREPLY)
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    void sendErrorReply( QDBusError::ErrorType type, const QString & msg = QString() ) const
+    void sendErrorReply( QDBusError::ErrorType type, const QString &msg = QString() ) const
     */
     QDBusContext *obj = (QDBusContext *)Qt5xHb::itemGetPtrStackSelfItem();
 

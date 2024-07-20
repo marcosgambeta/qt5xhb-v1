@@ -83,7 +83,7 @@ RETURN
   else if (ISNUMPAR(1) && ISQDBUSUNIXFILEDESCRIPTOR(1))
   {
     /*
-    QDBusUnixFileDescriptor( const QDBusUnixFileDescriptor & other )
+    QDBusUnixFileDescriptor( const QDBusUnixFileDescriptor &other )
     */
     QDBusUnixFileDescriptor *obj = new QDBusUnixFileDescriptor(*PQDBUSUNIXFILEDESCRIPTOR(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_DELETE)
 }
 
 /*
-void swap( QDBusUnixFileDescriptor & other )
+void swap( QDBusUnixFileDescriptor &other )
 */
 HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_SWAP)
 {

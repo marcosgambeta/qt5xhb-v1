@@ -77,7 +77,7 @@ RETURN
            (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QDBusServiceWatcher( const QString & service, const QDBusConnection & connection, QDBusServiceWatcher::WatchMode
+    QDBusServiceWatcher( const QString &service, const QDBusConnection &connection, QDBusServiceWatcher::WatchMode
     watchMode = QDBusServiceWatcher::WatchForOwnerChange, QObject * parent = 0 )
     */
     QDBusServiceWatcher *obj =
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_WATCHEDSERVICES)
 }
 
 /*
-void setWatchedServices( const QStringList & services )
+void setWatchedServices( const QStringList &services )
 */
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHEDSERVICES)
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETWATCHEDSERVICES)
 }
 
 /*
-void addWatchedService( const QString & newService )
+void addWatchedService( const QString &newService )
 */
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE)
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE)
 }
 
 /*
-bool removeWatchedService( const QString & service )
+bool removeWatchedService( const QString &service )
 */
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE)
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QDBUSSERVICEWATCHER_CONNECTION)
 }
 
 /*
-void setConnection( const QDBusConnection & connection )
+void setConnection( const QDBusConnection &connection )
 */
 HB_FUNC_STATIC(QDBUSSERVICEWATCHER_SETCONNECTION)
 {

@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QDBUSSIGNATURE_NEW3)
 }
 
 /*
-QDBusSignature( const QString & signature )
+QDBusSignature( const QString &signature )
 */
 HB_FUNC_STATIC(QDBUSSIGNATURE_NEW4)
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QDBUSSIGNATURE_SIGNATURE)
 }
 
 /*
-void setSignature( const QString & signature )
+void setSignature( const QString &signature )
 */
 HB_FUNC_STATIC(QDBUSSIGNATURE_SETSIGNATURE)
 {
