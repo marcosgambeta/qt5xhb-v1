@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_NEW)
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QTextStream( const QByteArray & array, QIODevice::OpenMode openMode = QIODevice::ReadOnly )
+    QTextStream( const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly )
     */
     QTextStream *obj = new QTextStream(*PQBYTEARRAY(1), HB_ISNIL(2) ? (QIODevice::OpenMode)QIODevice::ReadOnly
                                                                     : (QIODevice::OpenMode)hb_parni(2));
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_GENERATEBYTEORDERMARK)
 }
 
 /*
-void setLocale( const QLocale & locale )
+void setLocale( const QLocale &locale )
 */
 HB_FUNC_STATIC(QTEXTSTREAM_SETLOCALE)
 {

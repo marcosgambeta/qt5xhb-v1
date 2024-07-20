@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QATOMICINT_NEW)
   else if (ISNUMPAR(1) && ISQATOMICINT(1))
   {
     /*
-    QAtomicInt( const QAtomicInt & other )
+    QAtomicInt( const QAtomicInt &other )
     */
     QAtomicInt *obj = new QAtomicInt(*PQATOMICINT(1));
     Qt5xHb::returnNewObject(obj, true);

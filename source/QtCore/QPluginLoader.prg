@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QPluginLoader( const QString & fileName, QObject * parent = 0 )
+    QPluginLoader( const QString &fileName, QObject * parent = 0 )
     */
     QPluginLoader *obj = new QPluginLoader(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_LOADHINTS)
 }
 
 /*
-void setFileName( const QString & fileName )
+void setFileName( const QString &fileName )
 */
 HB_FUNC_STATIC(QPLUGINLOADER_SETFILENAME)
 {

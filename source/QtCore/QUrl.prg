@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QURL_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QUrl( const QString & url )
+    QUrl( const QString &url )
     */
     QUrl *obj = new QUrl(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QURL_NEW)
   else if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    QUrl( const QUrl & other )
+    QUrl( const QUrl &other )
     */
     QUrl *obj = new QUrl(*PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QURL_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    QUrl( const QString & url, QUrl::ParsingMode parsingMode )
+    QUrl( const QString &url, QUrl::ParsingMode parsingMode )
     */
     QUrl *obj = new QUrl(PQSTRING(1), (QUrl::ParsingMode)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QURL_ISLOCALFILE)
 }
 
 /*
-bool isParentOf( const QUrl & childUrl ) const
+bool isParentOf( const QUrl &childUrl ) const
 */
 HB_FUNC_STATIC(QURL_ISPARENTOF)
 {
@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QURL_PORT)
 }
 
 /*
-QUrl resolved( const QUrl & relative ) const
+QUrl resolved( const QUrl &relative ) const
 */
 HB_FUNC_STATIC(QURL_RESOLVED)
 {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QURL_SCHEME)
 }
 
 /*
-void setAuthority( const QString & authority )
+void setAuthority( const QString &authority )
 */
 HB_FUNC_STATIC(QURL_SETAUTHORITY)
 {
@@ -602,7 +602,7 @@ HB_FUNC_STATIC(QURL_SETAUTHORITY)
 }
 
 /*
-void setFragment( const QString & fragment )
+void setFragment( const QString &fragment )
 */
 HB_FUNC_STATIC(QURL_SETFRAGMENT)
 {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC(QURL_SETFRAGMENT)
 }
 
 /*
-void setHost( const QString & host )
+void setHost( const QString &host )
 */
 HB_FUNC_STATIC(QURL_SETHOST)
 {
@@ -654,7 +654,7 @@ HB_FUNC_STATIC(QURL_SETHOST)
 }
 
 /*
-void setPassword( const QString & password )
+void setPassword( const QString &password )
 */
 HB_FUNC_STATIC(QURL_SETPASSWORD)
 {
@@ -680,7 +680,7 @@ HB_FUNC_STATIC(QURL_SETPASSWORD)
 }
 
 /*
-void setPath( const QString & path )
+void setPath( const QString &path )
 */
 HB_FUNC_STATIC(QURL_SETPATH)
 {
@@ -732,7 +732,7 @@ HB_FUNC_STATIC(QURL_SETPORT)
 }
 
 /*
-void setScheme( const QString & scheme )
+void setScheme( const QString &scheme )
 */
 HB_FUNC_STATIC(QURL_SETSCHEME)
 {
@@ -762,7 +762,7 @@ HB_FUNC_STATIC(QURL_SETURL)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void setUrl( const QString & url )
+    void setUrl( const QString &url )
     */
     QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QURL_SETURL)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    void setUrl( const QString & url, QUrl::ParsingMode parsingMode )
+    void setUrl( const QString &url, QUrl::ParsingMode parsingMode )
     */
     QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -794,7 +794,7 @@ HB_FUNC_STATIC(QURL_SETURL)
 }
 
 /*
-void setUserInfo( const QString & userInfo )
+void setUserInfo( const QString &userInfo )
 */
 HB_FUNC_STATIC(QURL_SETUSERINFO)
 {
@@ -820,7 +820,7 @@ HB_FUNC_STATIC(QURL_SETUSERINFO)
 }
 
 /*
-void setUserName( const QString & userName )
+void setUserName( const QString &userName )
 */
 HB_FUNC_STATIC(QURL_SETUSERNAME)
 {
@@ -846,7 +846,7 @@ HB_FUNC_STATIC(QURL_SETUSERNAME)
 }
 
 /*
-void swap( QUrl & other )
+void swap( QUrl &other )
 */
 HB_FUNC_STATIC(QURL_SWAP)
 {
@@ -1018,7 +1018,7 @@ HB_FUNC_STATIC(QURL_USERNAME)
 }
 
 /*
-static QString fromAce( const QByteArray & domain )
+static QString fromAce( const QByteArray &domain )
 */
 HB_FUNC_STATIC(QURL_FROMACE)
 {
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC(QURL_FROMENCODED)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    static QUrl fromEncoded( const QByteArray & input )
+    static QUrl fromEncoded( const QByteArray &input )
     */
     QUrl *ptr = new QUrl(QUrl::fromEncoded(*PQBYTEARRAY(1)));
     Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC(QURL_FROMENCODED)
   else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
   {
     /*
-    static QUrl fromEncoded( const QByteArray & input, QUrl::ParsingMode parsingMode )
+    static QUrl fromEncoded( const QByteArray &input, QUrl::ParsingMode parsingMode )
     */
     QUrl *ptr = new QUrl(QUrl::fromEncoded(*PQBYTEARRAY(1), (QUrl::ParsingMode)hb_parni(2)));
     Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC(QURL_FROMENCODED)
 }
 
 /*
-static QUrl fromLocalFile( const QString & localFile )
+static QUrl fromLocalFile( const QString &localFile )
 */
 HB_FUNC_STATIC(QURL_FROMLOCALFILE)
 {
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC(QURL_FROMLOCALFILE)
 }
 
 /*
-static QString fromPercentEncoding( const QByteArray & input )
+static QString fromPercentEncoding( const QByteArray &input )
 */
 HB_FUNC_STATIC(QURL_FROMPERCENTENCODING)
 {
@@ -1100,7 +1100,7 @@ HB_FUNC_STATIC(QURL_FROMPERCENTENCODING)
 }
 
 /*
-static QUrl fromUserInput( const QString & userInput )
+static QUrl fromUserInput( const QString &userInput )
 */
 HB_FUNC_STATIC(QURL_FROMUSERINPUT)
 {
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC(QURL_FROMUSERINPUT)
 }
 
 /*
-static void setIdnWhitelist( const QStringList & list )
+static void setIdnWhitelist( const QStringList &list )
 */
 HB_FUNC_STATIC(QURL_SETIDNWHITELIST)
 {
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC(QURL_SETIDNWHITELIST)
 }
 
 /*
-static QByteArray toAce( const QString & domain )
+static QByteArray toAce( const QString &domain )
 */
 HB_FUNC_STATIC(QURL_TOACE)
 {
@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC(QURL_TOACE)
 }
 
 /*
-static QByteArray toPercentEncoding( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray
+static QByteArray toPercentEncoding( const QString &input, const QByteArray &exclude = QByteArray(), const QByteArray
 & include = QByteArray() )
 */
 HB_FUNC_STATIC(QURL_TOPERCENTENCODING)

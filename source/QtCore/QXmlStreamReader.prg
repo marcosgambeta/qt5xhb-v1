@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NEW)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QXmlStreamReader( const QByteArray & data )
+    QXmlStreamReader( const QByteArray &data )
     */
     QXmlStreamReader *obj = new QXmlStreamReader(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QXmlStreamReader( const QString & data )
+    QXmlStreamReader( const QString &data )
     */
     QXmlStreamReader *obj = new QXmlStreamReader(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    void addData( const QByteArray & data )
+    void addData( const QByteArray &data )
     */
     QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void addData( const QString & data )
+    void addData( const QString &data )
     */
     QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
 }
 
 /*
-void addExtraNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration )
+void addExtraNamespaceDeclaration( const QXmlStreamNamespaceDeclaration &extraNamespaceDeclaration )
 */
 HB_FUNC_STATIC(QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION)
 {
@@ -1252,7 +1252,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_QUALIFIEDNAME)
 }
 
 /*
-void raiseError( const QString & message = QString() )
+void raiseError( const QString &message = QString() )
 */
 HB_FUNC_STATIC(QXMLSTREAMREADER_RAISEERROR)
 {

@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_NEW)
   else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
+    QPropertyAnimation( QObject * target, const QByteArray &propertyName, QObject * parent = 0 )
     */
     QPropertyAnimation *obj = new QPropertyAnimation(PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
 }
 
 /*
-void setPropertyName( const QByteArray & propertyName )
+void setPropertyName( const QByteArray &propertyName )
 */
 HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
 {

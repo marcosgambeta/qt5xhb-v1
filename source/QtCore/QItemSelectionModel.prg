@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CURRENTINDEX)
 }
 
 /*
-bool isSelected( const QModelIndex & index ) const
+bool isSelected( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISSELECTED)
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISSELECTED)
 }
 
 /*
-bool isRowSelected( int row, const QModelIndex & parent ) const
+bool isRowSelected( int row, const QModelIndex &parent ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISROWSELECTED)
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISROWSELECTED)
 }
 
 /*
-bool isColumnSelected( int column, const QModelIndex & parent ) const
+bool isColumnSelected( int column, const QModelIndex &parent ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISCOLUMNSELECTED)
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISCOLUMNSELECTED)
 }
 
 /*
-bool rowIntersectsSelection( int row, const QModelIndex & parent ) const
+bool rowIntersectsSelection( int row, const QModelIndex &parent ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION)
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION)
 }
 
 /*
-bool columnIntersectsSelection( int column, const QModelIndex & parent ) const
+bool columnIntersectsSelection( int column, const QModelIndex &parent ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION)
 {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_MODEL)
 }
 
 /*
-virtual void setCurrentIndex( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
+virtual void setCurrentIndex( const QModelIndex &index, QItemSelectionModel::SelectionFlags command )
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_SETCURRENTINDEX)
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
   if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
   {
     /*
-    virtual void select( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
+    virtual void select( const QModelIndex &index, QItemSelectionModel::SelectionFlags command )
     */
     QItemSelectionModel *obj = (QItemSelectionModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -530,7 +530,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
   else if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2))
   {
     /*
-    virtual void select( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
+    virtual void select( const QItemSelection &selection, QItemSelectionModel::SelectionFlags command )
     */
     QItemSelectionModel *obj = (QItemSelectionModel *)Qt5xHb::itemGetPtrStackSelfItem();
 

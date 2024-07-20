@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_SETSINGLEDASHWORDOPTIONMODE)
 }
 
 /*
-bool addOption( const QCommandLineOption & commandLineOption )
+bool addOption( const QCommandLineOption &commandLineOption )
 */
 HB_FUNC_STATIC(QCOMMANDLINEPARSER_ADDOPTION)
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ADDHELPOPTION)
 }
 
 /*
-void setApplicationDescription( const QString & description )
+void setApplicationDescription( const QString &description )
 */
 HB_FUNC_STATIC(QCOMMANDLINEPARSER_SETAPPLICATIONDESCRIPTION)
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_APPLICATIONDESCRIPTION)
 }
 
 /*
-void addPositionalArgument( const QString & name, const QString & description, const QString & syntax = QString() )
+void addPositionalArgument( const QString &name, const QString &description, const QString &syntax = QString() )
 */
 HB_FUNC_STATIC(QCOMMANDLINEPARSER_ADDPOSITIONALARGUMENT)
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_PROCESS)
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void process( const QStringList & arguments )
+    void process( const QStringList &arguments )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QCommandLineParser *obj = (QCommandLineParser *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_PROCESS)
   else if (ISNUMPAR(1) && ISQCOREAPPLICATION(1))
   {
     /*
-    void process( const QCoreApplication & app )
+    void process( const QCoreApplication &app )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QCommandLineParser *obj = (QCommandLineParser *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_PROCESS)
 }
 
 /*
-bool parse( const QStringList & arguments )
+bool parse( const QStringList &arguments )
 */
 HB_FUNC_STATIC(QCOMMANDLINEPARSER_PARSE)
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ISSET)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool isSet( const QString & name ) const
+    bool isSet( const QString &name ) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QCommandLineParser *obj = (QCommandLineParser *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -444,7 +444,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_ISSET)
   else if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1))
   {
     /*
-    bool isSet( const QCommandLineOption & option ) const
+    bool isSet( const QCommandLineOption &option ) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QCommandLineParser *obj = (QCommandLineParser *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QString value( const QString & name ) const
+    QString value( const QString &name ) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QCommandLineParser *obj = (QCommandLineParser *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUE)
   else if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1))
   {
     /*
-    QString value( const QCommandLineOption & option ) const
+    QString value( const QCommandLineOption &option ) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QCommandLineParser *obj = (QCommandLineParser *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -502,7 +502,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUES)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QStringList values( const QString & name ) const
+    QStringList values( const QString &name ) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QCommandLineParser *obj = (QCommandLineParser *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -516,7 +516,7 @@ HB_FUNC_STATIC(QCOMMANDLINEPARSER_VALUES)
   else if (ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1))
   {
     /*
-    QStringList values( const QCommandLineOption & option ) const
+    QStringList values( const QCommandLineOption &option ) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QCommandLineParser *obj = (QCommandLineParser *)Qt5xHb::itemGetPtrStackSelfItem();

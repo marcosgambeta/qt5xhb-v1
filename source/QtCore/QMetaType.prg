@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QMETATYPE_DESTROY)
 }
 
 /*
-static bool save( QDataStream & stream, int type, const void * data )
+static bool save( QDataStream &stream, int type, const void * data )
 */
 HB_FUNC_STATIC(QMETATYPE_SAVE)
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QMETATYPE_SAVE)
 }
 
 /*
-static bool load( QDataStream & stream, int type, void * data )
+static bool load( QDataStream &stream, int type, void * data )
 */
 HB_FUNC_STATIC(QMETATYPE_LOAD)
 {

@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NEW)
   else if (ISNUMPAR(1) && ISQXMLSTREAMENTITYDECLARATION(1))
   {
     /*
-    QXmlStreamEntityDeclaration( const QXmlStreamEntityDeclaration & other )
+    QXmlStreamEntityDeclaration( const QXmlStreamEntityDeclaration &other )
     */
     QXmlStreamEntityDeclaration *obj = new QXmlStreamEntityDeclaration(*PQXMLSTREAMENTITYDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);

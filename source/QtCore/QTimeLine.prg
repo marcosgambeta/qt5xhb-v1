@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDURATION)
 }
 
 /*
-void setEasingCurve( const QEasingCurve & curve )
+void setEasingCurve( const QEasingCurve &curve )
 */
 HB_FUNC_STATIC(QTIMELINE_SETEASINGCURVE)
 {

@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_NEW)
   else if (ISNUMPAR(1) && ISQJSONOBJECT(1))
   {
     /*
-    QJsonDocument( const QJsonObject & object )
+    QJsonDocument( const QJsonObject &object )
     */
     QJsonDocument *obj = new QJsonDocument(*PQJSONOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_NEW)
   else if (ISNUMPAR(1) && ISQJSONARRAY(1))
   {
     /*
-    QJsonDocument( const QJsonArray & array )
+    QJsonDocument( const QJsonArray &array )
     */
     QJsonDocument *obj = new QJsonDocument(*PQJSONARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_NEW)
   else if (ISNUMPAR(1) && ISQJSONDOCUMENT(1))
   {
     /*
-    QJsonDocument( const QJsonDocument & other )
+    QJsonDocument( const QJsonDocument &other )
     */
     QJsonDocument *obj = new QJsonDocument(*PQJSONDOCUMENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_RAWDATA)
 }
 
 /*
-void setArray( const QJsonArray & array )
+void setArray( const QJsonArray &array )
 */
 HB_FUNC_STATIC(QJSONDOCUMENT_SETARRAY)
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_SETARRAY)
 }
 
 /*
-void setObject( const QJsonObject & object )
+void setObject( const QJsonObject &object )
 */
 HB_FUNC_STATIC(QJSONDOCUMENT_SETOBJECT)
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_TOVARIANT)
 }
 
 /*
-static QJsonDocument fromBinaryData( const QByteArray & data, QJsonDocument::DataValidation validation =
+static QJsonDocument fromBinaryData( const QByteArray &data, QJsonDocument::DataValidation validation =
 QJsonDocument::Validate )
 */
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMBINARYDATA)
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_FROMBINARYDATA)
 }
 
 /*
-static QJsonDocument fromJson( const QByteArray & json, QJsonParseError * error = 0 )
+static QJsonDocument fromJson( const QByteArray &json, QJsonParseError * error = 0 )
 */
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMJSON)
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_FROMRAWDATA)
 }
 
 /*
-static QJsonDocument fromVariant( const QVariant & variant )
+static QJsonDocument fromVariant( const QVariant &variant )
 */
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMVARIANT)
 {

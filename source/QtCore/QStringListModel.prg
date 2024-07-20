@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QStringListModel( const QStringList & strings, QObject * parent = 0)
+    QStringListModel( const QStringList &strings, QObject * parent = 0)
     */
     QStringListModel *obj = new QStringListModel(PQSTRINGLIST(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_NEW)
 }
 
 /*
-void setStringList( const QStringList & strings )
+void setStringList( const QStringList &strings )
 */
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SETSTRINGLIST)
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_STRINGLIST)
 }
 
 /*
-virtual QVariant data( const QModelIndex & index, int role ) const
+virtual QVariant data( const QModelIndex &index, int role ) const
 */
 HB_FUNC_STATIC(QSTRINGLISTMODEL_DATA)
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_DATA)
 }
 
 /*
-virtual Qt::ItemFlags flags( const QModelIndex & index ) const
+virtual Qt::ItemFlags flags( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSTRINGLISTMODEL_FLAGS)
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_FLAGS)
 }
 
 /*
-virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertRows( int row, int count, const QModelIndex &parent = QModelIndex() )
 */
 HB_FUNC_STATIC(QSTRINGLISTMODEL_INSERTROWS)
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_INSERTROWS)
 }
 
 /*
-virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeRows( int row, int count, const QModelIndex &parent = QModelIndex() )
 */
 HB_FUNC_STATIC(QSTRINGLISTMODEL_REMOVEROWS)
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_REMOVEROWS)
 }
 
 /*
-virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
+virtual int rowCount( const QModelIndex &parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC(QSTRINGLISTMODEL_ROWCOUNT)
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_ROWCOUNT)
 }
 
 /*
-virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+virtual bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SETDATA)
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SETDATA)
 }
 
 /*
-virtual QModelIndex sibling( int row, int column, const QModelIndex & idx ) const
+virtual QModelIndex sibling( int row, int column, const QModelIndex &idx ) const
 */
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SIBLING)
 {

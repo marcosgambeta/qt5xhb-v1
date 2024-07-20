@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QCOLLATOR_NEW)
   if (ISBETWEEN(0, 1) && (ISQLOCALE(1) || HB_ISNIL(1)))
   {
     /*
-    QCollator( const QLocale & locale = QLocale() )
+    QCollator( const QLocale &locale = QLocale() )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QCollator *obj = new QCollator(HB_ISNIL(1) ? QLocale() : *(QLocale *)Qt5xHb::itemGetPtr(1));
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QCOLLATOR_NEW)
   else if (ISNUMPAR(1) && ISQCOLLATOR(1))
   {
     /*
-    QCollator( const QCollator & )
+    QCollator( const QCollator &)
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QCollator *obj = new QCollator(*PQCOLLATOR(1));
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QCOLLATOR_DELETE)
 }
 
 /*
-void swap( QCollator & other )
+void swap( QCollator &other )
 */
 HB_FUNC_STATIC(QCOLLATOR_SWAP)
 {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QCOLLATOR_SWAP)
 }
 
 /*
-void setLocale( const QLocale & locale )
+void setLocale( const QLocale &locale )
 */
 HB_FUNC_STATIC(QCOLLATOR_SETLOCALE)
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC(QCOLLATOR_IGNOREPUNCTUATION)
 }
 
 /*
-QCollatorSortKey sortKey( const QString & string ) const
+QCollatorSortKey sortKey( const QString &string ) const
 */
 HB_FUNC_STATIC(QCOLLATOR_SORTKEY)
 {

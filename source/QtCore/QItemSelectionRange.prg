@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEW)
   else if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
   {
     /*
-    QItemSelectionRange( const QItemSelectionRange & other )
+    QItemSelectionRange( const QItemSelectionRange &other )
     */
     QItemSelectionRange *obj = new QItemSelectionRange(*PQITEMSELECTIONRANGE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEW)
   else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2))
   {
     /*
-    QItemSelectionRange( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+    QItemSelectionRange( const QModelIndex &topLeft, const QModelIndex &bottomRight )
     */
     QItemSelectionRange *obj = new QItemSelectionRange(*PQMODELINDEX(1), *PQMODELINDEX(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEW)
   else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
-    QItemSelectionRange( const QModelIndex & index )
+    QItemSelectionRange( const QModelIndex &index )
     */
     QItemSelectionRange *obj = new QItemSelectionRange(*PQMODELINDEX(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_HEIGHT)
 }
 
 /*
-const QPersistentModelIndex & topLeft() const
+const QPersistentModelIndex &topLeft() const
 */
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOPLEFT)
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOPLEFT)
 }
 
 /*
-const QPersistentModelIndex & bottomRight() const
+const QPersistentModelIndex &bottomRight() const
 */
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOMRIGHT)
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
   if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
-    bool contains( const QModelIndex & index ) const
+    bool contains( const QModelIndex &index ) const
     */
     QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3))
   {
     /*
-    bool contains( int row, int column, const QModelIndex & parentIndex ) const
+    bool contains( int row, int column, const QModelIndex &parentIndex ) const
     */
     QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
 }
 
 /*
-bool intersects( const QItemSelectionRange & other ) const
+bool intersects( const QItemSelectionRange &other ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTS)
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTS)
 }
 
 /*
-QItemSelectionRange intersected( const QItemSelectionRange & other ) const
+QItemSelectionRange intersected( const QItemSelectionRange &other ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTED)
 {

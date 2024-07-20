@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QJSONVALUE_NEW3)
 }
 
 /*
-QJsonValue( const QString & s )
+QJsonValue( const QString &s )
 */
 HB_FUNC_STATIC(QJSONVALUE_NEW4)
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QJSONVALUE_NEW4)
 }
 
 /*
-QJsonValue( const QJsonArray & a )
+QJsonValue( const QJsonArray &a )
 */
 HB_FUNC_STATIC(QJSONVALUE_NEW6)
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QJSONVALUE_NEW6)
 }
 
 /*
-QJsonValue( const QJsonObject & o )
+QJsonValue( const QJsonObject &o )
 */
 HB_FUNC_STATIC(QJSONVALUE_NEW7)
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QJSONVALUE_NEW7)
 }
 
 /*
-QJsonValue( const QJsonValue & other )
+QJsonValue( const QJsonValue &other )
 */
 HB_FUNC_STATIC(QJSONVALUE_NEW8)
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOARRAY)
   if (ISNUMPAR(1) && ISQJSONARRAY(1))
   {
     /*
-    QJsonArray toArray( const QJsonArray & defaultValue ) const
+    QJsonArray toArray( const QJsonArray &defaultValue ) const
     */
     QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOOBJECT)
   if (ISNUMPAR(1) && ISQJSONOBJECT(1))
   {
     /*
-    QJsonObject toObject( const QJsonObject & defaultValue ) const
+    QJsonObject toObject( const QJsonObject &defaultValue ) const
     */
     QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -495,7 +495,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOOBJECT)
 }
 
 /*
-QString toString( const QString & defaultValue = QString() ) const
+QString toString( const QString &defaultValue = QString() ) const
 */
 HB_FUNC_STATIC(QJSONVALUE_TOSTRING)
 {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC(QJSONVALUE_TYPE)
 }
 
 /*
-static QJsonValue fromVariant( const QVariant & variant )
+static QJsonValue fromVariant( const QVariant &variant )
 */
 HB_FUNC_STATIC(QJSONVALUE_FROMVARIANT)
 {

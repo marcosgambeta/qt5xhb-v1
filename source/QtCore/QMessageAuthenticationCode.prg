@@ -62,7 +62,7 @@ RETURN
 #endif
 
     /*
-    QMessageAuthenticationCode( QCryptographicHash::Algorithm method, const QByteArray & key = QByteArray() )
+    QMessageAuthenticationCode( QCryptographicHash::Algorithm method, const QByteArray &key = QByteArray() )
     */
 HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_NEW)
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_RESET)
 }
 
 /*
-void setKey( const QByteArray & key )
+void setKey( const QByteArray &key )
 */
 HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_SETKEY)
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_ADDDATA)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    void addData( const QByteArray & data )
+    void addData( const QByteArray &data )
     */
     QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_RESULT)
 }
 
 /*
-static QByteArray hash( const QByteArray & message, const QByteArray & key, QCryptographicHash::Algorithm method )
+static QByteArray hash( const QByteArray &message, const QByteArray &key, QCryptographicHash::Algorithm method )
 */
 HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_HASH)
 {

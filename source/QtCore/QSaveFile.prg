@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QSAVEFILE_NEW)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QSaveFile( const QString & name )
+    QSaveFile( const QString &name )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QSaveFile *obj = new QSaveFile(PQSTRING(1));
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QSAVEFILE_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    QSaveFile( const QString & name, QObject * parent )
+    QSaveFile( const QString &name, QObject * parent )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QSaveFile *obj = new QSaveFile(PQSTRING(1), PQOBJECT(2));
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QSAVEFILE_FILENAME)
 }
 
 /*
-void setFileName( const QString & name )
+void setFileName( const QString &name )
 */
 HB_FUNC_STATIC(QSAVEFILE_SETFILENAME)
 {

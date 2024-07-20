@@ -115,8 +115,8 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
       (HB_ISCHAR(4) || HB_ISNIL(4)))
   {
     /*
-    bool load( const QString & filename, const QString & directory = QString(), const QString & search_delimiters =
-    QString(), const QString & suffix = QString() )
+    bool load( const QString &filename, const QString &directory = QString(), const QString &search_delimiters =
+    QString(), const QString &suffix = QString() )
     */
     QTranslator *obj = (QTranslator *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -129,8 +129,8 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
            (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)))
   {
     /*
-    bool load( const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString &
-    directory = QString(), const QString & suffix = QString() )
+    bool load( const QLocale &locale, const QString &filename, const QString &prefix = QString(), const QString &
+    directory = QString(), const QString &suffix = QString() )
     */
     QTranslator *obj = (QTranslator *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISCHAR(3) || HB_ISNIL(3)))
   {
     /*
-    bool load( const uchar * data, int len, const QString & directory = QString() )
+    bool load( const uchar * data, int len, const QString &directory = QString() )
     */
     QTranslator *obj = (QTranslator *)Qt5xHb::itemGetPtrStackSelfItem();
 

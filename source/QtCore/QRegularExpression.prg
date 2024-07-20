@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QRegularExpression( const QString & pattern, QRegularExpression::PatternOptions options =
+    QRegularExpression( const QString &pattern, QRegularExpression::PatternOptions options =
     QRegularExpression::NoPatternOption )
     */
     QRegularExpression *obj = new QRegularExpression(
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_NEW)
   else if (ISNUMPAR(1) && ISQREGULAREXPRESSION(1))
   {
     /*
-    QRegularExpression( const QRegularExpression & re )
+    QRegularExpression( const QRegularExpression &re )
     */
     QRegularExpression *obj = new QRegularExpression(*PQREGULAREXPRESSION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_ERRORSTRING)
 }
 
 /*
-QRegularExpressionMatchIterator globalMatch( const QString & subject, int offset = 0, QRegularExpression::MatchType
+QRegularExpressionMatchIterator globalMatch( const QString &subject, int offset = 0, QRegularExpression::MatchType
 matchType = QRegularExpression::NormalMatch, QRegularExpression::MatchOptions matchOptions =
 QRegularExpression::NoMatchOption ) const
 */
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_ISVALID)
 }
 
 /*
-QRegularExpressionMatch match( const QString & subject, int offset = 0, QRegularExpression::MatchType matchType =
+QRegularExpressionMatch match( const QString &subject, int offset = 0, QRegularExpression::MatchType matchType =
 QRegularExpression::NormalMatch, QRegularExpression::MatchOptions matchOptions = QRegularExpression::NoMatchOption )
 const
 */
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERNOPTIONS)
 }
 
 /*
-void setPattern( const QString & pattern )
+void setPattern( const QString &pattern )
 */
 HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERN)
 {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERNOPTIONS)
 }
 
 /*
-void swap( QRegularExpression & other )
+void swap( QRegularExpression &other )
 */
 HB_FUNC_STATIC(QREGULAREXPRESSION_SWAP)
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SWAP)
 }
 
 /*
-static QString escape( const QString & str )
+static QString escape( const QString &str )
 */
 HB_FUNC_STATIC(QREGULAREXPRESSION_ESCAPE)
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_ESCAPE)
 }
 
 /*
-static QString anchoredPattern( const QString & expression )
+static QString anchoredPattern( const QString &expression )
 */
 HB_FUNC_STATIC(QREGULAREXPRESSION_ANCHOREDPATTERN)
 {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_ANCHOREDPATTERN)
 }
 
 /*
-static QString wildcardToRegularExpression( const QString & pattern )
+static QString wildcardToRegularExpression( const QString &pattern )
 */
 HB_FUNC_STATIC(QREGULAREXPRESSION_WILDCARDTOREGULAREXPRESSION)
 {

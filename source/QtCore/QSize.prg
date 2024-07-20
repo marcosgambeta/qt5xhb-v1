@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QSIZE_DELETE)
 }
 
 /*
-QSize boundedTo( const QSize & otherSize ) const
+QSize boundedTo( const QSize &otherSize ) const
 */
 HB_FUNC_STATIC(QSIZE_BOUNDEDTO)
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QSIZE_BOUNDEDTO)
 }
 
 /*
-QSize expandedTo( const QSize & otherSize ) const
+QSize expandedTo( const QSize &otherSize ) const
 */
 HB_FUNC_STATIC(QSIZE_EXPANDEDTO)
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QSIZE_SCALE)
   else if (ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2))
   {
     /*
-    void scale( const QSize & size, Qt::AspectRatioMode mode )
+    void scale( const QSize &size, Qt::AspectRatioMode mode )
     */
     QSize *obj = (QSize *)Qt5xHb::itemGetPtrStackSelfItem();
 

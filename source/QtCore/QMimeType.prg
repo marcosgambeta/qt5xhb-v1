@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QMIMETYPE_NEW)
   else if (ISNUMPAR(1) && ISQMIMETYPE(1))
   {
     /*
-    QMimeType( const QMimeType & other )
+    QMimeType( const QMimeType &other )
     */
     QMimeType *obj = new QMimeType(*PQMIMETYPE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QMIMETYPE_DELETE)
 }
 
 /*
-void swap( QMimeType & other )
+void swap( QMimeType &other )
 */
 HB_FUNC_STATIC(QMIMETYPE_SWAP)
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QMIMETYPE_PREFERREDSUFFIX)
 }
 
 /*
-bool inherits( const QString & mimeTypeName ) const
+bool inherits( const QString &mimeTypeName ) const
 */
 HB_FUNC_STATIC(QMIMETYPE_INHERITS)
 {

@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
 }
 
 /*
-void setTargetStates( const QList<QAbstractState*> & targets )
+void setTargetStates( const QList<QAbstractState*> &targets )
 */
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
 {

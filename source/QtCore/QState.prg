@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
 }
 
 /*
-void assignProperty( QObject * object, const char * name, const QVariant & value )
+void assignProperty( QObject * object, const char * name, const QVariant &value )
 */
 HB_FUNC_STATIC(QSTATE_ASSIGNPROPERTY)
 {

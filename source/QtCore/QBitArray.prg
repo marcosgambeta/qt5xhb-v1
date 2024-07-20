@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QBITARRAY_NEW)
   else if (ISNUMPAR(1) && ISQBITARRAY(1))
   {
     /*
-    QBitArray( const QBitArray & other )
+    QBitArray( const QBitArray &other )
     */
     QBitArray *obj = new QBitArray(*PQBITARRAY(1));
     Qt5xHb::returnNewObject(obj, true);

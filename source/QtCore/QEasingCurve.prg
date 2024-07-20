@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QEASINGCURVE_NEW)
   else if (ISNUMPAR(1) && ISQEASINGCURVE(1))
   {
     /*
-    QEasingCurve( const QEasingCurve & other )
+    QEasingCurve( const QEasingCurve &other )
     */
     QEasingCurve *obj = new QEasingCurve(*PQEASINGCURVE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QEASINGCURVE_DELETE)
 }
 
 /*
-void addCubicBezierSegment( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
+void addCubicBezierSegment( const QPointF &c1, const QPointF &c2, const QPointF &endPoint )
 */
 HB_FUNC_STATIC(QEASINGCURVE_ADDCUBICBEZIERSEGMENT)
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QEASINGCURVE_ADDCUBICBEZIERSEGMENT)
 }
 
 /*
-void addTCBSegment( const QPointF & nextPoint, qreal t, qreal c, qreal b )
+void addTCBSegment( const QPointF &nextPoint, qreal t, qreal c, qreal b )
 */
 HB_FUNC_STATIC(QEASINGCURVE_ADDTCBSEGMENT)
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETTYPE)
 }
 
 /*
-void swap( QEasingCurve & other )
+void swap( QEasingCurve &other )
 */
 HB_FUNC_STATIC(QEASINGCURVE_SWAP)
 {

@@ -72,7 +72,7 @@ RETURN
 #endif
 
     /*
-    QRegularExpressionMatch( const QRegularExpressionMatch & match )
+    QRegularExpressionMatch( const QRegularExpressionMatch &match )
     */
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_NEW)
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTURED)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QString captured( const QString & name ) const
+    QString captured( const QString &name ) const
     */
     QRegularExpressionMatch *obj = (QRegularExpressionMatch *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTUREDEND)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    int capturedEnd( const QString & name ) const
+    int capturedEnd( const QString &name ) const
     */
     QRegularExpressionMatch *obj = (QRegularExpressionMatch *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTUREDLENGTH)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    int capturedLength( const QString & name ) const
+    int capturedLength( const QString &name ) const
     */
     QRegularExpressionMatch *obj = (QRegularExpressionMatch *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTUREDREF)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QStringRef capturedRef( const QString & name ) const
+    QStringRef capturedRef( const QString &name ) const
     */
     QRegularExpressionMatch *obj = (QRegularExpressionMatch *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_CAPTUREDSTART)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    int capturedStart( const QString & name ) const
+    int capturedStart( const QString &name ) const
     */
     QRegularExpressionMatch *obj = (QRegularExpressionMatch *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_REGULAREXPRESSION)
 }
 
 /*
-void swap( QRegularExpressionMatch & other )
+void swap( QRegularExpressionMatch &other )
 */
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCH_SWAP)
 {

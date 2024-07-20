@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QURLQUERY_NEW)
   else if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    QUrlQuery( const QUrl & url )
+    QUrlQuery( const QUrl &url )
     */
     QUrlQuery *obj = new QUrlQuery(*PQURL(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QURLQUERY_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QUrlQuery( const QString & queryString )
+    QUrlQuery( const QString &queryString )
     */
     QUrlQuery *obj = new QUrlQuery(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QURLQUERY_NEW)
   else if (ISNUMPAR(1) && ISQURLQUERY(1))
   {
     /*
-    QUrlQuery( const QUrlQuery & other )
+    QUrlQuery( const QUrlQuery &other )
     */
     QUrlQuery *obj = new QUrlQuery(*PQURLQUERY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QURLQUERY_DELETE)
 }
 
 /*
-void addQueryItem( const QString & key, const QString & value )
+void addQueryItem( const QString &key, const QString &value )
 */
 HB_FUNC_STATIC(QURLQUERY_ADDQUERYITEM)
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QURLQUERY_ADDQUERYITEM)
 }
 
 /*
-QStringList allQueryItemValues( const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded )
+QStringList allQueryItemValues( const QString &key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded )
 const
 */
 HB_FUNC_STATIC(QURLQUERY_ALLQUERYITEMVALUES)
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QURLQUERY_CLEAR)
 }
 
 /*
-bool hasQueryItem( const QString & key ) const
+bool hasQueryItem( const QString &key ) const
 */
 HB_FUNC_STATIC(QURLQUERY_HASQUERYITEM)
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERY)
 }
 
 /*
-QString queryItemValue( const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
+QString queryItemValue( const QString &key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
 */
 HB_FUNC_STATIC(QURLQUERY_QUERYITEMVALUE)
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYVALUEDELIMITER)
 }
 
 /*
-void removeAllQueryItems( const QString & key )
+void removeAllQueryItems( const QString &key )
 */
 HB_FUNC_STATIC(QURLQUERY_REMOVEALLQUERYITEMS)
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEALLQUERYITEMS)
 }
 
 /*
-void removeQueryItem( const QString & key )
+void removeQueryItem( const QString &key )
 */
 HB_FUNC_STATIC(QURLQUERY_REMOVEQUERYITEM)
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEQUERYITEM)
 }
 
 /*
-void setQuery( const QString & queryString )
+void setQuery( const QString &queryString )
 */
 HB_FUNC_STATIC(QURLQUERY_SETQUERY)
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QURLQUERY_SETQUERY)
 }
 
 /*
-void swap( QUrlQuery & other )
+void swap( QUrlQuery &other )
 */
 HB_FUNC_STATIC(QURLQUERY_SWAP)
 {

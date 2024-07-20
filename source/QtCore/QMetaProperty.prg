@@ -675,7 +675,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_READ)
 }
 
 /*
-bool write( QObject * obj, const QVariant & value ) const
+bool write( QObject * obj, const QVariant &value ) const
 */
 HB_FUNC_STATIC(QMETAPROPERTY_WRITE)
 {

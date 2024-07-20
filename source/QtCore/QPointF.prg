@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QPOINTF_NEW)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QPointF( const QPoint & point )
+    QPointF( const QPoint &point )
     */
     QPointF *obj = new QPointF(*PQPOINT(1));
     Qt5xHb::returnNewObject(obj, true);

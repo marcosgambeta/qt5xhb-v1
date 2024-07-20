@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NEW)
   else if (ISNUMPAR(1) && ISQXMLSTREAMNOTATIONDECLARATION(1))
   {
     /*
-    QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
+    QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration &other )
     */
     QXmlStreamNotationDeclaration *obj = new QXmlStreamNotationDeclaration(*PQXMLSTREAMNOTATIONDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);

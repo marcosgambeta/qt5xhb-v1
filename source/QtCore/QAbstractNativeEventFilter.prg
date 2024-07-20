@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QABSTRACTNATIVEEVENTFILTER_DELETE)
 }
 
 /*
-virtual bool nativeEventFilter( const QByteArray & eventType, void * message, long * result ) = 0
+virtual bool nativeEventFilter( const QByteArray &eventType, void * message, long * result ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTNATIVEEVENTFILTER_NATIVEEVENTFILTER)
 {

@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QDATASTREAM_NEW)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QDataStream( const QByteArray & )
+    QDataStream( const QByteArray &)
     */
     QDataStream *obj = new QDataStream(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QDATASTREAM_READRAWDATA)
 }
 
 /*
-QDataStream & writeBytes( const char *, uint len )
+QDataStream &writeBytes( const char *, uint len )
 */
 HB_FUNC_STATIC(QDATASTREAM_WRITEBYTES)
 {

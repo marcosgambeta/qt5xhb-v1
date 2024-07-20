@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QBUFFER_DELETE)
 }
 
 /*
-QByteArray & buffer()
+QByteArray &buffer()
 */
 HB_FUNC_STATIC(QBUFFER_BUFFER1)
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QBUFFER_BUFFER1)
 }
 
 /*
-const QByteArray & buffer() const
+const QByteArray &buffer() const
 */
 HB_FUNC_STATIC(QBUFFER_BUFFER2)
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QBUFFER_BUFFER)
 }
 
 /*
-const QByteArray & data() const
+const QByteArray &data() const
 */
 HB_FUNC_STATIC(QBUFFER_DATA)
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QBUFFER_SETDATA)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    void setData( const QByteArray & data )
+    void setData( const QByteArray &data )
     */
     QBuffer *obj = (QBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 

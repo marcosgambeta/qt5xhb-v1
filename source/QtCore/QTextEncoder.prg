@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QByteArray fromUnicode( const QString & str )
+    QByteArray fromUnicode( const QString &str )
     */
     QTextEncoder *obj = (QTextEncoder *)Qt5xHb::itemGetPtrStackSelfItem();
 

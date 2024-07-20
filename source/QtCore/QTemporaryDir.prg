@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QTEMPORARYDIR_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QTemporaryDir( const QString & templateName )
+    QTemporaryDir( const QString &templateName )
     */
     QTemporaryDir *obj = new QTemporaryDir(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);

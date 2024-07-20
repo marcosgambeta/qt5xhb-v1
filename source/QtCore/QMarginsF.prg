@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QMARGINSF_NEW)
   else if (ISNUMPAR(1) && ISQMARGINSF(1))
   {
     /*
-    QMarginsF( const QMargins & margins )
+    QMarginsF( const QMargins &margins )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QMarginsF *obj = new QMarginsF(*PQMARGINS(1));

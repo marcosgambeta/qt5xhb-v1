@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QREGEXP_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QRegExp( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax =
+    QRegExp( const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax =
     QRegExp::RegExp )
     */
     QRegExp *obj = new QRegExp(
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QREGEXP_NEW)
   else if (ISNUMPAR(1) && ISQREGEXP(1))
   {
     /*
-    QRegExp( const QRegExp & rx )
+    QRegExp( const QRegExp &rx )
     */
     QRegExp *obj = new QRegExp(*PQREGEXP(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QREGEXP_ERRORSTRING)
 }
 
 /*
-bool exactMatch( const QString & str ) const
+bool exactMatch( const QString &str ) const
 */
 HB_FUNC_STATIC(QREGEXP_EXACTMATCH)
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QREGEXP_EXACTMATCH)
 }
 
 /*
-int indexIn( const QString & str, int offset = 0, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
+int indexIn( const QString &str, int offset = 0, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
 */
 HB_FUNC_STATIC(QREGEXP_INDEXIN)
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QREGEXP_ISVALID)
 }
 
 /*
-int lastIndexIn( const QString & str, int offset = -1, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
+int lastIndexIn( const QString &str, int offset = -1, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
 */
 HB_FUNC_STATIC(QREGEXP_LASTINDEXIN)
 {
@@ -543,7 +543,7 @@ HB_FUNC_STATIC(QREGEXP_SETMINIMAL)
 }
 
 /*
-void setPattern( const QString & pattern )
+void setPattern( const QString &pattern )
 */
 HB_FUNC_STATIC(QREGEXP_SETPATTERN)
 {
@@ -595,7 +595,7 @@ HB_FUNC_STATIC(QREGEXP_SETPATTERNSYNTAX)
 }
 
 /*
-static QString escape( const QString & str )
+static QString escape( const QString &str )
 */
 HB_FUNC_STATIC(QREGEXP_ESCAPE)
 {

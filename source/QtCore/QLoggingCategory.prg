@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_DEFAULTCATEGORY)
 }
 
 /*
-static void setFilterRules( const QString & rules )
+static void setFilterRules( const QString &rules )
 */
 HB_FUNC_STATIC(QLOGGINGCATEGORY_SETFILTERRULES)
 {

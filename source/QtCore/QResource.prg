@@ -68,7 +68,7 @@ RETURN
 #endif
 
     /*
-    QResource( const QString & file = QString(), const QLocale & locale = QLocale() )
+    QResource( const QString &file = QString(), const QLocale &locale = QLocale() )
     */
 HB_FUNC_STATIC(QRESOURCE_NEW)
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QRESOURCE_LOCALE)
 }
 
 /*
-void setFileName( const QString & file )
+void setFileName( const QString &file )
 */
 HB_FUNC_STATIC(QRESOURCE_SETFILENAME)
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QRESOURCE_SETFILENAME)
 }
 
 /*
-void setLocale( const QLocale & locale )
+void setLocale( const QLocale &locale )
 */
 HB_FUNC_STATIC(QRESOURCE_SETLOCALE)
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QRESOURCE_SIZE)
 }
 
 /*
-static bool registerResource( const QString & rccFileName, const QString & mapRoot = QString() )
+static bool registerResource( const QString &rccFileName, const QString &mapRoot = QString() )
 */
 HB_FUNC_STATIC(QRESOURCE_REGISTERRESOURCE)
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QRESOURCE_REGISTERRESOURCE)
 }
 
 /*
-static bool unregisterResource( const QString & rccFileName, const QString & mapRoot = QString() )
+static bool unregisterResource( const QString &rccFileName, const QString &mapRoot = QString() )
 */
 HB_FUNC_STATIC(QRESOURCE_UNREGISTERRESOURCE)
 {

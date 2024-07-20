@@ -67,7 +67,7 @@ RETURN
 #endif
 
     /*
-    QLockFile( const QString & fileName )
+    QLockFile( const QString &fileName )
     */
 HB_FUNC_STATIC(QLOCKFILE_NEW)
 {

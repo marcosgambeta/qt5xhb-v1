@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QFILE_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QFile( const QString & name )
+    QFile( const QString &name )
     */
     QFile *obj = new QFile(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QFILE_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    QFile( const QString & name, QObject * parent )
+    QFile( const QString &name, QObject * parent )
     */
     QFile *obj = new QFile(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QFILE_COPY)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool copy( const QString & newName )
+    bool copy( const QString &newName )
     */
     QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QFILE_COPY)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    static bool copy( const QString & fileName, const QString & newName )
+    static bool copy( const QString &fileName, const QString &newName )
     */
     RBOOL(QFile::copy(PQSTRING(1), PQSTRING(2)));
   }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QFILE_EXISTS)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static bool exists( const QString & fileName )
+    static bool exists( const QString &fileName )
     */
     RBOOL(QFile::exists(PQSTRING(1)));
   }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QFILE_LINK)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool link( const QString & linkName )
+    bool link( const QString &linkName )
     */
     QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QFILE_LINK)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    static bool link( const QString & fileName, const QString & linkName )
+    static bool link( const QString &fileName, const QString &linkName )
     */
     RBOOL(QFile::link(PQSTRING(1), PQSTRING(2)));
   }
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QFILE_PERMISSIONS)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    static QFile::Permissions permissions( const QString & fileName )
+    static QFile::Permissions permissions( const QString &fileName )
     */
     RENUM(QFile::permissions(PQSTRING(1)));
   }
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QFILE_REMOVE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static bool remove( const QString & fileName )
+    static bool remove( const QString &fileName )
     */
     RBOOL(QFile::remove(PQSTRING(1)));
   }
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QFILE_RENAME)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool rename( const QString & newName )
+    bool rename( const QString &newName )
     */
     QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QFILE_RENAME)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    static bool rename( const QString & oldName, const QString & newName )
+    static bool rename( const QString &oldName, const QString &newName )
     */
     RBOOL(QFile::rename(PQSTRING(1), PQSTRING(2)));
   }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QFILE_RESIZE)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    static bool resize( const QString & fileName, qint64 sz )
+    static bool resize( const QString &fileName, qint64 sz )
     */
     RBOOL(QFile::resize(PQSTRING(1), PQINT64(2)));
   }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QFILE_RESIZE)
 }
 
 /*
-void setFileName( const QString & name )
+void setFileName( const QString &name )
 */
 HB_FUNC_STATIC(QFILE_SETFILENAME)
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC(QFILE_SETPERMISSIONS)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    static bool setPermissions( const QString & fileName, QFile::Permissions permissions )
+    static bool setPermissions( const QString &fileName, QFile::Permissions permissions )
     */
     RBOOL(QFile::setPermissions(PQSTRING(1), (QFile::Permissions)hb_parni(2)));
   }
@@ -536,7 +536,7 @@ HB_FUNC_STATIC(QFILE_SYMLINKTARGET)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QString symLinkTarget( const QString & fileName )
+    static QString symLinkTarget( const QString &fileName )
     */
     RQSTRING(QFile::symLinkTarget(PQSTRING(1)));
   }
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QFILE_DECODENAME)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    static QString decodeName( const QByteArray & localFileName )
+    static QString decodeName( const QByteArray &localFileName )
     */
     RQSTRING(QFile::decodeName(*PQBYTEARRAY(1)));
   }
@@ -765,7 +765,7 @@ HB_FUNC_STATIC(QFILE_DECODENAME)
 }
 
 /*
-static QByteArray encodeName( const QString & fileName )
+static QByteArray encodeName( const QString &fileName )
 */
 HB_FUNC_STATIC(QFILE_ENCODENAME)
 {
@@ -801,7 +801,7 @@ HB_FUNC_STATIC(QFILE_READLINK)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QString readLink( const QString & fileName )
+    static QString readLink( const QString &fileName )
     */
     RQSTRING(QFile::readLink(PQSTRING(1)));
   }

@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    void addData( const QByteArray & data )
+    void addData( const QByteArray &data )
     */
     QCryptographicHash *obj = (QCryptographicHash *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESULT)
 }
 
 /*
-static QByteArray hash( const QByteArray & data, QCryptographicHash::Algorithm method )
+static QByteArray hash( const QByteArray &data, QCryptographicHash::Algorithm method )
 */
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_HASH)
 {

@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QUUID_NEW)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QUuid( const QByteArray & text )
+    QUuid( const QByteArray &text )
     */
     QUuid *obj = new QUuid(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QUUID_CREATEUUIDV3)
   if (ISNUMPAR(2) && ISQUUID(1) && ISQBYTEARRAY(2))
   {
     /*
-    static QUuid createUuidV3( const QUuid & ns, const QByteArray & baseData )
+    static QUuid createUuidV3( const QUuid &ns, const QByteArray &baseData )
     */
     QUuid *ptr = new QUuid(QUuid::createUuidV3(*PQUUID(1), *PQBYTEARRAY(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QUUID_CREATEUUIDV3)
   else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2))
   {
     /*
-    static QUuid createUuidV3( const QUuid & ns, const QString & baseData )
+    static QUuid createUuidV3( const QUuid &ns, const QString &baseData )
     */
     QUuid *ptr = new QUuid(QUuid::createUuidV3(*PQUUID(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QUUID_CREATEUUIDV5)
   if (ISNUMPAR(2) && ISQUUID(1) && ISQBYTEARRAY(2))
   {
     /*
-    static QUuid createUuidV5( const QUuid & ns, const QByteArray & baseData )
+    static QUuid createUuidV5( const QUuid &ns, const QByteArray &baseData )
     */
     QUuid *ptr = new QUuid(QUuid::createUuidV5(*PQUUID(1), *PQBYTEARRAY(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QUUID_CREATEUUIDV5)
   else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2))
   {
     /*
-    static QUuid createUuidV5( const QUuid & ns, const QString & baseData )
+    static QUuid createUuidV5( const QUuid &ns, const QString &baseData )
     */
     QUuid *ptr = new QUuid(QUuid::createUuidV5(*PQUUID(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QUUID_CREATEUUIDV5)
 }
 
 /*
-static QUuid fromRfc4122( const QByteArray & bytes )
+static QUuid fromRfc4122( const QByteArray &bytes )
 */
 HB_FUNC_STATIC(QUUID_FROMRFC4122)
 {

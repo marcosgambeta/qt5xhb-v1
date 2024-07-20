@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QDEBUG_NEW)
   else if (ISNUMPAR(1) && ISQDEBUG(1))
   {
     /*
-    QDebug( const QDebug & o )
+    QDebug( const QDebug &o )
     */
     QDebug *obj = new QDebug(*PQDEBUG(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QDEBUG_DELETE)
 }
 
 /*
-void swap( QDebug & other )
+void swap( QDebug &other )
 */
 HB_FUNC_STATIC(QDEBUG_SWAP)
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QDEBUG_SWAP)
 }
 
 /*
-QDebug & space()
+QDebug &space()
 */
 HB_FUNC_STATIC(QDEBUG_SPACE)
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QDEBUG_SPACE)
 }
 
 /*
-QDebug & nospace()
+QDebug &nospace()
 */
 HB_FUNC_STATIC(QDEBUG_NOSPACE)
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QDEBUG_NOSPACE)
 }
 
 /*
-QDebug & maybeSpace()
+QDebug &maybeSpace()
 */
 HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
 {

@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QStorageInfo( const QString & path )
+    QStorageInfo( const QString &path )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QStorageInfo *obj = new QStorageInfo(PQSTRING(1));
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_NEW)
   else if (ISNUMPAR(1) && ISQDIR(1))
   {
     /*
-    QStorageInfo( const QDir & dir )
+    QStorageInfo( const QDir &dir )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QStorageInfo *obj = new QStorageInfo(*PQDIR(1));
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_NEW)
   else if (ISNUMPAR(1) && ISQSTORAGEINFO(1))
   {
     /*
-    QStorageInfo( const QStorageInfo & other )
+    QStorageInfo( const QStorageInfo &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QStorageInfo *obj = new QStorageInfo(*PQSTORAGEINFO(1));
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_DELETE)
 }
 
 /*
-void swap( QStorageInfo & other )
+void swap( QStorageInfo &other )
 */
 HB_FUNC_STATIC(QSTORAGEINFO_SWAP)
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_SWAP)
 }
 
 /*
-void setPath( const QString & path )
+void setPath( const QString &path )
 */
 HB_FUNC_STATIC(QSTORAGEINFO_SETPATH)
 {

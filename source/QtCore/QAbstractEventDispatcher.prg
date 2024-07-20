@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_DELETE)
 }
 
 /*
-bool filterNativeEvent( const QByteArray & eventType, void * message, long * result )
+bool filterNativeEvent( const QByteArray &eventType, void * message, long * result )
 */
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT)
 {

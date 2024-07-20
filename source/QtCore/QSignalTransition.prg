@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SIGNAL)
 }
 
 /*
-void setSignal( const QByteArray & signal )
+void setSignal( const QByteArray &signal )
 */
 HB_FUNC_STATIC(QSIGNALTRANSITION_SETSIGNAL)
 {

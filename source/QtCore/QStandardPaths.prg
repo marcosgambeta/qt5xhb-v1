@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_STANDARDLOCATIONS)
 }
 
 /*
-static QString locate( QStandardPaths::StandardLocation type, const QString & fileName, QStandardPaths::LocateOptions
+static QString locate( QStandardPaths::StandardLocation type, const QString &fileName, QStandardPaths::LocateOptions
 options = QStandardPaths::LocateFile )
 */
 HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
 }
 
 /*
-static QStringList locateAll( QStandardPaths::StandardLocation type, const QString & fileName,
+static QStringList locateAll( QStandardPaths::StandardLocation type, const QString &fileName,
 QStandardPaths::LocateOptions options = QStandardPaths::LocateFile )
 */
 HB_FUNC_STATIC(QSTANDARDPATHS_LOCATEALL)
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_DISPLAYNAME)
 }
 
 /*
-static QString findExecutable( const QString & executableName, const QStringList & paths = QStringList() )
+static QString findExecutable( const QString &executableName, const QStringList &paths = QStringList() )
 */
 HB_FUNC_STATIC(QSTANDARDPATHS_FINDEXECUTABLE)
 {

@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SELECT)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QString select( const QString & filePath ) const
+    QString select( const QString &filePath ) const
     */
     QFileSelector *obj = (QFileSelector *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SELECT)
   else if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    QUrl select( const QUrl & filePath ) const
+    QUrl select( const QUrl &filePath ) const
     */
     QFileSelector *obj = (QFileSelector *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QFILESELECTOR_EXTRASELECTORS)
 }
 
 /*
-void setExtraSelectors( const QStringList & list )
+void setExtraSelectors( const QStringList &list )
 */
 HB_FUNC_STATIC(QFILESELECTOR_SETEXTRASELECTORS)
 {
