@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QDRAG_PIXMAP)
 }
 
 /*
-void setDragCursor( const QPixmap & cursor, Qt::DropAction action )
+void setDragCursor( const QPixmap &cursor, Qt::DropAction action )
 */
 HB_FUNC_STATIC(QDRAG_SETDRAGCURSOR)
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QDRAG_SETDRAGCURSOR)
 }
 
 /*
-void setHotSpot( const QPoint & hotspot )
+void setHotSpot( const QPoint &hotspot )
 */
 HB_FUNC_STATIC(QDRAG_SETHOTSPOT)
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QDRAG_SETMIMEDATA)
 }
 
 /*
-void setPixmap( const QPixmap & pixmap )
+void setPixmap( const QPixmap &pixmap )
 */
 HB_FUNC_STATIC(QDRAG_SETPIXMAP)
 {

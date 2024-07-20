@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QTEXTOPTION_NEW)
   else if (ISNUMPAR(1) && ISQTEXTOPTION(1))
   {
     /*
-    QTextOption( const QTextOption & o )
+    QTextOption( const QTextOption &o )
     */
     QTextOption *obj = new QTextOption(*PQTEXTOPTION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QTEXTOPTION_TABSTOP)
 }
 
 /*
-void setTabArray( const QList<qreal> & tabStops )
+void setTabArray( const QList<qreal> &tabStops )
 */
 HB_FUNC_STATIC(QTEXTOPTION_SETTABARRAY)
 {

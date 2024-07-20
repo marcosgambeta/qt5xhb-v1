@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETDEVICE)
 }
 
 /*
-void setFormat( const QByteArray & format )
+void setFormat( const QByteArray &format )
 */
 HB_FUNC_STATIC(QIMAGEIOHANDLER_SETFORMAT)
 {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETFORMAT)
 }
 
 /*
-virtual void setOption( QImageIOHandler::ImageOption option, const QVariant & value )
+virtual void setOption( QImageIOHandler::ImageOption option, const QVariant &value )
 */
 HB_FUNC_STATIC(QIMAGEIOHANDLER_SETOPTION)
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SUPPORTSOPTION)
 }
 
 /*
-virtual bool write( const QImage & image )
+virtual bool write( const QImage &image )
 */
 HB_FUNC_STATIC(QIMAGEIOHANDLER_WRITE)
 {

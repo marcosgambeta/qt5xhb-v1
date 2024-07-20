@@ -574,7 +574,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
 }
 
 /*
-void setPosition( const QPointF & pos )
+void setPosition( const QPointF &pos )
 */
 HB_FUNC_STATIC(QTEXTLINE_SETPOSITION)
 {

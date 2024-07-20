@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_NEW)
   else if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2))
   {
     /*
-    QTextDocumentWriter( QIODevice * device, const QByteArray & format )
+    QTextDocumentWriter( QIODevice * device, const QByteArray &format )
     */
     QTextDocumentWriter *obj = new QTextDocumentWriter(PQIODEVICE(1), *PQBYTEARRAY(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
     /*
-    QTextDocumentWriter( const QString & fileName, const QByteArray & format = QByteArray() )
+    QTextDocumentWriter( const QString &fileName, const QByteArray &format = QByteArray() )
     */
     QTextDocumentWriter *obj =
         new QTextDocumentWriter(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_DELETE)
 }
 
 /*
-void setFormat( const QByteArray & format )
+void setFormat( const QByteArray &format )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETFORMAT)
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_DEVICE)
 }
 
 /*
-void setFileName( const QString & fileName )
+void setFileName( const QString &fileName )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETFILENAME)
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_WRITE)
   else if (ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1))
   {
     /*
-    bool write( const QTextDocumentFragment & fragment )
+    bool write( const QTextDocumentFragment &fragment )
     */
     QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 

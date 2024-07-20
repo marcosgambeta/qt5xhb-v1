@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWELLIPSE)
   if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    virtual void drawEllipse( const QRectF & rect )
+    virtual void drawEllipse( const QRectF &rect )
     */
     QPaintEngine *obj = (QPaintEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWELLIPSE)
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    virtual void drawEllipse( const QRect & rect )
+    virtual void drawEllipse( const QRect &rect )
     */
     QPaintEngine *obj = (QPaintEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWELLIPSE)
 }
 
 /*
-virtual void drawImage( const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt::ImageConversionFlags
+virtual void drawImage( const QRectF &rectangle, const QImage &image, const QRectF &sr, Qt::ImageConversionFlags
 flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC(QPAINTENGINE_DRAWIMAGE)
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWLINES)
 }
 
 /*
-virtual void drawPath( const QPainterPath & path )
+virtual void drawPath( const QPainterPath &path )
 */
 HB_FUNC_STATIC(QPAINTENGINE_DRAWPATH)
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWPATH)
 }
 
 /*
-virtual void drawPixmap( const QRectF & r, const QPixmap & pm, const QRectF & sr ) = 0
+virtual void drawPixmap( const QRectF &r, const QPixmap &pm, const QRectF &sr ) = 0
 */
 HB_FUNC_STATIC(QPAINTENGINE_DRAWPIXMAP)
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWRECTS)
 }
 
 /*
-virtual void drawTextItem( const QPointF & p, const QTextItem & textItem )
+virtual void drawTextItem( const QPointF &p, const QTextItem &textItem )
 */
 HB_FUNC_STATIC(QPAINTENGINE_DRAWTEXTITEM)
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWTEXTITEM)
 }
 
 /*
-virtual void drawTiledPixmap( const QRectF & rect, const QPixmap & pixmap, const QPointF & p )
+virtual void drawTiledPixmap( const QRectF &rect, const QPixmap &pixmap, const QPointF &p )
 */
 HB_FUNC_STATIC(QPAINTENGINE_DRAWTILEDPIXMAP)
 {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QPAINTENGINE_TYPE)
 }
 
 /*
-virtual void updateState( const QPaintEngineState & state ) = 0
+virtual void updateState( const QPaintEngineState &state ) = 0
 */
 HB_FUNC_STATIC(QPAINTENGINE_UPDATESTATE)
 {

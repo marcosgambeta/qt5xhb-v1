@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_NEW)
   if (ISNUMPAR(5) && HB_ISNUM(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     /*
-    QMouseEvent( QEvent::Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons,
+    QMouseEvent( QEvent::Type type, const QPointF &localPos, Qt::MouseButton button, Qt::MouseButtons buttons,
     Qt::KeyboardModifiers modifiers )
     */
     QMouseEvent *obj = new QMouseEvent((QEvent::Type)hb_parni(1), *PQPOINTF(2), (Qt::MouseButton)hb_parni(3),
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_NEW)
   else if (ISNUMPAR(6) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6))
   {
     /*
-    QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button,
+    QMouseEvent( QEvent::Type type, const QPointF &localPos, const QPointF &screenPos, Qt::MouseButton button,
     Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
     QMouseEvent *obj =
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_NEW)
            HB_ISNUM(7))
   {
     /*
-    QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos,
+    QMouseEvent( QEvent::Type type, const QPointF &localPos, const QPointF &windowPos, const QPointF &screenPos,
     Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
     QMouseEvent *obj = new QMouseEvent((QEvent::Type)hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4),
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_GLOBALY)
 }
 
 /*
-const QPointF & localPos() const
+const QPointF &localPos() const
 */
 HB_FUNC_STATIC(QMOUSEEVENT_LOCALPOS)
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_LOCALPOS)
 }
 
 /*
-const QPointF & screenPos() const
+const QPointF &screenPos() const
 */
 HB_FUNC_STATIC(QMOUSEEVENT_SCREENPOS)
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_SCREENPOS)
 }
 
 /*
-const QPointF & windowPos() const
+const QPointF &windowPos() const
 */
 HB_FUNC_STATIC(QMOUSEEVENT_WINDOWPOS)
 {

@@ -152,7 +152,7 @@ void QImage_new7()
 }
 
 /*
-QImage( const QString & fileName, const char * format = 0 )
+QImage( const QString &fileName, const char * format = 0 )
 */
 HB_FUNC_STATIC(QIMAGE_NEW9)
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
   else if (ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2))
   {
     /*
-    QImage( const QSize & size, QImage::Format format )
+    QImage( const QSize &size, QImage::Format format )
     */
     QImage *obj = new QImage(*PQSIZE(1), (QImage::Format)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
   else if (ISNUMPAR(1) && ISQIMAGE(1))
   {
     /*
-    QImage( const QImage & image )
+    QImage( const QImage &image )
     */
     QImage *obj = new QImage(*PQIMAGE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTOFORMAT)
   else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QImage convertToFormat( QImage::Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags =
+    QImage convertToFormat( QImage::Format format, const QVector<QRgb> &colorTable, Qt::ImageConversionFlags flags =
     Qt::AutoColor ) const
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QIMAGE_COPY)
   if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1)))
   {
     /*
-    QImage copy( const QRect & rectangle = QRect() ) const
+    QImage copy( const QRect &rectangle = QRect() ) const
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -694,7 +694,7 @@ HB_FUNC_STATIC(QIMAGE_FILL)
   else if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
   {
     /*
-    void fill( const QColor & color )
+    void fill( const QColor &color )
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -862,7 +862,7 @@ HB_FUNC_STATIC(QIMAGE_LOAD)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    bool load( const QString & fileName, const char * format = 0 )
+    bool load( const QString &fileName, const char * format = 0 )
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -874,7 +874,7 @@ HB_FUNC_STATIC(QIMAGE_LOAD)
   else if (ISNUMPAR(2) && ISQIODEVICE(1) && HB_ISCHAR(2))
   {
     /*
-    bool load( const QString & fileName, const char * format = 0 )
+    bool load( const QString &fileName, const char * format = 0 )
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -906,7 +906,7 @@ HB_FUNC_STATIC(QIMAGE_LOADFROMDATA)
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    bool loadFromData( const QByteArray & data, const char * format = 0 )
+    bool loadFromData( const QByteArray &data, const char * format = 0 )
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -976,7 +976,7 @@ HB_FUNC_STATIC(QIMAGE_PIXEL)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QRgb pixel( const QPoint & position ) const
+    QRgb pixel( const QPoint &position ) const
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC(QIMAGE_PIXELINDEX)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    int pixelIndex( const QPoint & position ) const
+    int pixelIndex( const QPoint &position ) const
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC(QIMAGE_SAVE)
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    bool save( const QString & fileName, const char * format = 0, int quality = -1 ) const
+    bool save( const QString &fileName, const char * format = 0, int quality = -1 ) const
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC(QIMAGE_SCALED)
   if (ISBETWEEN(1, 3) && ISQSIZE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QImage scaled( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio,
+    QImage scaled( const QSize &size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio,
     Qt::TransformationMode transformMode = Qt::FastTransformation ) const
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1327,7 +1327,7 @@ HB_FUNC_STATIC(QIMAGE_SETDOTSPERMETERY)
 }
 
 /*
-void setOffset( const QPoint & offset )
+void setOffset( const QPoint &offset )
 */
 HB_FUNC_STATIC(QIMAGE_SETOFFSET)
 {
@@ -1357,7 +1357,7 @@ HB_FUNC_STATIC(QIMAGE_SETPIXEL)
   if (ISNUMPAR(2) && ISQPOINT(1) && HB_ISNUM(2))
   {
     /*
-    void setPixel( const QPoint & position, uint index_or_rgb )
+    void setPixel( const QPoint &position, uint index_or_rgb )
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1389,7 +1389,7 @@ HB_FUNC_STATIC(QIMAGE_SETPIXEL)
 }
 
 /*
-void setText( const QString & key, const QString & text )
+void setText( const QString &key, const QString &text )
 */
 HB_FUNC_STATIC(QIMAGE_SETTEXT)
 {
@@ -1440,7 +1440,7 @@ HB_FUNC_STATIC(QIMAGE_SIZE)
 }
 
 /*
-void swap( QImage & other )
+void swap( QImage &other )
 */
 HB_FUNC_STATIC(QIMAGE_SWAP)
 {
@@ -1466,7 +1466,7 @@ HB_FUNC_STATIC(QIMAGE_SWAP)
 }
 
 /*
-QString text( const QString & key = QString() ) const
+QString text( const QString &key = QString() ) const
 */
 HB_FUNC_STATIC(QIMAGE_TEXT)
 {
@@ -1518,7 +1518,7 @@ HB_FUNC_STATIC(QIMAGE_TRANSFORMED)
   if (ISBETWEEN(1, 2) && ISQMATRIX(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QImage transformed( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
+    QImage transformed( const QMatrix &matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1533,7 +1533,7 @@ HB_FUNC_STATIC(QIMAGE_TRANSFORMED)
   else if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QImage transformed( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
+    QImage transformed( const QTransform &matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1556,7 +1556,7 @@ HB_FUNC_STATIC(QIMAGE_VALID)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    bool valid( const QPoint & pos ) const
+    bool valid( const QPoint &pos ) const
     */
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1620,7 +1620,7 @@ HB_FUNC_STATIC(QIMAGE_FROMDATA)
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    static QImage fromData( const QByteArray & data, const char * format = 0 )
+    static QImage fromData( const QByteArray &data, const char * format = 0 )
     */
     QImage *ptr = new QImage(QImage::fromData(*PQBYTEARRAY(1), OPCONSTCHAR(2, 0)));
     Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -1636,7 +1636,7 @@ HB_FUNC_STATIC(QIMAGE_TRUEMATRIX)
   if (ISNUMPAR(3) && ISQMATRIX(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    static QMatrix trueMatrix( const QMatrix & matrix, int width, int height )
+    static QMatrix trueMatrix( const QMatrix &matrix, int width, int height )
     */
     QMatrix *ptr = new QMatrix(QImage::trueMatrix(*PQMATRIX(1), PINT(2), PINT(3)));
     Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
@@ -1644,7 +1644,7 @@ HB_FUNC_STATIC(QIMAGE_TRUEMATRIX)
   else if (ISNUMPAR(3) && ISQTRANSFORM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    static QTransform trueMatrix( const QTransform & matrix, int width, int height )
+    static QTransform trueMatrix( const QTransform &matrix, int width, int height )
     */
     QTransform *ptr = new QTransform(QImage::trueMatrix(*PQTRANSFORM(1), PINT(2), PINT(3)));
     Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
@@ -1660,7 +1660,7 @@ HB_FUNC_STATIC(QIMAGE_PIXELCOLOR)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QColor pixelColor( const QPoint & position ) const
+    QColor pixelColor( const QPoint &position ) const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1724,7 +1724,7 @@ HB_FUNC_STATIC(QIMAGE_SETPIXELCOLOR)
   if (ISNUMPAR(2) && ISQPOINT(1) && ISQCOLOR(2))
   {
     /*
-    void setPixelColor( const QPoint & position, const QColor & color )
+    void setPixelColor( const QPoint &position, const QColor &color )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1740,7 +1740,7 @@ HB_FUNC_STATIC(QIMAGE_SETPIXELCOLOR)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQCOLOR(3))
   {
     /*
-    void setPixelColor( int x, int y, const QColor & color )
+    void setPixelColor( int x, int y, const QColor &color )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     QImage *obj = (QImage *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1778,7 +1778,7 @@ HB_FUNC_STATIC(QIMAGE_TOVARIANT)
   else if (ISNUMPAR(1) && ISQIMAGE(1))
   {
     /*
-    static QVariant toVariant( const QImage & )
+    static QVariant toVariant( const QImage &)
     */
     QImage *image = (QImage *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
     QVariant *variant = new QVariant();
@@ -1792,7 +1792,7 @@ HB_FUNC_STATIC(QIMAGE_TOVARIANT)
 }
 
 /*
-static QImage fromVariant( const QVariant & )
+static QImage fromVariant( const QVariant &)
 */
 HB_FUNC_STATIC(QIMAGE_FROMVARIANT)
 {

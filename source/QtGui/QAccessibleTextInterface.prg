@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_CHARACTERRECT)
 }
 
 /*
-virtual int offsetAtPoint( const QPoint & point ) const = 0
+virtual int offsetAtPoint( const QPoint &point ) const = 0
 */
 HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_OFFSETATPOINT)
 {

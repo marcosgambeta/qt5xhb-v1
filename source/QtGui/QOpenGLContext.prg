@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_FUNCTIONS)
 }
 
 /*
-bool hasExtension( const QByteArray & extension ) const
+bool hasExtension( const QByteArray &extension ) const
 */
 HB_FUNC_STATIC(QOPENGLCONTEXT_HASEXTENSION)
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SCREEN)
 }
 
 /*
-void setFormat( const QSurfaceFormat & format )
+void setFormat( const QSurfaceFormat &format )
 */
 HB_FUNC_STATIC(QOPENGLCONTEXT_SETFORMAT)
 {

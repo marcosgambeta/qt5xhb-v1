@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_NEW)
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    QOpenGLPaintDevice( const QSize & size )
+    QOpenGLPaintDevice( const QSize &size )
     */
     QOpenGLPaintDevice *obj = new QOpenGLPaintDevice(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SIZE)
 }
 
 /*
-void setSize( const QSize & size )
+void setSize( const QSize &size )
 */
 HB_FUNC_STATIC(QOPENGLPAINTDEVICE_SETSIZE)
 {

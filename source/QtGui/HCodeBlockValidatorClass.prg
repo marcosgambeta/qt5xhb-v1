@@ -83,14 +83,14 @@ HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_DELETE)
 }
 
 /*
-QValidator::State validate( QString & input, int & pos ) const
+QValidator::State validate( QString &input, int &pos ) const
 */
 HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_VALIDATE)
 {
 }
 
 /*
-void fixup( QString & input ) const
+void fixup( QString &input ) const
 */
 HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_FIXUP)
 {

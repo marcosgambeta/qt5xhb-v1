@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_INDENT)
 }
 
 /*
-void setNumberPrefix( const QString & numberPrefix )
+void setNumberPrefix( const QString &numberPrefix )
 */
 HB_FUNC_STATIC(QTEXTLISTFORMAT_SETNUMBERPREFIX)
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_NUMBERPREFIX)
 }
 
 /*
-void setNumberSuffix( const QString & numberSuffix )
+void setNumberSuffix( const QString &numberSuffix )
 */
 HB_FUNC_STATIC(QTEXTLISTFORMAT_SETNUMBERSUFFIX)
 {

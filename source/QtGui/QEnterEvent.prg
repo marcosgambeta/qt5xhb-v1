@@ -58,7 +58,7 @@ RETURN
 #endif
 
     /*
-    QEnterEvent( const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos )
+    QEnterEvent( const QPointF &localPos, const QPointF &windowPos, const QPointF &screenPos )
     */
 HB_FUNC_STATIC(QENTEREVENT_NEW)
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALY)
 }
 
 /*
-const QPointF & localPos() const
+const QPointF &localPos() const
 */
 HB_FUNC_STATIC(QENTEREVENT_LOCALPOS)
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QENTEREVENT_LOCALPOS)
 }
 
 /*
-const QPointF & windowPos() const
+const QPointF &windowPos() const
 */
 HB_FUNC_STATIC(QENTEREVENT_WINDOWPOS)
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QENTEREVENT_WINDOWPOS)
 }
 
 /*
-const QPointF & screenPos() const
+const QPointF &screenPos() const
 */
 HB_FUNC_STATIC(QENTEREVENT_SCREENPOS)
 {

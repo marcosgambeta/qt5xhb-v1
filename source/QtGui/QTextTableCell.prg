@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_NEW)
   else if (ISNUMPAR(1) && ISQTEXTTABLECELL(1))
   {
     /*
-    QTextTableCell( const QTextTableCell & o )
+    QTextTableCell( const QTextTableCell &o )
     */
     QTextTableCell *obj = new QTextTableCell(*PQTEXTTABLECELL(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_DELETE)
 }
 
 /*
-void setFormat( const QTextCharFormat & format )
+void setFormat( const QTextCharFormat &format )
 */
 HB_FUNC_STATIC(QTEXTTABLECELL_SETFORMAT)
 {

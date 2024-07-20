@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW)
   else if (ISNUMPAR(1) && ISQOPENGLFRAMEBUFFEROBJECTFORMAT(1))
   {
     /*
-    QOpenGLFramebufferObjectFormat( const QOpenGLFramebufferObjectFormat & other )
+    QOpenGLFramebufferObjectFormat( const QOpenGLFramebufferObjectFormat &other )
     */
     QOpenGLFramebufferObjectFormat *obj = new QOpenGLFramebufferObjectFormat(*PQOPENGLFRAMEBUFFEROBJECTFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);

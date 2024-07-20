@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_BOTTOM)
 }
 
 /*
-virtual void fixup( QString & input ) const
+virtual void fixup( QString &input ) const
 */
 HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
 }
 
 /*
-void setLocale( const QLocale & locale )
+void setLocale( const QLocale &locale )
 */
 HB_FUNC_STATIC(QINTVALIDATOR_SETLOCALE)
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_TOP)
 }
 
 /*
-virtual QValidator::State validate( QString & input, int & pos ) const = 0
+virtual QValidator::State validate( QString &input, int &pos ) const = 0
 */
 HB_FUNC_STATIC(QINTVALIDATOR_VALIDATE)
 {

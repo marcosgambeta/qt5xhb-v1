@@ -75,7 +75,7 @@ RETURN
 }
 
 /*
-QTextFragment( const QTextFragment & o )
+QTextFragment( const QTextFragment &o )
 */
 void QTextFragment_new3()
 {

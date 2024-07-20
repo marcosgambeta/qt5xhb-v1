@@ -51,7 +51,7 @@ RETURN
 #endif
 
     /*
-    QScrollEvent( const QPointF & contentPos, const QPointF & overshoot, QScrollEvent::ScrollState scrollState )
+    QScrollEvent( const QPointF &contentPos, const QPointF &overshoot, QScrollEvent::ScrollState scrollState )
     */
 HB_FUNC_STATIC(QSCROLLEVENT_NEW)
 {

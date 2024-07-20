@@ -50,7 +50,7 @@ RETURN
 #endif
 
     /*
-    QAccessibleValueChangeEvent( QObject * obj, const QVariant & val )
+    QAccessibleValueChangeEvent( QObject * obj, const QVariant &val )
     */
 HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_NEW)
 {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_DELETE)
 }
 
 /*
-void setValue( const QVariant & val )
+void setValue( const QVariant &val )
 */
 HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_SETVALUE)
 {

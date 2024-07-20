@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_QUERIES)
 }
 
 /*
-void setValue( Qt::InputMethodQuery query, const QVariant & value )
+void setValue( Qt::InputMethodQuery query, const QVariant &value )
 */
 HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_SETVALUE)
 {

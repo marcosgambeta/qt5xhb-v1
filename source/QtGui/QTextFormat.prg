@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_NEW)
   else if (ISNUMPAR(1) && ISQTEXTFORMAT(1))
   {
     /*
-    QTextFormat( const QTextFormat & rhs )
+    QTextFormat( const QTextFormat &rhs )
     */
     QTextFormat *obj = new QTextFormat(*PQTEXTFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_DELETE)
 }
 
 /*
-void swap( QTextFormat & other )
+void swap( QTextFormat &other )
 */
 HB_FUNC_STATIC(QTEXTFORMAT_SWAP)
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SWAP)
 }
 
 /*
-void merge( const QTextFormat & other )
+void merge( const QTextFormat &other )
 */
 HB_FUNC_STATIC(QTEXTFORMAT_MERGE)
 {
@@ -635,7 +635,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
   if (ISNUMPAR(1) && HB_ISNUM(1) && ISQVARIANT(2))
   {
     /*
-    void setProperty( int propertyId, const QVariant & value )
+    void setProperty( int propertyId, const QVariant &value )
     */
     QTextFormat *obj = (QTextFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -649,7 +649,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
   else if (ISNUMPAR(1) && HB_ISNUM(1) && HB_ISARRAY(2))
   {
     /*
-    void setProperty( int propertyId, const QVector<QTextLength> & lengths )
+    void setProperty( int propertyId, const QVector<QTextLength> &lengths )
     */
     QTextFormat *obj = (QTextFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_LAYOUTDIRECTION)
 }
 
 /*
-void setBackground( const QBrush & brush )
+void setBackground( const QBrush &brush )
 */
 HB_FUNC_STATIC(QTEXTFORMAT_SETBACKGROUND)
 {
@@ -1219,7 +1219,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_CLEARBACKGROUND)
 }
 
 /*
-void setForeground( const QBrush & brush )
+void setForeground( const QBrush &brush )
 */
 HB_FUNC_STATIC(QTEXTFORMAT_SETFOREGROUND)
 {

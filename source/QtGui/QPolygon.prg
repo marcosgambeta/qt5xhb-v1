@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QPOLYGON_NEW)
   else if (ISNUMPAR(1) && ISQPOLYGON(1))
   {
     /*
-    QPolygon( const QPolygon & a )
+    QPolygon( const QPolygon &a )
     */
     QPolygon *obj = new QPolygon(*PQPOLYGON(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QPOLYGON_NEW)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    QPolygon( const QVector<QPoint> & v )
+    QPolygon( const QVector<QPoint> &v )
     */
     QVector<QPoint> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QPOLYGON_NEW)
   else if (ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
   {
     /*
-    QPolygon( const QRect & r, bool closed = false )
+    QPolygon( const QRect &r, bool closed = false )
     */
     QPolygon *obj = new QPolygon(*PQRECT(1), OPBOOL(2, false));
     Qt5xHb::returnNewObject(obj, true);
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QPOLYGON_DELETE)
 }
 
 /*
-void swap( QPolygon & other )
+void swap( QPolygon &other )
 */
 HB_FUNC_STATIC(QPOLYGON_SWAP)
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QPOLYGON_TRANSLATE)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    void translate( const QPoint & offset )
+    void translate( const QPoint &offset )
     */
     QPolygon *obj = (QPolygon *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QPOLYGON_TRANSLATED)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QPolygon translated( const QPoint & offset ) const
+    QPolygon translated( const QPoint &offset ) const
     */
     QPolygon *obj = (QPolygon *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QPOLYGON_SETPOINT)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2))
   {
     /*
-    void setPoint( int index, const QPoint & p )
+    void setPoint( int index, const QPoint &p )
     */
     QPolygon *obj = (QPolygon *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QPOLYGON_SETPOINT)
 }
 
 /*
-void putPoints( int index, int nPoints, const QPolygon & from, int fromIndex = 0 )
+void putPoints( int index, int nPoints, const QPolygon &from, int fromIndex = 0 )
 */
 HB_FUNC_STATIC(QPOLYGON_PUTPOINTS)
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QPOLYGON_PUTPOINTS)
 }
 
 /*
-bool containsPoint( const QPoint & pt, Qt::FillRule fillRule ) const
+bool containsPoint( const QPoint &pt, Qt::FillRule fillRule ) const
 */
 HB_FUNC_STATIC(QPOLYGON_CONTAINSPOINT)
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QPOLYGON_CONTAINSPOINT)
 }
 
 /*
-QPolygon united( const QPolygon & r ) const
+QPolygon united( const QPolygon &r ) const
 */
 HB_FUNC_STATIC(QPOLYGON_UNITED)
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QPOLYGON_UNITED)
 }
 
 /*
-QPolygon intersected( const QPolygon & r ) const
+QPolygon intersected( const QPolygon &r ) const
 */
 HB_FUNC_STATIC(QPOLYGON_INTERSECTED)
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QPOLYGON_INTERSECTED)
 }
 
 /*
-QPolygon subtracted( const QPolygon & r ) const
+QPolygon subtracted( const QPolygon &r ) const
 */
 HB_FUNC_STATIC(QPOLYGON_SUBTRACTED)
 {

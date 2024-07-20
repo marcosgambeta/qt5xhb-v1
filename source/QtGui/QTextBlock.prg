@@ -103,7 +103,7 @@ RETURN
 }
 
 /*
-QTextBlock( const QTextBlock & o )
+QTextBlock( const QTextBlock &o )
 */
 void QTextBlock_new3()
 {

@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_RECT)
 }
 
 /*
-void setText( QAccessible::Text t, const QString & text )
+void setText( QAccessible::Text t, const QString &text )
 */
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_SETTEXT)
 {

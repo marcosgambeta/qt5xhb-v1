@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_LOCALE)
 }
 
 /*
-void setInputItemTransform( const QTransform & transform )
+void setInputItemTransform( const QTransform &transform )
 */
 HB_FUNC_STATIC(QINPUTMETHOD_SETINPUTITEMTRANSFORM)
 {

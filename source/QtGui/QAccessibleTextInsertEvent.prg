@@ -49,7 +49,7 @@ RETURN
 #endif
 
     /*
-    QAccessibleTextInsertEvent( QObject * obj, int position, const QString & text )
+    QAccessibleTextInsertEvent( QObject * obj, int position, const QString &text )
     */
 HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_NEW)
 {

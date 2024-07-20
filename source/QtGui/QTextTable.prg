@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
   else if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
-    void mergeCells( const QTextCursor & cursor )
+    void mergeCells( const QTextCursor &cursor )
     */
     QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
   else if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
-    QTextTableCell cellAt( const QTextCursor & c ) const
+    QTextTableCell cellAt( const QTextCursor &c ) const
     */
     QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -443,7 +443,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
 }
 
 /*
-QTextCursor rowStart( const QTextCursor & c ) const
+QTextCursor rowStart( const QTextCursor &c ) const
 */
 HB_FUNC_STATIC(QTEXTTABLE_ROWSTART)
 {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWSTART)
 }
 
 /*
-QTextCursor rowEnd( const QTextCursor & c ) const
+QTextCursor rowEnd( const QTextCursor &c ) const
 */
 HB_FUNC_STATIC(QTEXTTABLE_ROWEND)
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWEND)
 }
 
 /*
-void setFormat( const QTextTableFormat & format )
+void setFormat( const QTextTableFormat &format )
 */
 HB_FUNC_STATIC(QTEXTTABLE_SETFORMAT)
 {

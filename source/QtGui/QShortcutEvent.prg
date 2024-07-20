@@ -51,7 +51,7 @@ RETURN
 #endif
 
     /*
-    QShortcutEvent( const QKeySequence & key, int id, bool ambiguous = false )
+    QShortcutEvent( const QKeySequence &key, int id, bool ambiguous = false )
     */
 HB_FUNC_STATIC(QSHORTCUTEVENT_NEW)
 {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_DELETE)
 }
 
 /*
-const QKeySequence & key() const
+const QKeySequence &key() const
 */
 HB_FUNC_STATIC(QSHORTCUTEVENT_KEY)
 {

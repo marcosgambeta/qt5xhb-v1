@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_NEW)
   else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QOpenGLTexture( const QImage & image, QOpenGLTexture::MipMapGeneration genMipMaps = QOpenGLTexture::GenerateMipMaps
+    QOpenGLTexture( const QImage &image, QOpenGLTexture::MipMapGeneration genMipMaps = QOpenGLTexture::GenerateMipMaps
     )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_NEW)
   else if (ISNUMPAR(1) && ISQPAGELAYOUT(1))
   {
     /*
-    QPageLayout( const QPageLayout & other )
+    QPageLayout( const QPageLayout &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QPageLayout *obj = new QPageLayout(*PQPAGELAYOUT(1));
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_DELETE)
 }
 
 /*
-void swap( QPageLayout & other )
+void swap( QPageLayout &other )
 */
 HB_FUNC_STATIC(QPAGELAYOUT_SWAP)
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SWAP)
 }
 
 /*
-bool isEquivalentTo( const QPageLayout & other ) const
+bool isEquivalentTo( const QPageLayout &other ) const
 */
 HB_FUNC_STATIC(QPAGELAYOUT_ISEQUIVALENTTO)
 {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETUNITS)
 }
 
 /*
-bool setMargins( const QMarginsF & margins )
+bool setMargins( const QMarginsF &margins )
 */
 HB_FUNC_STATIC(QPAGELAYOUT_SETMARGINS)
 {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINSPIXELS)
 }
 
 /*
-void setMinimumMargins( const QMarginsF & minMargins )
+void setMinimumMargins( const QMarginsF &minMargins )
 */
 HB_FUNC_STATIC(QPAGELAYOUT_SETMINIMUMMARGINS)
 {

@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_NEW)
   else if (ISNUMPAR(1) && ISQPEN(1))
   {
     /*
-    QPainterPathStroker( const QPen & pen )
+    QPainterPathStroker( const QPen &pen )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QPainterPathStroker *obj = new QPainterPathStroker(*PQPEN(1));
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_CAPSTYLE)
 }
 
 /*
-QPainterPath createStroke( const QPainterPath & path ) const
+QPainterPath createStroke( const QPainterPath &path ) const
 */
 HB_FUNC_STATIC(QPAINTERPATHSTROKER_CREATESTROKE)
 {
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETDASHPATTERN)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void setDashPattern( const QVector<qreal> & dashPattern )
+    void setDashPattern( const QVector<qreal> &dashPattern )
     */
     QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_TOP)
 }
 
 /*
-virtual QValidator::State validate( QString & input, int & pos ) const
+virtual QValidator::State validate( QString &input, int &pos ) const
 */
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_VALIDATE)
 {

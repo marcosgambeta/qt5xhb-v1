@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QCOLOR_NEW3)
 }
 
 /*
-QColor( const QString & name )
+QColor( const QString &name )
 */
 HB_FUNC_STATIC(QCOLOR_NEW4)
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QCOLOR_NEW)
   else if (ISNUMPAR(1) && ISQCOLOR(1))
   {
     /*
-    QColor( const QColor & color )
+    QColor( const QColor &color )
     */
     QColor *obj = new QColor(HB_ISOBJECT(1) ? *(QColor *)Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)));
     Qt5xHb::returnNewObject(obj, true);
@@ -1668,7 +1668,7 @@ HB_FUNC_STATIC(QCOLOR_SETHSVF)
 }
 
 /*
-void setNamedColor( const QString & name )
+void setNamedColor( const QString &name )
 */
 HB_FUNC_STATIC(QCOLOR_SETNAMEDCOLOR)
 {
@@ -2257,7 +2257,7 @@ HB_FUNC_STATIC(QCOLOR_FROMRGBA)
 }
 
 /*
-static bool isValidColor( const QString & name )
+static bool isValidColor( const QString &name )
 */
 HB_FUNC_STATIC(QCOLOR_ISVALIDCOLOR)
 {
@@ -2435,7 +2435,7 @@ HB_FUNC_STATIC(QCOLOR_TOVARIANT)
   else if (ISNUMPAR(1) && ISQCOLOR(1))
   {
     /*
-    static QVariant toVariant( const QColor & )
+    static QVariant toVariant( const QColor &)
     */
     QColor *color = (QColor *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
     QVariant *variant = new QVariant();
@@ -2449,7 +2449,7 @@ HB_FUNC_STATIC(QCOLOR_TOVARIANT)
 }
 
 /*
-static QColor fromVariant( const QVariant & )
+static QColor fromVariant( const QVariant &)
 */
 HB_FUNC_STATIC(QCOLOR_FROMVARIANT)
 {

@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QGLYPHRUN_NEW)
   else if (ISNUMPAR(1) && ISQGLYPHRUN(1))
   {
     /*
-    QGlyphRun( const QGlyphRun & other )
+    QGlyphRun( const QGlyphRun &other )
     */
     QGlyphRun *obj = new QGlyphRun(*PQGLYPHRUN(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETOVERLINE)
 }
 
 /*
-void setRawFont( const QRawFont & rawFont )
+void setRawFont( const QRawFont &rawFont )
 */
 HB_FUNC_STATIC(QGLYPHRUN_SETRAWFONT)
 {

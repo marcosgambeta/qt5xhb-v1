@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_DELETE)
 }
 
 /*
-virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QByteArray & format ) const = 0
+virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QByteArray &format ) const = 0
 */
 HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
 {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
 }
 
 /*
-virtual QImageIOHandler * create( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
+virtual QImageIOHandler * create( QIODevice * device, const QByteArray &format = QByteArray() ) const = 0
 */
 HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
 {

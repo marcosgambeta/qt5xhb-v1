@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_ISVALID)
 }
 
 /*
-void setName( const QString & name )
+void setName( const QString &name )
 */
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETNAME)
 {

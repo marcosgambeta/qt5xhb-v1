@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_SETCACHELIMIT)
 }
 
 /*
-static QPixmap * find( const QString & key )
+static QPixmap * find( const QString &key )
 */
 HB_FUNC_STATIC(QPIXMAPCACHE_FIND1)
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_FIND1)
 }
 
 /*
-static bool find( const QString & key, QPixmap & pixmap )
+static bool find( const QString &key, QPixmap &pixmap )
 */
 HB_FUNC_STATIC(QPIXMAPCACHE_FIND2)
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_FIND2)
 }
 
 /*
-static bool find( const QString & key, QPixmap * pixmap )
+static bool find( const QString &key, QPixmap * pixmap )
 */
 HB_FUNC_STATIC(QPIXMAPCACHE_FIND3)
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_FIND)
 }
 
 /*
-static bool insert( const QString & key, const QPixmap & pixmap )
+static bool insert( const QString &key, const QPixmap &pixmap )
 */
 HB_FUNC_STATIC(QPIXMAPCACHE_INSERT1)
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_INSERT)
 }
 
 /*
-static void remove( const QString & key )
+static void remove( const QString &key )
 */
 HB_FUNC_STATIC(QPIXMAPCACHE_REMOVE1)
 {

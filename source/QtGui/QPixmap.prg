@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QPIXMAP_NEW)
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    QPixmap( const QSize & size )
+    QPixmap( const QSize &size )
     */
     QPixmap *obj = new QPixmap(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QPIXMAP_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QPixmap( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
+    QPixmap( const QString &fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
     */
     QPixmap *obj =
         new QPixmap(PQSTRING(1), OPCONSTCHAR(2, 0),
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QPIXMAP_NEW)
   else if (ISNUMPAR(1) && ISQPIXMAP(1))
   {
     /*
-    QPixmap( const QPixmap & pixmap )
+    QPixmap( const QPixmap &pixmap )
     */
     QPixmap *obj = new QPixmap(*PQPIXMAP(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QPIXMAP_DELETE)
 }
 
 /*
-void swap( QPixmap & other )
+void swap( QPixmap &other )
 */
 HB_FUNC_STATIC(QPIXMAP_SWAP)
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QPIXMAP_FILL)
   if (ISBETWEEN(0, 1) && (ISQCOLOR(1) || HB_ISCHAR(1) || HB_ISNIL(1)))
   {
     /*
-    void fill( const QColor & fillColor = Qt::white )
+    void fill( const QColor &fillColor = Qt::white )
     */
     QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QPIXMAP_FILL)
   else if (ISNUMPAR(2) && HB_ISOBJECT(1) && ISQPOINT(2))
   {
     /*
-    void fill( const QPaintDevice * device, const QPoint & ofs )
+    void fill( const QPaintDevice * device, const QPoint &ofs )
     */
     QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QPIXMAP_MASK)
 }
 
 /*
-void setMask( const QBitmap & )
+void setMask( const QBitmap &)
 */
 HB_FUNC_STATIC(QPIXMAP_SETMASK)
 {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QPIXMAP_CREATEHEURISTICMASK)
 }
 
 /*
-QBitmap createMaskFromColor( const QColor & maskColor, Qt::MaskMode mode = Qt::MaskInColor ) const
+QBitmap createMaskFromColor( const QColor &maskColor, Qt::MaskMode mode = Qt::MaskInColor ) const
 */
 HB_FUNC_STATIC(QPIXMAP_CREATEMASKFROMCOLOR)
 {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QPIXMAP_SCALED)
   else if (ISBETWEEN(1, 3) && ISQSIZE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QPixmap scaled( const QSize & s, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio, Qt::TransformationMode mode
+    QPixmap scaled( const QSize &s, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio, Qt::TransformationMode mode
     = Qt::FastTransformation ) const
     */
     QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -766,7 +766,7 @@ HB_FUNC_STATIC(QPIXMAP_TOIMAGE)
 }
 
 /*
-bool load( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
+bool load( const QString &fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC(QPIXMAP_LOAD)
 {
@@ -810,7 +810,7 @@ HB_FUNC_STATIC(QPIXMAP_LOADFROMDATA)
   else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    bool loadFromData( const QByteArray & data, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor
+    bool loadFromData( const QByteArray &data, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor
     )
     */
     QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -833,7 +833,7 @@ HB_FUNC_STATIC(QPIXMAP_SAVE)
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    bool save( const QString & fileName, const char * format = 0, int quality = -1 ) const
+    bool save( const QString &fileName, const char * format = 0, int quality = -1 ) const
     */
     QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -861,7 +861,7 @@ HB_FUNC_STATIC(QPIXMAP_SAVE)
 }
 
 /*
-bool convertFromImage( const QImage & img, Qt::ImageConversionFlags flags = Qt::AutoColor )
+bool convertFromImage( const QImage &img, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC(QPIXMAP_CONVERTFROMIMAGE)
 {
@@ -903,7 +903,7 @@ HB_FUNC_STATIC(QPIXMAP_COPY)
   else if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1)))
   {
     /*
-    QPixmap copy( const QRect & rect = QRect() ) const
+    QPixmap copy( const QRect &rect = QRect() ) const
     */
     QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -940,7 +940,7 @@ HB_FUNC_STATIC(QPIXMAP_SCROLL)
   else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3) && (ISQREGION(4) || HB_ISNIL(4)))
   {
     /*
-    void scroll( int dx, int dy, const QRect & rect, QRegion * exposed = 0 )
+    void scroll( int dx, int dy, const QRect &rect, QRegion * exposed = 0 )
     */
     QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1126,7 +1126,7 @@ HB_FUNC_STATIC(QPIXMAP_GRABWIDGET)
   if (ISNUMPAR(2) && ISQOBJECT(1) && ISQRECT(2))
   {
     /*
-    static QPixmap grabWidget( QObject * widget, const QRect & rect )
+    static QPixmap grabWidget( QObject * widget, const QRect &rect )
     */
     QPixmap *ptr = new QPixmap(QPixmap::grabWidget(PQOBJECT(1), *PQRECT(2)));
     Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC(QPIXMAP_TRUEMATRIX)
   if (ISNUMPAR(3) && ISQMATRIX(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    static QMatrix trueMatrix( const QMatrix & m, int w, int h )
+    static QMatrix trueMatrix( const QMatrix &m, int w, int h )
     */
     QMatrix *ptr = new QMatrix(QPixmap::trueMatrix(*PQMATRIX(1), PINT(2), PINT(3)));
     Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC(QPIXMAP_TRUEMATRIX)
   else if (ISNUMPAR(3) && ISQTRANSFORM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    static QTransform trueMatrix( const QTransform & m, int w, int h )
+    static QTransform trueMatrix( const QTransform &m, int w, int h )
     */
     QTransform *ptr = new QTransform(QPixmap::trueMatrix(*PQTRANSFORM(1), PINT(2), PINT(3)));
     Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC(QPIXMAP_TRUEMATRIX)
 }
 
 /*
-static QPixmap fromImage( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
+static QPixmap fromImage( const QImage &image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC(QPIXMAP_FROMIMAGE)
 {
@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC(QPIXMAP_FROMIMAGEREADER)
 }
 
 //[1]QVariant toVariant()
-//[2]static QVariant toVariant( const QPixmap & )
+//[2]static QVariant toVariant( const QPixmap &)
 
 HB_FUNC_STATIC(QPIXMAP_TOVARIANT)
 {
@@ -1235,7 +1235,7 @@ HB_FUNC_STATIC(QPIXMAP_TOVARIANT)
   else if (ISNUMPAR(1) && ISQPIXMAP(1))
   {
     /*
-    static QVariant toVariant( const QPixmap & )
+    static QVariant toVariant( const QPixmap &)
     */
     QPixmap *pixmap = (QPixmap *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
     QVariant *variant = new QVariant();
@@ -1249,7 +1249,7 @@ HB_FUNC_STATIC(QPIXMAP_TOVARIANT)
 }
 
 /*
-static QPixmap fromVariant( const QVariant & )
+static QPixmap fromVariant( const QVariant &)
 */
 HB_FUNC_STATIC(QPIXMAP_FROMVARIANT)
 {

@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_CURRENTVALUE)
 }
 
 /*
-virtual void setCurrentValue( const QVariant & value ) = 0
+virtual void setCurrentValue( const QVariant &value ) = 0
 */
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_SETCURRENTVALUE)
 {

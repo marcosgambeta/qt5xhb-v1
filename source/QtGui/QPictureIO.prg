@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QPICTUREIO_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    QPictureIO( const QString & fileName, const char * format )
+    QPictureIO( const QString &fileName, const char * format )
     */
     QPictureIO *obj = new QPictureIO(PQSTRING(1), PCONSTCHAR(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QPICTUREIO_DELETE)
 }
 
 /*
-const QPicture & picture() const
+const QPicture &picture() const
 */
 HB_FUNC_STATIC(QPICTUREIO_PICTURE)
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QPICTUREIO_GAMMA)
 }
 
 /*
-void setPicture( const QPicture & )
+void setPicture( const QPicture &)
 */
 HB_FUNC_STATIC(QPICTUREIO_SETPICTURE)
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETIODEVICE)
 }
 
 /*
-void setFileName( const QString & )
+void setFileName( const QString &)
 */
 HB_FUNC_STATIC(QPICTUREIO_SETFILENAME)
 {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC(QPICTUREIO_SETQUALITY)
 }
 
 /*
-void setDescription( const QString & )
+void setDescription( const QString &)
 */
 HB_FUNC_STATIC(QPICTUREIO_SETDESCRIPTION)
 {
@@ -634,7 +634,7 @@ HB_FUNC_STATIC(QPICTUREIO_PICTUREFORMAT)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QByteArray pictureFormat( const QString & fileName )
+    static QByteArray pictureFormat( const QString &fileName )
     */
     QByteArray *ptr = new QByteArray(QPictureIO::pictureFormat(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);

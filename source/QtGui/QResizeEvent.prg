@@ -50,7 +50,7 @@ RETURN
 #endif
 
     /*
-    QResizeEvent( const QSize & size, const QSize & oldSize )
+    QResizeEvent( const QSize &size, const QSize &oldSize )
     */
 HB_FUNC_STATIC(QRESIZEEVENT_NEW)
 {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QRESIZEEVENT_DELETE)
 }
 
 /*
-const QSize & size() const
+const QSize &size() const
 */
 HB_FUNC_STATIC(QRESIZEEVENT_SIZE)
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QRESIZEEVENT_SIZE)
 }
 
 /*
-const QSize & oldSize() const
+const QSize &oldSize() const
 */
 HB_FUNC_STATIC(QRESIZEEVENT_OLDSIZE)
 {

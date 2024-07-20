@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QQUATERNION_NEW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISOBJECT(2))
   {
     /*
-    QQuaternion( float scalar, const QVector3D & vector )
+    QQuaternion( float scalar, const QVector3D &vector )
     */
     QQuaternion *obj = new QQuaternion(PFLOAT(1), *PQVECTOR3D(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QQUATERNION_NEW)
   else if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
     /*
-    QQuaternion( const QVector4D & vector )
+    QQuaternion( const QVector4D &vector )
     */
     QQuaternion *obj = new QQuaternion(*PQVECTOR4D(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QQUATERNION_SETVECTOR)
   if (ISNUMPAR(1) && ISQVECTOR3D(1))
   {
     /*
-    void setVector( const QVector3D & vector )
+    void setVector( const QVector3D &vector )
     */
     QQuaternion *obj = (QQuaternion *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QQUATERNION_CONJUGATE)
 }
 
 /*
-QVector3D rotatedVector( const QVector3D & vector ) const
+QVector3D rotatedVector( const QVector3D &vector ) const
 */
 HB_FUNC_STATIC(QQUATERNION_ROTATEDVECTOR)
 {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QQUATERNION_FROMAXISANDANGLE)
   if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2))
   {
     /*
-    static QQuaternion fromAxisAndAngle( const QVector3D & axis, float angle )
+    static QQuaternion fromAxisAndAngle( const QVector3D &axis, float angle )
     */
     QQuaternion *ptr = new QQuaternion(QQuaternion::fromAxisAndAngle(*PQVECTOR3D(1), PFLOAT(2)));
     Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
@@ -643,7 +643,7 @@ HB_FUNC_STATIC(QQUATERNION_FROMAXISANDANGLE)
 }
 
 /*
-static QQuaternion slerp( const QQuaternion & q1, const QQuaternion & q2, float t )
+static QQuaternion slerp( const QQuaternion &q1, const QQuaternion &q2, float t )
 */
 HB_FUNC_STATIC(QQUATERNION_SLERP)
 {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC(QQUATERNION_SLERP)
 }
 
 /*
-static QQuaternion nlerp( const QQuaternion & q1, const QQuaternion & q2, float t )
+static QQuaternion nlerp( const QQuaternion &q1, const QQuaternion &q2, float t )
 */
 HB_FUNC_STATIC(QQUATERNION_NLERP)
 {

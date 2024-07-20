@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTHINT)
 }
 
 /*
-void setRestartCommand( const QStringList & )
+void setRestartCommand( const QStringList &)
 */
 HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTCOMMAND)
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTCOMMAND)
 }
 
 /*
-void setDiscardCommand( const QStringList & )
+void setDiscardCommand( const QStringList &)
 */
 HB_FUNC_STATIC(QSESSIONMANAGER_SETDISCARDCOMMAND)
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    void setManagerProperty( const QString & name, const QString & value )
+    void setManagerProperty( const QString &name, const QString &value )
     */
     QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
     /*
-    void setManagerProperty( const QString & name, const QStringList & value )
+    void setManagerProperty( const QString &name, const QStringList &value )
     */
     QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 

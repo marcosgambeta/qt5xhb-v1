@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_NEW)
   else if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
   {
     /*
-    QSurfaceFormat( const QSurfaceFormat & other )
+    QSurfaceFormat( const QSurfaceFormat &other )
     */
     QSurfaceFormat *obj = new QSurfaceFormat(*PQSURFACEFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);

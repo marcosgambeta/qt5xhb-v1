@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QGRADIENT_COORDINATEMODE)
 }
 
 /*
-void setColorAt( qreal position, const QColor & color )
+void setColorAt( qreal position, const QColor &color )
 */
 HB_FUNC_STATIC(QGRADIENT_SETCOLORAT)
 {

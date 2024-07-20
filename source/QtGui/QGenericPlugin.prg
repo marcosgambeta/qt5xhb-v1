@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QGENERICPLUGIN_DELETE)
 }
 
 /*
-virtual QObject * create( const QString & key, const QString & specification ) = 0
+virtual QObject * create( const QString &key, const QString &specification ) = 0
 */
 HB_FUNC_STATIC(QGENERICPLUGIN_CREATE)
 {

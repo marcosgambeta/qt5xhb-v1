@@ -722,7 +722,7 @@ HB_FUNC_STATIC(QSCREEN_ANGLEBETWEEN)
 }
 
 /*
-QTransform transformBetween( Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect & target ) const
+QTransform transformBetween( Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &target ) const
 */
 HB_FUNC_STATIC(QSCREEN_TRANSFORMBETWEEN)
 {
@@ -748,7 +748,7 @@ HB_FUNC_STATIC(QSCREEN_TRANSFORMBETWEEN)
 }
 
 /*
-QRect mapBetween( Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect & rect ) const
+QRect mapBetween( Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &rect ) const
 */
 HB_FUNC_STATIC(QSCREEN_MAPBETWEEN)
 {

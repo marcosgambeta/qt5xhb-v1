@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
   else if (ISBETWEEN(1, 3) && ISQSIZE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QPageSize( const QSize & pointSize, const QString & name = QString(), QPageSize::SizeMatchPolicy matchPolicy =
+    QPageSize( const QSize &pointSize, const QString &name = QString(), QPageSize::SizeMatchPolicy matchPolicy =
     QPageSize::FuzzyMatch )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QPageSize( const QSizeF & size, QPageSize::Unit units, const QString & name = QString(), QPageSize::SizeMatchPolicy
+    QPageSize( const QSizeF &size, QPageSize::Unit units, const QString &name = QString(), QPageSize::SizeMatchPolicy
     matchPolicy = QPageSize::FuzzyMatch )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
   else if (ISNUMPAR(1) && ISQPAGESIZE(1))
   {
     /*
-    QPageSize( const QPageSize & other )
+    QPageSize( const QPageSize &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QPageSize *obj = new QPageSize(*PQPAGESIZE(1));
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QPAGESIZE_DELETE)
 }
 
 /*
-void swap( QPageSize & other )
+void swap( QPageSize &other )
 */
 HB_FUNC_STATIC(QPAGESIZE_SWAP)
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QPAGESIZE_SWAP)
 }
 
 /*
-bool isEquivalentTo( const QPageSize & other ) const
+bool isEquivalentTo( const QPageSize &other ) const
 */
 HB_FUNC_STATIC(QPAGESIZE_ISEQUIVALENTTO)
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
   else if (ISBETWEEN(1, 2) && ISQSIZE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    static QPageSize::PageSizeId id( const QSize & pointSize, QPageSize::SizeMatchPolicy matchPolicy =
+    static QPageSize::PageSizeId id( const QSize &pointSize, QPageSize::SizeMatchPolicy matchPolicy =
     QPageSize::FuzzyMatch )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
   else if (ISBETWEEN(2, 3) && ISQSIZEF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    static QPageSize::PageSizeId id( const QSizeF & size, QPageSize::Unit units, QPageSize::SizeMatchPolicy matchPolicy
+    static QPageSize::PageSizeId id( const QSizeF &size, QPageSize::Unit units, QPageSize::SizeMatchPolicy matchPolicy
     = QPageSize::FuzzyMatch )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))

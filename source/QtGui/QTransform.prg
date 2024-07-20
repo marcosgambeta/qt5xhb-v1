@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QTRANSFORM_NEW)
   else if (ISNUMPAR(1) && ISQMATRIX(1))
   {
     /*
-    QTransform( const QMatrix & mtx )
+    QTransform( const QMatrix &mtx )
     */
     QTransform *obj = new QTransform(*PQMATRIX(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QTRANSFORM_NEW)
   else if (ISNUMPAR(1) && ISQTRANSFORM(1))
   {
     /*
-    QTransform( const QTransform & other )
+    QTransform( const QTransform &other )
     */
     QTransform *obj = new QTransform(*PQTRANSFORM(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QTRANSFORM_TRANSPOSED)
 }
 
 /*
-QTransform & translate( qreal dx, qreal dy )
+QTransform &translate( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC(QTRANSFORM_TRANSLATE)
 {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC(QTRANSFORM_TRANSLATE)
 }
 
 /*
-QTransform & scale( qreal sx, qreal sy )
+QTransform &scale( qreal sx, qreal sy )
 */
 HB_FUNC_STATIC(QTRANSFORM_SCALE)
 {
@@ -817,7 +817,7 @@ HB_FUNC_STATIC(QTRANSFORM_SCALE)
 }
 
 /*
-QTransform & shear( qreal sh, qreal sv )
+QTransform &shear( qreal sh, qreal sv )
 */
 HB_FUNC_STATIC(QTRANSFORM_SHEAR)
 {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC(QTRANSFORM_SHEAR)
 }
 
 /*
-QTransform & rotate( qreal a, Qt::Axis axis = Qt::ZAxis )
+QTransform &rotate( qreal a, Qt::Axis axis = Qt::ZAxis )
 */
 HB_FUNC_STATIC(QTRANSFORM_ROTATE)
 {
@@ -867,7 +867,7 @@ HB_FUNC_STATIC(QTRANSFORM_ROTATE)
 }
 
 /*
-QTransform & rotateRadians( qreal a, Qt::Axis axis = Qt::ZAxis )
+QTransform &rotateRadians( qreal a, Qt::Axis axis = Qt::ZAxis )
 */
 HB_FUNC_STATIC(QTRANSFORM_ROTATERADIANS)
 {
@@ -922,7 +922,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QPoint map( const QPoint & p ) const
+    QPoint map( const QPoint &p ) const
     */
     QTransform *obj = (QTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -935,7 +935,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QPointF map( const QPointF & p ) const
+    QPointF map( const QPointF &p ) const
     */
     QTransform *obj = (QTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -948,7 +948,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQLINE(1))
   {
     /*
-    QLine map( const QLine & l ) const
+    QLine map( const QLine &l ) const
     */
     QTransform *obj = (QTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -961,7 +961,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQLINEF(1))
   {
     /*
-    QLineF map( const QLineF & l ) const
+    QLineF map( const QLineF &l ) const
     */
     QTransform *obj = (QTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -974,7 +974,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQPOLYGONF(1))
   {
     /*
-    QPolygonF map( const QPolygonF & a ) const
+    QPolygonF map( const QPolygonF &a ) const
     */
     QTransform *obj = (QTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -987,7 +987,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQPOLYGON(1))
   {
     /*
-    QPolygon map( const QPolygon & a ) const
+    QPolygon map( const QPolygon &a ) const
     */
     QTransform *obj = (QTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQREGION(1))
   {
     /*
-    QRegion map( const QRegion & r ) const
+    QRegion map( const QRegion &r ) const
     */
     QTransform *obj = (QTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQPAINTERPATH(1))
   {
     /*
-    QPainterPath map( const QPainterPath & p ) const
+    QPainterPath map( const QPainterPath &p ) const
     */
     QTransform *obj = (QTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
 }
 
 /*
-QPolygon mapToPolygon( const QRect & r ) const
+QPolygon mapToPolygon( const QRect &r ) const
 */
 HB_FUNC_STATIC(QTRANSFORM_MAPTOPOLYGON)
 {
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    QRect mapRect( const QRect & ) const
+    QRect mapRect( const QRect &) const
     */
     QTransform *obj = (QTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QRectF mapRect( const QRectF & ) const
+    QRectF mapRect( const QRectF &) const
     */
     QTransform *obj = (QTransform *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
 }
 
 /*
-const QMatrix & toAffine() const
+const QMatrix &toAffine() const
 */
 HB_FUNC_STATIC(QTRANSFORM_TOAFFINE)
 {
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC(QTRANSFORM_TOAFFINE)
 }
 
 /*
-static bool squareToQuad( const QPolygonF & square, QTransform & result )
+static bool squareToQuad( const QPolygonF &square, QTransform &result )
 */
 HB_FUNC_STATIC(QTRANSFORM_SQUARETOQUAD)
 {
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC(QTRANSFORM_SQUARETOQUAD)
 }
 
 /*
-static bool quadToSquare( const QPolygonF & quad, QTransform & result )
+static bool quadToSquare( const QPolygonF &quad, QTransform &result )
 */
 HB_FUNC_STATIC(QTRANSFORM_QUADTOSQUARE)
 {
@@ -1188,7 +1188,7 @@ HB_FUNC_STATIC(QTRANSFORM_QUADTOSQUARE)
 }
 
 /*
-static bool quadToQuad( const QPolygonF & one, const QPolygonF & two, QTransform & result )
+static bool quadToQuad( const QPolygonF &one, const QPolygonF &two, QTransform &result )
 */
 HB_FUNC_STATIC(QTRANSFORM_QUADTOQUAD)
 {

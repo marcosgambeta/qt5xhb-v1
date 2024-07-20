@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QVECTOR2D_NEW)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QVector2D( const QPoint & point )
+    QVector2D( const QPoint &point )
     */
     QVector2D *obj = new QVector2D(*PQPOINT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QVECTOR2D_NEW)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QVector2D( const QPointF & point )
+    QVector2D( const QPointF &point )
     */
     QVector2D *obj = new QVector2D(*PQPOINTF(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QVECTOR2D_NEW)
   else if (ISNUMPAR(1) && ISQVECTOR3D(1))
   {
     /*
-    QVector2D( const QVector3D & vector )
+    QVector2D( const QVector3D &vector )
     */
     QVector2D *obj = new QVector2D(*PQVECTOR3D(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QVECTOR2D_NEW)
   else if (ISNUMPAR(1) && ISQVECTOR4D(1))
   {
     /*
-    QVector2D( const QVector4D & vector )
+    QVector2D( const QVector4D &vector )
     */
     QVector2D *obj = new QVector2D(*PQVECTOR4D(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QVECTOR2D_NORMALIZE)
 }
 
 /*
-float distanceToPoint( const QVector2D & point ) const
+float distanceToPoint( const QVector2D &point ) const
 */
 HB_FUNC_STATIC(QVECTOR2D_DISTANCETOPOINT)
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QVECTOR2D_DISTANCETOPOINT)
 }
 
 /*
-float distanceToLine( const QVector2D & point, const QVector2D & direction ) const
+float distanceToLine( const QVector2D &point, const QVector2D &direction ) const
 */
 HB_FUNC_STATIC(QVECTOR2D_DISTANCETOLINE)
 {
@@ -522,7 +522,7 @@ HB_FUNC_STATIC(QVECTOR2D_TOPOINTF)
 }
 
 /*
-static float dotProduct( const QVector2D & v1, const QVector2D & v2 )
+static float dotProduct( const QVector2D &v1, const QVector2D &v2 )
 */
 HB_FUNC_STATIC(QVECTOR2D_DOTPRODUCT)
 {

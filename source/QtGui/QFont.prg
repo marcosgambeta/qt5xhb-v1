@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QFONT_NEW)
            (HB_ISLOG(4) || HB_ISNIL(4)))
   {
     /*
-    QFont( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
+    QFont( const QString &family, int pointSize = -1, int weight = -1, bool italic = false )
     */
     QFont *obj = new QFont(PQSTRING(1), OPINT(2, -1), OPINT(3, -1), OPBOOL(4, false));
     Qt5xHb::returnNewObject(obj, true);
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QFONT_NEW)
   else if (ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2))
   {
     /*
-    QFont( const QFont & font, QPaintDevice * pd )
+    QFont( const QFont &font, QPaintDevice * pd )
     */
     QFont *obj = new QFont(*PQFONT(1), PQPAINTDEVICE(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QFONT_NEW)
   else if (ISNUMPAR(1) && ISQFONT(1))
   {
     /*
-    QFont( const QFont & font )
+    QFont( const QFont &font )
     */
     QFont *obj = new QFont(*PQFONT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QFONT_FIXEDPITCH)
 }
 
 /*
-bool fromString( const QString & descrip )
+bool fromString( const QString &descrip )
 */
 HB_FUNC_STATIC(QFONT_FROMSTRING)
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QFONT_FROMSTRING)
 }
 
 /*
-bool isCopyOf( const QFont & f ) const
+bool isCopyOf( const QFont &f ) const
 */
 HB_FUNC_STATIC(QFONT_ISCOPYOF)
 {
@@ -679,7 +679,7 @@ HB_FUNC_STATIC(QFONT_RAWNAME)
 }
 
 /*
-QFont resolve( const QFont & other ) const
+QFont resolve( const QFont &other ) const
 */
 HB_FUNC_STATIC(QFONT_RESOLVE)
 {
@@ -756,7 +756,7 @@ HB_FUNC_STATIC(QFONT_SETCAPITALIZATION)
 }
 
 /*
-void setFamily( const QString & family )
+void setFamily( const QString &family )
 */
 HB_FUNC_STATIC(QFONT_SETFAMILY)
 {
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC(QFONT_SETRAWMODE)
 }
 
 /*
-void setRawName( const QString & name )
+void setRawName( const QString &name )
 */
 HB_FUNC_STATIC(QFONT_SETRAWNAME)
 {
@@ -1467,7 +1467,7 @@ HB_FUNC_STATIC(QFONT_WORDSPACING)
 }
 
 /*
-static void insertSubstitution( const QString & familyName, const QString & substituteName )
+static void insertSubstitution( const QString &familyName, const QString &substituteName )
 */
 HB_FUNC_STATIC(QFONT_INSERTSUBSTITUTION)
 {
@@ -1488,7 +1488,7 @@ HB_FUNC_STATIC(QFONT_INSERTSUBSTITUTION)
 }
 
 /*
-static void insertSubstitutions( const QString & familyName, const QStringList & substituteNames )
+static void insertSubstitutions( const QString &familyName, const QStringList &substituteNames )
 */
 HB_FUNC_STATIC(QFONT_INSERTSUBSTITUTIONS)
 {
@@ -1509,7 +1509,7 @@ HB_FUNC_STATIC(QFONT_INSERTSUBSTITUTIONS)
 }
 
 /*
-static QString substitute( const QString & familyName )
+static QString substitute( const QString &familyName )
 */
 HB_FUNC_STATIC(QFONT_SUBSTITUTE)
 {
@@ -1528,7 +1528,7 @@ HB_FUNC_STATIC(QFONT_SUBSTITUTE)
 }
 
 /*
-static QStringList substitutes( const QString & familyName )
+static QStringList substitutes( const QString &familyName )
 */
 HB_FUNC_STATIC(QFONT_SUBSTITUTES)
 {
@@ -1584,7 +1584,7 @@ HB_FUNC_STATIC(QFONT_TOVARIANT)
   else if (ISNUMPAR(1) && ISQFONT(1))
   {
     /*
-    static QVariant toVariant( const QFont & )
+    static QVariant toVariant( const QFont &)
     */
     QFont *font = (QFont *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
     QVariant *variant = new QVariant();
@@ -1598,7 +1598,7 @@ HB_FUNC_STATIC(QFONT_TOVARIANT)
 }
 
 /*
-static QFont fromVariant( const QVariant & )
+static QFont fromVariant( const QVariant &)
 */
 HB_FUNC_STATIC(QFONT_FROMVARIANT)
 {

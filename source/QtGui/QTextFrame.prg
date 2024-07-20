@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QTEXTFRAME_DELETE)
 }
 
 /*
-void setFrameFormat( const QTextFrameFormat & format )
+void setFrameFormat( const QTextFrameFormat &format )
 */
 HB_FUNC_STATIC(QTEXTFRAME_SETFRAMEFORMAT)
 {

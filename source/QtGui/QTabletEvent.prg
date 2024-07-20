@@ -68,7 +68,7 @@ RETURN
 #endif
 
     /*
-    QTabletEvent( QEvent::Type type, const QPointF & pos, const QPointF & globalPos, int device, int pointerType, qreal
+    QTabletEvent( QEvent::Type type, const QPointF &pos, const QPointF &globalPos, int device, int pointerType, qreal
     pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int z, Qt::KeyboardModifiers keyState,
     qint64 uniqueID )
     */
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOS)
 }
 
 /*
-const QPointF & globalPosF() const
+const QPointF &globalPosF() const
 */
 HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOSF)
 {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QTABLETEVENT_POS)
 }
 
 /*
-const QPointF & posF() const
+const QPointF &posF() const
 */
 HB_FUNC_STATIC(QTABLETEVENT_POSF)
 {

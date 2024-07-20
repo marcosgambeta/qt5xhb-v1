@@ -152,7 +152,7 @@ RETURN
 #include <QtGui/QStyleHints>
 
     /*
-    QGuiApplication( int & argc, char ** argv )
+    QGuiApplication( int &argc, char ** argv )
     */
 HB_FUNC_STATIC(QGUIAPPLICATION_NEW)
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_APPLICATIONDISPLAYNAME)
 }
 
 /*
-static void changeOverrideCursor( const QCursor & cursor )
+static void changeOverrideCursor( const QCursor &cursor )
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_CHANGEOVERRIDECURSOR)
 {
@@ -723,7 +723,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SCREENS)
 }
 
 /*
-static void setApplicationDisplayName( const QString & name )
+static void setApplicationDisplayName( const QString &name )
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME)
 {
@@ -765,7 +765,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE)
 }
 
 /*
-static void setFont( const QFont & font )
+static void setFont( const QFont &font )
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_SETFONT)
 {
@@ -807,7 +807,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETLAYOUTDIRECTION)
 }
 
 /*
-static void setOverrideCursor( const QCursor & cursor )
+static void setOverrideCursor( const QCursor &cursor )
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_SETOVERRIDECURSOR)
 {
@@ -828,7 +828,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETOVERRIDECURSOR)
 }
 
 /*
-static void setPalette( const QPalette & pal )
+static void setPalette( const QPalette &pal )
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_SETPALETTE)
 {
@@ -890,7 +890,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_STYLEHINTS)
 }
 
 /*
-static QWindow * topLevelAt( const QPoint & pos )
+static QWindow * topLevelAt( const QPoint &pos )
 */
 HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELAT)
 {

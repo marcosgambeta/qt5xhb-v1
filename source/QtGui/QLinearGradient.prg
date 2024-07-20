@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_NEW)
   else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2))
   {
     /*
-    QLinearGradient( const QPointF & start, const QPointF & finalStop )
+    QLinearGradient( const QPointF &start, const QPointF &finalStop )
     */
     QLinearGradient *obj = new QLinearGradient(*PQPOINTF(1), *PQPOINTF(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETFINALSTOP)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void setFinalStop( const QPointF & stop )
+    void setFinalStop( const QPointF &stop )
     */
     QLinearGradient *obj = (QLinearGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETSTART)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void setStart( const QPointF & start )
+    void setStart( const QPointF &start )
     */
     QLinearGradient *obj = (QLinearGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 

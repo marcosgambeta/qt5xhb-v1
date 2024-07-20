@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCOLUMNS)
 }
 
 /*
-void setColumnWidthConstraints( const QVector<QTextLength> & constraints )
+void setColumnWidthConstraints( const QVector<QTextLength> &constraints )
 */
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS)
 {

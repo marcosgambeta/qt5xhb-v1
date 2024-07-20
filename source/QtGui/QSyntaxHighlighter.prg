@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHT)
 }
 
 /*
-void rehighlightBlock( const QTextBlock & block )
+void rehighlightBlock( const QTextBlock &block )
 */
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK)
 {

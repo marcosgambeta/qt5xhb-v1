@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXT)
 }
 
 /*
-virtual void setText( QAccessible::Text t, const QString & text ) = 0
+virtual void setText( QAccessible::Text t, const QString &text ) = 0
 */
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
 {

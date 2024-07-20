@@ -86,7 +86,7 @@ RETURN
 #include <QtGui/QImage>
 
     /*
-    QOpenGLFramebufferObject( const QSize & size, GLenum target = GL_TEXTURE_2D )
+    QOpenGLFramebufferObject( const QSize &size, GLenum target = GL_TEXTURE_2D )
     */
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW1)
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW2)
 #if !defined(QT_OPENGL_ES) || defined(Q_QDOC)
 
 /*
-QOpenGLFramebufferObject( const QSize & size, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
+QOpenGLFramebufferObject( const QSize &size, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
 GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
 */
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW3)
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW4)
 }
 
 /*
-QOpenGLFramebufferObject( const QSize & size, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
+QOpenGLFramebufferObject( const QSize &size, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
 GL_TEXTURE_2D, GLenum internal_format = GL_RGBA )
 */
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW5)
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW6)
 #endif
 
 /*
-QOpenGLFramebufferObject( const QSize & size, const QOpenGLFramebufferObjectFormat & format )
+QOpenGLFramebufferObject( const QSize &size, const QOpenGLFramebufferObjectFormat &format )
 */
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW7)
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW7)
 }
 
 /*
-QOpenGLFramebufferObject( int width, int height, const QOpenGLFramebufferObjectFormat & format )
+QOpenGLFramebufferObject( int width, int height, const QOpenGLFramebufferObjectFormat &format )
 */
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW8)
 {
@@ -630,8 +630,8 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER)
       (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
     /*
-    static void blitFramebuffer( QOpenGLFramebufferObject * target, const QRect & targetRect, QOpenGLFramebufferObject *
-    source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
+    static void blitFramebuffer( QOpenGLFramebufferObject * target, const QRect &targetRect, QOpenGLFramebufferObject *
+    source, const QRect &sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
     */
     QOpenGLFramebufferObject::blitFramebuffer(PQOPENGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQOPENGLFRAMEBUFFEROBJECT(3),
                                               *PQRECT(4), OPGLBITFIELD(5, GL_COLOR_BUFFER_BIT),

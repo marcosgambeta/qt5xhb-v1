@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QPDFWRITER_NEW)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QPdfWriter( const QString & filename )
+    QPdfWriter( const QString &filename )
     */
     QPdfWriter *obj = new QPdfWriter(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QPDFWRITER_TITLE)
 }
 
 /*
-void setTitle( const QString & title )
+void setTitle( const QString &title )
 */
 HB_FUNC_STATIC(QPDFWRITER_SETTITLE)
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QPDFWRITER_CREATOR)
 }
 
 /*
-void setCreator( const QString & creator )
+void setCreator( const QString &creator )
 */
 HB_FUNC_STATIC(QPDFWRITER_SETCREATOR)
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGESIZE)
   else if (ISNUMPAR(1) && ISQPAGESIZE(1))
   {
     /*
-    bool setPageSize( const QPageSize & pageSize )
+    bool setPageSize( const QPageSize &pageSize )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QPdfWriter *obj = (QPdfWriter *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGESIZE)
 }
 
 /*
-void setPageSizeMM( const QSizeF & size )
+void setPageSizeMM( const QSizeF &size )
 */
 HB_FUNC_STATIC(QPDFWRITER_SETPAGESIZEMM)
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QPDFWRITER_PAGELAYOUT)
 }
 
 /*
-bool setPageLayout( const QPageLayout & newPageLayout )
+bool setPageLayout( const QPageLayout &newPageLayout )
 */
 HB_FUNC_STATIC(QPDFWRITER_SETPAGELAYOUT)
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGEMARGINS)
   if (ISNUMPAR(1) && ISQMARGINSF(1))
   {
     /*
-    bool setPageMargins( const QMarginsF & margins )
+    bool setPageMargins( const QMarginsF &margins )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QPdfWriter *obj = (QPdfWriter *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -444,7 +444,7 @@ HB_FUNC_STATIC(QPDFWRITER_SETPAGEMARGINS)
   else if (ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2))
   {
     /*
-    bool setPageMargins( const QMarginsF & margins, QPageLayout::Unit units )
+    bool setPageMargins( const QMarginsF &margins, QPageLayout::Unit units )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QPdfWriter *obj = (QPdfWriter *)Qt5xHb::itemGetPtrStackSelfItem();

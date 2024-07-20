@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QMATRIX4X4_NEW)
   else if (ISNUMPAR(1) && ISQTRANSFORM(1))
   {
     /*
-    QMatrix4x4( const QTransform & transform )
+    QMatrix4x4( const QTransform &transform )
     */
     QMatrix4x4 *obj = new QMatrix4x4(*PQTRANSFORM(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QMATRIX4X4_NEW)
   else if (ISNUMPAR(1) && ISQMATRIX(1))
   {
     /*
-    QMatrix4x4( const QMatrix & matrix )
+    QMatrix4x4( const QMatrix &matrix )
     */
     QMatrix4x4 *obj = new QMatrix4x4(*PQMATRIX(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -645,7 +645,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ORTHO)
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void ortho( const QRect & rect )
+    void ortho( const QRect &rect )
     */
     QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -659,7 +659,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ORTHO)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void ortho( const QRectF & rect )
+    void ortho( const QRectF &rect )
     */
     QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -775,7 +775,7 @@ HB_FUNC_STATIC(QMATRIX4X4_VIEWPORT)
   if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void viewport( const QRectF & rect )
+    void viewport( const QRectF &rect )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -901,7 +901,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAP)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QPoint map( const QPoint & point ) const
+    QPoint map( const QPoint &point ) const
     */
     QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -914,7 +914,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAP)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QPointF map( const QPointF & point ) const
+    QPointF map( const QPointF &point ) const
     */
     QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -992,7 +992,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAPRECT)
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    QRect mapRect( const QRect & rect ) const
+    QRect mapRect( const QRect &rect ) const
     */
     QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAPRECT)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QRect mapRect( const QRect & rect ) const
+    QRect mapRect( const QRect &rect ) const
     */
     QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 

@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETETEXT)
 }
 
 /*
-virtual void insertText( int offset, const QString & text ) = 0
+virtual void insertText( int offset, const QString &text ) = 0
 */
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT)
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT)
 }
 
 /*
-virtual void replaceText( int startOffset, int endOffset, const QString & text ) = 0
+virtual void replaceText( int startOffset, int endOffset, const QString &text ) = 0
 */
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_REPLACETEXT)
 {

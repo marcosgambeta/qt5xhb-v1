@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_ISVALID)
 }
 
 /*
-void setFormat( const QSurfaceFormat & format )
+void setFormat( const QSurfaceFormat &format )
 */
 HB_FUNC_STATIC(QOFFSCREENSURFACE_SETFORMAT)
 {

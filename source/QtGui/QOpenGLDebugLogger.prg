@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_MAXIMUMMESSAGELENGTH)
 }
 
 /*
-void pushGroup( const QString & name, GLuint id = 0, QOpenGLDebugMessage::Source source =
+void pushGroup( const QString &name, GLuint id = 0, QOpenGLDebugMessage::Source source =
 QOpenGLDebugMessage::ApplicationSource )
 */
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_PUSHGROUP)
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_POPGROUP)
 }
 
 /*
-void logMessage( const QOpenGLDebugMessage & debugMessage )
+void logMessage( const QOpenGLDebugMessage &debugMessage )
 */
 HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_LOGMESSAGE)
 {

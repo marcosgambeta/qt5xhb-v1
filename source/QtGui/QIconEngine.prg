@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QICONENGINE_DELETE)
 }
 
 /*
-virtual QSize actualSize( const QSize & size, QIcon::Mode mode, QIcon::State state )
+virtual QSize actualSize( const QSize &size, QIcon::Mode mode, QIcon::State state )
 */
 HB_FUNC_STATIC(QICONENGINE_ACTUALSIZE)
 {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QICONENGINE_ACTUALSIZE)
 }
 
 /*
-virtual void addFile( const QString & fileName, const QSize & size, QIcon::Mode mode, QIcon::State state )
+virtual void addFile( const QString &fileName, const QSize &size, QIcon::Mode mode, QIcon::State state )
 */
 HB_FUNC_STATIC(QICONENGINE_ADDFILE)
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDFILE)
 }
 
 /*
-virtual void addPixmap( const QPixmap & pixmap, QIcon::Mode mode, QIcon::State state )
+virtual void addPixmap( const QPixmap &pixmap, QIcon::Mode mode, QIcon::State state )
 */
 HB_FUNC_STATIC(QICONENGINE_ADDPIXMAP)
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QICONENGINE_KEY)
 }
 
 /*
-virtual void paint( QPainter * painter, const QRect & rect, QIcon::Mode mode, QIcon::State state ) = 0
+virtual void paint( QPainter * painter, const QRect &rect, QIcon::Mode mode, QIcon::State state ) = 0
 */
 HB_FUNC_STATIC(QICONENGINE_PAINT)
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QICONENGINE_PAINT)
 }
 
 /*
-virtual QPixmap pixmap( const QSize & size, QIcon::Mode mode, QIcon::State state )
+virtual QPixmap pixmap( const QSize &size, QIcon::Mode mode, QIcon::State state )
 */
 HB_FUNC_STATIC(QICONENGINE_PIXMAP)
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QICONENGINE_PIXMAP)
 }
 
 /*
-virtual bool read( QDataStream & in )
+virtual bool read( QDataStream &in )
 */
 HB_FUNC_STATIC(QICONENGINE_READ)
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QICONENGINE_VIRTUAL_HOOK)
 }
 
 /*
-virtual bool write( QDataStream & out ) const
+virtual bool write( QDataStream &out ) const
 */
 HB_FUNC_STATIC(QICONENGINE_WRITE)
 {

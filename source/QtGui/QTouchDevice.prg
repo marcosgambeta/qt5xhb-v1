@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QTOUCHDEVICE_CAPABILITIES)
 }
 
 /*
-void setName( const QString & name )
+void setName( const QString &name )
 */
 HB_FUNC_STATIC(QTOUCHDEVICE_SETNAME)
 {

@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DELETE)
 }
 
 /*
-QString anchorAt( const QPointF & position ) const
+QString anchorAt( const QPointF &position ) const
 */
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
 }
 
 /*
-virtual QRectF blockBoundingRect( const QTextBlock & block ) const = 0
+virtual QRectF blockBoundingRect( const QTextBlock &block ) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT)
 }
 
 /*
-virtual int hitTest( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
+virtual int hitTest( const QPointF &point, Qt::HitTestAccuracy accuracy ) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST)
 {

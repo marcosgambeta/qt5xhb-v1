@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QSTATICTEXT_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QStaticText( const QString & text )
+    QStaticText( const QString &text )
     */
     QStaticText *obj = new QStaticText(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSTATICTEXT_NEW)
   else if (ISNUMPAR(1) && ISQSTATICTEXT(1))
   {
     /*
-    QStaticText( const QStaticText & other )
+    QStaticText( const QStaticText &other )
     */
     QStaticText *obj = new QStaticText(*PQSTATICTEXT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QSTATICTEXT_DELETE)
 }
 
 /*
-void swap( QStaticText & other )
+void swap( QStaticText &other )
 */
 HB_FUNC_STATIC(QSTATICTEXT_SWAP)
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SWAP)
 }
 
 /*
-void setText( const QString & text )
+void setText( const QString &text )
 */
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXT)
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTWIDTH)
 }
 
 /*
-void setTextOption( const QTextOption & textOption )
+void setTextOption( const QTextOption &textOption )
 */
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXTOPTION)
 {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SIZE)
 }
 
 /*
-void prepare( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
+void prepare( const QTransform &matrix = QTransform(), const QFont &font = QFont() )
 */
 HB_FUNC_STATIC(QSTATICTEXT_PREPARE)
 {

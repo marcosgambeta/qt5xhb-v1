@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_NEW)
   else if (ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1))
   {
     /*
-    QOpenGLDebugMessage( const QOpenGLDebugMessage & debugMessage )
+    QOpenGLDebugMessage( const QOpenGLDebugMessage &debugMessage )
     */
     QOpenGLDebugMessage *obj = new QOpenGLDebugMessage(*PQOPENGLDEBUGMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_DELETE)
 }
 
 /*
-void swap( QOpenGLDebugMessage & debugMessage )
+void swap( QOpenGLDebugMessage &debugMessage )
 */
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_SWAP)
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_MESSAGE)
 }
 
 /*
-static QOpenGLDebugMessage createApplicationMessage( const QString & text, GLuint id = 0, QOpenGLDebugMessage::Severity
+static QOpenGLDebugMessage createApplicationMessage( const QString &text, GLuint id = 0, QOpenGLDebugMessage::Severity
 severity = QOpenGLDebugMessage::NotificationSeverity, QOpenGLDebugMessage::Type type = QOpenGLDebugMessage::OtherType )
 */
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE)
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE)
 }
 
 /*
-static QOpenGLDebugMessage createThirdPartyMessage( const QString & text, GLuint id = 0, QOpenGLDebugMessage::Severity
+static QOpenGLDebugMessage createThirdPartyMessage( const QString &text, GLuint id = 0, QOpenGLDebugMessage::Severity
 severity = QOpenGLDebugMessage::NotificationSeverity, QOpenGLDebugMessage::Type type = QOpenGLDebugMessage::OtherType )
 */
 HB_FUNC_STATIC(QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE)

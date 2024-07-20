@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_NEW)
   else if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
   {
     /*
-    QConicalGradient( const QPointF & center, qreal angle )
+    QConicalGradient( const QPointF &center, qreal angle )
     */
     QConicalGradient *obj = new QConicalGradient(*PQPOINTF(1), PQREAL(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_SETCENTER)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void setCenter( const QPointF & center )
+    void setCenter( const QPointF &center )
     */
     QConicalGradient *obj = (QConicalGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 

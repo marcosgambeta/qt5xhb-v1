@@ -56,7 +56,7 @@ RETURN
 #endif
 
     /*
-    QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool
+    QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString &text = QString(), bool
     autorep = false, ushort count = 1 )
     */
 HB_FUNC_STATIC(QKEYEVENT_NEW)

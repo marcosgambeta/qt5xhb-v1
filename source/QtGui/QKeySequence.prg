@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QKeySequence( const QString & key )
+    QKeySequence( const QString &key )
     */
     QKeySequence *obj = new QKeySequence(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    QKeySequence( const QString & key, QKeySequence::SequenceFormat format )
+    QKeySequence( const QString &key, QKeySequence::SequenceFormat format )
     */
     QKeySequence *obj = new QKeySequence(PQSTRING(1), (QKeySequence::SequenceFormat)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
   else if (ISNUMPAR(1) && ISQKEYSEQUENCE(1))
   {
     /*
-    QKeySequence( const QKeySequence & keysequence )
+    QKeySequence( const QKeySequence &keysequence )
     */
     QKeySequence *obj = new QKeySequence(*PQKEYSEQUENCE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_ISEMPTY)
 }
 
 /*
-QKeySequence::SequenceMatch matches( const QKeySequence & seq ) const
+QKeySequence::SequenceMatch matches( const QKeySequence &seq ) const
 */
 HB_FUNC_STATIC(QKEYSEQUENCE_MATCHES)
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
 }
 
 /*
-static QKeySequence fromString( const QString & str, QKeySequence::SequenceFormat format = QKeySequence::PortableText )
+static QKeySequence fromString( const QString &str, QKeySequence::SequenceFormat format = QKeySequence::PortableText )
 */
 HB_FUNC_STATIC(QKEYSEQUENCE_FROMSTRING)
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_KEYBINDINGS)
 }
 
 /*
-static QKeySequence mnemonic( const QString & text )
+static QKeySequence mnemonic( const QString &text )
 */
 HB_FUNC_STATIC(QKEYSEQUENCE_MNEMONIC)
 {

@@ -56,8 +56,8 @@ RETURN
 #endif
 
     /*
-    QNativeGestureEvent( Qt::NativeGestureType type, const QPointF & localPos, const QPointF & windowPos, const QPointF
-    & screenPos, qreal value, ulong sequenceId, quint64 intArgument )
+    QNativeGestureEvent( Qt::NativeGestureType type, const QPointF &localPos, const QPointF &windowPos, const QPointF
+    &screenPos, qreal value, ulong sequenceId, quint64 intArgument )
     */
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_NEW)
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_GLOBALPOS)
 }
 
 /*
-const QPointF & localPos() const
+const QPointF &localPos() const
 */
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_LOCALPOS)
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_LOCALPOS)
 }
 
 /*
-const QPointF & windowPos() const
+const QPointF &windowPos() const
 */
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_WINDOWPOS)
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QNATIVEGESTUREEVENT_WINDOWPOS)
 }
 
 /*
-const QPointF & screenPos() const
+const QPointF &screenPos() const
 */
 HB_FUNC_STATIC(QNATIVEGESTUREEVENT_SCREENPOS)
 {

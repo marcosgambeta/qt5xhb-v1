@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QIMAGEREADER_NEW)
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
     /*
-    QImageReader( QIODevice * device, const QByteArray & format = QByteArray() )
+    QImageReader( QIODevice * device, const QByteArray &format = QByteArray() )
     */
     QImageReader *obj =
         new QImageReader(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QIMAGEREADER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
     /*
-    QImageReader( const QString & fileName, const QByteArray & format = QByteArray() )
+    QImageReader( const QString &fileName, const QByteArray &format = QByteArray() )
     */
     QImageReader *obj =
         new QImageReader(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
@@ -699,7 +699,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETAUTODETECTIMAGEFORMAT)
 }
 
 /*
-void setBackgroundColor( const QColor & color )
+void setBackgroundColor( const QColor &color )
 */
 HB_FUNC_STATIC(QIMAGEREADER_SETBACKGROUNDCOLOR)
 {
@@ -725,7 +725,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETBACKGROUNDCOLOR)
 }
 
 /*
-void setClipRect( const QRect & rect )
+void setClipRect( const QRect &rect )
 */
 HB_FUNC_STATIC(QIMAGEREADER_SETCLIPRECT)
 {
@@ -803,7 +803,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETDEVICE)
 }
 
 /*
-void setFileName( const QString & fileName )
+void setFileName( const QString &fileName )
 */
 HB_FUNC_STATIC(QIMAGEREADER_SETFILENAME)
 {
@@ -829,7 +829,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETFILENAME)
 }
 
 /*
-void setFormat( const QByteArray & format )
+void setFormat( const QByteArray &format )
 */
 HB_FUNC_STATIC(QIMAGEREADER_SETFORMAT)
 {
@@ -881,7 +881,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETQUALITY)
 }
 
 /*
-void setScaledClipRect( const QRect & rect )
+void setScaledClipRect( const QRect &rect )
 */
 HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDCLIPRECT)
 {
@@ -907,7 +907,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDCLIPRECT)
 }
 
 /*
-void setScaledSize( const QSize & size )
+void setScaledSize( const QSize &size )
 */
 HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDSIZE)
 {
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SUPPORTSOPTION)
 }
 
 /*
-QString text( const QString & key ) const
+QString text( const QString &key ) const
 */
 HB_FUNC_STATIC(QIMAGEREADER_TEXT)
 {
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QByteArray imageFormat( const QString & fileName )
+    static QByteArray imageFormat( const QString &fileName )
     */
     QByteArray *ptr = new QByteArray(QImageReader::imageFormat(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SUPPORTEDIMAGEFORMATS)
 }
 
 /*
-static QList<QByteArray> imageFormatsForMimeType( const QByteArray & mimeType )
+static QList<QByteArray> imageFormatsForMimeType( const QByteArray &mimeType )
 */
 HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMATSFORMIMETYPE)
 {

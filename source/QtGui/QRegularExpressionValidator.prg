@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_NEW)
   else if (ISBETWEEN(1, 2) && ISQREGULAREXPRESSION(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QRegularExpressionValidator( const QRegularExpression & re, QObject * parent = 0 )
+    QRegularExpressionValidator( const QRegularExpression &re, QObject * parent = 0 )
     */
     QRegularExpressionValidator *obj = new QRegularExpressionValidator(*PQREGULAREXPRESSION(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION)
 }
 
 /*
-void setRegularExpression( const QRegularExpression & re )
+void setRegularExpression( const QRegularExpression &re )
 */
 HB_FUNC_STATIC(QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION)
 {
