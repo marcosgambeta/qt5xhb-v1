@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QABSTRACTURIRESOLVER_DELETE)
 }
 
 /*
-virtual QUrl resolve( const QUrl & relative, const QUrl & baseURI ) const = 0
+virtual QUrl resolve( const QUrl &relative, const QUrl &baseURI ) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTURIRESOLVER_RESOLVE)
 {

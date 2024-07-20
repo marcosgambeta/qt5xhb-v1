@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_DELETE)
 }
 
 /*
-virtual void atomicValue( const QVariant & value ) = 0
+virtual void atomicValue( const QVariant &value ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATOMICVALUE)
 {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATOMICVALUE)
 }
 
 /*
-virtual void attribute( const QXmlName & name, const QStringRef & value ) = 0
+virtual void attribute( const QXmlName &name, const QStringRef &value ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATTRIBUTE)
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATTRIBUTE)
 }
 
 /*
-virtual void characters( const QStringRef & value ) = 0
+virtual void characters( const QStringRef &value ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_CHARACTERS)
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_CHARACTERS)
 }
 
 /*
-virtual void comment( const QString & value ) = 0
+virtual void comment( const QString &value ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_COMMENT)
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ENDOFSEQUENCE)
 }
 
 /*
-virtual void namespaceBinding( const QXmlName & name ) = 0
+virtual void namespaceBinding( const QXmlName &name ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NAMESPACEBINDING)
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NAMESPACEBINDING)
 }
 
 /*
-virtual void processingInstruction( const QXmlName & target, const QString & value ) = 0
+virtual void processingInstruction( const QXmlName &target, const QString &value ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION)
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTDOCUMENT)
 }
 
 /*
-virtual void startElement( const QXmlName & name ) = 0
+virtual void startElement( const QXmlName &name ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTELEMENT)
 {

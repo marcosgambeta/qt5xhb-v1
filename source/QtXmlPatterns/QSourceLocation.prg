@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_NEW)
   else if (ISNUMPAR(1) && ISQSOURCELOCATION(1))
   {
     /*
-    QSourceLocation( const QSourceLocation & other )
+    QSourceLocation( const QSourceLocation &other )
     */
     QSourceLocation *obj = new QSourceLocation(*PQSOURCELOCATION(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_NEW)
   else if (ISBETWEEN(1, 3) && ISQURL(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QSourceLocation( const QUrl & u, int l = -1, int c = -1 )
+    QSourceLocation( const QUrl &u, int l = -1, int c = -1 )
     */
     QSourceLocation *obj = new QSourceLocation(*PQURL(1), OPINT(2, -1), OPINT(3, -1));
     Qt5xHb::returnNewObject(obj, true);
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETLINE)
 }
 
 /*
-void setUri( const QUrl & newUri )
+void setUri( const QUrl &newUri )
 */
 HB_FUNC_STATIC(QSOURCELOCATION_SETURI)
 {

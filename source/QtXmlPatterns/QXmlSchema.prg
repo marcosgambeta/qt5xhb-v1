@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_NEW)
   else if (ISNUMPAR(1) && ISQXMLSCHEMA(1))
   {
     /*
-    QXmlSchema( const QXmlSchema & other )
+    QXmlSchema( const QXmlSchema &other )
     */
     QXmlSchema *obj = new QXmlSchema(*PQXMLSCHEMA(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    bool load( const QUrl & source )
+    bool load( const QUrl &source )
     */
     QXmlSchema *obj = (QXmlSchema *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2)))
   {
     /*
-    bool load( QIODevice * source, const QUrl & documentUri = QUrl() )
+    bool load( QIODevice * source, const QUrl &documentUri = QUrl() )
     */
     QXmlSchema *obj = (QXmlSchema *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQURL(2) || HB_ISNIL(2)))
   {
     /*
-    bool load( const QByteArray & data, const QUrl & documentUri = QUrl() )
+    bool load( const QByteArray &data, const QUrl &documentUri = QUrl() )
     */
     QXmlSchema *obj = (QXmlSchema *)Qt5xHb::itemGetPtrStackSelfItem();
 
