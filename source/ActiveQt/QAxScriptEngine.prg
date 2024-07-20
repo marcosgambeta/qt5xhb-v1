@@ -55,7 +55,7 @@ RETURN
 #endif
 
     /*
-    QAxScriptEngine( const QString & language, QAxScript * script )
+    QAxScriptEngine( const QString &language, QAxScript * script )
     */
 HB_FUNC_STATIC(QAXSCRIPTENGINE_NEW)
 {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_DELETE)
 }
 
 /*
-void addItem( const QString & name )
+void addItem( const QString &name )
 */
 HB_FUNC_STATIC(QAXSCRIPTENGINE_ADDITEM)
 {

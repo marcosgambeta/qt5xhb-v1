@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QAXBINDABLE_CREATEAGGREGATE)
 }
 
 /*
-virtual bool readData( QIODevice * source, const QString & format )
+virtual bool readData( QIODevice * source, const QString &format )
 */
 HB_FUNC_STATIC(QAXBINDABLE_READDATA)
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QAXBINDABLE_READDATA)
 }
 
 /*
-void reportError( int code, const QString & src, const QString & desc, const QString & context = QString() )
+void reportError( int code, const QString &src, const QString &desc, const QString &context = QString() )
 */
 HB_FUNC_STATIC(QAXBINDABLE_REPORTERROR)
 {

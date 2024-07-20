@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QAXFACTORY_APPID)
 }
 
 /*
-virtual QUuid classID( const QString & key ) const
+virtual QUuid classID( const QString &key ) const
 */
 HB_FUNC_STATIC(QAXFACTORY_CLASSID)
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QAXFACTORY_CLASSID)
 }
 
 /*
-virtual QObject * createObject( const QString & key ) = 0
+virtual QObject * createObject( const QString &key ) = 0
 */
 HB_FUNC_STATIC(QAXFACTORY_CREATEOBJECT)
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QAXFACTORY_CREATEOBJECT)
 }
 
 /*
-virtual QUuid eventsID( const QString & key ) const
+virtual QUuid eventsID( const QString &key ) const
 */
 HB_FUNC_STATIC(QAXFACTORY_EVENTSID)
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QAXFACTORY_EVENTSID)
 }
 
 /*
-virtual QString exposeToSuperClass( const QString & key ) const
+virtual QString exposeToSuperClass( const QString &key ) const
 */
 HB_FUNC_STATIC(QAXFACTORY_EXPOSETOSUPERCLASS)
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QAXFACTORY_FEATURELIST)
 }
 
 /*
-virtual bool hasStockEvents( const QString & key ) const
+virtual bool hasStockEvents( const QString &key ) const
 */
 HB_FUNC_STATIC(QAXFACTORY_HASSTOCKEVENTS)
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QAXFACTORY_HASSTOCKEVENTS)
 }
 
 /*
-virtual QUuid interfaceID( const QString & key ) const
+virtual QUuid interfaceID( const QString &key ) const
 */
 HB_FUNC_STATIC(QAXFACTORY_INTERFACEID)
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QAXFACTORY_ISSERVICE)
 }
 
 /*
-virtual const QMetaObject * metaObject( const QString & key ) const = 0
+virtual const QMetaObject * metaObject( const QString &key ) const = 0
 */
 HB_FUNC_STATIC(QAXFACTORY_METAOBJECT)
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QAXFACTORY_METAOBJECT)
 }
 
 /*
-virtual void registerClass( const QString & key, QSettings * settings ) const
+virtual void registerClass( const QString &key, QSettings * settings ) const
 */
 HB_FUNC_STATIC(QAXFACTORY_REGISTERCLASS)
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QAXFACTORY_REGISTERCLASS)
 }
 
 /*
-virtual bool stayTopLevel( const QString & key ) const
+virtual bool stayTopLevel( const QString &key ) const
 */
 HB_FUNC_STATIC(QAXFACTORY_STAYTOPLEVEL)
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QAXFACTORY_TYPELIBID)
 }
 
 /*
-virtual void unregisterClass( const QString & key, QSettings * settings ) const
+virtual void unregisterClass( const QString &key, QSettings * settings ) const
 */
 HB_FUNC_STATIC(QAXFACTORY_UNREGISTERCLASS)
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QAXFACTORY_UNREGISTERCLASS)
 }
 
 /*
-virtual bool validateLicenseKey( const QString & key, const QString & licenseKey ) const
+virtual bool validateLicenseKey( const QString &key, const QString &licenseKey ) const
 */
 HB_FUNC_STATIC(QAXFACTORY_VALIDATELICENSEKEY)
 {
