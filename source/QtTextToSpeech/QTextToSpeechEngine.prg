@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_AVAILABLEVOICES)
 }
 
 /*
-virtual void say( const QString & text ) = 0
+virtual void say( const QString &text ) = 0
 */
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SAY)
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_LOCALE)
 }
 
 /*
-virtual bool setLocale( const QLocale & locale ) = 0
+virtual bool setLocale( const QLocale &locale ) = 0
 */
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETLOCALE)
 {
@@ -548,7 +548,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_VOICE)
 }
 
 /*
-virtual bool setVoice( const QVoice & voice ) = 0
+virtual bool setVoice( const QVoice &voice ) = 0
 */
 HB_FUNC_STATIC(QTEXTTOSPEECHENGINE_SETVOICE)
 {

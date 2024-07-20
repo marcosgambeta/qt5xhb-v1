@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QVOICE_NEW)
   else if (ISNUMPAR(1) && ISQVOICE(1))
   {
     /*
-    QVoice( const QVoice & other )
+    QVoice( const QVoice &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     QVoice *obj = new QVoice(*PQVOICE(1));
