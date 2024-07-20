@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_NEW)
   else if (ISNUMPAR(1) && ISQSERIALPORT(1))
   {
     /*
-    QSerialPortInfo( const QSerialPort & port )
+    QSerialPortInfo( const QSerialPort &port )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QSerialPortInfo *obj = new QSerialPortInfo(*PQSERIALPORT(1));
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QSerialPortInfo( const QString & name )
+    QSerialPortInfo( const QString &name )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QSerialPortInfo *obj = new QSerialPortInfo(PQSTRING(1));
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_NEW)
   else if (ISNUMPAR(1) && ISQSERIALPORTINFO(1))
   {
     /*
-    QSerialPortInfo( const QSerialPortInfo & other )
+    QSerialPortInfo( const QSerialPortInfo &other )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QSerialPortInfo *obj = new QSerialPortInfo(*PQSERIALPORTINFO(1));
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_DELETE)
 }
 
 /*
-void swap( QSerialPortInfo & other )
+void swap( QSerialPortInfo &other )
 */
 HB_FUNC_STATIC(QSERIALPORTINFO_SWAP)
 {

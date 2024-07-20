@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QSERIALPORT_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QSerialPort( const QString & name, QObject * parent = 0 )
+    QSerialPort( const QString &name, QObject * parent = 0 )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QSerialPort *obj = new QSerialPort(PQSTRING(1), OPQOBJECT(2, 0));
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QSERIALPORT_NEW)
   else if (ISBETWEEN(1, 2) && ISQSERIALPORTINFO(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QSerialPort( const QSerialPortInfo & info, QObject * parent = 0 )
+    QSerialPort( const QSerialPortInfo &info, QObject * parent = 0 )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QSerialPort *obj = new QSerialPort(*PQSERIALPORTINFO(1), OPQOBJECT(2, 0));
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QSERIALPORT_DELETE)
 }
 
 /*
-void setPortName( const QString & name )
+void setPortName( const QString &name )
 */
 HB_FUNC_STATIC(QSERIALPORT_SETPORTNAME)
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QSERIALPORT_PORTNAME)
 }
 
 /*
-void setPort( const QSerialPortInfo & info )
+void setPort( const QSerialPortInfo &info )
 */
 HB_FUNC_STATIC(QSERIALPORT_SETPORT)
 {
