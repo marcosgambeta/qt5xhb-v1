@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QWEBVIEW_URL)
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QWEBVIEW_SETURL)
 {
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QWEBVIEW_SETRENDERHINTS)
 }
 
 /*
-bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
+bool findText( const QString &subString, QWebPage::FindFlags options = 0 )
 */
 HB_FUNC_STATIC(QWEBVIEW_FINDTEXT)
 {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC(QWEBVIEW_LOAD)
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    void load( const QUrl & url )
+    void load( const QUrl &url )
     */
     QWebView *obj = (QWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -554,8 +554,8 @@ HB_FUNC_STATIC(QWEBVIEW_LOAD)
   else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQBYTEARRAY(3) || HB_ISNIL(3)))
   {
     /*
-    void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation =
-    QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+    void load( const QNetworkRequest &request, QNetworkAccessManager::Operation operation =
+    QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray() )
     */
     QWebView *obj = (QWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -628,7 +628,7 @@ HB_FUNC_STATIC(QWEBVIEW_PAGEACTION)
 }
 
 /*
-void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent( const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl() )
 */
 HB_FUNC_STATIC(QWEBVIEW_SETCONTENT)
 {
@@ -654,7 +654,7 @@ HB_FUNC_STATIC(QWEBVIEW_SETCONTENT)
 }
 
 /*
-void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml( const QString &html, const QUrl &baseUrl = QUrl() )
 */
 HB_FUNC_STATIC(QWEBVIEW_SETHTML)
 {

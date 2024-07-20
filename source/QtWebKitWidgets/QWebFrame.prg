@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QWEBFRAME_URL)
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QWEBFRAME_SETURL)
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLPOSITION)
 }
 
 /*
-void setScrollPosition( const QPoint & pos )
+void setScrollPosition( const QPoint &pos )
 */
 HB_FUNC_STATIC(QWEBFRAME_SETSCROLLPOSITION)
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QWEBFRAME_HASFOCUS)
 }
 
 /*
-void addToJavaScriptWindowObject( const QString & name, QObject * object, QWebFrame::ValueOwnership ownership =
+void addToJavaScriptWindowObject( const QString &name, QObject * object, QWebFrame::ValueOwnership ownership =
 QWebFrame::QtOwnership )
 */
 HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
@@ -568,7 +568,7 @@ HB_FUNC_STATIC(QWEBFRAME_DOCUMENTELEMENT)
 }
 
 /*
-QWebElementCollection findAllElements( const QString & selectorQuery ) const
+QWebElementCollection findAllElements( const QString &selectorQuery ) const
 */
 HB_FUNC_STATIC(QWEBFRAME_FINDALLELEMENTS)
 {
@@ -593,7 +593,7 @@ HB_FUNC_STATIC(QWEBFRAME_FINDALLELEMENTS)
 }
 
 /*
-QWebElement findFirstElement( const QString & selectorQuery ) const
+QWebElement findFirstElement( const QString &selectorQuery ) const
 */
 HB_FUNC_STATIC(QWEBFRAME_FINDFIRSTELEMENT)
 {
@@ -667,7 +667,7 @@ HB_FUNC_STATIC(QWEBFRAME_GEOMETRY)
 }
 
 /*
-QWebHitTestResult hitTestContent( const QPoint & pos ) const
+QWebHitTestResult hitTestContent( const QPoint &pos ) const
 */
 HB_FUNC_STATIC(QWEBFRAME_HITTESTCONTENT)
 {
@@ -696,7 +696,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    void load( const QUrl & url )
+    void load( const QUrl &url )
     */
     QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -710,8 +710,8 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
   else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQBYTEARRAY(3) || HB_ISNIL(3)))
   {
     /*
-    void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation =
-    QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+    void load( const QNetworkRequest &request, QNetworkAccessManager::Operation operation =
+    QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray() )
     */
     QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -811,7 +811,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
   if (ISBETWEEN(1, 2) && ISQPAINTER(1) && (ISQREGION(2) || HB_ISNIL(2)))
   {
     /*
-    void render( QPainter *, const QRegion & clip = QRegion() )
+    void render( QPainter *, const QRegion &clip = QRegion() )
     */
     QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -825,7 +825,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
   else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISNUM(2) && (ISQREGION(3) || HB_ISNIL(3)))
   {
     /*
-    void render( QPainter *, QWebFrame::RenderLayers layer, const QRegion & clip = QRegion() )
+    void render( QPainter *, QWebFrame::RenderLayers layer, const QRegion &clip = QRegion() )
     */
     QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -991,7 +991,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARVALUE)
 }
 
 /*
-void scrollToAnchor( const QString & anchor )
+void scrollToAnchor( const QString &anchor )
 */
 HB_FUNC_STATIC(QWEBFRAME_SCROLLTOANCHOR)
 {
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC(QWEBFRAME_SECURITYORIGIN)
 }
 
 /*
-void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent( const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl() )
 */
 HB_FUNC_STATIC(QWEBFRAME_SETCONTENT)
 {
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETFOCUS)
 }
 
 /*
-void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml( const QString &html, const QUrl &baseUrl = QUrl() )
 */
 HB_FUNC_STATIC(QWEBFRAME_SETHTML)
 {
@@ -1220,7 +1220,7 @@ HB_FUNC_STATIC(QWEBFRAME_TOPLAINTEXT)
 }
 
 /*
-QVariant evaluateJavaScript( const QString & scriptSource )
+QVariant evaluateJavaScript( const QString &scriptSource )
 */
 HB_FUNC_STATIC(QWEBFRAME_EVALUATEJAVASCRIPT)
 {
