@@ -31,7 +31,7 @@ REQUEST QDial
 REQUEST QLabel
 REQUEST QLCDNumber
 
-PROCEDURE Main()
+FUNCTION Main()
 
    LOCAL oApp
    LOCAl oLoader
@@ -79,4 +79,4 @@ PROCEDURE Main()
 
    oApp:delete()
 
-RETURN
+RETURN NIL

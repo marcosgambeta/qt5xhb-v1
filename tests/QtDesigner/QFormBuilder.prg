@@ -10,7 +10,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main()
+FUNCTION Main()
 
    LOCAL oApp
    LOCAl oFormBuilder
@@ -67,4 +67,4 @@ PROCEDURE Main()
 
    oApp:delete()
 
-RETURN
+RETURN NIL

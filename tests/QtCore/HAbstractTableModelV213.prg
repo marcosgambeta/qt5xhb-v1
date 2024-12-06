@@ -6,7 +6,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main()
+FUNCTION Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -92,7 +92,7 @@ PROCEDURE Main()
 
    USE
 
-RETURN
+RETURN NIL
 
 #include "hbclass.ch"
 

@@ -8,7 +8,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+FUNCTION Main()
 
    CLS
 
@@ -22,4 +22,4 @@ PROCEDURE Main ()
 
    WAIT
 
-RETURN
+RETURN NIL
