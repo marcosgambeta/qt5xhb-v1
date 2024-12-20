@@ -23,9 +23,9 @@ FUNCTION Main()
 
    oButton := QCommandLinkButton():new("texto", "descrição", oWindow)
    oButton:move(20, 20)
-   ? oButton:onClicked({||qout("clicked")})
-   ? oButton:onPressed({||qout("pressed")})
-   ? oButton:onReleased({||qout("released")})
+   ? oButton:onClicked({||QOut("clicked")})
+   ? oButton:onPressed({||QOut("pressed")})
+   ? oButton:onReleased({||QOut("released")})
 
    oWindow:show()
 

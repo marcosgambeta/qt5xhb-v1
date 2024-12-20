@@ -16,7 +16,8 @@ FUNCTION Main()
 
    ?
 
-   ? qt4xhb_version() // apenas para compatibilidade com o Qt4xHb
+   // apenas para compatibilidade com o Qt4xHb
+   ? qt4xhb_version()
 
    ?
 

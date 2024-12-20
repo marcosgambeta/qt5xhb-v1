@@ -75,7 +75,7 @@ METHOD data(pIndex, nRole) CLASS myModel
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new("Célula " + alltrim(str(nRow)) + "," + alltrim(str(nColumn)))
+         oVariant := QVariant():new("Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nColumn)))
       ENDIF
 
    ENDIF

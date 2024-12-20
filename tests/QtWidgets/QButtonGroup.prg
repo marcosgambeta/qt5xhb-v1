@@ -39,8 +39,8 @@ FUNCTION Main()
    oButtonGroup:addButton(oPushButton1, 1)
    oButtonGroup:addButton(oPushButton2, 2)
    oButtonGroup:addButton(oPushButton3, 3)
-   ? oButtonGroup:onButtonPressed1({|oSender,oButton|qout(oSender:classname()), qout(oButton:classname())})
-   ? oButtonGroup:onButtonPressed2({|oSender,n|qout(oSender:classname()), qout(n)})
+   ? oButtonGroup:onButtonPressed1({|oSender, oButton|QOut(oSender:classname()), QOut(oButton:classname())})
+   ? oButtonGroup:onButtonPressed2({|oSender, n|QOut(oSender:classname()), QOut(n)})
 
    ? oButtonGroup:id(oPushButton1)
    ? oButtonGroup:id(oPushButton2)
@@ -48,25 +48,25 @@ FUNCTION Main()
 
    ? "0"
    o := oButtonGroup:button(0)
-   ? valtype(o)
+   ? ValType(o)
    ? oButtonGroup:button(0):className()
    ? oButtonGroup:button(0):metaObject():className()
 
    ? "1"
    o := oButtonGroup:button(1)
-   ? valtype(o)
+   ? ValType(o)
    ? oButtonGroup:button(1):className()
    ? oButtonGroup:button(1):metaObject():className()
 
    ? "2"
    o := oButtonGroup:button(2)
-   ? valtype(o)
+   ? ValType(o)
    ? oButtonGroup:button(2):className()
    ? oButtonGroup:button(2):metaObject():className()
 
    ? "3"
    o := oButtonGroup:button(3)
-   ? valtype(o)
+   ? ValType(o)
    ? oButtonGroup:button(3):className()
    ? oButtonGroup:button(3):metaObject():className()
 

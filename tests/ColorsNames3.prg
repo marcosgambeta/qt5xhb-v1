@@ -29,8 +29,10 @@ FUNCTION Main()
    oView:move(10, 10)
    oView:resize(800 - 20, 600 - 20)
    oView:setModel(oModel)
-   oView:resizeColumnToContents(0) // ajusta a largura da coluna que exibe o nome da cor
-   oView:horizontalHeader():setStretchLastSection(.T.) // ajusta a largura da coluna que exibe a cor
+   // ajusta a largura da coluna que exibe o nome da cor
+   oView:resizeColumnToContents(0)
+   // ajusta a largura da coluna que exibe a cor
+   oView:horizontalHeader():setStretchLastSection(.T.)
 
    oWindow:show()
 
@@ -68,7 +70,7 @@ METHOD new(...) CLASS myModel
 RETURN self
 
 METHOD rowCount() CLASS myModel
-RETURN len(aColorsNames)
+RETURN Len(aColorsNames)
 
 METHOD columnCount() CLASS myModel
 RETURN 2
@@ -111,7 +113,7 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
          oVariant := QVariant():new("Cor")
       ENDIF
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new(alltrim(str(nSection + 1)))
+      oVariant := QVariant():new(AllTrim(Str(nSection + 1)))
    ENDIF
 
 RETURN oVariant

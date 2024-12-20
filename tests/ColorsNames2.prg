@@ -23,20 +23,29 @@ FUNCTION Main()
    oWindow:resize(800, 600)
 
    oModel := HAbstractTableModel():new()
-   oModel:setRowCountCB({||len(aColorsNames)}) // total de linhas
-   oModel:setColumnCountCB({||2}) // total de colunas
-   oModel:setDisplayRoleCB({|nRow,nCol|{aColorsNames[nRow + 1], NIL}[nCol + 1]}) // conteúdo da célula
-   oModel:setFontRoleCB({|nRow,nCol|iif(nCol == 0, QFont():new("Arial Black", 12), NIL)}) // fonte da célula
-   oModel:setBackgroundRoleCB({|nRow,nCol|iif(nCol == 0, NIL, aColorsNames[nRow + 1])}) // cor de fundo da célula
-   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|{"Nome", "Cor"}[nCol + 1]}) // títulos das colunas
-   oModel:setVerticalHeaderDisplayRoleCB({|nRow|alltrim(str(nRow + 1))}) // títulos das linhas
+   // total de linhas
+   oModel:setRowCountCB({||Len(aColorsNames)})
+   // total de colunas
+   oModel:setColumnCountCB({||2})
+   // conteúdo da célula
+   oModel:setDisplayRoleCB({|nRow, nCol|{aColorsNames[nRow + 1], NIL}[nCol + 1]})
+   // fonte da célula
+   oModel:setFontRoleCB({|nRow, nCol|IIf(nCol == 0, QFont():new("Arial Black", 12), NIL)})
+   // cor de fundo da célula
+   oModel:setBackgroundRoleCB({|nRow, nCol|IIf(nCol == 0, NIL, aColorsNames[nRow + 1])})
+   // títulos das colunas
+   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|{"Nome", "Cor"}[nCol + 1]})
+   // títulos das linhas
+   oModel:setVerticalHeaderDisplayRoleCB({|nRow|AllTrim(Str(nRow + 1))})
 
    oView := QTableView():new(oWindow)
    oView:move(10, 10)
    oView:resize(800 - 20, 600 - 20)
    oView:setModel(oModel)
-   oView:resizeColumnToContents(0) // ajusta a largura da coluna que exibe o nome da cor
-   oView:horizontalHeader():setStretchLastSection(.T.) // ajusta a largura da coluna que exibe a cor
+   // ajusta a largura da coluna que exibe o nome da cor
+   oView:resizeColumnToContents(0)
+   // ajusta a largura da coluna que exibe a cor
+   oView:horizontalHeader():setStretchLastSection(.T.)
 
    oWindow:show()
 

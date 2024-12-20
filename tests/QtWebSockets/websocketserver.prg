@@ -44,9 +44,9 @@ STATIC FUNCTION newConnection(oWebSocketServer)
 
    oSocket := oWebSocketServer:nextPendingConnection()
 
-   oSocket:onDestroyed({|oSender|qout(oSender:pointer),qout("socket destruido"),oSender:disconnectAll(.T.)})
-   oSocket:onTextMessageReceived({|oSender, cText|qout(oSender:pointer), qout("textMessageReceived=" + cText), oSender:sendTextMessage(cText)})
-   oSocket:onDisconnected({|oSender|qout(oSender:pointer), qout("socket desconectado"), oSender:delete()})
+   oSocket:onDestroyed({|oSender|QOut(oSender:pointer), QOut("socket destruido"), oSender:disconnectAll(.T.)})
+   oSocket:onTextMessageReceived({|oSender, cText|QOut(oSender:pointer), QOut("textMessageReceived=" + cText), oSender:sendTextMessage(cText)})
+   oSocket:onDisconnected({|oSender|QOut(oSender:pointer), QOut("socket desconectado"), oSender:delete()})
 
    ? "finalizando nova conexao"
 

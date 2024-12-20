@@ -46,16 +46,16 @@ FUNCTION Main()
    oWindow := loadUI("HUiLoader.ui")
 
    oPushButton := oWindow:findChild("pushButton")
-   ? oPushButton:onClicked({||qout("PushButton clicked")})
+   ? oPushButton:onClicked({||QOut("PushButton clicked")})
 
    oCommandLinkButton := oWindow:findChild("commandLinkButton")
-   ? oCommandLinkButton:onClicked({||qout("CommandLinkButton clicked")})
+   ? oCommandLinkButton:onClicked({||QOut("CommandLinkButton clicked")})
 
    oComboBox := oWindow:findChild("comboBox")
 
    oLineEdit := oWindow:findChild("lineEdit")
-   ? oLineEdit:onFocusInEvent({||qout("focusin")})
-   ? oLineEdit:onFocusOutEvent({||qout("focusout")})
+   ? oLineEdit:onFocusInEvent({||QOut("focusin")})
+   ? oLineEdit:onFocusOutEvent({||QOut("focusout")})
 
    oLCDNumber := oWindow:findChild("lcdNumber")
 

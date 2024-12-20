@@ -27,7 +27,7 @@ FUNCTION Main()
 
    FOR nRow := 0 TO 99
       FOR nColumn := 0 TO 99
-         aDados[nRow + 1, nColumn + 1] := alltrim(str(nRow)) + "," + alltrim(str(nColumn))
+         aDados[nRow + 1, nColumn + 1] := AllTrim(Str(nRow)) + "," + AllTrim(Str(nColumn))
       NEXT nColumn
    NEXT nRow
 
@@ -80,10 +80,10 @@ METHOD new(...) CLASS myModel
 RETURN self
 
 METHOD rowCount() CLASS myModel
-RETURN len(aDados)
+RETURN Len(aDados)
 
 METHOD columnCount() CLASS myModel
-RETURN len(aDados[1])
+RETURN Len(aDados[1])
 
 METHOD data(pIndex, nRole) CLASS myModel
 
@@ -109,9 +109,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Coluna " + alltrim(str(nSection)))
+      oVariant := QVariant():new("Coluna " + AllTrim(Str(nSection)))
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
+      oVariant := QVariant():new("Linha " + AllTrim(Str(nSection)))
    ENDIF
 
 RETURN oVariant

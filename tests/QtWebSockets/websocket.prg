@@ -22,7 +22,7 @@ FUNCTION Main()
 
    oApp := QApplication():new()
 
-   aSockets := array(TOTAL_DE_SOCKETS)
+   aSockets := Array(TOTAL_DE_SOCKETS)
 
    // widgets
 
@@ -54,8 +54,8 @@ FUNCTION Main()
       FOR n := 1 TO TOTAL_DE_SOCKETS
          aSockets[n] := QWebSocket():new()
          aSockets[n]:setProperty("socketIndex", QVariant():new(n))
-         aSockets[n]:onTextMessageReceived({|oSender,cText|qout("[" + oSender:property("socketIndex"):toString() + "] textMessageReceived=" + cText)})
-         ? "socket "+alltrim(str(n)) + " criado"
+         aSockets[n]:onTextMessageReceived({|oSender, cText|QOut("[" + oSender:property("socketIndex"):toString() + "] textMessageReceived=" + cText)})
+         ? "socket " + AllTrim(Str(n)) + " criado"
       NEXT n
       oButtonCreate:setEnabled(.F.)
       oButtonOpen:setEnabled(.T.)
@@ -64,7 +64,7 @@ FUNCTION Main()
    oButtonOpen:onClicked({||
       FOR n := 1 TO TOTAL_DE_SOCKETS
          aSockets[n]:open(QUrl():new("ws://127.0.0.1:1234"))
-         ? "socket " + alltrim(str(n)) + " aberto"
+         ? "socket " + AllTrim(Str(n)) + " aberto"
       NEXT n
       oButtonOpen:setEnabled(.F.)
       oButtonClose:setEnabled(.T.)
@@ -74,7 +74,7 @@ FUNCTION Main()
    oButtonClose:onClicked({||
       FOR n := 1 TO TOTAL_DE_SOCKETS
          aSockets[n]:close()
-         ? "socket " + alltrim(str(n)) + " fechado"
+         ? "socket " + AllTrim(Str(n)) + " fechado"
       NEXT n
       oButtonOpen:setEnabled(.T.)
       oButtonClose:setEnabled(.F.)

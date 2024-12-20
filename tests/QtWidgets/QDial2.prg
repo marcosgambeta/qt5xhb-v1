@@ -25,7 +25,7 @@ FUNCTION Main()
    oDial := QDial():new(oWindow)
    oDial:move(20, 20)
    oDial:setTooltip("Eu sou um QDial")
-   ? oDial:onActionTriggered({|oSender,nAction|test(oSender, nAction)})
+   ? oDial:onActionTriggered({|oSender, nAction|test(oSender, nAction)})
    ? oDial:onSliderPressed({|oSender|test2(oSender)})
    ? oDial:onSliderReleased({|oSender|test3(oSender)})
 
@@ -41,22 +41,22 @@ RETURN NIL
 
 STATIC FUNCTION test(oSender, nAction)
 
-   qout("action triggered")
-   qout(oSender:classname())
-   qout(nAction)
+   QOut("action triggered")
+   QOut(oSender:classname())
+   QOut(nAction)
 
 RETURN NIL
 
 STATIC FUNCTION test2(oSender)
 
-   qout("slider pressed")
-   qout(oSender:classname())
+   QOut("slider pressed")
+   QOut(oSender:classname())
 
 RETURN NIL
 
 STATIC FUNCTION test3(oSender)
 
-   qout("slider released")
-   qout(oSender:classname())
+   QOut("slider released")
+   QOut(oSender:classname())
 
 RETURN NIL

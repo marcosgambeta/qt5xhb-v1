@@ -24,15 +24,15 @@ FUNCTION Main()
 
    oButton1 := QCommandLinkButton():new("texto 1", "descrição 2", oWindow)
    oButton1:move(20, 20)
-   ? oButton1:onClicked({||qout("clicked-1")})
-   ? oButton1:onPressed({||qout("pressed-1")})
-   ? oButton1:onReleased({||qout("released-1")})
+   ? oButton1:onClicked({||QOut("clicked-1")})
+   ? oButton1:onPressed({||QOut("pressed-1")})
+   ? oButton1:onReleased({||QOut("released-1")})
 
    oButton2 := QCommandLinkButton():new("texto 2", "descrição 2", oWindow)
    oButton2:move(20, 120)
-   ? oButton2:onClicked({||qout("clicked-2")})
-   ? oButton2:onPressed({||qout("pressed-2")})
-   ? oButton2:onReleased({||qout("released-2")})
+   ? oButton2:onClicked({||QOut("clicked-2")})
+   ? oButton2:onPressed({||QOut("pressed-2")})
+   ? oButton2:onReleased({||QOut("released-2")})
 
    oWindow:show()
 

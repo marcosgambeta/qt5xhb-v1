@@ -25,7 +25,7 @@ FUNCTION Main()
    oDial := QDial():new(oWindow)
    oDial:move(20, 20)
    oDial:setTooltip("Eu sou um QDial")
-   ? oDial:onSliderMoved({|oSender,nValue|test(oSender, nValue)})
+   ? oDial:onSliderMoved({|oSender, nValue|test(oSender, nValue)})
 
    oWindow:show()
 
@@ -39,8 +39,8 @@ RETURN NIL
 
 STATIC FUNCTION test(oWidget, nValue)
 
-   qout("slider moved")
-   qout(oWidget:classname())
-   qout(nValue)
+   QOut("slider moved")
+   QOut(oWidget:classname())
+   QOut(nValue)
 
 RETURN NIL

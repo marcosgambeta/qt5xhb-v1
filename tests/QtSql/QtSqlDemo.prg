@@ -12,7 +12,7 @@ FUNCTION Main()
    LOCAL oDB
    LOCAl oModel
    LOCAL oView
-   LOCAL lFileExist := file("qtsqldemo.db")
+   LOCAL lFileExist := File("qtsqldemo.db")
 
    oApp := QApplication():new()
 
@@ -72,7 +72,8 @@ FUNCTION Main()
    // cria um objeto da classe QTableView
    oView := QTableView():new()
    oView:setModel(oModel)
-   oView:hideColumn(0) // não mostra a coluna 'Id'
+   // não mostra a coluna 'Id'
+   oView:hideColumn(0)
    oView:show()
 
    oApp:exec()

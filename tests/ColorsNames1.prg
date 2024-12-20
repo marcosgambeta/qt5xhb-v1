@@ -20,11 +20,11 @@ FUNCTION Main()
 
    aColorsNames := QColor():colorNames()
 
-   ? valtype(aColorsNames)
+   ? ValType(aColorsNames)
 
-   ? len(aColorsNames)
+   ? Len(aColorsNames)
 
-   FOR nIndex := 1 TO len(aColorsNames)
+   FOR nIndex := 1 TO Len(aColorsNames)
       ? nIndex
       ?? " = "
       ?? aColorsNames[nIndex]

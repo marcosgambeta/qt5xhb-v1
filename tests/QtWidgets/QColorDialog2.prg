@@ -41,7 +41,7 @@ STATIC FUNCTION ShowColorDialog(oWindow)
 
    oColorDialog := QColorDialog():new(oWindow)
 
-   ? oColorDialog:onColorSelected({|oSender,oColor|ShowColorSelected(oColor)})
+   ? oColorDialog:onColorSelected({|oSender, oColor|ShowColorSelected(oColor)})
 
    oColorDialog:exec()
 
