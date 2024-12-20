@@ -4,9 +4,7 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Baseado no exemplo "Extension" do Qt Framework
-*/
+// Baseado no exemplo "Extension" do Qt Framework
 
 #include "qt5xhb.ch"
 #include "hbclass.ch"

@@ -4,9 +4,7 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Baseado no exemplo "Config Dialog" do Qt Framework
-*/
+// Baseado no exemplo "Config Dialog" do Qt Framework
 
 #include "qt5xhb.ch"
 #include "hbclass.ch"
@@ -28,10 +26,8 @@ PROCEDURE Main()
 
 RETURN
 
-/*
-  O objeto ConfigDialog é a janela principal
-  e é derivada da classe QDialog
-*/
+// O objeto ConfigDialog é a janela principal
+// e é derivada da classe QDialog
 
 CLASS ConfigDialog INHERIT QDialog
 
@@ -155,7 +151,7 @@ METHOD changePage(pCurrent, pPrevious) CLASS ConfigDialog
    oCurrent := QListWidgetItem():newFrom(pCurrent)
    oPrevious := QListWidgetItem():newFrom(pPrevious)
 
-   IF empty(oCurrent:pointer)
+   IF Empty(oCurrent:pointer)
       oCurrent := oPrevious
    ENDIF
 

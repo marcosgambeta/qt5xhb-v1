@@ -4,9 +4,7 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Baseado no exemplo "Image Viewer" do Qt Framework
-*/
+// Baseado no exemplo "Image Viewer" do Qt Framework
 
 #include "qt5xhb.ch"
 #include "hbclass.ch"
@@ -113,7 +111,7 @@ METHOD open() CLASS ImageViewer
 
    cFileName := QFileDialog():getOpenFileName(SELF, "Open File", QDir():currentPath())
 
-   IF !empty(cFileName)
+   IF !Empty(cFileName)
       oImage := QImage():new(cFileName)
       IF oImage:isNull()
          QMessageBox():information(SELF, "Image Viewer", "Cannot load " + cFileName + ".")
@@ -146,7 +144,7 @@ METHOD print() CLASS ImageViewer
 
    oDialog := QPrintDialog():new(::oPrinter, SELF)
 
-   IF oDialog:exec() <> 0
+   IF oDialog:exec() != 0
       oPainter := QPainter():new(::oPrinter)
       oRect := oPainter:viewport()
       oSize := ::oImageLabel:pixmap():size()
@@ -302,6 +300,6 @@ RETURN NIL
 
 METHOD adjustScrollBar(oScrollBar, nFactor) CLASS ImageViewer
 
-   oScrollBar:setValue(int(nFactor * oScrollBar:value() + ((nFactor - 1) * oScrollBar:pageStep() / 2)))
+   oScrollBar:setValue(Int(nFactor * oScrollBar:value() + ((nFactor - 1) * oScrollBar:pageStep() / 2)))
 
 RETURN NIL

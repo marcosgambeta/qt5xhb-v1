@@ -4,9 +4,7 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Cálculo da diferença entre duas datas
-*/
+// Cálculo da diferença entre duas datas
 
 #include "qt5xhb.ch"
 
@@ -68,11 +66,9 @@ PROCEDURE Main()
 
 RETURN
 
-/*
-  A função CalculaDiferenca obtém as datas dos calendários
-  e mostra a diferença entre as duas, usando uma janela de
-  mensagem.
-*/
+// A função CalculaDiferenca obtém as datas dos calendários
+// e mostra a diferença entre as duas, usando uma janela de
+// mensagem.
 
 STATIC FUNCTION CalculaDiferenca(oCalendar1, oCalendar2)
 

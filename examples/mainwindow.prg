@@ -4,24 +4,18 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Exemplo de criação da janela principal de uma aplicação
-*/
+// Exemplo de criação da janela principal de uma aplicação
 
-/*
-  ATENÇÂO: por causa de diferenças entre Harbour e xHarbour, este exemplo
-  contém linhas de programação específicas, conforme o projeto utilizado.
-*/
+// ATENÇÂO: por causa de diferenças entre Harbour e xHarbour, este exemplo
+// contém linhas de programação específicas, conforme o projeto utilizado.
 
 #include "qt5xhb.ch"
 
 STATIC oApp
 STATIC oMainWindow
 
-/*
-  a função principal (main) cria um objeto da classe QApplication,
-  um objeto da classe MainWindow e inicia o loop de eventos
-*/
+// a função principal (main) cria um objeto da classe QApplication,
+// um objeto da classe MainWindow e inicia o loop de eventos
 
 PROCEDURE Main()
 
@@ -41,15 +35,13 @@ PROCEDURE Main()
 
 RETURN
 
-/*
-  a classe MainWindow é uma classe derivada da classe QMainWindow, com métodos para:
-  . definir as propriedades da janela
-  . criar a barra de menus e as ações
-  . criar a barra de ferramentas
-  . criar a barra de status
-  . confirmar se o usuário quer realmente sair do programa
-  . exibir mensagens
-*/
+// a classe MainWindow é uma classe derivada da classe QMainWindow, com métodos para:
+// . definir as propriedades da janela
+// . criar a barra de menus e as ações
+// . criar a barra de ferramentas
+// . criar a barra de status
+// . confirmar se o usuário quer realmente sair do programa
+// . exibir mensagens
 
 #include "hbclass.ch"
 
@@ -84,10 +76,8 @@ CLASS MainWindow INHERIT QMainWindow
 
 END CLASS
 
-/*
- o método 'new' executa o método 'new' da classe QMainWindow
- e configura a janela principal
-*/
+// o método 'new' executa o método 'new' da classe QMainWindow
+// e configura a janela principal
 
 METHOD new() CLASS MainWindow
 
@@ -105,10 +95,8 @@ METHOD new() CLASS MainWindow
 
 RETURN SELF
 
-/*
-  o método 'defineProperties' define as propriedades
-  'title' e 'size' da janela principal
-*/
+// o método 'defineProperties' define as propriedades
+// 'title' e 'size' da janela principal
 
 METHOD defineProperties() CLASS MainWindow
 
@@ -117,10 +105,8 @@ METHOD defineProperties() CLASS MainWindow
 
 RETURN SELF
 
-/*
-  o método 'createMenuBar' cria os menus da janela principal
-  e configura a ação que cada item do menu irá executar
-*/
+// o método 'createMenuBar' cria os menus da janela principal
+// e configura a ação que cada item do menu irá executar
 
 METHOD createMenuBar() CLASS MainWindow
 
@@ -162,7 +148,7 @@ METHOD createMenuBar() CLASS MainWindow
 
    ::oActionAboutxH := ::oMenu3:AddAction("&[x]Harbour")
    ::oActionAboutxH:setStatusTip("Exibe a versão do Harbour/xHarbour")
-   ::oActionAboutxH:onTriggered({|w, l|::showMessage(version())})
+   ::oActionAboutxH:onTriggered({|w, l|::showMessage(Version())})
 
    ::oActionAboutCC := ::oMenu3:AddAction("&C/C++ Compiler")
    ::oActionAboutCC:setStatusTip("Exibe informações sobre o compilador C/C++")
@@ -178,10 +164,8 @@ METHOD createMenuBar() CLASS MainWindow
 
 RETURN SELF
 
-/*
-  o método 'createToolBar' cria a barra de ferramentas da janela principal
-  e configura a ação que cada botão irá executar
-*/
+// o método 'createToolBar' cria a barra de ferramentas da janela principal
+// e configura a ação que cada botão irá executar
 
 METHOD createToolBar() CLASS MainWindow
 
@@ -199,9 +183,7 @@ METHOD createToolBar() CLASS MainWindow
 
 RETURN SELF
 
-/*
-  o método 'createStatusBar' cria a barra de status
-*/
+// o método 'createStatusBar' cria a barra de status
 
 METHOD createStatusBar() CLASS MainWindow
 
@@ -209,9 +191,7 @@ METHOD createStatusBar() CLASS MainWindow
 
 RETURN SELF
 
-/*
- o método 'defineEvent' define os eventos que serão processados
-*/
+// o método 'defineEvent' define os eventos que serão processados
 
 METHOD defineEvents() CLASS MainWindow
 
@@ -219,10 +199,8 @@ METHOD defineEvents() CLASS MainWindow
 
 RETURN SELF
 
-/*
- o método 'closeMainWindow' confirma, com o usuário, se quer
- realmente sair do programa
-*/
+// o método 'closeMainWindow' confirma, com o usuário, se quer
+// realmente sair do programa
 
 METHOD closeMainWindow(oSender, oCloseEvent) CLASS MainWindow
 
@@ -242,18 +220,16 @@ METHOD closeMainWindow(oSender, oCloseEvent) CLASS MainWindow
 
    IF nRet == QMessageBox_Yes
       oCloseEvent:accept()
-   endif
+   ENDIF
 
    IF nRet == QMessageBox_No
       oCloseEvent:ignore()
-   endif
+   ENDIF
 
 RETURN .T.
 
-/*
-  o método 'showMessage' exibe uma janela com uma mensagem,
-  usando a classe QMessageBox
-*/
+// o método 'showMessage' exibe uma janela com uma mensagem,
+// usando a classe QMessageBox
 
 METHOD showMessage(cText) CLASS MainWindow
 
