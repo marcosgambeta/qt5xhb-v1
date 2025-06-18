@@ -1,7 +1,7 @@
 rem
 rem Qt5xHb - bibliotecas de ligação entre Harbour/xHarbour e Qt Framework 5
 rem
-rem Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+rem Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 rem
 rem Prompt de comando para utilização do Qt5xHb com CLANG/MSYS.
 rem

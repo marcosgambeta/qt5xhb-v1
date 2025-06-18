@@ -1,7 +1,7 @@
 //
 // Qt5xHb Project - Example Program
 //
-// Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
 // Cálculo da diferença entre duas datas
