@@ -9,10 +9,8 @@
 #ifndef QGLFUNCTIONS_CH
 #define QGLFUNCTIONS_CH
 
-/*
-enum QGLFunctions::OpenGLFeature
-flags QGLFunctions::OpenGLFeatures
-*/
+// enum QGLFunctions::OpenGLFeature
+// flags QGLFunctions::OpenGLFeatures
 #define QGLFunctions_Multitexture                                    0x0001
 #define QGLFunctions_Shaders                                         0x0002
 #define QGLFunctions_Buffers                                         0x0004

@@ -9,9 +9,7 @@
 #ifndef QINPUTMETHOD_CH
 #define QINPUTMETHOD_CH
 
-/*
-enum QInputMethod::Action
-*/
+// enum QInputMethod::Action
 #define QInputMethod_Click                                           0
 #define QInputMethod_ContextMenu                                     1
 

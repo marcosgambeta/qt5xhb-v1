@@ -9,9 +9,7 @@
 #ifndef QGEOCODEREPLY_CH
 #define QGEOCODEREPLY_CH
 
-/*
-enum QGeoCodeReply::Error
-*/
+// enum QGeoCodeReply::Error
 #define QGeoCodeReply_NoError                                        0
 #define QGeoCodeReply_EngineNotSetError                              1
 #define QGeoCodeReply_CommunicationError                             2

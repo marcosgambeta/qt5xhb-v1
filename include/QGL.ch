@@ -9,9 +9,7 @@
 #ifndef QGL_CH
 #define QGL_CH
 
-/*
-enum QGL::DrawingMode
-*/
+// enum QGL::DrawingMode
 #define QGL_Points                                                   0x0000
 #define QGL_Lines                                                    0x0001
 #define QGL_LineLoop                                                 0x0002
@@ -24,24 +22,18 @@ enum QGL::DrawingMode
 #define QGL_TrianglesAdjacency                                       0x000C
 #define QGL_TriangleStripAdjacency                                   0x000D
 
-/*
-enum QGL::Eye
-*/
+// enum QGL::Eye
 #define QGL_NoEye                                                    0
 #define QGL_LeftEye                                                  1
 #define QGL_RightEye                                                 2
 
-/*
-enum QGL::Face
-*/
+// enum QGL::Face
 #define QGL_FrontFaces                                               0x0404
 #define QGL_BackFaces                                                0x0405
 #define QGL_AllFaces                                                 0x0408
 
-/*
-enum QGL::FormatOption
-flags QGL::FormatOptions
-*/
+// enum QGL::FormatOption
+// flags QGL::FormatOptions
 #define QGL_DoubleBuffer                                             0x0001
 #define QGL_DepthBuffer                                              0x0002
 #define QGL_Rgba                                                     0x0004
@@ -65,9 +57,7 @@ flags QGL::FormatOptions
 #define QGL_NoSampleBuffers                                          QGL_SampleBuffers<<16
 #define QGL_NoDeprecatedFunctions                                    QGL_DeprecatedFunctions<<16
 
-/*
-enum QGL::Mouse3DKeys
-*/
+// enum QGL::Mouse3DKeys
 #define QGL_Key_Fit                                                  0x01200002
 #define QGL_Key_TopView                                              0x01200003
 #define QGL_Key_LeftView                                             0x01200004
@@ -95,16 +85,12 @@ enum QGL::Mouse3DKeys
 #define QGL_Key_IncreaseSensitivity                                  0x0120001e
 #define QGL_Key_DecreaseSensitivity                                  0x0120001f
 
-/*
-enum QGL::Smoothing
-*/
+// enum QGL::Smoothing
 #define QGL_NoSmoothing                                              0
 #define QGL_Smooth                                                   1
 #define QGL_Faceted                                                  2
 
-/*
-enum QGL::StandardEffect
-*/
+// enum QGL::StandardEffect
 #define QGL_FlatColor                                                0
 #define QGL_FlatPerVertexColor                                       1
 #define QGL_FlatReplaceTexture2D                                     2
@@ -113,18 +99,14 @@ enum QGL::StandardEffect
 #define QGL_LitDecalTexture2D                                        5
 #define QGL_LitModulateTexture2D                                     6
 
-/*
-enum QGL::TextureWrap
-*/
+// enum QGL::TextureWrap
 #define QGL_Repeat                                                   0x2901
 #define QGL_Clamp                                                    ?
 #define QGL_ClampToBorder                                            ?
 #define QGL_ClampToEdge                                              0x812F
 #define QGL_MirroredRepeat                                           ?
 
-/*
-enum QGL::VertexAttribute
-*/
+// enum QGL::VertexAttribute
 #define QGL_Position                                                 0
 #define QGL_Normal                                                   1
 #define QGL_Color                                                    2

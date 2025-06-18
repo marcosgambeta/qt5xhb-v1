@@ -9,9 +9,7 @@
 #ifndef QGEOPOSITIONINFO_CH
 #define QGEOPOSITIONINFO_CH
 
-/*
-enum QGeoPositionInfo::Attribute
-*/
+// enum QGeoPositionInfo::Attribute
 #define QGeoPositionInfo_Direction                                   0
 #define QGeoPositionInfo_GroundSpeed                                 1
 #define QGeoPositionInfo_VerticalSpeed                               2

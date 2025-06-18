@@ -9,9 +9,7 @@
 #ifndef QIMAGEIOHANDLER_CH
 #define QIMAGEIOHANDLER_CH
 
-/*
-enum QImageIOHandler::ImageOption
-*/
+// enum QImageIOHandler::ImageOption
 #define QImageIOHandler_Size                                         0
 #define QImageIOHandler_ClipRect                                     1
 #define QImageIOHandler_ScaledSize                                   4

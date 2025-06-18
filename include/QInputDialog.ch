@@ -9,17 +9,13 @@
 #ifndef QINPUTDIALOG_CH
 #define QINPUTDIALOG_CH
 
-/*
-enum QInputDialog::InputDialogOption
-flags QInputDialog::InputDialogOptions
-*/
+// enum QInputDialog::InputDialogOption
+// flags QInputDialog::InputDialogOptions
 #define QInputDialog_NoButtons                                       0x00000001
 #define QInputDialog_UseListViewForComboBoxItems                     0x00000002
 #define QInputDialog_UsePlainTextEditForTextInput                    0x00000004
 
-/*
-enum QInputDialog::InputMode
-*/
+// enum QInputDialog::InputMode
 #define QInputDialog_TextInput                                       0
 #define QInputDialog_IntInput                                        1
 #define QInputDialog_DoubleInput                                     2

@@ -9,10 +9,8 @@
 #ifndef QIODEVICE_CH
 #define QIODEVICE_CH
 
-/*
-enum QIODevice::OpenModeFlag
-flags QIODevice::OpenMode
-*/
+// enum QIODevice::OpenModeFlag
+// flags QIODevice::OpenMode
 #define QIODevice_NotOpen                                            0x0000
 #define QIODevice_ReadOnly                                           0x0001
 #define QIODevice_WriteOnly                                          0x0002

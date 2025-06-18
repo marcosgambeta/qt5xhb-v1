@@ -9,9 +9,7 @@
 #ifndef QJSONVALUE_CH
 #define QJSONVALUE_CH
 
-/*
-enum QJsonValue::Type
-*/
+// enum QJsonValue::Type
 #define QJsonValue_Null                                              0x0
 #define QJsonValue_Bool                                              0x1
 #define QJsonValue_Double                                            0x2

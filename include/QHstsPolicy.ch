@@ -9,10 +9,8 @@
 #ifndef QHSTSPOLICY_CH
 #define QHSTSPOLICY_CH
 
-/*
-enum QHstsPolicy::PolicyFlag
-flags QHstsPolicy::PolicyFlags
-*/
+// enum QHstsPolicy::PolicyFlag
+// flags QHstsPolicy::PolicyFlags
 #define QHstsPolicy_IncludeSubDomains                                1
 
 #endif // QHSTSPOLICY_CH

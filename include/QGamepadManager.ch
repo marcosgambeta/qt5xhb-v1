@@ -9,10 +9,8 @@
 #ifndef QGAMEPADMANAGER_CH
 #define QGAMEPADMANAGER_CH
 
-/*
-enum QGamepadManager::GamepadButton
-flags QGamepadManager::GamepadButtons
-*/
+// enum QGamepadManager::GamepadButton
+// flags QGamepadManager::GamepadButtons
 #define QGamepadManager_ButtonInvalid                                -1
 #define QGamepadManager_ButtonA                                      0
 #define QGamepadManager_ButtonB                                      1
@@ -33,10 +31,8 @@ flags QGamepadManager::GamepadButtons
 #define QGamepadManager_ButtonCenter                                 16
 #define QGamepadManager_ButtonGuide
 
-/*
-enum QGamepadManager::GamepadAxis
-flags QGamepadManager::GamepadAxes
-*/
+// enum QGamepadManager::GamepadAxis
+// flags QGamepadManager::GamepadAxes
 #define QGamepadManager_AxisInvalid                                  -1
 #define QGamepadManager_AxisLeftX                                    0
 #define QGamepadManager_AxisLeftY                                    1

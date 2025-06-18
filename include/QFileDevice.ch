@@ -9,9 +9,7 @@
 #ifndef QFILEDEVICE_CH
 #define QFILEDEVICE_CH
 
-/*
-enum QFileDevice::FileError
-*/
+// enum QFileDevice::FileError
 #define QFileDevice_NoError                                          0
 #define QFileDevice_ReadError                                        1
 #define QFileDevice_WriteError                                       2
@@ -28,22 +26,16 @@ enum QFileDevice::FileError
 #define QFileDevice_PermissionsError                                 13
 #define QFileDevice_CopyError                                        14
 
-/*
-enum QFileDevice::FileHandleFlag
-flags QFileDevice::FileHandleFlags
-*/
+// enum QFileDevice::FileHandleFlag
+// flags QFileDevice::FileHandleFlags
 #define QFileDevice_AutoCloseHandle                                  0x0001
 #define QFileDevice_DontCloseHandle                                  0
 
-/*
-enum QFileDevice::MemoryMapFlags
-*/
+// enum QFileDevice::MemoryMapFlags
 #define QFileDevice_NoOptions                                        0
 
-/*
-enum QFileDevice::Permission
-flags QFileDevice::Permissions
-*/
+// enum QFileDevice::Permission
+// flags QFileDevice::Permissions
 #define QFileDevice_ReadOwner                                        0x4000
 #define QFileDevice_WriteOwner                                       0x2000
 #define QFileDevice_ExeOwner                                         0x1000

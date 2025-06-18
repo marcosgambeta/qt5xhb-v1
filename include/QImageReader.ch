@@ -9,9 +9,7 @@
 #ifndef QIMAGEREADER_CH
 #define QIMAGEREADER_CH
 
-/*
-enum QImageReader::ImageReaderError
-*/
+// enum QImageReader::ImageReaderError
 #define QImageReader_FileNotFoundError                               1
 #define QImageReader_DeviceError                                     2
 #define QImageReader_UnsupportedFormatError                          3

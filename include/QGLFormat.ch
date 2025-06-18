@@ -9,17 +9,13 @@
 #ifndef QGLFORMAT_CH
 #define QGLFORMAT_CH
 
-/*
-enum QGLFormat::OpenGLContextProfile
-*/
+// enum QGLFormat::OpenGLContextProfile
 #define QGLFormat_NoProfile                                          0
 #define QGLFormat_CoreProfile                                        1
 #define QGLFormat_CompatibilityProfile                               2
 
-/*
-enum QGLFormat::OpenGLVersionFlag
-flags QGLFormat::OpenGLVersionFlags
-*/
+// enum QGLFormat::OpenGLVersionFlag
+// flags QGLFormat::OpenGLVersionFlags
 #define QGLFormat_OpenGL_Version_None                                0x00000000
 #define QGLFormat_OpenGL_Version_1_1                                 0x00000001
 #define QGLFormat_OpenGL_Version_1_2                                 0x00000002

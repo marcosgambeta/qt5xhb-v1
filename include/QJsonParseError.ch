@@ -9,9 +9,7 @@
 #ifndef QJSONPARSEERROR_CH
 #define QJSONPARSEERROR_CH
 
-/*
-enum QJsonParseError::ParseError
-*/
+// enum QJsonParseError::ParseError
 #define QJsonParseError_NoError                                      0
 #define QJsonParseError_UnterminatedObject                           1
 #define QJsonParseError_MissingNameSeparator                         2

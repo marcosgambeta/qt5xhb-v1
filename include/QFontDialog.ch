@@ -9,10 +9,8 @@
 #ifndef QFONTDIALOG_CH
 #define QFONTDIALOG_CH
 
-/*
-enum QFontDialog::FontDialogOption
-flags QFontDialog::FontDialogOptions
-*/
+// enum QFontDialog::FontDialogOption
+// flags QFontDialog::FontDialogOptions
 #define QFontDialog_NoButtons                                        0x00000001
 #define QFontDialog_DontUseNativeDialog                              0x00000002
 #define QFontDialog_ScalableFonts                                    0x00000004

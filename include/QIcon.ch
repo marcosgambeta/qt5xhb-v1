@@ -9,17 +9,13 @@
 #ifndef QICON_CH
 #define QICON_CH
 
-/*
-enum QIcon::Mode
-*/
+// enum QIcon::Mode
 #define QIcon_Normal                                                 0
 #define QIcon_Disabled                                               1
 #define QIcon_Active                                                 2
 #define QIcon_Selected                                               3
 
-/*
-enum QIcon::State
-*/
+// enum QIcon::State
 #define QIcon_Off                                                    1
 #define QIcon_On                                                     0
 

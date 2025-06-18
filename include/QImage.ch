@@ -9,9 +9,7 @@
 #ifndef QIMAGE_CH
 #define QIMAGE_CH
 
-/*
-enum QImage::Format
-*/
+// enum QImage::Format
 #define QImage_Format_Invalid                                        0
 #define QImage_Format_Mono                                           1
 #define QImage_Format_MonoLSB                                        2
@@ -29,9 +27,7 @@ enum QImage::Format
 #define QImage_Format_RGB444                                         14
 #define QImage_Format_ARGB4444_Premultiplied                         15
 
-/*
-enum QImage::InvertMode
-*/
+// enum QImage::InvertMode
 #define QImage_InvertRgb                                             0
 #define QImage_InvertRgba                                            1
 

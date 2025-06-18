@@ -9,9 +9,7 @@
 #ifndef QJSVALUE_CH
 #define QJSVALUE_CH
 
-/*
-enum QJSValue::SpecialValue
-*/
+// enum QJSValue::SpecialValue
 #define QJSValue_UndefinedValue                                      1
 #define QJSValue_NullValue                                           0
 

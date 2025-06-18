@@ -9,10 +9,8 @@
 #ifndef QITEMSELECTIONMODEL_CH
 #define QITEMSELECTIONMODEL_CH
 
-/*
-enum QItemSelectionModel::SelectionFlag
-flags QItemSelectionModel::SelectionFlags
-*/
+// enum QItemSelectionModel::SelectionFlag
+// flags QItemSelectionModel::SelectionFlags
 #define QItemSelectionModel_NoUpdate                                 0x0000
 #define QItemSelectionModel_Clear                                    0x0001
 #define QItemSelectionModel_Select                                   0x0002

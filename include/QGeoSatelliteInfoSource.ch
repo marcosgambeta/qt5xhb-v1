@@ -9,9 +9,7 @@
 #ifndef QGEOSATELLITEINFOSOURCE_CH
 #define QGEOSATELLITEINFOSOURCE_CH
 
-/*
-enum QGeoSatelliteInfoSource::Error
-*/
+// enum QGeoSatelliteInfoSource::Error
 #define QGeoSatelliteInfoSource_AccessError                          0
 #define QGeoSatelliteInfoSource_ClosedError                          1
 #define QGeoSatelliteInfoSource_UnknownSourceError                   -1

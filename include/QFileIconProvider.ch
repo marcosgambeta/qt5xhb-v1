@@ -9,9 +9,7 @@
 #ifndef QFILEICONPROVIDER_CH
 #define QFILEICONPROVIDER_CH
 
-/*
-enum QFileIconProvider::IconType
-*/
+// enum QFileIconProvider::IconType
 #define QFileIconProvider_Computer                                   0
 #define QFileIconProvider_Desktop                                    1
 #define QFileIconProvider_Trashcan                                   2

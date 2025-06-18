@@ -9,38 +9,28 @@
 #ifndef QGRADIENT_CH
 #define QGRADIENT_CH
 
-/*
-enum QGradient::CoordinateMode
-*/
+// enum QGradient::CoordinateMode
 #define QGradient_LogicalMode                                        0
 #define QGradient_StretchToDeviceMode                                1
 #define QGradient_ObjectBoundingMode                                 2
 #define QGradient_ObjectMode                                         3
 
-/*
-enum QGradient::Spread
-*/
+// enum QGradient::Spread
 #define QGradient_PadSpread                                          0
 #define QGradient_ReflectSpread                                      1
 #define QGradient_RepeatSpread                                       2
 
-/*
-enum QGradient::Type
-*/
+// enum QGradient::Type
 #define QGradient_LinearGradient                                     0
 #define QGradient_RadialGradient                                     1
 #define QGradient_ConicalGradient                                    2
 #define QGradient_NoGradient                                         3
 
-/*
-enum QGradient::InterpolationMode
-*/
+// enum QGradient::InterpolationMode
 #define QGradient_ColorInterpolation                                 0
 #define QGradient_ComponentInterpolation                             1
 
-/*
-enum QGradient::Preset
-*/
+// enum QGradient::Preset
 #define QGradient_WarmFlame                                          1
 #define QGradient_NightFade                                          2
 #define QGradient_SpringWarmth                                       3

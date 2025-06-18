@@ -9,24 +9,18 @@
 #ifndef QFONT_CH
 #define QFONT_CH
 
-/*
-enum QFont::Capitalization
-*/
+// enum QFont::Capitalization
 #define QFont_MixedCase                                              0
 #define QFont_AllUppercase                                           1
 #define QFont_AllLowercase                                           2
 #define QFont_SmallCaps                                              3
 #define QFont_Capitalize                                             4
 
-/*
-enum QFont::SpacingType
-*/
+// enum QFont::SpacingType
 #define QFont_PercentageSpacing                                      0
 #define QFont_AbsoluteSpacing                                        1
 
-/*
-enum QFont::Stretch
-*/
+// enum QFont::Stretch
 #define QFont_UltraCondensed                                         50
 #define QFont_ExtraCondensed                                         62
 #define QFont_Condensed                                              75
@@ -37,16 +31,12 @@ enum QFont::Stretch
 #define QFont_ExtraExpanded                                          150
 #define QFont_UltraExpanded                                          200
 
-/*
-enum QFont::Style
-*/
+// enum QFont::Style
 #define QFont_StyleNormal                                            0
 #define QFont_StyleItalic                                            1
 #define QFont_StyleOblique                                           2
 
-/*
-enum QFont::StyleHint
-*/
+// enum QFont::StyleHint
 #define QFont_AnyStyle                                               ?
 #define QFont_SansSerif                                              QFont_Helvetica
 #define QFont_Helvetica                                              0
@@ -61,9 +51,7 @@ enum QFont::StyleHint
 #define QFont_Cursive                                                ?
 #define QFont_System                                                 ?
 
-/*
-enum QFont::StyleStrategy
-*/
+// enum QFont::StyleStrategy
 #define QFont_PreferDefault                                          0x0001
 #define QFont_PreferBitmap                                           0x0002
 #define QFont_PreferDevice                                           0x0004
@@ -77,9 +65,7 @@ enum QFont::StyleStrategy
 #define QFont_PreferQuality                                          0x0040
 #define QFont_ForceIntegerMetrics                                    0x0400
 
-/*
-enum QFont::Weight
-*/
+// enum QFont::Weight
 #define QFont_Light                                                  25
 #define QFont_Normal                                                 50
 #define QFont_DemiBold                                               63

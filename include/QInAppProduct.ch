@@ -9,9 +9,7 @@
 #ifndef QINAPPPRODUCT_CH
 #define QINAPPPRODUCT_CH
 
-/*
-enum QInAppProduct::ProductType
-*/
+// enum QInAppProduct::ProductType
 #define QInAppProduct_Consumable                                     0
 #define QInAppProduct_Unlockable                                     1
 

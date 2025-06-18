@@ -9,9 +9,7 @@
 #ifndef QITEMMODELSURFACEDATAPROXY_CH
 #define QITEMMODELSURFACEDATAPROXY_CH
 
-/*
-enum QItemModelSurfaceDataProxy::MultiMatchBehavior
-*/
+// enum QItemModelSurfaceDataProxy::MultiMatchBehavior
 #define QItemModelSurfaceDataProxy_MMBFirst                          0
 #define QItemModelSurfaceDataProxy_MMBLast                           1
 #define QItemModelSurfaceDataProxy_MMBAverage                        2

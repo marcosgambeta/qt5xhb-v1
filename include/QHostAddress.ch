@@ -9,9 +9,7 @@
 #ifndef QHOSTADDRESS_CH
 #define QHOSTADDRESS_CH
 
-/*
-enum QHostAddress::SpecialAddress
-*/
+// enum QHostAddress::SpecialAddress
 #define QHostAddress_Null                                            0
 #define QHostAddress_Broadcast                                       1
 #define QHostAddress_LocalHost                                       2
@@ -20,10 +18,8 @@ enum QHostAddress::SpecialAddress
 #define QHostAddress_AnyIPv6                                         5
 #define QHostAddress_AnyIPv4                                         6
 
-/*
-enum QHostAddress::ConversionModeFlag
-flags QHostAddress::ConversionMode
-*/
+// enum QHostAddress::ConversionModeFlag
+// flags QHostAddress::ConversionMode
 #define QHostAddress_ConvertV4MappedToIPv4                           1
 #define QHostAddress_ConvertV4CompatToIPv4                           2
 #define QHostAddress_ConvertUnspecifiedAddress                       4

@@ -9,9 +9,7 @@
 #ifndef QGEOROUTEREPLY_CH
 #define QGEOROUTEREPLY_CH
 
-/*
-enum QGeoRouteReply::Error
-*/
+// enum QGeoRouteReply::Error
 #define QGeoRouteReply_NoError                                       0
 #define QGeoRouteReply_EngineNotSetError                             1
 #define QGeoRouteReply_CommunicationError                            2

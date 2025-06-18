@@ -9,16 +9,12 @@
 #ifndef QGRAPHICSITEM_CH
 #define QGRAPHICSITEM_CH
 
-/*
-enum QGraphicsItem::CacheMode
-*/
+// enum QGraphicsItem::CacheMode
 #define QGraphicsItem_NoCache                                        0
 #define QGraphicsItem_ItemCoordinateCache                            1
 #define QGraphicsItem_DeviceCoordinateCache                          2
 
-/*
-enum QGraphicsItem::GraphicsItemChange
-*/
+// enum QGraphicsItem::GraphicsItemChange
 #define QGraphicsItem_ItemEnabledChange                              3
 #define QGraphicsItem_ItemEnabledHasChanged                          13
 #define QGraphicsItem_ItemMatrixChange                               1
@@ -54,10 +50,8 @@ enum QGraphicsItem::GraphicsItemChange
 #define QGraphicsItem_ItemOpacityHasChanged                          26
 #define QGraphicsItem_ItemScenePositionHasChanged                    27
 
-/*
-enum QGraphicsItem::GraphicsItemFlag
-flags QGraphicsItem::GraphicsItemFlags
-*/
+// enum QGraphicsItem::GraphicsItemFlag
+// flags QGraphicsItem::GraphicsItemFlags
 #define QGraphicsItem_ItemIsMovable                                  0x1
 #define QGraphicsItem_ItemIsSelectable                               0x2
 #define QGraphicsItem_ItemIsFocusable                                0x4
@@ -75,9 +69,7 @@ flags QGraphicsItem::GraphicsItemFlags
 #define QGraphicsItem_ItemIsPanel                                    0x4000
 #define QGraphicsItem_ItemSendsScenePositionChanges                  0x10000
 
-/*
-enum QGraphicsItem::PanelModality
-*/
+// enum QGraphicsItem::PanelModality
 #define QGraphicsItem_NonModal                                       0
 #define QGraphicsItem_PanelModal                                     1
 #define QGraphicsItem_SceneModal                                     2

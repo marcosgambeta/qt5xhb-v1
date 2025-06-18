@@ -9,16 +9,12 @@
 #ifndef QGEOCOORDINATE_CH
 #define QGEOCOORDINATE_CH
 
-/*
-enum QGeoCoordinate::CoordinateType
-*/
+// enum QGeoCoordinate::CoordinateType
 #define QGeoCoordinate_InvalidCoordinate                             0
 #define QGeoCoordinate_Coordinate2D                                  1
 #define QGeoCoordinate_Coordinate3D                                  2
 
-/*
-enum QGeoCoordinate::CoordinateFormat
-*/
+// enum QGeoCoordinate::CoordinateFormat
 #define QGeoCoordinate_Degrees                                       0
 #define QGeoCoordinate_DegreesWithHemisphere                         1
 #define QGeoCoordinate_DegreesMinutes                                2

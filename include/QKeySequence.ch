@@ -9,22 +9,16 @@
 #ifndef QKEYSEQUENCE_CH
 #define QKEYSEQUENCE_CH
 
-/*
-enum QKeySequence::SequenceFormat
-*/
+// enum QKeySequence::SequenceFormat
 #define QKeySequence_NativeText                                      0
 #define QKeySequence_PortableText                                    1
 
-/*
-enum QKeySequence::SequenceMatch
-*/
+// enum QKeySequence::SequenceMatch
 #define QKeySequence_NoMatch                                         0
 #define QKeySequence_PartialMatch                                    1
 #define QKeySequence_ExactMatch                                      2
 
-/*
-enum QKeySequence::StandardKey
-*/
+// enum QKeySequence::StandardKey
 #define QKeySequence_AddTab                                          19
 #define QKeySequence_Back                                            13
 #define QKeySequence_Bold                                            27

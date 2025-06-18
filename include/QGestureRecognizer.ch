@@ -9,10 +9,8 @@
 #ifndef QGESTURERECOGNIZER_CH
 #define QGESTURERECOGNIZER_CH
 
-/*
-enum QGestureRecognizer::ResultFlag
-flags QGestureRecognizer::Result
-*/
+// enum QGestureRecognizer::ResultFlag
+// flags QGestureRecognizer::Result
 #define QGestureRecognizer_Ignore                                    0x0001
 #define QGestureRecognizer_MayBeGesture                              0x0002
 #define QGestureRecognizer_TriggerGesture                            0x0004

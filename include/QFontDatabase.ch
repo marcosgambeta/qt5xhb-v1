@@ -9,9 +9,7 @@
 #ifndef QFONTDATABASE_CH
 #define QFONTDATABASE_CH
 
-/*
-enum QFontDatabase::WritingSystem
-*/
+// enum QFontDatabase::WritingSystem
 #define QFontDatabase_Any                                            0
 #define QFontDatabase_Latin                                          1
 #define QFontDatabase_Greek                                          2

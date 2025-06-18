@@ -9,24 +9,18 @@
 #ifndef QGLBUFFER_CH
 #define QGLBUFFER_CH
 
-/*
-enum QGLBuffer::Access
-*/
+// enum QGLBuffer::Access
 #define QGLBuffer_ReadOnly                                           0x88B8
 #define QGLBuffer_WriteOnly                                          0x88B9
 #define QGLBuffer_ReadWrite                                          0x88BA
 
-/*
-enum QGLBuffer::Type
-*/
+// enum QGLBuffer::Type
 #define QGLBuffer_VertexBuffer                                       0x8892
 #define QGLBuffer_IndexBuffer                                        0x8893
 #define QGLBuffer_PixelPackBuffer                                    0x88EB
 #define QGLBuffer_PixelUnpackBuffer                                  0x88EC
 
-/*
-enum QGLBuffer::UsagePattern
-*/
+// enum QGLBuffer::UsagePattern
 #define QGLBuffer_StreamDraw                                         0x88E0
 #define QGLBuffer_StreamRead                                         0x88E1
 #define QGLBuffer_StreamCopy                                         0x88E2

@@ -9,17 +9,13 @@
 #ifndef QINAPPTRANSACTION_CH
 #define QINAPPTRANSACTION_CH
 
-/*
-enum QInAppTransaction::TransactionStatus
-*/
+// enum QInAppTransaction::TransactionStatus
 #define QInAppTransaction_Unknown                                    0
 #define QInAppTransaction_PurchaseApproved                           1
 #define QInAppTransaction_PurchaseFailed                             2
 #define QInAppTransaction_PurchaseRestored                           3
 
-/*
-enum QInAppTransaction::FailureReason
-*/
+// enum QInAppTransaction::FailureReason
 #define QInAppTransaction_NoFailure                                  0
 #define QInAppTransaction_CanceledByUser                             1
 #define QInAppTransaction_ErrorOccurred                              2

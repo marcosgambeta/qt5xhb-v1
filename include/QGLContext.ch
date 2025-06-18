@@ -9,10 +9,8 @@
 #ifndef QGLCONTEXT_CH
 #define QGLCONTEXT_CH
 
-/*
-enum QGLContext::BindOption
-flags QGLContext::BindOptions
-*/
+// enum QGLContext::BindOption
+// flags QGLContext::BindOptions
 #define QGLContext_NoBindOption                                      0x0000
 #define QGLContext_InvertedYBindOption                               0x0001
 #define QGLContext_MipmapBindOption                                  0x0002

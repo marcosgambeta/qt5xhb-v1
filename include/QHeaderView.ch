@@ -9,9 +9,7 @@
 #ifndef QHEADERVIEW_CH
 #define QHEADERVIEW_CH
 
-/*
-enum QHeaderView::ResizeMode
-*/
+// enum QHeaderView::ResizeMode
 #define QHeaderView_Interactive                                      0
 #define QHeaderView_Stretch                                          1
 #define QHeaderView_Fixed                                            2

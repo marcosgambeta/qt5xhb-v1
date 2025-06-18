@@ -9,9 +9,7 @@
 #ifndef QFILE_CH
 #define QFILE_CH
 
-/*
-enum QFile::FileError
-*/
+// enum QFile::FileError
 #define QFile_NoError                                                0
 #define QFile_ReadError                                              1
 #define QFile_WriteError                                             2
@@ -28,22 +26,16 @@ enum QFile::FileError
 #define QFile_PermissionsError                                       13
 #define QFile_CopyError                                              14
 
-/*
-enum QFile::FileHandleFlag
-flags QFile::FileHandleFlags
-*/
+// enum QFile::FileHandleFlag
+// flags QFile::FileHandleFlags
 #define QFile_AutoCloseHandle                                        0x0001
 #define QFile_DontCloseHandle                                        0
 
-/*
-enum QFile::MemoryMapFlags
-*/
+// enum QFile::MemoryMapFlags
 #define QFile_NoOptions                                              0
 
-/*
-enum QFile::Permission
-flags QFile::Permissions
-*/
+// enum QFile::Permission
+// flags QFile::Permissions
 #define QFile_ReadOwner                                              0x4000
 #define QFile_WriteOwner                                             0x2000
 #define QFile_ExeOwner                                               0x1000

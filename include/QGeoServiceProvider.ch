@@ -11,19 +11,15 @@
 
 // TODO: acertar valores do enums: (n<n) e ~(n)
 
-/*
-enum QGeoServiceProvider::Error
-*/
+// enum QGeoServiceProvider::Error
 #define QGeoServiceProvider_NoError                                  0
 #define QGeoServiceProvider_NotSupportedError                        1
 #define QGeoServiceProvider_UnknownParameterError                    2
 #define QGeoServiceProvider_MissingRequiredParameterError            3
 #define QGeoServiceProvider_ConnectionError                          4
 
-/*
-enum QGeoServiceProvider::RoutingFeature
-flags QGeoServiceProvider::RoutingFeatures
-*/
+// enum QGeoServiceProvider::RoutingFeature
+// flags QGeoServiceProvider::RoutingFeatures
 #define QGeoServiceProvider_NoRoutingFeatures                        0
 #define QGeoServiceProvider_OnlineRoutingFeature                     (1<<0)
 #define QGeoServiceProvider_OfflineRoutingFeature                    (1<<1)
@@ -33,10 +29,8 @@ flags QGeoServiceProvider::RoutingFeatures
 #define QGeoServiceProvider_ExcludeAreasRoutingFeature               (1<<5)
 #define QGeoServiceProvider_AnyRoutingFeatures                       ~(0)
 
-/*
-enum QGeoServiceProvider::GeocodingFeature
-flags QGeoServiceProvider::GeocodingFeatures
-*/
+// enum QGeoServiceProvider::GeocodingFeature
+// flags QGeoServiceProvider::GeocodingFeatures
 #define QGeoServiceProvider_NoGeocodingFeatures                      0
 #define QGeoServiceProvider_OnlineGeocodingFeature                   (1<<0)
 #define QGeoServiceProvider_OfflineGeocodingFeature                  (1<<1)
@@ -44,20 +38,16 @@ flags QGeoServiceProvider::GeocodingFeatures
 #define QGeoServiceProvider_LocalizedGeocodingFeature                (1<<3)
 #define QGeoServiceProvider_AnyGeocodingFeatures                     ~(0)
 
-/*
-enum QGeoServiceProvider::MappingFeature
-flags QGeoServiceProvider::MappingFeatures
-*/
+// enum QGeoServiceProvider::MappingFeature
+// flags QGeoServiceProvider::MappingFeatures
 #define QGeoServiceProvider_NoMappingFeatures                        0
 #define QGeoServiceProvider_OnlineMappingFeature                     (1<<0)
 #define QGeoServiceProvider_OfflineMappingFeature                    (1<<1)
 #define QGeoServiceProvider_LocalizedMappingFeature                  (1<<2)
 #define QGeoServiceProvider_AnyMappingFeatures                       ~(0)
 
-/*
-enum QGeoServiceProvider::PlacesFeature
-flags QGeoServiceProvider::PlacesFeatures
-*/
+// enum QGeoServiceProvider::PlacesFeature
+// flags QGeoServiceProvider::PlacesFeatures
 #define QGeoServiceProvider_NoPlacesFeatures                         0
 #define QGeoServiceProvider_OnlinePlacesFeature                      (1<<0)
 #define QGeoServiceProvider_OfflinePlacesFeature                     (1<<1)
