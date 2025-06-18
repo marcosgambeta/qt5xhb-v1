@@ -1,7 +1,7 @@
 //
 // Qt5xHb Project - Test Program
 //
-// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
 // ATENÇÃO: a janela deste exemplo não irá aparecer imediatamente, havendo

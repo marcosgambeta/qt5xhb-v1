@@ -1,7 +1,7 @@
 //
 // Qt5xHb Project - Test Program
 //
-// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
 // ATENÇÂO: por causa de diferenças entre Harbour e xHarbour, este exemplo

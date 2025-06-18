@@ -1,7 +1,7 @@
 //
 // Qt5xHb Project - Example Program
 //
-// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
 // Baseado no exemplo "Extension" do Qt Framework
