@@ -43,7 +43,7 @@ RETURN
 // . confirmar se o usuário quer realmente sair do programa
 // . exibir mensagens
 
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 CLASS MainWindow INHERIT QMainWindow
 

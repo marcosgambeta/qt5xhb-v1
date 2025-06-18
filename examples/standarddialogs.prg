@@ -7,7 +7,7 @@
 // Baseado no exemplo "Standard Dialogs" do Qt Framework
 
 #include "qt5xhb.ch"
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 #define MESSAGE "<p>Message boxes have a caption, a text, " + ;
                 "and any number of buttons, each with standard or custom texts." + ;

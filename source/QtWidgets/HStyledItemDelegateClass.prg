@@ -6,7 +6,7 @@
 
 // clang-format off
 
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 CLASS HStyledItemDelegate INHERIT QStyledItemDelegate
 

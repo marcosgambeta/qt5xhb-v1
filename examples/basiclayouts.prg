@@ -8,7 +8,7 @@
 // Baseado no exemplo "Basic Layouts" do Qt Framework
 
 #include "qt5xhb.ch"
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 PROCEDURE Main()
 

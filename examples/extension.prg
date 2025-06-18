@@ -7,7 +7,7 @@
 // Baseado no exemplo "Extension" do Qt Framework
 
 #include "qt5xhb.ch"
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 PROCEDURE Main()
 

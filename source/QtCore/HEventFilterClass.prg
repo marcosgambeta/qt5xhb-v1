@@ -6,7 +6,7 @@
 
 // clang-format off
 
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
 #endif

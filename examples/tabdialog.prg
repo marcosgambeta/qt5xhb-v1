@@ -5,7 +5,7 @@
 //
 
 #include "qt5xhb.ch"
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 PROCEDURE Main(cFileName)
 

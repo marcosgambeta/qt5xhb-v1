@@ -46,7 +46,7 @@ FUNCTION Main()
 
 RETURN NIL
 
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 CLASS myModel INHERIT HAbstractTableModelV2
 

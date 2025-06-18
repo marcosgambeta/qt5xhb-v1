@@ -8,7 +8,7 @@
 
 // clang-format off
 
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 CLASS QLightFilter INHERIT QSensorFilter
 
