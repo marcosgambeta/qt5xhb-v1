@@ -9,9 +9,7 @@
 #ifndef QEVENT_CH
 #define QEVENT_CH
 
-/*
-enum QEvent::Type
-*/
+// enum QEvent::Type
 #define QEvent_None                                                  0
 #define QEvent_Timer                                                 1
 #define QEvent_MouseButtonPress                                      2

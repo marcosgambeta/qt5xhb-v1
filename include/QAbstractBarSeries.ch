@@ -9,9 +9,7 @@
 #ifndef QABSTRACTBARSERIES_CH
 #define QABSTRACTBARSERIES_CH
 
-/*
-enum QAbstractBarSeries::LabelsPosition
-*/
+// enum QAbstractBarSeries::LabelsPosition
 #define QAbstractBarSeries_LabelsCenter                              0
 #define QAbstractBarSeries_LabelsInsideEnd                           1
 #define QAbstractBarSeries_LabelsInsideBase                          2

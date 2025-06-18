@@ -9,10 +9,8 @@
 #ifndef QBLUETOOTH_CH
 #define QBLUETOOTH_CH
 
-/*
-enum QBluetooth::Security
-flags QBluetooth::SecurityFlags
-*/
+// enum QBluetooth::Security
+// flags QBluetooth::SecurityFlags
 #define QBluetooth_NoSecurity                                        0x00
 #define QBluetooth_Authorization                                     0x01
 #define QBluetooth_Authentication                                    0x02

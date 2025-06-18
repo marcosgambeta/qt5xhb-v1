@@ -9,9 +9,7 @@
 #ifndef QCAMERAEXPOSURECONTROL_CH
 #define QCAMERAEXPOSURECONTROL_CH
 
-/*
-enum QCameraExposureControl::ExposureParameter
-*/
+// enum QCameraExposureControl::ExposureParameter
 #define QCameraExposureControl_ISO                                   0
 #define QCameraExposureControl_Aperture                              1
 #define QCameraExposureControl_ShutterSpeed                          2

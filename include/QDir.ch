@@ -9,10 +9,8 @@
 #ifndef QDIR_CH
 #define QDIR_CH
 
-/*
-enum QDir::Filter
-flags QDir::Filters
-*/
+// enum QDir::Filter
+// flags QDir::Filters
 #define QDir_Dirs                                                    0x001
 #define QDir_AllDirs                                                 0x400
 #define QDir_Files                                                   0x002
@@ -30,10 +28,8 @@ flags QDir::Filters
 #define QDir_System                                                  0x200
 #define QDir_CaseSensitive                                           0x800
 
-/*
-enum QDir::SortFlag
-flags QDir::SortFlags
-*/
+// enum QDir::SortFlag
+// flags QDir::SortFlags
 #define QDir_Name                                                    0x00
 #define QDir_Time                                                    0x01
 #define QDir_Size                                                    0x02

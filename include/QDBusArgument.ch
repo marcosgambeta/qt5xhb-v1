@@ -9,9 +9,7 @@
 #ifndef QDBUSARGUMENT_CH
 #define QDBUSARGUMENT_CH
 
-/*
-enum QDBusArgument::ElementType
-*/
+// enum QDBusArgument::ElementType
 #define QDBusArgument_BasicType                                      0
 #define QDBusArgument_VariantType                                    1
 #define QDBusArgument_ArrayType                                      2

@@ -9,9 +9,7 @@
 #ifndef QCOMMANDLINEPARSER_CH
 #define QCOMMANDLINEPARSER_CH
 
-/*
-enum QCommandLineParser::SingleDashWordOptionMode
-*/
+// enum QCommandLineParser::SingleDashWordOptionMode
 #define QCommandLineParser_ParseAsCompactedShortOptions              0
 #define QCommandLineParser_ParseAsLongOptions                        1
 

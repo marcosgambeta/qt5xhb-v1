@@ -9,10 +9,8 @@
 #ifndef QABSTRACTPRINTDIALOG_CH
 #define QABSTRACTPRINTDIALOG_CH
 
-/*
-enum QAbstractPrintDialog::PrintDialogOption
-flags QAbstractPrintDialog::PrintDialogOptions
-*/
+// enum QAbstractPrintDialog::PrintDialogOption
+// flags QAbstractPrintDialog::PrintDialogOptions
 #define QAbstractPrintDialog_None                                    0x0000
 #define QAbstractPrintDialog_PrintToFile                             0x0001
 #define QAbstractPrintDialog_PrintSelection                          0x0002
@@ -22,9 +20,7 @@ flags QAbstractPrintDialog::PrintDialogOptions
 #define QAbstractPrintDialog_DontUseSheet                            0x0020
 #define QAbstractPrintDialog_PrintCurrentPage                        0x0040
 
-/*
-enum QAbstractPrintDialog::PrintRange
-*/
+// enum QAbstractPrintDialog::PrintRange
 #define QAbstractPrintDialog_AllPages                                0
 #define QAbstractPrintDialog_Selection                               1
 #define QAbstractPrintDialog_PageRange                               2

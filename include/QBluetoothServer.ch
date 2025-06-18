@@ -9,9 +9,7 @@
 #ifndef QBLUETOOTHSERVER_CH
 #define QBLUETOOTHSERVER_CH
 
-/*
-enum QBluetoothServer::Error
-*/
+// enum QBluetoothServer::Error
 #define QBluetoothServer_NoError                                     0
 #define QBluetoothServer_UnknownError                                1
 #define QBluetoothServer_PoweredOffError                             2

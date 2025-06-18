@@ -9,9 +9,7 @@
 #ifndef QABSTRACTVIDEOBUFFER_CH
 #define QABSTRACTVIDEOBUFFER_CH
 
-/*
-enum QAbstractVideoBuffer::HandleType
-*/
+// enum QAbstractVideoBuffer::HandleType
 #define QAbstractVideoBuffer_NoHandle                                0
 #define QAbstractVideoBuffer_GLTextureHandle                         1
 #define QAbstractVideoBuffer_XvShmImageHandle                        2
@@ -20,9 +18,7 @@ enum QAbstractVideoBuffer::HandleType
 #define QAbstractVideoBuffer_EGLImageHandle                          5
 #define QAbstractVideoBuffer_UserHandle                              1000
 
-/*
-enum QAbstractVideoBuffer::MapMode
-*/
+// enum QAbstractVideoBuffer::MapMode
 #define QAbstractVideoBuffer_NotMapped                               0x00
 #define QAbstractVideoBuffer_ReadOnly                                0x01
 #define QAbstractVideoBuffer_WriteOnly                               0x02

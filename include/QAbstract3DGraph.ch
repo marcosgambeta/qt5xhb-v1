@@ -9,10 +9,8 @@
 #ifndef QABSTRACT3DGRAPH_CH
 #define QABSTRACT3DGRAPH_CH
 
-/*
-enum QAbstract3DGraph::SelectionFlag
-flags QAbstract3DGraph::SelectionFlags
-*/
+// enum QAbstract3DGraph::SelectionFlag
+// flags QAbstract3DGraph::SelectionFlags
 #define QAbstract3DGraph_SelectionNone                               0
 #define QAbstract3DGraph_SelectionItem                               1
 #define QAbstract3DGraph_SelectionRow                                2
@@ -24,9 +22,7 @@ flags QAbstract3DGraph::SelectionFlags
 #define QAbstract3DGraph_SelectionSlice                              8
 #define QAbstract3DGraph_SelectionMultiSeries                        16
 
-/*
-enum QAbstract3DGraph::ShadowQuality
-*/
+// enum QAbstract3DGraph::ShadowQuality
 #define QAbstract3DGraph_ShadowQualityNone                           0
 #define QAbstract3DGraph_ShadowQualityLow                            1
 #define QAbstract3DGraph_ShadowQualityMedium                         2
@@ -35,9 +31,7 @@ enum QAbstract3DGraph::ShadowQuality
 #define QAbstract3DGraph_ShadowQualitySoftMedium                     5
 #define QAbstract3DGraph_ShadowQualitySoftHigh                       6
 
-/*
-enum QAbstract3DGraph::ElementType
-*/
+// enum QAbstract3DGraph::ElementType
 #define QAbstract3DGraph_ElementNone                                 0
 #define QAbstract3DGraph_ElementSeries                               1
 #define QAbstract3DGraph_ElementAxisXLabel                           2
@@ -45,10 +39,8 @@ enum QAbstract3DGraph::ElementType
 #define QAbstract3DGraph_ElementAxisZLabel                           4
 #define QAbstract3DGraph_ElementCustomItem                           5
 
-/*
-enum QAbstract3DGraph::OptimizationHint
-flags QAbstract3DGraph::OptimizationHints
-*/
+// enum QAbstract3DGraph::OptimizationHint
+// flags QAbstract3DGraph::OptimizationHints
 #define QAbstract3DGraph_OptimizationDefault                         0
 #define QAbstract3DGraph_OptimizationStatic                          1
 

@@ -9,17 +9,13 @@
 #ifndef QDBUSCONNECTION_CH
 #define QDBUSCONNECTION_CH
 
-/*
-enum QDBusConnection::BusType
-*/
+// enum QDBusConnection::BusType
 #define QDBusConnection_SessionBus                                   0
 #define QDBusConnection_SystemBus                                    1
 #define QDBusConnection_ActivationBus                                2
 
-/*
-enum QDBusConnection::RegisterOption
-flags QDBusConnection::RegisterOptions
-*/
+// enum QDBusConnection::RegisterOption
+// flags QDBusConnection::RegisterOptions
 #define QDBusConnection_ExportAdaptors                               0x01
 #define QDBusConnection_ExportScriptableSlots                        0x10
 #define QDBusConnection_ExportScriptableSignals                      0x20
@@ -40,26 +36,20 @@ flags QDBusConnection::RegisterOptions
 #define QDBusConnection_ExportChildObjects                           0x1000
 // Reserved = 0xff000000
 
-/*
 // TODO: verificar depois
-enum UnregisterMode
-flags UnregisterMode
-*/
+// enum UnregisterMode
+// flags UnregisterMode
 //UnregisterNode
 //UnregisterTree
 
-/*
-enum QDBusConnection::VirtualObjectRegisterOption
-flags QDBusConnection::VirtualObjectRegisterOptions
-*/
+// enum QDBusConnection::VirtualObjectRegisterOption
+// flags QDBusConnection::VirtualObjectRegisterOptions
 #define QDBusConnection_SingleNode                                   0x0
 #define QDBusConnection_SubPath                                      0x1
 // Reserved = 0xff000000
 
-/*
-enum QDBusConnection::ConnectionCapability
-flags QDBusConnection::ConnectionCapabilities
-*/
+// enum QDBusConnection::ConnectionCapability
+// flags QDBusConnection::ConnectionCapabilities
 #define QDBusConnection_UnixFileDescriptorPassing                    0x0001
 
 #endif // QDBUSCONNECTION_CH

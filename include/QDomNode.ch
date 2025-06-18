@@ -9,15 +9,11 @@
 #ifndef QDOMNODE_CH
 #define QDOMNODE_CH
 
-/*
-enum QDomNode::EncodingPolicy
-*/
+// enum QDomNode::EncodingPolicy
 #define QDomNode_EncodingFromDocument                                1
 #define QDomNode_EncodingFromTextStream                              2
 
-/*
-enum QDomNode::NodeType
-*/
+// enum QDomNode::NodeType
 #define QDomNode_ElementNode                                         1
 #define QDomNode_AttributeNode                                       2
 #define QDomNode_TextNode                                            3

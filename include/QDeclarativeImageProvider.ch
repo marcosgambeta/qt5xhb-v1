@@ -9,9 +9,7 @@
 #ifndef QDECLARATIVEIMAGEPROVIDER_CH
 #define QDECLARATIVEIMAGEPROVIDER_CH
 
-/*
-enum QDeclarativeImageProvider::ImageType
-*/
+// enum QDeclarativeImageProvider::ImageType
 #define QDeclarativeImageProvider_Image                              0
 #define QDeclarativeImageProvider_Pixmap                             1
 

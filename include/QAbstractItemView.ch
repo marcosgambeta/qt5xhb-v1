@@ -9,34 +9,26 @@
 #ifndef QABSTRACTITEMVIEW_CH
 #define QABSTRACTITEMVIEW_CH
 
-/*
-enum QAbstractItemView::SelectionMode
-*/
+// enum QAbstractItemView::SelectionMode
 #define QAbstractItemView_NoSelection                                0
 #define QAbstractItemView_SingleSelection                            1
 #define QAbstractItemView_MultiSelection                             2
 #define QAbstractItemView_ExtendedSelection                          3
 #define QAbstractItemView_ContiguousSelection                        4
 
-/*
-enum QAbstractItemView::SelectionBehavior
-*/
+// enum QAbstractItemView::SelectionBehavior
 #define QAbstractItemView_SelectItems                                0
 #define QAbstractItemView_SelectRows                                 1
 #define QAbstractItemView_SelectColumns                              2
 
-/*
-enum QAbstractItemView::ScrollHint
-*/
+// enum QAbstractItemView::ScrollHint
 #define QAbstractItemView_EnsureVisible                              0
 #define QAbstractItemView_PositionAtTop                              1
 #define QAbstractItemView_PositionAtBottom                           2
 #define QAbstractItemView_PositionAtCenter                           3
 
-/*
-enum QAbstractItemView::EditTrigger
-flags QAbstractItemView::EditTriggers
-*/
+// enum QAbstractItemView::EditTrigger
+// flags QAbstractItemView::EditTriggers
 #define QAbstractItemView_NoEditTriggers                             0
 #define QAbstractItemView_CurrentChanged                             1
 #define QAbstractItemView_DoubleClicked                              2
@@ -45,24 +37,18 @@ flags QAbstractItemView::EditTriggers
 #define QAbstractItemView_AnyKeyPressed                              16
 #define QAbstractItemView_AllEditTriggers                            31
 
-/*
-enum QAbstractItemView::ScrollMode
-*/
+// enum QAbstractItemView::ScrollMode
 #define QAbstractItemView_ScrollPerItem                              0
 #define QAbstractItemView_ScrollPerPixel                             1
 
-/*
-enum QAbstractItemView::DragDropMode
-*/
+// enum QAbstractItemView::DragDropMode
 #define QAbstractItemView_NoDragDrop                                 0
 #define QAbstractItemView_DragOnly                                   1
 #define QAbstractItemView_DropOnly                                   2
 #define QAbstractItemView_DragDrop                                   3
 #define QAbstractItemView_InternalMove                               4
 
-/*
-enum QAbstractItemView::CursorAction (protected)
-*/
+// enum QAbstractItemView::CursorAction (protected)
 #define QAbstractItemView_MoveUp                                     0
 #define QAbstractItemView_MoveDown                                   1
 #define QAbstractItemView_MoveLeft                                   2
@@ -74,9 +60,7 @@ enum QAbstractItemView::CursorAction (protected)
 #define QAbstractItemView_MoveNext                                   8
 #define QAbstractItemView_MovePrevious                               9
 
-/*
-enum QAbstractItemView::State (protected)
-*/
+// enum QAbstractItemView::State (protected)
 #define QAbstractItemView_NoState                                    0
 #define QAbstractItemView_DraggingState                              1
 #define QAbstractItemView_DragSelectingState                         2
@@ -85,9 +69,7 @@ enum QAbstractItemView::State (protected)
 #define QAbstractItemView_CollapsingState                            5
 #define QAbstractItemView_AnimatingState                             6
 
-/*
-enum QAbstractItemView::DropIndicatorPosition (protected)
-*/
+// enum QAbstractItemView::DropIndicatorPosition (protected)
 #define QAbstractItemView_OnItem                                     0
 #define QAbstractItemView_AboveItem                                  1
 #define QAbstractItemView_BelowItem                                  2

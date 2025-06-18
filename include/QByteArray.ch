@@ -9,11 +9,8 @@
 #ifndef QBYTEARRAY_CH
 #define QBYTEARRAY_CH
 
-/*
-enum QByteArray::Base64Option
-flags QByteArray::Base64Options
-*/
-
+// enum QByteArray::Base64Option
+// flags QByteArray::Base64Options
 #define QByteArray_Base64Encoding                                    0
 #define QByteArray_Base64UrlEncoding                                 1
 #define QByteArray_KeepTrailingEquals                                0

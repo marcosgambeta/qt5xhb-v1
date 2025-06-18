@@ -9,9 +9,7 @@
 #ifndef QABSTRACTSERIES_CH
 #define QABSTRACTSERIES_CH
 
-/*
-enum QAbstractSeries::SeriesType
-*/
+// enum QAbstractSeries::SeriesType
 #define QAbstractSeries_SeriesTypeLine                               0
 #define QAbstractSeries_SeriesTypeArea                               1
 #define QAbstractSeries_SeriesTypeBar                                2

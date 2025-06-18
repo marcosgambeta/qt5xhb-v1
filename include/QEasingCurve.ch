@@ -9,9 +9,7 @@
 #ifndef QEASINGCURVE_CH
 #define QEASINGCURVE_CH
 
-/*
-enum QEasingCurve::Type
-*/
+// enum QEasingCurve::Type
 #define QEasingCurve_Linear                                          0
 #define QEasingCurve_InQuad                                          1
 #define QEasingCurve_OutQuad                                         2

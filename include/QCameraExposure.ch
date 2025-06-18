@@ -9,10 +9,8 @@
 #ifndef QCAMERAEXPOSURE_CH
 #define QCAMERAEXPOSURE_CH
 
-/*
-enum QCameraExposure::FlashMode
-flags QCameraExposure::FlashModes
-*/
+// enum QCameraExposure::FlashMode
+// flags QCameraExposure::FlashModes
 #define QCameraExposure_FlashAuto                                    0x1
 #define QCameraExposure_FlashOff                                     0x2
 #define QCameraExposure_FlashOn                                      0x4
@@ -24,9 +22,7 @@ flags QCameraExposure::FlashModes
 #define QCameraExposure_FlashSlowSyncRearCurtain                     0x100
 #define QCameraExposure_FlashManual                                  0x200
 
-/*
-enum QCameraExposure::ExposureMode
-*/
+// enum QCameraExposure::ExposureMode
 #define QCameraExposure_ExposureAuto                                 0
 #define QCameraExposure_ExposureManual                               1
 #define QCameraExposure_ExposurePortrait                             2
@@ -50,9 +46,7 @@ enum QCameraExposure::ExposureMode
 #define QCameraExposure_ExposureBarcode                              20
 #define QCameraExposure_ExposureModeVendor                           1000
 
-/*
-enum QCameraExposure::MeteringMode
-*/
+// enum QCameraExposure::MeteringMode
 #define QCameraExposure_MeteringMatrix                               1
 #define QCameraExposure_MeteringAverage                              2
 #define QCameraExposure_MeteringSpot                                 3

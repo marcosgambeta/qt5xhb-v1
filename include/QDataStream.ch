@@ -9,9 +9,7 @@
 #ifndef QDATASTREAM_CH
 #define QDATASTREAM_CH
 
-/*
-enum QDataStream::Version
-*/
+// enum QDataStream::Version
 #define QDataStream_Qt_1_0                                           1
 #define QDataStream_Qt_2_0                                           2
 #define QDataStream_Qt_2_1                                           3
@@ -32,23 +30,17 @@ enum QDataStream::Version
 #define QDataStream_Qt_5_1                                           14
 #define QDataStream_Qt_5_2                                           15
 
-/*
-enum QDataStream::ByteOrder
-*/
+// enum QDataStream::ByteOrder
 #define QDataStream_BigEndian                                        QSysInfo_BigEndian
 #define QDataStream_LittleEndian                                     QSysInfo_LittleEndian
 
-/*
-enum QDataStream::Status
-*/
+// enum QDataStream::Status
 #define QDataStream_Ok                                               0
 #define QDataStream_ReadPastEnd                                      1
 #define QDataStream_ReadCorruptData                                  2
 #define QDataStream_WriteFailed                                      3
 
-/*
-enum QDataStream::FloatingPointPrecision
-*/
+// enum QDataStream::FloatingPointPrecision
 #define QDataStream_SinglePrecision                                  0
 #define QDataStream_DoublePrecision                                  1
 

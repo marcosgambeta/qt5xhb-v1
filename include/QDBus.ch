@@ -9,9 +9,7 @@
 #ifndef QDBUS_CH
 #define QDBUS_CH
 
-/*
-enum QDBus::CallMode
-*/
+// enum QDBus::CallMode
 #define QDBus_NoBlock                                                0
 #define QDBus_Block                                                  1
 #define QDBus_BlockWithGui                                           2

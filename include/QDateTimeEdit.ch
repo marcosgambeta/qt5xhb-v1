@@ -9,10 +9,8 @@
 #ifndef QDATETIMEEDIT_CH
 #define QDATETIMEEDIT_CH
 
-/*
-enum QDateTimeEdit::Section
-flags QDateTimeEdit::Sections
-*/
+// enum QDateTimeEdit::Section
+// flags QDateTimeEdit::Sections
 #define QDateTimeEdit_NoSection                                      0x0000
 #define QDateTimeEdit_AmPmSection                                    0x0001
 #define QDateTimeEdit_MSecSection                                    0x0002

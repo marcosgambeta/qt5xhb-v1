@@ -9,9 +9,7 @@
 #ifndef QBLUETOOTHUUID_CH
 #define QBLUETOOTHUUID_CH
 
-/*
-enum QBluetoothUuid::ProtocolUuid
-*/
+// enum QBluetoothUuid::ProtocolUuid
 #define QBluetoothUuid_Sdp                                           0x0001
 #define QBluetoothUuid_Udp                                           0x0002
 #define QBluetoothUuid_Rfcomm                                        0x0003
@@ -38,9 +36,7 @@ enum QBluetoothUuid::ProtocolUuid
 #define QBluetoothUuid_McapDataChannel                               0x001F
 #define QBluetoothUuid_L2cap                                         0x0100
 
-/*
-enum QBluetoothUuid::ServiceClassUuid
-*/
+// enum QBluetoothUuid::ServiceClassUuid
 #define QBluetoothUuid_ServiceDiscoveryServer                        0x1000
 #define QBluetoothUuid_BrowseGroupDescriptor                         0x1001
 #define QBluetoothUuid_PublicBrowseGroup                             0x1002

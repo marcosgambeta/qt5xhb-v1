@@ -9,9 +9,7 @@
 #ifndef QBLUETOOTHSOCKET_CH
 #define QBLUETOOTHSOCKET_CH
 
-/*
-enum QBluetoothSocket::SocketState
-*/
+// enum QBluetoothSocket::SocketState
 #define QBluetoothSocket_UnconnectedState                            QAbstractSocket_UnconnectedState
 #define QBluetoothSocket_ServiceLookupState                          QAbstractSocket_HostLookupState
 #define QBluetoothSocket_ConnectingState                             QAbstractSocket_ConnectingState
@@ -20,9 +18,7 @@ enum QBluetoothSocket::SocketState
 #define QBluetoothSocket_ClosingState                                QAbstractSocket_ClosingState
 #define QBluetoothSocket_ListeningState                              QAbstractSocket_ListeningState
 
-/*
-enum QBluetoothSocket::SocketError
-*/
+// enum QBluetoothSocket::SocketError
 #define QBluetoothSocket_NoSocketError                               -2
 #define QBluetoothSocket_UnknownSocketError                          QAbstractSocket_UnknownSocketError
 #define QBluetoothSocket_HostNotFoundError                           QAbstractSocket_HostNotFoundError

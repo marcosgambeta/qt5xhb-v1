@@ -9,9 +9,7 @@
 #ifndef QDBUSMESSAGE_CH
 #define QDBUSMESSAGE_CH
 
-/*
-enum QDBusMessage::MessageType
-*/
+// enum QDBusMessage::MessageType
 #define QDBusMessage_InvalidMessage                                  0
 #define QDBusMessage_MethodCallMessage                               1
 #define QDBusMessage_ReplyMessage                                    2

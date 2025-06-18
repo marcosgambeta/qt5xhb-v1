@@ -9,25 +9,19 @@
 #ifndef QABSTRACTOAUTH_CH
 #define QABSTRACTOAUTH_CH
 
-/*
-enum class QAbstractOAuth::Status
-*/
+// enum class QAbstractOAuth::Status
 #define QAbstractOAuth_NotAuthenticated                              0
 #define QAbstractOAuth_TemporaryCredentialsReceived                  1
 #define QAbstractOAuth_Granted                                       2
 #define QAbstractOAuth_RefreshingToken                               3
 
-/*
-enum class QAbstractOAuth::Stage
-*/
+// enum class QAbstractOAuth::Stage
 #define QAbstractOAuth_RequestingTemporaryCredentials                0
 #define QAbstractOAuth_RequestingAuthorization                       1
 #define QAbstractOAuth_RequestingAccessToken                         2
 #define QAbstractOAuth_RefreshingAccessToken                         3
 
-/*
-enum class QAbstractOAuth::Error
-*/
+// enum class QAbstractOAuth::Error
 #define QAbstractOAuth_NoError                                       0
 #define QAbstractOAuth_NetworkError                                  1
 #define QAbstractOAuth_ServerError                                   2
@@ -35,9 +29,7 @@ enum class QAbstractOAuth::Error
 #define QAbstractOAuth_OAuthTokenSecretNotFoundError                 4
 #define QAbstractOAuth_OAuthCallbackNotVerified                      5
 
-/*
-enum class QAbstractOAuth::ContentType
-*/
+// enum class QAbstractOAuth::ContentType
 #define QAbstractOAuth_WwwFormUrlEncoded                             0
 #define QAbstractOAuth_Json                                          1
 

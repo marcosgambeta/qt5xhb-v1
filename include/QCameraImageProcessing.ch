@@ -9,9 +9,7 @@
 #ifndef QCAMERAIMAGEPROCESSING_CH
 #define QCAMERAIMAGEPROCESSING_CH
 
-/*
-enum QCameraImageProcessing::ColorFilter
-*/
+// enum QCameraImageProcessing::ColorFilter
 #define QCameraImageProcessing_ColorFilterNone                       0
 #define QCameraImageProcessing_ColorFilterGrayscale                  1
 #define QCameraImageProcessing_ColorFilterNegative                   2
@@ -23,9 +21,7 @@ enum QCameraImageProcessing::ColorFilter
 #define QCameraImageProcessing_ColorFilterAqua                       8
 #define QCameraImageProcessing_ColorFilterVendor                     1000
 
-/*
-enum QCameraImageProcessing::WhiteBalanceMode
-*/
+// enum QCameraImageProcessing::WhiteBalanceMode
 #define QCameraImageProcessing_WhiteBalanceAuto                      0
 #define QCameraImageProcessing_WhiteBalanceManual                    1
 #define QCameraImageProcessing_WhiteBalanceSunlight                  2

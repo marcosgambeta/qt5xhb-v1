@@ -9,9 +9,7 @@
 #ifndef QCAMERAFEEDBACKCONTROL_CH
 #define QCAMERAFEEDBACKCONTROL_CH
 
-/*
-enum QCameraFeedbackControl::EventType
-*/
+// enum QCameraFeedbackControl::EventType
 #define QCameraFeedbackControl_ViewfinderStarted                     1
 #define QCameraFeedbackControl_ViewfinderStopped                     2
 #define QCameraFeedbackControl_ImageCaptured                         3

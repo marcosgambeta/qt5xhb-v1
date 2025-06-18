@@ -9,9 +9,7 @@
 #ifndef QDECLARATIVECOMPONENT_CH
 #define QDECLARATIVECOMPONENT_CH
 
-/*
-enum QDeclarativeComponent::Status
-*/
+// enum QDeclarativeComponent::Status
 #define QDeclarativeComponent_Null                                   0
 #define QDeclarativeComponent_Ready                                  1
 #define QDeclarativeComponent_Loading                                2

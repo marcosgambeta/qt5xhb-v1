@@ -9,9 +9,7 @@
 #ifndef QACCESSIBLE2_CH
 #define QACCESSIBLE2_CH
 
-/*
-enum QAccessible2::BoundaryType
-*/
+// enum QAccessible2::BoundaryType
 #define QAccessible2_CharBoundary                                    0
 #define QAccessible2_WordBoundary                                    1
 #define QAccessible2_SentenceBoundary                                2

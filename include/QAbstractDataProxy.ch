@@ -9,9 +9,7 @@
 #ifndef QABSTRACTDATAPROXY_CH
 #define QABSTRACTDATAPROXY_CH
 
-/*
-enum QAbstractDataProxy::DataType
-*/
+// enum QAbstractDataProxy::DataType
 #define QAbstractDataProxy_DataTypeNone                              0
 #define QAbstractDataProxy_DataTypeBar                               1
 #define QAbstractDataProxy_DataTypeScatter                           2

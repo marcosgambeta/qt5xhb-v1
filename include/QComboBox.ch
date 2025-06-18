@@ -9,9 +9,7 @@
 #ifndef QCOMBOBOX_CH
 #define QCOMBOBOX_CH
 
-/*
-enum QComboBox::InsertPolicy
-*/
+// enum QComboBox::InsertPolicy
 #define QComboBox_NoInsert                                           0
 #define QComboBox_InsertAtTop                                        1
 #define QComboBox_InsertAtCurrent                                    2
@@ -20,9 +18,7 @@ enum QComboBox::InsertPolicy
 #define QComboBox_InsertBeforeCurrent                                5
 #define QComboBox_InsertAlphabetically                               6
 
-/*
-enum QComboBox::SizeAdjustPolicy
-*/
+// enum QComboBox::SizeAdjustPolicy
 #define QComboBox_AdjustToContents                                   0
 #define QComboBox_AdjustToContentsOnFirstShow                        1
 #define QComboBox_AdjustToMinimumContentsLength                      2

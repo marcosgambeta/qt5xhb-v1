@@ -9,9 +9,7 @@
 #ifndef QDESKTOPSERVICES_CH
 #define QDESKTOPSERVICES_CH
 
-/*
-enum QDesktopServices::StandardLocation
-*/
+// enum QDesktopServices::StandardLocation
 #define QDesktopServices_DesktopLocation                             0
 #define QDesktopServices_DocumentsLocation                           1
 #define QDesktopServices_FontsLocation                               2

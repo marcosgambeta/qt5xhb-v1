@@ -9,9 +9,7 @@
 #ifndef QCAMERAVIEWFINDERSETTINGSCONTROL_CH
 #define QCAMERAVIEWFINDERSETTINGSCONTROL_CH
 
-/*
-enum QCameraViewfinderSettingsControl::ViewfinderParameter
-*/
+// enum QCameraViewfinderSettingsControl::ViewfinderParameter
 #define QCameraViewfinderSettingsControl_Resolution                  0
 #define QCameraViewfinderSettingsControl_PixelAspectRatio            1
 #define QCameraViewfinderSettingsControl_MinimumFrameRate            2

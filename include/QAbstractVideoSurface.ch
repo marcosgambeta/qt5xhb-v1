@@ -9,9 +9,7 @@
 #ifndef QABSTRACTVIDEOSURFACE_CH
 #define QABSTRACTVIDEOSURFACE_CH
 
-/*
-enum QAbstractVideoSurface::Error
-*/
+// enum QAbstractVideoSurface::Error
 #define QAbstractVideoSurface_NoError                                0
 #define QAbstractVideoSurface_UnsupportedFormatError                 1
 #define QAbstractVideoSurface_IncorrectFormatError                   2

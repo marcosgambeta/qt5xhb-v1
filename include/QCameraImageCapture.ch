@@ -9,21 +9,15 @@
 #ifndef QCAMERAIMAGECAPTURE_CH
 #define QCAMERAIMAGECAPTURE_CH
 
-/*
-enum QCameraImageCapture::CaptureDestination
-flags QCameraImageCapture::CaptureDestinations
-*/
+// enum QCameraImageCapture::CaptureDestination
+// flags QCameraImageCapture::CaptureDestinations
 #define QCameraImageCapture_CaptureToFile                            0x01
 #define QCameraImageCapture_CaptureToBuffer                          0x02
 
-/*
-enum QCameraImageCapture::DriveMode
-*/
+// enum QCameraImageCapture::DriveMode
 #define QCameraImageCapture_SingleImageCapture                       0
 
-/*
-enum QCameraImageCapture::Error
-*/
+// enum QCameraImageCapture::Error
 #define QCameraImageCapture_NoError                                  0
 #define QCameraImageCapture_NotReadyError                            1
 #define QCameraImageCapture_ResourceError                            2

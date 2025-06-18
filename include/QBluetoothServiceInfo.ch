@@ -9,9 +9,7 @@
 #ifndef QBLUETOOTHSERVICEINFO_CH
 #define QBLUETOOTHSERVICEINFO_CH
 
-/*
-enum QBluetoothServiceInfo::AttributeId
-*/
+// enum QBluetoothServiceInfo::AttributeId
 #define QBluetoothServiceInfo_ServiceRecordHandle                    0x0000
 #define QBluetoothServiceInfo_ServiceClassIds                        0x0001
 #define QBluetoothServiceInfo_ServiceRecordState                     0x0002
@@ -31,9 +29,7 @@ enum QBluetoothServiceInfo::AttributeId
 #define QBluetoothServiceInfo_ServiceDescription                     QBluetoothServiceInfo_PrimaryLanguageBase + 0x0001
 #define QBluetoothServiceInfo_ServiceProvider                        QBluetoothServiceInfo_PrimaryLanguageBase + 0x0002
 
-/*
-enum QBluetoothServiceInfo::Protocol
-*/
+// enum QBluetoothServiceInfo::Protocol
 #define QBluetoothServiceInfo_UnknownProtocol                        0
 #define QBluetoothServiceInfo_L2capProtocol                          1
 #define QBluetoothServiceInfo_RfcommProtocol                         2

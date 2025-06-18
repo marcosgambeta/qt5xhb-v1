@@ -9,9 +9,7 @@
 #ifndef QBOXSET_CH
 #define QBOXSET_CH
 
-/*
-enum QBoxSet::ValuePositions
-*/
+// enum QBoxSet::ValuePositions
 #define QBoxSet_LowerExtreme                                         0
 #define QBoxSet_LowerQuartile                                        1
 #define QBoxSet_Median                                               2

@@ -9,9 +9,7 @@
 #ifndef QBLUETOOTHDEVICEINFO_CH
 #define QBLUETOOTHDEVICEINFO_CH
 
-/*
-enum QBluetoothDeviceInfo::MajorDeviceClass
-*/
+// enum QBluetoothDeviceInfo::MajorDeviceClass
 #define QBluetoothDeviceInfo_MiscellaneousDevice                     0
 #define QBluetoothDeviceInfo_ComputerDevice                          1
 #define QBluetoothDeviceInfo_PhoneDevice                             2
@@ -24,14 +22,10 @@ enum QBluetoothDeviceInfo::MajorDeviceClass
 #define QBluetoothDeviceInfo_HealthDevice                            9
 #define QBluetoothDeviceInfo_UncategorizedDevice                     31
 
-/*
-enum QBluetoothDeviceInfo::MinorMiscellaneousClass
-*/
+// enum QBluetoothDeviceInfo::MinorMiscellaneousClass
 #define QBluetoothDeviceInfo_UncategorizedMiscellaneous              0
 
-/*
-enum QBluetoothDeviceInfo::MinorComputerClass
-*/
+// enum QBluetoothDeviceInfo::MinorComputerClass
 #define QBluetoothDeviceInfo_UncategorizedComputer                   0
 #define QBluetoothDeviceInfo_DesktopComputer                         1
 #define QBluetoothDeviceInfo_ServerComputer                          2
@@ -40,9 +34,7 @@ enum QBluetoothDeviceInfo::MinorComputerClass
 #define QBluetoothDeviceInfo_HandheldComputer                        5
 #define QBluetoothDeviceInfo_WearableComputer                        6
 
-/*
-enum QBluetoothDeviceInfo::MinorPhoneClass
-*/
+// enum QBluetoothDeviceInfo::MinorPhoneClass
 #define QBluetoothDeviceInfo_UncategorizedPhone                      0
 #define QBluetoothDeviceInfo_CellularPhone                           1
 #define QBluetoothDeviceInfo_CordlessPhone                           2
@@ -50,9 +42,7 @@ enum QBluetoothDeviceInfo::MinorPhoneClass
 #define QBluetoothDeviceInfo_WiredModemOrVoiceGatewayPhone           4
 #define QBluetoothDeviceInfo_CommonIsdnAccessPhone                   5
 
-/*
-enum QBluetoothDeviceInfo::MinorNetworkClass
-*/
+// enum QBluetoothDeviceInfo::MinorNetworkClass
 #define QBluetoothDeviceInfo_NetworkFullService                      0x00
 #define QBluetoothDeviceInfo_NetworkLoadFactorOne                    0x08
 #define QBluetoothDeviceInfo_NetworkLoadFactorTwo                    0x10
@@ -62,9 +52,7 @@ enum QBluetoothDeviceInfo::MinorNetworkClass
 #define QBluetoothDeviceInfo_NetworkLoadFactorSix                    0x30
 #define QBluetoothDeviceInfo_NetworkNoService                        0x38
 
-/*
-enum QBluetoothDeviceInfo::MinorAudioVideoClass
-*/
+// enum QBluetoothDeviceInfo::MinorAudioVideoClass
 #define QBluetoothDeviceInfo_UncategorizedAudioVideoDevice           0
 #define QBluetoothDeviceInfo_WearableHeadsetDevice                   1
 #define QBluetoothDeviceInfo_HandsFreeDevice                         2
@@ -85,9 +73,7 @@ enum QBluetoothDeviceInfo::MinorAudioVideoClass
 // reserved = 17
 #define QBluetoothDeviceInfo_GamingDevice                            18
 
-/*
-enum QBluetoothDeviceInfo::MinorPeripheralClass
-*/
+// enum QBluetoothDeviceInfo::MinorPeripheralClass
 #define QBluetoothDeviceInfo_UncategorizedPeripheral                 0
 #define QBluetoothDeviceInfo_KeyboardPeripheral                      0x10
 #define QBluetoothDeviceInfo_PointingDevicePeripheral                0x20
@@ -99,18 +85,14 @@ enum QBluetoothDeviceInfo::MinorPeripheralClass
 #define QBluetoothDeviceInfo_DigitizerTabletPeripheral               0x05
 #define QBluetoothDeviceInfo_CardReaderPeripheral                    0x06
 
-/*
-enum QBluetoothDeviceInfo::MinorImagingClass
-*/
+// enum QBluetoothDeviceInfo::MinorImagingClass
 #define QBluetoothDeviceInfo_UncategorizedImagingDevice              0
 #define QBluetoothDeviceInfo_ImageDisplay                            0x04
 #define QBluetoothDeviceInfo_ImageCamera                             0x08
 #define QBluetoothDeviceInfo_ImageScanner                            0x10
 #define QBluetoothDeviceInfo_ImagePrinter                            0x20
 
-/*
-enum QBluetoothDeviceInfo::MinorWearableClass
-*/
+// enum QBluetoothDeviceInfo::MinorWearableClass
 #define QBluetoothDeviceInfo_UncategorizedWearableDevice             0
 #define QBluetoothDeviceInfo_WearableWristWatch                      1
 #define QBluetoothDeviceInfo_WearablePager                           2
@@ -118,9 +100,7 @@ enum QBluetoothDeviceInfo::MinorWearableClass
 #define QBluetoothDeviceInfo_WearableHelmet                          4
 #define QBluetoothDeviceInfo_WearableGlasses                         5
 
-/*
-enum QBluetoothDeviceInfo::MinorToyClass
-*/
+// enum QBluetoothDeviceInfo::MinorToyClass
 #define QBluetoothDeviceInfo_UncategorizedToy                        0
 #define QBluetoothDeviceInfo_ToyRobot                                1
 #define QBluetoothDeviceInfo_ToyVehicle                              2
@@ -128,9 +108,7 @@ enum QBluetoothDeviceInfo::MinorToyClass
 #define QBluetoothDeviceInfo_ToyController                           4
 #define QBluetoothDeviceInfo_ToyGame                                 5
 
-/*
-enum QBluetoothDeviceInfo::MinorHealthClass
-*/
+// enum QBluetoothDeviceInfo::MinorHealthClass
 #define QBluetoothDeviceInfo_UncategorizedHealthDevice               0
 #define QBluetoothDeviceInfo_HealthBloodPressureMonitor              0x1
 #define QBluetoothDeviceInfo_HealthThermometer                       0x2
@@ -140,10 +118,8 @@ enum QBluetoothDeviceInfo::MinorHealthClass
 #define QBluetoothDeviceInfo_HealthDataDisplay                       0x7
 #define QBluetoothDeviceInfo_HealthStepCounter                       0x8
 
-/*
-enum QBluetoothDeviceInfo::ServiceClass
-flags QBluetoothDeviceInfo::ServiceClasses
-*/
+// enum QBluetoothDeviceInfo::ServiceClass
+// flags QBluetoothDeviceInfo::ServiceClasses
 #define QBluetoothDeviceInfo_NoService                               0x0000
 #define QBluetoothDeviceInfo_PositioningService                      0x0001
 #define QBluetoothDeviceInfo_NetworkingService                       0x0002
@@ -155,26 +131,20 @@ flags QBluetoothDeviceInfo::ServiceClasses
 #define QBluetoothDeviceInfo_InformationService                      0x0080
 #define QBluetoothDeviceInfo_AllServices                             0x07ff
 
-/*
-enum QBluetoothDeviceInfo::DataCompleteness
-*/
+// enum QBluetoothDeviceInfo::DataCompleteness
 #define QBluetoothDeviceInfo_DataComplete                            0
 #define QBluetoothDeviceInfo_DataIncomplete                          1
 #define QBluetoothDeviceInfo_DataUnavailable                         2
 
-/*
-enum class QBluetoothDeviceInfo::Field
-flags class QBluetoothDeviceInfo::Fields
-*/
+// enum class QBluetoothDeviceInfo::Field
+// flags class QBluetoothDeviceInfo::Fields
 #define QBluetoothDeviceInfo_None                                    0x0000
 #define QBluetoothDeviceInfo_RSSI                                    0x0001
 #define QBluetoothDeviceInfo_ManufacturerData                        0x0002
 #define QBluetoothDeviceInfo_All                                     0x7fff
 
-/*
-enum QBluetoothDeviceInfo::CoreConfiguration
-flags QBluetoothDeviceInfo::CoreConfigurations
-*/
+// enum QBluetoothDeviceInfo::CoreConfiguration
+// flags QBluetoothDeviceInfo::CoreConfigurations
 #define QBluetoothDeviceInfo_UnknownCoreConfiguration                0x0
 #define QBluetoothDeviceInfo_LowEnergyCoreConfiguration              0x01
 #define QBluetoothDeviceInfo_BaseRateCoreConfiguration               0x02

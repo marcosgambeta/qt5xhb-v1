@@ -9,9 +9,7 @@
 #ifndef QANDROIDBINDER_CH
 #define QANDROIDBINDER_CH
 
-/*
-enum class QAndroidBinder::CallType
-*/
+// enum class QAndroidBinder::CallType
 #define QAndroidBinder_Normal                                        0
 #define QAndroidBinder_OneWay                                        1
 

@@ -9,9 +9,7 @@
 #ifndef QDNSLOOKUP_CH
 #define QDNSLOOKUP_CH
 
-/*
-enum QDnsLookup::Error
-*/
+// enum QDnsLookup::Error
 #define QDnsLookup_NoError                                           0
 #define QDnsLookup_ResolverError                                     1
 #define QDnsLookup_OperationCancelledError                           2
@@ -21,9 +19,7 @@ enum QDnsLookup::Error
 #define QDnsLookup_ServerRefusedError                                6
 #define QDnsLookup_NotFoundError                                     7
 
-/*
-enum QDnsLookup::Type
-*/
+// enum QDnsLookup::Type
 #define QDnsLookup_A                                                 1
 #define QDnsLookup_AAAA                                              28
 #define QDnsLookup_ANY                                               255

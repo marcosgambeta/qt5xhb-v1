@@ -9,18 +9,14 @@
 #ifndef QAUDIODECODER_CH
 #define QAUDIODECODER_CH
 
-/*
-enum QAudioDecoder::Error
-*/
+// enum QAudioDecoder::Error
 #define QAudioDecoder_NoError                                        0
 #define QAudioDecoder_ResourceError                                  1
 #define QAudioDecoder_FormatError                                    2
 #define QAudioDecoder_AccessDeniedError                              3
 #define QAudioDecoder_ServiceMissingError                            4
 
-/*
-enum QAudioDecoder::State
-*/
+// enum QAudioDecoder::State
 #define QAudioDecoder_StoppedState                                   0
 #define QAudioDecoder_DecodingState                                  1
 

@@ -9,9 +9,7 @@
 #ifndef QDECLARATIVEENGINE_CH
 #define QDECLARATIVEENGINE_CH
 
-/*
-enum QDeclarativeEngine::ObjectOwnership
-*/
+// enum QDeclarativeEngine::ObjectOwnership
 #define QDeclarativeEngine_CppOwnership                              0
 #define QDeclarativeEngine_JavaScriptOwnership                       1
 

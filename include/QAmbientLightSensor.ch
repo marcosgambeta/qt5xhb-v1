@@ -9,9 +9,7 @@
 #ifndef QAMBIENTLIGHTSENSOR_CH
 #define QAMBIENTLIGHTSENSOR_CH
 
-/*
-enum QAmbientLightSensor::LightLevel
-*/
+// enum QAmbientLightSensor::LightLevel
 #define QAmbientLightSensor_Undefined                                0
 #define QAmbientLightSensor_Dark                                     1
 #define QAmbientLightSensor_Twilight                                 2

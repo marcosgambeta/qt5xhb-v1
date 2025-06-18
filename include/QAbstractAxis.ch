@@ -9,10 +9,8 @@
 #ifndef QABSTRACTAXIS_CH
 #define QABSTRACTAXIS_CH
 
-/*
-enum QAbstractAxis::AxisType
-flags QAbstractAxis::AxisTypes
-*/
+// enum QAbstractAxis::AxisType
+// flags QAbstractAxis::AxisTypes
 #define QAbstractAxis_AxisTypeNoAxis                                 0x0
 #define QAbstractAxis_AxisTypeValue                                  0x1
 #define QAbstractAxis_AxisTypeBarCategory                            0x2

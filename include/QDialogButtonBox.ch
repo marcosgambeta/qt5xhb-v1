@@ -9,17 +9,13 @@
 #ifndef QDIALOGBUTTONBOX_CH
 #define QDIALOGBUTTONBOX_CH
 
-/*
-enum QDialogButtonBox::ButtonLayout
-*/
+// enum QDialogButtonBox::ButtonLayout
 #define QDialogButtonBox_WinLayout                                   0
 #define QDialogButtonBox_MacLayout                                   1
 #define QDialogButtonBox_KdeLayout                                   2
 #define QDialogButtonBox_GnomeLayout                                 3
 
-/*
-enum QDialogButtonBox::ButtonRole
-*/
+// enum QDialogButtonBox::ButtonRole
 #define QDialogButtonBox_InvalidRole                                 -1
 #define QDialogButtonBox_AcceptRole                                  0
 #define QDialogButtonBox_RejectRole                                  1
@@ -31,10 +27,8 @@ enum QDialogButtonBox::ButtonRole
 #define QDialogButtonBox_ApplyRole                                   8
 #define QDialogButtonBox_ResetRole                                   7
 
-/*
-enum QDialogButtonBox::StandardButton
-flags QDialogButtonBox::StandardButtons
-*/
+// enum QDialogButtonBox::StandardButton
+// flags QDialogButtonBox::StandardButtons
 #define QDialogButtonBox_Ok                                          0x00000400
 #define QDialogButtonBox_Open                                        0x00002000
 #define QDialogButtonBox_Save                                        0x00000800

@@ -9,9 +9,7 @@
 #ifndef QABSTRACTITEMDELEGATE_CH
 #define QABSTRACTITEMDELEGATE_CH
 
-/*
-enum QAbstractItemDelegate::EndEditHint
-*/
+// enum QAbstractItemDelegate::EndEditHint
 #define QAbstractItemDelegate_NoHint                                 0
 #define QAbstractItemDelegate_EditNextItem                           1
 #define QAbstractItemDelegate_EditPreviousItem                       2

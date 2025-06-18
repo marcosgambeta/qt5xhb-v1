@@ -9,9 +9,7 @@
 #ifndef QBOXLAYOUT_CH
 #define QBOXLAYOUT_CH
 
-/*
-enum QBoxLayout::Direction
-*/
+// enum QBoxLayout::Direction
 #define QBoxLayout_LeftToRight                                       0
 #define QBoxLayout_RightToLeft                                       1
 #define QBoxLayout_TopToBottom                                       2

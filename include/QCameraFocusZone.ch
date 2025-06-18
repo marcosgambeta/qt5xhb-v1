@@ -9,9 +9,7 @@
 #ifndef QCAMERAFOCUSZONE_CH
 #define QCAMERAFOCUSZONE_CH
 
-/*
-enum QCameraFocusZone::FocusZoneStatus
-*/
+// enum QCameraFocusZone::FocusZoneStatus
 #define QCameraFocusZone_Invalid                                     0
 #define QCameraFocusZone_Unused                                      1
 #define QCameraFocusZone_Selected                                    2

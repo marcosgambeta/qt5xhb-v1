@@ -9,15 +9,11 @@
 #ifndef QDESIGNERFORMWINDOWCURSORINTERFACE_CH
 #define QDESIGNERFORMWINDOWCURSORINTERFACE_CH
 
-/*
-enum QDesignerFormWindowCursorInterface::MoveMode
-*/
+// enum QDesignerFormWindowCursorInterface::MoveMode
 #define QDesignerFormWindowCursorInterface_MoveAnchor                0
 #define QDesignerFormWindowCursorInterface_KeepAnchor                1
 
-/*
-enum QDesignerFormWindowCursorInterface::MoveOperation
-*/
+// enum QDesignerFormWindowCursorInterface::MoveOperation
 #define QDesignerFormWindowCursorInterface_NoMove                    0
 #define QDesignerFormWindowCursorInterface_Start                     1
 #define QDesignerFormWindowCursorInterface_End                       2

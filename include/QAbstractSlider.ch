@@ -9,9 +9,7 @@
 #ifndef QABSTRACTSLIDER_CH
 #define QABSTRACTSLIDER_CH
 
-/*
-enum QAbstractSlider::SliderAction
-*/
+// enum QAbstractSlider::SliderAction
 #define QAbstractSlider_SliderNoAction                               0
 #define QAbstractSlider_SliderSingleStepAdd                          1
 #define QAbstractSlider_SliderSingleStepSub                          2
@@ -21,9 +19,7 @@ enum QAbstractSlider::SliderAction
 #define QAbstractSlider_SliderToMaximum                              6
 #define QAbstractSlider_SliderMove                                   7
 
-/*
-enum QAbstractSlider::SliderChange (protected)
-*/
+// enum QAbstractSlider::SliderChange (protected)
 #define QAbstractSlider_SliderRangeChange                            0
 #define QAbstractSlider_SliderOrientationChange                      1
 #define QAbstractSlider_SliderStepsChange                            2

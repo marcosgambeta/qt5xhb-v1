@@ -9,9 +9,7 @@
 #ifndef QBLUETOOTHTRANSFERREPLY_CH
 #define QBLUETOOTHTRANSFERREPLY_CH
 
-/*
-enum QBluetoothTransferReply::TransferError
-*/
+// enum QBluetoothTransferReply::TransferError
 #define QBluetoothTransferReply_NoError                              0
 #define QBluetoothTransferReply_UnknownError                         1
 #define QBluetoothTransferReply_FileNotFoundError                    2

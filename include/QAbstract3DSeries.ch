@@ -9,17 +9,13 @@
 #ifndef QABSTRACT3DSERIES_CH
 #define QABSTRACT3DSERIES_CH
 
-/*
-enum QAbstract3DSeries::SeriesType
-*/
+// enum QAbstract3DSeries::SeriesType
 #define QAbstract3DSeries_SeriesTypeNone                             0
 #define QAbstract3DSeries_SeriesTypeBar                              1
 #define QAbstract3DSeries_SeriesTypeScatter                          2
 #define QAbstract3DSeries_SeriesTypeSurface                          4
 
-/*
-enum QAbstract3DSeries::Mesh
-*/
+// enum QAbstract3DSeries::Mesh
 #define QAbstract3DSeries_MeshUserDefined                            0
 #define QAbstract3DSeries_MeshBar                                    1
 #define QAbstract3DSeries_MeshCube                                   2

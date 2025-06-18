@@ -9,17 +9,13 @@
 #ifndef QABSTRACT3DAXIS_CH
 #define QABSTRACT3DAXIS_CH
 
-/*
-enum QAbstract3DAxis::AxisOrientation
-*/
+// enum QAbstract3DAxis::AxisOrientation
 #define QAbstract3DAxis_AxisOrientationNone                          0
 #define QAbstract3DAxis_AxisOrientationX                             1
 #define QAbstract3DAxis_AxisOrientationY                             2
 #define QAbstract3DAxis_AxisOrientationZ                             4
 
-/*
-enum QAbstract3DAxis::AxisType
-*/
+// enum QAbstract3DAxis::AxisType
 #define QAbstract3DAxis_AxisTypeNone                                 0
 #define QAbstract3DAxis_AxisTypeCategory                             1
 #define QAbstract3DAxis_AxisTypeValue                                2

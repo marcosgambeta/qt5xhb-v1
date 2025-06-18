@@ -9,9 +9,7 @@
 #ifndef QCOLOR_CH
 #define QCOLOR_CH
 
-/*
-enum QColor::Spec
-*/
+// enum QColor::Spec
 #define QColor_Rgb                                                   1
 #define QColor_Hsv                                                   2
 #define QColor_Cmyk                                                  3

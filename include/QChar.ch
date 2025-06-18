@@ -9,9 +9,7 @@
 #ifndef QCHAR_CH
 #define QCHAR_CH
 
-/*
-enum QChar::Category
-*/
+// enum QChar::Category
 #define QChar_Mark_NonSpacing                                        1
 #define QChar_Mark_SpacingCombining                                  2
 #define QChar_Mark_Enclosing                                         3
@@ -44,9 +42,7 @@ enum QChar::Category
 #define QChar_Symbol_Other                                           30
 #define QChar_NoCategory                                             0
 
-/*
-enum QChar::Decomposition
-*/
+// enum QChar::Decomposition
 #define QChar_NoDecomposition                                        0
 #define QChar_Canonical                                              1
 #define QChar_Circle                                                 8
@@ -66,9 +62,7 @@ enum QChar::Decomposition
 #define QChar_Vertical                                               11
 #define QChar_Wide                                                   12
 
-/*
-enum QChar::Direction
-*/
+// enum QChar::Direction
 #define QChar_DirAL                                                  13
 #define QChar_DirAN                                                  5
 #define QChar_DirB                                                   7
@@ -89,17 +83,13 @@ enum QChar::Direction
 #define QChar_DirS                                                   8
 #define QChar_DirWS                                                  9
 
-/*
-enum QChar::Joining
-*/
+// enum QChar::Joining
 #define QChar_Center                                                 3
 #define QChar_Dual                                                   1
 #define QChar_OtherJoining                                           0
 #define QChar_Right                                                  2
 
-/*
-enum QChar::SpecialCharacter
-*/
+// enum QChar::SpecialCharacter
 #define QChar_Null                                                   0x0000
 #define QChar_Nbsp                                                   0x00a0
 #define QChar_ReplacementCharacter                                   0xfffd
@@ -109,9 +99,7 @@ enum QChar::SpecialCharacter
 #define QChar_ParagraphSeparator                                     0x2029
 #define QChar_LineSeparator                                          0x2028
 
-/*
-enum QChar::UnicodeVersion
-*/
+// enum QChar::UnicodeVersion
 #define QChar_Unicode_1_1                                            1
 #define QChar_Unicode_2_0                                            2
 #define QChar_Unicode_2_1_2                                          3

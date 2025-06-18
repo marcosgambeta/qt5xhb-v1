@@ -9,9 +9,7 @@
 #ifndef QACCESSIBLETABLEMODELCHANGEEVENT_CH
 #define QACCESSIBLETABLEMODELCHANGEEVENT_CH
 
-/*
-enum QAccessibleTableModelChangeEvent::ModelChangeType
-*/
+// enum QAccessibleTableModelChangeEvent::ModelChangeType
 #define QAccessibleTableModelChangeEvent_ModelReset                  0
 #define QAccessibleTableModelChangeEvent_DataChanged                 1
 #define QAccessibleTableModelChangeEvent_RowsInserted                2

@@ -9,9 +9,7 @@
 #ifndef QANDROIDJNIEXCEPTIONCLEANER_CH
 #define QANDROIDJNIEXCEPTIONCLEANER_CH
 
-/*
-enum class QAndroidJniExceptionCleaner::OutputMode
-*/
+// enum class QAndroidJniExceptionCleaner::OutputMode
 #define QAndroidJniExceptionCleaner_Silent                           0
 #define QAndroidJniExceptionCleaner_Verbose                          1
 

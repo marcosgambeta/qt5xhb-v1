@@ -9,9 +9,7 @@
 #ifndef QACCESSIBLE_CH
 #define QACCESSIBLE_CH
 
-/*
-enum QAccessible::Event
-*/
+// enum QAccessible::Event
 #define QAccessible_SoundPlayed                                      0x0001
 #define QAccessible_Alert                                            0x0002
 #define QAccessible_ForegroundChanged                                0x0003
@@ -83,9 +81,7 @@ enum QAccessible::Event
 #define QAccessible_AcceleratorChanged                               0x80C0
 #define QAccessible_InvalidEvent
 
-/*
-enum QAccessible::Role
-*/
+// enum QAccessible::Role
 #define QAccessible_NoRole                                           0x00000000
 #define QAccessible_TitleBar                                         0x00000001
 #define QAccessible_MenuBar                                          0x00000002
@@ -155,9 +151,7 @@ enum QAccessible::Role
 #define QAccessible_Desktop                                          0x00000082
 #define QAccessible_UserRole                                         0x0000ffff
 
-/*
-enum QAccessible::Text
-*/
+// enum QAccessible::Text
 #define QAccessible_Name                                             0
 #define QAccessible_Description                                      1
 #define QAccessible_Value                                            2
@@ -166,18 +160,14 @@ enum QAccessible::Text
 #define QAccessible_DebugDescription                                 5
 #define QAccessible_UserText                                         0x0000ffff
 
-/*
-enum QAccessible::RelationFlag
-*/
+// enum QAccessible::RelationFlag
 #define QAccessible_Label                                            0x00000001
 #define QAccessible_Labelled                                         0x00000002
 #define QAccessible_Controller                                       0x00000004
 #define QAccessible_Controlled                                       0x00000008
 #define QAccessible_AllRelations                                     0xffffffff
 
-/*
-enum QAccessible::InterfaceType
-*/
+// enum QAccessible::InterfaceType
 #define QAccessible_TextInterface                                    0
 #define QAccessible_EditableTextInterface                            1
 #define QAccessible_ValueInterface                                   2

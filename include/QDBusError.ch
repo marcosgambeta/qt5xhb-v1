@@ -9,9 +9,7 @@
 #ifndef QDBUSERROR_CH
 #define QDBUSERROR_CH
 
-/*
-enum QDBusError::ErrorType
-*/
+// enum QDBusError::ErrorType
 #define QDBusError_NoError                                           0
 #define QDBusError_Other                                             1
 #define QDBusError_Failed                                            2

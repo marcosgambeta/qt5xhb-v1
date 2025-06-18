@@ -9,9 +9,7 @@
 #ifndef Q3DCAMERA_CH
 #define Q3DCAMERA_CH
 
-/*
-enum Q3DCamera::CameraPreset
-*/
+// enum Q3DCamera::CameraPreset
 #define Q3DCamera_CameraPresetNone                                   -1
 #define Q3DCamera_CameraPresetFrontLow                               0
 #define Q3DCamera_CameraPresetFront                                  1

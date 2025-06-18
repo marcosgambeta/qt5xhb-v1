@@ -9,9 +9,7 @@
 #ifndef QAXSCRIPTENGINE_CH
 #define QAXSCRIPTENGINE_CH
 
-/*
-enum QAxScriptEngine::State
-*/
+// enum QAxScriptEngine::State
 #define QAxScriptEngine_Uninitialized                                0
 #define QAxScriptEngine_Initialized                                  5
 #define QAxScriptEngine_Started                                      1

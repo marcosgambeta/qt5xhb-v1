@@ -9,9 +9,7 @@
 #ifndef QCAMERAIMAGEPROCESSINGCONTROL_CH
 #define QCAMERAIMAGEPROCESSINGCONTROL_CH
 
-/*
-enum QCameraImageProcessingControl::ProcessingParameter
-*/
+// enum QCameraImageProcessingControl::ProcessingParameter
 #define QCameraImageProcessingControl_WhiteBalancePreset             0
 #define QCameraImageProcessingControl_ColorTemperature               1
 #define QCameraImageProcessingControl_Contrast                       2

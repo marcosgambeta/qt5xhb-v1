@@ -9,9 +9,7 @@
 #ifndef QDATE_CH
 #define QDATE_CH
 
-/*
-enum QDate::MonthNameType
-*/
+// enum QDate::MonthNameType
 #define QDate_DateFormat                                             0
 #define QDate_StandaloneFormat                                       1
 

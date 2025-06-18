@@ -9,10 +9,8 @@
 #ifndef QDOCKWIDGET_CH
 #define QDOCKWIDGET_CH
 
-/*
-enum QDockWidget::DockWidgetFeature
-flags QDockWidget::DockWidgetFeatures
-*/
+// enum QDockWidget::DockWidgetFeature
+// flags QDockWidget::DockWidgetFeatures
 #define QDockWidget_DockWidgetClosable                               0x01
 #define QDockWidget_DockWidgetMovable                                0x02
 #define QDockWidget_DockWidgetFloatable                              0x04

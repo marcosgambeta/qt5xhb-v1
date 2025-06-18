@@ -9,10 +9,8 @@
 #ifndef QEVENTLOOP_CH
 #define QEVENTLOOP_CH
 
-/*
-enum QEventLoop::ProcessEventsFlag
-flags QEventLoop::ProcessEventsFlags
-*/
+// enum QEventLoop::ProcessEventsFlag
+// flags QEventLoop::ProcessEventsFlags
 #define QEventLoop_AllEvents                                         0x00
 #define QEventLoop_ExcludeUserInputEvents                            0x01
 #define QEventLoop_ExcludeSocketNotifiers                            0x02

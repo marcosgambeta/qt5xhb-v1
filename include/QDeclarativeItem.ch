@@ -9,9 +9,7 @@
 #ifndef QDECLARATIVEITEM_CH
 #define QDECLARATIVEITEM_CH
 
-/*
-enum QDeclarativeItem::TransformOrigin
-*/
+// enum QDeclarativeItem::TransformOrigin
 #define QDeclarativeItem_TopLeft                                     0
 #define QDeclarativeItem_Top                                         1
 #define QDeclarativeItem_TopRight                                    2

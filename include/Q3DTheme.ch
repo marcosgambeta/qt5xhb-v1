@@ -9,16 +9,12 @@
 #ifndef Q3DTHEME_CH
 #define Q3DTHEME_CH
 
-/*
-enum Q3DTheme::ColorStyle
-*/
+// enum Q3DTheme::ColorStyle
 #define Q3DTheme_ColorStyleUniform                                   0
 #define Q3DTheme_ColorStyleObjectGradient                            1
 #define Q3DTheme_ColorStyleRangeGradient                             2
 
-/*
-enum Q3DTheme::Theme
-*/
+// enum Q3DTheme::Theme
 #define Q3DTheme_ThemeQt                                             0
 #define Q3DTheme_ThemePrimaryColors                                  1
 #define Q3DTheme_ThemeDigia                                          2
