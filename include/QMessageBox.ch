@@ -9,9 +9,7 @@
 #ifndef QMESSAGEBOX_CH
 #define QMESSAGEBOX_CH
 
-/*
-enum QMessageBox::ButtonRole
-*/
+// enum QMessageBox::ButtonRole
 #define QMessageBox_InvalidRole                                      -1
 #define QMessageBox_AcceptRole                                       0
 #define QMessageBox_RejectRole                                       1
@@ -24,19 +22,15 @@ enum QMessageBox::ButtonRole
 #define QMessageBox_ApplyRole                                        8
 #define QMessageBox_NRoles                                           9
 
-/*
-enum QMessageBox::Icon
-*/
+// enum QMessageBox::Icon
 #define QMessageBox_NoIcon                                           0
 #define QMessageBox_Information                                      1
 #define QMessageBox_Warning                                          2
 #define QMessageBox_Critical                                         3
 #define QMessageBox_Question                                         4
 
-/*
-enum QMessageBox::StandardButton
-flags QMessageBox::StandardButtons
-*/
+// enum QMessageBox::StandardButton
+// flags QMessageBox::StandardButtons
 #define QMessageBox_NoButton                                         0x00000000
 #define QMessageBox_Ok                                               0x00000400
 #define QMessageBox_Save                                             0x00000800

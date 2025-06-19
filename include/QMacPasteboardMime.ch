@@ -5,9 +5,7 @@
 //
 
 
-/*
-enum QMacPasteboardMime::QMacPasteboardMimeType
-*/
+// enum QMacPasteboardMime::QMacPasteboardMimeType
 #define QMacPasteboardMime_MIME_DND                                  0x01
 #define QMacPasteboardMime_MIME_CLIP                                 0x02
 #define QMacPasteboardMime_MIME_QT_CONVERTOR                         0x04

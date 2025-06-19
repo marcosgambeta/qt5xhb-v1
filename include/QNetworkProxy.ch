@@ -9,10 +9,8 @@
 #ifndef QNETWORKPROXY_CH
 #define QNETWORKPROXY_CH
 
-/*
-enum QNetworkProxy::Capability
-flags QNetworkProxy::Capabilities
-*/
+// enum QNetworkProxy::Capability
+// flags QNetworkProxy::Capabilities
 #define QNetworkProxy_TunnelingCapability                            0x0001
 #define QNetworkProxy_ListeningCapability                            0x0002
 #define QNetworkProxy_UdpTunnelingCapability                         0x0004
@@ -21,9 +19,7 @@ flags QNetworkProxy::Capabilities
 #define QNetworkProxy_SctpTunnelingCapability                        0x00020
 #define QNetworkProxy_SctpListeningCapability                        0x00040
 
-/*
-enum QNetworkProxy::ProxyType
-*/
+// enum QNetworkProxy::ProxyType
 #define QNetworkProxy_DefaultProxy                                   0
 #define QNetworkProxy_Socks5Proxy                                    1
 #define QNetworkProxy_NoProxy                                        2

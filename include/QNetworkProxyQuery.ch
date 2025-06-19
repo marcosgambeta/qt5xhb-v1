@@ -9,9 +9,7 @@
 #ifndef QNETWORKPROXYQUERY_CH
 #define QNETWORKPROXYQUERY_CH
 
-/*
-enum QNetworkProxyQuery::QueryType
-*/
+// enum QNetworkProxyQuery::QueryType
 #define QNetworkProxyQuery_TcpSocket                                 0
 #define QNetworkProxyQuery_UdpSocket                                 1
 #define QNetworkProxyQuery_SctpSocket                                2

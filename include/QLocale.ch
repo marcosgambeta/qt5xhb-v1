@@ -9,9 +9,7 @@
 #ifndef QLOCALE_CH
 #define QLOCALE_CH
 
-/*
-enum QLocale::Country
-*/
+// enum QLocale::Country
 #define QLocale_AnyCountry                                           0
 #define QLocale_Afghanistan                                          1
 #define QLocale_Albania                                              2
@@ -260,23 +258,17 @@ enum QLocale::Country
 #define QLocale_SaintMartin                                          245
 #define QLocale_LatinAmericaAndTheCaribbean                          246
 
-/*
-enum QLocale::CurrencySymbolFormat
-*/
+// enum QLocale::CurrencySymbolFormat
 #define QLocale_CurrencyIsoCode                                      0
 #define QLocale_CurrencySymbol                                       1
 #define QLocale_CurrencyDisplayName                                  2
 
-/*
-enum QLocale::FormatType
-*/
+// enum QLocale::FormatType
 #define QLocale_LongFormat                                           0
 #define QLocale_ShortFormat                                          1
 #define QLocale_NarrowFormat                                         2
 
-/*
-enum QLocale::Language
-*/
+// enum QLocale::Language
 #define QLocale_AnyLanguage                                          0
 #define QLocale_C                                                    1
 #define QLocale_Abkhazian                                            2
@@ -499,28 +491,20 @@ enum QLocale::Language
 #define QLocale_KoyraboroSenni                                       213
 #define QLocale_Shambala                                             214
 
-/*
-enum QLocale::MeasurementSystem
-*/
+// enum QLocale::MeasurementSystem
 #define QLocale_MetricSystem                                         0
 #define QLocale_ImperialSystem                                       1
 
-/*
-enum QLocale::NumberOption
-flags QLocale::NumberOptions
-*/
+// enum QLocale::NumberOption
+// flags QLocale::NumberOptions
 #define QLocale_OmitGroupSeparator                                   0x01
 #define QLocale_RejectGroupSeparator                                 0x02
 
-/*
-enum QLocale::QuotationStyle
-*/
+// enum QLocale::QuotationStyle
 #define QLocale_StandardQuotation                                    0
 #define QLocale_AlternateQuotation                                   1
 
-/*
-enum QLocale::Script
-*/
+// enum QLocale::Script
 #define QLocale_AnyScript                                            0
 #define QLocale_ArabicScript                                         1
 #define QLocale_CyrillicScript                                       2

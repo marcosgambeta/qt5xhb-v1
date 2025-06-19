@@ -9,16 +9,12 @@
 #ifndef QMEDIAPLAYER_CH
 #define QMEDIAPLAYER_CH
 
-/*
-enum QMediaPlayer::State
-*/
+// enum QMediaPlayer::State
 #define QMediaPlayer_StoppedState                                    0
 #define QMediaPlayer_PlayingState                                    1
 #define QMediaPlayer_PausedState                                     2
 
-/*
-enum QMediaPlayer::MediaStatus
-*/
+// enum QMediaPlayer::MediaStatus
 #define QMediaPlayer_UnknownMediaStatus                              0
 #define QMediaPlayer_NoMedia                                         1
 #define QMediaPlayer_LoadingMedia                                    2
@@ -29,17 +25,13 @@ enum QMediaPlayer::MediaStatus
 #define QMediaPlayer_EndOfMedia                                      7
 #define QMediaPlayer_InvalidMedia                                    8
 
-/*
-enum QMediaPlayer::Flag
-flags QMediaPlayer::Flags
-*/
+// enum QMediaPlayer::Flag
+// flags QMediaPlayer::Flags
 #define QMediaPlayer_LowLatency                                      0x01
 #define QMediaPlayer_StreamPlayback                                  0x02
 #define QMediaPlayer_VideoSurface                                    0x04
 
-/*
-enum QMediaPlayer::Error
-*/
+// enum QMediaPlayer::Error
 #define QMediaPlayer_NoError                                         0
 #define QMediaPlayer_ResourceError                                   1
 #define QMediaPlayer_FormatError                                     2

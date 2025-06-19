@@ -9,9 +9,7 @@
 #ifndef QMODBUSSERVER_CH
 #define QMODBUSSERVER_CH
 
-/*
-enum QModbusServer::Option
-*/
+// enum QModbusServer::Option
 #define QModbusServer_DiagnosticRegister                             0
 #define QModbusServer_ExceptionStatusOffset                          1
 #define QModbusServer_DeviceBusy                                     2

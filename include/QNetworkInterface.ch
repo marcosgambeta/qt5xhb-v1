@@ -9,10 +9,8 @@
 #ifndef QNETWORKINTERFACE_CH
 #define QNETWORKINTERFACE_CH
 
-/*
-enum QNetworkInterface::InterfaceFlag
-flags QNetworkInterface::InterfaceFlags
-*/
+// enum QNetworkInterface::InterfaceFlag
+// flags QNetworkInterface::InterfaceFlags
 #define QNetworkInterface_IsUp                                       0x1
 #define QNetworkInterface_IsRunning                                  0x2
 #define QNetworkInterface_CanBroadcast                               0x4

@@ -9,10 +9,8 @@
 #ifndef QLOCATION_CH
 #define QLOCATION_CH
 
-/*
-enum QLocation::Visibility
-flags QLocation::VisibilityScope
-*/
+// enum QLocation::Visibility
+// flags QLocation::VisibilityScope
 #define QLocation_UnspecifiedVisibility                              0x00
 #define QLocation_DeviceVisibility                                   0x01
 #define QLocation_PrivateVisibility                                  0x02

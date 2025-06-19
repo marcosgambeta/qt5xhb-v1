@@ -9,9 +9,7 @@
 #ifndef QMEDIASTREAMSCONTROL_CH
 #define QMEDIASTREAMSCONTROL_CH
 
-/*
-enum QMediaStreamsControl::StreamType
-*/
+// enum QMediaStreamsControl::StreamType
 #define QMediaStreamsControl_UnknownStream                           0
 #define QMediaStreamsControl_VideoStream                             1
 #define QMediaStreamsControl_AudioStream                             2

@@ -9,24 +9,18 @@
 #ifndef QMEDIARECORDER_CH
 #define QMEDIARECORDER_CH
 
-/*
-enum QMediaRecorder::Error
-*/
+// enum QMediaRecorder::Error
 #define QMediaRecorder_NoError                                       0
 #define QMediaRecorder_ResourceError                                 1
 #define QMediaRecorder_FormatError                                   2
 #define QMediaRecorder_OutOfSpaceError                               3
 
-/*
-enum QMediaRecorder::State
-*/
+// enum QMediaRecorder::State
 #define QMediaRecorder_StoppedState                                  0
 #define QMediaRecorder_RecordingState                                1
 #define QMediaRecorder_PausedState                                   2
 
-/*
-enum QMediaRecorder::Status
-*/
+// enum QMediaRecorder::Status
 #define QMediaRecorder_UnavailableStatus                             0
 #define QMediaRecorder_UnloadedStatus                                1
 #define QMediaRecorder_LoadingStatus                                 2

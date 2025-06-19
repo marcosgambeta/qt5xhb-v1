@@ -9,9 +9,7 @@
 #ifndef QNETWORKSESSION_CH
 #define QNETWORKSESSION_CH
 
-/*
-enum QNetworkSession::State
-*/
+// enum QNetworkSession::State
 #define QNetworkSession_Invalid                                      0
 #define QNetworkSession_NotAvailable                                 1
 #define QNetworkSession_Connecting                                   2
@@ -20,19 +18,15 @@ enum QNetworkSession::State
 #define QNetworkSession_Disconnected                                 5
 #define QNetworkSession_Roaming                                      6
 
-/*
-enum QNetworkSession::SessionError
-*/
+// enum QNetworkSession::SessionError
 #define QNetworkSession_UnknownSessionError                          0
 #define QNetworkSession_SessionAbortedError                          1
 #define QNetworkSession_RoamingError                                 2
 #define QNetworkSession_OperationNotSupportedError                   3
 #define QNetworkSession_InvalidConfigurationError                    4
 
-/*
-enum QNetworkSession::UsagePolicy
-flags QNetworkSession::UsagePolicies
-*/
+// enum QNetworkSession::UsagePolicy
+// flags QNetworkSession::UsagePolicies
 #define QNetworkSession_NoPolicy                                     0
 #define QNetworkSession_NoBackgroundTrafficPolicy                    1
 

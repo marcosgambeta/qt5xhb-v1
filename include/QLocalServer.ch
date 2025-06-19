@@ -9,10 +9,8 @@
 #ifndef QLOCALSERVER_CH
 #define QLOCALSERVER_CH
 
-/*
-enum QLocalServer::SocketOption
-flags QLocalServer::SocketOptions
-*/
+// enum QLocalServer::SocketOption
+// flags QLocalServer::SocketOptions
 #define QLocalServer_NoOptions                                       0x0
 #define QLocalServer_UserAccessOption                                0x01
 #define QLocalServer_GroupAccessOption                               0x2

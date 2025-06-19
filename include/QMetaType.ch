@@ -9,9 +9,7 @@
 #ifndef QMETATYPE_CH
 #define QMETATYPE_CH
 
-/*
-enum QMetaType::ExtensionFlag
-*/
+// enum QMetaType::ExtensionFlag
 #define QMetaType_NoExtensionFlags                                   0
 #define QMetaType_CreateEx                                           0x1
 #define QMetaType_DestroyEx                                          0x2
@@ -24,9 +22,7 @@ enum QMetaType::ExtensionFlag
 #define QMetaType_FlagsEx                                            0x100
 #define QMetaType_MetaObjectEx                                       0x200
 
-/*
-enum QMetaType::Type
-*/
+// enum QMetaType::Type
 #define QMetaType_UnknownType                                        0
 #define QMetaType_Bool                                               1
 #define QMetaType_Int                                                2
@@ -110,9 +106,7 @@ enum QMetaType::Type
 #define QMetaType_HighestInternalId                                  QMetaType_LastWidgetsType
 #define QMetaType_QReal                                              //sizeof(qreal) == sizeof(double) ? Double : Float
 
-/*
-enum QMetaType::TypeFlag
-*/
+// enum QMetaType::TypeFlag
 #define QMetaType_NeedsConstruction                                  0x1
 #define QMetaType_NeedsDestruction                                   0x2
 #define QMetaType_MovableType                                        0x4

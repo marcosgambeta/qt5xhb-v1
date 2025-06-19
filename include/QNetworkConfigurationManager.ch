@@ -9,10 +9,8 @@
 #ifndef QNETWORKCONFIGURATIONMANAGER_CH
 #define QNETWORKCONFIGURATIONMANAGER_CH
 
-/*
-enum QNetworkConfigurationManager::Capability
-flags QNetworkConfigurationManager::Capabilities
-*/
+// enum QNetworkConfigurationManager::Capability
+// flags QNetworkConfigurationManager::Capabilities
 #define QNetworkConfigurationManager_CanStartAndStopInterfaces       0x00000001
 #define QNetworkConfigurationManager_DirectConnectionRouting         0x00000002
 #define QNetworkConfigurationManager_SystemSessionSupport            0x00000004

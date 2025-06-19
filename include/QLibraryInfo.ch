@@ -9,9 +9,7 @@
 #ifndef QLIBRARYINFO_CH
 #define QLIBRARYINFO_CH
 
-/*
-enum QLibraryInfo::LibraryLocation
-*/
+// enum QLibraryInfo::LibraryLocation
 #define QLibraryInfo_PrefixPath                                      0
 #define QLibraryInfo_DocumentationPath                               1
 #define QLibraryInfo_HeadersPath                                     2
@@ -36,9 +34,7 @@ enum QLibraryInfo::LibraryLocation
 #define QLibraryInfo_LastHostPath                                    QLibraryInfo_HostSpecPath
 #define QLibraryInfo_SettingsPath                                    100
 
-/*
-enum QLibraryInfo::PathGroup
-*/
+// enum QLibraryInfo::PathGroup
 #define QLibraryInfo_FinalPaths                                      0
 #define QLibraryInfo_EffectivePaths                                  1
 #define QLibraryInfo_EffectiveSourcePaths                            2

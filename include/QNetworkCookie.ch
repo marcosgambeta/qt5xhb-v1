@@ -9,9 +9,7 @@
 #ifndef QNETWORKCOOKIE_CH
 #define QNETWORKCOOKIE_CH
 
-/*
-enum QNetworkCookie::RawForm
-*/
+// enum QNetworkCookie::RawForm
 #define QNetworkCookie_NameAndValueOnly                              0
 #define QNetworkCookie_Full                                          1
 

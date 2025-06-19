@@ -9,9 +9,7 @@
 #ifndef QNETWORKREQUEST_CH
 #define QNETWORKREQUEST_CH
 
-/*
-enum QNetworkRequest::Attribute
-*/
+// enum QNetworkRequest::Attribute
 #define QNetworkRequest_HttpStatusCodeAttribute                      0
 #define QNetworkRequest_HttpReasonPhraseAttribute                    1
 #define QNetworkRequest_RedirectionTargetAttribute                   2
@@ -41,17 +39,13 @@ enum QNetworkRequest::Attribute
 #define QNetworkRequest_User                                         1000
 #define QNetworkRequest_UserMax                                      32767
 
-/*
-enum QNetworkRequest::CacheLoadControl
-*/
+// enum QNetworkRequest::CacheLoadControl
 #define QNetworkRequest_AlwaysNetwork                                0
 #define QNetworkRequest_PreferNetwork                                1
 #define QNetworkRequest_PreferCache                                  2
 #define QNetworkRequest_AlwaysCache                                  3
 
-/*
-enum QNetworkRequest::KnownHeaders
-*/
+// enum QNetworkRequest::KnownHeaders
 #define QNetworkRequest_ContentTypeHeader                            0
 #define QNetworkRequest_ContentLengthHeader                          1
 #define QNetworkRequest_LocationHeader                               2
@@ -62,22 +56,16 @@ enum QNetworkRequest::KnownHeaders
 #define QNetworkRequest_UserAgentHeader                              7
 #define QNetworkRequest_ServerHeader                                 8
 
-/*
-enum QNetworkRequest::LoadControl
-*/
+// enum QNetworkRequest::LoadControl
 #define QNetworkRequest_Automatic                                    0
 #define QNetworkRequest_Manual                                       1
 
-/*
-enum QNetworkRequest::Priority
-*/
+// enum QNetworkRequest::Priority
 #define QNetworkRequest_HighPriority                                 1
 #define QNetworkRequest_NormalPriority                               3
 #define QNetworkRequest_LowPriority                                  5
 
-/*
-enum QNetworkRequest::RedirectPolicy
-*/
+// enum QNetworkRequest::RedirectPolicy
 #define QNetworkRequest_ManualRedirectPolicy                         0
 #define QNetworkRequest_NoLessSafeRedirectPolicy                     1
 #define QNetworkRequest_SameOriginRedirectPolicy                     2

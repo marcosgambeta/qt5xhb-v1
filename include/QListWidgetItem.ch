@@ -9,9 +9,7 @@
 #ifndef QLISTWIDGETITEM_CH
 #define QLISTWIDGETITEM_CH
 
-/*
-enum QListWidgetItem::ItemType
-*/
+// enum QListWidgetItem::ItemType
 #define QListWidgetItem_Type                                         0
 #define QListWidgetItem_UserType                                     1000
 

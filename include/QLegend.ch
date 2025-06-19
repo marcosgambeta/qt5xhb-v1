@@ -9,9 +9,7 @@
 #ifndef QLEGEND_CH
 #define QLEGEND_CH
 
-/*
-enum QLegend::MarkerShape
-*/
+// enum QLegend::MarkerShape
 #define QLegend_MarkerShapeDefault                                   0
 #define QLegend_MarkerShapeRectangle                                 1
 #define QLegend_MarkerShapeCircle                                    2

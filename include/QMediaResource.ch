@@ -9,9 +9,7 @@
 #ifndef QMEDIARESOURCE_CH
 #define QMEDIARESOURCE_CH
 
-/*
-enum QMediaResource::Property
-*/
+// enum QMediaResource::Property
 #define QMediaResource_Url                                           0
 #define QMediaResource_Request                                       1
 #define QMediaResource_MimeType                                      2

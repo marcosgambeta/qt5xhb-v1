@@ -9,9 +9,7 @@
 #ifndef QMODBUSDEVICE_CH
 #define QMODBUSDEVICE_CH
 
-/*
-enum QModbusDevice::Error
-*/
+// enum QModbusDevice::Error
 #define QModbusDevice_NoError                                        0
 #define QModbusDevice_ReadError                                      1
 #define QModbusDevice_WriteError                                     2
@@ -22,17 +20,13 @@ enum QModbusDevice::Error
 #define QModbusDevice_ReplyAbortedError                              7
 #define QModbusDevice_UnknownError                                   8
 
-/*
-enum QModbusDevice::State
-*/
+// enum QModbusDevice::State
 #define QModbusDevice_UnconnectedState                               0
 #define QModbusDevice_ConnectingState                                1
 #define QModbusDevice_ConnectedState                                 2
 #define QModbusDevice_ClosingState                                   3
 
-/*
-enum QModbusDevice::ConnectionParameter
-*/
+// enum QModbusDevice::ConnectionParameter
 #define QModbusDevice_SerialPortNameParameter                        0
 #define QModbusDevice_SerialParityParameter                          1
 #define QModbusDevice_SerialBaudRateParameter                        2

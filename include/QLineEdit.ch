@@ -9,15 +9,11 @@
 #ifndef QLINEEDIT_CH
 #define QLINEEDIT_CH
 
-/*
-enum QLineEdit::ActionPosition
-*/
+// enum QLineEdit::ActionPosition
 #define QLineEdit_LeadingPosition                                    0
 #define QLineEdit_TrailingPosition                                   1
 
-/*
-enum QLineEdit::EchoMode
-*/
+// enum QLineEdit::EchoMode
 #define QLineEdit_Normal                                             0
 #define QLineEdit_NoEcho                                             1
 #define QLineEdit_Password                                           2

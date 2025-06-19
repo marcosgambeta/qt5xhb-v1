@@ -9,19 +9,15 @@
 #ifndef QMEDIASERVICEPROVIDERHINT_CH
 #define QMEDIASERVICEPROVIDERHINT_CH
 
-/*
-enum QMediaServiceProviderHint::Type
-*/
+// enum QMediaServiceProviderHint::Type
 #define QMediaServiceProviderHint_Null                               0
 #define QMediaServiceProviderHint_ContentType                        1
 #define QMediaServiceProviderHint_Device                             2
 #define QMediaServiceProviderHint_SupportedFeatures                  3
 #define QMediaServiceProviderHint_CameraPosition                     4
 
-/*
-enum QMediaServiceProviderHint::Feature
-flags QMediaServiceProviderHint::Features
-*/
+// enum QMediaServiceProviderHint::Feature
+// flags QMediaServiceProviderHint::Features
 #define QMediaServiceProviderHint_LowLatencyPlayback                 0x01
 #define QMediaServiceProviderHint_RecordingSupport                   0x02
 #define QMediaServiceProviderHint_StreamPlayback                     0x04

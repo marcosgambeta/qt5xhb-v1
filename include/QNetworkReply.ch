@@ -9,9 +9,7 @@
 #ifndef QNETWORKREPLY_CH
 #define QNETWORKREPLY_CH
 
-/*
-enum QNetworkReply::NetworkError
-*/
+// enum QNetworkReply::NetworkError
 #define QNetworkReply_NoError                                        0
 #define QNetworkReply_ConnectionRefusedError                         1
 #define QNetworkReply_RemoteHostClosedError                          2

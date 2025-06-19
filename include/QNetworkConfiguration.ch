@@ -9,34 +9,26 @@
 #ifndef QNETWORKCONFIGURATION_CH
 #define QNETWORKCONFIGURATION_CH
 
-/*
-enum QNetworkConfiguration::Type
-*/
+// enum QNetworkConfiguration::Type
 #define QNetworkConfiguration_InternetAccessPoint                    0
 #define QNetworkConfiguration_ServiceNetwork                         1
 #define QNetworkConfiguration_UserChoice                             2
 #define QNetworkConfiguration_Invalid                                3
 
-/*
-enum QNetworkConfiguration::Purpose
-*/
+// enum QNetworkConfiguration::Purpose
 #define QNetworkConfiguration_UnknownPurpose                         0
 #define QNetworkConfiguration_PublicPurpose                          1
 #define QNetworkConfiguration_PrivatePurpose                         2
 #define QNetworkConfiguration_ServiceSpecificPurpose                 3
 
-/*
-enum QNetworkConfiguration::StateFlag
-flags QNetworkConfiguration::StateFlags
-*/
+// enum QNetworkConfiguration::StateFlag
+// flags QNetworkConfiguration::StateFlags
 #define QNetworkConfiguration_Undefined                              0x0000001
 #define QNetworkConfiguration_Defined                                0x0000002
 #define QNetworkConfiguration_Discovered                             0x0000006
 #define QNetworkConfiguration_Active                                 0x000000e
 
-/*
-enum QNetworkConfiguration::BearerType
-*/
+// enum QNetworkConfiguration::BearerType
 #define QNetworkConfiguration_BearerUnknown                          0
 #define QNetworkConfiguration_BearerEthernet                         1
 #define QNetworkConfiguration_BearerWLAN                             2

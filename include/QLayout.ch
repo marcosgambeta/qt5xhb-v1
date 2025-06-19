@@ -9,9 +9,7 @@
 #ifndef QLAYOUT_CH
 #define QLAYOUT_CH
 
-/*
-enum QLayout::SizeConstraint
-*/
+// enum QLayout::SizeConstraint
 #define QLayout_SetDefaultConstraint                                 0
 #define QLayout_SetFixedSize                                         3
 #define QLayout_SetMinimumSize                                       2

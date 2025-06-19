@@ -9,9 +9,7 @@
 #ifndef QLEGENDMARKER_CH
 #define QLEGENDMARKER_CH
 
-/*
-enum QLegendMarker::LegendMarkerType
-*/
+// enum QLegendMarker::LegendMarkerType
 #define QLegendMarker_LegendMarkerTypeArea                           0
 #define QLegendMarker_LegendMarkerTypeBar                            1
 #define QLegendMarker_LegendMarkerTypePie                            2

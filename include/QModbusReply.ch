@@ -9,9 +9,7 @@
 #ifndef QMODBUSREPLY_CH
 #define QMODBUSREPLY_CH
 
-/*
-enum QModbusReply::ReplyType
-*/
+// enum QModbusReply::ReplyType
 #define QModbusReply_Raw                                             0
 #define QModbusReply_Common                                          1
 
