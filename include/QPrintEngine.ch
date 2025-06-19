@@ -9,9 +9,7 @@
 #ifndef QPRINTENGINE_CH
 #define QPRINTENGINE_CH
 
-/*
-enum QPrintEngine::PrintEnginePropertyKey
-*/
+// enum QPrintEngine::PrintEnginePropertyKey
 #define QPrintEngine_PPK_CollateCopies                               0
 #define QPrintEngine_PPK_ColorMode                                   1
 #define QPrintEngine_PPK_Creator                                     2

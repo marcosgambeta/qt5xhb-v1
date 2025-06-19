@@ -9,9 +9,7 @@
 #ifndef QPAINTERPATH_CH
 #define QPAINTERPATH_CH
 
-/*
-enum QPainterPath::ElementType
-*/
+// enum QPainterPath::ElementType
 #define QPainterPath_MoveToElement                                   0
 #define QPainterPath_LineToElement                                   1
 #define QPainterPath_CurveToElement                                  2

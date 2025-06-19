@@ -9,9 +9,7 @@
 #ifndef QPIESLICE_CH
 #define QPIESLICE_CH
 
-/*
-enum QPieSlice::LabelPosition
-*/
+// enum QPieSlice::LabelPosition
 #define QPieSlice_LabelOutside                                       0
 #define QPieSlice_LabelInsideHorizontal                              1
 #define QPieSlice_LabelInsideTangential                              2

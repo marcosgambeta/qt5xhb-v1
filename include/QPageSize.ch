@@ -9,9 +9,7 @@
 #ifndef QPAGESIZE_CH
 #define QPAGESIZE_CH
 
-/*
-enum QPageSize::PageSizeId
-*/
+// enum QPageSize::PageSizeId
 #define QPageSize_A4                                                 0
 #define QPageSize_B5                                                 1
 #define QPageSize_Letter                                             2
@@ -140,9 +138,7 @@ enum QPageSize::PageSizeId
 #define QPageSize_EnvelopeDL                                         QPageSize_DLE          // 125
 #define QPageSize_Envelope10                                         QPageSize_Comm10E      // 126
 
-/*
-enum QPageSize::Unit
-*/
+// enum QPageSize::Unit
 #define QPageSize_Millimeter                                         0
 #define QPageSize_Point                                              1
 #define QPageSize_Inch                                               2
@@ -150,9 +146,7 @@ enum QPageSize::Unit
 #define QPageSize_Didot                                              4
 #define QPageSize_Cicero                                             5
 
-/*
-enum QPageSize::SizeMatchPolicy
-*/
+// enum QPageSize::SizeMatchPolicy
 #define QPageSize_FuzzyMatch                                         0
 #define QPageSize_FuzzyOrientationMatch                              1
 #define QPageSize_ExactMatch                                         2

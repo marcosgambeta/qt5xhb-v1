@@ -9,9 +9,7 @@
 #ifndef QPLACEREPLY_CH
 #define QPLACEREPLY_CH
 
-/*
-enum QPlaceReply::Error
-*/
+// enum QPlaceReply::Error
 #define QPlaceReply_NoError                                          0
 #define QPlaceReply_PlaceDoesNotExistError                           1
 #define QPlaceReply_CategoryDoesNotExistError                        2
@@ -23,9 +21,7 @@ enum QPlaceReply::Error
 #define QPlaceReply_CancelError                                      8
 #define QPlaceReply_UnknownError                                     9
 
-/*
-enum QPlaceReply::Type
-*/
+// enum QPlaceReply::Type
 #define QPlaceReply_Reply                                            0
 #define QPlaceReply_DetailsReply                                     1
 #define QPlaceReply_SearchReply                                      2

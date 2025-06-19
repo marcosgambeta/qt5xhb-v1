@@ -9,17 +9,13 @@
 #ifndef QPALETTE_CH
 #define QPALETTE_CH
 
-/*
-enum QPalette::ColorGroup
-*/
+// enum QPalette::ColorGroup
 #define QPalette_Disabled                                            1
 #define QPalette_Active                                              0
 #define QPalette_Inactive                                            2
 #define QPalette_Normal                                              QPalette_Active
 
-/*
-enum QPalette::ColorRole
-*/
+// enum QPalette::ColorRole
 #define QPalette_Window                                              10
 #define QPalette_Background                                          QPalette_Window
 #define QPalette_WindowText                                          0

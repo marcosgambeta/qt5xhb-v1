@@ -9,9 +9,7 @@
 #ifndef QOPENGLTEXTURE_CH
 #define QOPENGLTEXTURE_CH
 
-/*
-enum QOpenGLTexture::Target
-*/
+// enum QOpenGLTexture::Target
 #define QOpenGLTexture_Target1D                                      0x0DE0 // GL_TEXTURE_1D
 #define QOpenGLTexture_Target1DArray                                 0x8C18 // GL_TEXTURE_1D_ARRAY
 #define QOpenGLTexture_Target2D                                      0x0DE1 // GL_TEXTURE_2D
@@ -24,9 +22,7 @@ enum QOpenGLTexture::Target
 #define QOpenGLTexture_TargetRectangle                               0x84F5 // GL_TEXTURE_RECTANGLE
 #define QOpenGLTexture_TargetBuffer                                  0x8C2A // GL_TEXTURE_BUFFER
 
-/*
-enum QOpenGLTexture::BindingTarget
-*/
+// enum QOpenGLTexture::BindingTarget
 #define QOpenGLTexture_BindingTarget1D                               0x8068 // GL_TEXTURE_BINDING_1D
 #define QOpenGLTexture_BindingTarget1DArray                          0x8C1C // GL_TEXTURE_BINDING_1D_ARRAY
 #define QOpenGLTexture_BindingTarget2D                               0x8069 // GL_TEXTURE_BINDING_2D
@@ -39,21 +35,15 @@ enum QOpenGLTexture::BindingTarget
 #define QOpenGLTexture_BindingTargetRectangle                        0x84F6 // GL_TEXTURE_BINDING_RECTANGLE
 #define QOpenGLTexture_BindingTargetBuffer                           0x8C2C // GL_TEXTURE_BINDING_BUFFER
 
-/*
-enum QOpenGLTexture::MipMapGeneration
-*/
+// enum QOpenGLTexture::MipMapGeneration
 #define QOpenGLTexture_GenerateMipMaps                               0
 #define QOpenGLTexture_DontGenerateMipMaps                           1
 
-/*
-enum QOpenGLTexture::TextureUnitReset
-*/
+// enum QOpenGLTexture::TextureUnitReset
 #define QOpenGLTexture_ResetTextureUnit                              0
 #define QOpenGLTexture_DontResetTextureUnit                          1
 
-/*
-enum QOpenGLTexture::TextureFormat
-*/
+// enum QOpenGLTexture::TextureFormat
 #define QOpenGLTexture_NoFormat                                      0      // GL_NONE
 #define QOpenGLTexture_R8_UNorm                                      0x8229 // GL_R8
 #define QOpenGLTexture_RG8_UNorm                                     0x822B // GL_RG8
@@ -141,9 +131,7 @@ enum QOpenGLTexture::TextureFormat
 #define QOpenGLTexture_LuminanceFormat                               0x1909 // GL_LUMINANCE
 #define QOpenGLTexture_LuminanceAlphaFormat                          0x190A
 
-/*
-enum QOpenGLTexture::TextureFormatClass
-*/
+// enum QOpenGLTexture::TextureFormatClass
 #define QOpenGLTexture_NoFormatClass                                 0
 #define QOpenGLTexture_FormatClass_128Bit                            1
 #define QOpenGLTexture_FormatClass_96Bit                             2
@@ -163,9 +151,7 @@ enum QOpenGLTexture::TextureFormatClass
 #define QOpenGLTexture_FormatClass_S3TC_DXT5_RGBA                    16
 #define QOpenGLTexture_FormatClass_Unique                            17
 
-/*
-enum QOpenGLTexture::CubeMapFace
-*/
+// enum QOpenGLTexture::CubeMapFace
 #define QOpenGLTexture_CubeMapPositiveX                              0x8515 // GL_TEXTURE_CUBE_MAP_POSITIVE_X
 #define QOpenGLTexture_CubeMapNegativeX                              0x8516 // GL_TEXTURE_CUBE_MAP_NEGATIVE_X
 #define QOpenGLTexture_CubeMapPositiveY                              0x8517 // GL_TEXTURE_CUBE_MAP_POSITIVE_Y
@@ -173,9 +159,7 @@ enum QOpenGLTexture::CubeMapFace
 #define QOpenGLTexture_CubeMapPositiveZ                              0x8519 // GL_TEXTURE_CUBE_MAP_POSITIVE_Z
 #define QOpenGLTexture_CubeMapNegativeZ                              0x851A // GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
 
-/*
-enum QOpenGLTexture::PixelFormat
-*/
+// enum QOpenGLTexture::PixelFormat
 #define QOpenGLTexture_NoSourceFormat                                0      // GL_NONE
 #define QOpenGLTexture_Red                                           0x1903 // GL_RED
 #define QOpenGLTexture_RG                                            0x8227 // GL_RG
@@ -195,9 +179,7 @@ enum QOpenGLTexture::PixelFormat
 #define QOpenGLTexture_Luminance                                     0x1909 // GL_LUMINANCE
 #define QOpenGLTexture_LuminanceAlpha                                0x190A // GL_LUMINANCE_ALPHA
 
-/*
-enum QOpenGLTexture::PixelType
-*/
+// enum QOpenGLTexture::PixelType
 #define QOpenGLTexture_NoPixelType                                   0      // GL_NONE
 #define QOpenGLTexture_Int8                                          0x1400 // GL_BYTE
 #define QOpenGLTexture_UInt8                                         0x1401 // GL_UNSIGNED_BYTE
@@ -221,10 +203,8 @@ enum QOpenGLTexture::PixelType
 #define QOpenGLTexture_UInt32_RGB10A2                                0x8036 // GL_UNSIGNED_INT_10_10_10_2
 #define QOpenGLTexture_UInt32_RGB10A2_Rev                            0x8368 // GL_UNSIGNED_INT_2_10_10_10_REV
 
-/*
-enum QOpenGLTexture::Feature
-flags QOpenGLTexture::Features
-*/
+// enum QOpenGLTexture::Feature
+// flags QOpenGLTexture::Features
 #define QOpenGLTexture_ImmutableStorage                              0x00000001
 #define QOpenGLTexture_ImmutableMultisampleStorage                   0x00000002
 #define QOpenGLTexture_TextureRectangle                              0x00000004
@@ -240,17 +220,13 @@ flags QOpenGLTexture::Features
 #define QOpenGLTexture_NPOTTextureRepeat                             0x00001000
 #define QOpenGLTexture_MaxFeatureFlag                                0x00002000
 
-/*
-enum QOpenGLTexture::SwizzleComponent
-*/
+// enum QOpenGLTexture::SwizzleComponent
 #define QOpenGLTexture_SwizzleRed                                    0x8E42 // GL_TEXTURE_SWIZZLE_R
 #define QOpenGLTexture_SwizzleGreen                                  0x8E43 // GL_TEXTURE_SWIZZLE_G
 #define QOpenGLTexture_SwizzleBlue                                   0x8E44 // GL_TEXTURE_SWIZZLE_B
 #define QOpenGLTexture_SwizzleAlpha                                  0x8E45 // GL_TEXTURE_SWIZZLE_A
 
-/*
-enum QOpenGLTexture::SwizzleValue
-*/
+// enum QOpenGLTexture::SwizzleValue
 #define QOpenGLTexture_RedValue                                      0x1903 // GL_RED
 #define QOpenGLTexture_GreenValue                                    0x1904 // GL_GREEN
 #define QOpenGLTexture_BlueValue                                     0x1905 // GL_BLUE
@@ -258,15 +234,11 @@ enum QOpenGLTexture::SwizzleValue
 #define QOpenGLTexture_ZeroValue                                     0      // GL_ZERO
 #define QOpenGLTexture_OneValue                                      1      // GL_ONE
 
-/*
-enum QOpenGLTexture::DepthStencilMode
-*/
+// enum QOpenGLTexture::DepthStencilMode
 #define QOpenGLTexture_DepthMode                                     0x1902 // GL_DEPTH_COMPONENT
 #define QOpenGLTexture_StencilMode                                   0x1901 // GL_STENCIL_INDEX
 
-/*
-enum QOpenGLTexture::Filter
-*/
+// enum QOpenGLTexture::Filter
 #define QOpenGLTexture_Nearest                                       0x2600 // GL_NEAREST
 #define QOpenGLTexture_Linear                                        0x2601 // GL_LINEAR
 #define QOpenGLTexture_NearestMipMapNearest                          0x2700 // GL_NEAREST_MIPMAP_NEAREST
@@ -274,17 +246,13 @@ enum QOpenGLTexture::Filter
 #define QOpenGLTexture_LinearMipMapNearest                           0x2701 // GL_LINEAR_MIPMAP_NEAREST
 #define QOpenGLTexture_LinearMipMapLinear                            0x2703 // GL_LINEAR_MIPMAP_LINEAR
 
-/*
-enum QOpenGLTexture::WrapMode
-*/
+// enum QOpenGLTexture::WrapMode
 #define QOpenGLTexture_Repeat                                        0x2901 // GL_REPEAT
 #define QOpenGLTexture_MirroredRepeat                                0x8370 // GL_MIRRORED_REPEAT
 #define QOpenGLTexture_ClampToEdge                                   0x812F // GL_CLAMP_TO_EDGE
 #define QOpenGLTexture_ClampToBorder                                 0x812D // GL_CLAMP_TO_BORDER
 
-/*
-enum QOpenGLTexture::CoordinateDirection
-*/
+// enum QOpenGLTexture::CoordinateDirection
 #define QOpenGLTexture_DirectionS                                    0x2802 // GL_TEXTURE_WRAP_S
 #define QOpenGLTexture_DirectionT                                    0x2803 // GL_TEXTURE_WRAP_T
 #define QOpenGLTexture_DirectionR                                    0x8072 // GL_TEXTURE_WRAP_R

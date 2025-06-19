@@ -9,16 +9,12 @@
 #ifndef QQUICKWEBENGINEPROFILE_CH
 #define QQUICKWEBENGINEPROFILE_CH
 
-/*
-enum QQuickWebEngineProfile::HttpCacheType
-*/
+// enum QQuickWebEngineProfile::HttpCacheType
 #define QQuickWebEngineProfile_MemoryHttpCache                       0
 #define QQuickWebEngineProfile_DiskHttpCache                         1
 #define QQuickWebEngineProfile_NoCache                               2
 
-/*
-enum QQuickWebEngineProfile::PersistentCookiesPolicy
-*/
+// enum QQuickWebEngineProfile::PersistentCookiesPolicy
 #define QQuickWebEngineProfile_NoPersistentCookies                   0
 #define QQuickWebEngineProfile_AllowPersistentCookies                1
 #define QQuickWebEngineProfile_ForcePersistentCookies                2

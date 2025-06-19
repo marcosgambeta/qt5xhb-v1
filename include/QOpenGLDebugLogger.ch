@@ -9,9 +9,7 @@
 #ifndef QOPENGLDEBUGLOGGER_CH
 #define QOPENGLDEBUGLOGGER_CH
 
-/*
-enum QOpenGLDebugLogger::LoggingMode
-*/
+// enum QOpenGLDebugLogger::LoggingMode
 #define QOpenGLDebugLogger_AsynchronousLogging                       0
 #define QOpenGLDebugLogger_SynchronousLogging                        1
 

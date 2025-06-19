@@ -9,9 +9,7 @@
 #ifndef QPAINTDEVICE_CH
 #define QPAINTDEVICE_CH
 
-/*
-enum QPaintDevice::PaintDeviceMetric
-*/
+// enum QPaintDevice::PaintDeviceMetric
 #define QPaintDevice_PdmWidth                                        1
 #define QPaintDevice_PdmHeight                                       2
 #define QPaintDevice_PdmWidthMM                                      3

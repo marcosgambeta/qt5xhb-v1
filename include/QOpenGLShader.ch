@@ -9,10 +9,8 @@
 #ifndef QOPENGLSHADER_CH
 #define QOPENGLSHADER_CH
 
-/*
-enum QOpenGLShader::ShaderTypeBit
-flags QOpenGLShader::ShaderType
-*/
+// enum QOpenGLShader::ShaderTypeBit
+// flags QOpenGLShader::ShaderType
 #define QOpenGLShader_Vertex                                         0x0001
 #define QOpenGLShader_Fragment                                       0x0002
 #define QOpenGLShader_Geometry                                       0x0004

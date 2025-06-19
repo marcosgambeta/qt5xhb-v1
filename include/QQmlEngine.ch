@@ -9,9 +9,7 @@
 #ifndef QQMLENGINE_CH
 #define QQMLENGINE_CH
 
-/*
-enum QQmlEngine::ObjectOwnership
-*/
+// enum QQmlEngine::ObjectOwnership
 #define QQmlEngine_CppOwnership                                      0
 #define QQmlEngine_JavaScriptOwnership                               1
 

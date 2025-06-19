@@ -9,16 +9,12 @@
 #ifndef QQMLINCUBATOR_CH
 #define QQMLINCUBATOR_CH
 
-/*
-enum QQmlIncubator::IncubationMode
-*/
+// enum QQmlIncubator::IncubationMode
 #define QQmlIncubator_Asynchronous                                   0
 #define QQmlIncubator_AsynchronousIfNested                           1
 #define QQmlIncubator_Synchronous                                    2
 
-/*
-enum QQmlIncubator::Status
-*/
+// enum QQmlIncubator::Status
 #define QQmlIncubator_Null                                           0
 #define QQmlIncubator_Ready                                          1
 #define QQmlIncubator_Loading                                        2

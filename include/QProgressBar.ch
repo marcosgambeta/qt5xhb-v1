@@ -9,9 +9,7 @@
 #ifndef QPROGRESSBAR_CH
 #define QPROGRESSBAR_CH
 
-/*
-enum QProgressBar::Direction
-*/
+// enum QProgressBar::Direction
 #define QProgressBar_TopToBottom                                     0
 #define QProgressBar_BottomToTop                                     1
 

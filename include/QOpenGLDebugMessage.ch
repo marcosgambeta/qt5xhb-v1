@@ -9,10 +9,8 @@
 #ifndef QOPENGLDEBUGMESSAGE_CH
 #define QOPENGLDEBUGMESSAGE_CH
 
-/*
-enum QOpenGLDebugMessage::Source
-flags QOpenGLDebugMessage::Sources
-*/
+// enum QOpenGLDebugMessage::Source
+// flags QOpenGLDebugMessage::Sources
 #define QOpenGLDebugMessage_InvalidSource                            0x00000000
 #define QOpenGLDebugMessage_APISource                                0x00000001
 #define QOpenGLDebugMessage_WindowSystemSource                       0x00000002
@@ -23,10 +21,8 @@ flags QOpenGLDebugMessage::Sources
 #define QOpenGLDebugMessage_LastSource                               QOpenGLDebugMessage_OtherSource
 #define QOpenGLDebugMessage_AnySource                                0xffffffff
 
-/*
-enum QOpenGLDebugMessage::Type
-flags QOpenGLDebugMessage::Types
-*/
+// enum QOpenGLDebugMessage::Type
+// flags QOpenGLDebugMessage::Types
 #define QOpenGLDebugMessage_InvalidType                              0x00000000
 #define QOpenGLDebugMessage_ErrorType                                0x00000001
 #define QOpenGLDebugMessage_DeprecatedBehaviorType                   0x00000002
@@ -40,10 +36,8 @@ flags QOpenGLDebugMessage::Types
 #define QOpenGLDebugMessage_LastType                                 QOpenGLDebugMessage_GroupPopType
 #define QOpenGLDebugMessage_AnyType                                  0xffffffff
 
-/*
-enum QOpenGLDebugMessage::Severity
-flags QOpenGLDebugMessage::Severities
-*/
+// enum QOpenGLDebugMessage::Severity
+// flags QOpenGLDebugMessage::Severities
 #define QOpenGLDebugMessage_InvalidSeverity                          0x00000000
 #define QOpenGLDebugMessage_HighSeverity                             0x00000001
 #define QOpenGLDebugMessage_MediumSeverity                           0x00000002

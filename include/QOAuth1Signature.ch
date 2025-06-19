@@ -9,9 +9,7 @@
 #ifndef QOAUTH1SIGNATURE_CH
 #define QOAUTH1SIGNATURE_CH
 
-/*
-enum class QOAuth1Signature::HttpRequestMethod
-*/
+// enum class QOAuth1Signature::HttpRequestMethod
 #define QOAuth1Signature_Head                                        1
 #define QOAuth1Signature_Get                                         2
 #define QOAuth1Signature_Put                                         3

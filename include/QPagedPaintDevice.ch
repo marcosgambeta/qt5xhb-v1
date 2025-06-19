@@ -9,9 +9,7 @@
 #ifndef QPAGEDPAINTDEVICE_CH
 #define QPAGEDPAINTDEVICE_CH
 
-/*
-enum QPagedPaintDevice::PageSize
-*/
+// enum QPagedPaintDevice::PageSize
 #define QPagedPaintDevice_A4                                         0
 #define QPagedPaintDevice_B5                                         1
 #define QPagedPaintDevice_Letter                                     2

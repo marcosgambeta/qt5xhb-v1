@@ -9,16 +9,12 @@
 #ifndef QQUICKWEBENGINESCRIPT_CH
 #define QQUICKWEBENGINESCRIPT_CH
 
-/*
-enum QQuickWebEngineScript::InjectionPoint
-*/
+// enum QQuickWebEngineScript::InjectionPoint
 #define QQuickWebEngineScript_Deferred                               0
 #define QQuickWebEngineScript_DocumentReady                          1
 #define QQuickWebEngineScript_DocumentCreation                       2
 
-/*
-enum QQuickWebEngineScript::ScriptWorldId
-*/
+// enum QQuickWebEngineScript::ScriptWorldId
 #define QQuickWebEngineScript_MainWorld                              0
 #define QQuickWebEngineScript_ApplicationWorld                       1
 #define QQuickWebEngineScript_UserWorld                              2

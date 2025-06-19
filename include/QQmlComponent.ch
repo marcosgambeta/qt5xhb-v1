@@ -9,15 +9,11 @@
 #ifndef QQMLCOMPONENT_CH
 #define QQMLCOMPONENT_CH
 
-/*
-enum QQmlComponent::CompilationMode
-*/
+// enum QQmlComponent::CompilationMode
 #define QQmlComponent_PreferSynchronous                              0
 #define QQmlComponent_Asynchronous                                   1
 
-/*
-enum QQmlComponent::Status
-*/
+// enum QQmlComponent::Status
 #define QQmlComponent_Null                                           0
 #define QQmlComponent_Ready                                          1
 #define QQmlComponent_Loading                                        2

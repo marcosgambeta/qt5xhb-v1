@@ -9,9 +9,7 @@
 #ifndef QORIENTATIONREADING_CH
 #define QORIENTATIONREADING_CH
 
-/*
-enum QOrientationReading::Orientation
-*/
+// enum QOrientationReading::Orientation
 #define QOrientationReading_Undefined                                0
 #define QOrientationReading_TopUp                                    1
 #define QOrientationReading_TopDown                                  2

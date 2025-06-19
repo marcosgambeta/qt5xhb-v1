@@ -9,24 +9,18 @@
 #ifndef QOPENGLBUFFER_CH
 #define QOPENGLBUFFER_CH
 
-/*
-enum QOpenGLBuffer::Access
-*/
+// enum QOpenGLBuffer::Access
 #define QOpenGLBuffer_ReadOnly                                       0x88B8
 #define QOpenGLBuffer_WriteOnly                                      0x88B9
 #define QOpenGLBuffer_ReadWrite                                      0x88BA
 
-/*
-enum QOpenGLBuffer::Type
-*/
+// enum QOpenGLBuffer::Type
 #define QOpenGLBuffer_VertexBuffer                                   0x8892
 #define QOpenGLBuffer_IndexBuffer                                    0x8893
 #define QOpenGLBuffer_PixelPackBuffer                                0x88EB
 #define QOpenGLBuffer_PixelUnpackBuffer                              0x88EC
 
-/*
-enum QOpenGLBuffer::UsagePattern
-*/
+// enum QOpenGLBuffer::UsagePattern
 #define QOpenGLBuffer_StreamDraw                                     0x88E0
 #define QOpenGLBuffer_StreamRead                                     0x88E1
 #define QOpenGLBuffer_StreamCopy                                     0x88E2

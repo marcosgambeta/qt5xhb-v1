@@ -9,9 +9,7 @@
 #ifndef QPLAINTEXTEDIT_CH
 #define QPLAINTEXTEDIT_CH
 
-/*
-enum QPlainTextEdit::LineWrapMode
-*/
+// enum QPlainTextEdit::LineWrapMode
 #define QPlainTextEdit_NoWrap                                        0
 #define QPlainTextEdit_WidgetWidth                                   1
 

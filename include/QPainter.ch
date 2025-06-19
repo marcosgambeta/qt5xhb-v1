@@ -9,9 +9,7 @@
 #ifndef QPAINTER_CH
 #define QPAINTER_CH
 
-/*
-enum QPainter::CompositionMode
-*/
+// enum QPainter::CompositionMode
 #define QPainter_CompositionMode_SourceOver                          0
 #define QPainter_CompositionMode_DestinationOver                     1
 #define QPainter_CompositionMode_Clear                               2
@@ -46,16 +44,12 @@ enum QPainter::CompositionMode
 #define QPainter_RasterOp_NotSourceAndDestination                    31
 #define QPainter_RasterOp_SourceAndNotDestination                    32
 
-/*
-enum QPainter::PixmapFragmentHint
-flags QPainter::PixmapFragmentHints
-*/
+// enum QPainter::PixmapFragmentHint
+// flags QPainter::PixmapFragmentHints
 #define QPainter_OpaqueHint                                          0x01
 
-/*
-enum QPainter::RenderHint
-flags QPainter::RenderHints
-*/
+// enum QPainter::RenderHint
+// flags QPainter::RenderHints
 #define QPainter_Antialiasing                                        0x01
 #define QPainter_TextAntialiasing                                    0x02
 #define QPainter_SmoothPixmapTransform                               0x04

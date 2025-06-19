@@ -9,9 +9,7 @@
 #ifndef QPLACECONTENT_CH
 #define QPLACECONTENT_CH
 
-/*
-enum QPlaceContent::Type
-*/
+// enum QPlaceContent::Type
 #define QPlaceContent_NoType                                         0
 #define QPlaceContent_ImageType                                      1
 #define QPlaceContent_ReviewType                                     2

@@ -9,10 +9,8 @@
 #ifndef QPAINTENGINE_CH
 #define QPAINTENGINE_CH
 
-/*
-enum QPaintEngine::DirtyFlag
-flags QPaintEngine::DirtyFlags
-*/
+// enum QPaintEngine::DirtyFlag
+// flags QPaintEngine::DirtyFlags
 #define QPaintEngine_DirtyPen                                        0x0001
 #define QPaintEngine_DirtyBrush                                      0x0002
 #define QPaintEngine_DirtyBrushOrigin                                0x0004
@@ -28,10 +26,8 @@ flags QPaintEngine::DirtyFlags
 #define QPaintEngine_DirtyOpacity                                    0x1000
 #define QPaintEngine_AllDirty                                        0xffff
 
-/*
-enum QPaintEngine::PaintEngineFeature
-flags QPaintEngine::PaintEngineFeatures
-*/
+// enum QPaintEngine::PaintEngineFeature
+// flags QPaintEngine::PaintEngineFeatures
 #define QPaintEngine_AlphaBlend                                      0x00000080
 #define QPaintEngine_Antialiasing                                    0x00000400
 #define QPaintEngine_BlendModes                                      0x00008000
@@ -53,17 +49,13 @@ flags QPaintEngine::PaintEngineFeatures
 #define QPaintEngine_RasterOpModes                                   0x00020000
 #define QPaintEngine_AllFeatures                                     0xffffffff
 
-/*
-enum QPaintEngine::PolygonDrawMode
-*/
+// enum QPaintEngine::PolygonDrawMode
 #define QPaintEngine_OddEvenMode                                     0
 #define QPaintEngine_WindingMode                                     1
 #define QPaintEngine_ConvexMode                                      2
 #define QPaintEngine_PolylineMode                                    3
 
-/*
-enum QPaintEngine::Type
-*/
+// enum QPaintEngine::Type
 #define QPaintEngine_X11                                             0
 #define QPaintEngine_Windows                                         1
 #define QPaintEngine_MacPrinter                                      4

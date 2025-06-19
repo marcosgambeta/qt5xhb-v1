@@ -9,19 +9,15 @@
 #ifndef QQUICKITEM_CH
 #define QQUICKITEM_CH
 
-/*
-enum QQuickItem::Flag
-flags QQuickItem::Flags
-*/
+// enum QQuickItem::Flag
+// flags QQuickItem::Flags
 #define QQuickItem_ItemClipsChildrenToShape                          0x01
 #define QQuickItem_ItemAcceptsInputMethod                            0x02
 #define QQuickItem_ItemIsFocusScope                                  0x04
 #define QQuickItem_ItemHasContents                                   0x08
 #define QQuickItem_ItemAcceptsDrops                                  0x10
 
-/*
-enum QQuickItem::TransformOrigin
-*/
+// enum QQuickItem::TransformOrigin
 #define QQuickItem_TopLeft                                           0
 #define QQuickItem_Top                                               1
 #define QQuickItem_TopRight                                          2

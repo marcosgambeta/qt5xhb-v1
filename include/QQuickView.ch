@@ -9,15 +9,11 @@
 #ifndef QQUICKVIEW_CH
 #define QQUICKVIEW_CH
 
-/*
-enum QQuickView::ResizeMode
-*/
+// enum QQuickView::ResizeMode
 #define QQuickView_SizeViewToRootObject                              0
 #define QQuickView_SizeRootObjectToView                              1
 
-/*
-enum QQuickView::Status
-*/
+// enum QQuickView::Status
 #define QQuickView_Null                                              0
 #define QQuickView_Ready                                             1
 #define QQuickView_Loading                                           2
