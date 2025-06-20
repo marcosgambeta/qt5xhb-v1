@@ -4,6 +4,9 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
+#ifndef QT5XHB_UTILS_H
+#define QT5XHB_UTILS_H
+
 #include <QtCore/QString>
 #include <QtCore/QStringList>
 #include <QtCore/QObject>
@@ -63,3 +66,5 @@ namespace Qt5xHb
   PHB_ITEM returnQWidgetObject( QWidget * ptr );
   PHB_ITEM returnQObjectObject( QObject * ptr );
 }
+
+#endif // QT5XHB_UTILS_H
