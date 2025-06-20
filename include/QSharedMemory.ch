@@ -9,15 +9,11 @@
 #ifndef QSHAREDMEMORY_CH
 #define QSHAREDMEMORY_CH
 
-/*
-enum QSharedMemory::AccessMode
-*/
+// enum QSharedMemory::AccessMode
 #define QSharedMemory_ReadOnly                                       0
 #define QSharedMemory_ReadWrite                                      1
 
-/*
-enum QSharedMemory::SharedMemoryError
-*/
+// enum QSharedMemory::SharedMemoryError
 #define QSharedMemory_NoError                                        0
 #define QSharedMemory_PermissionDenied                               1
 #define QSharedMemory_InvalidSize                                    2

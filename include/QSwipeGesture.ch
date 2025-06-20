@@ -9,9 +9,7 @@
 #ifndef QSWIPEGESTURE_CH
 #define QSWIPEGESTURE_CH
 
-/*
-enum QSwipeGesture::SwipeDirection
-*/
+// enum QSwipeGesture::SwipeDirection
 #define QSwipeGesture_NoDirection                                    0
 #define QSwipeGesture_Left                                           1
 #define QSwipeGesture_Right                                          2

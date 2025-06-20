@@ -9,9 +9,7 @@
 #ifndef QSTACKEDLAYOUT_CH
 #define QSTACKEDLAYOUT_CH
 
-/*
-enum QStackedLayout::StackingMode
-*/
+// enum QStackedLayout::StackingMode
 #define QStackedLayout_StackOne                                      0
 #define QStackedLayout_StackAll                                      1
 

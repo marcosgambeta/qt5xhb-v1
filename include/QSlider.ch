@@ -9,9 +9,7 @@
 #ifndef QSLIDER_CH
 #define QSLIDER_CH
 
-/*
-enum QSlider::TickPosition
-*/
+// enum QSlider::TickPosition
 #define QSlider_NoTicks                                              0
 #define QSlider_TicksBothSides                                       3
 #define QSlider_TicksAbove                                           1

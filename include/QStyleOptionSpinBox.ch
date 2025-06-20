@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONSPINBOX_CH
 #define QSTYLEOPTIONSPINBOX_CH
 
-/*
-enum QStyleOptionSpinBox::StyleOptionType
-*/
+// enum QStyleOptionSpinBox::StyleOptionType
 #define QStyleOptionSpinBox_Type                                     QStyleOption_SO_SpinBox
 
-/*
-enum QStyleOptionSpinBoxStyleOptionVersion
-*/
+// enum QStyleOptionSpinBoxStyleOptionVersion
 #define QStyleOptionSpinBox_Version                                  1
 
 #endif // QSTYLEOPTIONSPINBOX_CH

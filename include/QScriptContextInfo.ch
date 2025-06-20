@@ -9,9 +9,7 @@
 #ifndef QSCRIPTCONTEXTINFO_CH
 #define QSCRIPTCONTEXTINFO_CH
 
-/*
-enum QScriptContextInfo::FunctionType
-*/
+// enum QScriptContextInfo::FunctionType
 #define QScriptContextInfo_ScriptFunction                            0
 #define QScriptContextInfo_QtFunction                                1
 #define QScriptContextInfo_QtPropertyFunction                        2

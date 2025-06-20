@@ -9,16 +9,12 @@
 #ifndef QREGEXP_CH
 #define QREGEXP_CH
 
-/*
-enum QRegExp::CaretMode
-*/
+// enum QRegExp::CaretMode
 #define QRegExp_CaretAtZero                                          0
 #define QRegExp_CaretAtOffset                                        1
 #define QRegExp_CaretWontMatch                                       2
 
-/*
-enum QRegExp::PatternSyntax
-*/
+// enum QRegExp::PatternSyntax
 #define QRegExp_RegExp                                               0
 #define QRegExp_RegExp2                                              3
 #define QRegExp_Wildcard                                             1

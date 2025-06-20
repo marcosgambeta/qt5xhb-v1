@@ -9,15 +9,11 @@
 #ifndef QSYSTEMSEMAPHORE_CH
 #define QSYSTEMSEMAPHORE_CH
 
-/*
-enum QSystemSemaphore::AccessMode
-*/
+// enum QSystemSemaphore::AccessMode
 #define QSystemSemaphore_Open                                        0
 #define QSystemSemaphore_Create                                      1
 
-/*
-enum QSystemSemaphore::SystemSemaphoreError
-*/
+// enum QSystemSemaphore::SystemSemaphoreError
 #define QSystemSemaphore_NoError                                     0
 #define QSystemSemaphore_PermissionDenied                            1
 #define QSystemSemaphore_KeyError                                    2

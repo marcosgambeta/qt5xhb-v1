@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONGRAPHICSITEM_CH
 #define QSTYLEOPTIONGRAPHICSITEM_CH
 
-/*
-enum QStyleOptionGraphicsItem::StyleOptionType
-*/
+// enum QStyleOptionGraphicsItem::StyleOptionType
 #define QStyleOptionGraphicsItem_Type                                QStyleOption_SO_GraphicsItem
 
-/*
-enum QStyleOptionGraphicsItem::StyleOptionVersion
-*/
+// enum QStyleOptionGraphicsItem::StyleOptionVersion
 #define QStyleOptionGraphicsItem_Version                             1
 
 #endif // QSTYLEOPTIONGRAPHICSITEM_CH

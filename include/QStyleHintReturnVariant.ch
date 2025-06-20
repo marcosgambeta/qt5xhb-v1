@@ -9,14 +9,10 @@
 #ifndef QSTYLEHINTRETURNVARIANT_CH
 #define QSTYLEHINTRETURNVARIANT_CH
 
-/*
-enum QStyleHintReturnVariant::StyleOptionType
-*/
+// enum QStyleHintReturnVariant::StyleOptionType
 #define QStyleHintReturnVariant_Type                                 QStyleHintReturn_SH_Variant
 
-/*
-enum QStyleHintReturnVariant::StyleOptionVersion
-*/
+// enum QStyleHintReturnVariant::StyleOptionVersion
 #define QStyleHintReturnVariant_Version                              1
 
 #endif // QSTYLEHINTRETURNVARIANT_CH

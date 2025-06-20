@@ -9,28 +9,20 @@
 #ifndef QSTYLEOPTIONTOOLBAR_CH
 #define QSTYLEOPTIONTOOLBAR_CH
 
-/*
-enum QStyleOptionToolBar::StyleOptionType
-*/
+// enum QStyleOptionToolBar::StyleOptionType
 #define QStyleOptionToolBar_Type                                     QStyleOption_SO_ToolBar
 
-/*
-enum QStyleOptionToolBar::StyleOptionVersion
-*/
+// enum QStyleOptionToolBar::StyleOptionVersion
 #define QStyleOptionToolBar_Version                                  1
 
-/*
-enum QStyleOptionToolBar::ToolBarPosition
-*/
+// enum QStyleOptionToolBar::ToolBarPosition
 #define QStyleOptionToolBar_Beginning                                0
 #define QStyleOptionToolBar_Middle                                   1
 #define QStyleOptionToolBar_End                                      2
 #define QStyleOptionToolBar_OnlyOne                                  3
 
-/*
-enum QStyleOptionToolBar::ToolBarFeature
-flags QStyleOptionToolBar::ToolBarFeatures
-*/
+// enum QStyleOptionToolBar::ToolBarFeature
+// flags QStyleOptionToolBar::ToolBarFeatures
 #define QStyleOptionToolBar_None                                     0x0
 #define QStyleOptionToolBar_Movable                                  0x1
 

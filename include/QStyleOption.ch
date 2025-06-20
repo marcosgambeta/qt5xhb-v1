@@ -9,9 +9,7 @@
 #ifndef QSTYLEOPTION_CH
 #define QSTYLEOPTION_CH
 
-/*
-enum QStyleOption::OptionType
-*/
+// enum QStyleOption::OptionType
 #define QStyleOption_SO_Default                                      0
 #define QStyleOption_SO_FocusRect                                    1
 #define QStyleOption_SO_Button                                       2
@@ -39,14 +37,10 @@ enum QStyleOption::OptionType
 #define QStyleOption_SO_CustomBase                                   0xf00
 #define QStyleOption_SO_ComplexCustomBase                            0xf000000
 
-/*
-enum QStyleOption::StyleOptionType
-*/
+// enum QStyleOption::StyleOptionType
 #define QStyleOption_Type                                            QStyleOption_SO_Default
 
-/*
-enum QStyleOption::StyleOptionVersion
-*/
+// enum QStyleOption::StyleOptionVersion
 #define QStyleOption_Version                                         1
 
 #endif // QSTYLEOPTION_CH

@@ -9,9 +9,7 @@
 #ifndef QSTYLE_CH
 #define QSTYLE_CH
 
-/*
-enum QStyle::ComplexControl
-*/
+// enum QStyle::ComplexControl
 #define QStyle_CC_SpinBox                                            0
 #define QStyle_CC_ComboBox                                           1
 #define QStyle_CC_ScrollBar                                          2
@@ -24,9 +22,7 @@ enum QStyle::ComplexControl
 #define QStyle_CC_MdiControls                                        9
 #define QStyle_CC_CustomBase                                         0xf0000000
 
-/*
-enum QStyle::ContentsType
-*/
+// enum QStyle::ContentsType
 #define QStyle_CT_CheckBox                                           1
 #define QStyle_CT_ComboBox                                           4
 #define QStyle_CT_Q3DockWindow                                       6
@@ -53,9 +49,7 @@ enum QStyle::ContentsType
 #define QStyle_CT_CustomBase                                         0xf0000000
 #define QStyle_CT_MdiControls                                        23
 
-/*
-enum QStyle::ControlElement
-*/
+// enum QStyle::ControlElement
 #define QStyle_CE_PushButton                                         0
 #define QStyle_CE_PushButtonBevel                                    1
 #define QStyle_CE_PushButtonLabel                                    2
@@ -105,9 +99,7 @@ enum QStyle::ControlElement
 #define QStyle_CE_HeaderEmptyArea                                    44
 #define QStyle_CE_ShapedFrame                                        47
 
-/*
-enum QStyle::PixelMetric
-*/
+// enum QStyle::PixelMetric
 #define QStyle_PM_ButtonMargin                                       0
 #define QStyle_PM_DockWidgetTitleBarButtonMargin                     ?
 #define QStyle_PM_ButtonDefaultIndicator                             1
@@ -201,9 +193,7 @@ enum QStyle::PixelMetric
 #define QStyle_PM_ScrollView_ScrollBarSpacing                        ?
 #define QStyle_PM_SubMenuOverlap                                     ?
 
-/*
-enum QStyle::PrimitiveElement
-*/
+// enum QStyle::PrimitiveElement
 #define QStyle_PE_FrameStatusBar                                     12
 #define QStyle_PE_PanelButtonCommand                                 ?
 #define QStyle_PE_FrameDefaultButton                                 6
@@ -261,15 +251,11 @@ enum QStyle::PrimitiveElement
 #define QStyle_PE_IndicatorTabClose                                  ?
 #define QStyle_PE_PanelMenu                                          ?
 
-/*
-enum QStyle::RequestSoftwareInputPanel
-*/
+// enum QStyle::RequestSoftwareInputPanel
 #define QStyle_RSIP_OnMouseClickAndAlreadyFocused                    0
 #define QStyle_RSIP_OnMouseClick                                     1
 
-/*
-enum QStyle::StandardPixmap
-*/
+// enum QStyle::StandardPixmap
 #define QStyle_SP_TitleBarMinButton                                  1
 #define QStyle_SP_TitleBarMenuButton                                 0
 #define QStyle_SP_TitleBarMaxButton                                  2
@@ -341,10 +327,8 @@ enum QStyle::StandardPixmap
 #define QStyle_SP_MediaVolumeMuted                                   68
 #define QStyle_SP_CustomBase                                         0xf0000000
 
-/*
-enum QStyle::StateFlag
-flags QStyle::State
-*/
+// enum QStyle::StateFlag
+// flags QStyle::State
 #define QStyle_State_None                                            0x00000000
 #define QStyle_State_Active                                          0x00010000
 #define QStyle_State_AutoRaise                                       0x00001000
@@ -371,9 +355,7 @@ flags QStyle::State
 #define QStyle_State_Mini                                            0x08000000
 #define QStyle_State_Small                                           0x04000000
 
-/*
-enum QStyle::StyleHint
-*/
+// enum QStyle::StyleHint
 #define QStyle_SH_EtchDisabledText                                   0
 #define QStyle_SH_DitherDisabledText                                 1
 #define QStyle_SH_GUIStyle                                           0x00000100
@@ -477,10 +459,8 @@ enum QStyle::StyleHint
 #define QStyle_SH_ToolButtonStyle                                    ?
 #define QStyle_SH_RequestSoftwareInputPanel                          ?
 
-/*
-enum QStyle::SubControl
-flags QStyle::SubControls
-*/
+// enum QStyle::SubControl
+// flags QStyle::SubControls
 #define QStyle_SC_None                                               0x00000000
 #define QStyle_SC_ScrollBarAddLine                                   0x00000001
 #define QStyle_SC_ScrollBarSubLine                                   0x00000002
@@ -526,9 +506,7 @@ flags QStyle::SubControls
 #define QStyle_SC_MdiCloseButton                                     0x00000004
 #define QStyle_SC_All                                                0xffffffff
 
-/*
-enum QStyle::SubElement
-*/
+// enum QStyle::SubElement
 #define QStyle_SE_PushButtonContents                                 0
 #define QStyle_SE_PushButtonFocusRect                                1
 #define QStyle_SE_PushButtonLayoutItem                               ?

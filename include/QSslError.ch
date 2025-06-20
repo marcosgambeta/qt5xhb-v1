@@ -9,9 +9,7 @@
 #ifndef QSSLERROR_CH
 #define QSSLERROR_CH
 
-/*
-enum QSslError::SslError
-*/
+// enum QSslError::SslError
 #define QSslError_NoError                                            0
 #define QSslError_UnableToGetIssuerCertificate                       1
 #define QSslError_UnableToDecryptCertificateSignature                2

@@ -9,35 +9,25 @@
 #ifndef QSSL_CH
 #define QSSL_CH
 
-/*
-enum QSsl::KeyType
-*/
+// enum QSsl::KeyType
 #define QSsl_PrivateKey                                              0
 #define QSsl_PublicKey                                               1
 
-/*
-enum QSsl::EncodingFormat
-*/
+// enum QSsl::EncodingFormat
 #define QSsl_Pem                                                     0
 #define QSsl_Der                                                     1
 
-/*
-enum QSsl::KeyAlgorithm
-*/
+// enum QSsl::KeyAlgorithm
 #define QSsl_Opaque                                                  0
 #define QSsl_Rsa                                                     1
 #define QSsl_Dsa                                                     2
 #define QSsl_Ec                                                      3
 
-/*
-enum QSsl::AlternativeNameEntryType
-*/
+// enum QSsl::AlternativeNameEntryType
 #define QSsl_EmailEntry                                              0
 #define QSsl_DnsEntry                                                1
 
-/*
-enum QSsl::SslProtocol
-*/
+// enum QSsl::SslProtocol
 #define QSsl_SslV3                                                   0
 #define QSsl_SslV2                                                   1
 #define QSsl_TlsV1_0                                                 2
@@ -52,10 +42,8 @@ enum QSsl::SslProtocol
 #define QSsl_TlsV1_2OrLater                                          10
 #define QSsl_UnknownProtocol                                         -1
 
-/*
-enum QSsl::SslOption
-flags QSsl::SslOptions
-*/
+// enum QSsl::SslOption
+// flags QSsl::SslOptions
 #define QSsl_SslOptionDisableEmptyFragments                          0x01
 #define QSsl_SslOptionDisableSessionTickets                          0x02
 #define QSsl_SslOptionDisableCompression                             0x04

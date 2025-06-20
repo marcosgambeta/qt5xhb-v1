@@ -9,9 +9,7 @@
 #ifndef QSGGEOMETRY_CH
 #define QSGGEOMETRY_CH
 
-/*
-enum QSGGeometry::DataPattern
-*/
+// enum QSGGeometry::DataPattern
 #define QSGGeometry_AlwaysUploadPattern                              0
 #define QSGGeometry_DynamicPattern                                   2
 #define QSGGeometry_StaticPattern                                    3

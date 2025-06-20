@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONFOCUSRECT_CH
 #define QSTYLEOPTIONFOCUSRECT_CH
 
-/*
-enum QStyleOptionFocusRect::StyleOptionType
-*/
+// enum QStyleOptionFocusRect::StyleOptionType
 #define QStyleOptionFocusRect_Type                                   QStyleOption_SO_FocusRect
 
-/*
-enum QStyleOptionFocusRect::StyleOptionVersion
-*/
+// enum QStyleOptionFocusRect::StyleOptionVersion
 #define QStyleOptionFocusRect_Version                                1
 
 #endif // QSTYLEOPTIONFOCUSRECT_CH

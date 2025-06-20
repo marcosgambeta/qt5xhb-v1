@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONCOMBOBOX_CH
 #define QSTYLEOPTIONCOMBOBOX_CH
 
-/*
-enum QStyleOptionComboBox::StyleOptionType
-*/
+// enum QStyleOptionComboBox::StyleOptionType
 #define QStyleOptionComboBox_Type                                    QStyleOption_SO_ComboBox
 
-/*
-enum QStyleOptionComboBox::StyleOptionVersion
-*/
+// enum QStyleOptionComboBox::StyleOptionVersion
 #define QStyleOptionComboBox_Version                                 1
 
 #endif // QSTYLEOPTIONCOMBOBOX_CH

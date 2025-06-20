@@ -9,9 +9,7 @@
 #ifndef QREGION_CH
 #define QREGION_CH
 
-/*
-enum QRegion::RegionType
-*/
+// enum QRegion::RegionType
 #define QRegion_Rectangle                                            0
 #define QRegion_Ellipse                                              1
 

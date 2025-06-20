@@ -9,14 +9,10 @@
 #ifndef QSOUNDEFFECT_CH
 #define QSOUNDEFFECT_CH
 
-/*
-enum QSoundEffect::Loop
-*/
+// enum QSoundEffect::Loop
 #define QSoundEffect_Infinite                                        -2
 
-/*
-enum QSoundEffect::Status
-*/
+// enum QSoundEffect::Status
 #define QSoundEffect_Null                                            0
 #define QSoundEffect_Loading                                         1
 #define QSoundEffect_Ready                                           2

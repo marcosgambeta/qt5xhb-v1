@@ -9,9 +9,7 @@
 #ifndef QSENSOR_CH
 #define QSENSOR_CH
 
-/*
-enum QSensor::Feature
-*/
+// enum QSensor::Feature
 #define QSensor_Buffering                                            0
 #define QSensor_AlwaysOn                                             1
 #define QSensor_GeoValues                                            2
@@ -21,9 +19,7 @@ enum QSensor::Feature
 #define QSensor_AxesOrientation                                      6
 #define QSensor_Reserved                                             257
 
-/*
-enum QSensor::AxesOrientationMode
-*/
+// enum QSensor::AxesOrientationMode
 #define QSensor_FixedOrientation                                     0
 #define QSensor_AutomaticOrientation                                 1
 #define QSensor_UserOrientation                                      2

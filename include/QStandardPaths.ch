@@ -9,9 +9,7 @@
 #ifndef QSTANDARDPATHS_CH
 #define QSTANDARDPATHS_CH
 
-/*
-enum QStandardPaths::StandardLocation
-*/
+// enum QStandardPaths::StandardLocation
 #define QStandardPaths_DesktopLocation                               0
 #define QStandardPaths_DocumentsLocation                             1
 #define QStandardPaths_FontsLocation                                 2
@@ -30,10 +28,8 @@ enum QStandardPaths::StandardLocation
 #define QStandardPaths_GenericCacheLocation                          15
 #define QStandardPaths_GenericConfigLocation                         16
 
-/*
-enum QStandardPaths::LocateOption
-flags QStandardPaths::LocateOptions
-*/
+// enum QStandardPaths::LocateOption
+// flags QStandardPaths::LocateOptions
 #define QStandardPaths_LocateFile                                    0x0
 #define QStandardPaths_LocateDirectory                               0x1
 

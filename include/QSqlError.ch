@@ -9,9 +9,7 @@
 #ifndef QSQLERROR_CH
 #define QSQLERROR_CH
 
-/*
-enum QSqlError::ErrorType
-*/
+// enum QSqlError::ErrorType
 #define QSqlError_NoError                                            0
 #define QSqlError_ConnectionError                                    1
 #define QSqlError_StatementError                                     2

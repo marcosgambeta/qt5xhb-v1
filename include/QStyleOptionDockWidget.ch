@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONDOCKWIDGET_CH
 #define QSTYLEOPTIONDOCKWIDGET_CH
 
-/*
-enum QStyleOptionDockWidget::StyleOptionType
-*/
+// enum QStyleOptionDockWidget::StyleOptionType
 #define QStyleOptionDockWidget_Type                                  QStyleOption_SO_DockWidget
 
-/*
-enum QStyleOptionDockWidget::StyleOptionVersion
-*/
+// enum QStyleOptionDockWidget::StyleOptionVersion
 #define QStyleOptionDockWidget_Version                               2
 
 #endif // QSTYLEOPTIONDOCKWIDGET_CH

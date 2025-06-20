@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONTITLEBAR_CH
 #define QSTYLEOPTIONTITLEBAR_CH
 
-/*
-enum QStyleOptionTitleBar::StyleOptionType
-*/
+// enum QStyleOptionTitleBar::StyleOptionType
 #define QStyleOptionTitleBar_Type                                    QStyleOption_SO_TitleBar
 
-/*
-enum QStyleOptionTitleBar::StyleOptionVersion
-*/
+// enum QStyleOptionTitleBar::StyleOptionVersion
 #define QStyleOptionTitleBar_Version                                 1
 
 #endif // QSTYLEOPTIONTITLEBAR_CH

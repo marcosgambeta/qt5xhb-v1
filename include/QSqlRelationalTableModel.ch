@@ -9,9 +9,7 @@
 #ifndef QSQLRELATIONALTABLEMODEL_CH
 #define QSQLRELATIONALTABLEMODEL_CH
 
-/*
-enum QSqlRelationalTableModel::JoinMode
-*/
+// enum QSqlRelationalTableModel::JoinMode
 #define QSqlRelationalTableModel_InnerJoin                           0
 #define QSqlRelationalTableModel_LeftJoin                            1
 

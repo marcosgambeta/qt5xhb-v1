@@ -9,9 +9,7 @@
 #ifndef QSCRIPTENGINEDEBUGGER_CH
 #define QSCRIPTENGINEDEBUGGER_CH
 
-/*
-enum QScriptEngineDebugger::DebuggerAction
-*/
+// enum QScriptEngineDebugger::DebuggerAction
 #define QScriptEngineDebugger_InterruptAction                        0
 #define QScriptEngineDebugger_ContinueAction                         1
 #define QScriptEngineDebugger_StepIntoAction                         2
@@ -28,15 +26,11 @@ enum QScriptEngineDebugger::DebuggerAction
 #define QScriptEngineDebugger_FindPreviousInScriptAction             13
 #define QScriptEngineDebugger_GoToLineAction                         14
 
-/*
-enum QScriptEngineDebugger::DebuggerState
-*/
+// enum QScriptEngineDebugger::DebuggerState
 #define QScriptEngineDebugger_RunningState                           0
 #define QScriptEngineDebugger_SuspendedState                         1
 
-/*
-enum QScriptEngineDebugger::DebuggerWidget
-*/
+// enum QScriptEngineDebugger::DebuggerWidget
 #define QScriptEngineDebugger_ConsoleWidget                          0
 #define QScriptEngineDebugger_StackWidget                            1
 #define QScriptEngineDebugger_ScriptsWidget                          2

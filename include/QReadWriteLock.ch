@@ -9,9 +9,7 @@
 #ifndef QREADWRITELOCK_CH
 #define QREADWRITELOCK_CH
 
-/*
-enum QReadWriteLock::RecursionMode
-*/
+// enum QReadWriteLock::RecursionMode
 #define QReadWriteLock_NonRecursive                                  0
 #define QReadWriteLock_Recursive                                     1
 

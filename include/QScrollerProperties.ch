@@ -9,24 +9,18 @@
 #ifndef QSCROLLERPROPERTIES_CH
 #define QSCROLLERPROPERTIES_CH
 
-/*
-enum QScrollerProperties::FrameRates
-*/
+// enum QScrollerProperties::FrameRates
 #define QScrollerProperties_Fps60                                    1
 #define QScrollerProperties_Fps30                                    2
 #define QScrollerProperties_Fps20                                    3
 #define QScrollerProperties_Standard                                 0
 
-/*
-enum QScrollerProperties::OvershootPolicy
-*/
+// enum QScrollerProperties::OvershootPolicy
 #define QScrollerProperties_OvershootWhenScrollable                  0
 #define QScrollerProperties_OvershootAlwaysOff                       1
 #define QScrollerProperties_OvershootAlwaysOn                        2
 
-/*
-enum QScrollerProperties::ScrollMetric
-*/
+// enum QScrollerProperties::ScrollMetric
 #define QScrollerProperties_MousePressEventDelay                     0
 #define QScrollerProperties_DragStartDistance                        1
 #define QScrollerProperties_DragVelocitySmoothingFactor              2

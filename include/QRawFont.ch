@@ -9,9 +9,7 @@
 #ifndef QRAWFONT_CH
 #define QRAWFONT_CH
 
-/*
-enum QRawFont::AntialiasingType
-*/
+// enum QRawFont::AntialiasingType
 #define QRawFont_PixelAntialiasing                                   0
 #define QRawFont_SubPixelAntialiasing                                1
 

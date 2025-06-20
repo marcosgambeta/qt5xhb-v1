@@ -9,10 +9,8 @@
 #ifndef QSGNODE_CH
 #define QSGNODE_CH
 
-/*
-enum QSGNode::DirtyStateBit
-flags QSGNode::DirtyState
-*/
+// enum QSGNode::DirtyStateBit
+// flags QSGNode::DirtyState
 #define QSGNode_DirtyMatrix                                          0x0100
 #define QSGNode_DirtyNodeAdded                                       0x0400
 #define QSGNode_DirtyNodeRemoved                                     0x0800
@@ -20,19 +18,15 @@ flags QSGNode::DirtyState
 #define QSGNode_DirtyMaterial                                        0x2000
 #define QSGNode_DirtyOpacity                                         0x4000
 
-/*
-enum QSGNode::Flag
-flags QSGNode::Flags
-*/
+// enum QSGNode::Flag
+// flags QSGNode::Flags
 #define QSGNode_OwnedByParent                                        0x0001
 #define QSGNode_UsePreprocess                                        0x0002
 #define QSGNode_OwnsGeometry                                         0x00010000
 #define QSGNode_OwnsMaterial                                         0x00020000
 #define QSGNode_OwnsOpaqueMaterial                                   0x00040000
 
-/*
-enum QSGNode::NodeType
-*/
+// enum QSGNode::NodeType
 #define QSGNode_BasicNodeType                                        0
 #define QSGNode_GeometryNodeType                                     1
 #define QSGNode_TransformNodeType                                    2

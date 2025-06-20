@@ -9,16 +9,12 @@
 #ifndef QSYSINFO_CH
 #define QSYSINFO_CH
 
-/*
-enum QSysInfo::Endian
-*/
+// enum QSysInfo::Endian
 #define QSysInfo_BigEndian                                           0
 #define QSysInfo_LittleEndian                                        1
 #define QSysInfo_ByteOrder                                           <platform-dependent>
 
-/*
-enum QSysInfo::WinVersion
-*/
+// enum QSysInfo::WinVersion
 #define QSysInfo_WV_32s                                              0x0001
 #define QSysInfo_WV_95                                               0x0002
 #define QSysInfo_WV_98                                               0x0003
@@ -47,9 +43,7 @@ enum QSysInfo::WinVersion
 #define QSysInfo_WV_CE_6                                             0x0400
 #define QSysInfo_WV_CE_based                                         0x0f00
 
-/*
-enum QSysInfo::MacVersion
-*/
+// enum QSysInfo::MacVersion
 #define QSysInfo_MV_Unknown                                          0x0000
 #define QSysInfo_MV_9                                                0x0001
 #define QSysInfo_MV_10_0                                             0x0002
@@ -81,9 +75,7 @@ enum QSysInfo::MacVersion
 #define QSysInfo_MV_IOS_7_0                                          Q_MV_IOS(7, 0)
 #define QSysInfo_MV_IOS_7_1                                          Q_MV_IOS(7, 1)
 
-/*
-enum QSysInfo::Sizes
-*/
+// enum QSysInfo::Sizes
 #define QSysInfo_WordSize                                            ( sizeof( void * ) <<3 ) // TODO: implementar (se possível)
 
 #endif // QSYSINFO_CH

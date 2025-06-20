@@ -9,17 +9,13 @@
 #ifndef QSERIALPORT_CH
 #define QSERIALPORT_CH
 
-/*
-enum QSerialPort::Direction
-flags QSerialPort::Directions
-*/
+// enum QSerialPort::Direction
+// flags QSerialPort::Directions
 #define QSerialPort_Input                                            1
 #define QSerialPort_Output                                           2
 #define QSerialPort_AllDirections                                    hb_bitor(QSerialPort_Input,QSerialPort_Output)
 
-/*
-enum QSerialPort::BaudRate
-*/
+// enum QSerialPort::BaudRate
 #define QSerialPort_Baud1200                                         1200
 #define QSerialPort_Baud2400                                         2400
 #define QSerialPort_Baud4800                                         4800
@@ -30,18 +26,14 @@ enum QSerialPort::BaudRate
 #define QSerialPort_Baud115200                                       115200
 #define QSerialPort_UnknownBaud                                      -1
 
-/*
-enum QSerialPort::DataBits
-*/
+// enum QSerialPort::DataBits
 #define QSerialPort_Data5                                            5
 #define QSerialPort_Data6                                            6
 #define QSerialPort_Data7                                            7
 #define QSerialPort_Data8                                            8
 #define QSerialPort_UnknownDataBits                                  -1
 
-/*
-enum QSerialPort::Parity
-*/
+// enum QSerialPort::Parity
 #define QSerialPort_NoParity                                         0
 #define QSerialPort_EvenParity                                       2
 #define QSerialPort_OddParity                                        3
@@ -49,26 +41,20 @@ enum QSerialPort::Parity
 #define QSerialPort_MarkParity                                       5
 #define QSerialPort_UnknownParity                                    -1
 
-/*
-enum QSerialPort::StopBits
-*/
+// enum QSerialPort::StopBits
 #define QSerialPort_OneStop                                          1
 #define QSerialPort_OneAndHalfStop                                   3
 #define QSerialPort_TwoStop                                          2
 #define QSerialPort_UnknownStopBits                                  -1
 
-/*
-enum QSerialPort::FlowControl
-*/
+// enum QSerialPort::FlowControl
 #define QSerialPort_NoFlowControl                                    0
 #define QSerialPort_HardwareControl                                  1
 #define QSerialPort_SoftwareControl                                  2
 #define QSerialPort_UnknownFlowControl                               -1
 
-/*
-enum QSerialPort::PinoutSignal
-flags QSerialPort::PinoutSignals
-*/
+// enum QSerialPort::PinoutSignal
+// flags QSerialPort::PinoutSignals
 #define QSerialPort_NoSignal                                         0x00
 #define QSerialPort_TransmittedDataSignal                            0x01
 #define QSerialPort_ReceivedDataSignal                               0x02
@@ -81,18 +67,14 @@ flags QSerialPort::PinoutSignals
 #define QSerialPort_SecondaryTransmittedDataSignal                   0x100
 #define QSerialPort_SecondaryReceivedDataSignal                      0x200
 
-/*
-enum QSerialPort::DataErrorPolicy
-*/
+// enum QSerialPort::DataErrorPolicy
 #define QSerialPort_SkipPolicy                                       0
 #define QSerialPort_PassZeroPolicy                                   1
 #define QSerialPort_IgnorePolicy                                     2
 #define QSerialPort_StopReceivingPolicy                              3
 #define QSerialPort_UnknownPolicy                                    -1
 
-/*
-enum QSerialPort::SerialPortError
-*/
+// enum QSerialPort::SerialPortError
 #define QSerialPort_NoError                                          0
 #define QSerialPort_DeviceNotFoundError                              1
 #define QSerialPort_PermissionError                                  2

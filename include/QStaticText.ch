@@ -9,9 +9,7 @@
 #ifndef QSTATICTEXT_CH
 #define QSTATICTEXT_CH
 
-/*
-enum QStaticText::PerformanceHint
-*/
+// enum QStaticText::PerformanceHint
 #define QStaticText_ModerateCaching                                  0
 #define QStaticText_AggressiveCaching                                1
 

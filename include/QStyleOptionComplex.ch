@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONCOMPLEX_CH
 #define QSTYLEOPTIONCOMPLEX_CH
 
-/*
-enum QStyleOptionComplex::StyleOptionType
-*/
+// enum QStyleOptionComplex::StyleOptionType
 #define QStyleOptionComplex_Type                                     QStyleOption_SO_Complex
 
-/*
-enum QStyleOptionComplex::StyleOptionVersion
-*/
+// enum QStyleOptionComplex::StyleOptionVersion
 #define QStyleOptionComplex_Version                                  1
 
 #endif // QSTYLEOPTIONCOMPLEX_CH

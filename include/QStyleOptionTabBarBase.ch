@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONTABBARBASE_CH
 #define QSTYLEOPTIONTABBARBASE_CH
 
-/*
-enum QStyleOptionTabBarBase::StyleOptionType
-*/
+// enum QStyleOptionTabBarBase::StyleOptionType
 #define QStyleOptionTabBarBase_Type                                  QStyleOption_SO_TabBarBase
 
-/*
-enum QStyleOptionTabBarBase::StyleOptionVersion
-*/
+// enum QStyleOptionTabBarBase::StyleOptionVersion
 #define QStyleOptionTabBarBase_Version                               2
 
 #endif // QSTYLEOPTIONTABBARBASE_CH

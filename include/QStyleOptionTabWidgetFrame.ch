@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONTABWIDGETFRAME_CH
 #define QSTYLEOPTIONTABWIDGETFRAME_CH
 
-/*
-enum QStyleOptionTabWidgetFrame::StyleOptionType
-*/
+// enum QStyleOptionTabWidgetFrame::StyleOptionType
 #define QStyleOptionTabWidgetFrame_Type                              QStyleOption_SO_TabWidgetFrame
 
-/*
-enum QStyleOptionTabWidgetFrame::StyleOptionVersion
-*/
+// enum QStyleOptionTabWidgetFrame::StyleOptionVersion
 #define QStyleOptionTabWidgetFrame_Version                           2
 
 #endif // QSTYLEOPTIONTABWIDGETFRAME_CH

@@ -9,20 +9,14 @@
 #ifndef QSTYLEOPTIONTOOLBUTTON_CH
 #define QSTYLEOPTIONTOOLBUTTON_CH
 
-/*
-enum QStyleOptionToolButton::StyleOptionType
-*/
+// enum QStyleOptionToolButton::StyleOptionType
 #define QStyleOptionToolButton_Type                                  QStyleOption_SO_ToolButton
 
-/*
-enum QStyleOptionToolButton::StyleOptionVersion
-*/
+// enum QStyleOptionToolButton::StyleOptionVersion
 #define QStyleOptionToolButton_Version                               1
 
-/*
-enum QStyleOptionToolButton::ToolButtonFeature
-flags QStyleOptionToolButton::ToolButtonFeatures
-*/
+// enum QStyleOptionToolButton::ToolButtonFeature
+// flags QStyleOptionToolButton::ToolButtonFeatures
 #define QStyleOptionToolButton_None                                  0x00
 #define QStyleOptionToolButton_Arrow                                 0x01
 #define QStyleOptionToolButton_Menu                                  0x04

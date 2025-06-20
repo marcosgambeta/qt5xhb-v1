@@ -9,28 +9,20 @@
 #ifndef QSTYLEOPTIONVIEWITEM_CH
 #define QSTYLEOPTIONVIEWITEM_CH
 
-/*
-enum QStyleOptionViewItem::StyleOptionType
-*/
+// enum QStyleOptionViewItem::StyleOptionType
 #define QStyleOptionViewItem_Type                                    QStyleOption_SO_ViewItem
 
-/*
-enum QStyleOptionViewItem::StyleOptionVersion
-*/
+// enum QStyleOptionViewItem::StyleOptionVersion
 #define QStyleOptionViewItem_Version                                 4
 
-/*
-enum QStyleOptionViewItem::Position
-*/
+// enum QStyleOptionViewItem::Position
 #define QStyleOptionViewItem_Left                                    0
 #define QStyleOptionViewItem_Right                                   1
 #define QStyleOptionViewItem_Top                                     2
 #define QStyleOptionViewItem_Bottom                                  3
 
-/*
-enum QStyleOptionViewItem::ViewItemFeature
-flags QStyleOptionViewItem::ViewItemFeatures
-*/
+// enum QStyleOptionViewItem::ViewItemFeature
+// flags QStyleOptionViewItem::ViewItemFeatures
 #define QStyleOptionViewItem_None                                    0x00
 #define QStyleOptionViewItem_WrapText                                0x01
 #define QStyleOptionViewItem_Alternate                               0x02
@@ -38,9 +30,7 @@ flags QStyleOptionViewItem::ViewItemFeatures
 #define QStyleOptionViewItem_HasDisplay                              0x08
 #define QStyleOptionViewItem_HasDecoration                           0x10
 
-/*
-enum QStyleOptionViewItem::ViewItemPosition
-*/
+// enum QStyleOptionViewItem::ViewItemPosition
 #define QStyleOptionViewItem_Invalid                                 0
 #define QStyleOptionViewItem_Beginning                               1
 #define QStyleOptionViewItem_Middle                                  2

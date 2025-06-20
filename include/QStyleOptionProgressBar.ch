@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONPROGRESSBAR_CH
 #define QSTYLEOPTIONPROGRESSBAR_CH
 
-/*
-enum QStyleOptionProgressBar::StyleOptionType
-*/
+// enum QStyleOptionProgressBar::StyleOptionType
 #define QStyleOptionProgressBar_Type                                 QStyleOption_SO_ProgressBar
 
-/*
-enum QStyleOptionProgressBar::StyleOptionVersion
-*/
+// enum QStyleOptionProgressBar::StyleOptionVersion
 #define QStyleOptionProgressBar_Version                              2
 
 #endif // QSTYLEOPTIONPROGRESSBAR_CH

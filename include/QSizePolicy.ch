@@ -9,10 +9,8 @@
 #ifndef QSIZEPOLICY_CH
 #define QSIZEPOLICY_CH
 
-/*
-enum QSizePolicy::ControlType
-flags QSizePolicy::ControlTypes
-*/
+// enum QSizePolicy::ControlType
+// flags QSizePolicy::ControlTypes
 #define QSizePolicy_DefaultType                                      0x00000001
 #define QSizePolicy_ButtonBox                                        0x00000002
 #define QSizePolicy_CheckBox                                         0x00000004
@@ -29,17 +27,13 @@ flags QSizePolicy::ControlTypes
 #define QSizePolicy_TabWidget                                        0x00002000
 #define QSizePolicy_ToolButton                                       0x00004000
 
-/*
-enum QSizePolicy::PolicyFlag
-*/
+// enum QSizePolicy::PolicyFlag
 #define QSizePolicy_GrowFlag                                         1
 #define QSizePolicy_ExpandFlag                                       2
 #define QSizePolicy_ShrinkFlag                                       4
 #define QSizePolicy_IgnoreFlag                                       8
 
-/*
-enum QSizePolicy::Policy
-*/
+// enum QSizePolicy::Policy
 #define QSizePolicy_Fixed                                            0
 #define QSizePolicy_Minimum                                          QSizePolicy_GrowFlag
 #define QSizePolicy_Maximum                                          QSizePolicy_ShrinkFlag

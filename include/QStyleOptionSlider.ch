@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONSLIDER_CH
 #define QSTYLEOPTIONSLIDER_CH
 
-/*
-enum QStyleOptionSlider::StyleOptionType
-*/
+// enum QStyleOptionSlider::StyleOptionType
 #define QStyleOptionSlider_Type                                      QStyleOption_SO_Slider
 
-/*
-enum QStyleOptionSlider::StyleOptionVersion
-*/
+// enum QStyleOptionSlider::StyleOptionVersion
 #define QStyleOptionSlider_Version                                   1
 
 #endif // QSTYLEOPTIONSLIDER_CH

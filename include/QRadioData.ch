@@ -9,17 +9,13 @@
 #ifndef QRADIODATA_CH
 #define QRADIODATA_CH
 
-/*
-enum QRadioData::Error
-*/
+// enum QRadioData::Error
 #define QRadioData_NoError                                           0
 #define QRadioData_ResourceError                                     1
 #define QRadioData_OpenError                                         2
 #define QRadioData_OutOfRangeError                                   3
 
-/*
-enum QRadioData::ProgramType
-*/
+// enum QRadioData::ProgramType
 #define QRadioData_Undefined                                         0
 #define QRadioData_News                                              1
 #define QRadioData_CurrentAffairs                                    2

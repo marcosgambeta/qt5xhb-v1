@@ -9,9 +9,7 @@
 #ifndef QSSLCONFIGURATION_CH
 #define QSSLCONFIGURATION_CH
 
-/*
-enum QSslConfiguration::NextProtocolNegotiationStatus
-*/
+// enum QSslConfiguration::NextProtocolNegotiationStatus
 #define QSslConfiguration_NextProtocolNegotiationNone                0
 #define QSslConfiguration_NextProtocolNegotiationNegotiated          1
 #define QSslConfiguration_NextProtocolNegotiationUnsupported         2

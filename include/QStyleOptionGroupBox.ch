@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONGROUPBOX_CH
 #define QSTYLEOPTIONGROUPBOX_CH
 
-/*
-enum QStyleOptionGroupBox::StyleOptionType
-*/
+// enum QStyleOptionGroupBox::StyleOptionType
 #define QStyleOptionGroupBox_Type                                    QStyleOption_SO_GroupBox
 
-/*
-enum QStyleOptionGroupBox::StyleOptionVersion
-*/
+// enum QStyleOptionGroupBox::StyleOptionVersion
 #define QStyleOptionGroupBox_Version                                 1
 
 #endif // QSTYLEOPTIONGROUPBOX_CH
