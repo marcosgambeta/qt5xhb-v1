@@ -9,3 +9,4 @@
 #ifndef QWINFUNCTIONS_CH
 #define QWINFUNCTIONS_CH
 
+#endif // QWINFUNCTIONS_CH
