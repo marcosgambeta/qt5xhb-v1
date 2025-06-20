@@ -9,10 +9,8 @@
 #ifndef QT_CH
 #define QT_CH
 
-/*
-enum Qt::AlignmentFlag
-flags Qt::Alignment
-*/
+// enum Qt::AlignmentFlag
+// flags Qt::Alignment
 #define Qt_AlignLeft                                                 0x0001
 #define Qt_AlignLeading                                              Qt_AlignLeft
 #define Qt_AlignRight                                                0x0002
@@ -28,9 +26,7 @@ flags Qt::Alignment
 #define Qt_AlignVertical_Mask                                        hb_bitor(hb_bitor(hb_bitor(Qt_AlignTop,Qt_AlignBottom),Qt_AlignVCenter),Qt_AlignBaseline)
 #define Qt_AlignCenter                                               hb_bitor(Qt_AlignVCenter,Qt_AlignHCenter)
 
-/*
-enum Qt::AnchorPoint
-*/
+// enum Qt::AnchorPoint
 #define Qt_AnchorLeft                                                0
 #define Qt_AnchorHorizontalCenter                                    1
 #define Qt_AnchorRight                                               2
@@ -38,9 +34,7 @@ enum Qt::AnchorPoint
 #define Qt_AnchorVerticalCenter                                      4
 #define Qt_AnchorBottom                                              5
 
-/*
-enum Qt::ApplicationAttribute
-*/
+// enum Qt::ApplicationAttribute
 #define Qt_AA_ImmediateWidgetCreation                                0
 #define Qt_AA_MSWindowsUseDirect3DByDefault                          1
 #define Qt_AA_DontShowIconsInMenus                                   2
@@ -74,38 +68,28 @@ enum Qt::ApplicationAttribute
 #define Qt_AA_DisableWindowContextHelpButton                         30
 #define Qt_AA_AttributeCount                                         31
 
-/*
-enum Qt::ArrowType
-*/
+// enum Qt::ArrowType
 #define Qt_NoArrow                                                   0
 #define Qt_UpArrow                                                   1
 #define Qt_DownArrow                                                 2
 #define Qt_LeftArrow                                                 3
 #define Qt_RightArrow                                                4
 
-/*
-enum Qt::AspectRatioMode
-*/
+// enum Qt::AspectRatioMode
 #define Qt_IgnoreAspectRatio                                         0
 #define Qt_KeepAspectRatio                                           1
 #define Qt_KeepAspectRatioByExpanding                                2
 
-/*
-enum Qt::Axis
-*/
+// enum Qt::Axis
 #define Qt_XAxis                                                     0
 #define Qt_YAxis                                                     1
 #define Qt_ZAxis                                                     2
 
-/*
-enum Qt::BGMode
-*/
+// enum Qt::BGMode
 #define Qt_TransparentMode                                           0
 #define Qt_OpaqueMode                                                1
 
-/*
-enum Qt::BrushStyle
-*/
+// enum Qt::BrushStyle
 #define Qt_NoBrush                                                   0
 #define Qt_SolidPattern                                              1
 #define Qt_Dense1Pattern                                             2
@@ -126,67 +110,49 @@ enum Qt::BrushStyle
 #define Qt_ConicalGradientPattern                                    17
 #define Qt_TexturePattern                                            24
 
-/*
-enum Qt::CaseSensitivity
-*/
+// enum Qt::CaseSensitivity
 #define Qt_CaseInsensitive                                           0
 #define Qt_CaseSensitive                                             1
 
-/*
-enum Qt::CheckState
-*/
+// enum Qt::CheckState
 #define Qt_Unchecked                                                 0
 #define Qt_PartiallyChecked                                          1
 #define Qt_Checked                                                   2
 
-/*
-enum Qt::ClipOperation
-*/
+// enum Qt::ClipOperation
 #define Qt_NoClip                                                    0
 #define Qt_ReplaceClip                                               1
 #define Qt_IntersectClip                                             2
 
-/*
-enum Qt::ConnectionType
-*/
+// enum Qt::ConnectionType
 #define Qt_AutoConnection                                            0
 #define Qt_DirectConnection                                          1
 #define Qt_QueuedConnection                                          2
 #define Qt_BlockingQueuedConnection                                  3
 #define Qt_UniqueConnection                                          0x80
 
-/*
-enum Qt::ContextMenuPolicy
-*/
+// enum Qt::ContextMenuPolicy
 #define Qt_NoContextMenu                                             0
 #define Qt_DefaultContextMenu                                        1
 #define Qt_ActionsContextMenu                                        2
 #define Qt_CustomContextMenu                                         3
 #define Qt_PreventContextMenu                                        4
 
-/*
-enum Qt::CoordinateSystem
-*/
+// enum Qt::CoordinateSystem
 #define Qt_DeviceCoordinates                                         0
 #define Qt_LogicalCoordinates                                        1
 
-/*
-enum Qt::Corner
-*/
+// enum Qt::Corner
 #define Qt_TopLeftCorner                                             0x00000
 #define Qt_TopRightCorner                                            0x00001
 #define Qt_BottomLeftCorner                                          0x00002
 #define Qt_BottomRightCorner                                         0x00003
 
-/*
-enum Qt::CursorMoveStyle
-*/
+// enum Qt::CursorMoveStyle
 #define Qt_LogicalMoveStyle                                          0
 #define Qt_VisualMoveStyle                                           1
 
-/*
-enum Qt::CursorShape
-*/
+// enum Qt::CursorShape
 #define Qt_ArrowCursor                                               0
 #define Qt_UpArrowCursor                                             1
 #define Qt_CrossCursor                                               2
@@ -213,9 +179,7 @@ enum Qt::CursorShape
 #define Qt_BitmapCursor                                              24
 #define Qt_CustomCursor                                              25
 
-/*
-enum Qt::DateFormat
-*/
+// enum Qt::DateFormat
 #define Qt_TextDate                                                  0
 #define Qt_ISODate                                                   1
 #define Qt_SystemLocaleDate                                          2
@@ -228,9 +192,7 @@ enum Qt::DateFormat
 #define Qt_RFC2822Date                                               8
 #define Qt_ISODateWithMs                                             9
 
-/*
-enum Qt::DayOfWeek
-*/
+// enum Qt::DayOfWeek
 #define Qt_Monday                                                    1
 #define Qt_Tuesday                                                   2
 #define Qt_Wednesday                                                 3
@@ -239,10 +201,8 @@ enum Qt::DayOfWeek
 #define Qt_Saturday                                                  6
 #define Qt_Sunday                                                    7
 
-/*
-enum Qt::DockWidgetArea
-flags Qt::DockWidgetAreas
-*/
+// enum Qt::DockWidgetArea
+// flags Qt::DockWidgetAreas
 #define Qt_LeftDockWidgetArea                                        0x1
 #define Qt_RightDockWidgetArea                                       0x2
 #define Qt_TopDockWidgetArea                                         0x4
@@ -251,10 +211,8 @@ flags Qt::DockWidgetAreas
 #define Qt_AllDockWidgetAreas                                        Qt_DockWidgetArea_Mask
 #define Qt_NoDockWidgetArea                                          0
 
-/*
-enum Qt::DropAction
-flags Qt::DropActions
-*/
+// enum Qt::DropAction
+// flags Qt::DropActions
 #define Qt_CopyAction                                                0x1
 #define Qt_MoveAction                                                0x2
 #define Qt_LinkAction                                                0x4
@@ -263,47 +221,35 @@ flags Qt::DropActions
 #define Qt_TargetMoveAction                                          0x8002
 #define Qt_IgnoreAction                                              0x0
 
-/*
-enum Qt::EventPriority
-*/
+// enum Qt::EventPriority
 #define Qt_HighEventPriority                                         1
 #define Qt_NormalEventPriority                                       0
 #define Qt_LowEventPriority                                          -1
 
-/*
-enum CustomEventPriority
-*/
+// enum CustomEventPriority
 #define Qt_ImportantEventPriority                                    Qt_HighEventPriority
 #define Qt_MoreImportantEventPriority                                Qt_ImportantEventPriority + 1
 #define Qt_CriticalEventPriority                                     100 * Qt_MoreImportantEventPriority
 #define Qt_StatusEventPriority                                       Qt_LowEventPriority
 #define Qt_IdleProcessingDoneEventPriority                           Qt_StatusEventPriority - 1
 
-/*
-enum Qt::FillRule
-*/
+// enum Qt::FillRule
 #define Qt_OddEvenFill                                               0
 #define Qt_WindingFill                                               1
 
-/*
-enum Qt::FindChildOption
-flags Qt::FindChildOptions
-*/
+// enum Qt::FindChildOption
+// flags Qt::FindChildOptions
 #define Qt_FindDirectChildrenOnly                                    0x0
 #define Qt_FindChildrenRecursively                                   0x1
 
-/*
-enum Qt::FocusPolicy
-*/
+// enum Qt::FocusPolicy
 #define Qt_NoFocus                                                   0
 #define Qt_TabFocus                                                  0x1
 #define Qt_ClickFocus                                                0x2
 #define Qt_StrongFocus                                               hb_bitor(hb_bitor(Qt_TabFocus,Qt_ClickFocus),0x8)
 #define Qt_WheelFocus                                                hb_bitor(Qt_StrongFocus,0x4)
 
-/*
-enum Qt::FocusReason
-*/
+// enum Qt::FocusReason
 #define Qt_MouseFocusReason                                          0
 #define Qt_TabFocusReason                                            1
 #define Qt_BacktabFocusReason                                        2
@@ -314,25 +260,19 @@ enum Qt::FocusReason
 #define Qt_OtherFocusReason                                          7
 #define Qt_NoFocusReason                                             8
 
-/*
-enum Qt::GestureFlag
-flags Qt::GestureFlags
-*/
+// enum Qt::GestureFlag
+// flags Qt::GestureFlags
 #define Qt_DontStartGestureOnChildren                                0x01
 #define Qt_ReceivePartialGestures                                    0x02
 #define Qt_IgnoredGesturesPropagateToParent                          0x04
 
-/*
-enum Qt::GestureState
-*/
+// enum Qt::GestureState
 #define Qt_GestureStarted                                            1
 #define Qt_GestureUpdated                                            2
 #define Qt_GestureFinished                                           3
 #define Qt_GestureCanceled                                           4
 
-/*
-enum Qt::GestureType
-*/
+// enum Qt::GestureType
 #define Qt_TapGesture                                                1
 #define Qt_TapAndHoldGesture                                         2
 #define Qt_PanGesture                                                3
@@ -340,9 +280,7 @@ enum Qt::GestureType
 #define Qt_SwipeGesture                                              5
 #define Qt_CustomGesture                                             0x0100
 
-/*
-enum Qt::GlobalColor
-*/
+// enum Qt::GlobalColor
 #define Qt_color0                                                    0
 #define Qt_color1                                                    1
 #define Qt_black                                                     2
@@ -364,16 +302,12 @@ enum Qt::GlobalColor
 #define Qt_darkYellow                                                18
 #define Qt_transparent                                               19
 
-/*
-enum Qt::HitTestAccuracy
-*/
+// enum Qt::HitTestAccuracy
 #define Qt_ExactHit                                                  0
 #define Qt_FuzzyHit                                                  1
 
-/*
-enum Qt::ImageConversionFlag
-flags Qt::ImageConversionFlags
-*/
+// enum Qt::ImageConversionFlag
+// flags Qt::ImageConversionFlags
 #define Qt_ColorMode_Mask                                            0x00000003
 #define Qt_AutoColor                                                 0x00000000
 #define Qt_ColorOnly                                                 0x00000003
@@ -394,10 +328,8 @@ flags Qt::ImageConversionFlags
 #define Qt_NoOpaqueDetection                                         0x00000100
 #define Qt_NoFormatConversion                                        0x00000200
 
-/*
-enum Qt::InputMethodHint
-flags Qt::InputMethodHints
-*/
+// enum Qt::InputMethodHint
+// flags Qt::InputMethodHints
 #define Qt_ImhNone                                                   0x0
 #define Qt_ImhHiddenText                                             0x1
 #define Qt_ImhSensitiveData                                          0x2
@@ -419,10 +351,8 @@ flags Qt::InputMethodHints
 #define Qt_ImhLatinOnly                                              0x800000
 #define Qt_ImhExclusiveInputMask                                     0xffff0000
 
-/*
-enum Qt::InputMethodQuery
-flags Qt::InputMethodQueries
-*/
+// enum Qt::InputMethodQuery
+// flags Qt::InputMethodQueries
 #define Qt_ImEnabled                                                 0x1
 #define Qt_ImMicroFocus                                              0x2
 #define Qt_ImCursorRectangle                                         0x2
@@ -438,9 +368,7 @@ flags Qt::InputMethodQueries
 #define Qt_ImQueryInput                                              hb_bitor(hb_bitor(hb_bitor(hb_bitor(Qt_ImCursorRectangle,Qt_ImCursorPosition),Qt_ImSurroundingText),Qt_ImCurrentSelection),Qt_ImAnchorPosition)
 #define Qt_ImQueryAll                                                0xffffffff
 
-/*
-enum Qt::ItemDataRole
-*/
+// enum Qt::ItemDataRole
 #define Qt_DisplayRole                                               0
 #define Qt_DecorationRole                                            1
 #define Qt_EditRole                                                  2
@@ -460,10 +388,8 @@ enum Qt::ItemDataRole
 #define Qt_AccessibleDescriptionRole                                 12
 #define Qt_UserRole                                                  0x0100
 
-/*
-enum Qt::ItemFlag
-flags Qt::ItemFlags
-*/
+// enum Qt::ItemFlag
+// flags Qt::ItemFlags
 #define Qt_NoItemFlags                                               0
 #define Qt_ItemIsSelectable                                          1
 #define Qt_ItemIsEditable                                            2
@@ -476,17 +402,13 @@ flags Qt::ItemFlags
 #define Qt_ItemNeverHasChildren                                      128
 #define Qt_ItemIsUserTristate                                        256
 
-/*
-enum Qt::ItemSelectionMode
-*/
+// enum Qt::ItemSelectionMode
 #define Qt_ContainsItemShape                                         0x0
 #define Qt_IntersectsItemShape                                       0x1
 #define Qt_ContainsItemBoundingRect                                  0x2
 #define Qt_IntersectsItemBoundingRect                                0x3
 
-/*
-enum Qt::Key
-*/
+// enum Qt::Key
 #define Qt_Key_Escape                                                0x01000000
 #define Qt_Key_Tab                                                   0x01000001
 #define Qt_Key_Backtab                                               0x01000002
@@ -909,10 +831,8 @@ enum Qt::Key
 #define Qt_Key_Zoom                                                  0x01020006
 #define Qt_Key_Cancel                                                0x01020001
 
-/*
-enum Qt::KeyboardModifier
-flags Qt::KeyboardModifiers
-*/
+// enum Qt::KeyboardModifier
+// flags Qt::KeyboardModifiers
 #define Qt_NoModifier                                                0x00000000
 #define Qt_ShiftModifier                                             0x02000000
 #define Qt_ControlModifier                                           0x04000000
@@ -922,23 +842,17 @@ flags Qt::KeyboardModifiers
 #define Qt_GroupSwitchModifier                                       0x40000000
 #define Qt_KeyboardModifierMask                                      0xfe000000
 
-/*
-enum Qt::LayoutDirection
-*/
+// enum Qt::LayoutDirection
 #define Qt_LeftToRight                                               0
 #define Qt_RightToLeft                                               1
 #define Qt_LayoutDirectionAuto                                       2
 
-/*
-enum Qt::MaskMode
-*/
+// enum Qt::MaskMode
 #define Qt_MaskInColor                                               0
 #define Qt_MaskOutColor                                              1
 
-/*
-enum Qt::MatchFlag
-flags Qt::MatchFlags
-*/
+// enum Qt::MatchFlag
+// flags Qt::MatchFlags
 #define Qt_MatchExactly                                              0
 #define Qt_MatchContains                                             1
 #define Qt_MatchStartsWith                                           2
@@ -950,9 +864,7 @@ flags Qt::MatchFlags
 #define Qt_MatchWrap                                                 32
 #define Qt_MatchRecursive                                            64
 
-/*
-enum Qt::Modifier
-*/
+// enum Qt::Modifier
 #define Qt_META                                                      Qt_MetaModifier
 #define Qt_SHIFT                                                     Qt_ShiftModifier
 #define Qt_CTRL                                                      Qt_ControlModifier
@@ -960,10 +872,8 @@ enum Qt::Modifier
 #define Qt_MODIFIER_MASK                                             Qt_KeyboardModifierMask
 #define Qt_UNICODE_ACCEL                                             0x00000000
 
-/*
-enum Qt::MouseButton
-flags Qt::MouseButtons
-*/
+// enum Qt::MouseButton
+// flags Qt::MouseButtons
 #define Qt_NoButton                                                  0x00000000
 #define Qt_LeftButton                                                0x00000001
 #define Qt_RightButton                                               0x00000002
@@ -1002,42 +912,32 @@ flags Qt::MouseButtons
 #define Qt_MaxMouseButton                                            Qt_ExtraButton24
 #define Qt_MouseButtonMask                                           0xffffffff
 
-/*
-enum Qt::NavigationMode
-*/
+// enum Qt::NavigationMode
 #define Qt_NavigationModeNone                                        0
 #define Qt_NavigationModeKeypadTabOrder                              1
 #define Qt_NavigationModeKeypadDirectional                           2
 #define Qt_NavigationModeCursorAuto                                  3
 #define Qt_NavigationModeCursorForceVisible                          4
 
-/*
-enum Qt::Orientation
-flags Qt::Orientations
-*/
+// enum Qt::Orientation
+// flags Qt::Orientations
 #define Qt_Horizontal                                                0x1
 #define Qt_Vertical                                                  0x2
 
-/*
-enum Qt::PenCapStyle
-*/
+// enum Qt::PenCapStyle
 #define Qt_FlatCap                                                   0x00
 #define Qt_SquareCap                                                 0x10
 #define Qt_RoundCap                                                  0x20
 #define Qt_MPenCapStyle                                              0x30
 
-/*
-enum Qt::PenJoinStyle
-*/
+// enum Qt::PenJoinStyle
 #define Qt_MiterJoin                                                 0x00
 #define Qt_BevelJoin                                                 0x40
 #define Qt_RoundJoin                                                 0x80
 #define Qt_SvgMiterJoin                                              0x100
 #define Qt_MPenJoinStyle                                             0x1c0
 
-/*
-enum Qt::PenStyle
-*/
+// enum Qt::PenStyle
 #define Qt_NoPen                                                     0
 #define Qt_SolidLine                                                 1
 #define Qt_DashLine                                                  2
@@ -1047,63 +947,47 @@ enum Qt::PenStyle
 #define Qt_CustomDashLine                                            6
 #define Qt_MPenStyle                                                 0x0f
 
-/*
-enum Qt::ScreenOrientation
-flags Qt::ScreenOrientations
-*/
+// enum Qt::ScreenOrientation
+// flags Qt::ScreenOrientations
 #define Qt_PrimaryOrientation                                        0x00000000
 #define Qt_PortraitOrientation                                       0x00000001
 #define Qt_LandscapeOrientation                                      0x00000002
 #define Qt_InvertedPortraitOrientation                               0x00000004
 #define Qt_InvertedLandscapeOrientation                              0x00000008
 
-/*
-enum Qt::ScrollBarPolicy
-*/
+// enum Qt::ScrollBarPolicy
 #define Qt_ScrollBarAsNeeded                                         0
 #define Qt_ScrollBarAlwaysOff                                        1
 #define Qt_ScrollBarAlwaysOn                                         2
 
-/*
-enum Qt::ShortcutContext
-*/
+// enum Qt::ShortcutContext
 #define Qt_WidgetShortcut                                            0
 #define Qt_WindowShortcut                                            1
 #define Qt_ApplicationShortcut                                       2
 #define Qt_WidgetWithChildrenShortcut                                3
 
-/*
-enum Qt::SizeHint
-*/
+// enum Qt::SizeHint
 #define Qt_MinimumSize                                               0
 #define Qt_PreferredSize                                             1
 #define Qt_MaximumSize                                               2
 #define Qt_MinimumDescent                                            3
 #define Qt_NSizeHints                                                4
 
-/*
-enum Qt::SizeMode
-*/
+// enum Qt::SizeMode
 #define Qt_AbsoluteSize                                              0
 #define Qt_RelativeSize                                              1
 
-/*
-enum Qt::SortOrder
-*/
+// enum Qt::SortOrder
 #define Qt_AscendingOrder                                            0
 #define Qt_DescendingOrder                                           1
 
-/*
-enum Qt::TextElideMode
-*/
+// enum Qt::TextElideMode
 #define Qt_ElideLeft                                                 0
 #define Qt_ElideRight                                                1
 #define Qt_ElideMiddle                                               2
 #define Qt_ElideNone                                                 3
 
-/*
-enum Qt::TextFlag
-*/
+// enum Qt::TextFlag
 #define Qt_TextSingleLine                                            0x0100
 #define Qt_TextDontClip                                              0x0200
 #define Qt_TextExpandTabs                                            0x0400
@@ -1119,17 +1003,13 @@ enum Qt::TextFlag
 #define Qt_TextLongestVariant                                        0x80000
 #define Qt_TextBypassShaping                                         0x100000
 
-/*
-enum Qt::TextFormat
-*/
+// enum Qt::TextFormat
 #define Qt_PlainText                                                 0
 #define Qt_RichText                                                  1
 #define Qt_AutoText                                                  2
 
-/*
-enum Qt::TextInteractionFlag
-flags Qt::TextInteractionFlags
-*/
+// enum Qt::TextInteractionFlag
+// flags Qt::TextInteractionFlags
 #define Qt_NoTextInteraction                                         0
 #define Qt_TextSelectableByMouse                                     1
 #define Qt_TextSelectableByKeyboard                                  2
@@ -1139,32 +1019,24 @@ flags Qt::TextInteractionFlags
 #define Qt_TextEditorInteraction                                     hb_bitor(hb_bitor(Qt_TextSelectableByMouse,Qt_TextSelectableByKeyboard),Qt_TextEditable)
 #define Qt_TextBrowserInteraction                                    hb_bitor(hb_bitor(Qt_TextSelectableByMouse,Qt_LinksAccessibleByMouse),Qt_LinksAccessibleByKeyboard)
 
-/*
-enum Qt::TileRule
-*/
+// enum Qt::TileRule
 #define Qt_StretchTile                                               0
 #define Qt_RepeatTile                                                1
 #define Qt_RoundTile                                                 2
 
-/*
-enum Qt::TimeSpec
-*/
+// enum Qt::TimeSpec
 #define Qt_LocalTime                                                 0
 #define Qt_UTC                                                       1
 #define Qt_OffsetFromUTC                                             2
 #define Qt_TimeZone                                                  3
 
-/*
-enum Qt::TimerType
-*/
+// enum Qt::TimerType
 #define Qt_PreciseTimer                                              0
 #define Qt_CoarseTimer                                               1
 #define Qt_VeryCoarseTimer                                           2
 
-/*
-enum Qt::ToolBarArea
-flags Qt::ToolBarAreas
-*/
+// enum Qt::ToolBarArea
+// flags Qt::ToolBarAreas
 #define Qt_LeftToolBarArea                                           0x1
 #define Qt_RightToolBarArea                                          0x2
 #define Qt_TopToolBarArea                                            0x4
@@ -1173,33 +1045,25 @@ flags Qt::ToolBarAreas
 #define Qt_AllToolBarAreas                                           Qt_ToolBarArea_Mask
 #define Qt_NoToolBarArea                                             0
 
-/*
-enum Qt::ToolButtonStyle
-*/
+// enum Qt::ToolButtonStyle
 #define Qt_ToolButtonIconOnly                                        0
 #define Qt_ToolButtonTextOnly                                        1
 #define Qt_ToolButtonTextBesideIcon                                  2
 #define Qt_ToolButtonTextUnderIcon                                   3
 #define Qt_ToolButtonFollowStyle                                     4
 
-/*
-enum Qt::TouchPointState
-flags Qt::TouchPointStates
-*/
+// enum Qt::TouchPointState
+// flags Qt::TouchPointStates
 #define Qt_TouchPointPressed                                         0x01
 #define Qt_TouchPointMoved                                           0x02
 #define Qt_TouchPointStationary                                      0x04
 #define Qt_TouchPointReleased                                        0x08
 
-/*
-enum Qt::TransformationMode
-*/
+// enum Qt::TransformationMode
 #define Qt_FastTransformation                                        0
 #define Qt_SmoothTransformation                                      1
 
-/*
-enum Qt::UIEffect
-*/
+// enum Qt::UIEffect
 #define Qt_UI_General                                                0
 #define Qt_UI_AnimateMenu                                            1
 #define Qt_UI_FadeMenu                                               2
@@ -1208,17 +1072,13 @@ enum Qt::UIEffect
 #define Qt_UI_FadeTooltip                                            5
 #define Qt_UI_AnimateToolBox                                         6
 
-/*
-enum Qt::WhiteSpaceMode
-*/
+// enum Qt::WhiteSpaceMode
 #define Qt_WhiteSpaceNormal                                          0
 #define Qt_WhiteSpacePre                                             1
 #define Qt_WhiteSpaceNoWrap                                          2
 #define Qt_WhiteSpaceModeUndefined                                   -1
 
-/*
-enum Qt::WidgetAttribute
-*/
+// enum Qt::WidgetAttribute
 #define Qt_WA_Disabled                                               0
 #define Qt_WA_UnderMouse                                             1
 #define Qt_WA_MouseTracking                                          2
@@ -1334,9 +1194,7 @@ enum Qt::WidgetAttribute
 #define Qt_WA_ContentsMarginsRespectsSafeArea                        130
 #define Qt_WA_AttributeCount                                         131
 
-/*
-enum Qt::WindowFrameSection
-*/
+// enum Qt::WindowFrameSection
 #define Qt_NoSection                                                 0
 #define Qt_LeftSection                                               1
 #define Qt_TopLeftSection                                            2
@@ -1348,27 +1206,21 @@ enum Qt::WindowFrameSection
 #define Qt_BottomLeftSection                                         8
 #define Qt_TitleBarArea                                              9
 
-/*
-enum Qt::WindowModality
-*/
+// enum Qt::WindowModality
 #define Qt_NonModal                                                  0
 #define Qt_WindowModal                                               1
 #define Qt_ApplicationModal                                          2
 
-/*
-enum Qt::WindowState
-flags Qt::WindowStates
-*/
+// enum Qt::WindowState
+// flags Qt::WindowStates
 #define Qt_WindowNoState                                             0x00000000
 #define Qt_WindowMinimized                                           0x00000001
 #define Qt_WindowMaximized                                           0x00000002
 #define Qt_WindowFullScreen                                          0x00000004
 #define Qt_WindowActive                                              0x00000008
 
-/*
-enum Qt::WindowType
-flags Qt::WindowFlags
-*/
+// enum Qt::WindowType
+// flags Qt::WindowFlags
 #define Qt_Widget                                                    0x00000000
 #define Qt_Window                                                    0x00000001
 #define Qt_Dialog                                                    hb_bitor(0x00000002,Qt_Window)
@@ -1410,35 +1262,27 @@ flags Qt::WindowFlags
 #define Qt_WindowOkButtonHint                                        0x00080000
 #define Qt_WindowCancelButtonHint                                    0x00100000
 
-/*
-enum Qt::TabFocusBehavior
-*/
+// enum Qt::TabFocusBehavior
 #define Qt_NoTabFocus                                                0x00
 #define Qt_TabFocusTextControls                                      0x01
 #define Qt_TabFocusListControls                                      0x02
 #define Qt_TabFocusAllControls                                       0xff
 
-/*
-enum Qt::ApplicationState
-flags Qt::ApplicationStates
-*/
+// enum Qt::ApplicationState
+// flags Qt::ApplicationStates
 #define Qt_ApplicationSuspended                                      0x00000000
 #define Qt_ApplicationHidden                                         0x00000001
 #define Qt_ApplicationInactive                                       0x00000002
 #define Qt_ApplicationActive                                         0x00000004
 
-/*
-enum Qt::Edge
-flags Qt::Edges
-*/
+// enum Qt::Edge
+// flags Qt::Edges
 #define Qt_TopEdge                                                   0x00001
 #define Qt_LeftEdge                                                  0x00002
 #define Qt_RightEdge                                                 0x00004
 #define Qt_BottomEdge                                                0x00008
 
-/*
-enum Qt::EnterKeyType
-*/
+// enum Qt::EnterKeyType
 #define Qt_EnterKeyDefault                                           0
 #define Qt_EnterKeyReturn                                            1
 #define Qt_EnterKeyDone                                              2
@@ -1448,42 +1292,30 @@ enum Qt::EnterKeyType
 #define Qt_EnterKeyNext                                              6
 #define Qt_EnterKeyPrevious                                          7
 
-/*
-enum Qt::ScrollPhase
-*/
+// enum Qt::ScrollPhase
 #define Qt_NoScrollPhase                                             0
 #define Qt_ScrollBegin                                               1
 #define Qt_ScrollUpdate                                              2
 #define Qt_ScrollEnd                                                 3
 
-/*
-enum Qt::MouseEventSource
-*/
+// enum Qt::MouseEventSource
 #define Qt_MouseEventNotSynthesized                                  0
 #define Qt_MouseEventSynthesizedBySystem                             1
 #define Qt_MouseEventSynthesizedByQt                                 2
 #define Qt_MouseEventSynthesizedByApplication                        3
 
-/*
-enum Qt::MouseEventFlag
-flags Qt::MouseEventFlags
-*/
+// enum Qt::MouseEventFlag
+// flags Qt::MouseEventFlags
 #define Qt_MouseEventCreatedDoubleClick                              0x01
 #define Qt_MouseEventFlagMask                                        0xFF
 
-/*
-enum Qt::DockWidgetAreaSizes
-*/
+// enum Qt::DockWidgetAreaSizes
 #define Qt_NDockWidgetAreas                                          4
 
-/*
-enum Qt::ToolBarAreaSizes
-*/
+// enum Qt::ToolBarAreaSizes
 #define Qt_NToolBarAreas                                             4
 
-/*
-enum Qt::ChecksumType
-*/
+// enum Qt::ChecksumType
 #define Qt_ChecksumIso3309                                           0
 #define Qt_ChecksumItuV41                                            1
 
