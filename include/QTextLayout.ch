@@ -9,9 +9,7 @@
 #ifndef QTEXTLAYOUT_CH
 #define QTEXTLAYOUT_CH
 
-/*
-enum QTextLayout::CursorMode
-*/
+// enum QTextLayout::CursorMode
 #define QTextLayout_SkipCharacters                                   0
 #define QTextLayout_SkipWords                                        1
 

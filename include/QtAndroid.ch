@@ -9,10 +9,8 @@
 #ifndef QTANDROID_CH
 #define QTANDROID_CH
 
-/*
-enum class QtAndroid::BindFlag
-flags class QtAndroid::BindFlags
-*/
+// enum class QtAndroid::BindFlag
+// flags class QtAndroid::BindFlags
 #define QtAndroid_BindFlag_None                                      0x00000000
 #define QtAndroid_BindFlag_AutoCreate                                0x00000001
 #define QtAndroid_BindFlag_DebugUnbind                               0x00000002
@@ -24,9 +22,7 @@ flags class QtAndroid::BindFlags
 #define QtAndroid_BindFlag_AdjustWithActivity                        0x00000080
 #define QtAndroid_BindFlag_ExternalService                           -2147483648 // 0x80000000
 
-/*
-enum class QtAndroid::PermissionResult
-*/
+// enum class QtAndroid::PermissionResult
 #define QtAndroid_PermissionResult_Granted                           0
 #define QtAndroid_PermissionResult_Denied                            1
 

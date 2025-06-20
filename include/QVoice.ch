@@ -9,16 +9,12 @@
 #ifndef QVOICE_CH
 #define QVOICE_CH
 
-/*
-enum QVoice::Gender
-*/
+// enum QVoice::Gender
 #define QVoice_Male                                                  0
 #define QVoice_Female                                                1
 #define QVoice_Unknown                                               2
 
-/*
-enum QVoice::Age
-*/
+// enum QVoice::Age
 #define QVoice_Child                                                 0
 #define QVoice_Teenager                                              1
 #define QVoice_Adult                                                 2

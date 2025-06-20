@@ -9,9 +9,7 @@
 #ifndef QWEBENGINECERTIFICATEERROR_CH
 #define QWEBENGINECERTIFICATEERROR_CH
 
-/*
-enum QWebEngineCertificateError::Error
-*/
+// enum QWebEngineCertificateError::Error
 #define QWebEngineCertificateError_SslPinnedKeyNotInCertificateChain  -150
 #define QWebEngineCertificateError_CertificateCommonNameInvalid       -200
 #define QWebEngineCertificateError_CertificateDateInvalid             -201

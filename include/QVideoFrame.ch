@@ -9,17 +9,13 @@
 #ifndef QVIDEOFRAME_CH
 #define QVIDEOFRAME_CH
 
-/*
-enum QVideoFrame::FieldType
-*/
+// enum QVideoFrame::FieldType
 #define QVideoFrame_ProgressiveFrame                                 0
 #define QVideoFrame_TopField                                         1
 #define QVideoFrame_BottomField                                      2
 #define QVideoFrame_InterlacedFrame                                  3
 
-/*
-enum QVideoFrame::PixelFormat
-*/
+// enum QVideoFrame::PixelFormat
 #define QVideoFrame_Format_Invalid                                   0
 #define QVideoFrame_Format_ARGB32                                    1
 #define QVideoFrame_Format_ARGB32_Premultiplied                      2

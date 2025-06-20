@@ -9,9 +9,7 @@
 #ifndef QWEBSOCKETSERVER_CH
 #define QWEBSOCKETSERVER_CH
 
-/*
-enum QWebSocketServer::SslMode
-*/
+// enum QWebSocketServer::SslMode
 // TODO: checar efeito da flag QT_NO_SSL no valor das constantes
 //#ifndef QT_NO_SSL
 #define QWebSocketServer_SecureMode                                  0

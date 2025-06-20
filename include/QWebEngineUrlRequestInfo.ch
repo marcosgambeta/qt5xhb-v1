@@ -9,9 +9,7 @@
 #ifndef QWEBENGINEURLREQUESTINFO_CH
 #define QWEBENGINEURLREQUESTINFO_CH
 
-/*
-enum QWebEngineUrlRequestInfo::ResourceType
-*/
+// enum QWebEngineUrlRequestInfo::ResourceType
 #define QWebEngineUrlRequestInfo_ResourceTypeMainFrame               0
 #define QWebEngineUrlRequestInfo_ResourceTypeSubFrame                1
 #define QWebEngineUrlRequestInfo_ResourceTypeStylesheet              2
@@ -33,9 +31,7 @@ enum QWebEngineUrlRequestInfo::ResourceType
 #define QWebEngineUrlRequestInfo_ResourceTypeLast                    18
 #define QWebEngineUrlRequestInfo_ResourceTypeUnknown                 255
 
-/*
-enum QWebEngineUrlRequestInfo::NavigationType
-*/
+// enum QWebEngineUrlRequestInfo::NavigationType
 #define QWebEngineUrlRequestInfo_NavigationTypeLink                  0
 #define QWebEngineUrlRequestInfo_NavigationTypeTyped                 1
 #define QWebEngineUrlRequestInfo_NavigationTypeFormSubmitted         2

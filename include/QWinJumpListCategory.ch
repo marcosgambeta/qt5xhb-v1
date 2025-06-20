@@ -9,9 +9,7 @@
 #ifndef QWINJUMPLISTCATEGORY_CH
 #define QWINJUMPLISTCATEGORY_CH
 
-/*
-enum QWinJumpListCategory::Type
-*/
+// enum QWinJumpListCategory::Type
 #define QWinJumpListCategory_Custom                                  0
 #define QWinJumpListCategory_Recent                                  1
 #define QWinJumpListCategory_Frequent                                2

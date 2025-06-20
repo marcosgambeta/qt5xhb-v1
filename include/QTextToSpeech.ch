@@ -9,9 +9,7 @@
 #ifndef QTEXTTOSPEECH_CH
 #define QTEXTTOSPEECH_CH
 
-/*
-enum QTextToSpeech::State
-*/
+// enum QTextToSpeech::State
 #define QTextToSpeech_Ready                                         0
 #define QTextToSpeech_Speaking                                      1
 #define QTextToSpeech_Paused                                        2

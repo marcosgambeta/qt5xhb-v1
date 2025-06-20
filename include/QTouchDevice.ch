@@ -9,15 +9,11 @@
 #ifndef QTOUCHDEVICE_CH
 #define QTOUCHDEVICE_CH
 
-/*
-enum QTouchDevice::DeviceType
-*/
+// enum QTouchDevice::DeviceType
 #define QTouchDevice_TouchScreen                                     0
 #define QTouchDevice_TouchPad                                        1
 
-/*
-enum QTouchDevice::CapabilityFlag
-*/
+// enum QTouchDevice::CapabilityFlag
 #define QTouchDevice_Position                                        0x0001
 #define QTouchDevice_Area                                            0x0002
 #define QTouchDevice_Pressure                                        0x0004

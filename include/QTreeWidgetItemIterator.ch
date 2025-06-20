@@ -9,10 +9,8 @@
 #ifndef QTREEWIDGETITEMITERATOR_CH
 #define QTREEWIDGETITEMITERATOR_CH
 
-/*
-enum QTreeWidgetItemIterator::IteratorFlag
-flags QTreeWidgetItemIterator::IteratorFlags
-*/
+// enum QTreeWidgetItemIterator::IteratorFlag
+// flags QTreeWidgetItemIterator::IteratorFlags
 #define QTreeWidgetItemIterator_All                                  0x00000000
 #define QTreeWidgetItemIterator_Hidden                               0x00000001
 #define QTreeWidgetItemIterator_NotHidden                            0x00000002

@@ -9,9 +9,7 @@
 #ifndef QWEBSETTINGS_CH
 #define QWEBSETTINGS_CH
 
-/*
-enum QWebSettings::FontFamily
-*/
+// enum QWebSettings::FontFamily
 #define QWebSettings_StandardFont                                    0
 #define QWebSettings_FixedFont                                       1
 #define QWebSettings_SerifFont                                       2
@@ -19,17 +17,13 @@ enum QWebSettings::FontFamily
 #define QWebSettings_CursiveFont                                     4
 #define QWebSettings_FantasyFont                                     5
 
-/*
-enum QWebSettings::FontSize
-*/
+// enum QWebSettings::FontSize
 #define QWebSettings_MinimumFontSize                                 0
 #define QWebSettings_MinimumLogicalFontSize                          1
 #define QWebSettings_DefaultFontSize                                 2
 #define QWebSettings_DefaultFixedFontSize                            3
 
-/*
-enum QWebSettings::WebAttribute
-*/
+// enum QWebSettings::WebAttribute
 #define QWebSettings_AutoLoadImages                                  0
 #define QWebSettings_DnsPrefetchEnabled                              ?
 #define QWebSettings_JavascriptEnabled                               1
@@ -55,9 +49,7 @@ enum QWebSettings::WebAttribute
 #define QWebSettings_FrameFlatteningEnabled                          ?
 #define QWebSettings_SiteSpecificQuirksEnabled                       ?
 
-/*
-enum QWebSettings::WebGraphic
-*/
+// enum QWebSettings::WebGraphic
 #define QWebSettings_MissingImageGraphic                             0
 #define QWebSettings_MissingPluginGraphic                            1
 #define QWebSettings_DefaultFrameIconGraphic                         2

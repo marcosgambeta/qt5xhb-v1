@@ -9,25 +9,19 @@
 #ifndef QXMLSTREAMREADER_CH
 #define QXMLSTREAMREADER_CH
 
-/*
-enum QXmlStreamReader::Error
-*/
+// enum QXmlStreamReader::Error
 #define QXmlStreamReader_NoError                                     0
 #define QXmlStreamReader_CustomError                                 2
 #define QXmlStreamReader_NotWellFormedError                          3
 #define QXmlStreamReader_PrematureEndOfDocumentError                 4
 #define QXmlStreamReader_UnexpectedElementError                      1
 
-/*
-enum QXmlStreamReader::ReadElementTextBehaviour
-*/
+// enum QXmlStreamReader::ReadElementTextBehaviour
 #define QXmlStreamReader_ErrorOnUnexpectedElement                    0
 #define QXmlStreamReader_IncludeChildElements                        1
 #define QXmlStreamReader_SkipChildElements                           2
 
-/*
-enum QXmlStreamReader::TokenType
-*/
+// enum QXmlStreamReader::TokenType
 #define QXmlStreamReader_NoToken                                     0
 #define QXmlStreamReader_Invalid                                     1
 #define QXmlStreamReader_StartDocument                               2

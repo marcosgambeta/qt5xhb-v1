@@ -9,9 +9,7 @@
 #ifndef QTRANSFORM_CH
 #define QTRANSFORM_CH
 
-/*
-enum QTransform::TransformationType
-*/
+// enum QTransform::TransformationType
 #define QTransform_TxNone                                            0x00
 #define QTransform_TxTranslate                                       0x01
 #define QTransform_TxScale                                           0x02

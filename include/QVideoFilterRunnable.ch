@@ -9,10 +9,8 @@
 #ifndef QVIDEOFILTERRUNNABLE_CH
 #define QVIDEOFILTERRUNNABLE_CH
 
-/*
-enum QVideoFilterRunnable::RunFlag
-flags QVideoFilterRunnable::RunFlags
-*/
+// enum QVideoFilterRunnable::RunFlag
+// flags QVideoFilterRunnable::RunFlags
 #define QVideoFilterRunnable_LastInChain                             0x01
 
 #endif // QVIDEOFILTERRUNNABLE_CH

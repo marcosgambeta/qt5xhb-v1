@@ -9,9 +9,7 @@
 #ifndef QWEBSOCKETPROTOCOL_CH
 #define QWEBSOCKETPROTOCOL_CH
 
-/*
-enum QWebSocketProtocol::Version
-*/
+// enum QWebSocketProtocol::Version
 #define QWebSocketProtocol_VersionUnknown                            -1
 #define QWebSocketProtocol_Version0                                  0
 #define QWebSocketProtocol_Version4                                  4
@@ -22,9 +20,7 @@ enum QWebSocketProtocol::Version
 #define QWebSocketProtocol_Version13                                 13
 #define QWebSocketProtocol_VersionLatest                             QWebSocketProtocol_Version13
 
-/*
-enum QWebSocketProtocol::CloseCode
-*/
+// enum QWebSocketProtocol::CloseCode
 #define QWebSocketProtocol_CloseCodeNormal                           1000
 #define QWebSocketProtocol_CloseCodeGoingAway                        1001
 #define QWebSocketProtocol_CloseCodeProtocolError                    1002

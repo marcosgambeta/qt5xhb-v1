@@ -9,9 +9,7 @@
 #ifndef QTHREAD_CH
 #define QTHREAD_CH
 
-/*
-enum QThread::Priority
-*/
+// enum QThread::Priority
 #define QThread_IdlePriority                                         0
 #define QThread_LowestPriority                                       1
 #define QThread_LowPriority                                          2

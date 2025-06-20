@@ -9,15 +9,11 @@
 #ifndef QTEXTCURSOR_CH
 #define QTEXTCURSOR_CH
 
-/*
-enum QTextCursor::MoveMode
-*/
+// enum QTextCursor::MoveMode
 #define QTextCursor_MoveAnchor                                       0
 #define QTextCursor_KeepAnchor                                       1
 
-/*
-enum QTextCursor::MoveOperation
-*/
+// enum QTextCursor::MoveOperation
 #define QTextCursor_NoMove                                           0
 #define QTextCursor_Start                                            1
 #define QTextCursor_Up                                               2
@@ -44,9 +40,7 @@ enum QTextCursor::MoveOperation
 #define QTextCursor_NextRow                                          23
 #define QTextCursor_PreviousRow                                      24
 
-/*
-enum QTextCursor::SelectionType
-*/
+// enum QTextCursor::SelectionType
 #define QTextCursor_WordUnderCursor                                  0
 #define QTextCursor_LineUnderCursor                                  1
 #define QTextCursor_BlockUnderCursor                                 2

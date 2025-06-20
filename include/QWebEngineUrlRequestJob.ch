@@ -9,9 +9,7 @@
 #ifndef QWEBENGINEURLREQUESTJOB_CH
 #define QWEBENGINEURLREQUESTJOB_CH
 
-/*
-enum QWebEngineUrlRequestJob::Error
-*/
+// enum QWebEngineUrlRequestJob::Error
 #define QWebEngineUrlRequestJob_NoError                              0
 #define QWebEngineUrlRequestJob_UrlNotFound                          1
 #define QWebEngineUrlRequestJob_UrlInvalid                           2

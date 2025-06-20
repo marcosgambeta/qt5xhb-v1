@@ -9,22 +9,16 @@
 #ifndef QTABBAR_CH
 #define QTABBAR_CH
 
-/*
-enum QTabBar::ButtonPosition
-*/
+// enum QTabBar::ButtonPosition
 #define QTabBar_LeftSide                                             0
 #define QTabBar_RightSide                                            1
 
-/*
-enum QTabBar::SelectionBehavior
-*/
+// enum QTabBar::SelectionBehavior
 #define QTabBar_SelectLeftTab                                        0
 #define QTabBar_SelectRightTab                                       1
 #define QTabBar_SelectPreviousTab                                    2
 
-/*
-enum QTabBar::Shape
-*/
+// enum QTabBar::Shape
 #define QTabBar_RoundedNorth                                         0
 #define QTabBar_RoundedSouth                                         1
 #define QTabBar_RoundedWest                                          2

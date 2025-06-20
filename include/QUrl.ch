@@ -9,10 +9,8 @@
 #ifndef QURL_CH
 #define QURL_CH
 
-/*
-enum QUrl::FormattingOption
-flags QUrl::FormattingOptions
-*/
+// enum QUrl::FormattingOption
+// flags QUrl::FormattingOptions
 #define QUrl_None                                                    0x0
 #define QUrl_RemoveScheme                                            0x1
 #define QUrl_RemovePassword                                          0x2
@@ -24,9 +22,7 @@ flags QUrl::FormattingOptions
 #define QUrl_RemoveFragment                                          0x80
 #define QUrl_StripTrailingSlash                                      0x10000
 
-/*
-enum QUrl::ParsingMode
-*/
+// enum QUrl::ParsingMode
 #define QUrl_TolerantMode                                            0
 #define QUrl_StrictMode                                              1
 

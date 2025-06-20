@@ -9,9 +9,7 @@
 #ifndef QWEBENGINEHTTPREQUEST_CH
 #define QWEBENGINEHTTPREQUEST_CH
 
-/*
-enum QWebEngineHttpRequest::Method
-*/
+// enum QWebEngineHttpRequest::Method
 #define QWebEngineHttpRequest_Get                                    0
 #define QWebEngineHttpRequest_Post                                   1
 

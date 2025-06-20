@@ -9,9 +9,7 @@
 #ifndef QTAPREADING_CH
 #define QTAPREADING_CH
 
-/*
-enum QTapReading::TapDirection
-*/
+// enum QTapReading::TapDirection
 #define QTapReading_Undefined                                        0
 #define QTapReading_X                                                0x0001
 #define QTapReading_Y                                                0x0002

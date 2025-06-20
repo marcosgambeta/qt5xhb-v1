@@ -9,15 +9,11 @@
 #ifndef QVIRTUALKEYBOARDINPUTENGINE_CH
 #define QVIRTUALKEYBOARDINPUTENGINE_CH
 
-/*
-enum class QVirtualKeyboardInputEngine::TextCase
-*/
+// enum class QVirtualKeyboardInputEngine::TextCase
 #define QVirtualKeyboardInputEngine_Lower                            0
 #define QVirtualKeyboardInputEngine_Upper                            1
 
-/*
-enum class QVirtualKeyboardInputEngine::InputMode
-*/
+// enum class QVirtualKeyboardInputEngine::InputMode
 #define QVirtualKeyboardInputEngine_Latin                            0
 #define QVirtualKeyboardInputEngine_Numeric                          1
 #define QVirtualKeyboardInputEngine_Dialable                         2
@@ -36,18 +32,14 @@ enum class QVirtualKeyboardInputEngine::InputMode
 #define QVirtualKeyboardInputEngine_JapaneseHandwriting              15
 #define QVirtualKeyboardInputEngine_KoreanHandwriting                16
 
-/*
-enum class QVirtualKeyboardInputEngine::PatternRecognitionMode
-*/
+// enum class QVirtualKeyboardInputEngine::PatternRecognitionMode
 #define QVirtualKeyboardInputEngine_None                             0
 #define QVirtualKeyboardInputEngine_PatternRecognitionDisabled       QVirtualKeyboardInputEngine_None
 #define QVirtualKeyboardInputEngine_Handwriting                      1
 #define QVirtualKeyboardInputEngine_HandwritingRecoginition          QVirtualKeyboardInputEngine_Handwriting
 
-/*
-enum class QVirtualKeyboardInputEngine::ReselectFlag
-flags QVirtualKeyboardInputEngine::ReselectFlags
-*/
+// enum class QVirtualKeyboardInputEngine::ReselectFlag
+// flags QVirtualKeyboardInputEngine::ReselectFlags
 #define QVirtualKeyboardInputEngine_WordBeforeCursor                 0x1
 #define QVirtualKeyboardInputEngine_WordAfterCursor                  0x2
 #define QVirtualKeyboardInputEngine_WordAtCursor                     hb_bitor(QVirtualKeyboardInputEngine_WordBeforeCursor, QVirtualKeyboardInputEngine_WordAfterCursor)

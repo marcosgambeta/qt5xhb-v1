@@ -9,23 +9,17 @@
 #ifndef QWEBPAGE_CH
 #define QWEBPAGE_CH
 
-/*
-enum QWebPage::ErrorDomain
-*/
+// enum QWebPage::ErrorDomain
 #define QWebPage_QtNetwork                                           0
 #define QWebPage_Http                                                1
 #define QWebPage_WebKit                                              2
 
-/*
-enum QWebPage::Extension
-*/
+// enum QWebPage::Extension
 #define QWebPage_ChooseMultipleFilesExtension                        0
 #define QWebPage_ErrorPageExtension                                  1
 
-/*
-enum QWebPage::FindFlag
-flags QWebPage::FindFlags
-*/
+// enum QWebPage::FindFlag
+// flags QWebPage::FindFlags
 #define QWebPage_FindBackward                                        1
 #define QWebPage_FindCaseSensitively                                 2
 #define QWebPage_FindWrapsAroundDocument                             4
@@ -34,16 +28,12 @@ flags QWebPage::FindFlags
 #define QWebPage_TreatMedialCapitalAsWordBeginning                   32
 #define QWebPage_FindBeginsInSelection                               64
 
-/*
-enum QWebPage::LinkDelegationPolicy
-*/
+// enum QWebPage::LinkDelegationPolicy
 #define QWebPage_DontDelegateLinks                                   0
 #define QWebPage_DelegateExternalLinks                               1
 #define QWebPage_DelegateAllLinks                                    2
 
-/*
-enum QWebPage::NavigationType
-*/
+// enum QWebPage::NavigationType
 #define QWebPage_NavigationTypeLinkClicked                           0
 #define QWebPage_NavigationTypeFormSubmitted                         1
 #define QWebPage_NavigationTypeBackOrForward                         2
@@ -51,9 +41,7 @@ enum QWebPage::NavigationType
 #define QWebPage_NavigationTypeFormResubmitted                       4
 #define QWebPage_NavigationTypeOther                                 5
 
-/*
-enum QWebPage::WebAction
-*/
+// enum QWebPage::WebAction
 #define QWebPage_NoWebAction                                         -1
 #define QWebPage_OpenLink                                            0
 #define QWebPage_OpenLinkInNewWindow                                 1
@@ -134,28 +122,20 @@ enum QWebPage::WebAction
 #define QWebPage_ToggleVideoFullscreen                               76
 #define QWebPage_WebActionCount                                      77
 
-/*
-enum QWebPage::WebWindowType
-*/
+// enum QWebPage::WebWindowType
 #define QWebPage_WebBrowserWindow                                    0
 #define QWebPage_WebModalDialog                                      1
 
-/*
-enum QWebPage::PermissionPolicy
-*/
+// enum QWebPage::PermissionPolicy
 #define QWebPage_PermissionUnknown                                   0
 #define QWebPage_PermissionGrantedByUser                             1
 #define QWebPage_PermissionDeniedByUser                              2
 
-/*
-enum QWebPage::Feature
-*/
+// enum QWebPage::Feature
 #define QWebPage_Notifications                                       0
 #define QWebPage_Geolocation                                         1
 
-/*
-enum QWebPage::VisibilityState
-*/
+// enum QWebPage::VisibilityState
 #define QWebPage_VisibilityStateVisible                              0
 #define QWebPage_VisibilityStateHidden                               1
 #define QWebPage_VisibilityStatePrerender                            2

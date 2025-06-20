@@ -9,9 +9,7 @@
 #ifndef QWINDOW_CH
 #define QWINDOW_CH
 
-/*
-enum QWindow::AncestorMode
-*/
+// enum QWindow::AncestorMode
 #define QWindow_ExcludeTransients                                    0
 #define QWindow_IncludeTransients                                    1
 

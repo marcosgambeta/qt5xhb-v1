@@ -9,9 +9,7 @@
 #ifndef QWEBENGINEPAGE_CH
 #define QWEBENGINEPAGE_CH
 
-/*
-enum QWebEnginePage::WebAction
-*/
+// enum QWebEnginePage::WebAction
 #define QWebEnginePage_NoWebAction                                   -1
 #define QWebEnginePage_Back                                          0
 #define QWebEnginePage_Forward                                       1
@@ -27,45 +25,33 @@ enum QWebEnginePage::WebAction
 #define QWebEnginePage_PasteAndMatchStyle                            11
 #define QWebEnginePage_WebActionCount                                12
 
-/*
-enum QWebEnginePage::FindFlag
-flags QWebEnginePage::FindFlags
-*/
+// enum QWebEnginePage::FindFlag
+// flags QWebEnginePage::FindFlags
 #define QWebEnginePage_FindBackward                                  1
 #define QWebEnginePage_FindCaseSensitively                           2
 
-/*
-enum QWebEnginePage::WebWindowType
-*/
+// enum QWebEnginePage::WebWindowType
 #define QWebEnginePage_WebBrowserWindow                              0
 #define QWebEnginePage_WebBrowserTab                                 1
 #define QWebEnginePage_WebDialog                                     2
 
-/*
-enum QWebEnginePage::PermissionPolicy
-*/
+// enum QWebEnginePage::PermissionPolicy
 #define QWebEnginePage_PermissionUnknown                             0
 #define QWebEnginePage_PermissionGrantedByUser                       1
 #define QWebEnginePage_PermissionDeniedByUser                        2
 
-/*
-enum QWebEnginePage::Feature
-*/
+// enum QWebEnginePage::Feature
 #define QWebEnginePage_Notifications                                 0
 #define QWebEnginePage_Geolocation                                   1
 #define QWebEnginePage_MediaAudioDevices                             2
 #define QWebEnginePage_MediaVideoDevices                             3
 #define QWebEnginePage_MediaAudioVideoDevices                        4
 
-/*
-enum QWebEnginePage::FileSelectionMode
-*/
+// enum QWebEnginePage::FileSelectionMode
 #define QWebEnginePage_FileSelectOpen                                0
 #define QWebEnginePage_FileSelectOpenMultiple                        1
 
-/*
-enum QWebEnginePage::JavaScriptConsoleMessageLevel
-*/
+// enum QWebEnginePage::JavaScriptConsoleMessageLevel
 #define QWebEnginePage_InfoMessageLevel                              0
 #define QWebEnginePage_WarningMessageLevel                           1
 #define QWebEnginePage_ErrorMessageLevel                             2

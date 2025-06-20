@@ -9,9 +9,7 @@
 #ifndef QVARIANT_CH
 #define QVARIANT_CH
 
-/*
-enum QVariant::Type
-*/
+// enum QVariant::Type
 #define QVariant_Invalid                                             QMetaType_UnknownType
 #define QVariant_Bool                                                QMetaType_Bool
 #define QVariant_Int                                                 QMetaType_Int

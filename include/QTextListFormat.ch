@@ -9,9 +9,7 @@
 #ifndef QTEXTLISTFORMAT_CH
 #define QTEXTLISTFORMAT_CH
 
-/*
-enum QTextListFormat::Style
-*/
+// enum QTextListFormat::Style
 #define QTextListFormat_ListDisc                                     -1
 #define QTextListFormat_ListCircle                                   -2
 #define QTextListFormat_ListSquare                                   -3

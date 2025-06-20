@@ -9,15 +9,11 @@
 #ifndef QTEXTLINE_CH
 #define QTEXTLINE_CH
 
-/*
-enum QTextLine::Edge
-*/
+// enum QTextLine::Edge
 #define QTextLine_Leading                                            0
 #define QTextLine_Trailing                                           1
 
-/*
-enum QTextLine::CursorPosition
-*/
+// enum QTextLine::CursorPosition
 #define QTextLine_CursorBetweenCharacters                            0
 #define QTextLine_CursorOnCharacter                                  1
 

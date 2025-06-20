@@ -9,14 +9,10 @@
 #ifndef QVIRTUALKEYBOARDSELECTIONLISTMODEL_CH
 #define QVIRTUALKEYBOARDSELECTIONLISTMODEL_CH
 
-/*
-enum class QVirtualKeyboardSelectionListModel::Type
-*/
+// enum class QVirtualKeyboardSelectionListModel::Type
 #define QVirtualKeyboardSelectionListModel_WordCandidateList         0
 
-/*
-enum class QVirtualKeyboardSelectionListModel::Role
-*/
+// enum class QVirtualKeyboardSelectionListModel::Role
 #define QVirtualKeyboardSelectionListModel_Display                   Qt_DisplayRole
 #define QVirtualKeyboardSelectionListModel_DisplayRole               QVirtualKeyboardSelectionListModel_Display
 #define QVirtualKeyboardSelectionListModel_WordCompletionLength      Qt_UserRole + 1
@@ -24,9 +20,7 @@ enum class QVirtualKeyboardSelectionListModel::Role
 #define QVirtualKeyboardSelectionListModel_Dictionary                QVirtualKeyboardSelectionListModel_WordCompletionLengthRole + 1
 #define QVirtualKeyboardSelectionListModel_CanRemoveSuggestion       QVirtualKeyboardSelectionListModel_WordCompletionLengthRole + 2
 
-/*
-enum class QVirtualKeyboardSelectionListModel::DictionaryType
-*/
+// enum class QVirtualKeyboardSelectionListModel::DictionaryType
 #define QVirtualKeyboardSelectionListModel_Default                   0
 #define QVirtualKeyboardSelectionListModel_User                      1
 

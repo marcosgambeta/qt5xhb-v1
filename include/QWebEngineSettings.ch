@@ -9,9 +9,7 @@
 #ifndef QWEBENGINESETTINGS_CH
 #define QWEBENGINESETTINGS_CH
 
-/*
-enum QWebEngineSettings::FontFamily
-*/
+// enum QWebEngineSettings::FontFamily
 #define QWebEngineSettings_StandardFont                              0
 #define QWebEngineSettings_FixedFont                                 1
 #define QWebEngineSettings_SerifFont                                 2
@@ -19,9 +17,7 @@ enum QWebEngineSettings::FontFamily
 #define QWebEngineSettings_CursiveFont                               4
 #define QWebEngineSettings_FantasyFont                               5
 
-/*
-enum QWebEngineSettings::WebAttribute
-*/
+// enum QWebEngineSettings::WebAttribute
 #define QWebEngineSettings_AutoLoadImages                            0
 #define QWebEngineSettings_JavascriptEnabled                         1
 #define QWebEngineSettings_JavascriptCanOpenWindows                  2
@@ -35,9 +31,7 @@ enum QWebEngineSettings::WebAttribute
 #define QWebEngineSettings_HyperlinkAuditingEnabled                  10
 #define QWebEngineSettings_ScrollAnimatorEnabled                     11
 
-/*
-enum QWebEngineSettings::FontSize
-*/
+// enum QWebEngineSettings::FontSize
 #define QWebEngineSettings_MinimumFontSize                           0
 #define QWebEngineSettings_MinimumLogicalFontSize                    1
 #define QWebEngineSettings_DefaultFontSize                           2
