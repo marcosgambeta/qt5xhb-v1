@@ -4,6 +4,9 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
+#ifndef QT5XHB_COMMON_H
+#define QT5XHB_COMMON_H
+
 #include <hbapi.h>
 #include <hbapiitm.h>
 #include <hbapierr.h>
@@ -19,3 +22,5 @@
 #ifdef __XHARBOUR__
 #define hb_objGetClass(x) HB_OBJ_CLASS(x)
 #endif
+
+#endif // QT5XHB_COMMON_H
