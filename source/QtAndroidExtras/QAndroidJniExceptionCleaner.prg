@@ -67,7 +67,7 @@ RETURN
 HB_FUNC_STATIC(QANDROIDJNIEXCEPTIONCLEANER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     QAndroidJniExceptionCleaner *obj = new QAndroidJniExceptionCleaner(
         HB_ISNIL(1) ? (QAndroidJniExceptionCleaner::OutputMode)QAndroidJniExceptionCleaner:: ::Silent
