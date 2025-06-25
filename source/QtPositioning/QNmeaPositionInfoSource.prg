@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QNMEAPOSITIONINFOSOURCE_REQUESTUPDATE)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       obj->requestUpdate(OPINT(1, 0));

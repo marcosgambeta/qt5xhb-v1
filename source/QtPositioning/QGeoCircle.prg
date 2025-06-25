@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QGEOCIRCLE_NEW)
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQGEOCOORDINATE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQGEOCOORDINATE(1) && ISNUMORNIL(2))
   {
     /*
     QGeoCircle( const QGeoCoordinate &center, qreal radius = -1.0 )
