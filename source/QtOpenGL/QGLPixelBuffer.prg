@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_DELETE)
 
 HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
 {
-  if (ISBETWEEN(1, 2) && ISQIMAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISNUMORNIL(2))
   {
     /*
     GLuint bindTexture( const QImage &image, GLenum target = GL_TEXTURE_2D )
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
       RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM(2, GL_TEXTURE_2D)));
     }
   }
-  else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && ISNUMORNIL(2))
   {
     /*
     GLuint bindTexture( const QPixmap &pixmap, GLenum target = GL_TEXTURE_2D )
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_DONECURRENT)
 
 HB_FUNC_STATIC(QGLPIXELBUFFER_DRAWTEXTURE)
 {
-  if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
     /*
     void drawTexture( const QRectF &target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_DRAWTEXTURE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
     /*
     void drawTexture( const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )

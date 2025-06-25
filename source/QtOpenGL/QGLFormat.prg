@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QGLFORMAT_NEW)
     QGLFormat *obj = new QGLFormat();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     /*
     QGLFormat( QGL::FormatOptions options, int plane = 0 )
