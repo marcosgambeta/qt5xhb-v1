@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMID)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSIZE(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSIZE(2) && ISNUMORNIL(3))
     {
 #endif
       QSGTexture *ptr = obj->createTextureFromId(
