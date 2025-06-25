@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_SEND)
 HB_FUNC_STATIC(QDBUSCONNECTION_CALLWITHCALLBACK)
 {
   if (ISBETWEEN(4, 5) && ISQDBUSMESSAGE(1) && ISQOBJECT(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
-      (HB_ISNUM(5) || HB_ISNIL(5)))
+      ISNUMORNIL(5))
   {
     /*
     bool callWithCallback( const QDBusMessage &message, QObject * receiver, const char * returnMethod, const char *
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALLWITHCALLBACK)
       RBOOL(obj->callWithCallback(*PQDBUSMESSAGE(1), PQOBJECT(2), PCONSTCHAR(3), PCONSTCHAR(4), OPINT(5, -1)));
     }
   }
-  else if (ISBETWEEN(3, 4) && ISQDBUSMESSAGE(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQDBUSMESSAGE(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISNUMORNIL(4))
   {
     /*
     bool callWithCallback( const QDBusMessage &message, QObject * receiver, const char * slot, int timeout = -1 ) const
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_CALL)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQDBUSMESSAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && ISQDBUSMESSAGE(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
 #endif
       QDBusMessage *ptr = new QDBusMessage(obj->call(
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_ASYNCCALL)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQDBUSMESSAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQDBUSMESSAGE(1) && ISNUMORNIL(2))
     {
 #endif
       QDBusPendingCall *ptr = new QDBusPendingCall(obj->asyncCall(*PQDBUSMESSAGE(1), OPINT(2, -1)));
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_REGISTEROBJECT)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQOBJECT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQOBJECT(2) && ISNUMORNIL(3))
     {
 #endif
       RBOOL(obj->registerObject(PQSTRING(1), PQOBJECT(2),
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QDBUSCONNECTION_UNREGISTEROBJECT)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
     {
 #endif
       obj->unregisterObject(PQSTRING(1), HB_ISNIL(2) ? (QDBusConnection::UnregisterMode)QDBusConnection::UnregisterNode
