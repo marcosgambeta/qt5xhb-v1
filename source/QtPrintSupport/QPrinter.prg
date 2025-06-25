@@ -126,7 +126,7 @@ RETURN
 
 HB_FUNC_STATIC(QPRINTER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     QPrinter( QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QPRINTER_NEW)
                                              : (QPrinter::PrinterMode)hb_parni(1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && ISQPRINTERINFO(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQPRINTERINFO(1) && ISNUMORNIL(2))
   {
     /*
     QPrinter( const QPrinterInfo &printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
