@@ -70,7 +70,7 @@ RETURN
     */
 HB_FUNC_STATIC(QQMLINCUBATOR_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     QQmlIncubator *obj = new QQmlIncubator(HB_ISNIL(1) ? (QQmlIncubator::IncubationMode)QQmlIncubator::Asynchronous
                                                        : (QQmlIncubator::IncubationMode)hb_parni(1));
