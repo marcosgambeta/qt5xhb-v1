@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEW)
     QVideoSurfaceFormat *obj = new QVideoSurfaceFormat();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(2, 3) && ISQSIZE(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQSIZE(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
     /*
     QVideoSurfaceFormat( const QSize &size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type =
