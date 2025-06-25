@@ -656,7 +656,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERAT)
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
   {
     /*
     QTextCursor find( const QString &subString, int from = 0, QTextDocument::FindFlags options = 0 ) const
@@ -670,7 +670,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   }
-  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQTEXTCURSOR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQTEXTCURSOR(2) && ISNUMORNIL(3))
   {
     /*
     QTextCursor find( const QString &subString, const QTextCursor &from, QTextDocument::FindFlags options = 0 ) const
@@ -685,7 +685,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   }
-  else if (ISBETWEEN(1, 3) && ISQREGEXP(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && ISQREGEXP(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
   {
     /*
     QTextCursor find( const QRegExp &expr, int from = 0, QTextDocument::FindFlags options = 0 ) const
@@ -700,7 +700,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   }
-  else if (ISBETWEEN(2, 3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && ISNUMORNIL(3))
   {
     /*
     QTextCursor find( const QRegExp &expr, const QTextCursor &from, QTextDocument::FindFlags options = 0 ) const
@@ -1682,7 +1682,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       obj->clearUndoRedoStacks(HB_ISNIL(1) ? (QTextDocument::Stacks)QTextDocument::UndoAndRedoStacks

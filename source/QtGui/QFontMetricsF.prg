@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_BOUNDINGRECT)
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
-  else if (ISBETWEEN(3, 5) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
+  else if (ISBETWEEN(3, 5) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
            (HB_ISARRAY(5) || HB_ISNIL(5)))
   {
     /*
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_ELIDEDTEXT)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+    if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4))
     {
 #endif
       RQSTRING(obj->elidedText(PQSTRING(1), (Qt::TextElideMode)hb_parni(2), PQREAL(3), OPINT(4, 0)));
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_SIZE)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
     {
 #endif
       int par4;

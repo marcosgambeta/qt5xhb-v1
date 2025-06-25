@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QREGION_NEW)
     QRegion *obj = new QRegion();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
+  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5))
   {
     /*
     QRegion( int x, int y, int w, int h, QRegion::RegionType t = QRegion::Rectangle )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QREGION_NEW)
                     HB_ISNIL(5) ? (QRegion::RegionType)QRegion::Rectangle : (QRegion::RegionType)hb_parni(5));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQRECT(1) && ISNUMORNIL(2))
   {
     /*
     QRegion( const QRect &r, QRegion::RegionType t = QRegion::Rectangle )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QREGION_NEW)
                                                        : (QRegion::RegionType)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && ISQPOLYGON(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQPOLYGON(1) && ISNUMORNIL(2))
   {
     /*
     QRegion( const QPolygon &pa, Qt::FillRule fillRule = Qt::OddEvenFill )

@@ -604,7 +604,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ROTATE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   }
-  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4))
   {
     /*
     void rotate( float angle, float x, float y, float z = 0.0f )
@@ -789,7 +789,7 @@ HB_FUNC_STATIC(QMATRIX4X4_VIEWPORT)
 #endif
   }
   else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
-           (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
+           ISNUMORNIL(5) && ISNUMORNIL(6))
   {
     /*
     void viewport( float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f )

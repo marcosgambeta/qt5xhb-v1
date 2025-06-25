@@ -454,7 +454,7 @@ HB_FUNC_STATIC(QTEXTLINE_NATURALTEXTRECT)
 
 HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     /*
     qreal cursorToX( int * cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
       hb_storni(par1, 1);
     }
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     /*
     qreal cursorToX( int cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
@@ -496,7 +496,7 @@ HB_FUNC_STATIC(QTEXTLINE_XTOCURSOR)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       RINT(obj->xToCursor(PQREAL(1), HB_ISNIL(2) ? (QTextLine::CursorPosition)QTextLine::CursorBetweenCharacters

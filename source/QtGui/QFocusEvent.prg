@@ -54,7 +54,7 @@ RETURN
     */
 HB_FUNC_STATIC(QFOCUSEVENT_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     QFocusEvent *obj = new QFocusEvent((QEvent::Type)hb_parni(1), HB_ISNIL(2) ? (Qt::FocusReason)Qt::OtherFocusReason
                                                                               : (Qt::FocusReason)hb_parni(2));

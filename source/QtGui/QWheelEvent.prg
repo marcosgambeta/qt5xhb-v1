@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC(QWHEELEVENT_NEW)
 {
-  if (ISBETWEEN(4, 5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
+  if (ISBETWEEN(4, 5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5))
   {
     /*
     QWheelEvent( const QPointF &pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,
@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
     Qt5xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(5, 6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-           (HB_ISNUM(6) || HB_ISNIL(6)))
+           ISNUMORNIL(6))
   {
     /*
     QWheelEvent( const QPointF &pos, const QPointF &globalPos, int delta, Qt::MouseButtons buttons,

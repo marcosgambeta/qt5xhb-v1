@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
     QRawFont *obj = new QRawFont();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
     /*
     QRawFont( const QString &fileName, qreal pixelSize, QFont::HintingPreference hintingPreference =
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
                                              : (QFont::HintingPreference)hb_parni(3));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
     /*
     QRawFont( const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference hintingPreference =
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QRAWFONT_ALPHAMAPFORGLYPH)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQTRANSFORM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQTRANSFORM(3) || HB_ISNIL(3)))
     {
 #endif
       QImage *ptr =
@@ -904,7 +904,7 @@ static QRawFont fromFont( const QFont &font, QFontDatabase::WritingSystem writin
 HB_FUNC_STATIC(QRAWFONT_FROMFONT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQFONT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQFONT(1) && ISNUMORNIL(2))
   {
 #endif
     QRawFont *ptr =

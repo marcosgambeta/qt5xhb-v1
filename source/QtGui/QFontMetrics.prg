@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QFONTMETRICS_ELIDEDTEXT)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+    if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4))
     {
 #endif
       RQSTRING(obj->elidedText(PQSTRING(1), (Qt::TextElideMode)hb_parni(2), PINT(3), OPINT(4, 0)));
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QFONTMETRICS_SIZE)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
     {
 #endif
       int par4;
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QFONTMETRICS_UNDERLINEPOS)
 
 HB_FUNC_STATIC(QFONTMETRICS_WIDTH)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
     /*
     int width( const QString &text, int len = -1 ) const

@@ -104,8 +104,8 @@ HB_FUNC_STATIC(QPEN_NEW)
     QPen *obj = new QPen(HB_ISOBJECT(1) ? *(QColor *)Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(2, 5) && ISQBRUSH(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
-           (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
+  else if (ISBETWEEN(2, 5) && ISQBRUSH(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
+           ISNUMORNIL(4) && ISNUMORNIL(5))
   {
     /*
     QPen( const QBrush &brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap,

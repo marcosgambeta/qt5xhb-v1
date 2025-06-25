@@ -175,7 +175,7 @@ static QBitmap fromData( const QSize &size, const uchar * bits, QImage::Format m
 HB_FUNC_STATIC(QBITMAP_FROMDATA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && ISQSIZE(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && ISQSIZE(1) && HB_ISCHAR(2) && ISNUMORNIL(3))
   {
 #endif
     QBitmap *ptr = new QBitmap(
@@ -197,7 +197,7 @@ static QBitmap fromImage( const QImage &image, Qt::ImageConversionFlags flags = 
 HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQIMAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISNUMORNIL(2))
   {
 #endif
     QBitmap *ptr = new QBitmap(QBitmap::fromImage(*PQIMAGE(1), HB_ISNIL(2) ? (Qt::ImageConversionFlags)Qt::AutoColor

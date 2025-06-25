@@ -90,8 +90,8 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
     QKeySequence *obj = new QKeySequence(PQSTRING(1), (QKeySequence::SequenceFormat)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
-           (HB_ISNUM(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
+           ISNUMORNIL(4))
   {
     /*
     QKeySequence( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RQSTRING(obj->toString(HB_ISNIL(1) ? (QKeySequence::SequenceFormat)QKeySequence::PortableText
@@ -240,7 +240,7 @@ static QKeySequence fromString( const QString &str, QKeySequence::SequenceFormat
 HB_FUNC_STATIC(QKEYSEQUENCE_FROMSTRING)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
 #endif
     QKeySequence *ptr = new QKeySequence(

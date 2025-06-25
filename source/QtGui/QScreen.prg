@@ -831,8 +831,8 @@ HB_FUNC_STATIC(QSCREEN_GRABWINDOW)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 5) && HB_ISPOINTER(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
-        (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
+    if (ISBETWEEN(1, 5) && HB_ISPOINTER(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
+        ISNUMORNIL(4) && ISNUMORNIL(5))
     {
 #endif
       QPixmap *ptr =

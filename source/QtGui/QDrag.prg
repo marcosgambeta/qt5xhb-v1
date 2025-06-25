@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QDRAG_DRAGCURSOR)
 
 HB_FUNC_STATIC(QDRAG_EXEC)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     Qt::DropAction exec( Qt::DropActions supportedActions = Qt::MoveAction )

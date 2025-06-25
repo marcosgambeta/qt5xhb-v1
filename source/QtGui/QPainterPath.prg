@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDREGION)
 
 HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
 {
-  if (ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  if (ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4))
   {
     /*
     void addRoundedRect( const QRectF &rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
     hb_itemReturn(hb_stackSelfItem());
   }
   else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
-           (HB_ISNUM(7) || HB_ISNIL(7)))
+           ISNUMORNIL(7))
   {
     /*
     void addRoundedRect( qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode =

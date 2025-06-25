@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if (ISBETWEEN(1, 3) && ISQSIZE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && ISQSIZE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
   {
     /*
     QPageSize( const QSize &pointSize, const QString &name = QString(), QPageSize::SizeMatchPolicy matchPolicy =
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QPAGESIZE_NEW)
 #endif
   }
   else if (ISBETWEEN(2, 4) && ISQSIZEF(1) && HB_ISNUM(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
-           (HB_ISNUM(4) || HB_ISNIL(4)))
+           ISNUMORNIL(4))
   {
     /*
     QPageSize( const QSizeF &size, QPageSize::Unit units, const QString &name = QString(), QPageSize::SizeMatchPolicy
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
     }
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQSIZE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQSIZE(1) && ISNUMORNIL(2))
   {
     /*
     static QPageSize::PageSizeId id( const QSize &pointSize, QPageSize::SizeMatchPolicy matchPolicy =
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QPAGESIZE_ID)
                                                 : (QPageSize::SizeMatchPolicy)hb_parni(2)));
 #endif
   }
-  else if (ISBETWEEN(2, 3) && ISQSIZEF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQSIZEF(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
     /*
     static QPageSize::PageSizeId id( const QSizeF &size, QPageSize::Unit units, QPageSize::SizeMatchPolicy matchPolicy

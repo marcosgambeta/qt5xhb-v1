@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW)
         new QStandardItem(HB_ISOBJECT(1) ? *(QIcon *)Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
   {
     /*
     QStandardItem( int rows, int columns = 1 )
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_DATA)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       QVariant *ptr = new QVariant(obj->data(OPINT(1, Qt::UserRole + 1)));
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETDATA)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQVARIANT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQVARIANT(1) && ISNUMORNIL(2))
     {
 #endif
       obj->setData(*PQVARIANT(1), OPINT(2, Qt::UserRole + 1));
@@ -1558,7 +1558,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_CHILD)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       QStandardItem *ptr = obj->child(PINT(1), OPINT(2, 0));
@@ -1980,7 +1980,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_TAKECHILD)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       QStandardItem *ptr = obj->takeChild(PINT(1), OPINT(2, 0));
@@ -2099,7 +2099,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SORTCHILDREN)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       obj->sortChildren(PINT(1), HB_ISNIL(2) ? (Qt::SortOrder)Qt::AscendingOrder : (Qt::SortOrder)hb_parni(2));

@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_PUSHGROUP)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
 #endif
       obj->pushGroup(PQSTRING(1), OPGLUINT(2, 0),
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_STARTLOGGING)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       obj->startLogging(HB_ISNIL(1) ? (QOpenGLDebugLogger::LoggingMode)QOpenGLDebugLogger::AsynchronousLogging
