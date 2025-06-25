@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
     }
 #endif
   }
-  else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
+  else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
            (ISQGEOSHAPE(4) || HB_ISNIL(4)))
   {
     /*
