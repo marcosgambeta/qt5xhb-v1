@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_NEW)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2))
   {
     /*
     QStyleOptionComplex( int version = QStyleOptionComplex::Version, int type = QStyleOptionComplex::SO_Complex )

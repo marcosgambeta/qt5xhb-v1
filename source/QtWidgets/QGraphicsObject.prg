@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       obj->grabGesture((Qt::GestureType)hb_parni(1),

@@ -79,7 +79,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTION_NEW)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2))
   {
     /*
     QStyleOption( int version = QStyleOption::Version, int type = QStyleOption::SO_Default )

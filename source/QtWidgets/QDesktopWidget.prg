@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_DELETE)
 
 HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     const QRect availableGeometry( int screen = -1 ) const
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREEN)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       QWidget *ptr = obj->screen(OPINT(1, -1));
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENCOUNT)
 
 HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     const QRect screenGeometry( int screen = -1 ) const

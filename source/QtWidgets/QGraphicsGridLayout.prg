@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_DELETE)
 HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
 {
   if (ISBETWEEN(5, 6) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-      (HB_ISNUM(6) || HB_ISNIL(6)))
+      ISNUMORNIL(6))
   {
     /*
     void addItem( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(3, 4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4))
   {
     /*
     void addItem( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )

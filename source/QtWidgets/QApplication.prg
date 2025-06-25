@@ -442,7 +442,7 @@ static void alert( QWidget * widget, int msec = 0 )
 HB_FUNC_STATIC(QAPPLICATION_ALERT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2))
   {
 #endif
     QApplication::alert(PQWIDGET(1), OPINT(2, 0));

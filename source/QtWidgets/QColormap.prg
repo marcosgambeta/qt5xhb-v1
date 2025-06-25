@@ -274,7 +274,7 @@ static QColormap instance( int screen = -1 )
 HB_FUNC_STATIC(QCOLORMAP_INSTANCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
 #endif
     QColormap *ptr = new QColormap(QColormap::instance(OPINT(1, -1)));

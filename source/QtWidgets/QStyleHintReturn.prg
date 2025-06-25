@@ -60,7 +60,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSTYLEHINTRETURN_NEW)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2))
   {
     QStyleHintReturn *obj =
         new QStyleHintReturn(OPINT(1, QStyleOption::Version), OPINT(2, QStyleHintReturn::SH_Default));

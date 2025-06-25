@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_NEW)
     QDialogButtonBox *obj = new QDialogButtonBox((Qt::Orientation)hb_parni(1), OPQWIDGET(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
     /*
     QDialogButtonBox( QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget *

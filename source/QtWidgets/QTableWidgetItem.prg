@@ -98,7 +98,7 @@ RETURN
 
 HB_FUNC_STATIC(QTABLEWIDGETITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     QTableWidgetItem( int type = QTableWidgetItem::Type )
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_NEW)
     QTableWidgetItem *obj = new QTableWidgetItem(OPINT(1, QTableWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
     /*
     QTableWidgetItem( const QString &text, int type = QTableWidgetItem::Type )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_NEW)
     QTableWidgetItem *obj = new QTableWidgetItem(PQSTRING(1), OPINT(2, QTableWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISNUMORNIL(3))
   {
     /*
     QTableWidgetItem( const QIcon &icon, const QString &text, int type = QTableWidgetItem::Type )

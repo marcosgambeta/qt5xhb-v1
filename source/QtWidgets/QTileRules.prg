@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QTILERULES_NEW)
     QTileRules *obj = new QTileRules((Qt::TileRule)hb_parni(1), (Qt::TileRule)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     QTileRules( Qt::TileRule rule = Qt::StretchTile )

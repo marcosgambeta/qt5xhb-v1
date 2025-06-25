@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_DRAGMODE)
 
 HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
 {
-  if (ISBETWEEN(1, 3) && ISQRECTF(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(1, 3) && ISQRECTF(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
   {
     /*
     void ensureVisible( const QRectF &rect, int xmargin = 50, int ymargin = 50 )
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
     hb_itemReturn(hb_stackSelfItem());
   }
   else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
-           (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
+           ISNUMORNIL(5) && ISNUMORNIL(6))
   {
     /*
     void ensureVisible( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 3) && HB_ISOBJECT(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && HB_ISOBJECT(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
   {
     /*
     void ensureVisible( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
 
 HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
 {
-  if (ISBETWEEN(1, 2) && ISQRECTF(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISNUMORNIL(2))
   {
     /*
     void fitInView( const QRectF &rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
+  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5))
   {
     /*
     void fitInView( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 2) && HB_ISOBJECT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISOBJECT(1) && ISNUMORNIL(2))
   {
     /*
     void fitInView( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
@@ -752,7 +752,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RENDER)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)) && (ISQRECT(3) || HB_ISNIL(3)) &&
-        (HB_ISNUM(4) || HB_ISNIL(4)))
+        ISNUMORNIL(4))
     {
 #endif
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *(QRectF *)Qt5xHb::itemGetPtr(2),
@@ -1710,7 +1710,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_INVALIDATESCENE)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQRECTF(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(0, 2) && (ISQRECTF(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
     {
 #endif
       obj->invalidateScene(HB_ISNIL(1) ? QRectF() : *(QRectF *)Qt5xHb::itemGetPtr(1),
