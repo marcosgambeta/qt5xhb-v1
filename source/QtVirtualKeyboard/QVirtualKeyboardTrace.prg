@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_POINTS)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2))
     {
 #endif
       QVariantList list = obj->points(OPINT(1, 0), OPINT(2, -1));
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_CHANNELDATA)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
 #endif
       QVariantList list = obj->channelData(PQSTRING(1), OPINT(2, 0), OPINT(3, -1));
