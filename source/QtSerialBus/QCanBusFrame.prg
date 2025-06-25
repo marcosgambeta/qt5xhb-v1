@@ -82,7 +82,7 @@ RETURN
 
 HB_FUNC_STATIC(QCANBUSFRAME_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     QCanBusFrame( QCanBusFrame::FrameType type = QCanBusFrame::DataFrame ) Q_DECL_NOTHROW
