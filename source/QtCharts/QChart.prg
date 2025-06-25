@@ -135,7 +135,7 @@ QChart( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFla
 HB_FUNC_STATIC(QCHART_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
   {
     QChart *obj = new QChart(HB_ISNIL(1) ? nullptr : (QGraphicsItem *)Qt5xHb::itemGetPtr(1),
                              HB_ISNIL(2) ? (Qt::WindowFlags)Qt::WindowFlags() : (Qt::WindowFlags)hb_parni(2));
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC(QCHART_AXES)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2)))
     {
 #endif
       QList<QAbstractAxis *> list =

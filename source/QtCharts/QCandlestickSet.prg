@@ -87,7 +87,7 @@ RETURN
 
 HB_FUNC_STATIC(QCANDLESTICKSET_NEW)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QCandlestickSet( qreal timestamp = 0.0, QObject * parent = nullptr )
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QCANDLESTICKSET_NEW)
 #endif
   }
   else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
-           (HB_ISNUM(5) || HB_ISNIL(5)) && (ISQOBJECT(6) || HB_ISNIL(6)))
+           ISNUMORNIL(5) && (ISQOBJECT(6) || HB_ISNIL(6)))
   {
     /*
     QCandlestickSet( qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject * parent = nullptr )
