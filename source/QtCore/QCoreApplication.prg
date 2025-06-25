@@ -347,7 +347,7 @@ static void exit( int returnCode = 0 )
 HB_FUNC_STATIC(QCOREAPPLICATION_EXIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
 #endif
     QCoreApplication::exit(OPINT(1, 0));
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_POSTEVENT)
 
 HB_FUNC_STATIC(QCOREAPPLICATION_PROCESSEVENTS)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     static void processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
@@ -836,7 +836,7 @@ static QString translate( const char * context, const char * sourceText, const c
 HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) && ISNUMORNIL(4))
   {
 #endif
     RQSTRING(QCoreApplication::translate(PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3, 0), OPINT(4, -1)));

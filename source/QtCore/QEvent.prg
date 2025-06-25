@@ -250,7 +250,7 @@ static int registerEventType( int hint = -1 )
 HB_FUNC_STATIC(QEVENT_REGISTEREVENTTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
 #endif
     RINT(QEvent::registerEventType(OPINT(1, -1)));

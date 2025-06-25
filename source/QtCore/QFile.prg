@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
       RBOOL(obj->open((QFile::OpenMode)hb_parni(1)));
     }
   }
-  else if (ISBETWEEN(2, 3) && HB_ISPOINTER(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && HB_ISPOINTER(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
     /*
     bool open( FILE * f, QFile::OpenMode ioFlags, QFile::FileHandleFlags handleFlags = QFile::DontCloseHandle )
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
                                   : (QFile::FileHandleFlags)hb_parni(3)));
     }
   }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
     /*
     bool open( int fd, QFile::OpenMode ioFlags, QFile::FileHandleFlags handleFlags = QFile::DontCloseHandle )

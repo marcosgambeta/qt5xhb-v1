@@ -79,7 +79,7 @@ RETURN
 
 HB_FUNC_STATIC(QATOMICINT_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     QAtomicInt( int value = 0 )

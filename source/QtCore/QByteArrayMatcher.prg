@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_DELETE)
 
 HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
 {
-  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2))
   {
     /*
     int indexIn( const QByteArray &ba, int from = 0 ) const
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
       RINT(obj->indexIn(*PQBYTEARRAY(1), OPINT(2, 0)));
     }
   }
-  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
     /*
     int indexIn( const char * str, int len, int from = 0 ) const

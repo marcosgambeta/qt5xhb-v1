@@ -388,8 +388,8 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MATCH)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-        (HB_ISNUM(5) || HB_ISNIL(5)))
+    if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4) &&
+        ISNUMORNIL(5))
     {
 #endif
       QModelIndexList list =

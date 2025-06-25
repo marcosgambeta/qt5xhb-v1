@@ -441,7 +441,7 @@ QJsonDocument::Validate )
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMBINARYDATA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2))
   {
 #endif
     QJsonDocument *ptr = new QJsonDocument(QJsonDocument::fromBinaryData(
@@ -485,7 +485,7 @@ QJsonDocument::Validate )
 HB_FUNC_STATIC(QJSONDOCUMENT_FROMRAWDATA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
 #endif
     QJsonDocument *ptr = new QJsonDocument(

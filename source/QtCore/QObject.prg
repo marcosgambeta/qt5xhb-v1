@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILD)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
     {
 #endif
       QObject *ptr = obj->findChild<QObject *>(OPQSTRING(1, QString()),
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILD)
 
 HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
   {
     // QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
     QObject *obj = qobject_cast<QObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -582,7 +582,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
       hb_itemReturnRelease(pArray);
     }
   }
-  else if (ISBETWEEN(1, 2) && ISQREGEXP(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQREGEXP(1) && ISNUMORNIL(2))
   {
     // QList<T> findChildren(const QRegExp &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 #ifndef QT_NO_REGEXP
@@ -619,7 +619,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
     }
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQREGULAREXPRESSION(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQREGULAREXPRESSION(1) && ISNUMORNIL(2))
   {
     // QList<T> findChildren(const QRegularExpression &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 #ifndef QT_NO_REGULAREXPRESSION
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC(QOBJECT_STARTTIMER)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
 #endif
       RINT(obj->startTimer(PINT(1), HB_ISNIL(2) ? (Qt::TimerType)Qt::CoarseTimer : (Qt::TimerType)hb_parni(2)));
@@ -1084,7 +1084,7 @@ HB_FUNC_STATIC(QOBJECT_DELETELATER)
 HB_FUNC_STATIC(QOBJECT_TR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
   {
 #endif
     RQSTRING(QObject::tr(PCONSTCHAR(1), OPCONSTCHAR(2, 0), OPINT(3, -1)));

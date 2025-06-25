@@ -106,7 +106,7 @@ options = QStandardPaths::LocateFile )
 HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3))
   {
 #endif
     RQSTRING(QStandardPaths::locate((QStandardPaths::StandardLocation)hb_parni(1), PQSTRING(2),
@@ -128,7 +128,7 @@ QStandardPaths::LocateOptions options = QStandardPaths::LocateFile )
 HB_FUNC_STATIC(QSTANDARDPATHS_LOCATEALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3))
   {
 #endif
     RQSTRINGLIST(QStandardPaths::locateAll((QStandardPaths::StandardLocation)hb_parni(1), PQSTRING(2),

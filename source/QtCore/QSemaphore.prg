@@ -64,7 +64,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSEMAPHORE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     QSemaphore *obj = new QSemaphore(OPINT(1, 0));
     Qt5xHb::returnNewObject(obj, true);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QSEMAPHORE_ACQUIRE)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       obj->acquire(OPINT(1, 1));
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QSEMAPHORE_ACQUIRE)
 
 HB_FUNC_STATIC(QSEMAPHORE_TRYACQUIRE)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     bool tryAcquire( int n = 1 )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QSEMAPHORE_RELEASE)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       obj->release(OPINT(1, 1));

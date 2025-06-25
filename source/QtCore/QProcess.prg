@@ -582,7 +582,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDERRORFILE)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
     {
 #endif
       obj->setStandardErrorFile(PQSTRING(1), HB_ISNIL(2) ? (QIODevice::OpenMode)QIODevice::Truncate
@@ -635,7 +635,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTFILE)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
     {
 #endif
       obj->setStandardOutputFile(PQSTRING(1), HB_ISNIL(2) ? (QIODevice::OpenMode)QIODevice::Truncate
@@ -706,7 +706,7 @@ HB_FUNC_STATIC(QPROCESS_SETWORKINGDIRECTORY)
 
 HB_FUNC_STATIC(QPROCESS_START)
 {
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISNUMORNIL(3))
   {
     /*
     void start( const QString &program, const QStringList &arguments, QIODevice::OpenMode mode = QIODevice::ReadWrite
@@ -722,7 +722,7 @@ HB_FUNC_STATIC(QPROCESS_START)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
     /*
     void start( const QString &command, QIODevice::OpenMode mode = QIODevice::ReadWrite )
@@ -737,7 +737,7 @@ HB_FUNC_STATIC(QPROCESS_START)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     void start( QIODevice::OpenMode mode = QIODevice::ReadWrite )
@@ -793,7 +793,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORFINISHED)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForFinished(OPINT(1, 30000)));
@@ -817,7 +817,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORSTARTED)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForStarted(OPINT(1, 30000)));
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORBYTESWRITTEN)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForBytesWritten(OPINT(1, 30000)));
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORREADYREAD)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->waitForReadyRead(OPINT(1, 30000)));
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC(QPROCESS_EXECUTE)
 
 HB_FUNC_STATIC(QPROCESS_STARTDETACHED)
 {
-  if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && HB_ISCHAR(3) && ISNUMORNIL(4))
   {
     /*
     static bool startDetached ( const QString &program, const QStringList &arguments, const QString &
@@ -1182,7 +1182,7 @@ HB_FUNC_STATIC(QPROCESS_OPEN)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->open(HB_ISNIL(1) ? (QIODevice::OpenMode)QIODevice::ReadWrite : (QIODevice::OpenMode)hb_parni(1)));

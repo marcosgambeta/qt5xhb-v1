@@ -82,8 +82,8 @@ HB_FUNC_STATIC(QTIME_NEW)
     QTime *obj = new QTime();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
-           (HB_ISNUM(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
+           ISNUMORNIL(4))
   {
     /*
     QTime( int h, int m, int s = 0, int ms = 0 )
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QTIME_ISVALID)
       RBOOL(obj->isValid());
     }
   }
-  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4))
   {
     /*
     static bool isValid( int h, int m, int s, int ms = 0 )
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QTIME_SETHMS)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4))
     {
 #endif
       RBOOL(obj->setHMS(PINT(1), PINT(2), PINT(3), OPINT(4, 0)));
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
       RQSTRING(obj->toString(PQSTRING(1)));
     }
   }
-  else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     QString toString( Qt::DateFormat format = Qt::TextDate ) const
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(QTIME_CURRENTTIME)
 
 HB_FUNC_STATIC(QTIME_FROMSTRING)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
     /*
     static QTime fromString( const QString &string, Qt::DateFormat format = Qt::TextDate )

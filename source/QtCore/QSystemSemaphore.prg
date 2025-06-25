@@ -67,7 +67,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEW)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
   {
     QSystemSemaphore *obj = new QSystemSemaphore(PQSTRING(1), OPINT(2, 0),
                                                  HB_ISNIL(3) ? (QSystemSemaphore::AccessMode)QSystemSemaphore::Open
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETKEY)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
 #endif
       obj->setKey(PQSTRING(1), OPINT(2, 0),
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_RELEASE)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RBOOL(obj->release(OPINT(1, 1)));

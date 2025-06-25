@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QBITARRAY_COUNT)
 
 HB_FUNC_STATIC(QBITARRAY_FILL)
 {
-  if (ISBETWEEN(1, 2) && HB_ISLOG(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISLOG(1) && ISNUMORNIL(2))
   {
     /*
     bool fill( bool value, int size = -1 )

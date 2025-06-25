@@ -65,7 +65,7 @@ RETURN
     */
 HB_FUNC_STATIC(QREADWRITELOCK_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     QReadWriteLock *obj = new QReadWriteLock(HB_ISNIL(1) ? (QReadWriteLock::RecursionMode)QReadWriteLock::NonRecursive
                                                          : (QReadWriteLock::RecursionMode)hb_parni(1));

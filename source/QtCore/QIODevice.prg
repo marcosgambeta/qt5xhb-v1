@@ -590,7 +590,7 @@ HB_FUNC_STATIC(QIODEVICE_READLINE)
       RQINT64(obj->readLine((char *)hb_parc(1), PQINT64(2)));
     }
   }
-  else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
   {
     /*
     QByteArray readLine( qint64 maxSize = 0 )

@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
 #endif
   }
   else if (ISBETWEEN(4, 6) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
-           (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISCHAR(6) || HB_ISNIL(6)))
+           ISNUMORNIL(5) && (HB_ISCHAR(6) || HB_ISNIL(6)))
   {
     /*
     QTimeZone( const QByteArray &zoneId, int offsetSeconds, const QString &name, const QString &abbreviation,
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QTIMEZONE_COMMENT)
 
 HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
 {
-  if (ISBETWEEN(1, 3) && ISQDATETIME(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQLOCALE(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(1, 3) && ISQDATETIME(1) && ISNUMORNIL(2) && (ISQLOCALE(3) || HB_ISNIL(3)))
   {
     /*
     QString displayName( const QDateTime &atDateTime, QTimeZone::NameType nameType = QTimeZone::DefaultName, const
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
     }
 #endif
   }
-  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQLOCALE(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQLOCALE(3) || HB_ISNIL(3)))
   {
     /*
     QString displayName( QTimeZone::TimeType timeType, QTimeZone::NameType nameType = QTimeZone::DefaultName, const

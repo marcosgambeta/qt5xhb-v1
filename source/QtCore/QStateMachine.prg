@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_POSTEVENT)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQEVENT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && ISQEVENT(1) && ISNUMORNIL(2))
     {
 #endif
       obj->postEvent(PQEVENT(1), HB_ISNIL(2) ? (QStateMachine::EventPriority)QStateMachine::NormalPriority

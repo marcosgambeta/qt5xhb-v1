@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORNAME)
 
 HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
   {
     /*
     QMimeType mimeTypeForFile( const QString &fileName, QMimeDatabase::MatchMode mode = QMimeDatabase::MatchDefault )
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
       Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
     }
   }
-  else if (ISBETWEEN(1, 2) && ISQFILEINFO(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQFILEINFO(1) && ISNUMORNIL(2))
   {
     /*
     QMimeType mimeTypeForFile( const QFileInfo &fileInfo, QMimeDatabase::MatchMode mode = QMimeDatabase::MatchDefault )

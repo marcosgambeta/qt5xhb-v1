@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEDECODER)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       QTextDecoder *ptr = obj->makeDecoder(HB_ISNIL(1) ? (QTextCodec::ConversionFlags)QTextCodec::DefaultConversion
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       QTextEncoder *ptr = obj->makeEncoder(HB_ISNIL(1) ? (QTextCodec::ConversionFlags)QTextCodec::DefaultConversion
