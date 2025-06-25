@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_NEW)
     Qt5xHb::returnNewObject(obj, true);
 #endif
   }
-  else if (ISBETWEEN(3, 4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4))
   {
     /*
     QHstsPolicy( const QDateTime &expiry, QHstsPolicy::PolicyFlags flags, const QString &host, QUrl::ParsingMode mode
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_SETHOST)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
     {
 #endif
       obj->setHost(PQSTRING(1), HB_ISNIL(2) ? (QUrl::ParsingMode)QUrl::DecodedMode : (QUrl::ParsingMode)hb_parni(2));
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QHSTSPOLICY_HOST)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
 #endif
       RQSTRING(obj->host(HB_ISNIL(1) ? (QUrl::ComponentFormattingOptions)QUrl::FullyDecoded

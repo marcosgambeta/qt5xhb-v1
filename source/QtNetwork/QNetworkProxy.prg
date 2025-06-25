@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
     QNetworkProxy *obj = new QNetworkProxy();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 5) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
+  else if (ISBETWEEN(1, 5) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3) &&
            (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)))
   {
     /*
