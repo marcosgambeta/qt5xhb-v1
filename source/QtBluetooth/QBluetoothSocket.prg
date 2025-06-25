@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CANREADLINE)
 
 HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
 {
-  if (ISBETWEEN(1, 2) && ISQBLUETOOTHSERVICEINFO(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQBLUETOOTHSERVICEINFO(1) && ISNUMORNIL(2))
   {
     /*
     void connectToService( const QBluetoothServiceInfo &service, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   }
-  else if (ISBETWEEN(2, 3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && ISNUMORNIL(3))
   {
     /*
     void connectToService( const QBluetoothAddress &address, const QBluetoothUuid &uuid, QIODevice::OpenMode openMode
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_CONNECTTOSERVICE)
     hb_itemReturn(hb_stackSelfItem());
 #endif
   }
-  else if (ISBETWEEN(2, 3) && ISQBLUETOOTHADDRESS(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQBLUETOOTHADDRESS(1) && HB_ISNUM(2) && ISNUMORNIL(3))
   {
     /*
     void connectToService( const QBluetoothAddress &address, quint16 port, QIODevice::OpenMode openMode =
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
     {
 #endif
       RBOOL(obj->setSocketDescriptor(PINT(1), (QBluetoothServiceInfo::Protocol)hb_parni(2),
