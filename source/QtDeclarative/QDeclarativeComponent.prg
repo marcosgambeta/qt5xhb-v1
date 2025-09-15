@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_DELETE)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_BEGINCREATE)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1))
     {
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_COMPLETECREATE)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATE)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQDECLARATIVECONTEXT(1) || HB_ISNIL(1)))
     {
@@ -204,8 +200,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATIONCONTEXT)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -229,8 +224,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ERRORS)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -279,8 +273,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISERROR)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -303,8 +296,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISLOADING)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -327,8 +319,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISNULL)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -351,8 +342,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISREADY)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -375,8 +365,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_LOADURL)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -401,8 +390,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_PROGRESS)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -425,8 +413,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_SETDATA)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2))
     {
@@ -451,8 +438,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_STATUS)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -475,8 +461,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_URL)
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

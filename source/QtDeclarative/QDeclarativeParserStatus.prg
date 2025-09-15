@@ -62,8 +62,7 @@ HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_CLASSBEGIN)
 {
   QDeclarativeParserStatus *obj = (QDeclarativeParserStatus *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -88,8 +87,7 @@ HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE)
 {
   QDeclarativeParserStatus *obj = (QDeclarativeParserStatus *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

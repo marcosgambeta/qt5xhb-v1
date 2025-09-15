@@ -55,8 +55,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE)
 {
   QDeclarativeExtensionPlugin *obj = (QDeclarativeExtensionPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2))
     {
@@ -81,8 +80,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES)
 {
   QDeclarativeExtensionPlugin *obj = (QDeclarativeExtensionPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {

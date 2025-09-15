@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
 {
   QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCOPEOBJECT)
 {
   QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -145,8 +143,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
 {
   QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -169,8 +166,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
 {
   QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1))
     {
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
 {
   QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {
@@ -221,8 +216,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCRIPT)
 {
   QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {

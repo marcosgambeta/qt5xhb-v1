@@ -56,8 +56,7 @@ void QDeclarativeComponentSlots_connect_signal(const QString &signal, const QStr
 {
   QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDeclarativeComponentSlots *s = QCoreApplication::instance()->findChild<QDeclarativeComponentSlots *>();
 
     if (s == NULL)
