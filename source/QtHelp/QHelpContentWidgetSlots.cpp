@@ -38,8 +38,7 @@ void QHelpContentWidgetSlots_connect_signal(const QString &signal, const QString
 {
   QHelpContentWidget *obj = (QHelpContentWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QHelpContentWidgetSlots *s = QCoreApplication::instance()->findChild<QHelpContentWidgetSlots *>();
 
     if (s == NULL)

@@ -36,8 +36,7 @@ void QHelpSearchQueryWidgetSlots_connect_signal(const QString &signal, const QSt
 {
   QHelpSearchQueryWidget *obj = (QHelpSearchQueryWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QHelpSearchQueryWidgetSlots *s = QCoreApplication::instance()->findChild<QHelpSearchQueryWidgetSlots *>();
 
     if (s == NULL)
