@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_DELETE)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -133,8 +132,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_CANWRITE)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -157,8 +155,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_COMPRESSION)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -181,8 +178,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_DEVICE)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -206,8 +202,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_ERROR)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -230,8 +225,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_ERRORSTRING)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -254,8 +248,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_FILENAME)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -278,8 +271,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_FORMAT)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -303,8 +295,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_GAMMA)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -327,8 +318,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_QUALITY)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -351,8 +341,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETCOMPRESSION)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -377,8 +366,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETDEVICE)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
@@ -403,8 +391,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETFILENAME)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -429,8 +416,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETFORMAT)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -455,8 +441,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETGAMMA)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -481,8 +466,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETQUALITY)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -507,8 +491,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETTEXT)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -533,8 +516,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SUPPORTSOPTION)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -557,8 +539,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_WRITE)
 {
   QImageWriter *obj = (QImageWriter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIMAGE(1))
     {

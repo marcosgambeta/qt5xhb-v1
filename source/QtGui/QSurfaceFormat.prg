@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_DELETE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -139,8 +138,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETDEPTHBUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -165,8 +163,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_DEPTHBUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -189,8 +186,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETSTENCILBUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_STENCILBUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -239,8 +234,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETREDBUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -265,8 +259,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_REDBUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -289,8 +282,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETGREENBUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -315,8 +307,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_GREENBUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -339,8 +330,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETBLUEBUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -365,8 +355,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_BLUEBUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -389,8 +378,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETALPHABUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -415,8 +403,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_ALPHABUFFERSIZE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -439,8 +426,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETSAMPLES)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -465,8 +451,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SAMPLES)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -489,8 +474,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETSWAPBEHAVIOR)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -515,8 +499,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SWAPBEHAVIOR)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -539,8 +522,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_HASALPHA)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -563,8 +545,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETPROFILE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -589,8 +570,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_PROFILE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -613,8 +593,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETRENDERABLETYPE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -639,8 +618,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_RENDERABLETYPE)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -663,8 +641,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETMAJORVERSION)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -689,8 +666,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_MAJORVERSION)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -713,8 +689,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETMINORVERSION)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -739,8 +714,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_MINORVERSION)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -763,8 +737,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_STEREO)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -787,8 +760,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETSTEREO)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -813,8 +785,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_SETOPTION)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -839,8 +810,7 @@ HB_FUNC_STATIC(QSURFACEFORMAT_TESTOPTION)
 {
   QSurfaceFormat *obj = (QSurfaceFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

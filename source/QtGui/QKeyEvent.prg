@@ -78,8 +78,7 @@ HB_FUNC_STATIC(QKEYEVENT_DELETE)
 {
   QKeyEvent *obj = (QKeyEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -97,8 +96,7 @@ HB_FUNC_STATIC(QKEYEVENT_COUNT)
 {
   QKeyEvent *obj = (QKeyEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -121,8 +119,7 @@ HB_FUNC_STATIC(QKEYEVENT_ISAUTOREPEAT)
 {
   QKeyEvent *obj = (QKeyEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -145,8 +142,7 @@ HB_FUNC_STATIC(QKEYEVENT_KEY)
 {
   QKeyEvent *obj = (QKeyEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -169,8 +165,7 @@ HB_FUNC_STATIC(QKEYEVENT_MATCHES)
 {
   QKeyEvent *obj = (QKeyEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -193,8 +188,7 @@ HB_FUNC_STATIC(QKEYEVENT_MODIFIERS)
 {
   QKeyEvent *obj = (QKeyEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -217,8 +211,7 @@ HB_FUNC_STATIC(QKEYEVENT_NATIVEMODIFIERS)
 {
   QKeyEvent *obj = (QKeyEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -241,8 +234,7 @@ HB_FUNC_STATIC(QKEYEVENT_NATIVESCANCODE)
 {
   QKeyEvent *obj = (QKeyEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -265,8 +257,7 @@ HB_FUNC_STATIC(QKEYEVENT_NATIVEVIRTUALKEY)
 {
   QKeyEvent *obj = (QKeyEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -289,8 +280,7 @@ HB_FUNC_STATIC(QKEYEVENT_TEXT)
 {
   QKeyEvent *obj = (QKeyEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

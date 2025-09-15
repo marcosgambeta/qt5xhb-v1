@@ -56,8 +56,7 @@ HB_FUNC_STATIC(QVALIDATOR_DELETE)
 {
   QValidator *obj = (QValidator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -77,8 +76,7 @@ HB_FUNC_STATIC(QVALIDATOR_FIXUP)
 {
   QValidator *obj = (QValidator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -105,8 +103,7 @@ HB_FUNC_STATIC(QVALIDATOR_LOCALE)
 {
   QValidator *obj = (QValidator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -130,8 +127,7 @@ HB_FUNC_STATIC(QVALIDATOR_SETLOCALE)
 {
   QValidator *obj = (QValidator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLOCALE(1))
     {
@@ -156,8 +152,7 @@ HB_FUNC_STATIC(QVALIDATOR_VALIDATE)
 {
   QValidator *obj = (QValidator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {

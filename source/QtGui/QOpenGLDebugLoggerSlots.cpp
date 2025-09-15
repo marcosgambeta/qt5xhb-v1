@@ -38,8 +38,7 @@ void QOpenGLDebugLoggerSlots_connect_signal(const QString &signal, const QString
 {
   QOpenGLDebugLogger *obj = (QOpenGLDebugLogger *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QOpenGLDebugLoggerSlots *s = QCoreApplication::instance()->findChild<QOpenGLDebugLoggerSlots *>();
 
     if (s == NULL)

@@ -38,8 +38,7 @@ void QOffscreenSurfaceSlots_connect_signal(const QString &signal, const QString 
 {
   QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QOffscreenSurfaceSlots *s = QCoreApplication::instance()->findChild<QOffscreenSurfaceSlots *>();
 
     if (s == NULL)

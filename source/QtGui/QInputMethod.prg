@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_CURSORRECTANGLE)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INPUTDIRECTION)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -131,8 +129,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INPUTITEMTRANSFORM)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -156,8 +153,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ISANIMATING)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -180,8 +176,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_ISVISIBLE)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -204,8 +199,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_KEYBOARDRECTANGLE)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -229,8 +223,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_LOCALE)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -254,8 +247,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SETINPUTITEMTRANSFORM)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTRANSFORM(1))
     {
@@ -280,8 +272,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SETVISIBLE)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -306,8 +297,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_COMMIT)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -332,8 +322,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_HIDE)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -358,8 +347,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_INVOKEACTION)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -384,8 +372,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_RESET)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -410,8 +397,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_SHOW)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -436,8 +422,7 @@ HB_FUNC_STATIC(QINPUTMETHOD_UPDATE)
 {
   QInputMethod *obj = (QInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

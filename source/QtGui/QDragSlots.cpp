@@ -56,8 +56,7 @@ void QDragSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QDrag *obj = (QDrag *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDragSlots *s = QCoreApplication::instance()->findChild<QDragSlots *>();
 
     if (s == NULL)

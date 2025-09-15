@@ -151,8 +151,7 @@ HB_FUNC_STATIC(QPIXMAP_DELETE)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -170,8 +169,7 @@ HB_FUNC_STATIC(QPIXMAP_SWAP)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
@@ -196,8 +194,7 @@ HB_FUNC_STATIC(QPIXMAP_ISNULL)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -220,8 +217,7 @@ HB_FUNC_STATIC(QPIXMAP_DEVTYPE)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -244,8 +240,7 @@ HB_FUNC_STATIC(QPIXMAP_WIDTH)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -268,8 +263,7 @@ HB_FUNC_STATIC(QPIXMAP_HEIGHT)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -292,8 +286,7 @@ HB_FUNC_STATIC(QPIXMAP_SIZE)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -317,8 +310,7 @@ HB_FUNC_STATIC(QPIXMAP_RECT)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -342,8 +334,7 @@ HB_FUNC_STATIC(QPIXMAP_DEPTH)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -416,8 +407,7 @@ HB_FUNC_STATIC(QPIXMAP_MASK)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -441,8 +431,7 @@ HB_FUNC_STATIC(QPIXMAP_SETMASK)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBITMAP(1))
     {
@@ -467,8 +456,7 @@ HB_FUNC_STATIC(QPIXMAP_DEVICEPIXELRATIO)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -491,8 +479,7 @@ HB_FUNC_STATIC(QPIXMAP_SETDEVICEPIXELRATIO)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -517,8 +504,7 @@ HB_FUNC_STATIC(QPIXMAP_HASALPHA)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -541,8 +527,7 @@ HB_FUNC_STATIC(QPIXMAP_HASALPHACHANNEL)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -565,8 +550,7 @@ HB_FUNC_STATIC(QPIXMAP_CREATEHEURISTICMASK)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -590,8 +574,7 @@ HB_FUNC_STATIC(QPIXMAP_CREATEMASKFROMCOLOR)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISNUMORNIL(2))
     {
@@ -657,8 +640,7 @@ HB_FUNC_STATIC(QPIXMAP_SCALEDTOWIDTH)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -683,8 +665,7 @@ HB_FUNC_STATIC(QPIXMAP_SCALEDTOHEIGHT)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -747,8 +728,7 @@ HB_FUNC_STATIC(QPIXMAP_TOIMAGE)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -772,8 +752,7 @@ HB_FUNC_STATIC(QPIXMAP_LOAD)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
     {
@@ -867,8 +846,7 @@ HB_FUNC_STATIC(QPIXMAP_CONVERTFROMIMAGE)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISNUMORNIL(2))
     {
@@ -964,8 +942,7 @@ HB_FUNC_STATIC(QPIXMAP_CACHEKEY)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -988,8 +965,7 @@ HB_FUNC_STATIC(QPIXMAP_ISDETACHED)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1012,8 +988,7 @@ HB_FUNC_STATIC(QPIXMAP_DETACH)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1038,8 +1013,7 @@ HB_FUNC_STATIC(QPIXMAP_ISQBITMAP)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1062,8 +1036,7 @@ HB_FUNC_STATIC(QPIXMAP_PAINTENGINE)
 {
   QPixmap *obj = (QPixmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

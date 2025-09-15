@@ -126,8 +126,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -147,8 +146,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SWAP)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAGELAYOUT(1))
     {
@@ -175,8 +173,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_ISEQUIVALENTTO)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAGELAYOUT(1))
     {
@@ -201,8 +198,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_ISVALID)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -227,8 +223,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -253,8 +248,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETMODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -281,8 +275,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAGESIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -308,8 +301,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_ORIENTATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -334,8 +326,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETORIENTATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -362,8 +353,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_UNITS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -388,8 +378,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETUNITS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -416,8 +405,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETMARGINS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMARGINSF(1))
     {
@@ -442,8 +430,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETLEFTMARGIN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -468,8 +455,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETRIGHTMARGIN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -494,8 +480,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETTOPMARGIN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -520,8 +505,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETBOTTOMMARGIN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -584,8 +568,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINSPOINTS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -611,8 +594,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MARGINSPIXELS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -638,8 +620,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_SETMINIMUMMARGINS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMARGINSF(1))
     {
@@ -666,8 +647,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MINIMUMMARGINS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -693,8 +673,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_MAXIMUMMARGINS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -758,8 +737,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECTPOINTS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -785,8 +763,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_FULLRECTPIXELS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -850,8 +827,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECTPOINTS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -877,8 +853,7 @@ HB_FUNC_STATIC(QPAGELAYOUT_PAINTRECTPIXELS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QPageLayout *obj = (QPageLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

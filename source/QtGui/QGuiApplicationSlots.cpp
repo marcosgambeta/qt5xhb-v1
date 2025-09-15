@@ -106,8 +106,7 @@ void QGuiApplicationSlots_connect_signal(const QString &signal, const QString &s
 {
   QGuiApplication *obj = (QGuiApplication *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGuiApplicationSlots *s = QCoreApplication::instance()->findChild<QGuiApplicationSlots *>();
 
     if (s == NULL)

@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QMATRIX4X4_DELETE)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -163,8 +162,7 @@ HB_FUNC_STATIC(QMATRIX4X4_COLUMN)
 #ifndef QT_NO_VECTOR4D
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -190,8 +188,7 @@ HB_FUNC_STATIC(QMATRIX4X4_SETCOLUMN)
 #ifndef QT_NO_VECTOR4D
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVECTOR4D(2))
     {
@@ -218,8 +215,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ROW)
 #ifndef QT_NO_VECTOR4D
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -245,8 +241,7 @@ HB_FUNC_STATIC(QMATRIX4X4_SETROW)
 #ifndef QT_NO_VECTOR4D
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVECTOR4D(2))
     {
@@ -273,8 +268,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ISAFFINE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -298,8 +292,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ISIDENTITY)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -322,8 +315,7 @@ HB_FUNC_STATIC(QMATRIX4X4_SETTOIDENTITY)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -348,8 +340,7 @@ HB_FUNC_STATIC(QMATRIX4X4_FILL)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -374,8 +365,7 @@ HB_FUNC_STATIC(QMATRIX4X4_DETERMINANT)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -398,8 +388,7 @@ HB_FUNC_STATIC(QMATRIX4X4_INVERTED)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -425,8 +414,7 @@ HB_FUNC_STATIC(QMATRIX4X4_TRANSPOSED)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -450,8 +438,7 @@ HB_FUNC_STATIC(QMATRIX4X4_NORMALMATRIX)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -697,8 +684,7 @@ HB_FUNC_STATIC(QMATRIX4X4_FRUSTUM)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6))
     {
@@ -723,8 +709,7 @@ HB_FUNC_STATIC(QMATRIX4X4_PERSPECTIVE)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
@@ -750,8 +735,7 @@ HB_FUNC_STATIC(QMATRIX4X4_LOOKAT)
 #ifndef QT_NO_VECTOR3D
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQVECTOR3D(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3))
     {
@@ -818,8 +802,7 @@ HB_FUNC_STATIC(QMATRIX4X4_FLIPCOORDINATES)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -844,8 +827,7 @@ HB_FUNC_STATIC(QMATRIX4X4_TOAFFINE)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -968,8 +950,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAPVECTOR)
 #ifndef QT_NO_VECTOR3D
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
@@ -1028,8 +1009,7 @@ HB_FUNC_STATIC(QMATRIX4X4_OPTIMIZE)
 {
   QMatrix4x4 *obj = (QMatrix4x4 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_DELETE)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_CREATE)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_DEFAULTFRAMEBUFFEROBJECT)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -164,8 +161,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_DONECURRENT)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -190,8 +186,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_FORMAT)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -215,8 +210,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_FUNCTIONS)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -240,8 +234,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_HASEXTENSION)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -264,8 +257,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_ISVALID)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -288,8 +280,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_MAKECURRENT)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSURFACE(1))
     {
@@ -312,8 +303,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SCREEN)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -337,8 +327,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SETFORMAT)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
     {
@@ -363,8 +352,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SETSCREEN)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSCREEN(1))
     {
@@ -389,8 +377,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SETSHARECONTEXT)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOPENGLCONTEXT(1))
     {
@@ -415,8 +402,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SHARECONTEXT)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -440,8 +426,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SHAREGROUP)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -465,8 +450,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SURFACE)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -490,8 +474,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXT_SWAPBUFFERS)
 {
   QOpenGLContext *obj = (QOpenGLContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSURFACE(1))
     {

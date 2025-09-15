@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QENTEREVENT_DELETE)
 {
   QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -96,8 +95,7 @@ HB_FUNC_STATIC(QENTEREVENT_POS)
 {
   QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -121,8 +119,7 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALPOS)
 {
   QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -146,8 +143,7 @@ HB_FUNC_STATIC(QENTEREVENT_X)
 {
   QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -170,8 +166,7 @@ HB_FUNC_STATIC(QENTEREVENT_Y)
 {
   QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -194,8 +189,7 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALX)
 {
   QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -218,8 +212,7 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALY)
 {
   QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -242,8 +235,7 @@ HB_FUNC_STATIC(QENTEREVENT_LOCALPOS)
 {
   QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -267,8 +259,7 @@ HB_FUNC_STATIC(QENTEREVENT_WINDOWPOS)
 {
   QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -292,8 +283,7 @@ HB_FUNC_STATIC(QENTEREVENT_SCREENPOS)
 {
   QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -72,8 +72,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DELETE)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -93,8 +92,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -117,8 +115,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
@@ -142,8 +139,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -167,8 +163,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -192,8 +187,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTFRAME(1))
     {
@@ -217,8 +211,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -242,8 +235,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
     {
@@ -266,8 +258,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -290,8 +281,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -315,8 +305,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2))
     {
@@ -341,8 +330,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE)
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTDEVICE(1))
     {

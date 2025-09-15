@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_DELETE)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -122,8 +121,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_CAPSTYLE)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_CREATESTROKE)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
@@ -171,8 +168,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_CURVETHRESHOLD)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_DASHOFFSET)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -219,8 +214,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_DASHPATTERN)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -251,8 +245,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_JOINSTYLE)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -275,8 +268,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_MITERLIMIT)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -299,8 +291,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETCAPSTYLE)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -325,8 +316,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETCURVETHRESHOLD)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -351,8 +341,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETDASHOFFSET)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -422,8 +411,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETJOINSTYLE)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -448,8 +436,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETMITERLIMIT)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -474,8 +461,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETWIDTH)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -500,8 +486,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_WIDTH)
 {
   QPainterPathStroker *obj = (QPainterPathStroker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -151,8 +151,7 @@ HB_FUNC_STATIC(QVECTOR3D_DELETE)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -170,8 +169,7 @@ HB_FUNC_STATIC(QVECTOR3D_ISNULL)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -194,8 +192,7 @@ HB_FUNC_STATIC(QVECTOR3D_X)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -218,8 +215,7 @@ HB_FUNC_STATIC(QVECTOR3D_Y)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -242,8 +238,7 @@ HB_FUNC_STATIC(QVECTOR3D_Z)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -266,8 +261,7 @@ HB_FUNC_STATIC(QVECTOR3D_SETX)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -292,8 +286,7 @@ HB_FUNC_STATIC(QVECTOR3D_SETY)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -318,8 +311,7 @@ HB_FUNC_STATIC(QVECTOR3D_SETZ)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -344,8 +336,7 @@ HB_FUNC_STATIC(QVECTOR3D_LENGTH)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -368,8 +359,7 @@ HB_FUNC_STATIC(QVECTOR3D_LENGTHSQUARED)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -392,8 +382,7 @@ HB_FUNC_STATIC(QVECTOR3D_NORMALIZED)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -417,8 +406,7 @@ HB_FUNC_STATIC(QVECTOR3D_NORMALIZE)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -443,8 +431,7 @@ HB_FUNC_STATIC(QVECTOR3D_DISTANCETOPOINT)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
@@ -499,8 +486,7 @@ HB_FUNC_STATIC(QVECTOR3D_DISTANCETOLINE)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2))
     {
@@ -523,8 +509,7 @@ HB_FUNC_STATIC(QVECTOR3D_TOVECTOR2D)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -548,8 +533,7 @@ HB_FUNC_STATIC(QVECTOR3D_TOVECTOR4D)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -573,8 +557,7 @@ HB_FUNC_STATIC(QVECTOR3D_TOPOINT)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -598,8 +581,7 @@ HB_FUNC_STATIC(QVECTOR3D_TOPOINTF)
 {
   QVector3D *obj = (QVector3D *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -59,8 +59,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_DELETE)
 {
   QTouchEvent *obj = (QTouchEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -78,8 +77,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_WINDOW)
 {
   QTouchEvent *obj = (QTouchEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -103,8 +101,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_TARGET)
 {
   QTouchEvent *obj = (QTouchEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -128,8 +125,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_TOUCHPOINTSTATES)
 {
   QTouchEvent *obj = (QTouchEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -152,8 +148,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_DEVICE)
 {
   QTouchEvent *obj = (QTouchEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

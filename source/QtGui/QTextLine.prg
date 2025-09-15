@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QTEXTLINE_DELETE)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -119,8 +118,7 @@ HB_FUNC_STATIC(QTEXTLINE_ISVALID)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -143,8 +141,7 @@ HB_FUNC_STATIC(QTEXTLINE_RECT)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -168,8 +165,7 @@ HB_FUNC_STATIC(QTEXTLINE_X)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -192,8 +188,7 @@ HB_FUNC_STATIC(QTEXTLINE_Y)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -216,8 +211,7 @@ HB_FUNC_STATIC(QTEXTLINE_WIDTH)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -240,8 +234,7 @@ HB_FUNC_STATIC(QTEXTLINE_ASCENT)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -264,8 +257,7 @@ HB_FUNC_STATIC(QTEXTLINE_DESCENT)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -288,8 +280,7 @@ HB_FUNC_STATIC(QTEXTLINE_HEIGHT)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -312,8 +303,7 @@ HB_FUNC_STATIC(QTEXTLINE_LEADING)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -336,8 +326,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETLEADINGINCLUDED)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -362,8 +351,7 @@ HB_FUNC_STATIC(QTEXTLINE_LEADINGINCLUDED)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -386,8 +374,7 @@ HB_FUNC_STATIC(QTEXTLINE_NATURALTEXTWIDTH)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -410,8 +397,7 @@ HB_FUNC_STATIC(QTEXTLINE_HORIZONTALADVANCE)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -434,8 +420,7 @@ HB_FUNC_STATIC(QTEXTLINE_NATURALTEXTRECT)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -493,8 +478,7 @@ HB_FUNC_STATIC(QTEXTLINE_XTOCURSOR)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -518,8 +502,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETLINEWIDTH)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -580,8 +563,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETPOSITION)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -606,8 +588,7 @@ HB_FUNC_STATIC(QTEXTLINE_POSITION)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -631,8 +612,7 @@ HB_FUNC_STATIC(QTEXTLINE_TEXTSTART)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -655,8 +635,7 @@ HB_FUNC_STATIC(QTEXTLINE_TEXTLENGTH)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -679,8 +658,7 @@ HB_FUNC_STATIC(QTEXTLINE_LINENUMBER)
 {
   QTextLine *obj = (QTextLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QPICTURE_DELETE)
 {
   QPicture *obj = (QPicture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -104,8 +103,7 @@ HB_FUNC_STATIC(QPICTURE_BOUNDINGRECT)
 {
   QPicture *obj = (QPicture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -129,8 +127,7 @@ HB_FUNC_STATIC(QPICTURE_DATA)
 {
   QPicture *obj = (QPicture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QPICTURE_ISNULL)
 {
   QPicture *obj = (QPicture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -209,8 +205,7 @@ HB_FUNC_STATIC(QPICTURE_PLAY)
 {
   QPicture *obj = (QPicture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTER(1))
     {
@@ -265,8 +260,7 @@ HB_FUNC_STATIC(QPICTURE_SETBOUNDINGRECT)
 {
   QPicture *obj = (QPicture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECT(1))
     {
@@ -291,8 +285,7 @@ HB_FUNC_STATIC(QPICTURE_SETDATA)
 {
   QPicture *obj = (QPicture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -317,8 +310,7 @@ HB_FUNC_STATIC(QPICTURE_SIZE)
 {
   QPicture *obj = (QPicture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -341,8 +333,7 @@ HB_FUNC_STATIC(QPICTURE_SWAP)
 {
   QPicture *obj = (QPicture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPICTURE(1))
     {

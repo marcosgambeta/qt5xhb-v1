@@ -74,8 +74,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_DELETE)
 {
   QOpenGLVertexArrayObject *obj = (QOpenGLVertexArrayObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -95,8 +94,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_CREATE)
 {
   QOpenGLVertexArrayObject *obj = (QOpenGLVertexArrayObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -119,8 +117,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_DESTROY)
 {
   QOpenGLVertexArrayObject *obj = (QOpenGLVertexArrayObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -145,8 +142,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_ISCREATED)
 {
   QOpenGLVertexArrayObject *obj = (QOpenGLVertexArrayObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -169,8 +165,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_OBJECTID)
 {
   QOpenGLVertexArrayObject *obj = (QOpenGLVertexArrayObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -193,8 +188,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_BIND)
 {
   QOpenGLVertexArrayObject *obj = (QOpenGLVertexArrayObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -219,8 +213,7 @@ HB_FUNC_STATIC(QOPENGLVERTEXARRAYOBJECT_RELEASE)
 {
   QOpenGLVertexArrayObject *obj = (QOpenGLVertexArrayObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

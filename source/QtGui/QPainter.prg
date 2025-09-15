@@ -189,8 +189,7 @@ HB_FUNC_STATIC(QPAINTER_DELETE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -208,8 +207,7 @@ HB_FUNC_STATIC(QPAINTER_BACKGROUND)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -233,8 +231,7 @@ HB_FUNC_STATIC(QPAINTER_BACKGROUNDMODE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -257,8 +254,7 @@ HB_FUNC_STATIC(QPAINTER_BEGIN)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTDEVICE(1))
     {
@@ -281,8 +277,7 @@ HB_FUNC_STATIC(QPAINTER_BEGINNATIVEPAINTING)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -368,8 +363,7 @@ HB_FUNC_STATIC(QPAINTER_BRUSH)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -393,8 +387,7 @@ HB_FUNC_STATIC(QPAINTER_BRUSHORIGIN)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -418,8 +411,7 @@ HB_FUNC_STATIC(QPAINTER_CLIPPATH)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -443,8 +435,7 @@ HB_FUNC_STATIC(QPAINTER_CLIPREGION)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -468,8 +459,7 @@ HB_FUNC_STATIC(QPAINTER_COMBINEDTRANSFORM)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -493,8 +483,7 @@ HB_FUNC_STATIC(QPAINTER_COMPOSITIONMODE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -517,8 +506,7 @@ HB_FUNC_STATIC(QPAINTER_DEVICE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -542,8 +530,7 @@ HB_FUNC_STATIC(QPAINTER_DEVICETRANSFORM)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1005,8 +992,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWLINES5)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -1038,8 +1024,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWLINES6)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -1071,8 +1056,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWLINES7)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -1104,8 +1088,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWLINES8)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -1141,8 +1124,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWPATH)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
@@ -1639,8 +1621,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWRECTS3)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -1672,8 +1653,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWRECTS4)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -1973,8 +1953,7 @@ HB_FUNC_STATIC(QPAINTER_END)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1997,8 +1976,7 @@ HB_FUNC_STATIC(QPAINTER_ENDNATIVEPAINTING)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2073,8 +2051,7 @@ HB_FUNC_STATIC(QPAINTER_FILLPATH)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQPAINTERPATH(1) && ISQBRUSH(2))
     {
@@ -2324,8 +2301,7 @@ HB_FUNC_STATIC(QPAINTER_FONT)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2349,8 +2325,7 @@ HB_FUNC_STATIC(QPAINTER_FONTINFO)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2374,8 +2349,7 @@ HB_FUNC_STATIC(QPAINTER_FONTMETRICS)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2399,8 +2373,7 @@ HB_FUNC_STATIC(QPAINTER_HASCLIPPING)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2423,8 +2396,7 @@ HB_FUNC_STATIC(QPAINTER_ISACTIVE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2447,8 +2419,7 @@ HB_FUNC_STATIC(QPAINTER_LAYOUTDIRECTION)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2471,8 +2442,7 @@ HB_FUNC_STATIC(QPAINTER_OPACITY)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2495,8 +2465,7 @@ HB_FUNC_STATIC(QPAINTER_PAINTENGINE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2520,8 +2489,7 @@ HB_FUNC_STATIC(QPAINTER_PEN)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2545,8 +2513,7 @@ HB_FUNC_STATIC(QPAINTER_RENDERHINTS)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2569,8 +2536,7 @@ HB_FUNC_STATIC(QPAINTER_RESETTRANSFORM)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2595,8 +2561,7 @@ HB_FUNC_STATIC(QPAINTER_RESTORE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2621,8 +2586,7 @@ HB_FUNC_STATIC(QPAINTER_ROTATE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -2647,8 +2611,7 @@ HB_FUNC_STATIC(QPAINTER_SAVE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -2673,8 +2636,7 @@ HB_FUNC_STATIC(QPAINTER_SCALE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -2699,8 +2661,7 @@ HB_FUNC_STATIC(QPAINTER_SETBACKGROUND)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
@@ -2725,8 +2686,7 @@ HB_FUNC_STATIC(QPAINTER_SETBACKGROUNDMODE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -2837,8 +2797,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPPATH)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISNUMORNIL(2))
     {
@@ -2915,8 +2874,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPREGION)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQREGION(1) && ISNUMORNIL(2))
     {
@@ -2942,8 +2900,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPPING)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -2968,8 +2925,7 @@ HB_FUNC_STATIC(QPAINTER_SETCOMPOSITIONMODE)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -2994,8 +2950,7 @@ HB_FUNC_STATIC(QPAINTER_SETFONT)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
@@ -3020,8 +2975,7 @@ HB_FUNC_STATIC(QPAINTER_SETLAYOUTDIRECTION)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -3046,8 +3000,7 @@ HB_FUNC_STATIC(QPAINTER_SETOPACITY)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -3122,8 +3075,7 @@ HB_FUNC_STATIC(QPAINTER_SETRENDERHINT)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
@@ -3148,8 +3100,7 @@ HB_FUNC_STATIC(QPAINTER_SETRENDERHINTS)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
@@ -3174,8 +3125,7 @@ HB_FUNC_STATIC(QPAINTER_SETTRANSFORM)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
@@ -3200,8 +3150,7 @@ HB_FUNC_STATIC(QPAINTER_SETVIEWTRANSFORMENABLED)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -3298,8 +3247,7 @@ HB_FUNC_STATIC(QPAINTER_SETWORLDMATRIXENABLED)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -3324,8 +3272,7 @@ HB_FUNC_STATIC(QPAINTER_SETWORLDTRANSFORM)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
@@ -3350,8 +3297,7 @@ HB_FUNC_STATIC(QPAINTER_SHEAR)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -3376,8 +3322,7 @@ HB_FUNC_STATIC(QPAINTER_STROKEPATH)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQPAINTERPATH(1) && ISQPEN(2))
     {
@@ -3402,8 +3347,7 @@ HB_FUNC_STATIC(QPAINTER_TESTRENDERHINT)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -3426,8 +3370,7 @@ HB_FUNC_STATIC(QPAINTER_TRANSFORM)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -3501,8 +3444,7 @@ HB_FUNC_STATIC(QPAINTER_VIEWTRANSFORMENABLED)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -3525,8 +3467,7 @@ HB_FUNC_STATIC(QPAINTER_VIEWPORT)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -3550,8 +3491,7 @@ HB_FUNC_STATIC(QPAINTER_WINDOW)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -3575,8 +3515,7 @@ HB_FUNC_STATIC(QPAINTER_WORLDMATRIXENABLED)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -3599,8 +3538,7 @@ HB_FUNC_STATIC(QPAINTER_WORLDTRANSFORM)
 {
   QPainter *obj = (QPainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

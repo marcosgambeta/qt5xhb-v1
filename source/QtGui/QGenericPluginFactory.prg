@@ -61,8 +61,7 @@ HB_FUNC_STATIC(QGENERICPLUGINFACTORY_DELETE)
 {
   QGenericPluginFactory *obj = (QGenericPluginFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -80,8 +79,7 @@ HB_FUNC_STATIC(QGENERICPLUGINFACTORY_CREATE)
 {
   QGenericPluginFactory *obj = (QGenericPluginFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -105,8 +103,7 @@ HB_FUNC_STATIC(QGENERICPLUGINFACTORY_KEYS)
 {
   QGenericPluginFactory *obj = (QGenericPluginFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

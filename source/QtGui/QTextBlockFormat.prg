@@ -90,8 +90,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_DELETE)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_ISVALID)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -133,8 +131,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETALIGNMENT)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -159,8 +156,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_ALIGNMENT)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -183,8 +179,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETTOPMARGIN)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -209,8 +204,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_TOPMARGIN)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -233,8 +227,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETBOTTOMMARGIN)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -259,8 +252,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_BOTTOMMARGIN)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -283,8 +275,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETLEFTMARGIN)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -309,8 +300,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LEFTMARGIN)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -333,8 +323,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETRIGHTMARGIN)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -359,8 +348,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_RIGHTMARGIN)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -383,8 +371,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETTEXTINDENT)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -409,8 +396,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_TEXTINDENT)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -433,8 +419,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETINDENT)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -459,8 +444,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_INDENT)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -483,8 +467,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETLINEHEIGHT)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -541,8 +524,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LINEHEIGHTTYPE)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -565,8 +547,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETNONBREAKABLELINES)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -591,8 +572,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_NONBREAKABLELINES)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -615,8 +595,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -641,8 +620,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_PAGEBREAKPOLICY)
 {
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -666,8 +644,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_HEADINGLEVEL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -692,8 +669,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETHEADINGLEVEL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
   QTextBlockFormat *obj = (QTextBlockFormat *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

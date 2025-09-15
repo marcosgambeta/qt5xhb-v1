@@ -38,8 +38,7 @@ void QStandardItemModelSlots_connect_signal(const QString &signal, const QString
 {
   QStandardItemModel *obj = (QStandardItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QStandardItemModelSlots *s = QCoreApplication::instance()->findChild<QStandardItemModelSlots *>();
 
     if (s == NULL)

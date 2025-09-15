@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QSCREEN_DELETE)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -118,8 +117,7 @@ HB_FUNC_STATIC(QSCREEN_NAME)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -142,8 +140,7 @@ HB_FUNC_STATIC(QSCREEN_DEPTH)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -166,8 +163,7 @@ HB_FUNC_STATIC(QSCREEN_SIZE)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -191,8 +187,7 @@ HB_FUNC_STATIC(QSCREEN_GEOMETRY)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -216,8 +211,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALSIZE)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -241,8 +235,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALDOTSPERINCHX)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -265,8 +258,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALDOTSPERINCHY)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -289,8 +281,7 @@ HB_FUNC_STATIC(QSCREEN_PHYSICALDOTSPERINCH)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -313,8 +304,7 @@ HB_FUNC_STATIC(QSCREEN_LOGICALDOTSPERINCHX)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -337,8 +327,7 @@ HB_FUNC_STATIC(QSCREEN_LOGICALDOTSPERINCHY)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -361,8 +350,7 @@ HB_FUNC_STATIC(QSCREEN_LOGICALDOTSPERINCH)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -385,8 +373,7 @@ HB_FUNC_STATIC(QSCREEN_DEVICEPIXELRATIO)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -409,8 +396,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLESIZE)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -434,8 +420,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEGEOMETRY)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -459,8 +444,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALSIBLINGS)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -506,8 +490,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALSIZE)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -531,8 +514,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALGEOMETRY)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -556,8 +538,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEVIRTUALSIZE)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -581,8 +562,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEVIRTUALGEOMETRY)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -606,8 +586,7 @@ HB_FUNC_STATIC(QSCREEN_PRIMARYORIENTATION)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -630,8 +609,7 @@ HB_FUNC_STATIC(QSCREEN_ORIENTATION)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -654,8 +632,7 @@ HB_FUNC_STATIC(QSCREEN_ORIENTATIONUPDATEMASK)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -678,8 +655,7 @@ HB_FUNC_STATIC(QSCREEN_SETORIENTATIONUPDATEMASK)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -704,8 +680,7 @@ HB_FUNC_STATIC(QSCREEN_ANGLEBETWEEN)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -728,8 +703,7 @@ HB_FUNC_STATIC(QSCREEN_TRANSFORMBETWEEN)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3))
     {
@@ -754,8 +728,7 @@ HB_FUNC_STATIC(QSCREEN_MAPBETWEEN)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3))
     {
@@ -780,8 +753,7 @@ HB_FUNC_STATIC(QSCREEN_ISPORTRAIT)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -804,8 +776,7 @@ HB_FUNC_STATIC(QSCREEN_ISLANDSCAPE)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -828,8 +799,7 @@ HB_FUNC_STATIC(QSCREEN_GRABWINDOW)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 5) && HB_ISPOINTER(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
         ISNUMORNIL(4) && ISNUMORNIL(5))
@@ -855,8 +825,7 @@ HB_FUNC_STATIC(QSCREEN_REFRESHRATE)
 {
   QScreen *obj = (QScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

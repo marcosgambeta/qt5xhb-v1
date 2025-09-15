@@ -36,8 +36,7 @@ void QIntValidatorSlots_connect_signal(const QString &signal, const QString &slo
 {
   QIntValidator *obj = (QIntValidator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QIntValidatorSlots *s = QCoreApplication::instance()->findChild<QIntValidatorSlots *>();
 
     if (s == NULL)

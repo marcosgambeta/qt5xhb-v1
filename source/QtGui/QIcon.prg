@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QICON_DELETE)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -141,8 +140,7 @@ HB_FUNC_STATIC(QICON_ACTUALSIZE)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
@@ -169,8 +167,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (ISQSIZE(2) || HB_ISNIL(2)) && ISNUMORNIL(3) &&
         ISNUMORNIL(4))
@@ -198,8 +195,7 @@ HB_FUNC_STATIC(QICON_ADDPIXMAP)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
@@ -225,8 +221,7 @@ HB_FUNC_STATIC(QICON_AVAILABLESIZES)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2))
     {
@@ -276,8 +271,7 @@ HB_FUNC_STATIC(QICON_CACHEKEY)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -300,8 +294,7 @@ HB_FUNC_STATIC(QICON_ISNULL)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -324,8 +317,7 @@ HB_FUNC_STATIC(QICON_NAME)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

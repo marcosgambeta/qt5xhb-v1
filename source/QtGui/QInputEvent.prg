@@ -50,8 +50,7 @@ HB_FUNC_STATIC(QINPUTEVENT_DELETE)
 {
   QInputEvent *obj = (QInputEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -69,8 +68,7 @@ HB_FUNC_STATIC(QINPUTEVENT_MODIFIERS)
 {
   QInputEvent *obj = (QInputEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

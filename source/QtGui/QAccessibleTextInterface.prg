@@ -72,8 +72,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_DELETE)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -91,8 +90,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_SELECTION)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
@@ -121,8 +119,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_SELECTIONCOUNT)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -145,8 +142,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_ADDSELECTION)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -171,8 +167,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_REMOVESELECTION)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -197,8 +192,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_SETSELECTION)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
@@ -223,8 +217,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_CURSORPOSITION)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -247,8 +240,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_SETCURSORPOSITION)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -273,8 +265,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_TEXT)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -297,8 +288,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_CHARACTERCOUNT)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -321,8 +311,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_CHARACTERRECT)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -346,8 +335,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_OFFSETATPOINT)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -370,8 +358,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_SCROLLTOSUBSTRING)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -396,8 +383,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINTERFACE_ATTRIBUTES)
 {
   QAccessibleTextInterface *obj = (QAccessibleTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {

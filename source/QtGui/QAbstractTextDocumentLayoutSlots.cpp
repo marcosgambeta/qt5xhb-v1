@@ -92,8 +92,7 @@ void QAbstractTextDocumentLayoutSlots_connect_signal(const QString &signal, cons
 {
   QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractTextDocumentLayoutSlots *s = QCoreApplication::instance()->findChild<QAbstractTextDocumentLayoutSlots *>();
 
     if (s == NULL)

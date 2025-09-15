@@ -63,8 +63,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_DELETE)
 {
   QAccessibleActionInterface *obj = (QAccessibleActionInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -82,8 +81,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_ACTIONNAMES)
 {
   QAccessibleActionInterface *obj = (QAccessibleActionInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -106,8 +104,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME)
 {
   QAccessibleActionInterface *obj = (QAccessibleActionInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -130,8 +127,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION)
 {
   QAccessibleActionInterface *obj = (QAccessibleActionInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -154,8 +150,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_DOACTION)
 {
   QAccessibleActionInterface *obj = (QAccessibleActionInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -180,8 +175,7 @@ HB_FUNC_STATIC(QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION)
 {
   QAccessibleActionInterface *obj = (QAccessibleActionInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {

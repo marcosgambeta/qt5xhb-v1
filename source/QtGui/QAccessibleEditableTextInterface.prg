@@ -61,8 +61,7 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETE)
 {
   QAccessibleEditableTextInterface *obj = (QAccessibleEditableTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -80,8 +79,7 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETETEXT)
 {
   QAccessibleEditableTextInterface *obj = (QAccessibleEditableTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -106,8 +104,7 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT)
 {
   QAccessibleEditableTextInterface *obj = (QAccessibleEditableTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -132,8 +129,7 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_REPLACETEXT)
 {
   QAccessibleEditableTextInterface *obj = (QAccessibleEditableTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3))
     {

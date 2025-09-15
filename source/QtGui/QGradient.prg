@@ -64,8 +64,7 @@ HB_FUNC_STATIC(QGRADIENT_DELETE)
 {
   QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -83,8 +82,7 @@ HB_FUNC_STATIC(QGRADIENT_COORDINATEMODE)
 {
   QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -107,8 +105,7 @@ HB_FUNC_STATIC(QGRADIENT_SETCOLORAT)
 {
   QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
     {
@@ -133,8 +130,7 @@ HB_FUNC_STATIC(QGRADIENT_SETCOORDINATEMODE)
 {
   QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -159,8 +155,7 @@ HB_FUNC_STATIC(QGRADIENT_SETSPREAD)
 {
   QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -185,8 +180,7 @@ HB_FUNC_STATIC(QGRADIENT_SPREAD)
 {
   QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -209,8 +203,7 @@ HB_FUNC_STATIC(QGRADIENT_TYPE)
 {
   QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -60,8 +60,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_DELETE)
 {
   QAccessibleBridge *obj = (QAccessibleBridge *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -79,8 +78,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_SETROOTOBJECT)
 {
   QAccessibleBridge *obj = (QAccessibleBridge *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1))
     {
@@ -105,8 +103,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE)
 {
   QAccessibleBridge *obj = (QAccessibleBridge *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQACCESSIBLEEVENT(1))
     {

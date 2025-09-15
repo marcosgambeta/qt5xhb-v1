@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_DELETE)
 {
   QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_BUTTON)
 {
   QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -144,8 +142,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_BUTTONS)
 {
   QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -168,8 +165,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_GLOBALX)
 {
   QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -192,8 +188,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_GLOBALY)
 {
   QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -216,8 +211,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_LOCALPOS)
 {
   QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -241,8 +235,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_SCREENPOS)
 {
   QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -266,8 +259,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_WINDOWPOS)
 {
   QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -291,8 +283,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_X)
 {
   QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -315,8 +306,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_Y)
 {
   QMouseEvent *obj = (QMouseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

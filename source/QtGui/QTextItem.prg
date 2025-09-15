@@ -65,8 +65,7 @@ HB_FUNC_STATIC(QTEXTITEM_DELETE)
 {
   QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -84,8 +83,7 @@ HB_FUNC_STATIC(QTEXTITEM_DESCENT)
 {
   QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -108,8 +106,7 @@ HB_FUNC_STATIC(QTEXTITEM_ASCENT)
 {
   QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -132,8 +129,7 @@ HB_FUNC_STATIC(QTEXTITEM_WIDTH)
 {
   QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -156,8 +152,7 @@ HB_FUNC_STATIC(QTEXTITEM_RENDERFLAGS)
 {
   QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -180,8 +175,7 @@ HB_FUNC_STATIC(QTEXTITEM_TEXT)
 {
   QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -204,8 +198,7 @@ HB_FUNC_STATIC(QTEXTITEM_FONT)
 {
   QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

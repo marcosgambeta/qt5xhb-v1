@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QTEXTFRAME_DELETE)
 {
   QTextFrame *obj = (QTextFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QTEXTFRAME_SETFRAMEFORMAT)
 {
   QTextFrame *obj = (QTextFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTFRAMEFORMAT(1))
     {
@@ -127,8 +125,7 @@ HB_FUNC_STATIC(QTEXTFRAME_FRAMEFORMAT)
 {
   QTextFrame *obj = (QTextFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QTEXTFRAME_FIRSTCURSORPOSITION)
 {
   QTextFrame *obj = (QTextFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -177,8 +173,7 @@ HB_FUNC_STATIC(QTEXTFRAME_LASTCURSORPOSITION)
 {
   QTextFrame *obj = (QTextFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -202,8 +197,7 @@ HB_FUNC_STATIC(QTEXTFRAME_FIRSTPOSITION)
 {
   QTextFrame *obj = (QTextFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -226,8 +220,7 @@ HB_FUNC_STATIC(QTEXTFRAME_LASTPOSITION)
 {
   QTextFrame *obj = (QTextFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -250,8 +243,7 @@ HB_FUNC_STATIC(QTEXTFRAME_CHILDFRAMES)
 {
   QTextFrame *obj = (QTextFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -297,8 +289,7 @@ HB_FUNC_STATIC(QTEXTFRAME_PARENTFRAME)
 {
   QTextFrame *obj = (QTextFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

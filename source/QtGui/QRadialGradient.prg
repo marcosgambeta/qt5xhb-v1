@@ -125,8 +125,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_DELETE)
 {
   QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -144,8 +143,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_CENTER)
 {
   QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -169,8 +167,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_CENTERRADIUS)
 {
   QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -193,8 +190,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_FOCALPOINT)
 {
   QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -218,8 +214,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_FOCALRADIUS)
 {
   QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -242,8 +237,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_RADIUS)
 {
   QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -302,8 +296,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTERRADIUS)
 {
   QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -364,8 +357,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALRADIUS)
 {
   QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -390,8 +382,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETRADIUS)
 {
   QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

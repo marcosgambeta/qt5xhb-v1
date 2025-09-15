@@ -61,8 +61,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DELETE)
 {
   QSyntaxHighlighter *obj = (QSyntaxHighlighter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -82,8 +81,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_SETDOCUMENT)
 {
   QSyntaxHighlighter *obj = (QSyntaxHighlighter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
     {
@@ -108,8 +106,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
 {
   QSyntaxHighlighter *obj = (QSyntaxHighlighter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -133,8 +130,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHT)
 {
   QSyntaxHighlighter *obj = (QSyntaxHighlighter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -159,8 +155,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK)
 {
   QSyntaxHighlighter *obj = (QSyntaxHighlighter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {

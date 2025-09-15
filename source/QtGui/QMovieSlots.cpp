@@ -142,8 +142,7 @@ void QMovieSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMovieSlots *s = QCoreApplication::instance()->findChild<QMovieSlots *>();
 
     if (s == NULL)

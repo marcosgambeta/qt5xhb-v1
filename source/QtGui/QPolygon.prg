@@ -127,8 +127,7 @@ HB_FUNC_STATIC(QPOLYGON_DELETE)
 {
   QPolygon *obj = (QPolygon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -146,8 +145,7 @@ HB_FUNC_STATIC(QPOLYGON_SWAP)
 {
   QPolygon *obj = (QPolygon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGON(1))
     {
@@ -242,8 +240,7 @@ HB_FUNC_STATIC(QPOLYGON_BOUNDINGRECT)
 {
   QPolygon *obj = (QPolygon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -342,8 +339,7 @@ HB_FUNC_STATIC(QPOLYGON_PUTPOINTS)
 {
   QPolygon *obj = (QPolygon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQPOLYGON(3) && ISNUMORNIL(4))
     {
@@ -368,8 +364,7 @@ HB_FUNC_STATIC(QPOLYGON_CONTAINSPOINT)
 {
   QPolygon *obj = (QPolygon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQPOINT(1) && HB_ISNUM(2))
     {
@@ -392,8 +387,7 @@ HB_FUNC_STATIC(QPOLYGON_UNITED)
 {
   QPolygon *obj = (QPolygon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGON(1))
     {
@@ -417,8 +411,7 @@ HB_FUNC_STATIC(QPOLYGON_INTERSECTED)
 {
   QPolygon *obj = (QPolygon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGON(1))
     {
@@ -442,8 +435,7 @@ HB_FUNC_STATIC(QPOLYGON_SUBTRACTED)
 {
   QPolygon *obj = (QPolygon *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGON(1))
     {

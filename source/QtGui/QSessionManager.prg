@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONID)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -92,8 +91,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONKEY)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -116,8 +114,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSINTERACTION)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -140,8 +137,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSERRORINTERACTION)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -164,8 +160,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RELEASE)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -190,8 +185,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_CANCEL)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -216,8 +210,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTHINT)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -242,8 +235,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTHINT)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -266,8 +258,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTCOMMAND)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -292,8 +283,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTCOMMAND)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -316,8 +306,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETDISCARDCOMMAND)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -342,8 +331,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_DISCARDCOMMAND)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -402,8 +390,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ISPHASE2)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -426,8 +413,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_REQUESTPHASE2)
 {
   QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

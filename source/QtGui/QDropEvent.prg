@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QDROPEVENT_DELETE)
 {
   QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -102,8 +101,7 @@ HB_FUNC_STATIC(QDROPEVENT_ACCEPTPROPOSEDACTION)
 {
   QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QDROPEVENT_DROPACTION)
 {
   QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QDROPEVENT_KEYBOARDMODIFIERS)
 {
   QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -176,8 +172,7 @@ HB_FUNC_STATIC(QDROPEVENT_MIMEDATA)
 {
   QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -201,8 +196,7 @@ HB_FUNC_STATIC(QDROPEVENT_MOUSEBUTTONS)
 {
   QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -225,8 +219,7 @@ HB_FUNC_STATIC(QDROPEVENT_POSSIBLEACTIONS)
 {
   QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -249,8 +242,7 @@ HB_FUNC_STATIC(QDROPEVENT_PROPOSEDACTION)
 {
   QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -273,8 +265,7 @@ HB_FUNC_STATIC(QDROPEVENT_SETDROPACTION)
 {
   QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -299,8 +290,7 @@ HB_FUNC_STATIC(QDROPEVENT_SOURCE)
 {
   QDropEvent *obj = (QDropEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
