@@ -52,8 +52,7 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_DELETE)
 {
   QAbstractMessageHandler *obj = (QAbstractMessageHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -74,8 +73,7 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_MESSAGE)
 {
   QAbstractMessageHandler *obj = (QAbstractMessageHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQURL(3) || HB_ISNIL(3)) &&
         (ISQSOURCELOCATION(4) || HB_ISNIL(4)))

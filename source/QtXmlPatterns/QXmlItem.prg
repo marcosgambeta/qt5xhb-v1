@@ -108,8 +108,7 @@ HB_FUNC_STATIC(QXMLITEM_DELETE)
 {
   QXmlItem *obj = (QXmlItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QXMLITEM_ISATOMICVALUE)
 {
   QXmlItem *obj = (QXmlItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -151,8 +149,7 @@ HB_FUNC_STATIC(QXMLITEM_ISNODE)
 {
   QXmlItem *obj = (QXmlItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -175,8 +172,7 @@ HB_FUNC_STATIC(QXMLITEM_ISNULL)
 {
   QXmlItem *obj = (QXmlItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -199,8 +195,7 @@ HB_FUNC_STATIC(QXMLITEM_TOATOMICVALUE)
 {
   QXmlItem *obj = (QXmlItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -224,8 +219,7 @@ HB_FUNC_STATIC(QXMLITEM_TONODEMODELINDEX)
 {
   QXmlItem *obj = (QXmlItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
