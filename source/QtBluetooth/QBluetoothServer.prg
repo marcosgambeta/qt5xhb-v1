@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
     }
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQBLUETOOTHUUID(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQBLUETOOTHUUID(1) && ISCHARORNIL(2))
   {
     /*
     QBluetoothServiceInfo listen( const QBluetoothUuid &uuid, const QString &serviceName = QString() )
