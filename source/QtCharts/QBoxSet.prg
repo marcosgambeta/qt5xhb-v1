@@ -80,7 +80,7 @@ RETURN
 
 HB_FUNC_STATIC(QBOXSET_NEW)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QBOXSET_NEW)
 #endif
   }
   else if (ISBETWEEN(5, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-           (HB_ISCHAR(6) || HB_ISNIL(6)) && (ISQOBJECT(7) || HB_ISNIL(7)))
+           ISCHARORNIL(6) && (ISQOBJECT(7) || HB_ISNIL(7)))
   {
     /*
     explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label
