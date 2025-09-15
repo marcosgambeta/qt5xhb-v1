@@ -199,8 +199,7 @@ void QAbstractOAuthSlots_connect_signal(const QString &signal, const QString &sl
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAbstractOAuth *obj = (QAbstractOAuth *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractOAuthSlots *s = QCoreApplication::instance()->findChild<QAbstractOAuthSlots *>();
 
     if (s == NULL)

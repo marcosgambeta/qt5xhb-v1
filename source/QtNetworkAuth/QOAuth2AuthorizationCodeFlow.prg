@@ -133,8 +133,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QOAuth2AuthorizationCodeFlow *obj = (QOAuth2AuthorizationCodeFlow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -156,8 +155,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_ACCESSTOKENURL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QOAuth2AuthorizationCodeFlow *obj = (QOAuth2AuthorizationCodeFlow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -183,8 +181,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QOAuth2AuthorizationCodeFlow *obj = (QOAuth2AuthorizationCodeFlow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -211,8 +208,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_GRANT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QOAuth2AuthorizationCodeFlow *obj = (QOAuth2AuthorizationCodeFlow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -239,8 +235,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QOAuth2AuthorizationCodeFlow *obj = (QOAuth2AuthorizationCodeFlow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

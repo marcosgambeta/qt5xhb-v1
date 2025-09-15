@@ -41,8 +41,7 @@ void QOAuth2AuthorizationCodeFlowSlots_connect_signal(const QString &signal, con
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QOAuth2AuthorizationCodeFlow *obj = (QOAuth2AuthorizationCodeFlow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QOAuth2AuthorizationCodeFlowSlots *s =
         QCoreApplication::instance()->findChild<QOAuth2AuthorizationCodeFlowSlots *>();
 
