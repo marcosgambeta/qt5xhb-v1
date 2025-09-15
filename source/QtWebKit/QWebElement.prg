@@ -142,8 +142,7 @@ HB_FUNC_STATIC(QWEBELEMENT_DELETE)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -161,8 +160,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ADDCLASS)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -259,8 +257,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ATTRIBUTE)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
     {
@@ -284,8 +281,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ATTRIBUTENS)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3))
     {
@@ -308,8 +304,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ATTRIBUTENAMES)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
@@ -332,8 +327,7 @@ HB_FUNC_STATIC(QWEBELEMENT_CLASSES)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -356,8 +350,7 @@ HB_FUNC_STATIC(QWEBELEMENT_CLONE)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -381,8 +374,7 @@ HB_FUNC_STATIC(QWEBELEMENT_DOCUMENT)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -478,8 +470,7 @@ HB_FUNC_STATIC(QWEBELEMENT_EVALUATEJAVASCRIPT)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -503,8 +494,7 @@ HB_FUNC_STATIC(QWEBELEMENT_FINDALL)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -528,8 +518,7 @@ HB_FUNC_STATIC(QWEBELEMENT_FINDFIRST)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -553,8 +542,7 @@ HB_FUNC_STATIC(QWEBELEMENT_FIRSTCHILD)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -578,8 +566,7 @@ HB_FUNC_STATIC(QWEBELEMENT_GEOMETRY)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -603,8 +590,7 @@ HB_FUNC_STATIC(QWEBELEMENT_HASATTRIBUTE)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -627,8 +613,7 @@ HB_FUNC_STATIC(QWEBELEMENT_HASATTRIBUTENS)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -651,8 +636,7 @@ HB_FUNC_STATIC(QWEBELEMENT_HASATTRIBUTES)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -675,8 +659,7 @@ HB_FUNC_STATIC(QWEBELEMENT_HASCLASS)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -699,8 +682,7 @@ HB_FUNC_STATIC(QWEBELEMENT_HASFOCUS)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -723,8 +705,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ISNULL)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -747,8 +728,7 @@ HB_FUNC_STATIC(QWEBELEMENT_LASTCHILD)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -772,8 +752,7 @@ HB_FUNC_STATIC(QWEBELEMENT_LOCALNAME)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -796,8 +775,7 @@ HB_FUNC_STATIC(QWEBELEMENT_NAMESPACEURI)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -820,8 +798,7 @@ HB_FUNC_STATIC(QWEBELEMENT_NEXTSIBLING)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -845,8 +822,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PARENT)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -870,8 +846,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PREFIX)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -966,8 +941,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PREVIOUSSIBLING)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -991,8 +965,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REMOVEALLCHILDREN)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1017,8 +990,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REMOVEATTRIBUTE)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1043,8 +1015,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REMOVEATTRIBUTENS)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -1069,8 +1040,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REMOVECLASS)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1095,8 +1065,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REMOVEFROMDOCUMENT)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1193,8 +1162,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETATTRIBUTE)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -1219,8 +1187,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETATTRIBUTENS)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
     {
@@ -1245,8 +1212,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETFOCUS)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1271,8 +1237,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETINNERXML)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1297,8 +1262,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETOUTERXML)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1323,8 +1287,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETPLAINTEXT)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1349,8 +1312,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETSTYLEPROPERTY)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -1375,8 +1337,7 @@ HB_FUNC_STATIC(QWEBELEMENT_STYLEPROPERTY)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -1399,8 +1360,7 @@ HB_FUNC_STATIC(QWEBELEMENT_TAGNAME)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1423,8 +1383,7 @@ HB_FUNC_STATIC(QWEBELEMENT_TAKEFROMDOCUMENT)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1448,8 +1407,7 @@ HB_FUNC_STATIC(QWEBELEMENT_TOINNERXML)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1472,8 +1430,7 @@ HB_FUNC_STATIC(QWEBELEMENT_TOOUTERXML)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1496,8 +1453,7 @@ HB_FUNC_STATIC(QWEBELEMENT_TOPLAINTEXT)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1520,8 +1476,7 @@ HB_FUNC_STATIC(QWEBELEMENT_TOGGLECLASS)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1546,8 +1501,7 @@ HB_FUNC_STATIC(QWEBELEMENT_WEBFRAME)
 {
   QWebElement *obj = (QWebElement *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

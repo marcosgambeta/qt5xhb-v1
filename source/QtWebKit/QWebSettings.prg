@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_DEFAULTTEXTENCODING)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -124,8 +123,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_FONTFAMILY)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -148,8 +146,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_FONTSIZE)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -172,8 +169,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_LOCALSTORAGEPATH)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -196,8 +192,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETATTRIBUTE)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -222,8 +217,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTFAMILY)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -248,8 +242,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTSIZE)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -274,8 +267,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETATTRIBUTE)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
@@ -300,8 +292,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETDEFAULTTEXTENCODING)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -326,8 +317,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTFAMILY)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -352,8 +342,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTSIZE)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -378,8 +367,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETLOCALSTORAGEPATH)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -404,8 +392,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETUSERSTYLESHEETURL)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -430,8 +417,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_TESTATTRIBUTE)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -454,8 +440,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_USERSTYLESHEETURL)
 {
   QWebSettings *obj = (QWebSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
