@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_ISREADONLY)
 
 HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
 {
-  if (ISBETWEEN(1, 2) && ISQNETWORKREQUEST(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQNETWORKREQUEST(1) && ISCHARORNIL(2))
   {
     /*
     void load( const QNetworkRequest &request, const char * format = nullptr )
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 2) && ISQURL(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQURL(1) && ISCHARORNIL(2))
   {
     /*
     void load( const QUrl &location, const char * format = nullptr )
@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_LOAD)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISCHARORNIL(2))
   {
     /*
     void load( QIODevice * device, const char * format = nullptr )
@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QMEDIAPLAYLIST_REMOVEMEDIA)
 
 HB_FUNC_STATIC(QMEDIAPLAYLIST_SAVE)
 {
-  if (ISBETWEEN(1, 2) && ISQURL(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQURL(1) && ISCHARORNIL(2))
   {
     /*
     bool save( const QUrl &location, const char * format = nullptr )

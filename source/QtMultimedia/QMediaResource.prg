@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_NEW)
     QMediaResource *obj = new QMediaResource();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && ISQURL(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQURL(1) && ISCHARORNIL(2))
   {
     /*
     QMediaResource( const QUrl &url, const QString &mimeType = QString() )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QMEDIARESOURCE_NEW)
     QMediaResource *obj = new QMediaResource(*PQURL(1), OPQSTRING(2, QString()));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && ISQNETWORKREQUEST(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQNETWORKREQUEST(1) && ISCHARORNIL(2))
   {
     /*
     QMediaResource( const QNetworkRequest &request, const QString &mimeType = QString() )
