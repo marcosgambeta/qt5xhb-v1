@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusDevice *obj = (QModbusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -112,8 +111,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_CONNECTIONPARAMETER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusDevice *obj = (QModbusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -139,8 +137,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_SETCONNECTIONPARAMETER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusDevice *obj = (QModbusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_CONNECTDEVICE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusDevice *obj = (QModbusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -193,8 +189,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_DISCONNECTDEVICE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusDevice *obj = (QModbusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -221,8 +216,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_STATE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusDevice *obj = (QModbusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -247,8 +241,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_ERROR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusDevice *obj = (QModbusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -273,8 +266,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_ERRORSTRING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusDevice *obj = (QModbusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

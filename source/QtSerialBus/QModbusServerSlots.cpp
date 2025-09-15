@@ -45,8 +45,7 @@ void QModbusServerSlots_connect_signal(const QString &signal, const QString &slo
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusServer *obj = (QModbusServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QModbusServerSlots *s = QCoreApplication::instance()->findChild<QModbusServerSlots *>();
 
     if (s == NULL)

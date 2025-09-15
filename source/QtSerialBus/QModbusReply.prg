@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_TYPE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -113,8 +112,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_SERVERADDRESS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -139,8 +137,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ISFINISHED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -165,8 +162,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ERRORSTRING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -191,8 +187,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ERROR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -217,8 +212,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_SETFINISHED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -245,8 +239,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_SETERROR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QModbusReply *obj = (QModbusReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {

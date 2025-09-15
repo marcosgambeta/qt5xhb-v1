@@ -97,8 +97,7 @@ void QCanBusDeviceSlots_connect_signal(const QString &signal, const QString &slo
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QCanBusDeviceSlots *s = QCoreApplication::instance()->findChild<QCanBusDeviceSlots *>();
 
     if (s == NULL)

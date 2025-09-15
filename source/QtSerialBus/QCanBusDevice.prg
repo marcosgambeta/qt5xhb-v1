@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_SETCONFIGURATIONPARAMETER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
@@ -129,8 +128,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CONFIGURATIONPARAMETER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -156,8 +154,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CONFIGURATIONKEYS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -190,8 +187,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_WRITEFRAME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQCANBUSFRAME(1))
     {
@@ -216,8 +212,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_READFRAME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -243,8 +238,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_FRAMESAVAILABLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -269,8 +263,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_FRAMESTOWRITE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -295,8 +288,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_WAITFORFRAMESWRITTEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -321,8 +313,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_WAITFORFRAMESRECEIVED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -347,8 +338,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CONNECTDEVICE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -373,8 +363,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_DISCONNECTDEVICE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -401,8 +390,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_STATE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -427,8 +415,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ERROR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -453,8 +440,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ERRORSTRING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -479,8 +465,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_INTERPRETERRORFRAME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQCANBUSFRAME(1))
     {
@@ -505,8 +490,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CLEAR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -533,8 +517,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_READALLFRAMES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
   QCanBusDevice *obj = (QCanBusDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
