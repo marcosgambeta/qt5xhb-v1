@@ -75,8 +75,8 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
     QShortcut *obj = new QShortcut(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
-           (HB_ISCHAR(4) || HB_ISNIL(4)) && ISNUMORNIL(5))
+  else if (ISBETWEEN(2, 5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && ISCHARORNIL(3) &&
+           ISCHARORNIL(4) && ISNUMORNIL(5))
   {
     /*
     QShortcut( const QKeySequence &key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0,

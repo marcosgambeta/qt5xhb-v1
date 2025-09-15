@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
     hb_storl(par1, 1);
   }
   else if (ISBETWEEN(2, 5) && HB_ISLOG(1) && ISQFONT(2) && (ISQWIDGET(3) || HB_ISNIL(3)) &&
-           (HB_ISCHAR(4) || HB_ISNIL(4)) && ISNUMORNIL(5))
+           ISCHARORNIL(4) && ISNUMORNIL(5))
   {
     /*
     static QFont getFont( bool * ok, const QFont &initial, QWidget * parent = 0, const QString &title = QString(),

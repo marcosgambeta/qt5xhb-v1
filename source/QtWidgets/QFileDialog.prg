@@ -140,8 +140,8 @@ HB_FUNC_STATIC(QFILEDIALOG_NEW)
     QFileDialog *obj = new QFileDialog(PQWIDGET(1), (Qt::WindowFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
-           (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
+           ISCHARORNIL(3) && ISCHARORNIL(4))
   {
     /*
     QFileDialog( QWidget * parent = 0, const QString &caption = QString(), const QString &directory = QString(), const
@@ -1613,8 +1613,8 @@ QString(), QFileDialog::Options options = QFileDialog::ShowDirsOnly )
 HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
-      (HB_ISCHAR(3) || HB_ISNIL(3)) && ISNUMORNIL(4))
+  if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
+      ISCHARORNIL(3) && ISNUMORNIL(4))
   {
 #endif
     RQSTRING(QFileDialog::getExistingDirectory(OPQWIDGET(1, 0), OPQSTRING(2, QString()), OPQSTRING(3, QString()),
@@ -1636,8 +1636,8 @@ QString(), const QString &filter = QString(), QString * selectedFilter = 0, QFil
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
-      (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)) &&
+  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
+      ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5) &&
       ISNUMORNIL(6))
   {
 #endif
@@ -1660,8 +1660,8 @@ QString(), const QString &filter = QString(), QString * selectedFilter = 0, QFil
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAMES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
-      (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)) &&
+  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
+      ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5) &&
       ISNUMORNIL(6))
   {
 #endif
@@ -1684,8 +1684,8 @@ QString(), const QString &filter = QString(), QString * selectedFilter = 0, QFil
 HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILENAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
-      (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)) &&
+  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
+      ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5) &&
       ISNUMORNIL(6))
   {
 #endif
@@ -1709,8 +1709,8 @@ supportedSchemes = QStringList() )
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILEURL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 7) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)) &&
-      (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)) && ISNUMORNIL(6) &&
+  if (ISBETWEEN(0, 7) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && (ISQURL(3) || HB_ISNIL(3)) &&
+      ISCHARORNIL(4) && ISCHARORNIL(5) && ISNUMORNIL(6) &&
       (HB_ISARRAY(7) || HB_ISNIL(7)))
   {
 #endif
@@ -1736,8 +1736,8 @@ supportedSchemes = QStringList() )
 HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILEURL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 7) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)) &&
-      (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)) && ISNUMORNIL(6) &&
+  if (ISBETWEEN(0, 7) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && (ISQURL(3) || HB_ISNIL(3)) &&
+      ISCHARORNIL(4) && ISCHARORNIL(5) && ISNUMORNIL(6) &&
       (HB_ISARRAY(7) || HB_ISNIL(7)))
   {
 #endif
@@ -1762,7 +1762,7 @@ QUrl(), QFileDialog::Options options = QFileDialog::ShowDirsOnly, const QStringL
 HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORYURL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 5) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)) &&
+  if (ISBETWEEN(0, 5) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && (ISQURL(3) || HB_ISNIL(3)) &&
       ISNUMORNIL(4) && (HB_ISARRAY(5) || HB_ISNIL(5)))
   {
 #endif
@@ -1788,8 +1788,8 @@ QStringList &supportedSchemes = QStringList() )
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILEURLS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 7) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)) &&
-      (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)) && ISNUMORNIL(6) &&
+  if (ISBETWEEN(0, 7) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && (ISQURL(3) || HB_ISNIL(3)) &&
+      ISCHARORNIL(4) && ISCHARORNIL(5) && ISNUMORNIL(6) &&
       (HB_ISARRAY(7) || HB_ISNIL(7)))
   {
 #endif

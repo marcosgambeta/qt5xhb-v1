@@ -1144,7 +1144,7 @@ static void setFont( const QFont &font, const char * className = 0 )
 HB_FUNC_STATIC(QAPPLICATION_SETFONT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQFONT(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQFONT(1) && ISCHARORNIL(2))
   {
 #endif
     QApplication::setFont(*PQFONT(1), OPCONSTCHAR(2, 0));
@@ -1249,7 +1249,7 @@ static void setPalette( const QPalette &palette, const char * className = 0 )
 HB_FUNC_STATIC(QAPPLICATION_SETPALETTE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQPALETTE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQPALETTE(1) && ISCHARORNIL(2))
   {
 #endif
     QApplication::setPalette(*PQPALETTE(1), OPCONSTCHAR(2, 0));
