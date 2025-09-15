@@ -84,8 +84,7 @@ void QQuickPaintedItemSlots_connect_signal(const QString &signal, const QString 
 {
   QQuickPaintedItem *obj = (QQuickPaintedItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QQuickPaintedItemSlots *s = QCoreApplication::instance()->findChild<QQuickPaintedItemSlots *>();
 
     if (s == NULL)

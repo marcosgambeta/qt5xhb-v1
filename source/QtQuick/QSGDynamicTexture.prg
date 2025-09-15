@@ -54,8 +54,7 @@ HB_FUNC_STATIC(QSGDYNAMICTEXTURE_UPDATETEXTURE)
 {
   QSGDynamicTexture *obj = (QSGDynamicTexture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

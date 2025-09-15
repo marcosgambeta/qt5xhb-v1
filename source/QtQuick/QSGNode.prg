@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QSGNODE_DELETE)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -114,8 +113,7 @@ HB_FUNC_STATIC(QSGNODE_APPENDCHILDNODE)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSGNODE(1))
     {
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QSGNODE_CHILDATINDEX)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -165,8 +162,7 @@ HB_FUNC_STATIC(QSGNODE_CHILDCOUNT)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -189,8 +185,7 @@ HB_FUNC_STATIC(QSGNODE_FIRSTCHILD)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -214,8 +209,7 @@ HB_FUNC_STATIC(QSGNODE_FLAGS)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -238,8 +232,7 @@ HB_FUNC_STATIC(QSGNODE_INSERTCHILDNODEAFTER)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQSGNODE(1) && ISQSGNODE(2))
     {
@@ -264,8 +257,7 @@ HB_FUNC_STATIC(QSGNODE_INSERTCHILDNODEBEFORE)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQSGNODE(1) && ISQSGNODE(2))
     {
@@ -290,8 +282,7 @@ HB_FUNC_STATIC(QSGNODE_ISSUBTREEBLOCKED)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -314,8 +305,7 @@ HB_FUNC_STATIC(QSGNODE_LASTCHILD)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -339,8 +329,7 @@ HB_FUNC_STATIC(QSGNODE_MARKDIRTY)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -365,8 +354,7 @@ HB_FUNC_STATIC(QSGNODE_NEXTSIBLING)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -390,8 +378,7 @@ HB_FUNC_STATIC(QSGNODE_PARENT)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -415,8 +402,7 @@ HB_FUNC_STATIC(QSGNODE_PREPENDCHILDNODE)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSGNODE(1))
     {
@@ -441,8 +427,7 @@ HB_FUNC_STATIC(QSGNODE_PREPROCESS)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -467,8 +452,7 @@ HB_FUNC_STATIC(QSGNODE_PREVIOUSSIBLING)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -492,8 +476,7 @@ HB_FUNC_STATIC(QSGNODE_REMOVEALLCHILDNODES)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -518,8 +501,7 @@ HB_FUNC_STATIC(QSGNODE_REMOVECHILDNODE)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSGNODE(1))
     {
@@ -544,8 +526,7 @@ HB_FUNC_STATIC(QSGNODE_SETFLAG)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
@@ -570,8 +551,7 @@ HB_FUNC_STATIC(QSGNODE_SETFLAGS)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
@@ -596,8 +576,7 @@ HB_FUNC_STATIC(QSGNODE_TYPE)
 {
   QSGNode *obj = (QSGNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

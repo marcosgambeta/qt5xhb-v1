@@ -38,8 +38,7 @@ void QQuickViewSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QQuickView *obj = (QQuickView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QQuickViewSlots *s = QCoreApplication::instance()->findChild<QQuickViewSlots *>();
 
     if (s == NULL)
