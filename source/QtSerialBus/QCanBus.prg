@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QCANBUS_AVAILABLEDEVICES)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
     {
 #endif
       QList<QCanBusDeviceInfo> list = obj->availableDevices(PQSTRING(1), NULL);
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QCANBUS_CREATEDEVICE)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)))
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3))
     {
 #endif
       QCanBusDevice *ptr = obj->createDevice(PQSTRING(1), PQSTRING(2), NULL);
