@@ -72,8 +72,8 @@ HB_FUNC_STATIC(QXMLNAME_NEW)
     QXmlName *obj = new QXmlName();
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(2, 4) && ISQXMLNAMEPOOL(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
-           (HB_ISCHAR(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(2, 4) && ISQXMLNAMEPOOL(1) && HB_ISCHAR(2) && ISCHARORNIL(3) &&
+           ISCHARORNIL(4))
   {
     /*
     QXmlName( QXmlNamePool &namePool, const QString &localName, const QString &namespaceURI = QString(), const
