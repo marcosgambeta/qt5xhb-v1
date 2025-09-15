@@ -129,8 +129,7 @@ void QBluetoothLocalDeviceSlots_connect_signal(const QString &signal, const QStr
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QBluetoothLocalDevice *obj = (QBluetoothLocalDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QBluetoothLocalDeviceSlots *s = QCoreApplication::instance()->findChild<QBluetoothLocalDeviceSlots *>();
 
     if (s == NULL)

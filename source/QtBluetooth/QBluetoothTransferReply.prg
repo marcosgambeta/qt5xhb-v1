@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QBluetoothTransferReply *obj = (QBluetoothTransferReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -91,8 +90,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ISFINISHED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QBluetoothTransferReply *obj = (QBluetoothTransferReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -117,8 +115,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ISRUNNING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QBluetoothTransferReply *obj = (QBluetoothTransferReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -143,8 +140,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_MANAGER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QBluetoothTransferReply *obj = (QBluetoothTransferReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -170,8 +166,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ERROR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QBluetoothTransferReply *obj = (QBluetoothTransferReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -196,8 +191,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ERRORSTRING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QBluetoothTransferReply *obj = (QBluetoothTransferReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -222,8 +216,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_REQUEST)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QBluetoothTransferReply *obj = (QBluetoothTransferReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -249,8 +242,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERREPLY_ABORT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QBluetoothTransferReply *obj = (QBluetoothTransferReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
