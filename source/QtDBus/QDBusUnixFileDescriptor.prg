@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_DELETE)
 {
   QDBusUnixFileDescriptor *obj = (QDBusUnixFileDescriptor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_SWAP)
 {
   QDBusUnixFileDescriptor *obj = (QDBusUnixFileDescriptor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDBUSUNIXFILEDESCRIPTOR(1))
     {
@@ -143,8 +141,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_ISVALID)
 {
   QDBusUnixFileDescriptor *obj = (QDBusUnixFileDescriptor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_FILEDESCRIPTOR)
 {
   QDBusUnixFileDescriptor *obj = (QDBusUnixFileDescriptor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -191,8 +187,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_SETFILEDESCRIPTOR)
 {
   QDBusUnixFileDescriptor *obj = (QDBusUnixFileDescriptor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -217,8 +212,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_GIVEFILEDESCRIPTOR)
 {
   QDBusUnixFileDescriptor *obj = (QDBusUnixFileDescriptor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -243,8 +237,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_TAKEFILEDESCRIPTOR)
 {
   QDBusUnixFileDescriptor *obj = (QDBusUnixFileDescriptor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

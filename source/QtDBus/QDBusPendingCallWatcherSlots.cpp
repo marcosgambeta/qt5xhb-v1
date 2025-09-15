@@ -38,8 +38,7 @@ void QDBusPendingCallWatcherSlots_connect_signal(const QString &signal, const QS
 {
   QDBusPendingCallWatcher *obj = (QDBusPendingCallWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDBusPendingCallWatcherSlots *s = QCoreApplication::instance()->findChild<QDBusPendingCallWatcherSlots *>();
 
     if (s == NULL)
