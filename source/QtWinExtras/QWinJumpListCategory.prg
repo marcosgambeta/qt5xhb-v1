@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_TYPE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -143,8 +141,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ISVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -169,8 +166,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_SETVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -197,8 +193,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_TITLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -223,8 +218,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_SETTITLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -251,8 +245,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_COUNT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -277,8 +270,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ISEMPTY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -303,8 +295,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ITEMS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -352,8 +343,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDITEM)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWINJUMPLISTITEM(1))
     {
@@ -380,8 +370,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDDESTINATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -448,8 +437,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDSEPARATOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -475,8 +463,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_CLEAR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QWinJumpListCategory *obj = (QWinJumpListCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
