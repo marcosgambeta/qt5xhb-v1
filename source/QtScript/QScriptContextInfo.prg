@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_DELETE)
 {
   QScriptContextInfo *obj = (QScriptContextInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FILENAME)
 {
   QScriptContextInfo *obj = (QScriptContextInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -144,8 +142,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER)
 {
   QScriptContextInfo *obj = (QScriptContextInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -168,8 +165,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX)
 {
   QScriptContextInfo *obj = (QScriptContextInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -192,8 +188,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONNAME)
 {
   QScriptContextInfo *obj = (QScriptContextInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -216,8 +211,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES)
 {
   QScriptContextInfo *obj = (QScriptContextInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -240,8 +234,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER)
 {
   QScriptContextInfo *obj = (QScriptContextInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -264,8 +257,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONTYPE)
 {
   QScriptContextInfo *obj = (QScriptContextInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -288,8 +280,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_ISNULL)
 {
   QScriptContextInfo *obj = (QScriptContextInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -312,8 +303,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_LINENUMBER)
 {
   QScriptContextInfo *obj = (QScriptContextInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -336,8 +326,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_SCRIPTID)
 {
   QScriptContextInfo *obj = (QScriptContextInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

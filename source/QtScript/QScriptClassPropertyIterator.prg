@@ -72,8 +72,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_DELETE)
 {
   QScriptClassPropertyIterator *obj = (QScriptClassPropertyIterator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -91,8 +90,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_FLAGS)
 {
   QScriptClassPropertyIterator *obj = (QScriptClassPropertyIterator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -115,8 +113,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_HASNEXT)
 {
   QScriptClassPropertyIterator *obj = (QScriptClassPropertyIterator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -139,8 +136,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS)
 {
   QScriptClassPropertyIterator *obj = (QScriptClassPropertyIterator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -163,8 +159,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_ID)
 {
   QScriptClassPropertyIterator *obj = (QScriptClassPropertyIterator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -187,8 +182,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_NAME)
 {
   QScriptClassPropertyIterator *obj = (QScriptClassPropertyIterator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -212,8 +206,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_NEXT)
 {
   QScriptClassPropertyIterator *obj = (QScriptClassPropertyIterator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -238,8 +231,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_OBJECT)
 {
   QScriptClassPropertyIterator *obj = (QScriptClassPropertyIterator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -263,8 +255,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS)
 {
   QScriptClassPropertyIterator *obj = (QScriptClassPropertyIterator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -289,8 +280,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_TOBACK)
 {
   QScriptClassPropertyIterator *obj = (QScriptClassPropertyIterator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -315,8 +305,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_TOFRONT)
 {
   QScriptClassPropertyIterator *obj = (QScriptClassPropertyIterator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

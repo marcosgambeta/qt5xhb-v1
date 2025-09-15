@@ -38,8 +38,7 @@ void QScriptEngineSlots_connect_signal(const QString &signal, const QString &slo
 {
   QScriptEngine *obj = (QScriptEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QScriptEngineSlots *s = QCoreApplication::instance()->findChild<QScriptEngineSlots *>();
 
     if (s == NULL)

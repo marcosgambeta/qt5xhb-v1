@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_DELETE)
 {
   QScriptClass *obj = (QScriptClass *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
 {
   QScriptClass *obj = (QScriptClass *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
     {
@@ -131,8 +129,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NAME)
 {
   QScriptClass *obj = (QScriptClass *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -155,8 +152,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NEWITERATOR)
 {
   QScriptClass *obj = (QScriptClass *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
     {
@@ -180,8 +176,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTY)
 {
   QScriptClass *obj = (QScriptClass *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3))
     {
@@ -205,8 +200,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTYFLAGS)
 {
   QScriptClass *obj = (QScriptClass *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3))
     {
@@ -229,8 +223,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROTOTYPE)
 {
   QScriptClass *obj = (QScriptClass *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -254,8 +247,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_SETPROPERTY)
 {
   QScriptClass *obj = (QScriptClass *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3) && ISQSCRIPTVALUE(4))
     {
@@ -280,8 +272,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_SUPPORTSEXTENSION)
 {
   QScriptClass *obj = (QScriptClass *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
