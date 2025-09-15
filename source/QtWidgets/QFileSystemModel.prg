@@ -127,8 +127,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_DELETE)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -148,8 +147,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILEICON)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -173,8 +171,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILEINFO)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -198,8 +195,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILENAME)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -222,8 +218,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILEPATH)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -246,8 +241,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILTER)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -270,8 +264,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETFILTER)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -296,8 +289,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ICONPROVIDER)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -321,8 +313,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETICONPROVIDER)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFILEICONPROVIDER(1))
     {
@@ -382,8 +373,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ISDIR)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -406,8 +396,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ISREADONLY)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -430,8 +419,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETREADONLY)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -456,8 +444,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_LASTMODIFIED)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -481,8 +468,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MKDIR)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISCHAR(2))
     {
@@ -506,8 +492,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MYCOMPUTER)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -531,8 +516,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_NAMEFILTERDISABLES)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -555,8 +539,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETNAMEFILTERDISABLES)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -581,8 +564,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_NAMEFILTERS)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -605,8 +587,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETNAMEFILTERS)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -631,8 +612,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_PERMISSIONS)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -655,8 +635,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_REMOVE)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -679,8 +658,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_RESOLVESYMLINKS)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -703,8 +681,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETRESOLVESYMLINKS)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -729,8 +706,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_RMDIR)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -753,8 +729,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ROOTDIRECTORY)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -778,8 +753,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ROOTPATH)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -802,8 +776,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETROOTPATH)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -827,8 +800,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SIZE)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -851,8 +823,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_TYPE)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -875,8 +846,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_CANFETCHMORE)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -899,8 +869,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_COLUMNCOUNT)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
@@ -923,8 +892,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_DATA)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
     {
@@ -948,8 +916,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETDATA)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3))
     {
@@ -972,8 +939,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_DROPMIMEDATA)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
     {
@@ -996,8 +962,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FETCHMORE)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -1022,8 +987,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FLAGS)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -1046,8 +1010,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_HASCHILDREN)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
@@ -1070,8 +1033,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_HEADERDATA)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
     {
@@ -1095,8 +1057,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MIMEDATA)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -1127,8 +1088,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MIMETYPES)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1151,8 +1111,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_PARENT)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -1176,8 +1135,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ROWCOUNT)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
@@ -1200,8 +1158,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SORT)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -1226,8 +1183,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS)
 {
   QFileSystemModel *obj = (QFileSystemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

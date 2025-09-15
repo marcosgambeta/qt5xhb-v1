@@ -178,8 +178,7 @@ void QPlainTextEditSlots_connect_signal(const QString &signal, const QString &sl
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QPlainTextEditSlots *s = QCoreApplication::instance()->findChild<QPlainTextEditSlots *>();
 
     if (s == NULL)

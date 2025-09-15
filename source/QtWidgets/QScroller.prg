@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QSCROLLER_FINALPOSITION)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -104,8 +103,7 @@ HB_FUNC_STATIC(QSCROLLER_HANDLEINPUT)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQPOINTF(2) && ISNUMORNIL(3))
     {
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QSCROLLER_PIXELPERMETER)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLERPROPERTIES)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -268,8 +264,7 @@ HB_FUNC_STATIC(QSCROLLER_STATE)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -292,8 +287,7 @@ HB_FUNC_STATIC(QSCROLLER_STOP)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -318,8 +312,7 @@ HB_FUNC_STATIC(QSCROLLER_TARGET)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -343,8 +336,7 @@ HB_FUNC_STATIC(QSCROLLER_VELOCITY)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -404,8 +396,7 @@ HB_FUNC_STATIC(QSCROLLER_RESENDPREPAREEVENT)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -466,8 +457,7 @@ HB_FUNC_STATIC(QSCROLLER_SETSCROLLERPROPERTIES)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1))
     {
@@ -624,8 +614,7 @@ HB_FUNC_STATIC(QSCROLLER_UNGRABGESTURE)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {

@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_LINEWIDTH)
 {
   QStyleOptionFrame *obj = (QStyleOptionFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RINT(obj->lineWidth);
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETLINEWIDTH)
 {
   QStyleOptionFrame *obj = (QStyleOptionFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->lineWidth = PINT(1);
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_MIDLINEWIDTH)
 {
   QStyleOptionFrame *obj = (QStyleOptionFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RINT(obj->midLineWidth);
@@ -138,8 +135,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETMIDLINEWIDTH)
 {
   QStyleOptionFrame *obj = (QStyleOptionFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->midLineWidth = PINT(1);
@@ -160,8 +156,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_FEATURES)
 {
   QStyleOptionFrame *obj = (QStyleOptionFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->features);
@@ -176,8 +171,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETFEATURES)
 {
   QStyleOptionFrame *obj = (QStyleOptionFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->features = (QStyleOptionFrame::FrameFeatures)hb_parni(1);
@@ -198,8 +192,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_FRAMESHAPE)
 {
   QStyleOptionFrame *obj = (QStyleOptionFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->frameShape);
@@ -214,8 +207,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETFRAMESHAPE)
 {
   QStyleOptionFrame *obj = (QStyleOptionFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->frameShape = (QFrame::Shape)hb_parni(1);

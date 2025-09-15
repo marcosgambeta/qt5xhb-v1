@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_FEATURES)
 {
   QStyleOptionButton *obj = (QStyleOptionButton *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->features);
@@ -102,8 +101,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETFEATURES)
 {
   QStyleOptionButton *obj = (QStyleOptionButton *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->features = (QStyleOptionButton::ButtonFeatures)hb_parni(1);
@@ -124,8 +122,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_TEXT)
 {
   QStyleOptionButton *obj = (QStyleOptionButton *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RQSTRING(obj->text);
@@ -140,8 +137,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETTEXT)
 {
   QStyleOptionButton *obj = (QStyleOptionButton *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
@@ -162,8 +158,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_ICON)
 {
   QStyleOptionButton *obj = (QStyleOptionButton *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       QIcon *ptr = new QIcon(obj->icon);
@@ -179,8 +174,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETICON)
 {
   QStyleOptionButton *obj = (QStyleOptionButton *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQICON(1))
     {
       obj->icon = *PQICON(1);
@@ -201,8 +195,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_ICONSIZE)
 {
   QStyleOptionButton *obj = (QStyleOptionButton *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       QSize *ptr = new QSize(obj->iconSize);
@@ -218,8 +211,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETICONSIZE)
 {
   QStyleOptionButton *obj = (QStyleOptionButton *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->iconSize = *PQSIZE(1);

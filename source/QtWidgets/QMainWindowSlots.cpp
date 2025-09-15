@@ -56,8 +56,7 @@ void QMainWindowSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QMainWindow *obj = (QMainWindow *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMainWindowSlots *s = QCoreApplication::instance()->findChild<QMainWindowSlots *>();
 
     if (s == NULL)

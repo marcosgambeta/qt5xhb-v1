@@ -128,8 +128,7 @@ void QInputDialogSlots_connect_signal(const QString &signal, const QString &slot
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QInputDialogSlots *s = QCoreApplication::instance()->findChild<QInputDialogSlots *>();
 
     if (s == NULL)

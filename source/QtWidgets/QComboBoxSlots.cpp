@@ -146,8 +146,7 @@ void QComboBoxSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QComboBox *obj = (QComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QComboBoxSlots *s = QCoreApplication::instance()->findChild<QComboBoxSlots *>();
 
     if (s == NULL)

@@ -38,8 +38,7 @@ void QColumnViewSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QColumnViewSlots *s = QCoreApplication::instance()->findChild<QColumnViewSlots *>();
 
     if (s == NULL)

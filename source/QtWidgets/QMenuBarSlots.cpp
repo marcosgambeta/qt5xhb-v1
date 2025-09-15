@@ -56,8 +56,7 @@ void QMenuBarSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QMenuBar *obj = (QMenuBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMenuBarSlots *s = QCoreApplication::instance()->findChild<QMenuBarSlots *>();
 
     if (s == NULL)

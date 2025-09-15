@@ -54,8 +54,7 @@ HB_FUNC_STATIC(QTAPGESTURE_DELETE)
 {
   QTapGesture *obj = (QTapGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -75,8 +74,7 @@ HB_FUNC_STATIC(QTAPGESTURE_POSITION)
 {
   QTapGesture *obj = (QTapGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -100,8 +98,7 @@ HB_FUNC_STATIC(QTAPGESTURE_SETPOSITION)
 {
   QTapGesture *obj = (QTapGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {

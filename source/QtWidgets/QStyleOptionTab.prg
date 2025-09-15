@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SHAPE)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->shape);
@@ -118,8 +117,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSHAPE)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->shape = (QTabBar::Shape)hb_parni(1);
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_TEXT)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RQSTRING(obj->text);
@@ -156,8 +153,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETTEXT)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
@@ -178,8 +174,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_ICON)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       QIcon *ptr = new QIcon(obj->icon);
@@ -195,8 +190,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETICON)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQICON(1))
     {
       obj->icon = *PQICON(1);
@@ -217,8 +211,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_ROW)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RINT(obj->row);
@@ -233,8 +226,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETROW)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->row = PINT(1);
@@ -255,8 +247,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_POSITION)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->position);
@@ -271,8 +262,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETPOSITION)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->position = (QStyleOptionTab::TabPosition)hb_parni(1);
@@ -293,8 +283,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SELECTEDPOSITION)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->selectedPosition);
@@ -309,8 +298,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSELECTEDPOSITION)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->selectedPosition = (QStyleOptionTab::SelectedPosition)hb_parni(1);
@@ -331,8 +319,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_CORNERWIDGETS)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->cornerWidgets);
@@ -347,8 +334,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETCORNERWIDGETS)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->cornerWidgets = (QStyleOptionTab::CornerWidgets)hb_parni(1);
@@ -369,8 +355,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_ICONSIZE)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       QSize *ptr = new QSize(obj->iconSize);
@@ -386,8 +371,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETICONSIZE)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->iconSize = *PQSIZE(1);
@@ -408,8 +392,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_DOCUMENTMODE)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RBOOL(obj->documentMode);
@@ -424,8 +407,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETDOCUMENTMODE)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->documentMode = PBOOL(1);
@@ -446,8 +428,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_LEFTBUTTONSIZE)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       QSize *ptr = new QSize(obj->leftButtonSize);
@@ -463,8 +444,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETLEFTBUTTONSIZE)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->leftButtonSize = *PQSIZE(1);
@@ -485,8 +465,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_RIGHTBUTTONSIZE)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       QSize *ptr = new QSize(obj->rightButtonSize);
@@ -502,8 +481,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETRIGHTBUTTONSIZE)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->rightButtonSize = *PQSIZE(1);
@@ -524,8 +502,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_FEATURES)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->features);
@@ -540,8 +517,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETFEATURES)
 {
   QStyleOptionTab *obj = (QStyleOptionTab *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->features = (QStyleOptionTab::TabFeatures)hb_parni(1);

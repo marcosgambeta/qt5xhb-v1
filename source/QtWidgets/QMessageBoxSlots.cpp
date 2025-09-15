@@ -38,8 +38,7 @@ void QMessageBoxSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMessageBoxSlots *s = QCoreApplication::instance()->findChild<QMessageBoxSlots *>();
 
     if (s == NULL)

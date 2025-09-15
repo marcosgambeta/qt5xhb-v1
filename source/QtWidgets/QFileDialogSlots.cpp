@@ -209,8 +209,7 @@ void QFileDialogSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QFileDialog *obj = (QFileDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QFileDialogSlots *s = QCoreApplication::instance()->findChild<QFileDialogSlots *>();
 
     if (s == NULL)

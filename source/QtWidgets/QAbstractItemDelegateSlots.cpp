@@ -76,8 +76,7 @@ void QAbstractItemDelegateSlots_connect_signal(const QString &signal, const QStr
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractItemDelegateSlots *s = QCoreApplication::instance()->findChild<QAbstractItemDelegateSlots *>();
 
     if (s == NULL)

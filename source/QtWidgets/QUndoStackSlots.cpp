@@ -128,8 +128,7 @@ void QUndoStackSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QUndoStack *obj = (QUndoStack *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QUndoStackSlots *s = QCoreApplication::instance()->findChild<QUndoStackSlots *>();
 
     if (s == NULL)

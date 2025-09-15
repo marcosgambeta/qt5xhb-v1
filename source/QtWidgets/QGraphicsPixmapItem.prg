@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_DELETE)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -113,8 +112,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_OFFSET)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -138,8 +136,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_PIXMAP)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -199,8 +196,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_SETPIXMAP)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
@@ -225,8 +221,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_SETSHAPEMODE)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -251,8 +246,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -277,8 +271,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_SHAPEMODE)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -301,8 +294,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -325,8 +317,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_BOUNDINGRECT)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -350,8 +341,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_CONTAINS)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -374,8 +364,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_ISOBSCUREDBY)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
@@ -398,8 +387,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_OPAQUEAREA)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -423,8 +411,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_PAINT)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3))
     {
@@ -449,8 +436,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_SHAPE)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -474,8 +460,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_TYPE)
 {
   QGraphicsPixmapItem *obj = (QGraphicsPixmapItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

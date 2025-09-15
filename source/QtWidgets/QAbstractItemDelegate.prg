@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_DELETE)
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -89,8 +88,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_CREATEEDITOR)
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
@@ -115,8 +113,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_EDITOREVENT)
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && ISQEVENT(1) && ISQABSTRACTITEMMODEL(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4))
     {
@@ -139,8 +136,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_PAINT)
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
@@ -165,8 +161,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_SETEDITORDATA)
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2))
     {
@@ -191,8 +186,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_SETMODELDATA)
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3))
     {
@@ -217,8 +211,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_SIZEHINT)
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2))
     {
@@ -243,8 +236,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY)
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
@@ -270,8 +262,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_HELPEVENT)
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && ISQHELPEVENT(1) && ISQABSTRACTITEMVIEW(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4))
     {
@@ -294,8 +285,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_DESTROYEDITOR)
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2))
     {
@@ -340,8 +330,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_PAINTINGROLES)
 {
   QAbstractItemDelegate *obj = (QAbstractItemDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

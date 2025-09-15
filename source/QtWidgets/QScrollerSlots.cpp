@@ -56,8 +56,7 @@ void QScrollerSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QScroller *obj = (QScroller *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QScrollerSlots *s = QCoreApplication::instance()->findChild<QScrollerSlots *>();
 
     if (s == NULL)

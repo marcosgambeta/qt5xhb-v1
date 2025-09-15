@@ -146,8 +146,7 @@ void QUndoGroupSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QUndoGroupSlots *s = QCoreApplication::instance()->findChild<QUndoGroupSlots *>();
 
     if (s == NULL)

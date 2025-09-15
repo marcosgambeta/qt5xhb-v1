@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_DELETE)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_COLUMNWIDTHS)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_PREVIEWWIDGET)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -159,8 +156,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_RESIZEGRIPSVISIBLE)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -183,8 +179,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -218,8 +213,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETPREVIEWWIDGET)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -244,8 +238,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -270,8 +263,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_INDEXAT)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -295,8 +287,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SCROLLTO)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
     {
@@ -322,8 +313,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SELECTALL)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -348,8 +338,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
@@ -374,8 +363,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -400,8 +388,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETSELECTIONMODEL)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQITEMSELECTIONMODEL(1))
     {
@@ -426,8 +413,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SIZEHINT)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -451,8 +437,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_VISUALRECT)
 {
   QColumnView *obj = (QColumnView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {

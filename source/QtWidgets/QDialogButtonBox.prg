@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_DELETE)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -176,8 +175,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_BUTTON)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -201,8 +199,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_BUTTONROLE)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
     {
@@ -225,8 +222,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_CENTERBUTTONS)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -249,8 +245,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_CLEAR)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -275,8 +270,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ORIENTATION)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -299,8 +293,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_REMOVEBUTTON)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
     {
@@ -325,8 +318,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETCENTERBUTTONS)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -351,8 +343,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETORIENTATION)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -377,8 +368,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETSTANDARDBUTTONS)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -403,8 +393,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_STANDARDBUTTON)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
     {
@@ -427,8 +416,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_STANDARDBUTTONS)
 {
   QDialogButtonBox *obj = (QDialogButtonBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

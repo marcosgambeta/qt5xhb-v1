@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QUNDOGROUP_DELETE)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ACTIVESTACK)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -141,8 +139,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ADDSTACK)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQUNDOSTACK(1))
     {
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANREDO)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -191,8 +187,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANUNDO)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -215,8 +210,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISCHARORNIL(2))
     {
@@ -240,8 +234,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISCHARORNIL(2))
     {
@@ -265,8 +258,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ISCLEAN)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -289,8 +281,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDOTEXT)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -313,8 +304,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REMOVESTACK)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQUNDOSTACK(1))
     {
@@ -339,8 +329,7 @@ HB_FUNC_STATIC(QUNDOGROUP_STACKS)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -386,8 +375,7 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDOTEXT)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -410,8 +398,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDO)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -436,8 +423,7 @@ HB_FUNC_STATIC(QUNDOGROUP_SETACTIVESTACK)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQUNDOSTACK(1))
     {
@@ -462,8 +448,7 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDO)
 {
   QUndoGroup *obj = (QUndoGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

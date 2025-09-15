@@ -128,8 +128,7 @@ void QButtonGroupSlots_connect_signal(const QString &signal, const QString &slot
 {
   QButtonGroup *obj = (QButtonGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QButtonGroupSlots *s = QCoreApplication::instance()->findChild<QButtonGroupSlots *>();
 
     if (s == NULL)

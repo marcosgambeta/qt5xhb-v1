@@ -68,8 +68,7 @@ void QGraphicsRotationSlots_connect_signal(const QString &signal, const QString 
 {
   QGraphicsRotation *obj = (QGraphicsRotation *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGraphicsRotationSlots *s = QCoreApplication::instance()->findChild<QGraphicsRotationSlots *>();
 
     if (s == NULL)

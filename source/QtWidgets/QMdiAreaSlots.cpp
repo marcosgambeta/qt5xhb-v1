@@ -38,8 +38,7 @@ void QMdiAreaSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QMdiArea *obj = (QMdiArea *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMdiAreaSlots *s = QCoreApplication::instance()->findChild<QMdiAreaSlots *>();
 
     if (s == NULL)

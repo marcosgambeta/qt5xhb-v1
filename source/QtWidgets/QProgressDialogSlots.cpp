@@ -36,8 +36,7 @@ void QProgressDialogSlots_connect_signal(const QString &signal, const QString &s
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QProgressDialogSlots *s = QCoreApplication::instance()->findChild<QProgressDialogSlots *>();
 
     if (s == NULL)

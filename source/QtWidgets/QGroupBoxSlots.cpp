@@ -56,8 +56,7 @@ void QGroupBoxSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QGroupBox *obj = (QGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGroupBoxSlots *s = QCoreApplication::instance()->findChild<QGroupBoxSlots *>();
 
     if (s == NULL)

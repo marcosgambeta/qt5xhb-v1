@@ -88,8 +88,7 @@ void QActionSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QAction *obj = (QAction *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QActionSlots *s = QCoreApplication::instance()->findChild<QActionSlots *>();
 
     if (s == NULL)

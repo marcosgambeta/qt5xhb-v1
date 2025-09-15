@@ -56,8 +56,7 @@ void QTreeViewSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QTreeView *obj = (QTreeView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QTreeViewSlots *s = QCoreApplication::instance()->findChild<QTreeViewSlots *>();
 
     if (s == NULL)

@@ -38,8 +38,7 @@ void QDataWidgetMapperSlots_connect_signal(const QString &signal, const QString 
 {
   QDataWidgetMapper *obj = (QDataWidgetMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDataWidgetMapperSlots *s = QCoreApplication::instance()->findChild<QDataWidgetMapperSlots *>();
 
     if (s == NULL)

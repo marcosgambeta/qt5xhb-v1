@@ -38,8 +38,7 @@ void QFontComboBoxSlots_connect_signal(const QString &signal, const QString &slo
 {
   QFontComboBox *obj = (QFontComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QFontComboBoxSlots *s = QCoreApplication::instance()->findChild<QFontComboBoxSlots *>();
 
     if (s == NULL)

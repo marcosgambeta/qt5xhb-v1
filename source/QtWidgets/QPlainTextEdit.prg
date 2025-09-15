@@ -152,8 +152,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_DELETE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -173,8 +172,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ANCHORAT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -197,8 +195,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_BACKGROUNDVISIBLE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -221,8 +218,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_BLOCKCOUNT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -245,8 +241,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CANPASTE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -269,8 +264,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CENTERONSCROLL)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -293,8 +287,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CREATESTANDARDCONTEXTMENU)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -318,8 +311,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURRENTCHARFORMAT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -343,8 +335,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORFORPOSITION)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -402,8 +393,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORWIDTH)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -426,8 +416,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_DOCUMENT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -451,8 +440,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_DOCUMENTTITLE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -475,8 +463,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ENSURECURSORVISIBLE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -501,8 +488,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_FIND)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
     {
@@ -525,8 +511,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ISREADONLY)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -549,8 +534,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ISUNDOREDOENABLED)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -573,8 +557,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_LINEWRAPMODE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -597,8 +580,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_LOADRESOURCE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2))
     {
@@ -622,8 +604,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_MAXIMUMBLOCKCOUNT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -646,8 +627,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_MERGECURRENTCHARFORMAT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
     {
@@ -672,8 +652,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_MOVECURSOR)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -700,8 +679,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_OVERWRITEMODE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -724,8 +702,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_PRINT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPRINTER(1))
     {
@@ -750,8 +727,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETBACKGROUNDVISIBLE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -776,8 +752,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETCENTERONSCROLL)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -802,8 +777,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETCURRENTCHARFORMAT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
     {
@@ -828,8 +802,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETCURSORWIDTH)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -854,8 +827,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETDOCUMENT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
     {
@@ -880,8 +852,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETDOCUMENTTITLE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -906,8 +877,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETLINEWRAPMODE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -932,8 +902,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETMAXIMUMBLOCKCOUNT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -958,8 +927,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETOVERWRITEMODE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -984,8 +952,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETREADONLY)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1010,8 +977,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETTABCHANGESFOCUS)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1036,8 +1002,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETTABSTOPWIDTH)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1062,8 +1027,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETTEXTCURSOR)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
     {
@@ -1088,8 +1052,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETTEXTINTERACTIONFLAGS)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1114,8 +1077,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETUNDOREDOENABLED)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1140,8 +1102,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETWORDWRAPMODE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1166,8 +1127,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_TABCHANGESFOCUS)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1190,8 +1150,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_TABSTOPWIDTH)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1214,8 +1173,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_TEXTCURSOR)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1239,8 +1197,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_TEXTINTERACTIONFLAGS)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1263,8 +1220,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_TOPLAINTEXT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1287,8 +1243,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_WORDWRAPMODE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1311,8 +1266,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_APPENDHTML)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1337,8 +1291,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_APPENDPLAINTEXT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1363,8 +1316,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CENTERCURSOR)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1389,8 +1341,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CLEAR)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1415,8 +1366,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_COPY)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1441,8 +1391,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CUT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1467,8 +1416,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_INSERTPLAINTEXT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1493,8 +1441,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_PASTE)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1519,8 +1466,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_REDO)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1545,8 +1491,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SELECTALL)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1571,8 +1516,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETPLAINTEXT)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1597,8 +1541,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_UNDO)
 {
   QPlainTextEdit *obj = (QPlainTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

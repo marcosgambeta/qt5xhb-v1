@@ -74,8 +74,7 @@ void QDateTimeEditSlots_connect_signal(const QString &signal, const QString &slo
 {
   QDateTimeEdit *obj = (QDateTimeEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDateTimeEditSlots *s = QCoreApplication::instance()->findChild<QDateTimeEditSlots *>();
 
     if (s == NULL)

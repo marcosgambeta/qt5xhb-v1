@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_DELETE)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_FILLRULE)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_POLYGON)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -157,8 +154,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETFILLRULE)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -183,8 +179,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETPOLYGON)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGONF(1))
     {
@@ -209,8 +204,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_BOUNDINGRECT)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -234,8 +228,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_CONTAINS)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -258,8 +251,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_ISOBSCUREDBY)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
@@ -282,8 +274,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_OPAQUEAREA)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -307,8 +298,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_PAINT)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
@@ -333,8 +323,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SHAPE)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -358,8 +347,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_TYPE)
 {
   QGraphicsPolygonItem *obj = (QGraphicsPolygonItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

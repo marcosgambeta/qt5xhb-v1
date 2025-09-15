@@ -91,8 +91,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_EDITABLE)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RBOOL(obj->editable);
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETEDITABLE)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->editable = PBOOL(1);
@@ -129,8 +127,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_POPUPRECT)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       QRect *ptr = new QRect(obj->popupRect);
@@ -146,8 +143,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETPOPUPRECT)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
       obj->popupRect = *PQRECT(1);
@@ -168,8 +164,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_FRAME)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RBOOL(obj->frame);
@@ -184,8 +179,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETFRAME)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->frame = PBOOL(1);
@@ -206,8 +200,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_CURRENTTEXT)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RQSTRING(obj->currentText);
@@ -222,8 +215,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETCURRENTTEXT)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->currentText = PQSTRING(1);
@@ -244,8 +236,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_CURRENTICON)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       QIcon *ptr = new QIcon(obj->currentIcon);
@@ -261,8 +252,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETCURRENTICON)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQICON(1))
     {
       obj->currentIcon = *PQICON(1);
@@ -283,8 +273,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_ICONSIZE)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       QSize *ptr = new QSize(obj->iconSize);
@@ -300,8 +289,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETICONSIZE)
 {
   QStyleOptionComboBox *obj = (QStyleOptionComboBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->iconSize = *PQSIZE(1);

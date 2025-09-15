@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_DELETE)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_AUTOCLOSE)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -152,8 +150,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETAUTOCLOSE)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -178,8 +175,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_AUTORESET)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -202,8 +198,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETAUTORESET)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -228,8 +223,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_LABELTEXT)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -252,8 +246,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETLABELTEXT)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -278,8 +271,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_MAXIMUM)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -302,8 +294,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETMAXIMUM)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -328,8 +319,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_MINIMUM)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -352,8 +342,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETMINIMUM)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -378,8 +367,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_MINIMUMDURATION)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -402,8 +390,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETMINIMUMDURATION)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -428,8 +415,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_OPEN)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
     {
@@ -454,8 +440,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETBAR)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPROGRESSBAR(1))
     {
@@ -480,8 +465,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETCANCELBUTTON)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPUSHBUTTON(1))
     {
@@ -506,8 +490,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETLABEL)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLABEL(1))
     {
@@ -532,8 +515,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_VALUE)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -556,8 +538,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETVALUE)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -582,8 +563,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_WASCANCELED)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -606,8 +586,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SIZEHINT)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -631,8 +610,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_CANCEL)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -657,8 +635,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_RESET)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -683,8 +660,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETCANCELBUTTONTEXT)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -709,8 +685,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETRANGE)
 {
   QProgressDialog *obj = (QProgressDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {

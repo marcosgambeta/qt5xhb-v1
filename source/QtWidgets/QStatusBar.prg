@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QSTATUSBAR_DELETE)
 {
   QStatusBar *obj = (QStatusBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ADDPERMANENTWIDGET)
 {
   QStatusBar *obj = (QStatusBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2))
     {
@@ -127,8 +125,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ADDWIDGET)
 {
   QStatusBar *obj = (QStatusBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2))
     {
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QSTATUSBAR_CURRENTMESSAGE)
 {
   QStatusBar *obj = (QStatusBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -177,8 +173,7 @@ HB_FUNC_STATIC(QSTATUSBAR_INSERTPERMANENTWIDGET)
 {
   QStatusBar *obj = (QStatusBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && ISNUMORNIL(3))
     {
@@ -201,8 +196,7 @@ HB_FUNC_STATIC(QSTATUSBAR_INSERTWIDGET)
 {
   QStatusBar *obj = (QStatusBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && ISNUMORNIL(3))
     {
@@ -225,8 +219,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ISSIZEGRIPENABLED)
 {
   QStatusBar *obj = (QStatusBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -249,8 +242,7 @@ HB_FUNC_STATIC(QSTATUSBAR_REMOVEWIDGET)
 {
   QStatusBar *obj = (QStatusBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -275,8 +267,7 @@ HB_FUNC_STATIC(QSTATUSBAR_SETSIZEGRIPENABLED)
 {
   QStatusBar *obj = (QStatusBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -301,8 +292,7 @@ HB_FUNC_STATIC(QSTATUSBAR_CLEARMESSAGE)
 {
   QStatusBar *obj = (QStatusBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -327,8 +317,7 @@ HB_FUNC_STATIC(QSTATUSBAR_SHOWMESSAGE)
 {
   QStatusBar *obj = (QStatusBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
     {

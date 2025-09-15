@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QACTIONGROUP_DELETE)
 {
   QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -150,8 +149,7 @@ HB_FUNC_STATIC(QACTIONGROUP_CHECKEDACTION)
 {
   QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -175,8 +173,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISENABLED)
 {
   QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -199,8 +196,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISEXCLUSIVE)
 {
   QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -223,8 +219,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISVISIBLE)
 {
   QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -247,8 +242,7 @@ HB_FUNC_STATIC(QACTIONGROUP_REMOVEACTION)
 {
   QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQACTION(1))
     {
@@ -273,8 +267,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETDISABLED)
 {
   QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -299,8 +292,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETENABLED)
 {
   QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -325,8 +317,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETEXCLUSIVE)
 {
   QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -351,8 +342,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETVISIBLE)
 {
   QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {

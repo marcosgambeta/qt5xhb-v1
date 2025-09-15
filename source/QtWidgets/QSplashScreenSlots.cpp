@@ -38,8 +38,7 @@ void QSplashScreenSlots_connect_signal(const QString &signal, const QString &slo
 {
   QSplashScreen *obj = (QSplashScreen *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSplashScreenSlots *s = QCoreApplication::instance()->findChild<QSplashScreenSlots *>();
 
     if (s == NULL)

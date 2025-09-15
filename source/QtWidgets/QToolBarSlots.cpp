@@ -164,8 +164,7 @@ void QToolBarSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QToolBarSlots *s = QCoreApplication::instance()->findChild<QToolBarSlots *>();
 
     if (s == NULL)

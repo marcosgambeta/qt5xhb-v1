@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_DELETE)
 {
   QGraphicsProxyWidget *obj = (QGraphicsProxyWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET)
 {
   QGraphicsProxyWidget *obj = (QGraphicsProxyWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -125,8 +123,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETWIDGET)
 {
   QGraphicsProxyWidget *obj = (QGraphicsProxyWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -151,8 +148,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SUBWIDGETRECT)
 {
   QGraphicsProxyWidget *obj = (QGraphicsProxyWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -176,8 +172,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_WIDGET)
 {
   QGraphicsProxyWidget *obj = (QGraphicsProxyWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -201,8 +196,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_PAINT)
 {
   QGraphicsProxyWidget *obj = (QGraphicsProxyWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3))
     {
@@ -227,8 +221,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETGEOMETRY)
 {
   QGraphicsProxyWidget *obj = (QGraphicsProxyWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
@@ -253,8 +246,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_TYPE)
 {
   QGraphicsProxyWidget *obj = (QGraphicsProxyWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

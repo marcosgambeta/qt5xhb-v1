@@ -36,8 +36,7 @@ void QLCDNumberSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QLCDNumber *obj = (QLCDNumber *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QLCDNumberSlots *s = QCoreApplication::instance()->findChild<QLCDNumberSlots *>();
 
     if (s == NULL)

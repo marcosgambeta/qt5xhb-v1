@@ -126,8 +126,7 @@ void QAbstractItemViewSlots_connect_signal(const QString &signal, const QString 
 {
   QAbstractItemView *obj = (QAbstractItemView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractItemViewSlots *s = QCoreApplication::instance()->findChild<QAbstractItemViewSlots *>();
 
     if (s == NULL)

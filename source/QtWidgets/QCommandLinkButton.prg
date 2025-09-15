@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_DELETE)
 {
   QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_DESCRIPTION)
 {
   QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -133,8 +131,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETDESCRIPTION)
 {
   QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -159,8 +156,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_ISFLAT)
 {
   QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -183,8 +179,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETFLAT)
 {
   QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {

@@ -200,8 +200,7 @@ void QListWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QListWidget *obj = (QListWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QListWidgetSlots *s = QCoreApplication::instance()->findChild<QListWidgetSlots *>();
 
     if (s == NULL)

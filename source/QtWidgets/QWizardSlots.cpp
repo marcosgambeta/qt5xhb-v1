@@ -108,8 +108,7 @@ void QWizardSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QWizard *obj = (QWizard *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QWizardSlots *s = QCoreApplication::instance()->findChild<QWizardSlots *>();
 
     if (s == NULL)

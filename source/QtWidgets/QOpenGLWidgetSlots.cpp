@@ -93,8 +93,7 @@ void QOpenGLWidgetSlots_connect_signal(const QString &signal, const QString &slo
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QOpenGLWidget *obj = (QOpenGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QOpenGLWidgetSlots *s = QCoreApplication::instance()->findChild<QOpenGLWidgetSlots *>();
 
     if (s == NULL)

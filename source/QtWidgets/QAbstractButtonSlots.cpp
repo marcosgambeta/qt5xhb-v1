@@ -88,8 +88,7 @@ void QAbstractButtonSlots_connect_signal(const QString &signal, const QString &s
 {
   QAbstractButton *obj = (QAbstractButton *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractButtonSlots *s = QCoreApplication::instance()->findChild<QAbstractButtonSlots *>();
 
     if (s == NULL)

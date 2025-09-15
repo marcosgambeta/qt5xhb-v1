@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QCOLORMAP_DELETE)
 {
   QColormap *obj = (QColormap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -104,8 +103,7 @@ HB_FUNC_STATIC(QCOLORMAP_COLORAT)
 {
   QColormap *obj = (QColormap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -129,8 +127,7 @@ HB_FUNC_STATIC(QCOLORMAP_COLORMAP)
 {
   QColormap *obj = (QColormap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QCOLORMAP_DEPTH)
 {
   QColormap *obj = (QColormap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -203,8 +199,7 @@ HB_FUNC_STATIC(QCOLORMAP_MODE)
 {
   QColormap *obj = (QColormap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -227,8 +222,7 @@ HB_FUNC_STATIC(QCOLORMAP_PIXEL)
 {
   QColormap *obj = (QColormap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
@@ -251,8 +245,7 @@ HB_FUNC_STATIC(QCOLORMAP_SIZE)
 {
   QColormap *obj = (QColormap *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

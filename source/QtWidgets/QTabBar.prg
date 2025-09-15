@@ -132,8 +132,7 @@ HB_FUNC_STATIC(QTABBAR_DELETE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -185,8 +184,7 @@ HB_FUNC_STATIC(QTABBAR_COUNT)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -209,8 +207,7 @@ HB_FUNC_STATIC(QTABBAR_CURRENTINDEX)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -233,8 +230,7 @@ HB_FUNC_STATIC(QTABBAR_DOCUMENTMODE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -257,8 +253,7 @@ HB_FUNC_STATIC(QTABBAR_DRAWBASE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -281,8 +276,7 @@ HB_FUNC_STATIC(QTABBAR_ELIDEMODE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -305,8 +299,7 @@ HB_FUNC_STATIC(QTABBAR_EXPANDING)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -329,8 +322,7 @@ HB_FUNC_STATIC(QTABBAR_ICONSIZE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -386,8 +378,7 @@ HB_FUNC_STATIC(QTABBAR_ISMOVABLE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -410,8 +401,7 @@ HB_FUNC_STATIC(QTABBAR_ISTABENABLED)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -434,8 +424,7 @@ HB_FUNC_STATIC(QTABBAR_MOVETAB)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -460,8 +449,7 @@ HB_FUNC_STATIC(QTABBAR_REMOVETAB)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -486,8 +474,7 @@ HB_FUNC_STATIC(QTABBAR_SELECTIONBEHAVIORONREMOVE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -510,8 +497,7 @@ HB_FUNC_STATIC(QTABBAR_SETDOCUMENTMODE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -536,8 +522,7 @@ HB_FUNC_STATIC(QTABBAR_SETDRAWBASE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -562,8 +547,7 @@ HB_FUNC_STATIC(QTABBAR_SETELIDEMODE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -588,8 +572,7 @@ HB_FUNC_STATIC(QTABBAR_SETEXPANDING)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -614,8 +597,7 @@ HB_FUNC_STATIC(QTABBAR_SETICONSIZE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
@@ -640,8 +622,7 @@ HB_FUNC_STATIC(QTABBAR_SETMOVABLE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -666,8 +647,7 @@ HB_FUNC_STATIC(QTABBAR_SETSELECTIONBEHAVIORONREMOVE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -692,8 +672,7 @@ HB_FUNC_STATIC(QTABBAR_SETSHAPE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -718,8 +697,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABBUTTON)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQWIDGET(3))
     {
@@ -744,8 +722,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABDATA)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
@@ -770,8 +747,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABENABLED)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
@@ -796,8 +772,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABICON)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)))
     {
@@ -822,8 +797,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABTEXT)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -848,8 +822,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABTEXTCOLOR)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
     {
@@ -874,8 +847,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABTOOLTIP)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -900,8 +872,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABWHATSTHIS)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -926,8 +897,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABSCLOSABLE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -952,8 +922,7 @@ HB_FUNC_STATIC(QTABBAR_SETUSESSCROLLBUTTONS)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -978,8 +947,7 @@ HB_FUNC_STATIC(QTABBAR_SHAPE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1002,8 +970,7 @@ HB_FUNC_STATIC(QTABBAR_TABAT)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -1026,8 +993,7 @@ HB_FUNC_STATIC(QTABBAR_TABBUTTON)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -1051,8 +1017,7 @@ HB_FUNC_STATIC(QTABBAR_TABDATA)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1076,8 +1041,7 @@ HB_FUNC_STATIC(QTABBAR_TABICON)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1101,8 +1065,7 @@ HB_FUNC_STATIC(QTABBAR_TABRECT)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1126,8 +1089,7 @@ HB_FUNC_STATIC(QTABBAR_TABTEXT)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1150,8 +1112,7 @@ HB_FUNC_STATIC(QTABBAR_TABTEXTCOLOR)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1175,8 +1136,7 @@ HB_FUNC_STATIC(QTABBAR_TABTOOLTIP)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1199,8 +1159,7 @@ HB_FUNC_STATIC(QTABBAR_TABWHATSTHIS)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1223,8 +1182,7 @@ HB_FUNC_STATIC(QTABBAR_TABSCLOSABLE)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1247,8 +1205,7 @@ HB_FUNC_STATIC(QTABBAR_USESSCROLLBUTTONS)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1271,8 +1228,7 @@ HB_FUNC_STATIC(QTABBAR_MINIMUMSIZEHINT)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1296,8 +1252,7 @@ HB_FUNC_STATIC(QTABBAR_SIZEHINT)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1321,8 +1276,7 @@ HB_FUNC_STATIC(QTABBAR_SETCURRENTINDEX)
 {
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1348,8 +1302,7 @@ HB_FUNC_STATIC(QTABBAR_AUTOHIDE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1374,8 +1327,7 @@ HB_FUNC_STATIC(QTABBAR_SETAUTOHIDE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1402,8 +1354,7 @@ HB_FUNC_STATIC(QTABBAR_CHANGECURRENTONDRAG)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1428,8 +1379,7 @@ HB_FUNC_STATIC(QTABBAR_SETCHANGECURRENTONDRAG)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QTabBar *obj = (QTabBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {

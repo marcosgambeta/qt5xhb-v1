@@ -56,8 +56,7 @@ void QGraphicsColorizeEffectSlots_connect_signal(const QString &signal, const QS
 {
   QGraphicsColorizeEffect *obj = (QGraphicsColorizeEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGraphicsColorizeEffectSlots *s = QCoreApplication::instance()->findChild<QGraphicsColorizeEffectSlots *>();
 
     if (s == NULL)

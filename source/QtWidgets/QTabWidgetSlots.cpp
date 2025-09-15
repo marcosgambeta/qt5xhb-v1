@@ -96,8 +96,7 @@ void QTabWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QTabWidget *obj = (QTabWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QTabWidgetSlots *s = QCoreApplication::instance()->findChild<QTabWidgetSlots *>();
 
     if (s == NULL)

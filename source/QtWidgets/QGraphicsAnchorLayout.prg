@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_DELETE)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHOR)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4))
     {
@@ -130,8 +128,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHORS)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQGRAPHICSLAYOUTITEM(1) && ISQGRAPHICSLAYOUTITEM(2) && ISNUMORNIL(3))
     {
@@ -158,8 +155,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4))
     {
@@ -186,8 +182,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ANCHOR)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && ISQGRAPHICSLAYOUTITEM(3) && HB_ISNUM(4))
     {
@@ -212,8 +207,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -236,8 +230,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -262,8 +255,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETSPACING)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -288,8 +280,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -314,8 +305,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_VERTICALSPACING)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -338,8 +328,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_COUNT)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -362,8 +351,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_INVALIDATE)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -388,8 +376,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ITEMAT)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -413,8 +400,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_REMOVEAT)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -439,8 +425,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_SETGEOMETRY)
 {
   QGraphicsAnchorLayout *obj = (QGraphicsAnchorLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECTF(1))
     {

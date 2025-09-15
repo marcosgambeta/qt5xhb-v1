@@ -137,8 +137,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_DELETE)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CELLWIDGET)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -183,8 +181,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CLOSEPERSISTENTEDITOR)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1))
     {
@@ -209,8 +206,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_COLUMN)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1))
     {
@@ -233,8 +229,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_COLUMNCOUNT)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -257,8 +252,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CURRENTCOLUMN)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -281,8 +275,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CURRENTITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -306,8 +299,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CURRENTROW)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -330,8 +322,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_EDITITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1))
     {
@@ -356,8 +347,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_HORIZONTALHEADERITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -381,8 +371,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_ITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -440,8 +429,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_OPENPERSISTENTEDITOR)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1))
     {
@@ -466,8 +454,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_REMOVECELLWIDGET)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -492,8 +479,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_ROW)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1))
     {
@@ -516,8 +502,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_ROWCOUNT)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -540,8 +525,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCELLWIDGET)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQWIDGET(3))
     {
@@ -566,8 +550,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCOLUMNCOUNT)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -664,8 +647,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETHORIZONTALHEADERITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTABLEWIDGETITEM(2))
     {
@@ -690,8 +672,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETHORIZONTALHEADERLABELS)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -716,8 +697,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQTABLEWIDGETITEM(3))
     {
@@ -742,8 +722,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETITEMPROTOTYPE)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1))
     {
@@ -768,8 +747,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETRANGESELECTED)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQTABLEWIDGETSELECTIONRANGE(1) && HB_ISLOG(2))
     {
@@ -794,8 +772,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETROWCOUNT)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -820,8 +797,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETVERTICALHEADERITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTABLEWIDGETITEM(2))
     {
@@ -846,8 +822,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETVERTICALHEADERLABELS)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -872,8 +847,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SORTITEMS)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -898,8 +872,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_TAKEHORIZONTALHEADERITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -923,8 +896,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_TAKEITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -948,8 +920,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_TAKEVERTICALHEADERITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -973,8 +944,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_VERTICALHEADERITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -998,8 +968,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_VISUALCOLUMN)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1022,8 +991,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_VISUALITEMRECT)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1))
     {
@@ -1047,8 +1015,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_VISUALROW)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1071,8 +1038,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CLEAR)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1097,8 +1063,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CLEARCONTENTS)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1123,8 +1088,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_INSERTCOLUMN)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1149,8 +1113,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_INSERTROW)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1175,8 +1138,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_REMOVECOLUMN)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1201,8 +1163,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_REMOVEROW)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1228,8 +1189,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SCROLLTOITEM)
 {
   QTableWidget *obj = (QTableWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQTABLEWIDGETITEM(1) && ISNUMORNIL(2))
     {

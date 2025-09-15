@@ -124,8 +124,7 @@ void QLineEditSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QLineEdit *obj = (QLineEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QLineEditSlots *s = QCoreApplication::instance()->findChild<QLineEditSlots *>();
 
     if (s == NULL)

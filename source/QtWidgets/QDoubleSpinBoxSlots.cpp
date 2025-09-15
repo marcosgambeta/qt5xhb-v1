@@ -56,8 +56,7 @@ void QDoubleSpinBoxSlots_connect_signal(const QString &signal, const QString &sl
 {
   QDoubleSpinBox *obj = (QDoubleSpinBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDoubleSpinBoxSlots *s = QCoreApplication::instance()->findChild<QDoubleSpinBoxSlots *>();
 
     if (s == NULL)

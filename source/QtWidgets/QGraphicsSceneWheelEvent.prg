@@ -61,8 +61,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_DELETE)
 {
   QGraphicsSceneWheelEvent *obj = (QGraphicsSceneWheelEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -80,8 +79,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_BUTTONS)
 {
   QGraphicsSceneWheelEvent *obj = (QGraphicsSceneWheelEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -104,8 +102,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_DELTA)
 {
   QGraphicsSceneWheelEvent *obj = (QGraphicsSceneWheelEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -128,8 +125,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_MODIFIERS)
 {
   QGraphicsSceneWheelEvent *obj = (QGraphicsSceneWheelEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -152,8 +148,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_ORIENTATION)
 {
   QGraphicsSceneWheelEvent *obj = (QGraphicsSceneWheelEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -176,8 +171,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_POS)
 {
   QGraphicsSceneWheelEvent *obj = (QGraphicsSceneWheelEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -201,8 +195,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_SCENEPOS)
 {
   QGraphicsSceneWheelEvent *obj = (QGraphicsSceneWheelEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -226,8 +219,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_SCREENPOS)
 {
   QGraphicsSceneWheelEvent *obj = (QGraphicsSceneWheelEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

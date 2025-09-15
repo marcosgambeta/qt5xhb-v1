@@ -136,8 +136,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_DELETE)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -205,8 +204,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTON)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -230,8 +228,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONROLE)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
     {
@@ -254,8 +251,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONS)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -301,8 +297,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_CLICKEDBUTTON)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -326,8 +321,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_DEFAULTBUTTON)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -352,8 +346,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_DETAILEDTEXT)
 #ifndef QT_NO_TEXTEDIT
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -378,8 +371,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDETAILEDTEXT)
 #ifndef QT_NO_TEXTEDIT
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -405,8 +397,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ESCAPEBUTTON)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -430,8 +421,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ICON)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -454,8 +444,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICON)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -480,8 +469,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ICONPIXMAP)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -505,8 +493,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICONPIXMAP)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
@@ -531,8 +518,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATIVETEXT)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -555,8 +541,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETINFORMATIVETEXT)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -581,8 +566,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_OPEN)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
     {
@@ -607,8 +591,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_REMOVEBUTTON)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
     {
@@ -705,8 +688,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWMODALITY)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -731,8 +713,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWTITLE)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -757,8 +738,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_STANDARDBUTTON)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
     {
@@ -781,8 +761,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_STANDARDBUTTONS)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -805,8 +784,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETSTANDARDBUTTONS)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -831,8 +809,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_TEXT)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -855,8 +832,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXT)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -881,8 +857,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_TEXTFORMAT)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -905,8 +880,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXTFORMAT)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -932,8 +906,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETVISIBLE)
 #ifdef Q_OS_WINCE
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -959,8 +932,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_EXEC)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1125,8 +1097,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_TEXTINTERACTIONFLAGS)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1149,8 +1120,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXTINTERACTIONFLAGS)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1175,8 +1145,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_CHECKBOX)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1200,8 +1169,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETCHECKBOX)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQCHECKBOX(1))
     {
@@ -1246,8 +1214,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONTEXT)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1270,8 +1237,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETBUTTONTEXT)
 {
   QMessageBox *obj = (QMessageBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {

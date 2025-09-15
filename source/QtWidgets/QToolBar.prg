@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QTOOLBAR_DELETE)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -244,8 +243,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDSEPARATOR)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -269,8 +267,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDWIDGET)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -294,8 +291,7 @@ HB_FUNC_STATIC(QTOOLBAR_ALLOWEDAREAS)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -318,8 +314,7 @@ HB_FUNC_STATIC(QTOOLBAR_CLEAR)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -344,8 +339,7 @@ HB_FUNC_STATIC(QTOOLBAR_ICONSIZE)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -369,8 +363,7 @@ HB_FUNC_STATIC(QTOOLBAR_INSERTSEPARATOR)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQACTION(1))
     {
@@ -394,8 +387,7 @@ HB_FUNC_STATIC(QTOOLBAR_INSERTWIDGET)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQACTION(1) && ISQWIDGET(2))
     {
@@ -419,8 +411,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISAREAALLOWED)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -443,8 +434,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISFLOATABLE)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -467,8 +457,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISFLOATING)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -491,8 +480,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISMOVABLE)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -515,8 +503,7 @@ HB_FUNC_STATIC(QTOOLBAR_ORIENTATION)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -539,8 +526,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETALLOWEDAREAS)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -565,8 +551,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETFLOATABLE)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -591,8 +576,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETMOVABLE)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -617,8 +601,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETORIENTATION)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -643,8 +626,7 @@ HB_FUNC_STATIC(QTOOLBAR_TOGGLEVIEWACTION)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -668,8 +650,7 @@ HB_FUNC_STATIC(QTOOLBAR_TOOLBUTTONSTYLE)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -692,8 +673,7 @@ HB_FUNC_STATIC(QTOOLBAR_WIDGETFORACTION)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQACTION(1))
     {
@@ -717,8 +697,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETICONSIZE)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
@@ -743,8 +722,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETTOOLBUTTONSTYLE)
 {
   QToolBar *obj = (QToolBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

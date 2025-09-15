@@ -56,8 +56,7 @@ void QGraphicsOpacityEffectSlots_connect_signal(const QString &signal, const QSt
 {
   QGraphicsOpacityEffect *obj = (QGraphicsOpacityEffect *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGraphicsOpacityEffectSlots *s = QCoreApplication::instance()->findChild<QGraphicsOpacityEffectSlots *>();
 
     if (s == NULL)

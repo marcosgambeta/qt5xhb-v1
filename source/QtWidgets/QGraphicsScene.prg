@@ -180,8 +180,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_DELETE)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -201,8 +200,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ACTIVEPANEL)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -226,8 +224,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ACTIVEWINDOW)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -290,8 +287,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDITEM)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
@@ -351,8 +347,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPATH)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQPAINTERPATH(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
     {
@@ -377,8 +372,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPIXMAP)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
@@ -403,8 +397,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPOLYGON)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQPOLYGONF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
     {
@@ -468,8 +461,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDSIMPLETEXT)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2)))
     {
@@ -494,8 +486,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDTEXT)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2)))
     {
@@ -519,8 +510,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDWIDGET)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2))
     {
@@ -545,8 +535,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_BACKGROUNDBRUSH)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -570,8 +559,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_BSPTREEDEPTH)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -594,8 +582,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CLEARFOCUS)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -620,8 +607,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CREATEITEMGROUP)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -652,8 +638,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_DESTROYITEMGROUP)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEMGROUP(1))
     {
@@ -678,8 +663,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_FOCUSITEM)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -703,8 +687,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_FONT)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -728,8 +711,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_FOREGROUNDBRUSH)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -753,8 +735,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_HASFOCUS)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -777,8 +758,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_HEIGHT)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -801,8 +781,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_INPUTMETHODQUERY)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -867,8 +846,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ISACTIVE)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -891,8 +869,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ISSORTCACHEENABLED)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -949,8 +926,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMINDEXMETHOD)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -973,8 +949,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMSBOUNDINGRECT)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -998,8 +973,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_MOUSEGRABBERITEM)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1023,8 +997,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_PALETTE)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1048,8 +1021,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_REMOVEITEM)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
@@ -1075,8 +1047,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_RENDER)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)) && (ISQRECTF(3) || HB_ISNIL(3)) &&
         ISNUMORNIL(4))
@@ -1104,8 +1075,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SCENERECT)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1129,8 +1099,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SELECTIONAREA)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1154,8 +1123,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SENDEVENT)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQEVENT(2))
     {
@@ -1178,8 +1146,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETACTIVEPANEL)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
@@ -1204,8 +1171,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETACTIVEWINDOW)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSWIDGET(1))
     {
@@ -1230,8 +1196,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETBACKGROUNDBRUSH)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
@@ -1256,8 +1221,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETBSPTREEDEPTH)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1282,8 +1246,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOCUS)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -1308,8 +1271,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOCUSITEM)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && ISNUMORNIL(2))
     {
@@ -1335,8 +1297,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETFONT)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
@@ -1361,8 +1322,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOREGROUNDBRUSH)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
@@ -1387,8 +1347,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETITEMINDEXMETHOD)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1413,8 +1372,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETPALETTE)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPALETTE(1))
     {
@@ -1511,8 +1469,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSORTCACHEENABLED)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1537,8 +1494,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSTICKYFOCUS)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1563,8 +1519,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSTYLE)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSTYLE(1))
     {
@@ -1589,8 +1544,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_STICKYFOCUS)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1613,8 +1567,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_STYLE)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1674,8 +1627,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_WIDTH)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1698,8 +1650,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADVANCE)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1724,8 +1675,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CLEAR)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1750,8 +1700,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CLEARSELECTION)
 {
   QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

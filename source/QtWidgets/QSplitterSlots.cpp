@@ -40,8 +40,7 @@ void QSplitterSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QSplitter *obj = (QSplitter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSplitterSlots *s = QCoreApplication::instance()->findChild<QSplitterSlots *>();
 
     if (s == NULL)

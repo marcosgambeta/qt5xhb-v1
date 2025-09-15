@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QTOOLTIP_DELETE)
 {
   QToolTip *obj = (QToolTip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QTOOLTIP_FONT)
 {
   QToolTip *obj = (QToolTip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -112,8 +110,7 @@ HB_FUNC_STATIC(QTOOLTIP_HIDETEXT)
 {
   QToolTip *obj = (QToolTip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -138,8 +135,7 @@ HB_FUNC_STATIC(QTOOLTIP_ISVISIBLE)
 {
   QToolTip *obj = (QToolTip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -162,8 +158,7 @@ HB_FUNC_STATIC(QTOOLTIP_PALETTE)
 {
   QToolTip *obj = (QToolTip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -187,8 +182,7 @@ HB_FUNC_STATIC(QTOOLTIP_SETFONT)
 {
   QToolTip *obj = (QToolTip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
@@ -213,8 +207,7 @@ HB_FUNC_STATIC(QTOOLTIP_SETPALETTE)
 {
   QToolTip *obj = (QToolTip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPALETTE(1))
     {
@@ -275,8 +268,7 @@ HB_FUNC_STATIC(QTOOLTIP_TEXT)
 {
   QToolTip *obj = (QToolTip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

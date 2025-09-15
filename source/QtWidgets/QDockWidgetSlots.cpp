@@ -110,8 +110,7 @@ void QDockWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDockWidgetSlots *s = QCoreApplication::instance()->findChild<QDockWidgetSlots *>();
 
     if (s == NULL)

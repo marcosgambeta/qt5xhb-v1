@@ -78,8 +78,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_CORNER)
 {
   QStyleOptionSizeGrip *obj = (QStyleOptionSizeGrip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->corner);
@@ -94,8 +93,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_SETCORNER)
 {
   QStyleOptionSizeGrip *obj = (QStyleOptionSizeGrip *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->corner = (Qt::Corner)hb_parni(1);

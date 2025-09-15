@@ -230,8 +230,7 @@ void QHeaderViewSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QHeaderView *obj = (QHeaderView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QHeaderViewSlots *s = QCoreApplication::instance()->findChild<QHeaderViewSlots *>();
 
     if (s == NULL)

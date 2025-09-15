@@ -56,8 +56,7 @@ void QStackedWidgetSlots_connect_signal(const QString &signal, const QString &sl
 {
   QStackedWidget *obj = (QStackedWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QStackedWidgetSlots *s = QCoreApplication::instance()->findChild<QStackedWidgetSlots *>();
 
     if (s == NULL)

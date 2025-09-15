@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_TEXT)
 {
   QStyleOptionToolBox *obj = (QStyleOptionToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RQSTRING(obj->text);
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETTEXT)
 {
   QStyleOptionToolBox *obj = (QStyleOptionToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
@@ -123,8 +121,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_ICON)
 {
   QStyleOptionToolBox *obj = (QStyleOptionToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       QIcon *ptr = new QIcon(obj->icon);
@@ -140,8 +137,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETICON)
 {
   QStyleOptionToolBox *obj = (QStyleOptionToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQICON(1))
     {
       obj->icon = *PQICON(1);
@@ -162,8 +158,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_POSITION)
 {
   QStyleOptionToolBox *obj = (QStyleOptionToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->position);
@@ -178,8 +173,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETPOSITION)
 {
   QStyleOptionToolBox *obj = (QStyleOptionToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->position = (QStyleOptionToolBox::TabPosition)hb_parni(1);
@@ -200,8 +194,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SELECTEDPOSITION)
 {
   QStyleOptionToolBox *obj = (QStyleOptionToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->selectedPosition);
@@ -216,8 +209,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETSELECTEDPOSITION)
 {
   QStyleOptionToolBox *obj = (QStyleOptionToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->selectedPosition = (QStyleOptionToolBox::SelectedPosition)hb_parni(1);

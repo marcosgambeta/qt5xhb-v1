@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_FEATURES)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->features);
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETFEATURES)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->features = (QStyleOptionFrame::FrameFeatures)hb_parni(1);
@@ -127,8 +125,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXT)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RQSTRING(obj->text);
@@ -143,8 +140,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXT)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
@@ -165,8 +161,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RENUM(obj->textAlignment);
@@ -181,8 +176,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->textAlignment = (Qt::Alignment)hb_parni(1);
@@ -203,8 +197,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTCOLOR)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       QColor *ptr = new QColor(obj->textColor);
@@ -220,8 +213,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
       obj->textColor = *PQCOLOR(1);
@@ -242,8 +234,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_LINEWIDTH)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RINT(obj->lineWidth);
@@ -258,8 +249,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETLINEWIDTH)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->lineWidth = PINT(1);
@@ -280,8 +270,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(0))
     {
       RINT(obj->midLineWidth);
@@ -296,8 +285,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH)
 {
   QStyleOptionGroupBox *obj = (QStyleOptionGroupBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->midLineWidth = PINT(1);

@@ -36,8 +36,7 @@ void QGraphicsWidgetSlots_connect_signal(const QString &signal, const QString &s
 {
   QGraphicsWidget *obj = (QGraphicsWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGraphicsWidgetSlots *s = QCoreApplication::instance()->findChild<QGraphicsWidgetSlots *>();
 
     if (s == NULL)

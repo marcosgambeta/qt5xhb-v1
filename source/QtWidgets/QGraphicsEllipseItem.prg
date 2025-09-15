@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_DELETE)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -119,8 +118,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_RECT)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -180,8 +178,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETSPANANGLE)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -206,8 +203,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETSTARTANGLE)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -232,8 +228,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SPANANGLE)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -256,8 +251,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_STARTANGLE)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -280,8 +274,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_BOUNDINGRECT)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -305,8 +298,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_CONTAINS)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -329,8 +321,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_ISOBSCUREDBY)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
@@ -353,8 +344,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_OPAQUEAREA)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -378,8 +368,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_PAINT)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
@@ -404,8 +393,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SHAPE)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -429,8 +417,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_TYPE)
 {
   QGraphicsEllipseItem *obj = (QGraphicsEllipseItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

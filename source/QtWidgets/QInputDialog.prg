@@ -125,8 +125,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DELETE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -146,8 +145,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_CANCELBUTTONTEXT)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -170,8 +168,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCANCELBUTTONTEXT)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -196,8 +193,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_COMBOBOXITEMS)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -220,8 +216,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXITEMS)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -246,8 +241,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEDECIMALS)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -270,8 +264,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEDECIMALS)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -296,8 +289,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMAXIMUM)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -320,8 +312,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMAXIMUM)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -346,8 +337,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMINIMUM)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -370,8 +360,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMINIMUM)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -396,8 +385,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEVALUE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -420,8 +408,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEVALUE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -446,8 +433,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INPUTMODE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -470,8 +456,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINPUTMODE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -496,8 +481,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTMAXIMUM)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -520,8 +504,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMAXIMUM)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -546,8 +529,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTMINIMUM)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -570,8 +552,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMINIMUM)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -596,8 +577,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTSTEP)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -620,8 +600,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTSTEP)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -646,8 +625,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTVALUE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -670,8 +648,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTVALUE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -696,8 +673,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ISCOMBOBOXEDITABLE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -720,8 +696,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXEDITABLE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -746,8 +721,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_LABELTEXT)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -770,8 +744,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETLABELTEXT)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -796,8 +769,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OKBUTTONTEXT)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -820,8 +792,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOKBUTTONTEXT)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -846,8 +817,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OPEN)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
     {
@@ -872,8 +842,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OPTIONS)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -896,8 +865,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTIONS)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -922,8 +890,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLERANGE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -948,8 +915,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTRANGE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -974,8 +940,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTION)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
@@ -1000,8 +965,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TESTOPTION)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1024,8 +988,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TEXTECHOMODE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1048,8 +1011,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTECHOMODE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1074,8 +1036,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TEXTVALUE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1098,8 +1059,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTVALUE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1124,8 +1084,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DONE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1150,8 +1109,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_MINIMUMSIZEHINT)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1175,8 +1133,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETVISIBLE)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1201,8 +1158,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SIZEHINT)
 {
   QInputDialog *obj = (QInputDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

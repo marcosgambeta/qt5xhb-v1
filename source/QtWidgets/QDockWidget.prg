@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_DELETE)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ALLOWEDAREAS)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -145,8 +143,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_FEATURES)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -169,8 +166,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ISAREAALLOWED)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -193,8 +189,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ISFLOATING)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -217,8 +212,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETALLOWEDAREAS)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -243,8 +237,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETFEATURES)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -269,8 +262,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETFLOATING)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -295,8 +287,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETTITLEBARWIDGET)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -321,8 +312,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETWIDGET)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -347,8 +337,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_TITLEBARWIDGET)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -372,8 +361,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_TOGGLEVIEWACTION)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -397,8 +385,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_WIDGET)
 {
   QDockWidget *obj = (QDockWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

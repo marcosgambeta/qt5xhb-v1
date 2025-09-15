@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_DELETE)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -170,8 +169,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ALIGNMENT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1))
     {
@@ -194,8 +192,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNALIGNMENT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -218,8 +215,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNCOUNT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -242,8 +238,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNMAXIMUMWIDTH)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -266,8 +261,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNMINIMUMWIDTH)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -290,8 +284,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNPREFERREDWIDTH)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -314,8 +307,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNSPACING)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -338,8 +330,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNSTRETCHFACTOR)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -362,8 +353,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_HORIZONTALSPACING)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -420,8 +410,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_REMOVEITEM)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1))
     {
@@ -446,8 +435,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWALIGNMENT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -470,8 +458,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWCOUNT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -494,8 +481,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWMAXIMUMHEIGHT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -518,8 +504,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWMINIMUMHEIGHT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -542,8 +527,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWPREFERREDHEIGHT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -566,8 +550,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWSPACING)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -590,8 +573,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWSTRETCHFACTOR)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -614,8 +596,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETALIGNMENT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2))
     {
@@ -640,8 +621,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNALIGNMENT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -666,8 +646,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNFIXEDWIDTH)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -692,8 +671,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNMAXIMUMWIDTH)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -718,8 +696,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -744,8 +721,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNPREFERREDWIDTH)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -770,8 +746,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNSPACING)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -796,8 +771,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNSTRETCHFACTOR)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -822,8 +796,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETHORIZONTALSPACING)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -848,8 +821,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWALIGNMENT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -874,8 +846,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWFIXEDHEIGHT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -900,8 +871,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWMAXIMUMHEIGHT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -926,8 +896,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWMINIMUMHEIGHT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -952,8 +921,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWPREFERREDHEIGHT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -978,8 +946,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWSPACING)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -1004,8 +971,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWSTRETCHFACTOR)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -1030,8 +996,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETSPACING)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1056,8 +1021,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETVERTICALSPACING)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1082,8 +1046,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_VERTICALSPACING)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1106,8 +1069,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COUNT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1130,8 +1092,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_INVALIDATE)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1156,8 +1117,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_REMOVEAT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1182,8 +1142,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETGEOMETRY)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
@@ -1208,8 +1167,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SIZEHINT)
 {
   QGraphicsGridLayout *obj = (QGraphicsGridLayout *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZEF(2) || HB_ISNIL(2)))
     {

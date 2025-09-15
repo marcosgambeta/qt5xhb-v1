@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWPRIMITIVE)
 {
   QStylePainter *obj = (QStylePainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTION(2))
     {
@@ -150,8 +149,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCONTROL)
 {
   QStylePainter *obj = (QStylePainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTION(2))
     {
@@ -176,8 +174,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCOMPLEXCONTROL)
 {
   QStylePainter *obj = (QStylePainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2))
     {
@@ -203,8 +200,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMTEXT)
 {
   QStylePainter *obj = (QStylePainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(5, 6) && ISQRECT(1) && HB_ISNUM(2) && ISQPALETTE(3) && HB_ISLOG(4) && HB_ISCHAR(5) &&
         ISNUMORNIL(6))
@@ -231,8 +227,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMPIXMAP)
 {
   QStylePainter *obj = (QStylePainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && ISQPIXMAP(3))
     {
@@ -257,8 +252,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_STYLE)
 {
   QStylePainter *obj = (QStylePainter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

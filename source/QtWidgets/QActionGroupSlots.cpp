@@ -56,8 +56,7 @@ void QActionGroupSlots_connect_signal(const QString &signal, const QString &slot
 {
   QActionGroup *obj = (QActionGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QActionGroupSlots *s = QCoreApplication::instance()->findChild<QActionGroupSlots *>();
 
     if (s == NULL)
