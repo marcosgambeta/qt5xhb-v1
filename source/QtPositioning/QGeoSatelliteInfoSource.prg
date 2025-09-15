@@ -72,8 +72,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfoSource *obj = (QGeoSatelliteInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -93,8 +92,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_SOURCENAME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfoSource *obj = (QGeoSatelliteInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -119,8 +117,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_SETUPDATEINTERVAL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfoSource *obj = (QGeoSatelliteInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -147,8 +144,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_UPDATEINTERVAL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfoSource *obj = (QGeoSatelliteInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -173,8 +169,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_MINIMUMUPDATEINTERVAL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfoSource *obj = (QGeoSatelliteInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -199,8 +194,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_ERROR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfoSource *obj = (QGeoSatelliteInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -225,8 +219,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_STARTUPDATES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfoSource *obj = (QGeoSatelliteInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -253,8 +246,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_STOPUPDATES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfoSource *obj = (QGeoSatelliteInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -281,8 +273,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFOSOURCE_REQUESTUPDATE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfoSource *obj = (QGeoSatelliteInfoSource *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {

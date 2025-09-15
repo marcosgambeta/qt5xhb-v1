@@ -133,8 +133,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -154,8 +153,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_SETTOPLEFT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
@@ -182,8 +180,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TOPLEFT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -209,8 +206,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_SETTOPRIGHT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
@@ -237,8 +233,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TOPRIGHT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -264,8 +259,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_SETBOTTOMLEFT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
@@ -292,8 +286,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_BOTTOMLEFT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -319,8 +312,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_SETBOTTOMRIGHT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
@@ -347,8 +339,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_BOTTOMRIGHT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -374,8 +365,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_SETCENTER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGEOCOORDINATE(1))
     {
@@ -402,8 +392,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_CENTER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -429,8 +418,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_SETWIDTH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -457,8 +445,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_WIDTH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -483,8 +470,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_SETHEIGHT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -511,8 +497,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_HEIGHT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -573,8 +558,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_INTERSECTS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGEORECTANGLE(1))
     {
@@ -599,8 +583,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TRANSLATE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -627,8 +610,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_TRANSLATED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -654,8 +636,7 @@ HB_FUNC_STATIC(QGEORECTANGLE_UNITED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoRectangle *obj = (QGeoRectangle *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGEORECTANGLE(1))
     {

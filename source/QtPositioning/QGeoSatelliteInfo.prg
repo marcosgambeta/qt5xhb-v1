@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfo *obj = (QGeoSatelliteInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -123,8 +122,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSATELLITESYSTEM)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfo *obj = (QGeoSatelliteInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -151,8 +149,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SATELLITESYSTEM)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfo *obj = (QGeoSatelliteInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -177,8 +174,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSATELLITEIDENTIFIER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfo *obj = (QGeoSatelliteInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -205,8 +201,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SATELLITEIDENTIFIER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfo *obj = (QGeoSatelliteInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -231,8 +226,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETSIGNALSTRENGTH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfo *obj = (QGeoSatelliteInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -259,8 +253,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SIGNALSTRENGTH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfo *obj = (QGeoSatelliteInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -285,8 +278,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_SETATTRIBUTE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfo *obj = (QGeoSatelliteInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -313,8 +305,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_ATTRIBUTE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfo *obj = (QGeoSatelliteInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -339,8 +330,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_REMOVEATTRIBUTE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfo *obj = (QGeoSatelliteInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -367,8 +357,7 @@ HB_FUNC_STATIC(QGEOSATELLITEINFO_HASATTRIBUTE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QGeoSatelliteInfo *obj = (QGeoSatelliteInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
