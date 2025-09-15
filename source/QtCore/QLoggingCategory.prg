@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_DELETE)
 {
   QLoggingCategory *obj = (QLoggingCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -102,8 +101,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_ISENABLED)
 {
   QLoggingCategory *obj = (QLoggingCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -126,8 +124,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_SETENABLED)
 {
   QLoggingCategory *obj = (QLoggingCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_ISDEBUGENABLED)
 {
   QLoggingCategory *obj = (QLoggingCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -176,8 +172,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_ISWARNINGENABLED)
 {
   QLoggingCategory *obj = (QLoggingCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -200,8 +195,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_ISCRITICALENABLED)
 {
   QLoggingCategory *obj = (QLoggingCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -224,8 +218,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_CATEGORYNAME)
 {
   QLoggingCategory *obj = (QLoggingCategory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -90,8 +90,7 @@ void QTimeLineSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QTimeLine *obj = (QTimeLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QTimeLineSlots *s = QCoreApplication::instance()->findChild<QTimeLineSlots *>();
 
     if (s == NULL)

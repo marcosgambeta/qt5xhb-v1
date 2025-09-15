@@ -156,8 +156,7 @@ HB_FUNC_STATIC(QFILEINFO_DELETE)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -175,8 +174,7 @@ HB_FUNC_STATIC(QFILEINFO_ABSOLUTEDIR)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -200,8 +198,7 @@ HB_FUNC_STATIC(QFILEINFO_ABSOLUTEFILEPATH)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -224,8 +221,7 @@ HB_FUNC_STATIC(QFILEINFO_ABSOLUTEPATH)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -248,8 +244,7 @@ HB_FUNC_STATIC(QFILEINFO_BASENAME)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -272,8 +267,7 @@ HB_FUNC_STATIC(QFILEINFO_BUNDLENAME)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -296,8 +290,7 @@ HB_FUNC_STATIC(QFILEINFO_CACHING)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -320,8 +313,7 @@ HB_FUNC_STATIC(QFILEINFO_CANONICALFILEPATH)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -344,8 +336,7 @@ HB_FUNC_STATIC(QFILEINFO_CANONICALPATH)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -368,8 +359,7 @@ HB_FUNC_STATIC(QFILEINFO_COMPLETEBASENAME)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -392,8 +382,7 @@ HB_FUNC_STATIC(QFILEINFO_COMPLETESUFFIX)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -416,8 +405,7 @@ HB_FUNC_STATIC(QFILEINFO_CREATED)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -441,8 +429,7 @@ HB_FUNC_STATIC(QFILEINFO_DIR)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -466,8 +453,7 @@ HB_FUNC_STATIC(QFILEINFO_EXISTS)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -490,8 +476,7 @@ HB_FUNC_STATIC(QFILEINFO_FILENAME)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -514,8 +499,7 @@ HB_FUNC_STATIC(QFILEINFO_FILEPATH)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -538,8 +522,7 @@ HB_FUNC_STATIC(QFILEINFO_GROUP)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -562,8 +545,7 @@ HB_FUNC_STATIC(QFILEINFO_GROUPID)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -586,8 +568,7 @@ HB_FUNC_STATIC(QFILEINFO_ISABSOLUTE)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -610,8 +591,7 @@ HB_FUNC_STATIC(QFILEINFO_ISBUNDLE)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -634,8 +614,7 @@ HB_FUNC_STATIC(QFILEINFO_ISDIR)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -658,8 +637,7 @@ HB_FUNC_STATIC(QFILEINFO_ISEXECUTABLE)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -682,8 +660,7 @@ HB_FUNC_STATIC(QFILEINFO_ISFILE)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -706,8 +683,7 @@ HB_FUNC_STATIC(QFILEINFO_ISHIDDEN)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -730,8 +706,7 @@ HB_FUNC_STATIC(QFILEINFO_ISNATIVEPATH)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -754,8 +729,7 @@ HB_FUNC_STATIC(QFILEINFO_ISREADABLE)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -778,8 +752,7 @@ HB_FUNC_STATIC(QFILEINFO_ISRELATIVE)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -802,8 +775,7 @@ HB_FUNC_STATIC(QFILEINFO_ISROOT)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -826,8 +798,7 @@ HB_FUNC_STATIC(QFILEINFO_ISSYMLINK)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -850,8 +821,7 @@ HB_FUNC_STATIC(QFILEINFO_ISWRITABLE)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -874,8 +844,7 @@ HB_FUNC_STATIC(QFILEINFO_LASTMODIFIED)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -899,8 +868,7 @@ HB_FUNC_STATIC(QFILEINFO_LASTREAD)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -924,8 +892,7 @@ HB_FUNC_STATIC(QFILEINFO_MAKEABSOLUTE)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -948,8 +915,7 @@ HB_FUNC_STATIC(QFILEINFO_OWNER)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -972,8 +938,7 @@ HB_FUNC_STATIC(QFILEINFO_OWNERID)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -996,8 +961,7 @@ HB_FUNC_STATIC(QFILEINFO_PATH)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1020,8 +984,7 @@ HB_FUNC_STATIC(QFILEINFO_PERMISSION)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1044,8 +1007,7 @@ HB_FUNC_STATIC(QFILEINFO_PERMISSIONS)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1068,8 +1030,7 @@ HB_FUNC_STATIC(QFILEINFO_REFRESH)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1094,8 +1055,7 @@ HB_FUNC_STATIC(QFILEINFO_SETCACHING)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1170,8 +1130,7 @@ HB_FUNC_STATIC(QFILEINFO_SIZE)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1194,8 +1153,7 @@ HB_FUNC_STATIC(QFILEINFO_SUFFIX)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1218,8 +1176,7 @@ HB_FUNC_STATIC(QFILEINFO_SWAP)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFILEINFO(1))
     {
@@ -1244,8 +1201,7 @@ HB_FUNC_STATIC(QFILEINFO_SYMLINKTARGET)
 {
   QFileInfo *obj = (QFileInfo *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

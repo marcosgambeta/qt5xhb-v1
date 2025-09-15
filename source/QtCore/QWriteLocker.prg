@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QWRITELOCKER_DELETE)
 {
   QWriteLocker *obj = (QWriteLocker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QWRITELOCKER_READWRITELOCK)
 {
   QWriteLocker *obj = (QWriteLocker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -123,8 +121,7 @@ HB_FUNC_STATIC(QWRITELOCKER_RELOCK)
 {
   QWriteLocker *obj = (QWriteLocker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -149,8 +146,7 @@ HB_FUNC_STATIC(QWRITELOCKER_UNLOCK)
 {
   QWriteLocker *obj = (QWriteLocker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

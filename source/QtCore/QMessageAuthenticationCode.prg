@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_DELETE)
 {
   QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_RESET)
 {
   QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -127,8 +125,7 @@ HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_SETKEY)
 {
   QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -201,8 +198,7 @@ HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_RESULT)
 {
   QMessageAuthenticationCode *obj = (QMessageAuthenticationCode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

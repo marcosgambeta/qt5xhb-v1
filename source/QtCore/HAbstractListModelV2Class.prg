@@ -71,8 +71,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_DELETE)
 {
   HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -92,8 +91,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETROWCOUNTCB)
 {
   HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -118,8 +116,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETDATACB)
 {
   HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -144,8 +141,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETHEADERDATACB)
 {
   HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -170,8 +166,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETFLAGSCB)
 {
   HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -196,8 +191,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_SETSETDATACB)
 {
   HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
     {
@@ -246,8 +240,7 @@ HB_FUNC_STATIC(HABSTRACTLISTMODELV2_RELOADDATA)
 {
   HAbstractListModelV2 *obj = qobject_cast<HAbstractListModelV2 *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

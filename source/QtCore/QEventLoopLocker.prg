@@ -91,8 +91,7 @@ HB_FUNC_STATIC(QEVENTLOOPLOCKER_DELETE)
 {
   QEventLoopLocker *obj = (QEventLoopLocker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);

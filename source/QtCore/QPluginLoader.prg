@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_DELETE)
 {
   QPluginLoader *obj = (QPluginLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_ERRORSTRING)
 {
   QPluginLoader *obj = (QPluginLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_FILENAME)
 {
   QPluginLoader *obj = (QPluginLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -156,8 +153,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_INSTANCE)
 {
   QPluginLoader *obj = (QPluginLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -181,8 +177,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_ISLOADED)
 {
   QPluginLoader *obj = (QPluginLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -205,8 +200,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_LOAD)
 {
   QPluginLoader *obj = (QPluginLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -229,8 +223,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_LOADHINTS)
 {
   QPluginLoader *obj = (QPluginLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -253,8 +246,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_SETFILENAME)
 {
   QPluginLoader *obj = (QPluginLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -279,8 +271,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_SETLOADHINTS)
 {
   QPluginLoader *obj = (QPluginLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -305,8 +296,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_UNLOAD)
 {
   QPluginLoader *obj = (QPluginLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -329,8 +319,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_STATICINSTANCES)
 {
   QPluginLoader *obj = (QPluginLoader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

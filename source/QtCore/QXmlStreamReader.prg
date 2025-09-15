@@ -157,8 +157,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DELETE)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -226,8 +225,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1))
     {
@@ -252,8 +250,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ATEND)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -276,8 +273,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ATTRIBUTES)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -301,8 +297,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_CHARACTEROFFSET)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -325,8 +320,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_CLEAR)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -351,8 +345,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_COLUMNNUMBER)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -375,8 +368,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DEVICE)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -400,8 +392,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DOCUMENTENCODING)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -425,8 +416,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DOCUMENTVERSION)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -450,8 +440,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDNAME)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -475,8 +464,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDPUBLICID)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -500,8 +488,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDSYSTEMID)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -525,8 +512,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYDECLARATIONS)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -575,8 +561,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYRESOLVER)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -600,8 +585,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ERROR)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -624,8 +608,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ERRORSTRING)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -648,8 +631,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_HASERROR)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -672,8 +654,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCDATA)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -696,8 +677,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCHARACTERS)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -720,8 +700,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCOMMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -744,8 +723,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISDTD)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -768,8 +746,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENDDOCUMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -792,8 +769,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENDELEMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -816,8 +792,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENTITYREFERENCE)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -840,8 +815,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISPROCESSINGINSTRUCTION)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -864,8 +838,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTANDALONEDOCUMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -888,8 +861,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTARTDOCUMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -912,8 +884,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTARTELEMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -936,8 +907,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISWHITESPACE)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -960,8 +930,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_LINENUMBER)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -984,8 +953,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAME)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1009,8 +977,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEDECLARATIONS)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1059,8 +1026,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEPROCESSING)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1083,8 +1049,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEURI)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1108,8 +1073,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NOTATIONDECLARATIONS)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1158,8 +1122,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PREFIX)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1183,8 +1146,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PROCESSINGINSTRUCTIONDATA)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1208,8 +1170,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PROCESSINGINSTRUCTIONTARGET)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1233,8 +1194,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_QUALIFIEDNAME)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1258,8 +1218,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_RAISEERROR)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
@@ -1285,8 +1244,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READELEMENTTEXT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -1311,8 +1269,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1335,8 +1292,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXTSTARTELEMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1359,8 +1315,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETDEVICE)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
@@ -1385,8 +1340,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETENTITYRESOLVER)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLSTREAMENTITYRESOLVER(1))
     {
@@ -1411,8 +1365,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETNAMESPACEPROCESSING)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -1437,8 +1390,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SKIPCURRENTELEMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1463,8 +1415,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_TEXT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1488,8 +1439,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_TOKENSTRING)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1512,8 +1462,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_TOKENTYPE)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

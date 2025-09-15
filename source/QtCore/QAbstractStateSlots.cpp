@@ -52,8 +52,7 @@ void QAbstractStateSlots_connect_signal(const QString &signal, const QString &sl
 {
   QAbstractState *obj = (QAbstractState *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractStateSlots *s = QCoreApplication::instance()->findChild<QAbstractStateSlots *>();
 
     if (s == NULL)

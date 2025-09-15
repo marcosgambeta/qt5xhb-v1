@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_DELETE)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -142,8 +141,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ARRAY)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -167,8 +165,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISARRAY)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -191,8 +188,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISEMPTY)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISNULL)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -239,8 +234,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_ISOBJECT)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -263,8 +257,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_OBJECT)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -288,8 +281,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_RAWDATA)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -314,8 +306,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_SETARRAY)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQJSONARRAY(1))
     {
@@ -340,8 +331,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_SETOBJECT)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQJSONOBJECT(1))
     {
@@ -366,8 +356,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_TOBINARYDATA)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -391,8 +380,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_TOJSON)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -416,8 +404,7 @@ HB_FUNC_STATIC(QJSONDOCUMENT_TOVARIANT)
 {
   QJsonDocument *obj = (QJsonDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

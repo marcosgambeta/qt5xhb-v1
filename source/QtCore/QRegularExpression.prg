@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_DELETE)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -129,8 +128,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_CAPTURECOUNT)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_ERRORSTRING)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_GLOBALMATCH)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
         ISNUMORNIL(4))
@@ -210,8 +206,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_ISVALID)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -236,8 +231,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_MATCH)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
         ISNUMORNIL(4))
@@ -267,8 +261,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERN)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -291,8 +284,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERNERROROFFSET)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -315,8 +307,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERNOPTIONS)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -339,8 +330,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERN)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -365,8 +355,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERNOPTIONS)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -391,8 +380,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SWAP)
 {
   QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGULAREXPRESSION(1))
     {

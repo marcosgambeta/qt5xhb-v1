@@ -38,8 +38,7 @@ void QSequentialAnimationGroupSlots_connect_signal(const QString &signal, const 
 {
   QSequentialAnimationGroup *obj = (QSequentialAnimationGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSequentialAnimationGroupSlots *s = QCoreApplication::instance()->findChild<QSequentialAnimationGroupSlots *>();
 
     if (s == NULL)

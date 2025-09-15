@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QBASICTIMER_DELETE)
 {
   QBasicTimer *obj = (QBasicTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QBASICTIMER_ISACTIVE)
 {
   QBasicTimer *obj = (QBasicTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QBASICTIMER_START)
 {
   QBasicTimer *obj = (QBasicTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2))
     {
@@ -148,8 +145,7 @@ HB_FUNC_STATIC(QBASICTIMER_STOP)
 {
   QBasicTimer *obj = (QBasicTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -174,8 +170,7 @@ HB_FUNC_STATIC(QBASICTIMER_TIMERID)
 {
   QBasicTimer *obj = (QBasicTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

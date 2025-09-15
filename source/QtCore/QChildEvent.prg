@@ -71,8 +71,7 @@ HB_FUNC_STATIC(QCHILDEVENT_DELETE)
 {
   QChildEvent *obj = (QChildEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -90,8 +89,7 @@ HB_FUNC_STATIC(QCHILDEVENT_ADDED)
 {
   QChildEvent *obj = (QChildEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -114,8 +112,7 @@ HB_FUNC_STATIC(QCHILDEVENT_CHILD)
 {
   QChildEvent *obj = (QChildEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -139,8 +136,7 @@ HB_FUNC_STATIC(QCHILDEVENT_POLISHED)
 {
   QChildEvent *obj = (QChildEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -163,8 +159,7 @@ HB_FUNC_STATIC(QCHILDEVENT_REMOVED)
 {
   QChildEvent *obj = (QChildEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -100,8 +100,7 @@ void QItemSelectionModelSlots_connect_signal(const QString &signal, const QStrin
 {
   QItemSelectionModel *obj = (QItemSelectionModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QItemSelectionModelSlots *s = QCoreApplication::instance()->findChild<QItemSelectionModelSlots *>();
 
     if (s == NULL)

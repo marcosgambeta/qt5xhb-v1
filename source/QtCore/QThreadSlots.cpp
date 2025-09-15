@@ -52,8 +52,7 @@ void QThreadSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QThreadSlots *s = QCoreApplication::instance()->findChild<QThreadSlots *>();
 
     if (s == NULL)

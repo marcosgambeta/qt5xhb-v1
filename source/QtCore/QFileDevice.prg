@@ -65,8 +65,7 @@ HB_FUNC_STATIC(QFILEDEVICE_DELETE)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -86,8 +85,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ERROR)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -110,8 +108,7 @@ HB_FUNC_STATIC(QFILEDEVICE_FILENAME)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -134,8 +131,7 @@ HB_FUNC_STATIC(QFILEDEVICE_FLUSH)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -158,8 +154,7 @@ HB_FUNC_STATIC(QFILEDEVICE_HANDLE)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -182,8 +177,7 @@ HB_FUNC_STATIC(QFILEDEVICE_PERMISSIONS)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -206,8 +200,7 @@ HB_FUNC_STATIC(QFILEDEVICE_RESIZE)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -230,8 +223,7 @@ HB_FUNC_STATIC(QFILEDEVICE_SETPERMISSIONS)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -254,8 +246,7 @@ HB_FUNC_STATIC(QFILEDEVICE_UNSETERROR)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -280,8 +271,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ATEND)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -304,8 +294,7 @@ HB_FUNC_STATIC(QFILEDEVICE_CLOSE)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -330,8 +319,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ISSEQUENTIAL)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -354,8 +342,7 @@ HB_FUNC_STATIC(QFILEDEVICE_POS)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -378,8 +365,7 @@ HB_FUNC_STATIC(QFILEDEVICE_SEEK)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -402,8 +388,7 @@ HB_FUNC_STATIC(QFILEDEVICE_SIZE)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

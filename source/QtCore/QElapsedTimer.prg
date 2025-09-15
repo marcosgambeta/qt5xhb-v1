@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_DELETE)
 {
   QElapsedTimer *obj = (QElapsedTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -106,8 +105,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ELAPSED)
 {
   QElapsedTimer *obj = (QElapsedTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -130,8 +128,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_HASEXPIRED)
 {
   QElapsedTimer *obj = (QElapsedTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -154,8 +151,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_INVALIDATE)
 {
   QElapsedTimer *obj = (QElapsedTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -180,8 +176,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ISVALID)
 {
   QElapsedTimer *obj = (QElapsedTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -204,8 +199,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_MSECSSINCEREFERENCE)
 {
   QElapsedTimer *obj = (QElapsedTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -228,8 +222,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_MSECSTO)
 {
   QElapsedTimer *obj = (QElapsedTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQELAPSEDTIMER(1))
     {
@@ -252,8 +245,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_NSECSELAPSED)
 {
   QElapsedTimer *obj = (QElapsedTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -276,8 +268,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_RESTART)
 {
   QElapsedTimer *obj = (QElapsedTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -300,8 +291,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_SECSTO)
 {
   QElapsedTimer *obj = (QElapsedTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQELAPSEDTIMER(1))
     {
@@ -324,8 +314,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_START)
 {
   QElapsedTimer *obj = (QElapsedTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

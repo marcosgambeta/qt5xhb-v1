@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_DELETE)
 {
   QMimeDatabase *obj = (QMimeDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORNAME)
 {
   QMimeDatabase *obj = (QMimeDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -168,8 +166,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPESFORFILENAME)
 {
   QMimeDatabase *obj = (QMimeDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -252,8 +249,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORURL)
 {
   QMimeDatabase *obj = (QMimeDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -311,8 +307,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_SUFFIXFORFILENAME)
 {
   QMimeDatabase *obj = (QMimeDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -335,8 +330,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_ALLMIMETYPES)
 {
   QMimeDatabase *obj = (QMimeDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -90,8 +90,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_DELETE)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_COLUMNCOUNT)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
@@ -135,8 +133,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INDEX)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -161,8 +158,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPFROMSOURCE)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -186,8 +182,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPTOSOURCE)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -211,8 +206,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_PARENT)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -236,8 +230,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_ROWCOUNT)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
@@ -260,8 +253,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_HEADERDATA)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
@@ -285,8 +277,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_DROPMIMEDATA)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
     {
@@ -309,8 +300,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_SIBLING)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3))
     {
@@ -334,8 +324,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQITEMSELECTION(1))
     {
@@ -359,8 +348,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQITEMSELECTION(1))
     {
@@ -385,8 +373,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MATCH)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4) &&
         ISNUMORNIL(5))
@@ -439,8 +426,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_SETSOURCEMODEL)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
@@ -465,8 +451,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTCOLUMNS)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -489,8 +474,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTROWS)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -513,8 +497,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_REMOVECOLUMNS)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -537,8 +520,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_REMOVEROWS)
 {
   QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {

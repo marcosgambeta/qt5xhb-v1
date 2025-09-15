@@ -90,8 +90,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DELETE)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETKEY)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -137,8 +135,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_KEY)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -161,8 +158,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETNATIVEKEY)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -187,8 +183,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_NATIVEKEY)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -211,8 +206,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_CREATE)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
     {
@@ -236,8 +230,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SIZE)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -260,8 +253,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ATTACH)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -285,8 +277,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ISATTACHED)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -309,8 +300,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DETACH)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -333,8 +323,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DATA)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -357,8 +346,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_LOCK)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -381,8 +369,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_UNLOCK)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -405,8 +392,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ERROR)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -429,8 +415,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ERRORSTRING)
 {
   QSharedMemory *obj = (QSharedMemory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

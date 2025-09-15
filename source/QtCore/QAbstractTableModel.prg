@@ -54,8 +54,7 @@ HB_FUNC_STATIC(QABSTRACTTABLEMODEL_DELETE)
 {
   QAbstractTableModel *obj = (QAbstractTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -76,8 +75,7 @@ HB_FUNC_STATIC(QABSTRACTTABLEMODEL_DROPMIMEDATA)
 {
   QAbstractTableModel *obj = (QAbstractTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
     {
@@ -100,8 +98,7 @@ HB_FUNC_STATIC(QABSTRACTTABLEMODEL_INDEX)
 {
   QAbstractTableModel *obj = (QAbstractTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {

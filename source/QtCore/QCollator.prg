@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QCOLLATOR_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QCollator *obj = (QCollator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QCOLLATOR_SWAP)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QCollator *obj = (QCollator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQCOLLATOR(1))
     {
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QCOLLATOR_SETLOCALE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QCollator *obj = (QCollator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLOCALE(1))
     {
@@ -181,8 +178,7 @@ HB_FUNC_STATIC(QCOLLATOR_LOCALE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QCollator *obj = (QCollator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -208,8 +204,7 @@ HB_FUNC_STATIC(QCOLLATOR_CASESENSITIVITY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QCollator *obj = (QCollator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -234,8 +229,7 @@ HB_FUNC_STATIC(QCOLLATOR_SETCASESENSITIVITY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QCollator *obj = (QCollator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -262,8 +256,7 @@ HB_FUNC_STATIC(QCOLLATOR_SETNUMERICMODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QCollator *obj = (QCollator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -290,8 +283,7 @@ HB_FUNC_STATIC(QCOLLATOR_NUMERICMODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QCollator *obj = (QCollator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -316,8 +308,7 @@ HB_FUNC_STATIC(QCOLLATOR_SETIGNOREPUNCTUATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QCollator *obj = (QCollator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -344,8 +335,7 @@ HB_FUNC_STATIC(QCOLLATOR_IGNOREPUNCTUATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QCollator *obj = (QCollator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -370,8 +360,7 @@ HB_FUNC_STATIC(QCOLLATOR_SORTKEY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QCollator *obj = (QCollator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {

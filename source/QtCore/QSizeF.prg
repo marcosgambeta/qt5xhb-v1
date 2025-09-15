@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QSIZEF_DELETE)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QSIZEF_ISNULL)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -149,8 +147,7 @@ HB_FUNC_STATIC(QSIZEF_ISEMPTY)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -173,8 +170,7 @@ HB_FUNC_STATIC(QSIZEF_ISVALID)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -197,8 +193,7 @@ HB_FUNC_STATIC(QSIZEF_WIDTH)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -221,8 +216,7 @@ HB_FUNC_STATIC(QSIZEF_HEIGHT)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -245,8 +239,7 @@ HB_FUNC_STATIC(QSIZEF_SETWIDTH)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -271,8 +264,7 @@ HB_FUNC_STATIC(QSIZEF_SETHEIGHT)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -297,8 +289,7 @@ HB_FUNC_STATIC(QSIZEF_TRANSPOSE)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -323,8 +314,7 @@ HB_FUNC_STATIC(QSIZEF_TRANSPOSED)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -418,8 +408,7 @@ HB_FUNC_STATIC(QSIZEF_EXPANDEDTO)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
@@ -443,8 +432,7 @@ HB_FUNC_STATIC(QSIZEF_BOUNDEDTO)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
@@ -468,8 +456,7 @@ HB_FUNC_STATIC(QSIZEF_TOSIZE)
 {
   QSizeF *obj = (QSizeF *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

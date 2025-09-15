@@ -52,8 +52,7 @@ void QAnimationDriverSlots_connect_signal(const QString &signal, const QString &
 {
   QAnimationDriver *obj = (QAnimationDriver *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAnimationDriverSlots *s = QCoreApplication::instance()->findChild<QAnimationDriverSlots *>();
 
     if (s == NULL)

@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QLOCKFILE_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QLockFile *obj = (QLockFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QLOCKFILE_LOCK)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QLockFile *obj = (QLockFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(QLOCKFILE_TRYLOCK)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QLockFile *obj = (QLockFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -162,8 +159,7 @@ HB_FUNC_STATIC(QLOCKFILE_UNLOCK)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QLockFile *obj = (QLockFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -190,8 +186,7 @@ HB_FUNC_STATIC(QLOCKFILE_SETSTALELOCKTIME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QLockFile *obj = (QLockFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -218,8 +213,7 @@ HB_FUNC_STATIC(QLOCKFILE_STALELOCKTIME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QLockFile *obj = (QLockFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -244,8 +238,7 @@ HB_FUNC_STATIC(QLOCKFILE_ISLOCKED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QLockFile *obj = (QLockFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -270,8 +263,7 @@ HB_FUNC_STATIC(QLOCKFILE_REMOVESTALELOCKFILE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QLockFile *obj = (QLockFile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

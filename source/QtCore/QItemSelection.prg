@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QITEMSELECTION_DELETE)
 {
   QItemSelection *obj = (QItemSelection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QITEMSELECTION_SELECT)
 {
   QItemSelection *obj = (QItemSelection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2))
     {
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QITEMSELECTION_CONTAINS)
 {
   QItemSelection *obj = (QItemSelection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -158,8 +155,7 @@ HB_FUNC_STATIC(QITEMSELECTION_INDEXES)
 {
   QItemSelection *obj = (QItemSelection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -208,8 +204,7 @@ HB_FUNC_STATIC(QITEMSELECTION_MERGE)
 {
   QItemSelection *obj = (QItemSelection *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2))
     {

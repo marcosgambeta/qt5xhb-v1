@@ -36,8 +36,7 @@ void QTimerSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QTimerSlots *s = QCoreApplication::instance()->findChild<QTimerSlots *>();
 
     if (s == NULL)

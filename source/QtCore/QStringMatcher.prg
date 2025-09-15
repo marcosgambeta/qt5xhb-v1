@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_DELETE)
 {
   QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -125,8 +124,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETPATTERN)
 {
   QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -151,8 +149,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETCASESENSITIVITY)
 {
   QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -209,8 +206,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_PATTERN)
 {
   QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -233,8 +229,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_CASESENSITIVITY)
 {
   QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -92,8 +92,7 @@ void QSignalMapperSlots_connect_signal(const QString &signal, const QString &slo
 {
   QSignalMapper *obj = (QSignalMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSignalMapperSlots *s = QCoreApplication::instance()->findChild<QSignalMapperSlots *>();
 
     if (s == NULL)

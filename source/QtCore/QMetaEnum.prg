@@ -91,8 +91,7 @@ HB_FUNC_STATIC(QMETAENUM_DELETE)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QMETAENUM_NAME)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QMETAENUM_ISFLAG)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -158,8 +155,7 @@ HB_FUNC_STATIC(QMETAENUM_KEYCOUNT)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -182,8 +178,7 @@ HB_FUNC_STATIC(QMETAENUM_KEY)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -206,8 +201,7 @@ HB_FUNC_STATIC(QMETAENUM_VALUE)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -230,8 +224,7 @@ HB_FUNC_STATIC(QMETAENUM_SCOPE)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -254,8 +247,7 @@ HB_FUNC_STATIC(QMETAENUM_KEYTOVALUE)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -278,8 +270,7 @@ HB_FUNC_STATIC(QMETAENUM_VALUETOKEY)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -302,8 +293,7 @@ HB_FUNC_STATIC(QMETAENUM_KEYSTOVALUE)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -326,8 +316,7 @@ HB_FUNC_STATIC(QMETAENUM_VALUETOKEYS)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -351,8 +340,7 @@ HB_FUNC_STATIC(QMETAENUM_ENCLOSINGMETAOBJECT)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -376,8 +364,7 @@ HB_FUNC_STATIC(QMETAENUM_ISVALID)
 {
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -401,8 +388,7 @@ HB_FUNC_STATIC(QMETAENUM_ENUMNAME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -427,8 +413,7 @@ HB_FUNC_STATIC(QMETAENUM_ISSCOPED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

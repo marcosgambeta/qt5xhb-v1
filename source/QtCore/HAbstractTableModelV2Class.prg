@@ -64,8 +64,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_DELETE)
 {
   HAbstractTableModelV2 *obj = (HAbstractTableModelV2 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -85,8 +84,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETROWCOUNTCB)
 {
   HAbstractTableModelV2 *obj = (HAbstractTableModelV2 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1))
     {
@@ -111,8 +109,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB)
 {
   HAbstractTableModelV2 *obj = (HAbstractTableModelV2 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1))
     {
@@ -137,8 +134,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETDATACB)
 {
   HAbstractTableModelV2 *obj = (HAbstractTableModelV2 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1))
     {
@@ -163,8 +159,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETHEADERDATACB)
 {
   HAbstractTableModelV2 *obj = (HAbstractTableModelV2 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1))
     {
@@ -189,8 +184,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETFLAGSCB)
 {
   HAbstractTableModelV2 *obj = (HAbstractTableModelV2 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1))
     {
@@ -215,8 +209,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETSETDATACB)
 {
   HAbstractTableModelV2 *obj = (HAbstractTableModelV2 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1))
     {
@@ -265,8 +258,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_RELOADDATA)
 {
   HAbstractTableModelV2 *obj = (HAbstractTableModelV2 *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
