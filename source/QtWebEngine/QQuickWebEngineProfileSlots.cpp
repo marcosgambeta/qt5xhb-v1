@@ -196,8 +196,7 @@ void QQuickWebEngineProfileSlots_connect_signal(const QString &signal, const QSt
 {
   QQuickWebEngineProfile *obj = (QQuickWebEngineProfile *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QQuickWebEngineProfileSlots *s = QCoreApplication::instance()->findChild<QQuickWebEngineProfileSlots *>();
 
     if (s == NULL)
