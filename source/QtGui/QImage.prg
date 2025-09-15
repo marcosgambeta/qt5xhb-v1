@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
     QImage *obj = new QImage(PINT(1), PINT(2), (QImage::Format)hb_parni(3));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
   {
     HB_FUNC_EXEC(QIMAGE_NEW9);
   }
@@ -859,7 +859,7 @@ HB_FUNC_STATIC(QIMAGE_ISNULL)
 
 HB_FUNC_STATIC(QIMAGE_LOAD)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
   {
     /*
     bool load( const QString &fileName, const char * format = 0 )
@@ -891,7 +891,7 @@ HB_FUNC_STATIC(QIMAGE_LOAD)
 
 HB_FUNC_STATIC(QIMAGE_LOADFROMDATA)
 {
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISCHAR(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISCHARORNIL(3))
   {
     /*
     bool loadFromData( const uchar * data, int len, const char * format = 0 )
@@ -903,7 +903,7 @@ HB_FUNC_STATIC(QIMAGE_LOADFROMDATA)
       RBOOL(obj->loadFromData(PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3, 0)));
     }
   }
-  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISCHARORNIL(2))
   {
     /*
     bool loadFromData( const QByteArray &data, const char * format = 0 )
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC(QIMAGE_RGBSWAPPED)
 
 HB_FUNC_STATIC(QIMAGE_SAVE)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
   {
     /*
     bool save( const QString &fileName, const char * format = 0, int quality = -1 ) const
@@ -1099,7 +1099,7 @@ HB_FUNC_STATIC(QIMAGE_SAVE)
       RBOOL(obj->save(PQSTRING(1), OPCONSTCHAR(2, 0), OPINT(3, -1)));
     }
   }
-  else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
   {
     /*
     bool save( QIODevice * device, const char * format = 0, int quality = -1 ) const
@@ -1475,7 +1475,7 @@ HB_FUNC_STATIC(QIMAGE_TEXT)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
 #endif
       RQSTRING(obj->text(OPQSTRING(1, QString())));
@@ -1609,7 +1609,7 @@ HB_FUNC_STATIC(QIMAGE_WIDTH)
 
 HB_FUNC_STATIC(QIMAGE_FROMDATA)
 {
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISCHAR(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISCHARORNIL(3))
   {
     /*
     static QImage fromData( const uchar * data, int size, const char * format = 0 )
@@ -1617,7 +1617,7 @@ HB_FUNC_STATIC(QIMAGE_FROMDATA)
     QImage *ptr = new QImage(QImage::fromData(PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3, 0)));
     Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
   }
-  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISCHARORNIL(2))
   {
     /*
     static QImage fromData( const QByteArray &data, const char * format = 0 )

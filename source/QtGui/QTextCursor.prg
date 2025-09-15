@@ -1562,7 +1562,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISCHARORNIL(2))
   {
     /*
     void insertImage( const QImage &image, const QString &name = QString() )

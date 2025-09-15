@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
     QBitmap *obj = new QBitmap(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
   {
     /*
     QBitmap( const QString &fileName, const char * format = 0 )

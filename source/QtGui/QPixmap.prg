@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QPIXMAP_NEW)
     QPixmap *obj = new QPixmap(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
   {
     /*
     QPixmap( const QString &fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
@@ -775,7 +775,7 @@ HB_FUNC_STATIC(QPIXMAP_LOAD)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
     {
 #endif
       RBOOL(obj->load(PQSTRING(1), OPCONSTCHAR(2, 0),
@@ -792,7 +792,7 @@ HB_FUNC_STATIC(QPIXMAP_LOAD)
 
 HB_FUNC_STATIC(QPIXMAP_LOADFROMDATA)
 {
-  if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) && ISNUMORNIL(4))
+  if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISCHARORNIL(3) && ISNUMORNIL(4))
   {
     /*
     bool loadFromData( const uchar * buf, uint len, const char * format = 0, Qt::ImageConversionFlags flags =
@@ -807,7 +807,7 @@ HB_FUNC_STATIC(QPIXMAP_LOADFROMDATA)
                                           : (Qt::ImageConversionFlags)hb_parni(4)));
     }
   }
-  else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
   {
     /*
     bool loadFromData( const QByteArray &data, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor
@@ -830,7 +830,7 @@ HB_FUNC_STATIC(QPIXMAP_LOADFROMDATA)
 
 HB_FUNC_STATIC(QPIXMAP_SAVE)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
   {
     /*
     bool save( const QString &fileName, const char * format = 0, int quality = -1 ) const
@@ -842,7 +842,7 @@ HB_FUNC_STATIC(QPIXMAP_SAVE)
       RBOOL(obj->save(PQSTRING(1), OPCONSTCHAR(2, 0), OPINT(3, -1)));
     }
   }
-  else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
   {
     /*
     bool save( QIODevice * device, const char * format = 0, int quality = -1 ) const
