@@ -157,8 +157,7 @@ void QWebEngineViewSlots_connect_signal(const QString &signal, const QString &sl
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QWebEngineView *obj = (QWebEngineView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QWebEngineViewSlots *s = QCoreApplication::instance()->findChild<QWebEngineViewSlots *>();
 
     if (s == NULL)
