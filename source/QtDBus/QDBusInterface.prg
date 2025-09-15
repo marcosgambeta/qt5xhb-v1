@@ -57,7 +57,7 @@ RETURN
     */
 HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
 {
-  if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
+  if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3) &&
       (ISQDBUSCONNECTION(4) || HB_ISNIL(4)) && (ISQOBJECT(5) || HB_ISNIL(5)))
   {
     QDBusInterface *obj = new QDBusInterface(
