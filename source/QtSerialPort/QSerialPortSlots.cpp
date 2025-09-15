@@ -223,8 +223,7 @@ void QSerialPortSlots_connect_signal(const QString &signal, const QString &slot)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSerialPort *obj = (QSerialPort *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSerialPortSlots *s = QCoreApplication::instance()->findChild<QSerialPortSlots *>();
 
     if (s == NULL)
