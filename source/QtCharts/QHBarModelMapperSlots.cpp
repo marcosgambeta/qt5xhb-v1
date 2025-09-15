@@ -129,8 +129,7 @@ void QHBarModelMapperSlots_connect_signal(const QString &signal, const QString &
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QHBarModelMapper *obj = (QHBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QHBarModelMapperSlots *s = QCoreApplication::instance()->findChild<QHBarModelMapperSlots *>();
 
     if (s == NULL)

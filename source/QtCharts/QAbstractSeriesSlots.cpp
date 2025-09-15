@@ -93,8 +93,7 @@ void QAbstractSeriesSlots_connect_signal(const QString &signal, const QString &s
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractSeriesSlots *s = QCoreApplication::instance()->findChild<QAbstractSeriesSlots *>();
 
     if (s == NULL)

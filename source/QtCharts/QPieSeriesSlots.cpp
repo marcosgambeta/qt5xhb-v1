@@ -241,8 +241,7 @@ void QPieSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QPieSeriesSlots *s = QCoreApplication::instance()->findChild<QPieSeriesSlots *>();
 
     if (s == NULL)

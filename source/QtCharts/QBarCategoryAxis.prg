@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -124,8 +123,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_CATEGORIES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -150,8 +148,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETCATEGORIES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -178,8 +175,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_COUNT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -204,8 +200,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_MIN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -230,8 +225,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMIN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -258,8 +252,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_MAX)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -284,8 +277,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETMAX)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -312,8 +304,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_TYPE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -378,8 +369,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_REMOVE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -406,8 +396,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_INSERT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -434,8 +423,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_REPLACE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -462,8 +450,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_CLEAR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -490,8 +477,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_AT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -516,8 +502,7 @@ HB_FUNC_STATIC(QBARCATEGORYAXIS_SETRANGE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {

@@ -403,8 +403,7 @@ void QCandlestickSeriesSlots_connect_signal(const QString &signal, const QString
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QCandlestickSeries *obj = (QCandlestickSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QCandlestickSeriesSlots *s = QCoreApplication::instance()->findChild<QCandlestickSeriesSlots *>();
 
     if (s == NULL)

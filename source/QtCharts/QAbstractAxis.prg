@@ -149,8 +149,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -172,8 +171,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -198,8 +196,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -226,8 +223,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISLINEVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -252,8 +248,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLINEVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -280,8 +275,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LINEPEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -307,8 +301,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLINEPEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPEN(1))
     {
@@ -335,8 +328,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LINEPENCOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -362,8 +354,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLINEPENCOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
@@ -390,8 +381,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISGRIDLINEVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -416,8 +406,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINEVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -444,8 +433,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINEPEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -471,8 +459,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINEPEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPEN(1))
     {
@@ -499,8 +486,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISMINORGRIDLINEVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -525,8 +511,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINEVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -553,8 +538,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINEPEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -580,8 +564,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINEPEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPEN(1))
     {
@@ -608,8 +591,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINECOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -635,8 +617,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINECOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
@@ -663,8 +644,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINECOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -690,8 +670,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINECOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
@@ -718,8 +697,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -744,8 +722,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -772,8 +749,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSBRUSH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -799,8 +775,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSBRUSH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
@@ -827,8 +802,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSFONT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -854,8 +828,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSFONT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
@@ -882,8 +855,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSANGLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -908,8 +880,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSANGLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -936,8 +907,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSCOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -963,8 +933,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSCOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
@@ -991,8 +960,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISTITLEVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1017,8 +985,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -1045,8 +1012,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLEBRUSH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1072,8 +1038,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEBRUSH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
@@ -1100,8 +1065,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLEFONT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1127,8 +1091,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEFONT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
@@ -1155,8 +1118,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLETEXT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1181,8 +1143,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLETEXT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1209,8 +1170,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1235,8 +1195,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -1263,8 +1222,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESPEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1290,8 +1248,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESPEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPEN(1))
     {
@@ -1318,8 +1275,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBRUSH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1345,8 +1301,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESBRUSH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
@@ -1373,8 +1328,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESCOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1400,8 +1354,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESCOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
@@ -1428,8 +1381,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBORDERCOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1455,8 +1407,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESBORDERCOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
@@ -1483,8 +1434,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ORIENTATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1509,8 +1459,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ALIGNMENT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1535,8 +1484,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISREVERSE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1561,8 +1509,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETREVERSE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -1589,8 +1536,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TYPE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1615,8 +1561,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHOW)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1643,8 +1588,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_HIDE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1671,8 +1615,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMIN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
@@ -1699,8 +1642,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMAX)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
@@ -1727,8 +1669,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETRANGE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQVARIANT(1) && ISQVARIANT(2))
     {

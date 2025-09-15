@@ -41,8 +41,7 @@ void QChartSlots_connect_signal(const QString &signal, const QString &slot)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QChart *obj = (QChart *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QChartSlots *s = QCoreApplication::instance()->findChild<QChartSlots *>();
 
     if (s == NULL)

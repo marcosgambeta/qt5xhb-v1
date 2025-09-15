@@ -185,8 +185,7 @@ void QLegendMarkerSlots_connect_signal(const QString &signal, const QString &slo
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QLegendMarkerSlots *s = QCoreApplication::instance()->findChild<QLegendMarkerSlots *>();
 
     if (s == NULL)

@@ -337,8 +337,7 @@ void QBarSetSlots_connect_signal(const QString &signal, const QString &slot)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarSet *obj = (QBarSet *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QBarSetSlots *s = QCoreApplication::instance()->findChild<QBarSetSlots *>();
 
     if (s == NULL)

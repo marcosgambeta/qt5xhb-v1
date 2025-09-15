@@ -101,8 +101,7 @@ void QScatterSeriesSlots_connect_signal(const QString &signal, const QString &sl
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QScatterSeries *obj = (QScatterSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QScatterSeriesSlots *s = QCoreApplication::instance()->findChild<QScatterSeriesSlots *>();
 
     if (s == NULL)

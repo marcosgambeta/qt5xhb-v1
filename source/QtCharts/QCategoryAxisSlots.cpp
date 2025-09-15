@@ -59,8 +59,7 @@ void QCategoryAxisSlots_connect_signal(const QString &signal, const QString &slo
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QCategoryAxis *obj = (QCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QCategoryAxisSlots *s = QCoreApplication::instance()->findChild<QCategoryAxisSlots *>();
 
     if (s == NULL)

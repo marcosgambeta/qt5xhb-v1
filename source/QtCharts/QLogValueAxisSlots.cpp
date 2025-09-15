@@ -163,8 +163,7 @@ void QLogValueAxisSlots_connect_signal(const QString &signal, const QString &slo
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QLogValueAxis *obj = (QLogValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QLogValueAxisSlots *s = QCoreApplication::instance()->findChild<QLogValueAxisSlots *>();
 
     if (s == NULL)

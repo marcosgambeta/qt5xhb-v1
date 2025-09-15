@@ -129,8 +129,7 @@ void QVBoxPlotModelMapperSlots_connect_signal(const QString &signal, const QStri
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QVBoxPlotModelMapper *obj = (QVBoxPlotModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QVBoxPlotModelMapperSlots *s = QCoreApplication::instance()->findChild<QVBoxPlotModelMapperSlots *>();
 
     if (s == NULL)

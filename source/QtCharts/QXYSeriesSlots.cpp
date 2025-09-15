@@ -363,8 +363,7 @@ void QXYSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QXYSeriesSlots *s = QCoreApplication::instance()->findChild<QXYSeriesSlots *>();
 
     if (s == NULL)

@@ -112,8 +112,7 @@ HB_FUNC_STATIC(QXYSERIES_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTSVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -161,8 +159,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTSVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -189,8 +186,7 @@ HB_FUNC_STATIC(QXYSERIES_COLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -216,8 +212,7 @@ HB_FUNC_STATIC(QXYSERIES_SETCOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
@@ -244,8 +239,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSFORMAT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -270,8 +264,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFORMAT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -298,8 +291,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -324,8 +316,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSVISIBLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -352,8 +343,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSFONT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -379,8 +369,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFONT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
@@ -407,8 +396,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSCOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -434,8 +422,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSCOLOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
@@ -462,8 +449,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSCLIPPING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -488,8 +474,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSCLIPPING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -753,8 +738,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVEPOINTS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -781,8 +765,7 @@ HB_FUNC_STATIC(QXYSERIES_INSERT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2))
     {
@@ -809,8 +792,7 @@ HB_FUNC_STATIC(QXYSERIES_CLEAR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -837,8 +819,7 @@ HB_FUNC_STATIC(QXYSERIES_COUNT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -863,8 +844,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -915,8 +895,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTSVECTOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -967,8 +946,7 @@ HB_FUNC_STATIC(QXYSERIES_AT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -994,8 +972,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPEN(1))
     {
@@ -1022,8 +999,7 @@ HB_FUNC_STATIC(QXYSERIES_PEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1049,8 +1025,7 @@ HB_FUNC_STATIC(QXYSERIES_SETBRUSH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBRUSH(1))
     {
@@ -1077,8 +1052,7 @@ HB_FUNC_STATIC(QXYSERIES_BRUSH)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

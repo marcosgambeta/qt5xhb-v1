@@ -119,8 +119,7 @@ void QBarCategoryAxisSlots_connect_signal(const QString &signal, const QString &
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QBarCategoryAxisSlots *s = QCoreApplication::instance()->findChild<QBarCategoryAxisSlots *>();
 
     if (s == NULL)
