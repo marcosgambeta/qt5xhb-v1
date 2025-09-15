@@ -38,8 +38,7 @@ void QGraphicsVideoItemSlots_connect_signal(const QString &signal, const QString
 {
   QGraphicsVideoItem *obj = (QGraphicsVideoItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGraphicsVideoItemSlots *s = QCoreApplication::instance()->findChild<QGraphicsVideoItemSlots *>();
 
     if (s == NULL)

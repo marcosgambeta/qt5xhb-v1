@@ -110,8 +110,7 @@ void QVideoWidgetSlots_connect_signal(const QString &signal, const QString &slot
 {
   QVideoWidget *obj = (QVideoWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QVideoWidgetSlots *s = QCoreApplication::instance()->findChild<QVideoWidgetSlots *>();
 
     if (s == NULL)
