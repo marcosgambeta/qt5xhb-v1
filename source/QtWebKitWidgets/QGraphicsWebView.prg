@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_DELETE)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -145,8 +144,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TITLE)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -169,8 +167,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ICON)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -194,8 +191,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ZOOMFACTOR)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -218,8 +214,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETZOOMFACTOR)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -244,8 +239,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_URL)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -269,8 +263,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETURL)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -295,8 +288,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ISMODIFIED)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -319,8 +311,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RESIZESTOCONTENTS)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -343,8 +334,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -369,8 +359,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -393,8 +382,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -419,8 +407,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RENDERHINTS)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -443,8 +430,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRENDERHINTS)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -469,8 +455,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FINDTEXT)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2))
     {
@@ -493,8 +478,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_HISTORY)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -558,8 +542,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGE)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -583,8 +566,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGEACTION)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -608,8 +590,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETCONTENT)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ISCHARORNIL(2) && (ISQURL(3) || HB_ISNIL(3)))
     {
@@ -634,8 +615,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETHTML)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQURL(2) || HB_ISNIL(2)))
     {
@@ -660,8 +640,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETPAGE)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWEBPAGE(1))
     {
@@ -686,8 +665,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTINGS)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -711,8 +689,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TRIGGERPAGEACTION)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
@@ -737,8 +714,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_BACK)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -763,8 +739,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FORWARD)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -789,8 +764,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RELOAD)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -815,8 +789,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_STOP)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -841,8 +814,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETGEOMETRY)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
@@ -867,8 +839,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_UPDATEGEOMETRY)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -893,8 +864,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAINT)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
@@ -919,8 +889,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_EVENT)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQEVENT(1))
     {
@@ -943,8 +912,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SIZEHINT)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZEF(2))
     {
@@ -968,8 +936,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_INPUTMETHODQUERY)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -993,8 +960,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRENDERHINT)
 {
   QGraphicsWebView *obj = (QGraphicsWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {

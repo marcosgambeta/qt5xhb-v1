@@ -176,8 +176,7 @@ void QWebViewSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QWebView *obj = (QWebView *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QWebViewSlots *s = QCoreApplication::instance()->findChild<QWebViewSlots *>();
 
     if (s == NULL)

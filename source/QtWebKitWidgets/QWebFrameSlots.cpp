@@ -172,8 +172,7 @@ void QWebFrameSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QWebFrame *obj = (QWebFrame *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QWebFrameSlots *s = QCoreApplication::instance()->findChild<QWebFrameSlots *>();
 
     if (s == NULL)

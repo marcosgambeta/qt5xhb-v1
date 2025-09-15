@@ -517,8 +517,7 @@ void QWebPageSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QWebPage *obj = (QWebPage *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QWebPageSlots *s = QCoreApplication::instance()->findChild<QWebPageSlots *>();
 
     if (s == NULL)
