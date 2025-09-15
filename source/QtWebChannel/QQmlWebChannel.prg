@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QQMLWEBCHANNEL_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QQmlWebChannel *obj = (QQmlWebChannel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QQMLWEBCHANNEL_CONNECTTO)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QQmlWebChannel *obj = (QQmlWebChannel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QQMLWEBCHANNEL_DISCONNECTFROM)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QQmlWebChannel *obj = (QQmlWebChannel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {

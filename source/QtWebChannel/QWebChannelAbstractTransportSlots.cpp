@@ -44,8 +44,7 @@ void QWebChannelAbstractTransportSlots_connect_signal(const QString &signal, con
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QWebChannelAbstractTransport *obj = (QWebChannelAbstractTransport *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QWebChannelAbstractTransportSlots *s =
         QCoreApplication::instance()->findChild<QWebChannelAbstractTransportSlots *>();
 

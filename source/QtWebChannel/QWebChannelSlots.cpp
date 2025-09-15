@@ -41,8 +41,7 @@ void QWebChannelSlots_connect_signal(const QString &signal, const QString &slot)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QWebChannel *obj = (QWebChannel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QWebChannelSlots *s = QCoreApplication::instance()->findChild<QWebChannelSlots *>();
 
     if (s == NULL)
