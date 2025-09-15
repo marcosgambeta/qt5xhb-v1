@@ -56,8 +56,7 @@ void QQmlComponentSlots_connect_signal(const QString &signal, const QString &slo
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QQmlComponentSlots *s = QCoreApplication::instance()->findChild<QQmlComponentSlots *>();
 
     if (s == NULL)

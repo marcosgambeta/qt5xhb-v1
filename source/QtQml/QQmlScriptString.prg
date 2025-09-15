@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_DELETE)
 {
   QQmlScriptString *obj = (QQmlScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_BOOLEANLITERAL)
 {
   QQmlScriptString *obj = (QQmlScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISEMPTY)
 {
   QQmlScriptString *obj = (QQmlScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -158,8 +155,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISNULLLITERAL)
 {
   QQmlScriptString *obj = (QQmlScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -182,8 +178,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL)
 {
   QQmlScriptString *obj = (QQmlScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -206,8 +201,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_NUMBERLITERAL)
 {
   QQmlScriptString *obj = (QQmlScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -232,8 +226,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_STRINGLITERAL)
 {
   QQmlScriptString *obj = (QQmlScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

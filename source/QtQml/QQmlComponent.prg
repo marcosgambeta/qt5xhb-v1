@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_DELETE)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -145,8 +144,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_BEGINCREATE)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQQMLCONTEXT(1))
     {
@@ -170,8 +168,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_COMPLETECREATE)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -232,8 +229,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_CREATIONCONTEXT)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -257,8 +253,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_ISERROR)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -281,8 +276,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_ISLOADING)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -305,8 +299,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_ISNULL)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -329,8 +322,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_ISREADY)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -353,8 +345,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_PROGRESS)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -377,8 +368,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_STATUS)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -401,8 +391,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_URL)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -462,8 +451,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_SETDATA)
 {
   QQmlComponent *obj = (QQmlComponent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2))
     {

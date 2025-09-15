@@ -43,8 +43,7 @@ void QQmlApplicationEngineSlots_connect_signal(const QString &signal, const QStr
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QQmlApplicationEngine *obj = (QQmlApplicationEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QQmlApplicationEngineSlots *s = QCoreApplication::instance()->findChild<QQmlApplicationEngineSlots *>();
 
     if (s == NULL)

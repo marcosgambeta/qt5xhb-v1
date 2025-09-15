@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_DELETE)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_CLEARERROR)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -158,8 +156,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_COLUMNNUMBER)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -182,8 +179,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_CONTEXT)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -207,8 +203,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_ENGINE)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -232,8 +227,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_ERROR)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -257,8 +251,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_EVALUATE)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -284,8 +277,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_EXPRESSION)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -308,8 +300,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_HASERROR)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -332,8 +323,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_LINENUMBER)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -356,8 +346,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NOTIFYONVALUECHANGED)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -380,8 +369,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SCOPEOBJECT)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -405,8 +393,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETEXPRESSION)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -431,8 +418,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETNOTIFYONVALUECHANGED)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -457,8 +443,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETSOURCELOCATION)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3))
     {
@@ -483,8 +468,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SOURCEFILE)
 {
   QQmlExpression *obj = (QQmlExpression *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

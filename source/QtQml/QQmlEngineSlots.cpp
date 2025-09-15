@@ -36,8 +36,7 @@ void QQmlEngineSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QQmlEngine *obj = (QQmlEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QQmlEngineSlots *s = QCoreApplication::instance()->findChild<QQmlEngineSlots *>();
 
     if (s == NULL)
