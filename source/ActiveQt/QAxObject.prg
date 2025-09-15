@@ -106,8 +106,7 @@ HB_FUNC_STATIC(QAXOBJECT_DELETE)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QAXOBJECT_DOVERB)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -151,8 +149,7 @@ HB_FUNC_STATIC(QAXOBJECT_ASVARIANT)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -176,8 +173,7 @@ HB_FUNC_STATIC(QAXOBJECT_CLEAR)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -202,8 +198,7 @@ HB_FUNC_STATIC(QAXOBJECT_CONTROL)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -226,8 +221,7 @@ HB_FUNC_STATIC(QAXOBJECT_DISABLECLASSINFO)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -252,8 +246,7 @@ HB_FUNC_STATIC(QAXOBJECT_DISABLEEVENTSINK)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -278,8 +271,7 @@ HB_FUNC_STATIC(QAXOBJECT_DISABLEMETAOBJECT)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -350,8 +342,7 @@ HB_FUNC_STATIC(QAXOBJECT_GENERATEDOCUMENTATION)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -374,8 +365,7 @@ HB_FUNC_STATIC(QAXOBJECT_ISNULL)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -398,8 +388,7 @@ HB_FUNC_STATIC(QAXOBJECT_PROPERTYWRITABLE)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -468,8 +457,7 @@ HB_FUNC_STATIC(QAXOBJECT_SETCONTROL)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -492,8 +480,7 @@ HB_FUNC_STATIC(QAXOBJECT_SETPROPERTYWRITABLE)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2))
     {
@@ -518,8 +505,7 @@ HB_FUNC_STATIC(QAXOBJECT_VERBS)
 {
   QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

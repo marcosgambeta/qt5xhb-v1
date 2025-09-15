@@ -84,8 +84,7 @@ void QAxWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QAxWidget *obj = (QAxWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAxWidgetSlots *s = QCoreApplication::instance()->findChild<QAxWidgetSlots *>();
 
     if (s == NULL)
