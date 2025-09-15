@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_DELETE)
 {
   QAudioBuffer *obj = (QAudioBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -130,8 +129,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_BYTECOUNT)
 {
   QAudioBuffer *obj = (QAudioBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_DATA)
 {
   QAudioBuffer *obj = (QAudioBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -178,8 +175,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_DURATION)
 {
   QAudioBuffer *obj = (QAudioBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -202,8 +198,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_FORMAT)
 {
   QAudioBuffer *obj = (QAudioBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -227,8 +222,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_FRAMECOUNT)
 {
   QAudioBuffer *obj = (QAudioBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -251,8 +245,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_ISVALID)
 {
   QAudioBuffer *obj = (QAudioBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -275,8 +268,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_SAMPLECOUNT)
 {
   QAudioBuffer *obj = (QAudioBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -299,8 +291,7 @@ HB_FUNC_STATIC(QAUDIOBUFFER_STARTTIME)
 {
   QAudioBuffer *obj = (QAudioBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

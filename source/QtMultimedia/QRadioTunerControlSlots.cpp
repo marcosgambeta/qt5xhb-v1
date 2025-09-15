@@ -220,8 +220,7 @@ void QRadioTunerControlSlots_connect_signal(const QString &signal, const QString
 {
   QRadioTunerControl *obj = (QRadioTunerControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QRadioTunerControlSlots *s = QCoreApplication::instance()->findChild<QRadioTunerControlSlots *>();
 
     if (s == NULL)

@@ -146,8 +146,7 @@ void QRadioDataControlSlots_connect_signal(const QString &signal, const QString 
 {
   QRadioDataControl *obj = (QRadioDataControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QRadioDataControlSlots *s = QCoreApplication::instance()->findChild<QRadioDataControlSlots *>();
 
     if (s == NULL)

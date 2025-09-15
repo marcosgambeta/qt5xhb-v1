@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QAUDIODECODER_DELETE)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -123,8 +122,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SOURCEFILENAME)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -147,8 +145,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEFILENAME)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -173,8 +170,7 @@ HB_FUNC_STATIC(QAUDIODECODER_STATE)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -197,8 +193,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ERRORSTRING)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -221,8 +216,7 @@ HB_FUNC_STATIC(QAUDIODECODER_BUFFERAVAILABLE)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -245,8 +239,7 @@ HB_FUNC_STATIC(QAUDIODECODER_AUDIOFORMAT)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -270,8 +263,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETAUDIOFORMAT)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
     {
@@ -296,8 +288,7 @@ HB_FUNC_STATIC(QAUDIODECODER_DURATION)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -320,8 +311,7 @@ HB_FUNC_STATIC(QAUDIODECODER_ERROR)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -344,8 +334,7 @@ HB_FUNC_STATIC(QAUDIODECODER_POSITION)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -368,8 +357,7 @@ HB_FUNC_STATIC(QAUDIODECODER_READ)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -393,8 +381,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SOURCEDEVICE)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -418,8 +405,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEDEVICE)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
@@ -444,8 +430,7 @@ HB_FUNC_STATIC(QAUDIODECODER_START)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -470,8 +455,7 @@ HB_FUNC_STATIC(QAUDIODECODER_STOP)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -515,8 +499,7 @@ HB_FUNC_STATIC(QAUDIODECODER_BIND)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {
@@ -539,8 +522,7 @@ HB_FUNC_STATIC(QAUDIODECODER_UNBIND)
 {
   QAudioDecoder *obj = (QAudioDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {

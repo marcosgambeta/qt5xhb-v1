@@ -169,8 +169,7 @@ void QCameraSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QCamera *obj = (QCamera *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QCameraSlots *s = QCoreApplication::instance()->findChild<QCameraSlots *>();
 
     if (s == NULL)

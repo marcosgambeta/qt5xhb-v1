@@ -54,8 +54,7 @@ void QAudioRecorderSlots_connect_signal(const QString &signal, const QString &sl
 {
   QAudioRecorder *obj = (QAudioRecorder *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAudioRecorderSlots *s = QCoreApplication::instance()->findChild<QAudioRecorderSlots *>();
 
     if (s == NULL)

@@ -38,8 +38,7 @@ void QMediaNetworkAccessControlSlots_connect_signal(const QString &signal, const
 {
   QMediaNetworkAccessControl *obj = (QMediaNetworkAccessControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMediaNetworkAccessControlSlots *s = QCoreApplication::instance()->findChild<QMediaNetworkAccessControlSlots *>();
 
     if (s == NULL)

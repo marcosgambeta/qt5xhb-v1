@@ -148,8 +148,7 @@ void QMediaRecorderControlSlots_connect_signal(const QString &signal, const QStr
 {
   QMediaRecorderControl *obj = (QMediaRecorderControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMediaRecorderControlSlots *s = QCoreApplication::instance()->findChild<QMediaRecorderControlSlots *>();
 
     if (s == NULL)

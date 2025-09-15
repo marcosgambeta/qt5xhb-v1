@@ -72,8 +72,7 @@ void QMediaGaplessPlaybackControlSlots_connect_signal(const QString &signal, con
 {
   QMediaGaplessPlaybackControl *obj = (QMediaGaplessPlaybackControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMediaGaplessPlaybackControlSlots *s =
         QCoreApplication::instance()->findChild<QMediaGaplessPlaybackControlSlots *>();
 

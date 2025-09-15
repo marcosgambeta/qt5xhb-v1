@@ -59,8 +59,7 @@ HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_DELETE)
 {
   QCameraCaptureDestinationControl *obj = (QCameraCaptureDestinationControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -80,8 +79,7 @@ HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION)
 {
   QCameraCaptureDestinationControl *obj = (QCameraCaptureDestinationControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -104,8 +102,7 @@ HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED)
 {
   QCameraCaptureDestinationControl *obj = (QCameraCaptureDestinationControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -128,8 +125,7 @@ HB_FUNC_STATIC(QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION)
 {
   QCameraCaptureDestinationControl *obj = (QCameraCaptureDestinationControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

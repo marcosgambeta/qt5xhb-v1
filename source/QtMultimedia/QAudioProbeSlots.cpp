@@ -54,8 +54,7 @@ void QAudioProbeSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QAudioProbe *obj = (QAudioProbe *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAudioProbeSlots *s = QCoreApplication::instance()->findChild<QAudioProbeSlots *>();
 
     if (s == NULL)

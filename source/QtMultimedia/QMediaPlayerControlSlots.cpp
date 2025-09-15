@@ -274,8 +274,7 @@ void QMediaPlayerControlSlots_connect_signal(const QString &signal, const QStrin
 {
   QMediaPlayerControl *obj = (QMediaPlayerControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMediaPlayerControlSlots *s = QCoreApplication::instance()->findChild<QMediaPlayerControlSlots *>();
 
     if (s == NULL)

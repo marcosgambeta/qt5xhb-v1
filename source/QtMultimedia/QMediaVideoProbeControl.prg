@@ -57,8 +57,7 @@ HB_FUNC_STATIC(QMEDIAVIDEOPROBECONTROL_DELETE)
 {
   QMediaVideoProbeControl *obj = (QMediaVideoProbeControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;

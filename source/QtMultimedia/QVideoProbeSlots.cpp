@@ -54,8 +54,7 @@ void QVideoProbeSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QVideoProbe *obj = (QVideoProbe *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QVideoProbeSlots *s = QCoreApplication::instance()->findChild<QVideoProbeSlots *>();
 
     if (s == NULL)

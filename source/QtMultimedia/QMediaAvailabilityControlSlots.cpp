@@ -38,8 +38,7 @@ void QMediaAvailabilityControlSlots_connect_signal(const QString &signal, const 
 {
   QMediaAvailabilityControl *obj = (QMediaAvailabilityControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMediaAvailabilityControlSlots *s = QCoreApplication::instance()->findChild<QMediaAvailabilityControlSlots *>();
 
     if (s == NULL)

@@ -52,8 +52,7 @@ void QMediaStreamsControlSlots_connect_signal(const QString &signal, const QStri
 {
   QMediaStreamsControl *obj = (QMediaStreamsControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMediaStreamsControlSlots *s = QCoreApplication::instance()->findChild<QMediaStreamsControlSlots *>();
 
     if (s == NULL)

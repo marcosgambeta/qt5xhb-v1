@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_DELETE)
 {
   QMediaTimeRange *obj = (QMediaTimeRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -171,8 +170,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_ADDTIMERANGE)
 {
   QMediaTimeRange *obj = (QMediaTimeRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMEDIATIMERANGE(1))
     {
@@ -197,8 +195,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_CLEAR)
 {
   QMediaTimeRange *obj = (QMediaTimeRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -223,8 +220,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_CONTAINS)
 {
   QMediaTimeRange *obj = (QMediaTimeRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -247,8 +243,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_EARLIESTTIME)
 {
   QMediaTimeRange *obj = (QMediaTimeRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -271,8 +266,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_INTERVALS)
 {
   QMediaTimeRange *obj = (QMediaTimeRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -321,8 +315,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_ISCONTINUOUS)
 {
   QMediaTimeRange *obj = (QMediaTimeRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -345,8 +338,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_ISEMPTY)
 {
   QMediaTimeRange *obj = (QMediaTimeRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -369,8 +361,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_LATESTTIME)
 {
   QMediaTimeRange *obj = (QMediaTimeRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -429,8 +420,7 @@ HB_FUNC_STATIC(QMEDIATIMERANGE_REMOVETIMERANGE)
 {
   QMediaTimeRange *obj = (QMediaTimeRange *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMEDIATIMERANGE(1))
     {

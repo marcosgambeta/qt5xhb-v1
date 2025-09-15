@@ -74,8 +74,7 @@ void QCameraExposureControlSlots_connect_signal(const QString &signal, const QSt
 {
   QCameraExposureControl *obj = (QCameraExposureControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QCameraExposureControlSlots *s = QCoreApplication::instance()->findChild<QCameraExposureControlSlots *>();
 
     if (s == NULL)

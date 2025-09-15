@@ -128,8 +128,7 @@ void QCameraZoomControlSlots_connect_signal(const QString &signal, const QString
 {
   QCameraZoomControl *obj = (QCameraZoomControl *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QCameraZoomControlSlots *s = QCoreApplication::instance()->findChild<QCameraZoomControlSlots *>();
 
     if (s == NULL)
