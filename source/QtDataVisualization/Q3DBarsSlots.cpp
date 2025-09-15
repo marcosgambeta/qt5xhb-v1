@@ -200,8 +200,7 @@ void Q3DBarsSlots_connect_signal(const QString &signal, const QString &slot)
 {
   Q3DBars *obj = (Q3DBars *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Q3DBarsSlots *s = QCoreApplication::instance()->findChild<Q3DBarsSlots *>();
 
     if (s == NULL)

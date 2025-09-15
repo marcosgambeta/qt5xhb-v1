@@ -74,8 +74,7 @@ void QLogValue3DAxisFormatterSlots_connect_signal(const QString &signal, const Q
 {
   QLogValue3DAxisFormatter *obj = (QLogValue3DAxisFormatter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QLogValue3DAxisFormatterSlots *s = QCoreApplication::instance()->findChild<QLogValue3DAxisFormatterSlots *>();
 
     if (s == NULL)

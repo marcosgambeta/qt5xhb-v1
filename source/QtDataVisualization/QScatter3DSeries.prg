@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_DELETE)
 {
   QScatter3DSeries *obj = (QScatter3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -114,8 +113,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_DATAPROXY)
 {
   QScatter3DSeries *obj = (QScatter3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -139,8 +137,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETDATAPROXY)
 {
   QScatter3DSeries *obj = (QScatter3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSCATTERDATAPROXY(1))
     {
@@ -165,8 +162,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SELECTEDITEM)
 {
   QScatter3DSeries *obj = (QScatter3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -189,8 +185,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETSELECTEDITEM)
 {
   QScatter3DSeries *obj = (QScatter3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -215,8 +210,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ITEMSIZE)
 {
   QScatter3DSeries *obj = (QScatter3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -239,8 +233,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETITEMSIZE)
 {
   QScatter3DSeries *obj = (QScatter3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {

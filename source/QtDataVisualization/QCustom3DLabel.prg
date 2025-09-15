@@ -108,8 +108,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_DELETE)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -129,8 +128,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXT)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXT)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_FONT)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -204,8 +200,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFONT)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
@@ -230,8 +225,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXTCOLOR)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -255,8 +249,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXTCOLOR)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
@@ -281,8 +274,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_BACKGROUNDCOLOR)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -306,8 +298,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDCOLOR)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
@@ -332,8 +323,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBORDERENABLED)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -356,8 +346,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBORDERENABLED)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -382,8 +371,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBACKGROUNDENABLED)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -406,8 +394,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDENABLED)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -432,8 +419,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISFACINGCAMERA)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -456,8 +442,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFACINGCAMERA)
 {
   QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {

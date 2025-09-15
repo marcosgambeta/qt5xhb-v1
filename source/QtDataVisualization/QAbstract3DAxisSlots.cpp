@@ -200,8 +200,7 @@ void QAbstract3DAxisSlots_connect_signal(const QString &signal, const QString &s
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstract3DAxisSlots *s = QCoreApplication::instance()->findChild<QAbstract3DAxisSlots *>();
 
     if (s == NULL)

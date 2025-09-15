@@ -128,8 +128,7 @@ void QHeightMapSurfaceDataProxySlots_connect_signal(const QString &signal, const
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QHeightMapSurfaceDataProxySlots *s = QCoreApplication::instance()->findChild<QHeightMapSurfaceDataProxySlots *>();
 
     if (s == NULL)

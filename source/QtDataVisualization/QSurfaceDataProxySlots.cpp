@@ -190,8 +190,7 @@ void QSurfaceDataProxySlots_connect_signal(const QString &signal, const QString 
 {
   QSurfaceDataProxy *obj = (QSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSurfaceDataProxySlots *s = QCoreApplication::instance()->findChild<QSurfaceDataProxySlots *>();
 
     if (s == NULL)

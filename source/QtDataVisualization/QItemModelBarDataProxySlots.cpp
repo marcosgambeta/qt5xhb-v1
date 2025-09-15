@@ -360,8 +360,7 @@ void QItemModelBarDataProxySlots_connect_signal(const QString &signal, const QSt
 {
   QItemModelBarDataProxy *obj = (QItemModelBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QItemModelBarDataProxySlots *s = QCoreApplication::instance()->findChild<QItemModelBarDataProxySlots *>();
 
     if (s == NULL)

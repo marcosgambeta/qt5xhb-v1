@@ -345,8 +345,7 @@ void QAbstract3DGraphSlots_connect_signal(const QString &signal, const QString &
 {
   QAbstract3DGraph *obj = (QAbstract3DGraph *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstract3DGraphSlots *s = QCoreApplication::instance()->findChild<QAbstract3DGraphSlots *>();
 
     if (s == NULL)

@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_DELETE)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -131,8 +130,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAP)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -156,8 +154,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAP)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIMAGE(1))
     {
@@ -182,8 +179,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAPFILE)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -206,8 +202,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAPFILE)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -232,8 +227,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_MINXVALUE)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -256,8 +250,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETMINXVALUE)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -282,8 +275,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_MAXXVALUE)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -306,8 +298,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETMAXXVALUE)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -332,8 +323,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_MINZVALUE)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -356,8 +346,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETMINZVALUE)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -382,8 +371,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_MAXZVALUE)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -406,8 +394,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETMAXZVALUE)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -432,8 +419,7 @@ HB_FUNC_STATIC(QHEIGHTMAPSURFACEDATAPROXY_SETVALUERANGES)
 {
   QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {

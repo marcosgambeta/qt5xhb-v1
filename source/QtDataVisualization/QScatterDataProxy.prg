@@ -92,8 +92,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_DELETE)
 {
   QScatterDataProxy *obj = (QScatterDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -113,8 +112,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMCOUNT)
 {
   QScatterDataProxy *obj = (QScatterDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -137,8 +135,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_SERIES)
 {
   QScatterDataProxy *obj = (QScatterDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -162,8 +159,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ITEMAT)
 {
   QScatterDataProxy *obj = (QScatterDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -187,8 +183,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_SETITEM)
 {
   QScatterDataProxy *obj = (QScatterDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCATTERDATAITEM(2))
     {
@@ -213,8 +208,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_ADDITEM)
 {
   QScatterDataProxy *obj = (QScatterDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSCATTERDATAITEM(1))
     {
@@ -237,8 +231,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_INSERTITEM)
 {
   QScatterDataProxy *obj = (QScatterDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCATTERDATAITEM(2))
     {
@@ -263,8 +256,7 @@ HB_FUNC_STATIC(QSCATTERDATAPROXY_REMOVEITEMS)
 {
   QScatterDataProxy *obj = (QScatterDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {

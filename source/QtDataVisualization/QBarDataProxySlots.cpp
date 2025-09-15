@@ -204,8 +204,7 @@ void QBarDataProxySlots_connect_signal(const QString &signal, const QString &slo
 {
   QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QBarDataProxySlots *s = QCoreApplication::instance()->findChild<QBarDataProxySlots *>();
 
     if (s == NULL)

@@ -74,8 +74,7 @@ void QAbstract3DInputHandlerSlots_connect_signal(const QString &signal, const QS
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstract3DInputHandlerSlots *s = QCoreApplication::instance()->findChild<QAbstract3DInputHandlerSlots *>();
 
     if (s == NULL)

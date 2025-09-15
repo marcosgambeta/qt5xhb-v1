@@ -74,8 +74,7 @@ void QScatter3DSeriesSlots_connect_signal(const QString &signal, const QString &
 {
   QScatter3DSeries *obj = (QScatter3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QScatter3DSeriesSlots *s = QCoreApplication::instance()->findChild<QScatter3DSeriesSlots *>();
 
     if (s == NULL)

@@ -36,8 +36,7 @@ void QCategory3DAxisSlots_connect_signal(const QString &signal, const QString &s
 {
   QCategory3DAxis *obj = (QCategory3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QCategory3DAxisSlots *s = QCoreApplication::instance()->findChild<QCategory3DAxisSlots *>();
 
     if (s == NULL)

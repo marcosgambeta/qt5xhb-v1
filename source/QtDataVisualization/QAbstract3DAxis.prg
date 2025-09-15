@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_DELETE)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_TITLE)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -131,8 +129,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLE)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -157,8 +154,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELS)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -181,8 +177,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELS)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -207,8 +202,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ORIENTATION)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -231,8 +225,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_TYPE)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -255,8 +248,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_MIN)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -279,8 +271,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMIN)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -305,8 +296,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_MAX)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -329,8 +319,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMAX)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -355,8 +344,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISAUTOADJUSTRANGE)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -379,8 +367,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETAUTOADJUSTRANGE)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -405,8 +392,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELAUTOROTATION)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -429,8 +415,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELAUTOROTATION)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -455,8 +440,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEVISIBLE)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -479,8 +463,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEVISIBLE)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -505,8 +488,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEFIXED)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -529,8 +511,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEFIXED)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -555,8 +536,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETRANGE)
 {
   QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {

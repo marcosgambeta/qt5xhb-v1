@@ -255,8 +255,7 @@ void QItemModelScatterDataProxySlots_connect_signal(const QString &signal, const
 {
   QItemModelScatterDataProxy *obj = (QItemModelScatterDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QItemModelScatterDataProxySlots *s = QCoreApplication::instance()->findChild<QItemModelScatterDataProxySlots *>();
 
     if (s == NULL)

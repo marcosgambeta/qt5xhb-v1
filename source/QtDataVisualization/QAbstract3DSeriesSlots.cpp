@@ -308,8 +308,7 @@ void QAbstract3DSeriesSlots_connect_signal(const QString &signal, const QString 
 {
   QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstract3DSeriesSlots *s = QCoreApplication::instance()->findChild<QAbstract3DSeriesSlots *>();
 
     if (s == NULL)

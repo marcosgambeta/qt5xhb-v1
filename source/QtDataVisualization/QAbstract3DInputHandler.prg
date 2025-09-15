@@ -74,8 +74,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_DELETE)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -95,8 +94,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTVIEW)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -119,8 +117,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTVIEW)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -145,8 +142,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -170,8 +166,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
@@ -196,8 +191,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SCENE)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -221,8 +215,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETSCENE)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQ3DSCENE(1))
     {
@@ -247,8 +240,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEDOUBLECLICKEVENT)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMOUSEEVENT(1))
     {
@@ -273,8 +265,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_TOUCHEVENT)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTOUCHEVENT(1))
     {
@@ -299,8 +290,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEPRESSEVENT)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQMOUSEEVENT(1) && ISQPOINT(2))
     {
@@ -325,8 +315,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSERELEASEEVENT)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQMOUSEEVENT(1) && ISQPOINT(2))
     {
@@ -351,8 +340,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEMOVEEVENT)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQMOUSEEVENT(1) && ISQPOINT(2))
     {
@@ -377,8 +365,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_WHEELEVENT)
 {
   QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWHEELEVENT(1))
     {
