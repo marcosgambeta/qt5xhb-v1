@@ -141,8 +141,7 @@ void QTextToSpeechSlots_connect_signal(const QString &signal, const QString &slo
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QTextToSpeech *obj = (QTextToSpeech *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QTextToSpeechSlots *s = QCoreApplication::instance()->findChild<QTextToSpeechSlots *>();
 
     if (s == NULL)

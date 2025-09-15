@@ -62,8 +62,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECHPLUGIN_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QTextToSpeechPlugin *obj = (QTextToSpeechPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
