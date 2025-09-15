@@ -120,8 +120,7 @@ HB_FUNC_STATIC(QGLWIDGET_DELETE)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -209,8 +208,7 @@ HB_FUNC_STATIC(QGLWIDGET_COLORMAP)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -234,8 +232,7 @@ HB_FUNC_STATIC(QGLWIDGET_CONTEXT)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -259,8 +256,7 @@ HB_FUNC_STATIC(QGLWIDGET_DELETETEXTURE)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -285,8 +281,7 @@ HB_FUNC_STATIC(QGLWIDGET_DONECURRENT)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -311,8 +306,7 @@ HB_FUNC_STATIC(QGLWIDGET_DOUBLEBUFFER)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -371,8 +365,7 @@ HB_FUNC_STATIC(QGLWIDGET_FORMAT)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -396,8 +389,7 @@ HB_FUNC_STATIC(QGLWIDGET_GRABFRAMEBUFFER)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -421,8 +413,7 @@ HB_FUNC_STATIC(QGLWIDGET_ISSHARING)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -445,8 +436,7 @@ HB_FUNC_STATIC(QGLWIDGET_ISVALID)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -469,8 +459,7 @@ HB_FUNC_STATIC(QGLWIDGET_MAKECURRENT)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -495,8 +484,7 @@ HB_FUNC_STATIC(QGLWIDGET_MAKEOVERLAYCURRENT)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -521,8 +509,7 @@ HB_FUNC_STATIC(QGLWIDGET_OVERLAYCONTEXT)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -546,8 +533,7 @@ HB_FUNC_STATIC(QGLWIDGET_QGLCLEARCOLOR)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
@@ -572,8 +558,7 @@ HB_FUNC_STATIC(QGLWIDGET_QGLCOLOR)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
@@ -598,8 +583,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERPIXMAP)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 3) && ISNUMORNIL(1) && ISNUMORNIL(2) && (HB_ISLOG(3) || HB_ISNIL(3)))
     {
@@ -660,8 +644,7 @@ HB_FUNC_STATIC(QGLWIDGET_SETCOLORMAP)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGLCOLORMAP(1))
     {
@@ -686,8 +669,7 @@ HB_FUNC_STATIC(QGLWIDGET_SETMOUSETRACKING)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -712,8 +694,7 @@ HB_FUNC_STATIC(QGLWIDGET_SWAPBUFFERS)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -738,8 +719,7 @@ HB_FUNC_STATIC(QGLWIDGET_UPDATEGL)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -764,8 +744,7 @@ HB_FUNC_STATIC(QGLWIDGET_UPDATEOVERLAYGL)
 {
   QGLWidget *obj = (QGLWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

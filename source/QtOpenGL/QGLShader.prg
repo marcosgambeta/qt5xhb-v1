@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QGLSHADER_DELETE)
 {
   QGLShader *obj = (QGLShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE1)
 {
   QGLShader *obj = (QGLShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE2)
 {
   QGLShader *obj = (QGLShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -156,8 +153,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE3)
 {
   QGLShader *obj = (QGLShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -196,8 +192,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCEFILE)
 {
   QGLShader *obj = (QGLShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -220,8 +215,7 @@ HB_FUNC_STATIC(QGLSHADER_ISCOMPILED)
 {
   QGLShader *obj = (QGLShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -244,8 +238,7 @@ HB_FUNC_STATIC(QGLSHADER_LOG)
 {
   QGLShader *obj = (QGLShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -268,8 +261,7 @@ HB_FUNC_STATIC(QGLSHADER_SHADERID)
 {
   QGLShader *obj = (QGLShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -292,8 +284,7 @@ HB_FUNC_STATIC(QGLSHADER_SHADERTYPE)
 {
   QGLShader *obj = (QGLShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -316,8 +307,7 @@ HB_FUNC_STATIC(QGLSHADER_SOURCECODE)
 {
   QGLShader *obj = (QGLShader *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
