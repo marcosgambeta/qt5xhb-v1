@@ -126,8 +126,7 @@ void QVirtualKeyboardTraceSlots_connect_signal(const QString &signal, const QStr
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QVirtualKeyboardTraceSlots *s = QCoreApplication::instance()->findChild<QVirtualKeyboardTraceSlots *>();
 
     if (s == NULL)

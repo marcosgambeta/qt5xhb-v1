@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_DELETE)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_TRACEID)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -139,8 +137,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETTRACEID)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -165,8 +162,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_CHANNELS)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -189,8 +185,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCHANNELS)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -215,8 +210,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_LENGTH)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -239,8 +233,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ISFINAL)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -263,8 +256,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETFINAL)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -289,8 +281,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ISCANCELED)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -313,8 +304,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCANCELED)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -339,8 +329,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_OPACITY)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -363,8 +352,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETOPACITY)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -389,8 +377,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_POINTS)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2))
     {
@@ -439,8 +426,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_ADDPOINT)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
@@ -463,8 +449,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_SETCHANNELDATA)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQVARIANT(3))
     {
@@ -489,8 +474,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDTRACE_CHANNELDATA)
 {
   QVirtualKeyboardTrace *obj = (QVirtualKeyboardTrace *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {

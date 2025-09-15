@@ -72,8 +72,7 @@ void QVirtualKeyboardSelectionListModelSlots_connect_signal(const QString &signa
 {
   QVirtualKeyboardSelectionListModel *obj = (QVirtualKeyboardSelectionListModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QVirtualKeyboardSelectionListModelSlots *s =
         QCoreApplication::instance()->findChild<QVirtualKeyboardSelectionListModelSlots *>();
 
