@@ -38,8 +38,7 @@ void QPrintDialogSlots_connect_signal(const QString &signal, const QString &slot
 {
   QPrintDialog *obj = (QPrintDialog *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QPrintDialogSlots *s = QCoreApplication::instance()->findChild<QPrintDialogSlots *>();
 
     if (s == NULL)

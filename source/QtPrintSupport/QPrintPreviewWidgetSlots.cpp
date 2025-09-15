@@ -54,8 +54,7 @@ void QPrintPreviewWidgetSlots_connect_signal(const QString &signal, const QStrin
 {
   QPrintPreviewWidget *obj = (QPrintPreviewWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QPrintPreviewWidgetSlots *s = QCoreApplication::instance()->findChild<QPrintPreviewWidgetSlots *>();
 
     if (s == NULL)
