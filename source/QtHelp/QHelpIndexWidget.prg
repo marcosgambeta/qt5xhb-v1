@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
     {
 #endif
       obj->filterIndices(PQSTRING(1), OPQSTRING(2, QString()));
