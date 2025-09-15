@@ -77,8 +77,8 @@ HB_FUNC_STATIC(QSQLERROR_NEW)
     QSqlError *obj = new QSqlError(PQSTRING(1), PQSTRING(2), (QSqlError::ErrorType)hb_parni(3), PINT(4));
     Qt5xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(0, 4) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
-           ISNUMORNIL(3) && (HB_ISCHAR(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(0, 4) && ISCHARORNIL(1) && ISCHARORNIL(2) &&
+           ISNUMORNIL(3) && ISCHARORNIL(4))
   {
     /*
     QSqlError( const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType

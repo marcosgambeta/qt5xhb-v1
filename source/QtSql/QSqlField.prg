@@ -84,7 +84,7 @@ RETURN
 
 HB_FUNC_STATIC(QSQLFIELD_NEW)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISNUMORNIL(2))
   {
     /*
     QSqlField( const QString &fieldName = QString(), QVariant::Type type = QVariant::Invalid )

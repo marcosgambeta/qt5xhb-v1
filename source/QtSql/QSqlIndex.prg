@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC(QSQLINDEX_NEW)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISCHARORNIL(2))
   {
     /*
     QSqlIndex( const QString &cursorname = QString(), const QString &name = QString() )

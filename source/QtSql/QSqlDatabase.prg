@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETCONNECTOPTIONS)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
 #endif
       obj->setConnectOptions(OPQSTRING(1, QString()));
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QSQLDATABASE_EXEC)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
 #endif
       QSqlQuery *ptr = new QSqlQuery(obj->exec(OPQSTRING(1, QString())));
@@ -897,7 +897,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETUSERNAME)
 
 HB_FUNC_STATIC(QSQLDATABASE_ADDDATABASE)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
   {
     /*
     static QSqlDatabase addDatabase ( const QString &type, const QString &connectionName = QLatin1String(
@@ -907,7 +907,7 @@ HB_FUNC_STATIC(QSQLDATABASE_ADDDATABASE)
     QSqlDatabase *ptr = new QSqlDatabase(QSqlDatabase::addDatabase(PQSTRING(1), par2));
     Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
   }
-  else if (ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && ISCHARORNIL(2))
   {
     /*
     static QSqlDatabase addDatabase ( QSqlDriver * driver, const QString &connectionName = QLatin1String(
@@ -968,7 +968,7 @@ static bool contains ( const QString &connectionName = QLatin1String( defaultCon
 */
 HB_FUNC_STATIC(QSQLDATABASE_CONTAINS)
 {
-  if ((HB_ISCHAR(1) || HB_ISNIL(1)))
+  if (ISCHARORNIL(1))
   {
     QString par1 = HB_ISNIL(1) ? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String(hb_parc(1));
     RBOOL(QSqlDatabase::contains(par1));
@@ -984,7 +984,7 @@ static QSqlDatabase database ( const QString &connectionName = QLatin1String( de
 */
 HB_FUNC_STATIC(QSQLDATABASE_DATABASE)
 {
-  if ((HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISLOG(2) || HB_ISNIL(2)))
+  if (ISCHARORNIL(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
   {
     QString par1 = HB_ISNIL(1) ? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String(hb_parc(1));
     QSqlDatabase *ptr = new QSqlDatabase(QSqlDatabase::database(par1, OPBOOL(2, true)));
