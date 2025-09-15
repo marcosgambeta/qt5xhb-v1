@@ -226,8 +226,7 @@ void QNetworkReplySlots_connect_signal(const QString &signal, const QString &slo
 {
   QNetworkReply *obj = (QNetworkReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QNetworkReplySlots *s = QCoreApplication::instance()->findChild<QNetworkReplySlots *>();
 
     if (s == NULL)

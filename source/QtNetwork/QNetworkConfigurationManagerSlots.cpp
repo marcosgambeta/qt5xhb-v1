@@ -108,8 +108,7 @@ void QNetworkConfigurationManagerSlots_connect_signal(const QString &signal, con
 {
   QNetworkConfigurationManager *obj = (QNetworkConfigurationManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QNetworkConfigurationManagerSlots *s =
         QCoreApplication::instance()->findChild<QNetworkConfigurationManagerSlots *>();
 

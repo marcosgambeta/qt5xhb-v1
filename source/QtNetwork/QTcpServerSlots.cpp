@@ -54,8 +54,7 @@ void QTcpServerSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QTcpServer *obj = (QTcpServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QTcpServerSlots *s = QCoreApplication::instance()->findChild<QTcpServerSlots *>();
 
     if (s == NULL)

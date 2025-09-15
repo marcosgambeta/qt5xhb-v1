@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_DELETE)
 {
   QNetworkProxyFactory *obj = (QNetworkProxyFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_QUERYPROXY)
 {
   QNetworkProxyFactory *obj = (QNetworkProxyFactory *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQNETWORKPROXYQUERY(1) || HB_ISNIL(1)))
     {

@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QUDPSOCKET_DELETE)
 {
   QUdpSocket *obj = (QUdpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -171,8 +170,7 @@ HB_FUNC_STATIC(QUDPSOCKET_MULTICASTINTERFACE)
 {
   QUdpSocket *obj = (QUdpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -196,8 +194,7 @@ HB_FUNC_STATIC(QUDPSOCKET_SETMULTICASTINTERFACE)
 {
   QUdpSocket *obj = (QUdpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQNETWORKINTERFACE(1))
     {
@@ -222,8 +219,7 @@ HB_FUNC_STATIC(QUDPSOCKET_HASPENDINGDATAGRAMS)
 {
   QUdpSocket *obj = (QUdpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -246,8 +242,7 @@ HB_FUNC_STATIC(QUDPSOCKET_PENDINGDATAGRAMSIZE)
 {
   QUdpSocket *obj = (QUdpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -271,8 +266,7 @@ HB_FUNC_STATIC(QUDPSOCKET_RECEIVEDATAGRAM)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QUdpSocket *obj = (QUdpSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {

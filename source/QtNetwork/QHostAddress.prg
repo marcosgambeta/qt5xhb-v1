@@ -125,8 +125,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_DELETE)
 {
   QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -145,8 +144,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SWAP)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
   QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
     {
@@ -225,8 +223,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_PROTOCOL)
 {
   QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -285,8 +282,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOSTRING)
 {
   QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -309,8 +305,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SCOPEID)
 {
   QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -333,8 +328,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 {
   QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -360,8 +354,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISEQUAL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQHOSTADDRESS(1) && ISNUMORNIL(2))
     {
@@ -386,8 +379,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISNULL)
 {
   QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -410,8 +402,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
 {
   QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -456,8 +447,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISLOOPBACK)
 {
   QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -481,8 +471,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISMULTICAST)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
   QHostAddress *obj = (QHostAddress *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

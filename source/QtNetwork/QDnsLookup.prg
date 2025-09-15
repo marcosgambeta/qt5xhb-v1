@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_DELETE)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -143,8 +142,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ERROR)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -167,8 +165,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ERRORSTRING)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -191,8 +188,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAME)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -215,8 +211,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETNAME)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -241,8 +236,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_TYPE)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -265,8 +259,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETTYPE)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -292,8 +285,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -319,8 +311,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETNAMESERVER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
     {
@@ -346,8 +337,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ISFINISHED)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -370,8 +360,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_CANONICALNAMERECORDS)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -420,8 +409,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_HOSTADDRESSRECORDS)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -470,8 +458,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_MAILEXCHANGERECORDS)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -520,8 +507,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NAMESERVERRECORDS)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -570,8 +556,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_POINTERRECORDS)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -620,8 +605,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SERVICERECORDS)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -670,8 +654,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_TEXTRECORDS)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -720,8 +703,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_ABORT)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -746,8 +728,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_LOOKUP)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

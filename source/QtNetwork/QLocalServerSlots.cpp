@@ -36,8 +36,7 @@ void QLocalServerSlots_connect_signal(const QString &signal, const QString &slot
 {
   QLocalServer *obj = (QLocalServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QLocalServerSlots *s = QCoreApplication::instance()->findChild<QLocalServerSlots *>();
 
     if (s == NULL)

@@ -90,8 +90,7 @@ void QDnsLookupSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QDnsLookup *obj = (QDnsLookup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDnsLookupSlots *s = QCoreApplication::instance()->findChild<QDnsLookupSlots *>();
 
     if (s == NULL)

@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_DELETE)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_DISCONNECTFROMSERVER)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -184,8 +182,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETSERVERNAME)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -210,8 +207,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SERVERNAME)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -234,8 +230,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_FULLSERVERNAME)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -258,8 +253,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ABORT)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -284,8 +278,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ISSEQUENTIAL)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -308,8 +301,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_BYTESAVAILABLE)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -332,8 +324,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_BYTESTOWRITE)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -356,8 +347,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CANREADLINE)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -380,8 +370,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_OPEN)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -404,8 +393,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CLOSE)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -430,8 +418,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ERROR)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -454,8 +441,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_FLUSH)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -478,8 +464,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ISVALID)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -502,8 +487,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_READBUFFERSIZE)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -526,8 +510,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETREADBUFFERSIZE)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -553,8 +536,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SETSOCKETDESCRIPTOR)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
     {
@@ -581,8 +563,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_SOCKETDESCRIPTOR)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -605,8 +586,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_STATE)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -629,8 +609,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORBYTESWRITTEN)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -653,8 +632,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORCONNECTED)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -677,8 +655,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORDISCONNECTED)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -701,8 +678,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORREADYREAD)
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {

@@ -150,8 +150,7 @@ void QSslSocketSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QSslSocket *obj = (QSslSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSslSocketSlots *s = QCoreApplication::instance()->findChild<QSslSocketSlots *>();
 
     if (s == NULL)

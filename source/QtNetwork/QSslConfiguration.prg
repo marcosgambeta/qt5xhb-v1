@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_DELETE)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -150,8 +149,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SWAP)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
     {
@@ -176,8 +174,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_ISNULL)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -200,8 +197,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PROTOCOL)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -224,8 +220,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPROTOCOL)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -250,8 +245,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERVERIFYMODE)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -274,8 +268,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPEERVERIFYMODE)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -300,8 +293,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERVERIFYDEPTH)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -324,8 +316,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPEERVERIFYDEPTH)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -351,8 +342,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_LOCALCERTIFICATECHAIN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -403,8 +393,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETLOCALCERTIFICATECHAIN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -437,8 +426,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_LOCALCERTIFICATE)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -462,8 +450,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETLOCALCERTIFICATE)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSSLCERTIFICATE(1))
     {
@@ -488,8 +475,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERCERTIFICATE)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -513,8 +499,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERCERTIFICATECHAIN)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -563,8 +548,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONCIPHER)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -589,8 +573,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONPROTOCOL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -614,8 +597,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PRIVATEKEY)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -639,8 +621,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPRIVATEKEY)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSSLKEY(1))
     {
@@ -665,8 +646,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_CIPHERS)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -715,8 +695,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETCIPHERS)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -795,8 +774,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_CACERTIFICATES)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -845,8 +823,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETCACERTIFICATES)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -925,8 +902,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETSSLOPTION)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
@@ -951,8 +927,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_TESTSSLOPTION)
 {
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -976,8 +951,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONTICKET)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1003,8 +977,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETSESSIONTICKET)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -1031,8 +1004,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONTICKETLIFETIMEHINT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1057,8 +1029,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_EPHEMERALSERVERKEY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1084,8 +1055,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PRESHAREDKEYIDENTITYHINT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1111,8 +1081,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPRESHAREDKEYIDENTITYHINT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -1180,8 +1149,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETALLOWEDNEXTPROTOCOLS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -1215,8 +1183,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_ALLOWEDNEXTPROTOCOLS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1267,8 +1234,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_NEXTNEGOTIATEDPROTOCOL)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1294,8 +1260,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_NEXTPROTOCOLNEGOTIATIONSTATUS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QSslConfiguration *obj = (QSslConfiguration *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

@@ -91,8 +91,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_DELETE)
 {
   QDnsMailExchangeRecord *obj = (QDnsMailExchangeRecord *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_EXCHANGE)
 {
   QDnsMailExchangeRecord *obj = (QDnsMailExchangeRecord *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_NAME)
 {
   QDnsMailExchangeRecord *obj = (QDnsMailExchangeRecord *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -158,8 +155,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_PREFERENCE)
 {
   QDnsMailExchangeRecord *obj = (QDnsMailExchangeRecord *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -182,8 +178,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_SWAP)
 {
   QDnsMailExchangeRecord *obj = (QDnsMailExchangeRecord *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDNSMAILEXCHANGERECORD(1))
     {
@@ -208,8 +203,7 @@ HB_FUNC_STATIC(QDNSMAILEXCHANGERECORD_TIMETOLIVE)
 {
   QDnsMailExchangeRecord *obj = (QDnsMailExchangeRecord *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

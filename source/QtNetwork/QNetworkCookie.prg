@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_DELETE)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -130,8 +129,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_DOMAIN)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_EXPIRATIONDATE)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISHTTPONLY)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -203,8 +199,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISSECURE)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -227,8 +222,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISSESSIONCOOKIE)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -251,8 +245,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NAME)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -276,8 +269,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_PATH)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -300,8 +292,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETDOMAIN)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -326,8 +317,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETEXPIRATIONDATE)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDATETIME(1))
     {
@@ -352,8 +342,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETHTTPONLY)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -378,8 +367,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETNAME)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -404,8 +392,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETPATH)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -430,8 +417,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETSECURE)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -456,8 +442,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETVALUE)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -482,8 +467,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_TORAWFORM)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
     {
@@ -508,8 +492,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_VALUE)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -578,8 +561,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SWAP)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
     {
@@ -604,8 +586,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_HASSAMEIDENTIFIER)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
     {
@@ -628,8 +609,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NORMALIZE)
 {
   QNetworkCookie *obj = (QNetworkCookie *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {

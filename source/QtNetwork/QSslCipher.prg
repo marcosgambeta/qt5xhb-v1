@@ -112,8 +112,7 @@ HB_FUNC_STATIC(QSSLCIPHER_DELETE)
 {
   QSslCipher *obj = (QSslCipher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -131,8 +130,7 @@ HB_FUNC_STATIC(QSSLCIPHER_AUTHENTICATIONMETHOD)
 {
   QSslCipher *obj = (QSslCipher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -155,8 +153,7 @@ HB_FUNC_STATIC(QSSLCIPHER_ENCRYPTIONMETHOD)
 {
   QSslCipher *obj = (QSslCipher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -179,8 +176,7 @@ HB_FUNC_STATIC(QSSLCIPHER_ISNULL)
 {
   QSslCipher *obj = (QSslCipher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -203,8 +199,7 @@ HB_FUNC_STATIC(QSSLCIPHER_KEYEXCHANGEMETHOD)
 {
   QSslCipher *obj = (QSslCipher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -227,8 +222,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NAME)
 {
   QSslCipher *obj = (QSslCipher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -251,8 +245,7 @@ HB_FUNC_STATIC(QSSLCIPHER_PROTOCOL)
 {
   QSslCipher *obj = (QSslCipher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -275,8 +268,7 @@ HB_FUNC_STATIC(QSSLCIPHER_PROTOCOLSTRING)
 {
   QSslCipher *obj = (QSslCipher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -299,8 +291,7 @@ HB_FUNC_STATIC(QSSLCIPHER_SUPPORTEDBITS)
 {
   QSslCipher *obj = (QSslCipher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -323,8 +314,7 @@ HB_FUNC_STATIC(QSSLCIPHER_USEDBITS)
 {
   QSslCipher *obj = (QSslCipher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -347,8 +337,7 @@ HB_FUNC_STATIC(QSSLCIPHER_SWAP)
 {
   QSslCipher *obj = (QSslCipher *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSSLCIPHER(1))
     {

@@ -124,8 +124,7 @@ void QAbstractSocketSlots_connect_signal(const QString &signal, const QString &s
 {
   QAbstractSocket *obj = (QAbstractSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractSocketSlots *s = QCoreApplication::instance()->findChild<QAbstractSocketSlots *>();
 
     if (s == NULL)

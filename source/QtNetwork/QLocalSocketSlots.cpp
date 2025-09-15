@@ -88,8 +88,7 @@ void QLocalSocketSlots_connect_signal(const QString &signal, const QString &slot
 {
   QLocalSocket *obj = (QLocalSocket *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QLocalSocketSlots *s = QCoreApplication::instance()->findChild<QLocalSocketSlots *>();
 
     if (s == NULL)
