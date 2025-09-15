@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_DEFAULTPROTOTYPE)
 
 HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
   {
     /*
     QScriptValue evaluate( const QString &program, const QString &fileName = QString(), int lineNumber = 1 )
