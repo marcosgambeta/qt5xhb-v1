@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensorGesture *obj = (QSensorGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -106,8 +105,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_ISACTIVE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensorGesture *obj = (QSensorGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_VALIDIDS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensorGesture *obj = (QSensorGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -158,8 +155,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_INVALIDIDS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensorGesture *obj = (QSensorGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -184,8 +180,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_GESTURESIGNALS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensorGesture *obj = (QSensorGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -210,8 +205,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_STARTDETECTION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensorGesture *obj = (QSensorGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -238,8 +232,7 @@ HB_FUNC_STATIC(QSENSORGESTURE_STOPDETECTION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensorGesture *obj = (QSensorGesture *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

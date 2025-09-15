@@ -41,8 +41,7 @@ void QAccelerometerSlots_connect_signal(const QString &signal, const QString &sl
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QAccelerometer *obj = (QAccelerometer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAccelerometerSlots *s = QCoreApplication::instance()->findChild<QAccelerometerSlots *>();
 
     if (s == NULL)

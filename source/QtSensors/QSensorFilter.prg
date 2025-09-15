@@ -66,8 +66,7 @@ HB_FUNC_STATIC(QSENSORFILTER_FILTER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensorFilter *obj = (QSensorFilter *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSENSORREADING(1))
     {

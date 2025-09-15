@@ -289,8 +289,7 @@ void QSensorSlots_connect_signal(const QString &signal, const QString &slot)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSensorSlots *s = QCoreApplication::instance()->findChild<QSensorSlots *>();
 
     if (s == NULL)

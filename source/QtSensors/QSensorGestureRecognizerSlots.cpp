@@ -41,8 +41,7 @@ void QSensorGestureRecognizerSlots_connect_signal(const QString &signal, const Q
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensorGestureRecognizer *obj = (QSensorGestureRecognizer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSensorGestureRecognizerSlots *s = QCoreApplication::instance()->findChild<QSensorGestureRecognizerSlots *>();
 
     if (s == NULL)

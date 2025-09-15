@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QSENSOR_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -154,8 +153,7 @@ HB_FUNC_STATIC(QSENSOR_IDENTIFIER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -181,8 +179,7 @@ HB_FUNC_STATIC(QSENSOR_SETIDENTIFIER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -209,8 +206,7 @@ HB_FUNC_STATIC(QSENSOR_TYPE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -236,8 +232,7 @@ HB_FUNC_STATIC(QSENSOR_CONNECTTOBACKEND)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -262,8 +257,7 @@ HB_FUNC_STATIC(QSENSOR_ISCONNECTEDTOBACKEND)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -288,8 +282,7 @@ HB_FUNC_STATIC(QSENSOR_ISBUSY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -314,8 +307,7 @@ HB_FUNC_STATIC(QSENSOR_SETACTIVE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -342,8 +334,7 @@ HB_FUNC_STATIC(QSENSOR_ISACTIVE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -368,8 +359,7 @@ HB_FUNC_STATIC(QSENSOR_ISALWAYSON)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -394,8 +384,7 @@ HB_FUNC_STATIC(QSENSOR_SETALWAYSON)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -422,8 +411,7 @@ HB_FUNC_STATIC(QSENSOR_SKIPDUPLICATES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -448,8 +436,7 @@ HB_FUNC_STATIC(QSENSOR_SETSKIPDUPLICATES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
@@ -476,8 +463,7 @@ HB_FUNC_STATIC(QSENSOR_DATARATE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -502,8 +488,7 @@ HB_FUNC_STATIC(QSENSOR_SETDATARATE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -530,8 +515,7 @@ HB_FUNC_STATIC(QSENSOR_OUTPUTRANGE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -556,8 +540,7 @@ HB_FUNC_STATIC(QSENSOR_SETOUTPUTRANGE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -584,8 +567,7 @@ HB_FUNC_STATIC(QSENSOR_DESCRIPTION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -610,8 +592,7 @@ HB_FUNC_STATIC(QSENSOR_ERROR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -636,8 +617,7 @@ HB_FUNC_STATIC(QSENSOR_ADDFILTER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSENSORFILTER(1))
     {
@@ -664,8 +644,7 @@ HB_FUNC_STATIC(QSENSOR_REMOVEFILTER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSENSORFILTER(1))
     {
@@ -692,8 +671,7 @@ HB_FUNC_STATIC(QSENSOR_READING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -719,8 +697,7 @@ HB_FUNC_STATIC(QSENSOR_ISFEATURESUPPORTED)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -745,8 +722,7 @@ HB_FUNC_STATIC(QSENSOR_AXESORIENTATIONMODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -771,8 +747,7 @@ HB_FUNC_STATIC(QSENSOR_SETAXESORIENTATIONMODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -799,8 +774,7 @@ HB_FUNC_STATIC(QSENSOR_CURRENTORIENTATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -825,8 +799,7 @@ HB_FUNC_STATIC(QSENSOR_SETCURRENTORIENTATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -853,8 +826,7 @@ HB_FUNC_STATIC(QSENSOR_USERORIENTATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -879,8 +851,7 @@ HB_FUNC_STATIC(QSENSOR_SETUSERORIENTATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -907,8 +878,7 @@ HB_FUNC_STATIC(QSENSOR_MAXBUFFERSIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -933,8 +903,7 @@ HB_FUNC_STATIC(QSENSOR_SETMAXBUFFERSIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -961,8 +930,7 @@ HB_FUNC_STATIC(QSENSOR_EFFICIENTBUFFERSIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -987,8 +955,7 @@ HB_FUNC_STATIC(QSENSOR_SETEFFICIENTBUFFERSIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1015,8 +982,7 @@ HB_FUNC_STATIC(QSENSOR_BUFFERSIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1041,8 +1007,7 @@ HB_FUNC_STATIC(QSENSOR_SETBUFFERSIZE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1069,8 +1034,7 @@ HB_FUNC_STATIC(QSENSOR_START)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -1095,8 +1059,7 @@ HB_FUNC_STATIC(QSENSOR_STOP)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
   QSensor *obj = (QSensor *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
