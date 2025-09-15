@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidParcel *obj = (QAndroidParcel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEDATA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidParcel *obj = (QAndroidParcel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -156,8 +154,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEVARIANT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidParcel *obj = (QAndroidParcel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVARIANT(1))
     {
@@ -184,8 +181,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEBINDER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidParcel *obj = (QAndroidParcel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQANDROIDBINDER(1))
     {
@@ -212,8 +208,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEFILEDESCRIPTOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidParcel *obj = (QAndroidParcel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -240,8 +235,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READDATA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidParcel *obj = (QAndroidParcel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -267,8 +261,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READVARIANT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidParcel *obj = (QAndroidParcel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -294,8 +287,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READBINDER)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidParcel *obj = (QAndroidParcel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -321,8 +313,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READFILEDESCRIPTOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidParcel *obj = (QAndroidParcel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -347,8 +338,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_HANDLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidParcel *obj = (QAndroidParcel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

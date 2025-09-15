@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidIntent *obj = (QAndroidIntent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -143,8 +142,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_PUTEXTRA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidIntent *obj = (QAndroidIntent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2))
     {
@@ -171,8 +169,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_EXTRABYTES)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidIntent *obj = (QAndroidIntent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -198,8 +195,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_PUTEXTRA)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidIntent *obj = (QAndroidIntent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
     {
@@ -226,8 +222,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_EXTRAVARIANT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidIntent *obj = (QAndroidIntent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -253,8 +248,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_HANDLE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
   QAndroidIntent *obj = (QAndroidIntent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

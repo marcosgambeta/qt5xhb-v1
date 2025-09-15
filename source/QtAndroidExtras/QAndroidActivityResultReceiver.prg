@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QAndroidActivityResultReceiver *obj = (QAndroidActivityResultReceiver *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_HANDLEACTIVITYRESULT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QAndroidActivityResultReceiver *obj = (QAndroidActivityResultReceiver *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQANDROIDJNIOBJECT(3))
     {
