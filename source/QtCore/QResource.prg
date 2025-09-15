@@ -72,7 +72,7 @@ RETURN
     */
 HB_FUNC_STATIC(QRESOURCE_NEW)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQLOCALE(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && (ISQLOCALE(2) || HB_ISNIL(2)))
   {
     QResource *obj =
         new QResource(OPQSTRING(1, QString()), HB_ISNIL(2) ? QLocale() : *(QLocale *)Qt5xHb::itemGetPtr(2));
@@ -327,7 +327,7 @@ static bool registerResource( const QString &rccFileName, const QString &mapRoot
 HB_FUNC_STATIC(QRESOURCE_REGISTERRESOURCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
   {
 #endif
     RBOOL(QResource::registerResource(PQSTRING(1), OPQSTRING(2, QString())));
@@ -346,7 +346,7 @@ static bool unregisterResource( const QString &rccFileName, const QString &mapRo
 HB_FUNC_STATIC(QRESOURCE_UNREGISTERRESOURCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2))
   {
 #endif
     RBOOL(QResource::unregisterResource(PQSTRING(1), OPQSTRING(2, QString())));

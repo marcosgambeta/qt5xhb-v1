@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
 #endif
   }
   else if (ISBETWEEN(4, 6) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) &&
-           ISNUMORNIL(5) && (HB_ISCHAR(6) || HB_ISNIL(6)))
+           ISNUMORNIL(5) && ISCHARORNIL(6))
   {
     /*
     QTimeZone( const QByteArray &zoneId, int offsetSeconds, const QString &name, const QString &abbreviation,

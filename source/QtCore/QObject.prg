@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILD)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+    if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISNUMORNIL(2))
     {
 #endif
       QObject *ptr = obj->findChild<QObject *>(OPQSTRING(1, QString()),
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILD)
 
 HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISNUMORNIL(2))
   {
     // QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
     QObject *obj = qobject_cast<QObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -1084,7 +1084,7 @@ HB_FUNC_STATIC(QOBJECT_DELETELATER)
 HB_FUNC_STATIC(QOBJECT_TR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
   {
 #endif
     RQSTRING(QObject::tr(PCONSTCHAR(1), OPCONSTCHAR(2, 0), OPINT(3, -1)));

@@ -84,7 +84,7 @@ RETURN
 
 HB_FUNC_STATIC(QSETTINGS_NEW)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
     QSettings( const QString &organization, const QString &application = QString(), QObject * parent = 0 )
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
     QSettings *obj = new QSettings(PQSTRING(1), OPQSTRING(2, QString()), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
+  else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISCHARORNIL(3) &&
            (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
         new QSettings((QSettings::Scope)hb_parni(1), PQSTRING(2), OPQSTRING(3, QString()), OPQOBJECT(4, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (HB_ISCHAR(4) || HB_ISNIL(4)) &&
+  else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISCHARORNIL(4) &&
            (ISQOBJECT(5) || HB_ISNIL(5)))
   {
     /*
