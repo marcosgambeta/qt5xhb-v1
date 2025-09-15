@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QSVGRENDERER_DELETE)
 {
   QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ANIMATED)
 {
   QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -156,8 +154,7 @@ HB_FUNC_STATIC(QSVGRENDERER_BOUNDSONELEMENT)
 {
   QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -181,8 +178,7 @@ HB_FUNC_STATIC(QSVGRENDERER_DEFAULTSIZE)
 {
   QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -206,8 +202,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ELEMENTEXISTS)
 {
   QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -230,8 +225,7 @@ HB_FUNC_STATIC(QSVGRENDERER_FRAMESPERSECOND)
 {
   QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -254,8 +248,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ISVALID)
 {
   QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -278,8 +271,7 @@ HB_FUNC_STATIC(QSVGRENDERER_MATRIXFORELEMENT)
 {
   QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -303,8 +295,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETFRAMESPERSECOND)
 {
   QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -365,8 +356,7 @@ HB_FUNC_STATIC(QSVGRENDERER_VIEWBOX)
 {
   QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -390,8 +380,7 @@ HB_FUNC_STATIC(QSVGRENDERER_VIEWBOXF)
 {
   QSvgRenderer *obj = (QSvgRenderer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

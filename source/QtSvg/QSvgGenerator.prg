@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_DELETE)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -104,8 +103,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_DESCRIPTION)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_FILENAME)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_OUTPUTDEVICE)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -177,8 +173,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_RESOLUTION)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -201,8 +196,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETDESCRIPTION)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -227,8 +221,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETFILENAME)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -253,8 +246,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETOUTPUTDEVICE)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
@@ -279,8 +271,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETRESOLUTION)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -305,8 +296,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETSIZE)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
@@ -331,8 +321,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETTITLE)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -393,8 +382,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SIZE)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -418,8 +406,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_TITLE)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -442,8 +429,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_VIEWBOX)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -467,8 +453,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_VIEWBOXF)
 {
   QSvgGenerator *obj = (QSvgGenerator *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
