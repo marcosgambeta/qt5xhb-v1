@@ -178,8 +178,7 @@ void QWebSocketServerSlots_connect_signal(const QString &signal, const QString &
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QWebSocketServerSlots *s = QCoreApplication::instance()->findChild<QWebSocketServerSlots *>();
 
     if (s == NULL)

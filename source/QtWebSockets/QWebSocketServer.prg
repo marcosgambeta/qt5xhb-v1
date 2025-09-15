@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
     Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -137,8 +136,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_LISTEN)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && (ISQHOSTADDRESS(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
     {
@@ -163,8 +161,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_CLOSE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -191,8 +188,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ISLISTENING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -217,8 +213,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_MAXPENDINGCONNECTIONS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -243,8 +238,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETMAXPENDINGCONNECTIONS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -271,8 +265,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SERVERPORT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -297,8 +290,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SERVERADDRESS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -324,8 +316,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SECUREMODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -350,8 +341,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SOCKETDESCRIPTOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -376,8 +366,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETSOCKETDESCRIPTOR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -402,8 +391,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_HASPENDINGCONNECTIONS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -428,8 +416,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_NEXTPENDINGCONNECTION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -455,8 +442,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ERROR)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -481,8 +467,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ERRORSTRING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -507,8 +492,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_PAUSEACCEPTING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -535,8 +519,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_RESUMEACCEPTING)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -563,8 +546,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SERVERNAME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -589,8 +571,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETSERVERNAME)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -617,8 +598,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_PROXY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -644,8 +624,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETPROXY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
     {
@@ -672,8 +651,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETSSLCONFIGURATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
     {
@@ -700,8 +678,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SSLCONFIGURATION)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -727,8 +704,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SUPPORTEDVERSIONS)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
   QWebSocketServer *obj = (QWebSocketServer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
