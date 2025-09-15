@@ -74,8 +74,7 @@ void QDesignerFormWindowManagerInterfaceSlots_connect_signal(const QString &sign
 {
   QDesignerFormWindowManagerInterface *obj = (QDesignerFormWindowManagerInterface *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDesignerFormWindowManagerInterfaceSlots *s =
         QCoreApplication::instance()->findChild<QDesignerFormWindowManagerInterfaceSlots *>();
 

@@ -73,8 +73,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DELETE)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -92,8 +91,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_COUNT)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -116,8 +114,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -140,8 +137,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INDEXOF)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -164,8 +160,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -188,8 +183,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -212,8 +206,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSLOT)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -236,8 +229,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -260,8 +252,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -284,8 +275,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -308,8 +298,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -358,8 +347,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -408,8 +396,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -434,8 +421,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
@@ -460,8 +446,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE)
 {
   QDesignerMemberSheetExtension *obj = (QDesignerMemberSheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
