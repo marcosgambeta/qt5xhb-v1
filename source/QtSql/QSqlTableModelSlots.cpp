@@ -96,8 +96,7 @@ void QSqlTableModelSlots_connect_signal(const QString &signal, const QString &sl
 {
   QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSqlTableModelSlots *s = QCoreApplication::instance()->findChild<QSqlTableModelSlots *>();
 
     if (s == NULL)
