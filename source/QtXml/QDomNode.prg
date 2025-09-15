@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QDOMNODE_FIRSTCHILDELEMENT)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
 #endif
       QDomElement *ptr = new QDomElement(obj->firstChildElement(OPQSTRING(1, QString())));
@@ -865,7 +865,7 @@ HB_FUNC_STATIC(QDOMNODE_LASTCHILDELEMENT)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
 #endif
       QDomElement *ptr = new QDomElement(obj->lastChildElement(OPQSTRING(1, QString())));
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC(QDOMNODE_NEXTSIBLINGELEMENT)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
 #endif
       QDomElement *ptr = new QDomElement(obj->nextSiblingElement(OPQSTRING(1, QString())));
@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC(QDOMNODE_PREVIOUSSIBLINGELEMENT)
   if (obj != NULL)
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1))
     {
 #endif
       QDomElement *ptr = new QDomElement(obj->previousSiblingElement(OPQSTRING(1, QString())));
