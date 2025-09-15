@@ -76,8 +76,7 @@ void QInAppStoreSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QInAppStore *obj = (QInAppStore *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QInAppStoreSlots *s = QCoreApplication::instance()->findChild<QInAppStoreSlots *>();
 
     if (s == NULL)
