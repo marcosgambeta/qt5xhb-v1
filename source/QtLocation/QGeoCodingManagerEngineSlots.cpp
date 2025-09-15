@@ -65,8 +65,7 @@ void QGeoCodingManagerEngineSlots_connect_signal(const QString &signal, const QS
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QGeoCodingManagerEngine *obj = (QGeoCodingManagerEngine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGeoCodingManagerEngineSlots *s = QCoreApplication::instance()->findChild<QGeoCodingManagerEngineSlots *>();
 
     if (s == NULL)

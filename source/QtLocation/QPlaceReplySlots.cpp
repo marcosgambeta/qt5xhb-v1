@@ -61,8 +61,7 @@ void QPlaceReplySlots_connect_signal(const QString &signal, const QString &slot)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceReply *obj = (QPlaceReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QPlaceReplySlots *s = QCoreApplication::instance()->findChild<QPlaceReplySlots *>();
 
     if (s == NULL)

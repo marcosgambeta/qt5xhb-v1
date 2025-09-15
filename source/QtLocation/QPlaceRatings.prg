@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QPLACERATINGS_DELETE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceRatings *obj = (QPlaceRatings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QPLACERATINGS_AVERAGE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceRatings *obj = (QPlaceRatings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QPLACERATINGS_SETAVERAGE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceRatings *obj = (QPlaceRatings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -174,8 +171,7 @@ HB_FUNC_STATIC(QPLACERATINGS_COUNT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceRatings *obj = (QPlaceRatings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -200,8 +196,7 @@ HB_FUNC_STATIC(QPLACERATINGS_SETCOUNT)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceRatings *obj = (QPlaceRatings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -228,8 +223,7 @@ HB_FUNC_STATIC(QPLACERATINGS_MAXIMUM)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceRatings *obj = (QPlaceRatings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {
@@ -254,8 +248,7 @@ HB_FUNC_STATIC(QPLACERATINGS_SETMAXIMUM)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceRatings *obj = (QPlaceRatings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -282,8 +275,7 @@ HB_FUNC_STATIC(QPLACERATINGS_ISEMPTY)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QPlaceRatings *obj = (QPlaceRatings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0))
     {

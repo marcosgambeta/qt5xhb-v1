@@ -61,8 +61,7 @@ void QGeoRouteReplySlots_connect_signal(const QString &signal, const QString &sl
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
   QGeoRouteReply *obj = (QGeoRouteReply *)Qt5xHb::itemGetPtrStackSelfItem();
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGeoRouteReplySlots *s = QCoreApplication::instance()->findChild<QGeoRouteReplySlots *>();
 
     if (s == NULL)
