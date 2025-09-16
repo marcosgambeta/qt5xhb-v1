@@ -102,9 +102,7 @@ HB_FUNC_STATIC(QX11INFO_ISPLATFORMX11)
 #endif
     RBOOL(QX11Info::isPlatformX11());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -123,9 +121,7 @@ HB_FUNC_STATIC(QX11INFO_APPDPIX)
 #endif
     RINT(QX11Info::appDpiX(OPINT(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -144,9 +140,7 @@ HB_FUNC_STATIC(QX11INFO_APPDPIY)
 #endif
     RINT(QX11Info::appDpiY(OPINT(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QX11INFO_APPROOTWINDOW)
 #endif
     RUNSIGNEDLONG(QX11Info::appRootWindow(OPINT(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -186,9 +178,7 @@ HB_FUNC_STATIC(QX11INFO_APPSCREEN)
 #endif
     RINT(QX11Info::appScreen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -207,9 +197,7 @@ HB_FUNC_STATIC(QX11INFO_APPTIME)
 #endif
     RUNSIGNEDLONG(QX11Info::appTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -228,9 +216,7 @@ HB_FUNC_STATIC(QX11INFO_APPUSERTIME)
 #endif
     RUNSIGNEDLONG(QX11Info::appUserTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -249,9 +235,7 @@ HB_FUNC_STATIC(QX11INFO_SETAPPTIME)
 #endif
     QX11Info::setAppTime(PUNSIGNEDLONG(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -272,9 +256,7 @@ HB_FUNC_STATIC(QX11INFO_SETAPPUSERTIME)
 #endif
     QX11Info::setAppUserTime(PUNSIGNEDLONG(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -295,9 +277,7 @@ HB_FUNC_STATIC(QX11INFO_GETTIMESTAMP)
 #endif
     RUNSIGNEDLONG(QX11Info::getTimestamp());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -316,9 +296,7 @@ HB_FUNC_STATIC(QX11INFO_DISPLAY)
 #endif
     hb_retptr((Display *)QX11Info::display());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -337,9 +315,7 @@ HB_FUNC_STATIC(QX11INFO_CONNECTION)
 #endif
     hb_retptr((xcb_connection_t *)QX11Info::connection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -359,9 +335,7 @@ HB_FUNC_STATIC(QX11INFO_NEXTSTARTUPID)
     QByteArray *ptr = new QByteArray(QX11Info::nextStartupId());
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -380,9 +354,7 @@ HB_FUNC_STATIC(QX11INFO_SETNEXTSTARTUPID)
 #endif
     QX11Info::setNextStartupId(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -412,9 +384,7 @@ HB_FUNC_STATIC(QX11INFO_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -445,9 +415,7 @@ HB_FUNC_STATIC(QX11INFO_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
