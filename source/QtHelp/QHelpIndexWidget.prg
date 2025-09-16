@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 #endif
       obj->activateCurrentItem();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -107,9 +105,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 #endif
       obj->filterIndices(PQSTRING(1), OPQSTRING(2, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

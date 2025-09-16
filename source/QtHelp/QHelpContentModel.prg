@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_CONTENTITEMAT)
       QHelpContentItem *ptr = obj->contentItemAt(*PQMODELINDEX(1));
       Qt5xHb::createReturnClass(ptr, "QHELPCONTENTITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_CREATECONTENTS)
 #endif
       obj->createContents(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -141,9 +137,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ISCREATINGCONTENTS)
 #endif
       RBOOL(obj->isCreatingContents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -164,9 +158,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_COLUMNCOUNT)
 #endif
       RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -188,9 +180,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_DATA)
       QVariant *ptr = new QVariant(obj->data(*PQMODELINDEX(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -213,9 +203,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_INDEX)
           obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -237,9 +225,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_PARENT)
       QModelIndex *ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -260,9 +246,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ROWCOUNT)
 #endif
       RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

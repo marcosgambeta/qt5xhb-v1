@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_NEW)
   {
     QHelpSearchQueryWidget *obj = new QHelpSearchQueryWidget(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -125,9 +123,7 @@ HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_QUERY)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

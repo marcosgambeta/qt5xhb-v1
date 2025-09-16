@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QHELPENGINE_NEW)
   {
     QHelpEngine *obj = new QHelpEngine(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTMODEL)
       QHelpContentModel *ptr = obj->contentModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QHELPCONTENTMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -134,9 +130,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTWIDGET)
       QHelpContentWidget *ptr = obj->contentWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QHELPCONTENTWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -158,9 +152,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXMODEL)
       QHelpIndexModel *ptr = obj->indexModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QHELPINDEXMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -182,9 +174,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXWIDGET)
       QHelpIndexWidget *ptr = obj->indexWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QHELPINDEXWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -206,9 +196,7 @@ HB_FUNC_STATIC(QHELPENGINE_SEARCHENGINE)
       QHelpSearchEngine *ptr = obj->searchEngine();
       Qt5xHb::createReturnQObjectClass(ptr, "QHELPSEARCHENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
