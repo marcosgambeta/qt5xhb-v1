@@ -107,9 +107,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_NEW)
     QAndroidIntent *obj = new QAndroidIntent(*PQANDROIDJNIOBJECT(1), PCONSTCHAR(2));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -149,9 +147,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_PUTEXTRA)
 #endif
       obj->putExtra(PQSTRING(1), *PQBYTEARRAY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -177,9 +173,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_EXTRABYTES)
       QByteArray *ptr = new QByteArray(obj->extraBytes(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -202,9 +196,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_PUTEXTRA)
 #endif
       obj->putExtra(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -230,9 +222,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_EXTRAVARIANT)
       QVariant *ptr = new QVariant(obj->extraVariant(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -256,9 +246,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_HANDLE)
       QAndroidJniObject *ptr = new QAndroidJniObject(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

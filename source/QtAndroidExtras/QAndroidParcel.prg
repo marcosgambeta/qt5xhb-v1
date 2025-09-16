@@ -92,9 +92,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_NEW)
     QAndroidParcel *obj = new QAndroidParcel(*PQANDROIDJNIOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -134,9 +132,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEDATA)
 #endif
       obj->writeData(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -161,9 +157,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEVARIANT)
 #endif
       obj->writeVariant(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -188,9 +182,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEBINDER)
 #endif
       obj->writeBinder(*PQANDROIDBINDER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -215,9 +207,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEFILEDESCRIPTOR)
 #endif
       obj->writeFileDescriptor(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -243,9 +233,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READDATA)
       QByteArray *ptr = new QByteArray(obj->readData());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -269,9 +257,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READVARIANT)
       QVariant *ptr = new QVariant(obj->readVariant());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -295,9 +281,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READBINDER)
       QAndroidBinder *ptr = new QAndroidBinder(obj->readBinder());
       Qt5xHb::createReturnClass(ptr, "QANDROIDBINDER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -320,9 +304,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READFILEDESCRIPTOR)
 #endif
       RINT(obj->readFileDescriptor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -346,9 +328,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_HANDLE)
       QAndroidJniObject *ptr = new QAndroidJniObject(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -377,9 +357,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -410,9 +388,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

@@ -84,9 +84,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_NEW)
     QAndroidBinder *obj = new QAndroidBinder(*PQANDROIDJNIOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -127,9 +125,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_ONTRANSACT)
 #endif
       RBOOL(obj->onTransact(PINT(1), *PQANDROIDPARCEL(2), *PQANDROIDPARCEL(3), (QAndroidBinder::CallType)hb_parni(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -156,9 +152,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_TRANSACT)
                           HB_ISNIL(4) ? (QAndroidBinder::CallType)QAndroidBinder::CallType::Normal
                                       : (QAndroidBinder::CallType)hb_parni(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -182,9 +176,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_HANDLE)
       QAndroidJniObject *ptr = new QAndroidJniObject(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
