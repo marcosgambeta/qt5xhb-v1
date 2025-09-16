@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_NEW)
     */
     QStyleOptionRubberBand *obj = new QStyleOptionRubberBand(*PQSTYLEOPTIONRUBBERBAND(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SHAPE)
     if (ISNUMPAR(0))
     {
       RENUM(obj->shape);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -99,9 +95,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETSHAPE)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->shape = (QRubberBand::Shape)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -120,9 +114,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_OPAQUE)
     if (ISNUMPAR(0))
     {
       RBOOL(obj->opaque);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -135,9 +127,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETOPAQUE)
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->opaque = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

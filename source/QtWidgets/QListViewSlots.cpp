@@ -42,9 +42,7 @@ void QListViewSlots::indexesMoved(const QModelIndexList &indexes)
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -70,9 +68,7 @@ void QListViewSlots_connect_signal(const QString &signal, const QString &slot)
     }
 
     hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

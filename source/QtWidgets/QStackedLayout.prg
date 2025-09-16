@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_NEW)
     */
     QStackedLayout *obj = new QStackedLayout(PQLAYOUT(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -124,9 +122,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_ADDWIDGET)
 #endif
       RINT(obj->addWidget(PQWIDGET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -147,9 +143,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTINDEX)
 #endif
       RINT(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -171,9 +165,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTWIDGET)
       QWidget *ptr = obj->currentWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -194,9 +186,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_INSERTWIDGET)
 #endif
       RINT(obj->insertWidget(PINT(1), PQWIDGET(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -217,9 +207,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETSTACKINGMODE)
 #endif
       obj->setStackingMode((QStackedLayout::StackingMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -242,9 +230,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_STACKINGMODE)
 #endif
       RENUM(obj->stackingMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -266,9 +252,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_WIDGET)
       QWidget *ptr = obj->widget(PINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -289,9 +273,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTINDEX)
 #endif
       obj->setCurrentIndex(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -314,9 +296,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTWIDGET)
 #endif
       obj->setCurrentWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

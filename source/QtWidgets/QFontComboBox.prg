@@ -68,9 +68,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_NEW)
   {
     QFontComboBox *obj = new QFontComboBox(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -107,9 +105,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_CURRENTFONT)
       QFont *ptr = new QFont(obj->currentFont());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -130,9 +126,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_FONTFILTERS)
 #endif
       RENUM(obj->fontFilters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -153,9 +147,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETFONTFILTERS)
 #endif
       obj->setFontFilters((QFontComboBox::FontFilters)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -178,9 +170,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETWRITINGSYSTEM)
 #endif
       obj->setWritingSystem((QFontDatabase::WritingSystem)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -203,9 +193,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_WRITINGSYSTEM)
 #endif
       RENUM(obj->writingSystem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -227,9 +215,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SIZEHINT)
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -250,9 +236,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETCURRENTFONT)
 #endif
       obj->setCurrentFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

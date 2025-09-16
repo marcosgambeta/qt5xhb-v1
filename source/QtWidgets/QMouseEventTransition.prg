@@ -75,9 +75,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_NEW)
     QMouseEventTransition *obj =
         new QMouseEventTransition(PQOBJECT(1), (QEvent::Type)hb_parni(2), (Qt::MouseButton)hb_parni(3), OPQSTATE(4, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_BUTTON)
 #endif
       RENUM(obj->button());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -137,9 +133,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_HITTESTPATH)
       QPainterPath *ptr = new QPainterPath(obj->hitTestPath());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -160,9 +154,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_MODIFIERMASK)
 #endif
       RENUM(obj->modifierMask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -183,9 +175,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETBUTTON)
 #endif
       obj->setButton((Qt::MouseButton)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -208,9 +198,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETHITTESTPATH)
 #endif
       obj->setHitTestPath(*PQPAINTERPATH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -233,9 +221,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETMODIFIERMASK)
 #endif
       obj->setModifierMask((Qt::KeyboardModifiers)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

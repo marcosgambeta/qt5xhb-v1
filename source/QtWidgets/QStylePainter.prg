@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_NEW)
     */
     QStylePainter *obj = new QStylePainter(PQPAINTDEVICE(1), PQWIDGET(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_BEGIN)
     {
       RBOOL(obj->begin(PQPAINTDEVICE(1), PQWIDGET(2)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -131,9 +127,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWPRIMITIVE)
 #endif
       obj->drawPrimitive((QStyle::PrimitiveElement)hb_parni(1), *PQSTYLEOPTION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -156,9 +150,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCONTROL)
 #endif
       obj->drawControl((QStyle::ControlElement)hb_parni(1), *PQSTYLEOPTION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -181,9 +173,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWCOMPLEXCONTROL)
 #endif
       obj->drawComplexControl((QStyle::ComplexControl)hb_parni(1), *PQSTYLEOPTIONCOMPLEX(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -209,9 +199,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMTEXT)
       obj->drawItemText(*PQRECT(1), PINT(2), *PQPALETTE(3), PBOOL(4), PQSTRING(5),
                         HB_ISNIL(6) ? (QPalette::ColorRole)QPalette::NoRole : (QPalette::ColorRole)hb_parni(6));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -234,9 +222,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_DRAWITEMPIXMAP)
 #endif
       obj->drawItemPixmap(*PQRECT(1), PINT(2), *PQPIXMAP(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -260,9 +246,7 @@ HB_FUNC_STATIC(QSTYLEPAINTER_STYLE)
       QStyle *ptr = obj->style();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

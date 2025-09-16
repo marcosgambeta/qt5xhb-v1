@@ -90,9 +90,7 @@ HB_FUNC_STATIC(QWHATSTHIS_CREATEACTION)
     QAction *ptr = QWhatsThis::createAction(OPQOBJECT(1, 0));
     Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QWHATSTHIS_ENTERWHATSTHISMODE)
 #endif
     QWhatsThis::enterWhatsThisMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -130,9 +126,7 @@ HB_FUNC_STATIC(QWHATSTHIS_HIDETEXT)
 #endif
     QWhatsThis::hideText();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -151,9 +145,7 @@ HB_FUNC_STATIC(QWHATSTHIS_INWHATSTHISMODE)
 #endif
     RBOOL(QWhatsThis::inWhatsThisMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -170,9 +162,7 @@ HB_FUNC_STATIC(QWHATSTHIS_LEAVEWHATSTHISMODE)
 #endif
     QWhatsThis::leaveWhatsThisMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -191,9 +181,7 @@ HB_FUNC_STATIC(QWHATSTHIS_SHOWTEXT)
 #endif
     QWhatsThis::showText(*PQPOINT(1), PQSTRING(2), OPQWIDGET(3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -222,9 +210,7 @@ HB_FUNC_STATIC(QWHATSTHIS_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -255,9 +241,7 @@ HB_FUNC_STATIC(QWHATSTHIS_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

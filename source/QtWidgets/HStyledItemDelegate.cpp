@@ -99,9 +99,7 @@ void HStyledItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &o
     hb_itemRelease(pOption);
     hb_itemRelease(pIndex);
     hb_itemRelease(pRet);
-  }
-  else
-  {
+  } else {
     QStyledItemDelegate::paint(painter, option, index);
   }
 }
@@ -126,18 +124,14 @@ QSize HStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
     if (hb_clsIsParent(hb_objGetClass(pRet), "QSIZE"))
     {
       size = *((QSize *)hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0)));
-    }
-    else
-    {
+    } else {
       size = QStyledItemDelegate::sizeHint(option, index);
     }
 
     hb_itemRelease(pOption);
     hb_itemRelease(pIndex);
     hb_itemRelease(pRet);
-  }
-  else
-  {
+  } else {
     size = QStyledItemDelegate::sizeHint(option, index);
   }
 
@@ -188,9 +182,7 @@ QWidget *HStyledItemDelegate::createEditor(QWidget *parent, const QStyleOptionVi
     if (hb_clsIsParent(hb_objGetClass(pRet), "QWIDGET"))
     {
       widget = (QWidget *)hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
-    }
-    else
-    {
+    } else {
       widget = QStyledItemDelegate::createEditor(parent, option, index);
     }
 
@@ -198,9 +190,7 @@ QWidget *HStyledItemDelegate::createEditor(QWidget *parent, const QStyleOptionVi
     hb_itemRelease(pOption);
     hb_itemRelease(pIndex);
     hb_itemRelease(pRet);
-  }
-  else
-  {
+  } else {
     widget = QStyledItemDelegate::createEditor(parent, option, index);
   }
 
@@ -219,9 +209,7 @@ void HStyledItemDelegate::setEditorData(QWidget *editor, const QModelIndex &inde
     hb_itemRelease(pEditor);
     hb_itemRelease(pIndex);
     hb_itemRelease(pRet);
-  }
-  else
-  {
+  } else {
     QStyledItemDelegate::setEditorData(editor, index);
   }
 }
@@ -240,9 +228,7 @@ void HStyledItemDelegate::setModelData(QWidget *editor, QAbstractItemModel *mode
     hb_itemRelease(pModel);
     hb_itemRelease(pIndex);
     hb_itemRelease(pRet);
-  }
-  else
-  {
+  } else {
     QStyledItemDelegate::setModelData(editor, model, index);
   }
 }
@@ -262,9 +248,7 @@ void HStyledItemDelegate::updateEditorGeometry(QWidget *editor, const QStyleOpti
     hb_itemRelease(pOption);
     hb_itemRelease(pIndex);
     hb_itemRelease(pRet);
-  }
-  else
-  {
+  } else {
     QStyledItemDelegate::updateEditorGeometry(editor, option, index);
   }
 }

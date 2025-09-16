@@ -80,9 +80,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_NEW)
     */
     QStyleOptionTabWidgetFrame *obj = new QStyleOptionTabWidgetFrame(*PQSTYLEOPTIONTABWIDGETFRAME(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_LINEWIDTH)
     if (ISNUMPAR(0))
     {
       RINT(obj->lineWidth);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -113,9 +109,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETLINEWIDTH)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->lineWidth = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -134,9 +128,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_MIDLINEWIDTH)
     if (ISNUMPAR(0))
     {
       RINT(obj->midLineWidth);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -149,9 +141,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETMIDLINEWIDTH)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->midLineWidth = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -170,9 +160,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SHAPE)
     if (ISNUMPAR(0))
     {
       RENUM(obj->shape);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -185,9 +173,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETSHAPE)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->shape = (QTabBar::Shape)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -207,9 +193,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_TABBARSIZE)
     {
       QSize *ptr = new QSize(obj->tabBarSize);
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -222,9 +206,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETTABBARSIZE)
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->tabBarSize = *PQSIZE(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -244,9 +226,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_RIGHTCORNERWIDGETSIZE)
     {
       QSize *ptr = new QSize(obj->rightCornerWidgetSize);
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -259,9 +239,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETRIGHTCORNERWIDGETSIZE)
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->rightCornerWidgetSize = *PQSIZE(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -281,9 +259,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_LEFTCORNERWIDGETSIZE)
     {
       QSize *ptr = new QSize(obj->leftCornerWidgetSize);
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -296,9 +272,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETLEFTCORNERWIDGETSIZE)
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
       obj->leftCornerWidgetSize = *PQSIZE(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -318,9 +292,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_TABBARRECT)
     {
       QRect *ptr = new QRect(obj->tabBarRect);
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -333,9 +305,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETTABBARRECT)
     if (ISNUMPAR(1) && ISQRECT(1))
     {
       obj->tabBarRect = *PQRECT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -355,9 +325,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SELECTEDTABRECT)
     {
       QRect *ptr = new QRect(obj->selectedTabRect);
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -370,9 +338,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_SETSELECTEDTABRECT)
     if (ISNUMPAR(1) && ISQRECT(1))
     {
       obj->selectedTabRect = *PQRECT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

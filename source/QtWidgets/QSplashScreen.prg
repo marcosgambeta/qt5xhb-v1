@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
     QSplashScreen *obj = new QSplashScreen(PQWIDGET(1), HB_ISNIL(2) ? QPixmap() : *(QPixmap *)Qt5xHb::itemGetPtr(2),
                                            HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -114,9 +112,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_FINISH)
 #endif
       obj->finish(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_PIXMAP)
       QPixmap *ptr = new QPixmap(obj->pixmap());
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,9 +157,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SETPIXMAP)
 #endif
       obj->setPixmap(*PQPIXMAP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -188,9 +180,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_REPAINT)
 #endif
       obj->repaint();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -213,9 +203,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_CLEARMESSAGE)
 #endif
       obj->clearMessage();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -239,9 +227,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SHOWMESSAGE)
       obj->showMessage(PQSTRING(1), OPINT(2, Qt::AlignLeft),
                        HB_ISNIL(3) ? Qt::black : *(QColor *)Qt5xHb::itemGetPtr(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -80,9 +80,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_NEW)
     */
     QStyleOptionProgressBar *obj = new QStyleOptionProgressBar(*PQSTYLEOPTIONPROGRESSBAR(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_MINIMUM)
     if (ISNUMPAR(0))
     {
       RINT(obj->minimum);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -113,9 +109,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETMINIMUM)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->minimum = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -134,9 +128,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_MAXIMUM)
     if (ISNUMPAR(0))
     {
       RINT(obj->maximum);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -149,9 +141,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETMAXIMUM)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->maximum = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -170,9 +160,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_PROGRESS)
     if (ISNUMPAR(0))
     {
       RINT(obj->progress);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -185,9 +173,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETPROGRESS)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->progress = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -206,9 +192,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_TEXT)
     if (ISNUMPAR(0))
     {
       RQSTRING(obj->text);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -221,9 +205,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXT)
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -242,9 +224,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_TEXTALIGNMENT)
     if (ISNUMPAR(0))
     {
       RENUM(obj->textAlignment);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -257,9 +237,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXTALIGNMENT)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->textAlignment = (Qt::Alignment)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -278,9 +256,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_TEXTVISIBLE)
     if (ISNUMPAR(0))
     {
       RBOOL(obj->textVisible);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -293,9 +269,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXTVISIBLE)
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->textVisible = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -314,9 +288,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_ORIENTATION)
     if (ISNUMPAR(0))
     {
       RENUM(obj->orientation);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -329,9 +301,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETORIENTATION)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->orientation = (Qt::Orientation)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -350,9 +320,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_INVERTEDAPPEARANCE)
     if (ISNUMPAR(0))
     {
       RBOOL(obj->invertedAppearance);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -365,9 +333,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETINVERTEDAPPEARANCE)
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->invertedAppearance = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -386,9 +352,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_BOTTOMTOTOP)
     if (ISNUMPAR(0))
     {
       RBOOL(obj->bottomToTop);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -401,9 +365,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETBOTTOMTOTOP)
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->bottomToTop = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

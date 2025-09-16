@@ -75,9 +75,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_NEW)
     */
     QStyleOptionGroupBox *obj = new QStyleOptionGroupBox(*PQSTYLEOPTIONGROUPBOX(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_FEATURES)
     if (ISNUMPAR(0))
     {
       RENUM(obj->features);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -108,9 +104,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETFEATURES)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->features = (QStyleOptionFrame::FrameFeatures)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -129,9 +123,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXT)
     if (ISNUMPAR(0))
     {
       RQSTRING(obj->text);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -144,9 +136,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXT)
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -165,9 +155,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT)
     if (ISNUMPAR(0))
     {
       RENUM(obj->textAlignment);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -180,9 +168,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->textAlignment = (Qt::Alignment)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -202,9 +188,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTCOLOR)
     {
       QColor *ptr = new QColor(obj->textColor);
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -217,9 +201,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR)
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
       obj->textColor = *PQCOLOR(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -238,9 +220,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_LINEWIDTH)
     if (ISNUMPAR(0))
     {
       RINT(obj->lineWidth);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -253,9 +233,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETLINEWIDTH)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->lineWidth = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -274,9 +252,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH)
     if (ISNUMPAR(0))
     {
       RINT(obj->midLineWidth);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -289,9 +265,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->midLineWidth = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

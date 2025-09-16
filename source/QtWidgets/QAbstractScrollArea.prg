@@ -103,9 +103,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET)
 #endif
       obj->addScrollBarWidget(PQWIDGET(1), (Qt::Alignment)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -128,9 +126,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY)
 #endif
       RENUM(obj->horizontalScrollBarPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -151,9 +147,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY)
 #endif
       obj->setHorizontalScrollBarPolicy((Qt::ScrollBarPolicy)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -177,9 +171,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE)
       QSize *ptr = new QSize(obj->maximumViewportSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -223,9 +215,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SCROLLBARWIDGETS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -247,9 +237,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_CORNERWIDGET)
       QWidget *ptr = obj->cornerWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -270,9 +258,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETCORNERWIDGET)
 #endif
       obj->setCornerWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -296,9 +282,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR)
       QScrollBar *ptr = obj->horizontalScrollBar();
       Qt5xHb::createReturnQWidgetClass(ptr, "QSCROLLBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -319,9 +303,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR)
 #endif
       obj->setHorizontalScrollBar(PQSCROLLBAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -344,9 +326,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVIEWPORT)
 #endif
       obj->setViewport(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -370,9 +350,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VERTICALSCROLLBAR)
       QScrollBar *ptr = obj->verticalScrollBar();
       Qt5xHb::createReturnQWidgetClass(ptr, "QSCROLLBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -393,9 +371,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR)
 #endif
       obj->setVerticalScrollBar(PQSCROLLBAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -418,9 +394,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY)
 #endif
       RENUM(obj->verticalScrollBarPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -441,9 +415,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY)
 #endif
       obj->setVerticalScrollBarPolicy((Qt::ScrollBarPolicy)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -467,9 +439,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VIEWPORT)
       QWidget *ptr = obj->viewport();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -491,9 +461,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_MINIMUMSIZEHINT)
       QSize *ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -515,9 +483,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SIZEHINT)
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -538,9 +504,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETUPVIEWPORT)
 #endif
       obj->setupViewport(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -563,9 +527,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SIZEADJUSTPOLICY)
 #endif
       RENUM(obj->sizeAdjustPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -586,9 +548,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETSIZEADJUSTPOLICY)
 #endif
       obj->setSizeAdjustPolicy((QAbstractScrollArea::SizeAdjustPolicy)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

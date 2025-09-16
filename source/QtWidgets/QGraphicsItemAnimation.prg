@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_NEW)
   {
     QGraphicsItemAnimation *obj = new QGraphicsItemAnimation(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -123,9 +121,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_CLEAR)
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -148,9 +144,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT)
 #endif
       RQREAL(obj->horizontalScaleAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -171,9 +165,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT)
 #endif
       RQREAL(obj->horizontalShearAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -195,9 +187,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ITEM)
       QGraphicsItem *ptr = obj->item();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -219,9 +209,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_MATRIXAT)
       QMatrix *ptr = new QMatrix(obj->matrixAt(PQREAL(1)));
       Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -243,9 +231,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_POSAT)
       QPointF *ptr = new QPointF(obj->posAt(PQREAL(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -266,9 +252,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ROTATIONAT)
 #endif
       RQREAL(obj->rotationAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -289,9 +273,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETITEM)
 #endif
       obj->setItem(PQGRAPHICSITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -314,9 +296,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETPOSAT)
 #endif
       obj->setPosAt(PQREAL(1), *PQPOINTF(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -339,9 +319,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETROTATIONAT)
 #endif
       obj->setRotationAt(PQREAL(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -364,9 +342,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSCALEAT)
 #endif
       obj->setScaleAt(PQREAL(1), PQREAL(2), PQREAL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -389,9 +365,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSHEARAT)
 #endif
       obj->setShearAt(PQREAL(1), PQREAL(2), PQREAL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -414,9 +388,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTIMELINE)
 #endif
       obj->setTimeLine(PQTIMELINE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -439,9 +411,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTRANSLATIONAT)
 #endif
       obj->setTranslationAt(PQREAL(1), PQREAL(2), PQREAL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -465,9 +435,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_TIMELINE)
       QTimeLine *ptr = obj->timeLine();
       Qt5xHb::createReturnQObjectClass(ptr, "QTIMELINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -488,9 +456,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSCALEAT)
 #endif
       RQREAL(obj->verticalScaleAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -511,9 +477,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSHEARAT)
 #endif
       RQREAL(obj->verticalShearAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -534,9 +498,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_XTRANSLATIONAT)
 #endif
       RQREAL(obj->xTranslationAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -557,9 +519,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_YTRANSLATIONAT)
 #endif
       RQREAL(obj->yTranslationAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -580,9 +540,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSTEP)
 #endif
       obj->setStep(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

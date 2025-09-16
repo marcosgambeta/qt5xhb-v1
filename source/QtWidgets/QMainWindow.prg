@@ -117,9 +117,7 @@ HB_FUNC_STATIC(QMAINWINDOW_NEW)
     QMainWindow *obj =
         new QMainWindow(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -170,9 +168,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -219,9 +215,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
       QToolBar *ptr = obj->addToolBar(PQSTRING(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QTOOLBAR");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -240,9 +234,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBARBREAK)
 #endif
       obj->addToolBarBreak(HB_ISNIL(1) ? (Qt::ToolBarArea)Qt::TopToolBarArea : (Qt::ToolBarArea)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -266,9 +258,7 @@ HB_FUNC_STATIC(QMAINWINDOW_CENTRALWIDGET)
       QWidget *ptr = obj->centralWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -289,9 +279,7 @@ HB_FUNC_STATIC(QMAINWINDOW_CORNER)
 #endif
       RENUM(obj->corner((Qt::Corner)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -313,9 +301,7 @@ HB_FUNC_STATIC(QMAINWINDOW_CREATEPOPUPMENU)
       QMenu *ptr = obj->createPopupMenu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -336,9 +322,7 @@ HB_FUNC_STATIC(QMAINWINDOW_DOCKOPTIONS)
 #endif
       RENUM(obj->dockOptions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -359,9 +343,7 @@ HB_FUNC_STATIC(QMAINWINDOW_DOCKWIDGETAREA)
 #endif
       RENUM(obj->dockWidgetArea(PQDOCKWIDGET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -382,9 +364,7 @@ HB_FUNC_STATIC(QMAINWINDOW_DOCUMENTMODE)
 #endif
       RBOOL(obj->documentMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -406,9 +386,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ICONSIZE)
       QSize *ptr = new QSize(obj->iconSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -429,9 +407,7 @@ HB_FUNC_STATIC(QMAINWINDOW_INSERTTOOLBAR)
 #endif
       obj->insertToolBar(PQTOOLBAR(1), PQTOOLBAR(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -454,9 +430,7 @@ HB_FUNC_STATIC(QMAINWINDOW_INSERTTOOLBARBREAK)
 #endif
       obj->insertToolBarBreak(PQTOOLBAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -479,9 +453,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ISANIMATED)
 #endif
       RBOOL(obj->isAnimated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -502,9 +474,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ISDOCKNESTINGENABLED)
 #endif
       RBOOL(obj->isDockNestingEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -526,9 +496,7 @@ HB_FUNC_STATIC(QMAINWINDOW_MENUBAR)
       QMenuBar *ptr = obj->menuBar();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENUBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -550,9 +518,7 @@ HB_FUNC_STATIC(QMAINWINDOW_MENUWIDGET)
       QWidget *ptr = obj->menuWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -573,9 +539,7 @@ HB_FUNC_STATIC(QMAINWINDOW_REMOVEDOCKWIDGET)
 #endif
       obj->removeDockWidget(PQDOCKWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -598,9 +562,7 @@ HB_FUNC_STATIC(QMAINWINDOW_REMOVETOOLBAR)
 #endif
       obj->removeToolBar(PQTOOLBAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -623,9 +585,7 @@ HB_FUNC_STATIC(QMAINWINDOW_REMOVETOOLBARBREAK)
 #endif
       obj->removeToolBarBreak(PQTOOLBAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -648,9 +608,7 @@ HB_FUNC_STATIC(QMAINWINDOW_RESTOREDOCKWIDGET)
 #endif
       RBOOL(obj->restoreDockWidget(PQDOCKWIDGET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -671,9 +629,7 @@ HB_FUNC_STATIC(QMAINWINDOW_RESTORESTATE)
 #endif
       RBOOL(obj->restoreState(*PQBYTEARRAY(1), OPINT(2, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -695,9 +651,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SAVESTATE)
       QByteArray *ptr = new QByteArray(obj->saveState(OPINT(1, 0)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -718,9 +672,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETCENTRALWIDGET)
 #endif
       obj->setCentralWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -743,9 +695,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETCORNER)
 #endif
       obj->setCorner((Qt::Corner)hb_parni(1), (Qt::DockWidgetArea)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -768,9 +718,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETDOCKOPTIONS)
 #endif
       obj->setDockOptions((QMainWindow::DockOptions)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -793,9 +741,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETDOCUMENTMODE)
 #endif
       obj->setDocumentMode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -818,9 +764,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETICONSIZE)
 #endif
       obj->setIconSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -843,9 +787,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETMENUBAR)
 #endif
       obj->setMenuBar(PQMENUBAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -868,9 +810,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETMENUWIDGET)
 #endif
       obj->setMenuWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -893,9 +833,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETSTATUSBAR)
 #endif
       obj->setStatusBar(PQSTATUSBAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -918,9 +856,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETTABPOSITION)
 #endif
       obj->setTabPosition((Qt::DockWidgetAreas)hb_parni(1), (QTabWidget::TabPosition)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -943,9 +879,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETTABSHAPE)
 #endif
       obj->setTabShape((QTabWidget::TabShape)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -968,9 +902,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETTOOLBUTTONSTYLE)
 #endif
       obj->setToolButtonStyle((Qt::ToolButtonStyle)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -993,9 +925,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SPLITDOCKWIDGET)
 #endif
       obj->splitDockWidget(PQDOCKWIDGET(1), PQDOCKWIDGET(2), (Qt::Orientation)hb_parni(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1019,9 +949,7 @@ HB_FUNC_STATIC(QMAINWINDOW_STATUSBAR)
       QStatusBar *ptr = obj->statusBar();
       Qt5xHb::createReturnQWidgetClass(ptr, "QSTATUSBAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1042,9 +970,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABPOSITION)
 #endif
       RENUM(obj->tabPosition((Qt::DockWidgetArea)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1065,9 +991,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABSHAPE)
 #endif
       RENUM(obj->tabShape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1088,9 +1012,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABIFYDOCKWIDGET)
 #endif
       obj->tabifyDockWidget(PQDOCKWIDGET(1), PQDOCKWIDGET(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1113,9 +1035,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TOOLBARAREA)
 #endif
       RENUM(obj->toolBarArea(PQTOOLBAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1136,9 +1056,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TOOLBARBREAK)
 #endif
       RBOOL(obj->toolBarBreak(PQTOOLBAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1159,9 +1077,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TOOLBUTTONSTYLE)
 #endif
       RENUM(obj->toolButtonStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1182,9 +1098,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETANIMATED)
 #endif
       obj->setAnimated(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1207,9 +1121,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETDOCKNESTINGENABLED)
 #endif
       obj->setDockNestingEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1234,9 +1146,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TAKECENTRALWIDGET)
       QWidget *ptr = obj->takeCentralWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

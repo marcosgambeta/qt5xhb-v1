@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QSCROLLER_FINALPOSITION)
       QPointF *ptr = new QPointF(obj->finalPosition());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QSCROLLER_HANDLEINPUT)
 #endif
       RBOOL(obj->handleInput((QScroller::Input)hb_parni(1), *PQPOINTF(2), OPQINT64(3, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -134,9 +130,7 @@ HB_FUNC_STATIC(QSCROLLER_PIXELPERMETER)
       QPointF *ptr = new QPointF(obj->pixelPerMeter());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -158,9 +152,7 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLERPROPERTIES)
       QScrollerProperties *ptr = new QScrollerProperties(obj->scrollerProperties());
       Qt5xHb::createReturnClass(ptr, "QSCROLLERPROPERTIES", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -205,9 +197,7 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSX)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -250,9 +240,7 @@ HB_FUNC_STATIC(QSCROLLER_SETSNAPPOSITIONSY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -271,9 +259,7 @@ HB_FUNC_STATIC(QSCROLLER_STATE)
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -294,9 +280,7 @@ HB_FUNC_STATIC(QSCROLLER_STOP)
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -320,9 +304,7 @@ HB_FUNC_STATIC(QSCROLLER_TARGET)
       QObject *ptr = obj->target();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -344,9 +326,7 @@ HB_FUNC_STATIC(QSCROLLER_VELOCITY)
       QPointF *ptr = new QPointF(obj->velocity());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -382,9 +362,7 @@ HB_FUNC_STATIC(QSCROLLER_ENSUREVISIBLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -403,9 +381,7 @@ HB_FUNC_STATIC(QSCROLLER_RESENDPREPAREEVENT)
 #endif
       obj->resendPrepareEvent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -443,9 +419,7 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLTO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -464,9 +438,7 @@ HB_FUNC_STATIC(QSCROLLER_SETSCROLLERPROPERTIES)
 #endif
       obj->setScrollerProperties(*PQSCROLLERPROPERTIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -502,16 +474,12 @@ HB_FUNC_STATIC(QSCROLLER_ACTIVESCROLLERS)
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSCROLLER", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -530,9 +498,7 @@ HB_FUNC_STATIC(QSCROLLER_GRABGESTURE)
     RENUM(QScroller::grabGesture(PQOBJECT(1), HB_ISNIL(2) ? (QScroller::ScrollerGestureType)QScroller::TouchGesture
                                                           : (QScroller::ScrollerGestureType)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -549,9 +515,7 @@ HB_FUNC_STATIC(QSCROLLER_GRABBEDGESTURE)
 #endif
     RENUM(QScroller::grabbedGesture(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -568,9 +532,7 @@ HB_FUNC_STATIC(QSCROLLER_HASSCROLLER)
 #endif
     RBOOL(QScroller::hasScroller(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -599,9 +561,7 @@ HB_FUNC_STATIC(QSCROLLER_SCROLLER)
     QScroller *ptr = QScroller::scroller(PQOBJECT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QSCROLLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -621,9 +581,7 @@ HB_FUNC_STATIC(QSCROLLER_UNGRABGESTURE)
 #endif
       obj->ungrabGesture(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

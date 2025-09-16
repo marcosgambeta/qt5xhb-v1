@@ -112,9 +112,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWCOMPLEXCONTROL)
       obj->drawComplexControl((QStyle::ComplexControl)hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3),
                               OPQWIDGET(4, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -138,9 +136,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWCONTROL)
 #endif
       obj->drawControl((QStyle::ControlElement)hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,9 +159,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWITEMPIXMAP)
 #endif
       obj->drawItemPixmap(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPIXMAP(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -191,9 +185,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWITEMTEXT)
       obj->drawItemText(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6),
                         HB_ISNIL(7) ? (QPalette::ColorRole)QPalette::NoRole : (QPalette::ColorRole)hb_parni(7));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -217,9 +209,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWPRIMITIVE)
 #endif
       obj->drawPrimitive((QStyle::PrimitiveElement)hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -244,9 +234,7 @@ HB_FUNC_STATIC(QSTYLE_GENERATEDICONPIXMAP)
       QPixmap *ptr = new QPixmap(obj->generatedIconPixmap((QIcon::Mode)hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -269,9 +257,7 @@ HB_FUNC_STATIC(QSTYLE_HITTESTCOMPLEXCONTROL)
       RENUM(obj->hitTestComplexControl((QStyle::ComplexControl)hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), *PQPOINT(3),
                                        OPQWIDGET(4, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -293,9 +279,7 @@ HB_FUNC_STATIC(QSTYLE_ITEMPIXMAPRECT)
       QRect *ptr = new QRect(obj->itemPixmapRect(*PQRECT(1), PINT(2), *PQPIXMAP(3)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -318,9 +302,7 @@ HB_FUNC_STATIC(QSTYLE_ITEMTEXTRECT)
       QRect *ptr = new QRect(obj->itemTextRect(*PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -345,9 +327,7 @@ HB_FUNC_STATIC(QSTYLE_LAYOUTSPACING)
                               (Qt::Orientation)hb_parni(3), HB_ISNIL(4) ? 0 : (QStyleOption *)Qt5xHb::itemGetPtr(4),
                               OPQWIDGET(5, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -370,9 +350,7 @@ HB_FUNC_STATIC(QSTYLE_PIXELMETRIC)
       RINT(obj->pixelMetric((QStyle::PixelMetric)hb_parni(1), HB_ISNIL(2) ? 0 : (QStyleOption *)Qt5xHb::itemGetPtr(2),
                             OPQWIDGET(3, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -422,9 +400,7 @@ HB_FUNC_STATIC(QSTYLE_POLISH)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -444,9 +420,7 @@ HB_FUNC_STATIC(QSTYLE_PROXY)
       const QStyle *ptr = obj->proxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -470,9 +444,7 @@ HB_FUNC_STATIC(QSTYLE_SIZEFROMCONTENTS)
           obj->sizeFromContents((QStyle::ContentsType)hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET(4, 0)));
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -497,9 +469,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDICON)
                                       HB_ISNIL(2) ? 0 : (QStyleOption *)Qt5xHb::itemGetPtr(2), OPQWIDGET(3, 0)));
       Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -521,9 +491,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDPALETTE)
       QPalette *ptr = new QPalette(obj->standardPalette());
       Qt5xHb::createReturnClass(ptr, "QPALETTE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -547,9 +515,7 @@ HB_FUNC_STATIC(QSTYLE_STYLEHINT)
       RINT(obj->styleHint((QStyle::StyleHint)hb_parni(1), HB_ISNIL(2) ? 0 : (QStyleOption *)Qt5xHb::itemGetPtr(2),
                           OPQWIDGET(3, 0), HB_ISNIL(4) ? 0 : (QStyleHintReturn *)Qt5xHb::itemGetPtr(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -573,9 +539,7 @@ HB_FUNC_STATIC(QSTYLE_SUBCONTROLRECT)
                                                  (QStyle::SubControl)hb_parni(3), OPQWIDGET(4, 0)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -598,9 +562,7 @@ HB_FUNC_STATIC(QSTYLE_SUBELEMENTRECT)
       QRect *ptr = new QRect(obj->subElementRect((QStyle::SubElement)hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET(3, 0)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -636,9 +598,7 @@ HB_FUNC_STATIC(QSTYLE_UNPOLISH)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -657,9 +617,7 @@ HB_FUNC_STATIC(QSTYLE_ALIGNEDRECT)
         QStyle::alignedRect((Qt::LayoutDirection)hb_parni(1), (Qt::Alignment)hb_parni(2), *PQSIZE(3), *PQRECT(4)));
     Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -676,9 +634,7 @@ HB_FUNC_STATIC(QSTYLE_SLIDERPOSITIONFROMVALUE)
 #endif
     RINT(QStyle::sliderPositionFromValue(PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5, false)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -695,9 +651,7 @@ HB_FUNC_STATIC(QSTYLE_SLIDERVALUEFROMPOSITION)
 #endif
     RINT(QStyle::sliderValueFromPosition(PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5, false)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -714,9 +668,7 @@ HB_FUNC_STATIC(QSTYLE_VISUALALIGNMENT)
 #endif
     RENUM(QStyle::visualAlignment((Qt::LayoutDirection)hb_parni(1), (Qt::Alignment)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -735,9 +687,7 @@ HB_FUNC_STATIC(QSTYLE_VISUALPOS)
     QPoint *ptr = new QPoint(QStyle::visualPos((Qt::LayoutDirection)hb_parni(1), *PQRECT(2), *PQPOINT(3)));
     Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -756,9 +706,7 @@ HB_FUNC_STATIC(QSTYLE_VISUALRECT)
     QRect *ptr = new QRect(QStyle::visualRect((Qt::LayoutDirection)hb_parni(1), *PQRECT(2), *PQRECT(3)));
     Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSIZEPOLICY)
 #endif
       obj->setSizePolicy((QSizePolicy::Policy)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -108,9 +106,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSPACING)
 #endif
       obj->setSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -133,9 +129,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SIZEPOLICY)
 #endif
       RENUM(obj->sizePolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -156,9 +150,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SPACING)
 #endif
       RQREAL(obj->spacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -179,9 +171,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_UNSETSPACING)
 #endif
       obj->unsetSpacing();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -100,9 +100,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_NEW)
   {
     QGraphicsGridLayout *obj = new QGraphicsGridLayout(HB_ISNIL(1) ? 0 : (QGraphicsLayoutItem *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -155,9 +153,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -176,9 +172,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ALIGNMENT)
 #endif
       RENUM(obj->alignment(PQGRAPHICSLAYOUTITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -199,9 +193,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNALIGNMENT)
 #endif
       RENUM(obj->columnAlignment(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -222,9 +214,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNCOUNT)
 #endif
       RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -245,9 +235,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNMAXIMUMWIDTH)
 #endif
       RQREAL(obj->columnMaximumWidth(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -268,9 +256,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNMINIMUMWIDTH)
 #endif
       RQREAL(obj->columnMinimumWidth(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -291,9 +277,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNPREFERREDWIDTH)
 #endif
       RQREAL(obj->columnPreferredWidth(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -314,9 +298,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNSPACING)
 #endif
       RQREAL(obj->columnSpacing(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -337,9 +319,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COLUMNSTRETCHFACTOR)
 #endif
       RINT(obj->columnStretchFactor(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -360,9 +340,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_HORIZONTALSPACING)
 #endif
       RQREAL(obj->horizontalSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -396,9 +374,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ITEMAT)
       QGraphicsLayoutItem *ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -417,9 +393,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_REMOVEITEM)
 #endif
       obj->removeItem(PQGRAPHICSLAYOUTITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -442,9 +416,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWALIGNMENT)
 #endif
       RENUM(obj->rowAlignment(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -465,9 +437,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWCOUNT)
 #endif
       RINT(obj->rowCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -488,9 +458,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWMAXIMUMHEIGHT)
 #endif
       RQREAL(obj->rowMaximumHeight(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -511,9 +479,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWMINIMUMHEIGHT)
 #endif
       RQREAL(obj->rowMinimumHeight(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -534,9 +500,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWPREFERREDHEIGHT)
 #endif
       RQREAL(obj->rowPreferredHeight(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -557,9 +521,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWSPACING)
 #endif
       RQREAL(obj->rowSpacing(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -580,9 +542,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWSTRETCHFACTOR)
 #endif
       RINT(obj->rowStretchFactor(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -603,9 +563,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETALIGNMENT)
 #endif
       obj->setAlignment(PQGRAPHICSLAYOUTITEM(1), (Qt::Alignment)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -628,9 +586,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNALIGNMENT)
 #endif
       obj->setColumnAlignment(PINT(1), (Qt::Alignment)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -653,9 +609,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNFIXEDWIDTH)
 #endif
       obj->setColumnFixedWidth(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -678,9 +632,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNMAXIMUMWIDTH)
 #endif
       obj->setColumnMaximumWidth(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -703,9 +655,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH)
 #endif
       obj->setColumnMinimumWidth(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -728,9 +678,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNPREFERREDWIDTH)
 #endif
       obj->setColumnPreferredWidth(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -753,9 +701,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNSPACING)
 #endif
       obj->setColumnSpacing(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -778,9 +724,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNSTRETCHFACTOR)
 #endif
       obj->setColumnStretchFactor(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -803,9 +747,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETHORIZONTALSPACING)
 #endif
       obj->setHorizontalSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -828,9 +770,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWALIGNMENT)
 #endif
       obj->setRowAlignment(PINT(1), (Qt::Alignment)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -853,9 +793,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWFIXEDHEIGHT)
 #endif
       obj->setRowFixedHeight(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -878,9 +816,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWMAXIMUMHEIGHT)
 #endif
       obj->setRowMaximumHeight(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -903,9 +839,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWMINIMUMHEIGHT)
 #endif
       obj->setRowMinimumHeight(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -928,9 +862,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWPREFERREDHEIGHT)
 #endif
       obj->setRowPreferredHeight(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -953,9 +885,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWSPACING)
 #endif
       obj->setRowSpacing(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -978,9 +908,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWSTRETCHFACTOR)
 #endif
       obj->setRowStretchFactor(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1003,9 +931,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETSPACING)
 #endif
       obj->setSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1028,9 +954,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETVERTICALSPACING)
 #endif
       obj->setVerticalSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1053,9 +977,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_VERTICALSPACING)
 #endif
       RQREAL(obj->verticalSpacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1076,9 +998,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_COUNT)
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1099,9 +1019,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_INVALIDATE)
 #endif
       obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1124,9 +1042,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_REMOVEAT)
 #endif
       obj->removeAt(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1149,9 +1065,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETGEOMETRY)
 #endif
       obj->setGeometry(*PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1176,9 +1090,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SIZEHINT)
           obj->sizeHint((Qt::SizeHint)hb_parni(1), HB_ISNIL(2) ? QSizeF() : *(QSizeF *)Qt5xHb::itemGetPtr(2)));
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

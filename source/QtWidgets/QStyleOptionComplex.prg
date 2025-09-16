@@ -68,9 +68,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_NEW)
     */
     QStyleOptionComplex *obj = new QStyleOptionComplex(*PQSTYLEOPTIONCOMPLEX(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SUBCONTROLS)
     if (ISNUMPAR(0))
     {
       RENUM(obj->subControls);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -116,9 +112,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->subControls = (QStyle::SubControls)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS)
     if (ISNUMPAR(0))
     {
       RENUM(obj->activeSubControls);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -152,9 +144,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS)
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->activeSubControls = (QStyle::SubControls)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
