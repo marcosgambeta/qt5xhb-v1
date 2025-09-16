@@ -122,9 +122,7 @@ HB_FUNC_STATIC(QWEBSOCKET_NEW)
                                                  : (QWebSocketProtocol::Version)hb_parni(2),
                                      OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -164,9 +162,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ABORT)
 #endif
       obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -191,9 +187,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ERROR)
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -216,9 +210,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ERRORSTRING)
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -241,9 +233,7 @@ HB_FUNC_STATIC(QWEBSOCKET_FLUSH)
 #endif
       RBOOL(obj->flush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -266,9 +256,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -292,9 +280,7 @@ HB_FUNC_STATIC(QWEBSOCKET_LOCALADDRESS)
       QHostAddress *ptr = new QHostAddress(obj->localAddress());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -317,9 +303,7 @@ HB_FUNC_STATIC(QWEBSOCKET_LOCALPORT)
 #endif
       RQUINT16(obj->localPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -342,9 +326,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PAUSEMODE)
 #endif
       RENUM(obj->pauseMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -368,9 +350,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PEERADDRESS)
       QHostAddress *ptr = new QHostAddress(obj->peerAddress());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -393,9 +373,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PEERNAME)
 #endif
       RQSTRING(obj->peerName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -418,9 +396,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PEERPORT)
 #endif
       RQUINT16(obj->peerPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -444,9 +420,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PROXY)
       QNetworkProxy *ptr = new QNetworkProxy(obj->proxy());
       Qt5xHb::createReturnClass(ptr, "QNETWORKPROXY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -469,9 +443,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETPROXY)
 #endif
       obj->setProxy(*PQNETWORKPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -497,9 +469,7 @@ HB_FUNC_STATIC(QWEBSOCKET_MASKGENERATOR)
       const QMaskGenerator *ptr = obj->maskGenerator();
       Qt5xHb::createReturnQObjectClass(ptr, "QMASKGENERATOR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -522,9 +492,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETMASKGENERATOR)
 #endif
       obj->setMaskGenerator(PQMASKGENERATOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -549,9 +517,7 @@ HB_FUNC_STATIC(QWEBSOCKET_READBUFFERSIZE)
 #endif
       RQINT64(obj->readBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -574,9 +540,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETREADBUFFERSIZE)
 #endif
       obj->setReadBufferSize(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -601,9 +565,7 @@ HB_FUNC_STATIC(QWEBSOCKET_RESUME)
 #endif
       obj->resume();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -628,9 +590,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETPAUSEMODE)
 #endif
       obj->setPauseMode((QAbstractSocket::PauseModes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -655,9 +615,7 @@ HB_FUNC_STATIC(QWEBSOCKET_STATE)
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -680,9 +638,7 @@ HB_FUNC_STATIC(QWEBSOCKET_VERSION)
 #endif
       RENUM(obj->version());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -705,9 +661,7 @@ HB_FUNC_STATIC(QWEBSOCKET_RESOURCENAME)
 #endif
       RQSTRING(obj->resourceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -731,9 +685,7 @@ HB_FUNC_STATIC(QWEBSOCKET_REQUESTURL)
       QUrl *ptr = new QUrl(obj->requestUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -756,9 +708,7 @@ HB_FUNC_STATIC(QWEBSOCKET_ORIGIN)
 #endif
       RQSTRING(obj->origin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -781,9 +731,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSECODE)
 #endif
       RENUM(obj->closeCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -806,9 +754,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSEREASON)
 #endif
       RQSTRING(obj->closeReason());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -831,9 +777,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SENDTEXTMESSAGE)
 #endif
       RQINT64(obj->sendTextMessage(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -856,9 +800,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SENDBINARYMESSAGE)
 #endif
       RQINT64(obj->sendBinaryMessage(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -906,9 +848,7 @@ HB_FUNC_STATIC(QWEBSOCKET_IGNORESSLERRORS)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -929,9 +869,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SSLCONFIGURATION)
       QSslConfiguration *ptr = new QSslConfiguration(obj->sslConfiguration());
       Qt5xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -954,9 +892,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SETSSLCONFIGURATION)
 #endif
       obj->setSslConfiguration(*PQSSLCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -984,9 +920,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSE)
                              : (QWebSocketProtocol::CloseCode)hb_parni(1),
                  OPQSTRING(2, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1011,9 +945,7 @@ HB_FUNC_STATIC(QWEBSOCKET_OPEN)
 #endif
       obj->open(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1038,9 +970,7 @@ HB_FUNC_STATIC(QWEBSOCKET_PING)
 #endif
       obj->ping(HB_ISNIL(1) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QMASKGENERATOR_SEED)
 #endif
       RBOOL(obj->seed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QMASKGENERATOR_NEXTMASK)
 #endif
       RQUINT32(obj->nextMask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

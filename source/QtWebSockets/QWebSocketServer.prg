@@ -101,9 +101,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_NEW)
     QWebSocketServer *obj =
         new QWebSocketServer(PQSTRING(1), (QWebSocketServer::SslMode)hb_parni(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -143,9 +141,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_LISTEN)
 #endif
       RBOOL(obj->listen(HB_ISNIL(1) ? QHostAddress::Any : *(QHostAddress *)Qt5xHb::itemGetPtr(1), OPQUINT16(2, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -168,9 +164,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_CLOSE)
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -195,9 +189,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ISLISTENING)
 #endif
       RBOOL(obj->isListening());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -220,9 +212,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_MAXPENDINGCONNECTIONS)
 #endif
       RINT(obj->maxPendingConnections());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -245,9 +235,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETMAXPENDINGCONNECTIONS)
 #endif
       obj->setMaxPendingConnections(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -272,9 +260,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SERVERPORT)
 #endif
       RQUINT16(obj->serverPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -298,9 +284,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SERVERADDRESS)
       QHostAddress *ptr = new QHostAddress(obj->serverAddress());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -323,9 +307,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SECUREMODE)
 #endif
       RENUM(obj->secureMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -348,9 +330,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SOCKETDESCRIPTOR)
 #endif
       RINT(obj->socketDescriptor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -373,9 +353,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETSOCKETDESCRIPTOR)
 #endif
       RBOOL(obj->setSocketDescriptor(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -398,9 +376,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_HASPENDINGCONNECTIONS)
 #endif
       RBOOL(obj->hasPendingConnections());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -424,9 +400,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_NEXTPENDINGCONNECTION)
       QWebSocket *ptr = obj->nextPendingConnection();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBSOCKET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -449,9 +423,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ERROR)
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -474,9 +446,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_ERRORSTRING)
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -499,9 +469,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_PAUSEACCEPTING)
 #endif
       obj->pauseAccepting();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -526,9 +494,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_RESUMEACCEPTING)
 #endif
       obj->resumeAccepting();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -553,9 +519,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SERVERNAME)
 #endif
       RQSTRING(obj->serverName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -578,9 +542,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETSERVERNAME)
 #endif
       obj->setServerName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -606,9 +568,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_PROXY)
       QNetworkProxy *ptr = new QNetworkProxy(obj->proxy());
       Qt5xHb::createReturnClass(ptr, "QNETWORKPROXY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -631,9 +591,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETPROXY)
 #endif
       obj->setProxy(*PQNETWORKPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -658,9 +616,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETSSLCONFIGURATION)
 #endif
       obj->setSslConfiguration(*PQSSLCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -686,9 +642,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SSLCONFIGURATION)
       QSslConfiguration *ptr = new QSslConfiguration(obj->sslConfiguration());
       Qt5xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -719,9 +673,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SUPPORTEDVERSIONS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
