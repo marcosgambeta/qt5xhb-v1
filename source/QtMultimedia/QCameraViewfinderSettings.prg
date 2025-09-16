@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_NEW)
     QCameraViewfinderSettings *obj = new QCameraViewfinderSettings(*PQCAMERAVIEWFINDERSETTINGS(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -135,9 +133,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SWAP)
 #endif
       obj->swap(*PQCAMERAVIEWFINDERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -162,9 +158,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_ISNULL)
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -188,9 +182,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_RESOLUTION)
       QSize *ptr = new QSize(obj->resolution());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -231,9 +223,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -253,9 +243,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_MINIMUMFRAMERATE)
 #endif
       RQREAL(obj->minimumFrameRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -278,9 +266,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETMINIMUMFRAMERATE)
 #endif
       obj->setMinimumFrameRate(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -305,9 +291,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_MAXIMUMFRAMERATE)
 #endif
       RQREAL(obj->maximumFrameRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -330,9 +314,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETMAXIMUMFRAMERATE)
 #endif
       obj->setMaximumFrameRate(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -357,9 +339,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_PIXELFORMAT)
 #endif
       RENUM(obj->pixelFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -382,9 +362,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETPIXELFORMAT)
 #endif
       obj->setPixelFormat((QVideoFrame::PixelFormat)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -410,9 +388,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_PIXELASPECTRATIO)
       QSize *ptr = new QSize(obj->pixelAspectRatio());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -453,9 +429,7 @@ HB_FUNC_STATIC(QCAMERAVIEWFINDERSETTINGS_SETPIXELASPECTRATIO)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

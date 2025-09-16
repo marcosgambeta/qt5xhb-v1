@@ -144,9 +144,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEW)
   else if (ISNUMPAR(1) && ISQMEDIASERVICEPROVIDERHINT(1))
   {
     HB_FUNC_EXEC(QMEDIASERVICEPROVIDERHINT_NEW5);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -183,9 +181,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_ISNULL)
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -206,9 +202,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_TYPE)
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -229,9 +223,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_MIMETYPE)
 #endif
       RQSTRING(obj->mimeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -252,9 +244,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_CODECS)
 #endif
       RQSTRINGLIST(obj->codecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -276,9 +266,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_DEVICE)
       QByteArray *ptr = new QByteArray(obj->device());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -299,9 +287,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_FEATURES)
 #endif
       RENUM(obj->features());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -322,9 +308,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_CAMERAPOSITION)
 #endif
       RENUM(obj->cameraPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -352,9 +336,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -385,9 +367,7 @@ HB_FUNC_STATIC(QMEDIASERVICEPROVIDERHINT_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

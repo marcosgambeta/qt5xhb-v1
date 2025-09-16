@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QVIDEORENDERERCONTROL_SETSURFACE)
 #endif
       obj->setSurface(PQABSTRACTVIDEOSURFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QVIDEORENDERERCONTROL_SURFACE)
       QAbstractVideoSurface *ptr = obj->surface();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTVIDEOSURFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

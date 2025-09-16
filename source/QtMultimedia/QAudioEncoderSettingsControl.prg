@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_AUDIOSETTINGS)
       QAudioEncoderSettings *ptr = new QAudioEncoderSettings(obj->audioSettings());
       Qt5xHb::createReturnClass(ptr, "QAUDIOENCODERSETTINGS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_CODECDESCRIPTION)
 #endif
       RQSTRING(obj->codecDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -134,9 +130,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_SETAUDIOSETTINGS)
 #endif
       obj->setAudioSettings(*PQAUDIOENCODERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -159,9 +153,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDAUDIOCODECS)
 #endif
       RQSTRINGLIST(obj->supportedAudioCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -185,9 +177,7 @@ HB_FUNC_STATIC(QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDSAMPLERATES)
       Qt5xHb::convert_qlist_int_to_array(list);
       hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

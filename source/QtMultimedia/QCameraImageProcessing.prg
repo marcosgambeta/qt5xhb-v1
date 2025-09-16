@@ -79,9 +79,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_CONTRAST)
 #endif
       RQREAL(obj->contrast());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -102,9 +100,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_DENOISINGLEVEL)
 #endif
       RQREAL(obj->denoisingLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_ISAVAILABLE)
 #endif
       RBOOL(obj->isAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -148,9 +142,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_ISWHITEBALANCEMODESUPPORTED)
 #endif
       RBOOL(obj->isWhiteBalanceModeSupported((QCameraImageProcessing::WhiteBalanceMode)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -171,9 +163,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_MANUALWHITEBALANCE)
 #endif
       RQREAL(obj->manualWhiteBalance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -194,9 +184,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SATURATION)
 #endif
       RQREAL(obj->saturation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -217,9 +205,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETCONTRAST)
 #endif
       obj->setContrast(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -242,9 +228,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETDENOISINGLEVEL)
 #endif
       obj->setDenoisingLevel(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -267,9 +251,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETMANUALWHITEBALANCE)
 #endif
       obj->setManualWhiteBalance(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -292,9 +274,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETSATURATION)
 #endif
       obj->setSaturation(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -317,9 +297,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETSHARPENINGLEVEL)
 #endif
       obj->setSharpeningLevel(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -342,9 +320,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETWHITEBALANCEMODE)
 #endif
       obj->setWhiteBalanceMode((QCameraImageProcessing::WhiteBalanceMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -367,9 +343,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SHARPENINGLEVEL)
 #endif
       RQREAL(obj->sharpeningLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -390,9 +364,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_WHITEBALANCEMODE)
 #endif
       RENUM(obj->whiteBalanceMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -414,9 +386,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_BRIGHTNESS)
 #endif
       RQREAL(obj->brightness());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -439,9 +409,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETBRIGHTNESS)
 #endif
       obj->setBrightness(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -466,9 +434,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_COLORFILTER)
 #endif
       RENUM(obj->colorFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -491,9 +457,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_SETCOLORFILTER)
 #endif
       obj->setColorFilter((QCameraImageProcessing::ColorFilter)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -518,9 +482,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSING_ISCOLORFILTERSUPPORTED)
 #endif
       RBOOL(obj->isColorFilterSupported((QCameraImageProcessing::ColorFilter)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

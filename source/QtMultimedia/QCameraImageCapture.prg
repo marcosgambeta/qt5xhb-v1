@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_NEW)
   {
     QCameraImageCapture *obj = new QCameraImageCapture(PQMEDIAOBJECT(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -130,9 +128,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ISREADYFORCAPTURE)
 #endif
       RBOOL(obj->isReadyForCapture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -153,9 +149,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_AVAILABILITY)
 #endif
       RENUM(obj->availability());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -176,9 +170,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_BUFFERFORMAT)
 #endif
       RENUM(obj->bufferFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -199,9 +191,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_CAPTUREDESTINATION)
 #endif
       RENUM(obj->captureDestination());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -223,9 +213,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ENCODINGSETTINGS)
       QImageEncoderSettings *ptr = new QImageEncoderSettings(obj->encodingSettings());
       Qt5xHb::createReturnClass(ptr, "QIMAGEENCODERSETTINGS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -246,9 +234,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ERROR)
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -269,9 +255,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ERRORSTRING)
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -292,9 +276,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_IMAGECODECDESCRIPTION)
 #endif
       RQSTRING(obj->imageCodecDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -315,9 +297,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ISAVAILABLE)
 #endif
       RBOOL(obj->isAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -338,9 +318,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_ISCAPTUREDESTINATIONSUPPORTED)
 #endif
       RBOOL(obj->isCaptureDestinationSupported((QCameraImageCapture::CaptureDestinations)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -362,9 +340,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_MEDIAOBJECT)
       QMediaObject *ptr = obj->mediaObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -385,9 +361,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SETBUFFERFORMAT)
 #endif
       obj->setBufferFormat((QVideoFrame::PixelFormat)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -410,9 +384,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION)
 #endif
       obj->setCaptureDestination((QCameraImageCapture::CaptureDestinations)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -435,9 +407,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SETENCODINGSETTINGS)
 #endif
       obj->setEncodingSettings(*PQIMAGEENCODERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -468,9 +438,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDBUFFERFORMATS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -491,9 +459,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS)
 #endif
       RQSTRINGLIST(obj->supportedImageCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -544,9 +510,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS)
       hb_itemReturnRelease(pArray);
       hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -567,9 +531,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_CANCELCAPTURE)
 #endif
       obj->cancelCapture();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -592,9 +554,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURE_CAPTURE)
 #endif
       RINT(obj->capture(OPQSTRING(1, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -94,9 +94,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE)
 #endif
       obj->cancelCapture();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -119,9 +117,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CAPTURE)
 #endif
       RINT(obj->capture(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -142,9 +138,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DRIVEMODE)
 #endif
       RENUM(obj->driveMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE)
 #endif
       RBOOL(obj->isReadyForCapture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -188,9 +180,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE)
 #endif
       obj->setDriveMode((QCameraImageCapture::DriveMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

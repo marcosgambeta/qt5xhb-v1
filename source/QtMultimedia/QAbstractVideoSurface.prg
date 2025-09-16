@@ -96,9 +96,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NATIVERESOLUTION)
       QSize *ptr = new QSize(obj->nativeResolution());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -119,9 +117,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ERROR)
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -142,9 +138,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISACTIVE)
 #endif
       RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED)
 #endif
       RBOOL(obj->isFormatSupported(*PQVIDEOSURFACEFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -189,9 +181,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
       QVideoSurfaceFormat *ptr = new QVideoSurfaceFormat(obj->nearestFormat(*PQVIDEOSURFACEFORMAT(1)));
       Qt5xHb::createReturnClass(ptr, "QVIDEOSURFACEFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -212,9 +202,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_PRESENT)
 #endif
       RBOOL(obj->present(*PQVIDEOFRAME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -235,9 +223,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_START)
 #endif
       RBOOL(obj->start(*PQVIDEOSURFACEFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -258,9 +244,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_STOP)
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -284,9 +268,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SURFACEFORMAT)
       QVideoSurfaceFormat *ptr = new QVideoSurfaceFormat(obj->surfaceFormat());
       Qt5xHb::createReturnClass(ptr, "QVIDEOSURFACEFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -318,9 +300,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

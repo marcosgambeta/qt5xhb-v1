@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION)
       QNetworkConfiguration *ptr = new QNetworkConfiguration(obj->currentConfiguration());
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -118,9 +116,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS)
       }
       obj->setConfigurations(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

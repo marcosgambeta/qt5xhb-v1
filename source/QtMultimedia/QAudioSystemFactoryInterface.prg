@@ -120,9 +120,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_AVAILABLEDEVICES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -144,9 +142,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_CREATEINPUT)
       QAbstractAudioInput *ptr = obj->createInput(*PQBYTEARRAY(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIOINPUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -168,9 +164,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_CREATEOUTPUT)
       QAbstractAudioOutput *ptr = obj->createOutput(*PQBYTEARRAY(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIOOUTPUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -192,9 +186,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_CREATEDEVICEINFO)
       QAbstractAudioDeviceInfo *ptr = obj->createDeviceInfo(*PQBYTEARRAY(1), (QAudio::Mode)hb_parni(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIODEVICEINFO");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -222,9 +214,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -255,9 +245,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMFACTORYINTERFACE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

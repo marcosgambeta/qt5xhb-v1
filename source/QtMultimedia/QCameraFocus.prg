@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_FOCUSMODE)
 #endif
       RENUM(obj->focusMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_SETFOCUSMODE)
 #endif
       obj->setFocusMode((QCameraFocus::FocusModes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -131,9 +127,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_FOCUSPOINTMODE)
 #endif
       RENUM(obj->focusPointMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -154,9 +148,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_SETFOCUSPOINTMODE)
 #endif
       obj->setFocusPointMode((QCameraFocus::FocusPointMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -180,9 +172,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_CUSTOMFOCUSPOINT)
       QPointF *ptr = new QPointF(obj->customFocusPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -203,9 +193,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_SETCUSTOMFOCUSPOINT)
 #endif
       obj->setCustomFocusPoint(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -254,9 +242,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_FOCUSZONES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -277,9 +263,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_OPTICALZOOM)
 #endif
       RQREAL(obj->opticalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -300,9 +284,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_DIGITALZOOM)
 #endif
       RQREAL(obj->digitalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -323,9 +305,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_ISAVAILABLE)
 #endif
       RBOOL(obj->isAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -346,9 +326,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_ISFOCUSMODESUPPORTED)
 #endif
       RBOOL(obj->isFocusModeSupported((QCameraFocus::FocusModes)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -369,9 +347,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_ISFOCUSPOINTMODESUPPORTED)
 #endif
       RBOOL(obj->isFocusPointModeSupported((QCameraFocus::FocusPointMode)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -392,9 +368,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_MAXIMUMDIGITALZOOM)
 #endif
       RQREAL(obj->maximumDigitalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -415,9 +389,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_MAXIMUMOPTICALZOOM)
 #endif
       RQREAL(obj->maximumOpticalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -438,9 +410,7 @@ HB_FUNC_STATIC(QCAMERAFOCUS_ZOOMTO)
 #endif
       obj->zoomTo(PQREAL(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

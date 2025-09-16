@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_FLASHMODE)
 #endif
       RENUM(obj->flashMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED)
 #endif
       RBOOL(obj->isFlashModeSupported((QCameraExposure::FlashModes)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -133,9 +129,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_ISFLASHREADY)
 #endif
       RBOOL(obj->isFlashReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -156,9 +150,7 @@ HB_FUNC_STATIC(QCAMERAFLASHCONTROL_SETFLASHMODE)
 #endif
       obj->setFlashMode((QCameraExposure::FlashModes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

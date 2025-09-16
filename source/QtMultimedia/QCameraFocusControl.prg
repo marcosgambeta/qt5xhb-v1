@@ -98,9 +98,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_CUSTOMFOCUSPOINT)
       QPointF *ptr = new QPointF(obj->customFocusPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -121,9 +119,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_FOCUSMODE)
 #endif
       RENUM(obj->focusMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -144,9 +140,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_FOCUSPOINTMODE)
 #endif
       RENUM(obj->focusPointMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -193,9 +187,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_FOCUSZONES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -216,9 +208,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ISFOCUSMODESUPPORTED)
 #endif
       RBOOL(obj->isFocusModeSupported((QCameraFocus::FocusModes)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -239,9 +229,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_ISFOCUSPOINTMODESUPPORTED)
 #endif
       RBOOL(obj->isFocusPointModeSupported((QCameraFocus::FocusPointMode)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -262,9 +250,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_SETCUSTOMFOCUSPOINT)
 #endif
       obj->setCustomFocusPoint(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -287,9 +273,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_SETFOCUSMODE)
 #endif
       obj->setFocusMode((QCameraFocus::FocusModes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -312,9 +296,7 @@ HB_FUNC_STATIC(QCAMERAFOCUSCONTROL_SETFOCUSPOINTMODE)
 #endif
       obj->setFocusPointMode((QCameraFocus::FocusPointMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT)
 #endif
       RQSTRING(obj->activeInput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -120,9 +118,7 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -143,9 +139,7 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT)
 #endif
       RQSTRING(obj->defaultInput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -166,9 +160,7 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION)
 #endif
       RQSTRING(obj->inputDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -189,9 +181,7 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT)
 #endif
       obj->setActiveInput(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

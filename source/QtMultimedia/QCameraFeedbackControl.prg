@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED)
 #endif
       RBOOL(obj->isEventFeedbackEnabled((QCameraFeedbackControl::EventType)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED)
 #endif
       RBOOL(obj->isEventFeedbackLocked((QCameraFeedbackControl::EventType)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -132,9 +128,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK)
 #endif
       obj->resetEventFeedback((QCameraFeedbackControl::EventType)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -157,9 +151,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED)
 #endif
       RBOOL(obj->setEventFeedbackEnabled((QCameraFeedbackControl::EventType)hb_parni(1), PBOOL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -180,9 +172,7 @@ HB_FUNC_STATIC(QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND)
 #endif
       RBOOL(obj->setEventFeedbackSound((QCameraFeedbackControl::EventType)hb_parni(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

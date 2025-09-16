@@ -116,9 +116,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_NEW)
     QMediaPlayer *obj =
         new QMediaPlayer(OPQOBJECT(1, 0), HB_ISNIL(2) ? (QMediaPlayer::Flags)0 : (QMediaPlayer::Flags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -158,9 +156,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_MEDIA)
       QMediaContent *ptr = new QMediaContent(obj->media());
       Qt5xHb::createReturnClass(ptr, "QMEDIACONTENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -181,9 +177,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETMEDIA)
 #endif
       obj->setMedia(*PQMEDIACONTENT(1), OPQIODEVICE(2, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -207,9 +201,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_CURRENTMEDIA)
       QMediaContent *ptr = new QMediaContent(obj->currentMedia());
       Qt5xHb::createReturnClass(ptr, "QMEDIACONTENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -231,9 +223,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_PLAYLIST)
       QMediaPlaylist *ptr = obj->playlist();
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIAPLAYLIST");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -254,9 +244,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETPLAYLIST)
 #endif
       obj->setPlaylist(PQMEDIAPLAYLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -279,9 +267,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_DURATION)
 #endif
       RQINT64(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -302,9 +288,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_POSITION)
 #endif
       RQINT64(obj->position());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -325,9 +309,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETPOSITION)
 #endif
       obj->setPosition(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -350,9 +332,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_VOLUME)
 #endif
       RINT(obj->volume());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -373,9 +353,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETVOLUME)
 #endif
       obj->setVolume(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -398,9 +376,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_ISMUTED)
 #endif
       RBOOL(obj->isMuted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -421,9 +397,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETMUTED)
 #endif
       obj->setMuted(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -446,9 +420,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_BUFFERSTATUS)
 #endif
       RINT(obj->bufferStatus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -469,9 +441,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_ISAUDIOAVAILABLE)
 #endif
       RBOOL(obj->isAudioAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -492,9 +462,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_ISVIDEOAVAILABLE)
 #endif
       RBOOL(obj->isVideoAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -515,9 +483,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_ISSEEKABLE)
 #endif
       RBOOL(obj->isSeekable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -538,9 +504,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_PLAYBACKRATE)
 #endif
       RQREAL(obj->playbackRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -561,9 +525,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_STATE)
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -584,9 +546,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_MEDIASTATUS)
 #endif
       RENUM(obj->mediaStatus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -608,9 +568,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_AUDIOROLE)
 #endif
       RENUM(obj->audioRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -633,9 +591,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETAUDIOROLE)
 #endif
       obj->setAudioRole((QAudio::Role)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -659,9 +615,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_ERRORSTRING)
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -683,9 +637,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_CURRENTNETWORKCONFIGURATION)
       QNetworkConfiguration *ptr = new QNetworkConfiguration(obj->currentNetworkConfiguration());
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -706,9 +658,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_ERROR)
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -730,9 +680,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_MEDIASTREAM)
       const QIODevice *ptr = obj->mediaStream();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -782,9 +730,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETVIDEOOUTPUT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -803,9 +749,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_AVAILABILITY)
 #endif
       RENUM(obj->availability());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -826,9 +770,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_PAUSE)
 #endif
       obj->pause();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -851,9 +793,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_PLAY)
 #endif
       obj->play();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -884,9 +824,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETNETWORKCONFIGURATIONS)
       }
       obj->setNetworkConfigurations(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -909,9 +847,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SETPLAYBACKRATE)
 #endif
       obj->setPlaybackRate(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -934,9 +870,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_STOP)
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -958,9 +892,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_HASSUPPORT)
     RENUM(QMediaPlayer::hasSupport(PQSTRING(1), OPQSTRINGLIST(2, QStringList()),
                                    HB_ISNIL(3) ? (QMediaPlayer::Flags)0 : (QMediaPlayer::Flags)hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -978,9 +910,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SUPPORTEDMIMETYPES)
     RQSTRINGLIST(
         QMediaPlayer::supportedMimeTypes(HB_ISNIL(1) ? (QMediaPlayer::Flags)0 : (QMediaPlayer::Flags)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1009,9 +939,7 @@ HB_FUNC_STATIC(QMEDIAPLAYER_SUPPORTEDAUDIOROLES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

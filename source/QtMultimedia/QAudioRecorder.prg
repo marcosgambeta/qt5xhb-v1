@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_NEW)
   {
     QAudioRecorder *obj = new QAudioRecorder(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_AUDIOINPUT)
 #endif
       RQSTRING(obj->audioInput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -129,9 +125,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_SETAUDIOINPUT)
 #endif
       obj->setAudioInput(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -154,9 +148,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_AUDIOINPUTDESCRIPTION)
 #endif
       RQSTRING(obj->audioInputDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -177,9 +169,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_AUDIOINPUTS)
 #endif
       RQSTRINGLIST(obj->audioInputs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -200,9 +190,7 @@ HB_FUNC_STATIC(QAUDIORECORDER_DEFAULTAUDIOINPUT)
 #endif
       RQSTRING(obj->defaultAudioInput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

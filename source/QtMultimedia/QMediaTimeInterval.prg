@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NEW)
     */
     QMediaTimeInterval *obj = new QMediaTimeInterval(*PQMEDIATIMEINTERVAL(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -122,9 +120,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_CONTAINS)
 #endif
       RBOOL(obj->contains(PQINT64(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -145,9 +141,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_END)
 #endif
       RQINT64(obj->end());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -168,9 +162,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_ISNORMAL)
 #endif
       RBOOL(obj->isNormal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -192,9 +184,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NORMALIZED)
       QMediaTimeInterval *ptr = new QMediaTimeInterval(obj->normalized());
       Qt5xHb::createReturnClass(ptr, "QMEDIATIMEINTERVAL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -215,9 +205,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_START)
 #endif
       RQINT64(obj->start());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -239,9 +227,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_TRANSLATED)
       QMediaTimeInterval *ptr = new QMediaTimeInterval(obj->translated(PQINT64(1)));
       Qt5xHb::createReturnClass(ptr, "QMEDIATIMEINTERVAL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -269,9 +255,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -302,9 +286,7 @@ HB_FUNC_STATIC(QMEDIATIMEINTERVAL_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

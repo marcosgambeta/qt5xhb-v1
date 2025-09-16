@@ -98,9 +98,7 @@ HB_FUNC_STATIC(QVIDEOFILTERRUNNABLE_RUN)
           obj->run(PQVIDEOFRAME(1), *PQVIDEOSURFACEFORMAT(2), (QVideoFilterRunnable::RunFlags)hb_parni(3)));
       Qt5xHb::createReturnClass(ptr, "QVIDEOFRAME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

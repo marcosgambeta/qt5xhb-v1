@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT)
 #endif
       RENUM(obj->bufferFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT)
 #endif
       obj->setBufferFormat((QVideoFrame::PixelFormat)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -142,9 +138,7 @@ HB_FUNC_STATIC(QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

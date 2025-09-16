@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_PREFERREDFORMAT)
       QAudioFormat *ptr = new QAudioFormat(obj->preferredFormat());
       Qt5xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_ISFORMATSUPPORTED)
 #endif
       RBOOL(obj->isFormatSupported(*PQAUDIOFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -135,9 +131,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_DEVICENAME)
 #endif
       RQSTRING(obj->deviceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -158,9 +152,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDCODECS)
 #endif
       RQSTRINGLIST(obj->supportedCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -182,9 +174,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLERATES)
       QList<int> list = obj->supportedSampleRates();
       Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -206,9 +196,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS)
       QList<int> list = obj->supportedChannelCounts();
       Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -230,9 +218,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES)
       QList<int> list = obj->supportedSampleSizes();
       Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -261,9 +247,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDBYTEORDERS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -292,9 +276,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

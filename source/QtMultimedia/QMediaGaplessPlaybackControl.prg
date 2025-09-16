@@ -91,9 +91,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME)
 #endif
       RQREAL(obj->crossfadeTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -114,9 +112,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED)
 #endif
       RBOOL(obj->isCrossfadeSupported());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA)
       QMediaContent *ptr = new QMediaContent(obj->nextMedia());
       Qt5xHb::createReturnClass(ptr, "QMEDIACONTENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -161,9 +155,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME)
 #endif
       obj->setCrossfadeTime(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -186,9 +178,7 @@ HB_FUNC_STATIC(QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA)
 #endif
       obj->setNextMedia(*PQMEDIACONTENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

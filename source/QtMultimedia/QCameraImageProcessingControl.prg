@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED)
 #endif
       RBOOL(obj->isParameterSupported((QCameraImageProcessingControl::ProcessingParameter)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED)
       RBOOL(obj->isParameterValueSupported((QCameraImageProcessingControl::ProcessingParameter)hb_parni(1),
                                            *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -135,9 +131,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER)
       QVariant *ptr = new QVariant(obj->parameter((QCameraImageProcessingControl::ProcessingParameter)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -158,9 +152,7 @@ HB_FUNC_STATIC(QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER)
 #endif
       obj->setParameter((QCameraImageProcessingControl::ProcessingParameter)hb_parni(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

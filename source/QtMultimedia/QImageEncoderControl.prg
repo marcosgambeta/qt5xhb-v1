@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS)
 #endif
       RQSTRINGLIST(obj->supportedImageCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION)
 #endif
       RQSTRING(obj->imageCodecDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,9 +159,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS)
       hb_itemReturnRelease(pArray);
       hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -187,9 +181,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_IMAGESETTINGS)
       QImageEncoderSettings *ptr = new QImageEncoderSettings(obj->imageSettings());
       Qt5xHb::createReturnClass(ptr, "QIMAGEENCODERSETTINGS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -210,9 +202,7 @@ HB_FUNC_STATIC(QIMAGEENCODERCONTROL_SETIMAGESETTINGS)
 #endif
       obj->setImageSettings(*PQIMAGEENCODERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

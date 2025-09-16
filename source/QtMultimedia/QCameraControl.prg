@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_CANCHANGEPROPERTY)
 #endif
       RBOOL(obj->canChangeProperty((QCameraControl::PropertyChangeType)hb_parni(1), (QCamera::Status)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_CAPTUREMODE)
 #endif
       RENUM(obj->captureMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_ISCAPTUREMODESUPPORTED)
 #endif
       RBOOL(obj->isCaptureModeSupported((QCamera::CaptureModes)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -162,9 +156,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_SETCAPTUREMODE)
 #endif
       obj->setCaptureMode((QCamera::CaptureModes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -187,9 +179,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_SETSTATE)
 #endif
       obj->setState((QCamera::State)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -212,9 +202,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_STATE)
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -235,9 +223,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_STATUS)
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

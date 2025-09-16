@@ -108,9 +108,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_AUDIOFORMAT)
       QAudioFormat *ptr = new QAudioFormat(obj->audioFormat());
       Qt5xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -131,9 +129,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_BUFFERAVAILABLE)
 #endif
       RBOOL(obj->bufferAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -154,9 +150,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_DURATION)
 #endif
       RQINT64(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -177,9 +171,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_POSITION)
 #endif
       RQINT64(obj->position());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -201,9 +193,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_READ)
       QAudioBuffer *ptr = new QAudioBuffer(obj->read());
       Qt5xHb::createReturnClass(ptr, "QAUDIOBUFFER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -224,9 +214,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETAUDIOFORMAT)
 #endif
       obj->setAudioFormat(*PQAUDIOFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -250,9 +238,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SOURCEDEVICE)
       QIODevice *ptr = obj->sourceDevice();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -273,9 +259,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETSOURCEDEVICE)
 #endif
       obj->setSourceDevice(PQIODEVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -298,9 +282,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SETSOURCEFILENAME)
 #endif
       obj->setSourceFilename(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -323,9 +305,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_SOURCEFILENAME)
 #endif
       RQSTRING(obj->sourceFilename());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -346,9 +326,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_START)
 #endif
       obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -371,9 +349,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_STATE)
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -394,9 +370,7 @@ HB_FUNC_STATIC(QAUDIODECODERCONTROL_STOP)
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -115,9 +115,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_AVAILABLEDEVICES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -139,9 +137,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEINPUT)
       QAbstractAudioInput *ptr = obj->createInput(*PQBYTEARRAY(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIOINPUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,9 +159,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEOUTPUT)
       QAbstractAudioOutput *ptr = obj->createOutput(*PQBYTEARRAY(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIOOUTPUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -187,9 +181,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEDEVICEINFO)
       QAbstractAudioDeviceInfo *ptr = obj->createDeviceInfo(*PQBYTEARRAY(1), (QAudio::Mode)hb_parni(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIODEVICEINFO");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
