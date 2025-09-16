@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QGLSHADER_NEW)
     */
     QGLShader *obj = new QGLShader((QGLShader::ShaderType)hb_parni(1), PQGLCONTEXT(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -114,9 +112,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE1)
 #endif
       RBOOL(obj->compileSourceCode(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -137,9 +133,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE2)
 #endif
       RBOOL(obj->compileSourceCode(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -160,9 +154,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE3)
 #endif
       RBOOL(obj->compileSourceCode(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -178,9 +170,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     HB_FUNC_EXEC(QGLSHADER_COMPILESOURCECODE3);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -199,9 +189,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCEFILE)
 #endif
       RBOOL(obj->compileSourceFile(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -222,9 +210,7 @@ HB_FUNC_STATIC(QGLSHADER_ISCOMPILED)
 #endif
       RBOOL(obj->isCompiled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -245,9 +231,7 @@ HB_FUNC_STATIC(QGLSHADER_LOG)
 #endif
       RQSTRING(obj->log());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -268,9 +252,7 @@ HB_FUNC_STATIC(QGLSHADER_SHADERID)
 #endif
       RGLUINT(obj->shaderId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -291,9 +273,7 @@ HB_FUNC_STATIC(QGLSHADER_SHADERTYPE)
 #endif
       RENUM(obj->shaderType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -315,9 +295,7 @@ HB_FUNC_STATIC(QGLSHADER_SOURCECODE)
       QByteArray *ptr = new QByteArray(obj->sourceCode());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

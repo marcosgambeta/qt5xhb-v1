@@ -127,9 +127,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_NEW)
     */
     QGLFunctions *obj = new QGLFunctions(PQGLCONTEXT(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -163,9 +161,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLACTIVETEXTURE)
 #endif
       obj->glActiveTexture(PGLENUM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -188,9 +184,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLATTACHSHADER)
 #endif
       obj->glAttachShader(PGLUINT(1), PGLUINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -213,9 +207,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDATTRIBLOCATION)
 #endif
       obj->glBindAttribLocation(PGLUINT(1), PGLUINT(2), PCONSTCHAR(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -238,9 +230,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDBUFFER)
 #endif
       obj->glBindBuffer(PGLENUM(1), PGLUINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -263,9 +253,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDFRAMEBUFFER)
 #endif
       obj->glBindFramebuffer(PGLENUM(1), PGLUINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -288,9 +276,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDRENDERBUFFER)
 #endif
       obj->glBindRenderbuffer(PGLENUM(1), PGLUINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -313,9 +299,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDCOLOR)
 #endif
       obj->glBlendColor(PGLCLAMPF(1), PGLCLAMPF(2), PGLCLAMPF(3), PGLCLAMPF(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -338,9 +322,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATION)
 #endif
       obj->glBlendEquation(PGLENUM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -363,9 +345,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE)
 #endif
       obj->glBlendEquationSeparate(PGLENUM(1), PGLENUM(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -388,9 +368,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDFUNCSEPARATE)
 #endif
       obj->glBlendFuncSeparate(PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLENUM(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -413,9 +391,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS)
 #endif
       RGLENUM(obj->glCheckFramebufferStatus(PGLENUM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -436,9 +412,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCLEARDEPTHF)
 #endif
       obj->glClearDepthf(PGLCLAMPF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -461,9 +435,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPILESHADER)
 #endif
       obj->glCompileShader(PGLUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -486,9 +458,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATEPROGRAM)
 #endif
       RGLUINT(obj->glCreateProgram());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -509,9 +479,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATESHADER)
 #endif
       RGLUINT(obj->glCreateShader(PGLENUM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -532,9 +500,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETEPROGRAM)
 #endif
       obj->glDeleteProgram(PGLUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -557,9 +523,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETESHADER)
 #endif
       obj->glDeleteShader(PGLUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -582,9 +546,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDEPTHRANGEF)
 #endif
       obj->glDepthRangef(PGLCLAMPF(1), PGLCLAMPF(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -607,9 +569,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDETACHSHADER)
 #endif
       obj->glDetachShader(PGLUINT(1), PGLUINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -632,9 +592,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY)
 #endif
       obj->glDisableVertexAttribArray(PGLUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -657,9 +615,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY)
 #endif
       obj->glEnableVertexAttribArray(PGLUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -682,9 +638,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER)
 #endif
       obj->glFramebufferRenderbuffer(PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLUINT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -707,9 +661,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D)
 #endif
       obj->glFramebufferTexture2D(PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLUINT(4), PGLINT(5));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -732,9 +684,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGENERATEMIPMAP)
 #endif
       obj->glGenerateMipmap(PGLENUM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -757,9 +707,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGETATTRIBLOCATION)
 #endif
       RINT(obj->glGetAttribLocation(PGLUINT(1), PCONSTCHAR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -780,9 +728,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGETUNIFORMLOCATION)
 #endif
       RINT(obj->glGetUniformLocation(PGLUINT(1), PCONSTCHAR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -803,9 +749,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISBUFFER)
 #endif
       RGLBOOLEAN(obj->glIsBuffer(PGLUINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -826,9 +770,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISFRAMEBUFFER)
 #endif
       RGLBOOLEAN(obj->glIsFramebuffer(PGLUINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -849,9 +791,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISPROGRAM)
 #endif
       RGLBOOLEAN(obj->glIsProgram(PGLUINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -872,9 +812,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISRENDERBUFFER)
 #endif
       RGLBOOLEAN(obj->glIsRenderbuffer(PGLUINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -895,9 +833,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISSHADER)
 #endif
       RGLBOOLEAN(obj->glIsShader(PGLUINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -918,9 +854,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLLINKPROGRAM)
 #endif
       obj->glLinkProgram(PGLUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -943,9 +877,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLRELEASESHADERCOMPILER)
 #endif
       obj->glReleaseShaderCompiler();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -968,9 +900,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLRENDERBUFFERSTORAGE)
 #endif
       obj->glRenderbufferStorage(PGLENUM(1), PGLENUM(2), PGLSIZEI(3), PGLSIZEI(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -993,9 +923,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSAMPLECOVERAGE)
 #endif
       obj->glSampleCoverage(PGLCLAMPF(1), PGLBOOLEAN(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1018,9 +946,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILFUNCSEPARATE)
 #endif
       obj->glStencilFuncSeparate(PGLENUM(1), PGLENUM(2), PGLINT(3), PGLUINT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1043,9 +969,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILMASKSEPARATE)
 #endif
       obj->glStencilMaskSeparate(PGLENUM(1), PGLUINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1068,9 +992,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILOPSEPARATE)
 #endif
       obj->glStencilOpSeparate(PGLENUM(1), PGLENUM(2), PGLENUM(3), PGLENUM(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1093,9 +1015,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1F)
 #endif
       obj->glUniform1f(PGLINT(1), PGLFLOAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1118,9 +1038,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1I)
 #endif
       obj->glUniform1i(PGLINT(1), PGLINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1143,9 +1061,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2F)
 #endif
       obj->glUniform2f(PGLINT(1), PGLFLOAT(2), PGLFLOAT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1168,9 +1084,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2I)
 #endif
       obj->glUniform2i(PGLINT(1), PGLINT(2), PGLINT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1193,9 +1107,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3F)
 #endif
       obj->glUniform3f(PGLINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1218,9 +1130,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3I)
 #endif
       obj->glUniform3i(PGLINT(1), PGLINT(2), PGLINT(3), PGLINT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1243,9 +1153,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4F)
 #endif
       obj->glUniform4f(PGLINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1268,9 +1176,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4I)
 #endif
       obj->glUniform4i(PGLINT(1), PGLINT(2), PGLINT(3), PGLINT(4), PGLINT(5));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1293,9 +1199,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUSEPROGRAM)
 #endif
       obj->glUseProgram(PGLUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1318,9 +1222,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVALIDATEPROGRAM)
 #endif
       obj->glValidateProgram(PGLUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1343,9 +1245,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB1F)
 #endif
       obj->glVertexAttrib1f(PGLUINT(1), PGLFLOAT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1368,9 +1268,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB2F)
 #endif
       obj->glVertexAttrib2f(PGLUINT(1), PGLFLOAT(2), PGLFLOAT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1393,9 +1291,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB3F)
 #endif
       obj->glVertexAttrib3f(PGLUINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1418,9 +1314,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB4F)
 #endif
       obj->glVertexAttrib4f(PGLUINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1443,9 +1337,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_HASOPENGLFEATURE)
 #endif
       RBOOL(obj->hasOpenGLFeature((QGLFunctions::OpenGLFeature)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1466,9 +1358,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_INITIALIZEGLFUNCTIONS)
 #endif
       obj->initializeGLFunctions(HB_ISNIL(1) ? 0 : (QGLContext *)Qt5xHb::itemGetPtr(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1491,9 +1381,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_OPENGLFEATURES)
 #endif
       RENUM(obj->openGLFeatures());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1521,9 +1409,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -1554,9 +1440,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

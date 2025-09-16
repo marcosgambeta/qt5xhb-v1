@@ -120,9 +120,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_NEW)
     QGLFramebufferObject *obj = new QGLFramebufferObject(*PQSIZE(1), (QGLFramebufferObject::Attachment)hb_parni(2),
                                                          OPGLENUM(3, GL_TEXTURE_2D), OPGLENUM(4, GL_RGBA8));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -156,9 +154,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ATTACHMENT)
 #endif
       RENUM(obj->attachment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -179,9 +175,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_BIND)
 #endif
       RBOOL(obj->bind());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -217,9 +211,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_DRAWTEXTURE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -239,9 +231,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_FORMAT)
       QGLFramebufferObjectFormat *ptr = new QGLFramebufferObjectFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QGLFRAMEBUFFEROBJECTFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -262,9 +252,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_HANDLE)
 #endif
       RGLUINT(obj->handle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -285,9 +273,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ISBOUND)
 #endif
       RBOOL(obj->isBound());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -308,9 +294,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -331,9 +315,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_RELEASE)
 #endif
       RBOOL(obj->release());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -355,9 +337,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_SIZE)
       QSize *ptr = new QSize(obj->size());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -378,9 +358,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_TEXTURE)
 #endif
       RGLUINT(obj->texture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -402,9 +380,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_TOIMAGE)
       QImage *ptr = new QImage(obj->toImage());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -426,9 +402,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_PAINTENGINE)
       QPaintEngine *ptr = obj->paintEngine();
       Qt5xHb::createReturnClass(ptr, "QPAINTENGINE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -449,9 +423,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER)
     QGLFramebufferObject::blitFramebuffer(PQGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQGLFRAMEBUFFEROBJECT(3), *PQRECT(4),
                                           OPGLBITFIELD(5, GL_COLOR_BUFFER_BIT), OPGLENUM(6, GL_NEAREST));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -470,9 +442,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT)
 #endif
     RBOOL(QGLFramebufferObject::hasOpenGLFramebufferBlit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -489,9 +459,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS)
 #endif
     RBOOL(QGLFramebufferObject::hasOpenGLFramebufferObjects());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

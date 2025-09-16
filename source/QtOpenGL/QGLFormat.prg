@@ -134,9 +134,7 @@ HB_FUNC_STATIC(QGLFORMAT_NEW)
     */
     QGLFormat *obj = new QGLFormat(*PQGLFORMAT(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -170,9 +168,7 @@ HB_FUNC_STATIC(QGLFORMAT_ACCUM)
 #endif
       RBOOL(obj->accum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -193,9 +189,7 @@ HB_FUNC_STATIC(QGLFORMAT_ACCUMBUFFERSIZE)
 #endif
       RINT(obj->accumBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -216,9 +210,7 @@ HB_FUNC_STATIC(QGLFORMAT_ALPHA)
 #endif
       RBOOL(obj->alpha());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -239,9 +231,7 @@ HB_FUNC_STATIC(QGLFORMAT_ALPHABUFFERSIZE)
 #endif
       RINT(obj->alphaBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -262,9 +252,7 @@ HB_FUNC_STATIC(QGLFORMAT_BLUEBUFFERSIZE)
 #endif
       RINT(obj->blueBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -285,9 +273,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEPTH)
 #endif
       RBOOL(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -308,9 +294,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEPTHBUFFERSIZE)
 #endif
       RINT(obj->depthBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -331,9 +315,7 @@ HB_FUNC_STATIC(QGLFORMAT_DIRECTRENDERING)
 #endif
       RBOOL(obj->directRendering());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -354,9 +336,7 @@ HB_FUNC_STATIC(QGLFORMAT_DOUBLEBUFFER)
 #endif
       RBOOL(obj->doubleBuffer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -377,9 +357,7 @@ HB_FUNC_STATIC(QGLFORMAT_GREENBUFFERSIZE)
 #endif
       RINT(obj->greenBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -400,9 +378,7 @@ HB_FUNC_STATIC(QGLFORMAT_HASOVERLAY)
 #endif
       RBOOL(obj->hasOverlay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -423,9 +399,7 @@ HB_FUNC_STATIC(QGLFORMAT_MAJORVERSION)
 #endif
       RINT(obj->majorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -446,9 +420,7 @@ HB_FUNC_STATIC(QGLFORMAT_MINORVERSION)
 #endif
       RINT(obj->minorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -469,9 +441,7 @@ HB_FUNC_STATIC(QGLFORMAT_PLANE)
 #endif
       RINT(obj->plane());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -492,9 +462,7 @@ HB_FUNC_STATIC(QGLFORMAT_PROFILE)
 #endif
       RENUM(obj->profile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -515,9 +483,7 @@ HB_FUNC_STATIC(QGLFORMAT_REDBUFFERSIZE)
 #endif
       RINT(obj->redBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -538,9 +504,7 @@ HB_FUNC_STATIC(QGLFORMAT_RGBA)
 #endif
       RBOOL(obj->rgba());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -561,9 +525,7 @@ HB_FUNC_STATIC(QGLFORMAT_SAMPLEBUFFERS)
 #endif
       RBOOL(obj->sampleBuffers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -584,9 +546,7 @@ HB_FUNC_STATIC(QGLFORMAT_SAMPLES)
 #endif
       RINT(obj->samples());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -607,9 +567,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUM)
 #endif
       obj->setAccum(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -632,9 +590,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUMBUFFERSIZE)
 #endif
       obj->setAccumBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -657,9 +613,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHA)
 #endif
       obj->setAlpha(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -682,9 +636,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHABUFFERSIZE)
 #endif
       obj->setAlphaBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -707,9 +659,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETBLUEBUFFERSIZE)
 #endif
       obj->setBlueBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -732,9 +682,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTH)
 #endif
       obj->setDepth(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -757,9 +705,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTHBUFFERSIZE)
 #endif
       obj->setDepthBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -782,9 +728,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDIRECTRENDERING)
 #endif
       obj->setDirectRendering(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -807,9 +751,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDOUBLEBUFFER)
 #endif
       obj->setDoubleBuffer(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -832,9 +774,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETGREENBUFFERSIZE)
 #endif
       obj->setGreenBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -857,9 +797,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOPTION)
 #endif
       obj->setOption((QGL::FormatOptions)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -882,9 +820,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOVERLAY)
 #endif
       obj->setOverlay(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -907,9 +843,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPLANE)
 #endif
       obj->setPlane(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -932,9 +866,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPROFILE)
 #endif
       obj->setProfile((QGLFormat::OpenGLContextProfile)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -957,9 +889,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETREDBUFFERSIZE)
 #endif
       obj->setRedBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -982,9 +912,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETRGBA)
 #endif
       obj->setRgba(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1007,9 +935,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLEBUFFERS)
 #endif
       obj->setSampleBuffers(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1032,9 +958,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLES)
 #endif
       obj->setSamples(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1057,9 +981,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCIL)
 #endif
       obj->setStencil(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1082,9 +1004,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCILBUFFERSIZE)
 #endif
       obj->setStencilBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1107,9 +1027,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTEREO)
 #endif
       obj->setStereo(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1132,9 +1050,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSWAPINTERVAL)
 #endif
       obj->setSwapInterval(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1157,9 +1073,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETVERSION)
 #endif
       obj->setVersion(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1182,9 +1096,7 @@ HB_FUNC_STATIC(QGLFORMAT_STENCIL)
 #endif
       RBOOL(obj->stencil());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1205,9 +1117,7 @@ HB_FUNC_STATIC(QGLFORMAT_STENCILBUFFERSIZE)
 #endif
       RINT(obj->stencilBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1228,9 +1138,7 @@ HB_FUNC_STATIC(QGLFORMAT_STEREO)
 #endif
       RBOOL(obj->stereo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1251,9 +1159,7 @@ HB_FUNC_STATIC(QGLFORMAT_SWAPINTERVAL)
 #endif
       RINT(obj->swapInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1274,9 +1180,7 @@ HB_FUNC_STATIC(QGLFORMAT_TESTOPTION)
 #endif
       RBOOL(obj->testOption((QGL::FormatOptions)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1295,9 +1199,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEFAULTFORMAT)
     QGLFormat *ptr = new QGLFormat(QGLFormat::defaultFormat());
     Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1315,9 +1217,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEFAULTOVERLAYFORMAT)
     QGLFormat *ptr = new QGLFormat(QGLFormat::defaultOverlayFormat());
     Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1334,9 +1234,7 @@ HB_FUNC_STATIC(QGLFORMAT_HASOPENGL)
 #endif
     RBOOL(QGLFormat::hasOpenGL());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1353,9 +1251,7 @@ HB_FUNC_STATIC(QGLFORMAT_HASOPENGLOVERLAYS)
 #endif
     RBOOL(QGLFormat::hasOpenGLOverlays());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1372,9 +1268,7 @@ HB_FUNC_STATIC(QGLFORMAT_OPENGLVERSIONFLAGS)
 #endif
     RENUM(QGLFormat::openGLVersionFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1391,9 +1285,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTFORMAT)
 #endif
     QGLFormat::setDefaultFormat(*PQGLFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1412,9 +1304,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTOVERLAYFORMAT)
 #endif
     QGLFormat::setDefaultOverlayFormat(*PQGLFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1443,9 +1333,7 @@ HB_FUNC_STATIC(QGLFORMAT_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -1476,9 +1364,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

@@ -109,9 +109,7 @@ HB_FUNC_STATIC(QGLWIDGET_NEW)
     QGLWidget *obj = new QGLWidget(*PQGLFORMAT(1), OPQWIDGET(2, 0), OPQGLWIDGET(3, 0),
                                    HB_ISNIL(4) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(4));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -194,9 +192,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
     {
       RGLUINT(obj->bindTexture(PQSTRING(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -216,9 +212,7 @@ HB_FUNC_STATIC(QGLWIDGET_COLORMAP)
       const QGLColormap *ptr = &obj->colormap();
       Qt5xHb::createReturnClass(ptr, "QGLCOLORMAP", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -240,9 +234,7 @@ HB_FUNC_STATIC(QGLWIDGET_CONTEXT)
       const QGLContext *ptr = obj->context();
       Qt5xHb::createReturnClass(ptr, "QGLCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -263,9 +255,7 @@ HB_FUNC_STATIC(QGLWIDGET_DELETETEXTURE)
 #endif
       obj->deleteTexture(PGLUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -288,9 +278,7 @@ HB_FUNC_STATIC(QGLWIDGET_DONECURRENT)
 #endif
       obj->doneCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -313,9 +301,7 @@ HB_FUNC_STATIC(QGLWIDGET_DOUBLEBUFFER)
 #endif
       RBOOL(obj->doubleBuffer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -351,9 +337,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -373,9 +357,7 @@ HB_FUNC_STATIC(QGLWIDGET_FORMAT)
       QGLFormat *ptr = new QGLFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -397,9 +379,7 @@ HB_FUNC_STATIC(QGLWIDGET_GRABFRAMEBUFFER)
       QImage *ptr = new QImage(obj->grabFrameBuffer(OPBOOL(1, false)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -420,9 +400,7 @@ HB_FUNC_STATIC(QGLWIDGET_ISSHARING)
 #endif
       RBOOL(obj->isSharing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -443,9 +421,7 @@ HB_FUNC_STATIC(QGLWIDGET_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -466,9 +442,7 @@ HB_FUNC_STATIC(QGLWIDGET_MAKECURRENT)
 #endif
       obj->makeCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -491,9 +465,7 @@ HB_FUNC_STATIC(QGLWIDGET_MAKEOVERLAYCURRENT)
 #endif
       obj->makeOverlayCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -517,9 +489,7 @@ HB_FUNC_STATIC(QGLWIDGET_OVERLAYCONTEXT)
       const QGLContext *ptr = obj->overlayContext();
       Qt5xHb::createReturnClass(ptr, "QGLCONTEXT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -540,9 +510,7 @@ HB_FUNC_STATIC(QGLWIDGET_QGLCLEARCOLOR)
 #endif
       obj->qglClearColor(HB_ISOBJECT(1) ? *(QColor *)Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -565,9 +533,7 @@ HB_FUNC_STATIC(QGLWIDGET_QGLCOLOR)
 #endif
       obj->qglColor(HB_ISOBJECT(1) ? *(QColor *)Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -591,9 +557,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERPIXMAP)
       QPixmap *ptr = new QPixmap(obj->renderPixmap(OPINT(1, 0), OPINT(2, 0), OPBOOL(3, false)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -630,9 +594,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -651,9 +613,7 @@ HB_FUNC_STATIC(QGLWIDGET_SETCOLORMAP)
 #endif
       obj->setColormap(*PQGLCOLORMAP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -676,9 +636,7 @@ HB_FUNC_STATIC(QGLWIDGET_SETMOUSETRACKING)
 #endif
       obj->setMouseTracking(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -701,9 +659,7 @@ HB_FUNC_STATIC(QGLWIDGET_SWAPBUFFERS)
 #endif
       obj->swapBuffers();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -726,9 +682,7 @@ HB_FUNC_STATIC(QGLWIDGET_UPDATEGL)
 #endif
       obj->updateGL();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -751,9 +705,7 @@ HB_FUNC_STATIC(QGLWIDGET_UPDATEOVERLAYGL)
 #endif
       obj->updateOverlayGL();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -774,9 +726,7 @@ HB_FUNC_STATIC(QGLWIDGET_CONVERTTOGLFORMAT)
     QImage *ptr = new QImage(QGLWidget::convertToGLFormat(*PQIMAGE(1)));
     Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
