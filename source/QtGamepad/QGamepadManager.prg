@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_INSTANCE)
     QGamepadManager *ptr = QGamepadManager::instance();
     Qt5xHb::createReturnQObjectClass(ptr, "QGAMEPADMANAGER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ISGAMEPADCONNECTED)
 #endif
       RBOOL(obj->isGamepadConnected(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -130,9 +126,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ISCONFIGURATIONNEEDED)
 #endif
       RBOOL(obj->isConfigurationNeeded(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -155,9 +149,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_CONFIGUREBUTTON)
 #endif
       RBOOL(obj->configureButton(PINT(1), (QGamepadManager::GamepadButton)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -180,9 +172,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_CONFIGUREAXIS)
 #endif
       RBOOL(obj->configureAxis(PINT(1), (QGamepadManager::GamepadAxis)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -205,9 +195,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON)
 #endif
       RBOOL(obj->setCancelConfigureButton(PINT(1), (QGamepadManager::GamepadButton)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -230,9 +218,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_RESETCONFIGURATION)
 #endif
       obj->resetConfiguration(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -257,9 +243,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_SETSETTINGSFILE)
 #endif
       obj->setSettingsFile(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
