@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
 #endif
       RENUM(obj->capabilities(PQIODEVICE(1), *PQBYTEARRAY(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
           obj->create(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
       Qt5xHb::createReturnClass(ptr, "QIMAGEIOHANDLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -54,9 +54,7 @@ HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_NEW)
     */
     HCodeBlockValidator *o = new HCodeBlockValidator(PBLOCKORSYMBOL(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(o, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

@@ -67,9 +67,7 @@ HB_FUNC_STATIC(QPAINTEVENT_NEW)
     */
     QPaintEvent *obj = new QPaintEvent(*PQRECT(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -104,9 +102,7 @@ HB_FUNC_STATIC(QPAINTEVENT_RECT)
       const QRect *ptr = &obj->rect();
       Qt5xHb::createReturnClass(ptr, "QRECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -128,9 +124,7 @@ HB_FUNC_STATIC(QPAINTEVENT_REGION)
       const QRegion *ptr = &obj->region();
       Qt5xHb::createReturnClass(ptr, "QREGION", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

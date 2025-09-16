@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_NEW)
   {
     QAccessibleTextUpdateEvent *obj = new QAccessibleTextUpdateEvent(PQOBJECT(1), PINT(2), PQSTRING(3), PQSTRING(4));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -94,9 +92,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_TEXTREMOVED)
 #endif
       RQSTRING(obj->textRemoved());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -117,9 +113,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_TEXTINSERTED)
 #endif
       RQSTRING(obj->textInserted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -140,9 +134,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_CHANGEPOSITION)
 #endif
       RINT(obj->changePosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

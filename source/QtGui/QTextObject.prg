@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMAT)
       QTextFormat *ptr = new QTextFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QTEXTFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMATINDEX)
 #endif
       RINT(obj->formatIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -116,9 +112,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_DOCUMENT)
       QTextDocument *ptr = obj->document();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -139,9 +133,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_OBJECTINDEX)
 #endif
       RINT(obj->objectIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

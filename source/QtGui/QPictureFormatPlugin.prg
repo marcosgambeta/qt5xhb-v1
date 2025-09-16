@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_LOADPICTURE)
 #endif
       RBOOL(obj->loadPicture(PQSTRING(1), PQSTRING(2), PQPICTURE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -104,9 +102,7 @@ HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_SAVEPICTURE)
 #endif
       RBOOL(obj->savePicture(PQSTRING(1), PQSTRING(2), *PQPICTURE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -127,9 +123,7 @@ HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_INSTALLIOHANDLER)
 #endif
       RBOOL(obj->installIOHandler(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

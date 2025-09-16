@@ -57,9 +57,7 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_NEW)
   {
     QWindowStateChangeEvent *obj = new QWindowStateChangeEvent((Qt::WindowStates)hb_parni(1), OPBOOL(2, false));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_OLDSTATE)
 #endif
       RENUM(obj->oldState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -116,9 +112,7 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_ISOVERRIDE)
 #endif
       RBOOL(obj->isOverride());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -67,9 +67,7 @@ HB_FUNC_STATIC(QKEYEVENT_NEW)
     QKeyEvent *obj = new QKeyEvent((QEvent::Type)hb_parni(1), PINT(2), (Qt::KeyboardModifiers)hb_parni(3),
                                    OPQSTRING(4, QString()), OPBOOL(5, false), OPUSHORT(6, 1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -103,9 +101,7 @@ HB_FUNC_STATIC(QKEYEVENT_COUNT)
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -126,9 +122,7 @@ HB_FUNC_STATIC(QKEYEVENT_ISAUTOREPEAT)
 #endif
       RBOOL(obj->isAutoRepeat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -149,9 +143,7 @@ HB_FUNC_STATIC(QKEYEVENT_KEY)
 #endif
       RINT(obj->key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -172,9 +164,7 @@ HB_FUNC_STATIC(QKEYEVENT_MATCHES)
 #endif
       RBOOL(obj->matches((QKeySequence::StandardKey)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -195,9 +185,7 @@ HB_FUNC_STATIC(QKEYEVENT_MODIFIERS)
 #endif
       RENUM(obj->modifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -218,9 +206,7 @@ HB_FUNC_STATIC(QKEYEVENT_NATIVEMODIFIERS)
 #endif
       RQUINT32(obj->nativeModifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -241,9 +227,7 @@ HB_FUNC_STATIC(QKEYEVENT_NATIVESCANCODE)
 #endif
       RQUINT32(obj->nativeScanCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -264,9 +248,7 @@ HB_FUNC_STATIC(QKEYEVENT_NATIVEVIRTUALKEY)
 #endif
       RQUINT32(obj->nativeVirtualKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -287,9 +269,7 @@ HB_FUNC_STATIC(QKEYEVENT_TEXT)
 #endif
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -68,9 +68,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_NEW)
   {
     QOpenGLDebugLogger *obj = new QOpenGLDebugLogger(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_INITIALIZE)
 #endif
       RBOOL(obj->initialize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -129,9 +125,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_ISLOGGING)
 #endif
       RBOOL(obj->isLogging());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -152,9 +146,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_LOGGINGMODE)
 #endif
       RENUM(obj->loggingMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -175,9 +167,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_MAXIMUMMESSAGELENGTH)
 #endif
       RQINT64(obj->maximumMessageLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -201,9 +191,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_PUSHGROUP)
                      HB_ISNIL(3) ? (QOpenGLDebugMessage::Source)QOpenGLDebugMessage::ApplicationSource
                                  : (QOpenGLDebugMessage::Source)hb_parni(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -226,9 +214,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_POPGROUP)
 #endif
       obj->popGroup();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -251,9 +237,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_LOGMESSAGE)
 #endif
       obj->logMessage(*PQOPENGLDEBUGMESSAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -277,9 +261,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_STARTLOGGING)
       obj->startLogging(HB_ISNIL(1) ? (QOpenGLDebugLogger::LoggingMode)QOpenGLDebugLogger::AsynchronousLogging
                                     : (QOpenGLDebugLogger::LoggingMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -302,9 +284,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_STOPLOGGING)
 #endif
       obj->stopLogging();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
     */
     QInputMethodEvent *obj = new QInputMethodEvent(*PQINPUTMETHODEVENT(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -102,9 +100,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTLENGTH)
 #endif
       RINT(obj->replacementLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTSTART)
 #endif
       RINT(obj->replacementStart());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -148,9 +142,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_SETCOMMITSTRING)
 #endif
       obj->setCommitString(PQSTRING(1), OPINT(2, 0), OPINT(3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -55,9 +55,7 @@ HB_FUNC_STATIC(QAPPLICATIONSTATECHANGEEVENT_NEW)
   {
     QApplicationStateChangeEvent *obj = new QApplicationStateChangeEvent((Qt::ApplicationState)hb_parni(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -76,9 +74,7 @@ HB_FUNC_STATIC(QAPPLICATIONSTATECHANGEEVENT_APPLICATIONSTATE)
 #endif
       RENUM(obj->applicationState());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL)
 #endif
       RINT(obj->mouseDoubleClickInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -94,9 +92,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGDISTANCE)
 #endif
       RINT(obj->startDragDistance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -117,9 +113,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGTIME)
 #endif
       RINT(obj->startDragTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -140,9 +134,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGVELOCITY)
 #endif
       RINT(obj->startDragVelocity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,9 +155,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDINPUTINTERVAL)
 #endif
       RINT(obj->keyboardInputInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -186,9 +176,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDAUTOREPEATRATE)
 #endif
       RINT(obj->keyboardAutoRepeatRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -209,9 +197,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_CURSORFLASHTIME)
 #endif
       RINT(obj->cursorFlashTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -232,9 +218,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_SHOWISFULLSCREEN)
 #endif
       RBOOL(obj->showIsFullScreen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -255,9 +239,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_PASSWORDMASKDELAY)
 #endif
       RINT(obj->passwordMaskDelay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -278,9 +260,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_FONTSMOOTHINGGAMMA)
 #endif
       RQREAL(obj->fontSmoothingGamma());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -301,9 +281,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_USERTLEXTENSIONS)
 #endif
       RBOOL(obj->useRtlExtensions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

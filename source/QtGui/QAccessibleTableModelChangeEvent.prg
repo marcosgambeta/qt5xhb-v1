@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_NEW)
     QAccessibleTableModelChangeEvent *obj = new QAccessibleTableModelChangeEvent(
         PQOBJECT(1), (QAccessibleTableModelChangeEvent::ModelChangeType)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -102,9 +100,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE)
 #endif
       obj->setModelChangeType((QAccessibleTableModelChangeEvent::ModelChangeType)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -127,9 +123,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE)
 #endif
       RENUM(obj->modelChangeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -150,9 +144,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW)
 #endif
       obj->setFirstRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -175,9 +167,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN)
 #endif
       obj->setFirstColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -200,9 +190,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW)
 #endif
       obj->setLastRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -225,9 +213,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTCOLUMN)
 #endif
       obj->setLastColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -250,9 +236,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTROW)
 #endif
       RINT(obj->firstRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -273,9 +257,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTCOLUMN)
 #endif
       RINT(obj->firstColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -296,9 +278,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_LASTROW)
 #endif
       RINT(obj->lastRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -319,9 +299,7 @@ HB_FUNC_STATIC(QACCESSIBLETABLEMODELCHANGEEVENT_LASTCOLUMN)
 #endif
       RINT(obj->lastColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
