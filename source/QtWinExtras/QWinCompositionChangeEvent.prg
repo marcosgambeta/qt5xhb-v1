@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QWINCOMPOSITIONCHANGEEVENT_NEW)
   {
     QWinCompositionChangeEvent *obj = new QWinCompositionChangeEvent(PBOOL(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QWINCOMPOSITIONCHANGEEVENT_ISCOMPOSITIONENABLED)
 #endif
       RBOOL(obj->isCompositionEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
