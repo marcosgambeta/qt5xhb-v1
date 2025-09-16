@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_NEW)
     QDeclarativeListReference *obj =
         new QDeclarativeListReference(PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3, 0));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -104,9 +102,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_APPEND)
 #endif
       RBOOL(obj->append(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -128,9 +124,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_AT)
       QObject *ptr = obj->at(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -151,9 +145,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANAPPEND)
 #endif
       RBOOL(obj->canAppend());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -174,9 +166,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANAT)
 #endif
       RBOOL(obj->canAt());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -197,9 +187,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANCLEAR)
 #endif
       RBOOL(obj->canClear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -220,9 +208,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANCOUNT)
 #endif
       RBOOL(obj->canCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -243,9 +229,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CLEAR)
 #endif
       RBOOL(obj->clear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -266,9 +250,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_COUNT)
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -289,9 +271,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -313,9 +293,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_OBJECT)
       QObject *ptr = obj->object();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -343,9 +321,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -376,9 +352,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

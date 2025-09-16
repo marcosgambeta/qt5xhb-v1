@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_NEW)
     */
     QDeclarativeError *obj = new QDeclarativeError(*PQDECLARATIVEERROR(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -103,9 +101,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_COLUMN)
 #endif
       RINT(obj->column());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -126,9 +122,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_DESCRIPTION)
 #endif
       RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -149,9 +143,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -172,9 +164,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_LINE)
 #endif
       RINT(obj->line());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -195,9 +185,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETCOLUMN)
 #endif
       obj->setColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -220,9 +208,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETDESCRIPTION)
 #endif
       obj->setDescription(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -245,9 +231,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETLINE)
 #endif
       obj->setLine(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -270,9 +254,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETURL)
 #endif
       obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -295,9 +277,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_TOSTRING)
 #endif
       RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -319,9 +299,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_URL)
       QUrl *ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -349,9 +327,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -382,9 +358,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

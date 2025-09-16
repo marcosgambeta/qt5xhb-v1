@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_NEW)
   {
     QDeclarativeItem *obj = new QDeclarativeItem(OPQDECLARATIVEITEM(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_BASELINEOFFSET)
 #endif
       RQREAL(obj->baselineOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_CHILDAT)
       QDeclarativeItem *ptr = obj->childAt(PQREAL(1), PQREAL(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -164,9 +158,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_CHILDRENRECT)
       QRectF *ptr = new QRectF(obj->childrenRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -187,9 +179,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_CLIP)
 #endif
       RBOOL(obj->clip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_FORCEACTIVEFOCUS)
 #endif
       obj->forceActiveFocus();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -235,9 +223,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITHEIGHT)
 #endif
       RQREAL(obj->implicitHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -258,9 +244,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITWIDTH)
 #endif
       RQREAL(obj->implicitWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -281,9 +265,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_KEEPMOUSEGRAB)
 #endif
       RBOOL(obj->keepMouseGrab());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -305,9 +287,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_MAPFROMITEM)
       QScriptValue *ptr = new QScriptValue(obj->mapFromItem(*PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -329,9 +309,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_MAPTOITEM)
       QScriptValue *ptr = new QScriptValue(obj->mapToItem(*PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -353,9 +331,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_PARENTITEM)
       QDeclarativeItem *ptr = obj->parentItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -376,9 +352,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETBASELINEOFFSET)
 #endif
       obj->setBaselineOffset(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -401,9 +375,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETCLIP)
 #endif
       obj->setClip(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -426,9 +398,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETKEEPMOUSEGRAB)
 #endif
       obj->setKeepMouseGrab(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -451,9 +421,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETPARENTITEM)
 #endif
       obj->setParentItem(PQDECLARATIVEITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -476,9 +444,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETSMOOTH)
 #endif
       obj->setSmooth(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -501,9 +467,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETTRANSFORMORIGIN)
 #endif
       obj->setTransformOrigin((QDeclarativeItem::TransformOrigin)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -526,9 +490,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SMOOTH)
 #endif
       RBOOL(obj->smooth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -549,9 +511,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_TRANSFORMORIGIN)
 #endif
       RENUM(obj->transformOrigin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -96,9 +96,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
     */
     QDeclarativeComponent *obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -135,9 +133,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_BEGINCREATE)
       QObject *ptr = obj->beginCreate(PQDECLARATIVECONTEXT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -158,9 +154,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_COMPLETECREATE)
 #endif
       obj->completeCreate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -184,9 +178,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATE)
       QObject *ptr = obj->create(OPQDECLARATIVECONTEXT(1, 0));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -208,9 +200,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATIONCONTEXT)
       QDeclarativeContext *ptr = obj->creationContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -257,9 +247,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ERRORS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -280,9 +268,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISERROR)
 #endif
       RBOOL(obj->isError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -303,9 +289,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISLOADING)
 #endif
       RBOOL(obj->isLoading());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -326,9 +310,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISNULL)
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -349,9 +331,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISREADY)
 #endif
       RBOOL(obj->isReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -372,9 +352,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_LOADURL)
 #endif
       obj->loadUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -397,9 +375,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_PROGRESS)
 #endif
       RQREAL(obj->progress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -420,9 +396,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_SETDATA)
 #endif
       obj->setData(*PQBYTEARRAY(1), *PQURL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -445,9 +419,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_STATUS)
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -469,9 +441,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_URL)
       QUrl *ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

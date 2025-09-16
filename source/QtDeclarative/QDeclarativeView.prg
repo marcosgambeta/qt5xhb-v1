@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_NEW)
     */
     QDeclarativeView *obj = new QDeclarativeView(*PQURL(1), OPQWIDGET(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -128,9 +126,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ENGINE)
       QDeclarativeEngine *ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -177,9 +173,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ERRORS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -201,9 +195,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_INITIALSIZE)
       QSize *ptr = new QSize(obj->initialSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -224,9 +216,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_RESIZEMODE)
 #endif
       RENUM(obj->resizeMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -248,9 +238,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTCONTEXT)
       QDeclarativeContext *ptr = obj->rootContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -272,9 +260,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTOBJECT)
       QGraphicsObject *ptr = obj->rootObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -295,9 +281,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SETRESIZEMODE)
 #endif
       obj->setResizeMode((QDeclarativeView::ResizeMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -320,9 +304,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SETSOURCE)
 #endif
       obj->setSource(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -346,9 +328,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SOURCE)
       QUrl *ptr = new QUrl(obj->source());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -369,9 +349,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_STATUS)
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

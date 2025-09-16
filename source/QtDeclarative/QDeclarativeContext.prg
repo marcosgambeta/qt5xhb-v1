@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_NEW)
     */
     QDeclarativeContext *obj = new QDeclarativeContext(PQDECLARATIVECONTEXT(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -120,9 +118,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_BASEURL)
       QUrl *ptr = new QUrl(obj->baseUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -144,9 +140,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_CONTEXTOBJECT)
       QObject *ptr = obj->contextObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -168,9 +162,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_CONTEXTPROPERTY)
       QVariant *ptr = new QVariant(obj->contextProperty(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -192,9 +184,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_ENGINE)
       QDeclarativeEngine *ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVEENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -215,9 +205,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -239,9 +227,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_PARENTCONTEXT)
       QDeclarativeContext *ptr = obj->parentContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -263,9 +249,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_RESOLVEDURL)
       QUrl *ptr = new QUrl(obj->resolvedUrl(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -286,9 +270,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETBASEURL)
 #endif
       obj->setBaseUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -311,9 +293,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETCONTEXTOBJECT)
 #endif
       obj->setContextObject(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -351,9 +331,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETCONTEXTPROPERTY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
