@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QUILOADER_NEW)
   {
     QUiLoader *obj = new QUiLoader(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -120,9 +118,7 @@ HB_FUNC_STATIC(QUILOADER_ADDPLUGINPATH)
 #endif
       obj->addPluginPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -145,9 +141,7 @@ HB_FUNC_STATIC(QUILOADER_AVAILABLELAYOUTS)
 #endif
       RQSTRINGLIST(obj->availableLayouts());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -168,9 +162,7 @@ HB_FUNC_STATIC(QUILOADER_AVAILABLEWIDGETS)
 #endif
       RQSTRINGLIST(obj->availableWidgets());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -191,9 +183,7 @@ HB_FUNC_STATIC(QUILOADER_CLEARPLUGINPATHS)
 #endif
       obj->clearPluginPaths();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -217,9 +207,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTION)
       QAction *ptr = obj->createAction(OPQOBJECT(1, 0), OPQSTRING(2, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -241,9 +229,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTIONGROUP)
       QActionGroup *ptr = obj->createActionGroup(OPQOBJECT(1, 0), OPQSTRING(2, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTIONGROUP");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -265,9 +251,7 @@ HB_FUNC_STATIC(QUILOADER_CREATELAYOUT)
       QLayout *ptr = obj->createLayout(PQSTRING(1), OPQOBJECT(2, 0), OPQSTRING(3, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QLAYOUT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -289,9 +273,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEWIDGET)
       QWidget *ptr = obj->createWidget(PQSTRING(1), OPQWIDGET(2, 0), OPQSTRING(3, QString()));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -312,9 +294,7 @@ HB_FUNC_STATIC(QUILOADER_ISLANGUAGECHANGEENABLED)
 #endif
       RBOOL(obj->isLanguageChangeEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -336,9 +316,7 @@ HB_FUNC_STATIC(QUILOADER_LOAD)
       QWidget *ptr = obj->load(PQIODEVICE(1), OPQWIDGET(2, 0));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -359,9 +337,7 @@ HB_FUNC_STATIC(QUILOADER_PLUGINPATHS)
 #endif
       RQSTRINGLIST(obj->pluginPaths());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -382,9 +358,7 @@ HB_FUNC_STATIC(QUILOADER_SETLANGUAGECHANGEENABLED)
 #endif
       obj->setLanguageChangeEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -407,9 +381,7 @@ HB_FUNC_STATIC(QUILOADER_SETWORKINGDIRECTORY)
 #endif
       obj->setWorkingDirectory(*PQDIR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -433,9 +405,7 @@ HB_FUNC_STATIC(QUILOADER_WORKINGDIRECTORY)
       QDir *ptr = new QDir(obj->workingDirectory());
       Qt5xHb::createReturnClass(ptr, "QDIR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
