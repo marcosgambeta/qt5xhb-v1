@@ -111,9 +111,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW)
     */
     QHostAddress *obj = new QHostAddress((QHostAddress::SpecialAddress)hb_parni(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -151,9 +149,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SWAP)
 #endif
       obj->swap(*PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -209,9 +205,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
     {
       RBOOL(obj->setAddress(PQSTRING(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -230,9 +224,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_PROTOCOL)
 #endif
       RENUM(obj->protocol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -268,9 +260,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
       hb_storl(par1, 1);
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -289,9 +279,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOSTRING)
 #endif
       RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -312,9 +300,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SCOPEID)
 #endif
       RQSTRING(obj->scopeId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -335,9 +321,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 #endif
       obj->setScopeId(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -362,9 +346,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISEQUAL)
       RBOOL(obj->isEqual(*PQHOSTADDRESS(1), HB_ISNIL(2) ? (QHostAddress::ConversionMode)QHostAddress::TolerantConversion
                                                         : (QHostAddress::ConversionMode)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -386,9 +368,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISNULL)
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -409,9 +389,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -433,9 +411,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISINSUBNET)
     {
       RBOOL(obj->isInSubnet(*PQHOSTADDRESS(1), PINT(2)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -454,9 +430,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISLOOPBACK)
 #endif
       RBOOL(obj->isLoopback());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -478,9 +452,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISMULTICAST)
 #endif
       RBOOL(obj->isMulticast());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -509,9 +481,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -542,9 +512,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

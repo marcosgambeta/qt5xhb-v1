@@ -133,9 +133,7 @@ void QSslSocketSlots::sslErrors(const QList<QSslError> &errors)
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -161,9 +159,7 @@ void QSslSocketSlots_connect_signal(const QString &signal, const QString &slot)
     }
 
     hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

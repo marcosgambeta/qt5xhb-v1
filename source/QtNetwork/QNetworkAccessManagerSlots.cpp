@@ -121,9 +121,7 @@ void QNetworkAccessManagerSlots::sslErrors(QNetworkReply *reply, const QList<QSs
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -209,9 +207,7 @@ void QNetworkAccessManagerSlots_connect_signal(const QString &signal, const QStr
     }
 
     hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

@@ -141,9 +141,7 @@ HB_FUNC_STATIC(QSSLSOCKET_NEW)
   {
     QSslSocket *obj = new QSslSocket(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -182,9 +180,7 @@ HB_FUNC_STATIC(QSSLSOCKET_RESUME)
 #endif
       obj->resume();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -234,9 +230,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -260,9 +254,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSOCKETDESCRIPTOR)
                                      HB_ISNIL(3) ? (QIODevice::OpenMode)QIODevice::ReadWrite
                                                  : (QIODevice::OpenMode)hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -287,9 +279,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOST)
                          HB_ISNIL(4) ? (QAbstractSocket::NetworkLayerProtocol)QAbstractSocket::AnyIPProtocol
                                      : (QAbstractSocket::NetworkLayerProtocol)hb_parni(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -312,9 +302,7 @@ HB_FUNC_STATIC(QSSLSOCKET_DISCONNECTFROMHOST)
 #endif
       obj->disconnectFromHost();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -337,9 +325,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSOCKETOPTION)
 #endif
       obj->setSocketOption((QAbstractSocket::SocketOption)hb_parni(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -363,9 +349,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SOCKETOPTION)
       QVariant *ptr = new QVariant(obj->socketOption((QAbstractSocket::SocketOption)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -386,9 +370,7 @@ HB_FUNC_STATIC(QSSLSOCKET_MODE)
 #endif
       RENUM(obj->mode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -409,9 +391,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ISENCRYPTED)
 #endif
       RBOOL(obj->isEncrypted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -432,9 +412,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PROTOCOL)
 #endif
       RENUM(obj->protocol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -455,9 +433,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPROTOCOL)
 #endif
       obj->setProtocol((QSsl::SslProtocol)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -480,9 +456,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYMODE)
 #endif
       RENUM(obj->peerVerifyMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -503,9 +477,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPEERVERIFYMODE)
 #endif
       obj->setPeerVerifyMode((QSslSocket::PeerVerifyMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -528,9 +500,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYDEPTH)
 #endif
       RINT(obj->peerVerifyDepth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -551,9 +521,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPEERVERIFYDEPTH)
 #endif
       obj->setPeerVerifyDepth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -576,9 +544,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYNAME)
 #endif
       RQSTRING(obj->peerVerifyName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -599,9 +565,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPEERVERIFYNAME)
 #endif
       obj->setPeerVerifyName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -624,9 +588,7 @@ HB_FUNC_STATIC(QSSLSOCKET_BYTESAVAILABLE)
 #endif
       RQINT64(obj->bytesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -647,9 +609,7 @@ HB_FUNC_STATIC(QSSLSOCKET_BYTESTOWRITE)
 #endif
       RQINT64(obj->bytesToWrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -670,9 +630,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CANREADLINE)
 #endif
       RBOOL(obj->canReadLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -693,9 +651,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CLOSE)
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -718,9 +674,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ATEND)
 #endif
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -741,9 +695,7 @@ HB_FUNC_STATIC(QSSLSOCKET_FLUSH)
 #endif
       RBOOL(obj->flush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -764,9 +716,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ABORT)
 #endif
       obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -789,9 +739,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETREADBUFFERSIZE)
 #endif
       obj->setReadBufferSize(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -814,9 +762,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ENCRYPTEDBYTESAVAILABLE)
 #endif
       RQINT64(obj->encryptedBytesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -837,9 +783,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ENCRYPTEDBYTESTOWRITE)
 #endif
       RQINT64(obj->encryptedBytesToWrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -861,9 +805,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLCONFIGURATION)
       QSslConfiguration *ptr = new QSslConfiguration(obj->sslConfiguration());
       Qt5xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -884,9 +826,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSSLCONFIGURATION)
 #endif
       obj->setSslConfiguration(*PQSSLCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -917,9 +857,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETLOCALCERTIFICATECHAIN)
       }
       obj->setLocalCertificateChain(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -970,9 +908,7 @@ HB_FUNC_STATIC(QSSLSOCKET_LOCALCERTIFICATECHAIN)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1010,9 +946,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETLOCALCERTIFICATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1032,9 +966,7 @@ HB_FUNC_STATIC(QSSLSOCKET_LOCALCERTIFICATE)
       QSslCertificate *ptr = new QSslCertificate(obj->localCertificate());
       Qt5xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1056,9 +988,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERCERTIFICATE)
       QSslCertificate *ptr = new QSslCertificate(obj->peerCertificate());
       Qt5xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1105,9 +1035,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERCERTIFICATECHAIN)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1129,9 +1057,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SESSIONCIPHER)
       QSslCipher *ptr = new QSslCipher(obj->sessionCipher());
       Qt5xHb::createReturnClass(ptr, "QSSLCIPHER", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1153,9 +1079,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SESSIONPROTOCOL)
 #endif
       RENUM(obj->sessionProtocol());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1196,9 +1120,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPRIVATEKEY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1218,9 +1140,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PRIVATEKEY)
       QSslKey *ptr = new QSslKey(obj->privateKey());
       Qt5xHb::createReturnClass(ptr, "QSSLKEY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1267,9 +1187,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CIPHERS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1312,9 +1230,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETCIPHERS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1337,9 +1253,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETDEFAULTCIPHERS)
     }
     QSslSocket::setDefaultCiphers(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1377,16 +1291,12 @@ HB_FUNC_STATIC(QSSLSOCKET_DEFAULTCIPHERS)
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSSLCIPHER", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1422,16 +1332,12 @@ HB_FUNC_STATIC(QSSLSOCKET_SUPPORTEDCIPHERS)
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSSLCIPHER", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1474,9 +1380,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATES)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1495,9 +1399,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATE)
 #endif
       obj->addCaCertificate(*PQSSLCERTIFICATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1527,9 +1429,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETCACERTIFICATES)
       }
       obj->setCaCertificates(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1578,9 +1478,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CACERTIFICATES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1598,9 +1496,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDDEFAULTCACERTIFICATE)
 #endif
     QSslSocket::addDefaultCaCertificate(*PQSSLCERTIFICATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1635,9 +1531,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDDEFAULTCACERTIFICATES)
     QSslSocket::addDefaultCaCertificates(par1);
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1660,9 +1554,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETDEFAULTCACERTIFICATES)
     }
     QSslSocket::setDefaultCaCertificates(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1700,16 +1592,12 @@ HB_FUNC_STATIC(QSSLSOCKET_DEFAULTCACERTIFICATES)
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSSLCERTIFICATE", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1745,16 +1633,12 @@ HB_FUNC_STATIC(QSSLSOCKET_SYSTEMCACERTIFICATES)
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSSLCERTIFICATE", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1774,9 +1658,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORCONNECTED)
 #endif
       RBOOL(obj->waitForConnected(OPINT(1, 30000)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1797,9 +1679,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORENCRYPTED)
 #endif
       RBOOL(obj->waitForEncrypted(OPINT(1, 30000)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1820,9 +1700,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORREADYREAD)
 #endif
       RBOOL(obj->waitForReadyRead(OPINT(1, 30000)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1843,9 +1721,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORBYTESWRITTEN)
 #endif
       RBOOL(obj->waitForBytesWritten(OPINT(1, 30000)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1866,9 +1742,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORDISCONNECTED)
 #endif
       RBOOL(obj->waitForDisconnected(OPINT(1, 30000)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1915,9 +1789,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLERRORS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1935,9 +1807,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SUPPORTSSSL)
 #endif
     RBOOL(QSslSocket::supportsSsl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1954,9 +1824,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLLIBRARYVERSIONNUMBER)
 #endif
     RLONG(QSslSocket::sslLibraryVersionNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1973,9 +1841,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLLIBRARYVERSIONSTRING)
 #endif
     RQSTRING(QSslSocket::sslLibraryVersionString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1993,9 +1859,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLLIBRARYBUILDVERSIONNUMBER)
 #endif
     RLONG(QSslSocket::sslLibraryBuildVersionNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2014,9 +1878,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLLIBRARYBUILDVERSIONSTRING)
 #endif
     RQSTRING(QSslSocket::sslLibraryBuildVersionString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2059,9 +1921,7 @@ HB_FUNC_STATIC(QSSLSOCKET_IGNORESSLERRORS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2080,9 +1940,7 @@ HB_FUNC_STATIC(QSSLSOCKET_STARTCLIENTENCRYPTION)
 #endif
       obj->startClientEncryption();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2105,9 +1963,7 @@ HB_FUNC_STATIC(QSSLSOCKET_STARTSERVERENCRYPTION)
 #endif
       obj->startServerEncryption();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

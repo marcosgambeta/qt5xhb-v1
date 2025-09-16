@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_NEW)
     */
     QNetworkAddressEntry *obj = new QNetworkAddressEntry(*PQNETWORKADDRESSENTRY(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -122,9 +120,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_BROADCAST)
       QHostAddress *ptr = new QHostAddress(obj->broadcast());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -146,9 +142,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_IP)
       QHostAddress *ptr = new QHostAddress(obj->ip());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -170,9 +164,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_NETMASK)
       QHostAddress *ptr = new QHostAddress(obj->netmask());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -193,9 +185,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_PREFIXLENGTH)
 #endif
       RINT(obj->prefixLength());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -216,9 +206,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETBROADCAST)
 #endif
       obj->setBroadcast(*PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -241,9 +229,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETIP)
 #endif
       obj->setIp(*PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -266,9 +252,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETNETMASK)
 #endif
       obj->setNetmask(*PQHOSTADDRESS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -291,9 +275,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETPREFIXLENGTH)
 #endif
       obj->setPrefixLength(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -316,9 +298,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SWAP)
 #endif
       obj->swap(*PQNETWORKADDRESSENTRY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -348,9 +328,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -381,9 +359,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

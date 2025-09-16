@@ -72,9 +72,7 @@ HB_FUNC_STATIC(QUDPSOCKET_NEW)
   {
     QUdpSocket *obj = new QUdpSocket(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -124,9 +122,7 @@ HB_FUNC_STATIC(QUDPSOCKET_JOINMULTICASTGROUP)
     {
       RBOOL(obj->joinMulticastGroup(*PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -156,9 +152,7 @@ HB_FUNC_STATIC(QUDPSOCKET_LEAVEMULTICASTGROUP)
     {
       RBOOL(obj->leaveMulticastGroup(*PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -178,9 +172,7 @@ HB_FUNC_STATIC(QUDPSOCKET_MULTICASTINTERFACE)
       QNetworkInterface *ptr = new QNetworkInterface(obj->multicastInterface());
       Qt5xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -201,9 +193,7 @@ HB_FUNC_STATIC(QUDPSOCKET_SETMULTICASTINTERFACE)
 #endif
       obj->setMulticastInterface(*PQNETWORKINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -226,9 +216,7 @@ HB_FUNC_STATIC(QUDPSOCKET_HASPENDINGDATAGRAMS)
 #endif
       RBOOL(obj->hasPendingDatagrams());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -249,9 +237,7 @@ HB_FUNC_STATIC(QUDPSOCKET_PENDINGDATAGRAMSIZE)
 #endif
       RQINT64(obj->pendingDatagramSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -274,9 +260,7 @@ HB_FUNC_STATIC(QUDPSOCKET_RECEIVEDATAGRAM)
       QNetworkDatagram *ptr = new QNetworkDatagram(obj->receiveDatagram(OPQINT64(1, -1)));
       Qt5xHb::createReturnClass(ptr, "QNETWORKDATAGRAM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -323,9 +307,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
     {
       RQINT64(obj->writeDatagram(*PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

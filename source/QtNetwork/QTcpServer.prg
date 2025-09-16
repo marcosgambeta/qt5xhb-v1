@@ -84,9 +84,7 @@ HB_FUNC_STATIC(QTCPSERVER_NEW)
   {
     QTcpServer *obj = new QTcpServer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -125,9 +123,7 @@ HB_FUNC_STATIC(QTCPSERVER_LISTEN)
 #endif
       RBOOL(obj->listen(HB_ISNIL(1) ? QHostAddress::Any : *(QHostAddress *)Qt5xHb::itemGetPtr(1), OPQUINT16(2, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -148,9 +144,7 @@ HB_FUNC_STATIC(QTCPSERVER_CLOSE)
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -173,9 +167,7 @@ HB_FUNC_STATIC(QTCPSERVER_ISLISTENING)
 #endif
       RBOOL(obj->isListening());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -196,9 +188,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETMAXPENDINGCONNECTIONS)
 #endif
       obj->setMaxPendingConnections(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -221,9 +211,7 @@ HB_FUNC_STATIC(QTCPSERVER_MAXPENDINGCONNECTIONS)
 #endif
       RINT(obj->maxPendingConnections());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -244,9 +232,7 @@ HB_FUNC_STATIC(QTCPSERVER_SERVERPORT)
 #endif
       RQUINT16(obj->serverPort());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -268,9 +254,7 @@ HB_FUNC_STATIC(QTCPSERVER_SERVERADDRESS)
       QHostAddress *ptr = new QHostAddress(obj->serverAddress());
       Qt5xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -291,9 +275,7 @@ HB_FUNC_STATIC(QTCPSERVER_SOCKETDESCRIPTOR)
 #endif
       RQINTPTR(obj->socketDescriptor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -314,9 +296,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETSOCKETDESCRIPTOR)
 #endif
       RBOOL(obj->setSocketDescriptor(PQINTPTR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -339,9 +319,7 @@ HB_FUNC_STATIC(QTCPSERVER_WAITFORNEWCONNECTION)
       RBOOL(obj->waitForNewConnection(OPINT(1, 0), &par2));
       hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -362,9 +340,7 @@ HB_FUNC_STATIC(QTCPSERVER_HASPENDINGCONNECTIONS)
 #endif
       RBOOL(obj->hasPendingConnections());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -386,9 +362,7 @@ HB_FUNC_STATIC(QTCPSERVER_NEXTPENDINGCONNECTION)
       QTcpSocket *ptr = obj->nextPendingConnection();
       Qt5xHb::createReturnQObjectClass(ptr, "QTCPSOCKET");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -409,9 +383,7 @@ HB_FUNC_STATIC(QTCPSERVER_SERVERERROR)
 #endif
       RENUM(obj->serverError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -432,9 +404,7 @@ HB_FUNC_STATIC(QTCPSERVER_ERRORSTRING)
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -455,9 +425,7 @@ HB_FUNC_STATIC(QTCPSERVER_PAUSEACCEPTING)
 #endif
       obj->pauseAccepting();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -480,9 +448,7 @@ HB_FUNC_STATIC(QTCPSERVER_RESUMEACCEPTING)
 #endif
       obj->resumeAccepting();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -505,9 +471,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETPROXY)
 #endif
       obj->setProxy(*PQNETWORKPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -531,9 +495,7 @@ HB_FUNC_STATIC(QTCPSERVER_PROXY)
       QNetworkProxy *ptr = new QNetworkProxy(obj->proxy());
       Qt5xHb::createReturnClass(ptr, "QNETWORKPROXY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

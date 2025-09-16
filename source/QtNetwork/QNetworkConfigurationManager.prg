@@ -70,9 +70,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_NEW)
   {
     QNetworkConfigurationManager *obj = new QNetworkConfigurationManager(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -140,9 +138,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,9 +159,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
 #endif
       RENUM(obj->capabilities());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -187,9 +181,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
       QNetworkConfiguration *ptr = new QNetworkConfiguration(obj->configurationFromIdentifier(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -211,9 +203,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION)
       QNetworkConfiguration *ptr = new QNetworkConfiguration(obj->defaultConfiguration());
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -234,9 +224,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ISONLINE)
 #endif
       RBOOL(obj->isOnline());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -257,9 +245,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS)
 #endif
       obj->updateConfigurations();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

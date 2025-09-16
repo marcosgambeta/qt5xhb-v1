@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_NEW)
   {
     QSctpSocket *obj = new QSctpSocket(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -120,9 +118,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_CLOSE)
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -149,9 +145,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_DISCONNECTFROMHOST)
 #endif
       obj->disconnectFromHost();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -178,9 +172,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_SETMAXIMUMCHANNELCOUNT)
 #endif
       obj->setMaximumChannelCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -207,9 +199,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_MAXIMUMCHANNELCOUNT)
 #endif
       RINT(obj->maximumChannelCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -234,9 +224,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_ISINDATAGRAMMODE)
 #endif
       RBOOL(obj->isInDatagramMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -262,9 +250,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_READDATAGRAM)
       QNetworkDatagram *ptr = new QNetworkDatagram(obj->readDatagram());
       Qt5xHb::createReturnClass(ptr, "QNETWORKDATAGRAM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -289,9 +275,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_WRITEDATAGRAM)
 #endif
       RBOOL(obj->writeDatagram(*PQNETWORKDATAGRAM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

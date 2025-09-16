@@ -98,9 +98,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_NEW)
     */
     QNetworkRequest *obj = new QNetworkRequest(*PQNETWORKREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -139,9 +137,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_ATTRIBUTE)
                                                   HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -162,9 +158,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_HASRAWHEADER)
 #endif
       RBOOL(obj->hasRawHeader(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -186,9 +180,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_HEADER)
       QVariant *ptr = new QVariant(obj->header((QNetworkRequest::KnownHeaders)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -210,9 +202,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_ORIGINATINGOBJECT)
       QObject *ptr = obj->originatingObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -233,9 +223,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_PRIORITY)
 #endif
       RENUM(obj->priority());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -257,9 +245,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADER)
       QByteArray *ptr = new QByteArray(obj->rawHeader(*PQBYTEARRAY(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -306,9 +292,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADERLIST)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -329,9 +313,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETATTRIBUTE)
 #endif
       obj->setAttribute((QNetworkRequest::Attribute)hb_parni(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -354,9 +336,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETHEADER)
 #endif
       obj->setHeader((QNetworkRequest::KnownHeaders)hb_parni(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -379,9 +359,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETORIGINATINGOBJECT)
 #endif
       obj->setOriginatingObject(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -404,9 +382,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETPRIORITY)
 #endif
       obj->setPriority((QNetworkRequest::Priority)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -429,9 +405,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETRAWHEADER)
 #endif
       obj->setRawHeader(*PQBYTEARRAY(1), *PQBYTEARRAY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -454,9 +428,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETSSLCONFIGURATION)
 #endif
       obj->setSslConfiguration(*PQSSLCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -479,9 +451,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETURL)
 #endif
       obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -505,9 +475,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SSLCONFIGURATION)
       QSslConfiguration *ptr = new QSslConfiguration(obj->sslConfiguration());
       Qt5xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -529,9 +497,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_URL)
       QUrl *ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -552,9 +518,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SWAP)
 #endif
       obj->swap(*PQNETWORKREQUEST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -578,9 +542,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_MAXIMUMREDIRECTSALLOWED)
 #endif
       RINT(obj->maximumRedirectsAllowed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -603,9 +565,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETMAXIMUMREDIRECTSALLOWED)
 #endif
       obj->setMaximumRedirectsAllowed(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -636,9 +596,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -669,9 +627,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

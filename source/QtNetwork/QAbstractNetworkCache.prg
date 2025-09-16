@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_CACHESIZE)
 #endif
       RQINT64(obj->cacheSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -117,9 +115,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_DATA)
       QIODevice *ptr = obj->data(*PQURL(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_INSERT)
 #endif
       obj->insert(PQIODEVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -166,9 +160,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_METADATA)
       QNetworkCacheMetaData *ptr = new QNetworkCacheMetaData(obj->metaData(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -190,9 +182,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_PREPARE)
       QIODevice *ptr = obj->prepare(*PQNETWORKCACHEMETADATA(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -213,9 +203,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_REMOVE)
 #endif
       RBOOL(obj->remove(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -236,9 +224,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_UPDATEMETADATA)
 #endif
       obj->updateMetaData(*PQNETWORKCACHEMETADATA(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -261,9 +247,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_CLEAR)
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -74,9 +74,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_NEW)
   {
     QNetworkDiskCache *obj = new QNetworkDiskCache(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -115,9 +113,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHEDIRECTORY)
 #endif
       RQSTRING(obj->cacheDirectory());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETCACHEDIRECTORY)
 #endif
       obj->setCacheDirectory(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,9 +157,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_MAXIMUMCACHESIZE)
 #endif
       RQINT64(obj->maximumCacheSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -186,9 +178,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE)
 #endif
       obj->setMaximumCacheSize(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -211,9 +201,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHESIZE)
 #endif
       RQINT64(obj->cacheSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -235,9 +223,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
       QNetworkCacheMetaData *ptr = new QNetworkCacheMetaData(obj->metaData(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -258,9 +244,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_UPDATEMETADATA)
 #endif
       obj->updateMetaData(*PQNETWORKCACHEMETADATA(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -284,9 +268,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_DATA)
       QIODevice *ptr = obj->data(*PQURL(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -307,9 +289,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_REMOVE)
 #endif
       RBOOL(obj->remove(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -331,9 +311,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_PREPARE)
       QIODevice *ptr = obj->prepare(*PQNETWORKCACHEMETADATA(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -354,9 +332,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
 #endif
       obj->insert(PQIODEVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -380,9 +356,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_FILEMETADATA)
       QNetworkCacheMetaData *ptr = new QNetworkCacheMetaData(obj->fileMetaData(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -403,9 +377,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CLEAR)
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

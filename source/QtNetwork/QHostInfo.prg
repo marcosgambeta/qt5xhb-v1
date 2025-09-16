@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QHOSTINFO_NEW)
     */
     QHostInfo *obj = new QHostInfo(*PQHOSTINFO(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -129,9 +127,7 @@ HB_FUNC_STATIC(QHOSTINFO_SWAP)
 #endif
       obj->swap(*PQHOSTINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -155,9 +151,7 @@ HB_FUNC_STATIC(QHOSTINFO_HOSTNAME)
 #endif
       RQSTRING(obj->hostName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -178,9 +172,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETHOSTNAME)
 #endif
       obj->setHostName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -229,9 +221,7 @@ HB_FUNC_STATIC(QHOSTINFO_ADDRESSES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -259,9 +249,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETADDRESSES)
       }
       obj->setAddresses(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -284,9 +272,7 @@ HB_FUNC_STATIC(QHOSTINFO_ERROR)
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -307,9 +293,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETERROR)
 #endif
       obj->setError((QHostInfo::HostInfoError)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -332,9 +316,7 @@ HB_FUNC_STATIC(QHOSTINFO_ERRORSTRING)
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -355,9 +337,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETERRORSTRING)
 #endif
       obj->setErrorString(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -380,9 +360,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETLOOKUPID)
 #endif
       obj->setLookupId(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -405,9 +383,7 @@ HB_FUNC_STATIC(QHOSTINFO_LOOKUPID)
 #endif
       RINT(obj->lookupId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -425,9 +401,7 @@ HB_FUNC_STATIC(QHOSTINFO_LOOKUPHOST)
 #endif
     RINT(QHostInfo::lookupHost(PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -444,9 +418,7 @@ HB_FUNC_STATIC(QHOSTINFO_ABORTHOSTLOOKUP)
 #endif
     QHostInfo::abortHostLookup(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -466,9 +438,7 @@ HB_FUNC_STATIC(QHOSTINFO_FROMNAME)
     QHostInfo *ptr = new QHostInfo(QHostInfo::fromName(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QHOSTINFO", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -485,9 +455,7 @@ HB_FUNC_STATIC(QHOSTINFO_LOCALHOSTNAME)
 #endif
     RQSTRING(QHostInfo::localHostName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -504,9 +472,7 @@ HB_FUNC_STATIC(QHOSTINFO_LOCALDOMAINNAME)
 #endif
     RQSTRING(QHostInfo::localDomainName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -533,9 +499,7 @@ HB_FUNC_STATIC(QHOSTINFO_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -566,9 +530,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

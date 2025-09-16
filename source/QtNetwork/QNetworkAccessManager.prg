@@ -116,9 +116,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_NEW)
   {
     QNetworkAccessManager *obj = new QNetworkAccessManager(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -157,9 +155,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_NETWORKACCESSIBLE)
 #endif
       RENUM(obj->networkAccessible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -180,9 +176,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE)
 #endif
       obj->setNetworkAccessible((QNetworkAccessManager::NetworkAccessibility)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -206,9 +200,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SUPPORTEDSCHEMES)
 #endif
       RQSTRINGLIST(obj->supportedSchemes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -230,9 +222,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CLEARACCESSCACHE)
 #endif
       obj->clearAccessCache();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -256,9 +246,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CLEARCONNECTIONCACHE)
 #endif
       obj->clearConnectionCache();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -283,9 +271,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PROXY)
       QNetworkProxy *ptr = new QNetworkProxy(obj->proxy());
       Qt5xHb::createReturnClass(ptr, "QNETWORKPROXY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -306,9 +292,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXY)
 #endif
       obj->setProxy(*PQNETWORKPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -332,9 +316,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PROXYFACTORY)
       QNetworkProxyFactory *ptr = obj->proxyFactory();
       Qt5xHb::createReturnClass(ptr, "QNETWORKPROXYFACTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -355,9 +337,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXYFACTORY)
 #endif
       obj->setProxyFactory(PQNETWORKPROXYFACTORY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -381,9 +361,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CACHE)
       QAbstractNetworkCache *ptr = obj->cache();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTNETWORKCACHE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -404,9 +382,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCACHE)
 #endif
       obj->setCache(PQABSTRACTNETWORKCACHE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -430,9 +406,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_COOKIEJAR)
       QNetworkCookieJar *ptr = obj->cookieJar();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKCOOKIEJAR");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -453,9 +427,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCOOKIEJAR)
 #endif
       obj->setCookieJar(PQNETWORKCOOKIEJAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -479,9 +451,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETSTRICTTRANSPORTSECURITYENABLED)
 #endif
       obj->setStrictTransportSecurityEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -506,9 +476,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ISSTRICTTRANSPORTSECURITYENABLED)
 #endif
       RBOOL(obj->isStrictTransportSecurityEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -531,9 +499,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ENABLESTRICTTRANSPORTSECURITYSTORE)
 #endif
       obj->enableStrictTransportSecurityStore(PBOOL(1), OPQSTRING(2, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -558,9 +524,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ISSTRICTTRANSPORTSECURITYSTOREENABLED)
 #endif
       RBOOL(obj->isStrictTransportSecurityStoreEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -590,9 +554,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ADDSTRICTTRANSPORTSECURITYHOSTS)
       }
       obj->addStrictTransportSecurityHosts(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -643,9 +605,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_STRICTTRANSPORTSECURITYHOSTS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -668,9 +628,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_HEAD)
       QNetworkReply *ptr = obj->head(*PQNETWORKREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -692,9 +650,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_GET)
       QNetworkReply *ptr = obj->get(*PQNETWORKREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -741,9 +697,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
       QNetworkReply *ptr = obj->post(*PQNETWORKREQUEST(1), PQHTTPMULTIPART(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -788,9 +742,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
       QNetworkReply *ptr = obj->put(*PQNETWORKREQUEST(1), PQHTTPMULTIPART(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -810,9 +762,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETERESOURCE)
       QNetworkReply *ptr = obj->deleteResource(*PQNETWORKREQUEST(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -866,9 +816,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -887,9 +835,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCONFIGURATION)
 #endif
       obj->setConfiguration(*PQNETWORKCONFIGURATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -913,9 +859,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONFIGURATION)
       QNetworkConfiguration *ptr = new QNetworkConfiguration(obj->configuration());
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -937,9 +881,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ACTIVECONFIGURATION)
       QNetworkConfiguration *ptr = new QNetworkConfiguration(obj->activeConfiguration());
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -964,9 +906,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED)
                                   HB_ISNIL(3) ? QSslConfiguration::defaultConfiguration()
                                               : *(QSslConfiguration *)Qt5xHb::itemGetPtr(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -991,9 +931,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONNECTTOHOST)
 #endif
       obj->connectToHost(PQSTRING(1), OPQUINT16(2, 80));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1018,9 +956,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETREDIRECTPOLICY)
 #endif
       obj->setRedirectPolicy((QNetworkRequest::RedirectPolicy)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1045,9 +981,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_REDIRECTPOLICY)
 #endif
       RENUM(obj->redirectPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
