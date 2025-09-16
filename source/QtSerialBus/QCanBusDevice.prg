@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_NEW)
   {
     QCanBusDevice *obj = new QCanBusDevice(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -108,9 +106,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_SETCONFIGURATIONPARAMETER)
 #endif
       obj->setConfigurationParameter(PINT(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -136,9 +132,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CONFIGURATIONPARAMETER)
       QVariant *ptr = new QVariant(obj->configurationParameter(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -169,9 +163,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CONFIGURATIONKEYS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -194,9 +186,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_WRITEFRAME)
 #endif
       RBOOL(obj->writeFrame(*PQCANBUSFRAME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -220,9 +210,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_READFRAME)
       QCanBusFrame *ptr = new QCanBusFrame(obj->readFrame());
       Qt5xHb::createReturnClass(ptr, "QCANBUSFRAME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -245,9 +233,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_FRAMESAVAILABLE)
 #endif
       RQINT64(obj->framesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -270,9 +256,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_FRAMESTOWRITE)
 #endif
       RQINT64(obj->framesToWrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -295,9 +279,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_WAITFORFRAMESWRITTEN)
 #endif
       RBOOL(obj->waitForFramesWritten(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -320,9 +302,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_WAITFORFRAMESRECEIVED)
 #endif
       RBOOL(obj->waitForFramesReceived(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -345,9 +325,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CONNECTDEVICE)
 #endif
       RBOOL(obj->connectDevice());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -370,9 +348,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_DISCONNECTDEVICE)
 #endif
       obj->disconnectDevice();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -397,9 +373,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_STATE)
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -422,9 +396,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ERROR)
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -447,9 +419,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_ERRORSTRING)
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -472,9 +442,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_INTERPRETERRORFRAME)
 #endif
       RQSTRING(obj->interpretErrorFrame(*PQCANBUSFRAME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -497,9 +465,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_CLEAR)
 #endif
       obj->clear((QCanBusDevice::Directions)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -550,9 +516,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_READALLFRAMES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

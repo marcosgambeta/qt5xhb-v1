@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_NEW)
   {
     QModbusReply *obj = new QModbusReply((QModbusReply::ReplyType)hb_parni(1), PINT(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -94,9 +92,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_TYPE)
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -119,9 +115,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_SERVERADDRESS)
 #endif
       RINT(obj->serverAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -144,9 +138,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ISFINISHED)
 #endif
       RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -169,9 +161,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ERRORSTRING)
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -194,9 +184,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_ERROR)
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -219,9 +207,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_SETFINISHED)
 #endif
       obj->setFinished(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -246,9 +232,7 @@ HB_FUNC_STATIC(QMODBUSREPLY_SETERROR)
 #endif
       obj->setError((QModbusDevice::Error)hb_parni(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

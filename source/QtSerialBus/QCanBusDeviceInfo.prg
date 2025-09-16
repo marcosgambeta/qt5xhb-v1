@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_NEW)
     QCanBusDeviceInfo *obj = new QCanBusDeviceInfo(*PQCANBUSDEVICEINFO(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -129,9 +127,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_SWAP)
 #endif
       obj->swap(*PQCANBUSDEVICEINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -156,9 +152,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_NAME)
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -181,9 +175,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_HASFLEXIBLEDATARATE)
 #endif
       RBOOL(obj->hasFlexibleDataRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -206,9 +198,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_ISVIRTUAL)
 #endif
       RBOOL(obj->isVirtual());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -231,9 +221,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_CHANNEL)
 #endif
       RINT(obj->channel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -256,9 +244,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_DESCRIPTION)
 #endif
       RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -281,9 +267,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_SERIALNUMBER)
 #endif
       RQSTRING(obj->serialNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

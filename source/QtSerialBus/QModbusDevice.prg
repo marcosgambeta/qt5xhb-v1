@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_NEW)
   {
     QModbusDevice *obj = new QModbusDevice(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -119,9 +117,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_CONNECTIONPARAMETER)
       QVariant *ptr = new QVariant(obj->connectionParameter(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -144,9 +140,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_SETCONNECTIONPARAMETER)
 #endif
       obj->setConnectionParameter(PINT(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -171,9 +165,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_CONNECTDEVICE)
 #endif
       RBOOL(obj->connectDevice());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -196,9 +188,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_DISCONNECTDEVICE)
 #endif
       obj->disconnectDevice();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -223,9 +213,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_STATE)
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -248,9 +236,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_ERROR)
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -273,9 +259,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_ERRORSTRING)
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

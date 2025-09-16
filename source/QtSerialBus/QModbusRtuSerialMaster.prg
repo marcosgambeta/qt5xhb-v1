@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_NEW)
   {
     QModbusRtuSerialMaster *obj = new QModbusRtuSerialMaster(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY)
 #endif
       RINT(obj->interFrameDelay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -134,9 +130,7 @@ HB_FUNC_STATIC(QMODBUSRTUSERIALMASTER_SETINTERFRAMEDELAY)
 #endif
       obj->setInterFrameDelay(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QMODBUSSERVER_NEW)
   {
     QModbusServer *obj = new QModbusServer(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QMODBUSSERVER_SERVERADDRESS)
 #endif
       RINT(obj->serverAddress());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -141,9 +137,7 @@ HB_FUNC_STATIC(QMODBUSSERVER_SETSERVERADDRESS)
 #endif
       obj->setServerAddress(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -168,9 +162,7 @@ HB_FUNC_STATIC(QMODBUSSERVER_PROCESSESBROADCAST)
 #endif
       RBOOL(obj->processesBroadcast());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -194,9 +186,7 @@ HB_FUNC_STATIC(QMODBUSSERVER_VALUE)
       QVariant *ptr = new QVariant(obj->value(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -219,9 +209,7 @@ HB_FUNC_STATIC(QMODBUSSERVER_SETVALUE)
 #endif
       RBOOL(obj->setValue(PINT(1), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -244,9 +232,7 @@ HB_FUNC_STATIC(QMODBUSSERVER_SETDATA)
 #endif
       RBOOL(obj->setData((QModbusDataUnit::RegisterType)hb_parni(1), PQUINT16(2), PQUINT16(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
