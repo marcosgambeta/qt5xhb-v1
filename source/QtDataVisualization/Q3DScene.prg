@@ -96,9 +96,7 @@ HB_FUNC_STATIC(Q3DSCENE_NEW)
   {
     Q3DScene *obj = new Q3DScene(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -138,9 +136,7 @@ HB_FUNC_STATIC(Q3DSCENE_VIEWPORT)
       QRect *ptr = new QRect(obj->viewport());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -162,9 +158,7 @@ HB_FUNC_STATIC(Q3DSCENE_PRIMARYSUBVIEWPORT)
       QRect *ptr = new QRect(obj->primarySubViewport());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -185,9 +179,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETPRIMARYSUBVIEWPORT)
 #endif
       obj->setPrimarySubViewport(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -211,9 +203,7 @@ HB_FUNC_STATIC(Q3DSCENE_SECONDARYSUBVIEWPORT)
       QRect *ptr = new QRect(obj->secondarySubViewport());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -234,9 +224,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETSECONDARYSUBVIEWPORT)
 #endif
       obj->setSecondarySubViewport(*PQRECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -260,9 +248,7 @@ HB_FUNC_STATIC(Q3DSCENE_SELECTIONQUERYPOSITION)
       QPoint *ptr = new QPoint(obj->selectionQueryPosition());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -283,9 +269,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETSELECTIONQUERYPOSITION)
 #endif
       obj->setSelectionQueryPosition(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -308,9 +292,7 @@ HB_FUNC_STATIC(Q3DSCENE_ISSECONDARYSUBVIEWONTOP)
 #endif
       RBOOL(obj->isSecondarySubviewOnTop());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -331,9 +313,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETSECONDARYSUBVIEWONTOP)
 #endif
       obj->setSecondarySubviewOnTop(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -356,9 +336,7 @@ HB_FUNC_STATIC(Q3DSCENE_ISSLICINGACTIVE)
 #endif
       RBOOL(obj->isSlicingActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -379,9 +357,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETSLICINGACTIVE)
 #endif
       obj->setSlicingActive(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -405,9 +381,7 @@ HB_FUNC_STATIC(Q3DSCENE_ACTIVECAMERA)
       Q3DCamera *ptr = obj->activeCamera();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DCAMERA");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -428,9 +402,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETACTIVECAMERA)
 #endif
       obj->setActiveCamera(PQ3DCAMERA(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -454,9 +426,7 @@ HB_FUNC_STATIC(Q3DSCENE_ACTIVELIGHT)
       Q3DLight *ptr = obj->activeLight();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DLIGHT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -477,9 +447,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETACTIVELIGHT)
 #endif
       obj->setActiveLight(PQ3DLIGHT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -502,9 +470,7 @@ HB_FUNC_STATIC(Q3DSCENE_DEVICEPIXELRATIO)
 #endif
       RFLOAT(obj->devicePixelRatio());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -525,9 +491,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETDEVICEPIXELRATIO)
 #endif
       obj->setDevicePixelRatio(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -551,9 +515,7 @@ HB_FUNC_STATIC(Q3DSCENE_GRAPHPOSITIONQUERY)
       QPoint *ptr = new QPoint(obj->graphPositionQuery());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -574,9 +536,7 @@ HB_FUNC_STATIC(Q3DSCENE_SETGRAPHPOSITIONQUERY)
 #endif
       obj->setGraphPositionQuery(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -599,9 +559,7 @@ HB_FUNC_STATIC(Q3DSCENE_ISPOINTINPRIMARYSUBVIEW)
 #endif
       RBOOL(obj->isPointInPrimarySubView(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -622,9 +580,7 @@ HB_FUNC_STATIC(Q3DSCENE_ISPOINTINSECONDARYSUBVIEW)
 #endif
       RBOOL(obj->isPointInSecondarySubView(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -643,9 +599,7 @@ HB_FUNC_STATIC(Q3DSCENE_INVALIDSELECTIONPOINT)
     QPoint *ptr = new QPoint(Q3DScene::invalidSelectionPoint());
     Qt5xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

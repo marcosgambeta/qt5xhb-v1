@@ -63,9 +63,7 @@ HB_FUNC_STATIC(Q3DLIGHT_NEW)
   {
     Q3DLight *obj = new Q3DLight(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(Q3DLIGHT_SETAUTOPOSITION)
 #endif
       obj->setAutoPosition(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -132,9 +128,7 @@ HB_FUNC_STATIC(Q3DLIGHT_ISAUTOPOSITION)
 #endif
       RBOOL(obj->isAutoPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -168,9 +168,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER)
       QAbstract3DInputHandler *ptr = obj->activeInputHandler();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACT3DINPUTHANDLER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -191,9 +189,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETACTIVEINPUTHANDLER)
 #endif
       obj->setActiveInputHandler(PQABSTRACT3DINPUTHANDLER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -217,9 +213,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ACTIVETHEME)
       Q3DTheme *ptr = obj->activeTheme();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DTHEME");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -240,9 +234,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETACTIVETHEME)
 #endif
       obj->setActiveTheme(PQ3DTHEME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -265,9 +257,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTIONMODE)
 #endif
       RENUM(obj->selectionMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -288,9 +278,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSELECTIONMODE)
 #endif
       obj->setSelectionMode((QAbstract3DGraph::SelectionFlags)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -313,9 +301,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SHADOWQUALITY)
 #endif
       RENUM(obj->shadowQuality());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -336,9 +322,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETSHADOWQUALITY)
 #endif
       obj->setShadowQuality((QAbstract3DGraph::ShadowQuality)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -362,9 +346,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SCENE)
       Q3DScene *ptr = obj->scene();
       Qt5xHb::createReturnQObjectClass(ptr, "Q3DSCENE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -385,9 +367,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_MEASUREFPS)
 #endif
       RBOOL(obj->measureFps());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -408,9 +388,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETMEASUREFPS)
 #endif
       obj->setMeasureFps(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -433,9 +411,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_CURRENTFPS)
 #endif
       RQREAL(obj->currentFps());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -456,9 +432,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISORTHOPROJECTION)
 #endif
       RBOOL(obj->isOrthoProjection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -479,9 +453,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETORTHOPROJECTION)
 #endif
       obj->setOrthoProjection(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -504,9 +476,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDELEMENT)
 #endif
       RENUM(obj->selectedElement());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -527,9 +497,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ASPECTRATIO)
 #endif
       RQREAL(obj->aspectRatio());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -550,9 +518,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETASPECTRATIO)
 #endif
       obj->setAspectRatio(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -575,9 +541,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_OPTIMIZATIONHINTS)
 #endif
       RENUM(obj->optimizationHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -598,9 +562,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETOPTIMIZATIONHINTS)
 #endif
       obj->setOptimizationHints((QAbstract3DGraph::OptimizationHints)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -623,9 +585,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISPOLAR)
 #endif
       RBOOL(obj->isPolar());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -646,9 +606,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETPOLAR)
 #endif
       obj->setPolar(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -671,9 +629,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RADIALLABELOFFSET)
 #endif
       RFLOAT(obj->radialLabelOffset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -694,9 +650,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETRADIALLABELOFFSET)
 #endif
       obj->setRadialLabelOffset(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -719,9 +673,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_HORIZONTALASPECTRATIO)
 #endif
       RQREAL(obj->horizontalAspectRatio());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -742,9 +694,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETHORIZONTALASPECTRATIO)
 #endif
       obj->setHorizontalAspectRatio(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -767,9 +717,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ISREFLECTION)
 #endif
       RBOOL(obj->isReflection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -790,9 +738,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETREFLECTION)
 #endif
       obj->setReflection(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -815,9 +761,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REFLECTIVITY)
 #endif
       RQREAL(obj->reflectivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -838,9 +782,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETREFLECTIVITY)
 #endif
       obj->setReflectivity(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -864,9 +806,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_LOCALE)
       QLocale *ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -887,9 +827,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETLOCALE)
 #endif
       obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -913,9 +851,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_QUERIEDGRAPHPOSITION)
       QVector3D *ptr = new QVector3D(obj->queriedGraphPosition());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -936,9 +872,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_MARGIN)
 #endif
       RQREAL(obj->margin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -959,9 +893,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SETMARGIN)
 #endif
       obj->setMargin(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -984,9 +916,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDINPUTHANDLER)
 #endif
       obj->addInputHandler(PQABSTRACT3DINPUTHANDLER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1009,9 +939,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASEINPUTHANDLER)
 #endif
       obj->releaseInputHandler(PQABSTRACT3DINPUTHANDLER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1057,9 +985,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_INPUTHANDLERS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1080,9 +1006,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDTHEME)
 #endif
       obj->addTheme(PQ3DTHEME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1105,9 +1029,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASETHEME)
 #endif
       obj->releaseTheme(PQ3DTHEME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1153,9 +1075,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_THEMES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1176,9 +1096,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SHADOWSSUPPORTED)
 #endif
       RBOOL(obj->shadowsSupported());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1199,9 +1117,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_CLEARSELECTION)
 #endif
       obj->clearSelection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1224,9 +1140,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_ADDCUSTOMITEM)
 #endif
       RINT(obj->addCustomItem(PQCUSTOM3DITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1247,9 +1161,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEMS)
 #endif
       obj->removeCustomItems();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1272,9 +1184,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEM)
 #endif
       obj->removeCustomItem(PQCUSTOM3DITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1297,9 +1207,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT)
 #endif
       obj->removeCustomItemAt(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1322,9 +1230,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RELEASECUSTOMITEM)
 #endif
       obj->releaseCustomItem(PQCUSTOM3DITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1370,9 +1276,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_CUSTOMITEMS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1394,9 +1298,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDAXIS)
       QAbstract3DAxis *ptr = obj->selectedAxis();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACT3DAXIS");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1417,9 +1319,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDLABELINDEX)
 #endif
       RINT(obj->selectedLabelIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1440,9 +1340,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDCUSTOMITEMINDEX)
 #endif
       RINT(obj->selectedCustomItemIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1464,9 +1362,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM)
       QCustom3DItem *ptr = obj->selectedCustomItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QCUSTOM3DITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1489,9 +1385,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RENDERTOIMAGE)
           new QImage(obj->renderToImage(OPINT(1, 0), HB_ISNIL(2) ? QSize() : *(QSize *)Qt5xHb::itemGetPtr(2)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1512,9 +1406,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_HASCONTEXT)
 #endif
       RBOOL(obj->hasContext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

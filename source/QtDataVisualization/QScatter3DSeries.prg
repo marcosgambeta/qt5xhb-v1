@@ -79,9 +79,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_NEW)
     */
     QScatter3DSeries *obj = new QScatter3DSeries(PQSCATTERDATAPROXY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -121,9 +119,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_DATAPROXY)
       QScatterDataProxy *ptr = obj->dataProxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCATTERDATAPROXY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -144,9 +140,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETDATAPROXY)
 #endif
       obj->setDataProxy(PQSCATTERDATAPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -169,9 +163,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SELECTEDITEM)
 #endif
       RINT(obj->selectedItem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -192,9 +184,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETSELECTEDITEM)
 #endif
       obj->setSelectedItem(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -217,9 +207,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ITEMSIZE)
 #endif
       RFLOAT(obj->itemSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -240,9 +228,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETITEMSIZE)
 #endif
       obj->setItemSize(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -262,9 +248,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_INVALIDSELECTIONINDEX)
 #endif
     RINT(QScatter3DSeries::invalidSelectionIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

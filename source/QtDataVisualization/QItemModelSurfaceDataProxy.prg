@@ -196,9 +196,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
         new QItemModelSurfaceDataProxy(PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5),
                                        PQSTRING(6), PQSTRINGLIST(7), PQSTRINGLIST(8), OPQOBJECT(9, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -238,9 +236,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ITEMMODEL)
       QAbstractItemModel *ptr = obj->itemModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -261,9 +257,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETITEMMODEL)
 #endif
       obj->setItemModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -286,9 +280,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLE)
 #endif
       RQSTRING(obj->rowRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -309,9 +301,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLE)
 #endif
       obj->setRowRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -334,9 +324,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLE)
 #endif
       RQSTRING(obj->columnRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -357,9 +345,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLE)
 #endif
       obj->setColumnRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -382,9 +368,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLE)
 #endif
       RQSTRING(obj->xPosRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -405,9 +389,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLE)
 #endif
       obj->setXPosRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -430,9 +412,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLE)
 #endif
       RQSTRING(obj->yPosRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -453,9 +433,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLE)
 #endif
       obj->setYPosRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -478,9 +456,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLE)
 #endif
       RQSTRING(obj->zPosRole());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -501,9 +477,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLE)
 #endif
       obj->setZPosRole(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -526,9 +500,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORIES)
 #endif
       RQSTRINGLIST(obj->rowCategories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -549,9 +521,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWCATEGORIES)
 #endif
       obj->setRowCategories(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -574,9 +544,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORIES)
 #endif
       RQSTRINGLIST(obj->columnCategories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -597,9 +565,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNCATEGORIES)
 #endif
       obj->setColumnCategories(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -622,9 +588,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_USEMODELCATEGORIES)
 #endif
       RBOOL(obj->useModelCategories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -645,9 +609,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETUSEMODELCATEGORIES)
 #endif
       obj->setUseModelCategories(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -670,9 +632,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOROWCATEGORIES)
 #endif
       RBOOL(obj->autoRowCategories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -693,9 +653,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOROWCATEGORIES)
 #endif
       obj->setAutoRowCategories(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -718,9 +676,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOCOLUMNCATEGORIES)
 #endif
       RBOOL(obj->autoColumnCategories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -741,9 +697,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOCOLUMNCATEGORIES)
 #endif
       obj->setAutoColumnCategories(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -767,9 +721,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEPATTERN)
       QRegExp *ptr = new QRegExp(obj->rowRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -790,9 +742,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEPATTERN)
 #endif
       obj->setRowRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -816,9 +766,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEPATTERN)
       QRegExp *ptr = new QRegExp(obj->columnRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -839,9 +787,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEPATTERN)
 #endif
       obj->setColumnRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -865,9 +811,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEPATTERN)
       QRegExp *ptr = new QRegExp(obj->xPosRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -888,9 +832,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEPATTERN)
 #endif
       obj->setXPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -914,9 +856,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEPATTERN)
       QRegExp *ptr = new QRegExp(obj->yPosRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -937,9 +877,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEPATTERN)
 #endif
       obj->setYPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -963,9 +901,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEPATTERN)
       QRegExp *ptr = new QRegExp(obj->zPosRolePattern());
       Qt5xHb::createReturnClass(ptr, "QREGEXP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -986,9 +922,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEPATTERN)
 #endif
       obj->setZPosRolePattern(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1011,9 +945,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEREPLACE)
 #endif
       RQSTRING(obj->rowRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1034,9 +966,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEREPLACE)
 #endif
       obj->setRowRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1059,9 +989,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEREPLACE)
 #endif
       RQSTRING(obj->columnRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1082,9 +1010,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEREPLACE)
 #endif
       obj->setColumnRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1107,9 +1033,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEREPLACE)
 #endif
       RQSTRING(obj->xPosRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1130,9 +1054,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEREPLACE)
 #endif
       obj->setXPosRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1155,9 +1077,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEREPLACE)
 #endif
       RQSTRING(obj->yPosRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1178,9 +1098,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEREPLACE)
 #endif
       obj->setYPosRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1203,9 +1121,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEREPLACE)
 #endif
       RQSTRING(obj->zPosRoleReplace());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1226,9 +1142,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEREPLACE)
 #endif
       obj->setZPosRoleReplace(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1251,9 +1165,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_MULTIMATCHBEHAVIOR)
 #endif
       RENUM(obj->multiMatchBehavior());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1274,9 +1186,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETMULTIMATCHBEHAVIOR)
 #endif
       obj->setMultiMatchBehavior((QItemModelSurfaceDataProxy::MultiMatchBehavior)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1301,9 +1211,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_REMAP)
 #endif
       obj->remap(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRINGLIST(6), PQSTRINGLIST(7));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1326,9 +1234,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORYINDEX)
 #endif
       RINT(obj->rowCategoryIndex(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1349,9 +1255,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORYINDEX)
 #endif
       RINT(obj->columnCategoryIndex(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

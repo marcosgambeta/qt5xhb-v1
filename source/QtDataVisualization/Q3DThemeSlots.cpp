@@ -96,9 +96,7 @@ void Q3DThemeSlots::baseColorsChanged(const QList<QColor> &colors)
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QCOLOR", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -135,9 +133,7 @@ void Q3DThemeSlots::baseGradientsChanged(const QList<QLinearGradient> &gradients
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QLINEARGRADIENT", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -469,9 +465,7 @@ void Q3DThemeSlots_connect_signal(const QString &signal, const QString &slot)
     }
 
     hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }
