@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
         PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString()),
         HB_ISNIL(4) ? QDBusConnection::sessionBus() : *(QDBusConnection *)Qt5xHb::itemGetPtr(4), OPQOBJECT(5, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -103,9 +101,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_METAOBJECT)
       const QMetaObject *ptr = obj->metaObject();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -126,9 +122,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_QT_METACAST)
 #endif
       hb_retptr((void *)obj->qt_metacast(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

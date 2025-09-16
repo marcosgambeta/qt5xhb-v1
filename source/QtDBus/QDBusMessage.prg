@@ -95,9 +95,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_NEW)
     */
     QDBusMessage *obj = new QDBusMessage(*PQDBUSMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -135,9 +133,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEREPLY)
   if (ISNUMPAR(1) && ISQVARIANT(1))
   {
     QDBusMessage_createReply2();
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -182,9 +178,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
       QDBusMessage *ptr = new QDBusMessage(obj->createErrorReply((QDBusError::ErrorType)hb_parni(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -203,9 +197,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SERVICE)
 #endif
       RQSTRING(obj->service());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -226,9 +218,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_PATH)
 #endif
       RQSTRING(obj->path());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -249,9 +239,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_INTERFACE)
 #endif
       RQSTRING(obj->interface());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -272,9 +260,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_MEMBER)
 #endif
       RQSTRING(obj->member());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -295,9 +281,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ERRORNAME)
 #endif
       RQSTRING(obj->errorName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -318,9 +302,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ERRORMESSAGE)
 #endif
       RQSTRING(obj->errorMessage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -341,9 +323,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_TYPE)
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -364,9 +344,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SIGNATURE)
 #endif
       RQSTRING(obj->signature());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -387,9 +365,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ISREPLYREQUIRED)
 #endif
       RBOOL(obj->isReplyRequired());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -410,9 +386,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SETDELAYEDREPLY)
 #endif
       obj->setDelayedReply(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -435,9 +409,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ISDELAYEDREPLY)
 #endif
       RBOOL(obj->isDelayedReply());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -458,9 +430,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SETAUTOSTARTSERVICE)
 #endif
       obj->setAutoStartService(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -483,9 +453,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_AUTOSTARTSERVICE)
 #endif
       RBOOL(obj->autoStartService());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -513,9 +481,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SETARGUMENTS)
       }
       obj->setArguments(par1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -538,9 +504,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ARGUMENTS)
 #endif
       Qt5xHb::convert_qvariantlist_to_array(obj->arguments());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -559,9 +523,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATESIGNAL)
     QDBusMessage *ptr = new QDBusMessage(QDBusMessage::createSignal(PQSTRING(1), PQSTRING(2), PQSTRING(3)));
     Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -581,9 +543,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEMETHODCALL)
         new QDBusMessage(QDBusMessage::createMethodCall(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4)));
     Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -614,9 +574,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERROR)
     */
     QDBusMessage *ptr = new QDBusMessage(QDBusMessage::createError((QDBusError::ErrorType)hb_parni(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -636,9 +594,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ISINTERACTIVEAUTHORIZATIONALLOWED)
 #endif
       RBOOL(obj->isInteractiveAuthorizationAllowed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -661,9 +617,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SETINTERACTIVEAUTHORIZATIONALLOWED)
 #endif
       obj->setInteractiveAuthorizationAllowed(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -694,9 +648,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -727,9 +679,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
