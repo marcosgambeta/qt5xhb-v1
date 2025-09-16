@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_NEW)
   {
     QQmlIncubationController *obj = new QQmlIncubationController();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -108,9 +106,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_ENGINE)
       QQmlEngine *ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -131,9 +127,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATEFOR)
 #endif
       obj->incubateFor(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -158,9 +152,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATEWHILE)
       obj->incubateWhile(&par1, OPINT(2, 0));
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -183,9 +175,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT)
 #endif
       RINT(obj->incubatingObjectCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -213,9 +203,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -246,9 +234,7 @@ HB_FUNC_STATIC(QQMLINCUBATIONCONTROLLER_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

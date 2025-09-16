@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_NEW)
     */
     QQmlListReference *obj = new QQmlListReference(PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3, 0));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -121,9 +119,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_APPEND)
 #endif
       RBOOL(obj->append(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -145,9 +141,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_AT)
       QObject *ptr = obj->at(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -168,9 +162,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAPPEND)
 #endif
       RBOOL(obj->canAppend());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -191,9 +183,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANAT)
 #endif
       RBOOL(obj->canAt());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -214,9 +204,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCLEAR)
 #endif
       RBOOL(obj->canClear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -237,9 +225,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CANCOUNT)
 #endif
       RBOOL(obj->canCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -260,9 +246,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_CLEAR)
 #endif
       RBOOL(obj->clear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -283,9 +267,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_COUNT)
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -306,9 +288,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -330,9 +310,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_LISTELEMENTTYPE)
       const QMetaObject *ptr = obj->listElementType();
       Qt5xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -354,9 +332,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_OBJECT)
       QObject *ptr = obj->object();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -384,9 +360,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -417,9 +391,7 @@ HB_FUNC_STATIC(QQMLLISTREFERENCE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

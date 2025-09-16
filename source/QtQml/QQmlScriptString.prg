@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_NEW)
     */
     QQmlScriptString *obj = new QQmlScriptString(*PQQMLSCRIPTSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_BOOLEANLITERAL)
       RBOOL(obj->booleanLiteral(&par1));
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISEMPTY)
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -162,9 +156,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISNULLLITERAL)
 #endif
       RBOOL(obj->isNullLiteral());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -185,9 +177,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL)
 #endif
       RBOOL(obj->isUndefinedLiteral());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_NUMBERLITERAL)
       RQREAL(obj->numberLiteral(&par1));
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -233,9 +221,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_STRINGLITERAL)
 #endif
       RQSTRING(obj->stringLiteral());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -263,9 +249,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -296,9 +280,7 @@ HB_FUNC_STATIC(QQMLSCRIPTSTRING_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

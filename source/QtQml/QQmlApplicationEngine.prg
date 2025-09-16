@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
     QQmlApplicationEngine *obj = new QQmlApplicationEngine(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -153,9 +151,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_ROOTOBJECTS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -196,9 +192,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -218,9 +212,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOADDATA)
 #endif
       obj->loadData(*PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

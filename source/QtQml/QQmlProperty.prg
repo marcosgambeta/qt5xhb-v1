@@ -145,9 +145,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_NEW)
     */
     QQmlProperty *obj = new QQmlProperty(*PQQMLPROPERTY(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -192,9 +190,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_CONNECTNOTIFYSIGNAL)
     {
       RBOOL(obj->connectNotifySignal(PQOBJECT(1), PINT(2)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -213,9 +209,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_HASNOTIFYSIGNAL)
 #endif
       RBOOL(obj->hasNotifySignal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -236,9 +230,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_INDEX)
 #endif
       RINT(obj->index());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -259,9 +251,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_ISDESIGNABLE)
 #endif
       RBOOL(obj->isDesignable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -282,9 +272,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_ISPROPERTY)
 #endif
       RBOOL(obj->isProperty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -305,9 +293,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_ISRESETTABLE)
 #endif
       RBOOL(obj->isResettable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -328,9 +314,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_ISSIGNALPROPERTY)
 #endif
       RBOOL(obj->isSignalProperty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -351,9 +335,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -374,9 +356,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_ISWRITABLE)
 #endif
       RBOOL(obj->isWritable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -398,9 +378,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_METHOD)
       QMetaMethod *ptr = new QMetaMethod(obj->method());
       Qt5xHb::createReturnClass(ptr, "QMETAMETHOD", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -421,9 +399,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_NAME)
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -444,9 +420,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_NEEDSNOTIFYSIGNAL)
 #endif
       RBOOL(obj->needsNotifySignal());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -468,9 +442,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_OBJECT)
       QObject *ptr = obj->object();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -492,9 +464,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_PROPERTY)
       QMetaProperty *ptr = new QMetaProperty(obj->property());
       Qt5xHb::createReturnClass(ptr, "QMETAPROPERTY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -515,9 +485,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_PROPERTYTYPE)
 #endif
       RINT(obj->propertyType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -538,9 +506,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_PROPERTYTYPECATEGORY)
 #endif
       RENUM(obj->propertyTypeCategory());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -561,9 +527,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_PROPERTYTYPENAME)
 #endif
       hb_retc((const char *)obj->propertyTypeName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -608,9 +572,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_READ)
     */
     QVariant *ptr = new QVariant(QQmlProperty::read(PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3)));
     Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -629,9 +591,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_RESET)
 #endif
       RBOOL(obj->reset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -652,9 +612,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_TYPE)
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -695,9 +653,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_WRITE)
     static bool write( QObject * object, const QString &name, const QVariant &value, QQmlEngine * engine )
     */
     RBOOL(QQmlProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLENGINE(4)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -723,9 +679,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -756,9 +710,7 @@ HB_FUNC_STATIC(QQMLPROPERTY_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

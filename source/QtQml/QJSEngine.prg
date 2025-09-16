@@ -72,9 +72,7 @@ HB_FUNC_STATIC(QJSENGINE_NEW)
     */
     QJSEngine *obj = new QJSEngine(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QJSENGINE_COLLECTGARBAGE)
 #endif
       obj->collectGarbage();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -136,9 +132,7 @@ HB_FUNC_STATIC(QJSENGINE_EVALUATE)
       QJSValue *ptr = new QJSValue(obj->evaluate(PQSTRING(1), OPQSTRING(2, QString()), OPINT(3, 1)));
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -160,9 +154,7 @@ HB_FUNC_STATIC(QJSENGINE_GLOBALOBJECT)
       QJSValue *ptr = new QJSValue(obj->globalObject());
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -184,9 +176,7 @@ HB_FUNC_STATIC(QJSENGINE_NEWARRAY)
       QJSValue *ptr = new QJSValue(obj->newArray(OPUINT(1, 0)));
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -208,9 +198,7 @@ HB_FUNC_STATIC(QJSENGINE_NEWOBJECT)
       QJSValue *ptr = new QJSValue(obj->newObject());
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -232,9 +220,7 @@ HB_FUNC_STATIC(QJSENGINE_NEWQOBJECT)
       QJSValue *ptr = new QJSValue(obj->newQObject(PQOBJECT(1)));
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

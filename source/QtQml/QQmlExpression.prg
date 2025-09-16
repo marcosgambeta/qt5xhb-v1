@@ -100,9 +100,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
     QQmlExpression *obj =
         new QQmlExpression(*PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2, 0), OPQOBJECT(3, 0), OPQOBJECT(4, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -138,9 +136,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_CLEARERROR)
 #endif
       obj->clearError();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,9 +159,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_COLUMNNUMBER)
 #endif
       RINT(obj->columnNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -187,9 +181,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_CONTEXT)
       QQmlContext *ptr = obj->context();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -211,9 +203,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_ENGINE)
       QQmlEngine *ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -235,9 +225,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_ERROR)
       QQmlError *ptr = new QQmlError(obj->error());
       Qt5xHb::createReturnClass(ptr, "QQMLERROR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -261,9 +249,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_EVALUATE)
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -284,9 +270,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_EXPRESSION)
 #endif
       RQSTRING(obj->expression());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -307,9 +291,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_HASERROR)
 #endif
       RBOOL(obj->hasError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -330,9 +312,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_LINENUMBER)
 #endif
       RINT(obj->lineNumber());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -353,9 +333,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NOTIFYONVALUECHANGED)
 #endif
       RBOOL(obj->notifyOnValueChanged());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -377,9 +355,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SCOPEOBJECT)
       QObject *ptr = obj->scopeObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -400,9 +376,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETEXPRESSION)
 #endif
       obj->setExpression(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -425,9 +399,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETNOTIFYONVALUECHANGED)
 #endif
       obj->setNotifyOnValueChanged(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -450,9 +422,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETSOURCELOCATION)
 #endif
       obj->setSourceLocation(PQSTRING(1), PINT(2), OPINT(3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -475,9 +445,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SOURCEFILE)
 #endif
       RQSTRING(obj->sourceFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
