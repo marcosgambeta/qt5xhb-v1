@@ -112,9 +112,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_NEW)
     QGeoCoordinate *obj = new QGeoCoordinate(*PQGEOCOORDINATE(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -151,9 +149,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -176,9 +172,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_TYPE)
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -201,9 +195,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_SETLATITUDE)
 #endif
       obj->setLatitude(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -228,9 +220,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_LATITUDE)
 #endif
       RDOUBLE(obj->latitude());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -253,9 +243,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_SETLONGITUDE)
 #endif
       obj->setLongitude(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -280,9 +268,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_LONGITUDE)
 #endif
       RDOUBLE(obj->longitude());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -305,9 +291,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_SETALTITUDE)
 #endif
       obj->setAltitude(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -332,9 +316,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_ALTITUDE)
 #endif
       RDOUBLE(obj->altitude());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -357,9 +339,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_DISTANCETO)
 #endif
       RQREAL(obj->distanceTo(*PQGEOCOORDINATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -382,9 +362,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_AZIMUTHTO)
 #endif
       RQREAL(obj->azimuthTo(*PQGEOCOORDINATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -408,9 +386,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_ATDISTANCEANDAZIMUTH)
       QGeoCoordinate *ptr = new QGeoCoordinate(obj->atDistanceAndAzimuth(PQREAL(1), PQREAL(2), OPQREAL(3, 0.0)));
       Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -435,9 +411,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_TOSTRING)
                                  ? (QGeoCoordinate::CoordinateFormat)QGeoCoordinate::DegreesMinutesSecondsWithHemisphere
                                  : (QGeoCoordinate::CoordinateFormat)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -466,9 +440,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -499,9 +471,7 @@ HB_FUNC_STATIC(QGEOCOORDINATE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

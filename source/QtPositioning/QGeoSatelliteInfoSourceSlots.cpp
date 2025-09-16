@@ -43,9 +43,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated(const QList<QGeoSatel
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -84,9 +82,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated(const QList<QGeoSatell
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -152,9 +148,7 @@ void QGeoSatelliteInfoSourceSlots_connect_signal(const QString &signal, const QS
     }
 
     hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 #else

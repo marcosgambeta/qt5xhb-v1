@@ -104,9 +104,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SETPOSITIONINFOSOURCE)
 #endif
       obj->setPositionInfoSource(PQGEOPOSITIONINFOSOURCE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -132,9 +130,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE)
       QGeoPositionInfoSource *ptr = obj->positionInfoSource();
       Qt5xHb::createReturnClass(ptr, "QGEOPOSITIONINFOSOURCE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -157,9 +153,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SOURCENAME)
 #endif
       RQSTRING(obj->sourceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -182,9 +176,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ERROR)
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -207,9 +199,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES)
 #endif
       RENUM(obj->supportedAreaMonitorFeatures());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -232,9 +222,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STARTMONITORING)
 #endif
       RBOOL(obj->startMonitoring(*PQGEOAREAMONITORINFO(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -257,9 +245,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_STOPMONITORING)
 #endif
       RBOOL(obj->stopMonitoring(*PQGEOAREAMONITORINFO(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -282,9 +268,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_REQUESTUPDATE)
 #endif
       RBOOL(obj->requestUpdate(*PQGEOAREAMONITORINFO(1), PCONSTCHAR(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -373,9 +357,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_ACTIVEMONITORS)
       hb_itemReturnRelease(pArray);
     }
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -393,9 +375,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE)
     QGeoAreaMonitorSource *ptr = QGeoAreaMonitorSource::createDefaultSource(PQOBJECT(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOAREAMONITORSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -415,9 +395,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_CREATESOURCE)
     QGeoAreaMonitorSource *ptr = QGeoAreaMonitorSource::createSource(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::createReturnQObjectClass(ptr, "QGEOAREAMONITORSOURCE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -436,9 +414,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORSOURCE_AVAILABLESOURCES)
 #endif
     RQSTRINGLIST(QGeoAreaMonitorSource::availableSources());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
