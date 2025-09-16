@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CLEAR)
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -141,9 +139,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -192,9 +188,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEMS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -243,9 +237,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEMS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -268,9 +260,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOBACK)
 #endif
       RBOOL(obj->canGoBack());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -293,9 +283,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CANGOFORWARD)
 #endif
       RBOOL(obj->canGoForward());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -318,9 +306,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACK)
 #endif
       obj->back();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -345,9 +331,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARD)
 #endif
       obj->forward();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -372,9 +356,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_GOTOITEM)
 #endif
       obj->goToItem(*PQWEBENGINEHISTORYITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -400,9 +382,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_BACKITEM)
       QWebEngineHistoryItem *ptr = new QWebEngineHistoryItem(obj->backItem());
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORYITEM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -426,9 +406,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEM)
       QWebEngineHistoryItem *ptr = new QWebEngineHistoryItem(obj->currentItem());
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORYITEM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -452,9 +430,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_FORWARDITEM)
       QWebEngineHistoryItem *ptr = new QWebEngineHistoryItem(obj->forwardItem());
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORYITEM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -478,9 +454,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_ITEMAT)
       QWebEngineHistoryItem *ptr = new QWebEngineHistoryItem(obj->itemAt(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORYITEM", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -503,9 +477,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_CURRENTITEMINDEX)
 #endif
       RINT(obj->currentItemIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -528,9 +500,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_COUNT)
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -559,9 +529,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -592,9 +560,7 @@ HB_FUNC_STATIC(QWEBENGINEHISTORY_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

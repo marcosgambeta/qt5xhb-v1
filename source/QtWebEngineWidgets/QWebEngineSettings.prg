@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_GLOBALSETTINGS)
     QWebEngineSettings *ptr = QWebEngineSettings::globalSettings();
     Qt5xHb::createReturnClass(ptr, "QWEBENGINESETTINGS", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTFAMILY)
 #endif
       RQSTRING(obj->fontFamily((QWebEngineSettings::FontFamily)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -131,9 +127,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTFAMILY)
 #endif
       obj->setFontFamily((QWebEngineSettings::FontFamily)hb_parni(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -158,9 +152,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTFAMILY)
 #endif
       obj->resetFontFamily((QWebEngineSettings::FontFamily)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -185,9 +177,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_FONTSIZE)
 #endif
       RINT(obj->fontSize((QWebEngineSettings::FontSize)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETFONTSIZE)
 #endif
       obj->setFontSize((QWebEngineSettings::FontSize)hb_parni(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -237,9 +225,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETFONTSIZE)
 #endif
       obj->resetFontSize((QWebEngineSettings::FontSize)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -264,9 +250,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETATTRIBUTE)
 #endif
       obj->setAttribute((QWebEngineSettings::WebAttribute)hb_parni(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -291,9 +275,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_TESTATTRIBUTE)
 #endif
       RBOOL(obj->testAttribute((QWebEngineSettings::WebAttribute)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -316,9 +298,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_RESETATTRIBUTE)
 #endif
       obj->resetAttribute((QWebEngineSettings::WebAttribute)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -343,9 +323,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_DEFAULTTEXTENCODING)
 #endif
       RQSTRING(obj->defaultTextEncoding());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -368,9 +346,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETDEFAULTTEXTENCODING)
 #endif
       obj->setDefaultTextEncoding(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -401,9 +377,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -434,9 +408,7 @@ HB_FUNC_STATIC(QWEBENGINESETTINGS_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

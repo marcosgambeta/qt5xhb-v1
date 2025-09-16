@@ -98,9 +98,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_NEW)
   {
     QWebEngineView *obj = new QWebEngineView(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -141,9 +139,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_PAGE)
       QWebEnginePage *ptr = obj->page();
       Qt5xHb::createReturnQObjectClass(ptr, "QWEBENGINEPAGE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -166,9 +162,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETPAGE)
 #endif
       obj->setPage(PQWEBENGINEPAGE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -193,9 +187,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_LOAD)
 #endif
       obj->load(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -220,9 +212,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETHTML)
 #endif
       obj->setHtml(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -247,9 +237,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETCONTENT)
 #endif
       obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -275,9 +263,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_HISTORY)
       QWebEngineHistory *ptr = obj->history();
       Qt5xHb::createReturnClass(ptr, "QWEBENGINEHISTORY", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -300,9 +286,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_TITLE)
 #endif
       RQSTRING(obj->title());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -326,9 +310,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_URL)
       QUrl *ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -351,9 +333,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETURL)
 #endif
       obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -379,9 +359,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ICONURL)
       QUrl *ptr = new QUrl(obj->iconUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -404,9 +382,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_HASSELECTION)
 #endif
       RBOOL(obj->hasSelection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -429,9 +405,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SELECTEDTEXT)
 #endif
       RQSTRING(obj->selectedText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -456,9 +430,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_PAGEACTION)
       QAction *ptr = obj->pageAction((QWebEnginePage::WebAction)hb_parni(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -482,9 +454,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_TRIGGERPAGEACTION)
 #endif
       obj->triggerPageAction((QWebEnginePage::WebAction)hb_parni(1), OPBOOL(2, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -509,9 +479,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_ZOOMFACTOR)
 #endif
       RQREAL(obj->zoomFactor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -534,9 +502,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SETZOOMFACTOR)
 #endif
       obj->setZoomFactor(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -562,9 +528,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_SIZEHINT)
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -587,9 +551,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_STOP)
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -614,9 +576,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_BACK)
 #endif
       obj->back();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -641,9 +601,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_FORWARD)
 #endif
       obj->forward();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -668,9 +626,7 @@ HB_FUNC_STATIC(QWEBENGINEVIEW_RELOAD)
 #endif
       obj->reload();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
