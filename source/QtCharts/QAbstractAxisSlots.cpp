@@ -532,9 +532,7 @@ void QAbstractAxisSlots_connect_signal(const QString &signal, const QString &slo
     }
 
     hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 #else

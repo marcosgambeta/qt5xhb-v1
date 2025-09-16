@@ -70,9 +70,7 @@ HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_NEW)
     QCandlestickLegendMarker *obj =
         new QCandlestickLegendMarker(PQCANDLESTICKSERIES(1), PQLEGEND(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -115,9 +113,7 @@ HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_TYPE)
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -141,9 +137,7 @@ HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_SERIES)
       QCandlestickSeries *ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QCANDLESTICKSERIES");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

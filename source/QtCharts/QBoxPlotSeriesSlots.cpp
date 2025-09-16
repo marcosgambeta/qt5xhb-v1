@@ -61,9 +61,7 @@ void QBoxPlotSeriesSlots::boxsetsAdded(QList<QBoxSet *> sets)
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -102,9 +100,7 @@ void QBoxPlotSeriesSlots::boxsetsRemoved(QList<QBoxSet *> sets)
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -306,9 +302,7 @@ void QBoxPlotSeriesSlots_connect_signal(const QString &signal, const QString &sl
     }
 
     hb_retl(Qt5xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 #else
