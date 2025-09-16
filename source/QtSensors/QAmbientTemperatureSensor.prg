@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QAMBIENTTEMPERATURESENSOR_NEW)
   {
     QAmbientTemperatureSensor *obj = new QAmbientTemperatureSensor(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -107,9 +105,7 @@ HB_FUNC_STATIC(QAMBIENTTEMPERATURESENSOR_READING)
       QAmbientTemperatureReading *ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QAMBIENTTEMPERATUREREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

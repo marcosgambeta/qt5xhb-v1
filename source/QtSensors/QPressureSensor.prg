@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QPRESSURESENSOR_NEW)
   {
     QPressureSensor *obj = new QPressureSensor(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -107,9 +105,7 @@ HB_FUNC_STATIC(QPRESSURESENSOR_READING)
       QPressureReading *ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QPRESSUREREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

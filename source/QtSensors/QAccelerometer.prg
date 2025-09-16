@@ -68,9 +68,7 @@ HB_FUNC_STATIC(QACCELEROMETER_NEW)
   {
     QAccelerometer *obj = new QAccelerometer(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QACCELEROMETER_ACCELERATIONMODE)
 #endif
       RENUM(obj->accelerationMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -135,9 +131,7 @@ HB_FUNC_STATIC(QACCELEROMETER_SETACCELERATIONMODE)
 #endif
       obj->setAccelerationMode((QAccelerometer::AccelerationMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,9 +157,7 @@ HB_FUNC_STATIC(QACCELEROMETER_READING)
       QAccelerometerReading *ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QACCELEROMETERREADING");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
