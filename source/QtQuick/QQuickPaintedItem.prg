@@ -107,9 +107,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_ANTIALIASING)
 #endif
       RBOOL(obj->antialiasing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -131,9 +129,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSBOUNDINGRECT)
       QRectF *ptr = new QRectF(obj->contentsBoundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -154,9 +150,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSSCALE)
 #endif
       RQREAL(obj->contentsScale());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -178,9 +172,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_CONTENTSSIZE)
       QSize *ptr = new QSize(obj->contentsSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -202,9 +194,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_FILLCOLOR)
       QColor *ptr = new QColor(obj->fillColor());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -225,9 +215,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_MIPMAP)
 #endif
       RBOOL(obj->mipmap());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -248,9 +236,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_OPAQUEPAINTING)
 #endif
       RBOOL(obj->opaquePainting());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -271,9 +257,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_PAINT)
 #endif
       obj->paint(PQPAINTER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -296,9 +280,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_PERFORMANCEHINTS)
 #endif
       RENUM(obj->performanceHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -319,9 +301,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_RENDERTARGET)
 #endif
       RENUM(obj->renderTarget());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -342,9 +322,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_RESETCONTENTSSIZE)
 #endif
       obj->resetContentsSize();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -367,9 +345,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETANTIALIASING)
 #endif
       obj->setAntialiasing(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -392,9 +368,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETCONTENTSSCALE)
 #endif
       obj->setContentsScale(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -417,9 +391,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETCONTENTSSIZE)
 #endif
       obj->setContentsSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -442,9 +414,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETFILLCOLOR)
 #endif
       obj->setFillColor(HB_ISOBJECT(1) ? *(QColor *)Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -467,9 +437,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETMIPMAP)
 #endif
       obj->setMipmap(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -492,9 +460,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETOPAQUEPAINTING)
 #endif
       obj->setOpaquePainting(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -517,9 +483,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETPERFORMANCEHINT)
 #endif
       obj->setPerformanceHint((QQuickPaintedItem::PerformanceHint)hb_parni(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -542,9 +506,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETPERFORMANCEHINTS)
 #endif
       obj->setPerformanceHints((QQuickPaintedItem::PerformanceHints)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -567,9 +529,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_SETRENDERTARGET)
 #endif
       obj->setRenderTarget((QQuickPaintedItem::RenderTarget)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -592,9 +552,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_UPDATE)
 #endif
       obj->update(HB_ISNIL(1) ? QRect() : *(QRect *)Qt5xHb::itemGetPtr(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

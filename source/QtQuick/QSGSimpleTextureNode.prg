@@ -63,9 +63,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_NEW)
   {
     QSGSimpleTextureNode *obj = new QSGSimpleTextureNode();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -99,9 +97,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_FILTERING)
 #endif
       RENUM(obj->filtering());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -123,9 +119,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_RECT)
       QRectF *ptr = new QRectF(obj->rect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -146,9 +140,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETFILTERING)
 #endif
       obj->setFiltering((QSGTexture::Filtering)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -186,9 +178,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETRECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -207,9 +197,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETTEXTURE)
 #endif
       obj->setTexture(PQSGTEXTURE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -233,9 +221,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_TEXTURE)
       QSGTexture *ptr = obj->texture();
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

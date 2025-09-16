@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_NEW)
                                                        HB_ISNIL(2) ? (QQmlImageProviderBase::Flags)0
                                                                    : (QQmlImageProviderBase::Flags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_FLAGS)
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -124,9 +120,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_IMAGETYPE)
 #endif
       RENUM(obj->imageType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -148,9 +142,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
       QImage *ptr = new QImage(obj->requestImage(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -172,9 +164,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
       QPixmap *ptr = new QPixmap(obj->requestPixmap(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -196,9 +186,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTTEXTURE)
       QQuickTextureFactory *ptr = obj->requestTexture(PQSTRING(1), PQSIZE(2), *PQSIZE(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKTEXTUREFACTORY");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

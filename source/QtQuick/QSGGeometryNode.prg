@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_NEW)
   {
     QSGGeometryNode *obj = new QSGGeometryNode();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -97,9 +95,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_MATERIAL)
       QSGMaterial *ptr = obj->material();
       Qt5xHb::createReturnClass(ptr, "QSGMATERIAL", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -121,9 +117,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_OPAQUEMATERIAL)
       QSGMaterial *ptr = obj->opaqueMaterial();
       Qt5xHb::createReturnClass(ptr, "QSGMATERIAL", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -144,9 +138,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_SETMATERIAL)
 #endif
       obj->setMaterial(PQSGMATERIAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -169,9 +161,7 @@ HB_FUNC_STATIC(QSGGEOMETRYNODE_SETOPAQUEMATERIAL)
 #endif
       obj->setOpaqueMaterial(PQSGMATERIAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

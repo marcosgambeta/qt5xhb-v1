@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_CREATETEXTURE)
       QSGTexture *ptr = obj->createTexture(PQQUICKWINDOW(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_IMAGE)
       QImage *ptr = new QImage(obj->image());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -135,9 +131,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT)
 #endif
       RINT(obj->textureByteCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -159,9 +153,7 @@ HB_FUNC_STATIC(QQUICKTEXTUREFACTORY_TEXTURESIZE)
       QSize *ptr = new QSize(obj->textureSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

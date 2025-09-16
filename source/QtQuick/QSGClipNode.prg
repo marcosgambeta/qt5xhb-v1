@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QSGCLIPNODE_NEW)
   {
     QSGClipNode *obj = new QSGClipNode();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -97,9 +95,7 @@ HB_FUNC_STATIC(QSGCLIPNODE_CLIPRECT)
       QRectF *ptr = new QRectF(obj->clipRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -120,9 +116,7 @@ HB_FUNC_STATIC(QSGCLIPNODE_ISRECTANGULAR)
 #endif
       RBOOL(obj->isRectangular());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -143,9 +137,7 @@ HB_FUNC_STATIC(QSGCLIPNODE_SETCLIPRECT)
 #endif
       obj->setClipRect(*PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -168,9 +160,7 @@ HB_FUNC_STATIC(QSGCLIPNODE_SETISRECTANGULAR)
 #endif
       obj->setIsRectangular(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

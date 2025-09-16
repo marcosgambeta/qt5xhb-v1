@@ -102,9 +102,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_NEW)
   {
     QQuickWindow *obj = new QQuickWindow(OPQWINDOW(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -141,9 +139,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ACTIVEFOCUSITEM)
       QQuickItem *ptr = obj->activeFocusItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -164,9 +160,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CLEARBEFORERENDERING)
 #endif
       RBOOL(obj->clearBeforeRendering());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -188,9 +182,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_COLOR)
       QColor *ptr = new QColor(obj->color());
       Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -212,9 +204,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CONTENTITEM)
       QQuickItem *ptr = obj->contentItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -240,9 +230,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMID)
                       : (QQuickWindow::CreateTextureOptions)hb_parni(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -264,9 +252,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_CREATETEXTUREFROMIMAGE)
       QSGTexture *ptr = obj->createTextureFromImage(*PQIMAGE(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -288,9 +274,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_GRABWINDOW)
       QImage *ptr = new QImage(obj->grabWindow());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -312,9 +296,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_INCUBATIONCONTROLLER)
       QQmlIncubationController *ptr = obj->incubationController();
       Qt5xHb::createReturnClass(ptr, "QQMLINCUBATIONCONTROLLER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -335,9 +317,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ISPERSISTENTOPENGLCONTEXT)
 #endif
       RBOOL(obj->isPersistentOpenGLContext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -358,9 +338,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ISPERSISTENTSCENEGRAPH)
 #endif
       RBOOL(obj->isPersistentSceneGraph());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -382,9 +360,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_MOUSEGRABBERITEM)
       QQuickItem *ptr = obj->mouseGrabberItem();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -406,9 +382,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_OPENGLCONTEXT)
       QOpenGLContext *ptr = obj->openglContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -430,9 +404,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGET)
       QOpenGLFramebufferObject *ptr = obj->renderTarget();
       Qt5xHb::createReturnClass(ptr, "QOPENGLFRAMEBUFFEROBJECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -453,9 +425,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGETID)
 #endif
       RUINT(obj->renderTargetId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -477,9 +447,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RENDERTARGETSIZE)
       QSize *ptr = new QSize(obj->renderTargetSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -500,9 +468,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SENDEVENT)
 #endif
       RBOOL(obj->sendEvent(PQQUICKITEM(1), PQEVENT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -523,9 +489,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETCLEARBEFORERENDERING)
 #endif
       obj->setClearBeforeRendering(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -548,9 +512,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETCOLOR)
 #endif
       obj->setColor(HB_ISOBJECT(1) ? *(QColor *)Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -573,9 +535,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETPERSISTENTOPENGLCONTEXT)
 #endif
       obj->setPersistentOpenGLContext(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -598,9 +558,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETPERSISTENTSCENEGRAPH)
 #endif
       obj->setPersistentSceneGraph(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -638,9 +596,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_SETRENDERTARGET)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -660,9 +616,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_ACCESSIBLEROOT)
       QAccessibleInterface *ptr = obj->accessibleRoot();
       Qt5xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -683,9 +637,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_RELEASERESOURCES)
 #endif
       obj->releaseResources();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -708,9 +660,7 @@ HB_FUNC_STATIC(QQUICKWINDOW_UPDATE)
 #endif
       obj->update();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -98,9 +98,7 @@ HB_FUNC_STATIC(QSGTEXTURE_BIND)
 #endif
       obj->bind();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -124,9 +122,7 @@ HB_FUNC_STATIC(QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT)
       QRectF *ptr = new QRectF(obj->convertToNormalizedSourceRect(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -147,9 +143,7 @@ HB_FUNC_STATIC(QSGTEXTURE_FILTERING)
 #endif
       RENUM(obj->filtering());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -170,9 +164,7 @@ HB_FUNC_STATIC(QSGTEXTURE_HASALPHACHANNEL)
 #endif
       RBOOL(obj->hasAlphaChannel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -193,9 +185,7 @@ HB_FUNC_STATIC(QSGTEXTURE_HASMIPMAPS)
 #endif
       RBOOL(obj->hasMipmaps());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -216,9 +206,7 @@ HB_FUNC_STATIC(QSGTEXTURE_HORIZONTALWRAPMODE)
 #endif
       RENUM(obj->horizontalWrapMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -239,9 +227,7 @@ HB_FUNC_STATIC(QSGTEXTURE_ISATLASTEXTURE)
 #endif
       RBOOL(obj->isAtlasTexture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -262,9 +248,7 @@ HB_FUNC_STATIC(QSGTEXTURE_MIPMAPFILTERING)
 #endif
       RENUM(obj->mipmapFiltering());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -286,9 +270,7 @@ HB_FUNC_STATIC(QSGTEXTURE_NORMALIZEDTEXTURESUBRECT)
       QRectF *ptr = new QRectF(obj->normalizedTextureSubRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -310,9 +292,7 @@ HB_FUNC_STATIC(QSGTEXTURE_REMOVEDFROMATLAS)
       QSGTexture *ptr = obj->removedFromAtlas();
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -333,9 +313,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETFILTERING)
 #endif
       obj->setFiltering((QSGTexture::Filtering)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -358,9 +336,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETHORIZONTALWRAPMODE)
 #endif
       obj->setHorizontalWrapMode((QSGTexture::WrapMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -383,9 +359,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETMIPMAPFILTERING)
 #endif
       obj->setMipmapFiltering((QSGTexture::Filtering)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -408,9 +382,7 @@ HB_FUNC_STATIC(QSGTEXTURE_SETVERTICALWRAPMODE)
 #endif
       obj->setVerticalWrapMode((QSGTexture::WrapMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -433,9 +405,7 @@ HB_FUNC_STATIC(QSGTEXTURE_TEXTUREID)
 #endif
       RINT(obj->textureId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -457,9 +427,7 @@ HB_FUNC_STATIC(QSGTEXTURE_TEXTURESIZE)
       QSize *ptr = new QSize(obj->textureSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -480,9 +448,7 @@ HB_FUNC_STATIC(QSGTEXTURE_UPDATEBINDOPTIONS)
 #endif
       obj->updateBindOptions(OPBOOL(1, false));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -505,9 +471,7 @@ HB_FUNC_STATIC(QSGTEXTURE_VERTICALWRAPMODE)
 #endif
       RENUM(obj->verticalWrapMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
