@@ -99,9 +99,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_NEW)
     QTextToSpeech *obj = new QTextToSpeech(PQSTRING(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -121,9 +119,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_STATE)
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -147,9 +143,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_LOCALE)
       QLocale *ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -172,9 +166,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETLOCALE)
 #endif
       obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -200,9 +192,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_VOICE)
       QVoice *ptr = new QVoice(obj->voice());
       Qt5xHb::createReturnClass(ptr, "QVOICE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -225,9 +215,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETVOICE)
 #endif
       obj->setVoice(*PQVOICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -252,9 +240,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_RATE)
 #endif
       RDOUBLE(obj->rate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -277,9 +263,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETRATE)
 #endif
       obj->setRate(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -304,9 +288,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_PITCH)
 #endif
       RDOUBLE(obj->pitch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -329,9 +311,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETPITCH)
 #endif
       obj->setPitch(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -356,9 +336,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_VOLUME)
 #endif
       RDOUBLE(obj->volume());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -381,9 +359,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETVOLUME)
 #endif
       obj->setVolume(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -434,9 +410,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLELOCALES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -485,9 +459,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLEVOICES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -507,9 +479,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLEENGINES)
 #endif
     RQSTRINGLIST(QTextToSpeech::availableEngines());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -531,9 +501,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SAY)
 #endif
       obj->say(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -558,9 +526,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_STOP)
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -585,9 +551,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_PAUSE)
 #endif
       obj->pause();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -612,9 +576,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_RESUME)
 #endif
       obj->resume();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
