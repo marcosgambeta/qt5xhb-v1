@@ -107,9 +107,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_DEFAULTTEXTENCODING)
 #endif
       RQSTRING(obj->defaultTextEncoding());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -130,9 +128,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_FONTFAMILY)
 #endif
       RQSTRING(obj->fontFamily((QWebSettings::FontFamily)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -153,9 +149,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_FONTSIZE)
 #endif
       RINT(obj->fontSize((QWebSettings::FontSize)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -176,9 +170,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_LOCALSTORAGEPATH)
 #endif
       RQSTRING(obj->localStoragePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -199,9 +191,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETATTRIBUTE)
 #endif
       obj->resetAttribute((QWebSettings::WebAttribute)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -224,9 +214,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTFAMILY)
 #endif
       obj->resetFontFamily((QWebSettings::FontFamily)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -249,9 +237,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTSIZE)
 #endif
       obj->resetFontSize((QWebSettings::FontSize)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -274,9 +260,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETATTRIBUTE)
 #endif
       obj->setAttribute((QWebSettings::WebAttribute)hb_parni(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -299,9 +283,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETDEFAULTTEXTENCODING)
 #endif
       obj->setDefaultTextEncoding(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -324,9 +306,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTFAMILY)
 #endif
       obj->setFontFamily((QWebSettings::FontFamily)hb_parni(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -349,9 +329,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTSIZE)
 #endif
       obj->setFontSize((QWebSettings::FontSize)hb_parni(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -374,9 +352,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETLOCALSTORAGEPATH)
 #endif
       obj->setLocalStoragePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -399,9 +375,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETUSERSTYLESHEETURL)
 #endif
       obj->setUserStyleSheetUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -424,9 +398,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_TESTATTRIBUTE)
 #endif
       RBOOL(obj->testAttribute((QWebSettings::WebAttribute)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -448,9 +420,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_USERSTYLESHEETURL)
       QUrl *ptr = new QUrl(obj->userStyleSheetUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -468,9 +438,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_CLEARICONDATABASE)
 #endif
     QWebSettings::clearIconDatabase();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -489,9 +457,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_CLEARMEMORYCACHES)
 #endif
     QWebSettings::clearMemoryCaches();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -510,9 +476,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_ENABLEPERSISTENTSTORAGE)
 #endif
     QWebSettings::enablePersistentStorage(OPQSTRING(1, QString()));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -532,9 +496,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_GLOBALSETTINGS)
     QWebSettings *ptr = QWebSettings::globalSettings();
     Qt5xHb::createReturnClass(ptr, "QWEBSETTINGS", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -551,9 +513,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_ICONDATABASEPATH)
 #endif
     RQSTRING(QWebSettings::iconDatabasePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -571,9 +531,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_ICONFORURL)
     QIcon *ptr = new QIcon(QWebSettings::iconForUrl(*PQURL(1)));
     Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -590,9 +548,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_MAXIMUMPAGESINCACHE)
 #endif
     RINT(QWebSettings::maximumPagesInCache());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -609,9 +565,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA)
 #endif
     RQINT64(QWebSettings::offlineStorageDefaultQuota());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -628,9 +582,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_OFFLINESTORAGEPATH)
 #endif
     RQSTRING(QWebSettings::offlineStoragePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -647,9 +599,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH)
 #endif
     RQSTRING(QWebSettings::offlineWebApplicationCachePath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -666,9 +616,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA)
 #endif
     RQINT64(QWebSettings::offlineWebApplicationCacheQuota());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -685,9 +633,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETICONDATABASEPATH)
 #endif
     QWebSettings::setIconDatabasePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -706,9 +652,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETMAXIMUMPAGESINCACHE)
 #endif
     QWebSettings::setMaximumPagesInCache(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -727,9 +671,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOBJECTCACHECAPACITIES)
 #endif
     QWebSettings::setObjectCacheCapacities(PINT(1), PINT(2), PINT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -748,9 +690,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA)
 #endif
     QWebSettings::setOfflineStorageDefaultQuota(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -769,9 +709,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINESTORAGEPATH)
 #endif
     QWebSettings::setOfflineStoragePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -790,9 +728,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEPATH)
 #endif
     QWebSettings::setOfflineWebApplicationCachePath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -811,9 +747,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA)
 #endif
     QWebSettings::setOfflineWebApplicationCacheQuota(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -832,9 +766,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETWEBGRAPHIC)
 #endif
     QWebSettings::setWebGraphic((QWebSettings::WebGraphic)hb_parni(1), *PQPIXMAP(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -854,9 +786,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_WEBGRAPHIC)
     QPixmap *ptr = new QPixmap(QWebSettings::webGraphic((QWebSettings::WebGraphic)hb_parni(1)));
     Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -883,9 +813,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -916,9 +844,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

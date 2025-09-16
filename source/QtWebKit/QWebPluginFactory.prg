@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_CREATE)
       QObject *ptr = obj->create(PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_REFRESHPLUGINS)
 #endif
       obj->refreshPlugins();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

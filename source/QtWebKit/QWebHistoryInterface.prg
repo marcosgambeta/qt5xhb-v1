@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_ADDHISTORYENTRY)
 #endif
       obj->addHistoryEntry(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -107,9 +105,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_HISTORYCONTAINS)
 #endif
       RBOOL(obj->historyContains(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -128,9 +124,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DEFAULTINTERFACE)
     QWebHistoryInterface *ptr = QWebHistoryInterface::defaultInterface();
     Qt5xHb::createReturnQObjectClass(ptr, "QWEBHISTORYINTERFACE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -147,9 +141,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE)
 #endif
     QWebHistoryInterface::setDefaultInterface(PQWEBHISTORYINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
