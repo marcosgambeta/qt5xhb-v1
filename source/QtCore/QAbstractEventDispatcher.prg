@@ -102,9 +102,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT)
       RBOOL(obj->filterNativeEvent(*PQBYTEARRAY(1), (void *)hb_parptr(2), &par3));
       hb_stornl(par3, 3);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -125,9 +123,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_FLUSH)
 #endif
       obj->flush();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -150,9 +146,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS)
 #endif
       RBOOL(obj->hasPendingEvents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -173,9 +167,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INSTALLNATIVEEVENTFILTER)
 #endif
       obj->installNativeEventFilter(PQABSTRACTNATIVEEVENTFILTER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -198,9 +190,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INTERRUPT)
 #endif
       obj->interrupt();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -223,9 +213,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_PROCESSEVENTS)
 #endif
       RBOOL(obj->processEvents((QEventLoop::ProcessEventsFlags)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -247,9 +235,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTEREVENTNOTIFIER)
 #endif
       RBOOL(obj->registerEventNotifier(PQWINEVENTNOTIFIER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -271,9 +257,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER)
 #endif
       obj->registerSocketNotifier(PQSOCKETNOTIFIER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -309,9 +293,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERTIMER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -330,9 +312,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REMAININGTIME)
 #endif
       RINT(obj->remainingTime(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -353,9 +333,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REMOVENATIVEEVENTFILTER)
 #endif
       obj->removeNativeEventFilter(PQABSTRACTNATIVEEVENTFILTER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -379,9 +357,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTEREVENTNOTIFIER)
 #endif
       obj->unregisterEventNotifier(PQWINEVENTNOTIFIER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -405,9 +381,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER)
 #endif
       obj->unregisterSocketNotifier(PQSOCKETNOTIFIER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -430,9 +404,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER)
 #endif
       RBOOL(obj->unregisterTimer(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -453,9 +425,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS)
 #endif
       RBOOL(obj->unregisterTimers(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -476,9 +446,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_WAKEUP)
 #endif
       obj->wakeUp();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -499,9 +467,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INSTANCE)
     QAbstractEventDispatcher *ptr = QAbstractEventDispatcher::instance(OPQTHREAD(1, 0));
     Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTEVENTDISPATCHER");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -521,9 +487,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_STARTINGUP)
 #endif
       obj->startingUp();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -546,9 +510,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_CLOSINGDOWN)
 #endif
       obj->closingDown();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

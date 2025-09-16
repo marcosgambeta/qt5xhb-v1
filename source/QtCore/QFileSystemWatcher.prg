@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_NEW)
     */
     QFileSystemWatcher *obj = new QFileSystemWatcher(PQSTRINGLIST(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -114,9 +112,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATH)
 #endif
       RBOOL(obj->addPath(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -137,9 +133,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATHS)
 #endif
       RQSTRINGLIST(obj->addPaths(PQSTRINGLIST(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -160,9 +154,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_DIRECTORIES)
 #endif
       RQSTRINGLIST(obj->directories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -183,9 +175,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_FILES)
 #endif
       RQSTRINGLIST(obj->files());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -206,9 +196,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATH)
 #endif
       RBOOL(obj->removePath(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -229,9 +217,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATHS)
 #endif
       RQSTRINGLIST(obj->removePaths(PQSTRINGLIST(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

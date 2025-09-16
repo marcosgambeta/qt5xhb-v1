@@ -98,9 +98,7 @@ HB_FUNC_STATIC(QDATE_NEW)
     */
     QDate *obj = new QDate(PINT(1), PINT(2), PINT(3));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -135,9 +133,7 @@ HB_FUNC_STATIC(QDATE_ADDDAYS)
       QDate *ptr = new QDate(obj->addDays(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -159,9 +155,7 @@ HB_FUNC_STATIC(QDATE_ADDMONTHS)
       QDate *ptr = new QDate(obj->addMonths(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -183,9 +177,7 @@ HB_FUNC_STATIC(QDATE_ADDYEARS)
       QDate *ptr = new QDate(obj->addYears(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -206,9 +198,7 @@ HB_FUNC_STATIC(QDATE_DAY)
 #endif
       RINT(obj->day());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -229,9 +219,7 @@ HB_FUNC_STATIC(QDATE_DAYOFWEEK)
 #endif
       RINT(obj->dayOfWeek());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -252,9 +240,7 @@ HB_FUNC_STATIC(QDATE_DAYOFYEAR)
 #endif
       RINT(obj->dayOfYear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -275,9 +261,7 @@ HB_FUNC_STATIC(QDATE_DAYSINMONTH)
 #endif
       RINT(obj->daysInMonth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -298,9 +282,7 @@ HB_FUNC_STATIC(QDATE_DAYSINYEAR)
 #endif
       RINT(obj->daysInYear());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -321,9 +303,7 @@ HB_FUNC_STATIC(QDATE_DAYSTO)
 #endif
       RINT(obj->daysTo(*PQDATE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -350,9 +330,7 @@ HB_FUNC_STATIC(QDATE_GETDATE)
       hb_storni(par2, 2);
       hb_storni(par3, 3);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -375,9 +353,7 @@ HB_FUNC_STATIC(QDATE_ISNULL)
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -398,9 +374,7 @@ HB_FUNC_STATIC(QDATE_MONTH)
 #endif
       RINT(obj->month());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -421,9 +395,7 @@ HB_FUNC_STATIC(QDATE_SETDATE)
 #endif
       RBOOL(obj->setDate(PINT(1), PINT(2), PINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -444,9 +416,7 @@ HB_FUNC_STATIC(QDATE_TOJULIANDAY)
 #endif
       RINT(obj->toJulianDay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -478,9 +448,7 @@ HB_FUNC_STATIC(QDATE_TOSTRING)
     {
       RQSTRING(obj->toString(HB_ISNIL(1) ? (Qt::DateFormat)Qt::TextDate : (Qt::DateFormat)hb_parni(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -501,9 +469,7 @@ HB_FUNC_STATIC(QDATE_WEEKNUMBER)
       RINT(obj->weekNumber(&par1));
       hb_storni(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -524,9 +490,7 @@ HB_FUNC_STATIC(QDATE_YEAR)
 #endif
       RINT(obj->year());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -545,9 +509,7 @@ HB_FUNC_STATIC(QDATE_CURRENTDATE)
     QDate *ptr = new QDate(QDate::currentDate());
     Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -565,9 +527,7 @@ HB_FUNC_STATIC(QDATE_FROMJULIANDAY)
     QDate *ptr = new QDate(QDate::fromJulianDay(PINT(1)));
     Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -591,9 +551,7 @@ HB_FUNC_STATIC(QDATE_FROMSTRING)
     */
     QDate *ptr = new QDate(QDate::fromString(PQSTRING(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QDATE", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -609,9 +567,7 @@ HB_FUNC_STATIC(QDATE_ISLEAPYEAR)
 #endif
     RBOOL(QDate::isLeapYear(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -637,9 +593,7 @@ HB_FUNC_STATIC(QDATE_ISVALID)
     static bool isValid( int year, int month, int day )
     */
     RBOOL(QDate::isValid(PINT(1), PINT(2), PINT(3)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -659,9 +613,7 @@ HB_FUNC_STATIC(QDATE_LONGDAYNAME)
     static QString longDayName( int weekday, QDate::MonthNameType type )
     */
     RQSTRING(QDate::longDayName(PINT(1), (QDate::MonthNameType)hb_parni(2)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -681,9 +633,7 @@ HB_FUNC_STATIC(QDATE_LONGMONTHNAME)
     static QString longMonthName( int month, QDate::MonthNameType type )
     */
     RQSTRING(QDate::longMonthName(PINT(1), (QDate::MonthNameType)hb_parni(2)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -703,9 +653,7 @@ HB_FUNC_STATIC(QDATE_SHORTDAYNAME)
     static QString shortDayName( int weekday, QDate::MonthNameType type )
     */
     RQSTRING(QDate::shortDayName(PINT(1), (QDate::MonthNameType)hb_parni(2)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -725,9 +673,7 @@ HB_FUNC_STATIC(QDATE_SHORTMONTHNAME)
     static QString shortMonthName( int month, QDate::MonthNameType type )
     */
     RQSTRING(QDate::shortMonthName(PINT(1), (QDate::MonthNameType)hb_parni(2)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -753,9 +699,7 @@ HB_FUNC_STATIC(QDATE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -786,9 +730,7 @@ HB_FUNC_STATIC(QDATE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

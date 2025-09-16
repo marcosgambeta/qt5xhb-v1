@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_ADDANIMATION)
 #endif
       obj->addAnimation(PQABSTRACTANIMATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_ANIMATIONAT)
       QAbstractAnimation *ptr = obj->animationAt(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTANIMATION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -136,9 +132,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_ANIMATIONCOUNT)
 #endif
       RINT(obj->animationCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -159,9 +153,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_CLEAR)
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -184,9 +176,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_INDEXOFANIMATION)
 #endif
       RINT(obj->indexOfAnimation(PQABSTRACTANIMATION(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -207,9 +197,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_INSERTANIMATION)
 #endif
       obj->insertAnimation(PINT(1), PQABSTRACTANIMATION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -232,9 +220,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_REMOVEANIMATION)
 #endif
       obj->removeAnimation(PQABSTRACTANIMATION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -258,9 +244,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_TAKEANIMATION)
       QAbstractAnimation *ptr = obj->takeAnimation(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTANIMATION");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

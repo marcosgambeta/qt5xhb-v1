@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QCHILDEVENT_NEW)
   {
     QChildEvent *obj = new QChildEvent((QEvent::Type)hb_parni(1), PQOBJECT(2));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -96,9 +94,7 @@ HB_FUNC_STATIC(QCHILDEVENT_ADDED)
 #endif
       RBOOL(obj->added());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -120,9 +116,7 @@ HB_FUNC_STATIC(QCHILDEVENT_CHILD)
       QObject *ptr = obj->child();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -143,9 +137,7 @@ HB_FUNC_STATIC(QCHILDEVENT_POLISHED)
 #endif
       RBOOL(obj->polished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -166,9 +158,7 @@ HB_FUNC_STATIC(QCHILDEVENT_REMOVED)
 #endif
       RBOOL(obj->removed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

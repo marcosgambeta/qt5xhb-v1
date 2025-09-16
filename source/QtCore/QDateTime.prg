@@ -121,9 +121,7 @@ HB_FUNC_STATIC(QDATETIME_NEW)
     */
     QDateTime *obj = new QDateTime(*PQDATETIME(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -158,9 +156,7 @@ HB_FUNC_STATIC(QDATETIME_ADDDAYS)
       QDateTime *ptr = new QDateTime(obj->addDays(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -182,9 +178,7 @@ HB_FUNC_STATIC(QDATETIME_ADDMSECS)
       QDateTime *ptr = new QDateTime(obj->addMSecs(PQINT64(1)));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -206,9 +200,7 @@ HB_FUNC_STATIC(QDATETIME_ADDMONTHS)
       QDateTime *ptr = new QDateTime(obj->addMonths(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -230,9 +222,7 @@ HB_FUNC_STATIC(QDATETIME_ADDSECS)
       QDateTime *ptr = new QDateTime(obj->addSecs(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -254,9 +244,7 @@ HB_FUNC_STATIC(QDATETIME_ADDYEARS)
       QDateTime *ptr = new QDateTime(obj->addYears(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -278,9 +266,7 @@ HB_FUNC_STATIC(QDATETIME_DATE)
       QDate *ptr = new QDate(obj->date());
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -301,9 +287,7 @@ HB_FUNC_STATIC(QDATETIME_DAYSTO)
 #endif
       RINT(obj->daysTo(*PQDATETIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -324,9 +308,7 @@ HB_FUNC_STATIC(QDATETIME_ISNULL)
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -347,9 +329,7 @@ HB_FUNC_STATIC(QDATETIME_ISVALID)
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -370,9 +350,7 @@ HB_FUNC_STATIC(QDATETIME_MSECSTO)
 #endif
       RQINT64(obj->msecsTo(*PQDATETIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -393,9 +371,7 @@ HB_FUNC_STATIC(QDATETIME_SECSTO)
 #endif
       RINT(obj->secsTo(*PQDATETIME(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -416,9 +392,7 @@ HB_FUNC_STATIC(QDATETIME_SETDATE)
 #endif
       obj->setDate(*PQDATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -441,9 +415,7 @@ HB_FUNC_STATIC(QDATETIME_SETMSECSSINCEEPOCH)
 #endif
       obj->setMSecsSinceEpoch(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -466,9 +438,7 @@ HB_FUNC_STATIC(QDATETIME_SETTIME)
 #endif
       obj->setTime(*PQTIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -491,9 +461,7 @@ HB_FUNC_STATIC(QDATETIME_SETTIMESPEC)
 #endif
       obj->setTimeSpec((Qt::TimeSpec)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -516,9 +484,7 @@ HB_FUNC_STATIC(QDATETIME_SETTIME_T)
 #endif
       obj->setTime_t(PUINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -542,9 +508,7 @@ HB_FUNC_STATIC(QDATETIME_TIME)
       QTime *ptr = new QTime(obj->time());
       Qt5xHb::createReturnClass(ptr, "QTIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -565,9 +529,7 @@ HB_FUNC_STATIC(QDATETIME_TIMESPEC)
 #endif
       RENUM(obj->timeSpec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -589,9 +551,7 @@ HB_FUNC_STATIC(QDATETIME_TOLOCALTIME)
       QDateTime *ptr = new QDateTime(obj->toLocalTime());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -612,9 +572,7 @@ HB_FUNC_STATIC(QDATETIME_TOMSECSSINCEEPOCH)
 #endif
       RQINT64(obj->toMSecsSinceEpoch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -646,9 +604,7 @@ HB_FUNC_STATIC(QDATETIME_TOSTRING)
     {
       RQSTRING(obj->toString(HB_ISNIL(1) ? (Qt::DateFormat)Qt::TextDate : (Qt::DateFormat)hb_parni(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -668,9 +624,7 @@ HB_FUNC_STATIC(QDATETIME_TOTIMESPEC)
       QDateTime *ptr = new QDateTime(obj->toTimeSpec((Qt::TimeSpec)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -691,9 +645,7 @@ HB_FUNC_STATIC(QDATETIME_TOTIME_T)
 #endif
       RUINT(obj->toTime_t());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -715,9 +667,7 @@ HB_FUNC_STATIC(QDATETIME_TOUTC)
       QDateTime *ptr = new QDateTime(obj->toUTC());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -736,9 +686,7 @@ HB_FUNC_STATIC(QDATETIME_CURRENTDATETIME)
     QDateTime *ptr = new QDateTime(QDateTime::currentDateTime());
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -756,9 +704,7 @@ HB_FUNC_STATIC(QDATETIME_CURRENTDATETIMEUTC)
     QDateTime *ptr = new QDateTime(QDateTime::currentDateTimeUtc());
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -775,9 +721,7 @@ HB_FUNC_STATIC(QDATETIME_CURRENTMSECSSINCEEPOCH)
 #endif
     RQINT64(QDateTime::currentMSecsSinceEpoch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -795,9 +739,7 @@ HB_FUNC_STATIC(QDATETIME_FROMMSECSSINCEEPOCH)
     QDateTime *ptr = new QDateTime(QDateTime::fromMSecsSinceEpoch(PQINT64(1)));
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -821,9 +763,7 @@ HB_FUNC_STATIC(QDATETIME_FROMSTRING)
     */
     QDateTime *ptr = new QDateTime(QDateTime::fromString(PQSTRING(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -840,9 +780,7 @@ HB_FUNC_STATIC(QDATETIME_FROMTIME_T)
     QDateTime *ptr = new QDateTime(QDateTime::fromTime_t(PUINT(1)));
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -869,9 +807,7 @@ HB_FUNC_STATIC(QDATETIME_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -902,9 +838,7 @@ HB_FUNC_STATIC(QDATETIME_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

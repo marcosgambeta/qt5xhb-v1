@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QSTATE_NEW)
     */
     QState *obj = new QState((QState::ChildMode)hb_parni(1), OPQSTATE(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -148,9 +146,7 @@ HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
       QAbstractTransition *ptr = obj->addTransition(PQABSTRACTSTATE(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTTRANSITION");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -169,9 +165,7 @@ HB_FUNC_STATIC(QSTATE_ASSIGNPROPERTY)
 #endif
       obj->assignProperty(PQOBJECT(1), PCONSTCHAR(2), *PQVARIANT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -194,9 +188,7 @@ HB_FUNC_STATIC(QSTATE_CHILDMODE)
 #endif
       RENUM(obj->childMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -218,9 +210,7 @@ HB_FUNC_STATIC(QSTATE_ERRORSTATE)
       QAbstractState *ptr = obj->errorState();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -242,9 +232,7 @@ HB_FUNC_STATIC(QSTATE_INITIALSTATE)
       QAbstractState *ptr = obj->initialState();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -265,9 +253,7 @@ HB_FUNC_STATIC(QSTATE_REMOVETRANSITION)
 #endif
       obj->removeTransition(PQABSTRACTTRANSITION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -290,9 +276,7 @@ HB_FUNC_STATIC(QSTATE_SETCHILDMODE)
 #endif
       obj->setChildMode((QState::ChildMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -315,9 +299,7 @@ HB_FUNC_STATIC(QSTATE_SETERRORSTATE)
 #endif
       obj->setErrorState(PQABSTRACTSTATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -340,9 +322,7 @@ HB_FUNC_STATIC(QSTATE_SETINITIALSTATE)
 #endif
       obj->setInitialState(PQABSTRACTSTATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -388,9 +368,7 @@ HB_FUNC_STATIC(QSTATE_TRANSITIONS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

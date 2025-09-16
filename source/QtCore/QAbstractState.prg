@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
       QStateMachine *ptr = obj->machine();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTATEMACHINE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
       QState *ptr = obj->parentState();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

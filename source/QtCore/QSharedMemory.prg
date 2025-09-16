@@ -79,9 +79,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_NEW)
     */
     QSharedMemory *obj = new QSharedMemory(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -117,9 +115,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETKEY)
 #endif
       obj->setKey(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -142,9 +138,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_KEY)
 #endif
       RQSTRING(obj->key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETNATIVEKEY)
 #endif
       obj->setNativeKey(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -190,9 +182,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_NATIVEKEY)
 #endif
       RQSTRING(obj->nativeKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -214,9 +204,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_CREATE)
       RBOOL(obj->create(PINT(1), HB_ISNIL(2) ? (QSharedMemory::AccessMode)QSharedMemory::ReadWrite
                                              : (QSharedMemory::AccessMode)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -237,9 +225,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SIZE)
 #endif
       RINT(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -261,9 +247,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ATTACH)
       RBOOL(obj->attach(HB_ISNIL(1) ? (QSharedMemory::AccessMode)QSharedMemory::ReadWrite
                                     : (QSharedMemory::AccessMode)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -284,9 +268,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ISATTACHED)
 #endif
       RBOOL(obj->isAttached());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -307,9 +289,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DETACH)
 #endif
       RBOOL(obj->detach());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -330,9 +310,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DATA)
 #endif
       hb_retptr((void *)obj->data());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -353,9 +331,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_LOCK)
 #endif
       RBOOL(obj->lock());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -376,9 +352,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_UNLOCK)
 #endif
       RBOOL(obj->unlock());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -399,9 +373,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ERROR)
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -422,9 +394,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ERRORSTRING)
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

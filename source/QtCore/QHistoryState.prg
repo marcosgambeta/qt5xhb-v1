@@ -70,9 +70,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_NEW)
     */
     QHistoryState *obj = new QHistoryState((QHistoryState::HistoryType)hb_parni(1), OPQSTATE(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_DEFAULTSTATE)
       QAbstractState *ptr = obj->defaultState();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -132,9 +128,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_SETDEFAULTSTATE)
 #endif
       obj->setDefaultState(PQABSTRACTSTATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -157,9 +151,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_HISTORYTYPE)
 #endif
       RENUM(obj->historyType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -180,9 +172,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_SETHISTORYTYPE)
 #endif
       obj->setHistoryType((QHistoryState::HistoryType)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

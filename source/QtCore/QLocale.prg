@@ -178,9 +178,7 @@ HB_FUNC_STATIC(QLOCALE_NEW)
     */
     QLocale *obj = new QLocale(*PQLOCALE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -214,9 +212,7 @@ HB_FUNC_STATIC(QLOCALE_AMTEXT)
 #endif
       RQSTRING(obj->amText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -237,9 +233,7 @@ HB_FUNC_STATIC(QLOCALE_BCP47NAME)
 #endif
       RQSTRING(obj->bcp47Name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -260,9 +254,7 @@ HB_FUNC_STATIC(QLOCALE_COUNTRY)
 #endif
       RENUM(obj->country());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -283,9 +275,7 @@ HB_FUNC_STATIC(QLOCALE_CREATESEPARATEDLIST)
 #endif
       RQSTRING(obj->createSeparatedList(PQSTRINGLIST(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -307,9 +297,7 @@ HB_FUNC_STATIC(QLOCALE_CURRENCYSYMBOL)
       RQSTRING(obj->currencySymbol(HB_ISNIL(1) ? (QLocale::CurrencySymbolFormat)QLocale::CurrencySymbol
                                                : (QLocale::CurrencySymbolFormat)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -331,9 +319,7 @@ HB_FUNC_STATIC(QLOCALE_DATEFORMAT)
       RQSTRING(
           obj->dateFormat(HB_ISNIL(1) ? (QLocale::FormatType)QLocale::LongFormat : (QLocale::FormatType)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -355,9 +341,7 @@ HB_FUNC_STATIC(QLOCALE_DATETIMEFORMAT)
       RQSTRING(obj->dateTimeFormat(HB_ISNIL(1) ? (QLocale::FormatType)QLocale::LongFormat
                                                : (QLocale::FormatType)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -379,9 +363,7 @@ HB_FUNC_STATIC(QLOCALE_DAYNAME)
       RQSTRING(obj->dayName(PINT(1),
                             HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat : (QLocale::FormatType)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -403,9 +385,7 @@ HB_FUNC_STATIC(QLOCALE_DECIMALPOINT)
       QChar *ptr = new QChar(obj->decimalPoint());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -427,9 +407,7 @@ HB_FUNC_STATIC(QLOCALE_EXPONENTIAL)
       QChar *ptr = new QChar(obj->exponential());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -450,9 +428,7 @@ HB_FUNC_STATIC(QLOCALE_FIRSTDAYOFWEEK)
 #endif
       RENUM(obj->firstDayOfWeek());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -474,9 +450,7 @@ HB_FUNC_STATIC(QLOCALE_GROUPSEPARATOR)
       QChar *ptr = new QChar(obj->groupSeparator());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -497,9 +471,7 @@ HB_FUNC_STATIC(QLOCALE_LANGUAGE)
 #endif
       RENUM(obj->language());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -520,9 +492,7 @@ HB_FUNC_STATIC(QLOCALE_MEASUREMENTSYSTEM)
 #endif
       RENUM(obj->measurementSystem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -544,9 +514,7 @@ HB_FUNC_STATIC(QLOCALE_MONTHNAME)
       RQSTRING(obj->monthName(PINT(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
                                                    : (QLocale::FormatType)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -567,9 +535,7 @@ HB_FUNC_STATIC(QLOCALE_NAME)
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -590,9 +556,7 @@ HB_FUNC_STATIC(QLOCALE_NATIVECOUNTRYNAME)
 #endif
       RQSTRING(obj->nativeCountryName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -613,9 +577,7 @@ HB_FUNC_STATIC(QLOCALE_NATIVELANGUAGENAME)
 #endif
       RQSTRING(obj->nativeLanguageName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -637,9 +599,7 @@ HB_FUNC_STATIC(QLOCALE_NEGATIVESIGN)
       QChar *ptr = new QChar(obj->negativeSign());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -660,9 +620,7 @@ HB_FUNC_STATIC(QLOCALE_NUMBEROPTIONS)
 #endif
       RENUM(obj->numberOptions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -684,9 +642,7 @@ HB_FUNC_STATIC(QLOCALE_PERCENT)
       QChar *ptr = new QChar(obj->percent());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -707,9 +663,7 @@ HB_FUNC_STATIC(QLOCALE_PMTEXT)
 #endif
       RQSTRING(obj->pmText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -731,9 +685,7 @@ HB_FUNC_STATIC(QLOCALE_POSITIVESIGN)
       QChar *ptr = new QChar(obj->positiveSign());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -755,9 +707,7 @@ HB_FUNC_STATIC(QLOCALE_QUOTESTRING1)
       RQSTRING(obj->quoteString(PQSTRING(1), HB_ISNIL(2) ? (QLocale::QuotationStyle)QLocale::StandardQuotation
                                                          : (QLocale::QuotationStyle)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -779,9 +729,7 @@ HB_FUNC_STATIC(QLOCALE_QUOTESTRING2)
       RQSTRING(obj->quoteString(*PQSTRINGREF(1), HB_ISNIL(2) ? (QLocale::QuotationStyle)QLocale::StandardQuotation
                                                              : (QLocale::QuotationStyle)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -807,9 +755,7 @@ HB_FUNC_STATIC(QLOCALE_SCRIPT)
 #endif
       RENUM(obj->script());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -830,9 +776,7 @@ HB_FUNC_STATIC(QLOCALE_SETNUMBEROPTIONS)
 #endif
       obj->setNumberOptions((QLocale::NumberOptions)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -856,9 +800,7 @@ HB_FUNC_STATIC(QLOCALE_STANDALONEDAYNAME)
       RQSTRING(obj->standaloneDayName(PINT(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
                                                            : (QLocale::FormatType)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -880,9 +822,7 @@ HB_FUNC_STATIC(QLOCALE_STANDALONEMONTHNAME)
       RQSTRING(obj->standaloneMonthName(PINT(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
                                                              : (QLocale::FormatType)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -903,9 +843,7 @@ HB_FUNC_STATIC(QLOCALE_TEXTDIRECTION)
 #endif
       RENUM(obj->textDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -927,9 +865,7 @@ HB_FUNC_STATIC(QLOCALE_TIMEFORMAT)
       RQSTRING(
           obj->timeFormat(HB_ISNIL(1) ? (QLocale::FormatType)QLocale::LongFormat : (QLocale::FormatType)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -950,9 +886,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING1)
 #endif
       RQSTRING(obj->toCurrencyString(PQLONGLONG(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -973,9 +907,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING2)
 #endif
       RQSTRING(obj->toCurrencyString(PSHORT(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -996,9 +928,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING3)
 #endif
       RQSTRING(obj->toCurrencyString(PUSHORT(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1019,9 +949,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING4)
 #endif
       RQSTRING(obj->toCurrencyString(PINT(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1042,9 +970,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING5)
 #endif
       RQSTRING(obj->toCurrencyString(PUINT(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1065,9 +991,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING6)
 #endif
       RQSTRING(obj->toCurrencyString(PFLOAT(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1088,9 +1012,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING7)
 #endif
       RQSTRING(obj->toCurrencyString(PQULONGLONG(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1111,9 +1033,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING8)
 #endif
       RQSTRING(obj->toCurrencyString(PDOUBLE(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1152,9 +1072,7 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
       QDate *ptr = new QDate(obj->toDate(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDATE", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1187,9 +1105,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
       QDateTime *ptr = new QDateTime(obj->toDateTime(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1210,9 +1126,7 @@ HB_FUNC_STATIC(QLOCALE_TODOUBLE)
       RDOUBLE(obj->toDouble(PQSTRING(1), &par2));
       hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1235,9 +1149,7 @@ HB_FUNC_STATIC(QLOCALE_TOFLOAT)
       RFLOAT(obj->toFloat(PQSTRING(1), &par2));
       hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1258,9 +1170,7 @@ HB_FUNC_STATIC(QLOCALE_TOLOWER)
 #endif
       RQSTRING(obj->toLower(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1281,9 +1191,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING1)
 #endif
       RQSTRING(obj->toString(PQLONGLONG(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1304,9 +1212,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING2)
 #endif
       RQSTRING(obj->toString(*PQDATE(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1328,9 +1234,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING3)
       RQSTRING(obj->toString(*PQDATE(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
                                                      : (QLocale::FormatType)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1351,9 +1255,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING4)
 #endif
       RQSTRING(obj->toString(*PQTIME(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1375,9 +1277,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING5)
       RQSTRING(obj->toString(*PQTIME(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
                                                      : (QLocale::FormatType)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1399,9 +1299,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING6)
       RQSTRING(obj->toString(*PQDATETIME(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
                                                          : (QLocale::FormatType)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1422,9 +1320,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING7)
 #endif
       RQSTRING(obj->toString(*PQDATETIME(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1445,9 +1341,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING8)
 #endif
       RQSTRING(obj->toString(PSHORT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1468,9 +1362,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING9)
 #endif
       RQSTRING(obj->toString(PUSHORT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1491,9 +1383,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING10)
 #endif
       RQSTRING(obj->toString(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1514,9 +1404,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING11)
 #endif
       RQSTRING(obj->toString(PUINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1537,9 +1425,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING12)
 #endif
       RQSTRING(obj->toString(PFLOAT(1), OPCHAR(2, 'g'), OPINT(3, 6)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1560,9 +1446,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING13)
 #endif
       RQSTRING(obj->toString(PQULONGLONG(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1583,9 +1467,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING14)
 #endif
       RQSTRING(obj->toString(PDOUBLE(1), OPCHAR(2, 'g'), OPINT(3, 6)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1621,9 +1503,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING)
   else if (ISNUMPAR(2) && ISQDATETIME(1) && HB_ISCHAR(2))
   {
     HB_FUNC_EXEC(QLOCALE_TOSTRING7);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1656,9 +1536,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
       QTime *ptr = new QTime(obj->toTime(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QTIME", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1677,9 +1555,7 @@ HB_FUNC_STATIC(QLOCALE_TOUPPER)
 #endif
       RQSTRING(obj->toUpper(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1700,9 +1576,7 @@ HB_FUNC_STATIC(QLOCALE_UILANGUAGES)
 #endif
       RQSTRINGLIST(obj->uiLanguages());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1731,9 +1605,7 @@ HB_FUNC_STATIC(QLOCALE_WEEKDAYS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1755,9 +1627,7 @@ HB_FUNC_STATIC(QLOCALE_ZERODIGIT)
       QChar *ptr = new QChar(obj->zeroDigit());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1776,9 +1646,7 @@ HB_FUNC_STATIC(QLOCALE_C)
     QLocale *ptr = new QLocale(QLocale::c());
     Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1795,9 +1663,7 @@ HB_FUNC_STATIC(QLOCALE_COUNTRYTOSTRING)
 #endif
     RQSTRING(QLocale::countryToString((QLocale::Country)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1814,9 +1680,7 @@ HB_FUNC_STATIC(QLOCALE_LANGUAGETOSTRING)
 #endif
     RQSTRING(QLocale::languageToString((QLocale::Language)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1853,16 +1717,12 @@ HB_FUNC_STATIC(QLOCALE_MATCHINGLOCALES)
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QLOCALE", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1879,9 +1739,7 @@ HB_FUNC_STATIC(QLOCALE_SCRIPTTOSTRING)
 #endif
     RQSTRING(QLocale::scriptToString((QLocale::Script)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1898,9 +1756,7 @@ HB_FUNC_STATIC(QLOCALE_SETDEFAULT)
 #endif
     QLocale::setDefault(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1920,9 +1776,7 @@ HB_FUNC_STATIC(QLOCALE_SYSTEM)
     QLocale *ptr = new QLocale(QLocale::system());
     Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1949,9 +1803,7 @@ HB_FUNC_STATIC(QLOCALE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -1982,9 +1834,7 @@ HB_FUNC_STATIC(QLOCALE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

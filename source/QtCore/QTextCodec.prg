@@ -97,9 +97,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CANENCODE)
     {
       RBOOL(obj->canEncode(PQSTRING(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -129,9 +127,7 @@ HB_FUNC_STATIC(QTEXTCODEC_TOUNICODE)
     {
       RQSTRING(obj->toUnicode(PCONSTCHAR(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -150,9 +146,7 @@ HB_FUNC_STATIC(QTEXTCODEC_FROMUNICODE)
       QByteArray *ptr = new QByteArray(obj->fromUnicode(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -173,9 +167,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEDECODER)
                                                        : (QTextCodec::ConversionFlags)hb_parni(1));
       Qt5xHb::createReturnClass(ptr, "QTEXTDECODER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -198,9 +190,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
                                                        : (QTextCodec::ConversionFlags)hb_parni(1));
       Qt5xHb::createReturnClass(ptr, "QTEXTENCODER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -222,9 +212,7 @@ HB_FUNC_STATIC(QTEXTCODEC_NAME)
       QByteArray *ptr = new QByteArray(obj->name());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -271,9 +259,7 @@ HB_FUNC_STATIC(QTEXTCODEC_ALIASES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -294,9 +280,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MIBENUM)
 #endif
       RINT(obj->mibEnum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -320,9 +304,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORNAME)
     */
     QTextCodec *ptr = QTextCodec::codecForName(PCONSTCHAR(1));
     Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -339,9 +321,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORMIB)
     QTextCodec *ptr = QTextCodec::codecForMib(PINT(1));
     Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -377,16 +357,12 @@ HB_FUNC_STATIC(QTEXTCODEC_AVAILABLECODECS)
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -404,9 +380,7 @@ HB_FUNC_STATIC(QTEXTCODEC_AVAILABLEMIBS)
     QList<int> list = QTextCodec::availableMibs();
     Qt5xHb::convert_qlist_int_to_array(list);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -424,9 +398,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORLOCALE)
     QTextCodec *ptr = QTextCodec::codecForLocale();
     Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -443,9 +415,7 @@ HB_FUNC_STATIC(QTEXTCODEC_SETCODECFORLOCALE)
 #endif
     QTextCodec::setCodecForLocale(PQTEXTCODEC(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -470,9 +440,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORHTML)
     */
     QTextCodec *ptr = QTextCodec::codecForHtml(*PQBYTEARRAY(1), PQTEXTCODEC(2));
     Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -494,9 +462,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORUTFTEXT)
     */
     QTextCodec *ptr = QTextCodec::codecForUtfText(*PQBYTEARRAY(1), PQTEXTCODEC(2));
     Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -522,9 +488,7 @@ HB_FUNC_STATIC(QTEXTCODEC_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -555,9 +519,7 @@ HB_FUNC_STATIC(QTEXTCODEC_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

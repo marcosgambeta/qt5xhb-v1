@@ -72,9 +72,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_WRITABLELOCATION)
 #endif
     RQSTRING(QStandardPaths::writableLocation((QStandardPaths::StandardLocation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -91,9 +89,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_STANDARDLOCATIONS)
 #endif
     RQSTRINGLIST(QStandardPaths::standardLocations((QStandardPaths::StandardLocation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -113,9 +109,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
                                     HB_ISNIL(3) ? (QStandardPaths::LocateOptions)QStandardPaths::LocateFile
                                                 : (QStandardPaths::LocateOptions)hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -135,9 +129,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_LOCATEALL)
                                            HB_ISNIL(3) ? (QStandardPaths::LocateOptions)QStandardPaths::LocateFile
                                                        : (QStandardPaths::LocateOptions)hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -154,9 +146,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_DISPLAYNAME)
 #endif
     RQSTRING(QStandardPaths::displayName((QStandardPaths::StandardLocation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -173,9 +163,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_FINDEXECUTABLE)
 #endif
     RQSTRING(QStandardPaths::findExecutable(PQSTRING(1), OPQSTRINGLIST(2, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -192,9 +180,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_SETTESTMODEENABLED)
 #endif
     QStandardPaths::setTestModeEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -213,9 +199,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_ISTESTMODEENABLED)
 #endif
     RBOOL(QStandardPaths::isTestModeEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -242,9 +226,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -275,9 +257,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

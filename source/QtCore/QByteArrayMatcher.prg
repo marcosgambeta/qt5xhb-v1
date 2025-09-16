@@ -92,9 +92,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEW)
     */
     QByteArrayMatcher *obj = new QByteArrayMatcher(*PQBYTEARRAYMATCHER(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -139,9 +137,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
     {
       RINT(obj->indexIn(PCONSTCHAR(1), PINT(2), OPINT(3, 0)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -161,9 +157,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_PATTERN)
       QByteArray *ptr = new QByteArray(obj->pattern());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -184,9 +178,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_SETPATTERN)
 #endif
       obj->setPattern(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -216,9 +208,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -249,9 +239,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

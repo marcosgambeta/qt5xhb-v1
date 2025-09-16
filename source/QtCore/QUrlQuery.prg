@@ -107,9 +107,7 @@ HB_FUNC_STATIC(QURLQUERY_NEW)
     */
     QUrlQuery *obj = new QUrlQuery(*PQURLQUERY(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -143,9 +141,7 @@ HB_FUNC_STATIC(QURLQUERY_ADDQUERYITEM)
 #endif
       obj->addQueryItem(PQSTRING(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -171,9 +167,7 @@ HB_FUNC_STATIC(QURLQUERY_ALLQUERYITEMVALUES)
                                                             ? (QUrl::ComponentFormattingOptions)QUrl::PrettyDecoded
                                                             : (QUrl::ComponentFormattingOptions)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -194,9 +188,7 @@ HB_FUNC_STATIC(QURLQUERY_CLEAR)
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -219,9 +211,7 @@ HB_FUNC_STATIC(QURLQUERY_HASQUERYITEM)
 #endif
       RBOOL(obj->hasQueryItem(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -242,9 +232,7 @@ HB_FUNC_STATIC(QURLQUERY_ISEMPTY)
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -266,9 +254,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERY)
       RQSTRING(obj->query(HB_ISNIL(1) ? (QUrl::ComponentFormattingOptions)QUrl::PrettyDecoded
                                       : (QUrl::ComponentFormattingOptions)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -290,9 +276,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYITEMVALUE)
       RQSTRING(obj->queryItemValue(PQSTRING(1), HB_ISNIL(2) ? (QUrl::ComponentFormattingOptions)QUrl::PrettyDecoded
                                                             : (QUrl::ComponentFormattingOptions)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -314,9 +298,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYPAIRDELIMITER)
       QChar *ptr = new QChar(obj->queryPairDelimiter());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -338,9 +320,7 @@ HB_FUNC_STATIC(QURLQUERY_QUERYVALUEDELIMITER)
       QChar *ptr = new QChar(obj->queryValueDelimiter());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -361,9 +341,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEALLQUERYITEMS)
 #endif
       obj->removeAllQueryItems(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -386,9 +364,7 @@ HB_FUNC_STATIC(QURLQUERY_REMOVEQUERYITEM)
 #endif
       obj->removeQueryItem(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -411,9 +387,7 @@ HB_FUNC_STATIC(QURLQUERY_SETQUERY)
 #endif
       obj->setQuery(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -436,9 +410,7 @@ HB_FUNC_STATIC(QURLQUERY_SWAP)
 #endif
       obj->swap(*PQURLQUERY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -462,9 +434,7 @@ HB_FUNC_STATIC(QURLQUERY_TOSTRING)
       RQSTRING(obj->toString(HB_ISNIL(1) ? (QUrl::ComponentFormattingOptions)QUrl::PrettyDecoded
                                          : (QUrl::ComponentFormattingOptions)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -483,9 +453,7 @@ HB_FUNC_STATIC(QURLQUERY_DEFAULTQUERYPAIRDELIMITER)
     QChar *ptr = new QChar(QUrlQuery::defaultQueryPairDelimiter());
     Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -503,9 +471,7 @@ HB_FUNC_STATIC(QURLQUERY_DEFAULTQUERYVALUEDELIMITER)
     QChar *ptr = new QChar(QUrlQuery::defaultQueryValueDelimiter());
     Qt5xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -532,9 +498,7 @@ HB_FUNC_STATIC(QURLQUERY_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -565,9 +529,7 @@ HB_FUNC_STATIC(QURLQUERY_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
