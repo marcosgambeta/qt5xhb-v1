@@ -79,7 +79,7 @@ endif
 ifneq (,$(findstring 5.15,$(shell qmake -v)))
     CFLAGS += -std=c++11
 endif
-CFLAGS += -c -O2 -frtti -fexceptions -mthreads -Wall -DUNICODE
+CFLAGS += -c -O2 -frtti -fexceptions -mthreads -Wall -DUNICODE -Wno-deprecated-declarations
 CFLAGS += -DQT_DLL
 CFLAGS += -DQT_NO_DEBUG
 CFLAGS += -DQT_THREAD_SUPPORT
