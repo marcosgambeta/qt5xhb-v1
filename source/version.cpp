@@ -18,6 +18,16 @@ HB_FUNC(QT5XHB_VERSION_DATE)
   hb_retc(static_cast<const char *>("01/01/2023 02:45:00"));
 }
 
+HB_FUNC(QT5XHB_BUILD_DATE)
+{
+  hb_retc(static_cast<const char *>(__DATE__));
+}
+
+HB_FUNC(QT5XHB_BUILD_TIME)
+{
+  hb_retc(static_cast<const char *>(__TIME__));
+}
+
 HB_FUNC(QT5XHB_ISCPP11)
 {
   hb_retl(false);
