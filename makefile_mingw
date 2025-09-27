@@ -83,8 +83,9 @@ CFLAGS += -c -O2 -frtti -fexceptions -mthreads -Wall -DUNICODE -Wno-deprecated-d
 CFLAGS += -DQT_DLL
 CFLAGS += -DQT_NO_DEBUG
 CFLAGS += -DQT_THREAD_SUPPORT
-# ative a linha abaixo para compilar sem checagem de parametros
-# CFLAGS += -DQT5XHB_DONT_CHECK_PARAMETERS
+# defina a flag abaixo para compilar sem checagem de parametros
+# set QT5XHB_USER_CFLAGS=-DQT5XHB_DONT_CHECK_PARAMETERS
+CFLAGS += $(QT5XHB_USER_CFLAGS)
 include mak/modules3.mak
 
 # CINCLUDES
