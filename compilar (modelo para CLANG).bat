@@ -36,6 +36,9 @@ set QTCOMP=clang
 rem Define se é Harbour ou xHarbour (harbour ou xharbour)
 set HBCOMP=harbour
 
+rem Ative a linha abaixo para usar a flag QT5XHB_DONT_CHECK_PARAMETERS
+rem set QT5XHB_USER_CFLAGS=-DQT5XHB_DONT_CHECK_PARAMETERS
+
 rem Cria a pasta para as bibliotecas, caso não exista.
 if not exist lib mkdir lib
 if not exist lib\%QTPLATFORM% mkdir lib\%QTPLATFORM%
