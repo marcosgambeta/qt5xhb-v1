@@ -103,7 +103,7 @@ RETURN
 
 HB_FUNC_STATIC(QMESSAGEBOX_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     /*
     QMessageBox( QWidget * parent = 0 )
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_NEW)
     Qt5xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
-           (ISQWIDGET(5) || HB_ISNIL(5)) && ISNUMORNIL(6))
+           ISQWIDGETORNIL(5) && ISNUMORNIL(6))
   {
     /*
     QMessageBox( QMessageBox::Icon icon, const QString &title, const QString &text, QMessageBox::StandardButtons

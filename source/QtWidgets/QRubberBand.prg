@@ -57,7 +57,7 @@ RETURN
     */
 HB_FUNC_STATIC(QRUBBERBAND_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2))
   {
     QRubberBand *obj = new QRubberBand((QRubberBand::Shape)hb_parni(1), OPQWIDGET(2, 0));
     Qt5xHb::returnNewObject(obj, false);

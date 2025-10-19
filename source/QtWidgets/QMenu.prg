@@ -94,7 +94,7 @@ RETURN
 
 HB_FUNC_STATIC(QMENU_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     /*
     QMenu( QWidget * parent = 0 )
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QMENU_NEW)
     QMenu *obj = new QMenu(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2))
   {
     /*
     QMenu( const QString &title, QWidget * parent = 0 )
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
     }
   }
   else if (ISBETWEEN(2, 4) && HB_ISARRAY(1) && ISQPOINT(2) && (ISQACTION(3) || HB_ISNIL(3)) &&
-           (ISQWIDGET(4) || HB_ISNIL(4)))
+           ISQWIDGETORNIL(4))
   {
     /*
     static QAction * exec( QList<QAction*> actions, const QPoint &pos, QAction * at = 0, QWidget * parent = 0 )

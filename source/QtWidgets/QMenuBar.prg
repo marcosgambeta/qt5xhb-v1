@@ -86,7 +86,7 @@ RETURN
     */
 HB_FUNC_STATIC(QMENUBAR_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     QMenuBar *obj = new QMenuBar(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);

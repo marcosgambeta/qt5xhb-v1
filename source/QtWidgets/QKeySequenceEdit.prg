@@ -62,7 +62,7 @@ RETURN
 HB_FUNC_STATIC(QKEYSEQUENCEEDIT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     /*
     QKeySequenceEdit( QWidget * parent = 0 )
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISQWIDGETORNIL(2))
   {
     /*
     QKeySequenceEdit( const QKeySequence &keySequence, QWidget * parent = 0 )

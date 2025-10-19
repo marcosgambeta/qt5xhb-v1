@@ -94,7 +94,7 @@ RETURN
 
 HB_FUNC_STATIC(QLABEL_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2))
   {
     /*
     QLabel( QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QLABEL_NEW)
     QLabel *obj = new QLabel(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3))
+  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3))
   {
     /*
     QLabel( const QString &text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QLABEL_SETBUDDY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+    if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
     {
 #endif
       obj->setBuddy(OPQWIDGET(1, 0));

@@ -65,7 +65,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSTATUSBAR_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     QStatusBar *obj = new QStatusBar(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);

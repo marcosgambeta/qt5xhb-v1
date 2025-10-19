@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC(QTIMEEDIT_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     /*
     QTimeEdit( QWidget * parent = 0 )
@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QTIMEEDIT_NEW)
     QTimeEdit *obj = new QTimeEdit(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQTIME(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQTIME(1) && ISQWIDGETORNIL(2))
   {
     /*
     QTimeEdit( const QTime &time, QWidget * parent = 0 )
