@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC(QCHARTVIEW_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     /*
     QChartView( QWidget * parent = nullptr )
@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QCHARTVIEW_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQCHART(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQCHART(1) && ISQWIDGETORNIL(2))
   {
     /*
     QChartView( QChart * chart, QWidget * parent = nullptr )
