@@ -84,7 +84,7 @@ RETURN
 HB_FUNC_STATIC(QQUICKWIDGET_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     /*
     QQuickWidget( QWidget * parent = 0 )
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQWIDGETORNIL(2))
   {
     /*
     QQuickWidget( const QUrl &source, QWidget * parent = 0 )
