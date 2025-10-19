@@ -193,5 +193,6 @@
 
 #define ISNUMORNIL(n) (HB_ISNUM(n) || HB_ISNIL(n))
 #define ISCHARORNIL(n) (HB_ISCHAR(n) || HB_ISNIL(n))
+#define ISQWIDGETORNIL(n) (ISQWIDGET(n) || HB_ISNIL(n))
 
 #endif // QT5XHB_MACROS_H
