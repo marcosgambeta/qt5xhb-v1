@@ -94,7 +94,7 @@ RETURN
 HB_FUNC_STATIC(QWEBENGINEVIEW_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
   {
     QWebEngineView *obj = new QWebEngineView(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
