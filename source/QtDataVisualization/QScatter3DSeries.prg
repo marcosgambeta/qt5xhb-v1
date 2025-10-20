@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC(QSCATTER3DSERIES_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QScatter3DSeries( QObject * parent = nullptr )
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_NEW)
     QScatter3DSeries *obj = new QScatter3DSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQSCATTERDATAPROXY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQSCATTERDATAPROXY(1) && ISQOBJECTORNIL(2))
   {
     /*
     QScatter3DSeries( QScatterDataProxy * dataProxy, QObject * parent = nullptr )

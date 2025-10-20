@@ -66,7 +66,7 @@ QValue3DAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC(QVALUE3DAXIS_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     QValue3DAxis *obj = new QValue3DAxis(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);

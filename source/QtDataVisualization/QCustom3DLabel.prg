@@ -76,7 +76,7 @@ RETURN
 
 HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QCustom3DLabel( QObject * parent = nullptr )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW)
     Qt5xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(5, 6) && HB_ISCHAR(1) && ISQFONT(2) && ISQVECTOR3D(3) && ISQVECTOR3D(4) && ISQQUATERNION(5) &&
-           (ISQOBJECT(6) || HB_ISNIL(6)))
+           ISQOBJECTORNIL(6))
   {
     /*
     QCustom3DLabel( const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling,

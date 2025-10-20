@@ -122,7 +122,7 @@ RETURN
 
 HB_FUNC_STATIC(Q3DTHEME_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     Q3DTheme( QObject * parent = nullptr )
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(Q3DTHEME_NEW)
     Q3DTheme *obj = new Q3DTheme(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2))
   {
     /*
     Q3DTheme( Q3DTheme::Theme themeType, QObject * parent = nullptr )

@@ -84,7 +84,7 @@ RETURN
 
 HB_FUNC_STATIC(QCUSTOM3DITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QCustom3DItem( QObject * parent = nullptr )
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QCUSTOM3DITEM_NEW)
     Qt5xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(5, 6) && HB_ISCHAR(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) && ISQQUATERNION(4) && ISQIMAGE(5) &&
-           (ISQOBJECT(6) || HB_ISNIL(6)))
+           ISQOBJECTORNIL(6))
   {
     /*
     QCustom3DItem( const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &

@@ -59,7 +59,7 @@ Q3DLight( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC(Q3DLIGHT_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     Q3DLight *obj = new Q3DLight(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
