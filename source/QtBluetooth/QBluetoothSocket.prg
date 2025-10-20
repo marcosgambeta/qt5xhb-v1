@@ -80,7 +80,7 @@ RETURN
 
 HB_FUNC_STATIC(QBLUETOOTHSOCKET_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2))
   {
     /*
     QBluetoothSocket( QBluetoothServiceInfo::Protocol socketType, QObject * parent = 0 )
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QBLUETOOTHSOCKET_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QBluetoothSocket( QObject * parent = 0 )

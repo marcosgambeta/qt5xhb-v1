@@ -64,7 +64,7 @@ RETURN
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     QBluetoothTransferManager *obj = new QBluetoothTransferManager(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
