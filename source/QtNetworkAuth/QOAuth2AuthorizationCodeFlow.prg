@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QOAuth2AuthorizationCodeFlow( QObject * parent = nullptr )
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQNETWORKACCESSMANAGER(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQNETWORKACCESSMANAGER(1) && ISQOBJECTORNIL(2))
   {
     /*
     QOAuth2AuthorizationCodeFlow( QNetworkAccessManager * manager, QObject * parent = nullptr )
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQNETWORKACCESSMANAGER(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQNETWORKACCESSMANAGER(2) && ISQOBJECTORNIL(3))
   {
     /*
     QOAuth2AuthorizationCodeFlow( const QString &clientIdentifier, QNetworkAccessManager * manager, QObject * parent =
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(3, 4) && ISQURL(1) && ISQURL(2) && ISQNETWORKACCESSMANAGER(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && ISQURL(1) && ISQURL(2) && ISQNETWORKACCESSMANAGER(3) && ISQOBJECTORNIL(4))
   {
     /*
     QOAuth2AuthorizationCodeFlow( const QUrl &authorizationUrl, const QUrl &accessTokenUrl, QNetworkAccessManager *
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QOAUTH2AUTHORIZATIONCODEFLOW_NEW)
 #endif
   }
   else if (ISBETWEEN(4, 5) && HB_ISCHAR(1) && ISQURL(2) && ISQURL(3) && ISQNETWORKACCESSMANAGER(4) &&
-           (ISQOBJECT(5) || HB_ISNIL(5)))
+           ISQOBJECTORNIL(5))
   {
     /*
     QOAuth2AuthorizationCodeFlow( const QString &clientIdentifier, const QUrl &authorizationUrl, const QUrl &

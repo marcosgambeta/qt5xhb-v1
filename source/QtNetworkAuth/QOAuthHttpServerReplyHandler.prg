@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QOAuthHttpServerReplyHandler( QObject * parent = nullptr )
@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2))
   {
     /*
     QOAuthHttpServerReplyHandler( quint16 port, QObject * parent = nullptr )
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QOAUTHHTTPSERVERREPLYHANDLER_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3))
   {
     /*
     QOAuthHttpServerReplyHandler( const QHostAddress &address, quint16 port, QObject * parent = nullptr )
