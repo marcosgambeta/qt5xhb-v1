@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC(QGLSHADER_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2))
   {
     /*
     QGLShader( QGLShader::ShaderType type, QObject * parent = 0 )
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QGLSHADER_NEW)
     QGLShader *obj = new QGLShader((QGLShader::ShaderType)hb_parni(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQGLCONTEXT(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQGLCONTEXT(2) && ISQOBJECTORNIL(3))
   {
     /*
     QGLShader( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
