@@ -65,7 +65,7 @@ RETURN
     */
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     QVirtualKeyboardSelectionListModel *obj = new QVirtualKeyboardSelectionListModel(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
