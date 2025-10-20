@@ -78,7 +78,7 @@ RETURN
     */
 HB_FUNC_STATIC(QUILOADER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     QUiLoader *obj = new QUiLoader(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && ISCHARORNIL(2))
+    if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISCHARORNIL(2))
     {
 #endif
       QAction *ptr = obj->createAction(OPQOBJECT(1, 0), OPQSTRING(2, QString()));
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTIONGROUP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && ISCHARORNIL(2))
+    if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISCHARORNIL(2))
     {
 #endif
       QActionGroup *ptr = obj->createActionGroup(OPQOBJECT(1, 0), OPQSTRING(2, QString()));
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QUILOADER_CREATELAYOUT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)) && ISCHARORNIL(3))
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQOBJECTORNIL(2) && ISCHARORNIL(3))
     {
 #endif
       QLayout *ptr = obj->createLayout(PQSTRING(1), OPQOBJECT(2, 0), OPQSTRING(3, QString()));
