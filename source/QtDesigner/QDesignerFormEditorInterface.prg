@@ -78,7 +78,7 @@ RETURN
     */
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     QDesignerFormEditorInterface *obj = new QDesignerFormEditorInterface(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
