@@ -95,7 +95,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSQLTABLEMODEL_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && (ISQSQLDATABASE(2) || HB_ISNIL(2)))
   {
     QSqlTableModel *obj =
         new QSqlTableModel(OPQOBJECT(1, 0), HB_ISNIL(2) ? QSqlDatabase() : *(QSqlDatabase *)Qt5xHb::itemGetPtr(2));

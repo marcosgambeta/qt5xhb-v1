@@ -56,7 +56,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     QSqlRelationalDelegate *obj = new QSqlRelationalDelegate(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
