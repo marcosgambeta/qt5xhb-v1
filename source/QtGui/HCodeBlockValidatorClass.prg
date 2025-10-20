@@ -39,7 +39,7 @@ RETURN
 
 HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     explicit HCodeBlockValidator( QObject *parent = 0 )
@@ -47,7 +47,7 @@ HB_FUNC_STATIC(HCODEBLOCKVALIDATOR_NEW)
     HCodeBlockValidator *o = new HCodeBlockValidator(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(o, false);
   }
-  else if (ISBETWEEN(1, 2) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQOBJECTORNIL(2))
   {
     /*
     HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = 0 )

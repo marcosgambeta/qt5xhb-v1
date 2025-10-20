@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC(QINTVALIDATOR_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QIntValidator( QObject * parent = 0 )
@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_NEW)
     QIntValidator *obj = new QIntValidator(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3))
   {
     /*
     QIntValidator( int minimum, int maximum, QObject * parent = 0 )
