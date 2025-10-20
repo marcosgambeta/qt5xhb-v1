@@ -282,7 +282,7 @@ void _qtxhb_processOnEventMethod2(QEvent::Type event);
 // QObject( QObject * parent = 0 )
 HB_FUNC_STATIC(QOBJECT_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     QObject *obj = new QObject(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);

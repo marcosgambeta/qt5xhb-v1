@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC(QPLUGINLOADER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QPluginLoader( QObject * parent = 0 )
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QPLUGINLOADER_NEW)
     QPluginLoader *obj = new QPluginLoader(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
   {
     /*
     QPluginLoader( const QString &fileName, QObject * parent = 0 )

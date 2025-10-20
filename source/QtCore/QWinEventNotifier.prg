@@ -57,7 +57,7 @@ RETURN
 HB_FUNC_STATIC(QWINEVENTNOTIFIER_NEW)
 {
 #ifdef Q_OS_WIN
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     explicit QWinEventNotifier(QObject *parent = 0)

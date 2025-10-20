@@ -86,7 +86,7 @@ RETURN
     */
 HB_FUNC_STATIC(QTIMELINE_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISQOBJECTORNIL(2))
   {
     QTimeLine *obj = new QTimeLine(OPINT(1, 1000), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);

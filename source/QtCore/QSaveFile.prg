@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QSAVEFILE_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QSaveFile( QObject * parent = 0 )

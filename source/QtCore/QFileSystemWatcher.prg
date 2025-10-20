@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QFileSystemWatcher( QObject * parent = 0 )
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_NEW)
     QFileSystemWatcher *obj = new QFileSystemWatcher(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISQOBJECTORNIL(2))
   {
     /*
     QFileSystemWatcher( const QStringList &paths, QObject * parent = 0 )

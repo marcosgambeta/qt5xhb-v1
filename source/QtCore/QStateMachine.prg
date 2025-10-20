@@ -73,7 +73,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTATEMACHINE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QStateMachine( QObject * parent = 0 )
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_NEW)
     QStateMachine *obj = new QStateMachine(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2))
   {
     /*
     QStateMachine( QState::ChildMode childMode, QObject * parent = 0 )
