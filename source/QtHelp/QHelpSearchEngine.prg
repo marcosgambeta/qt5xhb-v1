@@ -72,7 +72,7 @@ RETURN
     */
 HB_FUNC_STATIC(QHELPSEARCHENGINE_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && ISQOBJECTORNIL(2))
   {
     QHelpSearchEngine *obj = new QHelpSearchEngine(PQHELPENGINECORE(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
