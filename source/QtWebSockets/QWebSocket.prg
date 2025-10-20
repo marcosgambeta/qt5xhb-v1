@@ -115,7 +115,7 @@ RETURN
 HB_FUNC_STATIC(QWEBSOCKET_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  if (ISBETWEEN(0, 3) && ISCHARORNIL(1) && ISNUMORNIL(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(0, 3) && ISCHARORNIL(1) && ISNUMORNIL(2) && ISQOBJECTORNIL(3))
   {
     QWebSocket *obj = new QWebSocket(OPQSTRING(1, QString()),
                                      HB_ISNIL(2) ? (QWebSocketProtocol::Version)QWebSocketProtocol::VersionLatest

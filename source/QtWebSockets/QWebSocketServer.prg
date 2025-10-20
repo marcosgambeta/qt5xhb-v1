@@ -96,7 +96,7 @@ RETURN
 HB_FUNC_STATIC(QWEBSOCKETSERVER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3))
   {
     QWebSocketServer *obj =
         new QWebSocketServer(PQSTRING(1), (QWebSocketServer::SslMode)hb_parni(2), OPQOBJECT(3, nullptr));
