@@ -66,7 +66,7 @@ RETURN
 HB_FUNC_STATIC(QWEBCHANNEL_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     QWebChannel *obj = new QWebChannel(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
