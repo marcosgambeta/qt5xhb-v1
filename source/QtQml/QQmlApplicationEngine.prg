@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QQmlApplicationEngine( QObject * parent = 0 )
@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQOBJECTORNIL(2))
   {
     /*
     QQmlApplicationEngine( const QUrl &url, QObject * parent = 0 )
@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
   {
     /*
     QQmlApplicationEngine( const QString &filePath, QObject * parent = 0 )
