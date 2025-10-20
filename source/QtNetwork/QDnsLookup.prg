@@ -81,7 +81,7 @@ RETURN
 
 HB_FUNC_STATIC(QDNSLOOKUP_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QDnsLookup( QObject * parent = nullptr )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NEW)
     QDnsLookup *obj = new QDnsLookup(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3))
   {
     /*
     QDnsLookup( QDnsLookup::Type type, const QString &name, QObject * parent = nullptr )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_NEW)
     QDnsLookup *obj = new QDnsLookup((QDnsLookup::Type)hb_parni(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQHOSTADDRESS(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
+  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQHOSTADDRESS(3) && ISQOBJECTORNIL(4))
   {
     /*
     QDnsLookup( QDnsLookup::Type type, const QString &name, const QHostAddress &nameserver, QObject * parent = nullptr

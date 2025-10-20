@@ -84,7 +84,7 @@ RETURN
     */
 HB_FUNC_STATIC(QNETWORKSESSION_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQNETWORKCONFIGURATION(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && ISQNETWORKCONFIGURATION(1) && ISQOBJECTORNIL(2))
   {
     QNetworkSession *obj = new QNetworkSession(*PQNETWORKCONFIGURATION(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
