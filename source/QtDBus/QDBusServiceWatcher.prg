@@ -65,7 +65,7 @@ RETURN
 
     HB_FUNC(QDBUSSERVICEWATCHER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QDBusServiceWatcher( QObject * parent = 0 )
@@ -74,7 +74,7 @@ RETURN
     Qt5xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && ISQDBUSCONNECTION(2) && ISNUMORNIL(3) &&
-           (ISQOBJECT(4) || HB_ISNIL(4)))
+           ISQOBJECTORNIL(4))
   {
     /*
     QDBusServiceWatcher( const QString &service, const QDBusConnection &connection, QDBusServiceWatcher::WatchMode
