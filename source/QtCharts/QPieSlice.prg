@@ -117,7 +117,7 @@ RETURN
 
 HB_FUNC_STATIC(QPIESLICE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QPieSlice( QObject * parent = nullptr )
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QPIESLICE_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3))
   {
     /*
     QPieSlice( QString label, qreal value, QObject * parent = nullptr )

@@ -79,7 +79,7 @@ QDateTimeAxis( QObject * parent = nullptr )
 HB_FUNC_STATIC(QDATETIMEAXIS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     QDateTimeAxis *obj = new QDateTimeAxis(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
