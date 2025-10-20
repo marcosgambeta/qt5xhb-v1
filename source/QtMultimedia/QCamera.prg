@@ -93,7 +93,7 @@ RETURN
 
 HB_FUNC_STATIC(QCAMERA_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
   {
     /*
     QCamera( QObject * parent = nullptr )
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QCAMERA_NEW)
     QCamera *obj = new QCamera(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQOBJECTORNIL(2))
   {
     /*
     QCamera( const QByteArray &deviceName, QObject * parent = nullptr )
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QCAMERA_NEW)
     QCamera *obj = new QCamera(*PQBYTEARRAY(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQCAMERAINFO(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && ISQCAMERAINFO(1) && ISQOBJECTORNIL(2))
   {
     /*
     QCamera( const QCameraInfo &cameraInfo, QObject * parent = nullptr )
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QCAMERA_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2))
   {
     /*
     QCamera( QCamera::Position position, QObject * parent = nullptr )

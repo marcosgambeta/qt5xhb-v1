@@ -111,7 +111,7 @@ RETURN
     */
 HB_FUNC_STATIC(QMEDIAPLAYER_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
+  if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISNUMORNIL(2))
   {
     QMediaPlayer *obj =
         new QMediaPlayer(OPQOBJECT(1, 0), HB_ISNIL(2) ? (QMediaPlayer::Flags)0 : (QMediaPlayer::Flags)hb_parni(2));
