@@ -67,7 +67,7 @@ RETURN
 HB_FUNC_STATIC(QMODBUSREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3))
   {
     QModbusReply *obj = new QModbusReply((QModbusReply::ReplyType)hb_parni(1), PINT(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
