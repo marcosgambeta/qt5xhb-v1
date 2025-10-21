@@ -67,16 +67,13 @@ RETURN
 
 HB_FUNC_STATIC(QQMLCONTEXT_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQQMLENGINE(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQQMLENGINE(1) && ISQOBJECTORNIL(2)) {
     /*
     QQmlContext( QQmlEngine * engine, QObject * parent = 0 )
     */
     QQmlContext *obj = new QQmlContext(PQQMLENGINE(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQQMLCONTEXT(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQQMLCONTEXT(1) && ISQOBJECTORNIL(2)) {
     /*
     QQmlContext( QQmlContext * parentContext, QObject * parent = 0 )
     */
@@ -113,8 +110,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_BASEURL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUrl *ptr = new QUrl(obj->baseUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -135,8 +131,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_CONTEXTOBJECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QObject *ptr = obj->contextObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -157,8 +152,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_CONTEXTPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->contextProperty(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -179,8 +173,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_ENGINE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QQmlEngine *ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
@@ -201,8 +194,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_ISVALID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +214,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_NAMEFOROBJECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       RQSTRING(obj->nameForObject(PQOBJECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +234,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_PARENTCONTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QQmlContext *ptr = obj->parentContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
@@ -265,8 +255,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_RESOLVEDURL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       QUrl *ptr = new QUrl(obj->resolvedUrl(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -287,8 +276,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_SETBASEURL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setBaseUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,8 +298,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTOBJECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       obj->setContextObject(PQOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,29 +313,24 @@ HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTOBJECT)
 
 HB_FUNC_STATIC(QQMLCONTEXT_SETCONTEXTPROPERTY)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
     /*
     void setContextProperty( const QString &name, QObject * value )
     */
     QQmlContext *obj = (QQmlContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setContextProperty(PQSTRING(1), PQOBJECT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
     /*
     void setContextProperty( const QString &name, const QVariant &value )
     */
     QQmlContext *obj = (QQmlContext *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setContextProperty(PQSTRING(1), *PQVARIANT(2));
     }
 

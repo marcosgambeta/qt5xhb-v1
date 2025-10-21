@@ -23,8 +23,7 @@ void QQmlApplicationEngineSlots::objectCreated(QObject *obj, const QUrl &url)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "objectCreated(QObject*,QUrl)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLAPPLICATIONENGINE");
     PHB_ITEM pobj = Qt5xHb::Signals_return_qobject(obj, "QOBJECT");
     PHB_ITEM purl = Qt5xHb::Signals_return_object((void *)&url, "QURL");
@@ -46,8 +45,7 @@ void QQmlApplicationEngineSlots_connect_signal(const QString &signal, const QStr
   if (obj != NULL) {
     QQmlApplicationEngineSlots *s = QCoreApplication::instance()->findChild<QQmlApplicationEngineSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QQmlApplicationEngineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -22,8 +22,7 @@ void QQmlComponentSlots::progressChanged(qreal progress)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "progressChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLCOMPONENT");
     PHB_ITEM pprogress = hb_itemPutND(NULL, progress);
 
@@ -40,8 +39,7 @@ void QQmlComponentSlots::statusChanged(QQmlComponent::Status status)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QQmlComponent::Status)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLCOMPONENT");
     PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
 
@@ -59,8 +57,7 @@ void QQmlComponentSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QQmlComponentSlots *s = QCoreApplication::instance()->findChild<QQmlComponentSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QQmlComponentSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

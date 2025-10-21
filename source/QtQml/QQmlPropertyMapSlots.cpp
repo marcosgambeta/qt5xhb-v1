@@ -22,8 +22,7 @@ void QQmlPropertyMapSlots::valueChanged(const QString &key, const QVariant &valu
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged(QString,QVariant)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLPROPERTYMAP");
     PHB_ITEM pkey = hb_itemPutC(NULL, QSTRINGTOSTRING(key));
     PHB_ITEM pvalue = Qt5xHb::Signals_return_object((void *)&value, "QVARIANT");
@@ -43,8 +42,7 @@ void QQmlPropertyMapSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QQmlPropertyMapSlots *s = QCoreApplication::instance()->findChild<QQmlPropertyMapSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QQmlPropertyMapSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

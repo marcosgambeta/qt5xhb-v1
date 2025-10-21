@@ -22,8 +22,7 @@ void QQmlEngineSlots::quit()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "quit()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLENGINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QQmlEngineSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QQmlEngineSlots *s = QCoreApplication::instance()->findChild<QQmlEngineSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QQmlEngineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

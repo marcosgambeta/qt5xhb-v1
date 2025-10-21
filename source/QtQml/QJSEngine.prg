@@ -57,16 +57,13 @@ RETURN
 
 HB_FUNC_STATIC(QJSENGINE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QJSEngine()
     */
     QJSEngine *obj = new QJSEngine();
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     /*
     QJSEngine( QObject * parent )
     */
@@ -103,8 +100,7 @@ HB_FUNC_STATIC(QJSENGINE_COLLECTGARBAGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->collectGarbage();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,8 +122,7 @@ HB_FUNC_STATIC(QJSENGINE_EVALUATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
 #endif
       QJSValue *ptr = new QJSValue(obj->evaluate(PQSTRING(1), OPQSTRING(2, QString()), OPINT(3, 1)));
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
@@ -148,8 +143,7 @@ HB_FUNC_STATIC(QJSENGINE_GLOBALOBJECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QJSValue *ptr = new QJSValue(obj->globalObject());
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
@@ -170,8 +164,7 @@ HB_FUNC_STATIC(QJSENGINE_NEWARRAY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QJSValue *ptr = new QJSValue(obj->newArray(OPUINT(1, 0)));
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
@@ -192,8 +185,7 @@ HB_FUNC_STATIC(QJSENGINE_NEWOBJECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QJSValue *ptr = new QJSValue(obj->newObject());
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
@@ -214,8 +206,7 @@ HB_FUNC_STATIC(QJSENGINE_NEWQOBJECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       QJSValue *ptr = new QJSValue(obj->newQObject(PQOBJECT(1)));
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);

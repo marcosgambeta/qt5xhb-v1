@@ -65,8 +65,7 @@ RETURN
     */
 HB_FUNC_STATIC(QJSVALUEITERATOR_NEW)
 {
-  if (ISNUMPAR(1) && ISQJSVALUE(1))
-  {
+  if (ISNUMPAR(1) && ISQJSVALUE(1)) {
     QJSValueIterator *obj = new QJSValueIterator(*PQJSVALUE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_HASNEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasNext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,8 +117,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_NAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +137,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_NEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->next());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,8 +157,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_VALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QJSValue *ptr = new QJSValue(obj->value());
       Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
@@ -178,17 +173,14 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -221,8 +213,7 @@ HB_FUNC_STATIC(QJSVALUEITERATOR_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

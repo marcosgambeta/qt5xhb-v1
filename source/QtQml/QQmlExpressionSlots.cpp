@@ -22,8 +22,7 @@ void QQmlExpressionSlots::valueChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLEXPRESSION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QQmlExpressionSlots_connect_signal(const QString &signal, const QString &sl
   if (obj != NULL) {
     QQmlExpressionSlots *s = QCoreApplication::instance()->findChild<QQmlExpressionSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QQmlExpressionSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
