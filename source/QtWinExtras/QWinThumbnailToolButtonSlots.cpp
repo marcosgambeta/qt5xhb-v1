@@ -23,8 +23,7 @@ void QWinThumbnailToolButtonSlots::clicked()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTHUMBNAILTOOLBUTTON");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QWinThumbnailToolButtonSlots::changed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "changed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTHUMBNAILTOOLBUTTON");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -60,8 +58,7 @@ void QWinThumbnailToolButtonSlots_connect_signal(const QString &signal, const QS
   if (obj != NULL) {
     QWinThumbnailToolButtonSlots *s = QCoreApplication::instance()->findChild<QWinThumbnailToolButtonSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QWinThumbnailToolButtonSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

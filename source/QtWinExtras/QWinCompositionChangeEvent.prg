@@ -57,8 +57,7 @@ RETURN
 HB_FUNC_STATIC(QWINCOMPOSITIONCHANGEEVENT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
     QWinCompositionChangeEvent *obj = new QWinCompositionChangeEvent(PBOOL(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -94,8 +93,7 @@ HB_FUNC_STATIC(QWINCOMPOSITIONCHANGEEVENT_ISCOMPOSITIONENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCompositionEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -23,8 +23,7 @@ void QWinTaskbarProgressSlots::valueChanged(int value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM pvalue = hb_itemPutNI(NULL, value);
 
@@ -43,8 +42,7 @@ void QWinTaskbarProgressSlots::minimumChanged(int minimum)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minimumChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM pminimum = hb_itemPutNI(NULL, minimum);
 
@@ -63,8 +61,7 @@ void QWinTaskbarProgressSlots::maximumChanged(int maximum)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maximumChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM pmaximum = hb_itemPutNI(NULL, maximum);
 
@@ -83,8 +80,7 @@ void QWinTaskbarProgressSlots::visibilityChanged(bool visible)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "visibilityChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
@@ -103,8 +99,7 @@ void QWinTaskbarProgressSlots::pausedChanged(bool paused)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pausedChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM ppaused = hb_itemPutL(NULL, paused);
 
@@ -123,8 +118,7 @@ void QWinTaskbarProgressSlots::stoppedChanged(bool stopped)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stoppedChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM pstopped = hb_itemPutL(NULL, stopped);
 
@@ -144,8 +138,7 @@ void QWinTaskbarProgressSlots_connect_signal(const QString &signal, const QStrin
   if (obj != NULL) {
     QWinTaskbarProgressSlots *s = QCoreApplication::instance()->findChild<QWinTaskbarProgressSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QWinTaskbarProgressSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
