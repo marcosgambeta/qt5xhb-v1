@@ -22,8 +22,7 @@ void QDeclarativeComponentSlots::progressChanged(qreal progress)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "progressChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVECOMPONENT");
     PHB_ITEM pprogress = hb_itemPutND(NULL, progress);
 
@@ -40,8 +39,7 @@ void QDeclarativeComponentSlots::statusChanged(QDeclarativeComponent::Status sta
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QDeclarativeComponent::Status)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVECOMPONENT");
     PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
 
@@ -59,8 +57,7 @@ void QDeclarativeComponentSlots_connect_signal(const QString &signal, const QStr
   if (obj != NULL) {
     QDeclarativeComponentSlots *s = QCoreApplication::instance()->findChild<QDeclarativeComponentSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDeclarativeComponentSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

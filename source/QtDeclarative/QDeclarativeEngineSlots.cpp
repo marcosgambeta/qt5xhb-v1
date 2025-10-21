@@ -22,8 +22,7 @@ void QDeclarativeEngineSlots::quit()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "quit()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVEENGINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,15 +37,12 @@ void QDeclarativeEngineSlots::warnings(const QList<QDeclarativeError> &warnings)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "warnings(QList<QDeclarativeError>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVEENGINE");
     PHB_DYNS pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
     PHB_ITEM pwarnings = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
-      for (int i = 0; i < warnings.count(); i++)
-      {
+    if (pDynSym != NULL) {
+      for (int i = 0; i < warnings.count(); i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -76,8 +72,7 @@ void QDeclarativeEngineSlots_connect_signal(const QString &signal, const QString
   if (obj != NULL) {
     QDeclarativeEngineSlots *s = QCoreApplication::instance()->findChild<QDeclarativeEngineSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDeclarativeEngineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

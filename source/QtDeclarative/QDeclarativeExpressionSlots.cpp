@@ -22,8 +22,7 @@ void QDeclarativeExpressionSlots::valueChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDECLARATIVEEXPRESSION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QDeclarativeExpressionSlots_connect_signal(const QString &signal, const QSt
   if (obj != NULL) {
     QDeclarativeExpressionSlots *s = QCoreApplication::instance()->findChild<QDeclarativeExpressionSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDeclarativeExpressionSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
