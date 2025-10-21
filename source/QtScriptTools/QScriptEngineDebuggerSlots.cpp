@@ -22,8 +22,7 @@ void QScriptEngineDebuggerSlots::evaluationResumed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "evaluationResumed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCRIPTENGINEDEBUGGER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QScriptEngineDebuggerSlots::evaluationSuspended()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "evaluationSuspended()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCRIPTENGINEDEBUGGER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -55,8 +53,7 @@ void QScriptEngineDebuggerSlots_connect_signal(const QString &signal, const QStr
   if (obj != NULL) {
     QScriptEngineDebuggerSlots *s = QCoreApplication::instance()->findChild<QScriptEngineDebuggerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QScriptEngineDebuggerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
