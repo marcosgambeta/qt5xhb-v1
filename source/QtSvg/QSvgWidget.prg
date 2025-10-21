@@ -57,16 +57,13 @@ RETURN
 
 HB_FUNC_STATIC(QSVGWIDGET_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     /*
     QSvgWidget( QWidget * parent = 0 )
     */
     QSvgWidget *obj = new QSvgWidget(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
     /*
     QSvgWidget( const QString &file, QWidget * parent = 0 )
     */
@@ -103,8 +100,7 @@ HB_FUNC_STATIC(QSVGWIDGET_RENDERER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSvgRenderer *ptr = obj->renderer();
       Qt5xHb::createReturnQObjectClass(ptr, "QSVGRENDERER");
@@ -125,8 +121,7 @@ HB_FUNC_STATIC(QSVGWIDGET_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -140,29 +135,24 @@ HB_FUNC_STATIC(QSVGWIDGET_SIZEHINT)
 
 HB_FUNC_STATIC(QSVGWIDGET_LOAD)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     void load( const QString &file )
     */
     QSvgWidget *obj = (QSvgWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->load(PQSTRING(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     void load( const QByteArray &contents )
     */
     QSvgWidget *obj = (QSvgWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->load(*PQBYTEARRAY(1));
     }
 

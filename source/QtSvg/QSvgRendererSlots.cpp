@@ -22,8 +22,7 @@ void QSvgRendererSlots::repaintNeeded()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "repaintNeeded()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSVGRENDERER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QSvgRendererSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QSvgRendererSlots *s = QCoreApplication::instance()->findChild<QSvgRendererSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSvgRendererSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
