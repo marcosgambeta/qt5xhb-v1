@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_STATUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_PRODUCT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QInAppProduct *ptr = obj->product();
       Qt5xHb::createReturnQObjectClass(ptr, "QINAPPPRODUCT");
@@ -131,8 +129,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_ORDERID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->orderId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_FAILUREREASON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->failureReason());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,8 +169,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_ERRORSTRING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +189,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_TIMESTAMP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDateTime *ptr = new QDateTime(obj->timestamp());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -216,8 +210,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_FINALIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->finalize();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +232,7 @@ HB_FUNC_STATIC(QINAPPTRANSACTION_PLATFORMPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQSTRING(obj->platformProperty(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

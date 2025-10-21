@@ -22,8 +22,7 @@ void QInAppStoreSlots::productRegistered(QInAppProduct *product)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "productRegistered(QInAppProduct*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINAPPSTORE");
     PHB_ITEM pproduct = Qt5xHb::Signals_return_qobject(product, "QINAPPPRODUCT");
 
@@ -40,8 +39,7 @@ void QInAppStoreSlots::productUnknown(QInAppProduct::ProductType productType, co
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "productUnknown(QInAppProduct::ProductType,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINAPPSTORE");
     PHB_ITEM pproductType = hb_itemPutNI(NULL, static_cast<int>(productType));
     PHB_ITEM pidentifier = hb_itemPutC(NULL, QSTRINGTOSTRING(identifier));
@@ -60,8 +58,7 @@ void QInAppStoreSlots::transactionReady(QInAppTransaction *transaction)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "transactionReady(QInAppTransaction*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINAPPSTORE");
     PHB_ITEM ptransaction = Qt5xHb::Signals_return_qobject(transaction, "QINAPPTRANSACTION");
 
@@ -79,8 +76,7 @@ void QInAppStoreSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QInAppStoreSlots *s = QCoreApplication::instance()->findChild<QInAppStoreSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QInAppStoreSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
