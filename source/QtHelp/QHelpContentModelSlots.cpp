@@ -22,8 +22,7 @@ void QHelpContentModelSlots::contentsCreated()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsCreated()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPCONTENTMODEL");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QHelpContentModelSlots::contentsCreationStarted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsCreationStarted()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPCONTENTMODEL");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -55,8 +53,7 @@ void QHelpContentModelSlots_connect_signal(const QString &signal, const QString 
   if (obj != NULL) {
     QHelpContentModelSlots *s = QCoreApplication::instance()->findChild<QHelpContentModelSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QHelpContentModelSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

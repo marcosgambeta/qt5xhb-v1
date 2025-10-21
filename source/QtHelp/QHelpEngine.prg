@@ -67,8 +67,7 @@ RETURN
     */
 HB_FUNC_STATIC(QHELPENGINE_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     QHelpEngine *obj = new QHelpEngine(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -102,8 +101,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTMODEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QHelpContentModel *ptr = obj->contentModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QHELPCONTENTMODEL");
@@ -124,8 +122,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QHelpContentWidget *ptr = obj->contentWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QHELPCONTENTWIDGET");
@@ -146,8 +143,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXMODEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QHelpIndexModel *ptr = obj->indexModel();
       Qt5xHb::createReturnQObjectClass(ptr, "QHELPINDEXMODEL");
@@ -168,8 +164,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QHelpIndexWidget *ptr = obj->indexWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QHELPINDEXWIDGET");
@@ -190,8 +185,7 @@ HB_FUNC_STATIC(QHELPENGINE_SEARCHENGINE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QHelpSearchEngine *ptr = obj->searchEngine();
       Qt5xHb::createReturnQObjectClass(ptr, "QHELPSEARCHENGINE");

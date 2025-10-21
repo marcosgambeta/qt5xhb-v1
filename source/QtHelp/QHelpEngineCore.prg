@@ -87,8 +87,7 @@ RETURN
     */
 HB_FUNC_STATIC(QHELPENGINECORE_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     QHelpEngineCore *obj = new QHelpEngineCore(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -122,8 +121,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_ADDCUSTOMFILTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
 #endif
       RBOOL(obj->addCustomFilter(PQSTRING(1), PQSTRINGLIST(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,8 +141,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_AUTOSAVEFILTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoSaveFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +161,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_COLLECTIONFILE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->collectionFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,8 +181,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_COPYCOLLECTIONFILE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->copyCollectionFile(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +201,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CURRENTFILTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->currentFilter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +221,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMFILTERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->customFilters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +241,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQVARIANTORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQVARIANTORNIL(2)) {
 #endif
       QVariant *ptr =
           new QVariant(obj->customValue(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2)));
@@ -271,8 +263,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_DOCUMENTATIONFILENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQSTRING(obj->documentationFileName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +283,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_ERROR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -313,8 +303,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILEDATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->fileData(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -328,27 +317,22 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILEDATA)
 
 HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStringList filterAttributes() const
     */
     QHelpEngineCore *obj = (QHelpEngineCore *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQSTRINGLIST(obj->filterAttributes());
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QStringList filterAttributes( const QString &filterName ) const
     */
     QHelpEngineCore *obj = (QHelpEngineCore *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQSTRINGLIST(obj->filterAttributes(PQSTRING(1)));
     }
   } else {
@@ -365,8 +349,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FINDFILE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       QUrl *ptr = new QUrl(obj->findFile(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -387,8 +370,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REGISTERDOCUMENTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->registerDocumentation(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -408,8 +390,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REGISTEREDDOCUMENTATIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->registeredDocumentations());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +410,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMFILTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->removeCustomFilter(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +430,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->removeCustomValue(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,8 +450,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETAUTOSAVEFILTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAutoSaveFilter(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -494,8 +472,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCOLLECTIONFILE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setCollectionFile(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -517,8 +494,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCURRENTFILTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setCurrentFilter(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -540,8 +516,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCUSTOMVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
 #endif
       RBOOL(obj->setCustomValue(PQSTRING(1), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -561,8 +536,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETUPDATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->setupData());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -582,8 +556,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_UNREGISTERDOCUMENTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->unregisterDocumentation(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -600,8 +573,7 @@ static QVariant metaData( const QString &documentationFileName, const QString &n
 HB_FUNC_STATIC(QHELPENGINECORE_METADATA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
     QVariant *ptr = new QVariant(QHelpEngineCore::metaData(PQSTRING(1), PQSTRING(2)));
     Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -618,8 +590,7 @@ static QString namespaceName( const QString &documentationFileName )
 HB_FUNC_STATIC(QHELPENGINECORE_NAMESPACENAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     RQSTRING(QHelpEngineCore::namespaceName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

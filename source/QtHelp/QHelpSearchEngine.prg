@@ -72,8 +72,7 @@ RETURN
     */
 HB_FUNC_STATIC(QHELPSEARCHENGINE_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && ISQOBJECTORNIL(2)) {
     QHelpSearchEngine *obj = new QHelpSearchEngine(PQHELPENGINECORE(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_HITCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->hitCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,16 +126,13 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QHelpSearchQuery> list = obj->query();
       PHB_DYNS pDynSym = hb_dynsymFindName("QHELPSEARCHQUERY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -152,9 +147,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERY)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QHELPSEARCHQUERY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -175,8 +168,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERYWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QHelpSearchQueryWidget *ptr = obj->queryWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QHELPSEARCHQUERYWIDGET");
@@ -197,8 +189,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_RESULTWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QHelpSearchResultWidget *ptr = obj->resultWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QHELPSEARCHRESULTWIDGET");
@@ -219,8 +210,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELINDEXING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->cancelIndexing();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +232,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELSEARCHING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->cancelSearching();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,8 +254,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_REINDEXDOCUMENTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reindexDocumentation();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,14 +276,12 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QList<QHelpSearchQuery> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << *(QHelpSearchQuery *)hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0));
       }
       obj->search(par1);

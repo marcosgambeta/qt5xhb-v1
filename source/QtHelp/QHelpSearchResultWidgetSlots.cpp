@@ -22,8 +22,7 @@ void QHelpSearchResultWidgetSlots::requestShowLink(const QUrl &link)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "requestShowLink(QUrl)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPSEARCHRESULTWIDGET");
     PHB_ITEM plink = Qt5xHb::Signals_return_object((void *)&link, "QURL");
 
@@ -41,8 +40,7 @@ void QHelpSearchResultWidgetSlots_connect_signal(const QString &signal, const QS
   if (obj != NULL) {
     QHelpSearchResultWidgetSlots *s = QCoreApplication::instance()->findChild<QHelpSearchResultWidgetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QHelpSearchResultWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
