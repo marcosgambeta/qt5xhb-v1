@@ -134,8 +134,7 @@ int HAbstractTableModelV2::rowCount(const QModelIndex &parent) const
 {
   if (m_rowCountBlock)
   {
-    if (parent.isValid())
-    {
+    if (parent.isValid()) {
       return 0;
     } else {
       return (int)hb_itemGetNI(hb_vmEvalBlockV(m_rowCountBlock, 0));
@@ -149,8 +148,7 @@ int HAbstractTableModelV2::columnCount(const QModelIndex &parent) const
 {
   if (m_columnCountBlock)
   {
-    if (parent.isValid())
-    {
+    if (parent.isValid()) {
       return 0;
     } else {
       return (int)hb_itemGetNI(hb_vmEvalBlockV(m_columnCountBlock, 0));
@@ -171,8 +169,7 @@ QVariant HAbstractTableModelV2::data(const QModelIndex &index, int role) const
 
     PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_dataBlock, 2, pIndex, pRole));
 
-    if (hb_clsIsParent(hb_objGetClass(pRet), "QVARIANT"))
-    {
+    if (hb_clsIsParent(hb_objGetClass(pRet), "QVARIANT")) {
       void *ptr = (void *)hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
       data = *((QVariant *)ptr);
     }
@@ -199,8 +196,7 @@ QVariant HAbstractTableModelV2::headerData(int section, Qt::Orientation orientat
 
     PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_headerDataBlock, 3, pSection, pOrientation, pRole));
 
-    if (hb_clsIsParent(hb_objGetClass(pRet), "QVARIANT"))
-    {
+    if (hb_clsIsParent(hb_objGetClass(pRet), "QVARIANT")) {
       void *ptr = (void *)hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
       data = *((QVariant *)ptr);
     }

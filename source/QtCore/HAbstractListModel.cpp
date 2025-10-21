@@ -1406,8 +1406,7 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
 
 int HAbstractListModel::rowCount(const QModelIndex &parent) const
 {
-  if (parent.isValid())
-  {
+  if (parent.isValid()) {
     return 0;
   }
 

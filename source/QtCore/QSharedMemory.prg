@@ -64,16 +64,13 @@ RETURN
 
 HB_FUNC_STATIC(QSHAREDMEMORY_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QSharedMemory( QObject * parent = 0 )
     */
     QSharedMemory *obj = new QSharedMemory(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     /*
     QSharedMemory( const QString &key, QObject * parent = 0 )
     */
@@ -110,8 +107,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETKEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setKey(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,8 +129,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_KEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +149,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SETNATIVEKEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setNativeKey(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +171,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_NATIVEKEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->nativeKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +191,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_CREATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->create(PINT(1), HB_ISNIL(2) ? (QSharedMemory::AccessMode)QSharedMemory::ReadWrite
                                              : (QSharedMemory::AccessMode)hb_parni(2)));
@@ -220,8 +212,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,8 +232,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ATTACH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->attach(HB_ISNIL(1) ? (QSharedMemory::AccessMode)QSharedMemory::ReadWrite
                                     : (QSharedMemory::AccessMode)hb_parni(1)));
@@ -263,8 +253,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ISATTACHED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAttached());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,8 +273,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DETACH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->detach());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +293,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retptr((void *)obj->data());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,8 +313,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_LOCK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->lock());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,8 +333,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_UNLOCK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->unlock());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,8 +353,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ERROR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,8 +373,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ERRORSTRING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

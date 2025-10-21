@@ -70,8 +70,7 @@ RETURN
     */
 HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_NEW)
 {
-  if (ISNUMPAR(1) && ISQREGULAREXPRESSIONMATCHITERATOR(1))
-  {
+  if (ISNUMPAR(1) && ISQREGULAREXPRESSIONMATCHITERATOR(1)) {
     QRegularExpressionMatchIterator *obj = new QRegularExpressionMatchIterator(*PQREGULAREXPRESSIONMATCHITERATOR(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_HASNEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasNext());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,8 +122,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_ISVALID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,8 +142,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_MATCHOPTIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->matchOptions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +162,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_MATCHTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->matchType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +182,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_NEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRegularExpressionMatch *ptr = new QRegularExpressionMatch(obj->next());
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSIONMATCH", true);
@@ -209,8 +203,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_PEEKNEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRegularExpressionMatch *ptr = new QRegularExpressionMatch(obj->peekNext());
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSIONMATCH", true);
@@ -231,8 +224,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_REGULAREXPRESSION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRegularExpression *ptr = new QRegularExpression(obj->regularExpression());
       Qt5xHb::createReturnClass(ptr, "QREGULAREXPRESSION", true);
@@ -253,8 +245,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_SWAP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQREGULAREXPRESSIONMATCHITERATOR(1))
-    {
+    if (ISNUMPAR(1) && ISQREGULAREXPRESSIONMATCHITERATOR(1)) {
 #endif
       obj->swap(*PQREGULAREXPRESSIONMATCHITERATOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,17 +262,14 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -314,8 +302,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSIONMATCHITERATOR_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

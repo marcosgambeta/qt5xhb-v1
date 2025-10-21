@@ -22,8 +22,7 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged(QAbstractAnimation 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentAnimationChanged(QAbstractAnimation*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSEQUENTIALANIMATIONGROUP");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_qobject(current, "QABSTRACTANIMATION");
 
@@ -41,8 +40,7 @@ void QSequentialAnimationGroupSlots_connect_signal(const QString &signal, const 
   if (obj != NULL) {
     QSequentialAnimationGroupSlots *s = QCoreApplication::instance()->findChild<QSequentialAnimationGroupSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSequentialAnimationGroupSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

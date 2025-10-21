@@ -73,24 +73,19 @@ RETURN
 
 HB_FUNC_STATIC(QLINE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QLine()
     */
     QLine *obj = new QLine();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2))
-  {
+  } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2)) {
     /*
     QLine( const QPoint &p1, const QPoint &p2 )
     */
     QLine *obj = new QLine(*PQPOINT(1), *PQPOINT(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     QLine( int x1, int y1, int x2, int y2 )
     */
@@ -125,8 +120,7 @@ HB_FUNC_STATIC(QLINE_P1)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPoint *ptr = new QPoint(obj->p1());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -147,8 +141,7 @@ HB_FUNC_STATIC(QLINE_P2)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPoint *ptr = new QPoint(obj->p2());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -169,8 +162,7 @@ HB_FUNC_STATIC(QLINE_X1)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->x1());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,8 +182,7 @@ HB_FUNC_STATIC(QLINE_X2)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->x2());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,8 +202,7 @@ HB_FUNC_STATIC(QLINE_Y1)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->y1());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +222,7 @@ HB_FUNC_STATIC(QLINE_Y2)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->y2());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +242,7 @@ HB_FUNC_STATIC(QLINE_DX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->dx());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,8 +262,7 @@ HB_FUNC_STATIC(QLINE_DY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->dy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,8 +282,7 @@ HB_FUNC_STATIC(QLINE_ISNULL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,8 +302,7 @@ HB_FUNC_STATIC(QLINE_SETP1)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->setP1(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,8 +324,7 @@ HB_FUNC_STATIC(QLINE_SETP2)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->setP2(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,8 +346,7 @@ HB_FUNC_STATIC(QLINE_SETLINE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->setLine(PINT(1), PINT(2), PINT(3), PINT(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,8 +368,7 @@ HB_FUNC_STATIC(QLINE_SETPOINTS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2))
-    {
+    if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2)) {
 #endif
       obj->setPoints(*PQPOINT(1), *PQPOINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,29 +383,24 @@ HB_FUNC_STATIC(QLINE_SETPOINTS)
 
 HB_FUNC_STATIC(QLINE_TRANSLATE)
 {
-  if (ISNUMPAR(1) && ISQPOINT(1))
-  {
+  if (ISNUMPAR(1) && ISQPOINT(1)) {
     /*
     void translate( const QPoint &offset )
     */
     QLine *obj = (QLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->translate(*PQPOINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void translate( int dx, int dy )
     */
     QLine *obj = (QLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->translate(PINT(1), PINT(2));
     }
 
@@ -435,28 +412,23 @@ HB_FUNC_STATIC(QLINE_TRANSLATE)
 
 HB_FUNC_STATIC(QLINE_TRANSLATED)
 {
-  if (ISNUMPAR(1) && ISQPOINT(1))
-  {
+  if (ISNUMPAR(1) && ISQPOINT(1)) {
     /*
     QLine translated( const QPoint &offset ) const
     */
     QLine *obj = (QLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QLine *ptr = new QLine(obj->translated(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QLINE", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     QLine translated( int dx, int dy ) const
     */
     QLine *obj = (QLine *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QLine *ptr = new QLine(obj->translated(PINT(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QLINE", true);
     }
@@ -469,17 +441,14 @@ HB_FUNC_STATIC(QLINE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -512,8 +481,7 @@ HB_FUNC_STATIC(QLINE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

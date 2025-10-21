@@ -72,8 +72,7 @@ RETURN
 
 HB_FUNC_STATIC(QMARGINSF_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QMarginsF()
     */
@@ -81,9 +80,7 @@ HB_FUNC_STATIC(QMARGINSF_NEW)
     QMarginsF *obj = new QMarginsF();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     QMarginsF( qreal left, qreal top, qreal right, qreal bottom )
     */
@@ -91,9 +88,7 @@ HB_FUNC_STATIC(QMARGINSF_NEW)
     QMarginsF *obj = new QMarginsF(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQMARGINSF(1))
-  {
+  } else if (ISNUMPAR(1) && ISQMARGINSF(1)) {
     /*
     QMarginsF( const QMargins &margins )
     */
@@ -133,8 +128,7 @@ HB_FUNC_STATIC(QMARGINSF_ISNULL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +150,7 @@ HB_FUNC_STATIC(QMARGINSF_LEFT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->left());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,8 +172,7 @@ HB_FUNC_STATIC(QMARGINSF_TOP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->top());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,8 +194,7 @@ HB_FUNC_STATIC(QMARGINSF_RIGHT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->right());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +216,7 @@ HB_FUNC_STATIC(QMARGINSF_BOTTOM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->bottom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +238,7 @@ HB_FUNC_STATIC(QMARGINSF_SETLEFT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLeft(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,8 +262,7 @@ HB_FUNC_STATIC(QMARGINSF_SETTOP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTop(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,8 +286,7 @@ HB_FUNC_STATIC(QMARGINSF_SETRIGHT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setRight(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,8 +310,7 @@ HB_FUNC_STATIC(QMARGINSF_SETBOTTOM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBottom(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,8 +334,7 @@ HB_FUNC_STATIC(QMARGINSF_TOMARGINS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QMargins *ptr = new QMargins(obj->toMargins());
       Qt5xHb::createReturnClass(ptr, "QMARGINS", true);
@@ -366,17 +351,14 @@ HB_FUNC_STATIC(QMARGINSF_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -409,8 +391,7 @@ HB_FUNC_STATIC(QMARGINSF_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

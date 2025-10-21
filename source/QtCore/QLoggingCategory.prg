@@ -68,8 +68,7 @@ RETURN
     */
 HB_FUNC_STATIC(QLOGGINGCATEGORY_NEW)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     QLoggingCategory *obj = new QLoggingCategory(PCONSTCHAR(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_ISENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isEnabled((QtMsgType)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_SETENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
 #endif
       obj->setEnabled((QtMsgType)hb_parni(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,8 +142,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_ISDEBUGENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDebugEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +162,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_ISWARNINGENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isWarningEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +182,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_ISCRITICALENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isCriticalEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,8 +202,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_CATEGORYNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc(obj->categoryName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +219,7 @@ static QLoggingCategory * defaultCategory()
 HB_FUNC_STATIC(QLOGGINGCATEGORY_DEFAULTCATEGORY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QLoggingCategory *ptr = QLoggingCategory::defaultCategory();
     Qt5xHb::createReturnClass(ptr, "QLOGGINGCATEGORY", false);
@@ -244,8 +236,7 @@ static void setFilterRules( const QString &rules )
 HB_FUNC_STATIC(QLOGGINGCATEGORY_SETFILTERRULES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     QLoggingCategory::setFilterRules(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,17 +252,14 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -304,8 +292,7 @@ HB_FUNC_STATIC(QLOGGINGCATEGORY_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

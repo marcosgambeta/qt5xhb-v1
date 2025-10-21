@@ -45,8 +45,7 @@ RETURN
     */
 HB_FUNC_STATIC(HEVENTFILTER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     HEventFilter *obj = new HEventFilter(OPQOBJECT(1, NULL));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -83,8 +82,7 @@ HB_FUNC_STATIC(HEVENTFILTER_SETEVENTFILTERCB)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1)))
-    {
+    if (ISNUMPAR(1) && (HB_ISBLOCK(1) || HB_ISSYMBOL(1))) {
 #endif
       obj->setEventFilterCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

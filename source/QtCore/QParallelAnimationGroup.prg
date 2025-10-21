@@ -54,8 +54,7 @@ RETURN
     */
 HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QParallelAnimationGroup *obj = new QParallelAnimationGroup(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -89,8 +88,7 @@ HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_DURATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

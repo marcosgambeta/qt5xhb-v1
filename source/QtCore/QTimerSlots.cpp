@@ -22,8 +22,7 @@ void QTimerSlots::timeout()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "timeout()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTIMER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QTimerSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QTimerSlots *s = QCoreApplication::instance()->findChild<QTimerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QTimerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

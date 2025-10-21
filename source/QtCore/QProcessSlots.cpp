@@ -22,8 +22,7 @@ void QProcessSlots::error(QProcess::ProcessError error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QProcess::ProcessError)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -40,8 +39,7 @@ void QProcessSlots::finished(int exitCode, QProcess::ExitStatus exitStatus)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(int,QProcess::ExitStatus)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
     PHB_ITEM pexitCode = hb_itemPutNI(NULL, exitCode);
     PHB_ITEM pexitStatus = hb_itemPutNI(NULL, static_cast<int>(exitStatus));
@@ -60,8 +58,7 @@ void QProcessSlots::readyReadStandardError()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "readyReadStandardError()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -76,8 +73,7 @@ void QProcessSlots::readyReadStandardOutput()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "readyReadStandardOutput()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -92,8 +88,7 @@ void QProcessSlots::started()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "started()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -108,8 +103,7 @@ void QProcessSlots::stateChanged(QProcess::ProcessState newState)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QProcess::ProcessState)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
     PHB_ITEM pnewState = hb_itemPutNI(NULL, static_cast<int>(newState));
 
@@ -127,8 +121,7 @@ void QProcessSlots::errorOccurred(QProcess::ProcessError error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "errorOccurred(QProcess::ProcessError)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROCESS");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -147,8 +140,7 @@ void QProcessSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QProcessSlots *s = QCoreApplication::instance()->findChild<QProcessSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QProcessSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

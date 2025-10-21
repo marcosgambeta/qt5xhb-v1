@@ -64,8 +64,7 @@ RETURN
     */
 HB_FUNC_STATIC(QTIMER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QTimer *obj = new QTimer(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QTIMER_INTERVAL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->interval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,8 +118,7 @@ HB_FUNC_STATIC(QTIMER_ISACTIVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +138,7 @@ HB_FUNC_STATIC(QTIMER_ISSINGLESHOT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSingleShot());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +158,7 @@ HB_FUNC_STATIC(QTIMER_SETINTERVAL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setInterval(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,8 +180,7 @@ HB_FUNC_STATIC(QTIMER_SETSINGLESHOT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSingleShot(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,8 +202,7 @@ HB_FUNC_STATIC(QTIMER_TIMERID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->timerId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,29 +215,24 @@ HB_FUNC_STATIC(QTIMER_TIMERID)
 
 HB_FUNC_STATIC(QTIMER_START)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     void start( int msec )
     */
     QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->start(PINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0))
-  {
+  } else if (ISNUMPAR(0)) {
     /*
     void start()
     */
     QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->start();
     }
 
@@ -263,8 +251,7 @@ HB_FUNC_STATIC(QTIMER_STOP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +270,7 @@ static void singleShot( int msec, QObject * receiver, const char * member )
 HB_FUNC_STATIC(QTIMER_SINGLESHOT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(3) && HB_ISNUM(1) && ISQOBJECT(2) && HB_ISCHAR(3))
-  {
+  if (ISNUMPAR(3) && HB_ISNUM(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
 #endif
     QTimer::singleShot(PINT(1), PQOBJECT(2), PCONSTCHAR(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

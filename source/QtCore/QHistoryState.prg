@@ -55,16 +55,13 @@ RETURN
 
 HB_FUNC_STATIC(QHISTORYSTATE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1))) {
     /*
     QHistoryState( QState * parent = 0 )
     */
     QHistoryState *obj = new QHistoryState(OPQSTATE(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSTATE(2) || HB_ISNIL(2)))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSTATE(2) || HB_ISNIL(2))) {
     /*
     QHistoryState( QHistoryState::HistoryType type, QState * parent = 0 )
     */
@@ -101,8 +98,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_DEFAULTSTATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAbstractState *ptr = obj->defaultState();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
@@ -123,8 +119,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_SETDEFAULTSTATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1)) {
 #endif
       obj->setDefaultState(PQABSTRACTSTATE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +141,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_HISTORYTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->historyType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +161,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_SETHISTORYTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setHistoryType((QHistoryState::HistoryType)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

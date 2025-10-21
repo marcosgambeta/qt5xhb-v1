@@ -79,16 +79,13 @@ RETURN
 
 HB_FUNC_STATIC(QATOMICINT_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     /*
     QAtomicInt( int value = 0 )
     */
     QAtomicInt *obj = new QAtomicInt(OPINT(1, 0));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQATOMICINT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQATOMICINT(1)) {
     /*
     QAtomicInt( const QAtomicInt &other )
     */
@@ -123,8 +120,7 @@ HB_FUNC_STATIC(QATOMICINT_DEREF)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->deref());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +140,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDACQUIRE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->fetchAndAddAcquire(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +160,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDORDERED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->fetchAndAddOrdered(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +180,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELAXED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->fetchAndAddRelaxed(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +200,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELEASE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->fetchAndAddRelease(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +220,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREACQUIRE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->fetchAndStoreAcquire(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,8 +240,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREORDERED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->fetchAndStoreOrdered(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,8 +260,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTORERELAXED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->fetchAndStoreRelaxed(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,8 +280,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTORERELEASE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->fetchAndStoreRelease(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,8 +300,7 @@ HB_FUNC_STATIC(QATOMICINT_REF)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->ref());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,8 +320,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETACQUIRE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->testAndSetAcquire(PINT(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +340,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETORDERED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->testAndSetOrdered(PINT(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -375,8 +360,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETRELAXED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->testAndSetRelaxed(PINT(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,8 +380,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETRELEASE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->testAndSetRelease(PINT(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -414,8 +397,7 @@ static bool isFetchAndAddNative()
 HB_FUNC_STATIC(QATOMICINT_ISFETCHANDADDNATIVE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAtomicInt::isFetchAndAddNative());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -431,8 +413,7 @@ static bool isFetchAndAddWaitFree()
 HB_FUNC_STATIC(QATOMICINT_ISFETCHANDADDWAITFREE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAtomicInt::isFetchAndAddWaitFree());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,8 +429,7 @@ static bool isFetchAndStoreNative()
 HB_FUNC_STATIC(QATOMICINT_ISFETCHANDSTORENATIVE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAtomicInt::isFetchAndStoreNative());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,8 +445,7 @@ static bool isFetchAndStoreWaitFree()
 HB_FUNC_STATIC(QATOMICINT_ISFETCHANDSTOREWAITFREE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAtomicInt::isFetchAndStoreWaitFree());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,8 +461,7 @@ static bool isReferenceCountingNative()
 HB_FUNC_STATIC(QATOMICINT_ISREFERENCECOUNTINGNATIVE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAtomicInt::isReferenceCountingNative());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -499,8 +477,7 @@ static bool isReferenceCountingWaitFree()
 HB_FUNC_STATIC(QATOMICINT_ISREFERENCECOUNTINGWAITFREE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAtomicInt::isReferenceCountingWaitFree());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -516,8 +493,7 @@ static bool isTestAndSetNative()
 HB_FUNC_STATIC(QATOMICINT_ISTESTANDSETNATIVE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAtomicInt::isTestAndSetNative());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,8 +509,7 @@ static bool isTestAndSetWaitFree()
 HB_FUNC_STATIC(QATOMICINT_ISTESTANDSETWAITFREE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAtomicInt::isTestAndSetWaitFree());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -548,17 +523,14 @@ HB_FUNC_STATIC(QATOMICINT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -591,8 +563,7 @@ HB_FUNC_STATIC(QATOMICINT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

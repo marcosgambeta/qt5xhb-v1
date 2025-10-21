@@ -109,33 +109,26 @@ void QTextStream_new5()
 
 HB_FUNC_STATIC(QTEXTSTREAM_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QTextStream()
     */
     QTextStream *obj = new QTextStream();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQIODEVICE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     /*
     QTextStream( QIODevice * device )
     */
     QTextStream *obj = new QTextStream(PQIODEVICE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && ISNUMORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && ISNUMORNIL(2)) {
     /*
     QTextStream( FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
     */
     QTextStream *obj = new QTextStream((FILE *)hb_parptr(1), HB_ISNIL(2) ? (QIODevice::OpenMode)QIODevice::ReadWrite
                                                                          : (QIODevice::OpenMode)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     /*
     QTextStream( const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly )
     */
@@ -164,29 +157,24 @@ HB_FUNC_STATIC(QTEXTSTREAM_DELETE)
 
 HB_FUNC_STATIC(QTEXTSTREAM_SETCODEC)
 {
-  if (ISNUMPAR(1) && ISQTEXTCODEC(1))
-  {
+  if (ISNUMPAR(1) && ISQTEXTCODEC(1)) {
     /*
     void setCodec( QTextCodec * codec )
     */
     QTextStream *obj = (QTextStream *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setCodec(PQTEXTCODEC(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     void setCodec( const char * codecName )
     */
     QTextStream *obj = (QTextStream *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setCodec(PCONSTCHAR(1));
     }
 
@@ -205,8 +193,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_CODEC)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTextCodec *ptr = obj->codec();
       Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
@@ -227,8 +214,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETAUTODETECTUNICODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAutoDetectUnicode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,8 +236,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_AUTODETECTUNICODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoDetectUnicode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,8 +256,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETGENERATEBYTEORDERMARK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setGenerateByteOrderMark(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,8 +278,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_GENERATEBYTEORDERMARK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->generateByteOrderMark());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,8 +298,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETLOCALE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLOCALE(1))
-    {
+    if (ISNUMPAR(1) && ISQLOCALE(1)) {
 #endif
       obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,8 +320,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_LOCALE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QLocale *ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -360,8 +341,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETDEVICE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQIODEVICE(1))
-    {
+    if (ISNUMPAR(1) && ISQIODEVICE(1)) {
 #endif
       obj->setDevice(PQIODEVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,8 +363,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_DEVICE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QIODevice *ptr = obj->device();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -405,8 +384,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETSTRING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISNUMORNIL(2)) {
 #endif
       obj->setString(NULL, HB_ISNIL(2) ? (QIODevice::OpenMode)QIODevice::ReadWrite : (QIODevice::OpenMode)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -428,8 +406,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_STATUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -449,8 +426,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETSTATUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStatus((QTextStream::Status)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -472,8 +448,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_RESETSTATUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resetStatus();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -495,8 +470,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_ATEND)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -516,8 +490,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_RESET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -539,8 +512,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_FLUSH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->flush();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -562,8 +534,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SEEK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->seek(PQINT64(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -583,8 +554,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_POS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->pos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -604,8 +574,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SKIPWHITESPACE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->skipWhiteSpace();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -627,8 +596,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_READLINE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRING(obj->readLine(OPQINT64(1, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -648,8 +616,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_READALL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->readAll());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -669,8 +636,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_READ)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->read(PQINT64(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -690,8 +656,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETFIELDALIGNMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFieldAlignment((QTextStream::FieldAlignment)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -713,8 +678,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_FIELDALIGNMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->fieldAlignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -734,8 +698,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETPADCHAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQCHAR(1))
-    {
+    if (ISNUMPAR(1) && ISQCHAR(1)) {
 #endif
       obj->setPadChar(*PQCHAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -757,8 +720,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_PADCHAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QChar *ptr = new QChar(obj->padChar());
       Qt5xHb::createReturnClass(ptr, "QCHAR", true);
@@ -779,8 +741,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETFIELDWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFieldWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -802,8 +763,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_FIELDWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->fieldWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -823,8 +783,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETNUMBERFLAGS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setNumberFlags((QTextStream::NumberFlags)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -846,8 +805,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_NUMBERFLAGS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->numberFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -867,8 +825,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETINTEGERBASE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setIntegerBase(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -890,8 +847,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_INTEGERBASE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->integerBase());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -911,8 +867,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETREALNUMBERNOTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setRealNumberNotation((QTextStream::RealNumberNotation)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -934,8 +889,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_REALNUMBERNOTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->realNumberNotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -955,8 +909,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETREALNUMBERPRECISION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setRealNumberPrecision(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -978,8 +931,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_REALNUMBERPRECISION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->realNumberPrecision());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -994,17 +946,14 @@ HB_FUNC_STATIC(QTEXTSTREAM_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -1037,8 +986,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

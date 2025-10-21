@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QIODEVICE_ATEND)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QIODEVICE_BYTESAVAILABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +147,7 @@ HB_FUNC_STATIC(QIODEVICE_BYTESTOWRITE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesToWrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +167,7 @@ HB_FUNC_STATIC(QIODEVICE_CANREADLINE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canReadLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,8 +187,7 @@ HB_FUNC_STATIC(QIODEVICE_CLOSE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +209,7 @@ HB_FUNC_STATIC(QIODEVICE_ERRORSTRING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,8 +229,7 @@ HB_FUNC_STATIC(QIODEVICE_GETCHAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->getChar((char *)hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,8 +249,7 @@ HB_FUNC_STATIC(QIODEVICE_ISOPEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isOpen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +269,7 @@ HB_FUNC_STATIC(QIODEVICE_ISREADABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,8 +289,7 @@ HB_FUNC_STATIC(QIODEVICE_ISSEQUENTIAL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSequential());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,8 +309,7 @@ HB_FUNC_STATIC(QIODEVICE_ISTEXTMODEENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isTextModeEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,8 +329,7 @@ HB_FUNC_STATIC(QIODEVICE_ISWRITABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isWritable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,8 +349,7 @@ HB_FUNC_STATIC(QIODEVICE_OPEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->open((QIODevice::OpenMode)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,8 +369,7 @@ HB_FUNC_STATIC(QIODEVICE_OPENMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->openMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,27 +382,22 @@ HB_FUNC_STATIC(QIODEVICE_OPENMODE)
 
 HB_FUNC_STATIC(QIODEVICE_PEEK)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     /*
     qint64 peek( char * data, qint64 maxSize )
     */
     QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQINT64(obj->peek((char *)hb_parc(1), PQINT64(2)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QByteArray peek( qint64 maxSize )
     */
     QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QByteArray *ptr = new QByteArray(obj->peek(PQINT64(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
@@ -434,8 +415,7 @@ HB_FUNC_STATIC(QIODEVICE_POS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->pos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -455,8 +435,7 @@ HB_FUNC_STATIC(QIODEVICE_PUTCHAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->putChar(PCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -469,27 +448,22 @@ HB_FUNC_STATIC(QIODEVICE_PUTCHAR)
 
 HB_FUNC_STATIC(QIODEVICE_READ)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     /*
     qint64 read( char * data, qint64 maxSize )
     */
     QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQINT64(obj->read((char *)hb_parc(1), PQINT64(2)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QByteArray read( qint64 maxSize )
     */
     QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QByteArray *ptr = new QByteArray(obj->read(PQINT64(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
@@ -507,8 +481,7 @@ HB_FUNC_STATIC(QIODEVICE_READALL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->readAll());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -522,27 +495,22 @@ HB_FUNC_STATIC(QIODEVICE_READALL)
 
 HB_FUNC_STATIC(QIODEVICE_READLINE)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     /*
     qint64 readLine( char * data, qint64 maxSize )
     */
     QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQINT64(obj->readLine((char *)hb_parc(1), PQINT64(2)));
     }
-  }
-  else if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-  {
+  } else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     /*
     QByteArray readLine( qint64 maxSize = 0 )
     */
     QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QByteArray *ptr = new QByteArray(obj->readLine(OPQINT64(1, 0)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
@@ -560,8 +528,7 @@ HB_FUNC_STATIC(QIODEVICE_RESET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->reset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -581,8 +548,7 @@ HB_FUNC_STATIC(QIODEVICE_SEEK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->seek(PQINT64(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -602,8 +568,7 @@ HB_FUNC_STATIC(QIODEVICE_SETTEXTMODEENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setTextModeEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -625,8 +590,7 @@ HB_FUNC_STATIC(QIODEVICE_SIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -646,8 +610,7 @@ HB_FUNC_STATIC(QIODEVICE_UNGETCHAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->ungetChar(PCHAR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -669,8 +632,7 @@ HB_FUNC_STATIC(QIODEVICE_WAITFORBYTESWRITTEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->waitForBytesWritten(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -690,8 +652,7 @@ HB_FUNC_STATIC(QIODEVICE_WAITFORREADYREAD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->waitForReadyRead(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -704,39 +665,31 @@ HB_FUNC_STATIC(QIODEVICE_WAITFORREADYREAD)
 
 HB_FUNC_STATIC(QIODEVICE_WRITE)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     /*
     qint64 write( const char * data, qint64 maxSize )
     */
     QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQINT64(obj->write(PCONSTCHAR(1), PQINT64(2)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     qint64 write( const char * data )
     */
     QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQINT64(obj->write(PCONSTCHAR(1)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     qint64 write( const QByteArray &byteArray )
     */
     QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQINT64(obj->write(*PQBYTEARRAY(1)));
     }
   } else {

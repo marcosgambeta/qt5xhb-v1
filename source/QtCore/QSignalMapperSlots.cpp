@@ -22,8 +22,7 @@ void QSignalMapperSlots::mapped(int arg)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mapped(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSIGNALMAPPER");
     PHB_ITEM parg = hb_itemPutNI(NULL, arg);
 
@@ -40,8 +39,7 @@ void QSignalMapperSlots::mapped(const QString &arg)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mapped(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSIGNALMAPPER");
     PHB_ITEM parg = hb_itemPutC(NULL, QSTRINGTOSTRING(arg));
 
@@ -58,8 +56,7 @@ void QSignalMapperSlots::mapped(QWidget *arg)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mapped(QWidget*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSIGNALMAPPER");
     PHB_ITEM parg = Qt5xHb::Signals_return_qobject(arg, "QWIDGET");
 
@@ -76,8 +73,7 @@ void QSignalMapperSlots::mapped(QObject *arg)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "mapped(QObject*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSIGNALMAPPER");
     PHB_ITEM parg = Qt5xHb::Signals_return_qobject(arg, "QOBJECT");
 
@@ -95,8 +91,7 @@ void QSignalMapperSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QSignalMapperSlots *s = QCoreApplication::instance()->findChild<QSignalMapperSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSignalMapperSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

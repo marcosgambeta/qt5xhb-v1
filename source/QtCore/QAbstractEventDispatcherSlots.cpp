@@ -22,8 +22,7 @@ void QAbstractEventDispatcherSlots::aboutToBlock()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToBlock()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTEVENTDISPATCHER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QAbstractEventDispatcherSlots::awake()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "awake()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTEVENTDISPATCHER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -55,8 +53,7 @@ void QAbstractEventDispatcherSlots_connect_signal(const QString &signal, const Q
   if (obj != NULL) {
     QAbstractEventDispatcherSlots *s = QCoreApplication::instance()->findChild<QAbstractEventDispatcherSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractEventDispatcherSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

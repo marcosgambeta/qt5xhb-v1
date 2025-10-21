@@ -22,8 +22,7 @@ void QItemSelectionModelSlots::selectionChanged(const QItemSelection &selected, 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionChanged(QItemSelection,QItemSelection)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pselected = Qt5xHb::Signals_return_object((void *)&selected, "QITEMSELECTION");
     PHB_ITEM pdeselected = Qt5xHb::Signals_return_object((void *)&deselected, "QITEMSELECTION");
@@ -42,8 +41,7 @@ void QItemSelectionModelSlots::currentChanged(const QModelIndex &current, const 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentChanged(QModelIndex,QModelIndex)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object((void *)&current, "QMODELINDEX");
     PHB_ITEM pprevious = Qt5xHb::Signals_return_object((void *)&previous, "QMODELINDEX");
@@ -62,8 +60,7 @@ void QItemSelectionModelSlots::currentRowChanged(const QModelIndex &current, con
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentRowChanged(QModelIndex,QModelIndex)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object((void *)&current, "QMODELINDEX");
     PHB_ITEM pprevious = Qt5xHb::Signals_return_object((void *)&previous, "QMODELINDEX");
@@ -82,8 +79,7 @@ void QItemSelectionModelSlots::currentColumnChanged(const QModelIndex &current, 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentColumnChanged(QModelIndex,QModelIndex)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object((void *)&current, "QMODELINDEX");
     PHB_ITEM pprevious = Qt5xHb::Signals_return_object((void *)&previous, "QMODELINDEX");
@@ -103,8 +99,7 @@ void QItemSelectionModelSlots_connect_signal(const QString &signal, const QStrin
   if (obj != NULL) {
     QItemSelectionModelSlots *s = QCoreApplication::instance()->findChild<QItemSelectionModelSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QItemSelectionModelSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

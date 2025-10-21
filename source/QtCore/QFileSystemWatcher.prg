@@ -61,16 +61,13 @@ RETURN
 
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QFileSystemWatcher( QObject * parent = 0 )
     */
     QFileSystemWatcher *obj = new QFileSystemWatcher(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISQOBJECTORNIL(2)) {
     /*
     QFileSystemWatcher( const QStringList &paths, QObject * parent = 0 )
     */
@@ -107,8 +104,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->addPath(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +124,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATHS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       RQSTRINGLIST(obj->addPaths(PQSTRINGLIST(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +144,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_DIRECTORIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->directories());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +164,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_FILES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->files());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,8 +184,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->removePath(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,8 +204,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATHS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       RQSTRINGLIST(obj->removePaths(PQSTRINGLIST(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -63,8 +63,7 @@ RETURN
     */
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QBBSystemLocaleData *obj = new QBBSystemLocaleData();
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -96,8 +95,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->measurementSystem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,8 +115,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_TIMEFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->timeFormat((QLocale::FormatType)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -139,8 +136,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_DATETIMEFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->dateTimeFormat((QLocale::FormatType)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -161,8 +157,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_LANGUAGELOCALE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QLocale *ptr = new QLocale(obj->languageLocale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -183,8 +178,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_REGIONLOCALE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QLocale *ptr = new QLocale(obj->regionLocale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -205,8 +199,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->installSocketNotifiers();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +221,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->readLanguageLocale();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +243,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READREGIONLOCALE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->readRegionLocale();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,8 +265,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->readMeasurementSystem();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +287,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READHOURFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->readHourFormat();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

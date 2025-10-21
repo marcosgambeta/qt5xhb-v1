@@ -22,8 +22,7 @@ void QAnimationDriverSlots::started()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "started()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QANIMATIONDRIVER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QAnimationDriverSlots::stopped()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stopped()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QANIMATIONDRIVER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -55,8 +53,7 @@ void QAnimationDriverSlots_connect_signal(const QString &signal, const QString &
   if (obj != NULL) {
     QAnimationDriverSlots *s = QCoreApplication::instance()->findChild<QAnimationDriverSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAnimationDriverSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -67,8 +67,7 @@ RETURN
 HB_FUNC_STATIC(QSTANDARDPATHS_WRITABLELOCATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     RQSTRING(QStandardPaths::writableLocation((QStandardPaths::StandardLocation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -84,8 +83,7 @@ static QStringList standardLocations( QStandardPaths::StandardLocation type )
 HB_FUNC_STATIC(QSTANDARDPATHS_STANDARDLOCATIONS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     RQSTRINGLIST(QStandardPaths::standardLocations((QStandardPaths::StandardLocation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,8 +100,7 @@ options = QStandardPaths::LocateFile )
 HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
 #endif
     RQSTRING(QStandardPaths::locate((QStandardPaths::StandardLocation)hb_parni(1), PQSTRING(2),
                                     HB_ISNIL(3) ? (QStandardPaths::LocateOptions)QStandardPaths::LocateFile
@@ -122,8 +119,7 @@ QStandardPaths::LocateOptions options = QStandardPaths::LocateFile )
 HB_FUNC_STATIC(QSTANDARDPATHS_LOCATEALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
 #endif
     RQSTRINGLIST(QStandardPaths::locateAll((QStandardPaths::StandardLocation)hb_parni(1), PQSTRING(2),
                                            HB_ISNIL(3) ? (QStandardPaths::LocateOptions)QStandardPaths::LocateFile
@@ -141,8 +137,7 @@ static QString displayName( QStandardPaths::StandardLocation type )
 HB_FUNC_STATIC(QSTANDARDPATHS_DISPLAYNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     RQSTRING(QStandardPaths::displayName((QStandardPaths::StandardLocation)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +153,7 @@ static QString findExecutable( const QString &executableName, const QStringList 
 HB_FUNC_STATIC(QSTANDARDPATHS_FINDEXECUTABLE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISARRAY(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISARRAY(2) || HB_ISNIL(2))) {
 #endif
     RQSTRING(QStandardPaths::findExecutable(PQSTRING(1), OPQSTRINGLIST(2, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +169,7 @@ static void setTestModeEnabled( bool testMode )
 HB_FUNC_STATIC(QSTANDARDPATHS_SETTESTMODEENABLED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
     QStandardPaths::setTestModeEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +187,7 @@ static bool isTestModeEnabled()
 HB_FUNC_STATIC(QSTANDARDPATHS_ISTESTMODEENABLED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QStandardPaths::isTestModeEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,17 +201,14 @@ HB_FUNC_STATIC(QSTANDARDPATHS_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -252,8 +241,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

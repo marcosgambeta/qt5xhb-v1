@@ -59,8 +59,7 @@ RETURN
     */
 HB_FUNC_STATIC(QEVENTLOOP_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QEventLoop *obj = new QEventLoop(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -94,8 +93,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXEC)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RINT(obj->exec(HB_ISNIL(1) ? (QEventLoop::ProcessEventsFlags)QEventLoop::AllEvents
                                  : (QEventLoop::ProcessEventsFlags)hb_parni(1)));
@@ -116,8 +114,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXIT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->exit(OPINT(1, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,8 +136,7 @@ HB_FUNC_STATIC(QEVENTLOOP_ISRUNNING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRunning());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,28 +149,23 @@ HB_FUNC_STATIC(QEVENTLOOP_ISRUNNING)
 
 HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
 {
-  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     /*
     bool processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
     */
     QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RBOOL(obj->processEvents(HB_ISNIL(1) ? (QEventLoop::ProcessEventsFlags)QEventLoop::AllEvents
                                            : (QEventLoop::ProcessEventsFlags)hb_parni(1)));
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void processEvents( QEventLoop::ProcessEventsFlags flags, int maxTime )
     */
     QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->processEvents((QEventLoop::ProcessEventsFlags)hb_parni(1), PINT(2));
     }
 
@@ -193,8 +184,7 @@ HB_FUNC_STATIC(QEVENTLOOP_WAKEUP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->wakeUp();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +206,7 @@ HB_FUNC_STATIC(QEVENTLOOP_QUIT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->quit();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

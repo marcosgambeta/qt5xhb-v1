@@ -625,8 +625,7 @@ QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
     hb_itemRelease(pRow);
     hb_itemRelease(pCol);
     hb_itemRelease(pRet);
-  }
-  else if (role == Qt::DecorationRole && m_getFieldDecorationCB)
+  } else if (role == Qt::DecorationRole && m_getFieldDecorationCB)
   {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
     PHB_ITEM pCol = hb_itemPutNI(NULL, index.column());
@@ -654,8 +653,7 @@ QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
     hb_itemRelease(pRow);
     hb_itemRelease(pCol);
     hb_itemRelease(pRet);
-  }
-  else if (role == Qt::EditRole && m_getFieldEditCB)
+  } else if (role == Qt::EditRole && m_getFieldEditCB)
   {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
     PHB_ITEM pCol = hb_itemPutNI(NULL, index.column());
@@ -667,8 +665,7 @@ QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
     hb_itemRelease(pRow);
     hb_itemRelease(pCol);
     hb_itemRelease(pRet);
-  }
-  else if (role == Qt::ToolTipRole && m_getFieldToolTipCB)
+  } else if (role == Qt::ToolTipRole && m_getFieldToolTipCB)
   {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
     PHB_ITEM pCol = hb_itemPutNI(NULL, index.column());
@@ -684,8 +681,7 @@ QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
     hb_itemRelease(pRow);
     hb_itemRelease(pCol);
     hb_itemRelease(pRet);
-  }
-  else if (role == Qt::StatusTipRole && m_getFieldStatusTipCB)
+  } else if (role == Qt::StatusTipRole && m_getFieldStatusTipCB)
   {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
     PHB_ITEM pCol = hb_itemPutNI(NULL, index.column());
@@ -701,8 +697,7 @@ QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
     hb_itemRelease(pRow);
     hb_itemRelease(pCol);
     hb_itemRelease(pRet);
-  }
-  else if (role == Qt::WhatsThisRole && m_getFieldWhatsThisCB)
+  } else if (role == Qt::WhatsThisRole && m_getFieldWhatsThisCB)
   {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
     PHB_ITEM pCol = hb_itemPutNI(NULL, index.column());
@@ -718,8 +713,7 @@ QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
     hb_itemRelease(pRow);
     hb_itemRelease(pCol);
     hb_itemRelease(pRet);
-  }
-  else if (role == Qt::SizeHintRole && m_getFieldSizeHintCB)
+  } else if (role == Qt::SizeHintRole && m_getFieldSizeHintCB)
   {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
     PHB_ITEM pCol = hb_itemPutNI(NULL, index.column());
@@ -733,8 +727,7 @@ QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
     hb_itemRelease(pRow);
     hb_itemRelease(pCol);
     hb_itemRelease(pRet);
-  }
-  else if (role == Qt::FontRole && m_getFieldFontCB)
+  } else if (role == Qt::FontRole && m_getFieldFontCB)
   {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
     PHB_ITEM pCol = hb_itemPutNI(NULL, index.column());
@@ -748,8 +741,7 @@ QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
     hb_itemRelease(pRow);
     hb_itemRelease(pCol);
     hb_itemRelease(pRet);
-  }
-  else if (role == Qt::TextAlignmentRole && m_getFieldAlignCB)
+  } else if (role == Qt::TextAlignmentRole && m_getFieldAlignCB)
   {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
     PHB_ITEM pCol = hb_itemPutNI(NULL, index.column());
@@ -761,8 +753,7 @@ QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
     hb_itemRelease(pRow);
     hb_itemRelease(pCol);
     hb_itemRelease(pRet);
-  }
-  else if (role == Qt::BackgroundRole && m_getFieldBGColorCB)
+  } else if (role == Qt::BackgroundRole && m_getFieldBGColorCB)
   {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
     PHB_ITEM pCol = hb_itemPutNI(NULL, index.column());
@@ -790,8 +781,7 @@ QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
     hb_itemRelease(pRow);
     hb_itemRelease(pCol);
     hb_itemRelease(pRet);
-  }
-  else if (role == Qt::ForegroundRole && m_getFieldFGColorCB)
+  } else if (role == Qt::ForegroundRole && m_getFieldFGColorCB)
   {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
     PHB_ITEM pCol = hb_itemPutNI(NULL, index.column());
@@ -945,8 +935,7 @@ QVariant HAbstractTableModel::headerData(int section, Qt::Orientation orientatio
       hb_itemRelease(pCol);
       hb_itemRelease(pRet);
     }
-  }
-  else if (orientation == Qt::Vertical)
+  } else if (orientation == Qt::Vertical)
   {
     if (role == Qt::DisplayRole && m_getVHCB)
     {
@@ -1079,8 +1068,7 @@ QVariant HAbstractTableModel::headerData(int section, Qt::Orientation orientatio
 */
 int HAbstractTableModel::rowCount(const QModelIndex &parent) const
 {
-  if (parent.isValid())
-  {
+  if (parent.isValid()) {
     return 0;
   } else {
     if (m_rowCountCB)
@@ -1097,8 +1085,7 @@ int HAbstractTableModel::rowCount(const QModelIndex &parent) const
 */
 int HAbstractTableModel::columnCount(const QModelIndex &parent) const
 {
-  if (parent.isValid())
-  {
+  if (parent.isValid()) {
     return 0;
   } else {
     if (m_colCountCB)

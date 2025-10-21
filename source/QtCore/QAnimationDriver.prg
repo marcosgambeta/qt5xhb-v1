@@ -63,8 +63,7 @@ RETURN
     */
 HB_FUNC_STATIC(QANIMATIONDRIVER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QAnimationDriver *obj = new QAnimationDriver(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_ADVANCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->advance();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +119,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_INSTALL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->install();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +141,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_UNINSTALL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->uninstall();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +163,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_ISRUNNING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRunning());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +183,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_ELAPSED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->elapsed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +203,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_SETSTARTTIME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStartTime(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +225,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_STARTTIME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->startTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

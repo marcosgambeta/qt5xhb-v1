@@ -60,24 +60,19 @@ RETURN
 
 HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QXmlStreamNamespaceDeclaration()
     */
     QXmlStreamNamespaceDeclaration *obj = new QXmlStreamNamespaceDeclaration();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1))
-  {
+  } else if (ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1)) {
     /*
     QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration &other )
     */
     QXmlStreamNamespaceDeclaration *obj = new QXmlStreamNamespaceDeclaration(*PQXMLSTREAMNAMESPACEDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*
     QXmlStreamNamespaceDeclaration( const QString &prefix, const QString &namespaceUri )
     */
@@ -112,8 +107,7 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QStringRef *ptr = new QStringRef(obj->namespaceUri());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -134,8 +128,7 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_PREFIX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QStringRef *ptr = new QStringRef(obj->prefix());
       Qt5xHb::createReturnClass(ptr, "QSTRINGREF", true);
@@ -151,17 +144,14 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -194,8 +184,7 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

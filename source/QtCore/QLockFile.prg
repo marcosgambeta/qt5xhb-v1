@@ -72,8 +72,7 @@ RETURN
 HB_FUNC_STATIC(QLOCKFILE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     QLockFile *obj = new QLockFile(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QLOCKFILE_LOCK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->lock());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QLOCKFILE_TRYLOCK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->tryLock(OPINT(1, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,8 +152,7 @@ HB_FUNC_STATIC(QLOCKFILE_UNLOCK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->unlock();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +176,7 @@ HB_FUNC_STATIC(QLOCKFILE_SETSTALELOCKTIME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStaleLockTime(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +200,7 @@ HB_FUNC_STATIC(QLOCKFILE_STALELOCKTIME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->staleLockTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +222,7 @@ HB_FUNC_STATIC(QLOCKFILE_ISLOCKED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLocked());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +244,7 @@ HB_FUNC_STATIC(QLOCKFILE_REMOVESTALELOCKFILE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->removeStaleLockFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,17 +260,14 @@ HB_FUNC_STATIC(QLOCKFILE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -311,8 +300,7 @@ HB_FUNC_STATIC(QLOCKFILE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

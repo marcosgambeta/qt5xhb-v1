@@ -70,16 +70,13 @@ RETURN
 
 HB_FUNC_STATIC(QMODELINDEX_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QModelIndex()
     */
     QModelIndex *obj = new QModelIndex();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQMODELINDEX(1))
-  {
+  } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     /*
     QModelIndex( const QModelIndex &other )
     */
@@ -114,8 +111,7 @@ HB_FUNC_STATIC(QMODELINDEX_CHILD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->child(PINT(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -136,8 +132,7 @@ HB_FUNC_STATIC(QMODELINDEX_COLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->column());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +152,7 @@ HB_FUNC_STATIC(QMODELINDEX_DATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->data(OPINT(1, Qt::DisplayRole)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -179,8 +173,7 @@ HB_FUNC_STATIC(QMODELINDEX_FLAGS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,8 +193,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQUINTPTR(obj->internalId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,8 +213,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALPOINTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retptr((void *)obj->internalPointer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +233,7 @@ HB_FUNC_STATIC(QMODELINDEX_ISVALID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,8 +253,7 @@ HB_FUNC_STATIC(QMODELINDEX_MODEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       const QAbstractItemModel *ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
@@ -285,8 +274,7 @@ HB_FUNC_STATIC(QMODELINDEX_PARENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->parent());
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -307,8 +295,7 @@ HB_FUNC_STATIC(QMODELINDEX_ROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->row());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,8 +315,7 @@ HB_FUNC_STATIC(QMODELINDEX_SIBLING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->sibling(PINT(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -345,17 +331,14 @@ HB_FUNC_STATIC(QMODELINDEX_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -388,8 +371,7 @@ HB_FUNC_STATIC(QMODELINDEX_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

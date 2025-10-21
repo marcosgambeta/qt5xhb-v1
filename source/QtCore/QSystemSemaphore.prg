@@ -67,8 +67,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEW)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
-  {
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     QSystemSemaphore *obj = new QSystemSemaphore(PQSTRING(1), OPINT(2, 0),
                                                  HB_ISNIL(3) ? (QSystemSemaphore::AccessMode)QSystemSemaphore::Open
                                                              : (QSystemSemaphore::AccessMode)hb_parni(3));
@@ -102,8 +101,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETKEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       obj->setKey(PQSTRING(1), OPINT(2, 0),
                   HB_ISNIL(3) ? (QSystemSemaphore::AccessMode)QSystemSemaphore::Open
@@ -127,8 +125,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_KEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->key());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,8 +145,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ACQUIRE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->acquire());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +165,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_RELEASE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->release(OPINT(1, 1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,8 +185,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ERROR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,8 +205,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ERRORSTRING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,17 +220,14 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -270,8 +260,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

@@ -22,8 +22,7 @@ void QCoreApplicationSlots::aboutToQuit()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToQuit()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOREAPPLICATION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QCoreApplicationSlots_connect_signal(const QString &signal, const QString &
   if (obj != NULL) {
     QCoreApplicationSlots *s = QCoreApplication::instance()->findChild<QCoreApplicationSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCoreApplicationSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

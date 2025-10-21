@@ -22,8 +22,7 @@ void QStateMachineSlots::started()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "started()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATEMACHINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QStateMachineSlots::stopped()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stopped()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATEMACHINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -55,8 +53,7 @@ void QStateMachineSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QStateMachineSlots *s = QCoreApplication::instance()->findChild<QStateMachineSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QStateMachineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

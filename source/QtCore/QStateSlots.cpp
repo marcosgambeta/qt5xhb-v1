@@ -22,8 +22,7 @@ void QStateSlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QStateSlots::propertiesAssigned()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "propertiesAssigned()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -55,8 +53,7 @@ void QStateSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QStateSlots *s = QCoreApplication::instance()->findChild<QStateSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QStateSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

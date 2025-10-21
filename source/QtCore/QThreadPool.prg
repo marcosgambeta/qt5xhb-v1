@@ -65,8 +65,7 @@ RETURN
     */
 HB_FUNC_STATIC(QTHREADPOOL_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QThreadPool *obj = new QThreadPool(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQRUNNABLE(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQRUNNABLE(1) && ISNUMORNIL(2)) {
 #endif
       obj->start(PQRUNNABLE(1), OPINT(2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,8 +121,7 @@ HB_FUNC_STATIC(QTHREADPOOL_TRYSTART)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRUNNABLE(1))
-    {
+    if (ISNUMPAR(1) && ISQRUNNABLE(1)) {
 #endif
       RBOOL(obj->tryStart(PQRUNNABLE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +141,7 @@ HB_FUNC_STATIC(QTHREADPOOL_EXPIRYTIMEOUT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->expiryTimeout());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +161,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setExpiryTimeout(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +183,7 @@ HB_FUNC_STATIC(QTHREADPOOL_MAXTHREADCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maxThreadCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +203,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaxThreadCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +225,7 @@ HB_FUNC_STATIC(QTHREADPOOL_ACTIVETHREADCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->activeThreadCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +245,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reserveThread();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +267,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RELEASETHREAD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->releaseThread();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,8 +289,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->waitForDone(OPINT(1, -1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,8 +309,7 @@ HB_FUNC_STATIC(QTHREADPOOL_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,8 +328,7 @@ static QThreadPool * globalInstance()
 HB_FUNC_STATIC(QTHREADPOOL_GLOBALINSTANCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QThreadPool *ptr = QThreadPool::globalInstance();
     Qt5xHb::createReturnQObjectClass(ptr, "QTHREADPOOL");

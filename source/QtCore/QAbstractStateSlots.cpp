@@ -22,8 +22,7 @@ void QAbstractStateSlots::entered()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "entered()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QAbstractStateSlots::exited()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "exited()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -55,8 +53,7 @@ void QAbstractStateSlots_connect_signal(const QString &signal, const QString &sl
   if (obj != NULL) {
     QAbstractStateSlots *s = QCoreApplication::instance()->findChild<QAbstractStateSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractStateSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

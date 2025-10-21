@@ -57,32 +57,25 @@ RETURN
 
 HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QTemporaryFile()
     */
     QTemporaryFile *obj = new QTemporaryFile();
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QTemporaryFile( const QString &templateName )
     */
     QTemporaryFile *obj = new QTemporaryFile(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     /*
     QTemporaryFile( QObject * parent )
     */
     QTemporaryFile *obj = new QTemporaryFile(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
     /*
     QTemporaryFile( const QString &templateName, QObject * parent )
     */
@@ -119,8 +112,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_AUTOREMOVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoRemove());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +132,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILETEMPLATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileTemplate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,8 +152,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_OPEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->open());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,8 +172,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAutoRemove(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +194,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setFileTemplate(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +216,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->fileName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,16 +229,13 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILENAME)
 
 HB_FUNC_STATIC(QTEMPORARYFILE_CREATENATIVEFILE)
 {
-  if (ISNUMPAR(1) && ISQFILE(1))
-  {
+  if (ISNUMPAR(1) && ISQFILE(1)) {
     /*
     static QTemporaryFile * createNativeFile( QFile &file )
     */
     QTemporaryFile *ptr = QTemporaryFile::createNativeFile(*PQFILE(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     static QTemporaryFile * createNativeFile( const QString &fileName )
     */

@@ -22,8 +22,7 @@ void QIODeviceSlots::aboutToClose()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToClose()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QIODeviceSlots::bytesWritten(qint64 bytes)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "bytesWritten(qint64)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
     PHB_ITEM pbytes = hb_itemPutNLL(NULL, bytes);
 
@@ -56,8 +54,7 @@ void QIODeviceSlots::readChannelFinished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "readChannelFinished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -72,8 +69,7 @@ void QIODeviceSlots::readyRead()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "readyRead()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QIODEVICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -89,8 +85,7 @@ void QIODeviceSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QIODeviceSlots *s = QCoreApplication::instance()->findChild<QIODeviceSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QIODeviceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

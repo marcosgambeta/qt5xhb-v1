@@ -22,8 +22,7 @@ void QFileSystemWatcherSlots::directoryChanged(const QString &path)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "directoryChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILESYSTEMWATCHER");
     PHB_ITEM ppath = hb_itemPutC(NULL, QSTRINGTOSTRING(path));
 
@@ -40,8 +39,7 @@ void QFileSystemWatcherSlots::fileChanged(const QString &path)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fileChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFILESYSTEMWATCHER");
     PHB_ITEM ppath = hb_itemPutC(NULL, QSTRINGTOSTRING(path));
 
@@ -59,8 +57,7 @@ void QFileSystemWatcherSlots_connect_signal(const QString &signal, const QString
   if (obj != NULL) {
     QFileSystemWatcherSlots *s = QCoreApplication::instance()->findChild<QFileSystemWatcherSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QFileSystemWatcherSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -22,8 +22,7 @@ void QObjectSlots::destroyed(QObject *obj)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "destroyed(QObject*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOBJECT");
     PHB_ITEM pobj = Qt5xHb::Signals_return_qobject(obj, "QOBJECT");
 
@@ -41,8 +40,7 @@ void QObjectSlots::objectNameChanged(const QString &objectName)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "objectNameChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOBJECT");
     PHB_ITEM pobjectName = hb_itemPutC(NULL, QSTRINGTOSTRING(objectName));
 
@@ -60,8 +58,7 @@ void QObjectSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QObjectSlots *s = QCoreApplication::instance()->findChild<QObjectSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QObjectSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -64,16 +64,13 @@ RETURN
 
 HB_FUNC_STATIC(QBUFFER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QBuffer( QObject * parent = 0 )
     */
     QBuffer *obj = new QBuffer(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQOBJECTORNIL(2)) {
     /*
     QBuffer( QByteArray * byteArray, QObject * parent = 0 )
     */
@@ -110,8 +107,7 @@ HB_FUNC_STATIC(QBUFFER_BUFFER1)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = &obj->buffer();
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -132,8 +128,7 @@ HB_FUNC_STATIC(QBUFFER_BUFFER2)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       const QByteArray *ptr = &obj->buffer();
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -159,8 +154,7 @@ HB_FUNC_STATIC(QBUFFER_DATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       const QByteArray *ptr = &obj->data();
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -181,8 +175,7 @@ HB_FUNC_STATIC(QBUFFER_SETBUFFER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setBuffer(PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,29 +190,24 @@ HB_FUNC_STATIC(QBUFFER_SETBUFFER)
 
 HB_FUNC_STATIC(QBUFFER_SETDATA)
 {
-  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     /*
     void setData( const QByteArray &data )
     */
     QBuffer *obj = (QBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setData(*PQBYTEARRAY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     /*
     void setData( const char * data, int size )
     */
     QBuffer *obj = (QBuffer *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setData(PCONSTCHAR(1), PINT(2));
     }
 
@@ -238,8 +226,7 @@ HB_FUNC_STATIC(QBUFFER_ATEND)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,8 +246,7 @@ HB_FUNC_STATIC(QBUFFER_CANREADLINE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canReadLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,8 +266,7 @@ HB_FUNC_STATIC(QBUFFER_CLOSE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,8 +288,7 @@ HB_FUNC_STATIC(QBUFFER_OPEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->open((QBuffer::OpenMode)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +308,7 @@ HB_FUNC_STATIC(QBUFFER_POS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->pos());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +328,7 @@ HB_FUNC_STATIC(QBUFFER_SEEK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->seek(PQINT64(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +348,7 @@ HB_FUNC_STATIC(QBUFFER_SIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

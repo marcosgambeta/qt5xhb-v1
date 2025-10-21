@@ -72,8 +72,7 @@ RETURN
     */
 HB_FUNC_STATIC(QELAPSEDTIMER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QElapsedTimer *obj = new QElapsedTimer();
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ELAPSED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->elapsed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,8 +124,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_HASEXPIRED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->hasExpired(PQINT64(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +144,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_INVALIDATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +166,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ISVALID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,8 +186,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_MSECSSINCEREFERENCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->msecsSinceReference());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,8 +206,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_MSECSTO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQELAPSEDTIMER(1))
-    {
+    if (ISNUMPAR(1) && ISQELAPSEDTIMER(1)) {
 #endif
       RQINT64(obj->msecsTo(*PQELAPSEDTIMER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,8 +226,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_NSECSELAPSED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->nsecsElapsed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,8 +246,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_RESTART)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->restart());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,8 +266,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_SECSTO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQELAPSEDTIMER(1))
-    {
+    if (ISNUMPAR(1) && ISQELAPSEDTIMER(1)) {
 #endif
       RQINT64(obj->secsTo(*PQELAPSEDTIMER(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,8 +286,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_START)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,8 +305,7 @@ static QElapsedTimer::ClockType clockType()
 HB_FUNC_STATIC(QELAPSEDTIMER_CLOCKTYPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QElapsedTimer::clockType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,8 +321,7 @@ static bool isMonotonic()
 HB_FUNC_STATIC(QELAPSEDTIMER_ISMONOTONIC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QElapsedTimer::isMonotonic());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,17 +335,14 @@ HB_FUNC_STATIC(QELAPSEDTIMER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -391,8 +375,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
