@@ -23,8 +23,7 @@ void QWebSocketSlots::aboutToClose()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToClose()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QWebSocketSlots::connected()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "connected()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -59,8 +57,7 @@ void QWebSocketSlots::disconnected()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "disconnected()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -77,8 +74,7 @@ void QWebSocketSlots::stateChanged(QAbstractSocket::SocketState state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QAbstractSocket::SocketState)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
     PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
@@ -97,8 +93,7 @@ void QWebSocketSlots::proxyAuthenticationRequired(const QNetworkProxy &proxy, QA
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
     PHB_ITEM pproxy = Qt5xHb::Signals_return_object((void *)&proxy, "QNETWORKPROXY");
     PHB_ITEM ppAuthenticator = Qt5xHb::Signals_return_object((void *)pAuthenticator, "QAUTHENTICATOR");
@@ -119,8 +114,7 @@ void QWebSocketSlots::readChannelFinished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "readChannelFinished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -137,8 +131,7 @@ void QWebSocketSlots::textFrameReceived(const QString &frame, bool isLastFrame)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "textFrameReceived(QString,bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
     PHB_ITEM pframe = hb_itemPutC(NULL, QSTRINGTOSTRING(frame));
     PHB_ITEM pisLastFrame = hb_itemPutL(NULL, isLastFrame);
@@ -159,8 +152,7 @@ void QWebSocketSlots::binaryFrameReceived(const QByteArray &frame, bool isLastFr
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "binaryFrameReceived(QByteArray,bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
     PHB_ITEM pframe = Qt5xHb::Signals_return_object((void *)&frame, "QBYTEARRAY");
     PHB_ITEM pisLastFrame = hb_itemPutL(NULL, isLastFrame);
@@ -181,8 +173,7 @@ void QWebSocketSlots::textMessageReceived(const QString &message)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "textMessageReceived(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
     PHB_ITEM pmessage = hb_itemPutC(NULL, QSTRINGTOSTRING(message));
 
@@ -201,8 +192,7 @@ void QWebSocketSlots::binaryMessageReceived(const QByteArray &message)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "binaryMessageReceived(QByteArray)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
     PHB_ITEM pmessage = Qt5xHb::Signals_return_object((void *)&message, "QBYTEARRAY");
 
@@ -221,8 +211,7 @@ void QWebSocketSlots::error(QAbstractSocket::SocketError error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QAbstractSocket::SocketError)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -241,8 +230,7 @@ void QWebSocketSlots::pong(quint64 elapsedTime, const QByteArray &payload)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pong(quint64,QByteArray)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
     PHB_ITEM pelapsedTime = hb_itemPutNLL(NULL, elapsedTime);
     PHB_ITEM ppayload = Qt5xHb::Signals_return_object((void *)&payload, "QBYTEARRAY");
@@ -263,8 +251,7 @@ void QWebSocketSlots::bytesWritten(qint64 bytes)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "bytesWritten(qint64)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
     PHB_ITEM pbytes = hb_itemPutNLL(NULL, bytes);
 
@@ -283,15 +270,12 @@ void QWebSocketSlots::sslErrors(const QList<QSslError> &errors)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sslErrors(QList<QSslError>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBSOCKET");
     PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
     PHB_ITEM perrors = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
-      for (int i = 0; i < errors.count(); i++)
-      {
+    if (pDynSym != NULL) {
+      for (int i = 0; i < errors.count(); i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -323,8 +307,7 @@ void QWebSocketSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QWebSocketSlots *s = QCoreApplication::instance()->findChild<QWebSocketSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QWebSocketSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -68,8 +68,7 @@ RETURN
 
 HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_NEW)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QWebSocketCorsAuthenticator( const QString &origin )
     */
@@ -77,9 +76,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_NEW)
     QWebSocketCorsAuthenticator *obj = new QWebSocketCorsAuthenticator(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQWEBSOCKETCORSAUTHENTICATOR(1))
-  {
+  } else if (ISNUMPAR(1) && ISQWEBSOCKETCORSAUTHENTICATOR(1)) {
     /*
     QWebSocketCorsAuthenticator( const QWebSocketCorsAuthenticator &other )
     */
@@ -119,8 +116,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_SWAP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWEBSOCKETCORSAUTHENTICATOR(1))
-    {
+    if (ISNUMPAR(1) && ISQWEBSOCKETCORSAUTHENTICATOR(1)) {
 #endif
       obj->swap(*PQWEBSOCKETCORSAUTHENTICATOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +140,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_ORIGIN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->origin());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +162,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_ALLOWED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->allowed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,8 +184,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_SETALLOWED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAllowed(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,17 +202,14 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -252,8 +242,7 @@ HB_FUNC_STATIC(QWEBSOCKETCORSAUTHENTICATOR_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
