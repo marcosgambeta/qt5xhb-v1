@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QCOMBOBOX_DELETE)
 
 HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQVARIANTORNIL(2))
   {
     /*
     void addItem( const QString &text, const QVariant &userData = QVariant() )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQVARIANT(3) || HB_ISNIL(3)))
+  else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQVARIANTORNIL(3))
   {
     /*
     void addItem( const QIcon &icon, const QString &text, const QVariant &userData = QVariant() )
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ICONSIZE)
 
 HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
 {
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQVARIANT(3) || HB_ISNIL(3)))
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQVARIANTORNIL(3))
   {
     /*
     void insertItem( int index, const QString &text, const QVariant &userData = QVariant() )
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
     hb_itemReturn(hb_stackSelfItem());
   }
   else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3) &&
-           (ISQVARIANT(4) || HB_ISNIL(4)))
+           ISQVARIANTORNIL(4))
   {
     /*
     void insertItem( int index, const QIcon &icon, const QString &text, const QVariant &userData = QVariant() )
