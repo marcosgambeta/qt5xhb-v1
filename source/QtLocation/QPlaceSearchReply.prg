@@ -67,8 +67,7 @@ RETURN
 HB_FUNC_STATIC(QPLACESEARCHREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QPlaceSearchReply *obj = new QPlaceSearchReply(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -106,8 +105,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_TYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,16 +127,13 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_RESULTS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QPlaceSearchResult> list = obj->results();
       PHB_DYNS pDynSym = hb_dynsymFindName("QPLACESEARCHRESULT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -153,9 +148,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_RESULTS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPLACESEARCHRESULT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -178,8 +171,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_REQUEST)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPlaceSearchRequest *ptr = new QPlaceSearchRequest(obj->request());
       Qt5xHb::createReturnClass(ptr, "QPLACESEARCHREQUEST", true);
@@ -202,8 +194,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPlaceSearchRequest *ptr = new QPlaceSearchRequest(obj->previousPageRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACESEARCHREQUEST", true);
@@ -226,8 +217,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_NEXTPAGEREQUEST)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPlaceSearchRequest *ptr = new QPlaceSearchRequest(obj->nextPageRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACESEARCHREQUEST", true);

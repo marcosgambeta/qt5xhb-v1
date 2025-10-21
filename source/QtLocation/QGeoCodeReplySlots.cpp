@@ -23,8 +23,7 @@ void QGeoCodeReplySlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOCODEREPLY");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QGeoCodeReplySlots::error(QGeoCodeReply::Error error, const QString &errorS
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QGeoCodeReply::Error,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOCODEREPLY");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
     PHB_ITEM perrorString = hb_itemPutC(NULL, QSTRINGTOSTRING(errorString));
@@ -64,8 +62,7 @@ void QGeoCodeReplySlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QGeoCodeReplySlots *s = QCoreApplication::instance()->findChild<QGeoCodeReplySlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGeoCodeReplySlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

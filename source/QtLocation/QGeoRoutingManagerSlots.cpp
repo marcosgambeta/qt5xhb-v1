@@ -23,8 +23,7 @@ void QGeoRoutingManagerSlots::finished(QGeoRouteReply *reply)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(QGeoRouteReply*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOROUTINGMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QGEOROUTEREPLY");
 
@@ -43,8 +42,7 @@ void QGeoRoutingManagerSlots::error(QGeoRouteReply *reply, QGeoRouteReply::Error
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOROUTINGMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QGEOROUTEREPLY");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
@@ -68,8 +66,7 @@ void QGeoRoutingManagerSlots_connect_signal(const QString &signal, const QString
   if (obj != NULL) {
     QGeoRoutingManagerSlots *s = QCoreApplication::instance()->findChild<QGeoRoutingManagerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGeoRoutingManagerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -61,8 +61,7 @@ RETURN
 HB_FUNC_STATIC(QPLACEIDREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2)) {
     QPlaceIdReply *obj = new QPlaceIdReply((QPlaceIdReply::OperationType)hb_parni(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_TYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,8 +121,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_OPERATIONTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->operationType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,8 +143,7 @@ HB_FUNC_STATIC(QPLACEIDREPLY_ID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

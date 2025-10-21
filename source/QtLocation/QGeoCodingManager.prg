@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->managerName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERVERSION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->managerVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,25 +129,21 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERVERSION)
 
 HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
 {
-  if (ISBETWEEN(1, 2) && ISQGEOADDRESS(1) && (ISQGEOSHAPE(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(1, 2) && ISQGEOADDRESS(1) && (ISQGEOSHAPE(2) || HB_ISNIL(2))) {
     /*
     QGeoCodeReply * geocode( const QGeoAddress &address, const QGeoShape &bounds = QGeoShape() )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QGeoCodingManager *obj = (QGeoCodingManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QGeoCodeReply *ptr =
           obj->geocode(*PQGEOADDRESS(1), HB_ISNIL(2) ? QGeoShape() : *(QGeoShape *)Qt5xHb::itemGetPtr(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
     }
 #endif
-  }
-  else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
-           (ISQGEOSHAPE(4) || HB_ISNIL(4)))
-  {
+  } else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
+           (ISQGEOSHAPE(4) || HB_ISNIL(4))) {
     /*
     QGeoCodeReply * geocode( const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds =
     QGeoShape() )
@@ -157,8 +151,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QGeoCodingManager *obj = (QGeoCodingManager *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QGeoCodeReply *ptr = obj->geocode(PQSTRING(1), OPINT(2, -1), OPINT(3, 0),
                                         HB_ISNIL(4) ? QGeoShape() : *(QGeoShape *)Qt5xHb::itemGetPtr(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
@@ -179,8 +172,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_REVERSEGEOCODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQGEOCOORDINATE(1) && (ISQGEOSHAPE(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && ISQGEOCOORDINATE(1) && (ISQGEOSHAPE(2) || HB_ISNIL(2))) {
 #endif
       QGeoCodeReply *ptr =
           obj->reverseGeocode(*PQGEOCOORDINATE(1), HB_ISNIL(2) ? QGeoShape() : *(QGeoShape *)Qt5xHb::itemGetPtr(2));
@@ -204,8 +196,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_SETLOCALE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLOCALE(1))
-    {
+    if (ISNUMPAR(1) && ISQLOCALE(1)) {
 #endif
       obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +220,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_LOCALE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QLocale *ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);

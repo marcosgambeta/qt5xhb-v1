@@ -23,8 +23,7 @@ void QPlaceReplySlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEREPLY");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QPlaceReplySlots::error(QPlaceReply::Error error, const QString &errorStrin
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QPlaceReply::Error,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEREPLY");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
     PHB_ITEM perrorString = hb_itemPutC(NULL, QSTRINGTOSTRING(errorString));
@@ -64,8 +62,7 @@ void QPlaceReplySlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QPlaceReplySlots *s = QCoreApplication::instance()->findChild<QPlaceReplySlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QPlaceReplySlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -63,8 +63,7 @@ RETURN
 HB_FUNC_STATIC(QPLACERESULT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QPlaceResult *obj = new QPlaceResult();
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QPLACERESULT_DISTANCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->distance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,8 +121,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETDISTANCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDistance(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,8 +145,7 @@ HB_FUNC_STATIC(QPLACERESULT_PLACE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPlace *ptr = new QPlace(obj->place());
       Qt5xHb::createReturnClass(ptr, "QPLACE", true);
@@ -172,8 +168,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETPLACE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPLACE(1))
-    {
+    if (ISNUMPAR(1) && ISQPLACE(1)) {
 #endif
       obj->setPlace(*PQPLACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +192,7 @@ HB_FUNC_STATIC(QPLACERESULT_ISSPONSORED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSponsored());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,8 +214,7 @@ HB_FUNC_STATIC(QPLACERESULT_SETSPONSORED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSponsored(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

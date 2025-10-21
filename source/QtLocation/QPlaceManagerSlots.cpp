@@ -23,8 +23,7 @@ void QPlaceManagerSlots::finished(QPlaceReply *reply)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(QPlaceReply*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QPLACEREPLY");
 
@@ -43,8 +42,7 @@ void QPlaceManagerSlots::error(QPlaceReply *reply, QPlaceReply::Error error, con
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QPlaceReply*,QPlaceReply::Error,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QPLACEREPLY");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
@@ -67,8 +65,7 @@ void QPlaceManagerSlots::placeAdded(const QString &placeId)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "placeAdded(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pplaceId = hb_itemPutC(NULL, QSTRINGTOSTRING(placeId));
 
@@ -87,8 +84,7 @@ void QPlaceManagerSlots::placeUpdated(const QString &placeId)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "placeUpdated(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pplaceId = hb_itemPutC(NULL, QSTRINGTOSTRING(placeId));
 
@@ -107,8 +103,7 @@ void QPlaceManagerSlots::placeRemoved(const QString &placeId)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "placeRemoved(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pplaceId = hb_itemPutC(NULL, QSTRINGTOSTRING(placeId));
 
@@ -127,8 +122,7 @@ void QPlaceManagerSlots::categoryAdded(const QPlaceCategory &category, const QSt
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "categoryAdded(QPlaceCategory,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pcategory = Qt5xHb::Signals_return_object((void *)&category, "QPLACECATEGORY");
     PHB_ITEM pparentId = hb_itemPutC(NULL, QSTRINGTOSTRING(parentId));
@@ -149,8 +143,7 @@ void QPlaceManagerSlots::categoryUpdated(const QPlaceCategory &category, const Q
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "categoryUpdated(QPlaceCategory,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pcategory = Qt5xHb::Signals_return_object((void *)&category, "QPLACECATEGORY");
     PHB_ITEM pparentId = hb_itemPutC(NULL, QSTRINGTOSTRING(parentId));
@@ -171,8 +164,7 @@ void QPlaceManagerSlots::categoryRemoved(const QString &categoryId, const QStrin
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "categoryRemoved(QString,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pcategoryId = hb_itemPutC(NULL, QSTRINGTOSTRING(categoryId));
     PHB_ITEM pparentId = hb_itemPutC(NULL, QSTRINGTOSTRING(parentId));
@@ -193,8 +185,7 @@ void QPlaceManagerSlots::dataChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -212,8 +203,7 @@ void QPlaceManagerSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QPlaceManagerSlots *s = QCoreApplication::instance()->findChild<QPlaceManagerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QPlaceManagerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

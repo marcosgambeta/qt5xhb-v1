@@ -59,8 +59,7 @@ RETURN
 
 HB_FUNC_STATIC(QPLACEIMAGE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QPlaceImage()
     */
@@ -68,9 +67,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_NEW)
     QPlaceImage *obj = new QPlaceImage();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQPLACECONTENT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPLACECONTENT(1)) {
     /*
     QPlaceImage( const QPlaceContent &other )
     */
@@ -110,8 +107,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_URL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUrl *ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -134,8 +130,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_SETURL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,8 +154,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_IMAGEID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->imageId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,8 +176,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_SETIMAGEID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setImageId(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +200,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_MIMETYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->mimeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +222,7 @@ HB_FUNC_STATIC(QPLACEIMAGE_SETMIMETYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setMimeType(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

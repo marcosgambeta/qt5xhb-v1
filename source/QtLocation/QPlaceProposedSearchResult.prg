@@ -61,8 +61,7 @@ RETURN
 HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QPlaceProposedSearchResult *obj = new QPlaceProposedSearchResult();
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPlaceSearchRequest *ptr = new QPlaceSearchRequest(obj->searchRequest());
       Qt5xHb::createReturnClass(ptr, "QPLACESEARCHREQUEST", true);
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QPLACEPROPOSEDSEARCHRESULT_SETSEARCHREQUEST)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1)) {
 #endif
       obj->setSearchRequest(*PQPLACESEARCHREQUEST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

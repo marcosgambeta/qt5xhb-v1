@@ -23,8 +23,7 @@ void QGeoRouteReplySlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOROUTEREPLY");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QGeoRouteReplySlots::error(QGeoRouteReply::Error error, const QString &erro
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QGeoRouteReply::Error,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOROUTEREPLY");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
     PHB_ITEM perrorString = hb_itemPutC(NULL, QSTRINGTOSTRING(errorString));
@@ -64,8 +62,7 @@ void QGeoRouteReplySlots_connect_signal(const QString &signal, const QString &sl
   if (obj != NULL) {
     QGeoRouteReplySlots *s = QCoreApplication::instance()->findChild<QGeoRouteReplySlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGeoRouteReplySlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
