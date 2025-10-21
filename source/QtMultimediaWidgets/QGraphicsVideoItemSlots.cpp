@@ -22,8 +22,7 @@ void QGraphicsVideoItemSlots::nativeSizeChanged(const QSizeF &size)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "nativeSizeChanged(QSizeF)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSVIDEOITEM");
     PHB_ITEM psize = Qt5xHb::Signals_return_object((void *)&size, "QSIZEF");
 
@@ -41,8 +40,7 @@ void QGraphicsVideoItemSlots_connect_signal(const QString &signal, const QString
   if (obj != NULL) {
     QGraphicsVideoItemSlots *s = QCoreApplication::instance()->findChild<QGraphicsVideoItemSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGraphicsVideoItemSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

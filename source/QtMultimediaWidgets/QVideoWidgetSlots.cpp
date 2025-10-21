@@ -22,8 +22,7 @@ void QVideoWidgetSlots::fullScreenChanged(bool fullScreen)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fullScreenChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
     PHB_ITEM pfullScreen = hb_itemPutL(NULL, fullScreen);
 
@@ -40,8 +39,7 @@ void QVideoWidgetSlots::brightnessChanged(int brightness)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "brightnessChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
     PHB_ITEM pbrightness = hb_itemPutNI(NULL, brightness);
 
@@ -58,8 +56,7 @@ void QVideoWidgetSlots::contrastChanged(int contrast)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contrastChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
     PHB_ITEM pcontrast = hb_itemPutNI(NULL, contrast);
 
@@ -76,8 +73,7 @@ void QVideoWidgetSlots::hueChanged(int hue)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hueChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
     PHB_ITEM phue = hb_itemPutNI(NULL, hue);
 
@@ -94,8 +90,7 @@ void QVideoWidgetSlots::saturationChanged(int saturation)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "saturationChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWIDGET");
     PHB_ITEM psaturation = hb_itemPutNI(NULL, saturation);
 
@@ -113,8 +108,7 @@ void QVideoWidgetSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QVideoWidgetSlots *s = QCoreApplication::instance()->findChild<QVideoWidgetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QVideoWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
