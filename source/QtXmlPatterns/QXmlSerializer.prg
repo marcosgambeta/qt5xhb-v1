@@ -70,8 +70,7 @@ RETURN
     */
 HB_FUNC_STATIC(QXMLSERIALIZER_NEW)
 {
-  if (ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2))
-  {
+  if (ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2)) {
     QXmlSerializer *obj = new QXmlSerializer(*PQXMLQUERY(1), PQIODEVICE(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_CODEC)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       const QTextCodec *ptr = obj->codec();
       Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
@@ -125,8 +123,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_OUTPUTDEVICE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QIODevice *ptr = obj->outputDevice();
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -147,8 +144,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_SETCODEC)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTCODEC(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTCODEC(1)) {
 #endif
       obj->setCodec(PQTEXTCODEC(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +166,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ATOMICVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVARIANT(1))
-    {
+    if (ISNUMPAR(1) && ISQVARIANT(1)) {
 #endif
       obj->atomicValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +188,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ATTRIBUTE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2))
-    {
+    if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2)) {
 #endif
       obj->attribute(*PQXMLNAME(1), *PQSTRINGREF(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +210,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_CHARACTERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSTRINGREF(1))
-    {
+    if (ISNUMPAR(1) && ISQSTRINGREF(1)) {
 #endif
       obj->characters(*PQSTRINGREF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +232,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_COMMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->comment(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +254,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDDOCUMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endDocument();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +276,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDELEMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endElement();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +298,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDOFSEQUENCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->endOfSequence();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,8 +320,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_NAMESPACEBINDING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNAME(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNAME(1)) {
 #endif
       obj->namespaceBinding(*PQXMLNAME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +342,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_PROCESSINGINSTRUCTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQXMLNAME(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQXMLNAME(1) && HB_ISCHAR(2)) {
 #endif
       obj->processingInstruction(*PQXMLNAME(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,8 +364,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_STARTDOCUMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->startDocument();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,8 +386,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_STARTELEMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNAME(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNAME(1)) {
 #endif
       obj->startElement(*PQXMLNAME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -423,8 +408,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_STARTOFSEQUENCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->startOfSequence();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
