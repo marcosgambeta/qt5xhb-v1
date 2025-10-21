@@ -23,8 +23,7 @@ void QDateTimeAxisSlots::formatChanged(QString format)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "formatChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEAXIS");
     PHB_ITEM pformat = hb_itemPutC(NULL, format.toLatin1().data());
 
@@ -43,8 +42,7 @@ void QDateTimeAxisSlots::maxChanged(QDateTime max)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxChanged(QDateTime)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEAXIS");
     PHB_ITEM pmax = Qt5xHb::Signals_return_object((void *)&max, "QDATETIME");
 
@@ -63,8 +61,7 @@ void QDateTimeAxisSlots::minChanged(QDateTime min)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minChanged(QDateTime)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEAXIS");
     PHB_ITEM pmin = Qt5xHb::Signals_return_object((void *)&min, "QDATETIME");
 
@@ -83,8 +80,7 @@ void QDateTimeAxisSlots::rangeChanged(QDateTime min, QDateTime max)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rangeChanged(QDateTime,QDateTime)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEAXIS");
     PHB_ITEM pmin = Qt5xHb::Signals_return_object((void *)&min, "QDATETIME");
     PHB_ITEM pmax = Qt5xHb::Signals_return_object((void *)&max, "QDATETIME");
@@ -105,8 +101,7 @@ void QDateTimeAxisSlots::tickCountChanged(int tick)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tickCountChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATETIMEAXIS");
     PHB_ITEM ptick = hb_itemPutNI(NULL, tick);
 
@@ -126,8 +121,7 @@ void QDateTimeAxisSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QDateTimeAxisSlots *s = QCoreApplication::instance()->findChild<QDateTimeAxisSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDateTimeAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

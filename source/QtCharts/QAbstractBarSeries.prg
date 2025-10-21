@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_BARWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->barWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,8 +138,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_SETBARWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBarWidth(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +162,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_COUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +184,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_ISLABELSVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLabelsVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,8 +206,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
 #endif
       obj->setLabelsVisible(OPBOOL(1, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,8 +230,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->labelsFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,8 +252,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setLabelsFormat(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +276,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSANGLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->labelsAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,8 +298,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSANGLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLabelsAngle(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,8 +322,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_LABELSPOSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->labelsPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +344,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSPOSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLabelsPosition((QAbstractBarSeries::LabelsPosition)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,35 +360,29 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_SETLABELSPOSITION)
 
 HB_FUNC_STATIC(QABSTRACTBARSERIES_APPEND)
 {
-  if (ISNUMPAR(1) && ISQBARSET(1))
-  {
+  if (ISNUMPAR(1) && ISQBARSET(1)) {
     /*
     bool append( QBarSet * set )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     QAbstractBarSeries *obj = (QAbstractBarSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RBOOL(obj->append(PQBARSET(1)));
     }
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISARRAY(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     /*
     bool append( QList<QBarSet*> sets )
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     QAbstractBarSeries *obj = (QAbstractBarSeries *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QList<QBarSet *> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << (QBarSet *)hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0));
       }
       RBOOL(obj->append(par1));
@@ -420,8 +403,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_REMOVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBARSET(1))
-    {
+    if (ISNUMPAR(1) && ISQBARSET(1)) {
 #endif
       RBOOL(obj->remove(PQBARSET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -443,8 +425,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_TAKE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBARSET(1))
-    {
+    if (ISNUMPAR(1) && ISQBARSET(1)) {
 #endif
       RBOOL(obj->take(PQBARSET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -466,8 +447,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_INSERT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBARSET(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBARSET(2)) {
 #endif
       RBOOL(obj->insert(PINT(1), PQBARSET(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -489,16 +469,13 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_BARSETS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QBarSet *> list = obj->barSets();
       PHB_DYNS pDynSym = hb_dynsymFindName("QBARSET");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -510,9 +487,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_BARSETS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBARSET", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -535,8 +510,7 @@ HB_FUNC_STATIC(QABSTRACTBARSERIES_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

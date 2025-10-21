@@ -23,8 +23,7 @@ void QBoxSetSlots::brushChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "brushChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QBoxSetSlots::cleared()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "cleared()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -59,8 +57,7 @@ void QBoxSetSlots::clicked()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -77,8 +74,7 @@ void QBoxSetSlots::doubleClicked()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "doubleClicked()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -95,8 +91,7 @@ void QBoxSetSlots::hovered(bool status)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
     PHB_ITEM pstatus = hb_itemPutL(NULL, status);
 
@@ -115,8 +110,7 @@ void QBoxSetSlots::penChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "penChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -133,8 +127,7 @@ void QBoxSetSlots::pressed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pressed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -151,8 +144,7 @@ void QBoxSetSlots::released()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "released()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -169,8 +161,7 @@ void QBoxSetSlots::valueChanged(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -189,8 +180,7 @@ void QBoxSetSlots::valuesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valuesChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBOXSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -208,8 +198,7 @@ void QBoxSetSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QBoxSetSlots *s = QCoreApplication::instance()->findChild<QBoxSetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QBoxSetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

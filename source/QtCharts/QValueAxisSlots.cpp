@@ -23,8 +23,7 @@ void QValueAxisSlots::labelFormatChanged(const QString &format)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelFormatChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pformat = hb_itemPutC(NULL, QSTRINGTOSTRING(format));
 
@@ -43,8 +42,7 @@ void QValueAxisSlots::maxChanged(qreal max)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pmax = hb_itemPutND(NULL, max);
 
@@ -63,8 +61,7 @@ void QValueAxisSlots::minChanged(qreal min)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pmin = hb_itemPutND(NULL, min);
 
@@ -83,8 +80,7 @@ void QValueAxisSlots::minorTickCountChanged(int tickCount)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minorTickCountChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM ptickCount = hb_itemPutNI(NULL, tickCount);
 
@@ -103,8 +99,7 @@ void QValueAxisSlots::rangeChanged(qreal min, qreal max)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rangeChanged(qreal,qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pmin = hb_itemPutND(NULL, min);
     PHB_ITEM pmax = hb_itemPutND(NULL, max);
@@ -125,8 +120,7 @@ void QValueAxisSlots::tickCountChanged(int tickCount)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tickCountChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM ptickCount = hb_itemPutNI(NULL, tickCount);
 
@@ -146,8 +140,7 @@ void QValueAxisSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QValueAxisSlots *s = QCoreApplication::instance()->findChild<QValueAxisSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QValueAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

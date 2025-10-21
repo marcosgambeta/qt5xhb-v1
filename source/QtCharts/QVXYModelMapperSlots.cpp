@@ -23,8 +23,7 @@ void QVXYModelMapperSlots::firstRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "firstRowChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QVXYModelMapperSlots::modelReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "modelReplaced()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -59,8 +57,7 @@ void QVXYModelMapperSlots::rowCountChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowCountChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -77,8 +74,7 @@ void QVXYModelMapperSlots::seriesReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "seriesReplaced()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -95,8 +91,7 @@ void QVXYModelMapperSlots::xColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xColumnChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -113,8 +108,7 @@ void QVXYModelMapperSlots::yColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yColumnChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVXYMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -132,8 +126,7 @@ void QVXYModelMapperSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QVXYModelMapperSlots *s = QCoreApplication::instance()->findChild<QVXYModelMapperSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QVXYModelMapperSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

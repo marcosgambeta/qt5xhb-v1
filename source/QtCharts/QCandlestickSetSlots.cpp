@@ -23,8 +23,7 @@ void QCandlestickSetSlots::brushChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "brushChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QCandlestickSetSlots::clicked()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -59,8 +57,7 @@ void QCandlestickSetSlots::closeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "closeChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -77,8 +74,7 @@ void QCandlestickSetSlots::doubleClicked()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "doubleClicked()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -95,8 +91,7 @@ void QCandlestickSetSlots::highChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "highChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -113,8 +108,7 @@ void QCandlestickSetSlots::hovered(bool status)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
     PHB_ITEM pstatus = hb_itemPutL(NULL, status);
 
@@ -133,8 +127,7 @@ void QCandlestickSetSlots::lowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lowChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -151,8 +144,7 @@ void QCandlestickSetSlots::openChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "openChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -169,8 +161,7 @@ void QCandlestickSetSlots::penChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "penChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -187,8 +178,7 @@ void QCandlestickSetSlots::pressed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pressed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -205,8 +195,7 @@ void QCandlestickSetSlots::released()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "released()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -223,8 +212,7 @@ void QCandlestickSetSlots::timestampChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "timestampChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -242,8 +230,7 @@ void QCandlestickSetSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QCandlestickSetSlots *s = QCoreApplication::instance()->findChild<QCandlestickSetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCandlestickSetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

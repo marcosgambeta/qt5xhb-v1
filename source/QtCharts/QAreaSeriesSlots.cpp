@@ -23,8 +23,7 @@ void QAreaSeriesSlots::borderColorChanged(QColor color)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "borderColorChanged(QColor)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
@@ -43,8 +42,7 @@ void QAreaSeriesSlots::clicked(const QPointF &point)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked(QPointF)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM ppoint = Qt5xHb::Signals_return_object((void *)&point, "QPOINTF");
 
@@ -63,8 +61,7 @@ void QAreaSeriesSlots::colorChanged(QColor color)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
@@ -83,8 +80,7 @@ void QAreaSeriesSlots::doubleClicked(const QPointF &point)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "doubleClicked(QPointF)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM ppoint = Qt5xHb::Signals_return_object((void *)&point, "QPOINTF");
 
@@ -103,8 +99,7 @@ void QAreaSeriesSlots::hovered(const QPointF &point, bool state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered(QPointF,bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM ppoint = Qt5xHb::Signals_return_object((void *)&point, "QPOINTF");
     PHB_ITEM pstate = hb_itemPutL(NULL, state);
@@ -125,8 +120,7 @@ void QAreaSeriesSlots::pointLabelsClippingChanged(bool clipping)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pointLabelsClippingChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM pclipping = hb_itemPutL(NULL, clipping);
 
@@ -145,8 +139,7 @@ void QAreaSeriesSlots::pointLabelsColorChanged(const QColor &color)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pointLabelsColorChanged(QColor)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
@@ -165,8 +158,7 @@ void QAreaSeriesSlots::pointLabelsFontChanged(const QFont &font)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pointLabelsFontChanged(QFont)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM pfont = Qt5xHb::Signals_return_object((void *)&font, "QFONT");
 
@@ -185,8 +177,7 @@ void QAreaSeriesSlots::pointLabelsFormatChanged(const QString &format)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pointLabelsFormatChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM pformat = hb_itemPutC(NULL, QSTRINGTOSTRING(format));
 
@@ -205,8 +196,7 @@ void QAreaSeriesSlots::pointLabelsVisibilityChanged(bool visible)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pointLabelsVisibilityChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM pvisible = hb_itemPutL(NULL, visible);
 
@@ -225,8 +215,7 @@ void QAreaSeriesSlots::pressed(const QPointF &point)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pressed(QPointF)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM ppoint = Qt5xHb::Signals_return_object((void *)&point, "QPOINTF");
 
@@ -245,8 +234,7 @@ void QAreaSeriesSlots::released(const QPointF &point)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "released(QPointF)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
     PHB_ITEM ppoint = Qt5xHb::Signals_return_object((void *)&point, "QPOINTF");
 
@@ -265,8 +253,7 @@ void QAreaSeriesSlots::selected()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selected()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAREASERIES");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -284,8 +271,7 @@ void QAreaSeriesSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QAreaSeriesSlots *s = QCoreApplication::instance()->findChild<QAreaSeriesSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAreaSeriesSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

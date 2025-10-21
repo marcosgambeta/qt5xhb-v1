@@ -23,8 +23,7 @@ void QLogValueAxisSlots::baseChanged(qreal base)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "baseChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
     PHB_ITEM pbase = hb_itemPutND(NULL, base);
 
@@ -43,8 +42,7 @@ void QLogValueAxisSlots::labelFormatChanged(const QString &format)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelFormatChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
     PHB_ITEM pformat = hb_itemPutC(NULL, QSTRINGTOSTRING(format));
 
@@ -63,8 +61,7 @@ void QLogValueAxisSlots::maxChanged(qreal max)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
     PHB_ITEM pmax = hb_itemPutND(NULL, max);
 
@@ -83,8 +80,7 @@ void QLogValueAxisSlots::minChanged(qreal min)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
     PHB_ITEM pmin = hb_itemPutND(NULL, min);
 
@@ -103,8 +99,7 @@ void QLogValueAxisSlots::minorTickCountChanged(int minorTickCount)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minorTickCountChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
     PHB_ITEM pminorTickCount = hb_itemPutNI(NULL, minorTickCount);
 
@@ -123,8 +118,7 @@ void QLogValueAxisSlots::rangeChanged(qreal min, qreal max)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rangeChanged(qreal,qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
     PHB_ITEM pmin = hb_itemPutND(NULL, min);
     PHB_ITEM pmax = hb_itemPutND(NULL, max);
@@ -145,8 +139,7 @@ void QLogValueAxisSlots::tickCountChanged(int tickCount)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tickCountChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOGVALUEAXIS");
     PHB_ITEM ptickCount = hb_itemPutNI(NULL, tickCount);
 
@@ -166,8 +159,7 @@ void QLogValueAxisSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QLogValueAxisSlots *s = QCoreApplication::instance()->findChild<QLogValueAxisSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QLogValueAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

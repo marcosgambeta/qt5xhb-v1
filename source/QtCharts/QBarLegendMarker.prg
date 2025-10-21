@@ -65,8 +65,7 @@ QBarLegendMarker( QAbstractBarSeries * series, QBarSet * barset, QLegend * legen
 HB_FUNC_STATIC(QBARLEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(3, 4) && ISQABSTRACTBARSERIES(1) && ISQBARSET(2) && ISQLEGEND(3) && ISQOBJECTORNIL(4))
-  {
+  if (ISBETWEEN(3, 4) && ISQABSTRACTBARSERIES(1) && ISQBARSET(2) && ISQLEGEND(3) && ISQOBJECTORNIL(4)) {
     QBarLegendMarker *obj =
         new QBarLegendMarker(PQABSTRACTBARSERIES(1), PQBARSET(2), PQLEGEND(3), OPQOBJECT(4, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QBARLEGENDMARKER_TYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,8 +129,7 @@ HB_FUNC_STATIC(QBARLEGENDMARKER_SERIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAbstractBarSeries *ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTBARSERIES");
@@ -155,8 +152,7 @@ HB_FUNC_STATIC(QBARLEGENDMARKER_BARSET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QBarSet *ptr = obj->barset();
       Qt5xHb::createReturnQObjectClass(ptr, "QBARSET");

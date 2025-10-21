@@ -23,8 +23,7 @@ void QAbstractSeriesSlots::nameChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "nameChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QAbstractSeriesSlots::opacityChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "opacityChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -59,8 +57,7 @@ void QAbstractSeriesSlots::useOpenGLChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "useOpenGLChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -77,8 +74,7 @@ void QAbstractSeriesSlots::visibleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "visibleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSERIES");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -96,8 +92,7 @@ void QAbstractSeriesSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QAbstractSeriesSlots *s = QCoreApplication::instance()->findChild<QAbstractSeriesSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractSeriesSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

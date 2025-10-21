@@ -23,8 +23,7 @@ void QScatterSeriesSlots::borderColorChanged(QColor color)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "borderColorChanged(QColor)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
@@ -43,8 +42,7 @@ void QScatterSeriesSlots::colorChanged(QColor color)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
@@ -63,8 +61,7 @@ void QScatterSeriesSlots::markerShapeChanged(QScatterSeries::MarkerShape shape)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "markerShapeChanged(QScatterSeries::MarkerShape)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
     PHB_ITEM pshape = hb_itemPutNI(NULL, static_cast<int>(shape));
 
@@ -83,8 +80,7 @@ void QScatterSeriesSlots::markerSizeChanged(qreal size)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "markerSizeChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
     PHB_ITEM psize = hb_itemPutND(NULL, size);
 
@@ -104,8 +100,7 @@ void QScatterSeriesSlots_connect_signal(const QString &signal, const QString &sl
   if (obj != NULL) {
     QScatterSeriesSlots *s = QCoreApplication::instance()->findChild<QScatterSeriesSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QScatterSeriesSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

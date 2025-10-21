@@ -23,8 +23,7 @@ void QPieSliceSlots::angleSpanChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "angleSpanChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QPieSliceSlots::borderColorChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "borderColorChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -59,8 +57,7 @@ void QPieSliceSlots::borderWidthChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "borderWidthChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -77,8 +74,7 @@ void QPieSliceSlots::brushChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "brushChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -95,8 +91,7 @@ void QPieSliceSlots::clicked()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -113,8 +108,7 @@ void QPieSliceSlots::colorChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -131,8 +125,7 @@ void QPieSliceSlots::doubleClicked()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "doubleClicked()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -149,8 +142,7 @@ void QPieSliceSlots::hovered(bool state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
     PHB_ITEM pstate = hb_itemPutL(NULL, state);
 
@@ -169,8 +161,7 @@ void QPieSliceSlots::labelBrushChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelBrushChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -187,8 +178,7 @@ void QPieSliceSlots::labelChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -205,8 +195,7 @@ void QPieSliceSlots::labelColorChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelColorChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -223,8 +212,7 @@ void QPieSliceSlots::labelFontChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelFontChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -241,8 +229,7 @@ void QPieSliceSlots::labelVisibleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelVisibleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -259,8 +246,7 @@ void QPieSliceSlots::penChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "penChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -277,8 +263,7 @@ void QPieSliceSlots::percentageChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "percentageChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -295,8 +280,7 @@ void QPieSliceSlots::pressed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pressed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -313,8 +297,7 @@ void QPieSliceSlots::released()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "released()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -331,8 +314,7 @@ void QPieSliceSlots::startAngleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "startAngleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -349,8 +331,7 @@ void QPieSliceSlots::valueChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -368,8 +349,7 @@ void QPieSliceSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QPieSliceSlots *s = QCoreApplication::instance()->findChild<QPieSliceSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QPieSliceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

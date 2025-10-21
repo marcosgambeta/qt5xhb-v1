@@ -23,8 +23,7 @@ void QCandlestickModelMapperSlots::modelReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "modelReplaced()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QCandlestickModelMapperSlots::seriesReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "seriesReplaced()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -60,8 +58,7 @@ void QCandlestickModelMapperSlots_connect_signal(const QString &signal, const QS
   if (obj != NULL) {
     QCandlestickModelMapperSlots *s = QCoreApplication::instance()->findChild<QCandlestickModelMapperSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCandlestickModelMapperSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

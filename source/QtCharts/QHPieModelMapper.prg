@@ -83,8 +83,7 @@ QHPieModelMapper( QObject * parent = nullptr )
 HB_FUNC_STATIC(QHPIEMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QHPieModelMapper *obj = new QHPieModelMapper(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_SERIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPieSeries *ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QPIESERIES");
@@ -127,8 +125,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_SETSERIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPIESERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQPIESERIES(1)) {
 #endif
       obj->setSeries(PQPIESERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_MODEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAbstractItemModel *ptr = obj->model();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
@@ -176,8 +172,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_SETMODEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1)) {
 #endif
       obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,8 +196,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_VALUESROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->valuesRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +218,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_SETVALUESROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setValuesRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,8 +242,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_LABELSROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->labelsRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +264,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_SETLABELSROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLabelsRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,8 +288,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_FIRSTCOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->firstColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,8 +310,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_SETFIRSTCOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFirstColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +334,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_COLUMNCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->columnCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,8 +356,7 @@ HB_FUNC_STATIC(QHPIEMODELMAPPER_SETCOLUMNCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setColumnCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

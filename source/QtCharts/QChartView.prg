@@ -60,8 +60,7 @@ RETURN
 
 HB_FUNC_STATIC(QCHARTVIEW_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     /*
     QChartView( QWidget * parent = nullptr )
     */
@@ -69,9 +68,7 @@ HB_FUNC_STATIC(QCHARTVIEW_NEW)
     QChartView *obj = new QChartView(OPQWIDGET(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && ISQCHART(1) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQCHART(1) && ISQWIDGETORNIL(2)) {
     /*
     QChartView( QChart * chart, QWidget * parent = nullptr )
     */
@@ -116,8 +113,7 @@ HB_FUNC_STATIC(QCHARTVIEW_RUBBERBAND)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->rubberBand());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,8 +135,7 @@ HB_FUNC_STATIC(QCHARTVIEW_CHART)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QChart *ptr = obj->chart();
       Qt5xHb::createReturnQObjectClass(ptr, "QCHART");
@@ -163,8 +158,7 @@ HB_FUNC_STATIC(QCHARTVIEW_SETCHART)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQCHART(1))
-    {
+    if (ISNUMPAR(1) && ISQCHART(1)) {
 #endif
       obj->setChart(PQCHART(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -23,15 +23,12 @@ void QPieSeriesSlots::added(QList<QPieSlice *> slices)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "added(QList<QPieSlice*>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
     PHB_DYNS pDynSym = hb_dynsymFindName("QPIESLICE");
     PHB_ITEM pslices = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
-      for (int i = 0; i < slices.count(); i++)
-      {
+    if (pDynSym != NULL) {
+      for (int i = 0; i < slices.count(); i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -62,8 +59,7 @@ void QPieSeriesSlots::clicked(QPieSlice *slice)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked(QPieSlice*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
     PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
 
@@ -82,8 +78,7 @@ void QPieSeriesSlots::countChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "countChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -100,8 +95,7 @@ void QPieSeriesSlots::doubleClicked(QPieSlice *slice)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "doubleClicked(QPieSlice*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
     PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
 
@@ -120,8 +114,7 @@ void QPieSeriesSlots::hovered(QPieSlice *slice, bool state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered(QPieSlice*,bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
     PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
     PHB_ITEM pstate = hb_itemPutL(NULL, state);
@@ -142,8 +135,7 @@ void QPieSeriesSlots::pressed(QPieSlice *slice)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pressed(QPieSlice*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
     PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
 
@@ -162,8 +154,7 @@ void QPieSeriesSlots::released(QPieSlice *slice)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "released(QPieSlice*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
     PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
 
@@ -182,15 +173,12 @@ void QPieSeriesSlots::removed(QList<QPieSlice *> slices)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "removed(QList<QPieSlice*>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
     PHB_DYNS pDynSym = hb_dynsymFindName("QPIESLICE");
     PHB_ITEM pslices = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
-      for (int i = 0; i < slices.count(); i++)
-      {
+    if (pDynSym != NULL) {
+      for (int i = 0; i < slices.count(); i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -221,8 +209,7 @@ void QPieSeriesSlots::sumChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sumChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -240,8 +227,7 @@ void QPieSeriesSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QPieSeriesSlots *s = QCoreApplication::instance()->findChild<QPieSeriesSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QPieSeriesSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -23,8 +23,7 @@ void QChartSlots::plotAreaChanged(const QRectF &plotArea)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "plotAreaChanged(QRectF)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCHART");
     PHB_ITEM pplotArea = Qt5xHb::Signals_return_object((void *)&plotArea, "QRECTF");
 
@@ -44,8 +43,7 @@ void QChartSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QChartSlots *s = QCoreApplication::instance()->findChild<QChartSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QChartSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

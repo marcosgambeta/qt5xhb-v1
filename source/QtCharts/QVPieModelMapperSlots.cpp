@@ -23,8 +23,7 @@ void QVPieModelMapperSlots::firstRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "firstRowChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QVPieModelMapperSlots::labelsColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelsColumnChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -59,8 +57,7 @@ void QVPieModelMapperSlots::modelReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "modelReplaced()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -77,8 +74,7 @@ void QVPieModelMapperSlots::rowCountChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowCountChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -95,8 +91,7 @@ void QVPieModelMapperSlots::seriesReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "seriesReplaced()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -113,8 +108,7 @@ void QVPieModelMapperSlots::valuesColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valuesColumnChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVPIEMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -132,8 +126,7 @@ void QVPieModelMapperSlots_connect_signal(const QString &signal, const QString &
   if (obj != NULL) {
     QVPieModelMapperSlots *s = QCoreApplication::instance()->findChild<QVPieModelMapperSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QVPieModelMapperSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

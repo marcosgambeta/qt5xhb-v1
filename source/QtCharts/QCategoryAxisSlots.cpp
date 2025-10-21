@@ -23,8 +23,7 @@ void QCategoryAxisSlots::categoriesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "categoriesChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCATEGORYAXIS");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QCategoryAxisSlots::labelsPositionChanged(QCategoryAxis::AxisLabelsPosition
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCATEGORYAXIS");
     PHB_ITEM pposition = hb_itemPutNI(NULL, static_cast<int>(position));
 
@@ -62,8 +60,7 @@ void QCategoryAxisSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QCategoryAxisSlots *s = QCoreApplication::instance()->findChild<QCategoryAxisSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCategoryAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

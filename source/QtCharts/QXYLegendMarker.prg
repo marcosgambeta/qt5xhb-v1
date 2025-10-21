@@ -63,8 +63,7 @@ QXYLegendMarker( QXYSeries * series, QLegend * legend, QObject * parent = nullpt
 HB_FUNC_STATIC(QXYLEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(2, 3) && ISQXYSERIES(1) && ISQLEGEND(2) && ISQOBJECTORNIL(3))
-  {
+  if (ISBETWEEN(2, 3) && ISQXYSERIES(1) && ISQLEGEND(2) && ISQOBJECTORNIL(3)) {
     QXYLegendMarker *obj = new QXYLegendMarker(PQXYSERIES(1), PQLEGEND(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QXYLEGENDMARKER_TYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QXYLEGENDMARKER_SERIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QXYSeries *ptr = obj->series();
       Qt5xHb::createReturnQObjectClass(ptr, "QXYSERIES");

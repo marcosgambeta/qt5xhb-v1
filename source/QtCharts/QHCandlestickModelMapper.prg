@@ -84,8 +84,7 @@ QHCandlestickModelMapper( QObject * parent = nullptr )
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QHCandlestickModelMapper *obj = new QHCandlestickModelMapper(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -104,8 +103,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_TIMESTAMPCOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->timestampColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,8 +125,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETTIMESTAMPCOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTimestampColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_OPENCOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->openColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +171,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETOPENCOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOpenColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,8 +195,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_HIGHCOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->highColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,8 +217,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETHIGHCOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setHighColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +241,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_LOWCOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lowColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,8 +263,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETLOWCOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLowColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,8 +287,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_CLOSECOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->closeColumn());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,8 +309,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETCLOSECOLUMN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCloseColumn(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,8 +333,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_FIRSTSETROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->firstSetRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,8 +355,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETFIRSTSETROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFirstSetRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -392,8 +379,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_LASTSETROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lastSetRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,8 +401,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETLASTSETROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLastSetRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,8 +425,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ORIENTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -23,8 +23,7 @@ void QVBarModelMapperSlots::firstBarSetColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "firstBarSetColumnChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QVBarModelMapperSlots::firstRowChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "firstRowChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -59,8 +57,7 @@ void QVBarModelMapperSlots::lastBarSetColumnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lastBarSetColumnChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -77,8 +74,7 @@ void QVBarModelMapperSlots::modelReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "modelReplaced()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -95,8 +91,7 @@ void QVBarModelMapperSlots::rowCountChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowCountChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -113,8 +108,7 @@ void QVBarModelMapperSlots::seriesReplaced()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "seriesReplaced()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVBARMODELMAPPER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -132,8 +126,7 @@ void QVBarModelMapperSlots_connect_signal(const QString &signal, const QString &
   if (obj != NULL) {
     QVBarModelMapperSlots *s = QCoreApplication::instance()->findChild<QVBarModelMapperSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QVBarModelMapperSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

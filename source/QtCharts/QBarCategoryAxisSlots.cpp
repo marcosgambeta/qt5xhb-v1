@@ -23,8 +23,7 @@ void QBarCategoryAxisSlots::categoriesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "categoriesChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARCATEGORYAXIS");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QBarCategoryAxisSlots::countChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "countChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARCATEGORYAXIS");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -59,8 +57,7 @@ void QBarCategoryAxisSlots::maxChanged(const QString &max)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARCATEGORYAXIS");
     PHB_ITEM pmax = hb_itemPutC(NULL, QSTRINGTOSTRING(max));
 
@@ -79,8 +76,7 @@ void QBarCategoryAxisSlots::minChanged(const QString &min)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARCATEGORYAXIS");
     PHB_ITEM pmin = hb_itemPutC(NULL, QSTRINGTOSTRING(min));
 
@@ -99,8 +95,7 @@ void QBarCategoryAxisSlots::rangeChanged(const QString &min, const QString &max)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rangeChanged(QString,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARCATEGORYAXIS");
     PHB_ITEM pmin = hb_itemPutC(NULL, QSTRINGTOSTRING(min));
     PHB_ITEM pmax = hb_itemPutC(NULL, QSTRINGTOSTRING(max));
@@ -122,8 +117,7 @@ void QBarCategoryAxisSlots_connect_signal(const QString &signal, const QString &
   if (obj != NULL) {
     QBarCategoryAxisSlots *s = QCoreApplication::instance()->findChild<QBarCategoryAxisSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QBarCategoryAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
