@@ -23,8 +23,7 @@ void QMagnetometerSlots::returnGeoValuesChanged(bool returnGeoValues)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "returnGeoValuesChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMAGNETOMETER");
     PHB_ITEM preturnGeoValues = hb_itemPutL(NULL, returnGeoValues);
 
@@ -44,8 +43,7 @@ void QMagnetometerSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QMagnetometerSlots *s = QCoreApplication::instance()->findChild<QMagnetometerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QMagnetometerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

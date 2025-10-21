@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QROTATIONREADING_X)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QROTATIONREADING_Y)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,8 +128,7 @@ HB_FUNC_STATIC(QROTATIONREADING_Z)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->z());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QROTATIONREADING_SETFROMEULER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->setFromEuler(PQREAL(1), PQREAL(2), PQREAL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

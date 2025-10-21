@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QTILTREADING_YROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->yRotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QTILTREADING_SETYROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setYRotation(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QTILTREADING_XROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->xRotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,8 +152,7 @@ HB_FUNC_STATIC(QTILTREADING_SETXROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setXRotation(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

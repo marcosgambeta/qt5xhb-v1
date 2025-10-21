@@ -23,8 +23,7 @@ void QSensorGestureManagerSlots::newSensorGestureAvailable()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "newSensorGestureAvailable()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSORGESTUREMANAGER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -42,8 +41,7 @@ void QSensorGestureManagerSlots_connect_signal(const QString &signal, const QStr
   if (obj != NULL) {
     QSensorGestureManagerSlots *s = QCoreApplication::instance()->findChild<QSensorGestureManagerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSensorGestureManagerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

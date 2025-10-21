@@ -23,8 +23,7 @@ void QTapSensorSlots::returnDoubleTapEventsChanged(bool returnDoubleTapEvents)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "returnDoubleTapEventsChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTAPSENSOR");
     PHB_ITEM preturnDoubleTapEvents = hb_itemPutL(NULL, returnDoubleTapEvents);
 
@@ -44,8 +43,7 @@ void QTapSensorSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QTapSensorSlots *s = QCoreApplication::instance()->findChild<QTapSensorSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QTapSensorSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

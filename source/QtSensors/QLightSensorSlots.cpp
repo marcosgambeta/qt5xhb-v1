@@ -23,8 +23,7 @@ void QLightSensorSlots::fieldOfViewChanged(qreal fieldOfView)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fieldOfViewChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLIGHTSENSOR");
     PHB_ITEM pfieldOfView = hb_itemPutND(NULL, fieldOfView);
 
@@ -44,8 +43,7 @@ void QLightSensorSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QLightSensorSlots *s = QCoreApplication::instance()->findChild<QLightSensorSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QLightSensorSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

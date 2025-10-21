@@ -64,8 +64,7 @@ RETURN
 HB_FUNC_STATIC(QTAPSENSOR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QTapSensor *obj = new QTapSensor(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QTAPSENSOR_READING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTapReading *ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QTAPREADING");
@@ -127,8 +125,7 @@ HB_FUNC_STATIC(QTAPSENSOR_RETURNDOUBLETAPEVENTS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->returnDoubleTapEvents());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,8 +147,7 @@ HB_FUNC_STATIC(QTAPSENSOR_SETRETURNDOUBLETAPEVENTS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setReturnDoubleTapEvents(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

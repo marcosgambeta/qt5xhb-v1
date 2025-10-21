@@ -23,8 +23,7 @@ void QAccelerometerSlots::accelerationModeChanged(QAccelerometer::AccelerationMo
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accelerationModeChanged(QAccelerometer::AccelerationMode)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACCELEROMETER");
     PHB_ITEM paccelerationMode = hb_itemPutNI(NULL, static_cast<int>(accelerationMode));
 
@@ -44,8 +43,7 @@ void QAccelerometerSlots_connect_signal(const QString &signal, const QString &sl
   if (obj != NULL) {
     QAccelerometerSlots *s = QCoreApplication::instance()->findChild<QAccelerometerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAccelerometerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

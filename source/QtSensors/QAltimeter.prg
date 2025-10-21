@@ -60,8 +60,7 @@ RETURN
 HB_FUNC_STATIC(QALTIMETER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QAltimeter *obj = new QAltimeter(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QALTIMETER_READING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAltimeterReading *ptr = obj->reading();
       Qt5xHb::createReturnQObjectClass(ptr, "QALTIMETERREADING");

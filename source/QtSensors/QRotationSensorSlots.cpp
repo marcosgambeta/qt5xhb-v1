@@ -23,8 +23,7 @@ void QRotationSensorSlots::hasZChanged(bool hasZ)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hasZChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QROTATIONSENSOR");
     PHB_ITEM phasZ = hb_itemPutL(NULL, hasZ);
 
@@ -44,8 +43,7 @@ void QRotationSensorSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QRotationSensorSlots *s = QCoreApplication::instance()->findChild<QRotationSensorSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QRotationSensorSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -23,8 +23,7 @@ void QSensorSlots::busyChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "busyChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QSensorSlots::activeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activeChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -59,8 +57,7 @@ void QSensorSlots::readingChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "readingChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -77,8 +74,7 @@ void QSensorSlots::sensorError(int error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sensorError(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
     PHB_ITEM perror = hb_itemPutNI(NULL, error);
 
@@ -97,8 +93,7 @@ void QSensorSlots::availableSensorsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availableSensorsChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -115,8 +110,7 @@ void QSensorSlots::alwaysOnChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "alwaysOnChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -133,8 +127,7 @@ void QSensorSlots::dataRateChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataRateChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -151,8 +144,7 @@ void QSensorSlots::skipDuplicatesChanged(bool skipDuplicates)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "skipDuplicatesChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
     PHB_ITEM pskipDuplicates = hb_itemPutL(NULL, skipDuplicates);
 
@@ -171,8 +163,7 @@ void QSensorSlots::axesOrientationModeChanged(QSensor::AxesOrientationMode axesO
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axesOrientationModeChanged(QSensor::AxesOrientationMode)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
     PHB_ITEM paxesOrientationMode = hb_itemPutNI(NULL, static_cast<int>(axesOrientationMode));
 
@@ -191,8 +182,7 @@ void QSensorSlots::currentOrientationChanged(int currentOrientation)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentOrientationChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
     PHB_ITEM pcurrentOrientation = hb_itemPutNI(NULL, currentOrientation);
 
@@ -211,8 +201,7 @@ void QSensorSlots::userOrientationChanged(int userOrientation)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "userOrientationChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
     PHB_ITEM puserOrientation = hb_itemPutNI(NULL, userOrientation);
 
@@ -231,8 +220,7 @@ void QSensorSlots::maxBufferSizeChanged(int maxBufferSize)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxBufferSizeChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
     PHB_ITEM pmaxBufferSize = hb_itemPutNI(NULL, maxBufferSize);
 
@@ -251,8 +239,7 @@ void QSensorSlots::efficientBufferSizeChanged(int efficientBufferSize)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "efficientBufferSizeChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
     PHB_ITEM pefficientBufferSize = hb_itemPutNI(NULL, efficientBufferSize);
 
@@ -271,8 +258,7 @@ void QSensorSlots::bufferSizeChanged(int bufferSize)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "bufferSizeChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSOR");
     PHB_ITEM pbufferSize = hb_itemPutNI(NULL, bufferSize);
 
@@ -292,8 +278,7 @@ void QSensorSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QSensorSlots *s = QCoreApplication::instance()->findChild<QSensorSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSensorSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

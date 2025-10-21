@@ -23,8 +23,7 @@ void QSensorGestureRecognizerSlots::detected(const QString &s)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "detected(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSORGESTURERECOGNIZER");
     PHB_ITEM ps = hb_itemPutC(NULL, QSTRINGTOSTRING(s));
 
@@ -44,8 +43,7 @@ void QSensorGestureRecognizerSlots_connect_signal(const QString &signal, const Q
   if (obj != NULL) {
     QSensorGestureRecognizerSlots *s = QCoreApplication::instance()->findChild<QSensorGestureRecognizerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSensorGestureRecognizerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
