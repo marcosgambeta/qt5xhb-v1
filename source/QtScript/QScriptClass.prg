@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQVARIANTORNIL(2))
     {
 #endif
       QVariant *ptr = new QVariant(obj->extension((QScriptClass::Extension)hb_parni(1),
