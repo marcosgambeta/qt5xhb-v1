@@ -63,8 +63,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTextFormat *ptr = new QTextFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QTEXTFORMAT", true);
@@ -85,8 +84,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMATINDEX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->formatIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,8 +104,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_DOCUMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTextDocument *ptr = obj->document();
       Qt5xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
@@ -128,8 +125,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_OBJECTINDEX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->objectIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

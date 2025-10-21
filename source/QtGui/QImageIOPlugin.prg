@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2))
-    {
+    if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2)) {
 #endif
       RENUM(obj->capabilities(PQIODEVICE(1), *PQBYTEARRAY(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,8 +96,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
 #endif
       QImageIOHandler *ptr =
           obj->create(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));

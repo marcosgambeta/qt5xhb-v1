@@ -22,8 +22,7 @@ void QDragSlots::actionChanged(Qt::DropAction action)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "actionChanged(Qt::DropAction)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDRAG");
     PHB_ITEM paction = hb_itemPutNI(NULL, static_cast<int>(action));
 
@@ -40,8 +39,7 @@ void QDragSlots::targetChanged(QObject *newTarget)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "targetChanged(QObject*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDRAG");
     PHB_ITEM pnewTarget = Qt5xHb::Signals_return_qobject(newTarget, "QOBJECT");
 
@@ -59,8 +57,7 @@ void QDragSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QDragSlots *s = QCoreApplication::instance()->findChild<QDragSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDragSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

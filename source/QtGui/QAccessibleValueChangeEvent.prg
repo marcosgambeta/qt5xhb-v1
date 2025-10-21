@@ -54,8 +54,7 @@ RETURN
     */
 HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_NEW)
 {
-  if (ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2))
-  {
+  if (ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2)) {
     QAccessibleValueChangeEvent *obj = new QAccessibleValueChangeEvent(PQOBJECT(1), *PQVARIANT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_SETVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVARIANT(1))
-    {
+    if (ISNUMPAR(1) && ISQVARIANT(1)) {
 #endif
       obj->setValue(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,8 +108,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUECHANGEEVENT_VALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVariant *ptr = new QVariant(obj->value());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);

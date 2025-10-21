@@ -76,16 +76,13 @@ HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QOpenGLContext *> list = obj->shares();
       PHB_DYNS pDynSym = hb_dynsymFindName("QOPENGLCONTEXT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -97,9 +94,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QOPENGLCONTEXT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -117,8 +112,7 @@ static QOpenGLContextGroup * currentContextGroup()
 HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QOpenGLContextGroup *ptr = QOpenGLContextGroup::currentContextGroup();
     Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXTGROUP");

@@ -22,8 +22,7 @@ void QGuiApplicationSlots::focusObjectChanged(QObject *focusObject)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "focusObjectChanged(QObject*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pfocusObject = Qt5xHb::Signals_return_qobject(focusObject, "QOBJECT");
 
@@ -40,8 +39,7 @@ void QGuiApplicationSlots::focusWindowChanged(QWindow *focusWindow)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "focusWindowChanged(QWindow*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pfocusWindow = Qt5xHb::Signals_return_qobject(focusWindow, "QWINDOW");
 
@@ -58,8 +56,7 @@ void QGuiApplicationSlots::fontDatabaseChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fontDatabaseChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -74,8 +71,7 @@ void QGuiApplicationSlots::lastWindowClosed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lastWindowClosed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -90,8 +86,7 @@ void QGuiApplicationSlots::screenAdded(QScreen *screen)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "screenAdded(QScreen*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
     PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject(screen, "QSCREEN");
 
@@ -109,8 +104,7 @@ void QGuiApplicationSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QGuiApplicationSlots *s = QCoreApplication::instance()->findChild<QGuiApplicationSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGuiApplicationSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

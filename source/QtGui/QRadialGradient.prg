@@ -59,56 +59,43 @@ RETURN
 
 HB_FUNC_STATIC(QRADIALGRADIENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QRadialGradient()
     */
     QRadialGradient *obj = new QRadialGradient();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(3) && ISQPOINTF(1) && HB_ISNUM(2) && ISQPOINTF(3))
-  {
+  } else if (ISNUMPAR(3) && ISQPOINTF(1) && HB_ISNUM(2) && ISQPOINTF(3)) {
     /*
     QRadialGradient( const QPointF &center, qreal radius, const QPointF &focalPoint )
     */
     QRadialGradient *obj = new QRadialGradient(*PQPOINTF(1), PQREAL(2), *PQPOINTF(3));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
-  {
+  } else if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     /*
     QRadialGradient( qreal cx, qreal cy, qreal radius, qreal fx, qreal fy )
     */
     QRadialGradient *obj = new QRadialGradient(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2)) {
     /*
     QRadialGradient( const QPointF &center, qreal radius )
     */
     QRadialGradient *obj = new QRadialGradient(*PQPOINTF(1), PQREAL(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-  {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     /*
     QRadialGradient( qreal cx, qreal cy, qreal radius )
     */
     QRadialGradient *obj = new QRadialGradient(PQREAL(1), PQREAL(2), PQREAL(3));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(4) && ISQPOINTF(1) && HB_ISNUM(2) && ISQPOINTF(3) && HB_ISNUM(4))
-  {
+  } else if (ISNUMPAR(4) && ISQPOINTF(1) && HB_ISNUM(2) && ISQPOINTF(3) && HB_ISNUM(4)) {
     /*
     QRadialGradient( const QPointF &center, qreal centerRadius, const QPointF &focalPoint, qreal focalRadius )
     */
     QRadialGradient *obj = new QRadialGradient(*PQPOINTF(1), PQREAL(2), *PQPOINTF(3), PQREAL(4));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6))
-  {
+  } else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6)) {
     /*
     QRadialGradient( qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius )
     */
@@ -143,8 +130,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_CENTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->center());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -165,8 +151,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_CENTERRADIUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->centerRadius());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +171,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_FOCALPOINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->focalPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -208,8 +192,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_FOCALRADIUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->focalRadius());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +212,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_RADIUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->radius());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,29 +225,24 @@ HB_FUNC_STATIC(QRADIALGRADIENT_RADIUS)
 
 HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTER)
 {
-  if (ISNUMPAR(1) && ISQPOINTF(1))
-  {
+  if (ISNUMPAR(1) && ISQPOINTF(1)) {
     /*
     void setCenter( const QPointF &center )
     */
     QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setCenter(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void setCenter( qreal x, qreal y )
     */
     QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setCenter(PQREAL(1), PQREAL(2));
     }
 
@@ -284,8 +261,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTERRADIUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCenterRadius(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,29 +276,24 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTERRADIUS)
 
 HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINT)
 {
-  if (ISNUMPAR(1) && ISQPOINTF(1))
-  {
+  if (ISNUMPAR(1) && ISQPOINTF(1)) {
     /*
     void setFocalPoint( const QPointF &focalPoint )
     */
     QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setFocalPoint(*PQPOINTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void setFocalPoint( qreal x, qreal y )
     */
     QRadialGradient *obj = (QRadialGradient *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setFocalPoint(PQREAL(1), PQREAL(2));
     }
 
@@ -341,8 +312,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALRADIUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFocalRadius(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,8 +334,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETRADIUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setRadius(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

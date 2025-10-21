@@ -55,8 +55,7 @@ RETURN
     */
 HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_NEW)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     QInputMethodQueryEvent *obj = new QInputMethodQueryEvent((Qt::InputMethodQueries)hb_parni(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -88,8 +87,7 @@ HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_QUERIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->queries());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,8 +107,7 @@ HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_SETVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
       obj->setValue((Qt::InputMethodQuery)hb_parni(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +129,7 @@ HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_VALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->value((Qt::InputMethodQuery)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);

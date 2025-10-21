@@ -52,16 +52,13 @@ RETURN
 
 HB_FUNC_STATIC(QPAINTEVENT_NEW)
 {
-  if (ISNUMPAR(1) && ISQREGION(1))
-  {
+  if (ISNUMPAR(1) && ISQREGION(1)) {
     /*
     QPaintEvent( const QRegion &paintRegion )
     */
     QPaintEvent *obj = new QPaintEvent(*PQREGION(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQRECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQRECT(1)) {
     /*
     QPaintEvent( const QRect &paintRect )
     */
@@ -96,8 +93,7 @@ HB_FUNC_STATIC(QPAINTEVENT_RECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       const QRect *ptr = &obj->rect();
       Qt5xHb::createReturnClass(ptr, "QRECT", false);
@@ -118,8 +114,7 @@ HB_FUNC_STATIC(QPAINTEVENT_REGION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       const QRegion *ptr = &obj->region();
       Qt5xHb::createReturnClass(ptr, "QREGION", false);

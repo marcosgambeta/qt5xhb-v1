@@ -57,8 +57,7 @@ RETURN
 HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-      ISNUMORNIL(6))
-  {
+      ISNUMORNIL(6)) {
     QDragMoveEvent *obj = new QDragMoveEvent(*PQPOINT(1), (Qt::DropActions)hb_parni(2), PQMIMEDATA(3),
                                              (Qt::MouseButtons)hb_parni(4), (Qt::KeyboardModifiers)hb_parni(5),
                                              HB_ISNIL(6) ? (QEvent::Type)QEvent::DragMove : (QEvent::Type)hb_parni(6));
@@ -85,29 +84,24 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_DELETE)
 
 HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
 {
-  if (ISNUMPAR(1) && ISQRECT(1))
-  {
+  if (ISNUMPAR(1) && ISQRECT(1)) {
     /*
     void accept( const QRect &rectangle )
     */
     QDragMoveEvent *obj = (QDragMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->accept(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0))
-  {
+  } else if (ISNUMPAR(0)) {
     /*
     void accept()
     */
     QDragMoveEvent *obj = (QDragMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->accept();
     }
 
@@ -126,8 +120,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ANSWERRECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRect *ptr = new QRect(obj->answerRect());
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -141,29 +134,24 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ANSWERRECT)
 
 HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
 {
-  if (ISNUMPAR(1) && ISQRECT(1))
-  {
+  if (ISNUMPAR(1) && ISQRECT(1)) {
     /*
     void ignore( const QRect &rectangle )
     */
     QDragMoveEvent *obj = (QDragMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->ignore(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0))
-  {
+  } else if (ISNUMPAR(0)) {
     /*
     void ignore()
     */
     QDragMoveEvent *obj = (QDragMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->ignore();
     }
 

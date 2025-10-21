@@ -51,8 +51,7 @@ RETURN
     */
 HB_FUNC_STATIC(QHIDEEVENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QHideEvent *obj = new QHideEvent();
     Qt5xHb::returnNewObject(obj, false);
   } else {

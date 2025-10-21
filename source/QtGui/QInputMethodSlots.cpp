@@ -22,8 +22,7 @@ void QInputMethodSlots::animatingChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "animatingChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QInputMethodSlots::cursorRectangleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "cursorRectangleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -54,8 +52,7 @@ void QInputMethodSlots::inputDirectionChanged(Qt::LayoutDirection newDirection)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "inputDirectionChanged(Qt::LayoutDirection)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
     PHB_ITEM pnewDirection = hb_itemPutNI(NULL, static_cast<int>(newDirection));
 
@@ -72,8 +69,7 @@ void QInputMethodSlots::keyboardRectangleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "keyboardRectangleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -88,8 +84,7 @@ void QInputMethodSlots::localeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "localeChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -104,8 +99,7 @@ void QInputMethodSlots::visibleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "visibleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTMETHOD");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -121,8 +115,7 @@ void QInputMethodSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QInputMethodSlots *s = QCoreApplication::instance()->findChild<QInputMethodSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QInputMethodSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

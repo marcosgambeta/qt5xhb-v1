@@ -53,8 +53,7 @@ RETURN
     */
 HB_FUNC_STATIC(QEXPOSEEVENT_NEW)
 {
-  if (ISNUMPAR(1) && ISQREGION(1))
-  {
+  if (ISNUMPAR(1) && ISQREGION(1)) {
     QExposeEvent *obj = new QExposeEvent(*PQREGION(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -86,8 +85,7 @@ HB_FUNC_STATIC(QEXPOSEEVENT_REGION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       const QRegion *ptr = &obj->region();
       Qt5xHb::createReturnClass(ptr, "QREGION", false);

@@ -22,8 +22,7 @@ void QOpenGLDebugLoggerSlots::messageLogged(const QOpenGLDebugMessage &debugMess
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "messageLogged(QOpenGLDebugMessage)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLDEBUGLOGGER");
     PHB_ITEM pdebugMessage = Qt5xHb::Signals_return_object((void *)&debugMessage, "QOPENGLDEBUGMESSAGE");
 
@@ -41,8 +40,7 @@ void QOpenGLDebugLoggerSlots_connect_signal(const QString &signal, const QString
   if (obj != NULL) {
     QOpenGLDebugLoggerSlots *s = QCoreApplication::instance()->findChild<QOpenGLDebugLoggerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QOpenGLDebugLoggerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

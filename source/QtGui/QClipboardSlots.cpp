@@ -22,8 +22,7 @@ void QClipboardSlots::changed(QClipboard::Mode mode)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "changed(QClipboard::Mode)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCLIPBOARD");
     PHB_ITEM pmode = hb_itemPutNI(NULL, static_cast<int>(mode));
 
@@ -40,8 +39,7 @@ void QClipboardSlots::dataChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCLIPBOARD");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -56,8 +54,7 @@ void QClipboardSlots::findBufferChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "findBufferChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCLIPBOARD");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -72,8 +69,7 @@ void QClipboardSlots::selectionChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCLIPBOARD");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -89,8 +85,7 @@ void QClipboardSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QClipboardSlots *s = QCoreApplication::instance()->findChild<QClipboardSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QClipboardSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

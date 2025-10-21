@@ -66,8 +66,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->mouseDoubleClickInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGDISTANCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->startDragDistance());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,8 +106,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGTIME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->startDragTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,8 +126,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGVELOCITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->startDragVelocity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,8 +146,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDINPUTINTERVAL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->keyboardInputInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,8 +166,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDAUTOREPEATRATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->keyboardAutoRepeatRate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,8 +186,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_CURSORFLASHTIME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->cursorFlashTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +206,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_SHOWISFULLSCREEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->showIsFullScreen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,8 +226,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_PASSWORDMASKDELAY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->passwordMaskDelay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,8 +246,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_FONTSMOOTHINGGAMMA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->fontSmoothingGamma());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +266,7 @@ HB_FUNC_STATIC(QSTYLEHINTS_USERTLEXTENSIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->useRtlExtensions());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

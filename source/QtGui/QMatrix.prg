@@ -90,32 +90,25 @@ RETURN
 
 HB_FUNC_STATIC(QMATRIX_NEW)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QMatrix( Qt::Initialization )
     */
     QMatrix *obj = new QMatrix((Qt::Initialization)hb_parni(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(0))
-  {
+  } else if (ISNUMPAR(0)) {
     /*
     QMatrix()
     */
     QMatrix *obj = new QMatrix();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6))
-  {
+  } else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6)) {
     /*
     QMatrix( qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy )
     */
     QMatrix *obj = new QMatrix(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQMATRIX(1))
-  {
+  } else if (ISNUMPAR(1) && ISQMATRIX(1)) {
     /*
     QMatrix( const QMatrix &matrix )
     */
@@ -150,8 +143,7 @@ HB_FUNC_STATIC(QMATRIX_SETMATRIX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6))
-    {
+    if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6)) {
 #endif
       obj->setMatrix(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,8 +165,7 @@ HB_FUNC_STATIC(QMATRIX_M11)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->m11());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +185,7 @@ HB_FUNC_STATIC(QMATRIX_M12)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->m12());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,8 +205,7 @@ HB_FUNC_STATIC(QMATRIX_M21)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->m21());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,8 +225,7 @@ HB_FUNC_STATIC(QMATRIX_M22)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->m22());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +245,7 @@ HB_FUNC_STATIC(QMATRIX_DX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->dx());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +265,7 @@ HB_FUNC_STATIC(QMATRIX_DY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->dy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,8 +285,7 @@ HB_FUNC_STATIC(QMATRIX_MAP1)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       int par3;
       int par4;
@@ -326,8 +311,7 @@ HB_FUNC_STATIC(QMATRIX_MAP2)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       qreal par3;
       qreal par4;
@@ -450,44 +434,25 @@ void QMatrix_map10()
 
 HB_FUNC_STATIC(QMATRIX_MAP)
 {
-  if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     HB_FUNC_EXEC(QMATRIX_MAP1);
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     HB_FUNC_EXEC(QMATRIX_MAP2);
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     QMatrix_map3();
-  }
-  else if (ISNUMPAR(1) && ISQPOINTF(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     QMatrix_map4();
-  }
-  else if (ISNUMPAR(1) && ISQLINE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQLINE(1)) {
     QMatrix_map5();
-  }
-  else if (ISNUMPAR(1) && ISQLINEF(1))
-  {
+  } else if (ISNUMPAR(1) && ISQLINEF(1)) {
     QMatrix_map6();
-  }
-  else if (ISNUMPAR(1) && ISQPOLYGON(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPOLYGON(1)) {
     QMatrix_map7();
-  }
-  else if (ISNUMPAR(1) && ISQPOLYGONF(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     QMatrix_map8();
-  }
-  else if (ISNUMPAR(1) && ISQREGION(1))
-  {
+  } else if (ISNUMPAR(1) && ISQREGION(1)) {
     QMatrix_map9();
-  }
-  else if (ISNUMPAR(1) && ISQPAINTERPATH(1))
-  {
+  } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     QMatrix_map10();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -496,28 +461,23 @@ HB_FUNC_STATIC(QMATRIX_MAP)
 
 HB_FUNC_STATIC(QMATRIX_MAPRECT)
 {
-  if (ISNUMPAR(1) && ISQRECT(1))
-  {
+  if (ISNUMPAR(1) && ISQRECT(1)) {
     /*
     QRect mapRect( const QRect &) const
     */
     QMatrix *obj = (QMatrix *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QRect *ptr = new QRect(obj->mapRect(*PQRECT(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQRECTF(1))
-  {
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     /*
     QRectF mapRect( const QRectF &) const
     */
     QMatrix *obj = (QMatrix *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QRectF *ptr = new QRectF(obj->mapRect(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
@@ -535,8 +495,7 @@ HB_FUNC_STATIC(QMATRIX_MAPTOPOLYGON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRECT(1))
-    {
+    if (ISNUMPAR(1) && ISQRECT(1)) {
 #endif
       QPolygon *ptr = new QPolygon(obj->mapToPolygon(*PQRECT(1)));
       Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
@@ -557,8 +516,7 @@ HB_FUNC_STATIC(QMATRIX_RESET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -580,8 +538,7 @@ HB_FUNC_STATIC(QMATRIX_ISIDENTITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isIdentity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -601,8 +558,7 @@ HB_FUNC_STATIC(QMATRIX_TRANSLATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       QMatrix *ptr = &obj->translate(PQREAL(1), PQREAL(2));
       Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
@@ -623,8 +579,7 @@ HB_FUNC_STATIC(QMATRIX_SCALE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       QMatrix *ptr = &obj->scale(PQREAL(1), PQREAL(2));
       Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
@@ -645,8 +600,7 @@ HB_FUNC_STATIC(QMATRIX_SHEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       QMatrix *ptr = &obj->shear(PQREAL(1), PQREAL(2));
       Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
@@ -667,8 +621,7 @@ HB_FUNC_STATIC(QMATRIX_ROTATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QMatrix *ptr = &obj->rotate(PQREAL(1));
       Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
@@ -689,8 +642,7 @@ HB_FUNC_STATIC(QMATRIX_ISINVERTIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isInvertible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -710,8 +662,7 @@ HB_FUNC_STATIC(QMATRIX_DETERMINANT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->determinant());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -731,8 +682,7 @@ HB_FUNC_STATIC(QMATRIX_INVERTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
 #endif
       bool par1;
       QMatrix *ptr = new QMatrix(obj->inverted(&par1));
@@ -750,17 +700,14 @@ HB_FUNC_STATIC(QMATRIX_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -793,8 +740,7 @@ HB_FUNC_STATIC(QMATRIX_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

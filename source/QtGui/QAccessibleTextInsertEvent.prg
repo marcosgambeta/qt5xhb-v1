@@ -53,8 +53,7 @@ RETURN
     */
 HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_NEW)
 {
-  if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISCHAR(3))
-  {
+  if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
     QAccessibleTextInsertEvent *obj = new QAccessibleTextInsertEvent(PQOBJECT(1), PINT(2), PQSTRING(3));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -86,8 +85,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_TEXTINSERTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->textInserted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,8 +105,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_CHANGEPOSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->changePosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

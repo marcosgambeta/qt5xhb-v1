@@ -54,16 +54,13 @@ RETURN
 
 HB_FUNC_STATIC(QREGEXPVALIDATOR_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QRegExpValidator( QObject * parent = 0 )
     */
     QRegExpValidator *obj = new QRegExpValidator(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2))
-  {
+  } else if (ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2)) {
     /*
     QRegExpValidator( const QRegExp &rx, QObject * parent = 0 )
     */
@@ -100,8 +97,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_REGEXP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       const QRegExp *ptr = &obj->regExp();
       Qt5xHb::createReturnClass(ptr, "QREGEXP", false);
@@ -122,8 +118,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_SETREGEXP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQREGEXP(1))
-    {
+    if (ISNUMPAR(1) && ISQREGEXP(1)) {
 #endif
       obj->setRegExp(*PQREGEXP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,8 +140,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_VALIDATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       QString par1 = hb_parc(1);
       int par2;

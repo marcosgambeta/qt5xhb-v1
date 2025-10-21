@@ -22,8 +22,7 @@ void QRegularExpressionValidatorSlots::regularExpressionChanged(const QRegularEx
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "regularExpressionChanged(QRegularExpression)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QREGULAREXPRESSIONVALIDATOR");
     PHB_ITEM pre = Qt5xHb::Signals_return_object((void *)&re, "QREGULAREXPRESSION");
 
@@ -41,8 +40,7 @@ void QRegularExpressionValidatorSlots_connect_signal(const QString &signal, cons
   if (obj != NULL) {
     QRegularExpressionValidatorSlots *s = QCoreApplication::instance()->findChild<QRegularExpressionValidatorSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QRegularExpressionValidatorSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

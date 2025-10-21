@@ -22,8 +22,7 @@ void QOffscreenSurfaceSlots::screenChanged(QScreen *screen)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "screenChanged(QScreen*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOFFSCREENSURFACE");
     PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject(screen, "QSCREEN");
 
@@ -41,8 +40,7 @@ void QOffscreenSurfaceSlots_connect_signal(const QString &signal, const QString 
   if (obj != NULL) {
     QOffscreenSurfaceSlots *s = QCoreApplication::instance()->findChild<QOffscreenSurfaceSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QOffscreenSurfaceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

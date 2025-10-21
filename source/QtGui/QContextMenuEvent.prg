@@ -56,8 +56,7 @@ RETURN
 
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_NEW)
 {
-  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && HB_ISNUM(4))
-  {
+  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && HB_ISNUM(4)) {
     /*
     QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos,
     Qt::KeyboardModifiers modifiers )
@@ -65,17 +64,13 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_NEW)
     QContextMenuEvent *obj = new QContextMenuEvent((QContextMenuEvent::Reason)hb_parni(1), *PQPOINT(2), *PQPOINT(3),
                                                    (Qt::KeyboardModifiers)hb_parni(4));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3))
-  {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3)) {
     /*
     QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos )
     */
     QContextMenuEvent *obj = new QContextMenuEvent((QContextMenuEvent::Reason)hb_parni(1), *PQPOINT(2), *PQPOINT(3));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2)) {
     /*
     QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint &pos )
     */
@@ -110,8 +105,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALPOS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       const QPoint *ptr = &obj->globalPos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
@@ -132,8 +126,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->globalX());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,8 +146,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->globalY());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +166,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_POS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       const QPoint *ptr = &obj->pos();
       Qt5xHb::createReturnClass(ptr, "QPOINT", false);
@@ -196,8 +187,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_REASON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->reason());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,8 +207,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_X)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->x());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,8 +227,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_Y)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->y());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

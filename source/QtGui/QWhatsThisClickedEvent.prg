@@ -52,8 +52,7 @@ RETURN
     */
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_NEW)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     QWhatsThisClickedEvent *obj = new QWhatsThisClickedEvent(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -85,8 +84,7 @@ HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_HREF)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->href());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
