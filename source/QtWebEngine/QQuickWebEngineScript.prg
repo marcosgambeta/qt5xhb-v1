@@ -79,8 +79,7 @@ RETURN
 HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QQuickWebEngineScript *obj = new QQuickWebEngineScript(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_NAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +142,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +166,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SOURCEURL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUrl *ptr = new QUrl(obj->sourceUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -193,8 +189,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETSOURCEURL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setSourceUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +213,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SOURCECODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->sourceCode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,8 +235,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETSOURCECODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setSourceCode(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,8 +259,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_INJECTIONPOINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->injectionPoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +281,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETINJECTIONPOINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setInjectionPoint((QQuickWebEngineScript::InjectionPoint)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,8 +305,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_WORLDID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->worldId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,8 +327,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETWORLDID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setWorldId((QQuickWebEngineScript::ScriptWorldId)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,8 +351,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_RUNONSUBFRAMES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->runOnSubframes());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,8 +373,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_SETRUNONSUBFRAMES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setRunOnSubframes(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,8 +397,7 @@ HB_FUNC_STATIC(QQUICKWEBENGINESCRIPT_TOSTRING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
