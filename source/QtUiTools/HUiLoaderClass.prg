@@ -52,8 +52,7 @@ RETURN
     */
 HB_FUNC_STATIC(HUILOADER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     HUiLoader *obj = new HUiLoader(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -106,8 +105,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONCB)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1))
-    {
+    if (ISNUMPAR(1)) {
 #endif
       obj->setCreateActionCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,8 +127,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONGROUPCB)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1))
-    {
+    if (ISNUMPAR(1)) {
 #endif
       obj->setCreateActionGroupCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATELAYOUTCB)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1))
-    {
+    if (ISNUMPAR(1)) {
 #endif
       obj->setCreateLayoutCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +171,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEWIDGETCB)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1))
-    {
+    if (ISNUMPAR(1)) {
 #endif
       obj->setCreateWidgetCB(PBLOCKORSYMBOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
