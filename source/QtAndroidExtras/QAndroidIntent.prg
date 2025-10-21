@@ -68,8 +68,7 @@ RETURN
 
 HB_FUNC_STATIC(QANDROIDINTENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QAndroidIntent()
     */
@@ -77,9 +76,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_NEW)
     QAndroidIntent *obj = new QAndroidIntent();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1)) {
     /*
     QAndroidIntent( const QAndroidJniObject &intent )
     */
@@ -87,9 +84,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_NEW)
     QAndroidIntent *obj = new QAndroidIntent(*PQANDROIDJNIOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QAndroidIntent( const QString &action )
     */
@@ -97,9 +92,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_NEW)
     QAndroidIntent *obj = new QAndroidIntent(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(2) && ISQANDROIDJNIOBJECT(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && ISQANDROIDJNIOBJECT(1) && HB_ISCHAR(2)) {
     /*
     QAndroidIntent( const QAndroidJniObject &packageContext, const char * className )
     */
@@ -142,8 +135,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_PUTEXTRA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2)) {
 #endif
       obj->putExtra(PQSTRING(1), *PQBYTEARRAY(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +159,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_EXTRABYTES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->extraBytes(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -191,8 +182,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_PUTEXTRA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
 #endif
       obj->putExtra(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +206,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_EXTRAVARIANT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->extraVariant(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -240,8 +229,7 @@ HB_FUNC_STATIC(QANDROIDINTENT_HANDLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAndroidJniObject *ptr = new QAndroidJniObject(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);

@@ -65,8 +65,7 @@ RETURN
 
 HB_FUNC_STATIC(QANDROIDBINDER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QAndroidBinder()
     */
@@ -74,9 +73,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_NEW)
     QAndroidBinder *obj = new QAndroidBinder();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1)) {
     /*
     QAndroidBinder( const QAndroidJniObject &binder )
     */
@@ -120,8 +117,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_ONTRANSACT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQANDROIDPARCEL(2) && ISQANDROIDPARCEL(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQANDROIDPARCEL(2) && ISQANDROIDPARCEL(3) && HB_ISNUM(4)) {
 #endif
       RBOOL(obj->onTransact(PINT(1), *PQANDROIDPARCEL(2), *PQANDROIDPARCEL(3), (QAndroidBinder::CallType)hb_parni(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,8 +141,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_TRANSACT)
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && ISQANDROIDPARCEL(2) && (ISQANDROIDPARCEL(3) || HB_ISNIL(3)) &&
-        ISNUMORNIL(4))
-    {
+        ISNUMORNIL(4)) {
 #endif
       RBOOL(obj->transact(PINT(1), *PQANDROIDPARCEL(2), HB_ISNIL(3) ? nullptr : (QAndroidParcel *)Qt5xHb::itemGetPtr(3),
                           HB_ISNIL(4) ? (QAndroidBinder::CallType)QAndroidBinder::CallType::Normal
@@ -170,8 +165,7 @@ HB_FUNC_STATIC(QANDROIDBINDER_HANDLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAndroidJniObject *ptr = new QAndroidJniObject(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);

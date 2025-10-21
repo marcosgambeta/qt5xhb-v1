@@ -73,8 +73,7 @@ RETURN
 
 HB_FUNC_STATIC(QANDROIDPARCEL_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QAndroidParcel()
     */
@@ -82,9 +81,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_NEW)
     QAndroidParcel *obj = new QAndroidParcel();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1)) {
     /*
     QAndroidParcel( const QAndroidJniObject &parcel )
     */
@@ -127,8 +124,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEDATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->writeData(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +148,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEVARIANT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVARIANT(1))
-    {
+    if (ISNUMPAR(1) && ISQVARIANT(1)) {
 #endif
       obj->writeVariant(*PQVARIANT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +172,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEBINDER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQANDROIDBINDER(1))
-    {
+    if (ISNUMPAR(1) && ISQANDROIDBINDER(1)) {
 #endif
       obj->writeBinder(*PQANDROIDBINDER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,8 +196,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_WRITEFILEDESCRIPTOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->writeFileDescriptor(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +220,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READDATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->readData());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -251,8 +243,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READVARIANT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVariant *ptr = new QVariant(obj->readVariant());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -275,8 +266,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READBINDER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAndroidBinder *ptr = new QAndroidBinder(obj->readBinder());
       Qt5xHb::createReturnClass(ptr, "QANDROIDBINDER", true);
@@ -299,8 +289,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READFILEDESCRIPTOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->readFileDescriptor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -322,8 +311,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_HANDLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAndroidJniObject *ptr = new QAndroidJniObject(obj->handle());
       Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
@@ -340,17 +328,14 @@ HB_FUNC_STATIC(QANDROIDPARCEL_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -383,8 +368,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

@@ -101,8 +101,7 @@ HB_FUNC_STATIC(QANDROIDSERVICE_ONBIND)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQANDROIDINTENT(1))
-    {
+    if (ISNUMPAR(1) && ISQANDROIDINTENT(1)) {
 #endif
       QAndroidBinder *ptr = obj->onBind(*PQANDROIDINTENT(1));
       Qt5xHb::createReturnClass(ptr, "QANDROIDBINDER", false);
