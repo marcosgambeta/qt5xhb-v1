@@ -23,8 +23,7 @@ void QAbstractOAuth2Slots::clientIdentifierSharedKeyChanged(const QString &clien
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clientIdentifierSharedKeyChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM pclientIdentifierSharedKey = hb_itemPutC(NULL, QSTRINGTOSTRING(clientIdentifierSharedKey));
 
@@ -43,8 +42,7 @@ void QAbstractOAuth2Slots::error(const QString &error, const QString &errorDescr
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QString,QString,QUrl)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM perror = hb_itemPutC(NULL, QSTRINGTOSTRING(error));
     PHB_ITEM perrorDescription = hb_itemPutC(NULL, QSTRINGTOSTRING(errorDescription));
@@ -67,8 +65,7 @@ void QAbstractOAuth2Slots::expirationAtChanged(const QDateTime &expiration)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "expirationAtChanged(QDateTime)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM pexpiration = Qt5xHb::Signals_return_object((void *)&expiration, "QDATETIME");
 
@@ -87,8 +84,7 @@ void QAbstractOAuth2Slots::responseTypeChanged(const QString &responseType)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "responseTypeChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM presponseType = hb_itemPutC(NULL, QSTRINGTOSTRING(responseType));
 
@@ -107,8 +103,7 @@ void QAbstractOAuth2Slots::scopeChanged(const QString &scope)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "scopeChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM pscope = hb_itemPutC(NULL, QSTRINGTOSTRING(scope));
 
@@ -127,8 +122,7 @@ void QAbstractOAuth2Slots::stateChanged(const QString &state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM pstate = hb_itemPutC(NULL, QSTRINGTOSTRING(state));
 
@@ -147,8 +141,7 @@ void QAbstractOAuth2Slots::userAgentChanged(const QString &userAgent)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "userAgentChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM puserAgent = hb_itemPutC(NULL, QSTRINGTOSTRING(userAgent));
 
@@ -168,8 +161,7 @@ void QAbstractOAuth2Slots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QAbstractOAuth2Slots *s = QCoreApplication::instance()->findChild<QAbstractOAuth2Slots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractOAuth2Slots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

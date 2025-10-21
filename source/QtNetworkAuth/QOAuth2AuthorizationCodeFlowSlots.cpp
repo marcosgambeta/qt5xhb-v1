@@ -23,8 +23,7 @@ void QOAuth2AuthorizationCodeFlowSlots::accessTokenUrlChanged(const QUrl &access
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accessTokenUrlChanged(QUrl)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOAUTH2AUTHORIZATIONCODEFLOW");
     PHB_ITEM paccessTokenUrl = Qt5xHb::Signals_return_object((void *)&accessTokenUrl, "QURL");
 
@@ -45,8 +44,7 @@ void QOAuth2AuthorizationCodeFlowSlots_connect_signal(const QString &signal, con
     QOAuth2AuthorizationCodeFlowSlots *s =
         QCoreApplication::instance()->findChild<QOAuth2AuthorizationCodeFlowSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QOAuth2AuthorizationCodeFlowSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

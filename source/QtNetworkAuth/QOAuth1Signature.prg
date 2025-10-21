@@ -91,8 +91,7 @@ RETURN
 
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_NEW)
 {
-  if (ISNUMPAR(1) && ISQOAUTH1SIGNATURE(1))
-  {
+  if (ISNUMPAR(1) && ISQOAUTH1SIGNATURE(1)) {
     QOAuth1Signature_new3();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -129,8 +128,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETHTTPREQUESTMETHOD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setHttpRequestMethod((QOAuth1Signature::HttpRequestMethod)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_URL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUrl *ptr = new QUrl(obj->url());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -178,8 +175,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETURL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,8 +199,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_ADDREQUESTBODY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURLQUERY(1))
-    {
+    if (ISNUMPAR(1) && ISQURLQUERY(1)) {
 #endif
       obj->addRequestBody(*PQURLQUERY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +223,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_INSERT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
 #endif
       obj->insert(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,13 +247,11 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_KEYS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QString> list = obj->keys();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for (int i = 0; i < list.count(); i++)
-      {
+      for (int i = 0; i < list.count(); i++) {
         PHB_ITEM pItem = hb_itemPutC(NULL, (const char *)list[i].toLatin1().data());
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -284,8 +276,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_TAKE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->take(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -308,8 +299,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_VALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQVARIANTORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQVARIANTORNIL(2)) {
 #endif
       QVariant *ptr =
           new QVariant(obj->value(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2)));
@@ -333,8 +323,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_CLIENTSHAREDKEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->clientSharedKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,8 +345,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETCLIENTSHAREDKEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setClientSharedKey(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -381,8 +369,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_TOKENSECRET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->tokenSecret());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,8 +391,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETTOKENSECRET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setTokenSecret(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +415,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_HMACSHA1)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->hmacSha1());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -453,8 +438,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_RSASHA1)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->rsaSha1());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -469,23 +453,19 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_RSASHA1)
 
 HB_FUNC_STATIC(QOAUTH1SIGNATURE_PLAINTEXT)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QByteArray plainText() const
     */
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     QOAuth1Signature *obj = (QOAuth1Signature *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QByteArray *ptr = new QByteArray(obj->plainText());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
 #endif
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     /*
     static QByteArray plainText( const QString &clientSharedSecret, const QString &tokenSecret )
     */
@@ -508,8 +488,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SWAP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOAUTH1SIGNATURE(1))
-    {
+    if (ISNUMPAR(1) && ISQOAUTH1SIGNATURE(1)) {
 #endif
       obj->swap(*PQOAUTH1SIGNATURE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -527,17 +506,14 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -570,8 +546,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

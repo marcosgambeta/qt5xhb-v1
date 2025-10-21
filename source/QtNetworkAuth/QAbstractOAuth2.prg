@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SCOPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->scope());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,8 +126,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SETSCOPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setScope(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +150,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_USERAGENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->userAgent());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +172,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SETUSERAGENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setUserAgent(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,8 +196,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->clientIdentifierSharedKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,8 +218,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SETCLIENTIDENTIFIERSHAREDKEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setClientIdentifierSharedKey(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +242,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_STATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,8 +264,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SETSTATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setState(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,8 +288,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_EXPIRATIONAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDateTime *ptr = new QDateTime(obj->expirationAt());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -320,8 +311,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_RESPONSETYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->responseType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,8 +333,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_REFRESHTOKEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->refreshToken());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +355,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH2_SETREFRESHTOKEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setRefreshToken(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

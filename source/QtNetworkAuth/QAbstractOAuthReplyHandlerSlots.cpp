@@ -23,8 +23,7 @@ void QAbstractOAuthReplyHandlerSlots::callbackDataReceived(const QByteArray &dat
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "callbackDataReceived(QByteArray)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTHREPLYHANDLER");
     PHB_ITEM pdata = Qt5xHb::Signals_return_object((void *)&data, "QBYTEARRAY");
 
@@ -43,8 +42,7 @@ void QAbstractOAuthReplyHandlerSlots::replyDataReceived(const QByteArray &data)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "replyDataReceived(QByteArray)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTHREPLYHANDLER");
     PHB_ITEM pdata = Qt5xHb::Signals_return_object((void *)&data, "QBYTEARRAY");
 
@@ -64,8 +62,7 @@ void QAbstractOAuthReplyHandlerSlots_connect_signal(const QString &signal, const
   if (obj != NULL) {
     QAbstractOAuthReplyHandlerSlots *s = QCoreApplication::instance()->findChild<QAbstractOAuthReplyHandlerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractOAuthReplyHandlerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

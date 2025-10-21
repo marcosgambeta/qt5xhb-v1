@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_CLIENTIDENTIFIER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->clientIdentifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,8 +135,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETCLIENTIDENTIFIER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setClientIdentifier(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,8 +159,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_TOKEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->token());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +181,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETTOKEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setToken(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +205,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_STATUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +227,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_AUTHORIZATIONURL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUrl *ptr = new QUrl(obj->authorizationUrl());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -256,8 +250,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETAUTHORIZATIONURL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setAuthorizationUrl(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +274,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_CONTENTTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->contentType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,8 +296,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETCONTENTTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setContentType((QAbstractOAuth::ContentType)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +320,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_NETWORKACCESSMANAGER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QNetworkAccessManager *ptr = obj->networkAccessManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
@@ -353,8 +343,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETNETWORKACCESSMANAGER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1)) {
 #endif
       obj->setNetworkAccessManager(PQNETWORKACCESSMANAGER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,8 +367,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_REPLYHANDLER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAbstractOAuthReplyHandler *ptr = obj->replyHandler();
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTOAUTHREPLYHANDLER");
@@ -402,8 +390,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_SETREPLYHANDLER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTOAUTHREPLYHANDLER(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTOAUTHREPLYHANDLER(1)) {
 #endif
       obj->setReplyHandler(PQABSTRACTOAUTHREPLYHANDLER(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -427,8 +414,7 @@ HB_FUNC_STATIC(QABSTRACTOAUTH_GRANT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->grant();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
