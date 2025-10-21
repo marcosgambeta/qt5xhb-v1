@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_CREATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISCHAR(1) && ISQURL(2) && HB_ISARRAY(3) && HB_ISARRAY(4))
-    {
+    if (ISNUMPAR(4) && HB_ISCHAR(1) && ISQURL(2) && HB_ISARRAY(3) && HB_ISARRAY(4)) {
 #endif
       QObject *ptr = obj->create(PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_REFRESHPLUGINS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->refreshPlugins();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
