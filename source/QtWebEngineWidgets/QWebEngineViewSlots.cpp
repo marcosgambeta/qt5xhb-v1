@@ -23,8 +23,7 @@ void QWebEngineViewSlots::loadStarted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "loadStarted()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QWebEngineViewSlots::loadProgress(int progress)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "loadProgress(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
     PHB_ITEM pprogress = hb_itemPutNI(NULL, progress);
 
@@ -61,8 +59,7 @@ void QWebEngineViewSlots::loadFinished(bool b)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "loadFinished(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
     PHB_ITEM pb = hb_itemPutL(NULL, b);
 
@@ -81,8 +78,7 @@ void QWebEngineViewSlots::titleChanged(const QString &title)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "titleChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
     PHB_ITEM ptitle = hb_itemPutC(NULL, QSTRINGTOSTRING(title));
 
@@ -101,8 +97,7 @@ void QWebEngineViewSlots::selectionChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -119,8 +114,7 @@ void QWebEngineViewSlots::urlChanged(const QUrl &url)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "urlChanged(QUrl)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
     PHB_ITEM purl = Qt5xHb::Signals_return_object((void *)&url, "QURL");
 
@@ -139,8 +133,7 @@ void QWebEngineViewSlots::iconUrlChanged(const QUrl &url)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "iconUrlChanged(QUrl)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBENGINEVIEW");
     PHB_ITEM purl = Qt5xHb::Signals_return_object((void *)&url, "QURL");
 
@@ -160,8 +153,7 @@ void QWebEngineViewSlots_connect_signal(const QString &signal, const QString &sl
   if (obj != NULL) {
     QWebEngineViewSlots *s = QCoreApplication::instance()->findChild<QWebEngineViewSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QWebEngineViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
