@@ -49,16 +49,13 @@ RETURN
 
 HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomDocumentFragment()
     */
     QDomDocumentFragment *obj = new QDomDocumentFragment();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1)) {
     /*
     QDomDocumentFragment( const QDomDocumentFragment &x )
     */
@@ -93,8 +90,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NODETYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

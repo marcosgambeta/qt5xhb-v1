@@ -82,32 +82,25 @@ RETURN
 
 HB_FUNC_STATIC(QDOMDOCUMENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomDocument()
     */
     QDomDocument *obj = new QDomDocument();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QDomDocument( const QString &name )
     */
     QDomDocument *obj = new QDomDocument(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1)) {
     /*
     QDomDocument( const QDomDocumentType &doctype )
     */
     QDomDocument *obj = new QDomDocument(*PQDOMDOCUMENTTYPE(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMDOCUMENT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMDOCUMENT(1)) {
     /*
     QDomDocument( const QDomDocument &x )
     */
@@ -142,8 +135,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEATTRIBUTE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QDomAttr *ptr = new QDomAttr(obj->createAttribute(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMATTR", true);
@@ -164,8 +156,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEATTRIBUTENS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
       QDomAttr *ptr = new QDomAttr(obj->createAttributeNS(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDOMATTR", true);
@@ -186,8 +177,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATECDATASECTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QDomCDATASection *ptr = new QDomCDATASection(obj->createCDATASection(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMCDATASECTION", true);
@@ -208,8 +198,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATECOMMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QDomComment *ptr = new QDomComment(obj->createComment(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMCOMMENT", true);
@@ -230,8 +219,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDomDocumentFragment *ptr = new QDomDocumentFragment(obj->createDocumentFragment());
       Qt5xHb::createReturnClass(ptr, "QDOMDOCUMENTFRAGMENT", true);
@@ -252,8 +240,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEELEMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QDomElement *ptr = new QDomElement(obj->createElement(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMELEMENT", true);
@@ -274,8 +261,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEELEMENTNS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
       QDomElement *ptr = new QDomElement(obj->createElementNS(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDOMELEMENT", true);
@@ -296,8 +282,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEENTITYREFERENCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QDomEntityReference *ptr = new QDomEntityReference(obj->createEntityReference(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMENTITYREFERENCE", true);
@@ -318,8 +303,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
       QDomProcessingInstruction *ptr =
           new QDomProcessingInstruction(obj->createProcessingInstruction(PQSTRING(1), PQSTRING(2)));
@@ -341,8 +325,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATETEXTNODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QDomText *ptr = new QDomText(obj->createTextNode(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMTEXT", true);
@@ -363,8 +346,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_DOCTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDomDocumentType *ptr = new QDomDocumentType(obj->doctype());
       Qt5xHb::createReturnClass(ptr, "QDOMDOCUMENTTYPE", true);
@@ -385,8 +367,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_DOCUMENTELEMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDomElement *ptr = new QDomElement(obj->documentElement());
       Qt5xHb::createReturnClass(ptr, "QDOMELEMENT", true);
@@ -407,8 +388,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTBYID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QDomElement *ptr = new QDomElement(obj->elementById(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMELEMENT", true);
@@ -429,8 +409,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTSBYTAGNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QDomNodeList *ptr = new QDomNodeList(obj->elementsByTagName(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODELIST", true);
@@ -451,8 +430,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTSBYTAGNAMENS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
       QDomNodeList *ptr = new QDomNodeList(obj->elementsByTagNameNS(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODELIST", true);
@@ -473,8 +451,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_IMPLEMENTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDomImplementation *ptr = new QDomImplementation(obj->implementation());
       Qt5xHb::createReturnClass(ptr, "QDOMIMPLEMENTATION", true);
@@ -495,8 +472,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_IMPORTNODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQDOMNODE(1) && HB_ISLOG(2))
-    {
+    if (ISNUMPAR(2) && ISQDOMNODE(1) && HB_ISLOG(2)) {
 #endif
       QDomNode *ptr = new QDomNode(obj->importNode(*PQDOMNODE(1), PBOOL(2)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
@@ -517,8 +493,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_NODETYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -532,139 +507,116 @@ HB_FUNC_STATIC(QDOMDOCUMENT_NODETYPE)
 HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
 {
   if (ISBETWEEN(2, 5) && ISQBYTEARRAY(1) && HB_ISLOG(2) && ISCHARORNIL(3) &&
-      ISNUMORNIL(4) && ISNUMORNIL(5))
-  {
+      ISNUMORNIL(4) && ISNUMORNIL(5)) {
     /*
     bool setContent( const QByteArray &data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int
     * errorColumn = 0 )
     */
     QDomDocument *obj = (QDomDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       int par4;
       int par5;
       RBOOL(obj->setContent(*PQBYTEARRAY(1), PBOOL(2), NULL, &par4, &par5));
       hb_storni(par4, 4);
       hb_storni(par5, 5);
     }
-  }
-  else if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISLOG(2) && ISCHARORNIL(3) &&
-           ISNUMORNIL(4) && ISNUMORNIL(5))
-  {
+  } else if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISLOG(2) && ISCHARORNIL(3) &&
+           ISNUMORNIL(4) && ISNUMORNIL(5)) {
     /*
     bool setContent( const QString &text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int *
     errorColumn = 0 )
     */
     QDomDocument *obj = (QDomDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       int par4;
       int par5;
       RBOOL(obj->setContent(PQSTRING(1), PBOOL(2), NULL, &par4, &par5));
       hb_storni(par4, 4);
       hb_storni(par5, 5);
     }
-  }
-  else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISLOG(2) && ISCHARORNIL(3) &&
-           ISNUMORNIL(4) && ISNUMORNIL(5))
-  {
+  } else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISLOG(2) && ISCHARORNIL(3) &&
+           ISNUMORNIL(4) && ISNUMORNIL(5)) {
     /*
     bool setContent( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int *
     errorColumn = 0 )
     */
     QDomDocument *obj = (QDomDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       int par4;
       int par5;
       RBOOL(obj->setContent(PQIODEVICE(1), PBOOL(2), NULL, &par4, &par5));
       hb_storni(par4, 4);
       hb_storni(par5, 5);
     }
-  }
-  else if (ISBETWEEN(2, 5) && ISQXMLINPUTSOURCE(1) && HB_ISLOG(2) && ISCHARORNIL(3) &&
-           ISNUMORNIL(4) && ISNUMORNIL(5))
-  {
+  } else if (ISBETWEEN(2, 5) && ISQXMLINPUTSOURCE(1) && HB_ISLOG(2) && ISCHARORNIL(3) &&
+           ISNUMORNIL(4) && ISNUMORNIL(5)) {
     /*
     bool setContent( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0,
     int * errorColumn = 0 )
     */
     QDomDocument *obj = (QDomDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       int par4;
       int par5;
       RBOOL(obj->setContent(PQXMLINPUTSOURCE(1), PBOOL(2), NULL, &par4, &par5));
       hb_storni(par4, 4);
       hb_storni(par5, 5);
     }
-  }
-  else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4))
-  {
+  } else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3) &&
+           ISNUMORNIL(4)) {
     /*
     bool setContent( const QString &text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
     */
     QDomDocument *obj = (QDomDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       int par3;
       int par4;
       RBOOL(obj->setContent(PQSTRING(1), NULL, &par3, &par4));
       hb_storni(par3, 3);
       hb_storni(par4, 4);
     }
-  }
-  else if (ISBETWEEN(1, 4) && ISQBYTEARRAY(1) && ISCHARORNIL(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4))
-  {
+  } else if (ISBETWEEN(1, 4) && ISQBYTEARRAY(1) && ISCHARORNIL(2) && ISNUMORNIL(3) &&
+           ISNUMORNIL(4)) {
     /*
     bool setContent( const QByteArray &buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
     */
     QDomDocument *obj = (QDomDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       int par3;
       int par4;
       RBOOL(obj->setContent(*PQBYTEARRAY(1), NULL, &par3, &par4));
       hb_storni(par3, 3);
       hb_storni(par4, 4);
     }
-  }
-  else if (ISBETWEEN(1, 4) && ISQIODEVICE(1) && ISCHARORNIL(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4))
-  {
+  } else if (ISBETWEEN(1, 4) && ISQIODEVICE(1) && ISCHARORNIL(2) && ISNUMORNIL(3) &&
+           ISNUMORNIL(4)) {
     /*
     bool setContent( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
     */
     QDomDocument *obj = (QDomDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       int par3;
       int par4;
       RBOOL(obj->setContent(PQIODEVICE(1), NULL, &par3, &par4));
       hb_storni(par3, 3);
       hb_storni(par4, 4);
     }
-  }
-  else if (ISBETWEEN(1, 4) && ISQXMLINPUTSOURCE(1) && ISCHARORNIL(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4))
-  {
+  } else if (ISBETWEEN(1, 4) && ISQXMLINPUTSOURCE(1) && ISCHARORNIL(2) && ISNUMORNIL(3) &&
+           ISNUMORNIL(4)) {
     /*
     bool setContent( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int *
     errorColumn = 0 )
     */
     QDomDocument *obj = (QDomDocument *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       int par4;
       int par5;
       RBOOL(obj->setContent(PQXMLINPUTSOURCE(1), PQXMLREADER(2), NULL, &par4, &par5));
@@ -685,8 +637,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_TOBYTEARRAY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toByteArray(OPINT(1, 1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -707,8 +658,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_TOSTRING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRING(obj->toString(OPINT(1, 1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -55,16 +55,13 @@ RETURN
 
 HB_FUNC_STATIC(QDOMATTR_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomAttr()
     */
     QDomAttr *obj = new QDomAttr();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMATTR(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMATTR(1)) {
     /*
     QDomAttr( const QDomAttr &x )
     */
@@ -99,8 +96,7 @@ HB_FUNC_STATIC(QDOMATTR_NAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,8 +116,7 @@ HB_FUNC_STATIC(QDOMATTR_NODETYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +136,7 @@ HB_FUNC_STATIC(QDOMATTR_OWNERELEMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDomElement *ptr = new QDomElement(obj->ownerElement());
       Qt5xHb::createReturnClass(ptr, "QDOMELEMENT", true);
@@ -163,8 +157,7 @@ HB_FUNC_STATIC(QDOMATTR_SETVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setValue(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +179,7 @@ HB_FUNC_STATIC(QDOMATTR_SPECIFIED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->specified());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +199,7 @@ HB_FUNC_STATIC(QDOMATTR_VALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

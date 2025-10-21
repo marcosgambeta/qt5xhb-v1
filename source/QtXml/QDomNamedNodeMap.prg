@@ -70,16 +70,13 @@ RETURN
 
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomNamedNodeMap()
     */
     QDomNamedNodeMap *obj = new QDomNamedNodeMap();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMNAMEDNODEMAP(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMNAMEDNODEMAP(1)) {
     /*
     QDomNamedNodeMap( const QDomNamedNodeMap &n )
     */
@@ -114,8 +111,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_CONTAINS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->contains(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,8 +131,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_COUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +151,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_ISEMPTY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +171,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_ITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QDomNode *ptr = new QDomNode(obj->item(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
@@ -199,8 +192,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_LENGTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->length());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,8 +212,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NAMEDITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QDomNode *ptr = new QDomNode(obj->namedItem(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
@@ -242,8 +233,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NAMEDITEMNS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
       QDomNode *ptr = new QDomNode(obj->namedItemNS(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
@@ -264,8 +254,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_REMOVENAMEDITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QDomNode *ptr = new QDomNode(obj->removeNamedItem(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
@@ -286,8 +275,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
       QDomNode *ptr = new QDomNode(obj->removeNamedItemNS(PQSTRING(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
@@ -308,8 +296,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SETNAMEDITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDOMNODE(1))
-    {
+    if (ISNUMPAR(1) && ISQDOMNODE(1)) {
 #endif
       QDomNode *ptr = new QDomNode(obj->setNamedItem(*PQDOMNODE(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
@@ -330,8 +317,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SETNAMEDITEMNS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDOMNODE(1))
-    {
+    if (ISNUMPAR(1) && ISQDOMNODE(1)) {
 #endif
       QDomNode *ptr = new QDomNode(obj->setNamedItemNS(*PQDOMNODE(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
@@ -352,8 +338,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->size());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,17 +353,14 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -411,8 +393,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

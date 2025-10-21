@@ -50,16 +50,13 @@ RETURN
 
 HB_FUNC_STATIC(QDOMTEXT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomText()
     */
     QDomText *obj = new QDomText();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMTEXT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMTEXT(1)) {
     /*
     QDomText( const QDomText &x )
     */
@@ -94,8 +91,7 @@ HB_FUNC_STATIC(QDOMTEXT_NODETYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,8 +111,7 @@ HB_FUNC_STATIC(QDOMTEXT_SPLITTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QDomText *ptr = new QDomText(obj->splitText(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QDOMTEXT", true);

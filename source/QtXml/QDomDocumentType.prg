@@ -56,16 +56,13 @@ RETURN
 
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDomDocumentType()
     */
     QDomDocumentType *obj = new QDomDocumentType();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1)) {
     /*
     QDomDocumentType( const QDomDocumentType &n )
     */
@@ -100,8 +97,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_ENTITIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDomNamedNodeMap *ptr = new QDomNamedNodeMap(obj->entities());
       Qt5xHb::createReturnClass(ptr, "QDOMNAMEDNODEMAP", true);
@@ -122,8 +118,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_INTERNALSUBSET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->internalSubset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,8 +138,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +158,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NODETYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->nodeType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,8 +178,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NOTATIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDomNamedNodeMap *ptr = new QDomNamedNodeMap(obj->notations());
       Qt5xHb::createReturnClass(ptr, "QDOMNAMEDNODEMAP", true);
@@ -207,8 +199,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_PUBLICID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->publicId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +219,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_SYSTEMID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->systemId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
