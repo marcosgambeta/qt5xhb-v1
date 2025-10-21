@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_CANCHANGEPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->canChangeProperty((QCameraControl::PropertyChangeType)hb_parni(1), (QCamera::Status)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_CAPTUREMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->captureMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,8 +128,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_ISCAPTUREMODESUPPORTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isCaptureModeSupported((QCamera::CaptureModes)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +148,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_SETCAPTUREMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCaptureMode((QCamera::CaptureModes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +170,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_SETSTATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setState((QCamera::State)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +192,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_STATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +212,7 @@ HB_FUNC_STATIC(QCAMERACONTROL_STATUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_PREFERREDFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAudioFormat *ptr = new QAudioFormat(obj->preferredFormat());
       Qt5xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_ISFORMATSUPPORTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1)) {
 #endif
       RBOOL(obj->isFormatSupported(*PQAUDIOFORMAT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,8 +124,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_DEVICENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->deviceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +144,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDCODECS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->supportedCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,8 +164,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLERATES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<int> list = obj->supportedSampleRates();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -190,8 +185,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<int> list = obj->supportedChannelCounts();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -212,8 +206,7 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<int> list = obj->supportedSampleSizes();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -234,13 +227,11 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDBYTEORDERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QAudioFormat::Endian> list = obj->supportedByteOrders();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for (int i = 0; i < list.count(); i++)
-      {
+      for (int i = 0; i < list.count(); i++) {
         PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -263,13 +254,11 @@ HB_FUNC_STATIC(QABSTRACTAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QAudioFormat::SampleType> list = obj->supportedSampleTypes();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for (int i = 0; i < list.count(); i++)
-      {
+      for (int i = 0; i < list.count(); i++) {
         PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);

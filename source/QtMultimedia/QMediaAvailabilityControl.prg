@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QMEDIAAVAILABILITYCONTROL_AVAILABILITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->availability());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

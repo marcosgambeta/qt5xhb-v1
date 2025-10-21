@@ -22,8 +22,7 @@ void QCameraFocusSlots::digitalZoomChanged(qreal value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "digitalZoomChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
     PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
@@ -40,8 +39,7 @@ void QCameraFocusSlots::focusZonesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "focusZonesChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -56,8 +54,7 @@ void QCameraFocusSlots::maximumDigitalZoomChanged(qreal zoom)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maximumDigitalZoomChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
     PHB_ITEM pzoom = hb_itemPutND(NULL, zoom);
 
@@ -74,8 +71,7 @@ void QCameraFocusSlots::maximumOpticalZoomChanged(qreal zoom)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maximumOpticalZoomChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
     PHB_ITEM pzoom = hb_itemPutND(NULL, zoom);
 
@@ -92,8 +88,7 @@ void QCameraFocusSlots::opticalZoomChanged(qreal value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "opticalZoomChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
     PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
@@ -111,8 +106,7 @@ void QCameraFocusSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QCameraFocusSlots *s = QCoreApplication::instance()->findChild<QCameraFocusSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCameraFocusSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -68,16 +68,13 @@ RETURN
 
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QImageEncoderSettings()
     */
     QImageEncoderSettings *obj = new QImageEncoderSettings();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1))
-  {
+  } else if (ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1)) {
     /*
     QImageEncoderSettings( const QImageEncoderSettings &other )
     */
@@ -115,8 +112,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_ISNULL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,8 +132,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_CODEC)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->codec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,8 +152,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETCODEC)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setCodec(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +174,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_RESOLUTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->resolution());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -195,29 +188,24 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_RESOLUTION)
 
 HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETRESOLUTION)
 {
-  if (ISNUMPAR(1) && ISQSIZE(1))
-  {
+  if (ISNUMPAR(1) && ISQSIZE(1)) {
     /*
     void setResolution( const QSize &)
     */
     QImageEncoderSettings *obj = (QImageEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setResolution(*PQSIZE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void setResolution( int width, int height )
     */
     QImageEncoderSettings *obj = (QImageEncoderSettings *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setResolution(PINT(1), PINT(2));
     }
 
@@ -236,8 +224,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_QUALITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->quality());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +244,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETQUALITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setQuality((QMultimedia::EncodingQuality)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,8 +266,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_ENCODINGOPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->encodingOption(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -302,8 +287,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETENCODINGOPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
 #endif
       obj->setEncodingOption(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,17 +304,14 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -363,8 +344,7 @@ HB_FUNC_STATIC(QIMAGEENCODERSETTINGS_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

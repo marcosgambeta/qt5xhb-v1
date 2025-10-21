@@ -93,8 +93,7 @@ HB_FUNC_STATIC(QRADIODATACONTROL_STATIONID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->stationId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,8 +113,7 @@ HB_FUNC_STATIC(QRADIODATACONTROL_PROGRAMTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->programType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,8 +133,7 @@ HB_FUNC_STATIC(QRADIODATACONTROL_PROGRAMTYPENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->programTypeName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +153,7 @@ HB_FUNC_STATIC(QRADIODATACONTROL_STATIONNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->stationName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +173,7 @@ HB_FUNC_STATIC(QRADIODATACONTROL_RADIOTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->radioText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +193,7 @@ HB_FUNC_STATIC(QRADIODATACONTROL_SETALTERNATIVEFREQUENCIESENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAlternativeFrequenciesEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,8 +215,7 @@ HB_FUNC_STATIC(QRADIODATACONTROL_ISALTERNATIVEFREQUENCIESENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAlternativeFrequenciesEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +235,7 @@ HB_FUNC_STATIC(QRADIODATACONTROL_ERROR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,8 +255,7 @@ HB_FUNC_STATIC(QRADIODATACONTROL_ERRORSTRING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->errorString());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

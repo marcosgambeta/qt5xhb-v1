@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_ISACTIVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isActive(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,8 +105,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_METADATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       QVariant *ptr = new QVariant(obj->metaData(PINT(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_SETACTIVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
 #endif
       obj->setActive(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +148,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_STREAMCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->streamCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +168,7 @@ HB_FUNC_STATIC(QMEDIASTREAMSCONTROL_STREAMTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RENUM(obj->streamType(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

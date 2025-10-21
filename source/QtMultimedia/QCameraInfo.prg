@@ -68,8 +68,7 @@ RETURN
 
 HB_FUNC_STATIC(QCAMERAINFO_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQBYTEARRAY(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQBYTEARRAY(1)) {
     /*
     QCameraInfo( const QByteArray &name = QByteArray() )
     */
@@ -77,9 +76,7 @@ HB_FUNC_STATIC(QCAMERAINFO_NEW)
     QCameraInfo *obj = new QCameraInfo(HB_ISNIL(1) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQCAMERA(1))
-  {
+  } else if (ISNUMPAR(1) && ISQCAMERA(1)) {
     /*
     QCameraInfo( const QCamera &camera )
     */
@@ -87,9 +84,7 @@ HB_FUNC_STATIC(QCAMERAINFO_NEW)
     QCameraInfo *obj = new QCameraInfo(*PQCAMERA(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQCAMERAINFO(1))
-  {
+  } else if (ISNUMPAR(1) && ISQCAMERAINFO(1)) {
     /*
     QCameraInfo( const QCameraInfo &other )
     */
@@ -132,8 +127,7 @@ HB_FUNC_STATIC(QCAMERAINFO_ISNULL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,8 +149,7 @@ HB_FUNC_STATIC(QCAMERAINFO_DEVICENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->deviceName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,8 +171,7 @@ HB_FUNC_STATIC(QCAMERAINFO_DESCRIPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->description());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,8 +193,7 @@ HB_FUNC_STATIC(QCAMERAINFO_POSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->position());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +215,7 @@ HB_FUNC_STATIC(QCAMERAINFO_ORIENTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,8 +234,7 @@ HB_FUNC_STATIC(QCAMERAINFO_DEFAULTCAMERA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QCameraInfo *ptr = new QCameraInfo(QCameraInfo::defaultCamera());
     Qt5xHb::createReturnClass(ptr, "QCAMERAINFO", true);
@@ -264,17 +253,14 @@ HB_FUNC_STATIC(QCAMERAINFO_AVAILABLECAMERAS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
     QList<QCameraInfo> list = QCameraInfo::availableCameras(
         HB_ISNIL(1) ? (QCamera::Position)QCamera::UnspecifiedPosition : (QCamera::Position)hb_parni(1));
     PHB_DYNS pDynSym = hb_dynsymFindName("QCAMERAINFO");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
-      for (int i = 0; i < list.count(); i++)
-      {
+    if (pDynSym != NULL) {
+      for (int i = 0; i < list.count(); i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);

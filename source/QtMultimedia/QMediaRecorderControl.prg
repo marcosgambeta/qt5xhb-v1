@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_APPLYSETTINGS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->applySettings();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_DURATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->duration());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,8 +140,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_ISMUTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMuted());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +160,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_OUTPUTLOCATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUrl *ptr = new QUrl(obj->outputLocation());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -185,8 +181,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETOUTPUTLOCATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       RBOOL(obj->setOutputLocation(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +201,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_STATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +221,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_STATUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +241,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_VOLUME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->volume());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +261,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETMUTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setMuted(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +283,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETSTATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setState((QMediaRecorder::State)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,8 +305,7 @@ HB_FUNC_STATIC(QMEDIARECORDERCONTROL_SETVOLUME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setVolume(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

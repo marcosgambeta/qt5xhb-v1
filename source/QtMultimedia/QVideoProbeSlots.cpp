@@ -22,8 +22,7 @@ void QVideoProbeSlots::flush()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flush()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOPROBE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QVideoProbeSlots::videoFrameProbed(const QVideoFrame &frame)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "videoFrameProbed(QVideoFrame)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOPROBE");
     PHB_ITEM pframe = Qt5xHb::Signals_return_object((void *)&frame, "QVIDEOFRAME");
 
@@ -57,8 +55,7 @@ void QVideoProbeSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QVideoProbeSlots *s = QCoreApplication::instance()->findChild<QVideoProbeSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QVideoProbeSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

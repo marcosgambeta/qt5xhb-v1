@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ACTUALVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->actualValue((QCameraExposureControl::ExposureParameter)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isParameterSupported((QCameraExposureControl::ExposureParameter)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,8 +127,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_REQUESTEDVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->requestedValue((QCameraExposureControl::ExposureParameter)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -151,8 +148,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SETVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
       RBOOL(obj->setValue((QCameraExposureControl::ExposureParameter)hb_parni(1), *PQVARIANT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,17 +169,14 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
 #endif
       bool par2;
       QVariantList list = obj->supportedParameterRange((QCameraExposureControl::ExposureParameter)hb_parni(1), &par2);
       PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -198,9 +191,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);

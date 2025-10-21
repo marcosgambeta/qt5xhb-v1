@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->activeInput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,13 +104,11 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QString> list = obj->availableInputs();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for (int i = 0; i < list.count(); i++)
-      {
+      for (int i = 0; i < list.count(); i++) {
         PHB_ITEM pItem = hb_itemPutC(NULL, list[i].toLatin1().data());
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -134,8 +131,7 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->defaultInput());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,8 +151,7 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQSTRING(obj->inputDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +171,7 @@ HB_FUNC_STATIC(QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setActiveInput(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

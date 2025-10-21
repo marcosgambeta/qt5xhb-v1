@@ -96,8 +96,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_APERTURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->aperture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,8 +116,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SHUTTERSPEED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->shutterSpeed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,8 +136,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISOSENSITIVITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->isoSensitivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,8 +156,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_EXPOSURECOMPENSATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->exposureCompensation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +176,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETEXPOSURECOMPENSATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setExposureCompensation(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,8 +198,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISFLASHREADY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFlashReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +218,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_FLASHMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flashMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,8 +238,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETFLASHMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFlashMode((QCameraExposure::FlashModes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,8 +260,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_EXPOSUREMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->exposureMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +280,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETEXPOSUREMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setExposureMode((QCameraExposure::ExposureMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,8 +302,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_METERINGMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->meteringMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,8 +322,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMETERINGMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMeteringMode((QCameraExposure::MeteringMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,8 +344,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISAVAILABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,8 +364,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isExposureModeSupported((QCameraExposure::ExposureMode)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,8 +384,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISFLASHMODESUPPORTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isFlashModeSupported((QCameraExposure::FlashModes)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -419,8 +404,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isMeteringModeSupported((QCameraExposure::MeteringMode)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,8 +424,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_REQUESTEDAPERTURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->requestedAperture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -461,8 +444,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_REQUESTEDISOSENSITIVITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->requestedIsoSensitivity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,8 +464,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_REQUESTEDSHUTTERSPEED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->requestedShutterSpeed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -503,8 +484,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETSPOTMETERINGPOINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINTF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINTF(1)) {
 #endif
       obj->setSpotMeteringPoint(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -526,8 +506,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SPOTMETERINGPOINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->spotMeteringPoint());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -548,8 +527,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SUPPORTEDAPERTURES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
 #endif
       bool par1;
       QList<qreal> list = obj->supportedApertures(&par1);
@@ -572,8 +550,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
 #endif
       bool par1;
       QList<int> list = obj->supportedIsoSensitivities(&par1);
@@ -596,8 +573,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
 #endif
       bool par1;
       QList<qreal> list = obj->supportedShutterSpeeds(&par1);
@@ -620,8 +596,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETAUTOAPERTURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setAutoAperture();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -643,8 +618,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETAUTOISOSENSITIVITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setAutoIsoSensitivity();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -666,8 +640,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETAUTOSHUTTERSPEED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->setAutoShutterSpeed();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -689,8 +662,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMANUALAPERTURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setManualAperture(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -712,8 +684,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMANUALISOSENSITIVITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setManualIsoSensitivity(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -735,8 +706,7 @@ HB_FUNC_STATIC(QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setManualShutterSpeed(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

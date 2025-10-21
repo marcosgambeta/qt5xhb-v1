@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QMEDIASERVICE_RELEASECONTROL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMEDIACONTROL(1))
-    {
+    if (ISNUMPAR(1) && ISQMEDIACONTROL(1)) {
 #endif
       obj->releaseControl(PQMEDIACONTROL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,8 +101,7 @@ HB_FUNC_STATIC(QMEDIASERVICE_REQUESTCONTROL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QMediaControl *ptr = obj->requestControl(PCONSTCHAR(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QMEDIACONTROL");

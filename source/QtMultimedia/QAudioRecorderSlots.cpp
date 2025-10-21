@@ -22,8 +22,7 @@ void QAudioRecorderSlots::audioInputChanged(const QString &name)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "audioInputChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIORECORDER");
     PHB_ITEM pname = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
 
@@ -40,8 +39,7 @@ void QAudioRecorderSlots::availableAudioInputsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availableAudioInputsChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIORECORDER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -57,8 +55,7 @@ void QAudioRecorderSlots_connect_signal(const QString &signal, const QString &sl
   if (obj != NULL) {
     QAudioRecorderSlots *s = QCoreApplication::instance()->findChild<QAudioRecorderSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAudioRecorderSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

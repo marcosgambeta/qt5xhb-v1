@@ -22,8 +22,7 @@ void QCameraExposureControlSlots::actualValueChanged(int parameter)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "actualValueChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURECONTROL");
     PHB_ITEM pparameter = hb_itemPutNI(NULL, parameter);
 
@@ -40,8 +39,7 @@ void QCameraExposureControlSlots::parameterRangeChanged(int parameter)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "parameterRangeChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURECONTROL");
     PHB_ITEM pparameter = hb_itemPutNI(NULL, parameter);
 
@@ -58,8 +56,7 @@ void QCameraExposureControlSlots::requestedValueChanged(int parameter)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "requestedValueChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURECONTROL");
     PHB_ITEM pparameter = hb_itemPutNI(NULL, parameter);
 
@@ -77,8 +74,7 @@ void QCameraExposureControlSlots_connect_signal(const QString &signal, const QSt
   if (obj != NULL) {
     QCameraExposureControlSlots *s = QCoreApplication::instance()->findChild<QCameraExposureControlSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCameraExposureControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

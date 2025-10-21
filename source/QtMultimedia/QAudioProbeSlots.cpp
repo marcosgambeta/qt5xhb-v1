@@ -22,8 +22,7 @@ void QAudioProbeSlots::audioBufferProbed(const QAudioBuffer &buffer)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "audioBufferProbed(QAudioBuffer)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOPROBE");
     PHB_ITEM pbuffer = Qt5xHb::Signals_return_object((void *)&buffer, "QAUDIOBUFFER");
 
@@ -40,8 +39,7 @@ void QAudioProbeSlots::flush()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flush()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOPROBE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -57,8 +55,7 @@ void QAudioProbeSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QAudioProbeSlots *s = QCoreApplication::instance()->findChild<QAudioProbeSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAudioProbeSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

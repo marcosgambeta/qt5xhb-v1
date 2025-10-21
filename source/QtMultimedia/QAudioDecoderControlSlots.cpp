@@ -22,8 +22,7 @@ void QAudioDecoderControlSlots::bufferAvailableChanged(bool available)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "bufferAvailableChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIODECODERCONTROL");
     PHB_ITEM pavailable = hb_itemPutL(NULL, available);
 
@@ -40,8 +39,7 @@ void QAudioDecoderControlSlots::bufferReady()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "bufferReady()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIODECODERCONTROL");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -56,8 +54,7 @@ void QAudioDecoderControlSlots::durationChanged(qint64 duration)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "durationChanged(qint64)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIODECODERCONTROL");
     PHB_ITEM pduration = hb_itemPutNLL(NULL, duration);
 
@@ -74,8 +71,7 @@ void QAudioDecoderControlSlots::error(int error, const QString &errorString)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(int,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIODECODERCONTROL");
     PHB_ITEM perror = hb_itemPutNI(NULL, error);
     PHB_ITEM perrorString = hb_itemPutC(NULL, QSTRINGTOSTRING(errorString));
@@ -94,8 +90,7 @@ void QAudioDecoderControlSlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIODECODERCONTROL");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -110,8 +105,7 @@ void QAudioDecoderControlSlots::formatChanged(const QAudioFormat &format)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "formatChanged(QAudioFormat)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIODECODERCONTROL");
     PHB_ITEM pformat = Qt5xHb::Signals_return_object((void *)&format, "QAUDIOFORMAT");
 
@@ -128,8 +122,7 @@ void QAudioDecoderControlSlots::positionChanged(qint64 position)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "positionChanged(qint64)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIODECODERCONTROL");
     PHB_ITEM pposition = hb_itemPutNLL(NULL, position);
 
@@ -146,8 +139,7 @@ void QAudioDecoderControlSlots::sourceChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sourceChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIODECODERCONTROL");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -162,8 +154,7 @@ void QAudioDecoderControlSlots::stateChanged(QAudioDecoder::State state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QAudioDecoder::State)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIODECODERCONTROL");
     PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
@@ -181,8 +172,7 @@ void QAudioDecoderControlSlots_connect_signal(const QString &signal, const QStri
   if (obj != NULL) {
     QAudioDecoderControlSlots *s = QCoreApplication::instance()->findChild<QAudioDecoderControlSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAudioDecoderControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

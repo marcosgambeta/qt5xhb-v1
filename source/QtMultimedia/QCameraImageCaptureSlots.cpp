@@ -22,8 +22,7 @@ void QCameraImageCaptureSlots::bufferFormatChanged(QVideoFrame::PixelFormat form
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "bufferFormatChanged(QVideoFrame::PixelFormat)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAIMAGECAPTURE");
     PHB_ITEM pformat = hb_itemPutNI(NULL, static_cast<int>(format));
 
@@ -41,8 +40,7 @@ void QCameraImageCaptureSlots::captureDestinationChanged(QCameraImageCapture::Ca
   PHB_ITEM cb =
       Qt5xHb::Signals_return_codeblock(object, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAIMAGECAPTURE");
     PHB_ITEM pdestination = hb_itemPutNI(NULL, static_cast<int>(destination));
 
@@ -59,8 +57,7 @@ void QCameraImageCaptureSlots::error(int id, QCameraImageCapture::Error error, c
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(int,QCameraImageCapture::Error,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAIMAGECAPTURE");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
@@ -81,8 +78,7 @@ void QCameraImageCaptureSlots::imageAvailable(int id, const QVideoFrame &buffer)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "imageAvailable(int,QVideoFrame)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAIMAGECAPTURE");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
     PHB_ITEM pbuffer = Qt5xHb::Signals_return_object((void *)&buffer, "QVIDEOFRAME");
@@ -101,8 +97,7 @@ void QCameraImageCaptureSlots::imageCaptured(int id, const QImage &preview)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "imageCaptured(int,QImage)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAIMAGECAPTURE");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
     PHB_ITEM ppreview = Qt5xHb::Signals_return_object((void *)&preview, "QIMAGE");
@@ -121,8 +116,7 @@ void QCameraImageCaptureSlots::imageExposed(int id)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "imageExposed(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAIMAGECAPTURE");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
 
@@ -139,8 +133,7 @@ void QCameraImageCaptureSlots::imageMetadataAvailable(int id, const QString &key
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "imageMetadataAvailable(int,QString,QVariant)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAIMAGECAPTURE");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
     PHB_ITEM pkey = hb_itemPutC(NULL, QSTRINGTOSTRING(key));
@@ -161,8 +154,7 @@ void QCameraImageCaptureSlots::imageSaved(int id, const QString &fileName)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "imageSaved(int,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAIMAGECAPTURE");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
     PHB_ITEM pfileName = hb_itemPutC(NULL, QSTRINGTOSTRING(fileName));
@@ -181,8 +173,7 @@ void QCameraImageCaptureSlots::readyForCaptureChanged(bool ready)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "readyForCaptureChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAIMAGECAPTURE");
     PHB_ITEM pready = hb_itemPutL(NULL, ready);
 
@@ -200,8 +191,7 @@ void QCameraImageCaptureSlots_connect_signal(const QString &signal, const QStrin
   if (obj != NULL) {
     QCameraImageCaptureSlots *s = QCoreApplication::instance()->findChild<QCameraImageCaptureSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCameraImageCaptureSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

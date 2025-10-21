@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QNetworkConfiguration *ptr = new QNetworkConfiguration(obj->currentConfiguration());
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
@@ -103,14 +102,12 @@ HB_FUNC_STATIC(QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QList<QNetworkConfiguration> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << *(QNetworkConfiguration *)hb_itemGetPtr(
             hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0));
       }

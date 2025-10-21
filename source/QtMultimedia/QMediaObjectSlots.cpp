@@ -22,8 +22,7 @@ void QMediaObjectSlots::availabilityChanged(bool available)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availabilityChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pavailable = hb_itemPutL(NULL, available);
 
@@ -40,8 +39,7 @@ void QMediaObjectSlots::availabilityChanged(QMultimedia::AvailabilityStatus avai
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availabilityChanged(QMultimedia::AvailabilityStatus)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pavailability = hb_itemPutNI(NULL, static_cast<int>(availability));
 
@@ -58,8 +56,7 @@ void QMediaObjectSlots::metaDataAvailableChanged(bool available)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataAvailableChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pavailable = hb_itemPutL(NULL, available);
 
@@ -76,8 +73,7 @@ void QMediaObjectSlots::metaDataChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -92,8 +88,7 @@ void QMediaObjectSlots::metaDataChanged(const QString &key, const QVariant &valu
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataChanged(QString,QVariant)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pkey = hb_itemPutC(NULL, QSTRINGTOSTRING(key));
     PHB_ITEM pvalue = Qt5xHb::Signals_return_object((void *)&value, "QVARIANT");
@@ -112,8 +107,7 @@ void QMediaObjectSlots::notifyIntervalChanged(int milliseconds)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "notifyIntervalChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pmilliseconds = hb_itemPutNI(NULL, milliseconds);
 
@@ -131,8 +125,7 @@ void QMediaObjectSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QMediaObjectSlots *s = QCoreApplication::instance()->findChild<QMediaObjectSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QMediaObjectSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

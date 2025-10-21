@@ -22,8 +22,7 @@ void QMetaDataReaderControlSlots::metaDataChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMETADATAREADERCONTROL");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QMetaDataReaderControlSlots::metaDataChanged(const QString &key, const QVar
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataChanged(QString,QVariant)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMETADATAREADERCONTROL");
     PHB_ITEM pkey = hb_itemPutC(NULL, QSTRINGTOSTRING(key));
     PHB_ITEM pvalue = Qt5xHb::Signals_return_object((void *)&value, "QVARIANT");
@@ -58,8 +56,7 @@ void QMetaDataReaderControlSlots::metaDataAvailableChanged(bool available)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "metaDataAvailableChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMETADATAREADERCONTROL");
     PHB_ITEM pavailable = hb_itemPutL(NULL, available);
 
@@ -77,8 +74,7 @@ void QMetaDataReaderControlSlots_connect_signal(const QString &signal, const QSt
   if (obj != NULL) {
     QMetaDataReaderControlSlots *s = QCoreApplication::instance()->findChild<QMetaDataReaderControlSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QMetaDataReaderControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

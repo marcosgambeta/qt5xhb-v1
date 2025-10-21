@@ -22,8 +22,7 @@ void QAudioOutputSelectorControlSlots::activeOutputChanged(const QString &name)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activeOutputChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOOUTPUTSELECTORCONTROL");
     PHB_ITEM pname = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
 
@@ -40,8 +39,7 @@ void QAudioOutputSelectorControlSlots::availableOutputsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availableOutputsChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOOUTPUTSELECTORCONTROL");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -57,8 +55,7 @@ void QAudioOutputSelectorControlSlots_connect_signal(const QString &signal, cons
   if (obj != NULL) {
     QAudioOutputSelectorControlSlots *s = QCoreApplication::instance()->findChild<QAudioOutputSelectorControlSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAudioOutputSelectorControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

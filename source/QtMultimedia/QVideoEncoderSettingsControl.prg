@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1))
-    {
+    if (ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1)) {
 #endif
       obj->setVideoSettings(*PQVIDEOENCODERSETTINGS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQVIDEOENCODERSETTINGS(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && ISQVIDEOENCODERSETTINGS(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
 #endif
       bool par2;
       QList<qreal> list = obj->supportedFrameRates(*PQVIDEOENCODERSETTINGS(1), &par2);
@@ -133,17 +131,14 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQVIDEOENCODERSETTINGS(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && ISQVIDEOENCODERSETTINGS(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
 #endif
       bool par2;
       QList<QSize> list = obj->supportedResolutions(*PQVIDEOENCODERSETTINGS(1), &par2);
       PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -158,9 +153,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSIZE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -182,8 +175,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->supportedVideoCodecs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,8 +195,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RQSTRING(obj->videoCodecDescription(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +215,7 @@ HB_FUNC_STATIC(QVIDEOENCODERSETTINGSCONTROL_VIDEOSETTINGS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVideoEncoderSettings *ptr = new QVideoEncoderSettings(obj->videoSettings());
       Qt5xHb::createReturnClass(ptr, "QVIDEOENCODERSETTINGS", true);

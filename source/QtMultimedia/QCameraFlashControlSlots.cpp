@@ -22,8 +22,7 @@ void QCameraFlashControlSlots::flashReady(bool ready)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flashReady(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFLASHCONTROL");
     PHB_ITEM pready = hb_itemPutL(NULL, ready);
 
@@ -41,8 +40,7 @@ void QCameraFlashControlSlots_connect_signal(const QString &signal, const QStrin
   if (obj != NULL) {
     QCameraFlashControlSlots *s = QCoreApplication::instance()->findChild<QCameraFlashControlSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCameraFlashControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

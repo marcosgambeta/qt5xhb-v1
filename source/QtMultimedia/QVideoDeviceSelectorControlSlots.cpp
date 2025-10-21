@@ -22,8 +22,7 @@ void QVideoDeviceSelectorControlSlots::devicesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "devicesChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEODEVICESELECTORCONTROL");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QVideoDeviceSelectorControlSlots::selectedDeviceChanged(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectedDeviceChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEODEVICESELECTORCONTROL");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -56,8 +54,7 @@ void QVideoDeviceSelectorControlSlots::selectedDeviceChanged(const QString &name
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectedDeviceChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEODEVICESELECTORCONTROL");
     PHB_ITEM pname = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
 
@@ -75,8 +72,7 @@ void QVideoDeviceSelectorControlSlots_connect_signal(const QString &signal, cons
   if (obj != NULL) {
     QVideoDeviceSelectorControlSlots *s = QCoreApplication::instance()->findChild<QVideoDeviceSelectorControlSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QVideoDeviceSelectorControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

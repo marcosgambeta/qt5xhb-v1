@@ -24,8 +24,7 @@ void QCameraLocksControlSlots::lockStatusChanged(QCamera::LockType lock, QCamera
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(
       object, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERALOCKSCONTROL");
     PHB_ITEM plock = hb_itemPutNI(NULL, static_cast<int>(lock));
     PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
@@ -47,8 +46,7 @@ void QCameraLocksControlSlots_connect_signal(const QString &signal, const QStrin
   if (obj != NULL) {
     QCameraLocksControlSlots *s = QCoreApplication::instance()->findChild<QCameraLocksControlSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCameraLocksControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

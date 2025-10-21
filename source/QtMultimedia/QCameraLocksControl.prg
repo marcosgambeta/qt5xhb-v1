@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_LOCKSTATUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RENUM(obj->lockStatus((QCamera::LockType)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_SEARCHANDLOCK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->searchAndLock((QCamera::LockTypes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,8 +124,7 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_SUPPORTEDLOCKS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedLocks());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +144,7 @@ HB_FUNC_STATIC(QCAMERALOCKSCONTROL_UNLOCK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->unlock((QCamera::LockTypes)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -90,8 +90,7 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_CURRENTDIGITALZOOM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->currentDigitalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_CURRENTOPTICALZOOM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->currentOpticalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_MAXIMUMDIGITALZOOM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->maximumDigitalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_MAXIMUMOPTICALZOOM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->maximumOpticalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +170,7 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_REQUESTEDDIGITALZOOM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->requestedDigitalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +190,7 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_REQUESTEDOPTICALZOOM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->requestedOpticalZoom());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +210,7 @@ HB_FUNC_STATIC(QCAMERAZOOMCONTROL_ZOOMTO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->zoomTo(PQREAL(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

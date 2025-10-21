@@ -22,8 +22,7 @@ void QCameraSlots::captureModeChanged(QCamera::CaptureModes mode)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "captureModeChanged(QCamera::CaptureModes)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERA");
     PHB_ITEM pmode = hb_itemPutNI(NULL, static_cast<int>(mode));
 
@@ -40,8 +39,7 @@ void QCameraSlots::error(QCamera::Error value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QCamera::Error)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERA");
     PHB_ITEM pvalue = hb_itemPutNI(NULL, static_cast<int>(value));
 
@@ -58,8 +56,7 @@ void QCameraSlots::lockFailed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lockFailed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERA");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -75,8 +72,7 @@ void QCameraSlots::lockStatusChanged(QCamera::LockStatus status, QCamera::LockCh
   PHB_ITEM cb =
       Qt5xHb::Signals_return_codeblock(object, "lockStatusChanged(QCamera::LockStatus,QCamera::LockChangeReason)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERA");
     PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
     PHB_ITEM preason = hb_itemPutNI(NULL, static_cast<int>(reason));
@@ -97,8 +93,7 @@ void QCameraSlots::lockStatusChanged(QCamera::LockType lock, QCamera::LockStatus
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(
       object, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERA");
     PHB_ITEM plock = hb_itemPutNI(NULL, static_cast<int>(lock));
     PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
@@ -119,8 +114,7 @@ void QCameraSlots::locked()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "locked()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERA");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -135,8 +129,7 @@ void QCameraSlots::stateChanged(QCamera::State state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QCamera::State)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERA");
     PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
@@ -153,8 +146,7 @@ void QCameraSlots::statusChanged(QCamera::Status status)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QCamera::Status)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERA");
     PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
 
@@ -172,8 +164,7 @@ void QCameraSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QCameraSlots *s = QCoreApplication::instance()->findChild<QCameraSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCameraSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

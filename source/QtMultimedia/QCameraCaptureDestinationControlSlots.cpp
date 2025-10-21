@@ -24,8 +24,7 @@ void QCameraCaptureDestinationControlSlots::captureDestinationChanged(
   PHB_ITEM cb =
       Qt5xHb::Signals_return_codeblock(object, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERACAPTUREDESTINATIONCONTROL");
     PHB_ITEM pdestination = hb_itemPutNI(NULL, static_cast<int>(destination));
 
@@ -44,8 +43,7 @@ void QCameraCaptureDestinationControlSlots_connect_signal(const QString &signal,
     QCameraCaptureDestinationControlSlots *s =
         QCoreApplication::instance()->findChild<QCameraCaptureDestinationControlSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCameraCaptureDestinationControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

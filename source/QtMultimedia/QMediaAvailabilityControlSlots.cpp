@@ -22,8 +22,7 @@ void QMediaAvailabilityControlSlots::availabilityChanged(QMultimedia::Availabili
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "availabilityChanged(QMultimedia::AvailabilityStatus)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAAVAILABILITYCONTROL");
     PHB_ITEM pavailability = hb_itemPutNI(NULL, static_cast<int>(availability));
 
@@ -41,8 +40,7 @@ void QMediaAvailabilityControlSlots_connect_signal(const QString &signal, const 
   if (obj != NULL) {
     QMediaAvailabilityControlSlots *s = QCoreApplication::instance()->findChild<QMediaAvailabilityControlSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QMediaAvailabilityControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

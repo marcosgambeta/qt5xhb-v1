@@ -22,8 +22,7 @@ void QRadioDataSlots::stationIdChanged(QString stationId)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stationIdChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
     PHB_ITEM pstationId = hb_itemPutC(NULL, stationId.toLatin1().data());
 
@@ -40,8 +39,7 @@ void QRadioDataSlots::programTypeChanged(QRadioData::ProgramType programType)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "programTypeChanged(QRadioData::ProgramType)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
     PHB_ITEM pprogramType = hb_itemPutNI(NULL, static_cast<int>(programType));
 
@@ -58,8 +56,7 @@ void QRadioDataSlots::programTypeNameChanged(QString programTypeName)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "programTypeNameChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
     PHB_ITEM pprogramTypeName = hb_itemPutC(NULL, programTypeName.toLatin1().data());
 
@@ -76,8 +73,7 @@ void QRadioDataSlots::stationNameChanged(QString stationName)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stationNameChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
     PHB_ITEM pstationName = hb_itemPutC(NULL, stationName.toLatin1().data());
 
@@ -94,8 +90,7 @@ void QRadioDataSlots::radioTextChanged(QString radioText)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "radioTextChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
     PHB_ITEM pradioText = hb_itemPutC(NULL, radioText.toLatin1().data());
 
@@ -112,8 +107,7 @@ void QRadioDataSlots::alternativeFrequenciesEnabledChanged(bool enabled)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "alternativeFrequenciesEnabledChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
     PHB_ITEM penabled = hb_itemPutL(NULL, enabled);
 
@@ -130,8 +124,7 @@ void QRadioDataSlots::error(QRadioData::Error error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QRadioData::Error)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QRADIODATA");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -149,8 +142,7 @@ void QRadioDataSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QRadioDataSlots *s = QCoreApplication::instance()->findChild<QRadioDataSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QRadioDataSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -84,16 +84,13 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_AVAILABLEDEVICES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QList<QByteArray> list = obj->availableDevices((QAudio::Mode)hb_parni(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -108,9 +105,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_AVAILABLEDEVICES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -131,8 +126,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEINPUT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       QAbstractAudioInput *ptr = obj->createInput(*PQBYTEARRAY(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIOINPUT");
@@ -153,8 +147,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEOUTPUT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       QAbstractAudioOutput *ptr = obj->createOutput(*PQBYTEARRAY(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIOOUTPUT");
@@ -175,8 +168,7 @@ HB_FUNC_STATIC(QAUDIOSYSTEMPLUGIN_CREATEDEVICEINFO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2)) {
 #endif
       QAbstractAudioDeviceInfo *ptr = obj->createDeviceInfo(*PQBYTEARRAY(1), (QAudio::Mode)hb_parni(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAUDIODEVICEINFO");

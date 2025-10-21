@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->cancelCapture();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,8 +111,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_CAPTURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->capture(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,8 +131,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_DRIVEMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->driveMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,8 +151,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isReadyForCapture());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +171,7 @@ HB_FUNC_STATIC(QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDriveMode((QCameraImageCapture::DriveMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

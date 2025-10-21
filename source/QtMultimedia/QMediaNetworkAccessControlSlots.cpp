@@ -22,8 +22,7 @@ void QMediaNetworkAccessControlSlots::configurationChanged(const QNetworkConfigu
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "configurationChanged(QNetworkConfiguration)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIANETWORKACCESSCONTROL");
     PHB_ITEM pconfiguration = Qt5xHb::Signals_return_object((void *)&configuration, "QNETWORKCONFIGURATION");
 
@@ -41,8 +40,7 @@ void QMediaNetworkAccessControlSlots_connect_signal(const QString &signal, const
   if (obj != NULL) {
     QMediaNetworkAccessControlSlots *s = QCoreApplication::instance()->findChild<QMediaNetworkAccessControlSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QMediaNetworkAccessControlSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
