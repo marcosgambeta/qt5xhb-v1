@@ -56,16 +56,13 @@ RETURN
 
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QGLFramebufferObjectFormat()
     */
     QGLFramebufferObjectFormat *obj = new QGLFramebufferObjectFormat();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(1)) {
     /*
     QGLFramebufferObjectFormat( const QGLFramebufferObjectFormat &other )
     */
@@ -100,8 +97,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->attachment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +117,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLENUM(obj->internalTextureFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,8 +137,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->samples());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +157,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setAttachment((QGLFramebufferObject::Attachment)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +179,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setInternalTextureFormat(PGLENUM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +201,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSamples(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +223,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTextureTarget(PGLENUM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,8 +245,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLENUM(obj->textureTarget());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

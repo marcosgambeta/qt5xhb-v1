@@ -111,24 +111,19 @@ RETURN
 
 HB_FUNC_STATIC(QGLFORMAT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QGLFormat()
     */
     QGLFormat *obj = new QGLFormat();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     /*
     QGLFormat( QGL::FormatOptions options, int plane = 0 )
     */
     QGLFormat *obj = new QGLFormat((QGL::FormatOptions)hb_parni(1), OPINT(2, 0));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQGLFORMAT(1))
-  {
+  } else if (ISNUMPAR(1) && ISQGLFORMAT(1)) {
     /*
     QGLFormat( const QGLFormat &other )
     */
@@ -163,8 +158,7 @@ HB_FUNC_STATIC(QGLFORMAT_ACCUM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->accum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +178,7 @@ HB_FUNC_STATIC(QGLFORMAT_ACCUMBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->accumBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +198,7 @@ HB_FUNC_STATIC(QGLFORMAT_ALPHA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->alpha());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +218,7 @@ HB_FUNC_STATIC(QGLFORMAT_ALPHABUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->alphaBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,8 +238,7 @@ HB_FUNC_STATIC(QGLFORMAT_BLUEBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->blueBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,8 +258,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEPTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->depth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +278,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEPTHBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->depthBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,8 +298,7 @@ HB_FUNC_STATIC(QGLFORMAT_DIRECTRENDERING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->directRendering());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,8 +318,7 @@ HB_FUNC_STATIC(QGLFORMAT_DOUBLEBUFFER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->doubleBuffer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -352,8 +338,7 @@ HB_FUNC_STATIC(QGLFORMAT_GREENBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->greenBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,8 +358,7 @@ HB_FUNC_STATIC(QGLFORMAT_HASOVERLAY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasOverlay());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -394,8 +378,7 @@ HB_FUNC_STATIC(QGLFORMAT_MAJORVERSION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->majorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,8 +398,7 @@ HB_FUNC_STATIC(QGLFORMAT_MINORVERSION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minorVersion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -436,8 +418,7 @@ HB_FUNC_STATIC(QGLFORMAT_PLANE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->plane());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -457,8 +438,7 @@ HB_FUNC_STATIC(QGLFORMAT_PROFILE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->profile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -478,8 +458,7 @@ HB_FUNC_STATIC(QGLFORMAT_REDBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->redBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -499,8 +478,7 @@ HB_FUNC_STATIC(QGLFORMAT_RGBA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->rgba());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -520,8 +498,7 @@ HB_FUNC_STATIC(QGLFORMAT_SAMPLEBUFFERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->sampleBuffers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -541,8 +518,7 @@ HB_FUNC_STATIC(QGLFORMAT_SAMPLES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->samples());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -562,8 +538,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAccum(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -585,8 +560,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUMBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setAccumBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -608,8 +582,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAlpha(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -631,8 +604,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHABUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setAlphaBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -654,8 +626,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETBLUEBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBlueBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -677,8 +648,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDepth(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -700,8 +670,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTHBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDepthBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -723,8 +692,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDIRECTRENDERING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDirectRendering(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -746,8 +714,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDOUBLEBUFFER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDoubleBuffer(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -769,8 +736,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETGREENBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setGreenBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -792,8 +758,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOption((QGL::FormatOptions)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -815,8 +780,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOVERLAY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setOverlay(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -838,8 +802,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPLANE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPlane(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -861,8 +824,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPROFILE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setProfile((QGLFormat::OpenGLContextProfile)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -884,8 +846,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETREDBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setRedBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -907,8 +868,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETRGBA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setRgba(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -930,8 +890,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLEBUFFERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSampleBuffers(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -953,8 +912,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSamples(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -976,8 +934,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCIL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setStencil(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -999,8 +956,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCILBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStencilBufferSize(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1022,8 +978,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTEREO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setStereo(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1045,8 +1000,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSWAPINTERVAL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSwapInterval(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1068,8 +1022,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETVERSION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setVersion(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1091,8 +1044,7 @@ HB_FUNC_STATIC(QGLFORMAT_STENCIL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->stencil());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1112,8 +1064,7 @@ HB_FUNC_STATIC(QGLFORMAT_STENCILBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->stencilBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1133,8 +1084,7 @@ HB_FUNC_STATIC(QGLFORMAT_STEREO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->stereo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1154,8 +1104,7 @@ HB_FUNC_STATIC(QGLFORMAT_SWAPINTERVAL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->swapInterval());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1175,8 +1124,7 @@ HB_FUNC_STATIC(QGLFORMAT_TESTOPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->testOption((QGL::FormatOptions)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1193,8 +1141,7 @@ static QGLFormat defaultFormat()
 HB_FUNC_STATIC(QGLFORMAT_DEFAULTFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QGLFormat *ptr = new QGLFormat(QGLFormat::defaultFormat());
     Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
@@ -1211,8 +1158,7 @@ static QGLFormat defaultOverlayFormat()
 HB_FUNC_STATIC(QGLFORMAT_DEFAULTOVERLAYFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QGLFormat *ptr = new QGLFormat(QGLFormat::defaultOverlayFormat());
     Qt5xHb::createReturnClass(ptr, "QGLFORMAT", true);
@@ -1229,8 +1175,7 @@ static bool hasOpenGL()
 HB_FUNC_STATIC(QGLFORMAT_HASOPENGL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QGLFormat::hasOpenGL());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1246,8 +1191,7 @@ static bool hasOpenGLOverlays()
 HB_FUNC_STATIC(QGLFORMAT_HASOPENGLOVERLAYS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QGLFormat::hasOpenGLOverlays());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1263,8 +1207,7 @@ static QGLFormat::OpenGLVersionFlags openGLVersionFlags()
 HB_FUNC_STATIC(QGLFORMAT_OPENGLVERSIONFLAGS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RENUM(QGLFormat::openGLVersionFlags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1280,8 +1223,7 @@ static void setDefaultFormat( const QGLFormat &f )
 HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQGLFORMAT(1))
-  {
+  if (ISNUMPAR(1) && ISQGLFORMAT(1)) {
 #endif
     QGLFormat::setDefaultFormat(*PQGLFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1299,8 +1241,7 @@ static void setDefaultOverlayFormat( const QGLFormat &f )
 HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTOVERLAYFORMAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQGLFORMAT(1))
-  {
+  if (ISNUMPAR(1) && ISQGLFORMAT(1)) {
 #endif
     QGLFormat::setDefaultOverlayFormat(*PQGLFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1316,17 +1257,14 @@ HB_FUNC_STATIC(QGLFORMAT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -1359,8 +1297,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
