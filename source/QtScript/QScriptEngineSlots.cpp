@@ -22,8 +22,7 @@ void QScriptEngineSlots::signalHandlerException(const QScriptValue &exception)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "signalHandlerException(QScriptValue)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCRIPTENGINE");
     PHB_ITEM pexception = Qt5xHb::Signals_return_object((void *)&exception, "QSCRIPTVALUE");
 
@@ -41,8 +40,7 @@ void QScriptEngineSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QScriptEngineSlots *s = QCoreApplication::instance()->findChild<QScriptEngineSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QScriptEngineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
