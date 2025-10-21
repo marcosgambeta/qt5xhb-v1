@@ -22,8 +22,7 @@ void QPrintDialogSlots::accepted(QPrinter *printer)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accepted(QPrinter*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPRINTDIALOG");
     PHB_ITEM pprinter = Qt5xHb::Signals_return_object((void *)printer, "QPRINTER");
 
@@ -41,8 +40,7 @@ void QPrintDialogSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QPrintDialogSlots *s = QCoreApplication::instance()->findChild<QPrintDialogSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QPrintDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

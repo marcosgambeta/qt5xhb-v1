@@ -56,16 +56,13 @@ RETURN
 
 HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQPRINTER(1) && ISQWIDGETORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQPRINTER(1) && ISQWIDGETORNIL(2)) {
     /*
     QPageSetupDialog( QPrinter * printer, QWidget * parent = 0 )
     */
     QPageSetupDialog *obj = new QPageSetupDialog(PQPRINTER(1), OPQWIDGET(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  } else if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     /*
     QPageSetupDialog( QWidget * parent = 0 )
     */
@@ -102,8 +99,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
 #endif
       obj->open(PQOBJECT(1), PCONSTCHAR(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,8 +121,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPrinter *ptr = obj->printer();
       Qt5xHb::createReturnClass(ptr, "QPRINTER", false);
@@ -147,8 +142,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +164,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_EXEC)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->exec());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,8 +184,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_DONE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->done(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

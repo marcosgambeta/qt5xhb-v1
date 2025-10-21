@@ -22,8 +22,7 @@ void QPrintPreviewDialogSlots::paintRequested(QPrinter *printer)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "paintRequested(QPrinter*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPRINTPREVIEWDIALOG");
     PHB_ITEM pprinter = Qt5xHb::Signals_return_object((void *)printer, "QPRINTER");
 
@@ -41,8 +40,7 @@ void QPrintPreviewDialogSlots_connect_signal(const QString &signal, const QStrin
   if (obj != NULL) {
     QPrintPreviewDialogSlots *s = QCoreApplication::instance()->findChild<QPrintPreviewDialogSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QPrintPreviewDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

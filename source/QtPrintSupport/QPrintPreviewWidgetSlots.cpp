@@ -22,8 +22,7 @@ void QPrintPreviewWidgetSlots::paintRequested(QPrinter *printer)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "paintRequested(QPrinter*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPRINTPREVIEWWIDGET");
     PHB_ITEM pprinter = Qt5xHb::Signals_return_object((void *)printer, "QPRINTER");
 
@@ -40,8 +39,7 @@ void QPrintPreviewWidgetSlots::previewChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "previewChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPRINTPREVIEWWIDGET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -57,8 +55,7 @@ void QPrintPreviewWidgetSlots_connect_signal(const QString &signal, const QStrin
   if (obj != NULL) {
     QPrintPreviewWidgetSlots *s = QCoreApplication::instance()->findChild<QPrintPreviewWidgetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QPrintPreviewWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
