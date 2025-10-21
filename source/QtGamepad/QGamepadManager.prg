@@ -75,8 +75,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_INSTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QGamepadManager *ptr = QGamepadManager::instance();
     Qt5xHb::createReturnQObjectClass(ptr, "QGAMEPADMANAGER");
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ISGAMEPADCONNECTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isGamepadConnected(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +119,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_ISCONFIGURATIONNEEDED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isConfigurationNeeded(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +141,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_CONFIGUREBUTTON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->configureButton(PINT(1), (QGamepadManager::GamepadButton)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +163,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_CONFIGUREAXIS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->configureAxis(PINT(1), (QGamepadManager::GamepadAxis)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,8 +185,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->setCancelConfigureButton(PINT(1), (QGamepadManager::GamepadButton)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +207,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_RESETCONFIGURATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->resetConfiguration(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,8 +231,7 @@ HB_FUNC_STATIC(QGAMEPADMANAGER_SETSETTINGSFILE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setSettingsFile(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
