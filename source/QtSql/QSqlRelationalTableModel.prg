@@ -67,8 +67,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && (ISQSQLDATABASE(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && (ISQSQLDATABASE(2) || HB_ISNIL(2))) {
     QSqlRelationalTableModel *obj = new QSqlRelationalTableModel(
         OPQOBJECT(1, 0), HB_ISNIL(2) ? QSqlDatabase() : *(QSqlDatabase *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -103,8 +102,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QSqlRelation *ptr = new QSqlRelation(obj->relation(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QSQLRELATION", true);
@@ -125,8 +123,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QSqlTableModel *ptr = obj->relationModel(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QSQLTABLEMODEL");
@@ -147,8 +144,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRELATION(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRELATION(2)) {
 #endif
       obj->setRelation(PINT(1), *PQSQLRELATION(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +166,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +188,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
       QVariant *ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -215,8 +209,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3))) {
 #endif
       RBOOL(obj->removeColumns(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,8 +229,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SELECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->select());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,8 +249,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
 #endif
       RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +269,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setTable(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,8 +291,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REVERTROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->revertRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +313,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETJOINMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setJoinMode((QSqlRelationalTableModel::JoinMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

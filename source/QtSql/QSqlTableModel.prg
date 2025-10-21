@@ -95,8 +95,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSQLTABLEMODEL_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && (ISQSQLDATABASE(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && (ISQSQLDATABASE(2) || HB_ISNIL(2))) {
     QSqlTableModel *obj =
         new QSqlTableModel(OPQOBJECT(1, 0), HB_ISNIL(2) ? QSqlDatabase() : *(QSqlDatabase *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -131,8 +130,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DATABASE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSqlDatabase *ptr = new QSqlDatabase(obj->database());
       Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
@@ -153,8 +151,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_EDITSTRATEGY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->editStrategy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +171,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETEDITSTRATEGY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setEditStrategy((QSqlTableModel::EditStrategy)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +193,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FIELDINDEX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->fieldIndex(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,8 +213,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FILTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->filter());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +233,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETFILTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setFilter(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +255,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTRECORD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRECORD(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRECORD(2)) {
 #endif
       RBOOL(obj->insertRecord(PINT(1), *PQSQLRECORD(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,27 +268,22 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTRECORD)
 
 HB_FUNC(QSQLTABLEMODEL_ISDIRTY)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     bool isDirty() const
     */
     QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RBOOL(obj->isDirty());
     }
-  }
-  else if (ISNUMPAR(1) && ISQMODELINDEX(1))
-  {
+  } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     /*
     bool isDirty( const QModelIndex &index ) const
     */
     QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RBOOL(obj->isDirty(*PQMODELINDEX(1)));
     }
   } else {
@@ -313,8 +300,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_PRIMARYKEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSqlIndex *ptr = new QSqlIndex(obj->primaryKey());
       Qt5xHb::createReturnClass(ptr, "QSQLINDEX", true);
@@ -335,8 +321,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->revertRow(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -358,8 +343,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SELECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->select());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,8 +363,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETRECORD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRECORD(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRECORD(2)) {
 #endif
       RBOOL(obj->setRecord(PINT(1), *PQSQLRECORD(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,8 +383,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SORT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->sort(PINT(1), (Qt::SortOrder)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -423,8 +405,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETSORT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setSort(PINT(1), (Qt::SortOrder)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -446,8 +427,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETTABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setTable(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -469,8 +449,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_TABLENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->tableName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -490,8 +469,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,8 +491,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
       QVariant *ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -535,8 +512,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETDATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
 #endif
       RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -556,8 +532,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FLAGS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RENUM(obj->flags(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -577,8 +552,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_HEADERDATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
       QVariant *ptr = new QVariant(obj->headerData(PINT(1), (Qt::Orientation)hb_parni(2), OPINT(3, Qt::DisplayRole)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -599,8 +573,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTROWS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3))) {
 #endif
       RBOOL(obj->insertRows(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -620,8 +593,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVECOLUMNS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3))) {
 #endif
       RBOOL(obj->removeColumns(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -641,8 +613,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVEROWS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3))) {
 #endif
       RBOOL(obj->removeRows(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -662,8 +633,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ROWCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1))) {
 #endif
       RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -683,8 +653,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->revert();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -706,8 +675,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTALL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->revertAll();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -729,8 +697,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMIT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->submit());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -750,8 +717,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMITALL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->submitAll());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -764,28 +730,23 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMITALL)
 
 HB_FUNC(QSQLTABLEMODEL_RECORD)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSqlRecord record() const
     */
     QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QSqlRecord *ptr = new QSqlRecord(obj->record());
       Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QSqlRecord record( int row ) const
     */
     QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QSqlRecord *ptr = new QSqlRecord(obj->record(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
     }
@@ -803,8 +764,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SELECTROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->selectRow(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

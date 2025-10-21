@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QSQLDRIVERPLUGIN_CREATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QSqlDriver *ptr = obj->create(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QSQLDRIVER");
