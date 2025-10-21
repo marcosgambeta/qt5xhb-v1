@@ -80,8 +80,7 @@ RETURN
 
 HB_FUNC_STATIC(QTEXTTOSPEECH_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QTextToSpeech( QObject * parent = nullptr )
     */
@@ -89,9 +88,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_NEW)
     QTextToSpeech *obj = new QTextToSpeech(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     /*
     QTextToSpeech( const QString &engine, QObject * parent = nullptr )
     */
@@ -114,8 +111,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_STATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,8 +133,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_LOCALE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QLocale *ptr = new QLocale(obj->locale());
       Qt5xHb::createReturnClass(ptr, "QLOCALE", true);
@@ -161,8 +156,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETLOCALE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLOCALE(1))
-    {
+    if (ISNUMPAR(1) && ISQLOCALE(1)) {
 #endif
       obj->setLocale(*PQLOCALE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +180,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_VOICE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVoice *ptr = new QVoice(obj->voice());
       Qt5xHb::createReturnClass(ptr, "QVOICE", true);
@@ -210,8 +203,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETVOICE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVOICE(1))
-    {
+    if (ISNUMPAR(1) && ISQVOICE(1)) {
 #endif
       obj->setVoice(*PQVOICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,8 +227,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_RATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->rate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,8 +249,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETRATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setRate(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,8 +273,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_PITCH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->pitch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,8 +295,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETPITCH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPitch(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,8 +319,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_VOLUME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->volume());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +341,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SETVOLUME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setVolume(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,16 +365,13 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLELOCALES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVector<QLocale> list = obj->availableLocales();
       PHB_DYNS pDynSym = hb_dynsymFindName("QLOCALE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -403,9 +386,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLELOCALES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QLOCALE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -428,16 +409,13 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLEVOICES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVector<QVoice> list = obj->availableVoices();
       PHB_DYNS pDynSym = hb_dynsymFindName("QVOICE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -452,9 +430,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLEVOICES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QVOICE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -474,8 +450,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_AVAILABLEENGINES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRINGLIST(QTextToSpeech::availableEngines());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -496,8 +471,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_SAY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->say(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -521,8 +495,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_STOP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -546,8 +519,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_PAUSE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->pause();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,8 +543,7 @@ HB_FUNC_STATIC(QTEXTTOSPEECH_RESUME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->resume();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

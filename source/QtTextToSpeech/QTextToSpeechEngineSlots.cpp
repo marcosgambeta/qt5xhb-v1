@@ -23,8 +23,7 @@ void QTextToSpeechEngineSlots::stateChanged(QTextToSpeech::State state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QTextToSpeech::State)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECHENGINE");
     PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
@@ -44,8 +43,7 @@ void QTextToSpeechEngineSlots_connect_signal(const QString &signal, const QStrin
   if (obj != NULL) {
     QTextToSpeechEngineSlots *s = QCoreApplication::instance()->findChild<QTextToSpeechEngineSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QTextToSpeechEngineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

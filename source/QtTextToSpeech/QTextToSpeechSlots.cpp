@@ -23,8 +23,7 @@ void QTextToSpeechSlots::localeChanged(const QLocale &locale)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "localeChanged(QLocale)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM plocale = Qt5xHb::Signals_return_object((void *)&locale, "QLOCALE");
 
@@ -43,8 +42,7 @@ void QTextToSpeechSlots::pitchChanged(double pitch)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pitchChanged(double)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM ppitch = hb_itemPutND(NULL, pitch);
 
@@ -63,8 +61,7 @@ void QTextToSpeechSlots::rateChanged(double rate)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rateChanged(double)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM prate = hb_itemPutND(NULL, rate);
 
@@ -83,8 +80,7 @@ void QTextToSpeechSlots::stateChanged(QTextToSpeech::State state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QTextToSpeech::State)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
@@ -103,8 +99,7 @@ void QTextToSpeechSlots::voiceChanged(const QVoice &voice)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "voiceChanged(QVoice)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM pvoice = Qt5xHb::Signals_return_object((void *)&voice, "QVOICE");
 
@@ -123,8 +118,7 @@ void QTextToSpeechSlots::volumeChanged(int volume)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "volumeChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECH");
     PHB_ITEM pvolume = hb_itemPutNI(NULL, volume);
 
@@ -144,8 +138,7 @@ void QTextToSpeechSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QTextToSpeechSlots *s = QCoreApplication::instance()->findChild<QTextToSpeechSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QTextToSpeechSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
