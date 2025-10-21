@@ -23,8 +23,7 @@ void QBluetoothServiceDiscoveryAgentSlots::serviceDiscovered(const QBluetoothSer
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "serviceDiscovered(QBluetoothServiceInfo)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSERVICEDISCOVERYAGENT");
     PHB_ITEM pinfo = Qt5xHb::Signals_return_object((void *)&info, "QBLUETOOTHSERVICEINFO");
 
@@ -43,8 +42,7 @@ void QBluetoothServiceDiscoveryAgentSlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSERVICEDISCOVERYAGENT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -61,8 +59,7 @@ void QBluetoothServiceDiscoveryAgentSlots::canceled()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "canceled()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSERVICEDISCOVERYAGENT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -79,8 +76,7 @@ void QBluetoothServiceDiscoveryAgentSlots::error(QBluetoothServiceDiscoveryAgent
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QBluetoothServiceDiscoveryAgent::Error)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSERVICEDISCOVERYAGENT");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -101,8 +97,7 @@ void QBluetoothServiceDiscoveryAgentSlots_connect_signal(const QString &signal, 
     QBluetoothServiceDiscoveryAgentSlots *s =
         QCoreApplication::instance()->findChild<QBluetoothServiceDiscoveryAgentSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QBluetoothServiceDiscoveryAgentSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

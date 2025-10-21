@@ -23,8 +23,7 @@ void QBluetoothServerSlots::newConnection()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "newConnection()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSERVER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QBluetoothServerSlots::error(QBluetoothServer::Error error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QBluetoothServer::Error)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSERVER");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -62,8 +60,7 @@ void QBluetoothServerSlots_connect_signal(const QString &signal, const QString &
   if (obj != NULL) {
     QBluetoothServerSlots *s = QCoreApplication::instance()->findChild<QBluetoothServerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QBluetoothServerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

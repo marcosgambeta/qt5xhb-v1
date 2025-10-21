@@ -23,8 +23,7 @@ void QBluetoothSocketSlots::connected()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "connected()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSOCKET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QBluetoothSocketSlots::disconnected()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "disconnected()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSOCKET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -59,8 +57,7 @@ void QBluetoothSocketSlots::error(QBluetoothSocket::SocketError error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QBluetoothSocket::SocketError)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSOCKET");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -79,8 +76,7 @@ void QBluetoothSocketSlots::stateChanged(QBluetoothSocket::SocketState state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QBluetoothSocket::SocketState)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHSOCKET");
     PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
@@ -100,8 +96,7 @@ void QBluetoothSocketSlots_connect_signal(const QString &signal, const QString &
   if (obj != NULL) {
     QBluetoothSocketSlots *s = QCoreApplication::instance()->findChild<QBluetoothSocketSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QBluetoothSocketSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

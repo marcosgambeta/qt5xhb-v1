@@ -23,8 +23,7 @@ void QBluetoothLocalDeviceSlots::hostModeStateChanged(QBluetoothLocalDevice::Hos
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hostModeStateChanged(QBluetoothLocalDevice::HostMode)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHLOCALDEVICE");
     PHB_ITEM pstate = hb_itemPutNI(NULL, static_cast<int>(state));
 
@@ -45,8 +44,7 @@ void QBluetoothLocalDeviceSlots::pairingFinished(const QBluetoothAddress &addres
   PHB_ITEM cb =
       Qt5xHb::Signals_return_codeblock(object, "pairingFinished(QBluetoothAddress,QBluetoothLocalDevice::Pairing)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHLOCALDEVICE");
     PHB_ITEM paddress = Qt5xHb::Signals_return_object((void *)&address, "QBLUETOOTHADDRESS");
     PHB_ITEM ppairing = hb_itemPutNI(NULL, static_cast<int>(pairing));
@@ -67,8 +65,7 @@ void QBluetoothLocalDeviceSlots::pairingDisplayPinCode(const QBluetoothAddress &
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pairingDisplayPinCode(QBluetoothAddress,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHLOCALDEVICE");
     PHB_ITEM paddress = Qt5xHb::Signals_return_object((void *)&address, "QBLUETOOTHADDRESS");
     PHB_ITEM ppin = hb_itemPutC(NULL, pin.toLatin1().data());
@@ -89,8 +86,7 @@ void QBluetoothLocalDeviceSlots::pairingDisplayConfirmation(const QBluetoothAddr
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pairingDisplayConfirmation(QBluetoothAddress,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHLOCALDEVICE");
     PHB_ITEM paddress = Qt5xHb::Signals_return_object((void *)&address, "QBLUETOOTHADDRESS");
     PHB_ITEM ppin = hb_itemPutC(NULL, pin.toLatin1().data());
@@ -111,8 +107,7 @@ void QBluetoothLocalDeviceSlots::error(QBluetoothLocalDevice::Error error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QBluetoothLocalDevice::Error)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHLOCALDEVICE");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -132,8 +127,7 @@ void QBluetoothLocalDeviceSlots_connect_signal(const QString &signal, const QStr
   if (obj != NULL) {
     QBluetoothLocalDeviceSlots *s = QCoreApplication::instance()->findChild<QBluetoothLocalDeviceSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QBluetoothLocalDeviceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -23,8 +23,7 @@ void QBluetoothTransferManagerSlots::finished(QBluetoothTransferReply *reply)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(QBluetoothTransferReply*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHTRANSFERMANAGER");
     PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QBLUETOOTHTRANSFERREPLY");
 
@@ -44,8 +43,7 @@ void QBluetoothTransferManagerSlots_connect_signal(const QString &signal, const 
   if (obj != NULL) {
     QBluetoothTransferManagerSlots *s = QCoreApplication::instance()->findChild<QBluetoothTransferManagerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QBluetoothTransferManagerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

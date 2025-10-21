@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_NEW5)
 
 HB_FUNC_STATIC(QBLUETOOTHUUID_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QBluetoothUuid()
     */
@@ -112,25 +111,15 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_NEW)
     QBluetoothUuid *obj = new QBluetoothUuid();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QBLUETOOTHUUID_NEW2);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QBLUETOOTHUUID_NEW3);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QBLUETOOTHUUID_NEW4);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QBLUETOOTHUUID_NEW5);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QBluetoothUuid( const QString &uuid )
     */
@@ -138,9 +127,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_NEW)
     QBluetoothUuid *obj = new QBluetoothUuid(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQBLUETOOTHUUID(1))
-  {
+  } else if (ISNUMPAR(1) && ISQBLUETOOTHUUID(1)) {
     /*
     QBluetoothUuid( const QBluetoothUuid &uuid )
     */
@@ -148,9 +135,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_NEW)
     QBluetoothUuid *obj = new QBluetoothUuid(*PQBLUETOOTHUUID(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  }
-  else if (ISNUMPAR(1) && ISQUUID(1))
-  {
+  } else if (ISNUMPAR(1) && ISQUUID(1)) {
     /*
     QBluetoothUuid( const QUuid &uuid )
     */
@@ -190,8 +175,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_MINIMUMSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->minimumSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +197,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_TOUINT16)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
 #endif
       bool par1;
       RQUINT16(obj->toUInt16(&par1));
@@ -238,8 +221,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_TOUINT32)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
 #endif
       bool par1;
       RQUINT32(obj->toUInt32(&par1));
