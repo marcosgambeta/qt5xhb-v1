@@ -22,8 +22,7 @@ void QVirtualKeyboardTraceSlots::traceIdChanged(int traceId)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "traceIdChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
     PHB_ITEM ptraceId = hb_itemPutNI(NULL, traceId);
 
@@ -40,8 +39,7 @@ void QVirtualKeyboardTraceSlots::channelsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "channelsChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -56,8 +54,7 @@ void QVirtualKeyboardTraceSlots::lengthChanged(int length)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lengthChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
     PHB_ITEM plength = hb_itemPutNI(NULL, length);
 
@@ -74,8 +71,7 @@ void QVirtualKeyboardTraceSlots::finalChanged(bool isFinal)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finalChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
     PHB_ITEM pisFinal = hb_itemPutL(NULL, isFinal);
 
@@ -92,8 +88,7 @@ void QVirtualKeyboardTraceSlots::canceledChanged(bool isCanceled)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "canceledChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
     PHB_ITEM pisCanceled = hb_itemPutL(NULL, isCanceled);
 
@@ -110,8 +105,7 @@ void QVirtualKeyboardTraceSlots::opacityChanged(qreal opacity)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "opacityChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
     PHB_ITEM popacity = hb_itemPutND(NULL, opacity);
 
@@ -129,8 +123,7 @@ void QVirtualKeyboardTraceSlots_connect_signal(const QString &signal, const QStr
   if (obj != NULL) {
     QVirtualKeyboardTraceSlots *s = QCoreApplication::instance()->findChild<QVirtualKeyboardTraceSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QVirtualKeyboardTraceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

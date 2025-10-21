@@ -24,8 +24,7 @@ void QVirtualKeyboardInputEngineSlots::virtualKeyClicked(Qt::Key key, const QStr
   PHB_ITEM cb =
       Qt5xHb::Signals_return_codeblock(object, "virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
     PHB_ITEM pkey = hb_itemPutNI(NULL, static_cast<int>(key));
     PHB_ITEM ptext = hb_itemPutC(NULL, QSTRINGTOSTRING(text));
@@ -48,8 +47,7 @@ void QVirtualKeyboardInputEngineSlots::activeKeyChanged(Qt::Key key)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activeKeyChanged(Qt::Key)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
     PHB_ITEM pkey = hb_itemPutNI(NULL, static_cast<int>(key));
 
@@ -66,8 +64,7 @@ void QVirtualKeyboardInputEngineSlots::previousKeyChanged(Qt::Key key)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "previousKeyChanged(Qt::Key)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
     PHB_ITEM pkey = hb_itemPutNI(NULL, static_cast<int>(key));
 
@@ -84,8 +81,7 @@ void QVirtualKeyboardInputEngineSlots::inputMethodChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "inputMethodChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -100,8 +96,7 @@ void QVirtualKeyboardInputEngineSlots::inputMethodReset()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "inputMethodReset()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -116,8 +111,7 @@ void QVirtualKeyboardInputEngineSlots::inputMethodUpdate()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "inputMethodUpdate()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -132,8 +126,7 @@ void QVirtualKeyboardInputEngineSlots::inputModesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "inputModesChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -148,8 +141,7 @@ void QVirtualKeyboardInputEngineSlots::inputModeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "inputModeChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -164,8 +156,7 @@ void QVirtualKeyboardInputEngineSlots::patternRecognitionModesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "patternRecognitionModesChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -180,8 +171,7 @@ void QVirtualKeyboardInputEngineSlots::wordCandidateListModelChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "wordCandidateListModelChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -196,8 +186,7 @@ void QVirtualKeyboardInputEngineSlots::wordCandidateListVisibleHintChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "wordCandidateListVisibleHintChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -213,8 +202,7 @@ void QVirtualKeyboardInputEngineSlots_connect_signal(const QString &signal, cons
   if (obj != NULL) {
     QVirtualKeyboardInputEngineSlots *s = QCoreApplication::instance()->findChild<QVirtualKeyboardInputEngineSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QVirtualKeyboardInputEngineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

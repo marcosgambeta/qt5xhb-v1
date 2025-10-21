@@ -23,8 +23,7 @@ void QVirtualKeyboardInputContextSlots::preeditTextChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "preeditTextChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QVirtualKeyboardInputContextSlots::inputMethodHintsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "inputMethodHintsChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -55,8 +53,7 @@ void QVirtualKeyboardInputContextSlots::surroundingTextChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "surroundingTextChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -71,8 +68,7 @@ void QVirtualKeyboardInputContextSlots::selectedTextChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectedTextChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -87,8 +83,7 @@ void QVirtualKeyboardInputContextSlots::anchorPositionChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "anchorPositionChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -103,8 +98,7 @@ void QVirtualKeyboardInputContextSlots::cursorPositionChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "cursorPositionChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -119,8 +113,7 @@ void QVirtualKeyboardInputContextSlots::anchorRectangleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "anchorRectangleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -135,8 +128,7 @@ void QVirtualKeyboardInputContextSlots::cursorRectangleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "cursorRectangleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -151,8 +143,7 @@ void QVirtualKeyboardInputContextSlots::shiftActiveChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "shiftActiveChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -167,8 +158,7 @@ void QVirtualKeyboardInputContextSlots::capsLockActiveChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "capsLockActiveChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -183,8 +173,7 @@ void QVirtualKeyboardInputContextSlots::uppercaseChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "uppercaseChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -199,8 +188,7 @@ void QVirtualKeyboardInputContextSlots::animatingChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "animatingChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -215,8 +203,7 @@ void QVirtualKeyboardInputContextSlots::localeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "localeChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -231,8 +218,7 @@ void QVirtualKeyboardInputContextSlots::selectionControlVisibleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionControlVisibleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -247,8 +233,7 @@ void QVirtualKeyboardInputContextSlots::anchorRectIntersectsClipRectChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "anchorRectIntersectsClipRectChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -263,8 +248,7 @@ void QVirtualKeyboardInputContextSlots::cursorRectIntersectsClipRectChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "cursorRectIntersectsClipRectChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTCONTEXT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -281,8 +265,7 @@ void QVirtualKeyboardInputContextSlots_connect_signal(const QString &signal, con
     QVirtualKeyboardInputContextSlots *s =
         QCoreApplication::instance()->findChild<QVirtualKeyboardInputContextSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QVirtualKeyboardInputContextSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

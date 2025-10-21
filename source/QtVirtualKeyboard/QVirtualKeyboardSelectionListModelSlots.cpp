@@ -22,8 +22,7 @@ void QVirtualKeyboardSelectionListModelSlots::countChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "countChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDSELECTIONLISTMODEL");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QVirtualKeyboardSelectionListModelSlots::activeItemChanged(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activeItemChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDSELECTIONLISTMODEL");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -56,8 +54,7 @@ void QVirtualKeyboardSelectionListModelSlots::itemSelected(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "itemSelected(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDSELECTIONLISTMODEL");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -76,8 +73,7 @@ void QVirtualKeyboardSelectionListModelSlots_connect_signal(const QString &signa
     QVirtualKeyboardSelectionListModelSlots *s =
         QCoreApplication::instance()->findChild<QVirtualKeyboardSelectionListModelSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QVirtualKeyboardSelectionListModelSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
