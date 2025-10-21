@@ -105,8 +105,7 @@ RETURN
 HB_FUNC_STATIC(QSERIALPORT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QSerialPort( QObject * parent = 0 )
     */
@@ -114,9 +113,7 @@ HB_FUNC_STATIC(QSERIALPORT_NEW)
     QSerialPort *obj = new QSerialPort(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     /*
     QSerialPort( const QString &name, QObject * parent = 0 )
     */
@@ -124,9 +121,7 @@ HB_FUNC_STATIC(QSERIALPORT_NEW)
     QSerialPort *obj = new QSerialPort(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && ISQSERIALPORTINFO(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQSERIALPORTINFO(1) && ISQOBJECTORNIL(2)) {
     /*
     QSerialPort( const QSerialPortInfo &info, QObject * parent = 0 )
     */
@@ -169,8 +164,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETPORTNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPortName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +188,7 @@ HB_FUNC_STATIC(QSERIALPORT_PORTNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->portName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,8 +210,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETPORT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSERIALPORTINFO(1))
-    {
+    if (ISNUMPAR(1) && ISQSERIALPORTINFO(1)) {
 #endif
       obj->setPort(*PQSERIALPORTINFO(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +234,7 @@ HB_FUNC_STATIC(QSERIALPORT_OPEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->open((QIODevice::OpenMode)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,8 +256,7 @@ HB_FUNC_STATIC(QSERIALPORT_CLOSE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +280,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETSETTINGSRESTOREDONCLOSE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSettingsRestoredOnClose(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,8 +304,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETTINGSRESTOREDONCLOSE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->settingsRestoredOnClose());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,8 +326,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETBAUDRATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->setBaudRate(PQINT32(1), HB_ISNIL(2) ? (QSerialPort::Directions)QSerialPort::AllDirections
                                                      : (QSerialPort::Directions)hb_parni(2)));
@@ -362,8 +349,7 @@ HB_FUNC_STATIC(QSERIALPORT_BAUDRATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQINT32(obj->baudRate(HB_ISNIL(1) ? (QSerialPort::Directions)QSerialPort::AllDirections
                                         : (QSerialPort::Directions)hb_parni(1)));
@@ -386,8 +372,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETDATABITS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->setDataBits((QSerialPort::DataBits)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -409,8 +394,7 @@ HB_FUNC_STATIC(QSERIALPORT_DATABITS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->dataBits());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -432,8 +416,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETPARITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->setParity((QSerialPort::Parity)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -455,8 +438,7 @@ HB_FUNC_STATIC(QSERIALPORT_PARITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->parity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -478,8 +460,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETSTOPBITS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->setStopBits((QSerialPort::StopBits)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,8 +482,7 @@ HB_FUNC_STATIC(QSERIALPORT_STOPBITS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->stopBits());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -524,8 +504,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETFLOWCONTROL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->setFlowControl((QSerialPort::FlowControl)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -547,8 +526,7 @@ HB_FUNC_STATIC(QSERIALPORT_FLOWCONTROL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flowControl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -570,8 +548,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETDATATERMINALREADY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       RBOOL(obj->setDataTerminalReady(PBOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -593,8 +570,7 @@ HB_FUNC_STATIC(QSERIALPORT_ISDATATERMINALREADY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDataTerminalReady());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -616,8 +592,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETREQUESTTOSEND)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       RBOOL(obj->setRequestToSend(PBOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -639,8 +614,7 @@ HB_FUNC_STATIC(QSERIALPORT_ISREQUESTTOSEND)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRequestToSend());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -662,8 +636,7 @@ HB_FUNC_STATIC(QSERIALPORT_PINOUTSIGNALS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->pinoutSignals());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -685,8 +658,7 @@ HB_FUNC_STATIC(QSERIALPORT_FLUSH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->flush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -708,8 +680,7 @@ HB_FUNC_STATIC(QSERIALPORT_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->clear(HB_ISNIL(1) ? (QSerialPort::Directions)QSerialPort::AllDirections
                                    : (QSerialPort::Directions)hb_parni(1)));
@@ -732,8 +703,7 @@ HB_FUNC_STATIC(QSERIALPORT_ATEND)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->atEnd());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -755,8 +725,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETDATAERRORPOLICY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->setDataErrorPolicy(HB_ISNIL(1) ? (QSerialPort::DataErrorPolicy)QSerialPort::IgnorePolicy
                                                 : (QSerialPort::DataErrorPolicy)hb_parni(1)));
@@ -779,8 +748,7 @@ HB_FUNC_STATIC(QSERIALPORT_DATAERRORPOLICY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->dataErrorPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -802,8 +770,7 @@ HB_FUNC_STATIC(QSERIALPORT_ERROR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->error());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -825,8 +792,7 @@ HB_FUNC_STATIC(QSERIALPORT_CLEARERROR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearError();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -850,8 +816,7 @@ HB_FUNC_STATIC(QSERIALPORT_READBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->readBufferSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -873,8 +838,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETREADBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setReadBufferSize(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -898,8 +862,7 @@ HB_FUNC_STATIC(QSERIALPORT_ISSEQUENTIAL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSequential());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -921,8 +884,7 @@ HB_FUNC_STATIC(QSERIALPORT_BYTESAVAILABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesAvailable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -944,8 +906,7 @@ HB_FUNC_STATIC(QSERIALPORT_BYTESTOWRITE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->bytesToWrite());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -967,8 +928,7 @@ HB_FUNC_STATIC(QSERIALPORT_CANREADLINE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canReadLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -990,8 +950,7 @@ HB_FUNC_STATIC(QSERIALPORT_WAITFORREADYREAD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->waitForReadyRead(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1013,8 +972,7 @@ HB_FUNC_STATIC(QSERIALPORT_WAITFORBYTESWRITTEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->waitForBytesWritten(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1036,8 +994,7 @@ HB_FUNC_STATIC(QSERIALPORT_SENDBREAK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RBOOL(obj->sendBreak(OPINT(1, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1059,8 +1016,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETBREAKENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
 #endif
       RBOOL(obj->setBreakEnabled(OPBOOL(1, true)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

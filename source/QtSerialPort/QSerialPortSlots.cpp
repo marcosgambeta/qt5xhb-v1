@@ -23,8 +23,7 @@ void QSerialPortSlots::baudRateChanged(qint32 baudRate, QSerialPort::Directions 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "baudRateChanged(qint32,QSerialPort::Directions)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pbaudRate = hb_itemPutNI(NULL, baudRate);
     PHB_ITEM pdir = hb_itemPutNI(NULL, static_cast<int>(dir));
@@ -45,8 +44,7 @@ void QSerialPortSlots::dataBitsChanged(QSerialPort::DataBits dataBits)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataBitsChanged(QSerialPort::DataBits)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pdataBits = hb_itemPutNI(NULL, static_cast<int>(dataBits));
 
@@ -65,8 +63,7 @@ void QSerialPortSlots::parityChanged(QSerialPort::Parity parity)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "parityChanged(QSerialPort::Parity)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pparity = hb_itemPutNI(NULL, static_cast<int>(parity));
 
@@ -85,8 +82,7 @@ void QSerialPortSlots::stopBitsChanged(QSerialPort::StopBits stopBits)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stopBitsChanged(QSerialPort::StopBits)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pstopBits = hb_itemPutNI(NULL, static_cast<int>(stopBits));
 
@@ -105,8 +101,7 @@ void QSerialPortSlots::flowControlChanged(QSerialPort::FlowControl flow)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "flowControlChanged(QSerialPort::FlowControl)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pflow = hb_itemPutNI(NULL, static_cast<int>(flow));
 
@@ -125,8 +120,7 @@ void QSerialPortSlots::dataErrorPolicyChanged(QSerialPort::DataErrorPolicy polic
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM ppolicy = hb_itemPutNI(NULL, static_cast<int>(policy));
 
@@ -145,8 +139,7 @@ void QSerialPortSlots::dataTerminalReadyChanged(bool set)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataTerminalReadyChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pset = hb_itemPutL(NULL, set);
 
@@ -165,8 +158,7 @@ void QSerialPortSlots::requestToSendChanged(bool set)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "requestToSendChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pset = hb_itemPutL(NULL, set);
 
@@ -185,8 +177,7 @@ void QSerialPortSlots::error(QSerialPort::SerialPortError serialPortError)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QSerialPort::SerialPortError)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pserialPortError = hb_itemPutNI(NULL, static_cast<int>(serialPortError));
 
@@ -205,8 +196,7 @@ void QSerialPortSlots::settingsRestoredOnCloseChanged(bool restore)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "settingsRestoredOnCloseChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM prestore = hb_itemPutL(NULL, restore);
 
@@ -226,8 +216,7 @@ void QSerialPortSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QSerialPortSlots *s = QCoreApplication::instance()->findChild<QSerialPortSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSerialPortSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
