@@ -64,17 +64,14 @@ RETURN
 
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1))) {
     /*
     QGraphicsSimpleTextItem( QGraphicsItem * parent = 0 )
     */
     QGraphicsSimpleTextItem *obj =
         new QGraphicsSimpleTextItem(HB_ISNIL(1) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
     /*
     QGraphicsSimpleTextItem( const QString &text, QGraphicsItem * parent = 0 )
     */
@@ -110,8 +107,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_FONT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QFont *ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -132,8 +128,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SETFONT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQFONT(1))
-    {
+    if (ISNUMPAR(1) && ISQFONT(1)) {
 #endif
       obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,8 +150,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SETTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,8 +172,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_TEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->text());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,8 +192,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -221,8 +213,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_CONTAINS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINTF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINTF(1)) {
 #endif
       RBOOL(obj->contains(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,8 +233,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
 #endif
       RBOOL(obj->isObscuredBy(PQGRAPHICSITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,8 +253,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPainterPath *ptr = new QPainterPath(obj->opaqueArea());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -285,8 +274,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_PAINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3))
-    {
+    if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3)) {
 #endif
       obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +296,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SHAPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPainterPath *ptr = new QPainterPath(obj->shape());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -330,8 +317,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_TYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

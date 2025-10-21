@@ -73,16 +73,13 @@ RETURN
 
 HB_FUNC_STATIC(QSIZEPOLICY_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QSizePolicy()
     */
     QSizePolicy *obj = new QSizePolicy();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     /*
     QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type =
     QSizePolicy::DefaultType )
@@ -120,8 +117,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_CONTROLTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->controlType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +137,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_EXPANDINGDIRECTIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->expandingDirections());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +157,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HASHEIGHTFORWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasHeightForWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +177,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HASWIDTHFORHEIGHT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasWidthForHeight());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +197,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALPOLICY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->horizontalPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +217,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALSTRETCH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->horizontalStretch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +237,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETCONTROLTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setControlType((QSizePolicy::ControlType)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +259,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHEIGHTFORWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setHeightForWidth(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +281,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALPOLICY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setHorizontalPolicy((QSizePolicy::Policy)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,8 +303,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALSTRETCH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setHorizontalStretch(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,8 +325,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALPOLICY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setVerticalPolicy((QSizePolicy::Policy)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,8 +347,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALSTRETCH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setVerticalStretch(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +369,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETWIDTHFORHEIGHT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setWidthForHeight(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -407,8 +391,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_TRANSPOSE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->transpose();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,8 +413,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_VERTICALPOLICY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->verticalPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -451,8 +433,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_VERTICALSTRETCH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->verticalStretch());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -467,17 +448,14 @@ HB_FUNC_STATIC(QSIZEPOLICY_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -510,8 +488,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

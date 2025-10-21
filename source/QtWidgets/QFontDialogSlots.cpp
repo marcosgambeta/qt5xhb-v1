@@ -22,8 +22,7 @@ void QFontDialogSlots::currentFontChanged(const QFont &font)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentFontChanged(QFont)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFONTDIALOG");
     PHB_ITEM pfont = Qt5xHb::Signals_return_object((void *)&font, "QFONT");
 
@@ -40,8 +39,7 @@ void QFontDialogSlots::fontSelected(const QFont &font)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fontSelected(QFont)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFONTDIALOG");
     PHB_ITEM pfont = Qt5xHb::Signals_return_object((void *)&font, "QFONT");
 
@@ -59,8 +57,7 @@ void QFontDialogSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QFontDialogSlots *s = QCoreApplication::instance()->findChild<QFontDialogSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QFontDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

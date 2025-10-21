@@ -22,8 +22,7 @@ void QButtonGroupSlots::buttonClicked(QAbstractButton *button)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonClicked(QAbstractButton*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
     PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");
 
@@ -40,8 +39,7 @@ void QButtonGroupSlots::buttonClicked(int id)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonClicked(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
 
@@ -58,8 +56,7 @@ void QButtonGroupSlots::buttonPressed(QAbstractButton *button)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonPressed(QAbstractButton*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
     PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");
 
@@ -76,8 +73,7 @@ void QButtonGroupSlots::buttonPressed(int id)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonPressed(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
 
@@ -94,8 +90,7 @@ void QButtonGroupSlots::buttonReleased(QAbstractButton *button)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonReleased(QAbstractButton*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
     PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");
 
@@ -112,8 +107,7 @@ void QButtonGroupSlots::buttonReleased(int id)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonReleased(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
 
@@ -131,8 +125,7 @@ void QButtonGroupSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QButtonGroupSlots *s = QCoreApplication::instance()->findChild<QButtonGroupSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QButtonGroupSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -110,8 +110,7 @@ RETURN
     */
 HB_FUNC_STATIC(QTABWIDGET_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     QTabWidget *obj = new QTabWidget(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -138,27 +137,22 @@ HB_FUNC_STATIC(QTABWIDGET_DELETE)
 
 HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
 {
-  if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2))
-  {
+  if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2)) {
     /*
     int addTab( QWidget * page, const QString &label )
     */
     QTabWidget *obj = (QTabWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(obj->addTab(PQWIDGET(1), PQSTRING(2)));
     }
-  }
-  else if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3))
-  {
+  } else if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
     /*
     int addTab( QWidget * page, const QIcon &icon, const QString &label )
     */
     QTabWidget *obj = (QTabWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(obj->addTab(PQWIDGET(1), HB_ISOBJECT(2) ? *(QIcon *)Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3)));
     }
   } else {
@@ -175,8 +169,7 @@ HB_FUNC_STATIC(QTABWIDGET_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +191,7 @@ HB_FUNC_STATIC(QTABWIDGET_CORNERWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QWidget *ptr = obj->cornerWidget(HB_ISNIL(1) ? (Qt::Corner)Qt::TopRightCorner : (Qt::Corner)hb_parni(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -220,8 +212,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETCORNERWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2)) {
 #endif
       obj->setCornerWidget(PQWIDGET(1), HB_ISNIL(2) ? (Qt::Corner)Qt::TopRightCorner : (Qt::Corner)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +234,7 @@ HB_FUNC_STATIC(QTABWIDGET_COUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,8 +254,7 @@ HB_FUNC_STATIC(QTABWIDGET_CURRENTINDEX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +274,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETCURRENTINDEX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCurrentIndex(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +296,7 @@ HB_FUNC_STATIC(QTABWIDGET_CURRENTWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWidget *ptr = obj->currentWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -330,8 +317,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETCURRENTWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       obj->setCurrentWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,8 +339,7 @@ HB_FUNC_STATIC(QTABWIDGET_DOCUMENTMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->documentMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,8 +359,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETDOCUMENTMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDocumentMode(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -397,8 +381,7 @@ HB_FUNC_STATIC(QTABWIDGET_ELIDEMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->elideMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -418,8 +401,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETELIDEMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setElideMode((Qt::TextElideMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -441,8 +423,7 @@ HB_FUNC_STATIC(QTABWIDGET_ICONSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->iconSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -463,8 +444,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETICONSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZE(1)) {
 #endif
       obj->setIconSize(*PQSIZE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -486,8 +466,7 @@ HB_FUNC_STATIC(QTABWIDGET_INDEXOF)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       RINT(obj->indexOf(PQWIDGET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -500,27 +479,22 @@ HB_FUNC_STATIC(QTABWIDGET_INDEXOF)
 
 HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
 {
-  if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3))
-  {
+  if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3)) {
     /*
     int insertTab( int index, QWidget * page, const QString &label )
     */
     QTabWidget *obj = (QTabWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(obj->insertTab(PINT(1), PQWIDGET(2), PQSTRING(3)));
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4))
-  {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4)) {
     /*
     int insertTab( int index, QWidget * page, const QIcon &icon, const QString &label )
     */
     QTabWidget *obj = (QTabWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(obj->insertTab(PINT(1), PQWIDGET(2), HB_ISOBJECT(3) ? *(QIcon *)Qt5xHb::itemGetPtr(3) : QIcon(hb_parc(3)),
                           PQSTRING(4)));
     }
@@ -538,8 +512,7 @@ HB_FUNC_STATIC(QTABWIDGET_ISMOVABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isMovable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -559,8 +532,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETMOVABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setMovable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -582,8 +554,7 @@ HB_FUNC_STATIC(QTABWIDGET_ISTABENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isTabEnabled(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -603,8 +574,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
 #endif
       obj->setTabEnabled(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -626,8 +596,7 @@ HB_FUNC_STATIC(QTABWIDGET_REMOVETAB)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->removeTab(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -649,8 +618,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABICON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QIcon *ptr = new QIcon(obj->tabIcon(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -671,8 +639,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABICON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2))) {
 #endif
       obj->setTabIcon(PINT(1), HB_ISOBJECT(2) ? *(QIcon *)Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -694,8 +661,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABPOSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->tabPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -715,8 +681,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABPOSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTabPosition((QTabWidget::TabPosition)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -738,8 +703,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABSHAPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->tabShape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -759,8 +723,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABSHAPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTabShape((QTabWidget::TabShape)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -782,8 +745,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->tabText(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -803,8 +765,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setTabText(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -827,8 +788,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABTOOLTIP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->tabToolTip(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -850,8 +810,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABTOOLTIP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setTabToolTip(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -875,8 +834,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABWHATSTHIS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->tabWhatsThis(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -898,8 +856,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABWHATSTHIS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setTabWhatsThis(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -922,8 +879,7 @@ HB_FUNC_STATIC(QTABWIDGET_USESSCROLLBUTTONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->usesScrollButtons());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -943,8 +899,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETUSESSCROLLBUTTONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setUsesScrollButtons(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -966,8 +921,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABSCLOSABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->tabsClosable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -987,8 +941,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABSCLOSABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setTabsClosable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1010,8 +963,7 @@ HB_FUNC_STATIC(QTABWIDGET_WIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QWidget *ptr = obj->widget(PINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -1032,8 +984,7 @@ HB_FUNC_STATIC(QTABWIDGET_MINIMUMSIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -1054,8 +1005,7 @@ HB_FUNC_STATIC(QTABWIDGET_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -1076,8 +1026,7 @@ HB_FUNC_STATIC(QTABWIDGET_HEIGHTFORWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->heightForWidth(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1097,8 +1046,7 @@ HB_FUNC_STATIC(QTABWIDGET_HASHEIGHTFORWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasHeightForWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1119,8 +1067,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABBARAUTOHIDE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->tabBarAutoHide());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1142,8 +1089,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABBARAUTOHIDE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setTabBarAutoHide(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1166,8 +1112,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABBAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTabBar *ptr = obj->tabBar();
       Qt5xHb::createReturnQWidgetClass(ptr, "QTABBAR");

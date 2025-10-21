@@ -50,16 +50,13 @@ RETURN
 
 HB_FUNC_STATIC(QVBOXLAYOUT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QVBoxLayout()
     */
     QVBoxLayout *obj = new QVBoxLayout();
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQWIDGET(1))
-  {
+  } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     /*
     QVBoxLayout( QWidget * parent )
     */

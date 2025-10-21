@@ -71,16 +71,13 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStyleOptionSlider()
     */
     QStyleOptionSlider *obj = new QStyleOptionSlider();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONSLIDER(1))
-  {
+  } else if (ISNUMPAR(1) && ISQSTYLEOPTIONSLIDER(1)) {
     /*
     QStyleOptionSlider( const QStyleOptionSlider &other )
     */
@@ -99,8 +96,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_ORIENTATION)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->orientation);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -112,8 +108,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETORIENTATION)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->orientation = (Qt::Orientation)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -131,8 +126,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_MINIMUM)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->minimum);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -144,8 +138,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETMINIMUM)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->minimum = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -163,8 +156,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_MAXIMUM)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->maximum);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -176,8 +168,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETMAXIMUM)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->maximum = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -195,8 +186,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_TICKPOSITION)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->tickPosition);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -208,8 +198,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETTICKPOSITION)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->tickPosition = (QSlider::TickPosition)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -227,8 +216,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_TICKINTERVAL)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->tickInterval);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -240,8 +228,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETTICKINTERVAL)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->tickInterval = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -259,8 +246,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_UPSIDEDOWN)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->upsideDown);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -272,8 +258,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETUPSIDEDOWN)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->upsideDown = PBOOL(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -291,8 +276,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SLIDERPOSITION)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->sliderPosition);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -304,8 +288,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETSLIDERPOSITION)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->sliderPosition = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -323,8 +306,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SLIDERVALUE)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->sliderValue);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -336,8 +318,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETSLIDERVALUE)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->sliderValue = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -355,8 +336,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SINGLESTEP)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->singleStep);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -368,8 +348,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETSINGLESTEP)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->singleStep = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -387,8 +366,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_PAGESTEP)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->pageStep);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -400,8 +378,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETPAGESTEP)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->pageStep = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -419,8 +396,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_NOTCHTARGET)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RQREAL(obj->notchTarget);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -432,8 +408,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETNOTCHTARGET)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->notchTarget = PQREAL(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -451,8 +426,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_DIALWRAPPING)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->dialWrapping);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -464,8 +438,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETDIALWRAPPING)
   QStyleOptionSlider *obj = (QStyleOptionSlider *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->dialWrapping = PBOOL(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

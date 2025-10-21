@@ -22,8 +22,7 @@ void QColumnViewSlots::updatePreviewWidget(const QModelIndex &index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "updatePreviewWidget(QModelIndex)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOLUMNVIEW");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
@@ -41,8 +40,7 @@ void QColumnViewSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QColumnViewSlots *s = QCoreApplication::instance()->findChild<QColumnViewSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QColumnViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -22,8 +22,7 @@ void QAbstractSpinBoxSlots::editingFinished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "editingFinished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSPINBOX");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QAbstractSpinBoxSlots_connect_signal(const QString &signal, const QString &
   if (obj != NULL) {
     QAbstractSpinBoxSlots *s = QCoreApplication::instance()->findChild<QAbstractSpinBoxSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractSpinBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

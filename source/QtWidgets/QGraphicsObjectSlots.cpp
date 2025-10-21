@@ -22,8 +22,7 @@ void QGraphicsObjectSlots::enabledChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "enabledChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QGraphicsObjectSlots::opacityChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "opacityChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -54,8 +52,7 @@ void QGraphicsObjectSlots::parentChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "parentChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -70,8 +67,7 @@ void QGraphicsObjectSlots::rotationChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rotationChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -86,8 +82,7 @@ void QGraphicsObjectSlots::scaleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "scaleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -102,8 +97,7 @@ void QGraphicsObjectSlots::visibleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "visibleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -118,8 +112,7 @@ void QGraphicsObjectSlots::xChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -134,8 +127,7 @@ void QGraphicsObjectSlots::yChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -150,8 +142,7 @@ void QGraphicsObjectSlots::zChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "zChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -167,8 +158,7 @@ void QGraphicsObjectSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QGraphicsObjectSlots *s = QCoreApplication::instance()->findChild<QGraphicsObjectSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGraphicsObjectSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -73,8 +73,7 @@ RETURN
     */
 HB_FUNC_STATIC(QBUTTONGROUP_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QButtonGroup *obj = new QButtonGroup(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -101,29 +100,24 @@ HB_FUNC_STATIC(QBUTTONGROUP_DELETE)
 
 HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
 {
-  if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
-  {
+  if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
     /*
     void addButton( QAbstractButton * button )
     */
     QButtonGroup *obj = (QButtonGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->addButton(PQABSTRACTBUTTON(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2)) {
     /*
     void addButton( QAbstractButton * button, int id )
     */
     QButtonGroup *obj = (QButtonGroup *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->addButton(PQABSTRACTBUTTON(1), PINT(2));
     }
 
@@ -142,8 +136,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QAbstractButton *ptr = obj->button(PINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QABSTRACTBUTTON");
@@ -164,16 +157,13 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QAbstractButton *> list = obj->buttons();
       PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTBUTTON");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -185,9 +175,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QABSTRACTBUTTON", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -208,8 +196,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDBUTTON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAbstractButton *ptr = obj->checkedButton();
       Qt5xHb::createReturnQWidgetClass(ptr, "QABSTRACTBUTTON");
@@ -230,8 +217,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->checkedId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +237,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_EXCLUSIVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->exclusive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +257,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
 #endif
       RINT(obj->id(PQABSTRACTBUTTON(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,8 +277,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_REMOVEBUTTON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
 #endif
       obj->removeButton(PQABSTRACTBUTTON(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,8 +299,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETEXCLUSIVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setExclusive(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,8 +321,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2)) {
 #endif
       obj->setId(PQABSTRACTBUTTON(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

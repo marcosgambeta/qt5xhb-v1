@@ -22,8 +22,7 @@ void QMainWindowSlots::iconSizeChanged(const QSize &iconSize)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "iconSizeChanged(QSize)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMAINWINDOW");
     PHB_ITEM piconSize = Qt5xHb::Signals_return_object((void *)&iconSize, "QSIZE");
 
@@ -40,8 +39,7 @@ void QMainWindowSlots::toolButtonStyleChanged(Qt::ToolButtonStyle toolButtonStyl
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "toolButtonStyleChanged(Qt::ToolButtonStyle)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMAINWINDOW");
     PHB_ITEM ptoolButtonStyle = hb_itemPutNI(NULL, static_cast<int>(toolButtonStyle));
 
@@ -59,8 +57,7 @@ void QMainWindowSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QMainWindowSlots *s = QCoreApplication::instance()->findChild<QMainWindowSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QMainWindowSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -22,8 +22,7 @@ void QApplicationSlots::aboutToReleaseGpuResources()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToReleaseGpuResources()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QApplicationSlots::aboutToUseGpuResources()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToUseGpuResources()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -54,8 +52,7 @@ void QApplicationSlots::commitDataRequest(QSessionManager &manager)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "commitDataRequest(QSessionManager)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
     PHB_ITEM pmanager = Qt5xHb::Signals_return_qobject(&manager, "QSESSIONMANAGER");
 
@@ -72,8 +69,7 @@ void QApplicationSlots::focusChanged(QWidget *old, QWidget *now)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "focusChanged(QWidget*,QWidget*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
     PHB_ITEM pold = Qt5xHb::Signals_return_qobject(old, "QWIDGET");
     PHB_ITEM pnow = Qt5xHb::Signals_return_qobject(now, "QWIDGET");
@@ -92,8 +88,7 @@ void QApplicationSlots::fontDatabaseChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fontDatabaseChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -108,8 +103,7 @@ void QApplicationSlots::lastWindowClosed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "lastWindowClosed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -124,8 +118,7 @@ void QApplicationSlots::saveStateRequest(QSessionManager &manager)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "saveStateRequest(QSessionManager)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAPPLICATION");
     PHB_ITEM pmanager = Qt5xHb::Signals_return_qobject(&manager, "QSESSIONMANAGER");
 
@@ -143,8 +136,7 @@ void QApplicationSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QApplicationSlots *s = QCoreApplication::instance()->findChild<QApplicationSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QApplicationSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

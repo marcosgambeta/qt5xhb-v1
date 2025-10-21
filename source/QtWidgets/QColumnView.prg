@@ -73,8 +73,7 @@ RETURN
     */
 HB_FUNC_STATIC(QCOLUMNVIEW_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     QColumnView *obj = new QColumnView(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_COLUMNWIDTHS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<int> list = obj->columnWidths();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -130,8 +128,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_PREVIEWWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWidget *ptr = obj->previewWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_RESIZEGRIPSVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->resizeGripsVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,15 +169,13 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QList<int> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
       int temp1;
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         temp1 = hb_arrayGetNI(aList1, i1 + 1);
         par1 << temp1;
       }
@@ -205,8 +199,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETPREVIEWWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       obj->setPreviewWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +221,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setResizeGripsVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +243,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_INDEXAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->indexAt(*PQPOINT(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -273,8 +264,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SCROLLTO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
       obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? (QColumnView::ScrollHint)QColumnView::EnsureVisible
                                                   : (QColumnView::ScrollHint)hb_parni(2));
@@ -297,8 +287,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SELECTALL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->selectAll();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,8 +309,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1)) {
 #endif
       obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,8 +331,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       obj->setRootIndex(*PQMODELINDEX(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +353,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETSELECTIONMODEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQITEMSELECTIONMODEL(1))
-    {
+    if (ISNUMPAR(1) && ISQITEMSELECTIONMODEL(1)) {
 #endif
       obj->setSelectionModel(PQITEMSELECTIONMODEL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,8 +375,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -411,8 +396,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_VISUALRECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       QRect *ptr = new QRect(obj->visualRect(*PQMODELINDEX(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);

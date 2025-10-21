@@ -81,8 +81,7 @@ RETURN
     */
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QGraphicsItemAnimation *obj = new QGraphicsItemAnimation(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,8 +137,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQREAL(obj->horizontalScaleAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQREAL(obj->horizontalShearAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +177,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QGraphicsItem *ptr = obj->item();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
@@ -203,8 +198,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_MATRIXAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QMatrix *ptr = new QMatrix(obj->matrixAt(PQREAL(1)));
       Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
@@ -225,8 +219,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_POSAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QPointF *ptr = new QPointF(obj->posAt(PQREAL(1)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -247,8 +240,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ROTATIONAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQREAL(obj->rotationAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,8 +260,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
 #endif
       obj->setItem(PQGRAPHICSITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,8 +282,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETPOSAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2)) {
 #endif
       obj->setPosAt(PQREAL(1), *PQPOINTF(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,8 +304,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETROTATIONAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setRotationAt(PQREAL(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,8 +326,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSCALEAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->setScaleAt(PQREAL(1), PQREAL(2), PQREAL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,8 +348,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSHEARAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->setShearAt(PQREAL(1), PQREAL(2), PQREAL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,8 +370,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTIMELINE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTIMELINE(1))
-    {
+    if (ISNUMPAR(1) && ISQTIMELINE(1)) {
 #endif
       obj->setTimeLine(PQTIMELINE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,8 +392,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTRANSLATIONAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->setTranslationAt(PQREAL(1), PQREAL(2), PQREAL(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +414,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_TIMELINE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTimeLine *ptr = obj->timeLine();
       Qt5xHb::createReturnQObjectClass(ptr, "QTIMELINE");
@@ -451,8 +435,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSCALEAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQREAL(obj->verticalScaleAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -472,8 +455,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSHEARAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQREAL(obj->verticalShearAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -493,8 +475,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_XTRANSLATIONAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQREAL(obj->xTranslationAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -514,8 +495,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_YTRANSLATIONAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQREAL(obj->yTranslationAt(PQREAL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -535,8 +515,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSTEP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStep(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

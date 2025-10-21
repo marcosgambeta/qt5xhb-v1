@@ -62,8 +62,7 @@ RETURN
     */
 HB_FUNC_STATIC(QGESTURE_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QGesture *obj = new QGesture(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -97,8 +96,7 @@ HB_FUNC_STATIC(QGESTURE_GESTURECANCELPOLICY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->gestureCancelPolicy());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,8 +116,7 @@ HB_FUNC_STATIC(QGESTURE_GESTURETYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->gestureType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,8 +136,7 @@ HB_FUNC_STATIC(QGESTURE_HASHOTSPOT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasHotSpot());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +156,7 @@ HB_FUNC_STATIC(QGESTURE_HOTSPOT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->hotSpot());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -182,8 +177,7 @@ HB_FUNC_STATIC(QGESTURE_SETGESTURECANCELPOLICY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setGestureCancelPolicy((QGesture::GestureCancelPolicy)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +199,7 @@ HB_FUNC_STATIC(QGESTURE_SETHOTSPOT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINTF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINTF(1)) {
 #endif
       obj->setHotSpot(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +221,7 @@ HB_FUNC_STATIC(QGESTURE_STATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->state());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,8 +241,7 @@ HB_FUNC_STATIC(QGESTURE_UNSETHOTSPOT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->unsetHotSpot();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

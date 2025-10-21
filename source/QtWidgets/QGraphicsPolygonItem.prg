@@ -62,16 +62,13 @@ RETURN
 
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1))) {
     /*
     QGraphicsPolygonItem( QGraphicsItem * parent = 0 )
     */
     QGraphicsPolygonItem *obj = new QGraphicsPolygonItem(HB_ISNIL(1) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
     /*
     QGraphicsPolygonItem( const QPolygonF &polygon, QGraphicsItem * parent = 0 )
     */
@@ -107,8 +104,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_FILLRULE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->fillRule());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +124,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_POLYGON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPolygonF *ptr = new QPolygonF(obj->polygon());
       Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
@@ -150,8 +145,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETFILLRULE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFillRule((Qt::FillRule)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,8 +167,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETPOLYGON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOLYGONF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
 #endif
       obj->setPolygon(*PQPOLYGONF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +189,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_BOUNDINGRECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -218,8 +210,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_CONTAINS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINTF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINTF(1)) {
 #endif
       RBOOL(obj->contains(*PQPOINTF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +230,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_ISOBSCUREDBY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
 #endif
       RBOOL(obj->isObscuredBy(PQGRAPHICSITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,8 +250,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_OPAQUEAREA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPainterPath *ptr = new QPainterPath(obj->opaqueArea());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -282,8 +271,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_PAINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGETORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGETORNIL(3)) {
 #endif
       obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +293,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SHAPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPainterPath *ptr = new QPainterPath(obj->shape());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -327,8 +314,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_TYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

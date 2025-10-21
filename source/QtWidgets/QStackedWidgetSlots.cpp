@@ -22,8 +22,7 @@ void QStackedWidgetSlots::currentChanged(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTACKEDWIDGET");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -40,8 +39,7 @@ void QStackedWidgetSlots::widgetRemoved(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "widgetRemoved(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTACKEDWIDGET");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -59,8 +57,7 @@ void QStackedWidgetSlots_connect_signal(const QString &signal, const QString &sl
   if (obj != NULL) {
     QStackedWidgetSlots *s = QCoreApplication::instance()->findChild<QStackedWidgetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QStackedWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

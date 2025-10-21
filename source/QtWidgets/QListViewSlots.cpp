@@ -22,15 +22,12 @@ void QListViewSlots::indexesMoved(const QModelIndexList &indexes)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "indexesMoved(QModelIndexList)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLISTVIEW");
     PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
     PHB_ITEM pindexes = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
-      for (int i = 0; i < indexes.count(); i++)
-      {
+    if (pDynSym != NULL) {
+      for (int i = 0; i < indexes.count(); i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -60,8 +57,7 @@ void QListViewSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QListViewSlots *s = QCoreApplication::instance()->findChild<QListViewSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QListViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

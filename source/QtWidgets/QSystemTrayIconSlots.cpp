@@ -22,8 +22,7 @@ void QSystemTrayIconSlots::activated(QSystemTrayIcon::ActivationReason reason)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "activated(QSystemTrayIcon::ActivationReason)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSYSTEMTRAYICON");
     PHB_ITEM preason = hb_itemPutNI(NULL, static_cast<int>(reason));
 
@@ -40,8 +39,7 @@ void QSystemTrayIconSlots::messageClicked()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "messageClicked()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSYSTEMTRAYICON");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -57,8 +55,7 @@ void QSystemTrayIconSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QSystemTrayIconSlots *s = QCoreApplication::instance()->findChild<QSystemTrayIconSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSystemTrayIconSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->modifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,8 +96,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_POS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->pos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -119,8 +117,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_REASON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->reason());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +137,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->scenePos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -162,8 +158,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPoint *ptr = new QPoint(obj->screenPos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);

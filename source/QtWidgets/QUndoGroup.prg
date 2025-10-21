@@ -80,8 +80,7 @@ RETURN
     */
 HB_FUNC_STATIC(QUNDOGROUP_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QUndoGroup *obj = new QUndoGroup(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ACTIVESTACK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUndoStack *ptr = obj->activeStack();
       Qt5xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
@@ -137,8 +135,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ADDSTACK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQUNDOSTACK(1))
-    {
+    if (ISNUMPAR(1) && ISQUNDOSTACK(1)) {
 #endif
       obj->addStack(PQUNDOSTACK(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANREDO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canRedo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +177,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANUNDO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canUndo());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,8 +197,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISCHARORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISCHARORNIL(2)) {
 #endif
       QAction *ptr = obj->createRedoAction(PQOBJECT(1), OPQSTRING(2, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -224,8 +218,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISCHARORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQOBJECT(1) && ISCHARORNIL(2)) {
 #endif
       QAction *ptr = obj->createUndoAction(PQOBJECT(1), OPQSTRING(2, QString()));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -246,8 +239,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ISCLEAN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isClean());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +259,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDOTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->redoText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,8 +279,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REMOVESTACK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQUNDOSTACK(1))
-    {
+    if (ISNUMPAR(1) && ISQUNDOSTACK(1)) {
 #endif
       obj->removeStack(PQUNDOSTACK(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,16 +301,13 @@ HB_FUNC_STATIC(QUNDOGROUP_STACKS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QUndoStack *> list = obj->stacks();
       PHB_DYNS pDynSym = hb_dynsymFindName("QUNDOSTACK");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -332,9 +319,7 @@ HB_FUNC_STATIC(QUNDOGROUP_STACKS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QUNDOSTACK", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -355,8 +340,7 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDOTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->undoText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -376,8 +360,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->redo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -399,8 +382,7 @@ HB_FUNC_STATIC(QUNDOGROUP_SETACTIVESTACK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQUNDOSTACK(1))
-    {
+    if (ISNUMPAR(1) && ISQUNDOSTACK(1)) {
 #endif
       obj->setActiveStack(PQUNDOSTACK(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,8 +404,7 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->undo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

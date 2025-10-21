@@ -71,17 +71,14 @@ RETURN
 
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1))) {
     /*
     QGraphicsLinearLayout( QGraphicsLayoutItem * parent = 0 )
     */
     QGraphicsLinearLayout *obj =
         new QGraphicsLinearLayout(HB_ISNIL(1) ? 0 : (QGraphicsLayoutItem *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQGRAPHICSLAYOUTITEM(2) || HB_ISNIL(2)))
-  {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQGRAPHICSLAYOUTITEM(2) || HB_ISNIL(2))) {
     /*
     QGraphicsLinearLayout( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
     */
@@ -117,8 +114,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ADDITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1)) {
 #endif
       obj->addItem(PQGRAPHICSLAYOUTITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +136,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ADDSTRETCH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->addStretch(OPINT(1, 1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +158,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ALIGNMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1)) {
 #endif
       RENUM(obj->alignment(PQGRAPHICSLAYOUTITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +178,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INSERTITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQGRAPHICSLAYOUTITEM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQGRAPHICSLAYOUTITEM(2)) {
 #endif
       obj->insertItem(PINT(1), PQGRAPHICSLAYOUTITEM(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +200,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INSERTSTRETCH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->insertStretch(PINT(1), OPINT(2, 1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +222,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ITEMSPACING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQREAL(obj->itemSpacing(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +242,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ORIENTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +262,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_REMOVEITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1)) {
 #endif
       obj->removeItem(PQGRAPHICSLAYOUTITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,8 +284,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETALIGNMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2)) {
 #endif
       obj->setAlignment(PQGRAPHICSLAYOUTITEM(1), (Qt::Alignment)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,8 +306,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETITEMSPACING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setItemSpacing(PINT(1), PQREAL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,8 +328,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETORIENTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOrientation((Qt::Orientation)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,8 +350,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETSPACING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSpacing(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,8 +372,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETSTRETCHFACTOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2)) {
 #endif
       obj->setStretchFactor(PQGRAPHICSLAYOUTITEM(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -410,8 +394,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SPACING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->spacing());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -431,8 +414,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_STRETCHFACTOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1)) {
 #endif
       RINT(obj->stretchFactor(PQGRAPHICSLAYOUTITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -452,8 +434,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_COUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -473,8 +454,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INVALIDATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -496,8 +476,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ITEMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QGraphicsLayoutItem *ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
@@ -518,8 +497,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_REMOVEAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->removeAt(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -541,8 +519,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETGEOMETRY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRECTF(1))
-    {
+    if (ISNUMPAR(1) && ISQRECTF(1)) {
 #endif
       obj->setGeometry(*PQRECTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -564,8 +541,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZEF(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZEF(2) || HB_ISNIL(2))) {
 #endif
       QSizeF *ptr = new QSizeF(
           obj->sizeHint((Qt::SizeHint)hb_parni(1), HB_ISNIL(2) ? QSizeF() : *(QSizeF *)Qt5xHb::itemGetPtr(2)));

@@ -60,8 +60,7 @@ RETURN
     */
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1))) {
     QGraphicsItemGroup *obj = new QGraphicsItemGroup(HB_ISNIL(1) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -93,8 +92,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_ADDTOGROUP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
 #endif
       obj->addToGroup(PQGRAPHICSITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,8 +114,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_REMOVEFROMGROUP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
 #endif
       obj->removeFromGroup(PQGRAPHICSITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,8 +136,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_BOUNDINGRECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->boundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -161,8 +157,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_ISOBSCUREDBY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
 #endif
       RBOOL(obj->isObscuredBy(PQGRAPHICSITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,8 +177,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_OPAQUEAREA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPainterPath *ptr = new QPainterPath(obj->opaqueArea());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -204,8 +198,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_PAINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGETORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGETORNIL(3)) {
 #endif
       obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +220,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_TYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

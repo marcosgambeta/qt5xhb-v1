@@ -67,8 +67,7 @@ RETURN
     */
 HB_FUNC_STATIC(QACTIONGROUP_NEW)
 {
-  if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  if (ISNUMPAR(1) && ISQOBJECT(1)) {
     QActionGroup *obj = new QActionGroup(PQOBJECT(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -95,41 +94,33 @@ HB_FUNC_STATIC(QACTIONGROUP_DELETE)
 
 HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
 {
-  if (ISNUMPAR(1) && ISQACTION(1))
-  {
+  if (ISNUMPAR(1) && ISQACTION(1)) {
     /*
     QAction * addAction( QAction * action )
     */
     QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QAction *ptr = obj->addAction(PQACTION(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     QAction * addAction( const QString &text )
     */
     QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QAction *ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  }
-  else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
     /*
     QAction * addAction( const QIcon &icon, const QString &text )
     */
     QActionGroup *obj = qobject_cast<QActionGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QAction *ptr = obj->addAction(HB_ISOBJECT(1) ? *(QIcon *)Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
@@ -147,8 +138,7 @@ HB_FUNC_STATIC(QACTIONGROUP_CHECKEDACTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAction *ptr = obj->checkedAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -169,8 +159,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,8 +179,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISEXCLUSIVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isExclusive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,8 +199,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVisible());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,8 +219,7 @@ HB_FUNC_STATIC(QACTIONGROUP_REMOVEACTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQACTION(1))
-    {
+    if (ISNUMPAR(1) && ISQACTION(1)) {
 #endif
       obj->removeAction(PQACTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,8 +241,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETDISABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDisabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +263,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,8 +285,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETEXCLUSIVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setExclusive(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +307,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

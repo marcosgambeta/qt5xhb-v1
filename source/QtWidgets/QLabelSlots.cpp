@@ -22,8 +22,7 @@ void QLabelSlots::linkActivated(const QString &link)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "linkActivated(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLABEL");
     PHB_ITEM plink = hb_itemPutC(NULL, QSTRINGTOSTRING(link));
 
@@ -40,8 +39,7 @@ void QLabelSlots::linkHovered(const QString &link)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "linkHovered(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLABEL");
     PHB_ITEM plink = hb_itemPutC(NULL, QSTRINGTOSTRING(link));
 
@@ -59,8 +57,7 @@ void QLabelSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QLabelSlots *s = QCoreApplication::instance()->findChild<QLabelSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QLabelSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

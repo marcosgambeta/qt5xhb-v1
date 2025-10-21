@@ -22,8 +22,7 @@ void QTreeViewSlots::collapsed(const QModelIndex &index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "collapsed(QModelIndex)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEVIEW");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
@@ -40,8 +39,7 @@ void QTreeViewSlots::expanded(const QModelIndex &index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "expanded(QModelIndex)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEVIEW");
     PHB_ITEM pindex = Qt5xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
@@ -59,8 +57,7 @@ void QTreeViewSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QTreeViewSlots *s = QCoreApplication::instance()->findChild<QTreeViewSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QTreeViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

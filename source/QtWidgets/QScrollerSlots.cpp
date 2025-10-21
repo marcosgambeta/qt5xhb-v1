@@ -22,8 +22,7 @@ void QScrollerSlots::scrollerPropertiesChanged(const QScrollerProperties &newPro
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "scrollerPropertiesChanged(QScrollerProperties)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCROLLER");
     PHB_ITEM pnewProperties = Qt5xHb::Signals_return_object((void *)&newProperties, "QSCROLLERPROPERTIES");
 
@@ -40,8 +39,7 @@ void QScrollerSlots::stateChanged(QScroller::State newState)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QScroller::State)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCROLLER");
     PHB_ITEM pnewState = hb_itemPutNI(NULL, static_cast<int>(newState));
 
@@ -59,8 +57,7 @@ void QScrollerSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QScrollerSlots *s = QCoreApplication::instance()->findChild<QScrollerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QScrollerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

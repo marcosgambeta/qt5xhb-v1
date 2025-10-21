@@ -22,8 +22,7 @@ void QAbstractSliderSlots::actionTriggered(int action)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "actionTriggered(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM paction = hb_itemPutNI(NULL, action);
 
@@ -40,8 +39,7 @@ void QAbstractSliderSlots::rangeChanged(int min, int max)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rangeChanged(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM pmin = hb_itemPutNI(NULL, min);
     PHB_ITEM pmax = hb_itemPutNI(NULL, max);
@@ -60,8 +58,7 @@ void QAbstractSliderSlots::sliderMoved(int value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sliderMoved(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM pvalue = hb_itemPutNI(NULL, value);
 
@@ -78,8 +75,7 @@ void QAbstractSliderSlots::sliderPressed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sliderPressed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -94,8 +90,7 @@ void QAbstractSliderSlots::sliderReleased()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sliderReleased()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -110,8 +105,7 @@ void QAbstractSliderSlots::valueChanged(int value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "valueChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM pvalue = hb_itemPutNI(NULL, value);
 
@@ -129,8 +123,7 @@ void QAbstractSliderSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QAbstractSliderSlots *s = QCoreApplication::instance()->findChild<QAbstractSliderSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractSliderSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

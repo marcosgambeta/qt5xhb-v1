@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ACTIVATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->activate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_COUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,8 +124,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_INVALIDATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +146,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ISACTIVATED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isActivated());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,8 +166,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ITEMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QGraphicsLayoutItem *ptr = obj->itemAt(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
@@ -192,8 +187,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_REMOVEAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->removeAt(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,8 +209,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_SETCONTENTSMARGINS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->setContentsMargins(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,8 +231,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_WIDGETEVENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQEVENT(1))
-    {
+    if (ISNUMPAR(1) && ISQEVENT(1)) {
 #endif
       obj->widgetEvent(PQEVENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +253,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_GETCONTENTSMARGINS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       qreal par1;
       qreal par2;
@@ -292,8 +283,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_UPDATEGEOMETRY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->updateGeometry();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,8 +302,7 @@ static bool instantInvalidatePropagation()
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QGraphicsLayout::instantInvalidatePropagation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +318,7 @@ static void setInstantInvalidatePropagation( bool enable )
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_SETINSTANTINVALIDATEPROPAGATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISLOG(1))
-  {
+  if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
     QGraphicsLayout::setInstantInvalidatePropagation(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

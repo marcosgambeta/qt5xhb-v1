@@ -22,8 +22,7 @@ void QGraphicsRotationSlots::angleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "angleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QGraphicsRotationSlots::axisChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -54,8 +52,7 @@ void QGraphicsRotationSlots::originChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "originChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -71,8 +68,7 @@ void QGraphicsRotationSlots_connect_signal(const QString &signal, const QString 
   if (obj != NULL) {
     QGraphicsRotationSlots *s = QCoreApplication::instance()->findChild<QGraphicsRotationSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGraphicsRotationSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

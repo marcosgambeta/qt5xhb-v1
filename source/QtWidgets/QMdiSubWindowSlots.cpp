@@ -22,8 +22,7 @@ void QMdiSubWindowSlots::aboutToActivate()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "aboutToActivate()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMDISUBWINDOW");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QMdiSubWindowSlots::windowStateChanged(Qt::WindowStates oldState, Qt::Windo
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMDISUBWINDOW");
     PHB_ITEM poldState = hb_itemPutNI(NULL, static_cast<int>(oldState));
     PHB_ITEM pnewState = hb_itemPutNI(NULL, static_cast<int>(newState));
@@ -59,8 +57,7 @@ void QMdiSubWindowSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QMdiSubWindowSlots *s = QCoreApplication::instance()->findChild<QMdiSubWindowSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QMdiSubWindowSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

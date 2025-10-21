@@ -22,8 +22,7 @@ void QInputDialogSlots::doubleValueChanged(double value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "doubleValueChanged(double)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
@@ -40,8 +39,7 @@ void QInputDialogSlots::doubleValueSelected(double value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "doubleValueSelected(double)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
@@ -58,8 +56,7 @@ void QInputDialogSlots::intValueChanged(int value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "intValueChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM pvalue = hb_itemPutNI(NULL, value);
 
@@ -76,8 +73,7 @@ void QInputDialogSlots::intValueSelected(int value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "intValueSelected(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM pvalue = hb_itemPutNI(NULL, value);
 
@@ -94,8 +90,7 @@ void QInputDialogSlots::textValueChanged(const QString &text)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "textValueChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM ptext = hb_itemPutC(NULL, QSTRINGTOSTRING(text));
 
@@ -112,8 +107,7 @@ void QInputDialogSlots::textValueSelected(const QString &text)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "textValueSelected(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINPUTDIALOG");
     PHB_ITEM ptext = hb_itemPutC(NULL, QSTRINGTOSTRING(text));
 
@@ -131,8 +125,7 @@ void QInputDialogSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QInputDialogSlots *s = QCoreApplication::instance()->findChild<QInputDialogSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QInputDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

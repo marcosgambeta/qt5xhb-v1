@@ -60,8 +60,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSPLITTERHANDLE_NEW)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSPLITTER(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSPLITTER(2)) {
     QSplitterHandle *obj = new QSplitterHandle((Qt::Orientation)hb_parni(1), PQSPLITTER(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -95,8 +94,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_OPAQUERESIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->opaqueResize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,8 +114,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_ORIENTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->orientation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,8 +134,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_SETORIENTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOrientation((Qt::Orientation)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +156,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_SPLITTER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSplitter *ptr = obj->splitter();
       Qt5xHb::createReturnQWidgetClass(ptr, "QSPLITTER");
@@ -182,8 +177,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

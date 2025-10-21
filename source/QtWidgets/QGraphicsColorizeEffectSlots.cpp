@@ -22,8 +22,7 @@ void QGraphicsColorizeEffectSlots::colorChanged(const QColor &color)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSCOLORIZEEFFECT");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
@@ -40,8 +39,7 @@ void QGraphicsColorizeEffectSlots::strengthChanged(qreal strength)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "strengthChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSCOLORIZEEFFECT");
     PHB_ITEM pstrength = hb_itemPutND(NULL, strength);
 
@@ -59,8 +57,7 @@ void QGraphicsColorizeEffectSlots_connect_signal(const QString &signal, const QS
   if (obj != NULL) {
     QGraphicsColorizeEffectSlots *s = QCoreApplication::instance()->findChild<QGraphicsColorizeEffectSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGraphicsColorizeEffectSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

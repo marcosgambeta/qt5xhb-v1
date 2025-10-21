@@ -56,8 +56,7 @@ RETURN
     */
 HB_FUNC_STATIC(QFOCUSFRAME_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     QFocusFrame *obj = new QFocusFrame(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -91,8 +90,7 @@ HB_FUNC_STATIC(QFOCUSFRAME_SETWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       obj->setWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,8 +112,7 @@ HB_FUNC_STATIC(QFOCUSFRAME_WIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWidget *ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");

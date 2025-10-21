@@ -93,8 +93,7 @@ RETURN
     */
 HB_FUNC_STATIC(QLISTWIDGET_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     QListWidget *obj = new QListWidget(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -121,29 +120,24 @@ HB_FUNC_STATIC(QLISTWIDGET_DELETE)
 
 HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     void addItem( const QString &label )
     */
     QListWidget *obj = (QListWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->addItem(PQSTRING(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
-  {
+  } else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
     /*
     void addItem( QListWidgetItem * item )
     */
     QListWidget *obj = (QListWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->addItem(PQLISTWIDGETITEM(1));
     }
 
@@ -162,8 +156,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEMS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       obj->addItems(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,8 +178,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CLOSEPERSISTENTEDITOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
 #endif
       obj->closePersistentEditor(PQLISTWIDGETITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,8 +200,7 @@ HB_FUNC_STATIC(QLISTWIDGET_COUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +220,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CURRENTITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QListWidgetItem *ptr = obj->currentItem();
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
@@ -251,8 +241,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CURRENTROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentRow());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +261,7 @@ HB_FUNC_STATIC(QLISTWIDGET_EDITITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
 #endif
       obj->editItem(PQLISTWIDGETITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,29 +276,24 @@ HB_FUNC_STATIC(QLISTWIDGET_EDITITEM)
 
 HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQLISTWIDGETITEM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQLISTWIDGETITEM(2)) {
     /*
     void insertItem( int row, QListWidgetItem * item )
     */
     QListWidget *obj = (QListWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->insertItem(PINT(1), PQLISTWIDGETITEM(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
     /*
     void insertItem( int row, const QString &label )
     */
     QListWidget *obj = (QListWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->insertItem(PINT(1), PQSTRING(2));
     }
 
@@ -329,8 +312,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEMS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2)) {
 #endif
       obj->insertItems(PINT(1), PQSTRINGLIST(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -352,8 +334,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ISSORTINGENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSortingEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,8 +354,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QListWidgetItem *ptr = obj->item(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
@@ -388,28 +368,23 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEM)
 
 HB_FUNC_STATIC(QLISTWIDGET_ITEMAT)
 {
-  if (ISNUMPAR(1) && ISQPOINT(1))
-  {
+  if (ISNUMPAR(1) && ISQPOINT(1)) {
     /*
     QListWidgetItem * itemAt( const QPoint &p ) const
     */
     QListWidget *obj = (QListWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QListWidgetItem *ptr = obj->itemAt(*PQPOINT(1));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     QListWidgetItem * itemAt( int x, int y ) const
     */
     QListWidget *obj = (QListWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QListWidgetItem *ptr = obj->itemAt(PINT(1), PINT(2));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
@@ -427,8 +402,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
 #endif
       QWidget *ptr = obj->itemWidget(PQLISTWIDGETITEM(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -449,8 +423,7 @@ HB_FUNC_STATIC(QLISTWIDGET_OPENPERSISTENTEDITOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
 #endif
       obj->openPersistentEditor(PQLISTWIDGETITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -472,8 +445,7 @@ HB_FUNC_STATIC(QLISTWIDGET_REMOVEITEMWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
 #endif
       obj->removeItemWidget(PQLISTWIDGETITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -495,8 +467,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ROW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
 #endif
       RINT(obj->row(PQLISTWIDGETITEM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -509,29 +480,24 @@ HB_FUNC_STATIC(QLISTWIDGET_ROW)
 
 HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
 {
-  if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
-  {
+  if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
     /*
     void setCurrentItem( QListWidgetItem * item )
     */
     QListWidget *obj = (QListWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setCurrentItem(PQLISTWIDGETITEM(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && HB_ISNUM(2)) {
     /*
     void setCurrentItem( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
     */
     QListWidget *obj = (QListWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setCurrentItem(PQLISTWIDGETITEM(1), (QItemSelectionModel::SelectionFlags)hb_parni(2));
     }
 
@@ -543,29 +509,24 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
 
 HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTROW)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     void setCurrentRow( int row )
     */
     QListWidget *obj = (QListWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setCurrentRow(PINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
     void setCurrentRow( int row, QItemSelectionModel::SelectionFlags command )
     */
     QListWidget *obj = (QListWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setCurrentRow(PINT(1), (QItemSelectionModel::SelectionFlags)hb_parni(2));
     }
 
@@ -584,8 +545,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETITEMWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && ISQWIDGET(2))
-    {
+    if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && ISQWIDGET(2)) {
 #endif
       obj->setItemWidget(PQLISTWIDGETITEM(1), PQWIDGET(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -607,8 +567,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETSORTINGENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSortingEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -630,8 +589,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SORTITEMS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->sortItems(HB_ISNIL(1) ? (Qt::SortOrder)Qt::AscendingOrder : (Qt::SortOrder)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -653,8 +611,7 @@ HB_FUNC_STATIC(QLISTWIDGET_TAKEITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QListWidgetItem *ptr = obj->takeItem(PINT(1));
       Qt5xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
@@ -675,8 +632,7 @@ HB_FUNC_STATIC(QLISTWIDGET_VISUALITEMRECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
 #endif
       QRect *ptr = new QRect(obj->visualItemRect(PQLISTWIDGETITEM(1)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);
@@ -697,8 +653,7 @@ HB_FUNC_STATIC(QLISTWIDGET_DROPEVENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDROPEVENT(1))
-    {
+    if (ISNUMPAR(1) && ISQDROPEVENT(1)) {
 #endif
       obj->dropEvent(PQDROPEVENT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -720,8 +675,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -743,8 +697,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SCROLLTOITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQLISTWIDGETITEM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQLISTWIDGETITEM(1) && ISNUMORNIL(2)) {
 #endif
       obj->scrollToItem(PQLISTWIDGETITEM(1), HB_ISNIL(2)
                                                  ? (QAbstractItemView::ScrollHint)QAbstractItemView::EnsureVisible

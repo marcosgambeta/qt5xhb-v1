@@ -22,8 +22,7 @@ void QHeaderViewSlots::geometriesChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "geometriesChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEADERVIEW");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QHeaderViewSlots::sectionAutoResize(int logicalIndex, QHeaderView::ResizeMo
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sectionAutoResize(int,QHeaderView::ResizeMode)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEADERVIEW");
     PHB_ITEM plogicalIndex = hb_itemPutNI(NULL, logicalIndex);
     PHB_ITEM pmode = hb_itemPutNI(NULL, static_cast<int>(mode));
@@ -58,8 +56,7 @@ void QHeaderViewSlots::sectionClicked(int logicalIndex)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sectionClicked(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEADERVIEW");
     PHB_ITEM plogicalIndex = hb_itemPutNI(NULL, logicalIndex);
 
@@ -76,8 +73,7 @@ void QHeaderViewSlots::sectionCountChanged(int oldCount, int newCount)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sectionCountChanged(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEADERVIEW");
     PHB_ITEM poldCount = hb_itemPutNI(NULL, oldCount);
     PHB_ITEM pnewCount = hb_itemPutNI(NULL, newCount);
@@ -96,8 +92,7 @@ void QHeaderViewSlots::sectionDoubleClicked(int logicalIndex)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sectionDoubleClicked(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEADERVIEW");
     PHB_ITEM plogicalIndex = hb_itemPutNI(NULL, logicalIndex);
 
@@ -114,8 +109,7 @@ void QHeaderViewSlots::sectionEntered(int logicalIndex)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sectionEntered(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEADERVIEW");
     PHB_ITEM plogicalIndex = hb_itemPutNI(NULL, logicalIndex);
 
@@ -132,8 +126,7 @@ void QHeaderViewSlots::sectionHandleDoubleClicked(int logicalIndex)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sectionHandleDoubleClicked(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEADERVIEW");
     PHB_ITEM plogicalIndex = hb_itemPutNI(NULL, logicalIndex);
 
@@ -150,8 +143,7 @@ void QHeaderViewSlots::sectionMoved(int logicalIndex, int oldVisualIndex, int ne
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sectionMoved(int,int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEADERVIEW");
     PHB_ITEM plogicalIndex = hb_itemPutNI(NULL, logicalIndex);
     PHB_ITEM poldVisualIndex = hb_itemPutNI(NULL, oldVisualIndex);
@@ -172,8 +164,7 @@ void QHeaderViewSlots::sectionPressed(int logicalIndex)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sectionPressed(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEADERVIEW");
     PHB_ITEM plogicalIndex = hb_itemPutNI(NULL, logicalIndex);
 
@@ -190,8 +181,7 @@ void QHeaderViewSlots::sectionResized(int logicalIndex, int oldSize, int newSize
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sectionResized(int,int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEADERVIEW");
     PHB_ITEM plogicalIndex = hb_itemPutNI(NULL, logicalIndex);
     PHB_ITEM poldSize = hb_itemPutNI(NULL, oldSize);
@@ -212,8 +202,7 @@ void QHeaderViewSlots::sortIndicatorChanged(int logicalIndex, Qt::SortOrder orde
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sortIndicatorChanged(int,Qt::SortOrder)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEADERVIEW");
     PHB_ITEM plogicalIndex = hb_itemPutNI(NULL, logicalIndex);
     PHB_ITEM porder = hb_itemPutNI(NULL, static_cast<int>(order));
@@ -233,8 +222,7 @@ void QHeaderViewSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QHeaderViewSlots *s = QCoreApplication::instance()->findChild<QHeaderViewSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QHeaderViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

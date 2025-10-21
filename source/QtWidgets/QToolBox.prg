@@ -75,8 +75,7 @@ RETURN
     */
 HB_FUNC_STATIC(QTOOLBOX_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     QToolBox *obj = new QToolBox(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -103,28 +102,23 @@ HB_FUNC_STATIC(QTOOLBOX_DELETE)
 
 HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
 {
-  if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3))
-  {
+  if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
     /*
     int addItem( QWidget * widget, const QIcon &iconSet, const QString &text )
     */
     QToolBox *obj = (QToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(
           obj->addItem(PQWIDGET(1), HB_ISOBJECT(2) ? *(QIcon *)Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3)));
     }
-  }
-  else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2))
-  {
+  } else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2)) {
     /*
     int addItem( QWidget * w, const QString &text )
     */
     QToolBox *obj = (QToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(obj->addItem(PQWIDGET(1), PQSTRING(2)));
     }
   } else {
@@ -141,8 +135,7 @@ HB_FUNC_STATIC(QTOOLBOX_COUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +155,7 @@ HB_FUNC_STATIC(QTOOLBOX_CURRENTINDEX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +175,7 @@ HB_FUNC_STATIC(QTOOLBOX_CURRENTWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWidget *ptr = obj->currentWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -205,8 +196,7 @@ HB_FUNC_STATIC(QTOOLBOX_INDEXOF)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       RINT(obj->indexOf(PQWIDGET(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,28 +209,23 @@ HB_FUNC_STATIC(QTOOLBOX_INDEXOF)
 
 HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
 {
-  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4))
-  {
+  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4)) {
     /*
     int insertItem( int index, QWidget * widget, const QIcon &icon, const QString &text )
     */
     QToolBox *obj = (QToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(obj->insertItem(PINT(1), PQWIDGET(2), HB_ISOBJECT(3) ? *(QIcon *)Qt5xHb::itemGetPtr(3) : QIcon(hb_parc(3)),
                            PQSTRING(4)));
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3))
-  {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3)) {
     /*
     int insertItem( int index, QWidget * widget, const QString &text )
     */
     QToolBox *obj = (QToolBox *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(obj->insertItem(PINT(1), PQWIDGET(2), PQSTRING(3)));
     }
   } else {
@@ -257,8 +242,7 @@ HB_FUNC_STATIC(QTOOLBOX_ISITEMENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->isItemEnabled(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +262,7 @@ HB_FUNC_STATIC(QTOOLBOX_ITEMICON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QIcon *ptr = new QIcon(obj->itemIcon(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -300,8 +283,7 @@ HB_FUNC_STATIC(QTOOLBOX_ITEMTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->itemText(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,8 +303,7 @@ HB_FUNC_STATIC(QTOOLBOX_ITEMTOOLTIP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->itemToolTip(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,8 +323,7 @@ HB_FUNC_STATIC(QTOOLBOX_REMOVEITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->removeItem(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -365,8 +345,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
 #endif
       obj->setItemEnabled(PINT(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -388,8 +367,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMICON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2))) {
 #endif
       obj->setItemIcon(PINT(1), HB_ISOBJECT(2) ? *(QIcon *)Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,8 +389,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setItemText(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -434,8 +411,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMTOOLTIP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setItemToolTip(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -457,8 +433,7 @@ HB_FUNC_STATIC(QTOOLBOX_WIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QWidget *ptr = obj->widget(PINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -479,8 +454,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETCURRENTINDEX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCurrentIndex(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -502,8 +476,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETCURRENTWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       obj->setCurrentWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

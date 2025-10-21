@@ -64,24 +64,19 @@ RETURN
 
 HB_FUNC_STATIC(QUNDOVIEW_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     /*
     QUndoView( QWidget * parent = 0 )
     */
     QUndoView *obj = new QUndoView(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQUNDOSTACK(1) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQUNDOSTACK(1) && ISQWIDGETORNIL(2)) {
     /*
     QUndoView( QUndoStack * stack, QWidget * parent = 0 )
     */
     QUndoView *obj = new QUndoView(PQUNDOSTACK(1), OPQWIDGET(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQUNDOGROUP(1) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQUNDOGROUP(1) && ISQWIDGETORNIL(2)) {
     /*
     QUndoView( QUndoGroup * group, QWidget * parent = 0 )
     */
@@ -118,8 +113,7 @@ HB_FUNC_STATIC(QUNDOVIEW_CLEANICON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QIcon *ptr = new QIcon(obj->cleanIcon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -140,8 +134,7 @@ HB_FUNC_STATIC(QUNDOVIEW_EMPTYLABEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->emptyLabel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,8 +154,7 @@ HB_FUNC_STATIC(QUNDOVIEW_GROUP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUndoGroup *ptr = obj->group();
       Qt5xHb::createReturnQObjectClass(ptr, "QUNDOGROUP");
@@ -183,8 +175,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETCLEANICON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQICON(1) || HB_ISCHAR(1))) {
 #endif
       obj->setCleanIcon(HB_ISOBJECT(1) ? *(QIcon *)Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +197,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETEMPTYLABEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setEmptyLabel(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,8 +219,7 @@ HB_FUNC_STATIC(QUNDOVIEW_STACK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUndoStack *ptr = obj->stack();
       Qt5xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
@@ -251,8 +240,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETGROUP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQUNDOGROUP(1))
-    {
+    if (ISNUMPAR(1) && ISQUNDOGROUP(1)) {
 #endif
       obj->setGroup(PQUNDOGROUP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,8 +262,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETSTACK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQUNDOSTACK(1))
-    {
+    if (ISNUMPAR(1) && ISQUNDOSTACK(1)) {
 #endif
       obj->setStack(PQUNDOSTACK(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

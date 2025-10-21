@@ -121,8 +121,7 @@ QSize HStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
 
     PHB_ITEM pRet = hb_vmEvalBlockV(m_sizeHintBlock, 2, pOption, pIndex);
 
-    if (hb_clsIsParent(hb_objGetClass(pRet), "QSIZE"))
-    {
+    if (hb_clsIsParent(hb_objGetClass(pRet), "QSIZE")) {
       size = *((QSize *)hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0)));
     } else {
       size = QStyledItemDelegate::sizeHint(option, index);
@@ -179,8 +178,7 @@ QWidget *HStyledItemDelegate::createEditor(QWidget *parent, const QStyleOptionVi
 
     PHB_ITEM pRet = hb_vmEvalBlockV(m_createEditorBlock, 3, pParent, pOption, pIndex);
 
-    if (hb_clsIsParent(hb_objGetClass(pRet), "QWIDGET"))
-    {
+    if (hb_clsIsParent(hb_objGetClass(pRet), "QWIDGET")) {
       widget = (QWidget *)hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
     } else {
       widget = QStyledItemDelegate::createEditor(parent, option, index);

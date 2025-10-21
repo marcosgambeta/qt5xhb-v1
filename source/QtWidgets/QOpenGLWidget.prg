@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
 #ifndef QT_NO_OPENGL
-  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     QOpenGLWidget *obj =
         new QOpenGLWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_FORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSurfaceFormat *ptr = new QSurfaceFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
@@ -147,8 +145,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_SETFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQSURFACEFORMAT(1)) {
 #endif
       obj->setFormat(*PQSURFACEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +171,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_ISVALID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,8 +195,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_MAKECURRENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->makeCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,8 +221,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_DONECURRENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->doneCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +247,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_CONTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QOpenGLContext *ptr = obj->context();
       Qt5xHb::createReturnQObjectClass(ptr, "QOPENGLCONTEXT");
@@ -279,8 +272,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLUINT(obj->defaultFramebufferObject());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,8 +296,7 @@ HB_FUNC_STATIC(QOPENGLWIDGET_GRABFRAMEBUFFER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QImage *ptr = new QImage(obj->grabFramebuffer());
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);

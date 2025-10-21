@@ -76,8 +76,7 @@ RETURN
     */
 HB_FUNC_STATIC(QTOOLBUTTON_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     QToolButton *obj = new QToolButton(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_ARROWTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->arrowType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_AUTORAISE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoRaise());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_DEFAULTACTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAction *ptr = obj->defaultAction();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -176,8 +172,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_MENU)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QMenu *ptr = obj->menu();
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
@@ -200,8 +195,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_POPUPMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->popupMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +216,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETARROWTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setArrowType((Qt::ArrowType)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,8 +238,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETAUTORAISE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAutoRaise(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +261,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETMENU)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMENU(1))
-    {
+    if (ISNUMPAR(1) && ISQMENU(1)) {
 #endif
       obj->setMenu(PQMENU(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,8 +285,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETPOPUPMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPopupMode((QToolButton::ToolButtonPopupMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,8 +308,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_TOOLBUTTONSTYLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->toolButtonStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,8 +328,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_MINIMUMSIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -361,8 +349,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -383,8 +370,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETDEFAULTACTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQACTION(1))
-    {
+    if (ISNUMPAR(1) && ISQACTION(1)) {
 #endif
       obj->setDefaultAction(PQACTION(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -406,8 +392,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETTOOLBUTTONSTYLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setToolButtonStyle((Qt::ToolButtonStyle)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,8 +415,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SHOWMENU)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->showMenu();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -108,8 +108,7 @@ RETURN
     */
 HB_FUNC_STATIC(QWIZARD_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     QWizard *obj = new QWizard(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -143,8 +142,7 @@ HB_FUNC_STATIC(QWIZARD_ADDPAGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIZARDPAGE(1))
-    {
+    if (ISNUMPAR(1) && ISQWIZARDPAGE(1)) {
 #endif
       RINT(obj->addPage(PQWIZARDPAGE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +162,7 @@ HB_FUNC_STATIC(QWIZARD_BUTTON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QAbstractButton *ptr = obj->button((QWizard::WizardButton)hb_parni(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QABSTRACTBUTTON");
@@ -186,8 +183,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQABSTRACTBUTTON(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQABSTRACTBUTTON(2)) {
 #endif
       obj->setButton((QWizard::WizardButton)hb_parni(1), PQABSTRACTBUTTON(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +205,7 @@ HB_FUNC_STATIC(QWIZARD_BUTTONTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->buttonText((QWizard::WizardButton)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,8 +225,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setButtonText((QWizard::WizardButton)hb_parni(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +247,7 @@ HB_FUNC_STATIC(QWIZARD_CURRENTID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->currentId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -274,8 +267,7 @@ HB_FUNC_STATIC(QWIZARD_CURRENTPAGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWizardPage *ptr = obj->currentPage();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIZARDPAGE");
@@ -296,8 +288,7 @@ HB_FUNC_STATIC(QWIZARD_FIELD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->field(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -318,8 +309,7 @@ HB_FUNC_STATIC(QWIZARD_HASVISITEDPAGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->hasVisitedPage(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,8 +329,7 @@ HB_FUNC_STATIC(QWIZARD_NEXTID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->nextId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,8 +349,7 @@ HB_FUNC_STATIC(QWIZARD_OPTIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->options());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -381,8 +369,7 @@ HB_FUNC_STATIC(QWIZARD_SETOPTIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOptions((QWizard::WizardOptions)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,8 +391,7 @@ HB_FUNC_STATIC(QWIZARD_PAGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QWizardPage *ptr = obj->page(PINT(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIZARDPAGE");
@@ -426,8 +412,7 @@ HB_FUNC_STATIC(QWIZARD_PAGEIDS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<int> list = obj->pageIds();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -448,8 +433,7 @@ HB_FUNC_STATIC(QWIZARD_PIXMAP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QPixmap *ptr = new QPixmap(obj->pixmap((QWizard::WizardPixmap)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
@@ -470,8 +454,7 @@ HB_FUNC_STATIC(QWIZARD_REMOVEPAGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->removePage(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -493,14 +476,12 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONLAYOUT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QList<QWizard::WizardButton> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << (QWizard::WizardButton)hb_arrayGetNI(aList1, i1 + 1);
       }
       obj->setButtonLayout(par1);
@@ -523,8 +504,7 @@ HB_FUNC_STATIC(QWIZARD_SETDEFAULTPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
-    {
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
 #endif
       obj->setDefaultProperty(PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -546,8 +526,7 @@ HB_FUNC_STATIC(QWIZARD_SETFIELD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
 #endif
       obj->setField(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -569,8 +548,7 @@ HB_FUNC_STATIC(QWIZARD_SETOPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
 #endif
       obj->setOption((QWizard::WizardOption)hb_parni(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -592,8 +570,7 @@ HB_FUNC_STATIC(QWIZARD_SETPAGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIZARDPAGE(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIZARDPAGE(2)) {
 #endif
       obj->setPage(PINT(1), PQWIZARDPAGE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -615,8 +592,7 @@ HB_FUNC_STATIC(QWIZARD_SETPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2)) {
 #endif
       obj->setPixmap((QWizard::WizardPixmap)hb_parni(1), *PQPIXMAP(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -638,8 +614,7 @@ HB_FUNC_STATIC(QWIZARD_SETSIDEWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       obj->setSideWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -661,8 +636,7 @@ HB_FUNC_STATIC(QWIZARD_SIDEWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWidget *ptr = obj->sideWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -683,8 +657,7 @@ HB_FUNC_STATIC(QWIZARD_STARTID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->startId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -704,8 +677,7 @@ HB_FUNC_STATIC(QWIZARD_SETSTARTID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStartId(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -727,8 +699,7 @@ HB_FUNC_STATIC(QWIZARD_SUBTITLEFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->subTitleFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -748,8 +719,7 @@ HB_FUNC_STATIC(QWIZARD_SETSUBTITLEFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSubTitleFormat((Qt::TextFormat)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -771,8 +741,7 @@ HB_FUNC_STATIC(QWIZARD_TESTOPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->testOption((QWizard::WizardOption)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -792,8 +761,7 @@ HB_FUNC_STATIC(QWIZARD_TITLEFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->titleFormat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -813,8 +781,7 @@ HB_FUNC_STATIC(QWIZARD_SETTITLEFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTitleFormat((Qt::TextFormat)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -836,8 +803,7 @@ HB_FUNC_STATIC(QWIZARD_VALIDATECURRENTPAGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->validateCurrentPage());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -857,8 +823,7 @@ HB_FUNC_STATIC(QWIZARD_VISITEDPAGES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<int> list = obj->visitedPages();
       Qt5xHb::convert_qlist_int_to_array(list);
@@ -879,8 +844,7 @@ HB_FUNC_STATIC(QWIZARD_WIZARDSTYLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->wizardStyle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -900,8 +864,7 @@ HB_FUNC_STATIC(QWIZARD_SETWIZARDSTYLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setWizardStyle((QWizard::WizardStyle)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -923,8 +886,7 @@ HB_FUNC_STATIC(QWIZARD_SETVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -946,8 +908,7 @@ HB_FUNC_STATIC(QWIZARD_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -968,8 +929,7 @@ HB_FUNC_STATIC(QWIZARD_BACK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->back();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -991,8 +951,7 @@ HB_FUNC_STATIC(QWIZARD_NEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->next();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1014,8 +973,7 @@ HB_FUNC_STATIC(QWIZARD_RESTART)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->restart();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -22,8 +22,7 @@ void QSplashScreenSlots::messageChanged(const QString &message)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "messageChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSPLASHSCREEN");
     PHB_ITEM pmessage = hb_itemPutC(NULL, QSTRINGTOSTRING(message));
 
@@ -41,8 +40,7 @@ void QSplashScreenSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QSplashScreenSlots *s = QCoreApplication::instance()->findChild<QSplashScreenSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSplashScreenSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -22,8 +22,7 @@ void QUndoStackSlots::canRedoChanged(bool canRedo)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "canRedoChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM pcanRedo = hb_itemPutL(NULL, canRedo);
 
@@ -40,8 +39,7 @@ void QUndoStackSlots::canUndoChanged(bool canUndo)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "canUndoChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM pcanUndo = hb_itemPutL(NULL, canUndo);
 
@@ -58,8 +56,7 @@ void QUndoStackSlots::cleanChanged(bool clean)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "cleanChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM pclean = hb_itemPutL(NULL, clean);
 
@@ -76,8 +73,7 @@ void QUndoStackSlots::indexChanged(int idx)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "indexChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM pidx = hb_itemPutNI(NULL, idx);
 
@@ -94,8 +90,7 @@ void QUndoStackSlots::redoTextChanged(const QString &redoText)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "redoTextChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM predoText = hb_itemPutC(NULL, QSTRINGTOSTRING(redoText));
 
@@ -112,8 +107,7 @@ void QUndoStackSlots::undoTextChanged(const QString &undoText)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "undoTextChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM pundoText = hb_itemPutC(NULL, QSTRINGTOSTRING(undoText));
 
@@ -131,8 +125,7 @@ void QUndoStackSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QUndoStackSlots *s = QCoreApplication::instance()->findChild<QUndoStackSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QUndoStackSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

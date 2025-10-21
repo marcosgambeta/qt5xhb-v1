@@ -146,24 +146,19 @@ RETURN
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QGraphicsScene( QObject * parent = 0 )
     */
     QGraphicsScene *obj = new QGraphicsScene(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISQOBJECTORNIL(2)) {
     /*
     QGraphicsScene( const QRectF &sceneRect, QObject * parent = 0 )
     */
     QGraphicsScene *obj = new QGraphicsScene(*PQRECTF(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQOBJECTORNIL(5))
-  {
+  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQOBJECTORNIL(5)) {
     /*
     QGraphicsScene( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
     */
@@ -200,8 +195,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ACTIVEPANEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QGraphicsItem *ptr = obj->activePanel();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
@@ -222,8 +216,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ACTIVEWINDOW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QGraphicsWidget *ptr = obj->activeWindow();
       Qt5xHb::createReturnQObjectClass(ptr, "QGRAPHICSWIDGET");
@@ -237,31 +230,26 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ACTIVEWINDOW)
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
 {
-  if (ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
-  {
+  if (ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3))) {
     /*
     QGraphicsEllipseItem * addEllipse( const QRectF &rect, const QPen &pen = QPen(), const QBrush &brush = QBrush() )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QGraphicsEllipseItem *ptr = obj->addEllipse(*PQRECTF(1), HB_ISNIL(2) ? QPen() : *(QPen *)Qt5xHb::itemGetPtr(2),
                                                   HB_ISNIL(3) ? QBrush() : *(QBrush *)Qt5xHb::itemGetPtr(3));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSELLIPSEITEM", false);
     }
-  }
-  else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) &&
-           (ISQBRUSH(6) || HB_ISNIL(6)))
-  {
+  } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) &&
+           (ISQBRUSH(6) || HB_ISNIL(6))) {
     /*
     QGraphicsEllipseItem * addEllipse( qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush &
     brush = QBrush() )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QGraphicsEllipseItem *ptr = obj->addEllipse(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
                                                   HB_ISNIL(5) ? QPen() : *(QPen *)Qt5xHb::itemGetPtr(5),
                                                   HB_ISNIL(6) ? QBrush() : *(QBrush *)Qt5xHb::itemGetPtr(6));
@@ -281,8 +269,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
 #endif
       obj->addItem(PQGRAPHICSITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,28 +284,23 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDITEM)
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
 {
-  if (ISBETWEEN(1, 2) && ISQLINEF(1) && (ISQPEN(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(1, 2) && ISQLINEF(1) && (ISQPEN(2) || HB_ISNIL(2))) {
     /*
     QGraphicsLineItem * addLine( const QLineF &line, const QPen &pen = QPen() )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QGraphicsLineItem *ptr = obj->addLine(*PQLINEF(1), HB_ISNIL(2) ? QPen() : *(QPen *)Qt5xHb::itemGetPtr(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLINEITEM", false);
     }
-  }
-  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)))
-  {
+  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5))) {
     /*
     QGraphicsLineItem * addLine( qreal x1, qreal y1, qreal x2, qreal y2, const QPen &pen = QPen() )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QGraphicsLineItem *ptr = obj->addLine(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
                                             HB_ISNIL(5) ? QPen() : *(QPen *)Qt5xHb::itemGetPtr(5));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSLINEITEM", false);
@@ -337,8 +319,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPATH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQPAINTERPATH(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(1, 3) && ISQPAINTERPATH(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3))) {
 #endif
       QGraphicsPathItem *ptr = obj->addPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? QPen() : *(QPen *)Qt5xHb::itemGetPtr(2),
                                             HB_ISNIL(3) ? QBrush() : *(QBrush *)Qt5xHb::itemGetPtr(3));
@@ -360,8 +341,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPIXMAP(1))
-    {
+    if (ISNUMPAR(1) && ISQPIXMAP(1)) {
 #endif
       QGraphicsPixmapItem *ptr = obj->addPixmap(*PQPIXMAP(1));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSPIXMAPITEM", false);
@@ -383,8 +363,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPOLYGON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQPOLYGONF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(1, 3) && ISQPOLYGONF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3))) {
 #endif
       QGraphicsPolygonItem *ptr = obj->addPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? QPen() : *(QPen *)Qt5xHb::itemGetPtr(2),
                                                   HB_ISNIL(3) ? QBrush() : *(QBrush *)Qt5xHb::itemGetPtr(3));
@@ -399,31 +378,26 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPOLYGON)
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
 {
-  if (ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
-  {
+  if (ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3))) {
     /*
     QGraphicsRectItem * addRect( const QRectF &rect, const QPen &pen = QPen(), const QBrush &brush = QBrush() )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QGraphicsRectItem *ptr = obj->addRect(*PQRECTF(1), HB_ISNIL(2) ? QPen() : *(QPen *)Qt5xHb::itemGetPtr(2),
                                             HB_ISNIL(3) ? QBrush() : *(QBrush *)Qt5xHb::itemGetPtr(3));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSRECTITEM", false);
     }
-  }
-  else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) &&
-           (ISQBRUSH(6) || HB_ISNIL(6)))
-  {
+  } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) &&
+           (ISQBRUSH(6) || HB_ISNIL(6))) {
     /*
     QGraphicsRectItem * addRect( qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush &brush =
     QBrush() )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QGraphicsRectItem *ptr = obj->addRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
                                             HB_ISNIL(5) ? QPen() : *(QPen *)Qt5xHb::itemGetPtr(5),
                                             HB_ISNIL(6) ? QBrush() : *(QBrush *)Qt5xHb::itemGetPtr(6));
@@ -443,8 +417,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDSIMPLETEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2))) {
 #endif
       QGraphicsSimpleTextItem *ptr =
           obj->addSimpleText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *(QFont *)Qt5xHb::itemGetPtr(2));
@@ -466,8 +439,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2))) {
 #endif
       QGraphicsTextItem *ptr = obj->addText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *(QFont *)Qt5xHb::itemGetPtr(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSTEXTITEM", false);
@@ -488,8 +460,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2)) {
 #endif
       QGraphicsProxyWidget *ptr =
           obj->addWidget(PQWIDGET(1), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
@@ -511,8 +482,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_BACKGROUNDBRUSH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QBrush *ptr = new QBrush(obj->backgroundBrush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -533,8 +503,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_BSPTREEDEPTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->bspTreeDepth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -554,8 +523,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CLEARFOCUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearFocus();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -577,14 +545,12 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CREATEITEMGROUP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QList<QGraphicsItem *> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << (QGraphicsItem *)hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0));
       }
       QGraphicsItemGroup *ptr = obj->createItemGroup(par1);
@@ -606,8 +572,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_DESTROYITEMGROUP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSITEMGROUP(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSITEMGROUP(1)) {
 #endif
       obj->destroyItemGroup(PQGRAPHICSITEMGROUP(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -629,8 +594,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_FOCUSITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QGraphicsItem *ptr = obj->focusItem();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
@@ -651,8 +615,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_FONT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QFont *ptr = new QFont(obj->font());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -673,8 +636,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_FOREGROUNDBRUSH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QBrush *ptr = new QBrush(obj->foregroundBrush());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -695,8 +657,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_HASFOCUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -716,8 +677,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_HEIGHT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->height());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -737,8 +697,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_INPUTMETHODQUERY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->inputMethodQuery((Qt::InputMethodQuery)hb_parni(1)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -752,32 +711,27 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_INPUTMETHODQUERY)
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_INVALIDATE)
 {
-  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5))
-  {
+  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     /*
     void invalidate( qreal x, qreal y, qreal w, qreal h, QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers
     )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->invalidate(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
                       HB_ISNIL(5) ? (QGraphicsScene::SceneLayers)QGraphicsScene::AllLayers
                                   : (QGraphicsScene::SceneLayers)hb_parni(5));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(0, 2) && (ISQRECTF(1) || HB_ISNIL(1)) && ISNUMORNIL(2))
-  {
+  } else if (ISBETWEEN(0, 2) && (ISQRECTF(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
     /*
     void invalidate( const QRectF &rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->invalidate(HB_ISNIL(1) ? QRectF() : *(QRectF *)Qt5xHb::itemGetPtr(1),
                       HB_ISNIL(2) ? (QGraphicsScene::SceneLayers)QGraphicsScene::AllLayers
                                   : (QGraphicsScene::SceneLayers)hb_parni(2));
@@ -798,8 +752,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ISACTIVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isActive());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -819,8 +772,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ISSORTCACHEENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSortCacheEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -833,28 +785,23 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ISSORTCACHEENABLED)
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMAT)
 {
-  if (ISNUMPAR(2) && ISQPOINTF(1) && ISQTRANSFORM(2))
-  {
+  if (ISNUMPAR(2) && ISQPOINTF(1) && ISQTRANSFORM(2)) {
     /*
     QGraphicsItem * itemAt( const QPointF &position, const QTransform &deviceTransform ) const
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QGraphicsItem *ptr = obj->itemAt(*PQPOINTF(1), *PQTRANSFORM(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQTRANSFORM(3))
-  {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQTRANSFORM(3)) {
     /*
     QGraphicsItem * itemAt( qreal x, qreal y, const QTransform &deviceTransform ) const
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QGraphicsItem *ptr = obj->itemAt(PQREAL(1), PQREAL(2), *PQTRANSFORM(3));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
@@ -872,8 +819,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMINDEXMETHOD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->itemIndexMethod());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -893,8 +839,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMSBOUNDINGRECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->itemsBoundingRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -915,8 +860,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_MOUSEGRABBERITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QGraphicsItem *ptr = obj->mouseGrabberItem();
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
@@ -937,8 +881,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_PALETTE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPalette *ptr = new QPalette(obj->palette());
       Qt5xHb::createReturnClass(ptr, "QPALETTE", true);
@@ -959,8 +902,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_REMOVEITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
 #endif
       obj->removeItem(PQGRAPHICSITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -984,8 +926,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_RENDER)
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)) && (ISQRECTF(3) || HB_ISNIL(3)) &&
-        ISNUMORNIL(4))
-    {
+        ISNUMORNIL(4)) {
 #endif
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *(QRectF *)Qt5xHb::itemGetPtr(2),
                   HB_ISNIL(3) ? QRectF() : *(QRectF *)Qt5xHb::itemGetPtr(3),
@@ -1009,8 +950,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SCENERECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->sceneRect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -1031,8 +971,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SELECTIONAREA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPainterPath *ptr = new QPainterPath(obj->selectionArea());
       Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
@@ -1053,8 +992,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SENDEVENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQEVENT(2))
-    {
+    if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQEVENT(2)) {
 #endif
       RBOOL(obj->sendEvent(PQGRAPHICSITEM(1), PQEVENT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1074,8 +1012,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETACTIVEPANEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
 #endif
       obj->setActivePanel(PQGRAPHICSITEM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1097,8 +1034,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETACTIVEWINDOW)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSWIDGET(1)) {
 #endif
       obj->setActiveWindow(PQGRAPHICSWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1120,8 +1056,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETBACKGROUNDBRUSH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBRUSH(1))
-    {
+    if (ISNUMPAR(1) && ISQBRUSH(1)) {
 #endif
       obj->setBackgroundBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1143,8 +1078,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETBSPTREEDEPTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBspTreeDepth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1166,8 +1100,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOCUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->setFocus(HB_ISNIL(1) ? (Qt::FocusReason)Qt::OtherFocusReason : (Qt::FocusReason)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1189,8 +1122,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOCUSITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && ISNUMORNIL(2)) {
 #endif
       obj->setFocusItem(PQGRAPHICSITEM(1),
                         HB_ISNIL(2) ? (Qt::FocusReason)Qt::OtherFocusReason : (Qt::FocusReason)hb_parni(2));
@@ -1213,8 +1145,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETFONT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQFONT(1))
-    {
+    if (ISNUMPAR(1) && ISQFONT(1)) {
 #endif
       obj->setFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1236,8 +1167,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOREGROUNDBRUSH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBRUSH(1))
-    {
+    if (ISNUMPAR(1) && ISQBRUSH(1)) {
 #endif
       obj->setForegroundBrush(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1259,8 +1189,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETITEMINDEXMETHOD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setItemIndexMethod((QGraphicsScene::ItemIndexMethod)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1282,8 +1211,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETPALETTE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPALETTE(1))
-    {
+    if (ISNUMPAR(1) && ISQPALETTE(1)) {
 #endif
       obj->setPalette(*PQPALETTE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1298,29 +1226,24 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETPALETTE)
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_SETSCENERECT)
 {
-  if (ISNUMPAR(1) && ISQRECTF(1))
-  {
+  if (ISNUMPAR(1) && ISQRECTF(1)) {
     /*
     void setSceneRect( const QRectF &rect )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setSceneRect(*PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     void setSceneRect( qreal x, qreal y, qreal w, qreal h )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setSceneRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
@@ -1332,29 +1255,24 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSCENERECT)
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_SETSELECTIONAREA)
 {
-  if (ISNUMPAR(2) && ISQPAINTERPATH(1) && ISQTRANSFORM(2))
-  {
+  if (ISNUMPAR(2) && ISQPAINTERPATH(1) && ISQTRANSFORM(2)) {
     /*
     void setSelectionArea( const QPainterPath &path, const QTransform &deviceTransform )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setSelectionArea(*PQPAINTERPATH(1), *PQTRANSFORM(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(3) && ISQPAINTERPATH(1) && HB_ISNUM(2) && ISQTRANSFORM(3))
-  {
+  } else if (ISNUMPAR(3) && ISQPAINTERPATH(1) && HB_ISNUM(2) && ISQTRANSFORM(3)) {
     /*
     void setSelectionArea( const QPainterPath &path, Qt::ItemSelectionMode mode, const QTransform &deviceTransform )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setSelectionArea(*PQPAINTERPATH(1), (Qt::ItemSelectionMode)hb_parni(2), *PQTRANSFORM(3));
     }
 
@@ -1373,8 +1291,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSORTCACHEENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSortCacheEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1396,8 +1313,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSTICKYFOCUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setStickyFocus(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1419,8 +1335,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSTYLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSTYLE(1))
-    {
+    if (ISNUMPAR(1) && ISQSTYLE(1)) {
 #endif
       obj->setStyle(PQSTYLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1442,8 +1357,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_STICKYFOCUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->stickyFocus());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1463,8 +1377,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_STYLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QStyle *ptr = obj->style();
       Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");
@@ -1478,29 +1391,24 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_STYLE)
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_UPDATE)
 {
-  if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     void update( qreal x, qreal y, qreal w, qreal h )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->update(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(0, 1) && (ISQRECTF(1) || HB_ISNIL(1)))
-  {
+  } else if (ISBETWEEN(0, 1) && (ISQRECTF(1) || HB_ISNIL(1))) {
     /*
     void update( const QRectF &rect = QRectF() )
     */
     QGraphicsScene *obj = (QGraphicsScene *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->update(HB_ISNIL(1) ? QRectF() : *(QRectF *)Qt5xHb::itemGetPtr(1));
     }
 
@@ -1519,8 +1427,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_WIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->width());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1540,8 +1447,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADVANCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->advance();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1563,8 +1469,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1586,8 +1491,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CLEARSELECTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearSelection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

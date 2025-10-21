@@ -22,8 +22,7 @@ void QWizardPageSlots::completeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "completeChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARDPAGE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QWizardPageSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QWizardPageSlots *s = QCoreApplication::instance()->findChild<QWizardPageSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QWizardPageSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

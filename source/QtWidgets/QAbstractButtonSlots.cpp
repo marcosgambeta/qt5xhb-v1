@@ -22,8 +22,7 @@ void QAbstractButtonSlots::clicked(bool checked)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTBUTTON");
     PHB_ITEM pchecked = hb_itemPutL(NULL, checked);
 
@@ -40,8 +39,7 @@ void QAbstractButtonSlots::pressed()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pressed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTBUTTON");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -56,8 +54,7 @@ void QAbstractButtonSlots::released()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "released()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTBUTTON");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -72,8 +69,7 @@ void QAbstractButtonSlots::toggled(bool checked)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "toggled(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTBUTTON");
     PHB_ITEM pchecked = hb_itemPutL(NULL, checked);
 
@@ -91,8 +87,7 @@ void QAbstractButtonSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QAbstractButtonSlots *s = QCoreApplication::instance()->findChild<QAbstractButtonSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractButtonSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

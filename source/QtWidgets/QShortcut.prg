@@ -67,17 +67,14 @@ RETURN
 
 HB_FUNC_STATIC(QSHORTCUT_NEW)
 {
-  if (ISNUMPAR(1) && ISQWIDGET(1))
-  {
+  if (ISNUMPAR(1) && ISQWIDGET(1)) {
     /*
     QShortcut( QWidget * parent )
     */
     QShortcut *obj = new QShortcut(PQWIDGET(1));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && ISCHARORNIL(3) &&
-           ISCHARORNIL(4) && ISNUMORNIL(5))
-  {
+  } else if (ISBETWEEN(2, 5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && ISCHARORNIL(3) &&
+           ISCHARORNIL(4) && ISNUMORNIL(5)) {
     /*
     QShortcut( const QKeySequence &key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0,
     Qt::ShortcutContext context = Qt::WindowShortcut )
@@ -117,8 +114,7 @@ HB_FUNC_STATIC(QSHORTCUT_AUTOREPEAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoRepeat());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,8 +134,7 @@ HB_FUNC_STATIC(QSHORTCUT_CONTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->context());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,8 +154,7 @@ HB_FUNC_STATIC(QSHORTCUT_ID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +174,7 @@ HB_FUNC_STATIC(QSHORTCUT_ISENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEnabled());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,8 +194,7 @@ HB_FUNC_STATIC(QSHORTCUT_KEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QKeySequence *ptr = new QKeySequence(obj->key());
       Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
@@ -223,8 +215,7 @@ HB_FUNC_STATIC(QSHORTCUT_PARENTWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWidget *ptr = obj->parentWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -245,8 +236,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETAUTOREPEAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAutoRepeat(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,8 +258,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setContext((Qt::ShortcutContext)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,8 +280,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETENABLED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setEnabled(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,8 +302,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETKEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQKEYSEQUENCE(1))
-    {
+    if (ISNUMPAR(1) && ISQKEYSEQUENCE(1)) {
 #endif
       obj->setKey(*PQKEYSEQUENCE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,8 +324,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETWHATSTHIS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setWhatsThis(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,8 +346,7 @@ HB_FUNC_STATIC(QSHORTCUT_WHATSTHIS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->whatsThis());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

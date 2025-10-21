@@ -109,8 +109,7 @@ RETURN
     */
 HB_FUNC_STATIC(QINPUTDIALOG_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     QInputDialog *obj =
         new QInputDialog(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -145,8 +144,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_CANCELBUTTONTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->cancelButtonText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +164,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCANCELBUTTONTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setCancelButtonText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,8 +186,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_COMBOBOXITEMS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->comboBoxItems());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,8 +206,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXITEMS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       obj->setComboBoxItems(PQSTRINGLIST(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,8 +228,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEDECIMALS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->doubleDecimals());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,8 +248,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEDECIMALS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDoubleDecimals(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +270,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMAXIMUM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->doubleMaximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,8 +290,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMAXIMUM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDoubleMaximum(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,8 +312,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMINIMUM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->doubleMinimum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,8 +332,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMINIMUM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDoubleMinimum(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -365,8 +354,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RDOUBLE(obj->doubleValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -386,8 +374,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDoubleValue(PDOUBLE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -409,8 +396,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INPUTMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->inputMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,8 +416,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINPUTMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setInputMode((QInputDialog::InputMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -453,8 +438,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTMAXIMUM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->intMaximum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -474,8 +458,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMAXIMUM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setIntMaximum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -497,8 +480,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTMINIMUM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->intMinimum());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -518,8 +500,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMINIMUM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setIntMinimum(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -541,8 +522,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTSTEP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->intStep());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -562,8 +542,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTSTEP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setIntStep(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -585,8 +564,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->intValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -606,8 +584,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setIntValue(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -629,8 +606,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ISCOMBOBOXEDITABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isComboBoxEditable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -650,8 +626,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXEDITABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setComboBoxEditable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -673,8 +648,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_LABELTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->labelText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -694,8 +668,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETLABELTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setLabelText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -717,8 +690,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OKBUTTONTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->okButtonText());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -738,8 +710,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOKBUTTONTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setOkButtonText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -761,8 +732,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OPEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
 #endif
       obj->open(PQOBJECT(1), PCONSTCHAR(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -784,8 +754,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OPTIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->options());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -805,8 +774,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOptions((QInputDialog::InputDialogOptions)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -828,8 +796,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLERANGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setDoubleRange(PDOUBLE(1), PDOUBLE(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -851,8 +818,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTRANGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setIntRange(PINT(1), PINT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -874,8 +840,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
 #endif
       obj->setOption((QInputDialog::InputDialogOption)hb_parni(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -897,8 +862,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TESTOPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->testOption((QInputDialog::InputDialogOption)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -918,8 +882,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TEXTECHOMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->textEchoMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -939,8 +902,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTECHOMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTextEchoMode((QLineEdit::EchoMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -962,8 +924,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TEXTVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->textValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -983,8 +944,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setTextValue(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1006,8 +966,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DONE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->done(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1029,8 +988,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_MINIMUMSIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -1051,8 +1009,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1074,8 +1031,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -1096,8 +1052,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
       ISNUMORNIL(5) && ISNUMORNIL(6) && ISNUMORNIL(7) &&
-      (HB_ISLOG(8) || HB_ISNIL(8)) && ISNUMORNIL(9))
-  {
+      (HB_ISLOG(8) || HB_ISNIL(8)) && ISNUMORNIL(9)) {
 #endif
     bool par8;
     RDOUBLE(QInputDialog::getDouble(PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPDOUBLE(4, 0), OPDOUBLE(5, -2147483647),
@@ -1120,8 +1075,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
       ISNUMORNIL(5) && ISNUMORNIL(6) && ISNUMORNIL(7) &&
-      (HB_ISLOG(8) || HB_ISNIL(8)) && ISNUMORNIL(9))
-  {
+      (HB_ISLOG(8) || HB_ISNIL(8)) && ISNUMORNIL(9)) {
 #endif
     bool par8;
     RINT(QInputDialog::getInt(PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPINT(4, 0), OPINT(5, -2147483647),
@@ -1145,8 +1099,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETITEM)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(4, 9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISARRAY(4) &&
       ISNUMORNIL(5) && (HB_ISLOG(6) || HB_ISNIL(6)) && (HB_ISLOG(7) || HB_ISNIL(7)) &&
-      ISNUMORNIL(8) && ISNUMORNIL(9))
-  {
+      ISNUMORNIL(8) && ISNUMORNIL(9)) {
 #endif
     bool par7;
     RQSTRING(
@@ -1171,8 +1124,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 8) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
       ISCHARORNIL(5) && (HB_ISLOG(6) || HB_ISNIL(6)) && ISNUMORNIL(7) &&
-      ISNUMORNIL(8))
-  {
+      ISNUMORNIL(8)) {
 #endif
     bool par6;
     RQSTRING(QInputDialog::getText(
@@ -1196,8 +1148,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETMULTILINETEXT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 7) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISCHARORNIL(4) &&
-      (HB_ISLOG(5) || HB_ISNIL(5)) && ISNUMORNIL(6) && ISNUMORNIL(7))
-  {
+      (HB_ISLOG(5) || HB_ISNIL(5)) && ISNUMORNIL(6) && ISNUMORNIL(7)) {
 #endif
     bool par5;
     RQSTRING(QInputDialog::getMultiLineText(PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4, QString()), &par5,

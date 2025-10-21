@@ -78,8 +78,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_LASTPOS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->lastPos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_LASTSCENEPOS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->lastScenePos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_LASTSCREENPOS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPoint *ptr = new QPoint(obj->lastScreenPos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -144,8 +141,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_MODIFIERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->modifiers());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +161,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_POS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->pos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -187,8 +182,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_SCENEPOS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->scenePos());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -209,8 +203,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_SCREENPOS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPoint *ptr = new QPoint(obj->screenPos());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);

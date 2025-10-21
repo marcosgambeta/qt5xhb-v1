@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_HORIZONTALDIRECTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->horizontalDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_SETSWIPEANGLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSwipeAngle(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +119,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_SWIPEANGLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->swipeAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,8 +139,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_VERTICALDIRECTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->verticalDirection());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

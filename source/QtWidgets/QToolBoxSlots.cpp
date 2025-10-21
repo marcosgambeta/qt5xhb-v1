@@ -22,8 +22,7 @@ void QToolBoxSlots::currentChanged(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBOX");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -41,8 +40,7 @@ void QToolBoxSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QToolBoxSlots *s = QCoreApplication::instance()->findChild<QToolBoxSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QToolBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QTAPGESTURE_POSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->position());
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QTAPGESTURE_SETPOSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINTF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINTF(1)) {
 #endif
       obj->setPosition(*PQPOINTF(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

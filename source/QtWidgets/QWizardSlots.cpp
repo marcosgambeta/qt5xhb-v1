@@ -22,8 +22,7 @@ void QWizardSlots::currentIdChanged(int id)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentIdChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
 
@@ -40,8 +39,7 @@ void QWizardSlots::customButtonClicked(int which)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "customButtonClicked(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pwhich = hb_itemPutNI(NULL, which);
 
@@ -58,8 +56,7 @@ void QWizardSlots::helpRequested()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "helpRequested()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -74,8 +71,7 @@ void QWizardSlots::pageAdded(int id)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pageAdded(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
 
@@ -92,8 +88,7 @@ void QWizardSlots::pageRemoved(int id)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "pageRemoved(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pid = hb_itemPutNI(NULL, id);
 
@@ -111,8 +106,7 @@ void QWizardSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QWizardSlots *s = QCoreApplication::instance()->findChild<QWizardSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QWizardSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -65,16 +65,13 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QStyleOptionProgressBar()
     */
     QStyleOptionProgressBar *obj = new QStyleOptionProgressBar();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONPROGRESSBAR(1))
-  {
+  } else if (ISNUMPAR(1) && ISQSTYLEOPTIONPROGRESSBAR(1)) {
     /*
     QStyleOptionProgressBar( const QStyleOptionProgressBar &other )
     */
@@ -93,8 +90,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_MINIMUM)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->minimum);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -106,8 +102,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETMINIMUM)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->minimum = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -125,8 +120,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_MAXIMUM)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->maximum);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -138,8 +132,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETMAXIMUM)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->maximum = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -157,8 +150,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_PROGRESS)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RINT(obj->progress);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -170,8 +162,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETPROGRESS)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->progress = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -189,8 +180,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_TEXT)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RQSTRING(obj->text);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -202,8 +192,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXT)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
       obj->text = PQSTRING(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -221,8 +210,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_TEXTALIGNMENT)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->textAlignment);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -234,8 +222,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXTALIGNMENT)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->textAlignment = (Qt::Alignment)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -253,8 +240,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_TEXTVISIBLE)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->textVisible);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -266,8 +252,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXTVISIBLE)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->textVisible = PBOOL(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -285,8 +270,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_ORIENTATION)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RENUM(obj->orientation);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -298,8 +282,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETORIENTATION)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->orientation = (Qt::Orientation)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -317,8 +300,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_INVERTEDAPPEARANCE)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->invertedAppearance);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -330,8 +312,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETINVERTEDAPPEARANCE)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->invertedAppearance = PBOOL(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -349,8 +330,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_BOTTOMTOTOP)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->bottomToTop);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -362,8 +342,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETBOTTOMTOTOP)
   QStyleOptionProgressBar *obj = (QStyleOptionProgressBar *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->bottomToTop = PBOOL(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

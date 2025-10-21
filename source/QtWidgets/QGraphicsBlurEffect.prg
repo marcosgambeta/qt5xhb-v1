@@ -62,8 +62,7 @@ RETURN
     */
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QGraphicsBlurEffect *obj = new QGraphicsBlurEffect(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -97,8 +96,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURHINTS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->blurHints());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,8 +116,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURRADIUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->blurRadius());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,8 +136,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRECTF(1))
-    {
+    if (ISNUMPAR(1) && ISQRECTF(1)) {
 #endif
       QRectF *ptr = new QRectF(obj->boundingRectFor(*PQRECTF(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -161,8 +157,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURHINTS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBlurHints((QGraphicsBlurEffect::BlurHints)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +179,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURRADIUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBlurRadius(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

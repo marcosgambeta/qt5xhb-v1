@@ -22,8 +22,7 @@ void QLCDNumberSlots::overflow()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "overflow()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLCDNUMBER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QLCDNumberSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QLCDNumberSlots *s = QCoreApplication::instance()->findChild<QLCDNumberSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QLCDNumberSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

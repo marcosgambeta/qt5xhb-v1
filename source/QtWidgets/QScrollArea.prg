@@ -66,8 +66,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSCROLLAREA_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     QScrollArea *obj = new QScrollArea(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ALIGNMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->alignment());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4))
-    {
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->ensureVisible(PINT(1), PINT(2), OPINT(3, 50), OPINT(4, 50));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,8 +142,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREWIDGETVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISNUMORNIL(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       obj->ensureWidgetVisible(PQWIDGET(1), OPINT(2, 50), OPINT(3, 50));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,8 +164,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETALIGNMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setAlignment((Qt::Alignment)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,8 +186,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       obj->setWidget(PQWIDGET(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +208,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGETRESIZABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setWidgetResizable(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,8 +230,7 @@ HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWidget *ptr = obj->takeWidget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -259,8 +251,7 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWidget *ptr = obj->widget();
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -281,8 +272,7 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGETRESIZABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->widgetResizable());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,8 +292,7 @@ HB_FUNC_STATIC(QSCROLLAREA_FOCUSNEXTPREVCHILD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       RBOOL(obj->focusNextPrevChild(PBOOL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,8 +312,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);

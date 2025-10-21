@@ -61,8 +61,7 @@ RETURN
     */
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QGraphicsOpacityEffect *obj = new QGraphicsOpacityEffect(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -96,8 +95,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_OPACITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->opacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,8 +115,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_OPACITYMASK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QBrush *ptr = new QBrush(obj->opacityMask());
       Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -139,8 +136,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_SETOPACITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOpacity(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +158,7 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_SETOPACITYMASK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBRUSH(1))
-    {
+    if (ISNUMPAR(1) && ISQBRUSH(1)) {
 #endif
       obj->setOpacityMask(*PQBRUSH(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

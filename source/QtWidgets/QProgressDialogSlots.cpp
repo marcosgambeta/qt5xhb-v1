@@ -22,8 +22,7 @@ void QProgressDialogSlots::canceled()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "canceled()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROGRESSDIALOG");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QProgressDialogSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QProgressDialogSlots *s = QCoreApplication::instance()->findChild<QProgressDialogSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QProgressDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

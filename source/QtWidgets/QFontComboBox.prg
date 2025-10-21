@@ -64,8 +64,7 @@ RETURN
     */
 HB_FUNC_STATIC(QFONTCOMBOBOX_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     QFontComboBox *obj = new QFontComboBox(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_CURRENTFONT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QFont *ptr = new QFont(obj->currentFont());
       Qt5xHb::createReturnClass(ptr, "QFONT", true);
@@ -121,8 +119,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_FONTFILTERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->fontFilters());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,8 +139,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETFONTFILTERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFontFilters((QFontComboBox::FontFilters)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +161,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETWRITINGSYSTEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setWritingSystem((QFontDatabase::WritingSystem)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +183,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_WRITINGSYSTEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->writingSystem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,8 +203,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -231,8 +224,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETCURRENTFONT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQFONT(1))
-    {
+    if (ISNUMPAR(1) && ISQFONT(1)) {
 #endif
       obj->setCurrentFont(*PQFONT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

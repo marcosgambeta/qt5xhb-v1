@@ -22,8 +22,7 @@ void QGraphicsScaleSlots::originChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "originChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QGraphicsScaleSlots::scaleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "scaleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -54,8 +52,7 @@ void QGraphicsScaleSlots::xScaleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "xScaleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -70,8 +67,7 @@ void QGraphicsScaleSlots::yScaleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "yScaleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -86,8 +82,7 @@ void QGraphicsScaleSlots::zScaleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "zScaleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -103,8 +98,7 @@ void QGraphicsScaleSlots_connect_signal(const QString &signal, const QString &sl
   if (obj != NULL) {
     QGraphicsScaleSlots *s = QCoreApplication::instance()->findChild<QGraphicsScaleSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGraphicsScaleSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

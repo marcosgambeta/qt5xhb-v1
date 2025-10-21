@@ -64,8 +64,7 @@ RETURN
     */
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_NEW)
 {
-  if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
-  {
+  if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1)) {
     QPlainTextDocumentLayout *obj = new QPlainTextDocumentLayout(PQTEXTDOCUMENT(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->cursorWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,8 +118,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
 #endif
       obj->ensureBlockLayout(*PQTEXTBLOCK(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,8 +140,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->requestUpdate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,8 +162,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCursorWidth(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,8 +184,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
 #endif
       QRectF *ptr = new QRectF(obj->blockBoundingRect(*PQTEXTBLOCK(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -211,8 +205,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSizeF *ptr = new QSizeF(obj->documentSize());
       Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
@@ -233,8 +226,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTFRAME(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTFRAME(1)) {
 #endif
       QRectF *ptr = new QRectF(obj->frameBoundingRect(PQTEXTFRAME(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -255,8 +247,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_HITTEST)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2)) {
 #endif
       RINT(obj->hitTest(*PQPOINTF(1), (Qt::HitTestAccuracy)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +267,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->pageCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

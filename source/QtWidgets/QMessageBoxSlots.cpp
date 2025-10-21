@@ -22,8 +22,7 @@ void QMessageBoxSlots::buttonClicked(QAbstractButton *button)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "buttonClicked(QAbstractButton*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMESSAGEBOX");
     PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");
 
@@ -41,8 +40,7 @@ void QMessageBoxSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QMessageBoxSlots *s = QCoreApplication::instance()->findChild<QMessageBoxSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QMessageBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

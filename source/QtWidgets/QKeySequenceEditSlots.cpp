@@ -23,8 +23,7 @@ void QKeySequenceEditSlots::editingFinished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "editingFinished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QKEYSEQUENCEEDIT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QKeySequenceEditSlots::keySequenceChanged(const QKeySequence &keySequence)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "keySequenceChanged(QKeySequence)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QKEYSEQUENCEEDIT");
     PHB_ITEM pkeySequence = Qt5xHb::Signals_return_object((void *)&keySequence, "QKEYSEQUENCE");
 
@@ -62,8 +60,7 @@ void QKeySequenceEditSlots_connect_signal(const QString &signal, const QString &
   if (obj != NULL) {
     QKeySequenceEditSlots *s = QCoreApplication::instance()->findChild<QKeySequenceEditSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QKeySequenceEditSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -22,8 +22,7 @@ void QGroupBoxSlots::clicked(bool checked)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "clicked(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGROUPBOX");
     PHB_ITEM pchecked = hb_itemPutL(NULL, checked);
 
@@ -40,8 +39,7 @@ void QGroupBoxSlots::toggled(bool on)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "toggled(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGROUPBOX");
     PHB_ITEM pon = hb_itemPutL(NULL, on);
 
@@ -59,8 +57,7 @@ void QGroupBoxSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QGroupBoxSlots *s = QCoreApplication::instance()->findChild<QGroupBoxSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGroupBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

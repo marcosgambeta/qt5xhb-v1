@@ -22,8 +22,7 @@ void QCheckBoxSlots::stateChanged(int state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCHECKBOX");
     PHB_ITEM pstate = hb_itemPutNI(NULL, state);
 
@@ -41,8 +40,7 @@ void QCheckBoxSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QCheckBoxSlots *s = QCoreApplication::instance()->findChild<QCheckBoxSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCheckBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

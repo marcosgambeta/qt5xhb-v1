@@ -62,8 +62,7 @@ RETURN
 HB_FUNC_STATIC(QKEYSEQUENCEEDIT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     /*
     QKeySequenceEdit( QWidget * parent = 0 )
     */
@@ -71,9 +70,7 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_NEW)
     QKeySequenceEdit *obj = new QKeySequenceEdit(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISQWIDGETORNIL(2)) {
     /*
     QKeySequenceEdit( const QKeySequence &keySequence, QWidget * parent = 0 )
     */
@@ -116,8 +113,7 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_KEYSEQUENCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QKeySequence *ptr = new QKeySequence(obj->keySequence());
       Qt5xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
@@ -140,8 +136,7 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_SETKEYSEQUENCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQKEYSEQUENCE(1))
-    {
+    if (ISNUMPAR(1) && ISQKEYSEQUENCE(1)) {
 #endif
       obj->setKeySequence(*PQKEYSEQUENCE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,8 +160,7 @@ HB_FUNC_STATIC(QKEYSEQUENCEEDIT_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

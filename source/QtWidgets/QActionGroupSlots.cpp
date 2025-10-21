@@ -22,8 +22,7 @@ void QActionGroupSlots::hovered(QAction *action)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hovered(QAction*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTIONGROUP");
     PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
 
@@ -40,8 +39,7 @@ void QActionGroupSlots::triggered(QAction *action)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "triggered(QAction*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTIONGROUP");
     PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
 
@@ -59,8 +57,7 @@ void QActionGroupSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QActionGroupSlots *s = QCoreApplication::instance()->findChild<QActionGroupSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QActionGroupSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

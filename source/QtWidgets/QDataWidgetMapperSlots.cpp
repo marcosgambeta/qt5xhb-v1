@@ -22,8 +22,7 @@ void QDataWidgetMapperSlots::currentIndexChanged(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentIndexChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDATAWIDGETMAPPER");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -41,8 +40,7 @@ void QDataWidgetMapperSlots_connect_signal(const QString &signal, const QString 
   if (obj != NULL) {
     QDataWidgetMapperSlots *s = QCoreApplication::instance()->findChild<QDataWidgetMapperSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDataWidgetMapperSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

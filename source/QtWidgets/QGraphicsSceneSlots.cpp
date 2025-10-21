@@ -22,15 +22,12 @@ void QGraphicsSceneSlots::changed(const QList<QRectF> &region)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "changed(QList<QRectF>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCENE");
     PHB_DYNS pDynSym = hb_dynsymFindName("QRECTF");
     PHB_ITEM pregion = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
-      for (int i = 0; i < region.count(); i++)
-      {
+    if (pDynSym != NULL) {
+      for (int i = 0; i < region.count(); i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -59,8 +56,7 @@ void QGraphicsSceneSlots::sceneRectChanged(const QRectF &rect)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sceneRectChanged(QRectF)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCENE");
     PHB_ITEM prect = Qt5xHb::Signals_return_object((void *)&rect, "QRECTF");
 
@@ -77,8 +73,7 @@ void QGraphicsSceneSlots::selectionChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectionChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSSCENE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -94,8 +89,7 @@ void QGraphicsSceneSlots_connect_signal(const QString &signal, const QString &sl
   if (obj != NULL) {
     QGraphicsSceneSlots *s = QCoreApplication::instance()->findChild<QGraphicsSceneSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGraphicsSceneSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

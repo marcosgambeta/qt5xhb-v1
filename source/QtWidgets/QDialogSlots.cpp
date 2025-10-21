@@ -22,8 +22,7 @@ void QDialogSlots::accepted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "accepted()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QDialogSlots::finished(int result)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
     PHB_ITEM presult = hb_itemPutNI(NULL, result);
 
@@ -56,8 +54,7 @@ void QDialogSlots::rejected()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rejected()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -73,8 +70,7 @@ void QDialogSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QDialogSlots *s = QCoreApplication::instance()->findChild<QDialogSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

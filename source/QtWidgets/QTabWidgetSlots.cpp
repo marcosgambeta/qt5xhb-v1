@@ -22,8 +22,7 @@ void QTabWidgetSlots::currentChanged(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABWIDGET");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -40,8 +39,7 @@ void QTabWidgetSlots::tabCloseRequested(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tabCloseRequested(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABWIDGET");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -59,8 +57,7 @@ void QTabWidgetSlots::tabBarClicked(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tabBarClicked(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABWIDGET");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -79,8 +76,7 @@ void QTabWidgetSlots::tabBarDoubleClicked(int index)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "tabBarDoubleClicked(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTABWIDGET");
     PHB_ITEM pindex = hb_itemPutNI(NULL, index);
 
@@ -99,8 +95,7 @@ void QTabWidgetSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QTabWidgetSlots *s = QCoreApplication::instance()->findChild<QTabWidgetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QTabWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
