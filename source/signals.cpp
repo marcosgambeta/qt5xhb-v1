@@ -26,10 +26,8 @@ Signals::~Signals()
 {
   // libera todos os codeblocks relacionados com sinais
   const int listsize = m_list1->size();
-  for (int i = 0; i < listsize; ++i)
-  {
-    if (m_list1->at(i))
-    {
+  for (int i = 0; i < listsize; ++i) {
+    if (m_list1->at(i)) {
       hb_itemRelease(m_list3->at(i));
     }
   }
@@ -56,10 +54,8 @@ bool Signals::connectSignal(QObject *object, const QString &signal, PHB_ITEM cod
 
   // verifica se já está na lista
   const int listsize = m_list1->size();
-  for (int i = 0; i < listsize; ++i)
-  {
-    if ((m_list1->at(i) == object) && (m_list2->at(i) == signal))
-    {
+  for (int i = 0; i < listsize; ++i) {
+    if ((m_list1->at(i) == object) && (m_list2->at(i) == signal)) {
       found = true;
       // hb_itemRelease( codeblock );
       break;
@@ -67,8 +63,7 @@ bool Signals::connectSignal(QObject *object, const QString &signal, PHB_ITEM cod
   }
 
   // se nao encontrado na lista, adiciona
-  if (!found)
-  {
+  if (!found) {
     // procura por posição livre
     int i = m_list1->indexOf(NULL);
 
@@ -78,8 +73,7 @@ bool Signals::connectSignal(QObject *object, const QString &signal, PHB_ITEM cod
       m_list1->append(object);
       m_list2->append(signal);
       m_list3->append(codeblock);
-    }
-    else // encontrou posicao livre
+    } else // encontrou posicao livre
     {
       // coloca na posição livre
       m_list1->replace(i, object);
@@ -107,10 +101,8 @@ bool Signals::disconnectSignal(QObject *object, const QString &signal)
 
   // remove sinal da lista de sinais
   const int listsize = m_list1->size();
-  for (int i = 0; i < listsize; ++i)
-  {
-    if ((m_list1->at(i) == object) && (m_list2->at(i) == signal))
-    {
+  for (int i = 0; i < listsize; ++i) {
+    if ((m_list1->at(i) == object) && (m_list2->at(i) == signal)) {
       hb_itemRelease(m_list3->at(i));
       m_list1->replace(i, NULL);
       m_list2->replace(i, "");
@@ -136,10 +128,8 @@ bool Signals::isSignalConnected(QObject *object, const QString &signal)
 
   // verifica se já está na lista
   const int listsize = m_list1->size();
-  for (int i = 0; i < listsize; ++i)
-  {
-    if ((m_list1->at(i) == object) && (m_list2->at(i) == signal))
-    {
+  for (int i = 0; i < listsize; ++i) {
+    if ((m_list1->at(i) == object) && (m_list2->at(i) == signal)) {
       result = true;
       break;
     }
@@ -158,10 +148,8 @@ PHB_ITEM Signals::returnCodeblock(QObject *object, const QString &signal)
 
   // localiza sinal na lista de sinais
   const int listsize = m_list1->size();
-  for (int i = 0; i < listsize; ++i)
-  {
-    if ((m_list1->at(i) == object) && (m_list2->at(i) == signal))
-    {
+  for (int i = 0; i < listsize; ++i) {
+    if ((m_list1->at(i) == object) && (m_list2->at(i) == signal)) {
       result = m_list3->at(i);
       break;
     }
@@ -180,15 +168,12 @@ PHB_ITEM Signals::returnCodeblock(QObject *object, const QString &signal)
 
 void Signals::disconnectAllSignals(QObject *obj, bool children)
 {
-  if (!children)
-  {
+  if (!children) {
     // percorre toda a lista de sinais
     const int listsize = m_list1->size();
-    for (int i = 0; i < listsize; ++i)
-    {
+    for (int i = 0; i < listsize; ++i) {
       // elimina sinais ativos (true) ligados ao objeto (obj)
-      if ((m_list1->at(i) == obj) && (m_list2->at(i) != "destroyed(QObject*)"))
-      {
+      if ((m_list1->at(i) == obj) && (m_list2->at(i) != "destroyed(QObject*)")) {
         hb_itemRelease(m_list3->at(i));
         m_list1->replace(i, NULL);
         m_list2->replace(i, "");
@@ -202,15 +187,12 @@ void Signals::disconnectAllSignals(QObject *obj, bool children)
     list << obj;
     // percorre toda a lista de objetos
     const int listsize = list.size();
-    for (int i = 0; i < listsize; ++i)
-    {
+    for (int i = 0; i < listsize; ++i) {
       // percorre toda a lista de sinais
       const int listsize2 = m_list1->size();
-      for (int ii = 0; ii < listsize2; ++ii)
-      {
+      for (int ii = 0; ii < listsize2; ++ii) {
         // elimina sinais ativos (true) ligados ao objeto list.at(i)
-        if ((m_list1->at(ii) == list.at(i)) && (m_list2->at(ii) != "destroyed(QObject*)"))
-        {
+        if ((m_list1->at(ii) == list.at(i)) && (m_list2->at(ii) != "destroyed(QObject*)")) {
           hb_itemRelease(m_list3->at(ii));
           m_list1->replace(ii, NULL);
           m_list2->replace(ii, "");
@@ -230,16 +212,13 @@ bool Signals::connectionDisconnection(QObject *s, const QString &signal, const Q
 
   m_mutex->lock();
 
-  if (hb_pcount() == 1)
-  {
+  if (hb_pcount() == 1) {
     QObject *object = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
-    if (!isSignalConnected(object, signal))
-    {
+    if (!isSignalConnected(object, signal)) {
       PHB_ITEM codeblock = hb_itemNew(hb_param(1, HB_IT_BLOCK | HB_IT_SYMBOL));
 
-      if (codeblock)
-      {
+      if (codeblock) {
         result = object->connect(object,
                                  object->metaObject()->method(object->metaObject()->indexOfMethod(
                                      QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
@@ -247,19 +226,14 @@ bool Signals::connectionDisconnection(QObject *s, const QString &signal, const Q
                                  s->metaObject()->method(s->metaObject()->indexOfMethod(
                                      QMetaObject::normalizedSignature(slot.toLatin1().constData()))));
 
-        if (result)
-        {
+        if (result) {
           connectSignal(object, signal, codeblock); // se conectado, adiciona
-        }
-        else
-        {
+        } else {
           hb_itemRelease(codeblock);
         }
       }
     }
-  }
-  else if (hb_pcount() == 0)
-  {
+  } else if (hb_pcount() == 0) {
     QObject *object = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
     result = object->disconnect(object,
@@ -269,8 +243,7 @@ bool Signals::connectionDisconnection(QObject *s, const QString &signal, const Q
                                 s->metaObject()->method(s->metaObject()->indexOfMethod(
                                     QMetaObject::normalizedSignature(slot.toLatin1().constData()))));
 
-    if (result)
-    {
+    if (result) {
       disconnectSignal(object, signal); // se desconectado, remove
     }
   }
@@ -286,8 +259,7 @@ PHB_ITEM Signals::returnObject(void *ptr, const char *classname)
 
   PHB_ITEM pObject = hb_itemNew(NULL);
 
-  if (pDynSym)
-  {
+  if (pDynSym) {
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
@@ -307,20 +279,17 @@ PHB_ITEM Signals::returnQObject(QObject *ptr, const char *classname)
 {
   PHB_DYNS pDynSym = NULL;
 
-  if (ptr)
-  {
+  if (ptr) {
     pDynSym = hb_dynsymFindName(static_cast<const char *>(ptr->metaObject()->className()));
   }
 
-  if (!pDynSym)
-  {
+  if (!pDynSym) {
     pDynSym = hb_dynsymFindName(classname);
   }
 
   PHB_ITEM pObject = hb_itemNew(NULL);
 
-  if (pDynSym)
-  {
+  if (pDynSym) {
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
@@ -347,10 +316,8 @@ int Signals::active()
 
   // percorre toda a lista de sinais
   const int listsize = m_list1->size();
-  for (int i = 0; i < listsize; ++i)
-  {
-    if (m_list1->at(i) != NULL)
-    {
+  for (int i = 0; i < listsize; ++i) {
+    if (m_list1->at(i) != NULL) {
       ++count;
     }
   }
@@ -411,8 +378,7 @@ HB_FUNC(QTXHB_SIGNALS_SIZE)
 {
   int size = 0;
 
-  if (s_signals)
-  {
+  if (s_signals) {
     size = s_signals->m_list1->size();
   }
 
@@ -429,14 +395,11 @@ HB_FUNC(QTXHB_SIGNALS_ACTIVE)
 {
   int count = 0;
 
-  if (s_signals)
-  {
+  if (s_signals) {
     // percorre toda a lista de sinais
     const int listsize = s_signals->m_list1->size();
-    for (int i = 0; i < listsize; ++i)
-    {
-      if (s_signals->m_list1->at(i))
-      {
+    for (int i = 0; i < listsize; ++i) {
+      if (s_signals->m_list1->at(i)) {
         ++count;
       }
     }
@@ -449,14 +412,11 @@ HB_FUNC(QTXHB_SIGNALS_SIZE_ACTIVE) // deprecated
 {
   int count = 0;
 
-  if (s_signals)
-  {
+  if (s_signals) {
     // percorre toda a lista de sinais
     const int listsize = s_signals->m_list1->size();
-    for (int i = 0; i < listsize; ++i)
-    {
-      if (s_signals->m_list1->at(i))
-      {
+    for (int i = 0; i < listsize; ++i) {
+      if (s_signals->m_list1->at(i)) {
         ++count;
       }
     }
@@ -472,8 +432,7 @@ static void qt5xhb_signals_init(void *cargo)
 {
   HB_SYMBOL_UNUSED(cargo);
 
-  if (s_signals == NULL)
-  {
+  if (s_signals == NULL) {
     s_signals = new Signals();
   }
 }
