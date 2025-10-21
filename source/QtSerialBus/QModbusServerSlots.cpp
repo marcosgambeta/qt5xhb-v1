@@ -23,8 +23,7 @@ void QModbusServerSlots::dataWritten(QModbusDataUnit::RegisterType table, int ad
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "dataWritten(QModbusDataUnit::RegisterType,int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSSERVER");
     PHB_ITEM ptable = hb_itemPutNI(NULL, static_cast<int>(table));
     PHB_ITEM paddress = hb_itemPutNI(NULL, address);
@@ -48,8 +47,7 @@ void QModbusServerSlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QModbusServerSlots *s = QCoreApplication::instance()->findChild<QModbusServerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QModbusServerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

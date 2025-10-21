@@ -23,8 +23,7 @@ void QModbusReplySlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSREPLY");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -41,8 +40,7 @@ void QModbusReplySlots::errorOccurred(QModbusDevice::Error error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "errorOccurred(QModbusDevice::Error)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSREPLY");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -62,8 +60,7 @@ void QModbusReplySlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QModbusReplySlots *s = QCoreApplication::instance()->findChild<QModbusReplySlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QModbusReplySlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
