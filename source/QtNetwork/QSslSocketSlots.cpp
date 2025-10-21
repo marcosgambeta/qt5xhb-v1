@@ -22,8 +22,7 @@ void QSslSocketSlots::encrypted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "encrypted()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QSslSocketSlots::encryptedBytesWritten(qint64 written)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "encryptedBytesWritten(qint64)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_ITEM pwritten = hb_itemPutNLL(NULL, written);
 
@@ -56,8 +54,7 @@ void QSslSocketSlots::modeChanged(QSslSocket::SslMode mode)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "modeChanged(QSslSocket::SslMode)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_ITEM pmode = hb_itemPutNI(NULL, static_cast<int>(mode));
 
@@ -74,8 +71,7 @@ void QSslSocketSlots::peerVerifyError(const QSslError &error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "peerVerifyError(QSslError)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_ITEM perror = Qt5xHb::Signals_return_object((void *)&error, "QSSLERROR");
 
@@ -94,8 +90,7 @@ void QSslSocketSlots::preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthent
   PHB_ITEM cb =
       Qt5xHb::Signals_return_codeblock(object, "preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_ITEM pauthenticator = Qt5xHb::Signals_return_object((void *)authenticator, "QSSLPRESHAREDKEYAUTHENTICATOR");
 
@@ -113,15 +108,12 @@ void QSslSocketSlots::sslErrors(const QList<QSslError> &errors)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sslErrors(QList<QSslError>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
     PHB_ITEM perrors = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
-      for (int i = 0; i < errors.count(); i++)
-      {
+    if (pDynSym != NULL) {
+      for (int i = 0; i < errors.count(); i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -151,8 +143,7 @@ void QSslSocketSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QSslSocketSlots *s = QCoreApplication::instance()->findChild<QSslSocketSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSslSocketSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

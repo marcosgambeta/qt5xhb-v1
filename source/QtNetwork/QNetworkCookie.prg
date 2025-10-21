@@ -81,17 +81,14 @@ RETURN
 
 HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
     /*
     QNetworkCookie( const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray() )
     */
     QNetworkCookie *obj = new QNetworkCookie(HB_ISNIL(1) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(1),
                                              HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
-  {
+  } else if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1)) {
     /*
     QNetworkCookie( const QNetworkCookie &other )
     */
@@ -129,8 +126,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_DOMAIN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->domain());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,8 +146,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_EXPIRATIONDATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDateTime *ptr = new QDateTime(obj->expirationDate());
       Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
@@ -172,8 +167,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISHTTPONLY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isHttpOnly());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +187,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISSECURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSecure());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +207,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISSESSIONCOOKIE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSessionCookie());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,8 +227,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->name());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -257,8 +248,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_PATH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->path());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,8 +268,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETDOMAIN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setDomain(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,8 +290,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETEXPIRATIONDATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATETIME(1))
-    {
+    if (ISNUMPAR(1) && ISQDATETIME(1)) {
 #endif
       obj->setExpirationDate(*PQDATETIME(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +312,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETHTTPONLY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setHttpOnly(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,8 +334,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setName(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -370,8 +356,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETPATH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPath(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,8 +378,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETSECURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSecure(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -416,8 +400,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setValue(*PQBYTEARRAY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -439,8 +422,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_TORAWFORM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toRawForm(HB_ISNIL(1) ? (QNetworkCookie::RawForm)QNetworkCookie::Full
                                                                   : (QNetworkCookie::RawForm)hb_parni(1)));
@@ -462,8 +444,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_VALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->value());
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -481,16 +462,13 @@ static QList<QNetworkCookie> parseCookies( const QByteArray &cookieString )
 HB_FUNC_STATIC(QNETWORKCOOKIE_PARSECOOKIES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
     QList<QNetworkCookie> list = QNetworkCookie::parseCookies(*PQBYTEARRAY(1));
     PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKCOOKIE");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
-      for (int i = 0; i < list.count(); i++)
-      {
+    if (pDynSym != NULL) {
+      for (int i = 0; i < list.count(); i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -525,8 +503,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SWAP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1)) {
 #endif
       obj->swap(*PQNETWORKCOOKIE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -548,8 +525,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_HASSAMEIDENTIFIER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1)) {
 #endif
       RBOOL(obj->hasSameIdentifier(*PQNETWORKCOOKIE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -569,8 +545,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NORMALIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->normalize(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -587,17 +562,14 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -630,8 +602,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

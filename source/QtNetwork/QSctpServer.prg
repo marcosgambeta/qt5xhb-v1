@@ -69,8 +69,7 @@ HB_FUNC_STATIC(QSCTPSERVER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QSctpServer *obj = new QSctpServer(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -115,8 +114,7 @@ HB_FUNC_STATIC(QSCTPSERVER_SETMAXIMUMCHANNELCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaximumChannelCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,8 +140,7 @@ HB_FUNC_STATIC(QSCTPSERVER_MAXIMUMCHANNELCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maximumChannelCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QSCTPSERVER_NEXTPENDINGDATAGRAMCONNECTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSctpSocket *ptr = obj->nextPendingDatagramConnection();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCTPSOCKET");

@@ -66,8 +66,7 @@ RETURN
     */
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QNetworkConfigurationManager *obj = new QNetworkConfigurationManager(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -105,18 +104,15 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISNUMORNIL(1))
-    {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QList<QNetworkConfiguration> list =
           obj->allConfigurations(HB_ISNIL(1) ? (QNetworkConfiguration::StateFlags)QNetworkConfiguration::StateFlags()
                                              : (QNetworkConfiguration::StateFlags)hb_parni(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKCONFIGURATION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -131,9 +127,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QNETWORKCONFIGURATION", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -154,8 +148,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->capabilities());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +168,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QNetworkConfiguration *ptr = new QNetworkConfiguration(obj->configurationFromIdentifier(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
@@ -197,8 +189,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QNetworkConfiguration *ptr = new QNetworkConfiguration(obj->defaultConfiguration());
       Qt5xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
@@ -219,8 +210,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ISONLINE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isOnline());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +230,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->updateConfigurations();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

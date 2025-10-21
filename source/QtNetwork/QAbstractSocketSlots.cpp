@@ -22,8 +22,7 @@ void QAbstractSocketSlots::connected()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "connected()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QAbstractSocketSlots::disconnected()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "disconnected()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -54,8 +52,7 @@ void QAbstractSocketSlots::error(QAbstractSocket::SocketError socketError)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QAbstractSocket::SocketError)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
     PHB_ITEM psocketError = hb_itemPutNI(NULL, static_cast<int>(socketError));
 
@@ -72,8 +69,7 @@ void QAbstractSocketSlots::hostFound()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "hostFound()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -88,8 +84,7 @@ void QAbstractSocketSlots::proxyAuthenticationRequired(const QNetworkProxy &prox
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
     PHB_ITEM pproxy = Qt5xHb::Signals_return_object((void *)&proxy, "QNETWORKPROXY");
     PHB_ITEM pauthenticator = Qt5xHb::Signals_return_object((void *)authenticator, "QAUTHENTICATOR");
@@ -108,8 +103,7 @@ void QAbstractSocketSlots::stateChanged(QAbstractSocket::SocketState socketState
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(QAbstractSocket::SocketState)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
     PHB_ITEM psocketState = hb_itemPutNI(NULL, static_cast<int>(socketState));
 
@@ -127,8 +121,7 @@ void QAbstractSocketSlots_connect_signal(const QString &signal, const QString &s
   if (obj != NULL) {
     QAbstractSocketSlots *s = QCoreApplication::instance()->findChild<QAbstractSocketSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractSocketSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

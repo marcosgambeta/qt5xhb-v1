@@ -67,8 +67,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
 #if !defined(QT_NO_SCTP)
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QSctpSocket *obj = new QSctpSocket(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -113,8 +112,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_CLOSE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_DISCONNECTFROMHOST)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->disconnectFromHost();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +164,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_SETMAXIMUMCHANNELCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaximumChannelCount(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,8 +190,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_MAXIMUMCHANNELCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maximumChannelCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +214,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_ISINDATAGRAMMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isInDatagramMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,8 +238,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_READDATAGRAM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QNetworkDatagram *ptr = new QNetworkDatagram(obj->readDatagram());
       Qt5xHb::createReturnClass(ptr, "QNETWORKDATAGRAM", true);
@@ -270,8 +263,7 @@ HB_FUNC_STATIC(QSCTPSOCKET_WRITEDATAGRAM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKDATAGRAM(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKDATAGRAM(1)) {
 #endif
       RBOOL(obj->writeDatagram(*PQNETWORKDATAGRAM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

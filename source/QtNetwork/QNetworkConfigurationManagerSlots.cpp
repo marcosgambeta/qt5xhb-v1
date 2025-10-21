@@ -22,8 +22,7 @@ void QNetworkConfigurationManagerSlots::configurationAdded(const QNetworkConfigu
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "configurationAdded(QNetworkConfiguration)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pconfig = Qt5xHb::Signals_return_object((void *)&config, "QNETWORKCONFIGURATION");
 
@@ -40,8 +39,7 @@ void QNetworkConfigurationManagerSlots::configurationChanged(const QNetworkConfi
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "configurationChanged(QNetworkConfiguration)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pconfig = Qt5xHb::Signals_return_object((void *)&config, "QNETWORKCONFIGURATION");
 
@@ -58,8 +56,7 @@ void QNetworkConfigurationManagerSlots::configurationRemoved(const QNetworkConfi
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "configurationRemoved(QNetworkConfiguration)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pconfig = Qt5xHb::Signals_return_object((void *)&config, "QNETWORKCONFIGURATION");
 
@@ -76,8 +73,7 @@ void QNetworkConfigurationManagerSlots::onlineStateChanged(bool isOnline)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "onlineStateChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pisOnline = hb_itemPutL(NULL, isOnline);
 
@@ -94,8 +90,7 @@ void QNetworkConfigurationManagerSlots::updateCompleted()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "updateCompleted()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -112,8 +107,7 @@ void QNetworkConfigurationManagerSlots_connect_signal(const QString &signal, con
     QNetworkConfigurationManagerSlots *s =
         QCoreApplication::instance()->findChild<QNetworkConfigurationManagerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QNetworkConfigurationManagerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

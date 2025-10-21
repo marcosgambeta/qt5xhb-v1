@@ -22,8 +22,7 @@ void QTcpServerSlots::acceptError(QAbstractSocket::SocketError socketError)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "acceptError(QAbstractSocket::SocketError)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTCPSERVER");
     PHB_ITEM psocketError = hb_itemPutNI(NULL, static_cast<int>(socketError));
 
@@ -40,8 +39,7 @@ void QTcpServerSlots::newConnection()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "newConnection()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTCPSERVER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -57,8 +55,7 @@ void QTcpServerSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QTcpServerSlots *s = QCoreApplication::instance()->findChild<QTcpServerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QTcpServerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

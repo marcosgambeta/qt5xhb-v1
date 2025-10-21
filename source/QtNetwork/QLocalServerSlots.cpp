@@ -22,8 +22,7 @@ void QLocalServerSlots::newConnection()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "newConnection()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOCALSERVER");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -39,8 +38,7 @@ void QLocalServerSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QLocalServerSlots *s = QCoreApplication::instance()->findChild<QLocalServerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QLocalServerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

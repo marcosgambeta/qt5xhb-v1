@@ -70,8 +70,7 @@ RETURN
     */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QNetworkDiskCache *obj = new QNetworkDiskCache(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -108,8 +107,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHEDIRECTORY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->cacheDirectory());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,8 +127,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETCACHEDIRECTORY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setCacheDirectory(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_MAXIMUMCACHESIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->maximumCacheSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,8 +169,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaximumCacheSize(PQINT64(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +191,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHESIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->cacheSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,8 +211,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       QNetworkCacheMetaData *ptr = new QNetworkCacheMetaData(obj->metaData(*PQURL(1)));
       Qt5xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
@@ -239,8 +232,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_UPDATEMETADATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1)) {
 #endif
       obj->updateMetaData(*PQNETWORKCACHEMETADATA(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +254,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_DATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       QIODevice *ptr = obj->data(*PQURL(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -284,8 +275,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_REMOVE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       RBOOL(obj->remove(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +295,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_PREPARE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1)) {
 #endif
       QIODevice *ptr = obj->prepare(*PQNETWORKCACHEMETADATA(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QIODEVICE");
@@ -327,8 +316,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQIODEVICE(1))
-    {
+    if (ISNUMPAR(1) && ISQIODEVICE(1)) {
 #endif
       obj->insert(PQIODEVICE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,8 +338,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_FILEMETADATA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QNetworkCacheMetaData *ptr = new QNetworkCacheMetaData(obj->fileMetaData(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
@@ -372,8 +359,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
