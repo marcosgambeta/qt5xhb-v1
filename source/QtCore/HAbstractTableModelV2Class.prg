@@ -48,9 +48,9 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-    /*
-    HAbstractTableModelV2( QObject * parent = 0 )
-    */
+/*
+HAbstractTableModelV2( QObject * parent = 0 )
+*/
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_NEW)
 {
   HAbstractTableModelV2 *o = new HAbstractTableModelV2(OPQOBJECT(1, 0));

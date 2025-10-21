@@ -54,143 +54,110 @@ HAbstractListModel::HAbstractListModel(QObject *parent) : QAbstractListModel(par
 HAbstractListModel::~HAbstractListModel()
 {
   // linhas
-  if (m_rowCountCB != NULL)
-  {
+  if (m_rowCountCB != NULL) {
     hb_itemRelease(m_rowCountCB);
   }
 
   // células
-  if (m_itemDisplayCB != NULL)
-  {
+  if (m_itemDisplayCB != NULL) {
     hb_itemRelease(m_itemDisplayCB);
   }
-  if (m_itemDecorationCB != NULL)
-  {
+  if (m_itemDecorationCB != NULL) {
     hb_itemRelease(m_itemDecorationCB);
   }
-  if (m_itemEditCB != NULL)
-  {
+  if (m_itemEditCB != NULL) {
     hb_itemRelease(m_itemEditCB);
   }
-  if (m_itemToolTipCB != NULL)
-  {
+  if (m_itemToolTipCB != NULL) {
     hb_itemRelease(m_itemToolTipCB);
   }
-  if (m_itemStatusTipCB != NULL)
-  {
+  if (m_itemStatusTipCB != NULL) {
     hb_itemRelease(m_itemStatusTipCB);
   }
-  if (m_itemWhatsThisCB != NULL)
-  {
+  if (m_itemWhatsThisCB != NULL) {
     hb_itemRelease(m_itemWhatsThisCB);
   }
-  if (m_itemSizeHintCB != NULL)
-  {
+  if (m_itemSizeHintCB != NULL) {
     hb_itemRelease(m_itemSizeHintCB);
   }
-  if (m_itemFontCB != NULL)
-  {
+  if (m_itemFontCB != NULL) {
     hb_itemRelease(m_itemFontCB);
   }
-  if (m_itemTextAlignmentCB != NULL)
-  {
+  if (m_itemTextAlignmentCB != NULL) {
     hb_itemRelease(m_itemTextAlignmentCB);
   }
-  if (m_itemBackgroundCB != NULL)
-  {
+  if (m_itemBackgroundCB != NULL) {
     hb_itemRelease(m_itemBackgroundCB);
   }
-  if (m_itemForegroundCB != NULL)
-  {
+  if (m_itemForegroundCB != NULL) {
     hb_itemRelease(m_itemForegroundCB);
   }
-  if (m_itemCheckStateCB != NULL)
-  {
+  if (m_itemCheckStateCB != NULL) {
     hb_itemRelease(m_itemCheckStateCB);
   }
-  if (m_itemAccessibleTextCB != NULL)
-  {
+  if (m_itemAccessibleTextCB != NULL) {
     hb_itemRelease(m_itemAccessibleTextCB);
   }
-  if (m_itemAccessibleDescriptionCB != NULL)
-  {
+  if (m_itemAccessibleDescriptionCB != NULL) {
     hb_itemRelease(m_itemAccessibleDescriptionCB);
   }
 
   // cabeçalho horizontal
-  if (m_horizontalHeaderDisplayCB != NULL)
-  {
+  if (m_horizontalHeaderDisplayCB != NULL) {
     hb_itemRelease(m_horizontalHeaderDisplayCB);
   }
-  if (m_horizontalHeaderDecorationCB != NULL)
-  {
+  if (m_horizontalHeaderDecorationCB != NULL) {
     hb_itemRelease(m_horizontalHeaderDecorationCB);
   }
-  if (m_horizontalHeaderToolTipCB != NULL)
-  {
+  if (m_horizontalHeaderToolTipCB != NULL) {
     hb_itemRelease(m_horizontalHeaderToolTipCB);
   }
-  if (m_horizontalHeaderSizeHintCB != NULL)
-  {
+  if (m_horizontalHeaderSizeHintCB != NULL) {
     hb_itemRelease(m_horizontalHeaderSizeHintCB);
   }
-  if (m_horizontalHeaderFontCB != NULL)
-  {
+  if (m_horizontalHeaderFontCB != NULL) {
     hb_itemRelease(m_horizontalHeaderFontCB);
   }
-  if (m_horizontalHeaderTextAlignmentCB != NULL)
-  {
+  if (m_horizontalHeaderTextAlignmentCB != NULL) {
     hb_itemRelease(m_horizontalHeaderTextAlignmentCB);
   }
-  if (m_horizontalHeaderBackgroundCB != NULL)
-  {
+  if (m_horizontalHeaderBackgroundCB != NULL) {
     hb_itemRelease(m_horizontalHeaderBackgroundCB);
   }
-  if (m_horizontalHeaderForegroundCB != NULL)
-  {
+  if (m_horizontalHeaderForegroundCB != NULL) {
     hb_itemRelease(m_horizontalHeaderForegroundCB);
   }
 
   // dados do cabecalho vertical
-  if (m_verticalHeaderDisplayCB != NULL)
-  {
+  if (m_verticalHeaderDisplayCB != NULL) {
     hb_itemRelease(m_verticalHeaderDisplayCB);
   }
-  if (m_verticalHeaderDecorationCB != NULL)
-  {
+  if (m_verticalHeaderDecorationCB != NULL) {
     hb_itemRelease(m_verticalHeaderDecorationCB);
   }
-  if (m_verticalHeaderToolTipCB != NULL)
-  {
+  if (m_verticalHeaderToolTipCB != NULL) {
     hb_itemRelease(m_verticalHeaderToolTipCB);
   }
-  if (m_verticalHeaderSizeHintCB != NULL)
-  {
+  if (m_verticalHeaderSizeHintCB != NULL) {
     hb_itemRelease(m_verticalHeaderSizeHintCB);
   }
-  if (m_verticalHeaderFontCB != NULL)
-  {
+  if (m_verticalHeaderFontCB != NULL) {
     hb_itemRelease(m_verticalHeaderFontCB);
   }
-  if (m_verticalHeaderTextAlignmentCB != NULL)
-  {
+  if (m_verticalHeaderTextAlignmentCB != NULL) {
     hb_itemRelease(m_verticalHeaderTextAlignmentCB);
   }
-  if (m_verticalHeaderBackgroundCB != NULL)
-  {
+  if (m_verticalHeaderBackgroundCB != NULL) {
     hb_itemRelease(m_verticalHeaderBackgroundCB);
   }
-  if (m_verticalHeaderForegroundCB != NULL)
-  {
+  if (m_verticalHeaderForegroundCB != NULL) {
     hb_itemRelease(m_verticalHeaderForegroundCB);
   }
 
-  if (m_flagsCB != NULL)
-  {
+  if (m_flagsCB != NULL) {
     hb_itemRelease(m_flagsCB);
   }
-  if (m_setDataCB != NULL)
-  {
+  if (m_setDataCB != NULL) {
     hb_itemRelease(m_setDataCB);
   }
 }
@@ -199,12 +166,10 @@ HAbstractListModel::~HAbstractListModel()
 
 void HAbstractListModel::setRowCountCB(PHB_ITEM block)
 {
-  if (m_rowCountCB != NULL)
-  {
+  if (m_rowCountCB != NULL) {
     hb_itemRelease(m_rowCountCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_rowCountCB = hb_itemNew(block);
   }
 }
@@ -216,8 +181,7 @@ void HAbstractListModel::setRowCountCB(PHB_ITEM block)
 */
 void HAbstractListModel::setCB(int role, PHB_ITEM block)
 {
-  switch (role)
-  {
+  switch (role) {
   case Qt::DisplayRole:
     setDisplayRoleCB(block);
     break;
@@ -265,168 +229,140 @@ void HAbstractListModel::setCB(int role, PHB_ITEM block)
 
 void HAbstractListModel::setDisplayRoleCB(PHB_ITEM block)
 {
-  if (m_itemDisplayCB != NULL)
-  {
+  if (m_itemDisplayCB != NULL) {
     hb_itemRelease(m_itemDisplayCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemDisplayCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setDecorationRoleCB(PHB_ITEM block)
 {
-  if (m_itemDecorationCB != NULL)
-  {
+  if (m_itemDecorationCB != NULL) {
     hb_itemRelease(m_itemDecorationCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemDecorationCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setEditRoleCB(PHB_ITEM block)
 {
-  if (m_itemEditCB != NULL)
-  {
+  if (m_itemEditCB != NULL) {
     hb_itemRelease(m_itemEditCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemEditCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setToolTipRoleCB(PHB_ITEM block)
 {
-  if (m_itemToolTipCB != NULL)
-  {
+  if (m_itemToolTipCB != NULL) {
     hb_itemRelease(m_itemToolTipCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemToolTipCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setStatusTipRoleCB(PHB_ITEM block)
 {
-  if (m_itemStatusTipCB != NULL)
-  {
+  if (m_itemStatusTipCB != NULL) {
     hb_itemRelease(m_itemStatusTipCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemStatusTipCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setWhatsThisRoleCB(PHB_ITEM block)
 {
-  if (m_itemWhatsThisCB != NULL)
-  {
+  if (m_itemWhatsThisCB != NULL) {
     hb_itemRelease(m_itemWhatsThisCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemWhatsThisCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setSizeHintRoleCB(PHB_ITEM block)
 {
-  if (m_itemSizeHintCB != NULL)
-  {
+  if (m_itemSizeHintCB != NULL) {
     hb_itemRelease(m_itemSizeHintCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemSizeHintCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setFontRoleCB(PHB_ITEM block)
 {
-  if (m_itemFontCB != NULL)
-  {
+  if (m_itemFontCB != NULL) {
     hb_itemRelease(m_itemFontCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemFontCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setTextAlignmentRoleCB(PHB_ITEM block)
 {
-  if (m_itemTextAlignmentCB != NULL)
-  {
+  if (m_itemTextAlignmentCB != NULL) {
     hb_itemRelease(m_itemTextAlignmentCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemTextAlignmentCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setBackgroundRoleCB(PHB_ITEM block)
 {
-  if (m_itemBackgroundCB != NULL)
-  {
+  if (m_itemBackgroundCB != NULL) {
     hb_itemRelease(m_itemBackgroundCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemBackgroundCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setForegroundRoleCB(PHB_ITEM block)
 {
-  if (m_itemForegroundCB != NULL)
-  {
+  if (m_itemForegroundCB != NULL) {
     hb_itemRelease(m_itemForegroundCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemForegroundCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setCheckStateRoleCB(PHB_ITEM block)
 {
-  if (m_itemCheckStateCB != NULL)
-  {
+  if (m_itemCheckStateCB != NULL) {
     hb_itemRelease(m_itemCheckStateCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemCheckStateCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setAccessibleTextRoleCB(PHB_ITEM block)
 {
-  if (m_itemAccessibleTextCB != NULL)
-  {
+  if (m_itemAccessibleTextCB != NULL) {
     hb_itemRelease(m_itemAccessibleTextCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemAccessibleTextCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setAccessibleDescriptionRoleCB(PHB_ITEM block)
 {
-  if (m_itemAccessibleDescriptionCB != NULL)
-  {
+  if (m_itemAccessibleDescriptionCB != NULL) {
     hb_itemRelease(m_itemAccessibleDescriptionCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_itemAccessibleDescriptionCB = hb_itemNew(block);
   }
 }
@@ -438,8 +374,7 @@ void HAbstractListModel::setAccessibleDescriptionRoleCB(PHB_ITEM block)
 */
 void HAbstractListModel::setHorizontalHeaderCB(int role, PHB_ITEM block)
 {
-  switch (role)
-  {
+  switch (role) {
   case Qt::DisplayRole:
     setHorizontalHeaderDisplayRoleCB(block);
     break;
@@ -469,95 +404,79 @@ void HAbstractListModel::setHorizontalHeaderCB(int role, PHB_ITEM block)
 
 void HAbstractListModel::setHorizontalHeaderDisplayRoleCB(PHB_ITEM block)
 {
-  if (m_horizontalHeaderDisplayCB != NULL)
-  {
+  if (m_horizontalHeaderDisplayCB != NULL) {
     hb_itemRelease(m_horizontalHeaderDisplayCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_horizontalHeaderDisplayCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setHorizontalHeaderDecorationRoleCB(PHB_ITEM block)
 {
-  if (m_horizontalHeaderDecorationCB != NULL)
-  {
+  if (m_horizontalHeaderDecorationCB != NULL) {
     hb_itemRelease(m_horizontalHeaderDecorationCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_horizontalHeaderDecorationCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setHorizontalHeaderToolTipRoleCB(PHB_ITEM block)
 {
-  if (m_horizontalHeaderToolTipCB != NULL)
-  {
+  if (m_horizontalHeaderToolTipCB != NULL) {
     hb_itemRelease(m_horizontalHeaderToolTipCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_horizontalHeaderToolTipCB = hb_itemNew(block);
   }
 }
 void HAbstractListModel::setHorizontalHeaderSizeHintRoleCB(PHB_ITEM block)
 {
-  if (m_horizontalHeaderSizeHintCB != NULL)
-  {
+  if (m_horizontalHeaderSizeHintCB != NULL) {
     hb_itemRelease(m_horizontalHeaderSizeHintCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_horizontalHeaderSizeHintCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setHorizontalHeaderFontRoleCB(PHB_ITEM block)
 {
-  if (m_horizontalHeaderFontCB != NULL)
-  {
+  if (m_horizontalHeaderFontCB != NULL) {
     hb_itemRelease(m_horizontalHeaderFontCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_horizontalHeaderFontCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setHorizontalHeaderTextAlignmentRoleCB(PHB_ITEM block)
 {
-  if (m_horizontalHeaderTextAlignmentCB != NULL)
-  {
+  if (m_horizontalHeaderTextAlignmentCB != NULL) {
     hb_itemRelease(m_horizontalHeaderTextAlignmentCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_horizontalHeaderTextAlignmentCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setHorizontalHeaderBackgroundRoleCB(PHB_ITEM block)
 {
-  if (m_horizontalHeaderBackgroundCB != NULL)
-  {
+  if (m_horizontalHeaderBackgroundCB != NULL) {
     hb_itemRelease(m_horizontalHeaderBackgroundCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_horizontalHeaderBackgroundCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setHorizontalHeaderForegroundRoleCB(PHB_ITEM block)
 {
-  if (m_horizontalHeaderForegroundCB != NULL)
-  {
+  if (m_horizontalHeaderForegroundCB != NULL) {
     hb_itemRelease(m_horizontalHeaderForegroundCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_horizontalHeaderForegroundCB = hb_itemNew(block);
   }
 }
@@ -569,8 +488,7 @@ void HAbstractListModel::setHorizontalHeaderForegroundRoleCB(PHB_ITEM block)
 */
 void HAbstractListModel::setVerticalHeaderCB(int role, PHB_ITEM block)
 {
-  switch (role)
-  {
+  switch (role) {
   case Qt::DisplayRole:
     setVerticalHeaderDisplayRoleCB(block);
     break;
@@ -600,96 +518,80 @@ void HAbstractListModel::setVerticalHeaderCB(int role, PHB_ITEM block)
 
 void HAbstractListModel::setVerticalHeaderDisplayRoleCB(PHB_ITEM block)
 {
-  if (m_verticalHeaderDisplayCB != NULL)
-  {
+  if (m_verticalHeaderDisplayCB != NULL) {
     hb_itemRelease(m_verticalHeaderDisplayCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_verticalHeaderDisplayCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setVerticalHeaderDecorationRoleCB(PHB_ITEM block)
 {
-  if (m_verticalHeaderDecorationCB != NULL)
-  {
+  if (m_verticalHeaderDecorationCB != NULL) {
     hb_itemRelease(m_verticalHeaderDecorationCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_verticalHeaderDecorationCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setVerticalHeaderToolTipRoleCB(PHB_ITEM block)
 {
-  if (m_verticalHeaderToolTipCB != NULL)
-  {
+  if (m_verticalHeaderToolTipCB != NULL) {
     hb_itemRelease(m_verticalHeaderToolTipCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_verticalHeaderToolTipCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setVerticalHeaderSizeHintRoleCB(PHB_ITEM block)
 {
-  if (m_verticalHeaderSizeHintCB != NULL)
-  {
+  if (m_verticalHeaderSizeHintCB != NULL) {
     hb_itemRelease(m_verticalHeaderSizeHintCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_verticalHeaderSizeHintCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setVerticalHeaderFontRoleCB(PHB_ITEM block)
 {
-  if (m_verticalHeaderFontCB != NULL)
-  {
+  if (m_verticalHeaderFontCB != NULL) {
     hb_itemRelease(m_verticalHeaderFontCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_verticalHeaderFontCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setVerticalHeaderTextAlignmentRoleCB(PHB_ITEM block)
 {
-  if (m_verticalHeaderTextAlignmentCB != NULL)
-  {
+  if (m_verticalHeaderTextAlignmentCB != NULL) {
     hb_itemRelease(m_verticalHeaderTextAlignmentCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_verticalHeaderTextAlignmentCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setVerticalHeaderBackgroundRoleCB(PHB_ITEM block)
 {
-  if (m_verticalHeaderBackgroundCB != NULL)
-  {
+  if (m_verticalHeaderBackgroundCB != NULL) {
     hb_itemRelease(m_verticalHeaderBackgroundCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_verticalHeaderBackgroundCB = hb_itemNew(block);
   }
 }
 
 void HAbstractListModel::setVerticalHeaderForegroundRoleCB(PHB_ITEM block)
 {
-  if (m_verticalHeaderForegroundCB != NULL)
-  {
+  if (m_verticalHeaderForegroundCB != NULL) {
     hb_itemRelease(m_verticalHeaderForegroundCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_verticalHeaderForegroundCB = hb_itemNew(block);
   }
 }
@@ -699,12 +601,10 @@ void HAbstractListModel::setVerticalHeaderForegroundRoleCB(PHB_ITEM block)
 */
 void HAbstractListModel::setFlagsCB(PHB_ITEM block)
 {
-  if (m_flagsCB != NULL)
-  {
+  if (m_flagsCB != NULL) {
     hb_itemRelease(m_flagsCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_flagsCB = hb_itemNew(block);
   }
 }
@@ -714,12 +614,10 @@ void HAbstractListModel::setFlagsCB(PHB_ITEM block)
 */
 void HAbstractListModel::setSetDataCB(PHB_ITEM block)
 {
-  if (m_setDataCB != NULL)
-  {
+  if (m_setDataCB != NULL) {
     hb_itemRelease(m_setDataCB);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_setDataCB = hb_itemNew(block);
   }
 }
@@ -728,15 +626,12 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
 {
   QVariant data;
 
-  switch (role)
-  {
+  switch (role) {
   case Qt::DisplayRole: {
-    if (m_itemDisplayCB != NULL)
-    {
+    if (m_itemDisplayCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemDisplayCB, 1, pRow));
-      switch (hb_itemType(pRet))
-      {
+      switch (hb_itemType(pRet)) {
       case HB_IT_STRING:
       case HB_IT_MEMO: {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
@@ -768,8 +663,7 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
       }
       case HB_IT_OBJECT: {
         void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
-        if (hb_clsIsParent(hb_objGetClass(pRet), "QVARIANT"))
-        {
+        if (hb_clsIsParent(hb_objGetClass(pRet), "QVARIANT")) {
           data = *(static_cast<QVariant *>(ptr));
         }
         break;
@@ -781,20 +675,15 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::DecorationRole: {
-    if (m_itemDecorationCB != NULL)
-    {
+    if (m_itemDecorationCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemDecorationCB, 1, pRow));
-      switch (hb_itemType(pRet))
-      {
+      switch (hb_itemType(pRet)) {
       case HB_IT_OBJECT: {
         void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
-        if (hb_clsIsParent(hb_objGetClass(pRet), "QICON"))
-        {
+        if (hb_clsIsParent(hb_objGetClass(pRet), "QICON")) {
           data = *(static_cast<QIcon *>(ptr));
-        }
-        else if (hb_clsIsParent(hb_objGetClass(pRet), "QPIXMAP"))
-        {
+        } else if (hb_clsIsParent(hb_objGetClass(pRet), "QPIXMAP")) {
           data = *(static_cast<QPixmap *>(ptr));
         }
         break;
@@ -810,12 +699,10 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::EditRole: {
-    if (m_itemEditCB != NULL)
-    {
+    if (m_itemEditCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemEditCB, 1, pRow));
-      if (hb_itemType(pRet) & HB_IT_STRING)
-      {
+      if (hb_itemType(pRet) & HB_IT_STRING) {
         data = hb_itemGetCPtr(pRet);
       }
       hb_itemRelease(pRow);
@@ -824,12 +711,10 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::ToolTipRole: {
-    if (m_itemToolTipCB != NULL)
-    {
+    if (m_itemToolTipCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemToolTipCB, 1, pRow));
-      if (hb_itemType(pRet) & HB_IT_STRING)
-      {
+      if (hb_itemType(pRet) & HB_IT_STRING) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
         data = QLatin1String(hb_itemGetCPtr(pRet));
 #else
@@ -842,12 +727,10 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::StatusTipRole: {
-    if (m_itemStatusTipCB != NULL)
-    {
+    if (m_itemStatusTipCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemStatusTipCB, 1, pRow));
-      if (hb_itemType(pRet) & HB_IT_STRING)
-      {
+      if (hb_itemType(pRet) & HB_IT_STRING) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
         data = QLatin1String(hb_itemGetCPtr(pRet));
 #else
@@ -860,12 +743,10 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::WhatsThisRole: {
-    if (m_itemWhatsThisCB != NULL)
-    {
+    if (m_itemWhatsThisCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemWhatsThisCB, 1, pRow));
-      if (hb_itemType(pRet) & HB_IT_STRING)
-      {
+      if (hb_itemType(pRet) & HB_IT_STRING) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
         data = QLatin1String(hb_itemGetCPtr(pRet));
 #else
@@ -878,12 +759,10 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::SizeHintRole: {
-    if (m_itemSizeHintCB != NULL)
-    {
+    if (m_itemSizeHintCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemSizeHintCB, 1, pRow));
-      if (hb_itemType(pRet) & HB_IT_OBJECT)
-      {
+      if (hb_itemType(pRet) & HB_IT_OBJECT) {
         void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
         data = *(static_cast<QSize *>(ptr));
       }
@@ -893,12 +772,10 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::FontRole: {
-    if (m_itemFontCB != NULL)
-    {
+    if (m_itemFontCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemFontCB, 1, pRow));
-      if (hb_itemType(pRet) & HB_IT_OBJECT)
-      {
+      if (hb_itemType(pRet) & HB_IT_OBJECT) {
         void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
         data = *(static_cast<QFont *>(ptr));
       }
@@ -908,12 +785,10 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::TextAlignmentRole: {
-    if (m_itemTextAlignmentCB != NULL)
-    {
+    if (m_itemTextAlignmentCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemTextAlignmentCB, 1, pRow));
-      if (hb_itemType(pRet) & HB_IT_NUMERIC)
-      {
+      if (hb_itemType(pRet) & HB_IT_NUMERIC) {
         data = hb_itemGetNI(pRet);
       }
       hb_itemRelease(pRow);
@@ -922,20 +797,15 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::BackgroundRole: {
-    if (m_itemBackgroundCB != NULL)
-    {
+    if (m_itemBackgroundCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemBackgroundCB, 1, pRow));
-      switch (hb_itemType(pRet))
-      {
+      switch (hb_itemType(pRet)) {
       case HB_IT_OBJECT: {
         void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
-        if (hb_clsIsParent(hb_objGetClass(pRet), "QCOLOR"))
-        {
+        if (hb_clsIsParent(hb_objGetClass(pRet), "QCOLOR")) {
           data = *(static_cast<QColor *>(ptr));
-        }
-        else if (hb_clsIsParent(hb_objGetClass(pRet), "QBRUSH"))
-        {
+        } else if (hb_clsIsParent(hb_objGetClass(pRet), "QBRUSH")) {
           data = *(static_cast<QBrush *>(ptr));
         }
         break;
@@ -951,12 +821,10 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::ForegroundRole: {
-    if (m_itemForegroundCB != NULL)
-    {
+    if (m_itemForegroundCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemForegroundCB, 1, pRow));
-      switch (hb_itemType(pRet))
-      {
+      switch (hb_itemType(pRet)) {
       case HB_IT_OBJECT: {
         void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
         data = *(static_cast<QColor *>(ptr));
@@ -973,12 +841,10 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::CheckStateRole: {
-    if (m_itemCheckStateCB != NULL)
-    {
+    if (m_itemCheckStateCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemCheckStateCB, 1, pRow));
-      if (hb_itemType(pRet) & HB_IT_NUMERIC)
-      {
+      if (hb_itemType(pRet) & HB_IT_NUMERIC) {
         data = hb_itemGetNI(pRet);
       }
       hb_itemRelease(pRow);
@@ -987,12 +853,10 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::AccessibleTextRole: {
-    if (m_itemAccessibleTextCB != NULL)
-    {
+    if (m_itemAccessibleTextCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemAccessibleTextCB, 1, pRow));
-      if (hb_itemType(pRet) & HB_IT_STRING)
-      {
+      if (hb_itemType(pRet) & HB_IT_STRING) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
         data = QLatin1String(hb_itemGetCPtr(pRet));
 #else
@@ -1005,12 +869,10 @@ QVariant HAbstractListModel::data(const QModelIndex &index, int role) const
     break;
   }
   case Qt::AccessibleDescriptionRole: {
-    if (m_itemAccessibleDescriptionCB != NULL)
-    {
+    if (m_itemAccessibleDescriptionCB != NULL) {
       PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
       PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemAccessibleDescriptionCB, 1, pRow));
-      if (hb_itemType(pRet) & HB_IT_STRING)
-      {
+      if (hb_itemType(pRet) & HB_IT_STRING) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
         data = QLatin1String(hb_itemGetCPtr(pRet));
 #else
@@ -1031,18 +893,14 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
 {
   QVariant data;
 
-  switch (orientation)
-  {
+  switch (orientation) {
   case Qt::Horizontal: {
-    switch (role)
-    {
+    switch (role) {
     case Qt::DisplayRole: {
-      if (m_horizontalHeaderDisplayCB != NULL)
-      {
+      if (m_horizontalHeaderDisplayCB != NULL) {
         PHB_ITEM pCol = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_horizontalHeaderDisplayCB, 1, pCol));
-        switch (hb_itemType(pRet))
-        {
+        switch (hb_itemType(pRet)) {
         case HB_IT_STRING:
         case HB_IT_MEMO: {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
@@ -1072,20 +930,15 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::DecorationRole: {
-      if (m_horizontalHeaderDecorationCB != NULL)
-      {
+      if (m_horizontalHeaderDecorationCB != NULL) {
         PHB_ITEM pCol = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_horizontalHeaderDecorationCB, 1, pCol));
-        switch (hb_itemType(pRet))
-        {
+        switch (hb_itemType(pRet)) {
         case HB_IT_OBJECT: {
           void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
-          if (hb_clsIsParent(hb_objGetClass(pRet), "QICON"))
-          {
+          if (hb_clsIsParent(hb_objGetClass(pRet), "QICON")) {
             data = *(static_cast<QIcon *>(ptr));
-          }
-          else if (hb_clsIsParent(hb_objGetClass(pRet), "QPIXMAP"))
-          {
+          } else if (hb_clsIsParent(hb_objGetClass(pRet), "QPIXMAP")) {
             data = *(static_cast<QPixmap *>(ptr));
           }
           break;
@@ -1101,12 +954,10 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::ToolTipRole: {
-      if (m_horizontalHeaderToolTipCB != NULL)
-      {
+      if (m_horizontalHeaderToolTipCB != NULL) {
         PHB_ITEM pCol = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemToolTipCB, 1, pCol));
-        if (hb_itemType(pRet) & HB_IT_STRING)
-        {
+        if (hb_itemType(pRet) & HB_IT_STRING) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
           data = QLatin1String(hb_itemGetCPtr(pRet));
 #else
@@ -1119,12 +970,10 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::SizeHintRole: {
-      if (m_horizontalHeaderSizeHintCB != NULL)
-      {
+      if (m_horizontalHeaderSizeHintCB != NULL) {
         PHB_ITEM pCol = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_horizontalHeaderSizeHintCB, 1, pCol));
-        if (hb_itemType(pRet) & HB_IT_OBJECT)
-        {
+        if (hb_itemType(pRet) & HB_IT_OBJECT) {
           void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
           data = *(static_cast<QSize *>(ptr));
         }
@@ -1134,12 +983,10 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::FontRole: {
-      if (m_horizontalHeaderFontCB != NULL)
-      {
+      if (m_horizontalHeaderFontCB != NULL) {
         PHB_ITEM pCol = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_horizontalHeaderFontCB, 1, pCol));
-        if (hb_itemType(pRet) & HB_IT_OBJECT)
-        {
+        if (hb_itemType(pRet) & HB_IT_OBJECT) {
           void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
           data = *(static_cast<QFont *>(ptr));
         }
@@ -1149,12 +996,10 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::TextAlignmentRole: {
-      if (m_horizontalHeaderTextAlignmentCB != NULL)
-      {
+      if (m_horizontalHeaderTextAlignmentCB != NULL) {
         PHB_ITEM pCol = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_horizontalHeaderTextAlignmentCB, 1, pCol));
-        if (hb_itemType(pRet) & HB_IT_NUMERIC)
-        {
+        if (hb_itemType(pRet) & HB_IT_NUMERIC) {
           data = hb_itemGetNI(pRet);
         }
         hb_itemRelease(pCol);
@@ -1163,20 +1008,15 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::BackgroundRole: {
-      if (m_horizontalHeaderBackgroundCB != NULL)
-      {
+      if (m_horizontalHeaderBackgroundCB != NULL) {
         PHB_ITEM pCol = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_horizontalHeaderBackgroundCB, 1, pCol));
-        switch (hb_itemType(pRet))
-        {
+        switch (hb_itemType(pRet)) {
         case HB_IT_OBJECT: {
           void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
-          if (hb_clsIsParent(hb_objGetClass(pRet), "QCOLOR"))
-          {
+          if (hb_clsIsParent(hb_objGetClass(pRet), "QCOLOR")) {
             data = *(static_cast<QColor *>(ptr));
-          }
-          else if (hb_clsIsParent(hb_objGetClass(pRet), "QBRUSH"))
-          {
+          } else if (hb_clsIsParent(hb_objGetClass(pRet), "QBRUSH")) {
             data = *(static_cast<QBrush *>(ptr));
           }
           break;
@@ -1192,12 +1032,10 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::ForegroundRole: {
-      if (m_horizontalHeaderForegroundCB != NULL)
-      {
+      if (m_horizontalHeaderForegroundCB != NULL) {
         PHB_ITEM pCol = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_horizontalHeaderForegroundCB, 1, pCol));
-        switch (hb_itemType(pRet))
-        {
+        switch (hb_itemType(pRet)) {
         case HB_IT_OBJECT: {
           void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
           data = *(static_cast<QColor *>(ptr));
@@ -1217,15 +1055,12 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
     break;
   }
   case Qt::Vertical: {
-    switch (role)
-    {
+    switch (role) {
     case Qt::DisplayRole: {
-      if (m_verticalHeaderDisplayCB != NULL)
-      {
+      if (m_verticalHeaderDisplayCB != NULL) {
         PHB_ITEM pRow = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_verticalHeaderDisplayCB, 1, pRow));
-        switch (hb_itemType(pRet))
-        {
+        switch (hb_itemType(pRet)) {
         case HB_IT_STRING:
         case HB_IT_MEMO: {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
@@ -1255,20 +1090,15 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::DecorationRole: {
-      if (m_verticalHeaderDecorationCB != NULL)
-      {
+      if (m_verticalHeaderDecorationCB != NULL) {
         PHB_ITEM pRow = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_verticalHeaderDecorationCB, 1, pRow));
-        switch (hb_itemType(pRet))
-        {
+        switch (hb_itemType(pRet)) {
         case HB_IT_OBJECT: {
           void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
-          if (hb_clsIsParent(hb_objGetClass(pRet), "QICON"))
-          {
+          if (hb_clsIsParent(hb_objGetClass(pRet), "QICON")) {
             data = *(static_cast<QIcon *>(ptr));
-          }
-          else if (hb_clsIsParent(hb_objGetClass(pRet), "QPIXMAP"))
-          {
+          } else if (hb_clsIsParent(hb_objGetClass(pRet), "QPIXMAP")) {
             data = *(static_cast<QPixmap *>(ptr));
           }
           break;
@@ -1284,12 +1114,10 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::ToolTipRole: {
-      if (m_verticalHeaderToolTipCB != NULL)
-      {
+      if (m_verticalHeaderToolTipCB != NULL) {
         PHB_ITEM pRow = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_itemToolTipCB, 1, pRow));
-        if (hb_itemType(pRet) & HB_IT_STRING)
-        {
+        if (hb_itemType(pRet) & HB_IT_STRING) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
           data = QLatin1String(hb_itemGetCPtr(pRet));
 #else
@@ -1302,12 +1130,10 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::SizeHintRole: {
-      if (m_verticalHeaderSizeHintCB != NULL)
-      {
+      if (m_verticalHeaderSizeHintCB != NULL) {
         PHB_ITEM pRow = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_horizontalHeaderSizeHintCB, 1, pRow));
-        if (hb_itemType(pRet) & HB_IT_OBJECT)
-        {
+        if (hb_itemType(pRet) & HB_IT_OBJECT) {
           void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
           data = *(static_cast<QSize *>(ptr));
         }
@@ -1317,12 +1143,10 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::FontRole: {
-      if (m_verticalHeaderFontCB != NULL)
-      {
+      if (m_verticalHeaderFontCB != NULL) {
         PHB_ITEM pRow = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_verticalHeaderFontCB, 1, pRow));
-        if (hb_itemType(pRet) & HB_IT_OBJECT)
-        {
+        if (hb_itemType(pRet) & HB_IT_OBJECT) {
           void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
           data = *(static_cast<QFont *>(ptr));
         }
@@ -1332,12 +1156,10 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::TextAlignmentRole: {
-      if (m_verticalHeaderTextAlignmentCB != NULL)
-      {
+      if (m_verticalHeaderTextAlignmentCB != NULL) {
         PHB_ITEM pRow = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_verticalHeaderTextAlignmentCB, 1, pRow));
-        if (hb_itemType(pRet) & HB_IT_NUMERIC)
-        {
+        if (hb_itemType(pRet) & HB_IT_NUMERIC) {
           data = hb_itemGetNI(pRet);
         }
         hb_itemRelease(pRow);
@@ -1346,20 +1168,15 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::BackgroundRole: {
-      if (m_verticalHeaderBackgroundCB != NULL)
-      {
+      if (m_verticalHeaderBackgroundCB != NULL) {
         PHB_ITEM pRow = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_verticalHeaderBackgroundCB, 1, pRow));
-        switch (hb_itemType(pRet))
-        {
+        switch (hb_itemType(pRet)) {
         case HB_IT_OBJECT: {
           void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
-          if (hb_clsIsParent(hb_objGetClass(pRet), "QCOLOR"))
-          {
+          if (hb_clsIsParent(hb_objGetClass(pRet), "QCOLOR")) {
             data = *(static_cast<QColor *>(ptr));
-          }
-          else if (hb_clsIsParent(hb_objGetClass(pRet), "QBRUSH"))
-          {
+          } else if (hb_clsIsParent(hb_objGetClass(pRet), "QBRUSH")) {
             data = *(static_cast<QBrush *>(ptr));
           }
           break;
@@ -1375,12 +1192,10 @@ QVariant HAbstractListModel::headerData(int section, Qt::Orientation orientation
       break;
     }
     case Qt::ForegroundRole: {
-      if (m_verticalHeaderForegroundCB != NULL)
-      {
+      if (m_verticalHeaderForegroundCB != NULL) {
         PHB_ITEM pRow = hb_itemPutNI(NULL, section);
         PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_verticalHeaderForegroundCB, 1, pRow));
-        switch (hb_itemType(pRet))
-        {
+        switch (hb_itemType(pRet)) {
         case HB_IT_OBJECT: {
           void *ptr = hb_itemGetPtr(hb_objSendMsg(pRet, "POINTER", 0));
           data = *(static_cast<QColor *>(ptr));
@@ -1410,8 +1225,7 @@ int HAbstractListModel::rowCount(const QModelIndex &parent) const
     return 0;
   }
 
-  if (m_rowCountCB != NULL)
-  {
+  if (m_rowCountCB != NULL) {
     return hb_itemGetNI(hb_vmEvalBlockV(m_rowCountCB, 0));
   }
 
@@ -1422,14 +1236,12 @@ Qt::ItemFlags HAbstractListModel::flags(const QModelIndex &index) const
 {
   Qt::ItemFlags flags = Qt::ItemIsSelectable | Qt::ItemIsEnabled;
 
-  if (m_flagsCB != NULL)
-  {
+  if (m_flagsCB != NULL) {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
 
     PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_flagsCB, 1, pRow));
 
-    if (hb_itemType(pRet) & HB_IT_NUMERIC)
-    {
+    if (hb_itemType(pRet) & HB_IT_NUMERIC) {
       flags = static_cast<Qt::ItemFlags>(hb_itemGetNI(pRet));
     }
 
@@ -1444,16 +1256,14 @@ bool HAbstractListModel::setData(const QModelIndex &index, const QVariant &value
 {
   bool success = false;
 
-  if (m_setDataCB != NULL)
-  {
+  if (m_setDataCB != NULL) {
     PHB_ITEM pRow = hb_itemPutNI(NULL, index.row());
     PHB_ITEM pValue = Qt5xHb::returnQVariantObject((void *)&value); // TODO: C++ cast
     PHB_ITEM pRole = hb_itemPutNI(NULL, role);
 
     PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_setDataCB, 3, pRow, pValue, pRole));
 
-    if (hb_itemType(pRet) & HB_IT_LOGICAL)
-    {
+    if (hb_itemType(pRet) & HB_IT_LOGICAL) {
       success = hb_itemGetL(pRet);
     }
 

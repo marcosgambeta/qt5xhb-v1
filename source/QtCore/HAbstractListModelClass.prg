@@ -84,9 +84,9 @@ END CLASS
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-    /*
-    HAbstractListModel( QObject * parent = NULL )
-    */
+/*
+HAbstractListModel( QObject * parent = NULL )
+*/
 HB_FUNC_STATIC(HABSTRACTLISTMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {

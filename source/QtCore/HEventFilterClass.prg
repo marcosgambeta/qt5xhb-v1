@@ -40,9 +40,9 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-    /*
-    HEventFilter( QObject *parent = NULL )
-    */
+/*
+HEventFilter( QObject *parent = NULL )
+*/
 HB_FUNC_STATIC(HEVENTFILTER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {

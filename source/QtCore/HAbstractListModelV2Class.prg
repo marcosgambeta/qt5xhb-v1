@@ -48,9 +48,9 @@ RETURN
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-    /*
-    HAbstractListModelV2( QObject * parent = NULL )
-    */
+/*
+HAbstractListModelV2( QObject * parent = NULL )
+*/
 HB_FUNC_STATIC(HABSTRACTLISTMODELV2_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {

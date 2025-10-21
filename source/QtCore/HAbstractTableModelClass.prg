@@ -76,9 +76,9 @@ END CLASS
 #include "qt5xhb_events.hpp"
 #include "qt5xhb_signals.hpp"
 
-    /*
-    HAbstractTableModel( QObject * parent = 0 )
-    */
+/*
+HAbstractTableModel( QObject * parent = 0 )
+*/
 HB_FUNC_STATIC(HABSTRACTTABLEMODEL_NEW)
 {
   HAbstractTableModel *o = new HAbstractTableModel(OPQOBJECT(1, 0));

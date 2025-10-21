@@ -21,38 +21,32 @@ HAbstractTableModelV2::HAbstractTableModelV2(QObject *parent) : QAbstractTableMo
 
 HAbstractTableModelV2::~HAbstractTableModelV2()
 {
-  if (m_rowCountBlock)
-  {
+  if (m_rowCountBlock) {
     hb_itemRelease(m_rowCountBlock);
     m_rowCountBlock = NULL;
   }
 
-  if (m_columnCountBlock)
-  {
+  if (m_columnCountBlock) {
     hb_itemRelease(m_columnCountBlock);
     m_columnCountBlock = NULL;
   }
 
-  if (m_dataBlock)
-  {
+  if (m_dataBlock) {
     hb_itemRelease(m_dataBlock);
     m_dataBlock = NULL;
   }
 
-  if (m_headerDataBlock)
-  {
+  if (m_headerDataBlock) {
     hb_itemRelease(m_headerDataBlock);
     m_headerDataBlock = NULL;
   }
 
-  if (m_flagsBlock)
-  {
+  if (m_flagsBlock) {
     hb_itemRelease(m_flagsBlock);
     m_flagsBlock = NULL;
   }
 
-  if (m_setDataBlock)
-  {
+  if (m_setDataBlock) {
     hb_itemRelease(m_setDataBlock);
     m_setDataBlock = NULL;
   }
@@ -60,80 +54,67 @@ HAbstractTableModelV2::~HAbstractTableModelV2()
 
 void HAbstractTableModelV2::setRowCountCB(PHB_ITEM block)
 {
-  if (m_rowCountBlock)
-  {
+  if (m_rowCountBlock) {
     hb_itemRelease(m_rowCountBlock);
   }
-  if (block)
-  {
+  if (block) {
     m_rowCountBlock = hb_itemNew(block);
   }
 }
 
 void HAbstractTableModelV2::setColumnCountCB(PHB_ITEM block)
 {
-  if (m_columnCountBlock)
-  {
+  if (m_columnCountBlock) {
     hb_itemRelease(m_columnCountBlock);
   }
-  if (block)
-  {
+  if (block) {
     m_columnCountBlock = hb_itemNew(block);
   }
 }
 
 void HAbstractTableModelV2::setDataCB(PHB_ITEM block)
 {
-  if (m_dataBlock)
-  {
+  if (m_dataBlock) {
     hb_itemRelease(m_dataBlock);
   }
-  if (block)
-  {
+  if (block) {
     m_dataBlock = hb_itemNew(block);
   }
 }
 
 void HAbstractTableModelV2::setHeaderDataCB(PHB_ITEM block)
 {
-  if (m_headerDataBlock)
-  {
+  if (m_headerDataBlock) {
     hb_itemRelease(m_headerDataBlock);
   }
-  if (block)
-  {
+  if (block) {
     m_headerDataBlock = hb_itemNew(block);
   }
 }
 
 void HAbstractTableModelV2::setFlagsCB(PHB_ITEM block)
 {
-  if (m_flagsBlock)
-  {
+  if (m_flagsBlock) {
     hb_itemRelease(m_flagsBlock);
   }
-  if (block)
-  {
+  if (block) {
     m_flagsBlock = hb_itemNew(block);
   }
 }
 
 void HAbstractTableModelV2::setSetDataCB(PHB_ITEM block)
 {
-  if (m_setDataBlock)
-  {
+  if (m_setDataBlock) {
     hb_itemRelease(m_setDataBlock);
   }
-  if (block)
-  {
+  if (block) {
     m_setDataBlock = hb_itemNew(block);
   }
 }
 
 int HAbstractTableModelV2::rowCount(const QModelIndex &parent) const
 {
-  if (m_rowCountBlock)
-  {
+  if (m_rowCountBlock) {
     if (parent.isValid()) {
       return 0;
     } else {
@@ -146,8 +127,7 @@ int HAbstractTableModelV2::rowCount(const QModelIndex &parent) const
 
 int HAbstractTableModelV2::columnCount(const QModelIndex &parent) const
 {
-  if (m_columnCountBlock)
-  {
+  if (m_columnCountBlock) {
     if (parent.isValid()) {
       return 0;
     } else {
@@ -162,8 +142,7 @@ QVariant HAbstractTableModelV2::data(const QModelIndex &index, int role) const
 {
   QVariant data;
 
-  if (m_dataBlock)
-  {
+  if (m_dataBlock) {
     PHB_ITEM pIndex = hb_itemPutPtr(NULL, (QModelIndex *)&index);
     PHB_ITEM pRole = hb_itemPutNI(NULL, role);
 
@@ -188,8 +167,7 @@ QVariant HAbstractTableModelV2::headerData(int section, Qt::Orientation orientat
 {
   QVariant data;
 
-  if (m_headerDataBlock)
-  {
+  if (m_headerDataBlock) {
     PHB_ITEM pSection = hb_itemPutNI(NULL, section);
     PHB_ITEM pOrientation = hb_itemPutNI(NULL, (int)orientation);
     PHB_ITEM pRole = hb_itemPutNI(NULL, role);
@@ -216,14 +194,12 @@ Qt::ItemFlags HAbstractTableModelV2::flags(const QModelIndex &index) const
 {
   Qt::ItemFlags flags = Qt::ItemIsSelectable | Qt::ItemIsEnabled;
 
-  if (m_flagsBlock)
-  {
+  if (m_flagsBlock) {
     PHB_ITEM pIndex = hb_itemPutPtr(NULL, (QModelIndex *)&index);
 
     PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_flagsBlock, 1, pIndex));
 
-    if (hb_itemType(pRet) & HB_IT_NUMERIC)
-    {
+    if (hb_itemType(pRet) & HB_IT_NUMERIC) {
       flags = (Qt::ItemFlags)hb_itemGetNI(pRet);
     }
 
@@ -240,16 +216,14 @@ bool HAbstractTableModelV2::setData(const QModelIndex &index, const QVariant &va
 {
   bool success = false;
 
-  if (m_setDataBlock)
-  {
+  if (m_setDataBlock) {
     PHB_ITEM pIndex = hb_itemPutPtr(NULL, (QModelIndex *)&index);
     PHB_ITEM pValue = hb_itemPutPtr(NULL, (QVariant *)&value);
     PHB_ITEM pRole = hb_itemPutNI(NULL, role);
 
     PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_setDataBlock, 3, pIndex, pValue, pRole));
 
-    if (hb_itemType(pRet) & HB_IT_LOGICAL)
-    {
+    if (hb_itemType(pRet) & HB_IT_LOGICAL) {
       success = hb_itemGetL(pRet);
     }
 
