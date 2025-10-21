@@ -22,8 +22,7 @@ void QAxScriptSlots::entered()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "entered()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QAxScriptSlots::error(int code, const QString &description, int sourcePosit
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(int,QString,int,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM pcode = hb_itemPutNI(NULL, code);
     PHB_ITEM pdescription = hb_itemPutC(NULL, QSTRINGTOSTRING(description));
@@ -62,8 +60,7 @@ void QAxScriptSlots::finished()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -78,8 +75,7 @@ void QAxScriptSlots::finished(const QVariant &result)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(QVariant)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM presult = Qt5xHb::Signals_return_object((void *)&result, "QVARIANT");
 
@@ -96,8 +92,7 @@ void QAxScriptSlots::finished(int code, const QString &source, const QString &de
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(int,QString,QString,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM pcode = hb_itemPutNI(NULL, code);
     PHB_ITEM psource = hb_itemPutC(NULL, QSTRINGTOSTRING(source));
@@ -120,8 +115,7 @@ void QAxScriptSlots::stateChanged(int state)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "stateChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM pstate = hb_itemPutNI(NULL, state);
 
@@ -139,8 +133,7 @@ void QAxScriptSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QAxScriptSlots *s = QCoreApplication::instance()->findChild<QAxScriptSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAxScriptSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

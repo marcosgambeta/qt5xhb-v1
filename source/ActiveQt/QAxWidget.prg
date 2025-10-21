@@ -79,25 +79,20 @@ RETURN
 
 HB_FUNC_STATIC(QAXWIDGET_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     /*
     QAxWidget( QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
     QAxWidget *obj = new QAxWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     /*
     QAxWidget( const QString &c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
     QAxWidget *obj =
         new QAxWidget(PQSTRING(1), OPQWIDGET(2, 0), HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 3) && HB_ISPOINTER(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3))
-  {
+  } else if (ISBETWEEN(1, 3) && HB_ISPOINTER(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     /*
     QAxWidget( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
@@ -135,8 +130,7 @@ HB_FUNC_STATIC(QAXWIDGET_CREATEAGGREGATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAxAggregated *ptr = obj->createAggregate();
       Qt5xHb::createReturnClass(ptr, "QAXAGGREGATED", false);
@@ -157,8 +151,7 @@ HB_FUNC_STATIC(QAXWIDGET_DOVERB)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->doVerb(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,8 +171,7 @@ HB_FUNC_STATIC(QAXWIDGET_CLEAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,8 +193,7 @@ HB_FUNC_STATIC(QAXWIDGET_MINIMUMSIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->minimumSizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -223,8 +214,7 @@ HB_FUNC_STATIC(QAXWIDGET_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -245,8 +235,7 @@ HB_FUNC_STATIC(QAXWIDGET_ASVARIANT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVariant *ptr = new QVariant(obj->asVariant());
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -267,8 +256,7 @@ HB_FUNC_STATIC(QAXWIDGET_CONTROL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->control());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,8 +276,7 @@ HB_FUNC_STATIC(QAXWIDGET_DISABLECLASSINFO)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->disableClassInfo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,8 +298,7 @@ HB_FUNC_STATIC(QAXWIDGET_DISABLEEVENTSINK)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->disableEventSink();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -334,8 +320,7 @@ HB_FUNC_STATIC(QAXWIDGET_DISABLEMETAOBJECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->disableMetaObject();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -352,8 +337,7 @@ HB_FUNC_STATIC(QAXWIDGET_DYNAMICCALL)
 {
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) &&
       ISQVARIANTORNIL(4) && ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) &&
-      ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9))
-  {
+      ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
     /*
     QVariant dynamicCall( const char * function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
     const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
@@ -361,8 +345,7 @@ HB_FUNC_STATIC(QAXWIDGET_DYNAMICCALL)
     */
     QAxWidget *obj = (QAxWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QVariant *ptr =
           new QVariant(obj->dynamicCall(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2),
                                         HB_ISNIL(3) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(3),
@@ -374,16 +357,13 @@ HB_FUNC_STATIC(QAXWIDGET_DYNAMICCALL)
                                         HB_ISNIL(9) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(9)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     /*
     QVariant dynamicCall( const char * function, QList<QVariant> &vars )
     */
     QAxWidget *obj = (QAxWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QVariant *ptr = new QVariant(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
       Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
     }
@@ -401,8 +381,7 @@ HB_FUNC_STATIC(QAXWIDGET_GENERATEDOCUMENTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->generateDocumentation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,8 +401,7 @@ HB_FUNC_STATIC(QAXWIDGET_ISNULL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -443,8 +421,7 @@ HB_FUNC_STATIC(QAXWIDGET_PROPERTYWRITABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->propertyWritable(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -459,8 +436,7 @@ HB_FUNC_STATIC(QAXWIDGET_QUERYSUBOBJECT)
 {
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) &&
       ISQVARIANTORNIL(4) && ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) &&
-      ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9))
-  {
+      ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
     /*
     QAxObject * querySubObject( const char * name, const QVariant &var1 = QVariant(), const QVariant &var2 =
     QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 =
@@ -469,8 +445,7 @@ HB_FUNC_STATIC(QAXWIDGET_QUERYSUBOBJECT)
     */
     QAxWidget *obj = (QAxWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QAxObject *ptr = obj->querySubObject(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2),
                                            HB_ISNIL(3) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(3),
                                            HB_ISNIL(4) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(4),
@@ -481,16 +456,13 @@ HB_FUNC_STATIC(QAXWIDGET_QUERYSUBOBJECT)
                                            HB_ISNIL(9) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(9));
       Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
-  {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     /*
     QAxObject * querySubObject( const char * name, QList<QVariant> &vars )
     */
     QAxWidget *obj = (QAxWidget *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QAxObject *ptr = obj->querySubObject(PCONSTCHAR(1), PQVARIANTLIST(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
@@ -508,8 +480,7 @@ HB_FUNC_STATIC(QAXWIDGET_SETCONTROL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->setControl(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -529,8 +500,7 @@ HB_FUNC_STATIC(QAXWIDGET_SETPROPERTYWRITABLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2)) {
 #endif
       obj->setPropertyWritable(PCONSTCHAR(1), PBOOL(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -552,8 +522,7 @@ HB_FUNC_STATIC(QAXWIDGET_VERBS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->verbs());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

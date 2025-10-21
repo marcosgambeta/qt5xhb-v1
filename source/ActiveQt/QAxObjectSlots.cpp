@@ -22,8 +22,7 @@ void QAxObjectSlots::exception(int code, const QString &source, const QString &d
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "exception(int,QString,QString,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXOBJECT");
     PHB_ITEM pcode = hb_itemPutNI(NULL, code);
     PHB_ITEM psource = hb_itemPutC(NULL, QSTRINGTOSTRING(source));
@@ -46,8 +45,7 @@ void QAxObjectSlots::propertyChanged(const QString &name)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "propertyChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXOBJECT");
     PHB_ITEM pname = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
 
@@ -64,8 +62,7 @@ void QAxObjectSlots::signal(const QString &name, int argc, void *argv)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "signal(QString,int,void*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXOBJECT");
     PHB_ITEM pname = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
     PHB_ITEM pargc = hb_itemPutNI(NULL, argc);
@@ -87,8 +84,7 @@ void QAxObjectSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QAxObjectSlots *s = QCoreApplication::instance()->findChild<QAxObjectSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAxObjectSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
