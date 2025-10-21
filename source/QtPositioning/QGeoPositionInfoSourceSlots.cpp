@@ -23,8 +23,7 @@ void QGeoPositionInfoSourceSlots::positionUpdated(const QGeoPositionInfo &update
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "positionUpdated(QGeoPositionInfo)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOPOSITIONINFOSOURCE");
     PHB_ITEM pupdate = Qt5xHb::Signals_return_object((void *)&update, "QGEOPOSITIONINFO");
 
@@ -43,8 +42,7 @@ void QGeoPositionInfoSourceSlots::updateTimeout()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "updateTimeout()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOPOSITIONINFOSOURCE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -61,8 +59,7 @@ void QGeoPositionInfoSourceSlots::error(QGeoPositionInfoSource::Error error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QGeoPositionInfoSource::Error)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOPOSITIONINFOSOURCE");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -82,8 +79,7 @@ void QGeoPositionInfoSourceSlots_connect_signal(const QString &signal, const QSt
   if (obj != NULL) {
     QGeoPositionInfoSourceSlots *s = QCoreApplication::instance()->findChild<QGeoPositionInfoSourceSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGeoPositionInfoSourceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

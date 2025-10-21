@@ -23,15 +23,12 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated(const QList<QGeoSatel
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
     PHB_DYNS pDynSym = hb_dynsymFindName("QGEOSATELLITEINFO");
     PHB_ITEM psatellites = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
-      for (int i = 0; i < satellites.count(); i++)
-      {
+    if (pDynSym != NULL) {
+      for (int i = 0; i < satellites.count(); i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -62,15 +59,12 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated(const QList<QGeoSatell
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
     PHB_DYNS pDynSym = hb_dynsymFindName("QGEOSATELLITEINFO");
     PHB_ITEM psatellites = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
-      for (int i = 0; i < satellites.count(); i++)
-      {
+    if (pDynSym != NULL) {
+      for (int i = 0; i < satellites.count(); i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -101,8 +95,7 @@ void QGeoSatelliteInfoSourceSlots::requestTimeout()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "requestTimeout()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -119,8 +112,7 @@ void QGeoSatelliteInfoSourceSlots::error(QGeoSatelliteInfoSource::Error error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QGeoSatelliteInfoSource::Error)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -140,8 +132,7 @@ void QGeoSatelliteInfoSourceSlots_connect_signal(const QString &signal, const QS
   if (obj != NULL) {
     QGeoSatelliteInfoSourceSlots *s = QCoreApplication::instance()->findChild<QGeoSatelliteInfoSourceSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGeoSatelliteInfoSourceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -23,8 +23,7 @@ void QGeoAreaMonitorSourceSlots::areaEntered(const QGeoAreaMonitorInfo &monitor,
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOAREAMONITORSOURCE");
     PHB_ITEM pmonitor = Qt5xHb::Signals_return_object((void *)&monitor, "QGEOAREAMONITORINFO");
     PHB_ITEM pupdate = Qt5xHb::Signals_return_object((void *)&update, "QGEOPOSITIONINFO");
@@ -45,8 +44,7 @@ void QGeoAreaMonitorSourceSlots::areaExited(const QGeoAreaMonitorInfo &monitor, 
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOAREAMONITORSOURCE");
     PHB_ITEM pmonitor = Qt5xHb::Signals_return_object((void *)&monitor, "QGEOAREAMONITORINFO");
     PHB_ITEM pupdate = Qt5xHb::Signals_return_object((void *)&update, "QGEOPOSITIONINFO");
@@ -67,8 +65,7 @@ void QGeoAreaMonitorSourceSlots::monitorExpired(const QGeoAreaMonitorInfo &monit
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "monitorExpired(QGeoAreaMonitorInfo)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOAREAMONITORSOURCE");
     PHB_ITEM pmonitor = Qt5xHb::Signals_return_object((void *)&monitor, "QGEOAREAMONITORINFO");
 
@@ -87,8 +84,7 @@ void QGeoAreaMonitorSourceSlots::error(QGeoAreaMonitorSource::Error error)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "error(QGeoAreaMonitorSource::Error)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOAREAMONITORSOURCE");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -108,8 +104,7 @@ void QGeoAreaMonitorSourceSlots_connect_signal(const QString &signal, const QStr
   if (obj != NULL) {
     QGeoAreaMonitorSourceSlots *s = QCoreApplication::instance()->findChild<QGeoAreaMonitorSourceSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGeoAreaMonitorSourceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
