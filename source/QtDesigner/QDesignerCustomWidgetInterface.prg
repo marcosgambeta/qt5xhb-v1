@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->codeTemplate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       QWidget *ptr = obj->createWidget(PQWIDGET(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -143,8 +141,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->domXml());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,8 +161,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_GROUP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->group());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,8 +181,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ICON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QIcon *ptr = new QIcon(obj->icon());
       Qt5xHb::createReturnClass(ptr, "QICON", true);
@@ -207,8 +202,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->includeFile());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +222,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDESIGNERFORMEDITORINTERFACE(1))
-    {
+    if (ISNUMPAR(1) && ISQDESIGNERFORMEDITORINTERFACE(1)) {
 #endif
       obj->initialize(PQDESIGNERFORMEDITORINTERFACE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,8 +244,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isContainer());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +264,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isInitialized());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,8 +284,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_NAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,8 +304,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toolTip());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,8 +324,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->whatsThis());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -351,17 +339,14 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -394,8 +379,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

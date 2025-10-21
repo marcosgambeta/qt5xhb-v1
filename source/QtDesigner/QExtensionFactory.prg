@@ -59,8 +59,7 @@ RETURN
     */
 HB_FUNC_STATIC(QEXTENSIONFACTORY_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQEXTENSIONMANAGER(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQEXTENSIONMANAGER(1) || HB_ISNIL(1))) {
     QExtensionFactory *obj = new QExtensionFactory(OPQEXTENSIONMANAGER(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -94,8 +93,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QExtensionManager *ptr = obj->extensionManager();
       Qt5xHb::createReturnQObjectClass(ptr, "QEXTENSIONMANAGER");
@@ -116,8 +114,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
 #endif
       QObject *ptr = obj->extension(PQOBJECT(1), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");

@@ -22,8 +22,7 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged(const QString &name,
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "propertyChanged(QString,QVariant)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDESIGNERPROPERTYEDITORINTERFACE");
     PHB_ITEM pname = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
     PHB_ITEM pvalue = Qt5xHb::Signals_return_object((void *)&value, "QVARIANT");
@@ -44,8 +43,7 @@ void QDesignerPropertyEditorInterfaceSlots_connect_signal(const QString &signal,
     QDesignerPropertyEditorInterfaceSlots *s =
         QCoreApplication::instance()->findChild<QDesignerPropertyEditorInterfaceSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDesignerPropertyEditorInterfaceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
