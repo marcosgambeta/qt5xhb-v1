@@ -23,8 +23,7 @@ void QQuickWidgetSlots::statusChanged(QQuickWidget::Status status)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QQuickWidget::Status)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWIDGET");
     PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
 
@@ -43,8 +42,7 @@ void QQuickWidgetSlots::sceneGraphError(QQuickWindow::SceneGraphError error, con
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sceneGraphError(QQuickWindow::SceneGraphError,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWIDGET");
     PHB_ITEM perror = hb_itemPutNI(NULL, static_cast<int>(error));
     PHB_ITEM pmessage = hb_itemPutC(NULL, QSTRINGTOSTRING(message));
@@ -66,8 +64,7 @@ void QQuickWidgetSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QQuickWidgetSlots *s = QCoreApplication::instance()->findChild<QQuickWidgetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QQuickWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

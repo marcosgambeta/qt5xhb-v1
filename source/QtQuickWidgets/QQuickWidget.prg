@@ -84,8 +84,7 @@ RETURN
 HB_FUNC_STATIC(QQUICKWIDGET_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     /*
     QQuickWidget( QWidget * parent = 0 )
     */
@@ -93,9 +92,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_NEW)
     QQuickWidget *obj = new QQuickWidget(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISNUMPAR(2) && ISQQMLENGINE(1) && ISQWIDGET(2))
-  {
+  } else if (ISNUMPAR(2) && ISQQMLENGINE(1) && ISQWIDGET(2)) {
     /*
     QQuickWidget( QQmlEngine * engine, QWidget * parent )
     */
@@ -103,9 +100,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_NEW)
     QQuickWidget *obj = new QQuickWidget(PQQMLENGINE(1), PQWIDGET(2));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  }
-  else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQWIDGETORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQWIDGETORNIL(2)) {
     /*
     QQuickWidget( const QUrl &source, QWidget * parent = 0 )
     */
@@ -148,8 +143,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SOURCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUrl *ptr = new QUrl(obj->source());
       Qt5xHb::createReturnClass(ptr, "QURL", true);
@@ -172,8 +166,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETSOURCE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setSource(*PQURL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,8 +190,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_ENGINE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QQmlEngine *ptr = obj->engine();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLENGINE");
@@ -221,8 +213,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_ROOTCONTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QQmlContext *ptr = obj->rootContext();
       Qt5xHb::createReturnQObjectClass(ptr, "QQMLCONTEXT");
@@ -245,8 +236,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_ROOTOBJECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QQuickItem *ptr = obj->rootObject();
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKITEM");
@@ -269,8 +259,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_RESIZEMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->resizeMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +281,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETRESIZEMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setResizeMode((QQuickWidget::ResizeMode)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,8 +305,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_STATUS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->status());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,16 +327,13 @@ HB_FUNC_STATIC(QQUICKWIDGET_ERRORS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QQmlError> list = obj->errors();
       PHB_DYNS pDynSym = hb_dynsymFindName("QQMLERROR");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -364,9 +348,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_ERRORS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QQMLERROR", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -389,8 +371,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -413,8 +394,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_INITIALSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->initialSize());
       Qt5xHb::createReturnClass(ptr, "QSIZE", true);
@@ -437,8 +417,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETCONTENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQURL(1) && ISQQMLCOMPONENT(2) && ISQOBJECT(3))
-    {
+    if (ISNUMPAR(3) && ISQURL(1) && ISQQMLCOMPONENT(2) && ISQOBJECT(3)) {
 #endif
       obj->setContent(*PQURL(1), PQQMLCOMPONENT(2), PQOBJECT(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -462,8 +441,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_FORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSurfaceFormat *ptr = new QSurfaceFormat(obj->format());
       Qt5xHb::createReturnClass(ptr, "QSURFACEFORMAT", true);
@@ -486,8 +464,7 @@ HB_FUNC_STATIC(QQUICKWIDGET_SETFORMAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSURFACEFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQSURFACEFORMAT(1)) {
 #endif
       obj->setFormat(*PQSURFACEFORMAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
