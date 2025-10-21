@@ -72,8 +72,7 @@ HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_GEOMETRY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSGGeometry *ptr = obj->geometry();
       Qt5xHb::createReturnClass(ptr, "QSGGEOMETRY", false);
@@ -94,8 +93,7 @@ HB_FUNC_STATIC(QSGBASICGEOMETRYNODE_SETGEOMETRY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSGGEOMETRY(1))
-    {
+    if (ISNUMPAR(1) && ISQSGGEOMETRY(1)) {
 #endif
       obj->setGeometry(PQSGGEOMETRY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

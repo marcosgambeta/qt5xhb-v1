@@ -22,8 +22,7 @@ void QQuickWindowSlots::afterRendering()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "afterRendering()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QQuickWindowSlots::beforeRendering()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "beforeRendering()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -54,8 +52,7 @@ void QQuickWindowSlots::beforeSynchronizing()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "beforeSynchronizing()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -70,8 +67,7 @@ void QQuickWindowSlots::colorChanged(const QColor &color)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object((void *)&color, "QCOLOR");
 
@@ -88,8 +84,7 @@ void QQuickWindowSlots::frameSwapped()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "frameSwapped()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -104,8 +99,7 @@ void QQuickWindowSlots::sceneGraphInitialized()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sceneGraphInitialized()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -120,8 +114,7 @@ void QQuickWindowSlots::sceneGraphInvalidated()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sceneGraphInvalidated()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -137,8 +130,7 @@ void QQuickWindowSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QQuickWindowSlots *s = QCoreApplication::instance()->findChild<QQuickWindowSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QQuickWindowSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

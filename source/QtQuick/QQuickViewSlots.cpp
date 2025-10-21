@@ -22,8 +22,7 @@ void QQuickViewSlots::statusChanged(QQuickView::Status status)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "statusChanged(QQuickView::Status)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKVIEW");
     PHB_ITEM pstatus = hb_itemPutNI(NULL, static_cast<int>(status));
 
@@ -41,8 +40,7 @@ void QQuickViewSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QQuickViewSlots *s = QCoreApplication::instance()->findChild<QQuickViewSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QQuickViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

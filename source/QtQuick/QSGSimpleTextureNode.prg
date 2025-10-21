@@ -59,8 +59,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QSGSimpleTextureNode *obj = new QSGSimpleTextureNode();
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -92,8 +91,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_FILTERING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->filtering());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,8 +111,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_RECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->rect());
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -135,8 +132,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETFILTERING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFiltering((QSGTexture::Filtering)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,29 +147,24 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETFILTERING)
 
 HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETRECT)
 {
-  if (ISNUMPAR(1) && ISQRECTF(1))
-  {
+  if (ISNUMPAR(1) && ISQRECTF(1)) {
     /*
     void setRect( const QRectF &r )
     */
     QSGSimpleTextureNode *obj = (QSGSimpleTextureNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setRect(*PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
     void setRect( qreal x, qreal y, qreal w, qreal h )
     */
     QSGSimpleTextureNode *obj = (QSGSimpleTextureNode *)Qt5xHb::itemGetPtrStackSelfItem();
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
@@ -192,8 +183,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_SETTEXTURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSGTEXTURE(1))
-    {
+    if (ISNUMPAR(1) && ISQSGTEXTURE(1)) {
 #endif
       obj->setTexture(PQSGTEXTURE(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,8 +205,7 @@ HB_FUNC_STATIC(QSGSIMPLETEXTURENODE_TEXTURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSGTexture *ptr = obj->texture();
       Qt5xHb::createReturnQObjectClass(ptr, "QSGTEXTURE");

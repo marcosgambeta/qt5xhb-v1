@@ -51,8 +51,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSGTRANSFORMNODE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QSGTransformNode *obj = new QSGTransformNode();
     Qt5xHb::returnNewObject(obj, true);
   } else {

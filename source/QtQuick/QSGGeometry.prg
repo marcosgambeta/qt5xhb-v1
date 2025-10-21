@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ALLOCATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->allocate(PINT(1), OPINT(2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,8 +119,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_ATTRIBUTECOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->attributeCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +139,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_DRAWINGMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RGLENUM(obj->drawingMode());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,8 +159,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->indexCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +179,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXDATAPATTERN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->indexDataPattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +199,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_INDEXTYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->indexType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +219,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_LINEWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->lineWidth());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +239,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKINDEXDATADIRTY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->markIndexDataDirty();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +261,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_MARKVERTEXDATADIRTY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->markVertexDataDirty();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,8 +283,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETDRAWINGMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDrawingMode(PGLENUM(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,8 +305,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETINDEXDATAPATTERN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setIndexDataPattern((QSGGeometry::DataPattern)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,8 +327,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETLINEWIDTH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLineWidth(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,8 +349,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETVERTEXDATAPATTERN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setVertexDataPattern((QSGGeometry::DataPattern)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +371,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFINDEX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sizeOfIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,8 +391,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SIZEOFVERTEX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sizeOfVertex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,8 +411,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->vertexCount());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,8 +431,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_VERTEXDATAPATTERN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->vertexDataPattern());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,8 +448,7 @@ static void updateRectGeometry( QSGGeometry * g, const QRectF &rect )
 HB_FUNC_STATIC(QSGGEOMETRY_UPDATERECTGEOMETRY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && ISQSGGEOMETRY(1) && ISQRECTF(2))
-  {
+  if (ISNUMPAR(2) && ISQSGGEOMETRY(1) && ISQRECTF(2)) {
 #endif
     QSGGeometry::updateRectGeometry(PQSGGEOMETRY(1), *PQRECTF(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -484,8 +466,7 @@ static void updateTexturedRectGeometry( QSGGeometry * g, const QRectF &rect, con
 HB_FUNC_STATIC(QSGGEOMETRY_UPDATETEXTUREDRECTGEOMETRY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(3) && ISQSGGEOMETRY(1) && ISQRECTF(2) && ISQRECTF(3))
-  {
+  if (ISNUMPAR(3) && ISQSGGEOMETRY(1) && ISQRECTF(2) && ISQRECTF(3)) {
 #endif
     QSGGeometry::updateTexturedRectGeometry(PQSGGEOMETRY(1), *PQRECTF(2), *PQRECTF(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,17 +482,14 @@ HB_FUNC_STATIC(QSGGEOMETRY_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -544,8 +522,7 @@ HB_FUNC_STATIC(QSGGEOMETRY_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

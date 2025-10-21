@@ -22,8 +22,7 @@ void QQuickPaintedItemSlots::contentsScaleChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsScaleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QQuickPaintedItemSlots::contentsSizeChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "contentsSizeChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -54,8 +52,7 @@ void QQuickPaintedItemSlots::fillColorChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "fillColorChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -70,8 +67,7 @@ void QQuickPaintedItemSlots::renderTargetChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "renderTargetChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -87,8 +83,7 @@ void QQuickPaintedItemSlots_connect_signal(const QString &signal, const QString 
   if (obj != NULL) {
     QQuickPaintedItemSlots *s = QCoreApplication::instance()->findChild<QQuickPaintedItemSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QQuickPaintedItemSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

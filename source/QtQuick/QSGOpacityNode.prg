@@ -53,8 +53,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSGOPACITYNODE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QSGOpacityNode *obj = new QSGOpacityNode();
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -86,8 +85,7 @@ HB_FUNC_STATIC(QSGOPACITYNODE_OPACITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->opacity());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,8 +105,7 @@ HB_FUNC_STATIC(QSGOPACITYNODE_SETOPACITY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setOpacity(PQREAL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

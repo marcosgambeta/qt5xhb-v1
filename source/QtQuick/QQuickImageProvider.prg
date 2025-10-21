@@ -59,8 +59,7 @@ RETURN
     */
 HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     QQuickImageProvider *obj = new QQuickImageProvider((QQmlImageProviderBase::ImageType)hb_parni(1),
                                                        HB_ISNIL(2) ? (QQmlImageProviderBase::Flags)0
                                                                    : (QQmlImageProviderBase::Flags)hb_parni(2));
@@ -94,8 +93,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_FLAGS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,8 +113,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_IMAGETYPE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->imageType());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,8 +133,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
-    {
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3)) {
 #endif
       QImage *ptr = new QImage(obj->requestImage(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -158,8 +154,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
-    {
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3)) {
 #endif
       QPixmap *ptr = new QPixmap(obj->requestPixmap(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
@@ -180,8 +175,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTTEXTURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3))
-    {
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3)) {
 #endif
       QQuickTextureFactory *ptr = obj->requestTexture(PQSTRING(1), PQSIZE(2), *PQSIZE(3));
       Qt5xHb::createReturnQObjectClass(ptr, "QQUICKTEXTUREFACTORY");
