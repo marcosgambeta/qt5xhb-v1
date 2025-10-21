@@ -86,8 +86,7 @@ Q3DCamera( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC(Q3DCAMERA_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     Q3DCamera *obj = new Q3DCamera(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -124,8 +123,7 @@ HB_FUNC_STATIC(Q3DCAMERA_XROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->xRotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,8 +143,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETXROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setXRotation(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,8 +165,7 @@ HB_FUNC_STATIC(Q3DCAMERA_YROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->yRotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,8 +185,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETYROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setYRotation(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,8 +207,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ZOOMLEVEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->zoomLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,8 +227,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETZOOMLEVEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setZoomLevel(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,8 +249,7 @@ HB_FUNC_STATIC(Q3DCAMERA_CAMERAPRESET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->cameraPreset());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,8 +269,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPRESET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCameraPreset((Q3DCamera::CameraPreset)hb_parni(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,8 +291,7 @@ HB_FUNC_STATIC(Q3DCAMERA_WRAPXROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->wrapXRotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,8 +311,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETWRAPXROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setWrapXRotation(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,8 +333,7 @@ HB_FUNC_STATIC(Q3DCAMERA_WRAPYROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->wrapYRotation());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -365,8 +353,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETWRAPYROTATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setWrapYRotation(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -388,8 +375,7 @@ HB_FUNC_STATIC(Q3DCAMERA_TARGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVector3D *ptr = new QVector3D(obj->target());
       Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
@@ -410,8 +396,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETTARGET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVECTOR3D(1))
-    {
+    if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
 #endif
       obj->setTarget(*PQVECTOR3D(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -433,8 +418,7 @@ HB_FUNC_STATIC(Q3DCAMERA_MINZOOMLEVEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->minZoomLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -454,8 +438,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETMINZOOMLEVEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMinZoomLevel(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -477,8 +460,7 @@ HB_FUNC_STATIC(Q3DCAMERA_MAXZOOMLEVEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->maxZoomLevel());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -498,8 +480,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETMAXZOOMLEVEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaxZoomLevel(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -521,8 +502,7 @@ HB_FUNC_STATIC(Q3DCAMERA_COPYVALUESFROM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQ3DOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQ3DOBJECT(1)) {
 #endif
       obj->copyValuesFrom(*PQ3DOBJECT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -544,8 +524,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPOSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
       obj->setCameraPosition(PFLOAT(1), PFLOAT(2), OPFLOAT(3, 100.0f));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -65,16 +65,13 @@ RETURN
 
 HB_FUNC_STATIC(QBAR3DSERIES_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QBar3DSeries( QObject * parent = nullptr )
     */
     QBar3DSeries *obj = new QBar3DSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQBARDATAPROXY(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQBARDATAPROXY(1) && ISQOBJECTORNIL(2)) {
     /*
     QBar3DSeries( QBarDataProxy * dataProxy, QObject * parent = nullptr )
     */
@@ -114,8 +111,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_DATAPROXY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QBarDataProxy *ptr = obj->dataProxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QBARDATAPROXY");
@@ -136,8 +132,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SETDATAPROXY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBARDATAPROXY(1))
-    {
+    if (ISNUMPAR(1) && ISQBARDATAPROXY(1)) {
 #endif
       obj->setDataProxy(PQBARDATAPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,8 +154,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SELECTEDBAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPoint *ptr = new QPoint(obj->selectedBar());
       Qt5xHb::createReturnClass(ptr, "QPOINT", true);
@@ -181,8 +175,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SETSELECTEDBAR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->setSelectedBar(*PQPOINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +197,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_MESHANGLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->meshAngle());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,8 +217,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SETMESHANGLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMeshAngle(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,8 +236,7 @@ static QPoint invalidSelectionPosition()
 HB_FUNC_STATIC(QBAR3DSERIES_INVALIDSELECTIONPOSITION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QPoint *ptr = new QPoint(QBar3DSeries::invalidSelectionPosition());
     Qt5xHb::createReturnClass(ptr, "QPOINT", true);

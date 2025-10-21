@@ -23,8 +23,7 @@ void QValue3DAxisSlots_connect_signal(const QString &signal, const QString &slot
   if (obj != NULL) {
     QValue3DAxisSlots *s = QCoreApplication::instance()->findChild<QValue3DAxisSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QValue3DAxisSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

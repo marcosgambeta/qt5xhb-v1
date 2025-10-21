@@ -75,8 +75,7 @@ Q3DScatter( const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr 
 */
 HB_FUNC_STATIC(Q3DSCATTER_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQSURFACEFORMAT(1) || HB_ISNIL(1)) && (ISQWINDOW(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(0, 2) && (ISQSURFACEFORMAT(1) || HB_ISNIL(1)) && (ISQWINDOW(2) || HB_ISNIL(2))) {
     Q3DScatter *obj =
         new Q3DScatter(HB_ISNIL(1) ? nullptr : (QSurfaceFormat *)Qt5xHb::itemGetPtr(1), OPQWINDOW(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -114,8 +113,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QValue3DAxis *ptr = obj->axisX();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1)) {
 #endif
       obj->setAxisX(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,8 +156,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QValue3DAxis *ptr = obj->axisY();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
@@ -181,8 +177,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1)) {
 #endif
       obj->setAxisY(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +199,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISZ)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QValue3DAxis *ptr = obj->axisZ();
       Qt5xHb::createReturnQObjectClass(ptr, "QVALUE3DAXIS");
@@ -226,8 +220,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISZ)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1)) {
 #endif
       obj->setAxisZ(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,8 +242,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SELECTEDSERIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QScatter3DSeries *ptr = obj->selectedSeries();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCATTER3DSERIES");
@@ -271,8 +263,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ADDSERIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCATTER3DSERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQSCATTER3DSERIES(1)) {
 #endif
       obj->addSeries(PQSCATTER3DSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,8 +285,7 @@ HB_FUNC_STATIC(Q3DSCATTER_REMOVESERIES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCATTER3DSERIES(1))
-    {
+    if (ISNUMPAR(1) && ISQSCATTER3DSERIES(1)) {
 #endif
       obj->removeSeries(PQSCATTER3DSERIES(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,16 +307,13 @@ HB_FUNC_STATIC(Q3DSCATTER_SERIESLIST)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QScatter3DSeries *> list = obj->seriesList();
       PHB_DYNS pDynSym = hb_dynsymFindName("QSCATTER3DSERIES");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -338,9 +325,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SERIESLIST)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSCATTER3DSERIES", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -361,8 +346,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ADDAXIS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1)) {
 #endif
       obj->addAxis(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +368,7 @@ HB_FUNC_STATIC(Q3DSCATTER_RELEASEAXIS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1))
-    {
+    if (ISNUMPAR(1) && ISQVALUE3DAXIS(1)) {
 #endif
       obj->releaseAxis(PQVALUE3DAXIS(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -407,16 +390,13 @@ HB_FUNC_STATIC(Q3DSCATTER_AXES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QValue3DAxis *> list = obj->axes();
       PHB_DYNS pDynSym = hb_dynsymFindName("QVALUE3DAXIS");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
-        for (int i = 0; i < list.count(); i++)
-        {
+      if (pDynSym != NULL) {
+        for (int i = 0; i < list.count(); i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -428,9 +408,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QVALUE3DAXIS", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);

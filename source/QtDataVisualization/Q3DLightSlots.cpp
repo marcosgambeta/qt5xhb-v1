@@ -23,8 +23,7 @@ void Q3DLightSlots::autoPositionChanged(bool autoPosition)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "autoPositionChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DLIGHT");
     PHB_ITEM pautoPosition = hb_itemPutL(NULL, autoPosition);
 
@@ -43,8 +42,7 @@ void Q3DLightSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     Q3DLightSlots *s = QCoreApplication::instance()->findChild<Q3DLightSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new Q3DLightSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

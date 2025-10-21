@@ -22,8 +22,7 @@ void QHeightMapSurfaceDataProxySlots::heightMapChanged(const QImage &image)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "heightMapChanged(QImage)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
     PHB_ITEM pimage = Qt5xHb::Signals_return_object((void *)&image, "QIMAGE");
 
@@ -40,8 +39,7 @@ void QHeightMapSurfaceDataProxySlots::heightMapFileChanged(const QString &filena
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "heightMapFileChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
     PHB_ITEM pfilename = hb_itemPutC(NULL, QSTRINGTOSTRING(filename));
 
@@ -58,8 +56,7 @@ void QHeightMapSurfaceDataProxySlots::maxXValueChanged(float value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxXValueChanged(float)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
     PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
@@ -76,8 +73,7 @@ void QHeightMapSurfaceDataProxySlots::maxZValueChanged(float value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "maxZValueChanged(float)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
     PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
@@ -94,8 +90,7 @@ void QHeightMapSurfaceDataProxySlots::minXValueChanged(float value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minXValueChanged(float)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
     PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
@@ -112,8 +107,7 @@ void QHeightMapSurfaceDataProxySlots::minZValueChanged(float value)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "minZValueChanged(float)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHEIGHTMAPSURFACEDATAPROXY");
     PHB_ITEM pvalue = hb_itemPutND(NULL, value);
 
@@ -131,8 +125,7 @@ void QHeightMapSurfaceDataProxySlots_connect_signal(const QString &signal, const
   if (obj != NULL) {
     QHeightMapSurfaceDataProxySlots *s = QCoreApplication::instance()->findChild<QHeightMapSurfaceDataProxySlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QHeightMapSurfaceDataProxySlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

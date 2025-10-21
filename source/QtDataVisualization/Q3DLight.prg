@@ -59,8 +59,7 @@ Q3DLight( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC(Q3DLIGHT_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     Q3DLight *obj = new Q3DLight(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(Q3DLIGHT_SETAUTOPOSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAutoPosition(PBOOL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,8 +121,7 @@ HB_FUNC_STATIC(Q3DLIGHT_ISAUTOPOSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isAutoPosition());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

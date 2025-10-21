@@ -22,8 +22,7 @@ void QBarDataProxySlots::arrayReset()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "arrayReset()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -38,8 +37,7 @@ void QBarDataProxySlots::columnLabelsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "columnLabelsChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -54,8 +52,7 @@ void QBarDataProxySlots::itemChanged(int rowIndex, int columnIndex)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "itemChanged(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM prowIndex = hb_itemPutNI(NULL, rowIndex);
     PHB_ITEM pcolumnIndex = hb_itemPutNI(NULL, columnIndex);
@@ -74,8 +71,7 @@ void QBarDataProxySlots::rowCountChanged(int count)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowCountChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pcount = hb_itemPutNI(NULL, count);
 
@@ -92,8 +88,7 @@ void QBarDataProxySlots::rowLabelsChanged()
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowLabelsChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
 
     hb_vmEvalBlockV(cb, 1, psender);
@@ -108,8 +103,7 @@ void QBarDataProxySlots::rowsAdded(int startIndex, int count)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowsAdded(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI(NULL, startIndex);
     PHB_ITEM pcount = hb_itemPutNI(NULL, count);
@@ -128,8 +122,7 @@ void QBarDataProxySlots::rowsChanged(int startIndex, int count)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowsChanged(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI(NULL, startIndex);
     PHB_ITEM pcount = hb_itemPutNI(NULL, count);
@@ -148,8 +141,7 @@ void QBarDataProxySlots::rowsInserted(int startIndex, int count)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowsInserted(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI(NULL, startIndex);
     PHB_ITEM pcount = hb_itemPutNI(NULL, count);
@@ -168,8 +160,7 @@ void QBarDataProxySlots::rowsRemoved(int startIndex, int count)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "rowsRemoved(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pstartIndex = hb_itemPutNI(NULL, startIndex);
     PHB_ITEM pcount = hb_itemPutNI(NULL, count);
@@ -188,8 +179,7 @@ void QBarDataProxySlots::seriesChanged(QBar3DSeries *series)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "seriesChanged(QBar3DSeries*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBARDATAPROXY");
     PHB_ITEM pseries = Qt5xHb::Signals_return_qobject(series, "QBAR3DSERIES");
 
@@ -207,8 +197,7 @@ void QBarDataProxySlots_connect_signal(const QString &signal, const QString &slo
   if (obj != NULL) {
     QBarDataProxySlots *s = QCoreApplication::instance()->findChild<QBarDataProxySlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QBarDataProxySlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

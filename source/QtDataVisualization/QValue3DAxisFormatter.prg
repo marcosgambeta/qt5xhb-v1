@@ -55,8 +55,7 @@ QValue3DAxisFormatter( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC(QVALUE3DAXISFORMATTER_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     QValue3DAxisFormatter *obj = new QValue3DAxisFormatter(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {

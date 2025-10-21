@@ -64,16 +64,13 @@ RETURN
 
 HB_FUNC_STATIC(QSCATTER3DSERIES_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QScatter3DSeries( QObject * parent = nullptr )
     */
     QScatter3DSeries *obj = new QScatter3DSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQSCATTERDATAPROXY(1) && ISQOBJECTORNIL(2))
-  {
+  } else if (ISBETWEEN(1, 2) && ISQSCATTERDATAPROXY(1) && ISQOBJECTORNIL(2)) {
     /*
     QScatter3DSeries( QScatterDataProxy * dataProxy, QObject * parent = nullptr )
     */
@@ -113,8 +110,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_DATAPROXY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QScatterDataProxy *ptr = obj->dataProxy();
       Qt5xHb::createReturnQObjectClass(ptr, "QSCATTERDATAPROXY");
@@ -135,8 +131,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETDATAPROXY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCATTERDATAPROXY(1))
-    {
+    if (ISNUMPAR(1) && ISQSCATTERDATAPROXY(1)) {
 #endif
       obj->setDataProxy(PQSCATTERDATAPROXY(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +153,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SELECTEDITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->selectedItem());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,8 +173,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETSELECTEDITEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSelectedItem(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,8 +195,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_ITEMSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RFLOAT(obj->itemSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,8 +215,7 @@ HB_FUNC_STATIC(QSCATTER3DSERIES_SETITEMSIZE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setItemSize(PFLOAT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +234,7 @@ static int invalidSelectionIndex()
 HB_FUNC_STATIC(QSCATTER3DSERIES_INVALIDSELECTIONINDEX)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RINT(QScatter3DSeries::invalidSelectionIndex());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

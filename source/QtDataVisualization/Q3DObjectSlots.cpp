@@ -22,8 +22,7 @@ void Q3DObjectSlots::positionChanged(const QVector3D &position)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "positionChanged(QVector3D)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DOBJECT");
     PHB_ITEM pposition = Qt5xHb::Signals_return_object((void *)&position, "QVECTOR3D");
 
@@ -41,8 +40,7 @@ void Q3DObjectSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     Q3DObjectSlots *s = QCoreApplication::instance()->findChild<Q3DObjectSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new Q3DObjectSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

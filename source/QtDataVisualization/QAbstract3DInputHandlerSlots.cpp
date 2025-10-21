@@ -22,8 +22,7 @@ void QAbstract3DInputHandlerSlots::inputViewChanged(QAbstract3DInputHandler::Inp
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "inputViewChanged(QAbstract3DInputHandler::InputView)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DINPUTHANDLER");
     PHB_ITEM pview = hb_itemPutNI(NULL, static_cast<int>(view));
 
@@ -40,8 +39,7 @@ void QAbstract3DInputHandlerSlots::positionChanged(const QPoint &position)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "positionChanged(QPoint)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DINPUTHANDLER");
     PHB_ITEM pposition = Qt5xHb::Signals_return_object((void *)&position, "QPOINT");
 
@@ -58,8 +56,7 @@ void QAbstract3DInputHandlerSlots::sceneChanged(Q3DScene *scene)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "sceneChanged(Q3DScene*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DINPUTHANDLER");
     PHB_ITEM pscene = Qt5xHb::Signals_return_qobject(scene, "Q3DSCENE");
 
@@ -77,8 +74,7 @@ void QAbstract3DInputHandlerSlots_connect_signal(const QString &signal, const QS
   if (obj != NULL) {
     QAbstract3DInputHandlerSlots *s = QCoreApplication::instance()->findChild<QAbstract3DInputHandlerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstract3DInputHandlerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

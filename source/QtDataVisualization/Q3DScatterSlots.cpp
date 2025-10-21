@@ -22,8 +22,7 @@ void Q3DScatterSlots::axisXChanged(QValue3DAxis *axis)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisXChanged(QValue3DAxis*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCATTER");
     PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QVALUE3DAXIS");
 
@@ -40,8 +39,7 @@ void Q3DScatterSlots::axisYChanged(QValue3DAxis *axis)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisYChanged(QValue3DAxis*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCATTER");
     PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QVALUE3DAXIS");
 
@@ -58,8 +56,7 @@ void Q3DScatterSlots::axisZChanged(QValue3DAxis *axis)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "axisZChanged(QValue3DAxis*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCATTER");
     PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QVALUE3DAXIS");
 
@@ -76,8 +73,7 @@ void Q3DScatterSlots::selectedSeriesChanged(QScatter3DSeries *series)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "selectedSeriesChanged(QScatter3DSeries*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DSCATTER");
     PHB_ITEM pseries = Qt5xHb::Signals_return_qobject(series, "QSCATTER3DSERIES");
 
@@ -95,8 +91,7 @@ void Q3DScatterSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     Q3DScatterSlots *s = QCoreApplication::instance()->findChild<Q3DScatterSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new Q3DScatterSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
