@@ -57,8 +57,7 @@ RETURN
     */
 HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQDBUSPENDINGCALL(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && ISQDBUSPENDINGCALL(1) && ISQOBJECTORNIL(2)) {
     QDBusPendingCallWatcher *obj = new QDBusPendingCallWatcher(*PQDBUSPENDINGCALL(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -92,8 +91,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_ISFINISHED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,8 +111,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_WAITFORFINISHED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->waitForFinished();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

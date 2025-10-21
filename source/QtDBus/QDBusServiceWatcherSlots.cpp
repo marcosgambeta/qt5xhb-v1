@@ -22,8 +22,7 @@ void QDBusServiceWatcherSlots::serviceRegistered(const QString &service)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "serviceRegistered(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVICEWATCHER");
     PHB_ITEM pservice = hb_itemPutC(NULL, QSTRINGTOSTRING(service));
 
@@ -40,8 +39,7 @@ void QDBusServiceWatcherSlots::serviceUnregistered(const QString &service)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "serviceUnregistered(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVICEWATCHER");
     PHB_ITEM pservice = hb_itemPutC(NULL, QSTRINGTOSTRING(service));
 
@@ -59,8 +57,7 @@ void QDBusServiceWatcherSlots::serviceOwnerChanged(const QString &service, const
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "serviceOwnerChanged(QString,QString,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVICEWATCHER");
     PHB_ITEM pservice = hb_itemPutC(NULL, QSTRINGTOSTRING(service));
     PHB_ITEM poldOwner = hb_itemPutC(NULL, QSTRINGTOSTRING(oldOwner));
@@ -82,8 +79,7 @@ void QDBusServiceWatcherSlots_connect_signal(const QString &signal, const QStrin
   if (obj != NULL) {
     QDBusServiceWatcherSlots *s = QCoreApplication::instance()->findChild<QDBusServiceWatcherSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDBusServiceWatcherSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

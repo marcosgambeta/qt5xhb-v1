@@ -22,8 +22,7 @@ void QDBusConnectionInterfaceSlots::serviceRegistered(const QString &service)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "serviceRegistered(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM pservice = hb_itemPutC(NULL, QSTRINGTOSTRING(service));
 
@@ -40,8 +39,7 @@ void QDBusConnectionInterfaceSlots::serviceUnregistered(const QString &service)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "serviceUnregistered(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM pservice = hb_itemPutC(NULL, QSTRINGTOSTRING(service));
 
@@ -59,8 +57,7 @@ void QDBusConnectionInterfaceSlots::serviceOwnerChanged(const QString &name, con
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "serviceOwnerChanged(QString,QString,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM pname = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
     PHB_ITEM poldOwner = hb_itemPutC(NULL, QSTRINGTOSTRING(oldOwner));
@@ -81,8 +78,7 @@ void QDBusConnectionInterfaceSlots::callWithCallbackFailed(const QDBusError &err
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "callWithCallbackFailed(QDBusError,QDBusMessage)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM perror = Qt5xHb::Signals_return_object((void *)&error, "QDBUSERROR");
     PHB_ITEM pcall = Qt5xHb::Signals_return_object((void *)&call, "QDBUSMESSAGE");
@@ -102,8 +98,7 @@ void QDBusConnectionInterfaceSlots_connect_signal(const QString &signal, const Q
   if (obj != NULL) {
     QDBusConnectionInterfaceSlots *s = QCoreApplication::instance()->findChild<QDBusConnectionInterfaceSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDBusConnectionInterfaceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

@@ -22,8 +22,7 @@ void QDBusPendingCallWatcherSlots::finished(QDBusPendingCallWatcher *self)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "finished(QDBusPendingCallWatcher*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSPENDINGCALLWATCHER");
     PHB_ITEM pself = Qt5xHb::Signals_return_qobject(self, "QDBUSPENDINGCALLWATCHER");
 
@@ -41,8 +40,7 @@ void QDBusPendingCallWatcherSlots_connect_signal(const QString &signal, const QS
   if (obj != NULL) {
     QDBusPendingCallWatcherSlots *s = QCoreApplication::instance()->findChild<QDBusPendingCallWatcherSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDBusPendingCallWatcherSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

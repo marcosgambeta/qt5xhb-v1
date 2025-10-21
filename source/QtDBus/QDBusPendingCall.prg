@@ -71,8 +71,7 @@ RETURN
     */
 HB_FUNC_STATIC(QDBUSPENDINGCALL_NEW)
 {
-  if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1))
-  {
+  if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1)) {
     QDBusPendingCall *obj = new QDBusPendingCall(*PQDBUSPENDINGCALL(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -104,8 +103,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_SWAP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1))
-    {
+    if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1)) {
 #endif
       obj->swap(*PQDBUSPENDINGCALL(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISFINISHED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isFinished());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +148,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_WAITFORFINISHED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->waitForFinished();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +172,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISERROR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,8 +194,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISVALID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +216,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ERROR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDBusError *ptr = new QDBusError(obj->error());
       Qt5xHb::createReturnClass(ptr, "QDBUSERROR", true);
@@ -246,8 +239,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_REPLY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDBusMessage *ptr = new QDBusMessage(obj->reply());
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
@@ -266,8 +258,7 @@ static QDBusPendingCall fromError( const QDBusError &error )
 HB_FUNC_STATIC(QDBUSPENDINGCALL_FROMERROR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQDBUSERROR(1))
-  {
+  if (ISNUMPAR(1) && ISQDBUSERROR(1)) {
 #endif
     QDBusPendingCall *ptr = new QDBusPendingCall(QDBusPendingCall::fromError(*PQDBUSERROR(1)));
     Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
@@ -284,8 +275,7 @@ static QDBusPendingCall fromCompletedCall( const QDBusMessage &message )
 HB_FUNC_STATIC(QDBUSPENDINGCALL_FROMCOMPLETEDCALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQDBUSMESSAGE(1))
-  {
+  if (ISNUMPAR(1) && ISQDBUSMESSAGE(1)) {
 #endif
     QDBusPendingCall *ptr = new QDBusPendingCall(QDBusPendingCall::fromCompletedCall(*PQDBUSMESSAGE(1)));
     Qt5xHb::createReturnClass(ptr, "QDBUSPENDINGCALL", true);
@@ -300,17 +290,14 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -343,8 +330,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

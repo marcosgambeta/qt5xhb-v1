@@ -64,24 +64,19 @@ RETURN
 
     HB_FUNC(QDBUSUNIXFILEDESCRIPTOR_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     /*
     QDBusUnixFileDescriptor()
     */
     QDBusUnixFileDescriptor *obj = new QDBusUnixFileDescriptor();
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
     QDBusUnixFileDescriptor( int fileDescriptor )
     */
     QDBusUnixFileDescriptor *obj = new QDBusUnixFileDescriptor(PINT(1));
     Qt5xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDBUSUNIXFILEDESCRIPTOR(1))
-  {
+  } else if (ISNUMPAR(1) && ISQDBUSUNIXFILEDESCRIPTOR(1)) {
     /*
     QDBusUnixFileDescriptor( const QDBusUnixFileDescriptor &other )
     */
@@ -116,8 +111,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_SWAP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDBUSUNIXFILEDESCRIPTOR(1))
-    {
+    if (ISNUMPAR(1) && ISQDBUSUNIXFILEDESCRIPTOR(1)) {
 #endif
       obj->swap(*PQDBUSUNIXFILEDESCRIPTOR(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,8 +133,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_ISVALID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +153,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_FILEDESCRIPTOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->fileDescriptor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +173,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_SETFILEDESCRIPTOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFileDescriptor(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,8 +195,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_GIVEFILEDESCRIPTOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->giveFileDescriptor(PINT(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,8 +217,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_TAKEFILEDESCRIPTOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->takeFileDescriptor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,8 +234,7 @@ static bool isSupported()
 HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_ISSUPPORTED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QDBusUnixFileDescriptor::isSupported());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,17 +248,14 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -303,8 +288,7 @@ HB_FUNC_STATIC(QDBUSUNIXFILEDESCRIPTOR_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

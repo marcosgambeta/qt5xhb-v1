@@ -58,16 +58,13 @@ RETURN
 
 HB_FUNC_STATIC(QDBUSSERVER_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     /*
     QDBusServer( const QString &address, QObject * parent = 0 )
     */
     QDBusServer *obj = new QDBusServer(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1))
-  {
+  } else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     /*
     QDBusServer( QObject * parent = 0 )
     */
@@ -104,8 +101,7 @@ HB_FUNC_STATIC(QDBUSSERVER_ISCONNECTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isConnected());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,8 +121,7 @@ HB_FUNC_STATIC(QDBUSSERVER_LASTERROR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDBusError *ptr = new QDBusError(obj->lastError());
       Qt5xHb::createReturnClass(ptr, "QDBUSERROR", true);
@@ -147,8 +142,7 @@ HB_FUNC_STATIC(QDBUSSERVER_ADDRESS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->address());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

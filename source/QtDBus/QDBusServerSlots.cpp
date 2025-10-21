@@ -22,8 +22,7 @@ void QDBusServerSlots::newConnection(const QDBusConnection &connection)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "newConnection(QDBusConnection)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVER");
     PHB_ITEM pconnection = Qt5xHb::Signals_return_object((void *)&connection, "QDBUSCONNECTION");
 
@@ -41,8 +40,7 @@ void QDBusServerSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QDBusServerSlots *s = QCoreApplication::instance()->findChild<QDBusServerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDBusServerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
