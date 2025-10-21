@@ -24,8 +24,7 @@ void QWebChannelAbstractTransportSlots::messageReceived(const QJsonObject &messa
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "messageReceived(QJsonObject,QWebChannelAbstractTransport*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBCHANNELABSTRACTTRANSPORT");
     PHB_ITEM pmessage = Qt5xHb::Signals_return_object((void *)&message, "QJSONOBJECT");
     PHB_ITEM ptransport = Qt5xHb::Signals_return_qobject(transport, "QWEBCHANNELABSTRACTTRANSPORT");
@@ -48,8 +47,7 @@ void QWebChannelAbstractTransportSlots_connect_signal(const QString &signal, con
     QWebChannelAbstractTransportSlots *s =
         QCoreApplication::instance()->findChild<QWebChannelAbstractTransportSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QWebChannelAbstractTransportSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());

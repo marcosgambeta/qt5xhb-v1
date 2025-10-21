@@ -23,8 +23,7 @@ void QWebChannelSlots::blockUpdatesChanged(bool block)
 
   PHB_ITEM cb = Qt5xHb::Signals_return_codeblock(object, "blockUpdatesChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBCHANNEL");
     PHB_ITEM pblock = hb_itemPutL(NULL, block);
 
@@ -44,8 +43,7 @@ void QWebChannelSlots_connect_signal(const QString &signal, const QString &slot)
   if (obj != NULL) {
     QWebChannelSlots *s = QCoreApplication::instance()->findChild<QWebChannelSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QWebChannelSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
