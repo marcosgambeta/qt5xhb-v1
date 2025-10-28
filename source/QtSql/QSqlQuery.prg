@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEW)
     */
     QSqlQuery *obj = new QSqlQuery(PQSQLRESULT(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && ISCHARORNIL(1) && (ISQSQLDATABASE(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISCHARORNIL(1) && ISQSQLDATABASEORNIL(2)) {
     /*
     QSqlQuery( const QString &query = QString(), QSqlDatabase db = QSqlDatabase() )
     */

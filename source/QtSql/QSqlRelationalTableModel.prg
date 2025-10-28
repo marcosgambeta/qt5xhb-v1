@@ -67,7 +67,7 @@ RETURN
     */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && (ISQSQLDATABASE(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISQSQLDATABASEORNIL(2)) {
     QSqlRelationalTableModel *obj = new QSqlRelationalTableModel(
         OPQOBJECT(1, 0), HB_ISNIL(2) ? QSqlDatabase() : *(QSqlDatabase *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
       RBOOL(obj->removeColumns(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
