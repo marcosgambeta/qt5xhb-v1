@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && (ISQRECTF(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && ISQRECTFORNIL(3)) {
     /*
     void render( QPainter * painter, const QString &elementId, const QRectF &bounds = QRectF() )
     */
