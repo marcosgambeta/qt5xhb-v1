@@ -781,7 +781,7 @@ HB_FUNC_STATIC(QLEGEND_MARKERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQABSTRACTSERIES(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQABSTRACTSERIESORNIL(1)) {
 #endif
       QList<QLegendMarker *> list = obj->markers(OPQABSTRACTSERIES(1, nullptr));
       PHB_DYNS pDynSym = hb_dynsymFindName("QLEGENDMARKER");

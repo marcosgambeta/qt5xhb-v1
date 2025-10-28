@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QAREASERIES_NEW)
     QAreaSeries *obj = new QAreaSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  } else if (ISBETWEEN(1, 2) && ISQLINESERIES(1) && (ISQLINESERIES(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQLINESERIES(1) && ISQLINESERIESORNIL(2)) {
     /*
     QAreaSeries( QLineSeries * upperSeries, QLineSeries * lowerSeries = nullptr )
     */

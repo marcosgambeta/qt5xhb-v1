@@ -135,7 +135,7 @@ QChart( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFla
 HB_FUNC_STATIC(QCHART_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  if (ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(0, 2) && ISQGRAPHICSITEMORNIL(1) && ISNUMORNIL(2)) {
     QChart *obj = new QChart(HB_ISNIL(1) ? nullptr : (QGraphicsItem *)Qt5xHb::itemGetPtr(1),
                              HB_ISNIL(2) ? (Qt::WindowFlags)Qt::WindowFlags() : (Qt::WindowFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, false);
@@ -866,7 +866,7 @@ HB_FUNC_STATIC(QCHART_SETAXISX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQABSTRACTAXIS(1) && ISQABSTRACTSERIESORNIL(2)) {
 #endif
       obj->setAxisX(PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -890,7 +890,7 @@ HB_FUNC_STATIC(QCHART_SETAXISY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQABSTRACTAXIS(1) && ISQABSTRACTSERIESORNIL(2)) {
 #endif
       obj->setAxisY(PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2, nullptr));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -914,7 +914,7 @@ HB_FUNC_STATIC(QCHART_AXISX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQABSTRACTSERIES(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQABSTRACTSERIESORNIL(1)) {
 #endif
       QAbstractAxis *ptr = obj->axisX(OPQABSTRACTSERIES(1, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAXIS");
@@ -937,7 +937,7 @@ HB_FUNC_STATIC(QCHART_AXISY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQABSTRACTSERIES(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQABSTRACTSERIESORNIL(1)) {
 #endif
       QAbstractAxis *ptr = obj->axisY(OPQABSTRACTSERIES(1, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QABSTRACTAXIS");
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC(QCHART_AXES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISQABSTRACTSERIESORNIL(2)) {
 #endif
       QList<QAbstractAxis *> list =
           obj->axes(HB_ISNIL(1) ? (Qt::Orientations)Qt::Horizontal | Qt::Vertical : (Qt::Orientations)hb_parni(1),
@@ -1556,7 +1556,7 @@ HB_FUNC_STATIC(QCHART_MAPTOVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQPOINTF(1) && ISQABSTRACTSERIESORNIL(2)) {
 #endif
       QPointF *ptr = new QPointF(obj->mapToValue(*PQPOINTF(1), OPQABSTRACTSERIES(2, nullptr)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
@@ -1579,7 +1579,7 @@ HB_FUNC_STATIC(QCHART_MAPTOPOSITION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQPOINTF(1) && ISQABSTRACTSERIESORNIL(2)) {
 #endif
       QPointF *ptr = new QPointF(obj->mapToPosition(*PQPOINTF(1), OPQABSTRACTSERIES(2, nullptr)));
       Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
