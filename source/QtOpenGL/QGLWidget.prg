@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QGLWIDGET_GRABFRAMEBUFFER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       QImage *ptr = new QImage(obj->grabFrameBuffer(OPBOOL(1, false)));
       Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 3) && ISNUMORNIL(1) && ISNUMORNIL(2) && (HB_ISLOG(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(0, 3) && ISNUMORNIL(1) && ISNUMORNIL(2) && ISLOGORNIL(3)) {
 #endif
       QPixmap *ptr = new QPixmap(obj->renderPixmap(OPINT(1, 0), OPINT(2, 0), OPBOOL(3, false)));
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
