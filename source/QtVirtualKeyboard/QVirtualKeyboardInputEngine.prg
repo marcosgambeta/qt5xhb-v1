@@ -86,7 +86,7 @@ RETURN
     */
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTENGINE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQVIRTUALKEYBOARDINPUTCONTEXT(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQVIRTUALKEYBOARDINPUTCONTEXTORNIL(1)) {
     QVirtualKeyboardInputEngine *obj = new QVirtualKeyboardInputEngine(OPQVIRTUALKEYBOARDINPUTCONTEXT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
   } else {
