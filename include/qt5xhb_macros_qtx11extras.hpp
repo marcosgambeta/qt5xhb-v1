@@ -11,8 +11,10 @@
 
 #define ISQX11INFO(n)                                       Qt5xHb::isObjectDerivedFrom(n, "QX11Info")
 
-#define PQX11INFO(n)                                        static_cast<QX11Info*>(Qt5xHb::itemGetPtr(n))
+#define ISQX11INFOORNIL(n)                                  (ISQX11INFO(n) || HB_ISNIL(n))
 
-#define OPQX11INFO(n, v)                                    HB_ISNIL(n) ? v : static_cast<QX11Info*>(Qt5xHb::itemGetPtr(n))
+#define PQX11INFO(n)                                        static_cast<QX11Info *>(Qt5xHb::itemGetPtr(n))
+
+#define OPQX11INFO(n, v)                                    HB_ISNIL(n) ? v : static_cast<QX11Info *>(Qt5xHb::itemGetPtr(n))
 
 #endif // QT5XHB_MACROS_QTX11EXTRAS_H

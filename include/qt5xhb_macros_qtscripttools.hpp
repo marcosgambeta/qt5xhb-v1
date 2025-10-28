@@ -11,8 +11,10 @@
 
 #define ISQSCRIPTENGINEDEBUGGER(n)                          Qt5xHb::isObjectDerivedFrom(n, "QScriptEngineDebugger")
 
-#define PQSCRIPTENGINEDEBUGGER(n)                           static_cast<QScriptEngineDebugger*>(Qt5xHb::itemGetPtr(n))
+#define ISQSCRIPTENGINEDEBUGGERORNIL(n)                     (ISQSCRIPTENGINEDEBUGGER(n) || HB_ISNIL(n))
 
-#define OPQSCRIPTENGINEDEBUGGER(n, v)                       HB_ISNIL(n) ? v : static_cast<QScriptEngineDebugger*>(Qt5xHb::itemGetPtr(n))
+#define PQSCRIPTENGINEDEBUGGER(n)                           static_cast<QScriptEngineDebugger *>(Qt5xHb::itemGetPtr(n))
+
+#define OPQSCRIPTENGINEDEBUGGER(n, v)                       HB_ISNIL(n) ? v : static_cast<QScriptEngineDebugger *>(Qt5xHb::itemGetPtr(n))
 
 #endif // QT5XHB_MACROS_QTSCRIPTTOOLS_H

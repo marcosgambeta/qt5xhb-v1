@@ -13,12 +13,16 @@
 #define ISQQUICKWEBENGINESCRIPT(n)                          Qt5xHb::isObjectDerivedFrom(n, "QQuickWebEngineScript")
 #define ISQTWEBENGINE(n)                                    Qt5xHb::isObjectDerivedFrom(n, "QtWebEngine")
 
-#define PQQUICKWEBENGINEPROFILE(n)                          static_cast<QQuickWebEngineProfile*>(Qt5xHb::itemGetPtr(n))
-#define PQQUICKWEBENGINESCRIPT(n)                           static_cast<QQuickWebEngineScript*>(Qt5xHb::itemGetPtr(n))
-#define PQTWEBENGINE(n)                                     static_cast<QtWebEngine*>(Qt5xHb::itemGetPtr(n))
+#define ISQQUICKWEBENGINEPROFILEORNIL(n)                    (ISQQUICKWEBENGINEPROFILE(n) || HB_ISNIL(n))
+#define ISQQUICKWEBENGINESCRIPTORNIL(n)                     (ISQQUICKWEBENGINESCRIPT(n) || HB_ISNIL(n))
+#define ISQTWEBENGINEORNIL(n)                               (ISQTWEBENGINE(n) || HB_ISNIL(n))
 
-#define OPQQUICKWEBENGINEPROFILE(n, v)                      HB_ISNIL(n) ? v : static_cast<QQuickWebEngineProfile*>(Qt5xHb::itemGetPtr(n))
-#define OPQQUICKWEBENGINESCRIPT(n, v)                       HB_ISNIL(n) ? v : static_cast<QQuickWebEngineScript*>(Qt5xHb::itemGetPtr(n))
-#define OPQTWEBENGINE(n, v)                                 HB_ISNIL(n) ? v : static_cast<QtWebEngine*>(Qt5xHb::itemGetPtr(n))
+#define PQQUICKWEBENGINEPROFILE(n)                          static_cast<QQuickWebEngineProfile *>(Qt5xHb::itemGetPtr(n))
+#define PQQUICKWEBENGINESCRIPT(n)                           static_cast<QQuickWebEngineScript *>(Qt5xHb::itemGetPtr(n))
+#define PQTWEBENGINE(n)                                     static_cast<QtWebEngine *>(Qt5xHb::itemGetPtr(n))
+
+#define OPQQUICKWEBENGINEPROFILE(n, v)                      HB_ISNIL(n) ? v : static_cast<QQuickWebEngineProfile *>(Qt5xHb::itemGetPtr(n))
+#define OPQQUICKWEBENGINESCRIPT(n, v)                       HB_ISNIL(n) ? v : static_cast<QQuickWebEngineScript *>(Qt5xHb::itemGetPtr(n))
+#define OPQTWEBENGINE(n, v)                                 HB_ISNIL(n) ? v : static_cast<QtWebEngine *>(Qt5xHb::itemGetPtr(n))
 
 #endif // QT5XHB_MACROS_QTWEBENGINE_H

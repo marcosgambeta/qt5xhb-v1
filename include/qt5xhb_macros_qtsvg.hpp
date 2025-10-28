@@ -14,14 +14,19 @@
 #define ISQSVGRENDERER(n)                                   Qt5xHb::isObjectDerivedFrom(n, "QSvgRenderer")
 #define ISQSVGWIDGET(n)                                     Qt5xHb::isObjectDerivedFrom(n, "QSvgWidget")
 
-#define PQGRAPHICSSVGITEM(n)                                static_cast<QGraphicsSvgItem*>(Qt5xHb::itemGetPtr(n))
-#define PQSVGGENERATOR(n)                                   static_cast<QSvgGenerator*>(Qt5xHb::itemGetPtr(n))
-#define PQSVGRENDERER(n)                                    static_cast<QSvgRenderer*>(Qt5xHb::itemGetPtr(n))
-#define PQSVGWIDGET(n)                                      static_cast<QSvgWidget*>(Qt5xHb::itemGetPtr(n))
+#define ISQGRAPHICSSVGITEMORNIL(n)                          (ISQGRAPHICSSVGITEM(n) || HB_ISNIL(n))
+#define ISQSVGGENERATORORNIL(n)                             (ISQSVGGENERATOR(n) || HB_ISNIL(n))
+#define ISQSVGRENDERERORNIL(n)                              (ISQSVGRENDERER(n) || HB_ISNIL(n))
+#define ISQSVGWIDGETORNIL(n)                                (ISQSVGWIDGET(n) || HB_ISNIL(n))
 
-#define OPQGRAPHICSSVGITEM(n, v)                            HB_ISNIL(n) ? v : static_cast<QGraphicsSvgItem*>(Qt5xHb::itemGetPtr(n))
-#define OPQSVGGENERATOR(n, v)                               HB_ISNIL(n) ? v : static_cast<QSvgGenerator*>(Qt5xHb::itemGetPtr(n))
-#define OPQSVGRENDERER(n, v)                                HB_ISNIL(n) ? v : static_cast<QSvgRenderer*>(Qt5xHb::itemGetPtr(n))
-#define OPQSVGWIDGET(n, v)                                  HB_ISNIL(n) ? v : static_cast<QSvgWidget*>(Qt5xHb::itemGetPtr(n))
+#define PQGRAPHICSSVGITEM(n)                                static_cast<QGraphicsSvgItem *>(Qt5xHb::itemGetPtr(n))
+#define PQSVGGENERATOR(n)                                   static_cast<QSvgGenerator *>(Qt5xHb::itemGetPtr(n))
+#define PQSVGRENDERER(n)                                    static_cast<QSvgRenderer *>(Qt5xHb::itemGetPtr(n))
+#define PQSVGWIDGET(n)                                      static_cast<QSvgWidget *>(Qt5xHb::itemGetPtr(n))
+
+#define OPQGRAPHICSSVGITEM(n, v)                            HB_ISNIL(n) ? v : static_cast<QGraphicsSvgItem *>(Qt5xHb::itemGetPtr(n))
+#define OPQSVGGENERATOR(n, v)                               HB_ISNIL(n) ? v : static_cast<QSvgGenerator *>(Qt5xHb::itemGetPtr(n))
+#define OPQSVGRENDERER(n, v)                                HB_ISNIL(n) ? v : static_cast<QSvgRenderer *>(Qt5xHb::itemGetPtr(n))
+#define OPQSVGWIDGET(n, v)                                  HB_ISNIL(n) ? v : static_cast<QSvgWidget *>(Qt5xHb::itemGetPtr(n))
 
 #endif // QT5XHB_MACROS_QTSVG_H
