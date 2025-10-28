@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QQMLCOMPONENT_COMPLETECREATE)
 
 HB_FUNC_STATIC(QQMLCOMPONENT_CREATE)
 {
-  if (ISBETWEEN(0, 1) && (ISQQMLCONTEXT(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQQMLCONTEXTORNIL(1)) {
     /*
     virtual QObject * create( QQmlContext * context = 0 )
     */
@@ -181,8 +181,8 @@ HB_FUNC_STATIC(QQMLCOMPONENT_CREATE)
       QObject *ptr = obj->create(OPQQMLCONTEXT(1, 0));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
-  } else if (ISBETWEEN(1, 3) && ISQQMLINCUBATOR(1) && (ISQQMLCONTEXT(2) || HB_ISNIL(2)) &&
-           (ISQQMLCONTEXT(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(1, 3) && ISQQMLINCUBATOR(1) && ISQQMLCONTEXTORNIL(2) &&
+           ISQQMLCONTEXTORNIL(3)) {
     /*
     void create( QQmlIncubator &incubator, QQmlContext * context = 0, QQmlContext * forContext = 0 )
     */

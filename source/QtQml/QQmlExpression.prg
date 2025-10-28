@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
     */
     QQmlExpression *obj = new QQmlExpression(PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 4) && ISQQMLSCRIPTSTRING(1) && (ISQQMLCONTEXT(2) || HB_ISNIL(2)) &&
+  } else if (ISBETWEEN(1, 4) && ISQQMLSCRIPTSTRING(1) && ISQQMLCONTEXTORNIL(2) &&
            ISQOBJECTORNIL(3) && ISQOBJECTORNIL(4)) {
     /*
     QQmlExpression( const QQmlScriptString &script, QQmlContext * ctxt = 0, QObject * scope = 0, QObject * parent = 0 )
