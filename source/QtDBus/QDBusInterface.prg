@@ -58,7 +58,7 @@ RETURN
 HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
 {
   if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3) &&
-      (ISQDBUSCONNECTION(4) || HB_ISNIL(4)) && ISQOBJECTORNIL(5)) {
+      ISQDBUSCONNECTIONORNIL(4) && ISQOBJECTORNIL(5)) {
     QDBusInterface *obj = new QDBusInterface(
         PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString()),
         HB_ISNIL(4) ? QDBusConnection::sessionBus() : *(QDBusConnection *)Qt5xHb::itemGetPtr(4), OPQOBJECT(5, 0));
