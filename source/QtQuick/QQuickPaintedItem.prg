@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QQUICKPAINTEDITEM_UPDATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQRECTORNIL(1)) {
 #endif
       obj->update(HB_ISNIL(1) ? QRect() : *(QRect *)Qt5xHb::itemGetPtr(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

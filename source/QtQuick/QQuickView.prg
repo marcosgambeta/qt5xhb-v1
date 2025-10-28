@@ -71,7 +71,7 @@ RETURN
 
 HB_FUNC_STATIC(QQUICKVIEW_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWINDOW(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQWINDOWORNIL(1)) {
     /*
     QQuickView( QWindow * parent = 0 )
     */
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QQUICKVIEW_NEW)
     */
     QQuickView *obj = new QQuickView(PQQMLENGINE(1), PQWINDOW(2));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWINDOW(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQWINDOWORNIL(2)) {
     /*
     QQuickView( const QUrl &source, QWindow * parent = 0 )
     */
