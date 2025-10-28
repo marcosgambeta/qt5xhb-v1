@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QXMLQUERY_NEW)
     */
     QXmlQuery *obj = new QXmlQuery(*PQXMLNAMEPOOL(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQXMLNAMEPOOL(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQXMLNAMEPOOLORNIL(2)) {
     /*
     QXmlQuery( QXmlQuery::QueryLanguage queryLanguage, const QXmlNamePool &np = QXmlNamePool() )
     */
@@ -479,7 +479,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETNETWORKACCESSMANAGER)
 
 HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
 {
-  if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQURLORNIL(2)) {
     /*
     void setQuery( QIODevice * sourceCode, const QUrl &documentURI = QUrl() )
     */
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQURL(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQURL(1) && ISQURLORNIL(2)) {
     /*
     void setQuery( const QUrl &queryURI, const QUrl &baseURI = QUrl() )
     */
@@ -501,7 +501,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQURL(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQURLORNIL(2)) {
     /*
     void setQuery( const QString &sourceCode, const QUrl &documentURI = QUrl() )
     */
