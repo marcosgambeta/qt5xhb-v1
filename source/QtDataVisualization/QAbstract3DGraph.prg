@@ -1314,7 +1314,7 @@ HB_FUNC_STATIC(QABSTRACT3DGRAPH_RENDERTOIMAGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && (ISQSIZE(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISQSIZEORNIL(2)) {
 #endif
       QImage *ptr =
           new QImage(obj->renderToImage(OPINT(1, 0), HB_ISNIL(2) ? QSize() : *(QSize *)Qt5xHb::itemGetPtr(2)));
