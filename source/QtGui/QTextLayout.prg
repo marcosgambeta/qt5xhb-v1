@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEW)
     */
     QTextLayout *obj = new QTextLayout(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && (HB_ISOBJECT(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && ISOBJECTORNIL(3)) {
     /*
     QTextLayout( const QString &text, const QFont &font, QPaintDevice * paintdevice = 0 )
     */

@@ -78,7 +78,7 @@ RETURN
 
 HB_FUNC_STATIC(QPROXYSTYLE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISOBJECT(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISOBJECTORNIL(1)) {
     /*
     QProxyStyle( QStyle * style = 0 )
     */
