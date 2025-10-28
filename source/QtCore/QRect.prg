@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QRECT_CENTER)
 
 HB_FUNC_STATIC(QRECT_CONTAINS)
 {
-  if (ISBETWEEN(1, 2) && ISQPOINT(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && ISQPOINT(1) && ISLOGORNIL(2)) {
     /*
     bool contains( const QPoint &point, bool proper = false ) const
     */
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QRECT_CONTAINS)
     if (obj != NULL) {
       RBOOL(obj->contains(PINT(1), PINT(2)));
     }
-  } else if (ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQRECT(1) && ISLOGORNIL(2)) {
     /*
     bool contains( const QRect &rectangle, bool proper = false ) const
     */

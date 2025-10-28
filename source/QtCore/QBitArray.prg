@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QBITARRAY_NEW)
     */
     QBitArray *obj = new QBitArray();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
     /*
     QBitArray( int size, bool value = false )
     */

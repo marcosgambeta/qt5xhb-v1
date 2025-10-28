@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LEFTJUSTIFIED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (HB_ISLOG(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISLOGORNIL(3)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->leftJustified(PINT(1), OPCHAR(2, ' '), OPBOOL(3, false)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -1630,7 +1630,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RIGHTJUSTIFIED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (HB_ISLOG(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISLOGORNIL(3)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->rightJustified(PINT(1), OPCHAR(2, ' '), OPBOOL(3, false)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -2009,7 +2009,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TODOUBLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
       RDOUBLE(obj->toDouble(&par1));
@@ -2031,7 +2031,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOFLOAT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
       RFLOAT(obj->toFloat(&par1));
@@ -2074,7 +2074,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISLOGORNIL(1) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RINT(obj->toInt(&par1, OPINT(2, 10)));
@@ -2096,7 +2096,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLONG)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISLOGORNIL(1) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RLONG(obj->toLong(&par1, OPINT(2, 10)));
@@ -2118,7 +2118,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLONGLONG)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISLOGORNIL(1) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RQLONGLONG(obj->toLongLong(&par1, OPINT(2, 10)));
@@ -2186,7 +2186,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOSHORT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISLOGORNIL(1) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RSHORT(obj->toShort(&par1, OPINT(2, 10)));
@@ -2208,7 +2208,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISLOGORNIL(1) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RUINT(obj->toUInt(&par1, OPINT(2, 10)));
@@ -2230,7 +2230,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOULONG)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISLOGORNIL(1) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RULONG(obj->toULong(&par1, OPINT(2, 10)));
@@ -2252,7 +2252,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOULONGLONG)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISLOGORNIL(1) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RQULONGLONG(obj->toULongLong(&par1, OPINT(2, 10)));
@@ -2274,7 +2274,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUSHORT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISLOGORNIL(1) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RUSHORT(obj->toUShort(&par1, OPINT(2, 10)));
