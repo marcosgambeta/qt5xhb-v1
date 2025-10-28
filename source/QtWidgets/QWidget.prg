@@ -2649,7 +2649,7 @@ HB_FUNC_STATIC(QWIDGET_REMOVEACTION)
 
 HB_FUNC_STATIC(QWIDGET_RENDER)
 {
-  if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQPOINT(2) || HB_ISNIL(2)) && (ISQREGION(3) || HB_ISNIL(3)) &&
+  if (ISBETWEEN(1, 4) && ISQPAINTER(1) && ISQPOINTORNIL(2) && ISQREGIONORNIL(3) &&
       ISNUMORNIL(4)) {
     // void render( QPainter * painter, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) )
     QWidget *obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -2663,7 +2663,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(1, 4) && HB_ISOBJECT(1) && (ISQPOINT(2) || HB_ISNIL(2)) && (ISQREGION(3) || HB_ISNIL(3)) &&
+  } else if (ISBETWEEN(1, 4) && HB_ISOBJECT(1) && ISQPOINTORNIL(2) && ISQREGIONORNIL(3) &&
            ISNUMORNIL(4)) {
     // void render( QPaintDevice * target, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) )
     QWidget *obj = qobject_cast<QWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
@@ -4612,7 +4612,7 @@ HB_FUNC_STATIC(QWIDGET_GRAB)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQRECTORNIL(1)) {
 #endif
       QPixmap *ptr =
           new QPixmap(obj->grab(HB_ISNIL(1) ? QRect(QPoint(0, 0), QSize(-1, -1)) : *(QRect *)Qt5xHb::itemGetPtr(1)));

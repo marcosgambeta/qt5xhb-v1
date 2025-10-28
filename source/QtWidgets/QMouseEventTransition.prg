@@ -59,13 +59,13 @@ RETURN
 
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
     /*
     QMouseEventTransition( QState * sourceState = 0 )
     */
     QMouseEventTransition *obj = new QMouseEventTransition(OPQSTATE(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQSTATE(4) || HB_ISNIL(4))) {
+  } else if (ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTATEORNIL(4)) {
     /*
     QMouseEventTransition( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
     */

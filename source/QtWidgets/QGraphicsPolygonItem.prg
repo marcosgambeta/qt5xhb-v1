@@ -62,13 +62,13 @@ RETURN
 
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQGRAPHICSITEMORNIL(1)) {
     /*
     QGraphicsPolygonItem( QGraphicsItem * parent = 0 )
     */
     QGraphicsPolygonItem *obj = new QGraphicsPolygonItem(HB_ISNIL(1) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && ISQGRAPHICSITEMORNIL(2)) {
     /*
     QGraphicsPolygonItem( const QPolygonF &polygon, QGraphicsItem * parent = 0 )
     */

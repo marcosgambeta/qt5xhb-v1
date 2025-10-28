@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
       QAction *ptr = obj->addAction(HB_ISOBJECT(1) ? *(QIcon *)Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  } else if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQKEYSEQUENCE(4) || HB_ISNIL(4))) {
+  } else if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISQKEYSEQUENCEORNIL(4)) {
     /*
     QAction * addAction( const QString &text, const QObject * receiver, const char * member, const QKeySequence &
     shortcut = 0 )
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   } else if (ISBETWEEN(4, 5) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) &&
-           (ISQKEYSEQUENCE(5) || HB_ISNIL(5))) {
+           ISQKEYSEQUENCEORNIL(5)) {
     /*
     QAction * addAction( const QIcon &icon, const QString &text, const QObject * receiver, const char * member, const
     QKeySequence &shortcut = 0 )
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
       QAction *ptr = obj->exec();
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  } else if (ISBETWEEN(1, 2) && ISQPOINT(1) && (ISQACTION(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQPOINT(1) && ISQACTIONORNIL(2)) {
     /*
     QAction * exec( const QPoint &pos, QAction * at = 0 )
     */
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
       QAction *ptr = obj->exec(*PQPOINT(1), OPQACTION(2, 0));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  } else if (ISBETWEEN(2, 4) && HB_ISARRAY(1) && ISQPOINT(2) && (ISQACTION(3) || HB_ISNIL(3)) &&
+  } else if (ISBETWEEN(2, 4) && HB_ISARRAY(1) && ISQPOINT(2) && ISQACTIONORNIL(3) &&
            ISQWIDGETORNIL(4)) {
     /*
     static QAction * exec( QList<QAction*> actions, const QPoint &pos, QAction * at = 0, QWidget * parent = 0 )
@@ -659,7 +659,7 @@ HB_FUNC_STATIC(QMENU_POPUP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQPOINT(1) && (ISQACTION(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQPOINT(1) && ISQACTIONORNIL(2)) {
 #endif
       obj->popup(*PQPOINT(1), OPQACTION(2, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

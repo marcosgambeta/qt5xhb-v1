@@ -632,7 +632,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_EFFECTIVEOPACITY)
 
 HB_FUNC_STATIC(QGRAPHICSITEM_ENSUREVISIBLE)
 {
-  if (ISBETWEEN(0, 3) && (ISQRECTF(1) || HB_ISNIL(1)) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(0, 3) && ISQRECTFORNIL(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     /*
     void ensureVisible( const QRectF &rect = QRectF(), int xmargin = 50, int ymargin = 50 )
     */
@@ -2181,7 +2181,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SCROLL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQRECTF(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECTFORNIL(3)) {
 #endif
       obj->scroll(PQREAL(1), PQREAL(2), HB_ISNIL(3) ? QRectF() : *(QRectF *)Qt5xHb::itemGetPtr(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -2335,7 +2335,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETCACHEMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZE(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEORNIL(2)) {
 #endif
       obj->setCacheMode((QGraphicsItem::CacheMode)hb_parni(1), HB_ISNIL(2) ? QSize() : *(QSize *)Qt5xHb::itemGetPtr(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -3190,7 +3190,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_UNSETCURSOR)
 
 HB_FUNC_STATIC(QGRAPHICSITEM_UPDATE)
 {
-  if (ISBETWEEN(0, 1) && (ISQRECTF(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQRECTFORNIL(1)) {
     /*
     void update( const QRectF &rect = QRectF() )
     */

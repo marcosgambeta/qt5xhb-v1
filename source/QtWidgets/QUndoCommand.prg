@@ -66,13 +66,13 @@ RETURN
 
 HB_FUNC_STATIC(QUNDOCOMMAND_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQUNDOCOMMAND(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQUNDOCOMMANDORNIL(1)) {
     /*
     QUndoCommand( QUndoCommand * parent = 0 )
     */
     QUndoCommand *obj = new QUndoCommand(HB_ISNIL(1) ? 0 : (QUndoCommand *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQUNDOCOMMAND(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQUNDOCOMMANDORNIL(2)) {
     /*
     QUndoCommand( const QString &text, QUndoCommand * parent = 0 )
     */

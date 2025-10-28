@@ -633,7 +633,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RENDER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)) && (ISQRECT(3) || HB_ISNIL(3)) &&
+    if (ISBETWEEN(1, 4) && ISQPAINTER(1) && ISQRECTFORNIL(2) && ISQRECTORNIL(3) &&
         ISNUMORNIL(4)) {
 #endif
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *(QRectF *)Qt5xHb::itemGetPtr(2),
@@ -1441,7 +1441,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_INVALIDATESCENE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQRECTF(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISQRECTFORNIL(1) && ISNUMORNIL(2)) {
 #endif
       obj->invalidateScene(HB_ISNIL(1) ? QRectF() : *(QRectF *)Qt5xHb::itemGetPtr(1),
                            HB_ISNIL(2) ? (QGraphicsScene::SceneLayers)QGraphicsScene::AllLayers

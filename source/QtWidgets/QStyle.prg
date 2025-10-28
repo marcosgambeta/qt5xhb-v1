@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QSTYLE_LAYOUTSPACING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQSTYLEOPTION(4) || HB_ISNIL(4)) &&
+    if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTYLEOPTIONORNIL(4) &&
         ISQWIDGETORNIL(5)) {
 #endif
       RINT(obj->layoutSpacing((QSizePolicy::ControlType)hb_parni(1), (QSizePolicy::ControlType)hb_parni(2),
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QSTYLE_PIXELMETRIC)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && ISQWIDGETORNIL(3)) {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3)) {
 #endif
       RINT(obj->pixelMetric((QStyle::PixelMetric)hb_parni(1), HB_ISNIL(2) ? 0 : (QStyleOption *)Qt5xHb::itemGetPtr(2),
                             OPQWIDGET(3, 0)));
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDICON)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && ISQWIDGETORNIL(3)) {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3)) {
 #endif
       QIcon *ptr =
           new QIcon(obj->standardIcon((QStyle::StandardPixmap)hb_parni(1),
@@ -485,8 +485,8 @@ HB_FUNC_STATIC(QSTYLE_STYLEHINT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && ISQWIDGETORNIL(3) &&
-        (ISQSTYLEHINTRETURN(4) || HB_ISNIL(4))) {
+    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3) &&
+        ISQSTYLEHINTRETURNORNIL(4)) {
 #endif
       RINT(obj->styleHint((QStyle::StyleHint)hb_parni(1), HB_ISNIL(2) ? 0 : (QStyleOption *)Qt5xHb::itemGetPtr(2),
                           OPQWIDGET(3, 0), HB_ISNIL(4) ? 0 : (QStyleHintReturn *)Qt5xHb::itemGetPtr(4)));

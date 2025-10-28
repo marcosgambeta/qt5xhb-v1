@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
       QModelIndex *ptr = new QModelIndex(obj->index(PQSTRING(1), OPINT(2, 0)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
-  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
     /*
     QModelIndex index( int row, int column, const QModelIndex &parent = QModelIndex() ) const
     */
@@ -774,7 +774,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_COLUMNCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
       RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -897,7 +897,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_HASCHILDREN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
       RBOOL(obj->hasChildren(HB_ISNIL(1) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ROWCOUNT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQMODELINDEXORNIL(1)) {
 #endif
       RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
