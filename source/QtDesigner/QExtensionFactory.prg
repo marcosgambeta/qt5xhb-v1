@@ -59,7 +59,7 @@ RETURN
     */
 HB_FUNC_STATIC(QEXTENSIONFACTORY_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQEXTENSIONMANAGER(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQEXTENSIONMANAGERORNIL(1)) {
     QExtensionFactory *obj = new QExtensionFactory(OPQEXTENSIONMANAGER(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
