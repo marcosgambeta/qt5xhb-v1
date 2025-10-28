@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_NEW)
     */
     QTextDocumentWriter *obj = new QTextDocumentWriter(PQIODEVICE(1), *PQBYTEARRAY(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQBYTEARRAYORNIL(2)) {
     /*
     QTextDocumentWriter( const QString &fileName, const QByteArray &format = QByteArray() )
     */

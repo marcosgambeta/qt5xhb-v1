@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_NEW)
     */
     QImageWriter *obj = new QImageWriter(PQIODEVICE(1), *PQBYTEARRAY(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQBYTEARRAYORNIL(2)) {
     /*
     QImageWriter( const QString &fileName, const QByteArray &format = QByteArray() )
     */

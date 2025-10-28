@@ -136,7 +136,7 @@ RETURN
 
 HB_FUNC_STATIC(QWINDOW_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQSCREEN(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQSCREENORNIL(1)) {
     /*
     QWindow( QScreen * targetScreen = 0 )
     */

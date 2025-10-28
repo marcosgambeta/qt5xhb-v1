@@ -102,14 +102,14 @@ HB_FUNC_STATIC(QMOVIE_NEW)
     */
     QMovie *obj = new QMovie(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && ISQOBJECTORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && ISQBYTEARRAYORNIL(2) && ISQOBJECTORNIL(3)) {
     /*
     QMovie( QIODevice * device, const QByteArray &format = QByteArray(), QObject * parent = 0 )
     */
     QMovie *obj =
         new QMovie(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && ISQOBJECTORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQBYTEARRAYORNIL(2) && ISQOBJECTORNIL(3)) {
     /*
     QMovie( const QString &fileName, const QByteArray &format = QByteArray(), QObject * parent = 0 )
     */

@@ -110,14 +110,14 @@ HB_FUNC_STATIC(QIMAGEREADER_NEW)
     */
     QImageReader *obj = new QImageReader();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQBYTEARRAYORNIL(2)) {
     /*
     QImageReader( QIODevice * device, const QByteArray &format = QByteArray() )
     */
     QImageReader *obj =
         new QImageReader(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQBYTEARRAYORNIL(2)) {
     /*
     QImageReader( const QString &fileName, const QByteArray &format = QByteArray() )
     */

@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTOFORMAT)
 
 HB_FUNC_STATIC(QIMAGE_COPY)
 {
-  if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQRECTORNIL(1)) {
     /*
     QImage copy( const QRect &rectangle = QRect() ) const
     */

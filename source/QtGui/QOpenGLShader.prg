@@ -281,7 +281,7 @@ static bool hasOpenGLShaders( QOpenGLShader::ShaderType type, QOpenGLContext * c
 HB_FUNC_STATIC(QOPENGLSHADER_HASOPENGLSHADERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOPENGLCONTEXT(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOPENGLCONTEXTORNIL(2)) {
 #endif
     RBOOL(QOpenGLShader::hasOpenGLShaders((QOpenGLShader::ShaderType)hb_parni(1), OPQOPENGLCONTEXT(2, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
