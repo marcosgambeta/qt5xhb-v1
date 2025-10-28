@@ -69,7 +69,7 @@ RETURN
     */
 HB_FUNC_STATIC(QGRAPHICSVIDEOITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQGRAPHICSITEMORNIL(1)) {
     QGraphicsVideoItem *obj = new QGraphicsVideoItem(HB_ISNIL(1) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
