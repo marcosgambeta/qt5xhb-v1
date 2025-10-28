@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_MANAGERVERSION)
 
 HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
 {
-  if (ISBETWEEN(1, 2) && ISQGEOADDRESS(1) && (ISQGEOSHAPE(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && ISQGEOADDRESS(1) && ISQGEOSHAPEORNIL(2)) {
     /*
     QGeoCodeReply * geocode( const QGeoAddress &address, const QGeoShape &bounds = QGeoShape() )
     */
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
     }
 #endif
   } else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
-           (ISQGEOSHAPE(4) || HB_ISNIL(4))) {
+           ISQGEOSHAPEORNIL(4)) {
     /*
     QGeoCodeReply * geocode( const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds =
     QGeoShape() )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_REVERSEGEOCODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQGEOCOORDINATE(1) && (ISQGEOSHAPE(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQGEOCOORDINATE(1) && ISQGEOSHAPEORNIL(2)) {
 #endif
       QGeoCodeReply *ptr =
           obj->reverseGeocode(*PQGEOCOORDINATE(1), HB_ISNIL(2) ? QGeoShape() : *(QGeoShape *)Qt5xHb::itemGetPtr(2));
