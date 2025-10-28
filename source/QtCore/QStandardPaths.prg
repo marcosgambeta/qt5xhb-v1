@@ -153,7 +153,7 @@ static QString findExecutable( const QString &executableName, const QStringList 
 HB_FUNC_STATIC(QSTANDARDPATHS_FINDEXECUTABLE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISARRAY(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISARRAYORNIL(2)) {
 #endif
     RQSTRING(QStandardPaths::findExecutable(PQSTRING(1), OPQSTRINGLIST(2, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

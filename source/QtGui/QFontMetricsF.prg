@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_BOUNDINGRECT)
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
   } else if (ISBETWEEN(3, 5) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
-           (HB_ISARRAY(5) || HB_ISNIL(5))) {
+           ISARRAYORNIL(5)) {
     /*
     QRectF boundingRect( const QRectF &rect, int flags, const QString &text, int tabStops = 0, int * tabArray = 0 )
     const

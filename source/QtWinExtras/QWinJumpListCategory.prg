@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDDESTINATION)
 
 HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDLINK)
 {
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISARRAY(3) || HB_ISNIL(3))) {
+  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISARRAYORNIL(3)) {
     /*
     QWinJumpListItem * addLink( const QString &title, const QString &executablePath, const QStringList &arguments =
     QStringList() )
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QWINJUMPLISTCATEGORY_ADDLINK)
       Qt5xHb::createReturnClass(ptr, "QWINJUMPLISTITEM", false);
     }
 #endif
-  } else if (ISBETWEEN(3, 4) && ISQICON(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISARRAY(4) || HB_ISNIL(4))) {
+  } else if (ISBETWEEN(3, 4) && ISQICON(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISARRAYORNIL(4)) {
     /*
     QWinJumpListItem * addLink( const QIcon &icon, const QString &title, const QString &executablePath, const
     QStringList &arguments = QStringList() )
