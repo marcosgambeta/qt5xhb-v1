@@ -81,7 +81,7 @@ RETURN
 
 HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(0, 2) && ISQBYTEARRAYORNIL(1) && ISQBYTEARRAYORNIL(2)) {
     /*
     QNetworkCookie( const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray() )
     */

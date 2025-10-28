@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPRIVATEKEY)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
-           (ISQBYTEARRAY(4) || HB_ISNIL(4))) {
+           ISQBYTEARRAYORNIL(4)) {
     /*
     void setPrivateKey( const QString &fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format
     = QSsl::Pem, const QByteArray &passPhrase = QByteArray() )

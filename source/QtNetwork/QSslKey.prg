@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
     QSslKey *obj = new QSslKey();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 5) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4) && (ISQBYTEARRAY(5) || HB_ISNIL(5))) {
+           ISNUMORNIL(4) && ISQBYTEARRAYORNIL(5)) {
     /*
     QSslKey( const QByteArray &encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem,
     QSsl::KeyType type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray() )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
                                HB_ISNIL(5) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(5));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4) && (ISQBYTEARRAY(5) || HB_ISNIL(5))) {
+           ISNUMORNIL(4) && ISQBYTEARRAYORNIL(5)) {
     /*
     QSslKey( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType
     type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray() )
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QSSLKEY_TODER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQBYTEARRAY(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toDer(HB_ISNIL(1) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QSSLKEY_TOPEM)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQBYTEARRAY(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toPem(HB_ISNIL(1) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);

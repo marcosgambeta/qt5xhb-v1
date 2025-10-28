@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_NEW)
     QSslCertificate *obj = new QSslCertificate(PQIODEVICE(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem
                                                                           : (QSsl::EncodingFormat)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(0, 2) && ISQBYTEARRAYORNIL(1) && ISNUMORNIL(2)) {
     /*
     QSslCertificate( const QByteArray &data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
     */

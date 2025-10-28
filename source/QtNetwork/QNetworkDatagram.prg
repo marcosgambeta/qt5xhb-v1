@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QNETWORKDATAGRAM_NEW)
     QNetworkDatagram *obj = new QNetworkDatagram();
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  } else if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && (ISQHOSTADDRESS(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ISQHOSTADDRESSORNIL(2) && ISNUMORNIL(3)) {
     /*
     QNetworkDatagram( const QByteArray &data, const QHostAddress &destinationAddress = QHostAddress(), quint16 port =
     0 )

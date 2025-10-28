@@ -727,7 +727,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETERESOURCE)
 
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
 {
-  if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && (ISQIODEVICE(3) || HB_ISNIL(3))) {
+  if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && ISQIODEVICEORNIL(3)) {
     /*
     QNetworkReply * sendCustomRequest( const QNetworkRequest &request, const QByteArray &verb, QIODevice * data =
     nullptr )
@@ -738,7 +738,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
       QNetworkReply *ptr = obj->sendCustomRequest(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE(3, nullptr));
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
-  } else if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && (ISQBYTEARRAY(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && ISQBYTEARRAYORNIL(3)) {
     /*
     QNetworkReply * sendCustomRequest( const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data
     )
@@ -751,7 +751,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
       Qt5xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
 #endif
-  } else if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && (ISQHTTPMULTIPART(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && ISQHTTPMULTIPARTORNIL(3)) {
     /*
     QNetworkReply * sendCustomRequest( const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *
     multiPart )
@@ -844,7 +844,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && (ISQSSLCONFIGURATION(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISQSSLCONFIGURATIONORNIL(3)) {
 #endif
       obj->connectToHostEncrypted(PQSTRING(1), OPQUINT16(2, 443),
                                   HB_ISNIL(3) ? QSslConfiguration::defaultConfiguration()

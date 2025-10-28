@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_QUERYPROXY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQNETWORKPROXYQUERY(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQNETWORKPROXYQUERYORNIL(1)) {
 #endif
       QList<QNetworkProxy> list =
           obj->queryProxy(HB_ISNIL(1) ? QNetworkProxyQuery() : *(QNetworkProxyQuery *)Qt5xHb::itemGetPtr(1));
@@ -202,7 +202,7 @@ static QList<QNetworkProxy> systemProxyForQuery( const QNetworkProxyQuery &query
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (ISQNETWORKPROXYQUERY(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQNETWORKPROXYQUERYORNIL(1)) {
 #endif
     QList<QNetworkProxy> list = QNetworkProxyFactory::systemProxyForQuery(
         HB_ISNIL(1) ? QNetworkProxyQuery() : *(QNetworkProxyQuery *)Qt5xHb::itemGetPtr(1));
