@@ -597,7 +597,7 @@ static int sliderPositionFromValue( int min, int max, int logicalValue, int span
 HB_FUNC_STATIC(QSTYLE_SLIDERPOSITIONFROMVALUE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISLOG(5) || HB_ISNIL(5))) {
+  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISLOGORNIL(5)) {
 #endif
     RINT(QStyle::sliderPositionFromValue(PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5, false)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -613,7 +613,7 @@ static int sliderValueFromPosition( int min, int max, int position, int span, bo
 HB_FUNC_STATIC(QSTYLE_SLIDERVALUEFROMPOSITION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISLOG(5) || HB_ISNIL(5))) {
+  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISLOGORNIL(5)) {
 #endif
     RINT(QStyle::sliderValueFromPosition(PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5, false)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
