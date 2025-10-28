@@ -680,7 +680,7 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERSETTINGS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQCAMERAVIEWFINDERSETTINGS(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQCAMERAVIEWFINDERSETTINGSORNIL(1)) {
 #endif
       QList<QCameraViewfinderSettings> list = obj->supportedViewfinderSettings(
           HB_ISNIL(1) ? QCameraViewfinderSettings() : *(QCameraViewfinderSettings *)Qt5xHb::itemGetPtr(1));
@@ -726,7 +726,7 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQCAMERAVIEWFINDERSETTINGS(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQCAMERAVIEWFINDERSETTINGSORNIL(1)) {
 #endif
       QList<QSize> list = obj->supportedViewfinderResolutions(
           HB_ISNIL(1) ? QCameraViewfinderSettings() : *(QCameraViewfinderSettings *)Qt5xHb::itemGetPtr(1));
@@ -772,7 +772,7 @@ HB_FUNC_STATIC(QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQCAMERAVIEWFINDERSETTINGS(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQCAMERAVIEWFINDERSETTINGSORNIL(1)) {
 #endif
       QList<QVideoFrame::PixelFormat> list = obj->supportedViewfinderPixelFormats(
           HB_ISNIL(1) ? QCameraViewfinderSettings() : *(QCameraViewfinderSettings *)Qt5xHb::itemGetPtr(1));

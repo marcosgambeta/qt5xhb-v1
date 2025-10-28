@@ -75,14 +75,14 @@ RETURN
 
 HB_FUNC_STATIC(QAUDIOOUTPUT_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQAUDIOFORMAT(1) || HB_ISNIL(1)) && ISQOBJECTORNIL(2)) {
+  if (ISBETWEEN(0, 2) && ISQAUDIOFORMATORNIL(1) && ISQOBJECTORNIL(2)) {
     /*
     QAudioOutput( const QAudioFormat &format = QAudioFormat(), QObject * parent = nullptr )
     */
     QAudioOutput *obj =
         new QAudioOutput(HB_ISNIL(1) ? QAudioFormat() : *(QAudioFormat *)Qt5xHb::itemGetPtr(1), OPQOBJECT(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2) || HB_ISNIL(2)) &&
+  } else if (ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && ISQAUDIOFORMATORNIL(2) &&
            ISQOBJECTORNIL(3)) {
     /*
     QAudioOutput( const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject *
