@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QTWIN_COLORIZATIONCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
     bool par1;
     QColor *ptr = new QColor(QtWin::colorizationColor(&par1));
@@ -610,7 +610,7 @@ HB_FUNC_STATIC(QTWIN_MARKFULLSCREENWINDOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQWINDOW(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && ISQWINDOW(1) && ISLOGORNIL(2)) {
 #endif
     QtWin::markFullscreenWindow(PQWINDOW(1), OPBOOL(2, true));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
