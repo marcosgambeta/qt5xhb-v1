@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQDECLARATIVECONTEXT(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQDECLARATIVECONTEXTORNIL(1)) {
 #endif
       QObject *ptr = obj->create(OPQDECLARATIVECONTEXT(1, 0));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");

@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_NEW)
     */
     QDeclarativeListReference *obj = new QDeclarativeListReference();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQDECLARATIVEENGINE(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINEORNIL(3)) {
     /*
     QDeclarativeListReference( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
     */
