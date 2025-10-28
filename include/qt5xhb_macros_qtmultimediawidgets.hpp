@@ -14,14 +14,19 @@
 #define ISQVIDEOWIDGET(n)                                   Qt5xHb::isObjectDerivedFrom(n, "QVideoWidget")
 #define ISQVIDEOWIDGETCONTROL(n)                            Qt5xHb::isObjectDerivedFrom(n, "QVideoWidgetControl")
 
-#define PQCAMERAVIEWFINDER(n)                               static_cast<QCameraViewfinder*>(Qt5xHb::itemGetPtr(n))
-#define PQGRAPHICSVIDEOITEM(n)                              static_cast<QGraphicsVideoItem*>(Qt5xHb::itemGetPtr(n))
-#define PQVIDEOWIDGET(n)                                    static_cast<QVideoWidget*>(Qt5xHb::itemGetPtr(n))
-#define PQVIDEOWIDGETCONTROL(n)                             static_cast<QVideoWidgetControl*>(Qt5xHb::itemGetPtr(n))
+#define ISQCAMERAVIEWFINDERORNIL(n)                         (ISQCAMERAVIEWFINDER(n) || HB_ISNIL(n))
+#define ISQGRAPHICSVIDEOITEMORNIL(n)                        (ISQGRAPHICSVIDEOITEM(n) || HB_ISNIL(n))
+#define ISQVIDEOWIDGETORNIL(n)                              (ISQVIDEOWIDGET(n) || HB_ISNIL(n))
+#define ISQVIDEOWIDGETCONTROLORNIL(n)                       (ISQVIDEOWIDGETCONTROL(n) || HB_ISNIL(n))
 
-#define OPQCAMERAVIEWFINDER(n, v)                           HB_ISNIL(n) ? v : static_cast<QCameraViewfinder*>(Qt5xHb::itemGetPtr(n))
-#define OPQGRAPHICSVIDEOITEM(n, v)                          HB_ISNIL(n) ? v : static_cast<QGraphicsVideoItem*>(Qt5xHb::itemGetPtr(n))
-#define OPQVIDEOWIDGET(n, v)                                HB_ISNIL(n) ? v : static_cast<QVideoWidget*>(Qt5xHb::itemGetPtr(n))
-#define OPQVIDEOWIDGETCONTROL(n, v)                         HB_ISNIL(n) ? v : static_cast<QVideoWidgetControl*>(Qt5xHb::itemGetPtr(n))
+#define PQCAMERAVIEWFINDER(n)                               static_cast<QCameraViewfinder *>(Qt5xHb::itemGetPtr(n))
+#define PQGRAPHICSVIDEOITEM(n)                              static_cast<QGraphicsVideoItem *>(Qt5xHb::itemGetPtr(n))
+#define PQVIDEOWIDGET(n)                                    static_cast<QVideoWidget *>(Qt5xHb::itemGetPtr(n))
+#define PQVIDEOWIDGETCONTROL(n)                             static_cast<QVideoWidgetControl *>(Qt5xHb::itemGetPtr(n))
+
+#define OPQCAMERAVIEWFINDER(n, v)                           HB_ISNIL(n) ? v : static_cast<QCameraViewfinder *>(Qt5xHb::itemGetPtr(n))
+#define OPQGRAPHICSVIDEOITEM(n, v)                          HB_ISNIL(n) ? v : static_cast<QGraphicsVideoItem *>(Qt5xHb::itemGetPtr(n))
+#define OPQVIDEOWIDGET(n, v)                                HB_ISNIL(n) ? v : static_cast<QVideoWidget *>(Qt5xHb::itemGetPtr(n))
+#define OPQVIDEOWIDGETCONTROL(n, v)                         HB_ISNIL(n) ? v : static_cast<QVideoWidgetControl *>(Qt5xHb::itemGetPtr(n))
 
 #endif // QT5XHB_MACROS_QTMULTIMEDIAWIDGETS_H

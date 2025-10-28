@@ -13,12 +13,16 @@
 #define ISQGAMEPADKEYNAVIGATION(n)                          Qt5xHb::isObjectDerivedFrom(n, "QGamepadKeyNavigation")
 #define ISQGAMEPADMANAGER(n)                                Qt5xHb::isObjectDerivedFrom(n, "QGamepadManager")
 
-#define PQGAMEPAD(n)                                        static_cast<QGamepad*>(Qt5xHb::itemGetPtr(n))
-#define PQGAMEPADKEYNAVIGATION(n)                           static_cast<QGamepadKeyNavigation*>(Qt5xHb::itemGetPtr(n))
-#define PQGAMEPADMANAGER(n)                                 static_cast<QGamepadManager*>(Qt5xHb::itemGetPtr(n))
+#define ISQGAMEPADORNIL(n)                                  (ISQGAMEPAD(n) || HB_ISNIL(n))
+#define ISQGAMEPADKEYNAVIGATIONORNIL(n)                     (ISQGAMEPADKEYNAVIGATION(n) || HB_ISNIL(n))
+#define ISQGAMEPADMANAGERORNIL(n)                           (ISQGAMEPADMANAGER(n) || HB_ISNIL(n))
 
-#define OPQGAMEPAD(n, v)                                    HB_ISNIL(n) ? v : static_cast<QGamepad*>(Qt5xHb::itemGetPtr(n))
-#define OPQGAMEPADKEYNAVIGATION(n, v)                       HB_ISNIL(n) ? v : static_cast<QGamepadKeyNavigation*>(Qt5xHb::itemGetPtr(n))
-#define OPQGAMEPADMANAGER(n, v)                             HB_ISNIL(n) ? v : static_cast<QGamepadManager*>(Qt5xHb::itemGetPtr(n))
+#define PQGAMEPAD(n)                                        static_cast<QGamepad *>(Qt5xHb::itemGetPtr(n))
+#define PQGAMEPADKEYNAVIGATION(n)                           static_cast<QGamepadKeyNavigation *>(Qt5xHb::itemGetPtr(n))
+#define PQGAMEPADMANAGER(n)                                 static_cast<QGamepadManager *>(Qt5xHb::itemGetPtr(n))
+
+#define OPQGAMEPAD(n, v)                                    HB_ISNIL(n) ? v : static_cast<QGamepad *>(Qt5xHb::itemGetPtr(n))
+#define OPQGAMEPADKEYNAVIGATION(n, v)                       HB_ISNIL(n) ? v : static_cast<QGamepadKeyNavigation *>(Qt5xHb::itemGetPtr(n))
+#define OPQGAMEPADMANAGER(n, v)                             HB_ISNIL(n) ? v : static_cast<QGamepadManager *>(Qt5xHb::itemGetPtr(n))
 
 #endif // QT5XHB_MACROS_QTGAMEPAD_H
