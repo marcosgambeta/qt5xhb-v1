@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QMEDIACONTENT_NEW)
     */
     QMediaContent *obj = new QMediaContent(*PQMEDIACONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && ISQURLORNIL(2) && (HB_ISLOG(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(1, 3) && ISQMEDIAPLAYLIST(1) && ISQURLORNIL(2) && ISLOGORNIL(3)) {
     /*
     QMediaContent( QMediaPlaylist * playlist, const QUrl &contentUrl = QUrl(), bool takeOwnership = false )
     */
