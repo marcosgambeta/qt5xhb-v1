@@ -841,7 +841,7 @@ static QSqlDatabase database ( const QString &connectionName = QLatin1String( de
 */
 HB_FUNC_STATIC(QSQLDATABASE_DATABASE)
 {
-  if (ISCHARORNIL(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  if (ISCHARORNIL(1) && ISLOGORNIL(2)) {
     QString par1 = HB_ISNIL(1) ? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String(hb_parc(1));
     QSqlDatabase *ptr = new QSqlDatabase(QSqlDatabase::database(par1, OPBOOL(2, true)));
     Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
