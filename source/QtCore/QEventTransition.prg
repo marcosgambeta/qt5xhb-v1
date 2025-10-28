@@ -55,13 +55,13 @@ RETURN
 
 HB_FUNC_STATIC(QEVENTTRANSITION_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
     /*
     QEventTransition( QState * sourceState = 0 )
     */
     QEventTransition *obj = new QEventTransition(OPQSTATE(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && (ISQSTATE(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && ISQSTATEORNIL(3)) {
     /*
     QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = 0 )
     */

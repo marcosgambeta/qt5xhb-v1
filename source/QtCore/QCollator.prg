@@ -73,7 +73,7 @@ RETURN
 
 HB_FUNC_STATIC(QCOLLATOR_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQLOCALE(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQLOCALEORNIL(1)) {
     /*
     QCollator( const QLocale &locale = QLocale() )
     */

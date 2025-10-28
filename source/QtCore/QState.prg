@@ -68,13 +68,13 @@ RETURN
 
 HB_FUNC_STATIC(QSTATE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
     /*
     QState( QState * parent = 0 )
     */
     QState *obj = new QState(OPQSTATE(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSTATE(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSTATEORNIL(2)) {
     /*
     QState( QState::ChildMode childMode, QState * parent = 0 )
     */

@@ -72,7 +72,7 @@ RETURN
     */
 HB_FUNC_STATIC(QRESOURCE_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && (ISQLOCALE(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISQLOCALEORNIL(2)) {
     QResource *obj =
         new QResource(OPQSTRING(1, QString()), HB_ISNIL(2) ? QLocale() : *(QLocale *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, true);

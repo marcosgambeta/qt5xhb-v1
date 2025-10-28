@@ -66,7 +66,7 @@ RETURN
     */
 HB_FUNC_STATIC(QMESSAGEAUTHENTICATIONCODE_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQBYTEARRAYORNIL(2)) {
     QMessageAuthenticationCode *obj = new QMessageAuthenticationCode(
         (QCryptographicHash::Algorithm)hb_parni(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, true);
