@@ -195,5 +195,6 @@
 #define ISCHARORNIL(n) (HB_ISCHAR(n) || HB_ISNIL(n))
 #define ISLOGORNIL(n) (HB_ISLOG(n) || HB_ISNIL(n))
 #define ISARRAYORNIL(n) (HB_ISARRAY(n) || HB_ISNIL(n))
+#define ISOBJECTORNIL(n) (HB_ISOBJECT(n) || HB_ISNIL(n))
 
 #endif // QT5XHB_MACROS_H
