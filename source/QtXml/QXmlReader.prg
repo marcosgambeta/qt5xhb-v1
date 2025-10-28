@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QXMLREADER_FEATURE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISLOGORNIL(2)) {
 #endif
       bool par2;
       RBOOL(obj->feature(PQSTRING(1), &par2));
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QXMLREADER_PROPERTY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISLOGORNIL(2)) {
 #endif
       bool par2;
       hb_retptr((void *)obj->property(PQSTRING(1), &par2));
