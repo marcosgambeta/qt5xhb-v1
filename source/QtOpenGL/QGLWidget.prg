@@ -79,7 +79,7 @@ RETURN
 
 HB_FUNC_STATIC(QGLWIDGET_NEW)
 {
-  if (ISBETWEEN(0, 3) && ISQWIDGETORNIL(1) && (ISQGLWIDGET(2) || HB_ISNIL(2)) &&
+  if (ISBETWEEN(0, 3) && ISQWIDGETORNIL(1) && ISQGLWIDGETORNIL(2) &&
       ISNUMORNIL(3)) {
     /*
     QGLWidget( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QGLWIDGET_NEW)
     QGLWidget *obj = new QGLWidget(OPQWIDGET(1, 0), OPQGLWIDGET(2, 0),
                                    HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 4) && ISQGLCONTEXT(1) && ISQWIDGETORNIL(2) && (ISQGLWIDGET(3) || HB_ISNIL(3)) &&
+  } else if (ISBETWEEN(1, 4) && ISQGLCONTEXT(1) && ISQWIDGETORNIL(2) && ISQGLWIDGETORNIL(3) &&
            ISNUMORNIL(4)) {
     /*
     QGLWidget( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QGLWIDGET_NEW)
     QGLWidget *obj = new QGLWidget(PQGLCONTEXT(1), OPQWIDGET(2, 0), OPQGLWIDGET(3, 0),
                                    HB_ISNIL(4) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(4));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 4) && ISQGLFORMAT(1) && ISQWIDGETORNIL(2) && (ISQGLWIDGET(3) || HB_ISNIL(3)) &&
+  } else if (ISBETWEEN(1, 4) && ISQGLFORMAT(1) && ISQWIDGETORNIL(2) && ISQGLWIDGETORNIL(3) &&
            ISNUMORNIL(4)) {
     /*
     QGLWidget( const QGLFormat &format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0
@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERPIXMAP)
 
 HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
 {
-  if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (ISQFONT(4) || HB_ISNIL(4))) {
+  if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISQFONTORNIL(4)) {
     /*
     void renderText( int x, int y, const QString &str, const QFont &font = QFont() )
     */
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISCHAR(4) && (ISQFONT(5) || HB_ISNIL(5))) {
+  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISCHAR(4) && ISQFONTORNIL(5)) {
     /*
     void renderText( double x, double y, double z, const QString &str, const QFont &font = QFont() )
     */

@@ -67,7 +67,7 @@ RETURN
 
 HB_FUNC_STATIC(QGLPIXELBUFFER_NEW)
 {
-  if (ISBETWEEN(1, 3) && ISQSIZE(1) && (ISQGLFORMAT(2) || HB_ISNIL(2)) && (ISQGLWIDGET(3) || HB_ISNIL(3))) {
+  if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISQGLFORMATORNIL(2) && ISQGLWIDGETORNIL(3)) {
     /*
     QGLPixelBuffer( const QSize &size, const QGLFormat &format = QGLFormat::defaultFormat(), QGLWidget * shareWidget =
     0 )
@@ -75,8 +75,8 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_NEW)
     QGLPixelBuffer *obj = new QGLPixelBuffer(
         *PQSIZE(1), HB_ISNIL(2) ? QGLFormat::defaultFormat() : *(QGLFormat *)Qt5xHb::itemGetPtr(2), OPQGLWIDGET(3, 0));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQGLFORMAT(3) || HB_ISNIL(3)) &&
-           (ISQGLWIDGET(4) || HB_ISNIL(4))) {
+  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQGLFORMATORNIL(3) &&
+           ISQGLWIDGETORNIL(4)) {
     /*
     QGLPixelBuffer( int width, int height, const QGLFormat &format = QGLFormat::defaultFormat(), QGLWidget *
     shareWidget = 0 )
