@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ABORTEVALUATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQSCRIPTVALUE(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQSCRIPTVALUEORNIL(1)) {
 #endif
       obj->abortEvaluation(HB_ISNIL(1) ? QScriptValue() : *(QScriptValue *)Qt5xHb::itemGetPtr(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQSCRIPTVALUE(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQSCRIPTVALUEORNIL(1)) {
 #endif
       obj->installTranslatorFunctions(HB_ISNIL(1) ? QScriptValue() : *(QScriptValue *)Qt5xHb::itemGetPtr(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWOBJECT)
       QScriptValue *ptr = new QScriptValue(obj->newObject());
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
-  } else if (ISBETWEEN(1, 2) && ISQSCRIPTCLASS(1) && (ISQSCRIPTVALUE(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQSCRIPTCLASS(1) && ISQSCRIPTVALUEORNIL(2)) {
     /*
     QScriptValue newObject( QScriptClass * scriptClass, const QScriptValue &data = QScriptValue() )
     */
@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWQMETAOBJECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQMETAOBJECT(1) && (ISQSCRIPTVALUE(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQMETAOBJECT(1) && ISQSCRIPTVALUEORNIL(2)) {
 #endif
       QScriptValue *ptr = new QScriptValue(
           obj->newQMetaObject(PQMETAOBJECT(1), HB_ISNIL(2) ? QScriptValue() : *(QScriptValue *)Qt5xHb::itemGetPtr(2)));
