@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_CLOSE)
 
 HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
 {
-  if (ISBETWEEN(0, 2) && (ISQBLUETOOTHADDRESS(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(0, 2) && ISQBLUETOOTHADDRESSORNIL(1) && ISNUMORNIL(2)) {
     /*
     bool listen( const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0 )
     */

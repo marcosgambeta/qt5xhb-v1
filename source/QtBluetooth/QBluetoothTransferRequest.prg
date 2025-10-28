@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERREQUEST_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQBLUETOOTHADDRESS(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQBLUETOOTHADDRESSORNIL(1)) {
     /*
     QBluetoothTransferRequest( const QBluetoothAddress &address = QBluetoothAddress() )
     */
