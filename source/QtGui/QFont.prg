@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QFONT_NEW)
     QFont *obj = new QFont();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
-           (HB_ISLOG(4) || HB_ISNIL(4))) {
+           ISLOGORNIL(4)) {
     /*
     QFont( const QString &family, int pointSize = -1, int weight = -1, bool italic = false )
     */

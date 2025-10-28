@@ -53,7 +53,7 @@ RETURN
     */
 HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
     QWindowStateChangeEvent *obj = new QWindowStateChangeEvent((Qt::WindowStates)hb_parni(1), OPBOOL(2, false));
     Qt5xHb::returnNewObject(obj, false);
   } else {

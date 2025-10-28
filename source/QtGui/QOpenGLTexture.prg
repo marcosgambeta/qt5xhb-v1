@@ -907,7 +907,7 @@ HB_FUNC_STATIC(QOPENGLTEXTURE_GENERATEMIPMAPS)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
     /*
     void generateMipMaps( int baseLevel, bool resetBaseLevel = true )
     */
