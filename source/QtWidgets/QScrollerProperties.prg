@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSCROLLERPROPERTIES_SCROLLMETRIC)
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->scrollMetric((QScrollerProperties::ScrollMetric)hb_parni(1)));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

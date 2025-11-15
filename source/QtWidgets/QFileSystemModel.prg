@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MYCOMPUTER)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->myComputer(OPINT(1, Qt::DisplayRole)));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -797,7 +797,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_DATA)
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
       QVariant *ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -920,7 +920,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_HEADERDATA)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
       QVariant *ptr = new QVariant(obj->headerData(PINT(1), (Qt::Orientation)hb_parni(2), OPINT(3, Qt::DisplayRole)));
-      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
