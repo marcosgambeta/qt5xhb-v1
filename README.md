@@ -84,13 +84,3 @@ mainwindow [ENTER]
 Harbour 3.2.0dev for Qt 5.5.1 and MinGW 4.9.2 (32-bit)
 
 http://www.mediafire.com/file/82yql0w5t6a388u/harbour320dev-qt551-mingw492-32bit-20170225-0002.7z
-
-### To contact the developer
-
-Send your message to: marcosgambeta AT outlook DOT com
-
-### More info and extra content
-
-Follow the blog below for more info and extra content:
-
-https://magsoftinfo.com/blog/
