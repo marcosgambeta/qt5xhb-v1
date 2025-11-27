@@ -24,7 +24,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
    CASE "post_all"
       ferase("source\QtSql\QSqlDriverSlotsMoc.cpp")
       ferase("source\QtSql\QSqlTableModelSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

@@ -28,7 +28,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtWebKitWidgets\QWebFrameSlotsMoc.cpp")
       ferase("source\QtWebKitWidgets\QWebPageSlotsMoc.cpp")
       ferase("source\QtWebKitWidgets\QWebViewSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

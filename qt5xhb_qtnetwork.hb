@@ -40,7 +40,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtNetwork\QNetworkSessionSlotsMoc.cpp")
       ferase("source\QtNetwork\QSslSocketSlotsMoc.cpp")
       ferase("source\QtNetwork\QTcpServerSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

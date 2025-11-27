@@ -30,7 +30,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtSerialBus\QModbusDeviceSlotsMoc.cpp")
       ferase("source\QtSerialBus\QModbusReplySlotsMoc.cpp")
       ferase("source\QtSerialBus\QModbusServerSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

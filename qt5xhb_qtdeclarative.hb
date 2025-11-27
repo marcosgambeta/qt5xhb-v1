@@ -30,7 +30,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtDeclarative\QDeclarativeExpressionSlotsMoc.cpp")
       ferase("source\QtDeclarative\QDeclarativePropertyMapSlotsMoc.cpp")
       ferase("source\QtDeclarative\QDeclarativeViewSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

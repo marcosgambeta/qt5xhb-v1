@@ -24,7 +24,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
    CASE "post_all"
       ferase("source\QtDesigner\QDesignerFormWindowManagerInterfaceSlotsMoc.cpp")
       ferase("source\QtDesigner\QDesignerPropertyEditorInterfaceSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

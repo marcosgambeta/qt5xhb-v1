@@ -30,7 +30,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtNetworkAuth\QAbstractOAuthSlotsMoc.cpp")
       ferase("source\QtNetworkAuth\QOAuth1SlotsMoc.cpp")
       ferase("source\QtNetworkAuth\QOAuth2AuthorizationCodeFlowSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

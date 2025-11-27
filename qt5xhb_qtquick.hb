@@ -26,7 +26,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtQuick\QQuickPaintedItemSlotsMoc.cpp")
       ferase("source\QtQuick\QQuickViewSlotsMoc.cpp")
       ferase("source\QtQuick\QQuickWindowSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

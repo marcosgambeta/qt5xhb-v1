@@ -30,7 +30,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtQml\QQmlEngineSlotsMoc.cpp")
       ferase("source\QtQml\QQmlExpressionSlotsMoc.cpp")
       ferase("source\QtQml\QQmlPropertyMapSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

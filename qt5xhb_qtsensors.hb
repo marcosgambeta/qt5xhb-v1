@@ -38,7 +38,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtSensors\QSensorGestureSlotsMoc.cpp")
       ferase("source\QtSensors\QSensorSlotsMoc.cpp")
       ferase("source\QtSensors\QTapSensorSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

@@ -24,7 +24,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
    CASE "post_all"
       ferase("source\QtWinExtras\QWinTaskbarProgressSlotsMoc.cpp")
       ferase("source\QtWinExtras\QWinThumbnailToolButtonSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

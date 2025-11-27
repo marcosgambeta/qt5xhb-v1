@@ -26,7 +26,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtMultimediaWidgets\QGraphicsVideoItemSlotsMoc.cpp")
       ferase("source\QtMultimediaWidgets\QVideoWidgetControlSlotsMoc.cpp")
       ferase("source\QtMultimediaWidgets\QVideoWidgetSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

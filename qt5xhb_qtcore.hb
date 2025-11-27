@@ -70,7 +70,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtCore\QTimeLineSlotsMoc.cpp")
       ferase("source\QtCore\QTimerSlotsMoc.cpp")
       ferase("source\QtCore\QVariantAnimationSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

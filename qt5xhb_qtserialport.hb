@@ -22,7 +22,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
 
    CASE "post_all"
       ferase("source\QtSerialPort\QSerialPortSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

@@ -24,7 +24,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
    CASE "post_all"
       ferase("source\QtWebEngineWidgets\QWebEnginePageSlotsMoc.cpp")
       ferase("source\QtWebEngineWidgets\QWebEngineViewSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

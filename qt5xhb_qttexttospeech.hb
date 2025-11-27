@@ -24,7 +24,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
    CASE "post_all"
       ferase("source\QtTextToSpeech\QTextToSpeechEngineSlotsMoc.cpp")
       ferase("source\QtTextToSpeech\QTextToSpeechSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

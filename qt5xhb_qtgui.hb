@@ -52,7 +52,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtGui\QStandardItemModelSlotsMoc.cpp")
       ferase("source\QtGui\QTextDocumentSlotsMoc.cpp")
       ferase("source\QtGui\QWindowSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

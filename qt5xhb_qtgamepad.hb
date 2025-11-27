@@ -26,7 +26,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtGamepad\QGamepadKeyNavigationSlotsMoc.cpp")
       ferase("source\QtGamepad\QGamepadManagerSlotsMoc.cpp")
       ferase("source\QtGamepad\QGamepadSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

@@ -36,7 +36,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtHelp\QHelpSearchEngineSlotsMoc.cpp")
       ferase("source\QtHelp\QHelpSearchQueryWidgetSlotsMoc.cpp")
       ferase("source\QtHelp\QHelpSearchResultWidgetSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

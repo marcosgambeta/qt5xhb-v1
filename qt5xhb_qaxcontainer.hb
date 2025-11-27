@@ -28,7 +28,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\ActiveQt\QAxObjectSlotsMoc.cpp")
       ferase("source\ActiveQt\QAxScriptSlotsMoc.cpp")
       ferase("source\ActiveQt\QAxWidgetSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

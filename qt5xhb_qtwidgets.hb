@@ -182,7 +182,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtWidgets\QWidgetSlotsMoc.cpp")
       ferase("source\QtWidgets\QWizardPageSlotsMoc.cpp")
       ferase("source\QtWidgets\QWizardSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

@@ -28,7 +28,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtDBus\QDBusPendingCallWatcherSlotsMoc.cpp")
       ferase("source\QtDBus\QDBusServerSlotsMoc.cpp")
       ferase("source\QtDBus\QDBusServiceWatcherSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

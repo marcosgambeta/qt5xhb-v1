@@ -26,7 +26,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtPositioning\QGeoAreaMonitorSourceSlotsMoc.cpp")
       ferase("source\QtPositioning\QGeoPositionInfoSourceSlotsMoc.cpp")
       ferase("source\QtPositioning\QGeoSatelliteInfoSourceSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

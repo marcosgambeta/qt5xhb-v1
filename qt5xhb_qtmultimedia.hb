@@ -108,7 +108,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtMultimedia\QVideoDeviceSelectorControlSlotsMoc.cpp")
       ferase("source\QtMultimedia\QVideoProbeSlotsMoc.cpp")
       ferase("source\QtMultimedia\QVideoWindowControlSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

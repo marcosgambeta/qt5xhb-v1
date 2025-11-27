@@ -24,7 +24,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
    CASE "post_all"
       ferase("source\QtWebSockets\QWebSocketServerSlotsMoc.cpp")
       ferase("source\QtWebSockets\QWebSocketSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

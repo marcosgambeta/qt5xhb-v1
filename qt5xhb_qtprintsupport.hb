@@ -26,7 +26,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtPrintSupport\QPrintDialogSlotsMoc.cpp")
       ferase("source\QtPrintSupport\QPrintPreviewDialogSlotsMoc.cpp")
       ferase("source\QtPrintSupport\QPrintPreviewWidgetSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

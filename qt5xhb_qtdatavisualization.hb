@@ -78,7 +78,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtDataVisualization\QSurface3DSeriesSlotsMoc.cpp")
       ferase("source\QtDataVisualization\QSurfaceDataProxySlotsMoc.cpp")
       ferase("source\QtDataVisualization\QValue3DAxisSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

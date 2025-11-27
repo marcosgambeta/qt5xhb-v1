@@ -38,7 +38,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtLocation\QPlaceManagerEngineSlotsMoc.cpp")
       ferase("source\QtLocation\QPlaceManagerSlotsMoc.cpp")
       ferase("source\QtLocation\QPlaceReplySlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

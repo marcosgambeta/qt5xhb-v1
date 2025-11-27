@@ -84,7 +84,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtCharts\QVPieModelMapperSlotsMoc.cpp")
       ferase("source\QtCharts\QVXYModelMapperSlotsMoc.cpp")
       ferase("source\QtCharts\QXYSeriesSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

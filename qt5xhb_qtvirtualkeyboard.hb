@@ -30,7 +30,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtVirtualKeyboard\QVirtualKeyboardInputEngineSlotsMoc.cpp")
       ferase("source\QtVirtualKeyboard\QVirtualKeyboardSelectionListModelSlotsMoc.cpp")
       ferase("source\QtVirtualKeyboard\QVirtualKeyboardTraceSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

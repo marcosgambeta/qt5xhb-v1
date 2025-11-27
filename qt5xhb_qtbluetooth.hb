@@ -34,7 +34,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       ferase("source\QtBluetooth\QBluetoothSocketSlotsMoc.cpp")
       ferase("source\QtBluetooth\QBluetoothTransferManagerSlotsMoc.cpp")
       ferase("source\QtBluetooth\QBluetoothTransferReplySlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 
