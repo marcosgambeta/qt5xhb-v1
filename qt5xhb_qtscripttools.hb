@@ -21,7 +21,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtScriptTools\QScriptEngineDebuggerSlotsMoc.cpp")
+      ferase("source\QtScriptTools\QScriptEngineDebuggerSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

@@ -29,15 +29,15 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtSensors\QAccelerometerSlotsMoc.cpp")
-      run("del source\QtSensors\QLightSensorSlotsMoc.cpp")
-      run("del source\QtSensors\QMagnetometerSlotsMoc.cpp")
-      run("del source\QtSensors\QRotationSensorSlotsMoc.cpp")
-      run("del source\QtSensors\QSensorGestureManagerSlotsMoc.cpp")
-      run("del source\QtSensors\QSensorGestureRecognizerSlotsMoc.cpp")
-      run("del source\QtSensors\QSensorGestureSlotsMoc.cpp")
-      run("del source\QtSensors\QSensorSlotsMoc.cpp")
-      run("del source\QtSensors\QTapSensorSlotsMoc.cpp")
+      ferase("source\QtSensors\QAccelerometerSlotsMoc.cpp")
+      ferase("source\QtSensors\QLightSensorSlotsMoc.cpp")
+      ferase("source\QtSensors\QMagnetometerSlotsMoc.cpp")
+      ferase("source\QtSensors\QRotationSensorSlotsMoc.cpp")
+      ferase("source\QtSensors\QSensorGestureManagerSlotsMoc.cpp")
+      ferase("source\QtSensors\QSensorGestureRecognizerSlotsMoc.cpp")
+      ferase("source\QtSensors\QSensorGestureSlotsMoc.cpp")
+      ferase("source\QtSensors\QSensorSlotsMoc.cpp")
+      ferase("source\QtSensors\QTapSensorSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

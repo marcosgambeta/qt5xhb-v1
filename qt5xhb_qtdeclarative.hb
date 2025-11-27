@@ -25,11 +25,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtDeclarative\QDeclarativeComponentSlotsMoc.cpp")
-      run("del source\QtDeclarative\QDeclarativeEngineSlotsMoc.cpp")
-      run("del source\QtDeclarative\QDeclarativeExpressionSlotsMoc.cpp")
-      run("del source\QtDeclarative\QDeclarativePropertyMapSlotsMoc.cpp")
-      run("del source\QtDeclarative\QDeclarativeViewSlotsMoc.cpp")
+      ferase("source\QtDeclarative\QDeclarativeComponentSlotsMoc.cpp")
+      ferase("source\QtDeclarative\QDeclarativeEngineSlotsMoc.cpp")
+      ferase("source\QtDeclarative\QDeclarativeExpressionSlotsMoc.cpp")
+      ferase("source\QtDeclarative\QDeclarativePropertyMapSlotsMoc.cpp")
+      ferase("source\QtDeclarative\QDeclarativeViewSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

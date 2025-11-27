@@ -24,10 +24,10 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtDBus\QDBusConnectionInterfaceSlotsMoc.cpp")
-      run("del source\QtDBus\QDBusPendingCallWatcherSlotsMoc.cpp")
-      run("del source\QtDBus\QDBusServerSlotsMoc.cpp")
-      run("del source\QtDBus\QDBusServiceWatcherSlotsMoc.cpp")
+      ferase("source\QtDBus\QDBusConnectionInterfaceSlotsMoc.cpp")
+      ferase("source\QtDBus\QDBusPendingCallWatcherSlotsMoc.cpp")
+      ferase("source\QtDBus\QDBusServerSlotsMoc.cpp")
+      ferase("source\QtDBus\QDBusServiceWatcherSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

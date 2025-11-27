@@ -25,11 +25,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtQml\QQmlApplicationEngineSlotsMoc.cpp")
-      run("del source\QtQml\QQmlComponentSlotsMoc.cpp")
-      run("del source\QtQml\QQmlEngineSlotsMoc.cpp")
-      run("del source\QtQml\QQmlExpressionSlotsMoc.cpp")
-      run("del source\QtQml\QQmlPropertyMapSlotsMoc.cpp")
+      ferase("source\QtQml\QQmlApplicationEngineSlotsMoc.cpp")
+      ferase("source\QtQml\QQmlComponentSlotsMoc.cpp")
+      ferase("source\QtQml\QQmlEngineSlotsMoc.cpp")
+      ferase("source\QtQml\QQmlExpressionSlotsMoc.cpp")
+      ferase("source\QtQml\QQmlPropertyMapSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

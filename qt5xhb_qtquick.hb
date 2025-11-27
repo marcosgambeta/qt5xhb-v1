@@ -23,9 +23,9 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtQuick\QQuickPaintedItemSlotsMoc.cpp")
-      run("del source\QtQuick\QQuickViewSlotsMoc.cpp")
-      run("del source\QtQuick\QQuickWindowSlotsMoc.cpp")
+      ferase("source\QtQuick\QQuickPaintedItemSlotsMoc.cpp")
+      ferase("source\QtQuick\QQuickViewSlotsMoc.cpp")
+      ferase("source\QtQuick\QQuickWindowSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

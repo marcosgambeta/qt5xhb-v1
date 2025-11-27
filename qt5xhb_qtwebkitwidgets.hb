@@ -24,10 +24,10 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtWebKitWidgets\QGraphicsWebViewSlotsMoc.cpp")
-      run("del source\QtWebKitWidgets\QWebFrameSlotsMoc.cpp")
-      run("del source\QtWebKitWidgets\QWebPageSlotsMoc.cpp")
-      run("del source\QtWebKitWidgets\QWebViewSlotsMoc.cpp")
+      ferase("source\QtWebKitWidgets\QGraphicsWebViewSlotsMoc.cpp")
+      ferase("source\QtWebKitWidgets\QWebFrameSlotsMoc.cpp")
+      ferase("source\QtWebKitWidgets\QWebPageSlotsMoc.cpp")
+      ferase("source\QtWebKitWidgets\QWebViewSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

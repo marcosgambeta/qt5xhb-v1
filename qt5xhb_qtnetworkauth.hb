@@ -25,11 +25,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtNetworkAuth\QAbstractOAuth2SlotsMoc.cpp")
-      run("del source\QtNetworkAuth\QAbstractOAuthReplyHandlerSlotsMoc.cpp")
-      run("del source\QtNetworkAuth\QAbstractOAuthSlotsMoc.cpp")
-      run("del source\QtNetworkAuth\QOAuth1SlotsMoc.cpp")
-      run("del source\QtNetworkAuth\QOAuth2AuthorizationCodeFlowSlotsMoc.cpp")
+      ferase("source\QtNetworkAuth\QAbstractOAuth2SlotsMoc.cpp")
+      ferase("source\QtNetworkAuth\QAbstractOAuthReplyHandlerSlotsMoc.cpp")
+      ferase("source\QtNetworkAuth\QAbstractOAuthSlotsMoc.cpp")
+      ferase("source\QtNetworkAuth\QOAuth1SlotsMoc.cpp")
+      ferase("source\QtNetworkAuth\QOAuth2AuthorizationCodeFlowSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

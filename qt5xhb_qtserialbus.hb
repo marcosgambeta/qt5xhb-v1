@@ -25,11 +25,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtSerialBus\QCanBusDeviceSlotsMoc.cpp")
-      run("del source\QtSerialBus\QModbusClientSlotsMoc.cpp")
-      run("del source\QtSerialBus\QModbusDeviceSlotsMoc.cpp")
-      run("del source\QtSerialBus\QModbusReplySlotsMoc.cpp")
-      run("del source\QtSerialBus\QModbusServerSlotsMoc.cpp")
+      ferase("source\QtSerialBus\QCanBusDeviceSlotsMoc.cpp")
+      ferase("source\QtSerialBus\QModbusClientSlotsMoc.cpp")
+      ferase("source\QtSerialBus\QModbusDeviceSlotsMoc.cpp")
+      ferase("source\QtSerialBus\QModbusReplySlotsMoc.cpp")
+      ferase("source\QtSerialBus\QModbusServerSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

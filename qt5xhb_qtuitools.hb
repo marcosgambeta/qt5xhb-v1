@@ -21,7 +21,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtUiTools\HUiLoaderMoc.cpp")
+      ferase("source\QtUiTools\HUiLoaderMoc.cpp")
       EXIT
 
    ENDSWITCH

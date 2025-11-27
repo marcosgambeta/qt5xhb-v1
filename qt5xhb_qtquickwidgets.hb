@@ -21,7 +21,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtQuickWidgets\QQuickWidgetSlotsMoc.cpp")
+      ferase("source\QtQuickWidgets\QQuickWidgetSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

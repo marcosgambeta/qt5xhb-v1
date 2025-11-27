@@ -25,11 +25,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtVirtualKeyboard\QVirtualKeyboardAbstractInputMethodSlotsMoc.cpp")
-      run("del source\QtVirtualKeyboard\QVirtualKeyboardInputContextSlotsMoc.cpp")
-      run("del source\QtVirtualKeyboard\QVirtualKeyboardInputEngineSlotsMoc.cpp")
-      run("del source\QtVirtualKeyboard\QVirtualKeyboardSelectionListModelSlotsMoc.cpp")
-      run("del source\QtVirtualKeyboard\QVirtualKeyboardTraceSlotsMoc.cpp")
+      ferase("source\QtVirtualKeyboard\QVirtualKeyboardAbstractInputMethodSlotsMoc.cpp")
+      ferase("source\QtVirtualKeyboard\QVirtualKeyboardInputContextSlotsMoc.cpp")
+      ferase("source\QtVirtualKeyboard\QVirtualKeyboardInputEngineSlotsMoc.cpp")
+      ferase("source\QtVirtualKeyboard\QVirtualKeyboardSelectionListModelSlotsMoc.cpp")
+      ferase("source\QtVirtualKeyboard\QVirtualKeyboardTraceSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

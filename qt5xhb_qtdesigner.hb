@@ -22,8 +22,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtDesigner\QDesignerFormWindowManagerInterfaceSlotsMoc.cpp")
-      run("del source\QtDesigner\QDesignerPropertyEditorInterfaceSlotsMoc.cpp")
+      ferase("source\QtDesigner\QDesignerFormWindowManagerInterfaceSlotsMoc.cpp")
+      ferase("source\QtDesigner\QDesignerPropertyEditorInterfaceSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

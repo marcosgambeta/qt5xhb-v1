@@ -23,9 +23,9 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtPositioning\QGeoAreaMonitorSourceSlotsMoc.cpp")
-      run("del source\QtPositioning\QGeoPositionInfoSourceSlotsMoc.cpp")
-      run("del source\QtPositioning\QGeoSatelliteInfoSourceSlotsMoc.cpp")
+      ferase("source\QtPositioning\QGeoAreaMonitorSourceSlotsMoc.cpp")
+      ferase("source\QtPositioning\QGeoPositionInfoSourceSlotsMoc.cpp")
+      ferase("source\QtPositioning\QGeoSatelliteInfoSourceSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

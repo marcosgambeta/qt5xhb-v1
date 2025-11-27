@@ -22,8 +22,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtWebChannel\QWebChannelAbstractTransportSlotsMoc.cpp")
-      run("del source\QtWebChannel\QWebChannelSlotsMoc.cpp")
+      ferase("source\QtWebChannel\QWebChannelAbstractTransportSlotsMoc.cpp")
+      ferase("source\QtWebChannel\QWebChannelSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

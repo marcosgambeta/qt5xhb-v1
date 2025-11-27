@@ -21,7 +21,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtPurchasing\QInAppStoreSlotsMoc.cpp")
+      ferase("source\QtPurchasing\QInAppStoreSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

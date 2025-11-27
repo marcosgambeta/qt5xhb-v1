@@ -23,9 +23,9 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtPrintSupport\QPrintDialogSlotsMoc.cpp")
-      run("del source\QtPrintSupport\QPrintPreviewDialogSlotsMoc.cpp")
-      run("del source\QtPrintSupport\QPrintPreviewWidgetSlotsMoc.cpp")
+      ferase("source\QtPrintSupport\QPrintDialogSlotsMoc.cpp")
+      ferase("source\QtPrintSupport\QPrintPreviewDialogSlotsMoc.cpp")
+      ferase("source\QtPrintSupport\QPrintPreviewWidgetSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

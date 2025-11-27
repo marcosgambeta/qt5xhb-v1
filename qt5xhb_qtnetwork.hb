@@ -30,16 +30,16 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtNetwork\QAbstractSocketSlotsMoc.cpp")
-      run("del source\QtNetwork\QDnsLookupSlotsMoc.cpp")
-      run("del source\QtNetwork\QLocalServerSlotsMoc.cpp")
-      run("del source\QtNetwork\QLocalSocketSlotsMoc.cpp")
-      run("del source\QtNetwork\QNetworkAccessManagerSlotsMoc.cpp")
-      run("del source\QtNetwork\QNetworkConfigurationManagerSlotsMoc.cpp")
-      run("del source\QtNetwork\QNetworkReplySlotsMoc.cpp")
-      run("del source\QtNetwork\QNetworkSessionSlotsMoc.cpp")
-      run("del source\QtNetwork\QSslSocketSlotsMoc.cpp")
-      run("del source\QtNetwork\QTcpServerSlotsMoc.cpp")
+      ferase("source\QtNetwork\QAbstractSocketSlotsMoc.cpp")
+      ferase("source\QtNetwork\QDnsLookupSlotsMoc.cpp")
+      ferase("source\QtNetwork\QLocalServerSlotsMoc.cpp")
+      ferase("source\QtNetwork\QLocalSocketSlotsMoc.cpp")
+      ferase("source\QtNetwork\QNetworkAccessManagerSlotsMoc.cpp")
+      ferase("source\QtNetwork\QNetworkConfigurationManagerSlotsMoc.cpp")
+      ferase("source\QtNetwork\QNetworkReplySlotsMoc.cpp")
+      ferase("source\QtNetwork\QNetworkSessionSlotsMoc.cpp")
+      ferase("source\QtNetwork\QSslSocketSlotsMoc.cpp")
+      ferase("source\QtNetwork\QTcpServerSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

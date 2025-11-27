@@ -28,14 +28,14 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtHelp\QHelpContentModelSlotsMoc.cpp")
-      run("del source\QtHelp\QHelpContentWidgetSlotsMoc.cpp")
-      run("del source\QtHelp\QHelpEngineCoreSlotsMoc.cpp")
-      run("del source\QtHelp\QHelpIndexModelSlotsMoc.cpp")
-      run("del source\QtHelp\QHelpIndexWidgetSlotsMoc.cpp")
-      run("del source\QtHelp\QHelpSearchEngineSlotsMoc.cpp")
-      run("del source\QtHelp\QHelpSearchQueryWidgetSlotsMoc.cpp")
-      run("del source\QtHelp\QHelpSearchResultWidgetSlotsMoc.cpp")
+      ferase("source\QtHelp\QHelpContentModelSlotsMoc.cpp")
+      ferase("source\QtHelp\QHelpContentWidgetSlotsMoc.cpp")
+      ferase("source\QtHelp\QHelpEngineCoreSlotsMoc.cpp")
+      ferase("source\QtHelp\QHelpIndexModelSlotsMoc.cpp")
+      ferase("source\QtHelp\QHelpIndexWidgetSlotsMoc.cpp")
+      ferase("source\QtHelp\QHelpSearchEngineSlotsMoc.cpp")
+      ferase("source\QtHelp\QHelpSearchQueryWidgetSlotsMoc.cpp")
+      ferase("source\QtHelp\QHelpSearchResultWidgetSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

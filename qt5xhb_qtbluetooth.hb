@@ -27,13 +27,13 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtBluetooth\QBluetoothDeviceDiscoveryAgentSlotsMoc.cpp")
-      run("del source\QtBluetooth\QBluetoothLocalDeviceSlotsMoc.cpp")
-      run("del source\QtBluetooth\QBluetoothServerSlotsMoc.cpp")
-      run("del source\QtBluetooth\QBluetoothServiceDiscoveryAgentSlotsMoc.cpp")
-      run("del source\QtBluetooth\QBluetoothSocketSlotsMoc.cpp")
-      run("del source\QtBluetooth\QBluetoothTransferManagerSlotsMoc.cpp")
-      run("del source\QtBluetooth\QBluetoothTransferReplySlotsMoc.cpp")
+      ferase("source\QtBluetooth\QBluetoothDeviceDiscoveryAgentSlotsMoc.cpp")
+      ferase("source\QtBluetooth\QBluetoothLocalDeviceSlotsMoc.cpp")
+      ferase("source\QtBluetooth\QBluetoothServerSlotsMoc.cpp")
+      ferase("source\QtBluetooth\QBluetoothServiceDiscoveryAgentSlotsMoc.cpp")
+      ferase("source\QtBluetooth\QBluetoothSocketSlotsMoc.cpp")
+      ferase("source\QtBluetooth\QBluetoothTransferManagerSlotsMoc.cpp")
+      ferase("source\QtBluetooth\QBluetoothTransferReplySlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

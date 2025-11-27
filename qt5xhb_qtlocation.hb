@@ -29,15 +29,15 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtLocation\QGeoCodeReplySlotsMoc.cpp")
-      run("del source\QtLocation\QGeoCodingManagerEngineSlotsMoc.cpp")
-      run("del source\QtLocation\QGeoCodingManagerSlotsMoc.cpp")
-      run("del source\QtLocation\QGeoRouteReplySlotsMoc.cpp")
-      run("del source\QtLocation\QGeoRoutingManagerEngineSlotsMoc.cpp")
-      run("del source\QtLocation\QGeoRoutingManagerSlotsMoc.cpp")
-      run("del source\QtLocation\QPlaceManagerEngineSlotsMoc.cpp")
-      run("del source\QtLocation\QPlaceManagerSlotsMoc.cpp")
-      run("del source\QtLocation\QPlaceReplySlotsMoc.cpp")
+      ferase("source\QtLocation\QGeoCodeReplySlotsMoc.cpp")
+      ferase("source\QtLocation\QGeoCodingManagerEngineSlotsMoc.cpp")
+      ferase("source\QtLocation\QGeoCodingManagerSlotsMoc.cpp")
+      ferase("source\QtLocation\QGeoRouteReplySlotsMoc.cpp")
+      ferase("source\QtLocation\QGeoRoutingManagerEngineSlotsMoc.cpp")
+      ferase("source\QtLocation\QGeoRoutingManagerSlotsMoc.cpp")
+      ferase("source\QtLocation\QPlaceManagerEngineSlotsMoc.cpp")
+      ferase("source\QtLocation\QPlaceManagerSlotsMoc.cpp")
+      ferase("source\QtLocation\QPlaceReplySlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

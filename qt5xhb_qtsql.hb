@@ -22,8 +22,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtSql\QSqlDriverSlotsMoc.cpp")
-      run("del source\QtSql\QSqlTableModelSlotsMoc.cpp")
+      ferase("source\QtSql\QSqlDriverSlotsMoc.cpp")
+      ferase("source\QtSql\QSqlTableModelSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

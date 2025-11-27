@@ -21,7 +21,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtSerialPort\QSerialPortSlotsMoc.cpp")
+      ferase("source\QtSerialPort\QSerialPortSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

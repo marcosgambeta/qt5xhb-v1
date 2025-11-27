@@ -22,8 +22,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtTextToSpeech\QTextToSpeechEngineSlotsMoc.cpp")
-      run("del source\QtTextToSpeech\QTextToSpeechSlotsMoc.cpp")
+      ferase("source\QtTextToSpeech\QTextToSpeechEngineSlotsMoc.cpp")
+      ferase("source\QtTextToSpeech\QTextToSpeechSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

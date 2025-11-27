@@ -24,10 +24,10 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\ActiveQt\QAxBaseSlotsMoc.cpp")
-      run("del source\ActiveQt\QAxObjectSlotsMoc.cpp")
-      run("del source\ActiveQt\QAxScriptSlotsMoc.cpp")
-      run("del source\ActiveQt\QAxWidgetSlotsMoc.cpp")
+      ferase("source\ActiveQt\QAxBaseSlotsMoc.cpp")
+      ferase("source\ActiveQt\QAxObjectSlotsMoc.cpp")
+      ferase("source\ActiveQt\QAxScriptSlotsMoc.cpp")
+      ferase("source\ActiveQt\QAxWidgetSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH

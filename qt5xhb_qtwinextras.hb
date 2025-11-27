@@ -22,8 +22,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtWinExtras\QWinTaskbarProgressSlotsMoc.cpp")
-      run("del source\QtWinExtras\QWinThumbnailToolButtonSlotsMoc.cpp")
+      ferase("source\QtWinExtras\QWinTaskbarProgressSlotsMoc.cpp")
+      ferase("source\QtWinExtras\QWinThumbnailToolButtonSlotsMoc.cpp")
       EXIT
 
    ENDSWITCH
