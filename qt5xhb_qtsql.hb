@@ -1,0 +1,31 @@
+//
+// Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
+//
+// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+//
+
+FUNCTION hbmk_plugin_qt(hbmk)
+
+   LOCAL cRetVal := ""
+
+   SWITCH hbmk["cSTATE"]
+
+   CASE "init"
+      EXIT
+
+   CASE "pre_all"
+      EXIT
+
+   CASE "pre_c"
+      run("moc source\QtSql\QSqlDriverSlots.hpp -o source\QtSql\QSqlDriverSlotsMoc.cpp")
+      run("moc source\QtSql\QSqlTableModelSlots.hpp -o source\QtSql\QSqlTableModelSlotsMoc.cpp")
+      EXIT
+
+   CASE "post_all"
+      run("del source\QtSql\QSqlDriverSlotsMoc.cpp")
+      run("del source\QtSql\QSqlTableModelSlotsMoc.cpp")
+      EXIT
+
+   ENDSWITCH
+
+RETURN cRetVal
