@@ -22,7 +22,7 @@
 #include "qt5xhb_utils.hpp"
 #include "qt5xhb_signals.hpp"
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 using namespace QtCharts;
 
