@@ -4,6 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
+#define RUNMOC(file) run("moc " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
+
 FUNCTION hbmk_plugin_qt(hbmk)
 
    LOCAL cRetVal := ""
