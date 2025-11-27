@@ -19,8 +19,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtTextToSpeech\QTextToSpeechEngineSlots.hpp -o source\QtTextToSpeech\QTextToSpeechEngineSlotsMoc.cpp")
-      run("moc source\QtTextToSpeech\QTextToSpeechSlots.hpp -o source\QtTextToSpeech\QTextToSpeechSlotsMoc.cpp")
+      RUNMOC("source\QtTextToSpeech\QTextToSpeechEngineSlots.hpp")
+      RUNMOC("source\QtTextToSpeech\QTextToSpeechSlots.hpp")
       EXIT
 
    CASE "post_all"

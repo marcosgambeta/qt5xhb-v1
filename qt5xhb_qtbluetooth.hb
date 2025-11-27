@@ -19,13 +19,13 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtBluetooth\QBluetoothDeviceDiscoveryAgentSlots.hpp -o source\QtBluetooth\QBluetoothDeviceDiscoveryAgentSlotsMoc.cpp")
-      run("moc source\QtBluetooth\QBluetoothLocalDeviceSlots.hpp -o source\QtBluetooth\QBluetoothLocalDeviceSlotsMoc.cpp")
-      run("moc source\QtBluetooth\QBluetoothServerSlots.hpp -o source\QtBluetooth\QBluetoothServerSlotsMoc.cpp")
-      run("moc source\QtBluetooth\QBluetoothServiceDiscoveryAgentSlots.hpp -o source\QtBluetooth\QBluetoothServiceDiscoveryAgentSlotsMoc.cpp")
-      run("moc source\QtBluetooth\QBluetoothSocketSlots.hpp -o source\QtBluetooth\QBluetoothSocketSlotsMoc.cpp")
-      run("moc source\QtBluetooth\QBluetoothTransferManagerSlots.hpp -o source\QtBluetooth\QBluetoothTransferManagerSlotsMoc.cpp")
-      run("moc source\QtBluetooth\QBluetoothTransferReplySlots.hpp -o source\QtBluetooth\QBluetoothTransferReplySlotsMoc.cpp")
+      RUNMOC("source\QtBluetooth\QBluetoothDeviceDiscoveryAgentSlots.hpp")
+      RUNMOC("source\QtBluetooth\QBluetoothLocalDeviceSlots.hpp")
+      RUNMOC("source\QtBluetooth\QBluetoothServerSlots.hpp")
+      RUNMOC("source\QtBluetooth\QBluetoothServiceDiscoveryAgentSlots.hpp")
+      RUNMOC("source\QtBluetooth\QBluetoothSocketSlots.hpp")
+      RUNMOC("source\QtBluetooth\QBluetoothTransferManagerSlots.hpp")
+      RUNMOC("source\QtBluetooth\QBluetoothTransferReplySlots.hpp")
       EXIT
 
    CASE "post_all"

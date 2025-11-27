@@ -19,10 +19,10 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtDBus\QDBusConnectionInterfaceSlots.hpp -o source\QtDBus\QDBusConnectionInterfaceSlotsMoc.cpp")
-      run("moc source\QtDBus\QDBusPendingCallWatcherSlots.hpp -o source\QtDBus\QDBusPendingCallWatcherSlotsMoc.cpp")
-      run("moc source\QtDBus\QDBusServerSlots.hpp -o source\QtDBus\QDBusServerSlotsMoc.cpp")
-      run("moc source\QtDBus\QDBusServiceWatcherSlots.hpp -o source\QtDBus\QDBusServiceWatcherSlotsMoc.cpp")
+      RUNMOC("source\QtDBus\QDBusConnectionInterfaceSlots.hpp")
+      RUNMOC("source\QtDBus\QDBusPendingCallWatcherSlots.hpp")
+      RUNMOC("source\QtDBus\QDBusServerSlots.hpp")
+      RUNMOC("source\QtDBus\QDBusServiceWatcherSlots.hpp")
       EXIT
 
    CASE "post_all"

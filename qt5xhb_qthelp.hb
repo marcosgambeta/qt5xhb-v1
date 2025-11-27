@@ -19,14 +19,14 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtHelp\QHelpContentModelSlots.hpp -o source\QtHelp\QHelpContentModelSlotsMoc.cpp")
-      run("moc source\QtHelp\QHelpContentWidgetSlots.hpp -o source\QtHelp\QHelpContentWidgetSlotsMoc.cpp")
-      run("moc source\QtHelp\QHelpEngineCoreSlots.hpp -o source\QtHelp\QHelpEngineCoreSlotsMoc.cpp")
-      run("moc source\QtHelp\QHelpIndexModelSlots.hpp -o source\QtHelp\QHelpIndexModelSlotsMoc.cpp")
-      run("moc source\QtHelp\QHelpIndexWidgetSlots.hpp -o source\QtHelp\QHelpIndexWidgetSlotsMoc.cpp")
-      run("moc source\QtHelp\QHelpSearchEngineSlots.hpp -o source\QtHelp\QHelpSearchEngineSlotsMoc.cpp")
-      run("moc source\QtHelp\QHelpSearchQueryWidgetSlots.hpp -o source\QtHelp\QHelpSearchQueryWidgetSlotsMoc.cpp")
-      run("moc source\QtHelp\QHelpSearchResultWidgetSlots.hpp -o source\QtHelp\QHelpSearchResultWidgetSlotsMoc.cpp")
+      RUNMOC("source\QtHelp\QHelpContentModelSlots.hpp")
+      RUNMOC("source\QtHelp\QHelpContentWidgetSlots.hpp")
+      RUNMOC("source\QtHelp\QHelpEngineCoreSlots.hpp")
+      RUNMOC("source\QtHelp\QHelpIndexModelSlots.hpp")
+      RUNMOC("source\QtHelp\QHelpIndexWidgetSlots.hpp")
+      RUNMOC("source\QtHelp\QHelpSearchEngineSlots.hpp")
+      RUNMOC("source\QtHelp\QHelpSearchQueryWidgetSlots.hpp")
+      RUNMOC("source\QtHelp\QHelpSearchResultWidgetSlots.hpp")
       EXIT
 
    CASE "post_all"

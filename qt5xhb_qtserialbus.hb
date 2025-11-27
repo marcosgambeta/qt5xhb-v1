@@ -19,11 +19,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtSerialBus\QCanBusDeviceSlots.hpp -o source\QtSerialBus\QCanBusDeviceSlotsMoc.cpp")
-      run("moc source\QtSerialBus\QModbusClientSlots.hpp -o source\QtSerialBus\QModbusClientSlotsMoc.cpp")
-      run("moc source\QtSerialBus\QModbusDeviceSlots.hpp -o source\QtSerialBus\QModbusDeviceSlotsMoc.cpp")
-      run("moc source\QtSerialBus\QModbusReplySlots.hpp -o source\QtSerialBus\QModbusReplySlotsMoc.cpp")
-      run("moc source\QtSerialBus\QModbusServerSlots.hpp -o source\QtSerialBus\QModbusServerSlotsMoc.cpp")
+      RUNMOC("source\QtSerialBus\QCanBusDeviceSlots.hpp")
+      RUNMOC("source\QtSerialBus\QModbusClientSlots.hpp")
+      RUNMOC("source\QtSerialBus\QModbusDeviceSlots.hpp")
+      RUNMOC("source\QtSerialBus\QModbusReplySlots.hpp")
+      RUNMOC("source\QtSerialBus\QModbusServerSlots.hpp")
       EXIT
 
    CASE "post_all"

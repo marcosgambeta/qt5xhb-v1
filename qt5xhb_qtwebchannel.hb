@@ -19,8 +19,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtWebChannel\QWebChannelAbstractTransportSlots.hpp -o source\QtWebChannel\QWebChannelAbstractTransportSlotsMoc.cpp")
-      run("moc source\QtWebChannel\QWebChannelSlots.hpp -o source\QtWebChannel\QWebChannelSlotsMoc.cpp")
+      RUNMOC("source\QtWebChannel\QWebChannelAbstractTransportSlots.hpp")
+      RUNMOC("source\QtWebChannel\QWebChannelSlots.hpp")
       EXIT
 
    CASE "post_all"

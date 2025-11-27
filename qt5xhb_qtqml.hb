@@ -19,11 +19,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtQml\QQmlApplicationEngineSlots.hpp -o source\QtQml\QQmlApplicationEngineSlotsMoc.cpp")
-      run("moc source\QtQml\QQmlComponentSlots.hpp -o source\QtQml\QQmlComponentSlotsMoc.cpp")
-      run("moc source\QtQml\QQmlEngineSlots.hpp -o source\QtQml\QQmlEngineSlotsMoc.cpp")
-      run("moc source\QtQml\QQmlExpressionSlots.hpp -o source\QtQml\QQmlExpressionSlotsMoc.cpp")
-      run("moc source\QtQml\QQmlPropertyMapSlots.hpp -o source\QtQml\QQmlPropertyMapSlotsMoc.cpp")
+      RUNMOC("source\QtQml\QQmlApplicationEngineSlots.hpp")
+      RUNMOC("source\QtQml\QQmlComponentSlots.hpp")
+      RUNMOC("source\QtQml\QQmlEngineSlots.hpp")
+      RUNMOC("source\QtQml\QQmlExpressionSlots.hpp")
+      RUNMOC("source\QtQml\QQmlPropertyMapSlots.hpp")
       EXIT
 
    CASE "post_all"

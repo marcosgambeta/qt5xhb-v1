@@ -19,7 +19,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtUiTools\HUiLoader.hpp -o source\QtUiTools\HUiLoaderMoc.cpp")
+      RUNMOC("source\QtUiTools\HUiLoader.hpp")
       EXIT
 
    CASE "post_all"

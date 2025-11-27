@@ -19,7 +19,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtQuickWidgets\QQuickWidgetSlots.hpp -o source\QtQuickWidgets\QQuickWidgetSlotsMoc.cpp")
+      RUNMOC("source\QtQuickWidgets\QQuickWidgetSlots.hpp")
       EXIT
 
    CASE "post_all"

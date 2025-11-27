@@ -19,9 +19,9 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtQuick\QQuickPaintedItemSlots.hpp -o source\QtQuick\QQuickPaintedItemSlotsMoc.cpp")
-      run("moc source\QtQuick\QQuickViewSlots.hpp -o source\QtQuick\QQuickViewSlotsMoc.cpp")
-      run("moc source\QtQuick\QQuickWindowSlots.hpp -o source\QtQuick\QQuickWindowSlotsMoc.cpp")
+      RUNMOC("source\QtQuick\QQuickPaintedItemSlots.hpp")
+      RUNMOC("source\QtQuick\QQuickViewSlots.hpp")
+      RUNMOC("source\QtQuick\QQuickWindowSlots.hpp")
       EXIT
 
    CASE "post_all"

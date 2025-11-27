@@ -19,11 +19,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtVirtualKeyboard\QVirtualKeyboardAbstractInputMethodSlots.hpp -o source\QtVirtualKeyboard\QVirtualKeyboardAbstractInputMethodSlotsMoc.cpp")
-      run("moc source\QtVirtualKeyboard\QVirtualKeyboardInputContextSlots.hpp -o source\QtVirtualKeyboard\QVirtualKeyboardInputContextSlotsMoc.cpp")
-      run("moc source\QtVirtualKeyboard\QVirtualKeyboardInputEngineSlots.hpp -o source\QtVirtualKeyboard\QVirtualKeyboardInputEngineSlotsMoc.cpp")
-      run("moc source\QtVirtualKeyboard\QVirtualKeyboardSelectionListModelSlots.hpp -o source\QtVirtualKeyboard\QVirtualKeyboardSelectionListModelSlotsMoc.cpp")
-      run("moc source\QtVirtualKeyboard\QVirtualKeyboardTraceSlots.hpp -o source\QtVirtualKeyboard\QVirtualKeyboardTraceSlotsMoc.cpp")
+      RUNMOC("source\QtVirtualKeyboard\QVirtualKeyboardAbstractInputMethodSlots.hpp")
+      RUNMOC("source\QtVirtualKeyboard\QVirtualKeyboardInputContextSlots.hpp")
+      RUNMOC("source\QtVirtualKeyboard\QVirtualKeyboardInputEngineSlots.hpp")
+      RUNMOC("source\QtVirtualKeyboard\QVirtualKeyboardSelectionListModelSlots.hpp")
+      RUNMOC("source\QtVirtualKeyboard\QVirtualKeyboardTraceSlots.hpp")
       EXIT
 
    CASE "post_all"

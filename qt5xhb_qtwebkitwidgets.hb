@@ -19,10 +19,10 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtWebKitWidgets\QGraphicsWebViewSlots.hpp -o source\QtWebKitWidgets\QGraphicsWebViewSlotsMoc.cpp")
-      run("moc source\QtWebKitWidgets\QWebFrameSlots.hpp -o source\QtWebKitWidgets\QWebFrameSlotsMoc.cpp")
-      run("moc source\QtWebKitWidgets\QWebPageSlots.hpp -o source\QtWebKitWidgets\QWebPageSlotsMoc.cpp")
-      run("moc source\QtWebKitWidgets\QWebViewSlots.hpp -o source\QtWebKitWidgets\QWebViewSlotsMoc.cpp")
+      RUNMOC("source\QtWebKitWidgets\QGraphicsWebViewSlots.hpp")
+      RUNMOC("source\QtWebKitWidgets\QWebFrameSlots.hpp")
+      RUNMOC("source\QtWebKitWidgets\QWebPageSlots.hpp")
+      RUNMOC("source\QtWebKitWidgets\QWebViewSlots.hpp")
       EXIT
 
    CASE "post_all"

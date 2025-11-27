@@ -19,9 +19,9 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtMultimediaWidgets\QGraphicsVideoItemSlots.hpp -o source\QtMultimediaWidgets\QGraphicsVideoItemSlotsMoc.cpp")
-      run("moc source\QtMultimediaWidgets\QVideoWidgetControlSlots.hpp -o source\QtMultimediaWidgets\QVideoWidgetControlSlotsMoc.cpp")
-      run("moc source\QtMultimediaWidgets\QVideoWidgetSlots.hpp -o source\QtMultimediaWidgets\QVideoWidgetSlotsMoc.cpp")
+      RUNMOC("source\QtMultimediaWidgets\QGraphicsVideoItemSlots.hpp")
+      RUNMOC("source\QtMultimediaWidgets\QVideoWidgetControlSlots.hpp")
+      RUNMOC("source\QtMultimediaWidgets\QVideoWidgetSlots.hpp")
       EXIT
 
    CASE "post_all"

@@ -19,9 +19,9 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtPrintSupport\QPrintDialogSlots.hpp -o source\QtPrintSupport\QPrintDialogSlotsMoc.cpp")
-      run("moc source\QtPrintSupport\QPrintPreviewDialogSlots.hpp -o source\QtPrintSupport\QPrintPreviewDialogSlotsMoc.cpp")
-      run("moc source\QtPrintSupport\QPrintPreviewWidgetSlots.hpp -o source\QtPrintSupport\QPrintPreviewWidgetSlotsMoc.cpp")
+      RUNMOC("source\QtPrintSupport\QPrintDialogSlots.hpp")
+      RUNMOC("source\QtPrintSupport\QPrintPreviewDialogSlots.hpp")
+      RUNMOC("source\QtPrintSupport\QPrintPreviewWidgetSlots.hpp")
       EXIT
 
    CASE "post_all"

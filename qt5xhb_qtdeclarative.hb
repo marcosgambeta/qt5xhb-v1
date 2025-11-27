@@ -19,11 +19,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtDeclarative\QDeclarativeComponentSlots.hpp -o source\QtDeclarative\QDeclarativeComponentSlotsMoc.cpp")
-      run("moc source\QtDeclarative\QDeclarativeEngineSlots.hpp -o source\QtDeclarative\QDeclarativeEngineSlotsMoc.cpp")
-      run("moc source\QtDeclarative\QDeclarativeExpressionSlots.hpp -o source\QtDeclarative\QDeclarativeExpressionSlotsMoc.cpp")
-      run("moc source\QtDeclarative\QDeclarativePropertyMapSlots.hpp -o source\QtDeclarative\QDeclarativePropertyMapSlotsMoc.cpp")
-      run("moc source\QtDeclarative\QDeclarativeViewSlots.hpp -o source\QtDeclarative\QDeclarativeViewSlotsMoc.cpp")
+      RUNMOC("source\QtDeclarative\QDeclarativeComponentSlots.hpp")
+      RUNMOC("source\QtDeclarative\QDeclarativeEngineSlots.hpp")
+      RUNMOC("source\QtDeclarative\QDeclarativeExpressionSlots.hpp")
+      RUNMOC("source\QtDeclarative\QDeclarativePropertyMapSlots.hpp")
+      RUNMOC("source\QtDeclarative\QDeclarativeViewSlots.hpp")
       EXIT
 
    CASE "post_all"

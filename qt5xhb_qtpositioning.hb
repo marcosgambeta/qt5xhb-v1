@@ -19,9 +19,9 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtPositioning\QGeoAreaMonitorSourceSlots.hpp -o source\QtPositioning\QGeoAreaMonitorSourceSlotsMoc.cpp")
-      run("moc source\QtPositioning\QGeoPositionInfoSourceSlots.hpp -o source\QtPositioning\QGeoPositionInfoSourceSlotsMoc.cpp")
-      run("moc source\QtPositioning\QGeoSatelliteInfoSourceSlots.hpp -o source\QtPositioning\QGeoSatelliteInfoSourceSlotsMoc.cpp")
+      RUNMOC("source\QtPositioning\QGeoAreaMonitorSourceSlots.hpp")
+      RUNMOC("source\QtPositioning\QGeoPositionInfoSourceSlots.hpp")
+      RUNMOC("source\QtPositioning\QGeoSatelliteInfoSourceSlots.hpp")
       EXIT
 
    CASE "post_all"

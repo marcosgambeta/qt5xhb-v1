@@ -19,7 +19,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtPurchasing\QInAppStoreSlots.hpp -o source\QtPurchasing\QInAppStoreSlotsMoc.cpp")
+      RUNMOC("source\QtPurchasing\QInAppStoreSlots.hpp")
       EXIT
 
    CASE "post_all"

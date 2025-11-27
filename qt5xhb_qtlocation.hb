@@ -19,15 +19,15 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtLocation\QGeoCodeReplySlots.hpp -o source\QtLocation\QGeoCodeReplySlotsMoc.cpp")
-      run("moc source\QtLocation\QGeoCodingManagerEngineSlots.hpp -o source\QtLocation\QGeoCodingManagerEngineSlotsMoc.cpp")
-      run("moc source\QtLocation\QGeoCodingManagerSlots.hpp -o source\QtLocation\QGeoCodingManagerSlotsMoc.cpp")
-      run("moc source\QtLocation\QGeoRouteReplySlots.hpp -o source\QtLocation\QGeoRouteReplySlotsMoc.cpp")
-      run("moc source\QtLocation\QGeoRoutingManagerEngineSlots.hpp -o source\QtLocation\QGeoRoutingManagerEngineSlotsMoc.cpp")
-      run("moc source\QtLocation\QGeoRoutingManagerSlots.hpp -o source\QtLocation\QGeoRoutingManagerSlotsMoc.cpp")
-      run("moc source\QtLocation\QPlaceManagerEngineSlots.hpp -o source\QtLocation\QPlaceManagerEngineSlotsMoc.cpp")
-      run("moc source\QtLocation\QPlaceManagerSlots.hpp -o source\QtLocation\QPlaceManagerSlotsMoc.cpp")
-      run("moc source\QtLocation\QPlaceReplySlots.hpp -o source\QtLocation\QPlaceReplySlotsMoc.cpp")
+      RUNMOC("source\QtLocation\QGeoCodeReplySlots.hpp")
+      RUNMOC("source\QtLocation\QGeoCodingManagerEngineSlots.hpp")
+      RUNMOC("source\QtLocation\QGeoCodingManagerSlots.hpp")
+      RUNMOC("source\QtLocation\QGeoRouteReplySlots.hpp")
+      RUNMOC("source\QtLocation\QGeoRoutingManagerEngineSlots.hpp")
+      RUNMOC("source\QtLocation\QGeoRoutingManagerSlots.hpp")
+      RUNMOC("source\QtLocation\QPlaceManagerEngineSlots.hpp")
+      RUNMOC("source\QtLocation\QPlaceManagerSlots.hpp")
+      RUNMOC("source\QtLocation\QPlaceReplySlots.hpp")
       EXIT
 
    CASE "post_all"

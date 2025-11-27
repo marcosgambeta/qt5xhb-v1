@@ -19,7 +19,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtScriptTools\QScriptEngineDebuggerSlots.hpp -o source\QtScriptTools\QScriptEngineDebuggerSlotsMoc.cpp")
+      RUNMOC("source\QtScriptTools\QScriptEngineDebuggerSlots.hpp")
       EXIT
 
    CASE "post_all"

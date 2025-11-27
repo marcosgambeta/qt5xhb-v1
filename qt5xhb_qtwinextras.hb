@@ -19,8 +19,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtWinExtras\QWinTaskbarProgressSlots.hpp -o source\QtWinExtras\QWinTaskbarProgressSlotsMoc.cpp")
-      run("moc source\QtWinExtras\QWinThumbnailToolButtonSlots.hpp -o source\QtWinExtras\QWinThumbnailToolButtonSlotsMoc.cpp")
+      RUNMOC("source\QtWinExtras\QWinTaskbarProgressSlots.hpp")
+      RUNMOC("source\QtWinExtras\QWinThumbnailToolButtonSlots.hpp")
       EXIT
 
    CASE "post_all"

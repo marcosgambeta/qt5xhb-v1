@@ -19,7 +19,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtSvg\QSvgRendererSlots.hpp -o source\QtSvg\QSvgRendererSlotsMoc.cpp")
+      RUNMOC("source\QtSvg\QSvgRendererSlots.hpp")
       EXIT
 
    CASE "post_all"

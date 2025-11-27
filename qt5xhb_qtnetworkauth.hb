@@ -19,11 +19,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtNetworkAuth\QAbstractOAuth2Slots.hpp -o source\QtNetworkAuth\QAbstractOAuth2SlotsMoc.cpp")
-      run("moc source\QtNetworkAuth\QAbstractOAuthReplyHandlerSlots.hpp -o source\QtNetworkAuth\QAbstractOAuthReplyHandlerSlotsMoc.cpp")
-      run("moc source\QtNetworkAuth\QAbstractOAuthSlots.hpp -o source\QtNetworkAuth\QAbstractOAuthSlotsMoc.cpp")
-      run("moc source\QtNetworkAuth\QOAuth1Slots.hpp -o source\QtNetworkAuth\QOAuth1SlotsMoc.cpp")
-      run("moc source\QtNetworkAuth\QOAuth2AuthorizationCodeFlowSlots.hpp -o source\QtNetworkAuth\QOAuth2AuthorizationCodeFlowSlotsMoc.cpp")
+      RUNMOC("source\QtNetworkAuth\QAbstractOAuth2Slots.hpp")
+      RUNMOC("source\QtNetworkAuth\QAbstractOAuthReplyHandlerSlots.hpp")
+      RUNMOC("source\QtNetworkAuth\QAbstractOAuthSlots.hpp")
+      RUNMOC("source\QtNetworkAuth\QOAuth1Slots.hpp")
+      RUNMOC("source\QtNetworkAuth\QOAuth2AuthorizationCodeFlowSlots.hpp")
       EXIT
 
    CASE "post_all"

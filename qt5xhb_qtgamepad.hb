@@ -19,9 +19,9 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtGamepad\QGamepadKeyNavigationSlots.hpp -o source\QtGamepad\QGamepadKeyNavigationSlotsMoc.cpp")
-      run("moc source\QtGamepad\QGamepadManagerSlots.hpp -o source\QtGamepad\QGamepadManagerSlotsMoc.cpp")
-      run("moc source\QtGamepad\QGamepadSlots.hpp -o source\QtGamepad\QGamepadSlotsMoc.cpp")
+      RUNMOC("source\QtGamepad\QGamepadKeyNavigationSlots.hpp")
+      RUNMOC("source\QtGamepad\QGamepadManagerSlots.hpp")
+      RUNMOC("source\QtGamepad\QGamepadSlots.hpp")
       EXIT
 
    CASE "post_all"

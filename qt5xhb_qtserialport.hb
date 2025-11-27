@@ -19,7 +19,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtSerialPort\QSerialPortSlots.hpp -o source\QtSerialPort\QSerialPortSlotsMoc.cpp")
+      RUNMOC("source\QtSerialPort\QSerialPortSlots.hpp")
       EXIT
 
    CASE "post_all"

@@ -19,8 +19,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtDesigner\QDesignerFormWindowManagerInterfaceSlots.hpp -o source\QtDesigner\QDesignerFormWindowManagerInterfaceSlotsMoc.cpp")
-      run("moc source\QtDesigner\QDesignerPropertyEditorInterfaceSlots.hpp -o source\QtDesigner\QDesignerPropertyEditorInterfaceSlotsMoc.cpp")
+      RUNMOC("source\QtDesigner\QDesignerFormWindowManagerInterfaceSlots.hpp")
+      RUNMOC("source\QtDesigner\QDesignerPropertyEditorInterfaceSlots.hpp")
       EXIT
 
    CASE "post_all"

@@ -19,15 +19,15 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtSensors\QAccelerometerSlots.hpp -o source\QtSensors\QAccelerometerSlotsMoc.cpp")
-      run("moc source\QtSensors\QLightSensorSlots.hpp -o source\QtSensors\QLightSensorSlotsMoc.cpp")
-      run("moc source\QtSensors\QMagnetometerSlots.hpp -o source\QtSensors\QMagnetometerSlotsMoc.cpp")
-      run("moc source\QtSensors\QRotationSensorSlots.hpp -o source\QtSensors\QRotationSensorSlotsMoc.cpp")
-      run("moc source\QtSensors\QSensorGestureManagerSlots.hpp -o source\QtSensors\QSensorGestureManagerSlotsMoc.cpp")
-      run("moc source\QtSensors\QSensorGestureRecognizerSlots.hpp -o source\QtSensors\QSensorGestureRecognizerSlotsMoc.cpp")
-      run("moc source\QtSensors\QSensorGestureSlots.hpp -o source\QtSensors\QSensorGestureSlotsMoc.cpp")
-      run("moc source\QtSensors\QSensorSlots.hpp -o source\QtSensors\QSensorSlotsMoc.cpp")
-      run("moc source\QtSensors\QTapSensorSlots.hpp -o source\QtSensors\QTapSensorSlotsMoc.cpp")
+      RUNMOC("source\QtSensors\QAccelerometerSlots.hpp")
+      RUNMOC("source\QtSensors\QLightSensorSlots.hpp")
+      RUNMOC("source\QtSensors\QMagnetometerSlots.hpp")
+      RUNMOC("source\QtSensors\QRotationSensorSlots.hpp")
+      RUNMOC("source\QtSensors\QSensorGestureManagerSlots.hpp")
+      RUNMOC("source\QtSensors\QSensorGestureRecognizerSlots.hpp")
+      RUNMOC("source\QtSensors\QSensorGestureSlots.hpp")
+      RUNMOC("source\QtSensors\QSensorSlots.hpp")
+      RUNMOC("source\QtSensors\QTapSensorSlots.hpp")
       EXIT
 
    CASE "post_all"
