@@ -15,6 +15,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
       cMocExe := "moc"
    ENDIF
 
+   HB_SYMBOL_UNUSED(cMocExe)
+
    SWITCH hbmk["cSTATE"]
 
    CASE "init"
