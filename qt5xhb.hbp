@@ -57,7 +57,7 @@ qt5xhb_qtwebchannel.hbp
 qt5xhb_qtwebsockets.hbp
 #qt5xhb_qtwebview.hbp
 qt5xhb_qtwidgets.hbp
-#qt5xhb_qtwinextras.hbp
+qt5xhb_qtwinextras.hbp
 #qt5xhb_qtx11extras.hbp
 qt5xhb_qtxml.hbp
 qt5xhb_qtxmlpatterns.hbp
