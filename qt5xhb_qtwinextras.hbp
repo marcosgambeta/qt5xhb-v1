@@ -31,6 +31,7 @@
 -cflag=-DQT_NO_DEBUG
 -cflag=-DQT_THREAD_SUPPORT
 -cflag=-DQT_WINEXTRAS_LIB
+-cflag=-DQT_WIDGETS_LIB
 -cflag=-Wno-deprecated-declarations
 
 -plugin=qt5xhb_qtwinextras.hb
