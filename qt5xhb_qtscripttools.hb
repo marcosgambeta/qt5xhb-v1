@@ -4,11 +4,16 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#define RUNMOC(file) run("moc " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
+#define RUNMOC(file) run(cMocExe + " " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
 
 FUNCTION hbmk_plugin_qt(hbmk)
 
    LOCAL cRetVal := ""
+   LOCAL cMocExe := getenv("QT_MOC_EXE")
+
+   IF empty(cMocExe)
+      cMocExe := "moc"
+   ENDIF
 
    SWITCH hbmk["cSTATE"]
 
