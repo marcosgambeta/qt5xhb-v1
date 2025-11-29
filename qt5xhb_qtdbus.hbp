@@ -24,7 +24,7 @@
 
 -cflag=-frtti
 -cflag=-fexceptions
--cflag=-mthreads
+{allmingw}-cflag=-mthreads
 -cflag=-Wall
 -cflag=-DUNICODE
 -cflag=-DQT_DLL
