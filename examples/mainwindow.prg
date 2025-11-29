@@ -114,29 +114,29 @@ METHOD createMenuBar() CLASS MainWindow
 
    ::oMenu1 := ::oMenuBar:addMenu("&Arquivo")
 
-   ::oActionNew := ::oMenu1:AddAction(QIcon():new("images\new.png"), "&Novo")
+   ::oActionNew := ::oMenu1:AddAction(QIcon():new("images/new.png"), "&Novo")
    ::oActionNew:setStatusTip("Executa a opção NOVO")
    ::oActionNew:onTriggered({|w, l|::showMessage("Arquivo/Novo")})
 
-   ::oActionOpen := ::oMenu1:AddAction(QIcon():new("images\open.png"), "&Abrir")
+   ::oActionOpen := ::oMenu1:AddAction(QIcon():new("images/open.png"), "&Abrir")
    ::oActionOpen:setStatusTip("Executa a opção ABRIR")
    ::oActionOpen:onTriggered({|w, l|::showMessage("Arquivo/Abrir")})
 
-   ::oActionSave := ::oMenu1:AddAction(QIcon():new("images\save.png"), "&Salvar")
+   ::oActionSave := ::oMenu1:AddAction(QIcon():new("images/save.png"), "&Salvar")
    ::oActionSave:setStatusTip("Executa a opção SALVAR")
    ::oActionSave:onTriggered({|w, l|::showMessage("Arquivo/Salvar")})
 
    ::oMenu2 := ::oMenuBar:AddMenu("&Editar")
 
-   ::oActionCut := ::oMenu2:AddAction(QIcon():New("images\cut.png"), "&Recortar")
+   ::oActionCut := ::oMenu2:AddAction(QIcon():New("images/cut.png"), "&Recortar")
    ::oActionCut:setStatusTip("Executa a opção RECORTAR")
    ::oActionCut:onTriggered({|w, l|::showMessage("Editar/Recortar")})
 
-   ::oActionCopy := ::oMenu2:AddAction(QIcon():new("images\copy.png"), "&Copiar")
+   ::oActionCopy := ::oMenu2:AddAction(QIcon():new("images/copy.png"), "&Copiar")
    ::oActionCopy:setStatusTip("Executa a opção COPIAR")
    ::oActionCopy:onTriggered({|w, l|::showMessage("Editar/Copiar")})
 
-   ::oActionPaste := ::oMenu2:AddAction(QIcon():New("images\paste.png"), "C&olar")
+   ::oActionPaste := ::oMenu2:AddAction(QIcon():New("images/paste.png"), "C&olar")
    ::oActionPaste:setStatusTip("Executa a opção COLAR")
    ::oActionPaste:onTriggered({|w, l|::showMessage("Editar/Colar")})
 
