@@ -35,4 +35,4 @@
 
 -plugin=qt5xhb_qtwebview.hb
 
-source\QtWebView\QtWebViewVersion.cpp
+source/QtWebView/QtWebViewVersion.cpp

@@ -35,14 +35,14 @@
 
 -plugin=qt5xhb_qtopengl.hb
 
-source\QtOpenGL\QGLBuffer.prg
-source\QtOpenGL\QGLColormap.prg
-source\QtOpenGL\QGLContext.prg
-source\QtOpenGL\QGLFormat.prg
-source\QtOpenGL\QGLFramebufferObject.prg
-source\QtOpenGL\QGLFramebufferObjectFormat.prg
-source\QtOpenGL\QGLFunctions.prg
-source\QtOpenGL\QGLPixelBuffer.prg
-source\QtOpenGL\QGLShader.prg
-source\QtOpenGL\QGLWidget.prg
-source\QtOpenGL\QtOpenGLVersion.cpp
+source/QtOpenGL/QGLBuffer.prg
+source/QtOpenGL/QGLColormap.prg
+source/QtOpenGL/QGLContext.prg
+source/QtOpenGL/QGLFormat.prg
+source/QtOpenGL/QGLFramebufferObject.prg
+source/QtOpenGL/QGLFramebufferObjectFormat.prg
+source/QtOpenGL/QGLFunctions.prg
+source/QtOpenGL/QGLPixelBuffer.prg
+source/QtOpenGL/QGLShader.prg
+source/QtOpenGL/QGLWidget.prg
+source/QtOpenGL/QtOpenGLVersion.cpp

@@ -35,12 +35,12 @@
 
 -plugin=qt5xhb_qttexttospeech.hb
 
-source\QtTextToSpeech\QTextToSpeech.prg
-source\QtTextToSpeech\QTextToSpeechEngine.prg
-source\QtTextToSpeech\QTextToSpeechEngineSlots.cpp
-source\QtTextToSpeech\QTextToSpeechEngineSlotsMoc.cpp
-source\QtTextToSpeech\QTextToSpeechPlugin.prg
-source\QtTextToSpeech\QTextToSpeechSlots.cpp
-source\QtTextToSpeech\QTextToSpeechSlotsMoc.cpp
-source\QtTextToSpeech\QtTextToSpeechVersion.cpp
-source\QtTextToSpeech\QVoice.prg
+source/QtTextToSpeech/QTextToSpeech.prg
+source/QtTextToSpeech/QTextToSpeechEngine.prg
+source/QtTextToSpeech/QTextToSpeechEngineSlots.cpp
+source/QtTextToSpeech/QTextToSpeechEngineSlotsMoc.cpp
+source/QtTextToSpeech/QTextToSpeechPlugin.prg
+source/QtTextToSpeech/QTextToSpeechSlots.cpp
+source/QtTextToSpeech/QTextToSpeechSlotsMoc.cpp
+source/QtTextToSpeech/QtTextToSpeechVersion.cpp
+source/QtTextToSpeech/QVoice.prg

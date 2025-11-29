@@ -35,10 +35,10 @@
 
 -plugin=qt5xhb_qtwebenginecore.hb
 
-source\QtWebEngineCore\QtWebEngineCoreVersion.cpp
-#source\QtWebEngineCore\QWebEngineCookieStore.prg
-#source\QtWebEngineCore\QWebEngineHttpRequest.prg
-#source\QtWebEngineCore\QWebEngineUrlRequestInfo.prg
-#source\QtWebEngineCore\QWebEngineUrlRequestInterceptor.prg
-#source\QtWebEngineCore\QWebEngineUrlRequestJob.prg
-#source\QtWebEngineCore\QWebEngineUrlSchemeHandler.prg
+source/QtWebEngineCore/QtWebEngineCoreVersion.cpp
+#source/QtWebEngineCore/QWebEngineCookieStore.prg
+#source/QtWebEngineCore/QWebEngineHttpRequest.prg
+#source/QtWebEngineCore/QWebEngineUrlRequestInfo.prg
+#source/QtWebEngineCore/QWebEngineUrlRequestInterceptor.prg
+#source/QtWebEngineCore/QWebEngineUrlRequestJob.prg
+#source/QtWebEngineCore/QWebEngineUrlSchemeHandler.prg

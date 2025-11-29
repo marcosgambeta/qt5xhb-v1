@@ -35,14 +35,14 @@
 
 -plugin=qt5xhb_qtandroidextras.hb
 
-source\QtAndroidExtras\QAndroidActivityResultReceiver.prg
-source\QtAndroidExtras\QAndroidBinder.prg
-source\QtAndroidExtras\QAndroidIntent.prg
-source\QtAndroidExtras\QAndroidJniEnvironment.prg
-source\QtAndroidExtras\QAndroidJniExceptionCleaner.prg
-source\QtAndroidExtras\QAndroidJniObject.prg
-source\QtAndroidExtras\QAndroidParcel.prg
-source\QtAndroidExtras\QAndroidService.prg
-source\QtAndroidExtras\QAndroidServiceConnection.prg
-source\QtAndroidExtras\QtAndroid.prg
-source\QtAndroidExtras\QtAndroidExtrasVersion.cpp
+source/QtAndroidExtras/QAndroidActivityResultReceiver.prg
+source/QtAndroidExtras/QAndroidBinder.prg
+source/QtAndroidExtras/QAndroidIntent.prg
+source/QtAndroidExtras/QAndroidJniEnvironment.prg
+source/QtAndroidExtras/QAndroidJniExceptionCleaner.prg
+source/QtAndroidExtras/QAndroidJniObject.prg
+source/QtAndroidExtras/QAndroidParcel.prg
+source/QtAndroidExtras/QAndroidService.prg
+source/QtAndroidExtras/QAndroidServiceConnection.prg
+source/QtAndroidExtras/QtAndroid.prg
+source/QtAndroidExtras/QtAndroidExtrasVersion.cpp

@@ -35,11 +35,11 @@
 
 -plugin=qt5xhb_qtwebengine.hb
 
-source\QtWebEngine\QQuickWebEngineProfile.prg
-source\QtWebEngine\QQuickWebEngineProfileSlots.cpp
-source\QtWebEngine\QQuickWebEngineProfileSlotsMoc.cpp
-source\QtWebEngine\QQuickWebEngineScript.prg
-source\QtWebEngine\QQuickWebEngineScriptSlots.cpp
-source\QtWebEngine\QQuickWebEngineScriptSlotsMoc.cpp
-source\QtWebEngine\QtWebEngine.prg
-source\QtWebEngine\QtWebEngineVersion.cpp
+source/QtWebEngine/QQuickWebEngineProfile.prg
+source/QtWebEngine/QQuickWebEngineProfileSlots.cpp
+source/QtWebEngine/QQuickWebEngineProfileSlotsMoc.cpp
+source/QtWebEngine/QQuickWebEngineScript.prg
+source/QtWebEngine/QQuickWebEngineScriptSlots.cpp
+source/QtWebEngine/QQuickWebEngineScriptSlotsMoc.cpp
+source/QtWebEngine/QtWebEngine.prg
+source/QtWebEngine/QtWebEngineVersion.cpp

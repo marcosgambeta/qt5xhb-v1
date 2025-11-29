@@ -35,8 +35,8 @@
 
 -plugin=qt5xhb_qtuitools.hb
 
-source\QtUiTools\HUiLoader.cpp
-source\QtUiTools\HUiLoaderMoc.cpp
-source\QtUiTools\HUiLoaderClass.prg
-source\QtUiTools\QtUiToolsVersion.cpp
-source\QtUiTools\QUiLoader.prg
+source/QtUiTools/HUiLoader.cpp
+source/QtUiTools/HUiLoaderMoc.cpp
+source/QtUiTools/HUiLoaderClass.prg
+source/QtUiTools/QtUiToolsVersion.cpp
+source/QtUiTools/QUiLoader.prg

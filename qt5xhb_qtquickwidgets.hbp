@@ -35,7 +35,7 @@
 
 -plugin=qt5xhb_qtquickwidgets.hb
 
-source\QtQuickWidgets\QQuickWidget.prg
-source\QtQuickWidgets\QQuickWidgetSlots.cpp
-source\QtQuickWidgets\QQuickWidgetSlotsMoc.cpp
-source\QtQuickWidgets\QtQuickWidgetsVersion.cpp
+source/QtQuickWidgets/QQuickWidget.prg
+source/QtQuickWidgets/QQuickWidgetSlots.cpp
+source/QtQuickWidgets/QQuickWidgetSlotsMoc.cpp
+source/QtQuickWidgets/QtQuickWidgetsVersion.cpp

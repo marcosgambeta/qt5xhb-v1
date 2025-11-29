@@ -35,18 +35,18 @@
 
 -plugin=qt5xhb_qtwebkitwidgets.hb
 
-source\QtWebKitWidgets\QGraphicsWebView.prg
-source\QtWebKitWidgets\QGraphicsWebViewSlots.cpp
-source\QtWebKitWidgets\QGraphicsWebViewSlotsMoc.cpp
-source\QtWebKitWidgets\QtWebKitWidgetsVersion.cpp
-source\QtWebKitWidgets\QWebFrame.prg
-source\QtWebKitWidgets\QWebFrameSlots.cpp
-source\QtWebKitWidgets\QWebFrameSlotsMoc.cpp
-source\QtWebKitWidgets\QWebHitTestResult.prg
-source\QtWebKitWidgets\QWebInspector.prg
-source\QtWebKitWidgets\QWebPage.prg
-source\QtWebKitWidgets\QWebPageSlots.cpp
-source\QtWebKitWidgets\QWebPageSlotsMoc.cpp
-source\QtWebKitWidgets\QWebView.prg
-source\QtWebKitWidgets\QWebViewSlots.cpp
-source\QtWebKitWidgets\QWebViewSlotsMoc.cpp
+source/QtWebKitWidgets/QGraphicsWebView.prg
+source/QtWebKitWidgets/QGraphicsWebViewSlots.cpp
+source/QtWebKitWidgets/QGraphicsWebViewSlotsMoc.cpp
+source/QtWebKitWidgets/QtWebKitWidgetsVersion.cpp
+source/QtWebKitWidgets/QWebFrame.prg
+source/QtWebKitWidgets/QWebFrameSlots.cpp
+source/QtWebKitWidgets/QWebFrameSlotsMoc.cpp
+source/QtWebKitWidgets/QWebHitTestResult.prg
+source/QtWebKitWidgets/QWebInspector.prg
+source/QtWebKitWidgets/QWebPage.prg
+source/QtWebKitWidgets/QWebPageSlots.cpp
+source/QtWebKitWidgets/QWebPageSlotsMoc.cpp
+source/QtWebKitWidgets/QWebView.prg
+source/QtWebKitWidgets/QWebViewSlots.cpp
+source/QtWebKitWidgets/QWebViewSlotsMoc.cpp

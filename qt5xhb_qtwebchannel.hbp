@@ -35,11 +35,11 @@
 
 -plugin=qt5xhb_qtwebchannel.hb
 
-source\QtWebChannel\QQmlWebChannel.prg
-source\QtWebChannel\QtWebChannelVersion.cpp
-source\QtWebChannel\QWebChannel.prg
-source\QtWebChannel\QWebChannelAbstractTransport.prg
-source\QtWebChannel\QWebChannelAbstractTransportSlots.cpp
-source\QtWebChannel\QWebChannelAbstractTransportSlotsMoc.cpp
-source\QtWebChannel\QWebChannelSlots.cpp
-source\QtWebChannel\QWebChannelSlotsMoc.cpp
+source/QtWebChannel/QQmlWebChannel.prg
+source/QtWebChannel/QtWebChannelVersion.cpp
+source/QtWebChannel/QWebChannel.prg
+source/QtWebChannel/QWebChannelAbstractTransport.prg
+source/QtWebChannel/QWebChannelAbstractTransportSlots.cpp
+source/QtWebChannel/QWebChannelAbstractTransportSlotsMoc.cpp
+source/QtWebChannel/QWebChannelSlots.cpp
+source/QtWebChannel/QWebChannelSlotsMoc.cpp

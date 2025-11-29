@@ -35,5 +35,5 @@
 
 -plugin=qt5xhb_qtmacextras.hb
 
-source\QtMacExtras\QMacPasteboardMime.prg
-source\QtMacExtras\QtMacExtrasVersion.cpp
+source/QtMacExtras/QMacPasteboardMime.prg
+source/QtMacExtras/QtMacExtrasVersion.cpp

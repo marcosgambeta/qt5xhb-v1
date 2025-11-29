@@ -35,9 +35,9 @@
 
 -plugin=qt5xhb_qtpurchasing.hb
 
-source\QtPurchasing\QInAppProduct.prg
-source\QtPurchasing\QInAppStore.prg
-source\QtPurchasing\QInAppStoreSlots.cpp
-source\QtPurchasing\QInAppStoreSlotsMoc.cpp
-source\QtPurchasing\QInAppTransaction.prg
-source\QtPurchasing\QtPurchasingVersion.cpp
+source/QtPurchasing/QInAppProduct.prg
+source/QtPurchasing/QInAppStore.prg
+source/QtPurchasing/QInAppStoreSlots.cpp
+source/QtPurchasing/QInAppStoreSlotsMoc.cpp
+source/QtPurchasing/QInAppTransaction.prg
+source/QtPurchasing/QtPurchasingVersion.cpp

@@ -35,10 +35,10 @@
 
 -plugin=qt5xhb_qtsvg.hb
 
-source\QtSvg\QGraphicsSvgItem.prg
-source\QtSvg\QSvgGenerator.prg
-source\QtSvg\QSvgRenderer.prg
-source\QtSvg\QSvgRendererSlots.cpp
-source\QtSvg\QSvgRendererSlotsMoc.cpp
-source\QtSvg\QSvgWidget.prg
-source\QtSvg\QtSvgVersion.cpp
+source/QtSvg/QGraphicsSvgItem.prg
+source/QtSvg/QSvgGenerator.prg
+source/QtSvg/QSvgRenderer.prg
+source/QtSvg/QSvgRendererSlots.cpp
+source/QtSvg/QSvgRendererSlotsMoc.cpp
+source/QtSvg/QSvgWidget.prg
+source/QtSvg/QtSvgVersion.cpp

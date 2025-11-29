@@ -35,12 +35,12 @@
 
 -plugin=qt5xhb_qtwebsockets.hb
 
-source\QtWebSockets\QMaskGenerator.prg
-source\QtWebSockets\QtWebSocketsVersion.cpp
-source\QtWebSockets\QWebSocket.prg
-source\QtWebSockets\QWebSocketCorsAuthenticator.prg
-source\QtWebSockets\QWebSocketServer.prg
-source\QtWebSockets\QWebSocketServerSlots.cpp
-source\QtWebSockets\QWebSocketServerSlotsMoc.cpp
-source\QtWebSockets\QWebSocketSlots.cpp
-source\QtWebSockets\QWebSocketSlotsMoc.cpp
+source/QtWebSockets/QMaskGenerator.prg
+source/QtWebSockets/QtWebSocketsVersion.cpp
+source/QtWebSockets/QWebSocket.prg
+source/QtWebSockets/QWebSocketCorsAuthenticator.prg
+source/QtWebSockets/QWebSocketServer.prg
+source/QtWebSockets/QWebSocketServerSlots.cpp
+source/QtWebSockets/QWebSocketServerSlotsMoc.cpp
+source/QtWebSockets/QWebSocketSlots.cpp
+source/QtWebSockets/QWebSocketSlotsMoc.cpp

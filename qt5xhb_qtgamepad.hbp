@@ -35,13 +35,13 @@
 
 -plugin=qt5xhb_qtgamepad.hb
 
-source\QtGamepad\QGamepad.prg
-source\QtGamepad\QGamepadKeyNavigation.prg
-source\QtGamepad\QGamepadKeyNavigationSlots.cpp
-source\QtGamepad\QGamepadKeyNavigationSlotsMoc.cpp
-source\QtGamepad\QGamepadManager.prg
-source\QtGamepad\QGamepadManagerSlots.cpp
-source\QtGamepad\QGamepadManagerSlotsMoc.cpp
-source\QtGamepad\QGamepadSlots.cpp
-source\QtGamepad\QGamepadSlotsMoc.cpp
-source\QtGamepad\QtGamepadVersion.cpp
+source/QtGamepad/QGamepad.prg
+source/QtGamepad/QGamepadKeyNavigation.prg
+source/QtGamepad/QGamepadKeyNavigationSlots.cpp
+source/QtGamepad/QGamepadKeyNavigationSlotsMoc.cpp
+source/QtGamepad/QGamepadManager.prg
+source/QtGamepad/QGamepadManagerSlots.cpp
+source/QtGamepad/QGamepadManagerSlotsMoc.cpp
+source/QtGamepad/QGamepadSlots.cpp
+source/QtGamepad/QGamepadSlotsMoc.cpp
+source/QtGamepad/QtGamepadVersion.cpp

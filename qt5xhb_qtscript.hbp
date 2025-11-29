@@ -35,19 +35,19 @@
 
 -plugin=qt5xhb_qtscript.hb
 
-source\QtScript\QScriptable.prg
-source\QtScript\QScriptClass.prg
-source\QtScript\QScriptClassPropertyIterator.prg
-source\QtScript\QScriptContext.prg
-source\QtScript\QScriptContextInfo.prg
-source\QtScript\QScriptEngine.prg
-source\QtScript\QScriptEngineAgent.prg
-source\QtScript\QScriptEngineSlots.cpp
-source\QtScript\QScriptEngineSlotsMoc.cpp
-source\QtScript\QScriptExtensionPlugin.prg
-source\QtScript\QScriptProgram.prg
-source\QtScript\QScriptString.prg
-source\QtScript\QScriptSyntaxCheckResult.prg
-source\QtScript\QScriptValue.prg
-source\QtScript\QScriptValueIterator.prg
-source\QtScript\QtScriptVersion.cpp
+source/QtScript/QScriptable.prg
+source/QtScript/QScriptClass.prg
+source/QtScript/QScriptClassPropertyIterator.prg
+source/QtScript/QScriptContext.prg
+source/QtScript/QScriptContextInfo.prg
+source/QtScript/QScriptEngine.prg
+source/QtScript/QScriptEngineAgent.prg
+source/QtScript/QScriptEngineSlots.cpp
+source/QtScript/QScriptEngineSlotsMoc.cpp
+source/QtScript/QScriptExtensionPlugin.prg
+source/QtScript/QScriptProgram.prg
+source/QtScript/QScriptString.prg
+source/QtScript/QScriptSyntaxCheckResult.prg
+source/QtScript/QScriptValue.prg
+source/QtScript/QScriptValueIterator.prg
+source/QtScript/QtScriptVersion.cpp

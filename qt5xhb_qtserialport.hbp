@@ -35,8 +35,8 @@
 
 -plugin=qt5xhb_qtserialport.hb
 
-source\QtSerialPort\QSerialPort.prg
-source\QtSerialPort\QSerialPortInfo.prg
-source\QtSerialPort\QSerialPortSlots.cpp
-source\QtSerialPort\QSerialPortSlotsMoc.cpp
-source\QtSerialPort\QtSerialPortVersion.cpp
+source/QtSerialPort/QSerialPort.prg
+source/QtSerialPort/QSerialPortInfo.prg
+source/QtSerialPort/QSerialPortSlots.cpp
+source/QtSerialPort/QSerialPortSlotsMoc.cpp
+source/QtSerialPort/QtSerialPortVersion.cpp

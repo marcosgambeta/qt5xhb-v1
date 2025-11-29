@@ -35,20 +35,20 @@
 
 -plugin=qt5xhb_qtxmlpatterns.hb
 
-source\QtXmlPatterns\QAbstractMessageHandler.prg
-source\QtXmlPatterns\QAbstractUriResolver.prg
-source\QtXmlPatterns\QAbstractXmlNodeModel.prg
-source\QtXmlPatterns\QAbstractXmlReceiver.prg
-source\QtXmlPatterns\QSimpleXmlNodeModel.prg
-source\QtXmlPatterns\QSourceLocation.prg
-source\QtXmlPatterns\QtXmlPatternsVersion.cpp
-source\QtXmlPatterns\QXmlFormatter.prg
-source\QtXmlPatterns\QXmlItem.prg
-source\QtXmlPatterns\QXmlName.prg
-source\QtXmlPatterns\QXmlNamePool.prg
-source\QtXmlPatterns\QXmlNodeModelIndex.prg
-source\QtXmlPatterns\QXmlQuery.prg
-source\QtXmlPatterns\QXmlResultItems.prg
-source\QtXmlPatterns\QXmlSchema.prg
-source\QtXmlPatterns\QXmlSchemaValidator.prg
-source\QtXmlPatterns\QXmlSerializer.prg
+source/QtXmlPatterns/QAbstractMessageHandler.prg
+source/QtXmlPatterns/QAbstractUriResolver.prg
+source/QtXmlPatterns/QAbstractXmlNodeModel.prg
+source/QtXmlPatterns/QAbstractXmlReceiver.prg
+source/QtXmlPatterns/QSimpleXmlNodeModel.prg
+source/QtXmlPatterns/QSourceLocation.prg
+source/QtXmlPatterns/QtXmlPatternsVersion.cpp
+source/QtXmlPatterns/QXmlFormatter.prg
+source/QtXmlPatterns/QXmlItem.prg
+source/QtXmlPatterns/QXmlName.prg
+source/QtXmlPatterns/QXmlNamePool.prg
+source/QtXmlPatterns/QXmlNodeModelIndex.prg
+source/QtXmlPatterns/QXmlQuery.prg
+source/QtXmlPatterns/QXmlResultItems.prg
+source/QtXmlPatterns/QXmlSchema.prg
+source/QtXmlPatterns/QXmlSchemaValidator.prg
+source/QtXmlPatterns/QXmlSerializer.prg

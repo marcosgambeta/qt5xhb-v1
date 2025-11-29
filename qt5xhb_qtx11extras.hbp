@@ -35,5 +35,5 @@
 
 -plugin=qt5xhb_qtx11extras.hb
 
-source\QtX11Extras\QtX11ExtrasVersion.cpp
-source\QtX11Extras\QX11Info.prg
+source/QtX11Extras/QtX11ExtrasVersion.cpp
+source/QtX11Extras/QX11Info.prg

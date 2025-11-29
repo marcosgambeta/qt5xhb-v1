@@ -35,18 +35,18 @@
 
 -plugin=qt5xhb_qtprintsupport.hb
 
-source\QtPrintSupport\QAbstractPrintDialog.prg
-source\QtPrintSupport\QPageSetupDialog.prg
-source\QtPrintSupport\QPrintDialog.prg
-source\QtPrintSupport\QPrintDialogSlots.cpp
-source\QtPrintSupport\QPrintDialogSlotsMoc.cpp
-source\QtPrintSupport\QPrintEngine.prg
-source\QtPrintSupport\QPrinter.prg
-source\QtPrintSupport\QPrinterInfo.prg
-source\QtPrintSupport\QPrintPreviewDialog.prg
-source\QtPrintSupport\QPrintPreviewDialogSlots.cpp
-source\QtPrintSupport\QPrintPreviewDialogSlotsMoc.cpp
-source\QtPrintSupport\QPrintPreviewWidget.prg
-source\QtPrintSupport\QPrintPreviewWidgetSlots.cpp
-source\QtPrintSupport\QPrintPreviewWidgetSlotsMoc.cpp
-source\QtPrintSupport\QtPrintSupportVersion.cpp
+source/QtPrintSupport/QAbstractPrintDialog.prg
+source/QtPrintSupport/QPageSetupDialog.prg
+source/QtPrintSupport/QPrintDialog.prg
+source/QtPrintSupport/QPrintDialogSlots.cpp
+source/QtPrintSupport/QPrintDialogSlotsMoc.cpp
+source/QtPrintSupport/QPrintEngine.prg
+source/QtPrintSupport/QPrinter.prg
+source/QtPrintSupport/QPrinterInfo.prg
+source/QtPrintSupport/QPrintPreviewDialog.prg
+source/QtPrintSupport/QPrintPreviewDialogSlots.cpp
+source/QtPrintSupport/QPrintPreviewDialogSlotsMoc.cpp
+source/QtPrintSupport/QPrintPreviewWidget.prg
+source/QtPrintSupport/QPrintPreviewWidgetSlots.cpp
+source/QtPrintSupport/QPrintPreviewWidgetSlotsMoc.cpp
+source/QtPrintSupport/QtPrintSupportVersion.cpp

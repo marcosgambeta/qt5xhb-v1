@@ -35,14 +35,14 @@
 
 -plugin=qt5xhb_qtmultimediawidgets.hb
 
-source\QtMultimediaWidgets\QCameraViewfinder.prg
-source\QtMultimediaWidgets\QGraphicsVideoItem.prg
-source\QtMultimediaWidgets\QGraphicsVideoItemSlots.cpp
-source\QtMultimediaWidgets\QGraphicsVideoItemSlotsMoc.cpp
-source\QtMultimediaWidgets\QtMultimediaWidgetsVersion.cpp
-source\QtMultimediaWidgets\QVideoWidget.prg
-source\QtMultimediaWidgets\QVideoWidgetControl.prg
-source\QtMultimediaWidgets\QVideoWidgetControlSlots.cpp
-source\QtMultimediaWidgets\QVideoWidgetControlSlotsMoc.cpp
-source\QtMultimediaWidgets\QVideoWidgetSlots.cpp
-source\QtMultimediaWidgets\QVideoWidgetSlotsMoc.cpp
+source/QtMultimediaWidgets/QCameraViewfinder.prg
+source/QtMultimediaWidgets/QGraphicsVideoItem.prg
+source/QtMultimediaWidgets/QGraphicsVideoItemSlots.cpp
+source/QtMultimediaWidgets/QGraphicsVideoItemSlotsMoc.cpp
+source/QtMultimediaWidgets/QtMultimediaWidgetsVersion.cpp
+source/QtMultimediaWidgets/QVideoWidget.prg
+source/QtMultimediaWidgets/QVideoWidgetControl.prg
+source/QtMultimediaWidgets/QVideoWidgetControlSlots.cpp
+source/QtMultimediaWidgets/QVideoWidgetControlSlotsMoc.cpp
+source/QtMultimediaWidgets/QVideoWidgetSlots.cpp
+source/QtMultimediaWidgets/QVideoWidgetSlotsMoc.cpp

@@ -36,19 +36,19 @@
 
 -plugin=qt5xhb_qtwinextras.hb
 
-source\QtWinExtras\QtWin.prg
-source\QtWinExtras\QtWinExtrasVersion.cpp
-source\QtWinExtras\QWinColorizationChangeEvent.prg
-source\QtWinExtras\QWinCompositionChangeEvent.prg
-source\QtWinExtras\QWinEvent.prg
-source\QtWinExtras\QWinJumpList.prg
-source\QtWinExtras\QWinJumpListCategory.prg
-source\QtWinExtras\QWinJumpListItem.prg
-source\QtWinExtras\QWinTaskbarButton.prg
-source\QtWinExtras\QWinTaskbarProgress.prg
-source\QtWinExtras\QWinTaskbarProgressSlots.cpp
-source\QtWinExtras\QWinTaskbarProgressSlotsMoc.cpp
-source\QtWinExtras\QWinThumbnailToolBar.prg
-source\QtWinExtras\QWinThumbnailToolButton.prg
-source\QtWinExtras\QWinThumbnailToolButtonSlots.cpp
-source\QtWinExtras\QWinThumbnailToolButtonSlotsMoc.cpp
+source/QtWinExtras/QtWin.prg
+source/QtWinExtras/QtWinExtrasVersion.cpp
+source/QtWinExtras/QWinColorizationChangeEvent.prg
+source/QtWinExtras/QWinCompositionChangeEvent.prg
+source/QtWinExtras/QWinEvent.prg
+source/QtWinExtras/QWinJumpList.prg
+source/QtWinExtras/QWinJumpListCategory.prg
+source/QtWinExtras/QWinJumpListItem.prg
+source/QtWinExtras/QWinTaskbarButton.prg
+source/QtWinExtras/QWinTaskbarProgress.prg
+source/QtWinExtras/QWinTaskbarProgressSlots.cpp
+source/QtWinExtras/QWinTaskbarProgressSlotsMoc.cpp
+source/QtWinExtras/QWinThumbnailToolBar.prg
+source/QtWinExtras/QWinThumbnailToolButton.prg
+source/QtWinExtras/QWinThumbnailToolButtonSlots.cpp
+source/QtWinExtras/QWinThumbnailToolButtonSlotsMoc.cpp

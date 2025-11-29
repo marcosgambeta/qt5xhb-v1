@@ -35,13 +35,13 @@
 
 -plugin=qt5xhb_qtwebkit.hb
 
-source\QtWebKit\QtWebKitVersion.cpp
-source\QtWebKit\QWebDatabase.prg
-source\QtWebKit\QWebElement.prg
-source\QtWebKit\QWebElementCollection.prg
-source\QtWebKit\QWebHistory.prg
-source\QtWebKit\QWebHistoryInterface.prg
-source\QtWebKit\QWebHistoryItem.prg
-source\QtWebKit\QWebPluginFactory.prg
-source\QtWebKit\QWebSecurityOrigin.prg
-source\QtWebKit\QWebSettings.prg
+source/QtWebKit/QtWebKitVersion.cpp
+source/QtWebKit/QWebDatabase.prg
+source/QtWebKit/QWebElement.prg
+source/QtWebKit/QWebElementCollection.prg
+source/QtWebKit/QWebHistory.prg
+source/QtWebKit/QWebHistoryInterface.prg
+source/QtWebKit/QWebHistoryItem.prg
+source/QtWebKit/QWebPluginFactory.prg
+source/QtWebKit/QWebSecurityOrigin.prg
+source/QtWebKit/QWebSettings.prg
