@@ -4,6 +4,8 @@
 # Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
 
+{!win}-stop
+
 -hblib
 
 -olib/${hb_plat}/${hb_comp}/hbqtwinextras5
