@@ -24,23 +24,23 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtBluetooth\QBluetoothDeviceDiscoveryAgentSlots.hpp")
-      RUNMOC("source\QtBluetooth\QBluetoothLocalDeviceSlots.hpp")
-      RUNMOC("source\QtBluetooth\QBluetoothServerSlots.hpp")
-      RUNMOC("source\QtBluetooth\QBluetoothServiceDiscoveryAgentSlots.hpp")
-      RUNMOC("source\QtBluetooth\QBluetoothSocketSlots.hpp")
-      RUNMOC("source\QtBluetooth\QBluetoothTransferManagerSlots.hpp")
-      RUNMOC("source\QtBluetooth\QBluetoothTransferReplySlots.hpp")
+      RUNMOC("source/QtBluetooth/QBluetoothDeviceDiscoveryAgentSlots.hpp")
+      RUNMOC("source/QtBluetooth/QBluetoothLocalDeviceSlots.hpp")
+      RUNMOC("source/QtBluetooth/QBluetoothServerSlots.hpp")
+      RUNMOC("source/QtBluetooth/QBluetoothServiceDiscoveryAgentSlots.hpp")
+      RUNMOC("source/QtBluetooth/QBluetoothSocketSlots.hpp")
+      RUNMOC("source/QtBluetooth/QBluetoothTransferManagerSlots.hpp")
+      RUNMOC("source/QtBluetooth/QBluetoothTransferReplySlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtBluetooth\QBluetoothDeviceDiscoveryAgentSlotsMoc.cpp")
-      ferase("source\QtBluetooth\QBluetoothLocalDeviceSlotsMoc.cpp")
-      ferase("source\QtBluetooth\QBluetoothServerSlotsMoc.cpp")
-      ferase("source\QtBluetooth\QBluetoothServiceDiscoveryAgentSlotsMoc.cpp")
-      ferase("source\QtBluetooth\QBluetoothSocketSlotsMoc.cpp")
-      ferase("source\QtBluetooth\QBluetoothTransferManagerSlotsMoc.cpp")
-      ferase("source\QtBluetooth\QBluetoothTransferReplySlotsMoc.cpp")
+      ferase("source/QtBluetooth/QBluetoothDeviceDiscoveryAgentSlotsMoc.cpp")
+      ferase("source/QtBluetooth/QBluetoothLocalDeviceSlotsMoc.cpp")
+      ferase("source/QtBluetooth/QBluetoothServerSlotsMoc.cpp")
+      ferase("source/QtBluetooth/QBluetoothServiceDiscoveryAgentSlotsMoc.cpp")
+      ferase("source/QtBluetooth/QBluetoothSocketSlotsMoc.cpp")
+      ferase("source/QtBluetooth/QBluetoothTransferManagerSlotsMoc.cpp")
+      ferase("source/QtBluetooth/QBluetoothTransferReplySlotsMoc.cpp")
 
    ENDSWITCH
 

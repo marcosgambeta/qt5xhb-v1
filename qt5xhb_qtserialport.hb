@@ -24,11 +24,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtSerialPort\QSerialPortSlots.hpp")
+      RUNMOC("source/QtSerialPort/QSerialPortSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtSerialPort\QSerialPortSlotsMoc.cpp")
+      ferase("source/QtSerialPort/QSerialPortSlotsMoc.cpp")
 
    ENDSWITCH
 

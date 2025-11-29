@@ -24,15 +24,15 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtQuick\QQuickPaintedItemSlots.hpp")
-      RUNMOC("source\QtQuick\QQuickViewSlots.hpp")
-      RUNMOC("source\QtQuick\QQuickWindowSlots.hpp")
+      RUNMOC("source/QtQuick/QQuickPaintedItemSlots.hpp")
+      RUNMOC("source/QtQuick/QQuickViewSlots.hpp")
+      RUNMOC("source/QtQuick/QQuickWindowSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtQuick\QQuickPaintedItemSlotsMoc.cpp")
-      ferase("source\QtQuick\QQuickViewSlotsMoc.cpp")
-      ferase("source\QtQuick\QQuickWindowSlotsMoc.cpp")
+      ferase("source/QtQuick/QQuickPaintedItemSlotsMoc.cpp")
+      ferase("source/QtQuick/QQuickViewSlotsMoc.cpp")
+      ferase("source/QtQuick/QQuickWindowSlotsMoc.cpp")
 
    ENDSWITCH
 

@@ -24,13 +24,13 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtWebChannel\QWebChannelAbstractTransportSlots.hpp")
-      RUNMOC("source\QtWebChannel\QWebChannelSlots.hpp")
+      RUNMOC("source/QtWebChannel/QWebChannelAbstractTransportSlots.hpp")
+      RUNMOC("source/QtWebChannel/QWebChannelSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtWebChannel\QWebChannelAbstractTransportSlotsMoc.cpp")
-      ferase("source\QtWebChannel\QWebChannelSlotsMoc.cpp")
+      ferase("source/QtWebChannel/QWebChannelAbstractTransportSlotsMoc.cpp")
+      ferase("source/QtWebChannel/QWebChannelSlotsMoc.cpp")
 
    ENDSWITCH
 

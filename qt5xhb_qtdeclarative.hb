@@ -24,19 +24,19 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtDeclarative\QDeclarativeComponentSlots.hpp")
-      RUNMOC("source\QtDeclarative\QDeclarativeEngineSlots.hpp")
-      RUNMOC("source\QtDeclarative\QDeclarativeExpressionSlots.hpp")
-      RUNMOC("source\QtDeclarative\QDeclarativePropertyMapSlots.hpp")
-      RUNMOC("source\QtDeclarative\QDeclarativeViewSlots.hpp")
+      RUNMOC("source/QtDeclarative/QDeclarativeComponentSlots.hpp")
+      RUNMOC("source/QtDeclarative/QDeclarativeEngineSlots.hpp")
+      RUNMOC("source/QtDeclarative/QDeclarativeExpressionSlots.hpp")
+      RUNMOC("source/QtDeclarative/QDeclarativePropertyMapSlots.hpp")
+      RUNMOC("source/QtDeclarative/QDeclarativeViewSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtDeclarative\QDeclarativeComponentSlotsMoc.cpp")
-      ferase("source\QtDeclarative\QDeclarativeEngineSlotsMoc.cpp")
-      ferase("source\QtDeclarative\QDeclarativeExpressionSlotsMoc.cpp")
-      ferase("source\QtDeclarative\QDeclarativePropertyMapSlotsMoc.cpp")
-      ferase("source\QtDeclarative\QDeclarativeViewSlotsMoc.cpp")
+      ferase("source/QtDeclarative/QDeclarativeComponentSlotsMoc.cpp")
+      ferase("source/QtDeclarative/QDeclarativeEngineSlotsMoc.cpp")
+      ferase("source/QtDeclarative/QDeclarativeExpressionSlotsMoc.cpp")
+      ferase("source/QtDeclarative/QDeclarativePropertyMapSlotsMoc.cpp")
+      ferase("source/QtDeclarative/QDeclarativeViewSlotsMoc.cpp")
 
    ENDSWITCH
 

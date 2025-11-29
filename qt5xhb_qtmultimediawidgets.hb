@@ -24,15 +24,15 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtMultimediaWidgets\QGraphicsVideoItemSlots.hpp")
-      RUNMOC("source\QtMultimediaWidgets\QVideoWidgetControlSlots.hpp")
-      RUNMOC("source\QtMultimediaWidgets\QVideoWidgetSlots.hpp")
+      RUNMOC("source/QtMultimediaWidgets/QGraphicsVideoItemSlots.hpp")
+      RUNMOC("source/QtMultimediaWidgets/QVideoWidgetControlSlots.hpp")
+      RUNMOC("source/QtMultimediaWidgets/QVideoWidgetSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtMultimediaWidgets\QGraphicsVideoItemSlotsMoc.cpp")
-      ferase("source\QtMultimediaWidgets\QVideoWidgetControlSlotsMoc.cpp")
-      ferase("source\QtMultimediaWidgets\QVideoWidgetSlotsMoc.cpp")
+      ferase("source/QtMultimediaWidgets/QGraphicsVideoItemSlotsMoc.cpp")
+      ferase("source/QtMultimediaWidgets/QVideoWidgetControlSlotsMoc.cpp")
+      ferase("source/QtMultimediaWidgets/QVideoWidgetSlotsMoc.cpp")
 
    ENDSWITCH
 

@@ -24,19 +24,19 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtSerialBus\QCanBusDeviceSlots.hpp")
-      RUNMOC("source\QtSerialBus\QModbusClientSlots.hpp")
-      RUNMOC("source\QtSerialBus\QModbusDeviceSlots.hpp")
-      RUNMOC("source\QtSerialBus\QModbusReplySlots.hpp")
-      RUNMOC("source\QtSerialBus\QModbusServerSlots.hpp")
+      RUNMOC("source/QtSerialBus/QCanBusDeviceSlots.hpp")
+      RUNMOC("source/QtSerialBus/QModbusClientSlots.hpp")
+      RUNMOC("source/QtSerialBus/QModbusDeviceSlots.hpp")
+      RUNMOC("source/QtSerialBus/QModbusReplySlots.hpp")
+      RUNMOC("source/QtSerialBus/QModbusServerSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtSerialBus\QCanBusDeviceSlotsMoc.cpp")
-      ferase("source\QtSerialBus\QModbusClientSlotsMoc.cpp")
-      ferase("source\QtSerialBus\QModbusDeviceSlotsMoc.cpp")
-      ferase("source\QtSerialBus\QModbusReplySlotsMoc.cpp")
-      ferase("source\QtSerialBus\QModbusServerSlotsMoc.cpp")
+      ferase("source/QtSerialBus/QCanBusDeviceSlotsMoc.cpp")
+      ferase("source/QtSerialBus/QModbusClientSlotsMoc.cpp")
+      ferase("source/QtSerialBus/QModbusDeviceSlotsMoc.cpp")
+      ferase("source/QtSerialBus/QModbusReplySlotsMoc.cpp")
+      ferase("source/QtSerialBus/QModbusServerSlotsMoc.cpp")
 
    ENDSWITCH
 

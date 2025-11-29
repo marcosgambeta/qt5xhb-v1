@@ -24,27 +24,27 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtLocation\QGeoCodeReplySlots.hpp")
-      RUNMOC("source\QtLocation\QGeoCodingManagerEngineSlots.hpp")
-      RUNMOC("source\QtLocation\QGeoCodingManagerSlots.hpp")
-      RUNMOC("source\QtLocation\QGeoRouteReplySlots.hpp")
-      RUNMOC("source\QtLocation\QGeoRoutingManagerEngineSlots.hpp")
-      RUNMOC("source\QtLocation\QGeoRoutingManagerSlots.hpp")
-      RUNMOC("source\QtLocation\QPlaceManagerEngineSlots.hpp")
-      RUNMOC("source\QtLocation\QPlaceManagerSlots.hpp")
-      RUNMOC("source\QtLocation\QPlaceReplySlots.hpp")
+      RUNMOC("source/QtLocation/QGeoCodeReplySlots.hpp")
+      RUNMOC("source/QtLocation/QGeoCodingManagerEngineSlots.hpp")
+      RUNMOC("source/QtLocation/QGeoCodingManagerSlots.hpp")
+      RUNMOC("source/QtLocation/QGeoRouteReplySlots.hpp")
+      RUNMOC("source/QtLocation/QGeoRoutingManagerEngineSlots.hpp")
+      RUNMOC("source/QtLocation/QGeoRoutingManagerSlots.hpp")
+      RUNMOC("source/QtLocation/QPlaceManagerEngineSlots.hpp")
+      RUNMOC("source/QtLocation/QPlaceManagerSlots.hpp")
+      RUNMOC("source/QtLocation/QPlaceReplySlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtLocation\QGeoCodeReplySlotsMoc.cpp")
-      ferase("source\QtLocation\QGeoCodingManagerEngineSlotsMoc.cpp")
-      ferase("source\QtLocation\QGeoCodingManagerSlotsMoc.cpp")
-      ferase("source\QtLocation\QGeoRouteReplySlotsMoc.cpp")
-      ferase("source\QtLocation\QGeoRoutingManagerEngineSlotsMoc.cpp")
-      ferase("source\QtLocation\QGeoRoutingManagerSlotsMoc.cpp")
-      ferase("source\QtLocation\QPlaceManagerEngineSlotsMoc.cpp")
-      ferase("source\QtLocation\QPlaceManagerSlotsMoc.cpp")
-      ferase("source\QtLocation\QPlaceReplySlotsMoc.cpp")
+      ferase("source/QtLocation/QGeoCodeReplySlotsMoc.cpp")
+      ferase("source/QtLocation/QGeoCodingManagerEngineSlotsMoc.cpp")
+      ferase("source/QtLocation/QGeoCodingManagerSlotsMoc.cpp")
+      ferase("source/QtLocation/QGeoRouteReplySlotsMoc.cpp")
+      ferase("source/QtLocation/QGeoRoutingManagerEngineSlotsMoc.cpp")
+      ferase("source/QtLocation/QGeoRoutingManagerSlotsMoc.cpp")
+      ferase("source/QtLocation/QPlaceManagerEngineSlotsMoc.cpp")
+      ferase("source/QtLocation/QPlaceManagerSlotsMoc.cpp")
+      ferase("source/QtLocation/QPlaceReplySlotsMoc.cpp")
 
    ENDSWITCH
 

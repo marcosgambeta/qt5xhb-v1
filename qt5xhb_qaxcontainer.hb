@@ -24,17 +24,17 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\ActiveQt\QAxBaseSlots.hpp")
-      RUNMOC("source\ActiveQt\QAxObjectSlots.hpp")
-      RUNMOC("source\ActiveQt\QAxScriptSlots.hpp")
-      RUNMOC("source\ActiveQt\QAxWidgetSlots.hpp")
+      RUNMOC("source/ActiveQt/QAxBaseSlots.hpp")
+      RUNMOC("source/ActiveQt/QAxObjectSlots.hpp")
+      RUNMOC("source/ActiveQt/QAxScriptSlots.hpp")
+      RUNMOC("source/ActiveQt/QAxWidgetSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\ActiveQt\QAxBaseSlotsMoc.cpp")
-      ferase("source\ActiveQt\QAxObjectSlotsMoc.cpp")
-      ferase("source\ActiveQt\QAxScriptSlotsMoc.cpp")
-      ferase("source\ActiveQt\QAxWidgetSlotsMoc.cpp")
+      ferase("source/ActiveQt/QAxBaseSlotsMoc.cpp")
+      ferase("source/ActiveQt/QAxObjectSlotsMoc.cpp")
+      ferase("source/ActiveQt/QAxScriptSlotsMoc.cpp")
+      ferase("source/ActiveQt/QAxWidgetSlotsMoc.cpp")
 
    ENDSWITCH
 

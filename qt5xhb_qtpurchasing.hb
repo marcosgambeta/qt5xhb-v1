@@ -24,11 +24,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtPurchasing\QInAppStoreSlots.hpp")
+      RUNMOC("source/QtPurchasing/QInAppStoreSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtPurchasing\QInAppStoreSlotsMoc.cpp")
+      ferase("source/QtPurchasing/QInAppStoreSlotsMoc.cpp")
 
    ENDSWITCH
 

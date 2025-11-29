@@ -24,13 +24,13 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtSql\QSqlDriverSlots.hpp")
-      RUNMOC("source\QtSql\QSqlTableModelSlots.hpp")
+      RUNMOC("source/QtSql/QSqlDriverSlots.hpp")
+      RUNMOC("source/QtSql/QSqlTableModelSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtSql\QSqlDriverSlotsMoc.cpp")
-      ferase("source\QtSql\QSqlTableModelSlotsMoc.cpp")
+      ferase("source/QtSql/QSqlDriverSlotsMoc.cpp")
+      ferase("source/QtSql/QSqlTableModelSlotsMoc.cpp")
 
    ENDSWITCH
 

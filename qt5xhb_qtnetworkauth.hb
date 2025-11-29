@@ -24,19 +24,19 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtNetworkAuth\QAbstractOAuth2Slots.hpp")
-      RUNMOC("source\QtNetworkAuth\QAbstractOAuthReplyHandlerSlots.hpp")
-      RUNMOC("source\QtNetworkAuth\QAbstractOAuthSlots.hpp")
-      RUNMOC("source\QtNetworkAuth\QOAuth1Slots.hpp")
-      RUNMOC("source\QtNetworkAuth\QOAuth2AuthorizationCodeFlowSlots.hpp")
+      RUNMOC("source/QtNetworkAuth/QAbstractOAuth2Slots.hpp")
+      RUNMOC("source/QtNetworkAuth/QAbstractOAuthReplyHandlerSlots.hpp")
+      RUNMOC("source/QtNetworkAuth/QAbstractOAuthSlots.hpp")
+      RUNMOC("source/QtNetworkAuth/QOAuth1Slots.hpp")
+      RUNMOC("source/QtNetworkAuth/QOAuth2AuthorizationCodeFlowSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtNetworkAuth\QAbstractOAuth2SlotsMoc.cpp")
-      ferase("source\QtNetworkAuth\QAbstractOAuthReplyHandlerSlotsMoc.cpp")
-      ferase("source\QtNetworkAuth\QAbstractOAuthSlotsMoc.cpp")
-      ferase("source\QtNetworkAuth\QOAuth1SlotsMoc.cpp")
-      ferase("source\QtNetworkAuth\QOAuth2AuthorizationCodeFlowSlotsMoc.cpp")
+      ferase("source/QtNetworkAuth/QAbstractOAuth2SlotsMoc.cpp")
+      ferase("source/QtNetworkAuth/QAbstractOAuthReplyHandlerSlotsMoc.cpp")
+      ferase("source/QtNetworkAuth/QAbstractOAuthSlotsMoc.cpp")
+      ferase("source/QtNetworkAuth/QOAuth1SlotsMoc.cpp")
+      ferase("source/QtNetworkAuth/QOAuth2AuthorizationCodeFlowSlotsMoc.cpp")
 
    ENDSWITCH
 

@@ -24,19 +24,19 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtQml\QQmlApplicationEngineSlots.hpp")
-      RUNMOC("source\QtQml\QQmlComponentSlots.hpp")
-      RUNMOC("source\QtQml\QQmlEngineSlots.hpp")
-      RUNMOC("source\QtQml\QQmlExpressionSlots.hpp")
-      RUNMOC("source\QtQml\QQmlPropertyMapSlots.hpp")
+      RUNMOC("source/QtQml/QQmlApplicationEngineSlots.hpp")
+      RUNMOC("source/QtQml/QQmlComponentSlots.hpp")
+      RUNMOC("source/QtQml/QQmlEngineSlots.hpp")
+      RUNMOC("source/QtQml/QQmlExpressionSlots.hpp")
+      RUNMOC("source/QtQml/QQmlPropertyMapSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtQml\QQmlApplicationEngineSlotsMoc.cpp")
-      ferase("source\QtQml\QQmlComponentSlotsMoc.cpp")
-      ferase("source\QtQml\QQmlEngineSlotsMoc.cpp")
-      ferase("source\QtQml\QQmlExpressionSlotsMoc.cpp")
-      ferase("source\QtQml\QQmlPropertyMapSlotsMoc.cpp")
+      ferase("source/QtQml/QQmlApplicationEngineSlotsMoc.cpp")
+      ferase("source/QtQml/QQmlComponentSlotsMoc.cpp")
+      ferase("source/QtQml/QQmlEngineSlotsMoc.cpp")
+      ferase("source/QtQml/QQmlExpressionSlotsMoc.cpp")
+      ferase("source/QtQml/QQmlPropertyMapSlotsMoc.cpp")
 
    ENDSWITCH
 

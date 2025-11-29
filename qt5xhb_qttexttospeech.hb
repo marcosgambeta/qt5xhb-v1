@@ -24,13 +24,13 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtTextToSpeech\QTextToSpeechEngineSlots.hpp")
-      RUNMOC("source\QtTextToSpeech\QTextToSpeechSlots.hpp")
+      RUNMOC("source/QtTextToSpeech/QTextToSpeechEngineSlots.hpp")
+      RUNMOC("source/QtTextToSpeech/QTextToSpeechSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtTextToSpeech\QTextToSpeechEngineSlotsMoc.cpp")
-      ferase("source\QtTextToSpeech\QTextToSpeechSlotsMoc.cpp")
+      ferase("source/QtTextToSpeech/QTextToSpeechEngineSlotsMoc.cpp")
+      ferase("source/QtTextToSpeech/QTextToSpeechSlotsMoc.cpp")
 
    ENDSWITCH
 

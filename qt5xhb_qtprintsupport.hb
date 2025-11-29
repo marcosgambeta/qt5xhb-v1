@@ -24,15 +24,15 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtPrintSupport\QPrintDialogSlots.hpp")
-      RUNMOC("source\QtPrintSupport\QPrintPreviewDialogSlots.hpp")
-      RUNMOC("source\QtPrintSupport\QPrintPreviewWidgetSlots.hpp")
+      RUNMOC("source/QtPrintSupport/QPrintDialogSlots.hpp")
+      RUNMOC("source/QtPrintSupport/QPrintPreviewDialogSlots.hpp")
+      RUNMOC("source/QtPrintSupport/QPrintPreviewWidgetSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtPrintSupport\QPrintDialogSlotsMoc.cpp")
-      ferase("source\QtPrintSupport\QPrintPreviewDialogSlotsMoc.cpp")
-      ferase("source\QtPrintSupport\QPrintPreviewWidgetSlotsMoc.cpp")
+      ferase("source/QtPrintSupport/QPrintDialogSlotsMoc.cpp")
+      ferase("source/QtPrintSupport/QPrintPreviewDialogSlotsMoc.cpp")
+      ferase("source/QtPrintSupport/QPrintPreviewWidgetSlotsMoc.cpp")
 
    ENDSWITCH
 

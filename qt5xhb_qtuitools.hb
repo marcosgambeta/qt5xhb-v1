@@ -24,11 +24,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtUiTools\HUiLoader.hpp")
+      RUNMOC("source/QtUiTools/HUiLoader.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtUiTools\HUiLoaderMoc.cpp")
+      ferase("source/QtUiTools/HUiLoaderMoc.cpp")
 
    ENDSWITCH
 

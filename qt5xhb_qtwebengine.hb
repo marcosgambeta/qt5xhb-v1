@@ -24,13 +24,13 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtWebEngine\QQuickWebEngineProfileSlots.hpp")
-      RUNMOC("source\QtWebEngine\QQuickWebEngineScriptSlots.hpp")
+      RUNMOC("source/QtWebEngine/QQuickWebEngineProfileSlots.hpp")
+      RUNMOC("source/QtWebEngine/QQuickWebEngineScriptSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtWebEngine\QQuickWebEngineProfileSlotsMoc.cpp")
-      ferase("source\QtWebEngine\QQuickWebEngineScriptSlotsMoc.cpp")
+      ferase("source/QtWebEngine/QQuickWebEngineProfileSlotsMoc.cpp")
+      ferase("source/QtWebEngine/QQuickWebEngineScriptSlotsMoc.cpp")
 
    ENDSWITCH
 

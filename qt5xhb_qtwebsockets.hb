@@ -24,13 +24,13 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtWebSockets\QWebSocketServerSlots.hpp")
-      RUNMOC("source\QtWebSockets\QWebSocketSlots.hpp")
+      RUNMOC("source/QtWebSockets/QWebSocketServerSlots.hpp")
+      RUNMOC("source/QtWebSockets/QWebSocketSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtWebSockets\QWebSocketServerSlotsMoc.cpp")
-      ferase("source\QtWebSockets\QWebSocketSlotsMoc.cpp")
+      ferase("source/QtWebSockets/QWebSocketServerSlotsMoc.cpp")
+      ferase("source/QtWebSockets/QWebSocketSlotsMoc.cpp")
 
    ENDSWITCH
 

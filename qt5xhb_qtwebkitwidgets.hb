@@ -24,17 +24,17 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtWebKitWidgets\QGraphicsWebViewSlots.hpp")
-      RUNMOC("source\QtWebKitWidgets\QWebFrameSlots.hpp")
-      RUNMOC("source\QtWebKitWidgets\QWebPageSlots.hpp")
-      RUNMOC("source\QtWebKitWidgets\QWebViewSlots.hpp")
+      RUNMOC("source/QtWebKitWidgets/QGraphicsWebViewSlots.hpp")
+      RUNMOC("source/QtWebKitWidgets/QWebFrameSlots.hpp")
+      RUNMOC("source/QtWebKitWidgets/QWebPageSlots.hpp")
+      RUNMOC("source/QtWebKitWidgets/QWebViewSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtWebKitWidgets\QGraphicsWebViewSlotsMoc.cpp")
-      ferase("source\QtWebKitWidgets\QWebFrameSlotsMoc.cpp")
-      ferase("source\QtWebKitWidgets\QWebPageSlotsMoc.cpp")
-      ferase("source\QtWebKitWidgets\QWebViewSlotsMoc.cpp")
+      ferase("source/QtWebKitWidgets/QGraphicsWebViewSlotsMoc.cpp")
+      ferase("source/QtWebKitWidgets/QWebFrameSlotsMoc.cpp")
+      ferase("source/QtWebKitWidgets/QWebPageSlotsMoc.cpp")
+      ferase("source/QtWebKitWidgets/QWebViewSlotsMoc.cpp")
 
    ENDSWITCH
 

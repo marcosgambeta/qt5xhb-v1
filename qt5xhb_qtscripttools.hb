@@ -24,11 +24,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtScriptTools\QScriptEngineDebuggerSlots.hpp")
+      RUNMOC("source/QtScriptTools/QScriptEngineDebuggerSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtScriptTools\QScriptEngineDebuggerSlotsMoc.cpp")
+      ferase("source/QtScriptTools/QScriptEngineDebuggerSlotsMoc.cpp")
 
    ENDSWITCH
 

@@ -24,13 +24,13 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtWinExtras\QWinTaskbarProgressSlots.hpp")
-      RUNMOC("source\QtWinExtras\QWinThumbnailToolButtonSlots.hpp")
+      RUNMOC("source/QtWinExtras/QWinTaskbarProgressSlots.hpp")
+      RUNMOC("source/QtWinExtras/QWinThumbnailToolButtonSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtWinExtras\QWinTaskbarProgressSlotsMoc.cpp")
-      ferase("source\QtWinExtras\QWinThumbnailToolButtonSlotsMoc.cpp")
+      ferase("source/QtWinExtras/QWinTaskbarProgressSlotsMoc.cpp")
+      ferase("source/QtWinExtras/QWinThumbnailToolButtonSlotsMoc.cpp")
 
    ENDSWITCH
 

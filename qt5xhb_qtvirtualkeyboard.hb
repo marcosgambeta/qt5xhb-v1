@@ -24,19 +24,19 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtVirtualKeyboard\QVirtualKeyboardAbstractInputMethodSlots.hpp")
-      RUNMOC("source\QtVirtualKeyboard\QVirtualKeyboardInputContextSlots.hpp")
-      RUNMOC("source\QtVirtualKeyboard\QVirtualKeyboardInputEngineSlots.hpp")
-      RUNMOC("source\QtVirtualKeyboard\QVirtualKeyboardSelectionListModelSlots.hpp")
-      RUNMOC("source\QtVirtualKeyboard\QVirtualKeyboardTraceSlots.hpp")
+      RUNMOC("source/QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethodSlots.hpp")
+      RUNMOC("source/QtVirtualKeyboard/QVirtualKeyboardInputContextSlots.hpp")
+      RUNMOC("source/QtVirtualKeyboard/QVirtualKeyboardInputEngineSlots.hpp")
+      RUNMOC("source/QtVirtualKeyboard/QVirtualKeyboardSelectionListModelSlots.hpp")
+      RUNMOC("source/QtVirtualKeyboard/QVirtualKeyboardTraceSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtVirtualKeyboard\QVirtualKeyboardAbstractInputMethodSlotsMoc.cpp")
-      ferase("source\QtVirtualKeyboard\QVirtualKeyboardInputContextSlotsMoc.cpp")
-      ferase("source\QtVirtualKeyboard\QVirtualKeyboardInputEngineSlotsMoc.cpp")
-      ferase("source\QtVirtualKeyboard\QVirtualKeyboardSelectionListModelSlotsMoc.cpp")
-      ferase("source\QtVirtualKeyboard\QVirtualKeyboardTraceSlotsMoc.cpp")
+      ferase("source/QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethodSlotsMoc.cpp")
+      ferase("source/QtVirtualKeyboard/QVirtualKeyboardInputContextSlotsMoc.cpp")
+      ferase("source/QtVirtualKeyboard/QVirtualKeyboardInputEngineSlotsMoc.cpp")
+      ferase("source/QtVirtualKeyboard/QVirtualKeyboardSelectionListModelSlotsMoc.cpp")
+      ferase("source/QtVirtualKeyboard/QVirtualKeyboardTraceSlotsMoc.cpp")
 
    ENDSWITCH
 

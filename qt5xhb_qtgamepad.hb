@@ -24,15 +24,15 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtGamepad\QGamepadKeyNavigationSlots.hpp")
-      RUNMOC("source\QtGamepad\QGamepadManagerSlots.hpp")
-      RUNMOC("source\QtGamepad\QGamepadSlots.hpp")
+      RUNMOC("source/QtGamepad/QGamepadKeyNavigationSlots.hpp")
+      RUNMOC("source/QtGamepad/QGamepadManagerSlots.hpp")
+      RUNMOC("source/QtGamepad/QGamepadSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtGamepad\QGamepadKeyNavigationSlotsMoc.cpp")
-      ferase("source\QtGamepad\QGamepadManagerSlotsMoc.cpp")
-      ferase("source\QtGamepad\QGamepadSlotsMoc.cpp")
+      ferase("source/QtGamepad/QGamepadKeyNavigationSlotsMoc.cpp")
+      ferase("source/QtGamepad/QGamepadManagerSlotsMoc.cpp")
+      ferase("source/QtGamepad/QGamepadSlotsMoc.cpp")
 
    ENDSWITCH
 

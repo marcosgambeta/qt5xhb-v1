@@ -24,17 +24,17 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtDBus\QDBusConnectionInterfaceSlots.hpp")
-      RUNMOC("source\QtDBus\QDBusPendingCallWatcherSlots.hpp")
-      RUNMOC("source\QtDBus\QDBusServerSlots.hpp")
-      RUNMOC("source\QtDBus\QDBusServiceWatcherSlots.hpp")
+      RUNMOC("source/QtDBus/QDBusConnectionInterfaceSlots.hpp")
+      RUNMOC("source/QtDBus/QDBusPendingCallWatcherSlots.hpp")
+      RUNMOC("source/QtDBus/QDBusServerSlots.hpp")
+      RUNMOC("source/QtDBus/QDBusServiceWatcherSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtDBus\QDBusConnectionInterfaceSlotsMoc.cpp")
-      ferase("source\QtDBus\QDBusPendingCallWatcherSlotsMoc.cpp")
-      ferase("source\QtDBus\QDBusServerSlotsMoc.cpp")
-      ferase("source\QtDBus\QDBusServiceWatcherSlotsMoc.cpp")
+      ferase("source/QtDBus/QDBusConnectionInterfaceSlotsMoc.cpp")
+      ferase("source/QtDBus/QDBusPendingCallWatcherSlotsMoc.cpp")
+      ferase("source/QtDBus/QDBusServerSlotsMoc.cpp")
+      ferase("source/QtDBus/QDBusServiceWatcherSlotsMoc.cpp")
 
    ENDSWITCH
 

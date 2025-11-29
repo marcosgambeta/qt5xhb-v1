@@ -24,15 +24,15 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtPositioning\QGeoAreaMonitorSourceSlots.hpp")
-      RUNMOC("source\QtPositioning\QGeoPositionInfoSourceSlots.hpp")
-      RUNMOC("source\QtPositioning\QGeoSatelliteInfoSourceSlots.hpp")
+      RUNMOC("source/QtPositioning/QGeoAreaMonitorSourceSlots.hpp")
+      RUNMOC("source/QtPositioning/QGeoPositionInfoSourceSlots.hpp")
+      RUNMOC("source/QtPositioning/QGeoSatelliteInfoSourceSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtPositioning\QGeoAreaMonitorSourceSlotsMoc.cpp")
-      ferase("source\QtPositioning\QGeoPositionInfoSourceSlotsMoc.cpp")
-      ferase("source\QtPositioning\QGeoSatelliteInfoSourceSlotsMoc.cpp")
+      ferase("source/QtPositioning/QGeoAreaMonitorSourceSlotsMoc.cpp")
+      ferase("source/QtPositioning/QGeoPositionInfoSourceSlotsMoc.cpp")
+      ferase("source/QtPositioning/QGeoSatelliteInfoSourceSlotsMoc.cpp")
 
    ENDSWITCH
 

@@ -24,11 +24,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtSvg\QSvgRendererSlots.hpp")
+      RUNMOC("source/QtSvg/QSvgRendererSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtSvg\QSvgRendererSlotsMoc.cpp")
+      ferase("source/QtSvg/QSvgRendererSlotsMoc.cpp")
 
    ENDSWITCH
 

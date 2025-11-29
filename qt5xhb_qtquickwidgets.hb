@@ -24,11 +24,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtQuickWidgets\QQuickWidgetSlots.hpp")
+      RUNMOC("source/QtQuickWidgets/QQuickWidgetSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtQuickWidgets\QQuickWidgetSlotsMoc.cpp")
+      ferase("source/QtQuickWidgets/QQuickWidgetSlotsMoc.cpp")
 
    ENDSWITCH
 
