@@ -16,6 +16,8 @@
 -w3
 -gc3
 
+-pic
+
 -cpp
 
 -isource/ActiveQt
