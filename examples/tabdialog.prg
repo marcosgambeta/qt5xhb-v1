@@ -64,7 +64,7 @@ METHOD new(oFileInfo, oParent) CLASS GeneralTab
 
    oSizeLabel := QLabel():new("Size:")
    nSize := oFileInfo:size() / 1024
-   oSizeValueLabel := QLabel():new(AllTrim(Str(nSize)) + " K")
+   oSizeValueLabel := QLabel():new(alltrim(str(nSize)) + " K")
    oSizeValueLabel:setFrameStyle(QFrame_Panel + QFrame_Sunken)
 
    oLastReadLabel := QLabel():new("Last Read:")
@@ -189,13 +189,13 @@ METHOD new(oFileInfo, oParent) CLASS ApplicationsTab
    aApplications := {}
 
    FOR n := 1 TO 30
-      AAdd(aApplications,"Application " + AllTrim(Str(n)))
+      aadd(aApplications,"Application " + alltrim(str(n)))
    NEXT n
    oApplicationsListBox:insertItems(0, aApplications)
 
    oAlwaysCheckBox := NIL
 
-   IF Empty(oFileInfo:suffix())
+   IF empty(oFileInfo:suffix())
       oAlwaysCheckBox := QCheckBox():new("Always use this application to open this type of file")
    ELSE
       oAlwaysCheckBox := QCheckBox():new("Always use this application to open files with the extension '" + oFileInfo:suffix() + "'")

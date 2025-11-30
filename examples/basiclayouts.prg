@@ -109,7 +109,7 @@ METHOD createHorizontalGroupBox() CLASS Dialog
    oLayout := QHBoxLayout():new()
 
    FOR nIndex := 1 TO NumButtons
-      ::aButtons[nIndex] := QPushButton():new("Button " + AllTrim(Str(nIndex)))
+      ::aButtons[nIndex] := QPushButton():new("Button " + alltrim(str(nIndex)))
       oLayout:addWidget(::aButtons[nIndex])
    NEXT nIndex
 
@@ -126,7 +126,7 @@ METHOD createGridGroupBox() CLASS Dialog
    oLayout := QGridLayout():new()
 
    FOR nIndex := 1 TO NumGridRows
-      ::aLabels[nIndex] := QLabel():new("Line " + AllTrim(Str(nIndex)) + ":")
+      ::aLabels[nIndex] := QLabel():new("Line " + alltrim(str(nIndex)) + ":")
       ::aLineEdits[nIndex] := QLineEdit():new()
       oLayout:addWidget(::aLabels[nIndex], nIndex, 0)
       oLayout:addWidget(::aLineEdits[nIndex], nIndex, 1)

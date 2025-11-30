@@ -93,7 +93,7 @@ STATIC FUNCTION CalculaDiferenca(oCalendar1, oCalendar2)
    oMessageBox:setWindowTitle("Diferença entre as datas")
 
    // define o texto da janela de mensagem
-   oMessageBox:setInformativeText("A diferença entre as datas é de " + AllTrim(Str(nDias)) + " dia(s)")
+   oMessageBox:setInformativeText("A diferença entre as datas é de " + alltrim(str(nDias)) + " dia(s)")
 
    // mostra a janela de mensagem
    oMessageBox:exec()

@@ -112,7 +112,7 @@ STATIC FUNCTION CriarBancoDeDados()
       FOR n := 1 TO 1000
          oRecordset:AddNew()
          oRecordset:Fields(0):Value := n
-         oRecordset:Fields(1):Value := "Nome do cliente " + AllTrim(Str(n))
+         oRecordset:Fields(1):Value := "Nome do cliente " + alltrim(str(n))
          oRecordset:Fields(2):Value := n*10
          oRecordset:Update()
       NEXT n

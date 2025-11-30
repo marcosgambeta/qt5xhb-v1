@@ -151,7 +151,7 @@ METHOD changePage(pCurrent, pPrevious) CLASS ConfigDialog
    oCurrent := QListWidgetItem():newFrom(pCurrent)
    oPrevious := QListWidgetItem():newFrom(pPrevious)
 
-   IF Empty(oCurrent:pointer)
+   IF empty(oCurrent:pointer)
       oCurrent := oPrevious
    ENDIF
 

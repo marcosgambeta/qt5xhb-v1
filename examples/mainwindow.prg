@@ -148,7 +148,7 @@ METHOD createMenuBar() CLASS MainWindow
 
    ::oActionAboutxH := ::oMenu3:AddAction("&[x]Harbour")
    ::oActionAboutxH:setStatusTip("Exibe a versão do Harbour/xHarbour")
-   ::oActionAboutxH:onTriggered({|w, l|::showMessage(Version())})
+   ::oActionAboutxH:onTriggered({|w, l|::showMessage(version())})
 
    ::oActionAboutCC := ::oMenu3:AddAction("&C/C++ Compiler")
    ::oActionAboutCC:setStatusTip("Exibe informações sobre o compilador C/C++")
