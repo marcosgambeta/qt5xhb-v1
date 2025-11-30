@@ -47,7 +47,7 @@ qt5xhb_qtsvg.hbp
 #qt5xhb_qttest.hbp
 qt5xhb_qttexttospeech.hbp
 qt5xhb_qtuitools.hbp
-#qt5xhb_qtvirtualkeyboard.hbp
+qt5xhb_qtvirtualkeyboard.hbp
 qt5xhb_qtwebchannel.hbp
 #qt5xhb_qtwebengine.hbp
 #qt5xhb_qtwebenginecore.hbp
