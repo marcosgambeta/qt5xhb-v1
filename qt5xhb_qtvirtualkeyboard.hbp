@@ -22,6 +22,7 @@
 -iinclude
 -i${QT_INC_DIR}
 -i${QT_INC_DIR}/QtCore
+-i${QT_INC_DIR}/QtGui
 
 -cflag=-frtti
 -cflag=-fexceptions
