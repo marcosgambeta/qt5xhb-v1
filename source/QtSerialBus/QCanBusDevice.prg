@@ -17,7 +17,9 @@ REQUEST QVARIANT
 
 CLASS QCanBusDevice INHERIT QObject
 
+#if 0
    METHOD new
+#endif
    METHOD setConfigurationParameter
    METHOD configurationParameter
    METHOD configurationKeys
@@ -75,9 +77,12 @@ RETURN
 #endif
 #endif
 
-    /*
-    QCanBusDevice( QObject * parent = nullptr )
-    */
+#include <QtCore/QVariant>
+
+/*
+QCanBusDevice( QObject * parent = nullptr )
+*/
+#if 0
 HB_FUNC_STATIC(QCANBUSDEVICE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -89,6 +94,7 @@ HB_FUNC_STATIC(QCANBUSDEVICE_NEW)
   }
 #endif
 }
+#endif
 
 /*
 virtual void setConfigurationParameter( int key, const QVariant &value )

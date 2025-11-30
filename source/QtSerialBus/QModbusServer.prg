@@ -16,7 +16,9 @@ REQUEST QVARIANT
 
 CLASS QModbusServer INHERIT QModbusDevice
 
+#if 0
    METHOD new
+#endif
    METHOD delete
    METHOD serverAddress
    METHOD setServerAddress
@@ -61,9 +63,10 @@ RETURN
 #endif
 #endif
 
-    /*
-    QModbusServer( QObject * parent = nullptr )
-    */
+/*
+QModbusServer( QObject * parent = nullptr )
+*/
+#if 0
 HB_FUNC_STATIC(QMODBUSSERVER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -75,6 +78,7 @@ HB_FUNC_STATIC(QMODBUSSERVER_NEW)
   }
 #endif
 }
+#endif
 
 /*
 ~QModbusServer()

@@ -16,7 +16,9 @@ REQUEST QVARIANT
 
 CLASS QModbusDevice INHERIT QObject
 
+#if 0
    METHOD new
+#endif
    METHOD delete
    METHOD connectionParameter
    METHOD setConnectionParameter
@@ -63,9 +65,12 @@ RETURN
 #endif
 #endif
 
-    /*
-    QModbusDevice( QObject * parent = nullptr )
-    */
+#include <QtCore/QVariant>
+
+/*
+QModbusDevice( QObject * parent = nullptr )
+*/
+#if 0
 HB_FUNC_STATIC(QMODBUSDEVICE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -77,6 +82,7 @@ HB_FUNC_STATIC(QMODBUSDEVICE_NEW)
   }
 #endif
 }
+#endif
 
 /*
 ~QModbusDevice()

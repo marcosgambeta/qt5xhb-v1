@@ -18,7 +18,9 @@ CLASS QCanBusDeviceInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
+#if 0
    METHOD new
+#endif
    METHOD delete
    METHOD swap
    METHOD name
@@ -66,6 +68,7 @@ RETURN
 #endif
 #endif
 
+#if 0
 HB_FUNC_STATIC(QCANBUSDEVICEINFO_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -88,6 +91,7 @@ HB_FUNC_STATIC(QCANBUSDEVICEINFO_NEW)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 /*
 ~QCanBusDeviceInfo()
