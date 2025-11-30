@@ -125,7 +125,7 @@
 #define OPFLOAT(n, v)                                       static_cast<float>(HB_ISNIL(n) ? v : hb_parnd(n))
 #define OPDOUBLE(n, v)                                      static_cast<double>(HB_ISNIL(n) ? v : hb_parnd(n))
 #define OPQREAL(n, v)                                       static_cast<qreal>(HB_ISNIL(n) ? v : hb_parnd(n))
-#define OPCONSTCHAR(n, v)                                   (const char *)HB_ISNIL(n) ? v : hb_parc(n)
+#define OPCONSTCHAR(n, v)                                   static_cast<const char *>(HB_ISNIL(n) ? v : hb_parc(n))
 #define OPQSTRING(n, v)                                     HB_ISNIL(n) ? v : QString::fromLatin1(hb_parc(n))
 //#define OPQSTRING(n, v)                                   HB_ISNIL(n) ? v : QString::fromUtf8(hb_parc(n))
 #define OPQSTRINGLIST(n, v)                                 HB_ISNIL(n) ? v : Qt5xHb::convert_array_parameter_to_qstringlist(n)
