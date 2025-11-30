@@ -40,7 +40,7 @@ qt5xhb_qtquickwidgets.hbp
 qt5xhb_qtscript.hbp
 qt5xhb_qtscripttools.hbp
 qt5xhb_qtsensors.hbp
-#qt5xhb_qtserialbus.hbp
+qt5xhb_qtserialbus.hbp
 qt5xhb_qtserialport.hbp
 qt5xhb_qtsql.hbp
 qt5xhb_qtsvg.hbp
