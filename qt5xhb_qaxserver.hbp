@@ -13,9 +13,7 @@
 -workdir=obj
 
 -n
-
 -w3
-
 -gc3
 
 -cpp
