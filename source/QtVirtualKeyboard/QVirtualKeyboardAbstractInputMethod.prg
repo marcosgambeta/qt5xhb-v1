@@ -18,9 +18,13 @@ REQUEST QVIRTUALKEYBOARDINPUTENGINE
 
 CLASS QVirtualKeyboardAbstractInputMethod INHERIT QObject
 
+#if 0
    METHOD new
+#endif
    METHOD delete
+#if 0
    METHOD inputContext
+#endif
    METHOD inputEngine
    METHOD inputModes
    METHOD setInputMode
@@ -71,9 +75,10 @@ RETURN
 #include <QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod>
 #endif
 
-    /*
-    QVirtualKeyboardAbstractInputMethod( QObject * parent = nullptr )
-    */
+/*
+QVirtualKeyboardAbstractInputMethod( QObject * parent = nullptr )
+*/
+#if 0
 HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -83,6 +88,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_NEW)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 /*
 ~QVirtualKeyboardAbstractInputMethod()
@@ -107,6 +113,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_DELETE)
 /*
 QVirtualKeyboardInputContext * inputContext() const
 */
+#if 0
 HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTCONTEXT)
 {
   QVirtualKeyboardAbstractInputMethod *obj = (QVirtualKeyboardAbstractInputMethod *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -124,6 +131,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTCONTEXT)
 #endif
   }
 }
+#endif
 
 /*
 QVirtualKeyboardInputEngine * inputEngine() const

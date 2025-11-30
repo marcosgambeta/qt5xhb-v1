@@ -33,7 +33,9 @@ CLASS QVirtualKeyboardInputContext INHERIT QObject
    METHOD isAnimating
    METHOD setAnimating
    METHOD locale
+#if 0
    METHOD inputEngine
+#endif
    METHOD isSelectionControlVisible
    METHOD anchorRectIntersectsClipRect
    METHOD cursorRectIntersectsClipRect
@@ -409,6 +411,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_LOCALE)
 /*
 QVirtualKeyboardInputEngine * inputEngine() const
 */
+#if 0
 HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_INPUTENGINE)
 {
   QVirtualKeyboardInputContext *obj = (QVirtualKeyboardInputContext *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -426,6 +429,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_INPUTENGINE)
 #endif
   }
 }
+#endif
 
 /*
 bool isSelectionControlVisible() const
@@ -509,7 +513,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-STATIC_HB_FUNC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
+HB_FUNC_STATIC(QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT)
 {
   if (ISNUMPAR(0)) {
     /*

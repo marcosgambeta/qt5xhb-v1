@@ -17,10 +17,14 @@ REQUEST QVIRTUALKEYBOARDABSTRACTINPUTMETHOD
 
 CLASS QVirtualKeyboardSelectionListModel INHERIT QAbstractListModel
 
+#if 0
    METHOD new
+#endif
    METHOD delete
    METHOD count
+#if 0
    METHOD dataSource
+#endif
    METHOD rowCount
    METHOD data
    METHOD selectItem
@@ -60,9 +64,10 @@ RETURN
 #include <QtVirtualKeyboard/QVirtualKeyboardSelectionListModel>
 #endif
 
-    /*
-    QVirtualKeyboardSelectionListModel( QObject * parent = nullptr )
-    */
+/*
+QVirtualKeyboardSelectionListModel( QObject * parent = nullptr )
+*/
+#if 0
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -72,6 +77,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_NEW)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 /*
 ~QVirtualKeyboardSelectionListModel()
@@ -116,6 +122,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_COUNT)
 /*
 QVirtualKeyboardAbstractInputMethod * dataSource() const
 */
+#if 0
 HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATASOURCE)
 {
   QVirtualKeyboardSelectionListModel *obj = (QVirtualKeyboardSelectionListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -133,6 +140,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATASOURCE)
 #endif
   }
 }
+#endif
 
 /*
 int rowCount( const QModelIndex &parent = QModelIndex() ) const
