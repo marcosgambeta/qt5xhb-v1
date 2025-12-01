@@ -62,27 +62,19 @@ RETURN
 HB_FUNC_STATIC(QLIBRARY_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QLibrary( QObject * parent = 0 )
-    */
+    // QLibrary( QObject * parent = 0 )
     QLibrary *obj = new QLibrary(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QLibrary( const QString &fileName, QObject * parent = 0 )
-    */
+    // QLibrary( const QString & fileName, QObject * parent = 0 )
     QLibrary *obj = new QLibrary(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
-    /*
-    QLibrary( const QString &fileName, int verNum, QObject * parent = 0 )
-    */
+    // QLibrary( const QString & fileName, int verNum, QObject * parent = 0 )
     QLibrary *obj = new QLibrary(PQSTRING(1), PINT(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3)) {
-    /*
-    QLibrary( const QString &fileName, const QString &version, QObject * parent = 0 )
-    */
+    // QLibrary( const QString & fileName, const QString & version, QObject * parent = 0 )
     QLibrary *obj = new QLibrary(PQSTRING(1), PQSTRING(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -92,7 +84,7 @@ HB_FUNC_STATIC(QLIBRARY_NEW)
 
 HB_FUNC_STATIC(QLIBRARY_DELETE)
 {
-  QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
+  QLibrary *obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -107,9 +99,7 @@ HB_FUNC_STATIC(QLIBRARY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool load()
-*/
+// bool load()
 HB_FUNC_STATIC(QLIBRARY_LOAD)
 {
   QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -127,9 +117,7 @@ HB_FUNC_STATIC(QLIBRARY_LOAD)
   }
 }
 
-/*
-bool unload()
-*/
+// bool unload()
 HB_FUNC_STATIC(QLIBRARY_UNLOAD)
 {
   QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -147,9 +135,7 @@ HB_FUNC_STATIC(QLIBRARY_UNLOAD)
   }
 }
 
-/*
-bool isLoaded() const
-*/
+// bool isLoaded() const
 HB_FUNC_STATIC(QLIBRARY_ISLOADED)
 {
   QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -167,9 +153,7 @@ HB_FUNC_STATIC(QLIBRARY_ISLOADED)
   }
 }
 
-/*
-void setFileName( const QString &fileName )
-*/
+// void setFileName( const QString & fileName )
 HB_FUNC_STATIC(QLIBRARY_SETFILENAME)
 {
   QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -189,9 +173,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QLIBRARY_FILENAME)
 {
   QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -212,10 +194,8 @@ HB_FUNC_STATIC(QLIBRARY_FILENAME)
 HB_FUNC_STATIC(QLIBRARY_SETFILENAMEANDVERSION)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
-    /*
-    void setFileNameAndVersion( const QString &fileName, int verNum )
-    */
-    QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void setFileNameAndVersion( const QString & fileName, int verNum )
+    QLibrary *obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       obj->setFileNameAndVersion(PQSTRING(1), PINT(2));
@@ -223,10 +203,8 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAMEANDVERSION)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    void setFileNameAndVersion( const QString &fileName, const QString &version )
-    */
-    QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void setFileNameAndVersion( const QString & fileName, const QString & version )
+    QLibrary *obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       obj->setFileNameAndVersion(PQSTRING(1), PQSTRING(2));
@@ -238,9 +216,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAMEANDVERSION)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QLIBRARY_ERRORSTRING)
 {
   QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -258,9 +234,7 @@ HB_FUNC_STATIC(QLIBRARY_ERRORSTRING)
   }
 }
 
-/*
-void setLoadHints( QLibrary::LoadHints hints )
-*/
+// void setLoadHints( QLibrary::LoadHints hints )
 HB_FUNC_STATIC(QLIBRARY_SETLOADHINTS)
 {
   QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -280,9 +254,7 @@ HB_FUNC_STATIC(QLIBRARY_SETLOADHINTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QLibrary::LoadHints loadHints() const
-*/
+// QLibrary::LoadHints loadHints() const
 HB_FUNC_STATIC(QLIBRARY_LOADHINTS)
 {
   QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -305,9 +277,7 @@ HB_FUNC_STATIC(QLIBRARY_RESOLVE)
   hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
 }
 
-/*
-static bool isLibrary( const QString &fileName )
-*/
+// static bool isLibrary( const QString & fileName )
 HB_FUNC_STATIC(QLIBRARY_ISLIBRARY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

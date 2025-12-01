@@ -54,9 +54,7 @@ RETURN
 #include <QtCore/QEventLoop>
 #endif
 
-    /*
-    QEventLoop( QObject * parent = 0 )
-    */
+    // QEventLoop( QObject * parent = 0 )
 HB_FUNC_STATIC(QEVENTLOOP_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -69,7 +67,7 @@ HB_FUNC_STATIC(QEVENTLOOP_NEW)
 
 HB_FUNC_STATIC(QEVENTLOOP_DELETE)
 {
-  QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
+  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QEVENTLOOP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int exec( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
-*/
+// int exec( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 HB_FUNC_STATIC(QEVENTLOOP_EXEC)
 {
   QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -105,9 +101,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXEC)
   }
 }
 
-/*
-void exit( int returnCode = 0 )
-*/
+// void exit( int returnCode = 0 )
 HB_FUNC_STATIC(QEVENTLOOP_EXIT)
 {
   QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXIT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isRunning() const
-*/
+// bool isRunning() const
 HB_FUNC_STATIC(QEVENTLOOP_ISRUNNING)
 {
   QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -150,20 +142,16 @@ HB_FUNC_STATIC(QEVENTLOOP_ISRUNNING)
 HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    bool processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
-    */
-    QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
+    // bool processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
+    QEventLoop *obj = qobject_cast<QEventLoop *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->processEvents(HB_ISNIL(1) ? (QEventLoop::ProcessEventsFlags)QEventLoop::AllEvents
                                            : (QEventLoop::ProcessEventsFlags)hb_parni(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    void processEvents( QEventLoop::ProcessEventsFlags flags, int maxTime )
-    */
-    QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void processEvents( QEventLoop::ProcessEventsFlags flags, int maxTime )
+    QEventLoop *obj = qobject_cast<QEventLoop *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       obj->processEvents((QEventLoop::ProcessEventsFlags)hb_parni(1), PINT(2));
@@ -175,9 +163,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
   }
 }
 
-/*
-void wakeUp()
-*/
+// void wakeUp()
 HB_FUNC_STATIC(QEVENTLOOP_WAKEUP)
 {
   QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -197,9 +183,7 @@ HB_FUNC_STATIC(QEVENTLOOP_WAKEUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void quit()
-*/
+// void quit()
 HB_FUNC_STATIC(QEVENTLOOP_QUIT)
 {
   QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();

@@ -63,29 +63,21 @@ RETURN
 HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QStringMatcher()
-    */
+    // QStringMatcher()
     QStringMatcher *obj = new QStringMatcher();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
-    /*
-    QStringMatcher( const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive )
-    */
+    // QStringMatcher( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive )
     QStringMatcher *obj = new QStringMatcher(PQSTRING(1), HB_ISNIL(2) ? (Qt::CaseSensitivity)Qt::CaseSensitive
                                                                       : (Qt::CaseSensitivity)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 3) && ISQCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
-    /*
-    QStringMatcher( const QChar * uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive )
-    */
+    // QStringMatcher( const QChar * uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive )
     QStringMatcher *obj = new QStringMatcher(
         PQCHAR(1), PINT(2), HB_ISNIL(3) ? (Qt::CaseSensitivity)Qt::CaseSensitive : (Qt::CaseSensitivity)hb_parni(3));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSTRINGMATCHER(1)) {
-    /*
-    QStringMatcher( const QStringMatcher &other )
-    */
+    // QStringMatcher( const QStringMatcher & other )
     QStringMatcher *obj = new QStringMatcher(*PQSTRINGMATCHER(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -95,7 +87,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
 
 HB_FUNC_STATIC(QSTRINGMATCHER_DELETE)
 {
-  QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStringMatcher *obj = static_cast<QStringMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -108,9 +100,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPattern( const QString &pattern )
-*/
+// void setPattern( const QString & pattern )
 HB_FUNC_STATIC(QSTRINGMATCHER_SETPATTERN)
 {
   QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -130,9 +120,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETPATTERN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCaseSensitivity( Qt::CaseSensitivity cs )
-*/
+// void setCaseSensitivity( Qt::CaseSensitivity cs )
 HB_FUNC_STATIC(QSTRINGMATCHER_SETCASESENSITIVITY)
 {
   QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -155,19 +143,15 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETCASESENSITIVITY)
 HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
-    /*
-    int indexIn( const QString &str, int from = 0 ) const
-    */
-    QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+    // int indexIn( const QString & str, int from = 0 ) const
+    QStringMatcher *obj = static_cast<QStringMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RINT(obj->indexIn(PQSTRING(1), OPINT(2, 0)));
     }
   } else if (ISBETWEEN(2, 3) && ISQCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
-    /*
-    int indexIn( const QChar * str, int length, int from = 0 ) const
-    */
-    QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+    // int indexIn( const QChar * str, int length, int from = 0 ) const
+    QStringMatcher *obj = static_cast<QStringMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RINT(obj->indexIn(PQCHAR(1), PINT(2), OPINT(3, 0)));
@@ -177,9 +161,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)
   }
 }
 
-/*
-QString pattern() const
-*/
+// QString pattern() const
 HB_FUNC_STATIC(QSTRINGMATCHER_PATTERN)
 {
   QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -197,9 +179,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_PATTERN)
   }
 }
 
-/*
-Qt::CaseSensitivity caseSensitivity() const
-*/
+// Qt::CaseSensitivity caseSensitivity() const
 HB_FUNC_STATIC(QSTRINGMATCHER_CASESENSITIVITY)
 {
   QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();

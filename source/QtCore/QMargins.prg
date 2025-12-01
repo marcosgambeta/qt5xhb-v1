@@ -67,15 +67,11 @@ RETURN
 HB_FUNC_STATIC(QMARGINS_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QMargins()
-    */
+    // QMargins()
     QMargins *obj = new QMargins();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    QMargins( int left, int top, int right, int bottom )
-    */
+    // QMargins( int left, int top, int right, int bottom )
     QMargins *obj = new QMargins(PINT(1), PINT(2), PINT(3), PINT(4));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -85,7 +81,7 @@ HB_FUNC_STATIC(QMARGINS_NEW)
 
 HB_FUNC_STATIC(QMARGINS_DELETE)
 {
-  QMargins *obj = (QMargins *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMargins *obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -98,9 +94,7 @@ HB_FUNC_STATIC(QMARGINS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QMARGINS_ISNULL)
 {
   QMargins *obj = (QMargins *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -118,9 +112,7 @@ HB_FUNC_STATIC(QMARGINS_ISNULL)
   }
 }
 
-/*
-int left() const
-*/
+// int left() const
 HB_FUNC_STATIC(QMARGINS_LEFT)
 {
   QMargins *obj = (QMargins *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -138,9 +130,7 @@ HB_FUNC_STATIC(QMARGINS_LEFT)
   }
 }
 
-/*
-int top() const
-*/
+// int top() const
 HB_FUNC_STATIC(QMARGINS_TOP)
 {
   QMargins *obj = (QMargins *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -158,9 +148,7 @@ HB_FUNC_STATIC(QMARGINS_TOP)
   }
 }
 
-/*
-int right() const
-*/
+// int right() const
 HB_FUNC_STATIC(QMARGINS_RIGHT)
 {
   QMargins *obj = (QMargins *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -178,9 +166,7 @@ HB_FUNC_STATIC(QMARGINS_RIGHT)
   }
 }
 
-/*
-int bottom() const
-*/
+// int bottom() const
 HB_FUNC_STATIC(QMARGINS_BOTTOM)
 {
   QMargins *obj = (QMargins *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -198,9 +184,7 @@ HB_FUNC_STATIC(QMARGINS_BOTTOM)
   }
 }
 
-/*
-void setLeft( int left )
-*/
+// void setLeft( int left )
 HB_FUNC_STATIC(QMARGINS_SETLEFT)
 {
   QMargins *obj = (QMargins *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -220,9 +204,7 @@ HB_FUNC_STATIC(QMARGINS_SETLEFT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTop( int top )
-*/
+// void setTop( int top )
 HB_FUNC_STATIC(QMARGINS_SETTOP)
 {
   QMargins *obj = (QMargins *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -242,9 +224,7 @@ HB_FUNC_STATIC(QMARGINS_SETTOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRight( int right )
-*/
+// void setRight( int right )
 HB_FUNC_STATIC(QMARGINS_SETRIGHT)
 {
   QMargins *obj = (QMargins *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -264,9 +244,7 @@ HB_FUNC_STATIC(QMARGINS_SETRIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBottom( int bottom )
-*/
+// void setBottom( int bottom )
 HB_FUNC_STATIC(QMARGINS_SETBOTTOM)
 {
   QMargins *obj = (QMargins *)Qt5xHb::itemGetPtrStackSelfItem();

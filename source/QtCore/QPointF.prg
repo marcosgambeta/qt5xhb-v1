@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINT
+REQUEST QPoint
 #endif
 
 CLASS QPointF
@@ -66,21 +66,15 @@ RETURN
 HB_FUNC_STATIC(QPOINTF_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPointF()
-    */
+    // QPointF()
     QPointF *obj = new QPointF();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
-    /*
-    QPointF( const QPoint &point )
-    */
+    // QPointF( const QPoint & point )
     QPointF *obj = new QPointF(*PQPOINT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    QPointF( qreal xpos, qreal ypos )
-    */
+    // QPointF( qreal xpos, qreal ypos )
     QPointF *obj = new QPointF(PQREAL(1), PQREAL(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -90,7 +84,7 @@ HB_FUNC_STATIC(QPOINTF_NEW)
 
 HB_FUNC_STATIC(QPOINTF_DELETE)
 {
-  QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPointF *obj = static_cast<QPointF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -103,9 +97,7 @@ HB_FUNC_STATIC(QPOINTF_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QPOINTF_ISNULL)
 {
   QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -123,9 +115,7 @@ HB_FUNC_STATIC(QPOINTF_ISNULL)
   }
 }
 
-/*
-qreal manhattanLength() const
-*/
+// qreal manhattanLength() const
 HB_FUNC_STATIC(QPOINTF_MANHATTANLENGTH)
 {
   QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -143,9 +133,7 @@ HB_FUNC_STATIC(QPOINTF_MANHATTANLENGTH)
   }
 }
 
-/*
-void setX( qreal x )
-*/
+// void setX( qreal x )
 HB_FUNC_STATIC(QPOINTF_SETX)
 {
   QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -165,9 +153,7 @@ HB_FUNC_STATIC(QPOINTF_SETX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setY( qreal y )
-*/
+// void setY( qreal y )
 HB_FUNC_STATIC(QPOINTF_SETY)
 {
   QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -187,9 +173,7 @@ HB_FUNC_STATIC(QPOINTF_SETY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPoint toPoint() const
-*/
+// QPoint toPoint() const
 HB_FUNC_STATIC(QPOINTF_TOPOINT)
 {
   QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -208,9 +192,7 @@ HB_FUNC_STATIC(QPOINTF_TOPOINT)
   }
 }
 
-/*
-qreal x() const
-*/
+// qreal x() const
 HB_FUNC_STATIC(QPOINTF_X)
 {
   QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -228,9 +210,7 @@ HB_FUNC_STATIC(QPOINTF_X)
   }
 }
 
-/*
-qreal y() const
-*/
+// qreal y() const
 HB_FUNC_STATIC(QPOINTF_Y)
 {
   QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();

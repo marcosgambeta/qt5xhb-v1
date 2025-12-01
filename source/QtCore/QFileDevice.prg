@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC(QFILEDEVICE_DELETE)
 {
-  QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QFILEDEVICE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QFileDevice::FileError error() const
-*/
+// QFileDevice::FileError error() const
 HB_FUNC_STATIC(QFILEDEVICE_ERROR)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ERROR)
   }
 }
 
-/*
-virtual QString fileName() const
-*/
+// virtual QString fileName() const
 HB_FUNC_STATIC(QFILEDEVICE_FILENAME)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -118,9 +114,7 @@ HB_FUNC_STATIC(QFILEDEVICE_FILENAME)
   }
 }
 
-/*
-bool flush()
-*/
+// bool flush()
 HB_FUNC_STATIC(QFILEDEVICE_FLUSH)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -138,9 +132,7 @@ HB_FUNC_STATIC(QFILEDEVICE_FLUSH)
   }
 }
 
-/*
-int handle() const
-*/
+// int handle() const
 HB_FUNC_STATIC(QFILEDEVICE_HANDLE)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -158,9 +150,7 @@ HB_FUNC_STATIC(QFILEDEVICE_HANDLE)
   }
 }
 
-/*
-virtual QFileDevice::Permissions permissions() const
-*/
+// virtual QFileDevice::Permissions permissions() const
 HB_FUNC_STATIC(QFILEDEVICE_PERMISSIONS)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -178,9 +168,7 @@ HB_FUNC_STATIC(QFILEDEVICE_PERMISSIONS)
   }
 }
 
-/*
-virtual bool resize( qint64 sz )
-*/
+// virtual bool resize( qint64 sz )
 HB_FUNC_STATIC(QFILEDEVICE_RESIZE)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -198,9 +186,7 @@ HB_FUNC_STATIC(QFILEDEVICE_RESIZE)
   }
 }
 
-/*
-virtual bool setPermissions( QFileDevice::Permissions permissions )
-*/
+// virtual bool setPermissions( QFileDevice::Permissions permissions )
 HB_FUNC_STATIC(QFILEDEVICE_SETPERMISSIONS)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -218,9 +204,7 @@ HB_FUNC_STATIC(QFILEDEVICE_SETPERMISSIONS)
   }
 }
 
-/*
-void unsetError()
-*/
+// void unsetError()
 HB_FUNC_STATIC(QFILEDEVICE_UNSETERROR)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -240,9 +224,7 @@ HB_FUNC_STATIC(QFILEDEVICE_UNSETERROR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool atEnd() const
-*/
+// virtual bool atEnd() const
 HB_FUNC_STATIC(QFILEDEVICE_ATEND)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -260,9 +242,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ATEND)
   }
 }
 
-/*
-virtual void close()
-*/
+// virtual void close()
 HB_FUNC_STATIC(QFILEDEVICE_CLOSE)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -282,9 +262,7 @@ HB_FUNC_STATIC(QFILEDEVICE_CLOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool isSequential() const
-*/
+// virtual bool isSequential() const
 HB_FUNC_STATIC(QFILEDEVICE_ISSEQUENTIAL)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -302,9 +280,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ISSEQUENTIAL)
   }
 }
 
-/*
-virtual qint64 pos() const
-*/
+// virtual qint64 pos() const
 HB_FUNC_STATIC(QFILEDEVICE_POS)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -322,9 +298,7 @@ HB_FUNC_STATIC(QFILEDEVICE_POS)
   }
 }
 
-/*
-virtual bool seek( qint64 pos )
-*/
+// virtual bool seek( qint64 pos )
 HB_FUNC_STATIC(QFILEDEVICE_SEEK)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -342,9 +316,7 @@ HB_FUNC_STATIC(QFILEDEVICE_SEEK)
   }
 }
 
-/*
-virtual qint64 size() const
-*/
+// virtual qint64 size() const
 HB_FUNC_STATIC(QFILEDEVICE_SIZE)
 {
   QFileDevice *obj = (QFileDevice *)Qt5xHb::itemGetPtrStackSelfItem();

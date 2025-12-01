@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QJSONARRAY
-REQUEST QJSONOBJECT
+REQUEST QJsonArray
+REQUEST QJsonObject
 #endif
 
 CLASS QJsonValueRef
@@ -77,15 +77,11 @@ RETURN
 HB_FUNC_STATIC(QJSONVALUEREF_NEW)
 {
   if (ISNUMPAR(2) && ISQJSONARRAY(1) && HB_ISNUM(2)) {
-    /*
-    QJsonValueRef( QJsonArray * array, int idx )
-    */
+    // QJsonValueRef( QJsonArray * array, int idx )
     QJsonValueRef *obj = new QJsonValueRef(PQJSONARRAY(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && ISQJSONOBJECT(1) && HB_ISNUM(2)) {
-    /*
-    QJsonValueRef( QJsonObject * object, int idx )
-    */
+    // QJsonValueRef( QJsonObject * object, int idx )
     QJsonValueRef *obj = new QJsonValueRef(PQJSONOBJECT(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -95,7 +91,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_NEW)
 
 HB_FUNC_STATIC(QJSONVALUEREF_DELETE)
 {
-  QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValueRef *obj = static_cast<QJsonValueRef *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -108,9 +104,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QJsonValue::Type type() const
-*/
+// QJsonValue::Type type() const
 HB_FUNC_STATIC(QJSONVALUEREF_TYPE)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -128,9 +122,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_TYPE)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QJSONVALUEREF_ISNULL)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -148,9 +140,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_ISNULL)
   }
 }
 
-/*
-bool isBool() const
-*/
+// bool isBool() const
 HB_FUNC_STATIC(QJSONVALUEREF_ISBOOL)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -168,9 +158,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_ISBOOL)
   }
 }
 
-/*
-bool isDouble() const
-*/
+// bool isDouble() const
 HB_FUNC_STATIC(QJSONVALUEREF_ISDOUBLE)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -188,9 +176,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_ISDOUBLE)
   }
 }
 
-/*
-bool isString() const
-*/
+// bool isString() const
 HB_FUNC_STATIC(QJSONVALUEREF_ISSTRING)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -208,9 +194,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_ISSTRING)
   }
 }
 
-/*
-bool isArray() const
-*/
+// bool isArray() const
 HB_FUNC_STATIC(QJSONVALUEREF_ISARRAY)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -228,9 +212,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_ISARRAY)
   }
 }
 
-/*
-bool isObject() const
-*/
+// bool isObject() const
 HB_FUNC_STATIC(QJSONVALUEREF_ISOBJECT)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -248,9 +230,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_ISOBJECT)
   }
 }
 
-/*
-bool isUndefined() const
-*/
+// bool isUndefined() const
 HB_FUNC_STATIC(QJSONVALUEREF_ISUNDEFINED)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -268,9 +248,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_ISUNDEFINED)
   }
 }
 
-/*
-bool toBool() const
-*/
+// bool toBool() const
 HB_FUNC_STATIC(QJSONVALUEREF_TOBOOL)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -288,9 +266,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_TOBOOL)
   }
 }
 
-/*
-int toInt() const
-*/
+// int toInt() const
 HB_FUNC_STATIC(QJSONVALUEREF_TOINT)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -308,9 +284,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_TOINT)
   }
 }
 
-/*
-double toDouble() const
-*/
+// double toDouble() const
 HB_FUNC_STATIC(QJSONVALUEREF_TODOUBLE)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -328,9 +302,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_TODOUBLE)
   }
 }
 
-/*
-QString toString() const
-*/
+// QString toString() const
 HB_FUNC_STATIC(QJSONVALUEREF_TOSTRING)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -348,9 +320,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_TOSTRING)
   }
 }
 
-/*
-QJsonArray toArray() const
-*/
+// QJsonArray toArray() const
 HB_FUNC_STATIC(QJSONVALUEREF_TOARRAY)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -369,9 +339,7 @@ HB_FUNC_STATIC(QJSONVALUEREF_TOARRAY)
   }
 }
 
-/*
-QJsonObject toObject() const
-*/
+// QJsonObject toObject() const
 HB_FUNC_STATIC(QJSONVALUEREF_TOOBJECT)
 {
   QJsonValueRef *obj = (QJsonValueRef *)Qt5xHb::itemGetPtrStackSelfItem();

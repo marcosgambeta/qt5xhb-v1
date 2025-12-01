@@ -61,9 +61,7 @@ RETURN
 #include <QtCore/QStandardPaths>
 #endif
 
-    /*
-    static QString writableLocation( QStandardPaths::StandardLocation type )
-    */
+    // static QString writableLocation( QStandardPaths::StandardLocation type )
 HB_FUNC_STATIC(QSTANDARDPATHS_WRITABLELOCATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -77,9 +75,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_WRITABLELOCATION)
 #endif
 }
 
-/*
-static QStringList standardLocations( QStandardPaths::StandardLocation type )
-*/
+// static QStringList standardLocations( QStandardPaths::StandardLocation type )
 HB_FUNC_STATIC(QSTANDARDPATHS_STANDARDLOCATIONS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -93,10 +89,8 @@ HB_FUNC_STATIC(QSTANDARDPATHS_STANDARDLOCATIONS)
 #endif
 }
 
-/*
-static QString locate( QStandardPaths::StandardLocation type, const QString &fileName, QStandardPaths::LocateOptions
-options = QStandardPaths::LocateFile )
-*/
+// static QString locate( QStandardPaths::StandardLocation type, const QString & fileName, QStandardPaths::LocateOptions
+// options = QStandardPaths::LocateFile )
 HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,10 +106,8 @@ HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
 #endif
 }
 
-/*
-static QStringList locateAll( QStandardPaths::StandardLocation type, const QString &fileName,
-QStandardPaths::LocateOptions options = QStandardPaths::LocateFile )
-*/
+// static QStringList locateAll( QStandardPaths::StandardLocation type, const QString & fileName,
+// QStandardPaths::LocateOptions options = QStandardPaths::LocateFile )
 HB_FUNC_STATIC(QSTANDARDPATHS_LOCATEALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,9 +123,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_LOCATEALL)
 #endif
 }
 
-/*
-static QString displayName( QStandardPaths::StandardLocation type )
-*/
+// static QString displayName( QStandardPaths::StandardLocation type )
 HB_FUNC_STATIC(QSTANDARDPATHS_DISPLAYNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,9 +137,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_DISPLAYNAME)
 #endif
 }
 
-/*
-static QString findExecutable( const QString &executableName, const QStringList &paths = QStringList() )
-*/
+// static QString findExecutable( const QString & executableName, const QStringList & paths = QStringList() )
 HB_FUNC_STATIC(QSTANDARDPATHS_FINDEXECUTABLE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,9 +151,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_FINDEXECUTABLE)
 #endif
 }
 
-/*
-static void setTestModeEnabled( bool testMode )
-*/
+// static void setTestModeEnabled( bool testMode )
 HB_FUNC_STATIC(QSTANDARDPATHS_SETTESTMODEENABLED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,9 +167,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_SETTESTMODEENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool isTestModeEnabled()
-*/
+// static bool isTestModeEnabled()
 HB_FUNC_STATIC(QSTANDARDPATHS_ISTESTMODEENABLED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -59,9 +59,7 @@ RETURN
 #include <QtCore/QSemaphore>
 #endif
 
-    /*
-    QSemaphore( int n = 0 )
-    */
+    // QSemaphore( int n = 0 )
 HB_FUNC_STATIC(QSEMAPHORE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -74,7 +72,7 @@ HB_FUNC_STATIC(QSEMAPHORE_NEW)
 
 HB_FUNC_STATIC(QSEMAPHORE_DELETE)
 {
-  QSemaphore *obj = (QSemaphore *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSemaphore *obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QSEMAPHORE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void acquire( int n = 1 )
-*/
+// void acquire( int n = 1 )
 HB_FUNC_STATIC(QSEMAPHORE_ACQUIRE)
 {
   QSemaphore *obj = (QSemaphore *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -112,19 +108,15 @@ HB_FUNC_STATIC(QSEMAPHORE_ACQUIRE)
 HB_FUNC_STATIC(QSEMAPHORE_TRYACQUIRE)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    bool tryAcquire( int n = 1 )
-    */
-    QSemaphore *obj = (QSemaphore *)Qt5xHb::itemGetPtrStackSelfItem();
+    // bool tryAcquire( int n = 1 )
+    QSemaphore *obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->tryAcquire(OPINT(1, 1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    bool tryAcquire( int n, int timeout )
-    */
-    QSemaphore *obj = (QSemaphore *)Qt5xHb::itemGetPtrStackSelfItem();
+    // bool tryAcquire( int n, int timeout )
+    QSemaphore *obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->tryAcquire(PINT(1), PINT(2)));
@@ -134,9 +126,7 @@ HB_FUNC_STATIC(QSEMAPHORE_TRYACQUIRE)
   }
 }
 
-/*
-void release( int n = 1 )
-*/
+// void release( int n = 1 )
 HB_FUNC_STATIC(QSEMAPHORE_RELEASE)
 {
   QSemaphore *obj = (QSemaphore *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -156,9 +146,7 @@ HB_FUNC_STATIC(QSEMAPHORE_RELEASE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int available() const
-*/
+// int available() const
 HB_FUNC_STATIC(QSEMAPHORE_AVAILABLE)
 {
   QSemaphore *obj = (QSemaphore *)Qt5xHb::itemGetPtrStackSelfItem();

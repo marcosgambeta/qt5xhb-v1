@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QEASINGCURVE
-REQUEST QVARIANT
+REQUEST QEasingCurve
+REQUEST QVariant
 #endif
 
 CLASS QVariantAnimation INHERIT QAbstractAnimation
@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC(QVARIANTANIMATION_DELETE)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant currentValue() const
-*/
+// QVariant currentValue() const
 HB_FUNC_STATIC(QVARIANTANIMATION_CURRENTVALUE)
 {
   QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -99,9 +97,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_CURRENTVALUE)
   }
 }
 
-/*
-QEasingCurve easingCurve() const
-*/
+// QEasingCurve easingCurve() const
 HB_FUNC_STATIC(QVARIANTANIMATION_EASINGCURVE)
 {
   QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -120,9 +116,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_EASINGCURVE)
   }
 }
 
-/*
-QVariant endValue() const
-*/
+// QVariant endValue() const
 HB_FUNC_STATIC(QVARIANTANIMATION_ENDVALUE)
 {
   QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -141,9 +135,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_ENDVALUE)
   }
 }
 
-/*
-QVariant keyValueAt( qreal step ) const
-*/
+// QVariant keyValueAt( qreal step ) const
 HB_FUNC_STATIC(QVARIANTANIMATION_KEYVALUEAT)
 {
   QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_KEYVALUEAT)
   }
 }
 
-/*
-void setDuration( int msecs )
-*/
+// void setDuration( int msecs )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETDURATION)
 {
   QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -184,9 +174,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETDURATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEasingCurve( const QEasingCurve &easing )
-*/
+// void setEasingCurve( const QEasingCurve & easing )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETEASINGCURVE)
 {
   QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -206,9 +194,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETEASINGCURVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEndValue( const QVariant &value )
-*/
+// void setEndValue( const QVariant & value )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETENDVALUE)
 {
   QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -228,9 +214,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETENDVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setKeyValueAt( qreal step, const QVariant &value )
-*/
+// void setKeyValueAt( qreal step, const QVariant & value )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETKEYVALUEAT)
 {
   QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -250,9 +234,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETKEYVALUEAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStartValue( const QVariant &value )
-*/
+// void setStartValue( const QVariant & value )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETSTARTVALUE)
 {
   QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -272,9 +254,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETSTARTVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant startValue() const
-*/
+// QVariant startValue() const
 HB_FUNC_STATIC(QVARIANTANIMATION_STARTVALUE)
 {
   QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -295,9 +275,11 @@ HB_FUNC_STATIC(QVARIANTANIMATION_STARTVALUE)
 
 void QVariantAnimationSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QVariantAnimationSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QVARIANTANIMATION_ONVALUECHANGED)
 {
-  QVariantAnimationSlots_connect_signal("valueChanged(QVariant)", "valueChanged(QVariant)");
+  CONNECT_SIGNAL("valueChanged(QVariant)");
 }
 
 #pragma ENDDUMP

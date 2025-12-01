@@ -47,9 +47,7 @@ RETURN
 #include <QtCore/QTimerEvent>
 #endif
 
-    /*
-    QTimerEvent( int timerId )
-    */
+    // QTimerEvent( int timerId )
 HB_FUNC_STATIC(QTIMEREVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -62,7 +60,7 @@ HB_FUNC_STATIC(QTIMEREVENT_NEW)
 
 HB_FUNC_STATIC(QTIMEREVENT_DELETE)
 {
-  QTimerEvent *obj = (QTimerEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimerEvent *obj = static_cast<QTimerEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -75,9 +73,7 @@ HB_FUNC_STATIC(QTIMEREVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int timerId() const
-*/
+// int timerId() const
 HB_FUNC_STATIC(QTIMEREVENT_TIMERID)
 {
   QTimerEvent *obj = (QTimerEvent *)Qt5xHb::itemGetPtrStackSelfItem();

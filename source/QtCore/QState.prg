@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTSTATE
-REQUEST QABSTRACTTRANSITION
-REQUEST QSIGNALTRANSITION
+REQUEST QAbstractState
+REQUEST QAbstractTransition
+REQUEST QSignalTransition
 #endif
 
 CLASS QState INHERIT QAbstractState
@@ -69,15 +69,11 @@ RETURN
 HB_FUNC_STATIC(QSTATE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
-    /*
-    QState( QState * parent = 0 )
-    */
+    // QState( QState * parent = 0 )
     QState *obj = new QState(OPQSTATE(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSTATEORNIL(2)) {
-    /*
-    QState( QState::ChildMode childMode, QState * parent = 0 )
-    */
+    // QState( QState::ChildMode childMode, QState * parent = 0 )
     QState *obj = new QState((QState::ChildMode)hb_parni(1), OPQSTATE(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -87,7 +83,7 @@ HB_FUNC_STATIC(QSTATE_NEW)
 
 HB_FUNC_STATIC(QSTATE_DELETE)
 {
-  QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
+  QState *obj = qobject_cast<QState *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -105,10 +101,8 @@ HB_FUNC_STATIC(QSTATE_DELETE)
 HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
 {
   if (ISNUMPAR(1) && ISQABSTRACTTRANSITION(1)) {
-    /*
-    void addTransition( QAbstractTransition * transition )
-    */
-    QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void addTransition( QAbstractTransition * transition )
+    QState *obj = qobject_cast<QState *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       obj->addTransition(PQABSTRACTTRANSITION(1));
@@ -116,20 +110,16 @@ HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQABSTRACTSTATE(3)) {
-    /*
-    QSignalTransition * addTransition( QObject * sender, const char * signal, QAbstractState * target )
-    */
-    QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QSignalTransition * addTransition( QObject * sender, const char * signal, QAbstractState * target )
+    QState *obj = qobject_cast<QState *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       QSignalTransition *ptr = obj->addTransition(PQOBJECT(1), PCONSTCHAR(2), PQABSTRACTSTATE(3));
       Qt5xHb::createReturnClass(ptr, "QSIGNALTRANSITION", false);
     }
   } else if (ISNUMPAR(1) && ISQABSTRACTSTATE(1)) {
-    /*
-    QAbstractTransition * addTransition( QAbstractState * target )
-    */
-    QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QAbstractTransition * addTransition( QAbstractState * target )
+    QState *obj = qobject_cast<QState *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       QAbstractTransition *ptr = obj->addTransition(PQABSTRACTSTATE(1));
@@ -140,9 +130,7 @@ HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
   }
 }
 
-/*
-void assignProperty( QObject * object, const char * name, const QVariant &value )
-*/
+// void assignProperty( QObject * object, const char * name, const QVariant & value )
 HB_FUNC_STATIC(QSTATE_ASSIGNPROPERTY)
 {
   QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -162,9 +150,7 @@ HB_FUNC_STATIC(QSTATE_ASSIGNPROPERTY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QState::ChildMode childMode() const
-*/
+// QState::ChildMode childMode() const
 HB_FUNC_STATIC(QSTATE_CHILDMODE)
 {
   QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -182,9 +168,7 @@ HB_FUNC_STATIC(QSTATE_CHILDMODE)
   }
 }
 
-/*
-QAbstractState * errorState() const
-*/
+// QAbstractState * errorState() const
 HB_FUNC_STATIC(QSTATE_ERRORSTATE)
 {
   QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -203,9 +187,7 @@ HB_FUNC_STATIC(QSTATE_ERRORSTATE)
   }
 }
 
-/*
-QAbstractState * initialState() const
-*/
+// QAbstractState * initialState() const
 HB_FUNC_STATIC(QSTATE_INITIALSTATE)
 {
   QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -224,9 +206,7 @@ HB_FUNC_STATIC(QSTATE_INITIALSTATE)
   }
 }
 
-/*
-void removeTransition( QAbstractTransition * transition )
-*/
+// void removeTransition( QAbstractTransition * transition )
 HB_FUNC_STATIC(QSTATE_REMOVETRANSITION)
 {
   QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -246,9 +226,7 @@ HB_FUNC_STATIC(QSTATE_REMOVETRANSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setChildMode( QState::ChildMode mode )
-*/
+// void setChildMode( QState::ChildMode mode )
 HB_FUNC_STATIC(QSTATE_SETCHILDMODE)
 {
   QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -268,9 +246,7 @@ HB_FUNC_STATIC(QSTATE_SETCHILDMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setErrorState( QAbstractState * state )
-*/
+// void setErrorState( QAbstractState * state )
 HB_FUNC_STATIC(QSTATE_SETERRORSTATE)
 {
   QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -290,9 +266,7 @@ HB_FUNC_STATIC(QSTATE_SETERRORSTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setInitialState( QAbstractState * state )
-*/
+// void setInitialState( QAbstractState * state )
 HB_FUNC_STATIC(QSTATE_SETINITIALSTATE)
 {
   QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -312,9 +286,7 @@ HB_FUNC_STATIC(QSTATE_SETINITIALSTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QAbstractTransition*> transitions() const
-*/
+// QList<QAbstractTransition *> transitions() const
 HB_FUNC_STATIC(QSTATE_TRANSITIONS)
 {
   QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -353,14 +325,16 @@ HB_FUNC_STATIC(QSTATE_TRANSITIONS)
 
 void QStateSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QStateSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSTATE_ONFINISHED)
 {
-  QStateSlots_connect_signal("finished()", "finished()");
+  CONNECT_SIGNAL("finished()");
 }
 
 HB_FUNC_STATIC(QSTATE_ONPROPERTIESASSIGNED)
 {
-  QStateSlots_connect_signal("propertiesAssigned()", "propertiesAssigned()");
+  CONNECT_SIGNAL("propertiesAssigned()");
 }
 
 #pragma ENDDUMP

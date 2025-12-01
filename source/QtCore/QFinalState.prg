@@ -48,9 +48,7 @@ RETURN
 #include <QtCore/QFinalState>
 #endif
 
-    /*
-    QFinalState( QState * parent = 0 )
-    */
+    // QFinalState( QState * parent = 0 )
 HB_FUNC_STATIC(QFINALSTATE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
@@ -63,7 +61,7 @@ HB_FUNC_STATIC(QFINALSTATE_NEW)
 
 HB_FUNC_STATIC(QFINALSTATE_DELETE)
 {
-  QFinalState *obj = (QFinalState *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFinalState *obj = qobject_cast<QFinalState *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);

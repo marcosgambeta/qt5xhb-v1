@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODELINDEX
-REQUEST QSIZE
-REQUEST QVARIANT
+REQUEST QModelIndex
+REQUEST QSize
+REQUEST QVariant
 #endif
 
 CLASS QAbstractItemModel INHERIT QObject
@@ -106,7 +106,7 @@ RETURN
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_DELETE)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -121,9 +121,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QModelIndex buddy( const QModelIndex &index ) const
-*/
+// virtual QModelIndex buddy( const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_BUDDY)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -142,9 +140,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_BUDDY)
   }
 }
 
-/*
-virtual bool canFetchMore( const QModelIndex &parent ) const
-*/
+// virtual bool canFetchMore( const QModelIndex & parent ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_CANFETCHMORE)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -162,9 +158,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_CANFETCHMORE)
   }
 }
 
-/*
-virtual int columnCount( const QModelIndex &parent = QModelIndex() ) const = 0
-*/
+// virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_COLUMNCOUNT)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -182,9 +176,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_COLUMNCOUNT)
   }
 }
 
-/*
-virtual QVariant data( const QModelIndex &index, int role = Qt::DisplayRole ) const = 0
-*/
+// virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_DATA)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -203,10 +195,8 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DATA)
   }
 }
 
-/*
-virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
-parent )
-*/
+// virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
+// parent )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_DROPMIMEDATA)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -224,9 +214,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DROPMIMEDATA)
   }
 }
 
-/*
-virtual void fetchMore( const QModelIndex &parent )
-*/
+// virtual void fetchMore( const QModelIndex & parent )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_FETCHMORE)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -246,9 +234,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_FETCHMORE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual Qt::ItemFlags flags( const QModelIndex &index ) const
-*/
+// virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_FLAGS)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -266,9 +252,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_FLAGS)
   }
 }
 
-/*
-virtual bool hasChildren( const QModelIndex &parent = QModelIndex() ) const
-*/
+// virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASCHILDREN)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -286,9 +270,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASCHILDREN)
   }
 }
 
-/*
-bool hasIndex( int row, int column, const QModelIndex &parent = QModelIndex() ) const
-*/
+// bool hasIndex( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASINDEX)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -306,9 +288,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASINDEX)
   }
 }
 
-/*
-virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
-*/
+// virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_HEADERDATA)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -327,9 +307,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_HEADERDATA)
   }
 }
 
-/*
-virtual QModelIndex index( int row, int column, const QModelIndex &parent = QModelIndex() ) const = 0
-*/
+// virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INDEX)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -349,9 +327,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INDEX)
   }
 }
 
-/*
-bool insertColumn( int column, const QModelIndex &parent = QModelIndex() )
-*/
+// bool insertColumn( int column, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMN)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -369,9 +345,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMN)
   }
 }
 
-/*
-virtual bool insertColumns( int column, int count, const QModelIndex &parent = QModelIndex() )
-*/
+// virtual bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMNS)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -389,9 +363,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMNS)
   }
 }
 
-/*
-bool insertRow( int row, const QModelIndex &parent = QModelIndex() )
-*/
+// bool insertRow( int row, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROW)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -409,9 +381,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROW)
   }
 }
 
-/*
-virtual bool insertRows( int row, int count, const QModelIndex &parent = QModelIndex() )
-*/
+// virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROWS)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -429,18 +399,15 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROWS)
   }
 }
 
-/*
-virtual QModelIndexList match( const QModelIndex &start, int role, const QVariant &value, int hits = 1, Qt::MatchFlags
-flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
-*/
+// virtual QModelIndexList match( const QModelIndex & start, int role, const QVariant & value, int hits = 1,
+// Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_MATCH)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4) &&
-        ISNUMORNIL(5)) {
+    if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
 #endif
       QModelIndexList list =
           obj->match(*PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4, 1),
@@ -476,9 +443,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MATCH)
   }
 }
 
-/*
-virtual QStringList mimeTypes() const
-*/
+// virtual QStringList mimeTypes() const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMETYPES)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -496,9 +461,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMETYPES)
   }
 }
 
-/*
-virtual QModelIndex parent( const QModelIndex &index ) const = 0
-*/
+// virtual QModelIndex parent( const QModelIndex & index ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_PARENT)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -517,9 +480,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_PARENT)
   }
 }
 
-/*
-bool removeColumn( int column, const QModelIndex &parent = QModelIndex() )
-*/
+// bool removeColumn( int column, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMN)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -537,9 +498,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMN)
   }
 }
 
-/*
-virtual bool removeColumns( int column, int count, const QModelIndex &parent = QModelIndex() )
-*/
+// virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMNS)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -557,9 +516,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMNS)
   }
 }
 
-/*
-bool removeRow( int row, const QModelIndex &parent = QModelIndex() )
-*/
+// bool removeRow( int row, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROW)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -577,9 +534,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROW)
   }
 }
 
-/*
-virtual bool removeRows( int row, int count, const QModelIndex &parent = QModelIndex() )
-*/
+// virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROWS)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -597,9 +552,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROWS)
   }
 }
 
-/*
-virtual int rowCount( const QModelIndex &parent = QModelIndex() ) const = 0
-*/
+// virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ROWCOUNT)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -617,9 +570,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_ROWCOUNT)
   }
 }
 
-/*
-virtual bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
-*/
+// virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETDATA)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -637,9 +588,8 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETDATA)
   }
 }
 
-/*
-virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole )
-*/
+// virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole
+// )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETHEADERDATA)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -657,9 +607,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETHEADERDATA)
   }
 }
 
-/*
-QModelIndex sibling( int row, int column, const QModelIndex &index ) const
-*/
+// QModelIndex sibling( int row, int column, const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SIBLING)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -678,9 +626,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SIBLING)
   }
 }
 
-/*
-virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
-*/
+// virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SORT)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -700,9 +646,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize span( const QModelIndex &index ) const
-*/
+// virtual QSize span( const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SPAN)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -721,9 +665,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SPAN)
   }
 }
 
-/*
-Qt::DropActions supportedDragActions() const
-*/
+// Qt::DropActions supportedDragActions() const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -741,9 +683,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS)
   }
 }
 
-/*
-virtual Qt::DropActions supportedDropActions() const
-*/
+// virtual Qt::DropActions supportedDropActions() const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -761,9 +701,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS)
   }
 }
 
-/*
-virtual void revert()
-*/
+// virtual void revert()
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REVERT)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -783,9 +721,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REVERT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool submit()
-*/
+// virtual bool submit()
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUBMIT)
 {
   QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -805,105 +741,96 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUBMIT)
 
 void QAbstractItemModelSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractItemModelSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsAboutToBeInserted(QModelIndex,int,int)",
-                                         "columnsAboutToBeInserted(QModelIndex,int,int)");
+  CONNECT_SIGNAL("columnsAboutToBeInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)",
-                                         "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
+  CONNECT_SIGNAL("columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsAboutToBeRemoved(QModelIndex,int,int)",
-                                         "columnsAboutToBeRemoved(QModelIndex,int,int)");
+  CONNECT_SIGNAL("columnsAboutToBeRemoved(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSINSERTED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsInserted(QModelIndex,int,int)",
-                                         "columnsInserted(QModelIndex,int,int)");
+  CONNECT_SIGNAL("columnsInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsMoved(QModelIndex,int,int,QModelIndex,int)",
-                                         "columnsMoved(QModelIndex,int,int,QModelIndex,int)");
+  CONNECT_SIGNAL("columnsMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSREMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsRemoved(QModelIndex,int,int)", "columnsRemoved(QModelIndex,int,int)");
+  CONNECT_SIGNAL("columnsRemoved(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONDATACHANGED)
 {
-  QAbstractItemModelSlots_connect_signal("dataChanged(QModelIndex,QModelIndex)",
-                                         "dataChanged(QModelIndex,QModelIndex)");
+  CONNECT_SIGNAL("dataChanged(QModelIndex,QModelIndex)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONHEADERDATACHANGED)
 {
-  QAbstractItemModelSlots_connect_signal("headerDataChanged(Qt::Orientation,int,int)",
-                                         "headerDataChanged(Qt::Orientation,int,int)");
+  CONNECT_SIGNAL("headerDataChanged(Qt::Orientation,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED)
 {
-  QAbstractItemModelSlots_connect_signal("layoutAboutToBeChanged()", "layoutAboutToBeChanged()");
+  CONNECT_SIGNAL("layoutAboutToBeChanged()");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONLAYOUTCHANGED)
 {
-  QAbstractItemModelSlots_connect_signal("layoutChanged()", "layoutChanged()");
+  CONNECT_SIGNAL("layoutChanged()");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET)
 {
-  QAbstractItemModelSlots_connect_signal("modelAboutToBeReset()", "modelAboutToBeReset()");
+  CONNECT_SIGNAL("modelAboutToBeReset()");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONMODELRESET)
 {
-  QAbstractItemModelSlots_connect_signal("modelReset()", "modelReset()");
+  CONNECT_SIGNAL("modelReset()");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsAboutToBeInserted(QModelIndex,int,int)",
-                                         "rowsAboutToBeInserted(QModelIndex,int,int)");
+  CONNECT_SIGNAL("rowsAboutToBeInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)",
-                                         "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
+  CONNECT_SIGNAL("rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsAboutToBeRemoved(QModelIndex,int,int)",
-                                         "rowsAboutToBeRemoved(QModelIndex,int,int)");
+  CONNECT_SIGNAL("rowsAboutToBeRemoved(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSINSERTED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsInserted(QModelIndex,int,int)", "rowsInserted(QModelIndex,int,int)");
+  CONNECT_SIGNAL("rowsInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsMoved(QModelIndex,int,int,QModelIndex,int)",
-                                         "rowsMoved(QModelIndex,int,int,QModelIndex,int)");
+  CONNECT_SIGNAL("rowsMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSREMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsRemoved(QModelIndex,int,int)", "rowsRemoved(QModelIndex,int,int)");
+  CONNECT_SIGNAL("rowsRemoved(QModelIndex,int,int)");
 }
 
 #pragma ENDDUMP

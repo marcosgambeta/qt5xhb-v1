@@ -55,9 +55,7 @@ RETURN
 #include <QtCore/QDebugStateSaver>
 #endif
 
-    /*
-    QDebugStateSaver( QDebug &dbg )
-    */
+    // QDebugStateSaver( QDebug & dbg )
 HB_FUNC_STATIC(QDEBUGSTATESAVER_NEW)
 {
   if (ISNUMPAR(1) && ISQDEBUG(1)) {
@@ -70,7 +68,7 @@ HB_FUNC_STATIC(QDEBUGSTATESAVER_NEW)
 
 HB_FUNC_STATIC(QDEBUGSTATESAVER_DELETE)
 {
-  QDebugStateSaver *obj = (QDebugStateSaver *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDebugStateSaver *obj = static_cast<QDebugStateSaver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;

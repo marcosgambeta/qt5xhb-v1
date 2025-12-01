@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
+REQUEST QObject
 #endif
 
 CLASS QObjectCleanupHandler INHERIT QObject
@@ -53,9 +53,7 @@ RETURN
 #include <QtCore/QObjectCleanupHandler>
 #endif
 
-    /*
-    QObjectCleanupHandler()
-    */
+    // QObjectCleanupHandler()
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -68,7 +66,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_NEW)
 
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_DELETE)
 {
-  QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
+  QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -83,9 +81,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QObject * add( QObject * object )
-*/
+// QObject * add( QObject * object )
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 {
   QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
   }
 }
 
-/*
-void remove( QObject * object )
-*/
+// void remove( QObject * object )
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 {
   QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -126,9 +120,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ISEMPTY)
 {
   QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -146,9 +138,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ISEMPTY)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_CLEAR)
 {
   QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();

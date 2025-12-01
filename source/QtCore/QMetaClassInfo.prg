@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMETAOBJECT
+REQUEST QMetaObject
 #endif
 
 CLASS QMetaClassInfo
@@ -59,9 +59,7 @@ RETURN
 #include <QtCore/QMetaClassInfo>
 #endif
 
-    /*
-    QMetaClassInfo()
-    */
+    // QMetaClassInfo()
 HB_FUNC_STATIC(QMETACLASSINFO_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -74,7 +72,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_NEW)
 
 HB_FUNC_STATIC(QMETACLASSINFO_DELETE)
 {
-  QMetaClassInfo *obj = (QMetaClassInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const char * name() const
-*/
+// const char * name() const
 HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 {
   QMetaClassInfo *obj = (QMetaClassInfo *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -98,7 +94,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      hb_retc(obj->name());
+      hb_retc((const char *)obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_NAME)
   }
 }
 
-/*
-const char * value() const
-*/
+// const char * value() const
 HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 {
   QMetaClassInfo *obj = (QMetaClassInfo *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -118,7 +112,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      hb_retc(obj->value());
+      hb_retc((const char *)obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
   }
 }
 
-/*
-const QMetaObject * enclosingMetaObject() const
-*/
+// const QMetaObject * enclosingMetaObject() const
 HB_FUNC_STATIC(QMETACLASSINFO_ENCLOSINGMETAOBJECT)
 {
   QMetaClassInfo *obj = (QMetaClassInfo *)Qt5xHb::itemGetPtrStackSelfItem();

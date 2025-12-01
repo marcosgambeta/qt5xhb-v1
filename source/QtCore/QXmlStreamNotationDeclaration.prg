@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSTRINGREF
+REQUEST QStringRef
 #endif
 
 CLASS QXmlStreamNotationDeclaration
@@ -62,15 +62,11 @@ RETURN
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QXmlStreamNotationDeclaration()
-    */
+    // QXmlStreamNotationDeclaration()
     QXmlStreamNotationDeclaration *obj = new QXmlStreamNotationDeclaration();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQXMLSTREAMNOTATIONDECLARATION(1)) {
-    /*
-    QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration &other )
-    */
+    // QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
     QXmlStreamNotationDeclaration *obj = new QXmlStreamNotationDeclaration(*PQXMLSTREAMNOTATIONDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -80,7 +76,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NEW)
 
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_DELETE)
 {
-  QXmlStreamNotationDeclaration *obj = (QXmlStreamNotationDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamNotationDeclaration *obj = static_cast<QXmlStreamNotationDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -93,9 +89,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringRef name() const
-*/
+// QStringRef name() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NAME)
 {
   QXmlStreamNotationDeclaration *obj = (QXmlStreamNotationDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -114,9 +108,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NAME)
   }
 }
 
-/*
-QStringRef publicId() const
-*/
+// QStringRef publicId() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_PUBLICID)
 {
   QXmlStreamNotationDeclaration *obj = (QXmlStreamNotationDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -135,9 +127,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_PUBLICID)
   }
 }
 
-/*
-QStringRef systemId() const
-*/
+// QStringRef systemId() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_SYSTEMID)
 {
   QXmlStreamNotationDeclaration *obj = (QXmlStreamNotationDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();

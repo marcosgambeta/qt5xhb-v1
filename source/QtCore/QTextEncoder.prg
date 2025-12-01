@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
+REQUEST QByteArray
 #endif
 
 CLASS QTextEncoder
@@ -61,15 +61,11 @@ RETURN
 HB_FUNC_STATIC(QTEXTENCODER_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTCODEC(1)) {
-    /*
-    QTextEncoder( const QTextCodec * codec )
-    */
+    // QTextEncoder( const QTextCodec * codec )
     QTextEncoder *obj = new QTextEncoder(PQTEXTCODEC(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2)) {
-    /*
-    QTextEncoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
-    */
+    // QTextEncoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
     QTextEncoder *obj = new QTextEncoder(PQTEXTCODEC(1), (QTextCodec::ConversionFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -79,7 +75,7 @@ HB_FUNC_STATIC(QTEXTENCODER_NEW)
 
 HB_FUNC_STATIC(QTEXTENCODER_DELETE)
 {
-  QTextEncoder *obj = (QTextEncoder *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTextEncoder *obj = static_cast<QTextEncoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -95,20 +91,16 @@ HB_FUNC_STATIC(QTEXTENCODER_DELETE)
 HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QByteArray fromUnicode( const QString &str )
-    */
-    QTextEncoder *obj = (QTextEncoder *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QByteArray fromUnicode( const QString & str )
+    QTextEncoder *obj = static_cast<QTextEncoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       QByteArray *ptr = new QByteArray(obj->fromUnicode(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   } else if (ISNUMPAR(2) && ISQCHAR(1) && HB_ISNUM(2)) {
-    /*
-    QByteArray fromUnicode( const QChar * uc, int len )
-    */
-    QTextEncoder *obj = (QTextEncoder *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QByteArray fromUnicode( const QChar * uc, int len )
+    QTextEncoder *obj = static_cast<QTextEncoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       QByteArray *ptr = new QByteArray(obj->fromUnicode(PQCHAR(1), PINT(2)));
@@ -119,9 +111,7 @@ HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
   }
 }
 
-/*
-bool hasFailure() const
-*/
+// bool hasFailure() const
 HB_FUNC_STATIC(QTEXTENCODER_HASFAILURE)
 {
   QTextEncoder *obj = (QTextEncoder *)Qt5xHb::itemGetPtrStackSelfItem();

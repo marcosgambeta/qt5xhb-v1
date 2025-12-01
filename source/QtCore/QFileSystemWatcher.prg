@@ -62,15 +62,11 @@ RETURN
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QFileSystemWatcher( QObject * parent = 0 )
-    */
+    // QFileSystemWatcher( QObject * parent = 0 )
     QFileSystemWatcher *obj = new QFileSystemWatcher(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QFileSystemWatcher( const QStringList &paths, QObject * parent = 0 )
-    */
+    // QFileSystemWatcher( const QStringList & paths, QObject * parent = 0 )
     QFileSystemWatcher *obj = new QFileSystemWatcher(PQSTRINGLIST(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -80,7 +76,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_NEW)
 
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_DELETE)
 {
-  QFileSystemWatcher *obj = (QFileSystemWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFileSystemWatcher *obj = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -95,9 +91,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool addPath( const QString &path )
-*/
+// bool addPath( const QString & path )
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATH)
 {
   QFileSystemWatcher *obj = (QFileSystemWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -115,9 +109,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATH)
   }
 }
 
-/*
-QStringList addPaths( const QStringList &paths )
-*/
+// QStringList addPaths( const QStringList & paths )
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATHS)
 {
   QFileSystemWatcher *obj = (QFileSystemWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -135,9 +127,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATHS)
   }
 }
 
-/*
-QStringList directories() const
-*/
+// QStringList directories() const
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_DIRECTORIES)
 {
   QFileSystemWatcher *obj = (QFileSystemWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -155,9 +145,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_DIRECTORIES)
   }
 }
 
-/*
-QStringList files() const
-*/
+// QStringList files() const
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_FILES)
 {
   QFileSystemWatcher *obj = (QFileSystemWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -175,9 +163,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_FILES)
   }
 }
 
-/*
-bool removePath( const QString &path )
-*/
+// bool removePath( const QString & path )
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATH)
 {
   QFileSystemWatcher *obj = (QFileSystemWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -195,9 +181,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATH)
   }
 }
 
-/*
-QStringList removePaths( const QStringList &paths )
-*/
+// QStringList removePaths( const QStringList & paths )
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATHS)
 {
   QFileSystemWatcher *obj = (QFileSystemWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -217,14 +201,16 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATHS)
 
 void QFileSystemWatcherSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QFileSystemWatcherSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONDIRECTORYCHANGED)
 {
-  QFileSystemWatcherSlots_connect_signal("directoryChanged(QString)", "directoryChanged(QString)");
+  CONNECT_SIGNAL("directoryChanged(QString)");
 }
 
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONFILECHANGED)
 {
-  QFileSystemWatcherSlots_connect_signal("fileChanged(QString)", "fileChanged(QString)");
+  CONNECT_SIGNAL("fileChanged(QString)");
 }
 
 #pragma ENDDUMP

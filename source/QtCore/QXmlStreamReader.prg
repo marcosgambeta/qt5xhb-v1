@@ -11,13 +11,13 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIODEVICE
-REQUEST QSTRINGREF
-REQUEST QXMLSTREAMATTRIBUTES
-REQUEST QXMLSTREAMENTITYDECLARATION
-REQUEST QXMLSTREAMENTITYRESOLVER
-REQUEST QXMLSTREAMNAMESPACEDECLARATION
-REQUEST QXMLSTREAMNOTATIONDECLARATION
+REQUEST QIODevice
+REQUEST QStringRef
+REQUEST QXmlStreamAttributes
+REQUEST QXmlStreamEntityDeclaration
+REQUEST QXmlStreamEntityResolver
+REQUEST QXmlStreamNamespaceDeclaration
+REQUEST QXmlStreamNotationDeclaration
 #endif
 
 CLASS QXmlStreamReader
@@ -116,27 +116,19 @@ RETURN
 HB_FUNC_STATIC(QXMLSTREAMREADER_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QXmlStreamReader()
-    */
+    // QXmlStreamReader()
     QXmlStreamReader *obj = new QXmlStreamReader();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
-    /*
-    QXmlStreamReader( QIODevice * device )
-    */
+    // QXmlStreamReader( QIODevice * device )
     QXmlStreamReader *obj = new QXmlStreamReader(PQIODEVICE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
-    /*
-    QXmlStreamReader( const QByteArray &data )
-    */
+    // QXmlStreamReader( const QByteArray & data )
     QXmlStreamReader *obj = new QXmlStreamReader(*PQBYTEARRAY(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QXmlStreamReader( const QString &data )
-    */
+    // QXmlStreamReader( const QString & data )
     QXmlStreamReader *obj = new QXmlStreamReader(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -146,7 +138,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NEW)
 
 HB_FUNC_STATIC(QXMLSTREAMREADER_DELETE)
 {
-  QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -162,10 +154,8 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DELETE)
 HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
-    /*
-    void addData( const QByteArray &data )
-    */
-    QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void addData( const QByteArray & data )
+    QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       obj->addData(*PQBYTEARRAY(1));
@@ -173,10 +163,8 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    void addData( const QString &data )
-    */
-    QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void addData( const QString & data )
+    QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       obj->addData(PQSTRING(1));
@@ -184,10 +172,8 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    void addData( const char * data )
-    */
-    QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void addData( const char * data )
+    QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       obj->addData(PCONSTCHAR(1));
@@ -199,9 +185,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
   }
 }
 
-/*
-void addExtraNamespaceDeclaration( const QXmlStreamNamespaceDeclaration &extraNamespaceDeclaration )
-*/
+// void addExtraNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration )
 HB_FUNC_STATIC(QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -221,9 +205,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool atEnd() const
-*/
+// bool atEnd() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ATEND)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -241,9 +223,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ATEND)
   }
 }
 
-/*
-QXmlStreamAttributes attributes() const
-*/
+// QXmlStreamAttributes attributes() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ATTRIBUTES)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -262,9 +242,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ATTRIBUTES)
   }
 }
 
-/*
-qint64 characterOffset() const
-*/
+// qint64 characterOffset() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_CHARACTEROFFSET)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -282,9 +260,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_CHARACTEROFFSET)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QXMLSTREAMREADER_CLEAR)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -304,9 +280,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qint64 columnNumber() const
-*/
+// qint64 columnNumber() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_COLUMNNUMBER)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -324,9 +298,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_COLUMNNUMBER)
   }
 }
 
-/*
-QIODevice * device() const
-*/
+// QIODevice * device() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_DEVICE)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -345,9 +317,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DEVICE)
   }
 }
 
-/*
-QStringRef documentEncoding() const
-*/
+// QStringRef documentEncoding() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_DOCUMENTENCODING)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -366,9 +336,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DOCUMENTENCODING)
   }
 }
 
-/*
-QStringRef documentVersion() const
-*/
+// QStringRef documentVersion() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_DOCUMENTVERSION)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -387,9 +355,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DOCUMENTVERSION)
   }
 }
 
-/*
-QStringRef dtdName() const
-*/
+// QStringRef dtdName() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_DTDNAME)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -408,9 +374,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDNAME)
   }
 }
 
-/*
-QStringRef dtdPublicId() const
-*/
+// QStringRef dtdPublicId() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_DTDPUBLICID)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -429,9 +393,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDPUBLICID)
   }
 }
 
-/*
-QStringRef dtdSystemId() const
-*/
+// QStringRef dtdSystemId() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_DTDSYSTEMID)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -450,9 +412,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DTDSYSTEMID)
   }
 }
 
-/*
-QXmlStreamEntityDeclarations entityDeclarations() const
-*/
+// QXmlStreamEntityDeclarations entityDeclarations() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYDECLARATIONS)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -492,9 +452,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYDECLARATIONS)
   }
 }
 
-/*
-QXmlStreamEntityResolver * entityResolver() const
-*/
+// QXmlStreamEntityResolver * entityResolver() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYRESOLVER)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -513,9 +471,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYRESOLVER)
   }
 }
 
-/*
-QXmlStreamReader::Error error() const
-*/
+// QXmlStreamReader::Error error() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ERROR)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -533,9 +489,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ERROR)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ERRORSTRING)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -553,9 +507,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ERRORSTRING)
   }
 }
 
-/*
-bool hasError() const
-*/
+// bool hasError() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_HASERROR)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -573,9 +525,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_HASERROR)
   }
 }
 
-/*
-bool isCDATA() const
-*/
+// bool isCDATA() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISCDATA)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -593,9 +543,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCDATA)
   }
 }
 
-/*
-bool isCharacters() const
-*/
+// bool isCharacters() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISCHARACTERS)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -613,9 +561,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCHARACTERS)
   }
 }
 
-/*
-bool isComment() const
-*/
+// bool isComment() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISCOMMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -633,9 +579,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISCOMMENT)
   }
 }
 
-/*
-bool isDTD() const
-*/
+// bool isDTD() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISDTD)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -653,9 +597,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISDTD)
   }
 }
 
-/*
-bool isEndDocument() const
-*/
+// bool isEndDocument() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISENDDOCUMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -673,9 +615,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENDDOCUMENT)
   }
 }
 
-/*
-bool isEndElement() const
-*/
+// bool isEndElement() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISENDELEMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -693,9 +633,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENDELEMENT)
   }
 }
 
-/*
-bool isEntityReference() const
-*/
+// bool isEntityReference() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISENTITYREFERENCE)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -713,9 +651,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISENTITYREFERENCE)
   }
 }
 
-/*
-bool isProcessingInstruction() const
-*/
+// bool isProcessingInstruction() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISPROCESSINGINSTRUCTION)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -733,9 +669,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISPROCESSINGINSTRUCTION)
   }
 }
 
-/*
-bool isStandaloneDocument() const
-*/
+// bool isStandaloneDocument() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTANDALONEDOCUMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -753,9 +687,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTANDALONEDOCUMENT)
   }
 }
 
-/*
-bool isStartDocument() const
-*/
+// bool isStartDocument() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTARTDOCUMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -773,9 +705,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTARTDOCUMENT)
   }
 }
 
-/*
-bool isStartElement() const
-*/
+// bool isStartElement() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTARTELEMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -793,9 +723,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISSTARTELEMENT)
   }
 }
 
-/*
-bool isWhitespace() const
-*/
+// bool isWhitespace() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ISWHITESPACE)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -813,9 +741,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ISWHITESPACE)
   }
 }
 
-/*
-qint64 lineNumber() const
-*/
+// qint64 lineNumber() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_LINENUMBER)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -833,9 +759,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_LINENUMBER)
   }
 }
 
-/*
-QStringRef name() const
-*/
+// QStringRef name() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_NAME)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -854,9 +778,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAME)
   }
 }
 
-/*
-QXmlStreamNamespaceDeclarations namespaceDeclarations() const
-*/
+// QXmlStreamNamespaceDeclarations namespaceDeclarations() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEDECLARATIONS)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -896,9 +818,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEDECLARATIONS)
   }
 }
 
-/*
-bool namespaceProcessing() const
-*/
+// bool namespaceProcessing() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEPROCESSING)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -916,9 +836,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEPROCESSING)
   }
 }
 
-/*
-QStringRef namespaceUri() const
-*/
+// QStringRef namespaceUri() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEURI)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -937,9 +855,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEURI)
   }
 }
 
-/*
-QXmlStreamNotationDeclarations notationDeclarations() const
-*/
+// QXmlStreamNotationDeclarations notationDeclarations() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_NOTATIONDECLARATIONS)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -979,9 +895,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NOTATIONDECLARATIONS)
   }
 }
 
-/*
-QStringRef prefix() const
-*/
+// QStringRef prefix() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_PREFIX)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1000,9 +914,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PREFIX)
   }
 }
 
-/*
-QStringRef processingInstructionData() const
-*/
+// QStringRef processingInstructionData() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_PROCESSINGINSTRUCTIONDATA)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1021,9 +933,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PROCESSINGINSTRUCTIONDATA)
   }
 }
 
-/*
-QStringRef processingInstructionTarget() const
-*/
+// QStringRef processingInstructionTarget() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_PROCESSINGINSTRUCTIONTARGET)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1042,9 +952,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_PROCESSINGINSTRUCTIONTARGET)
   }
 }
 
-/*
-QStringRef qualifiedName() const
-*/
+// QStringRef qualifiedName() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_QUALIFIEDNAME)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1063,9 +971,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_QUALIFIEDNAME)
   }
 }
 
-/*
-void raiseError( const QString &message = QString() )
-*/
+// void raiseError( const QString & message = QString() )
 HB_FUNC_STATIC(QXMLSTREAMREADER_RAISEERROR)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1085,10 +991,8 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_RAISEERROR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString readElementText( QXmlStreamReader::ReadElementTextBehaviour behaviour =
-QXmlStreamReader::ErrorOnUnexpectedElement )
-*/
+// QString readElementText( QXmlStreamReader::ReadElementTextBehaviour behaviour =
+// QXmlStreamReader::ErrorOnUnexpectedElement )
 HB_FUNC_STATIC(QXMLSTREAMREADER_READELEMENTTEXT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1108,9 +1012,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READELEMENTTEXT)
   }
 }
 
-/*
-QXmlStreamReader::TokenType readNext()
-*/
+// QXmlStreamReader::TokenType readNext()
 HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1128,9 +1030,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXT)
   }
 }
 
-/*
-bool readNextStartElement()
-*/
+// bool readNextStartElement()
 HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXTSTARTELEMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1148,9 +1048,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXTSTARTELEMENT)
   }
 }
 
-/*
-void setDevice( QIODevice * device )
-*/
+// void setDevice( QIODevice * device )
 HB_FUNC_STATIC(QXMLSTREAMREADER_SETDEVICE)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1170,9 +1068,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEntityResolver( QXmlStreamEntityResolver * resolver )
-*/
+// void setEntityResolver( QXmlStreamEntityResolver * resolver )
 HB_FUNC_STATIC(QXMLSTREAMREADER_SETENTITYRESOLVER)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1192,9 +1088,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETENTITYRESOLVER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNamespaceProcessing( bool )
-*/
+// void setNamespaceProcessing( bool )
 HB_FUNC_STATIC(QXMLSTREAMREADER_SETNAMESPACEPROCESSING)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1214,9 +1108,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETNAMESPACEPROCESSING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void skipCurrentElement()
-*/
+// void skipCurrentElement()
 HB_FUNC_STATIC(QXMLSTREAMREADER_SKIPCURRENTELEMENT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1236,9 +1128,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SKIPCURRENTELEMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringRef text() const
-*/
+// QStringRef text() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_TEXT)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1257,9 +1147,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_TEXT)
   }
 }
 
-/*
-QString tokenString() const
-*/
+// QString tokenString() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_TOKENSTRING)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -1277,9 +1165,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_TOKENSTRING)
   }
 }
 
-/*
-QXmlStreamReader::TokenType tokenType() const
-*/
+// QXmlStreamReader::TokenType tokenType() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_TOKENTYPE)
 {
   QXmlStreamReader *obj = (QXmlStreamReader *)Qt5xHb::itemGetPtrStackSelfItem();

@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC(QXMLSTREAMENTITYRESOLVER_DELETE)
 {
-  QXmlStreamEntityResolver *obj = (QXmlStreamEntityResolver *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamEntityResolver *obj = static_cast<QXmlStreamEntityResolver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -70,9 +70,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYRESOLVER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString resolveUndeclaredEntity( const QString &name )
-*/
+// virtual QString resolveUndeclaredEntity( const QString & name )
 HB_FUNC_STATIC(QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY)
 {
   QXmlStreamEntityResolver *obj = (QXmlStreamEntityResolver *)Qt5xHb::itemGetPtrStackSelfItem();

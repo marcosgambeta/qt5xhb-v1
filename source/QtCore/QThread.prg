@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTEVENTDISPATCHER
+REQUEST QAbstractEventDispatcher
 #endif
 
 CLASS QThread INHERIT QObject
@@ -73,9 +73,7 @@ RETURN
 
 #include <QtCore/QAbstractEventDispatcher>
 
-    /*
-    QThread( QObject * parent = 0 )
-    */
+    // QThread( QObject * parent = 0 )
 HB_FUNC_STATIC(QTHREAD_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -88,7 +86,7 @@ HB_FUNC_STATIC(QTHREAD_NEW)
 
 HB_FUNC_STATIC(QTHREAD_DELETE)
 {
-  QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThread *obj = qobject_cast<QThread *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -103,9 +101,7 @@ HB_FUNC_STATIC(QTHREAD_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractEventDispatcher * eventDispatcher() const
-*/
+// QAbstractEventDispatcher * eventDispatcher() const
 HB_FUNC_STATIC(QTHREAD_EVENTDISPATCHER)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -124,9 +120,7 @@ HB_FUNC_STATIC(QTHREAD_EVENTDISPATCHER)
   }
 }
 
-/*
-void exit( int returnCode = 0 )
-*/
+// void exit( int returnCode = 0 )
 HB_FUNC_STATIC(QTHREAD_EXIT)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -146,9 +140,7 @@ HB_FUNC_STATIC(QTHREAD_EXIT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isFinished() const
-*/
+// bool isFinished() const
 HB_FUNC_STATIC(QTHREAD_ISFINISHED)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -166,9 +158,7 @@ HB_FUNC_STATIC(QTHREAD_ISFINISHED)
   }
 }
 
-/*
-bool isRunning() const
-*/
+// bool isRunning() const
 HB_FUNC_STATIC(QTHREAD_ISRUNNING)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -186,9 +176,7 @@ HB_FUNC_STATIC(QTHREAD_ISRUNNING)
   }
 }
 
-/*
-QThread::Priority priority() const
-*/
+// QThread::Priority priority() const
 HB_FUNC_STATIC(QTHREAD_PRIORITY)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -206,9 +194,7 @@ HB_FUNC_STATIC(QTHREAD_PRIORITY)
   }
 }
 
-/*
-void setEventDispatcher( QAbstractEventDispatcher * eventDispatcher )
-*/
+// void setEventDispatcher( QAbstractEventDispatcher * eventDispatcher )
 HB_FUNC_STATIC(QTHREAD_SETEVENTDISPATCHER)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -228,9 +214,7 @@ HB_FUNC_STATIC(QTHREAD_SETEVENTDISPATCHER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPriority( QThread::Priority priority )
-*/
+// void setPriority( QThread::Priority priority )
 HB_FUNC_STATIC(QTHREAD_SETPRIORITY)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -250,9 +234,7 @@ HB_FUNC_STATIC(QTHREAD_SETPRIORITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStackSize( uint stackSize )
-*/
+// void setStackSize( uint stackSize )
 HB_FUNC_STATIC(QTHREAD_SETSTACKSIZE)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -272,9 +254,7 @@ HB_FUNC_STATIC(QTHREAD_SETSTACKSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-uint stackSize() const
-*/
+// uint stackSize() const
 HB_FUNC_STATIC(QTHREAD_STACKSIZE)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -292,9 +272,7 @@ HB_FUNC_STATIC(QTHREAD_STACKSIZE)
   }
 }
 
-/*
-virtual bool event( QEvent * event )
-*/
+// virtual bool event( QEvent * event )
 HB_FUNC_STATIC(QTHREAD_EVENT)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -312,9 +290,7 @@ HB_FUNC_STATIC(QTHREAD_EVENT)
   }
 }
 
-/*
-void quit()
-*/
+// void quit()
 HB_FUNC_STATIC(QTHREAD_QUIT)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -334,9 +310,7 @@ HB_FUNC_STATIC(QTHREAD_QUIT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void start( QThread::Priority priority = QThread::InheritPriority )
-*/
+// void start( QThread::Priority priority = QThread::InheritPriority )
 HB_FUNC_STATIC(QTHREAD_START)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -356,9 +330,7 @@ HB_FUNC_STATIC(QTHREAD_START)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void terminate()
-*/
+// void terminate()
 HB_FUNC_STATIC(QTHREAD_TERMINATE)
 {
   QThread *obj = (QThread *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -378,9 +350,7 @@ HB_FUNC_STATIC(QTHREAD_TERMINATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QThread * currentThread()
-*/
+// static QThread * currentThread()
 HB_FUNC_STATIC(QTHREAD_CURRENTTHREAD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,9 +365,7 @@ HB_FUNC_STATIC(QTHREAD_CURRENTTHREAD)
 #endif
 }
 
-/*
-static int idealThreadCount()
-*/
+// static int idealThreadCount()
 HB_FUNC_STATIC(QTHREAD_IDEALTHREADCOUNT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,9 +379,7 @@ HB_FUNC_STATIC(QTHREAD_IDEALTHREADCOUNT)
 #endif
 }
 
-/*
-static void msleep( unsigned long msecs )
-*/
+// static void msleep( unsigned long msecs )
 HB_FUNC_STATIC(QTHREAD_MSLEEP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -429,9 +395,7 @@ HB_FUNC_STATIC(QTHREAD_MSLEEP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void sleep( unsigned long secs )
-*/
+// static void sleep( unsigned long secs )
 HB_FUNC_STATIC(QTHREAD_SLEEP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,9 +411,7 @@ HB_FUNC_STATIC(QTHREAD_SLEEP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void usleep( unsigned long usecs )
-*/
+// static void usleep( unsigned long usecs )
 HB_FUNC_STATIC(QTHREAD_USLEEP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,9 +427,7 @@ HB_FUNC_STATIC(QTHREAD_USLEEP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void yieldCurrentThread()
-*/
+// static void yieldCurrentThread()
 HB_FUNC_STATIC(QTHREAD_YIELDCURRENTTHREAD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -485,14 +445,16 @@ HB_FUNC_STATIC(QTHREAD_YIELDCURRENTTHREAD)
 
 void QThreadSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QThreadSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTHREAD_ONFINISHED)
 {
-  QThreadSlots_connect_signal("finished()", "finished()");
+  CONNECT_SIGNAL("finished()");
 }
 
 HB_FUNC_STATIC(QTHREAD_ONSTARTED)
 {
-  QThreadSlots_connect_signal("started()", "started()");
+  CONNECT_SIGNAL("started()");
 }
 
 #pragma ENDDUMP

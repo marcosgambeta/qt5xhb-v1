@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODELINDEX
-REQUEST QVARIANT
+REQUEST QModelIndex
+REQUEST QVariant
 #endif
 
 CLASS QStringListModel INHERIT QAbstractListModel
@@ -63,15 +63,11 @@ RETURN
 HB_FUNC_STATIC(QSTRINGLISTMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QStringListModel( QObject * parent = 0 )
-    */
+    // QStringListModel( QObject * parent = 0 )
     QStringListModel *obj = new QStringListModel(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QStringListModel( const QStringList &strings, QObject * parent = 0)
-    */
+    // QStringListModel( const QStringList & strings, QObject * parent = 0)
     QStringListModel *obj = new QStringListModel(PQSTRINGLIST(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -79,9 +75,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_NEW)
   }
 }
 
-/*
-void setStringList( const QStringList &strings )
-*/
+// void setStringList( const QStringList & strings )
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SETSTRINGLIST)
 {
   QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -101,9 +95,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SETSTRINGLIST)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList stringList() const
-*/
+// QStringList stringList() const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_STRINGLIST)
 {
   QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -121,9 +113,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_STRINGLIST)
   }
 }
 
-/*
-virtual QVariant data( const QModelIndex &index, int role ) const
-*/
+// virtual QVariant data( const QModelIndex & index, int role ) const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_DATA)
 {
   QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -142,9 +132,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_DATA)
   }
 }
 
-/*
-virtual Qt::ItemFlags flags( const QModelIndex &index ) const
-*/
+// virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_FLAGS)
 {
   QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -162,9 +150,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_FLAGS)
   }
 }
 
-/*
-virtual bool insertRows( int row, int count, const QModelIndex &parent = QModelIndex() )
-*/
+// virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QSTRINGLISTMODEL_INSERTROWS)
 {
   QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -182,9 +168,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_INSERTROWS)
   }
 }
 
-/*
-virtual bool removeRows( int row, int count, const QModelIndex &parent = QModelIndex() )
-*/
+// virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QSTRINGLISTMODEL_REMOVEROWS)
 {
   QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -202,9 +186,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_REMOVEROWS)
   }
 }
 
-/*
-virtual int rowCount( const QModelIndex &parent = QModelIndex() ) const
-*/
+// virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_ROWCOUNT)
 {
   QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -222,9 +204,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_ROWCOUNT)
   }
 }
 
-/*
-virtual bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
-*/
+// virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SETDATA)
 {
   QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -242,9 +222,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SETDATA)
   }
 }
 
-/*
-virtual QModelIndex sibling( int row, int column, const QModelIndex &idx ) const
-*/
+// virtual QModelIndex sibling( int row, int column, const QModelIndex & idx ) const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SIBLING)
 {
   QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -263,9 +241,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SIBLING)
   }
 }
 
-/*
-virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
-*/
+// virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SORT)
 {
   QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -285,9 +261,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual Qt::DropActions supportedDropActions() const
-*/
+// virtual Qt::DropActions supportedDropActions() const
 HB_FUNC_STATIC(QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS)
 {
   QStringListModel *obj = (QStringListModel *)Qt5xHb::itemGetPtrStackSelfItem();

@@ -80,15 +80,11 @@ RETURN
 HB_FUNC_STATIC(QATOMICINT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    /*
-    QAtomicInt( int value = 0 )
-    */
+    // QAtomicInt( int value = 0 )
     QAtomicInt *obj = new QAtomicInt(OPINT(1, 0));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQATOMICINT(1)) {
-    /*
-    QAtomicInt( const QAtomicInt &other )
-    */
+    // QAtomicInt( const QAtomicInt & other )
     QAtomicInt *obj = new QAtomicInt(*PQATOMICINT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -98,7 +94,7 @@ HB_FUNC_STATIC(QATOMICINT_NEW)
 
 HB_FUNC_STATIC(QATOMICINT_DELETE)
 {
-  QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAtomicInt *obj = static_cast<QAtomicInt *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -111,9 +107,7 @@ HB_FUNC_STATIC(QATOMICINT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool deref()
-*/
+// bool deref()
 HB_FUNC_STATIC(QATOMICINT_DEREF)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -131,9 +125,7 @@ HB_FUNC_STATIC(QATOMICINT_DEREF)
   }
 }
 
-/*
-int fetchAndAddAcquire( int valueToAdd )
-*/
+// int fetchAndAddAcquire( int valueToAdd )
 HB_FUNC_STATIC(QATOMICINT_FETCHANDADDACQUIRE)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -151,9 +143,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDACQUIRE)
   }
 }
 
-/*
-int fetchAndAddOrdered( int valueToAdd )
-*/
+// int fetchAndAddOrdered( int valueToAdd )
 HB_FUNC_STATIC(QATOMICINT_FETCHANDADDORDERED)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -171,9 +161,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDORDERED)
   }
 }
 
-/*
-int fetchAndAddRelaxed( int valueToAdd )
-*/
+// int fetchAndAddRelaxed( int valueToAdd )
 HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELAXED)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -191,9 +179,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELAXED)
   }
 }
 
-/*
-int fetchAndAddRelease( int valueToAdd )
-*/
+// int fetchAndAddRelease( int valueToAdd )
 HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELEASE)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -211,9 +197,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELEASE)
   }
 }
 
-/*
-int fetchAndStoreAcquire( int newValue )
-*/
+// int fetchAndStoreAcquire( int newValue )
 HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREACQUIRE)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -231,9 +215,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREACQUIRE)
   }
 }
 
-/*
-int fetchAndStoreOrdered( int newValue )
-*/
+// int fetchAndStoreOrdered( int newValue )
 HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREORDERED)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -251,9 +233,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREORDERED)
   }
 }
 
-/*
-int fetchAndStoreRelaxed( int newValue )
-*/
+// int fetchAndStoreRelaxed( int newValue )
 HB_FUNC_STATIC(QATOMICINT_FETCHANDSTORERELAXED)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -271,9 +251,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTORERELAXED)
   }
 }
 
-/*
-int fetchAndStoreRelease( int newValue )
-*/
+// int fetchAndStoreRelease( int newValue )
 HB_FUNC_STATIC(QATOMICINT_FETCHANDSTORERELEASE)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -291,9 +269,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTORERELEASE)
   }
 }
 
-/*
-bool ref()
-*/
+// bool ref()
 HB_FUNC_STATIC(QATOMICINT_REF)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -311,9 +287,7 @@ HB_FUNC_STATIC(QATOMICINT_REF)
   }
 }
 
-/*
-bool testAndSetAcquire( int expectedValue, int newValue )
-*/
+// bool testAndSetAcquire( int expectedValue, int newValue )
 HB_FUNC_STATIC(QATOMICINT_TESTANDSETACQUIRE)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -331,9 +305,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETACQUIRE)
   }
 }
 
-/*
-bool testAndSetOrdered( int expectedValue, int newValue )
-*/
+// bool testAndSetOrdered( int expectedValue, int newValue )
 HB_FUNC_STATIC(QATOMICINT_TESTANDSETORDERED)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -351,9 +323,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETORDERED)
   }
 }
 
-/*
-bool testAndSetRelaxed( int expectedValue, int newValue )
-*/
+// bool testAndSetRelaxed( int expectedValue, int newValue )
 HB_FUNC_STATIC(QATOMICINT_TESTANDSETRELAXED)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -371,9 +341,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETRELAXED)
   }
 }
 
-/*
-bool testAndSetRelease( int expectedValue, int newValue )
-*/
+// bool testAndSetRelease( int expectedValue, int newValue )
 HB_FUNC_STATIC(QATOMICINT_TESTANDSETRELEASE)
 {
   QAtomicInt *obj = (QAtomicInt *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -391,9 +359,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETRELEASE)
   }
 }
 
-/*
-static bool isFetchAndAddNative()
-*/
+// static bool isFetchAndAddNative()
 HB_FUNC_STATIC(QATOMICINT_ISFETCHANDADDNATIVE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -407,9 +373,7 @@ HB_FUNC_STATIC(QATOMICINT_ISFETCHANDADDNATIVE)
 #endif
 }
 
-/*
-static bool isFetchAndAddWaitFree()
-*/
+// static bool isFetchAndAddWaitFree()
 HB_FUNC_STATIC(QATOMICINT_ISFETCHANDADDWAITFREE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -423,9 +387,7 @@ HB_FUNC_STATIC(QATOMICINT_ISFETCHANDADDWAITFREE)
 #endif
 }
 
-/*
-static bool isFetchAndStoreNative()
-*/
+// static bool isFetchAndStoreNative()
 HB_FUNC_STATIC(QATOMICINT_ISFETCHANDSTORENATIVE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -439,9 +401,7 @@ HB_FUNC_STATIC(QATOMICINT_ISFETCHANDSTORENATIVE)
 #endif
 }
 
-/*
-static bool isFetchAndStoreWaitFree()
-*/
+// static bool isFetchAndStoreWaitFree()
 HB_FUNC_STATIC(QATOMICINT_ISFETCHANDSTOREWAITFREE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -455,9 +415,7 @@ HB_FUNC_STATIC(QATOMICINT_ISFETCHANDSTOREWAITFREE)
 #endif
 }
 
-/*
-static bool isReferenceCountingNative()
-*/
+// static bool isReferenceCountingNative()
 HB_FUNC_STATIC(QATOMICINT_ISREFERENCECOUNTINGNATIVE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,9 +429,7 @@ HB_FUNC_STATIC(QATOMICINT_ISREFERENCECOUNTINGNATIVE)
 #endif
 }
 
-/*
-static bool isReferenceCountingWaitFree()
-*/
+// static bool isReferenceCountingWaitFree()
 HB_FUNC_STATIC(QATOMICINT_ISREFERENCECOUNTINGWAITFREE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -487,9 +443,7 @@ HB_FUNC_STATIC(QATOMICINT_ISREFERENCECOUNTINGWAITFREE)
 #endif
 }
 
-/*
-static bool isTestAndSetNative()
-*/
+// static bool isTestAndSetNative()
 HB_FUNC_STATIC(QATOMICINT_ISTESTANDSETNATIVE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -503,9 +457,7 @@ HB_FUNC_STATIC(QATOMICINT_ISTESTANDSETNATIVE)
 #endif
 }
 
-/*
-static bool isTestAndSetWaitFree()
-*/
+// static bool isTestAndSetWaitFree()
 HB_FUNC_STATIC(QATOMICINT_ISTESTANDSETWAITFREE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

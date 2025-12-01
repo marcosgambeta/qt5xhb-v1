@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSTATE
-REQUEST QSTATEMACHINE
+REQUEST QState
+REQUEST QStateMachine
 #endif
 
 CLASS QAbstractState INHERIT QObject
@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC(QABSTRACTSTATE_DELETE)
 {
-  QAbstractState *obj = (QAbstractState *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractState *obj = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -74,9 +74,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStateMachine * machine() const
-*/
+// QStateMachine * machine() const
 HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
 {
   QAbstractState *obj = (QAbstractState *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -95,9 +93,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
   }
 }
 
-/*
-QState * parentState() const
-*/
+// QState * parentState() const
 HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
 {
   QAbstractState *obj = (QAbstractState *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -118,14 +114,16 @@ HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
 
 void QAbstractStateSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractStateSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTSTATE_ONENTERED)
 {
-  QAbstractStateSlots_connect_signal("entered()", "entered()");
+  CONNECT_SIGNAL("entered()");
 }
 
 HB_FUNC_STATIC(QABSTRACTSTATE_ONEXITED)
 {
-  QAbstractStateSlots_connect_signal("exited()", "exited()");
+  CONNECT_SIGNAL("exited()");
 }
 
 #pragma ENDDUMP

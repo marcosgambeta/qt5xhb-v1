@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTANIMATION
-REQUEST QABSTRACTSTATE
-REQUEST QSTATE
-REQUEST QSTATEMACHINE
+REQUEST QAbstractAnimation
+REQUEST QAbstractState
+REQUEST QState
+REQUEST QStateMachine
 #endif
 
 CLASS QAbstractTransition INHERIT QObject
@@ -68,7 +68,7 @@ RETURN
 
 HB_FUNC_STATIC(QABSTRACTTRANSITION_DELETE)
 {
-  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addAnimation( QAbstractAnimation * animation )
-*/
+// void addAnimation( QAbstractAnimation * animation )
 HB_FUNC_STATIC(QABSTRACTTRANSITION_ADDANIMATION)
 {
   QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ADDANIMATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QAbstractAnimation*> animations() const
-*/
+// QList<QAbstractAnimation *> animations() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
 {
   QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -144,9 +140,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
   }
 }
 
-/*
-QStateMachine * machine() const
-*/
+// QStateMachine * machine() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
 {
   QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
   }
 }
 
-/*
-void removeAnimation( QAbstractAnimation * animation )
-*/
+// void removeAnimation( QAbstractAnimation * animation )
 HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
 {
   QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -187,9 +179,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTargetState( QAbstractState * target )
-*/
+// void setTargetState( QAbstractState * target )
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
 {
   QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -209,9 +199,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTargetStates( const QList<QAbstractState*> &targets )
-*/
+// void setTargetStates( const QList<QAbstractState *> & targets )
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
 {
   QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -237,9 +225,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QState * sourceState() const
-*/
+// QState * sourceState() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
 {
   QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -258,9 +244,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
   }
 }
 
-/*
-QAbstractState * targetState() const
-*/
+// QAbstractState * targetState() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATE)
 {
   QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -279,9 +263,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATE)
   }
 }
 
-/*
-QList<QAbstractState*> targetStates() const
-*/
+// QList<QAbstractState *> targetStates() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATES)
 {
   QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -320,9 +302,11 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATES)
 
 void QAbstractTransitionSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractTransitionSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTTRANSITION_ONTRIGGERED)
 {
-  QAbstractTransitionSlots_connect_signal("triggered()", "triggered()");
+  CONNECT_SIGNAL("triggered()");
 }
 
 #pragma ENDDUMP

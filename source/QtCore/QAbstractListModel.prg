@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODELINDEX
+REQUEST QModelIndex
 #endif
 
 CLASS QAbstractListModel INHERIT QAbstractItemModel
@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC(QABSTRACTLISTMODEL_DELETE)
 {
-  QAbstractListModel *obj = (QAbstractListModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractListModel *obj = qobject_cast<QAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -67,10 +67,8 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
-parent )
-*/
+// virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
+// parent )
 HB_FUNC_STATIC(QABSTRACTLISTMODEL_DROPMIMEDATA)
 {
   QAbstractListModel *obj = (QAbstractListModel *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_DROPMIMEDATA)
   }
 }
 
-/*
-virtual QModelIndex index( int row, int column = 0, const QModelIndex &parent = QModelIndex() ) const
-*/
+// virtual QModelIndex index( int row, int column = 0, const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QABSTRACTLISTMODEL_INDEX)
 {
   QAbstractListModel *obj = (QAbstractListModel *)Qt5xHb::itemGetPtrStackSelfItem();

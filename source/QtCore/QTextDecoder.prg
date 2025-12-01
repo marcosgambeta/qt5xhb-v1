@@ -60,15 +60,11 @@ RETURN
 HB_FUNC_STATIC(QTEXTDECODER_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTCODEC(1)) {
-    /*
-    QTextDecoder( const QTextCodec * codec )
-    */
+    // QTextDecoder( const QTextCodec * codec )
     QTextDecoder *obj = new QTextDecoder(PQTEXTCODEC(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2)) {
-    /*
-    QTextDecoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
-    */
+    // QTextDecoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
     QTextDecoder *obj = new QTextDecoder(PQTEXTCODEC(1), (QTextCodec::ConversionFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -78,7 +74,7 @@ HB_FUNC_STATIC(QTEXTDECODER_NEW)
 
 HB_FUNC_STATIC(QTEXTDECODER_DELETE)
 {
-  QTextDecoder *obj = (QTextDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTextDecoder *obj = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -94,19 +90,15 @@ HB_FUNC_STATIC(QTEXTDECODER_DELETE)
 HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
-    /*
-    QString toUnicode( const char * chars, int len )
-    */
-    QTextDecoder *obj = (QTextDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QString toUnicode( const char * chars, int len )
+    QTextDecoder *obj = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RQSTRING(obj->toUnicode(PCONSTCHAR(1), PINT(2)));
     }
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
-    /*
-    QString toUnicode( const QByteArray &ba )
-    */
-    QTextDecoder *obj = (QTextDecoder *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QString toUnicode( const QByteArray & ba )
+    QTextDecoder *obj = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RQSTRING(obj->toUnicode(*PQBYTEARRAY(1)));
@@ -116,9 +108,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
   }
 }
 
-/*
-bool hasFailure() const
-*/
+// bool hasFailure() const
 HB_FUNC_STATIC(QTEXTDECODER_HASFAILURE)
 {
   QTextDecoder *obj = (QTextDecoder *)Qt5xHb::itemGetPtrStackSelfItem();

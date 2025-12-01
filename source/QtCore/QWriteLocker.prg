@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QREADWRITELOCK
+REQUEST QReadWriteLock
 #endif
 
 CLASS QWriteLocker
@@ -59,9 +59,7 @@ RETURN
 #include <QtCore/QWriteLocker>
 #endif
 
-    /*
-    QWriteLocker( QReadWriteLock * lock )
-    */
+    // QWriteLocker( QReadWriteLock * lock )
 HB_FUNC_STATIC(QWRITELOCKER_NEW)
 {
   if (ISNUMPAR(1) && ISQREADWRITELOCK(1)) {
@@ -74,7 +72,7 @@ HB_FUNC_STATIC(QWRITELOCKER_NEW)
 
 HB_FUNC_STATIC(QWRITELOCKER_DELETE)
 {
-  QWriteLocker *obj = (QWriteLocker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QWriteLocker *obj = static_cast<QWriteLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QWRITELOCKER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QReadWriteLock * readWriteLock() const
-*/
+// QReadWriteLock * readWriteLock() const
 HB_FUNC_STATIC(QWRITELOCKER_READWRITELOCK)
 {
   QWriteLocker *obj = (QWriteLocker *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -108,9 +104,7 @@ HB_FUNC_STATIC(QWRITELOCKER_READWRITELOCK)
   }
 }
 
-/*
-void relock()
-*/
+// void relock()
 HB_FUNC_STATIC(QWRITELOCKER_RELOCK)
 {
   QWriteLocker *obj = (QWriteLocker *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -130,9 +124,7 @@ HB_FUNC_STATIC(QWRITELOCKER_RELOCK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void unlock()
-*/
+// void unlock()
 HB_FUNC_STATIC(QWRITELOCKER_UNLOCK)
 {
   QWriteLocker *obj = (QWriteLocker *)Qt5xHb::itemGetPtrStackSelfItem();

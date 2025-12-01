@@ -60,9 +60,7 @@ RETURN
 #include <QtCore/QReadWriteLock>
 #endif
 
-    /*
-    QReadWriteLock( QReadWriteLock::RecursionMode recursionMode = QReadWriteLock::NonRecursive )
-    */
+    // QReadWriteLock( QReadWriteLock::RecursionMode recursionMode = QReadWriteLock::NonRecursive )
 HB_FUNC_STATIC(QREADWRITELOCK_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -76,7 +74,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_NEW)
 
 HB_FUNC_STATIC(QREADWRITELOCK_DELETE)
 {
-  QReadWriteLock *obj = (QReadWriteLock *)Qt5xHb::itemGetPtrStackSelfItem();
+  QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void lockForRead()
-*/
+// void lockForRead()
 HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORREAD)
 {
   QReadWriteLock *obj = (QReadWriteLock *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -114,19 +110,15 @@ HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORREAD)
 HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
 {
   if (ISNUMPAR(0)) {
-    /*
-    bool tryLockForRead()
-    */
-    QReadWriteLock *obj = (QReadWriteLock *)Qt5xHb::itemGetPtrStackSelfItem();
+    // bool tryLockForRead()
+    QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->tryLockForRead());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    bool tryLockForRead( int timeout )
-    */
-    QReadWriteLock *obj = (QReadWriteLock *)Qt5xHb::itemGetPtrStackSelfItem();
+    // bool tryLockForRead( int timeout )
+    QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->tryLockForRead(PINT(1)));
@@ -136,9 +128,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
   }
 }
 
-/*
-void lockForWrite()
-*/
+// void lockForWrite()
 HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORWRITE)
 {
   QReadWriteLock *obj = (QReadWriteLock *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -161,19 +151,15 @@ HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORWRITE)
 HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
 {
   if (ISNUMPAR(0)) {
-    /*
-    bool tryLockForWrite()
-    */
-    QReadWriteLock *obj = (QReadWriteLock *)Qt5xHb::itemGetPtrStackSelfItem();
+    // bool tryLockForWrite()
+    QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->tryLockForWrite());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    bool tryLockForWrite( int timeout )
-    */
-    QReadWriteLock *obj = (QReadWriteLock *)Qt5xHb::itemGetPtrStackSelfItem();
+    // bool tryLockForWrite( int timeout )
+    QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->tryLockForWrite(PINT(1)));
@@ -183,9 +169,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
   }
 }
 
-/*
-void unlock()
-*/
+// void unlock()
 HB_FUNC_STATIC(QREADWRITELOCK_UNLOCK)
 {
   QReadWriteLock *obj = (QReadWriteLock *)Qt5xHb::itemGetPtrStackSelfItem();

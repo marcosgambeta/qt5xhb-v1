@@ -58,21 +58,15 @@ RETURN
 HB_FUNC_STATIC(QEVENTLOOPLOCKER_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QEventLoopLocker()
-    */
+    // QEventLoopLocker()
     QEventLoopLocker *obj = new QEventLoopLocker();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQEVENTLOOP(1)) {
-    /*
-    QEventLoopLocker( QEventLoop * loop )
-    */
+    // QEventLoopLocker( QEventLoop * loop )
     QEventLoopLocker *obj = new QEventLoopLocker(PQEVENTLOOP(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQTHREAD(1)) {
-    /*
-    QEventLoopLocker( QThread * thread )
-    */
+    // QEventLoopLocker( QThread * thread )
     QEventLoopLocker *obj = new QEventLoopLocker(PQTHREAD(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -82,7 +76,7 @@ HB_FUNC_STATIC(QEVENTLOOPLOCKER_NEW)
 
 HB_FUNC_STATIC(QEVENTLOOPLOCKER_DELETE)
 {
-  QEventLoopLocker *obj = (QEventLoopLocker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QEventLoopLocker *obj = static_cast<QEventLoopLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;

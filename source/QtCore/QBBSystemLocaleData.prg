@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QLOCALE
-REQUEST QVARIANT
+REQUEST QLocale
+REQUEST QVariant
 #endif
 
 CLASS QBBSystemLocaleData INHERIT QObject
@@ -58,9 +58,7 @@ RETURN
 #include <QtCore/QBBSystemLocaleData>
 #endif
 
-    /*
-    QBBSystemLocaleData()
-    */
+    // QBBSystemLocaleData()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -73,7 +71,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_NEW)
 
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_DELETE)
 {
-  QBBSystemLocaleData *obj = (QBBSystemLocaleData *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBBSystemLocaleData *obj = static_cast<QBBSystemLocaleData *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-uint measurementSystem()
-*/
+// uint measurementSystem()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM)
 {
   QBBSystemLocaleData *obj = (QBBSystemLocaleData *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -106,9 +102,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM)
   }
 }
 
-/*
-QVariant timeFormat( QLocale::FormatType )
-*/
+// QVariant timeFormat( QLocale::FormatType )
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_TIMEFORMAT)
 {
   QBBSystemLocaleData *obj = (QBBSystemLocaleData *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -127,9 +121,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_TIMEFORMAT)
   }
 }
 
-/*
-QVariant dateTimeFormat( QLocale::FormatType )
-*/
+// QVariant dateTimeFormat( QLocale::FormatType )
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_DATETIMEFORMAT)
 {
   QBBSystemLocaleData *obj = (QBBSystemLocaleData *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -148,9 +140,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_DATETIMEFORMAT)
   }
 }
 
-/*
-QLocale languageLocale()
-*/
+// QLocale languageLocale()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_LANGUAGELOCALE)
 {
   QBBSystemLocaleData *obj = (QBBSystemLocaleData *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -169,9 +159,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_LANGUAGELOCALE)
   }
 }
 
-/*
-QLocale regionLocale()
-*/
+// QLocale regionLocale()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_REGIONLOCALE)
 {
   QBBSystemLocaleData *obj = (QBBSystemLocaleData *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -190,9 +178,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_REGIONLOCALE)
   }
 }
 
-/*
-void installSocketNotifiers()
-*/
+// void installSocketNotifiers()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS)
 {
   QBBSystemLocaleData *obj = (QBBSystemLocaleData *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -212,9 +198,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void readLanguageLocale()
-*/
+// void readLanguageLocale()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE)
 {
   QBBSystemLocaleData *obj = (QBBSystemLocaleData *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -234,9 +218,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void readRegionLocale()
-*/
+// void readRegionLocale()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READREGIONLOCALE)
 {
   QBBSystemLocaleData *obj = (QBBSystemLocaleData *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -256,9 +238,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READREGIONLOCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void readMeasurementSystem()
-*/
+// void readMeasurementSystem()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM)
 {
   QBBSystemLocaleData *obj = (QBBSystemLocaleData *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -278,9 +258,7 @@ HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void readHourFormat()
-*/
+// void readHourFormat()
 HB_FUNC_STATIC(QBBSYSTEMLOCALEDATA_READHOURFORMAT)
 {
   QBBSystemLocaleData *obj = (QBBSystemLocaleData *)Qt5xHb::itemGetPtrStackSelfItem();

@@ -64,15 +64,11 @@ RETURN
 HB_FUNC_STATIC(QPOINT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPoint()
-    */
+    // QPoint()
     QPoint *obj = new QPoint();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    QPoint( int xpos, int ypos )
-    */
+    // QPoint( int xpos, int ypos )
     QPoint *obj = new QPoint(PINT(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -82,7 +78,7 @@ HB_FUNC_STATIC(QPOINT_NEW)
 
 HB_FUNC_STATIC(QPOINT_DELETE)
 {
-  QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -95,9 +91,7 @@ HB_FUNC_STATIC(QPOINT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QPOINT_ISNULL)
 {
   QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -115,9 +109,7 @@ HB_FUNC_STATIC(QPOINT_ISNULL)
   }
 }
 
-/*
-int manhattanLength() const
-*/
+// int manhattanLength() const
 HB_FUNC_STATIC(QPOINT_MANHATTANLENGTH)
 {
   QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -135,9 +127,7 @@ HB_FUNC_STATIC(QPOINT_MANHATTANLENGTH)
   }
 }
 
-/*
-void setX( int x )
-*/
+// void setX( int x )
 HB_FUNC_STATIC(QPOINT_SETX)
 {
   QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -157,9 +147,7 @@ HB_FUNC_STATIC(QPOINT_SETX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setY( int y )
-*/
+// void setY( int y )
 HB_FUNC_STATIC(QPOINT_SETY)
 {
   QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -179,9 +167,7 @@ HB_FUNC_STATIC(QPOINT_SETY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int x() const
-*/
+// int x() const
 HB_FUNC_STATIC(QPOINT_X)
 {
   QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -199,9 +185,7 @@ HB_FUNC_STATIC(QPOINT_X)
   }
 }
 
-/*
-int y() const
-*/
+// int y() const
 HB_FUNC_STATIC(QPOINT_Y)
 {
   QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();

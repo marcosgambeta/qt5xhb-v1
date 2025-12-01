@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSTRINGREF
+REQUEST QStringRef
 #endif
 
 CLASS QXmlStreamNamespaceDeclaration
@@ -61,21 +61,15 @@ RETURN
 HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QXmlStreamNamespaceDeclaration()
-    */
+    // QXmlStreamNamespaceDeclaration()
     QXmlStreamNamespaceDeclaration *obj = new QXmlStreamNamespaceDeclaration();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1)) {
-    /*
-    QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration &other )
-    */
+    // QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
     QXmlStreamNamespaceDeclaration *obj = new QXmlStreamNamespaceDeclaration(*PQXMLSTREAMNAMESPACEDECLARATION(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    QXmlStreamNamespaceDeclaration( const QString &prefix, const QString &namespaceUri )
-    */
+    // QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
     QXmlStreamNamespaceDeclaration *obj = new QXmlStreamNamespaceDeclaration(PQSTRING(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -85,7 +79,8 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NEW)
 
 HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_DELETE)
 {
-  QXmlStreamNamespaceDeclaration *obj = (QXmlStreamNamespaceDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamNamespaceDeclaration *obj =
+      static_cast<QXmlStreamNamespaceDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -98,9 +93,7 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringRef namespaceUri() const
-*/
+// QStringRef namespaceUri() const
 HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI)
 {
   QXmlStreamNamespaceDeclaration *obj = (QXmlStreamNamespaceDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -119,9 +112,7 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI)
   }
 }
 
-/*
-QStringRef prefix() const
-*/
+// QStringRef prefix() const
 HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_PREFIX)
 {
   QXmlStreamNamespaceDeclaration *obj = (QXmlStreamNamespaceDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
