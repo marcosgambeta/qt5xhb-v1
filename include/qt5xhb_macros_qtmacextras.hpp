@@ -11,8 +11,10 @@
 
 #define ISQMACPASTEBOARDMIME(n)                             Qt5xHb::isObjectDerivedFrom(n, "QMacPasteboardMime")
 
-#define PQMACPASTEBOARDMIME(n)                              static_cast<QMacPasteboardMime*>(Qt5xHb::itemGetPtr(n))
+#define ISQMACPASTEBOARDMIMEORNIL(n)                        (ISQMACPASTEBOARDMIME(n) || HB_ISNIL(n))
 
-#define OPQMACPASTEBOARDMIME(n, v)                          HB_ISNIL(n) ? v : static_cast<QMacPasteboardMime*>(Qt5xHb::itemGetPtr(n))
+#define PQMACPASTEBOARDMIME(n)                              static_cast<QMacPasteboardMime *>(Qt5xHb::itemGetPtr(n))
+
+#define OPQMACPASTEBOARDMIME(n, v)                          HB_ISNIL(n) ? v : static_cast<QMacPasteboardMime *>(Qt5xHb::itemGetPtr(n))
 
 #endif // QT5XHB_MACROS_QTMACEXTRAS_H
