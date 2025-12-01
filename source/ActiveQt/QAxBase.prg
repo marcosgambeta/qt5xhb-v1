@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QAXOBJECT
-REQUEST QVARIANT
+REQUEST QAxObject
+REQUEST QVariant
 #endif
 
 CLASS QAxBase
@@ -75,7 +75,7 @@ RETURN
 
 HB_FUNC_STATIC(QAXBASE_DELETE)
 {
-  QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxBase *obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QAXBASE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant asVariant() const
-*/
+// QVariant asVariant() const
 HB_FUNC_STATIC(QAXBASE_ASVARIANT)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QAXBASE_ASVARIANT)
   }
 }
 
-/*
-virtual void clear()
-*/
+// virtual void clear()
 HB_FUNC_STATIC(QAXBASE_CLEAR)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -131,9 +127,7 @@ HB_FUNC_STATIC(QAXBASE_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString control() const
-*/
+// QString control() const
 HB_FUNC_STATIC(QAXBASE_CONTROL)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -151,9 +145,7 @@ HB_FUNC_STATIC(QAXBASE_CONTROL)
   }
 }
 
-/*
-void disableClassInfo()
-*/
+// void disableClassInfo()
 HB_FUNC_STATIC(QAXBASE_DISABLECLASSINFO)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -173,9 +165,7 @@ HB_FUNC_STATIC(QAXBASE_DISABLECLASSINFO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void disableEventSink()
-*/
+// void disableEventSink()
 HB_FUNC_STATIC(QAXBASE_DISABLEEVENTSINK)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -195,9 +185,7 @@ HB_FUNC_STATIC(QAXBASE_DISABLEEVENTSINK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void disableMetaObject()
-*/
+// void disableMetaObject()
 HB_FUNC_STATIC(QAXBASE_DISABLEMETAOBJECT)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -219,15 +207,13 @@ HB_FUNC_STATIC(QAXBASE_DISABLEMETAOBJECT)
 
 HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
 {
-  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) &&
-      ISQVARIANTORNIL(4) && ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) &&
-      ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
-    /*
-    QVariant dynamicCall( const char * function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
-    const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
-    QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant() )
-    */
-    QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
+  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
+      ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
+    // QVariant dynamicCall( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 =
+    // QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 =
+    // QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 =
+    // QVariant() )
+    QAxBase *obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       QVariant *ptr =
@@ -242,10 +228,8 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
       RQVARIANT(ptr);
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
-    /*
-    QVariant dynamicCall( const char * function, QList<QVariant> &vars )
-    */
-    QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QVariant dynamicCall( const char * function, QList<QVariant> & vars )
+    QAxBase *obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       QVariant *ptr = new QVariant(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
@@ -256,9 +240,7 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
   }
 }
 
-/*
-QString generateDocumentation()
-*/
+// QString generateDocumentation()
 HB_FUNC_STATIC(QAXBASE_GENERATEDOCUMENTATION)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -276,9 +258,7 @@ HB_FUNC_STATIC(QAXBASE_GENERATEDOCUMENTATION)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QAXBASE_ISNULL)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -296,9 +276,7 @@ HB_FUNC_STATIC(QAXBASE_ISNULL)
   }
 }
 
-/*
-virtual bool propertyWritable( const char * prop ) const
-*/
+// virtual bool propertyWritable( const char * prop ) const
 HB_FUNC_STATIC(QAXBASE_PROPERTYWRITABLE)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -318,16 +296,13 @@ HB_FUNC_STATIC(QAXBASE_PROPERTYWRITABLE)
 
 HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
 {
-  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) &&
-      ISQVARIANTORNIL(4) && ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) &&
-      ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
-    /*
-    QAxObject * querySubObject( const char * name, const QVariant &var1 = QVariant(), const QVariant &var2 =
-    QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 =
-    QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 =
-    QVariant() )
-    */
-    QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
+  if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && ISQVARIANTORNIL(2) && ISQVARIANTORNIL(3) && ISQVARIANTORNIL(4) &&
+      ISQVARIANTORNIL(5) && ISQVARIANTORNIL(6) && ISQVARIANTORNIL(7) && ISQVARIANTORNIL(8) && ISQVARIANTORNIL(9)) {
+    // QAxObject * querySubObject( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 =
+    // QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 =
+    // QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 =
+    // QVariant() )
+    QAxBase *obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       QAxObject *ptr = obj->querySubObject(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2),
@@ -341,10 +316,8 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
       Qt5xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
-    /*
-    QAxObject * querySubObject( const char * name, QList<QVariant> &vars )
-    */
-    QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QAxObject * querySubObject( const char * name, QList<QVariant> & vars )
+    QAxBase *obj = static_cast<QAxBase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       QAxObject *ptr = obj->querySubObject(PCONSTCHAR(1), PQVARIANTLIST(2));
@@ -355,9 +328,7 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
   }
 }
 
-/*
-bool setControl( const QString &)
-*/
+// bool setControl( const QString & )
 HB_FUNC_STATIC(QAXBASE_SETCONTROL)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -375,9 +346,7 @@ HB_FUNC_STATIC(QAXBASE_SETCONTROL)
   }
 }
 
-/*
-virtual void setPropertyWritable( const char * prop, bool ok )
-*/
+// virtual void setPropertyWritable( const char * prop, bool ok )
 HB_FUNC_STATIC(QAXBASE_SETPROPERTYWRITABLE)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -397,9 +366,7 @@ HB_FUNC_STATIC(QAXBASE_SETPROPERTYWRITABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList verbs() const
-*/
+// QStringList verbs() const
 HB_FUNC_STATIC(QAXBASE_VERBS)
 {
   QAxBase *obj = (QAxBase *)Qt5xHb::itemGetPtrStackSelfItem();
