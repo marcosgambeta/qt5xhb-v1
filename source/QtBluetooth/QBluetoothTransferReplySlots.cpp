@@ -59,7 +59,7 @@ void QBluetoothTransferReplySlots::transferProgress(qint64 bytesTransferred, qin
 void QBluetoothTransferReplySlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothTransferReply *obj = (QBluetoothTransferReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBluetoothTransferReply *obj = qobject_cast<QBluetoothTransferReply *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QBluetoothTransferReplySlots *s = QCoreApplication::instance()->findChild<QBluetoothTransferReplySlots *>();

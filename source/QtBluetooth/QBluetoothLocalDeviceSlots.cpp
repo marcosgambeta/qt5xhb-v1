@@ -122,7 +122,7 @@ void QBluetoothLocalDeviceSlots::error(QBluetoothLocalDevice::Error error)
 void QBluetoothLocalDeviceSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothLocalDevice *obj = (QBluetoothLocalDevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBluetoothLocalDevice *obj = qobject_cast<QBluetoothLocalDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QBluetoothLocalDeviceSlots *s = QCoreApplication::instance()->findChild<QBluetoothLocalDeviceSlots *>();

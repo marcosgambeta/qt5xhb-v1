@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBLUETOOTHTRANSFERREPLY
+REQUEST QBluetoothTransferReply
 #endif
 
 CLASS QBluetoothTransferManager INHERIT QObject
@@ -58,9 +58,7 @@ RETURN
 
 #include <QtBluetooth/QBluetoothTransferReply>
 
-    /*
-    QBluetoothTransferManager( QObject * parent = 0 )
-    */
+    // QBluetoothTransferManager( QObject * parent = 0 )
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
@@ -76,7 +74,7 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_NEW)
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothTransferManager *obj = (QBluetoothTransferManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBluetoothTransferManager *obj = qobject_cast<QBluetoothTransferManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -92,13 +90,11 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_DELETE)
 #endif
 }
 
-/*
-QBluetoothTransferReply * put( const QBluetoothTransferRequest &request, QIODevice * data )
-*/
+// QBluetoothTransferReply * put( const QBluetoothTransferRequest & request, QIODevice * data )
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_PUT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothTransferManager *obj = (QBluetoothTransferManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBluetoothTransferManager *obj = qobject_cast<QBluetoothTransferManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,11 +113,12 @@ HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_PUT)
 
 void QBluetoothTransferManagerSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QBluetoothTransferManagerSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QBLUETOOTHTRANSFERMANAGER_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothTransferManagerSlots_connect_signal("finished(QBluetoothTransferReply*)",
-                                                "finished(QBluetoothTransferReply*)");
+  CONNECT_SIGNAL("finished(QBluetoothTransferReply*)");
 #else
   hb_retl(false);
 #endif

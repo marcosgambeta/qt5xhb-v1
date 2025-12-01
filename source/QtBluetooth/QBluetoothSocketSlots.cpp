@@ -91,7 +91,7 @@ void QBluetoothSocketSlots::stateChanged(QBluetoothSocket::SocketState state)
 void QBluetoothSocketSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothSocket *obj = (QBluetoothSocket *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBluetoothSocket *obj = qobject_cast<QBluetoothSocket *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QBluetoothSocketSlots *s = QCoreApplication::instance()->findChild<QBluetoothSocketSlots *>();
