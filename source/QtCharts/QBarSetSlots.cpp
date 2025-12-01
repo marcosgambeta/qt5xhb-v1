@@ -319,7 +319,7 @@ void QBarSetSlots::valuesRemoved(int index, int count)
 void QBarSetSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QBarSet *obj = (QBarSet *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBarSet *obj = qobject_cast<QBarSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QBarSetSlots *s = QCoreApplication::instance()->findChild<QBarSetSlots *>();

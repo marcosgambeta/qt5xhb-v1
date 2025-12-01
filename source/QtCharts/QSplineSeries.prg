@@ -55,9 +55,7 @@ RETURN
 
     using namespace QtCharts;
 
-/*
-QSplineSeries( QObject * parent = nullptr )
-*/
+// QSplineSeries( QObject * parent = nullptr )
 HB_FUNC_STATIC(QSPLINESERIES_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -70,13 +68,11 @@ HB_FUNC_STATIC(QSPLINESERIES_NEW)
 #endif
 }
 
-/*
-~QSplineSeries()
-*/
+// ~QSplineSeries()
 HB_FUNC_STATIC(QSPLINESERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QSplineSeries *obj = (QSplineSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSplineSeries *obj = qobject_cast<QSplineSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -92,13 +88,11 @@ HB_FUNC_STATIC(QSPLINESERIES_DELETE)
 #endif
 }
 
-/*
-QAbstractSeries::SeriesType type() const
-*/
+// QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC(QSPLINESERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QSplineSeries *obj = (QSplineSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSplineSeries *obj = qobject_cast<QSplineSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

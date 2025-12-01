@@ -174,7 +174,7 @@ void QLegendMarkerSlots::visibleChanged()
 void QLegendMarkerSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegendMarker *obj = (QLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QLegendMarker *obj = qobject_cast<QLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QLegendMarkerSlots *s = QCoreApplication::instance()->findChild<QLegendMarkerSlots *>();

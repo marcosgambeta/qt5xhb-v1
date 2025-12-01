@@ -138,7 +138,7 @@ void QVCandlestickModelMapperSlots::timestampRowChanged()
 void QVCandlestickModelMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QVCandlestickModelMapper *obj = (QVCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVCandlestickModelMapper *obj = qobject_cast<QVCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QVCandlestickModelMapperSlots *s = QCoreApplication::instance()->findChild<QVCandlestickModelMapperSlots *>();

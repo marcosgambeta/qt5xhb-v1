@@ -225,7 +225,7 @@ void QCandlestickSetSlots::timestampChanged()
 void QCandlestickSetSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickSet *obj = (QCandlestickSet *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCandlestickSet *obj = qobject_cast<QCandlestickSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QCandlestickSetSlots *s = QCoreApplication::instance()->findChild<QCandlestickSetSlots *>();

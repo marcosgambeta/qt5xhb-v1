@@ -53,7 +53,7 @@ void QCandlestickModelMapperSlots::seriesReplaced()
 void QCandlestickModelMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapper *obj = (QCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCandlestickModelMapper *obj = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QCandlestickModelMapperSlots *s = QCoreApplication::instance()->findChild<QCandlestickModelMapperSlots *>();

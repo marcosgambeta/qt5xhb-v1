@@ -55,9 +55,7 @@ RETURN
 
     using namespace QtCharts;
 
-/*
-QHorizontalPercentBarSeries( QObject * parent = nullptr )
-*/
+// QHorizontalPercentBarSeries( QObject * parent = nullptr )
 HB_FUNC_STATIC(QHORIZONTALPERCENTBARSERIES_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -70,13 +68,12 @@ HB_FUNC_STATIC(QHORIZONTALPERCENTBARSERIES_NEW)
 #endif
 }
 
-/*
-~QHorizontalPercentBarSeries()
-*/
+// ~QHorizontalPercentBarSeries()
 HB_FUNC_STATIC(QHORIZONTALPERCENTBARSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHorizontalPercentBarSeries *obj = (QHorizontalPercentBarSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHorizontalPercentBarSeries *obj =
+      qobject_cast<QHorizontalPercentBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -92,13 +89,12 @@ HB_FUNC_STATIC(QHORIZONTALPERCENTBARSERIES_DELETE)
 #endif
 }
 
-/*
-QAbstractSeries::SeriesType type() const
-*/
+// QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC(QHORIZONTALPERCENTBARSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHorizontalPercentBarSeries *obj = (QHorizontalPercentBarSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHorizontalPercentBarSeries *obj =
+      qobject_cast<QHorizontalPercentBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

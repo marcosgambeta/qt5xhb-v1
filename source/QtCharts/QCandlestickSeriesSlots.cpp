@@ -85,7 +85,8 @@ void QCandlestickSeriesSlots::candlestickSetsAdded(const QList<QCandlestickSet *
         hb_vmDo(0);
         PHB_ITEM pTempObject = hb_itemNew(NULL);
         hb_itemCopy(pTempObject, hb_stackReturnItem());
-        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, sets[i]);
+        PHB_ITEM pTempItem = hb_itemNew(NULL);
+        hb_itemPutPtr(pTempItem, (QCandlestickSet *)sets[i]);
         hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
         hb_arrayAddForward(psets, pTempObject);
         hb_itemRelease(pTempObject);
@@ -121,7 +122,8 @@ void QCandlestickSeriesSlots::candlestickSetsRemoved(const QList<QCandlestickSet
         hb_vmDo(0);
         PHB_ITEM pTempObject = hb_itemNew(NULL);
         hb_itemCopy(pTempObject, hb_stackReturnItem());
-        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, sets[i]);
+        PHB_ITEM pTempItem = hb_itemNew(NULL);
+        hb_itemPutPtr(pTempItem, (QCandlestickSet *)sets[i]);
         hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
         hb_arrayAddForward(psets, pTempObject);
         hb_itemRelease(pTempObject);
@@ -182,7 +184,7 @@ void QCandlestickSeriesSlots::clicked(QCandlestickSet *set)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
-    PHB_ITEM pset = Qt5xHb::Signals_return_qobject(set, "QCANDLESTICKSET");
+    PHB_ITEM pset = Qt5xHb::Signals_return_qobject((QObject *)set, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 2, psender, pset);
 
@@ -235,7 +237,7 @@ void QCandlestickSeriesSlots::doubleClicked(QCandlestickSet *set)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
-    PHB_ITEM pset = Qt5xHb::Signals_return_qobject(set, "QCANDLESTICKSET");
+    PHB_ITEM pset = Qt5xHb::Signals_return_qobject((QObject *)set, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 2, psender, pset);
 
@@ -255,7 +257,7 @@ void QCandlestickSeriesSlots::hovered(bool status, QCandlestickSet *set)
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
     PHB_ITEM pstatus = hb_itemPutL(NULL, status);
-    PHB_ITEM pset = Qt5xHb::Signals_return_qobject(set, "QCANDLESTICKSET");
+    PHB_ITEM pset = Qt5xHb::Signals_return_qobject((QObject *)set, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 3, psender, pstatus, pset);
 
@@ -343,7 +345,7 @@ void QCandlestickSeriesSlots::pressed(QCandlestickSet *set)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
-    PHB_ITEM pset = Qt5xHb::Signals_return_qobject(set, "QCANDLESTICKSET");
+    PHB_ITEM pset = Qt5xHb::Signals_return_qobject((QObject *)set, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 2, psender, pset);
 
@@ -362,7 +364,7 @@ void QCandlestickSeriesSlots::released(QCandlestickSet *set)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKSERIES");
-    PHB_ITEM pset = Qt5xHb::Signals_return_qobject(set, "QCANDLESTICKSET");
+    PHB_ITEM pset = Qt5xHb::Signals_return_qobject((QObject *)set, "QCANDLESTICKSET");
 
     hb_vmEvalBlockV(cb, 2, psender, pset);
 
@@ -375,7 +377,7 @@ void QCandlestickSeriesSlots::released(QCandlestickSet *set)
 void QCandlestickSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickSeries *obj = (QCandlestickSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCandlestickSeries *obj = qobject_cast<QCandlestickSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QCandlestickSeriesSlots *s = QCoreApplication::instance()->findChild<QCandlestickSeriesSlots *>();

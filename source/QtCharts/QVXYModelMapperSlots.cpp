@@ -121,7 +121,7 @@ void QVXYModelMapperSlots::yColumnChanged()
 void QVXYModelMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVXYModelMapper *obj = (QVXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVXYModelMapper *obj = qobject_cast<QVXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QVXYModelMapperSlots *s = QCoreApplication::instance()->findChild<QVXYModelMapperSlots *>();

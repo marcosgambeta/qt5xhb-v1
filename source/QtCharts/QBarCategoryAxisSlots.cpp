@@ -112,7 +112,7 @@ void QBarCategoryAxisSlots::rangeChanged(const QString &min, const QString &max)
 void QBarCategoryAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QBarCategoryAxis *obj = (QBarCategoryAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBarCategoryAxis *obj = qobject_cast<QBarCategoryAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QBarCategoryAxisSlots *s = QCoreApplication::instance()->findChild<QBarCategoryAxisSlots *>();

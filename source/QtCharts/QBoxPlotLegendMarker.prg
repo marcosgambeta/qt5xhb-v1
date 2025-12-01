@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBOXPLOTSERIES
+REQUEST QBoxPlotSeries
 #endif
 
 CLASS QBoxPlotLegendMarker INHERIT QLegendMarker
@@ -57,9 +57,7 @@ RETURN
 
     using namespace QtCharts;
 
-/*
-QBoxPlotLegendMarker( QBoxPlotSeries * series, QLegend * legend, QObject * parent = nullptr )
-*/
+// QBoxPlotLegendMarker( QBoxPlotSeries * series, QLegend * legend, QObject * parent = nullptr )
 HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -72,13 +70,11 @@ HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_NEW)
 #endif
 }
 
-/*
-virtual ~QBoxPlotLegendMarker()
-*/
+// virtual ~QBoxPlotLegendMarker()
 HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QBoxPlotLegendMarker *obj = (QBoxPlotLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBoxPlotLegendMarker *obj = qobject_cast<QBoxPlotLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -94,13 +90,11 @@ HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_DELETE)
 #endif
 }
 
-/*
-virtual QLegendMarker::LegendMarkerType type()
-*/
+// virtual QLegendMarker::LegendMarkerType type()
 HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QBoxPlotLegendMarker *obj = (QBoxPlotLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBoxPlotLegendMarker *obj = qobject_cast<QBoxPlotLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,13 +110,11 @@ HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_TYPE)
 #endif
 }
 
-/*
-virtual QBoxPlotSeries * series()
-*/
+// virtual QBoxPlotSeries * series()
 HB_FUNC_STATIC(QBOXPLOTLEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QBoxPlotLegendMarker *obj = (QBoxPlotLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBoxPlotLegendMarker *obj = qobject_cast<QBoxPlotLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

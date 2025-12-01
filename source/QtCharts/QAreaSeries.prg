@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBRUSH
-REQUEST QCOLOR
-REQUEST QFONT
-REQUEST QLINESERIES
-REQUEST QPEN
+REQUEST QBrush
+REQUEST QColor
+REQUEST QFont
+REQUEST QLineSeries
+REQUEST QPen
 #endif
 
 CLASS QAreaSeries INHERIT QAbstractSeries
@@ -103,17 +103,13 @@ RETURN
 HB_FUNC_STATIC(QAREASERIES_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QAreaSeries( QObject * parent = nullptr )
-    */
+    // QAreaSeries( QObject * parent = nullptr )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     QAreaSeries *obj = new QAreaSeries(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(1, 2) && ISQLINESERIES(1) && ISQLINESERIESORNIL(2)) {
-    /*
-    QAreaSeries( QLineSeries * upperSeries, QLineSeries * lowerSeries = nullptr )
-    */
+    // QAreaSeries( QLineSeries * upperSeries, QLineSeries * lowerSeries = nullptr )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     QAreaSeries *obj = new QAreaSeries(PQLINESERIES(1), OPQLINESERIES(2, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -123,13 +119,11 @@ HB_FUNC_STATIC(QAREASERIES_NEW)
   }
 }
 
-/*
-~QAreaSeries()
-*/
+// ~QAreaSeries()
 HB_FUNC_STATIC(QAREASERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -145,13 +139,11 @@ HB_FUNC_STATIC(QAREASERIES_DELETE)
 #endif
 }
 
-/*
-QLineSeries * upperSeries() const
-*/
+// QLineSeries * upperSeries() const
 HB_FUNC_STATIC(QAREASERIES_UPPERSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,13 +160,11 @@ HB_FUNC_STATIC(QAREASERIES_UPPERSERIES)
 #endif
 }
 
-/*
-QLineSeries * lowerSeries() const
-*/
+// QLineSeries * lowerSeries() const
 HB_FUNC_STATIC(QAREASERIES_LOWERSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,13 +181,11 @@ HB_FUNC_STATIC(QAREASERIES_LOWERSERIES)
 #endif
 }
 
-/*
-QColor color() const
-*/
+// QColor color() const
 HB_FUNC_STATIC(QAREASERIES_COLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,13 +202,11 @@ HB_FUNC_STATIC(QAREASERIES_COLOR)
 #endif
 }
 
-/*
-void setColor( const QColor &color )
-*/
+// void setColor( const QColor & color )
 HB_FUNC_STATIC(QAREASERIES_SETCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,13 +224,11 @@ HB_FUNC_STATIC(QAREASERIES_SETCOLOR)
 #endif
 }
 
-/*
-QColor borderColor() const
-*/
+// QColor borderColor() const
 HB_FUNC_STATIC(QAREASERIES_BORDERCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,13 +245,11 @@ HB_FUNC_STATIC(QAREASERIES_BORDERCOLOR)
 #endif
 }
 
-/*
-void setBorderColor( const QColor &color )
-*/
+// void setBorderColor( const QColor & color )
 HB_FUNC_STATIC(QAREASERIES_SETBORDERCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,13 +267,11 @@ HB_FUNC_STATIC(QAREASERIES_SETBORDERCOLOR)
 #endif
 }
 
-/*
-QString pointLabelsFormat() const
-*/
+// QString pointLabelsFormat() const
 HB_FUNC_STATIC(QAREASERIES_POINTLABELSFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,13 +287,11 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSFORMAT)
 #endif
 }
 
-/*
-void setPointLabelsFormat( const QString &format )
-*/
+// void setPointLabelsFormat( const QString & format )
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,13 +309,11 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFORMAT)
 #endif
 }
 
-/*
-bool pointLabelsVisible() const
-*/
+// bool pointLabelsVisible() const
 HB_FUNC_STATIC(QAREASERIES_POINTLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,13 +329,11 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSVISIBLE)
 #endif
 }
 
-/*
-void setPointLabelsVisible( bool visible = true )
-*/
+// void setPointLabelsVisible( bool visible = true )
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,13 +351,11 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSVISIBLE)
 #endif
 }
 
-/*
-QFont pointLabelsFont() const
-*/
+// QFont pointLabelsFont() const
 HB_FUNC_STATIC(QAREASERIES_POINTLABELSFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,13 +372,11 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSFONT)
 #endif
 }
 
-/*
-void setPointLabelsFont( const QFont &font )
-*/
+// void setPointLabelsFont( const QFont & font )
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -424,13 +394,11 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSFONT)
 #endif
 }
 
-/*
-QColor pointLabelsColor() const
-*/
+// QColor pointLabelsColor() const
 HB_FUNC_STATIC(QAREASERIES_POINTLABELSCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,13 +415,11 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSCOLOR)
 #endif
 }
 
-/*
-void setPointLabelsColor( const QColor &color )
-*/
+// void setPointLabelsColor( const QColor & color )
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,13 +437,11 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCOLOR)
 #endif
 }
 
-/*
-bool pointLabelsClipping() const
-*/
+// bool pointLabelsClipping() const
 HB_FUNC_STATIC(QAREASERIES_POINTLABELSCLIPPING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -493,13 +457,11 @@ HB_FUNC_STATIC(QAREASERIES_POINTLABELSCLIPPING)
 #endif
 }
 
-/*
-void setPointLabelsClipping( bool enabled = true )
-*/
+// void setPointLabelsClipping( bool enabled = true )
 HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCLIPPING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -517,13 +479,11 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTLABELSCLIPPING)
 #endif
 }
 
-/*
-QAbstractSeries::SeriesType type() const
-*/
+// QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC(QAREASERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -539,13 +499,11 @@ HB_FUNC_STATIC(QAREASERIES_TYPE)
 #endif
 }
 
-/*
-void setUpperSeries( QLineSeries * series )
-*/
+// void setUpperSeries( QLineSeries * series )
 HB_FUNC_STATIC(QAREASERIES_SETUPPERSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -563,13 +521,11 @@ HB_FUNC_STATIC(QAREASERIES_SETUPPERSERIES)
 #endif
 }
 
-/*
-void setLowerSeries( QLineSeries * series )
-*/
+// void setLowerSeries( QLineSeries * series )
 HB_FUNC_STATIC(QAREASERIES_SETLOWERSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -587,13 +543,11 @@ HB_FUNC_STATIC(QAREASERIES_SETLOWERSERIES)
 #endif
 }
 
-/*
-void setPen( const QPen &pen )
-*/
+// void setPen( const QPen & pen )
 HB_FUNC_STATIC(QAREASERIES_SETPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -611,13 +565,11 @@ HB_FUNC_STATIC(QAREASERIES_SETPEN)
 #endif
 }
 
-/*
-QPen pen() const
-*/
+// QPen pen() const
 HB_FUNC_STATIC(QAREASERIES_PEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -634,13 +586,11 @@ HB_FUNC_STATIC(QAREASERIES_PEN)
 #endif
 }
 
-/*
-void setBrush( const QBrush &brush )
-*/
+// void setBrush( const QBrush & brush )
 HB_FUNC_STATIC(QAREASERIES_SETBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -658,13 +608,11 @@ HB_FUNC_STATIC(QAREASERIES_SETBRUSH)
 #endif
 }
 
-/*
-QBrush brush() const
-*/
+// QBrush brush() const
 HB_FUNC_STATIC(QAREASERIES_BRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -681,13 +629,11 @@ HB_FUNC_STATIC(QAREASERIES_BRUSH)
 #endif
 }
 
-/*
-void setPointsVisible( bool visible = true )
-*/
+// void setPointsVisible( bool visible = true )
 HB_FUNC_STATIC(QAREASERIES_SETPOINTSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -705,13 +651,11 @@ HB_FUNC_STATIC(QAREASERIES_SETPOINTSVISIBLE)
 #endif
 }
 
-/*
-bool pointsVisible() const
-*/
+// bool pointsVisible() const
 HB_FUNC_STATIC(QAREASERIES_POINTSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -729,10 +673,12 @@ HB_FUNC_STATIC(QAREASERIES_POINTSVISIBLE)
 
 void QAreaSeriesSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAreaSeriesSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QAREASERIES_ONBORDERCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("borderColorChanged(QColor)", "borderColorChanged(QColor)");
+  CONNECT_SIGNAL("borderColorChanged(QColor)");
 #else
   hb_retl(false);
 #endif
@@ -741,7 +687,7 @@ HB_FUNC_STATIC(QAREASERIES_ONBORDERCOLORCHANGED)
 HB_FUNC_STATIC(QAREASERIES_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("clicked(QPointF)", "clicked(QPointF)");
+  CONNECT_SIGNAL("clicked(QPointF)");
 #else
   hb_retl(false);
 #endif
@@ -750,7 +696,7 @@ HB_FUNC_STATIC(QAREASERIES_ONCLICKED)
 HB_FUNC_STATIC(QAREASERIES_ONCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("colorChanged(QColor)", "colorChanged(QColor)");
+  CONNECT_SIGNAL("colorChanged(QColor)");
 #else
   hb_retl(false);
 #endif
@@ -759,7 +705,7 @@ HB_FUNC_STATIC(QAREASERIES_ONCOLORCHANGED)
 HB_FUNC_STATIC(QAREASERIES_ONDOUBLECLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("doubleClicked(QPointF)", "doubleClicked(QPointF)");
+  CONNECT_SIGNAL("doubleClicked(QPointF)");
 #else
   hb_retl(false);
 #endif
@@ -768,7 +714,7 @@ HB_FUNC_STATIC(QAREASERIES_ONDOUBLECLICKED)
 HB_FUNC_STATIC(QAREASERIES_ONHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("hovered(QPointF,bool)", "hovered(QPointF,bool)");
+  CONNECT_SIGNAL("hovered(QPointF,bool)");
 #else
   hb_retl(false);
 #endif
@@ -777,7 +723,7 @@ HB_FUNC_STATIC(QAREASERIES_ONHOVERED)
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("pointLabelsClippingChanged(bool)", "pointLabelsClippingChanged(bool)");
+  CONNECT_SIGNAL("pointLabelsClippingChanged(bool)");
 #else
   hb_retl(false);
 #endif
@@ -786,7 +732,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED)
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCOLORCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("pointLabelsColorChanged(QColor)", "pointLabelsColorChanged(QColor)");
+  CONNECT_SIGNAL("pointLabelsColorChanged(QColor)");
 #else
   hb_retl(false);
 #endif
@@ -795,7 +741,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSCOLORCHANGED)
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFONTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("pointLabelsFontChanged(QFont)", "pointLabelsFontChanged(QFont)");
+  CONNECT_SIGNAL("pointLabelsFontChanged(QFont)");
 #else
   hb_retl(false);
 #endif
@@ -804,7 +750,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFONTCHANGED)
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("pointLabelsFormatChanged(QString)", "pointLabelsFormatChanged(QString)");
+  CONNECT_SIGNAL("pointLabelsFormatChanged(QString)");
 #else
   hb_retl(false);
 #endif
@@ -813,7 +759,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSFORMATCHANGED)
 HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("pointLabelsVisibilityChanged(bool)", "pointLabelsVisibilityChanged(bool)");
+  CONNECT_SIGNAL("pointLabelsVisibilityChanged(bool)");
 #else
   hb_retl(false);
 #endif
@@ -822,7 +768,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED)
 HB_FUNC_STATIC(QAREASERIES_ONPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("pressed(QPointF)", "pressed(QPointF)");
+  CONNECT_SIGNAL("pressed(QPointF)");
 #else
   hb_retl(false);
 #endif
@@ -831,7 +777,7 @@ HB_FUNC_STATIC(QAREASERIES_ONPRESSED)
 HB_FUNC_STATIC(QAREASERIES_ONRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("released(QPointF)", "released(QPointF)");
+  CONNECT_SIGNAL("released(QPointF)");
 #else
   hb_retl(false);
 #endif
@@ -840,7 +786,7 @@ HB_FUNC_STATIC(QAREASERIES_ONRELEASED)
 HB_FUNC_STATIC(QAREASERIES_ONSELECTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeriesSlots_connect_signal("selected()", "selected()");
+  CONNECT_SIGNAL("selected()");
 #else
   hb_retl(false);
 #endif

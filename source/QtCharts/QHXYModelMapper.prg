@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTITEMMODEL
-REQUEST QXYSERIES
+REQUEST QAbstractItemModel
+REQUEST QXYSeries
 #endif
 
 CLASS QHXYModelMapper INHERIT QXYModelMapper
@@ -77,9 +77,7 @@ RETURN
 
     using namespace QtCharts;
 
-/*
-QHXYModelMapper( QObject * parent = nullptr )
-*/
+// QHXYModelMapper( QObject * parent = nullptr )
 HB_FUNC_STATIC(QHXYMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -92,13 +90,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_NEW)
 #endif
 }
 
-/*
-QXYSeries * series() const
-*/
+// QXYSeries * series() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,13 +111,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SERIES)
 #endif
 }
 
-/*
-void setSeries( QXYSeries * series )
-*/
+// void setSeries( QXYSeries * series )
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,13 +133,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETSERIES)
 #endif
 }
 
-/*
-QAbstractItemModel * model() const
-*/
+// QAbstractItemModel * model() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,13 +154,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_MODEL)
 #endif
 }
 
-/*
-void setModel( QAbstractItemModel * model )
-*/
+// void setModel( QAbstractItemModel * model )
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,13 +176,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETMODEL)
 #endif
 }
 
-/*
-int xRow() const
-*/
+// int xRow() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_XROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,13 +196,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_XROW)
 #endif
 }
 
-/*
-void setXRow( int xRow )
-*/
+// void setXRow( int xRow )
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETXROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,13 +218,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETXROW)
 #endif
 }
 
-/*
-int yRow() const
-*/
+// int yRow() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_YROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,13 +238,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_YROW)
 #endif
 }
 
-/*
-void setYRow( int yRow )
-*/
+// void setYRow( int yRow )
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETYROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,13 +260,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETYROW)
 #endif
 }
 
-/*
-int firstColumn() const
-*/
+// int firstColumn() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_FIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,13 +280,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_FIRSTCOLUMN)
 #endif
 }
 
-/*
-void setFirstColumn( int firstColumn )
-*/
+// void setFirstColumn( int firstColumn )
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETFIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,13 +302,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETFIRSTCOLUMN)
 #endif
 }
 
-/*
-int columnCount() const
-*/
+// int columnCount() const
 HB_FUNC_STATIC(QHXYMODELMAPPER_COLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,13 +322,11 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_COLUMNCOUNT)
 #endif
 }
 
-/*
-void setColumnCount( int columnCount )
-*/
+// void setColumnCount( int columnCount )
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETCOLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = (QHXYModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -372,10 +346,12 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETCOLUMNCOUNT)
 
 void QHXYModelMapperSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHXYModelMapperSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapperSlots_connect_signal("columnCountChanged()", "columnCountChanged()");
+  CONNECT_SIGNAL("columnCountChanged()");
 #else
   hb_retl(false);
 #endif
@@ -384,7 +360,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONCOLUMNCOUNTCHANGED)
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapperSlots_connect_signal("firstColumnChanged()", "firstColumnChanged()");
+  CONNECT_SIGNAL("firstColumnChanged()");
 #else
   hb_retl(false);
 #endif
@@ -393,7 +369,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONFIRSTCOLUMNCHANGED)
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONMODELREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapperSlots_connect_signal("modelReplaced()", "modelReplaced()");
+  CONNECT_SIGNAL("modelReplaced()");
 #else
   hb_retl(false);
 #endif
@@ -402,7 +378,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONMODELREPLACED)
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONSERIESREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapperSlots_connect_signal("seriesReplaced()", "seriesReplaced()");
+  CONNECT_SIGNAL("seriesReplaced()");
 #else
   hb_retl(false);
 #endif
@@ -411,7 +387,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONSERIESREPLACED)
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONXROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapperSlots_connect_signal("xRowChanged()", "xRowChanged()");
+  CONNECT_SIGNAL("xRowChanged()");
 #else
   hb_retl(false);
 #endif
@@ -420,7 +396,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_ONXROWCHANGED)
 HB_FUNC_STATIC(QHXYMODELMAPPER_ONYROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapperSlots_connect_signal("yRowChanged()", "yRowChanged()");
+  CONNECT_SIGNAL("yRowChanged()");
 #else
   hb_retl(false);
 #endif

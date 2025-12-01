@@ -116,7 +116,7 @@ void QDateTimeAxisSlots::tickCountChanged(int tick)
 void QDateTimeAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QDateTimeAxis *obj = (QDateTimeAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTimeAxis *obj = qobject_cast<QDateTimeAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QDateTimeAxisSlots *s = QCoreApplication::instance()->findChild<QDateTimeAxisSlots *>();

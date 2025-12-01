@@ -78,9 +78,7 @@ RETURN
     using namespace QtCharts;
 #endif
 
-/*
-QHCandlestickModelMapper( QObject * parent = nullptr )
-*/
+// QHCandlestickModelMapper( QObject * parent = nullptr )
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
@@ -93,13 +91,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_NEW)
 #endif
 }
 
-/*
-int timestampColumn() const
-*/
+// int timestampColumn() const
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_TIMESTAMPCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,13 +111,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_TIMESTAMPCOLUMN)
 #endif
 }
 
-/*
-void setTimestampColumn( int timestampColumn )
-*/
+// void setTimestampColumn( int timestampColumn )
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETTIMESTAMPCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,13 +133,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETTIMESTAMPCOLUMN)
 #endif
 }
 
-/*
-int openColumn() const
-*/
+// int openColumn() const
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_OPENCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,13 +153,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_OPENCOLUMN)
 #endif
 }
 
-/*
-void setOpenColumn( int openColumn )
-*/
+// void setOpenColumn( int openColumn )
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETOPENCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,13 +175,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETOPENCOLUMN)
 #endif
 }
 
-/*
-int highColumn() const
-*/
+// int highColumn() const
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_HIGHCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,13 +195,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_HIGHCOLUMN)
 #endif
 }
 
-/*
-void setHighColumn( int highColumn )
-*/
+// void setHighColumn( int highColumn )
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETHIGHCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,13 +217,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETHIGHCOLUMN)
 #endif
 }
 
-/*
-int lowColumn() const
-*/
+// int lowColumn() const
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_LOWCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,13 +237,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_LOWCOLUMN)
 #endif
 }
 
-/*
-void setLowColumn( int lowColumn )
-*/
+// void setLowColumn( int lowColumn )
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETLOWCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,13 +259,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETLOWCOLUMN)
 #endif
 }
 
-/*
-int closeColumn() const
-*/
+// int closeColumn() const
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_CLOSECOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,13 +279,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_CLOSECOLUMN)
 #endif
 }
 
-/*
-void setCloseColumn( int closeColumn )
-*/
+// void setCloseColumn( int closeColumn )
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETCLOSECOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,13 +301,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETCLOSECOLUMN)
 #endif
 }
 
-/*
-int firstSetRow() const
-*/
+// int firstSetRow() const
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_FIRSTSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,13 +321,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_FIRSTSETROW)
 #endif
 }
 
-/*
-void setFirstSetRow( int firstSetRow )
-*/
+// void setFirstSetRow( int firstSetRow )
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETFIRSTSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -369,13 +343,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETFIRSTSETROW)
 #endif
 }
 
-/*
-int lastSetRow() const
-*/
+// int lastSetRow() const
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_LASTSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,13 +363,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_LASTSETROW)
 #endif
 }
 
-/*
-void setLastSetRow( int lastSetRow )
-*/
+// void setLastSetRow( int lastSetRow )
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETLASTSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,13 +385,11 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_SETLASTSETROW)
 #endif
 }
 
-/*
-Qt::Orientation orientation() const
-*/
+// Qt::Orientation orientation() const
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapper *obj = (QHCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHCandlestickModelMapper *obj = qobject_cast<QHCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -439,10 +407,12 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ORIENTATION)
 
 void QHCandlestickModelMapperSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHCandlestickModelMapperSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONCLOSECOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapperSlots_connect_signal("closeColumnChanged()", "closeColumnChanged()");
+  CONNECT_SIGNAL("closeColumnChanged()");
 #else
   hb_retl(false);
 #endif
@@ -451,7 +421,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONCLOSECOLUMNCHANGED)
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONFIRSTSETROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapperSlots_connect_signal("firstSetRowChanged()", "firstSetRowChanged()");
+  CONNECT_SIGNAL("firstSetRowChanged()");
 #else
   hb_retl(false);
 #endif
@@ -460,7 +430,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONFIRSTSETROWCHANGED)
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONHIGHCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapperSlots_connect_signal("highColumnChanged()", "highColumnChanged()");
+  CONNECT_SIGNAL("highColumnChanged()");
 #else
   hb_retl(false);
 #endif
@@ -469,7 +439,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONHIGHCOLUMNCHANGED)
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONLASTSETROWCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapperSlots_connect_signal("lastSetRowChanged()", "lastSetRowChanged()");
+  CONNECT_SIGNAL("lastSetRowChanged()");
 #else
   hb_retl(false);
 #endif
@@ -478,7 +448,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONLASTSETROWCHANGED)
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONLOWCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapperSlots_connect_signal("lowColumnChanged()", "lowColumnChanged()");
+  CONNECT_SIGNAL("lowColumnChanged()");
 #else
   hb_retl(false);
 #endif
@@ -487,7 +457,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONLOWCOLUMNCHANGED)
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONOPENCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapperSlots_connect_signal("openColumnChanged()", "openColumnChanged()");
+  CONNECT_SIGNAL("openColumnChanged()");
 #else
   hb_retl(false);
 #endif
@@ -496,7 +466,7 @@ HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONOPENCOLUMNCHANGED)
 HB_FUNC_STATIC(QHCANDLESTICKMODELMAPPER_ONTIMESTAMPCOLUMNCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHCandlestickModelMapperSlots_connect_signal("timestampColumnChanged()", "timestampColumnChanged()");
+  CONNECT_SIGNAL("timestampColumnChanged()");
 #else
   hb_retl(false);
 #endif

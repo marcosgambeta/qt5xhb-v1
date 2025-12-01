@@ -289,7 +289,7 @@ void QAbstractBarSeriesSlots::released(int index, QBarSet *barset)
 void QAbstractBarSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractBarSeries *obj = (QAbstractBarSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractBarSeries *obj = qobject_cast<QAbstractBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstractBarSeriesSlots *s = QCoreApplication::instance()->findChild<QAbstractBarSeriesSlots *>();

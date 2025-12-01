@@ -121,7 +121,7 @@ void QHPieModelMapperSlots::valuesRowChanged()
 void QHPieModelMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHPieModelMapper *obj = (QHPieModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHPieModelMapper *obj = qobject_cast<QHPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QHPieModelMapperSlots *s = QCoreApplication::instance()->findChild<QHPieModelMapperSlots *>();

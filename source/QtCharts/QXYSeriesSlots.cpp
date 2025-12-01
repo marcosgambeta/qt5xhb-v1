@@ -344,7 +344,7 @@ void QXYSeriesSlots::released(const QPointF &point)
 void QXYSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = (QXYSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QXYSeriesSlots *s = QCoreApplication::instance()->findChild<QXYSeriesSlots *>();

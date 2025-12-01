@@ -121,7 +121,7 @@ void QHBoxPlotModelMapperSlots::seriesReplaced()
 void QHBoxPlotModelMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = (QHBoxPlotModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QHBoxPlotModelMapperSlots *s = QCoreApplication::instance()->findChild<QHBoxPlotModelMapperSlots *>();

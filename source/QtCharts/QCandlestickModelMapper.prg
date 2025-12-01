@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTITEMMODEL
-REQUEST QCANDLESTICKSERIES
+REQUEST QAbstractItemModel
+REQUEST QCandlestickSeries
 #endif
 
 CLASS QCandlestickModelMapper INHERIT QObject
@@ -69,13 +69,11 @@ RETURN
     using namespace QtCharts;
 #endif
 
-/*
-QAbstractItemModel * model() const
-*/
+// QAbstractItemModel * model() const
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapper *obj = (QCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCandlestickModelMapper *obj = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -92,13 +90,11 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_MODEL)
 #endif
 }
 
-/*
-void setModel( QAbstractItemModel * model )
-*/
+// void setModel( QAbstractItemModel * model )
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapper *obj = (QCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCandlestickModelMapper *obj = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,13 +112,11 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETMODEL)
 #endif
 }
 
-/*
-QCandlestickSeries * series() const
-*/
+// QCandlestickSeries * series() const
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapper *obj = (QCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCandlestickModelMapper *obj = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,13 +133,11 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SERIES)
 #endif
 }
 
-/*
-void setSeries( QCandlestickSeries * series )
-*/
+// void setSeries( QCandlestickSeries * series )
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapper *obj = (QCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCandlestickModelMapper *obj = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,13 +155,11 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETSERIES)
 #endif
 }
 
-/*
-virtual Qt::Orientation orientation() const = 0
-*/
+// virtual Qt::Orientation orientation() const = 0
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapper *obj = (QCandlestickModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCandlestickModelMapper *obj = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,10 +177,12 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ORIENTATION)
 
 void QCandlestickModelMapperSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QCandlestickModelMapperSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONMODELREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapperSlots_connect_signal("modelReplaced()", "modelReplaced()");
+  CONNECT_SIGNAL("modelReplaced()");
 #else
   hb_retl(false);
 #endif
@@ -199,7 +191,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONMODELREPLACED)
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ONSERIESREPLACED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapperSlots_connect_signal("seriesReplaced()", "seriesReplaced()");
+  CONNECT_SIGNAL("seriesReplaced()");
 #else
   hb_retl(false);
 #endif

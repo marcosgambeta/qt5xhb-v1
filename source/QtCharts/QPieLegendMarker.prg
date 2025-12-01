@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPIESERIES
-REQUEST QPIESLICE
+REQUEST QPieSeries
+REQUEST QPieSlice
 #endif
 
 CLASS QPieLegendMarker INHERIT QLegendMarker
@@ -59,9 +59,7 @@ RETURN
 
     using namespace QtCharts;
 
-/*
-QPieLegendMarker( QPieSeries * series, QPieSlice * slice, QLegend * legend, QObject * parent = nullptr )
-*/
+// QPieLegendMarker( QPieSeries * series, QPieSlice * slice, QLegend * legend, QObject * parent = nullptr )
 HB_FUNC_STATIC(QPIELEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -74,13 +72,11 @@ HB_FUNC_STATIC(QPIELEGENDMARKER_NEW)
 #endif
 }
 
-/*
-virtual ~QPieLegendMarker()
-*/
+// virtual ~QPieLegendMarker()
 HB_FUNC_STATIC(QPIELEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieLegendMarker *obj = (QPieLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieLegendMarker *obj = qobject_cast<QPieLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -96,13 +92,11 @@ HB_FUNC_STATIC(QPIELEGENDMARKER_DELETE)
 #endif
 }
 
-/*
-virtual QLegendMarker::LegendMarkerType type()
-*/
+// virtual QLegendMarker::LegendMarkerType type()
 HB_FUNC_STATIC(QPIELEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieLegendMarker *obj = (QPieLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieLegendMarker *obj = qobject_cast<QPieLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,13 +112,11 @@ HB_FUNC_STATIC(QPIELEGENDMARKER_TYPE)
 #endif
 }
 
-/*
-virtual QPieSeries * series()
-*/
+// virtual QPieSeries * series()
 HB_FUNC_STATIC(QPIELEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieLegendMarker *obj = (QPieLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieLegendMarker *obj = qobject_cast<QPieLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,13 +133,11 @@ HB_FUNC_STATIC(QPIELEGENDMARKER_SERIES)
 #endif
 }
 
-/*
-QPieSlice * slice()
-*/
+// QPieSlice * slice()
 HB_FUNC_STATIC(QPIELEGENDMARKER_SLICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieLegendMarker *obj = (QPieLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieLegendMarker *obj = qobject_cast<QPieLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

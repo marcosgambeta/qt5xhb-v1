@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTAXIS
-REQUEST QCHART
+REQUEST QAbstractAxis
+REQUEST QChart
 #endif
 
 CLASS QAbstractSeries INHERIT QObject
@@ -77,13 +77,11 @@ RETURN
 
     using namespace QtCharts;
 
-/*
-~QAbstractSeries()
-*/
+// ~QAbstractSeries()
 HB_FUNC_STATIC(QABSTRACTSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -99,13 +97,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_DELETE)
 #endif
 }
 
-/*
-virtual QAbstractSeries::SeriesType type() const = 0
-*/
+// virtual QAbstractSeries::SeriesType type() const = 0
 HB_FUNC_STATIC(QABSTRACTSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,13 +117,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_TYPE)
 #endif
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QABSTRACTSERIES_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,13 +137,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_NAME)
 #endif
 }
 
-/*
-void setName( const QString &name )
-*/
+// void setName( const QString & name )
 HB_FUNC_STATIC(QABSTRACTSERIES_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,13 +159,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETNAME)
 #endif
 }
 
-/*
-bool isVisible() const
-*/
+// bool isVisible() const
 HB_FUNC_STATIC(QABSTRACTSERIES_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,13 +179,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ISVISIBLE)
 #endif
 }
 
-/*
-void setVisible( bool visible = true )
-*/
+// void setVisible( bool visible = true )
 HB_FUNC_STATIC(QABSTRACTSERIES_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,13 +201,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETVISIBLE)
 #endif
 }
 
-/*
-qreal opacity() const
-*/
+// qreal opacity() const
 HB_FUNC_STATIC(QABSTRACTSERIES_OPACITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,13 +221,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_OPACITY)
 #endif
 }
 
-/*
-void setOpacity( qreal opacity )
-*/
+// void setOpacity( qreal opacity )
 HB_FUNC_STATIC(QABSTRACTSERIES_SETOPACITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,13 +243,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETOPACITY)
 #endif
 }
 
-/*
-bool useOpenGL() const
-*/
+// bool useOpenGL() const
 HB_FUNC_STATIC(QABSTRACTSERIES_USEOPENGL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,13 +263,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_USEOPENGL)
 #endif
 }
 
-/*
-void setUseOpenGL( bool enable = true )
-*/
+// void setUseOpenGL( bool enable = true )
 HB_FUNC_STATIC(QABSTRACTSERIES_SETUSEOPENGL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,13 +285,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETUSEOPENGL)
 #endif
 }
 
-/*
-QChart * chart() const
-*/
+// QChart * chart() const
 HB_FUNC_STATIC(QABSTRACTSERIES_CHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,13 +306,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_CHART)
 #endif
 }
 
-/*
-bool attachAxis( QAbstractAxis * axis )
-*/
+// bool attachAxis( QAbstractAxis * axis )
 HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,13 +326,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHAXIS)
 #endif
 }
 
-/*
-bool detachAxis( QAbstractAxis * axis )
-*/
+// bool detachAxis( QAbstractAxis * axis )
 HB_FUNC_STATIC(QABSTRACTSERIES_DETACHAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -372,13 +346,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_DETACHAXIS)
 #endif
 }
 
-/*
-QList<QAbstractAxis*> attachedAxes()
-*/
+// QList<QAbstractAxis *> attachedAxes()
 HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHEDAXES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -413,13 +385,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHEDAXES)
 #endif
 }
 
-/*
-void show()
-*/
+// void show()
 HB_FUNC_STATIC(QABSTRACTSERIES_SHOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -437,13 +407,11 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SHOW)
 #endif
 }
 
-/*
-void hide()
-*/
+// void hide()
 HB_FUNC_STATIC(QABSTRACTSERIES_HIDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -463,10 +431,12 @@ HB_FUNC_STATIC(QABSTRACTSERIES_HIDE)
 
 void QAbstractSeriesSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractSeriesSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTSERIES_ONNAMECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeriesSlots_connect_signal("nameChanged()", "nameChanged()");
+  CONNECT_SIGNAL("nameChanged()");
 #else
   hb_retl(false);
 #endif
@@ -475,7 +445,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ONNAMECHANGED)
 HB_FUNC_STATIC(QABSTRACTSERIES_ONOPACITYCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeriesSlots_connect_signal("opacityChanged()", "opacityChanged()");
+  CONNECT_SIGNAL("opacityChanged()");
 #else
   hb_retl(false);
 #endif
@@ -484,7 +454,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ONOPACITYCHANGED)
 HB_FUNC_STATIC(QABSTRACTSERIES_ONUSEOPENGLCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeriesSlots_connect_signal("useOpenGLChanged()", "useOpenGLChanged()");
+  CONNECT_SIGNAL("useOpenGLChanged()");
 #else
   hb_retl(false);
 #endif
@@ -493,7 +463,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ONUSEOPENGLCHANGED)
 HB_FUNC_STATIC(QABSTRACTSERIES_ONVISIBLECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeriesSlots_connect_signal("visibleChanged()", "visibleChanged()");
+  CONNECT_SIGNAL("visibleChanged()");
 #else
   hb_retl(false);
 #endif

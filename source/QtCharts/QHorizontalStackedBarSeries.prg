@@ -55,9 +55,7 @@ RETURN
 
     using namespace QtCharts;
 
-/*
-QHorizontalStackedBarSeries( QObject * parent = nullptr )
-*/
+// QHorizontalStackedBarSeries( QObject * parent = nullptr )
 HB_FUNC_STATIC(QHORIZONTALSTACKEDBARSERIES_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -70,13 +68,12 @@ HB_FUNC_STATIC(QHORIZONTALSTACKEDBARSERIES_NEW)
 #endif
 }
 
-/*
-~QHorizontalStackedBarSeries()
-*/
+// ~QHorizontalStackedBarSeries()
 HB_FUNC_STATIC(QHORIZONTALSTACKEDBARSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHorizontalStackedBarSeries *obj = (QHorizontalStackedBarSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHorizontalStackedBarSeries *obj =
+      qobject_cast<QHorizontalStackedBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -92,13 +89,12 @@ HB_FUNC_STATIC(QHORIZONTALSTACKEDBARSERIES_DELETE)
 #endif
 }
 
-/*
-QAbstractSeries::SeriesType type() const
-*/
+// QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC(QHORIZONTALSTACKEDBARSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHorizontalStackedBarSeries *obj = (QHorizontalStackedBarSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHorizontalStackedBarSeries *obj =
+      qobject_cast<QHorizontalStackedBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -135,7 +135,7 @@ void QValueAxisSlots::tickCountChanged(int tickCount)
 void QValueAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QValueAxisSlots *s = QCoreApplication::instance()->findChild<QValueAxisSlots *>();

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QAREASERIES
+REQUEST QAreaSeries
 #endif
 
 CLASS QAreaLegendMarker INHERIT QLegendMarker
@@ -57,9 +57,7 @@ RETURN
 
     using namespace QtCharts;
 
-/*
-QAreaLegendMarker( QAreaSeries * series, QLegend * legend, QObject * parent = nullptr )
-*/
+// QAreaLegendMarker( QAreaSeries * series, QLegend * legend, QObject * parent = nullptr )
 HB_FUNC_STATIC(QAREALEGENDMARKER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -72,13 +70,11 @@ HB_FUNC_STATIC(QAREALEGENDMARKER_NEW)
 #endif
 }
 
-/*
-virtual ~QAreaLegendMarker()
-*/
+// virtual ~QAreaLegendMarker()
 HB_FUNC_STATIC(QAREALEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaLegendMarker *obj = (QAreaLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaLegendMarker *obj = qobject_cast<QAreaLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -94,13 +90,11 @@ HB_FUNC_STATIC(QAREALEGENDMARKER_DELETE)
 #endif
 }
 
-/*
-virtual QLegendMarker::LegendMarkerType type()
-*/
+// virtual QLegendMarker::LegendMarkerType type()
 HB_FUNC_STATIC(QAREALEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaLegendMarker *obj = (QAreaLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaLegendMarker *obj = qobject_cast<QAreaLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,13 +110,11 @@ HB_FUNC_STATIC(QAREALEGENDMARKER_TYPE)
 #endif
 }
 
-/*
-virtual QAreaSeries * series()
-*/
+// virtual QAreaSeries * series()
 HB_FUNC_STATIC(QAREALEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaLegendMarker *obj = (QAreaLegendMarker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaLegendMarker *obj = qobject_cast<QAreaLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

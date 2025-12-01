@@ -95,7 +95,7 @@ void QScatterSeriesSlots::markerSizeChanged(qreal size)
 void QScatterSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QScatterSeries *obj = (QScatterSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterSeries *obj = qobject_cast<QScatterSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QScatterSeriesSlots *s = QCoreApplication::instance()->findChild<QScatterSeriesSlots *>();

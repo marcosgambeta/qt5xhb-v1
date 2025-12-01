@@ -121,7 +121,7 @@ void QVBarModelMapperSlots::seriesReplaced()
 void QVBarModelMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = (QVBarModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QVBarModelMapperSlots *s = QCoreApplication::instance()->findChild<QVBarModelMapperSlots *>();

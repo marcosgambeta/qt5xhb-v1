@@ -193,7 +193,7 @@ void QBoxSetSlots::valuesChanged()
 void QBoxSetSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QBoxSet *obj = (QBoxSet *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBoxSet *obj = qobject_cast<QBoxSet *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QBoxSetSlots *s = QCoreApplication::instance()->findChild<QBoxSetSlots *>();

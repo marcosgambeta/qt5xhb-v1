@@ -34,7 +34,8 @@ void QPieSeriesSlots::added(QList<QPieSlice *> slices)
         hb_vmDo(0);
         PHB_ITEM pTempObject = hb_itemNew(NULL);
         hb_itemCopy(pTempObject, hb_stackReturnItem());
-        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, slices[i]);
+        PHB_ITEM pTempItem = hb_itemNew(NULL);
+        hb_itemPutPtr(pTempItem, (QPieSlice *)slices[i]);
         hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
         hb_arrayAddForward(pslices, pTempObject);
         hb_itemRelease(pTempObject);
@@ -61,7 +62,7 @@ void QPieSeriesSlots::clicked(QPieSlice *slice)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
-    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject((QObject *)slice, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 2, psender, pslice);
 
@@ -97,7 +98,7 @@ void QPieSeriesSlots::doubleClicked(QPieSlice *slice)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
-    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject((QObject *)slice, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 2, psender, pslice);
 
@@ -116,7 +117,7 @@ void QPieSeriesSlots::hovered(QPieSlice *slice, bool state)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
-    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject((QObject *)slice, "QPIESLICE");
     PHB_ITEM pstate = hb_itemPutL(NULL, state);
 
     hb_vmEvalBlockV(cb, 3, psender, pslice, pstate);
@@ -137,7 +138,7 @@ void QPieSeriesSlots::pressed(QPieSlice *slice)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
-    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject((QObject *)slice, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 2, psender, pslice);
 
@@ -156,7 +157,7 @@ void QPieSeriesSlots::released(QPieSlice *slice)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
-    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject((QObject *)slice, "QPIESLICE");
 
     hb_vmEvalBlockV(cb, 2, psender, pslice);
 
@@ -184,7 +185,8 @@ void QPieSeriesSlots::removed(QList<QPieSlice *> slices)
         hb_vmDo(0);
         PHB_ITEM pTempObject = hb_itemNew(NULL);
         hb_itemCopy(pTempObject, hb_stackReturnItem());
-        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, slices[i]);
+        PHB_ITEM pTempItem = hb_itemNew(NULL);
+        hb_itemPutPtr(pTempItem, (QPieSlice *)slices[i]);
         hb_objSendMsg(pTempObject, "NEWFROMPOINTER", 1, pTempItem);
         hb_arrayAddForward(pslices, pTempObject);
         hb_itemRelease(pTempObject);
@@ -222,7 +224,7 @@ void QPieSeriesSlots::sumChanged()
 void QPieSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QPieSeriesSlots *s = QCoreApplication::instance()->findChild<QPieSeriesSlots *>();

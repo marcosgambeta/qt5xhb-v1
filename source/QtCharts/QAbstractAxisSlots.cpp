@@ -494,7 +494,7 @@ void QAbstractAxisSlots::visibleChanged(bool visible)
 void QAbstractAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = (QAbstractAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstractAxisSlots *s = QCoreApplication::instance()->findChild<QAbstractAxisSlots *>();

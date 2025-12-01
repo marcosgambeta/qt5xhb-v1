@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPIESLICE
+REQUEST QPieSlice
 #endif
 
 CLASS QPieSeries INHERIT QAbstractSeries
@@ -89,9 +89,7 @@ RETURN
 
     using namespace QtCharts;
 
-/*
-QPieSeries( QObject * parent = nullptr )
-*/
+// QPieSeries( QObject * parent = nullptr )
 HB_FUNC_STATIC(QPIESERIES_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -104,13 +102,11 @@ HB_FUNC_STATIC(QPIESERIES_NEW)
 #endif
 }
 
-/*
-virtual ~QPieSeries()
-*/
+// virtual ~QPieSeries()
 HB_FUNC_STATIC(QPIESERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -126,13 +122,11 @@ HB_FUNC_STATIC(QPIESERIES_DELETE)
 #endif
 }
 
-/*
-qreal horizontalPosition() const
-*/
+// qreal horizontalPosition() const
 HB_FUNC_STATIC(QPIESERIES_HORIZONTALPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,13 +142,11 @@ HB_FUNC_STATIC(QPIESERIES_HORIZONTALPOSITION)
 #endif
 }
 
-/*
-void setHorizontalPosition( qreal relativePosition )
-*/
+// void setHorizontalPosition( qreal relativePosition )
 HB_FUNC_STATIC(QPIESERIES_SETHORIZONTALPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,13 +164,11 @@ HB_FUNC_STATIC(QPIESERIES_SETHORIZONTALPOSITION)
 #endif
 }
 
-/*
-qreal verticalPosition() const
-*/
+// qreal verticalPosition() const
 HB_FUNC_STATIC(QPIESERIES_VERTICALPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,13 +184,11 @@ HB_FUNC_STATIC(QPIESERIES_VERTICALPOSITION)
 #endif
 }
 
-/*
-void setVerticalPosition( qreal relativePosition )
-*/
+// void setVerticalPosition( qreal relativePosition )
 HB_FUNC_STATIC(QPIESERIES_SETVERTICALPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,13 +206,11 @@ HB_FUNC_STATIC(QPIESERIES_SETVERTICALPOSITION)
 #endif
 }
 
-/*
-qreal pieSize() const
-*/
+// qreal pieSize() const
 HB_FUNC_STATIC(QPIESERIES_PIESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,13 +226,11 @@ HB_FUNC_STATIC(QPIESERIES_PIESIZE)
 #endif
 }
 
-/*
-void setPieSize( qreal relativeSize )
-*/
+// void setPieSize( qreal relativeSize )
 HB_FUNC_STATIC(QPIESERIES_SETPIESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,13 +248,11 @@ HB_FUNC_STATIC(QPIESERIES_SETPIESIZE)
 #endif
 }
 
-/*
-qreal pieStartAngle() const
-*/
+// qreal pieStartAngle() const
 HB_FUNC_STATIC(QPIESERIES_PIESTARTANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,13 +268,11 @@ HB_FUNC_STATIC(QPIESERIES_PIESTARTANGLE)
 #endif
 }
 
-/*
-void setPieStartAngle( qreal startAngle )
-*/
+// void setPieStartAngle( qreal startAngle )
 HB_FUNC_STATIC(QPIESERIES_SETPIESTARTANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,13 +290,11 @@ HB_FUNC_STATIC(QPIESERIES_SETPIESTARTANGLE)
 #endif
 }
 
-/*
-qreal pieEndAngle() const
-*/
+// qreal pieEndAngle() const
 HB_FUNC_STATIC(QPIESERIES_PIEENDANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,13 +310,11 @@ HB_FUNC_STATIC(QPIESERIES_PIEENDANGLE)
 #endif
 }
 
-/*
-void setPieEndAngle( qreal endAngle )
-*/
+// void setPieEndAngle( qreal endAngle )
 HB_FUNC_STATIC(QPIESERIES_SETPIEENDANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,13 +332,11 @@ HB_FUNC_STATIC(QPIESERIES_SETPIEENDANGLE)
 #endif
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QPIESERIES_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -378,13 +352,11 @@ HB_FUNC_STATIC(QPIESERIES_COUNT)
 #endif
 }
 
-/*
-qreal sum() const
-*/
+// qreal sum() const
 HB_FUNC_STATIC(QPIESERIES_SUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,13 +372,11 @@ HB_FUNC_STATIC(QPIESERIES_SUM)
 #endif
 }
 
-/*
-qreal holeSize() const
-*/
+// qreal holeSize() const
 HB_FUNC_STATIC(QPIESERIES_HOLESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,13 +392,11 @@ HB_FUNC_STATIC(QPIESERIES_HOLESIZE)
 #endif
 }
 
-/*
-void setHoleSize( qreal holeSize )
-*/
+// void setHoleSize( qreal holeSize )
 HB_FUNC_STATIC(QPIESERIES_SETHOLESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -446,13 +414,11 @@ HB_FUNC_STATIC(QPIESERIES_SETHOLESIZE)
 #endif
 }
 
-/*
-QAbstractSeries::SeriesType type() const
-*/
+// QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC(QPIESERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -471,22 +437,18 @@ HB_FUNC_STATIC(QPIESERIES_TYPE)
 HB_FUNC_STATIC(QPIESERIES_APPEND)
 {
   if (ISNUMPAR(1) && ISQPIESLICE(1)) {
-    /*
-    bool append( QPieSlice * slice )
-    */
+    // bool append( QPieSlice * slice )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+    QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->append(PQPIESLICE(1)));
     }
 #endif
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
-    /*
-    bool append( QList<QPieSlice*> slices )
-    */
+    // bool append( QList<QPieSlice *> slices )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+    QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       QList<QPieSlice *> par1;
@@ -499,11 +461,9 @@ HB_FUNC_STATIC(QPIESERIES_APPEND)
     }
 #endif
   } else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2)) {
-    /*
-    QPieSlice * append( QString label, qreal value )
-    */
+    // QPieSlice * append( QString label, qreal value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+    QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       QPieSlice *ptr = obj->append(PQSTRING(1), PQREAL(2));
@@ -515,13 +475,11 @@ HB_FUNC_STATIC(QPIESERIES_APPEND)
   }
 }
 
-/*
-bool insert( int index, QPieSlice * slice )
-*/
+// bool insert( int index, QPieSlice * slice )
 HB_FUNC_STATIC(QPIESERIES_INSERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -537,13 +495,11 @@ HB_FUNC_STATIC(QPIESERIES_INSERT)
 #endif
 }
 
-/*
-bool remove( QPieSlice * slice )
-*/
+// bool remove( QPieSlice * slice )
 HB_FUNC_STATIC(QPIESERIES_REMOVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -559,13 +515,11 @@ HB_FUNC_STATIC(QPIESERIES_REMOVE)
 #endif
 }
 
-/*
-bool take( QPieSlice * slice )
-*/
+// bool take( QPieSlice * slice )
 HB_FUNC_STATIC(QPIESERIES_TAKE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -581,13 +535,11 @@ HB_FUNC_STATIC(QPIESERIES_TAKE)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QPIESERIES_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -605,13 +557,11 @@ HB_FUNC_STATIC(QPIESERIES_CLEAR)
 #endif
 }
 
-/*
-QList<QPieSlice*> slices() const
-*/
+// QList<QPieSlice *> slices() const
 HB_FUNC_STATIC(QPIESERIES_SLICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -646,13 +596,11 @@ HB_FUNC_STATIC(QPIESERIES_SLICES)
 #endif
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QPIESERIES_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -668,13 +616,11 @@ HB_FUNC_STATIC(QPIESERIES_ISEMPTY)
 #endif
 }
 
-/*
-void setLabelsVisible( bool visible = true )
-*/
+// void setLabelsVisible( bool visible = true )
 HB_FUNC_STATIC(QPIESERIES_SETLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -692,13 +638,11 @@ HB_FUNC_STATIC(QPIESERIES_SETLABELSVISIBLE)
 #endif
 }
 
-/*
-void setLabelsPosition( QPieSlice::LabelPosition position )
-*/
+// void setLabelsPosition( QPieSlice::LabelPosition position )
 HB_FUNC_STATIC(QPIESERIES_SETLABELSPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = (QPieSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -718,10 +662,12 @@ HB_FUNC_STATIC(QPIESERIES_SETLABELSPOSITION)
 
 void QPieSeriesSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QPieSeriesSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QPIESERIES_ONADDED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeriesSlots_connect_signal("added(QList<QPieSlice*>)", "added(QList<QPieSlice*>)");
+  CONNECT_SIGNAL("added(QList<QPieSlice*>)");
 #else
   hb_retl(false);
 #endif
@@ -730,7 +676,7 @@ HB_FUNC_STATIC(QPIESERIES_ONADDED)
 HB_FUNC_STATIC(QPIESERIES_ONCLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeriesSlots_connect_signal("clicked(QPieSlice*)", "clicked(QPieSlice*)");
+  CONNECT_SIGNAL("clicked(QPieSlice*)");
 #else
   hb_retl(false);
 #endif
@@ -739,7 +685,7 @@ HB_FUNC_STATIC(QPIESERIES_ONCLICKED)
 HB_FUNC_STATIC(QPIESERIES_ONCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeriesSlots_connect_signal("countChanged()", "countChanged()");
+  CONNECT_SIGNAL("countChanged()");
 #else
   hb_retl(false);
 #endif
@@ -748,7 +694,7 @@ HB_FUNC_STATIC(QPIESERIES_ONCOUNTCHANGED)
 HB_FUNC_STATIC(QPIESERIES_ONDOUBLECLICKED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeriesSlots_connect_signal("doubleClicked(QPieSlice*)", "doubleClicked(QPieSlice*)");
+  CONNECT_SIGNAL("doubleClicked(QPieSlice*)");
 #else
   hb_retl(false);
 #endif
@@ -757,7 +703,7 @@ HB_FUNC_STATIC(QPIESERIES_ONDOUBLECLICKED)
 HB_FUNC_STATIC(QPIESERIES_ONHOVERED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeriesSlots_connect_signal("hovered(QPieSlice*,bool)", "hovered(QPieSlice*,bool)");
+  CONNECT_SIGNAL("hovered(QPieSlice*,bool)");
 #else
   hb_retl(false);
 #endif
@@ -766,7 +712,7 @@ HB_FUNC_STATIC(QPIESERIES_ONHOVERED)
 HB_FUNC_STATIC(QPIESERIES_ONPRESSED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeriesSlots_connect_signal("pressed(QPieSlice*)", "pressed(QPieSlice*)");
+  CONNECT_SIGNAL("pressed(QPieSlice*)");
 #else
   hb_retl(false);
 #endif
@@ -775,7 +721,7 @@ HB_FUNC_STATIC(QPIESERIES_ONPRESSED)
 HB_FUNC_STATIC(QPIESERIES_ONRELEASED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeriesSlots_connect_signal("released(QPieSlice*)", "released(QPieSlice*)");
+  CONNECT_SIGNAL("released(QPieSlice*)");
 #else
   hb_retl(false);
 #endif
@@ -784,7 +730,7 @@ HB_FUNC_STATIC(QPIESERIES_ONRELEASED)
 HB_FUNC_STATIC(QPIESERIES_ONREMOVED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeriesSlots_connect_signal("removed(QList<QPieSlice*>)", "removed(QList<QPieSlice*>)");
+  CONNECT_SIGNAL("removed(QList<QPieSlice*>)");
 #else
   hb_retl(false);
 #endif
@@ -793,7 +739,7 @@ HB_FUNC_STATIC(QPIESERIES_ONREMOVED)
 HB_FUNC_STATIC(QPIESERIES_ONSUMCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeriesSlots_connect_signal("sumChanged()", "sumChanged()");
+  CONNECT_SIGNAL("sumChanged()");
 #else
   hb_retl(false);
 #endif

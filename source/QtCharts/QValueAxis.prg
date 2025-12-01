@@ -74,9 +74,7 @@ RETURN
 
     using namespace QtCharts;
 
-/*
-QValueAxis( QObject * parent = nullptr )
-*/
+// QValueAxis( QObject * parent = nullptr )
 HB_FUNC_STATIC(QVALUEAXIS_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
@@ -89,13 +87,11 @@ HB_FUNC_STATIC(QVALUEAXIS_NEW)
 #endif
 }
 
-/*
-~QValueAxis()
-*/
+// ~QValueAxis()
 HB_FUNC_STATIC(QVALUEAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -111,13 +107,11 @@ HB_FUNC_STATIC(QVALUEAXIS_DELETE)
 #endif
 }
 
-/*
-int tickCount() const
-*/
+// int tickCount() const
 HB_FUNC_STATIC(QVALUEAXIS_TICKCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,13 +127,11 @@ HB_FUNC_STATIC(QVALUEAXIS_TICKCOUNT)
 #endif
 }
 
-/*
-void setTickCount( int count )
-*/
+// void setTickCount( int count )
 HB_FUNC_STATIC(QVALUEAXIS_SETTICKCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,13 +149,11 @@ HB_FUNC_STATIC(QVALUEAXIS_SETTICKCOUNT)
 #endif
 }
 
-/*
-qreal min() const
-*/
+// qreal min() const
 HB_FUNC_STATIC(QVALUEAXIS_MIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,13 +169,11 @@ HB_FUNC_STATIC(QVALUEAXIS_MIN)
 #endif
 }
 
-/*
-void setMin( qreal min )
-*/
+// void setMin( qreal min )
 HB_FUNC_STATIC(QVALUEAXIS_SETMIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,13 +191,11 @@ HB_FUNC_STATIC(QVALUEAXIS_SETMIN)
 #endif
 }
 
-/*
-qreal max() const
-*/
+// qreal max() const
 HB_FUNC_STATIC(QVALUEAXIS_MAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,13 +211,11 @@ HB_FUNC_STATIC(QVALUEAXIS_MAX)
 #endif
 }
 
-/*
-void setMax( qreal max )
-*/
+// void setMax( qreal max )
 HB_FUNC_STATIC(QVALUEAXIS_SETMAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,13 +233,11 @@ HB_FUNC_STATIC(QVALUEAXIS_SETMAX)
 #endif
 }
 
-/*
-QString labelFormat() const
-*/
+// QString labelFormat() const
 HB_FUNC_STATIC(QVALUEAXIS_LABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,13 +253,11 @@ HB_FUNC_STATIC(QVALUEAXIS_LABELFORMAT)
 #endif
 }
 
-/*
-void setLabelFormat( const QString &format )
-*/
+// void setLabelFormat( const QString & format )
 HB_FUNC_STATIC(QVALUEAXIS_SETLABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,13 +275,11 @@ HB_FUNC_STATIC(QVALUEAXIS_SETLABELFORMAT)
 #endif
 }
 
-/*
-int minorTickCount() const
-*/
+// int minorTickCount() const
 HB_FUNC_STATIC(QVALUEAXIS_MINORTICKCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,13 +295,11 @@ HB_FUNC_STATIC(QVALUEAXIS_MINORTICKCOUNT)
 #endif
 }
 
-/*
-void setMinorTickCount( int count )
-*/
+// void setMinorTickCount( int count )
 HB_FUNC_STATIC(QVALUEAXIS_SETMINORTICKCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,13 +317,11 @@ HB_FUNC_STATIC(QVALUEAXIS_SETMINORTICKCOUNT)
 #endif
 }
 
-/*
-QAbstractAxis::AxisType type() const
-*/
+// QAbstractAxis::AxisType type() const
 HB_FUNC_STATIC(QVALUEAXIS_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -363,13 +337,11 @@ HB_FUNC_STATIC(QVALUEAXIS_TYPE)
 #endif
 }
 
-/*
-void setRange( qreal min, qreal max )
-*/
+// void setRange( qreal min, qreal max )
 HB_FUNC_STATIC(QVALUEAXIS_SETRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,13 +359,11 @@ HB_FUNC_STATIC(QVALUEAXIS_SETRANGE)
 #endif
 }
 
-/*
-void applyNiceNumbers()
-*/
+// void applyNiceNumbers()
 HB_FUNC_STATIC(QVALUEAXIS_APPLYNICENUMBERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxis *obj = (QValueAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValueAxis *obj = qobject_cast<QValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -413,10 +383,12 @@ HB_FUNC_STATIC(QVALUEAXIS_APPLYNICENUMBERS)
 
 void QValueAxisSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QValueAxisSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QVALUEAXIS_ONLABELFORMATCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxisSlots_connect_signal("labelFormatChanged(QString)", "labelFormatChanged(QString)");
+  CONNECT_SIGNAL("labelFormatChanged(QString)");
 #else
   hb_retl(false);
 #endif
@@ -425,7 +397,7 @@ HB_FUNC_STATIC(QVALUEAXIS_ONLABELFORMATCHANGED)
 HB_FUNC_STATIC(QVALUEAXIS_ONMAXCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxisSlots_connect_signal("maxChanged(qreal)", "maxChanged(qreal)");
+  CONNECT_SIGNAL("maxChanged(qreal)");
 #else
   hb_retl(false);
 #endif
@@ -434,7 +406,7 @@ HB_FUNC_STATIC(QVALUEAXIS_ONMAXCHANGED)
 HB_FUNC_STATIC(QVALUEAXIS_ONMINCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxisSlots_connect_signal("minChanged(qreal)", "minChanged(qreal)");
+  CONNECT_SIGNAL("minChanged(qreal)");
 #else
   hb_retl(false);
 #endif
@@ -443,7 +415,7 @@ HB_FUNC_STATIC(QVALUEAXIS_ONMINCHANGED)
 HB_FUNC_STATIC(QVALUEAXIS_ONMINORTICKCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxisSlots_connect_signal("minorTickCountChanged(int)", "minorTickCountChanged(int)");
+  CONNECT_SIGNAL("minorTickCountChanged(int)");
 #else
   hb_retl(false);
 #endif
@@ -452,7 +424,7 @@ HB_FUNC_STATIC(QVALUEAXIS_ONMINORTICKCOUNTCHANGED)
 HB_FUNC_STATIC(QVALUEAXIS_ONRANGECHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxisSlots_connect_signal("rangeChanged(qreal,qreal)", "rangeChanged(qreal,qreal)");
+  CONNECT_SIGNAL("rangeChanged(qreal,qreal)");
 #else
   hb_retl(false);
 #endif
@@ -461,7 +433,7 @@ HB_FUNC_STATIC(QVALUEAXIS_ONRANGECHANGED)
 HB_FUNC_STATIC(QVALUEAXIS_ONTICKCOUNTCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QValueAxisSlots_connect_signal("tickCountChanged(int)", "tickCountChanged(int)");
+  CONNECT_SIGNAL("tickCountChanged(int)");
 #else
   hb_retl(false);
 #endif

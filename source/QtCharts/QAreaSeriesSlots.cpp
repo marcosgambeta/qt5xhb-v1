@@ -266,7 +266,7 @@ void QAreaSeriesSlots::selected()
 void QAreaSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAreaSeries *obj = (QAreaSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAreaSeries *obj = qobject_cast<QAreaSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAreaSeriesSlots *s = QCoreApplication::instance()->findChild<QAreaSeriesSlots *>();

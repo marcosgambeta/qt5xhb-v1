@@ -87,7 +87,7 @@ void QAbstractSeriesSlots::visibleChanged()
 void QAbstractSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = (QAbstractSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstractSeriesSlots *s = QCoreApplication::instance()->findChild<QAbstractSeriesSlots *>();

@@ -121,7 +121,7 @@ void QVBoxPlotModelMapperSlots::seriesReplaced()
 void QVBoxPlotModelMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBoxPlotModelMapper *obj = (QVBoxPlotModelMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVBoxPlotModelMapper *obj = qobject_cast<QVBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QVBoxPlotModelMapperSlots *s = QCoreApplication::instance()->findChild<QVBoxPlotModelMapperSlots *>();
