@@ -79,7 +79,7 @@ void QAxObjectSlots::signal(const QString &name, int argc, void *argv)
 
 void QAxObjectSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAxObjectSlots *s = QCoreApplication::instance()->findChild<QAxObjectSlots *>();

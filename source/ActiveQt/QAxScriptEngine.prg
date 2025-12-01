@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_DELETE)
 // void addItem( const QString & name )
 HB_FUNC_STATIC(QAXSCRIPTENGINE_ADDITEM)
 {
-  QAxScriptEngine *obj = (QAxScriptEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_ADDITEM)
 // bool hasIntrospection() const
 HB_FUNC_STATIC(QAXSCRIPTENGINE_HASINTROSPECTION)
 {
-  QAxScriptEngine *obj = (QAxScriptEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_HASINTROSPECTION)
 // bool isValid() const
 HB_FUNC_STATIC(QAXSCRIPTENGINE_ISVALID)
 {
-  QAxScriptEngine *obj = (QAxScriptEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_ISVALID)
 // QString scriptLanguage() const
 HB_FUNC_STATIC(QAXSCRIPTENGINE_SCRIPTLANGUAGE)
 {
-  QAxScriptEngine *obj = (QAxScriptEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_SCRIPTLANGUAGE)
 // void setState( QAxScriptEngine::State st )
 HB_FUNC_STATIC(QAXSCRIPTENGINE_SETSTATE)
 {
-  QAxScriptEngine *obj = (QAxScriptEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_SETSTATE)
 // QAxScriptEngine::State state() const
 HB_FUNC_STATIC(QAXSCRIPTENGINE_STATE)
 {
-  QAxScriptEngine *obj = (QAxScriptEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

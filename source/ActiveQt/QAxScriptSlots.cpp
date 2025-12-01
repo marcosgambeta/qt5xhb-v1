@@ -128,7 +128,7 @@ void QAxScriptSlots::stateChanged(int state)
 
 void QAxScriptSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAxScript *obj = (QAxScript *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     QAxScriptSlots *s = QCoreApplication::instance()->findChild<QAxScriptSlots *>();

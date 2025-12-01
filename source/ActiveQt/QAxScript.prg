@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
 // QStringList functions( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
 HB_FUNC_STATIC(QAXSCRIPT_FUNCTIONS)
 {
-  QAxScript *obj = (QAxScript *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QAXSCRIPT_FUNCTIONS)
 // bool load( const QString & code, const QString & language = QString() )
 HB_FUNC_STATIC(QAXSCRIPT_LOAD)
 {
-  QAxScript *obj = (QAxScript *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QAXSCRIPT_LOAD)
 // QString scriptCode() const
 HB_FUNC_STATIC(QAXSCRIPT_SCRIPTCODE)
 {
-  QAxScript *obj = (QAxScript *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTCODE)
 // QAxScriptEngine * scriptEngine() const
 HB_FUNC_STATIC(QAXSCRIPT_SCRIPTENGINE)
 {
-  QAxScript *obj = (QAxScript *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTENGINE)
 // QString scriptName() const
 HB_FUNC_STATIC(QAXSCRIPT_SCRIPTNAME)
 {
-  QAxScript *obj = (QAxScript *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

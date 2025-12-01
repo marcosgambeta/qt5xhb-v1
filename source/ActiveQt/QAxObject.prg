@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QAXOBJECT_DELETE)
 // bool doVerb( const QString & verb )
 HB_FUNC_STATIC(QAXOBJECT_DOVERB)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QAXOBJECT_DOVERB)
 // QVariant asVariant() const
 HB_FUNC_STATIC(QAXOBJECT_ASVARIANT)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QAXOBJECT_ASVARIANT)
 // virtual void clear()
 HB_FUNC_STATIC(QAXOBJECT_CLEAR)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QAXOBJECT_CLEAR)
 // QString control() const
 HB_FUNC_STATIC(QAXOBJECT_CONTROL)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QAXOBJECT_CONTROL)
 // void disableClassInfo()
 HB_FUNC_STATIC(QAXOBJECT_DISABLECLASSINFO)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QAXOBJECT_DISABLECLASSINFO)
 // void disableEventSink()
 HB_FUNC_STATIC(QAXOBJECT_DISABLEEVENTSINK)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QAXOBJECT_DISABLEEVENTSINK)
 // void disableMetaObject()
 HB_FUNC_STATIC(QAXOBJECT_DISABLEMETAOBJECT)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
 // QString generateDocumentation()
 HB_FUNC_STATIC(QAXOBJECT_GENERATEDOCUMENTATION)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QAXOBJECT_GENERATEDOCUMENTATION)
 // bool isNull() const
 HB_FUNC_STATIC(QAXOBJECT_ISNULL)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QAXOBJECT_ISNULL)
 // virtual bool propertyWritable( const char * prop ) const
 HB_FUNC_STATIC(QAXOBJECT_PROPERTYWRITABLE)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
 // bool setControl( const QString & )
 HB_FUNC_STATIC(QAXOBJECT_SETCONTROL)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QAXOBJECT_SETCONTROL)
 // virtual void setPropertyWritable( const char * prop, bool ok )
 HB_FUNC_STATIC(QAXOBJECT_SETPROPERTYWRITABLE)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QAXOBJECT_SETPROPERTYWRITABLE)
 // QStringList verbs() const
 HB_FUNC_STATIC(QAXOBJECT_VERBS)
 {
-  QAxObject *obj = (QAxObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAxObject *obj = qobject_cast<QAxObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
