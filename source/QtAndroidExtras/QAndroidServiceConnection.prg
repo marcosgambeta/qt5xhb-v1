@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QANDROIDJNIOBJECT
+REQUEST QAndroidJniObject
 #endif
 
 CLASS QAndroidServiceConnection
@@ -64,17 +64,13 @@ RETURN
 HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QAndroidServiceConnection()
-    */
+    // QAndroidServiceConnection()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     QAndroidServiceConnection *obj = new QAndroidServiceConnection();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1)) {
-    /*
-    QAndroidServiceConnection( const QAndroidJniObject &serviceConnection )
-    */
+    // QAndroidServiceConnection( const QAndroidJniObject & serviceConnection )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     QAndroidServiceConnection *obj = new QAndroidServiceConnection(*PQANDROIDJNIOBJECT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -84,13 +80,11 @@ HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_NEW)
   }
 }
 
-/*
-virtual ~QAndroidServiceConnection()
-*/
+// virtual ~QAndroidServiceConnection()
 HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  QAndroidServiceConnection *obj = (QAndroidServiceConnection *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAndroidServiceConnection *obj = static_cast<QAndroidServiceConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -104,13 +98,11 @@ HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_DELETE)
 #endif
 }
 
-/*
-QAndroidJniObject handle() const
-*/
+// QAndroidJniObject handle() const
 HB_FUNC_STATIC(QANDROIDSERVICECONNECTION_HANDLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  QAndroidServiceConnection *obj = (QAndroidServiceConnection *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAndroidServiceConnection *obj = static_cast<QAndroidServiceConnection *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QANDROIDBINDER
+REQUEST QAndroidBinder
 #endif
 
 CLASS QAndroidService INHERIT QCoreApplication
@@ -54,9 +54,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QAndroidService( int &argc, char ** argv )
-    */
+// QAndroidService( int & argc, char ** argv )
 
 HB_FUNC_STATIC(QANDROIDSERVICE_NEW)
 {
@@ -69,13 +67,11 @@ HB_FUNC_STATIC(QANDROIDSERVICE_NEW)
   Qt5xHb::returnNewObject(o, false);
 }
 
-/*
-virtual ~QAndroidService()
-*/
+// virtual ~QAndroidService()
 HB_FUNC_STATIC(QANDROIDSERVICE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  QAndroidService *obj = (QAndroidService *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAndroidService *obj = qobject_cast<QAndroidService *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -91,13 +87,11 @@ HB_FUNC_STATIC(QANDROIDSERVICE_DELETE)
 #endif
 }
 
-/*
-virtual QAndroidBinder * onBind( const QAndroidIntent &intent )
-*/
+// virtual QAndroidBinder * onBind( const QAndroidIntent & intent )
 HB_FUNC_STATIC(QANDROIDSERVICE_ONBIND)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
-  QAndroidService *obj = (QAndroidService *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAndroidService *obj = qobject_cast<QAndroidService *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
