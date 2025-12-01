@@ -60,9 +60,7 @@ RETURN
 #endif
 #endif
 
-    /*
-    QAndroidActivityResultReceiver()
-    */
+// QAndroidActivityResultReceiver()
 HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
@@ -75,13 +73,12 @@ HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_NEW)
 #endif
 }
 
-/*
-virtual ~QAndroidActivityResultReceiver()
-*/
+// virtual ~QAndroidActivityResultReceiver()
 HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  QAndroidActivityResultReceiver *obj = (QAndroidActivityResultReceiver *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAndroidActivityResultReceiver *obj =
+      static_cast<QAndroidActivityResultReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -95,13 +92,12 @@ HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_DELETE)
 #endif
 }
 
-/*
-virtual void handleActivityResult( int receiverRequestCode, int resultCode, const QAndroidJniObject &data ) = 0
-*/
+// virtual void handleActivityResult( int receiverRequestCode, int resultCode, const QAndroidJniObject & data ) = 0
 HB_FUNC_STATIC(QANDROIDACTIVITYRESULTRECEIVER_HANDLEACTIVITYRESULT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  QAndroidActivityResultReceiver *obj = (QAndroidActivityResultReceiver *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAndroidActivityResultReceiver *obj =
+      static_cast<QAndroidActivityResultReceiver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
