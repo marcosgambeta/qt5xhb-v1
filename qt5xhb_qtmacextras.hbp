@@ -4,6 +4,8 @@
 # Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
 
+{!darwin}-stop
+
 -hblib
 
 -olib/${hb_plat}/${hb_comp}/hbqtmacextras5
