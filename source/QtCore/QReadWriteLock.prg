@@ -60,7 +60,7 @@ RETURN
 #include <QtCore/QReadWriteLock>
 #endif
 
-    // QReadWriteLock( QReadWriteLock::RecursionMode recursionMode = QReadWriteLock::NonRecursive )
+// QReadWriteLock( QReadWriteLock::RecursionMode recursionMode = QReadWriteLock::NonRecursive )
 HB_FUNC_STATIC(QREADWRITELOCK_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_DELETE)
 // void lockForRead()
 HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORREAD)
 {
-  QReadWriteLock *obj = (QReadWriteLock *)Qt5xHb::itemGetPtrStackSelfItem();
+  QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
 // void lockForWrite()
 HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORWRITE)
 {
-  QReadWriteLock *obj = (QReadWriteLock *)Qt5xHb::itemGetPtrStackSelfItem();
+  QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
 // void unlock()
 HB_FUNC_STATIC(QREADWRITELOCK_UNLOCK)
 {
-  QReadWriteLock *obj = (QReadWriteLock *)Qt5xHb::itemGetPtrStackSelfItem();
+  QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

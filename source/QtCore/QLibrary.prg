@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QLIBRARY_DELETE)
 // bool load()
 HB_FUNC_STATIC(QLIBRARY_LOAD)
 {
-  QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
+  QLibrary *obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QLIBRARY_LOAD)
 // bool unload()
 HB_FUNC_STATIC(QLIBRARY_UNLOAD)
 {
-  QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
+  QLibrary *obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QLIBRARY_UNLOAD)
 // bool isLoaded() const
 HB_FUNC_STATIC(QLIBRARY_ISLOADED)
 {
-  QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
+  QLibrary *obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QLIBRARY_ISLOADED)
 // void setFileName( const QString & fileName )
 HB_FUNC_STATIC(QLIBRARY_SETFILENAME)
 {
-  QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
+  QLibrary *obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAME)
 // QString fileName() const
 HB_FUNC_STATIC(QLIBRARY_FILENAME)
 {
-  QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
+  QLibrary *obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QLIBRARY_SETFILENAMEANDVERSION)
 // QString errorString() const
 HB_FUNC_STATIC(QLIBRARY_ERRORSTRING)
 {
-  QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
+  QLibrary *obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QLIBRARY_ERRORSTRING)
 // void setLoadHints( QLibrary::LoadHints hints )
 HB_FUNC_STATIC(QLIBRARY_SETLOADHINTS)
 {
-  QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
+  QLibrary *obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QLIBRARY_SETLOADHINTS)
 // QLibrary::LoadHints loadHints() const
 HB_FUNC_STATIC(QLIBRARY_LOADHINTS)
 {
-  QLibrary *obj = (QLibrary *)Qt5xHb::itemGetPtrStackSelfItem();
+  QLibrary *obj = qobject_cast<QLibrary *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

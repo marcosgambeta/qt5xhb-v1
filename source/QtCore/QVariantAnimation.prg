@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_DELETE)
 // QVariant currentValue() const
 HB_FUNC_STATIC(QVARIANTANIMATION_CURRENTVALUE)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_CURRENTVALUE)
 // QEasingCurve easingCurve() const
 HB_FUNC_STATIC(QVARIANTANIMATION_EASINGCURVE)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_EASINGCURVE)
 // QVariant endValue() const
 HB_FUNC_STATIC(QVARIANTANIMATION_ENDVALUE)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_ENDVALUE)
 // QVariant keyValueAt( qreal step ) const
 HB_FUNC_STATIC(QVARIANTANIMATION_KEYVALUEAT)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_KEYVALUEAT)
 // void setDuration( int msecs )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETDURATION)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETDURATION)
 // void setEasingCurve( const QEasingCurve & easing )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETEASINGCURVE)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETEASINGCURVE)
 // void setEndValue( const QVariant & value )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETENDVALUE)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETENDVALUE)
 // void setKeyValueAt( qreal step, const QVariant & value )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETKEYVALUEAT)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETKEYVALUEAT)
 // void setStartValue( const QVariant & value )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETSTARTVALUE)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETSTARTVALUE)
 // QVariant startValue() const
 HB_FUNC_STATIC(QVARIANTANIMATION_STARTVALUE)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

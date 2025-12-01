@@ -61,7 +61,7 @@ RETURN
 #include <QtCore/QCryptographicHash>
 #endif
 
-    // QCryptographicHash( QCryptographicHash::Algorithm method )
+// QCryptographicHash( QCryptographicHash::Algorithm method )
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_DELETE)
 // void reset()
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESET)
 {
-  QCryptographicHash *obj = (QCryptographicHash *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCryptographicHash *obj = static_cast<QCryptographicHash *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
 // QByteArray result() const
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESULT)
 {
-  QCryptographicHash *obj = (QCryptographicHash *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCryptographicHash *obj = static_cast<QCryptographicHash *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

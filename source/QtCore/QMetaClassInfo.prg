@@ -59,7 +59,7 @@ RETURN
 #include <QtCore/QMetaClassInfo>
 #endif
 
-    // QMetaClassInfo()
+// QMetaClassInfo()
 HB_FUNC_STATIC(QMETACLASSINFO_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -88,13 +88,13 @@ HB_FUNC_STATIC(QMETACLASSINFO_DELETE)
 // const char * name() const
 HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 {
-  QMetaClassInfo *obj = (QMetaClassInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      hb_retc((const char *)obj->name());
+      hb_retc(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -106,13 +106,13 @@ HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 // const char * value() const
 HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 {
-  QMetaClassInfo *obj = (QMetaClassInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      hb_retc((const char *)obj->value());
+      hb_retc(obj->value());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 // const QMetaObject * enclosingMetaObject() const
 HB_FUNC_STATIC(QMETACLASSINFO_ENCLOSINGMETAOBJECT)
 {
-  QMetaClassInfo *obj = (QMetaClassInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

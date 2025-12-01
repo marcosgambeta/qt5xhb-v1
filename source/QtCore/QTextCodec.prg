@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QTEXTCODEC_FROMUNICODE)
 // QTextDecoder * makeDecoder( QTextCodec::ConversionFlags flags = QTextCodec::DefaultConversion ) const
 HB_FUNC_STATIC(QTEXTCODEC_MAKEDECODER)
 {
-  QTextCodec *obj = (QTextCodec *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTextCodec *obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEDECODER)
 // QTextEncoder * makeEncoder( QTextCodec::ConversionFlags flags = QTextCodec::DefaultConversion ) const
 HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
 {
-  QTextCodec *obj = (QTextCodec *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTextCodec *obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
 // virtual QByteArray name() const = 0
 HB_FUNC_STATIC(QTEXTCODEC_NAME)
 {
-  QTextCodec *obj = (QTextCodec *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTextCodec *obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QTEXTCODEC_NAME)
 // virtual QList<QByteArray> aliases() const
 HB_FUNC_STATIC(QTEXTCODEC_ALIASES)
 {
-  QTextCodec *obj = (QTextCodec *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTextCodec *obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QTEXTCODEC_ALIASES)
 // virtual int mibEnum() const = 0
 HB_FUNC_STATIC(QTEXTCODEC_MIBENUM)
 {
-  QTextCodec *obj = (QTextCodec *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTextCodec *obj = static_cast<QTextCodec *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

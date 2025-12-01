@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_DELETE)
 // parent )
 HB_FUNC_STATIC(QABSTRACTLISTMODEL_DROPMIMEDATA)
 {
-  QAbstractListModel *obj = (QAbstractListModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractListModel *obj = qobject_cast<QAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_DROPMIMEDATA)
 // virtual QModelIndex index( int row, int column = 0, const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QABSTRACTLISTMODEL_INDEX)
 {
-  QAbstractListModel *obj = (QAbstractListModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractListModel *obj = qobject_cast<QAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

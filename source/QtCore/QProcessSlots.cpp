@@ -135,7 +135,7 @@ void QProcessSlots::errorOccurred(QProcess::ProcessError error)
 
 void QProcessSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QProcess *obj = (QProcess *)Qt5xHb::itemGetPtrStackSelfItem();
+  QProcess *obj = qobject_cast<QProcess *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QProcessSlots *s = QCoreApplication::instance()->findChild<QProcessSlots *>();

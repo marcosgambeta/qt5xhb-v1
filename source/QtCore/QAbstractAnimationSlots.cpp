@@ -87,7 +87,7 @@ void QAbstractAnimationSlots::stateChanged(QAbstractAnimation::State newState, Q
 
 void QAbstractAnimationSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractAnimation *obj = (QAbstractAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstractAnimationSlots *s = QCoreApplication::instance()->findChild<QAbstractAnimationSlots *>();

@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QFILE_COPY)
 // QFileDevice::FileError error() const
 HB_FUNC_STATIC(QFILE_ERROR)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QFILE_EXISTS)
 // QString fileName() const
 HB_FUNC_STATIC(QFILE_FILENAME)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QFILE_FILENAME)
 // bool flush()
 HB_FUNC_STATIC(QFILE_FLUSH)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QFILE_FLUSH)
 // int handle() const
 HB_FUNC_STATIC(QFILE_HANDLE)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QFILE_RESIZE)
 // void setFileName( const QString & name )
 HB_FUNC_STATIC(QFILE_SETFILENAME)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QFILE_SYMLINKTARGET)
 // bool unmap( uchar * address )
 HB_FUNC_STATIC(QFILE_UNMAP)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QFILE_UNMAP)
 // void unsetError()
 HB_FUNC_STATIC(QFILE_UNSETERROR)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -442,7 +442,7 @@ HB_FUNC_STATIC(QFILE_UNSETERROR)
 // virtual bool atEnd() const
 HB_FUNC_STATIC(QFILE_ATEND)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QFILE_ATEND)
 // virtual void close()
 HB_FUNC_STATIC(QFILE_CLOSE)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QFILE_CLOSE)
 // virtual bool isSequential() const
 HB_FUNC_STATIC(QFILE_ISSEQUENTIAL)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -498,7 +498,7 @@ HB_FUNC_STATIC(QFILE_ISSEQUENTIAL)
 // virtual qint64 pos() const
 HB_FUNC_STATIC(QFILE_POS)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -516,7 +516,7 @@ HB_FUNC_STATIC(QFILE_POS)
 // virtual bool seek( qint64 pos )
 HB_FUNC_STATIC(QFILE_SEEK)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QFILE_SEEK)
 // qint64 size() const
 HB_FUNC_STATIC(QFILE_SIZE)
 {
-  QFile *obj = (QFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFile *obj = qobject_cast<QFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_DELETE)
 HB_FUNC_STATIC(QSTORAGEINFO_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_SWAP)
 HB_FUNC_STATIC(QSTORAGEINFO_SETPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_SETPATH)
 HB_FUNC_STATIC(QSTORAGEINFO_ROOTPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ROOTPATH)
 HB_FUNC_STATIC(QSTORAGEINFO_DEVICE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_DEVICE)
 HB_FUNC_STATIC(QSTORAGEINFO_FILESYSTEMTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_FILESYSTEMTYPE)
 HB_FUNC_STATIC(QSTORAGEINFO_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_NAME)
 HB_FUNC_STATIC(QSTORAGEINFO_DISPLAYNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_DISPLAYNAME)
 HB_FUNC_STATIC(QSTORAGEINFO_BYTESTOTAL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_BYTESTOTAL)
 HB_FUNC_STATIC(QSTORAGEINFO_BYTESFREE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_BYTESFREE)
 HB_FUNC_STATIC(QSTORAGEINFO_BYTESAVAILABLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_BYTESAVAILABLE)
 HB_FUNC_STATIC(QSTORAGEINFO_ISROOT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISROOT)
 HB_FUNC_STATIC(QSTORAGEINFO_ISREADONLY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISREADONLY)
 HB_FUNC_STATIC(QSTORAGEINFO_ISREADY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISREADY)
 HB_FUNC_STATIC(QSTORAGEINFO_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QSTORAGEINFO_ISVALID)
 HB_FUNC_STATIC(QSTORAGEINFO_REFRESH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QStorageInfo *obj = (QStorageInfo *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStorageInfo *obj = static_cast<QStorageInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

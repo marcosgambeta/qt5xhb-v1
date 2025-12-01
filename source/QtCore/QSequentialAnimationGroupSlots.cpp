@@ -35,7 +35,7 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged(QAbstractAnimation 
 
 void QSequentialAnimationGroupSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QSequentialAnimationGroup *obj = (QSequentialAnimationGroup *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QSequentialAnimationGroupSlots *s = QCoreApplication::instance()->findChild<QSequentialAnimationGroupSlots *>();

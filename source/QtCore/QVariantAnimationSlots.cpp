@@ -35,7 +35,7 @@ void QVariantAnimationSlots::valueChanged(const QVariant &value)
 
 void QVariantAnimationSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QVariantAnimation *obj = (QVariantAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QVariantAnimationSlots *s = QCoreApplication::instance()->findChild<QVariantAnimationSlots *>();

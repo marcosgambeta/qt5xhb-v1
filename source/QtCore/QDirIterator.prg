@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QDIRITERATOR_DELETE)
 // QFileInfo fileInfo() const
 HB_FUNC_STATIC(QDIRITERATOR_FILEINFO)
 {
-  QDirIterator *obj = (QDirIterator *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILEINFO)
 // QString fileName() const
 HB_FUNC_STATIC(QDIRITERATOR_FILENAME)
 {
-  QDirIterator *obj = (QDirIterator *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILENAME)
 // QString filePath() const
 HB_FUNC_STATIC(QDIRITERATOR_FILEPATH)
 {
-  QDirIterator *obj = (QDirIterator *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILEPATH)
 // bool hasNext() const
 HB_FUNC_STATIC(QDIRITERATOR_HASNEXT)
 {
-  QDirIterator *obj = (QDirIterator *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QDIRITERATOR_HASNEXT)
 // QString next()
 HB_FUNC_STATIC(QDIRITERATOR_NEXT)
 {
-  QDirIterator *obj = (QDirIterator *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEXT)
 // QString path() const
 HB_FUNC_STATIC(QDIRITERATOR_PATH)
 {
-  QDirIterator *obj = (QDirIterator *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

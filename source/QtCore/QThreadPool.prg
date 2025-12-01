@@ -60,7 +60,7 @@ RETURN
 #include <QtCore/QThreadPool>
 #endif
 
-    // QThreadPool( QObject * parent = 0 )
+// QThreadPool( QObject * parent = 0 )
 HB_FUNC_STATIC(QTHREADPOOL_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QTHREADPOOL_DELETE)
 // void start( QRunnable * runnable, int priority = 0 )
 HB_FUNC_STATIC(QTHREADPOOL_START)
 {
-  QThreadPool *obj = (QThreadPool *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
 // bool tryStart( QRunnable * runnable )
 HB_FUNC_STATIC(QTHREADPOOL_TRYSTART)
 {
-  QThreadPool *obj = (QThreadPool *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QTHREADPOOL_TRYSTART)
 // int expiryTimeout() const
 HB_FUNC_STATIC(QTHREADPOOL_EXPIRYTIMEOUT)
 {
-  QThreadPool *obj = (QThreadPool *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QTHREADPOOL_EXPIRYTIMEOUT)
 // void setExpiryTimeout( int expiryTimeout )
 HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 {
-  QThreadPool *obj = (QThreadPool *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 // int maxThreadCount() const
 HB_FUNC_STATIC(QTHREADPOOL_MAXTHREADCOUNT)
 {
-  QThreadPool *obj = (QThreadPool *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QTHREADPOOL_MAXTHREADCOUNT)
 // void setMaxThreadCount( int maxThreadCount )
 HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 {
-  QThreadPool *obj = (QThreadPool *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 // int activeThreadCount() const
 HB_FUNC_STATIC(QTHREADPOOL_ACTIVETHREADCOUNT)
 {
-  QThreadPool *obj = (QThreadPool *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QTHREADPOOL_ACTIVETHREADCOUNT)
 // void reserveThread()
 HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 {
-  QThreadPool *obj = (QThreadPool *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 // void releaseThread()
 HB_FUNC_STATIC(QTHREADPOOL_RELEASETHREAD)
 {
-  QThreadPool *obj = (QThreadPool *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RELEASETHREAD)
 // bool waitForDone( int msecs = -1 )
 HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
 {
-  QThreadPool *obj = (QThreadPool *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
 // void clear()
 HB_FUNC_STATIC(QTHREADPOOL_CLEAR)
 {
-  QThreadPool *obj = (QThreadPool *)Qt5xHb::itemGetPtrStackSelfItem();
+  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

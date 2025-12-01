@@ -71,7 +71,7 @@ RETURN
 #include <QtCore/QMetaEnum>
 #endif
 
-    // QMetaEnum()
+// QMetaEnum()
 HB_FUNC_STATIC(QMETAENUM_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -100,13 +100,13 @@ HB_FUNC_STATIC(QMETAENUM_DELETE)
 // const char * name() const
 HB_FUNC_STATIC(QMETAENUM_NAME)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      hb_retc((const char *)obj->name());
+      hb_retc(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QMETAENUM_NAME)
 // bool isFlag() const
 HB_FUNC_STATIC(QMETAENUM_ISFLAG)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QMETAENUM_ISFLAG)
 // int keyCount() const
 HB_FUNC_STATIC(QMETAENUM_KEYCOUNT)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,13 +154,13 @@ HB_FUNC_STATIC(QMETAENUM_KEYCOUNT)
 // const char * key( int index ) const
 HB_FUNC_STATIC(QMETAENUM_KEY)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      hb_retc((const char *)obj->key(PINT(1)));
+      hb_retc(obj->key(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QMETAENUM_KEY)
 // int value( int index ) const
 HB_FUNC_STATIC(QMETAENUM_VALUE)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,13 +190,13 @@ HB_FUNC_STATIC(QMETAENUM_VALUE)
 // const char * scope() const
 HB_FUNC_STATIC(QMETAENUM_SCOPE)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      hb_retc((const char *)obj->scope());
+      hb_retc(obj->scope());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QMETAENUM_SCOPE)
 // int keyToValue( const char * key ) const
 HB_FUNC_STATIC(QMETAENUM_KEYTOVALUE)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,13 +226,13 @@ HB_FUNC_STATIC(QMETAENUM_KEYTOVALUE)
 // const char * valueToKey( int value ) const
 HB_FUNC_STATIC(QMETAENUM_VALUETOKEY)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      hb_retc((const char *)obj->valueToKey(PINT(1)));
+      hb_retc(obj->valueToKey(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QMETAENUM_VALUETOKEY)
 // int keysToValue( const char * keys ) const
 HB_FUNC_STATIC(QMETAENUM_KEYSTOVALUE)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QMETAENUM_KEYSTOVALUE)
 // QByteArray valueToKeys( int value ) const
 HB_FUNC_STATIC(QMETAENUM_VALUETOKEYS)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QMETAENUM_VALUETOKEYS)
 // const QMetaObject * enclosingMetaObject() const
 HB_FUNC_STATIC(QMETAENUM_ENCLOSINGMETAOBJECT)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QMETAENUM_ENCLOSINGMETAOBJECT)
 // bool isValid() const
 HB_FUNC_STATIC(QMETAENUM_ISVALID)
 {
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,13 +319,13 @@ HB_FUNC_STATIC(QMETAENUM_ISVALID)
 HB_FUNC_STATIC(QMETAENUM_ENUMNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      hb_retc((const char *)obj->enumName());
+      hb_retc(obj->enumName());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QMETAENUM_ENUMNAME)
 HB_FUNC_STATIC(QMETAENUM_ISSCOPED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QMetaEnum *obj = (QMetaEnum *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

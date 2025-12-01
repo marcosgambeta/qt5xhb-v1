@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QJSONPARSEERROR_DELETE)
 // QString errorString() const
 HB_FUNC_STATIC(QJSONPARSEERROR_ERRORSTRING)
 {
-  QJsonParseError *obj = (QJsonParseError *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonParseError *obj = static_cast<QJsonParseError *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

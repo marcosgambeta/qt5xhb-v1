@@ -59,7 +59,7 @@ RETURN
 #include <QtCore/QSemaphore>
 #endif
 
-    // QSemaphore( int n = 0 )
+// QSemaphore( int n = 0 )
 HB_FUNC_STATIC(QSEMAPHORE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QSEMAPHORE_DELETE)
 // void acquire( int n = 1 )
 HB_FUNC_STATIC(QSEMAPHORE_ACQUIRE)
 {
-  QSemaphore *obj = (QSemaphore *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSemaphore *obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QSEMAPHORE_TRYACQUIRE)
 // void release( int n = 1 )
 HB_FUNC_STATIC(QSEMAPHORE_RELEASE)
 {
-  QSemaphore *obj = (QSemaphore *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSemaphore *obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QSEMAPHORE_RELEASE)
 // int available() const
 HB_FUNC_STATIC(QSEMAPHORE_AVAILABLE)
 {
-  QSemaphore *obj = (QSemaphore *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSemaphore *obj = static_cast<QSemaphore *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QMODELINDEX_DELETE)
 // QModelIndex child( int row, int column ) const
 HB_FUNC_STATIC(QMODELINDEX_CHILD)
 {
-  QModelIndex *obj = (QModelIndex *)Qt5xHb::itemGetPtrStackSelfItem();
+  QModelIndex *obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QMODELINDEX_CHILD)
 // int column() const
 HB_FUNC_STATIC(QMODELINDEX_COLUMN)
 {
-  QModelIndex *obj = (QModelIndex *)Qt5xHb::itemGetPtrStackSelfItem();
+  QModelIndex *obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QMODELINDEX_COLUMN)
 // QVariant data( int role = Qt::DisplayRole ) const
 HB_FUNC_STATIC(QMODELINDEX_DATA)
 {
-  QModelIndex *obj = (QModelIndex *)Qt5xHb::itemGetPtrStackSelfItem();
+  QModelIndex *obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QMODELINDEX_DATA)
 // Qt::ItemFlags flags() const
 HB_FUNC_STATIC(QMODELINDEX_FLAGS)
 {
-  QModelIndex *obj = (QModelIndex *)Qt5xHb::itemGetPtrStackSelfItem();
+  QModelIndex *obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QMODELINDEX_FLAGS)
 // quintptr internalId() const
 HB_FUNC_STATIC(QMODELINDEX_INTERNALID)
 {
-  QModelIndex *obj = (QModelIndex *)Qt5xHb::itemGetPtrStackSelfItem();
+  QModelIndex *obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALID)
 // void * internalPointer() const
 HB_FUNC_STATIC(QMODELINDEX_INTERNALPOINTER)
 {
-  QModelIndex *obj = (QModelIndex *)Qt5xHb::itemGetPtrStackSelfItem();
+  QModelIndex *obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALPOINTER)
 // bool isValid() const
 HB_FUNC_STATIC(QMODELINDEX_ISVALID)
 {
-  QModelIndex *obj = (QModelIndex *)Qt5xHb::itemGetPtrStackSelfItem();
+  QModelIndex *obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QMODELINDEX_ISVALID)
 // const QAbstractItemModel * model() const
 HB_FUNC_STATIC(QMODELINDEX_MODEL)
 {
-  QModelIndex *obj = (QModelIndex *)Qt5xHb::itemGetPtrStackSelfItem();
+  QModelIndex *obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QMODELINDEX_MODEL)
 // QModelIndex parent() const
 HB_FUNC_STATIC(QMODELINDEX_PARENT)
 {
-  QModelIndex *obj = (QModelIndex *)Qt5xHb::itemGetPtrStackSelfItem();
+  QModelIndex *obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QMODELINDEX_PARENT)
 // int row() const
 HB_FUNC_STATIC(QMODELINDEX_ROW)
 {
-  QModelIndex *obj = (QModelIndex *)Qt5xHb::itemGetPtrStackSelfItem();
+  QModelIndex *obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QMODELINDEX_ROW)
 // QModelIndex sibling( int row, int column ) const
 HB_FUNC_STATIC(QMODELINDEX_SIBLING)
 {
-  QModelIndex *obj = (QModelIndex *)Qt5xHb::itemGetPtrStackSelfItem();
+  QModelIndex *obj = static_cast<QModelIndex *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

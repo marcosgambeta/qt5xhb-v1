@@ -61,7 +61,7 @@ RETURN
 #include <QtCore/QStandardPaths>
 #endif
 
-    // static QString writableLocation( QStandardPaths::StandardLocation type )
+// static QString writableLocation( QStandardPaths::StandardLocation type )
 HB_FUNC_STATIC(QSTANDARDPATHS_WRITABLELOCATION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

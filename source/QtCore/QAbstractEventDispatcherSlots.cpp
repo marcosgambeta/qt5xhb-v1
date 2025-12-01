@@ -48,7 +48,7 @@ void QAbstractEventDispatcherSlots::awake()
 
 void QAbstractEventDispatcherSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractEventDispatcher *obj = (QAbstractEventDispatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstractEventDispatcherSlots *s = QCoreApplication::instance()->findChild<QAbstractEventDispatcherSlots *>();

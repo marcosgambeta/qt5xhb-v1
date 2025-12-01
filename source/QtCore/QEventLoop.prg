@@ -54,7 +54,7 @@ RETURN
 #include <QtCore/QEventLoop>
 #endif
 
-    // QEventLoop( QObject * parent = 0 )
+// QEventLoop( QObject * parent = 0 )
 HB_FUNC_STATIC(QEVENTLOOP_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QEVENTLOOP_DELETE)
 // int exec( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 HB_FUNC_STATIC(QEVENTLOOP_EXEC)
 {
-  QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
+  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXEC)
 // void exit( int returnCode = 0 )
 HB_FUNC_STATIC(QEVENTLOOP_EXIT)
 {
-  QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
+  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXIT)
 // bool isRunning() const
 HB_FUNC_STATIC(QEVENTLOOP_ISRUNNING)
 {
-  QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
+  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
 // void wakeUp()
 HB_FUNC_STATIC(QEVENTLOOP_WAKEUP)
 {
-  QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
+  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QEVENTLOOP_WAKEUP)
 // void quit()
 HB_FUNC_STATIC(QEVENTLOOP_QUIT)
 {
-  QEventLoop *obj = (QEventLoop *)Qt5xHb::itemGetPtrStackSelfItem();
+  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

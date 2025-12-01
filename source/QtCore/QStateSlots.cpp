@@ -48,7 +48,7 @@ void QStateSlots::propertiesAssigned()
 
 void QStateSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QState *obj = (QState *)Qt5xHb::itemGetPtrStackSelfItem();
+  QState *obj = qobject_cast<QState *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QStateSlots *s = QCoreApplication::instance()->findChild<QStateSlots *>();

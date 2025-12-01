@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_DELETE)
 // void addAnimation( QAbstractAnimation * animation )
 HB_FUNC_STATIC(QABSTRACTTRANSITION_ADDANIMATION)
 {
-  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ADDANIMATION)
 // QList<QAbstractAnimation *> animations() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
 {
-  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
 // QStateMachine * machine() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
 {
-  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
 // void removeAnimation( QAbstractAnimation * animation )
 HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
 {
-  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
 // void setTargetState( QAbstractState * target )
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
 {
-  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
 // void setTargetStates( const QList<QAbstractState *> & targets )
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
 {
-  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
 // QState * sourceState() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
 {
-  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
 // QAbstractState * targetState() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATE)
 {
-  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATE)
 // QList<QAbstractState *> targetStates() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATES)
 {
-  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

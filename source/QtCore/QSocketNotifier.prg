@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_DELETE)
 // QSocketNotifier::Type type() const
 HB_FUNC_STATIC(QSOCKETNOTIFIER_TYPE)
 {
-  QSocketNotifier *obj = (QSocketNotifier *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier *obj = qobject_cast<QSocketNotifier *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_TYPE)
 // bool isEnabled() const
 HB_FUNC_STATIC(QSOCKETNOTIFIER_ISENABLED)
 {
-  QSocketNotifier *obj = (QSocketNotifier *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier *obj = qobject_cast<QSocketNotifier *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_ISENABLED)
 // void setEnabled( bool )
 HB_FUNC_STATIC(QSOCKETNOTIFIER_SETENABLED)
 {
-  QSocketNotifier *obj = (QSocketNotifier *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier *obj = qobject_cast<QSocketNotifier *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

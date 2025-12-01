@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_DELETE)
 // QStringRef name() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NAME)
 {
-  QXmlStreamNotationDeclaration *obj = (QXmlStreamNotationDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamNotationDeclaration *obj = static_cast<QXmlStreamNotationDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NAME)
 // QStringRef publicId() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_PUBLICID)
 {
-  QXmlStreamNotationDeclaration *obj = (QXmlStreamNotationDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamNotationDeclaration *obj = static_cast<QXmlStreamNotationDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_PUBLICID)
 // QStringRef systemId() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_SYSTEMID)
 {
-  QXmlStreamNotationDeclaration *obj = (QXmlStreamNotationDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamNotationDeclaration *obj = static_cast<QXmlStreamNotationDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_DELETE)
 // int top() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOP)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOP)
 // int left() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_LEFT)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_LEFT)
 // int bottom() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOM)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOM)
 // int right() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_RIGHT)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_RIGHT)
 // int width() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_WIDTH)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_WIDTH)
 // int height() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_HEIGHT)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_HEIGHT)
 // const QPersistentModelIndex & topLeft() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOPLEFT)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOPLEFT)
 // const QPersistentModelIndex & bottomRight() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOMRIGHT)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOMRIGHT)
 // QModelIndex parent() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_PARENT)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_PARENT)
 // const QAbstractItemModel * model() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_MODEL)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
 // bool intersects( const QItemSelectionRange & other ) const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTS)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTS)
 // QItemSelectionRange intersected( const QItemSelectionRange & other ) const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTED)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTED)
 // bool isValid() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISVALID)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISVALID)
 // bool isEmpty() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISEMPTY)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISEMPTY)
 // QModelIndexList indexes() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_INDEXES)
 {
-  QItemSelectionRange *obj = (QItemSelectionRange *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

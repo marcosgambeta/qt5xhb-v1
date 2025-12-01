@@ -390,7 +390,7 @@ void QAbstractItemModelSlots::rowsRemoved(const QModelIndex &parent, int start, 
 
 void QAbstractItemModelSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstractItemModelSlots *s = QCoreApplication::instance()->findChild<QAbstractItemModelSlots *>();

@@ -55,7 +55,7 @@ RETURN
 #include <QtCore/QDebugStateSaver>
 #endif
 
-    // QDebugStateSaver( QDebug & dbg )
+// QDebugStateSaver( QDebug & dbg )
 HB_FUNC_STATIC(QDEBUGSTATESAVER_NEW)
 {
   if (ISNUMPAR(1) && ISQDEBUG(1)) {

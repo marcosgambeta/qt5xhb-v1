@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_DELETE)
 // QStringRef name() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NAME)
 {
-  QXmlStreamEntityDeclaration *obj = (QXmlStreamEntityDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NAME)
 // QStringRef notationName() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NOTATIONNAME)
 {
-  QXmlStreamEntityDeclaration *obj = (QXmlStreamEntityDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NOTATIONNAME)
 // QStringRef publicId() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_PUBLICID)
 {
-  QXmlStreamEntityDeclaration *obj = (QXmlStreamEntityDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_PUBLICID)
 // QStringRef systemId() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SYSTEMID)
 {
-  QXmlStreamEntityDeclaration *obj = (QXmlStreamEntityDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SYSTEMID)
 // QStringRef value() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_VALUE)
 {
-  QXmlStreamEntityDeclaration *obj = (QXmlStreamEntityDeclaration *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

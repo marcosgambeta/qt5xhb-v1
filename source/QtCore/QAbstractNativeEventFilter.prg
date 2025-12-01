@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QABSTRACTNATIVEEVENTFILTER_DELETE)
 // virtual bool nativeEventFilter( const QByteArray & eventType, void * message, long * result ) = 0
 HB_FUNC_STATIC(QABSTRACTNATIVEEVENTFILTER_NATIVEEVENTFILTER)
 {
-  QAbstractNativeEventFilter *obj = (QAbstractNativeEventFilter *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractNativeEventFilter *obj = static_cast<QAbstractNativeEventFilter *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

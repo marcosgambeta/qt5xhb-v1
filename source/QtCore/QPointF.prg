@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QPOINTF_DELETE)
 // bool isNull() const
 HB_FUNC_STATIC(QPOINTF_ISNULL)
 {
-  QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPointF *obj = static_cast<QPointF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QPOINTF_ISNULL)
 // qreal manhattanLength() const
 HB_FUNC_STATIC(QPOINTF_MANHATTANLENGTH)
 {
-  QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPointF *obj = static_cast<QPointF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QPOINTF_MANHATTANLENGTH)
 // void setX( qreal x )
 HB_FUNC_STATIC(QPOINTF_SETX)
 {
-  QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPointF *obj = static_cast<QPointF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QPOINTF_SETX)
 // void setY( qreal y )
 HB_FUNC_STATIC(QPOINTF_SETY)
 {
-  QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPointF *obj = static_cast<QPointF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QPOINTF_SETY)
 // QPoint toPoint() const
 HB_FUNC_STATIC(QPOINTF_TOPOINT)
 {
-  QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPointF *obj = static_cast<QPointF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QPOINTF_TOPOINT)
 // qreal x() const
 HB_FUNC_STATIC(QPOINTF_X)
 {
-  QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPointF *obj = static_cast<QPointF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QPOINTF_X)
 // qreal y() const
 HB_FUNC_STATIC(QPOINTF_Y)
 {
-  QPointF *obj = (QPointF *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPointF *obj = static_cast<QPointF *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

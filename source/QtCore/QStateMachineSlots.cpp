@@ -48,7 +48,7 @@ void QStateMachineSlots::stopped()
 
 void QStateMachineSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QStateMachine *obj = (QStateMachine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QStateMachineSlots *s = QCoreApplication::instance()->findChild<QStateMachineSlots *>();

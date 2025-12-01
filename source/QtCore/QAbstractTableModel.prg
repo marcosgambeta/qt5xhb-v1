@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QABSTRACTTABLEMODEL_DELETE)
 // parent )
 HB_FUNC_STATIC(QABSTRACTTABLEMODEL_DROPMIMEDATA)
 {
-  QAbstractTableModel *obj = (QAbstractTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTableModel *obj = qobject_cast<QAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QABSTRACTTABLEMODEL_DROPMIMEDATA)
 // virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QABSTRACTTABLEMODEL_INDEX)
 {
-  QAbstractTableModel *obj = (QAbstractTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTableModel *obj = qobject_cast<QAbstractTableModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

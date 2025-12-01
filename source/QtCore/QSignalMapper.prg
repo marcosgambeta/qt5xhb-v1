@@ -58,7 +58,7 @@ RETURN
 #include <QtCore/QSignalMapper>
 #endif
 
-    // QSignalMapper( QObject * parent = 0 )
+// QSignalMapper( QObject * parent = 0 )
 HB_FUNC_STATIC(QSIGNALMAPPER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
 // void removeMappings( QObject * sender )
 HB_FUNC_STATIC(QSIGNALMAPPER_REMOVEMAPPINGS)
 {
-  QSignalMapper *obj = (QSignalMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSignalMapper *obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

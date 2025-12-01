@@ -59,7 +59,7 @@ RETURN
 #include <QtCore/QWriteLocker>
 #endif
 
-    // QWriteLocker( QReadWriteLock * lock )
+// QWriteLocker( QReadWriteLock * lock )
 HB_FUNC_STATIC(QWRITELOCKER_NEW)
 {
   if (ISNUMPAR(1) && ISQREADWRITELOCK(1)) {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QWRITELOCKER_DELETE)
 // QReadWriteLock * readWriteLock() const
 HB_FUNC_STATIC(QWRITELOCKER_READWRITELOCK)
 {
-  QWriteLocker *obj = (QWriteLocker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QWriteLocker *obj = static_cast<QWriteLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QWRITELOCKER_READWRITELOCK)
 // void relock()
 HB_FUNC_STATIC(QWRITELOCKER_RELOCK)
 {
-  QWriteLocker *obj = (QWriteLocker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QWriteLocker *obj = static_cast<QWriteLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QWRITELOCKER_RELOCK)
 // void unlock()
 HB_FUNC_STATIC(QWRITELOCKER_UNLOCK)
 {
-  QWriteLocker *obj = (QWriteLocker *)Qt5xHb::itemGetPtrStackSelfItem();
+  QWriteLocker *obj = static_cast<QWriteLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

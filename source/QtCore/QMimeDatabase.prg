@@ -64,7 +64,7 @@ RETURN
 #include <QtCore/QMimeDatabase>
 #endif
 
-    // QMimeDatabase()
+// QMimeDatabase()
 HB_FUNC_STATIC(QMIMEDATABASE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_DELETE)
 // QMimeType mimeTypeForName( const QString & nameOrAlias ) const
 HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORNAME)
 {
-  QMimeDatabase *obj = (QMimeDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMimeDatabase *obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILE)
 // QList<QMimeType> mimeTypesForFileName( const QString & fileName ) const
 HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPESFORFILENAME)
 {
-  QMimeDatabase *obj = (QMimeDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMimeDatabase *obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORDATA)
 // QMimeType mimeTypeForUrl( const QUrl & url ) const
 HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORURL)
 {
-  QMimeDatabase *obj = (QMimeDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMimeDatabase *obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA)
 // QString suffixForFileName( const QString & fileName ) const
 HB_FUNC_STATIC(QMIMEDATABASE_SUFFIXFORFILENAME)
 {
-  QMimeDatabase *obj = (QMimeDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMimeDatabase *obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QMIMEDATABASE_SUFFIXFORFILENAME)
 // QList<QMimeType> allMimeTypes() const
 HB_FUNC_STATIC(QMIMEDATABASE_ALLMIMETYPES)
 {
-  QMimeDatabase *obj = (QMimeDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  QMimeDatabase *obj = static_cast<QMimeDatabase *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

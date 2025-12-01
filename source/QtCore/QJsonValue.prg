@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QJSONVALUE_DELETE)
 // bool isArray() const
 HB_FUNC_STATIC(QJSONVALUE_ISARRAY)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISARRAY)
 // bool isBool() const
 HB_FUNC_STATIC(QJSONVALUE_ISBOOL)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISBOOL)
 // bool isDouble() const
 HB_FUNC_STATIC(QJSONVALUE_ISDOUBLE)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISDOUBLE)
 // bool isNull() const
 HB_FUNC_STATIC(QJSONVALUE_ISNULL)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISNULL)
 // bool isObject() const
 HB_FUNC_STATIC(QJSONVALUE_ISOBJECT)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISOBJECT)
 // bool isString() const
 HB_FUNC_STATIC(QJSONVALUE_ISSTRING)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QJSONVALUE_ISSTRING)
 // bool isUndefined() const
 HB_FUNC_STATIC(QJSONVALUE_ISUNDEFINED)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOARRAY)
 // bool toBool( bool defaultValue = false ) const
 HB_FUNC_STATIC(QJSONVALUE_TOBOOL)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOBOOL)
 // double toDouble( double defaultValue = 0 ) const
 HB_FUNC_STATIC(QJSONVALUE_TODOUBLE)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOOBJECT)
 // QString toString( const QString & defaultValue = QString() ) const
 HB_FUNC_STATIC(QJSONVALUE_TOSTRING)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOSTRING)
 // QVariant toVariant() const
 HB_FUNC_STATIC(QJSONVALUE_TOVARIANT)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QJSONVALUE_TOVARIANT)
 // QJsonValue::Type type() const
 HB_FUNC_STATIC(QJSONVALUE_TYPE)
 {
-  QJsonValue *obj = (QJsonValue *)Qt5xHb::itemGetPtrStackSelfItem();
+  QJsonValue *obj = static_cast<QJsonValue *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

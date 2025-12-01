@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QSETTINGS_DELETE)
 // QStringList allKeys() const
 HB_FUNC_STATIC(QSETTINGS_ALLKEYS)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QSETTINGS_ALLKEYS)
 // QString applicationName() const
 HB_FUNC_STATIC(QSETTINGS_APPLICATIONNAME)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QSETTINGS_APPLICATIONNAME)
 // void beginGroup( const QString & prefix )
 HB_FUNC_STATIC(QSETTINGS_BEGINGROUP)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QSETTINGS_BEGINGROUP)
 // int beginReadArray( const QString & prefix )
 HB_FUNC_STATIC(QSETTINGS_BEGINREADARRAY)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QSETTINGS_BEGINREADARRAY)
 // void beginWriteArray( const QString & prefix, int size = -1 )
 HB_FUNC_STATIC(QSETTINGS_BEGINWRITEARRAY)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QSETTINGS_BEGINWRITEARRAY)
 // QStringList childGroups() const
 HB_FUNC_STATIC(QSETTINGS_CHILDGROUPS)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QSETTINGS_CHILDGROUPS)
 // QStringList childKeys() const
 HB_FUNC_STATIC(QSETTINGS_CHILDKEYS)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QSETTINGS_CHILDKEYS)
 // void clear()
 HB_FUNC_STATIC(QSETTINGS_CLEAR)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QSETTINGS_CLEAR)
 // bool contains( const QString & key ) const
 HB_FUNC_STATIC(QSETTINGS_CONTAINS)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QSETTINGS_CONTAINS)
 // void endArray()
 HB_FUNC_STATIC(QSETTINGS_ENDARRAY)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QSETTINGS_ENDARRAY)
 // void endGroup()
 HB_FUNC_STATIC(QSETTINGS_ENDGROUP)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QSETTINGS_ENDGROUP)
 // bool fallbacksEnabled() const
 HB_FUNC_STATIC(QSETTINGS_FALLBACKSENABLED)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QSETTINGS_FALLBACKSENABLED)
 // QString fileName() const
 HB_FUNC_STATIC(QSETTINGS_FILENAME)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QSETTINGS_FILENAME)
 // QSettings::Format format() const
 HB_FUNC_STATIC(QSETTINGS_FORMAT)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QSETTINGS_FORMAT)
 // QString group() const
 HB_FUNC_STATIC(QSETTINGS_GROUP)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QSETTINGS_GROUP)
 // QTextCodec * iniCodec() const
 HB_FUNC_STATIC(QSETTINGS_INICODEC)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QSETTINGS_INICODEC)
 // bool isWritable() const
 HB_FUNC_STATIC(QSETTINGS_ISWRITABLE)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QSETTINGS_ISWRITABLE)
 // QString organizationName() const
 HB_FUNC_STATIC(QSETTINGS_ORGANIZATIONNAME)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QSETTINGS_ORGANIZATIONNAME)
 // void remove( const QString & key )
 HB_FUNC_STATIC(QSETTINGS_REMOVE)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QSETTINGS_REMOVE)
 // QSettings::Scope scope() const
 HB_FUNC_STATIC(QSETTINGS_SCOPE)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(QSETTINGS_SCOPE)
 // void setArrayIndex( int i )
 HB_FUNC_STATIC(QSETTINGS_SETARRAYINDEX)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -526,7 +526,7 @@ HB_FUNC_STATIC(QSETTINGS_SETARRAYINDEX)
 // void setFallbacksEnabled( bool b )
 HB_FUNC_STATIC(QSETTINGS_SETFALLBACKSENABLED)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QSETTINGS_SETINICODEC)
 // void setValue( const QString & key, const QVariant & value )
 HB_FUNC_STATIC(QSETTINGS_SETVALUE)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -591,7 +591,7 @@ HB_FUNC_STATIC(QSETTINGS_SETVALUE)
 // QSettings::Status status() const
 HB_FUNC_STATIC(QSETTINGS_STATUS)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QSETTINGS_STATUS)
 // void sync()
 HB_FUNC_STATIC(QSETTINGS_SYNC)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -629,7 +629,7 @@ HB_FUNC_STATIC(QSETTINGS_SYNC)
 // QVariant value( const QString & key, const QVariant & defaultValue = QVariant() ) const
 HB_FUNC_STATIC(QSETTINGS_VALUE)
 {
-  QSettings *obj = (QSettings *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSettings *obj = qobject_cast<QSettings *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

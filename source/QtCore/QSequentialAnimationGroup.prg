@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DELETE)
 // QPauseAnimation * addPause( int msecs )
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ADDPAUSE)
 {
-  QSequentialAnimationGroup *obj = (QSequentialAnimationGroup *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ADDPAUSE)
 // QAbstractAnimation * currentAnimation() const
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION)
 {
-  QSequentialAnimationGroup *obj = (QSequentialAnimationGroup *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION)
 // QPauseAnimation * insertPause( int index, int msecs )
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_INSERTPAUSE)
 {
-  QSequentialAnimationGroup *obj = (QSequentialAnimationGroup *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_INSERTPAUSE)
 // virtual int duration() const
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DURATION)
 {
-  QSequentialAnimationGroup *obj = (QSequentialAnimationGroup *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

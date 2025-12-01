@@ -52,7 +52,7 @@ void QFileSystemWatcherSlots::fileChanged(const QString &path)
 
 void QFileSystemWatcherSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QFileSystemWatcher *obj = (QFileSystemWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFileSystemWatcher *obj = qobject_cast<QFileSystemWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QFileSystemWatcherSlots *s = QCoreApplication::instance()->findChild<QFileSystemWatcherSlots *>();

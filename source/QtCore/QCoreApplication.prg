@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_DELETE)
 // virtual bool notify( QObject * receiver, QEvent * event )
 HB_FUNC_STATIC(QCOREAPPLICATION_NOTIFY)
 {
-  QCoreApplication *obj = (QCoreApplication *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCoreApplication *obj = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_NOTIFY)
 // void quit()
 HB_FUNC_STATIC(QCOREAPPLICATION_QUIT)
 {
-  QCoreApplication *obj = (QCoreApplication *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCoreApplication *obj = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

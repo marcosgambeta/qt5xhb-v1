@@ -61,7 +61,7 @@ RETURN
 #include <QtCore/QMetaType>
 #endif
 
-    // static int registerTypedef( const char * typeName, int aliasId )
+// static int registerTypedef( const char * typeName, int aliasId )
 HB_FUNC_STATIC(QMETATYPE_REGISTERTYPEDEF)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QMETATYPE_TYPENAME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    hb_retc((const char *)QMetaType::typeName(PINT(1)));
+    hb_retc(QMetaType::typeName(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

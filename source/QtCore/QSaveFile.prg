@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSAVEFILE_DELETE)
 HB_FUNC_STATIC(QSAVEFILE_FILENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSaveFile *obj = qobject_cast<QSaveFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QSAVEFILE_FILENAME)
 HB_FUNC_STATIC(QSAVEFILE_SETFILENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSaveFile *obj = qobject_cast<QSaveFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QSAVEFILE_SETFILENAME)
 HB_FUNC_STATIC(QSAVEFILE_OPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSaveFile *obj = qobject_cast<QSaveFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QSAVEFILE_OPEN)
 HB_FUNC_STATIC(QSAVEFILE_COMMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSaveFile *obj = qobject_cast<QSaveFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QSAVEFILE_COMMIT)
 HB_FUNC_STATIC(QSAVEFILE_CANCELWRITING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSaveFile *obj = qobject_cast<QSaveFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QSAVEFILE_CANCELWRITING)
 HB_FUNC_STATIC(QSAVEFILE_SETDIRECTWRITEFALLBACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSaveFile *obj = qobject_cast<QSaveFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QSAVEFILE_SETDIRECTWRITEFALLBACK)
 HB_FUNC_STATIC(QSAVEFILE_DIRECTWRITEFALLBACK)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  QSaveFile *obj = (QSaveFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSaveFile *obj = qobject_cast<QSaveFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

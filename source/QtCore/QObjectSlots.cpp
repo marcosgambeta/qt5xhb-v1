@@ -24,7 +24,7 @@ void QObjectSlots::destroyed(QObject *obj)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOBJECT");
-    PHB_ITEM pobj = Qt5xHb::Signals_return_qobject(obj, "QOBJECT");
+    PHB_ITEM pobj = Qt5xHb::Signals_return_qobject((QObject *)obj, "QOBJECT");
 
     hb_vmEvalBlockV(cb, 2, psender, pobj);
 
@@ -53,7 +53,7 @@ void QObjectSlots::objectNameChanged(const QString &objectName)
 
 void QObjectSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QObject *obj = (QObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  QObject *obj = qobject_cast<QObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QObjectSlots *s = QCoreApplication::instance()->findChild<QObjectSlots *>();

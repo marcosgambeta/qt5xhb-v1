@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DELETE)
 // virtual QModelIndex buddy( const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_BUDDY)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_BUDDY)
 // virtual bool canFetchMore( const QModelIndex & parent ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_CANFETCHMORE)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_CANFETCHMORE)
 // virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_COLUMNCOUNT)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_COLUMNCOUNT)
 // virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_DATA)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DATA)
 // parent )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_DROPMIMEDATA)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DROPMIMEDATA)
 // virtual void fetchMore( const QModelIndex & parent )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_FETCHMORE)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_FETCHMORE)
 // virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_FLAGS)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_FLAGS)
 // virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASCHILDREN)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASCHILDREN)
 // bool hasIndex( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASINDEX)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASINDEX)
 // virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_HEADERDATA)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_HEADERDATA)
 // virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INDEX)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INDEX)
 // bool insertColumn( int column, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMN)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMN)
 // virtual bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMNS)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMNS)
 // bool insertRow( int row, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROW)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROW)
 // virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROWS)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROWS)
 // Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_MATCH)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MATCH)
 // virtual QStringList mimeTypes() const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMETYPES)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMETYPES)
 // virtual QModelIndex parent( const QModelIndex & index ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_PARENT)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_PARENT)
 // bool removeColumn( int column, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMN)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,7 +501,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMN)
 // virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMNS)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -519,7 +519,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMNS)
 // bool removeRow( int row, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROW)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROW)
 // virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROWS)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -555,7 +555,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROWS)
 // virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ROWCOUNT)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_ROWCOUNT)
 // virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETDATA)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETDATA)
 // )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETHEADERDATA)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -610,7 +610,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETHEADERDATA)
 // QModelIndex sibling( int row, int column, const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SIBLING)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -629,7 +629,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SIBLING)
 // virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SORT)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -649,7 +649,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SORT)
 // virtual QSize span( const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SPAN)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -668,7 +668,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SPAN)
 // Qt::DropActions supportedDragActions() const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -686,7 +686,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS)
 // virtual Qt::DropActions supportedDropActions() const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -704,7 +704,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS)
 // virtual void revert()
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REVERT)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -724,7 +724,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REVERT)
 // virtual bool submit()
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUBMIT)
 {
-  QAbstractItemModel *obj = (QAbstractItemModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

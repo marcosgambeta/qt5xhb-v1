@@ -33,7 +33,7 @@ void QAbstractTransitionSlots::triggered()
 
 void QAbstractTransitionSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractTransition *obj = (QAbstractTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstractTransitionSlots *s = QCoreApplication::instance()->findChild<QAbstractTransitionSlots *>();

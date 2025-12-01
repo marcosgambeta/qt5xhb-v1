@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_DELETE)
 // int captureCount() const
 HB_FUNC_STATIC(QREGULAREXPRESSION_CAPTURECOUNT)
 {
-  QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpression *obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_CAPTURECOUNT)
 // QString errorString() const
 HB_FUNC_STATIC(QREGULAREXPRESSION_ERRORSTRING)
 {
-  QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpression *obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_ERRORSTRING)
 // QRegularExpression::NoMatchOption ) const
 HB_FUNC_STATIC(QREGULAREXPRESSION_GLOBALMATCH)
 {
-  QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpression *obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_GLOBALMATCH)
 // bool isValid() const
 HB_FUNC_STATIC(QREGULAREXPRESSION_ISVALID)
 {
-  QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpression *obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_ISVALID)
 // const
 HB_FUNC_STATIC(QREGULAREXPRESSION_MATCH)
 {
-  QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpression *obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_MATCH)
 // QString pattern() const
 HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERN)
 {
-  QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpression *obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERN)
 // int patternErrorOffset() const
 HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERNERROROFFSET)
 {
-  QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpression *obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERNERROROFFSET)
 // QRegularExpression::PatternOptions patternOptions() const
 HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERNOPTIONS)
 {
-  QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpression *obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_PATTERNOPTIONS)
 // void setPattern( const QString & pattern )
 HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERN)
 {
-  QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpression *obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERN)
 // void setPatternOptions( QRegularExpression::PatternOptions options )
 HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERNOPTIONS)
 {
-  QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpression *obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERNOPTIONS)
 // void swap( QRegularExpression & other )
 HB_FUNC_STATIC(QREGULAREXPRESSION_SWAP)
 {
-  QRegularExpression *obj = (QRegularExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QRegularExpression *obj = static_cast<QRegularExpression *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QDATE_DELETE)
 // QDate addDays( int ndays ) const
 HB_FUNC_STATIC(QDATE_ADDDAYS)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QDATE_ADDDAYS)
 // QDate addMonths( int nmonths ) const
 HB_FUNC_STATIC(QDATE_ADDMONTHS)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QDATE_ADDMONTHS)
 // QDate addYears( int nyears ) const
 HB_FUNC_STATIC(QDATE_ADDYEARS)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QDATE_ADDYEARS)
 // int day() const
 HB_FUNC_STATIC(QDATE_DAY)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QDATE_DAY)
 // int dayOfWeek() const
 HB_FUNC_STATIC(QDATE_DAYOFWEEK)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QDATE_DAYOFWEEK)
 // int dayOfYear() const
 HB_FUNC_STATIC(QDATE_DAYOFYEAR)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QDATE_DAYOFYEAR)
 // int daysInMonth() const
 HB_FUNC_STATIC(QDATE_DAYSINMONTH)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QDATE_DAYSINMONTH)
 // int daysInYear() const
 HB_FUNC_STATIC(QDATE_DAYSINYEAR)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QDATE_DAYSINYEAR)
 // int daysTo( const QDate & d ) const
 HB_FUNC_STATIC(QDATE_DAYSTO)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QDATE_DAYSTO)
 // void getDate( int * year, int * month, int * day )
 HB_FUNC_STATIC(QDATE_GETDATE)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QDATE_GETDATE)
 // bool isNull() const
 HB_FUNC_STATIC(QDATE_ISNULL)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QDATE_ISNULL)
 // int month() const
 HB_FUNC_STATIC(QDATE_MONTH)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QDATE_MONTH)
 // bool setDate( int year, int month, int day )
 HB_FUNC_STATIC(QDATE_SETDATE)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QDATE_SETDATE)
 // int toJulianDay() const
 HB_FUNC_STATIC(QDATE_TOJULIANDAY)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QDATE_TOSTRING)
 // int weekNumber( int * yearNumber = 0 ) const
 HB_FUNC_STATIC(QDATE_WEEKNUMBER)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QDATE_WEEKNUMBER)
 // int year() const
 HB_FUNC_STATIC(QDATE_YEAR)
 {
-  QDate *obj = (QDate *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDate *obj = static_cast<QDate *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

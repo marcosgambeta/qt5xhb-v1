@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QUUID_DELETE)
 // bool isNull() const
 HB_FUNC_STATIC(QUUID_ISNULL)
 {
-  QUuid *obj = (QUuid *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QUUID_ISNULL)
 // QByteArray toByteArray() const
 HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
 {
-  QUuid *obj = (QUuid *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
 // QByteArray toRfc4122() const
 HB_FUNC_STATIC(QUUID_TORFC4122)
 {
-  QUuid *obj = (QUuid *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QUUID_TORFC4122)
 // QString toString() const
 HB_FUNC_STATIC(QUUID_TOSTRING)
 {
-  QUuid *obj = (QUuid *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QUUID_TOSTRING)
 // QUuid::Variant variant() const
 HB_FUNC_STATIC(QUUID_VARIANT)
 {
-  QUuid *obj = (QUuid *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QUUID_VARIANT)
 // QUuid::Version version() const
 HB_FUNC_STATIC(QUUID_VERSION)
 {
-  QUuid *obj = (QUuid *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

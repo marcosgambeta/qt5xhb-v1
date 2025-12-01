@@ -64,7 +64,7 @@ RETURN
 #include <QtCore/QXmlStreamAttributes>
 #endif
 
-    // QXmlStreamAttributes()
+// QXmlStreamAttributes()
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_HASATTRIBUTE)
 // QStringRef value( const QString & namespaceUri, const QString & name ) const
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE1)
 {
-  QXmlStreamAttributes *obj = (QXmlStreamAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE1)
 // QStringRef value( const QString & namespaceUri, QLatin1String name ) const
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE2)
 {
-  QXmlStreamAttributes *obj = (QXmlStreamAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE2)
 // QStringRef value( QLatin1String namespaceUri, QLatin1String name ) const
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE3)
 {
-  QXmlStreamAttributes *obj = (QXmlStreamAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE3)
 // QStringRef value( const QString & qualifiedName ) const
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE4)
 {
-  QXmlStreamAttributes *obj = (QXmlStreamAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE4)
 // QStringRef value( QLatin1String qualifiedName ) const
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE5)
 {
-  QXmlStreamAttributes *obj = (QXmlStreamAttributes *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

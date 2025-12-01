@@ -53,7 +53,7 @@ RETURN
 #include <QtCore/QObjectCleanupHandler>
 #endif
 
-    // QObjectCleanupHandler()
+// QObjectCleanupHandler()
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_DELETE)
 // QObject * add( QObject * object )
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 {
-  QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
+  QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 // void remove( QObject * object )
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 {
-  QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
+  QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 // bool isEmpty() const
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ISEMPTY)
 {
-  QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
+  QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ISEMPTY)
 // void clear()
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_CLEAR)
 {
-  QObjectCleanupHandler *obj = (QObjectCleanupHandler *)Qt5xHb::itemGetPtrStackSelfItem();
+  QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

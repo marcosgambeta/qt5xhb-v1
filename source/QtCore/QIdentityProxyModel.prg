@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_DELETE)
 // int columnCount( const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_COLUMNCOUNT)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_COLUMNCOUNT)
 // QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INDEX)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INDEX)
 // QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPFROMSOURCE)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPFROMSOURCE)
 // QModelIndex mapToSource( const QModelIndex & proxyIndex ) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPTOSOURCE)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPTOSOURCE)
 // QModelIndex parent( const QModelIndex & child ) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_PARENT)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_PARENT)
 // int rowCount( const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_ROWCOUNT)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_ROWCOUNT)
 // QVariant headerData( int section, Qt::Orientation orientation, int role ) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_HEADERDATA)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_HEADERDATA)
 // bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_DROPMIMEDATA)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_DROPMIMEDATA)
 // QModelIndex sibling( int row, int column, const QModelIndex & idx ) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_SIBLING)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_SIBLING)
 // QItemSelection mapSelectionFromSource( const QItemSelection & selection ) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE)
 // QItemSelection mapSelectionToSource( const QItemSelection & selection ) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE)
 // flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MATCH)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MATCH)
 // void setSourceModel( QAbstractItemModel * sourceModel )
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_SETSOURCEMODEL)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_SETSOURCEMODEL)
 // bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTCOLUMNS)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTCOLUMNS)
 // bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTROWS)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTROWS)
 // bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_REMOVECOLUMNS)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_REMOVECOLUMNS)
 // bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_REMOVEROWS)
 {
-  QIdentityProxyModel *obj = (QIdentityProxyModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

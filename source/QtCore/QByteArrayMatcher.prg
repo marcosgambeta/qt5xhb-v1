@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
 // QByteArray pattern() const
 HB_FUNC_STATIC(QBYTEARRAYMATCHER_PATTERN)
 {
-  QByteArrayMatcher *obj = (QByteArrayMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QByteArrayMatcher *obj = static_cast<QByteArrayMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_PATTERN)
 // void setPattern( const QByteArray & pattern )
 HB_FUNC_STATIC(QBYTEARRAYMATCHER_SETPATTERN)
 {
-  QByteArrayMatcher *obj = (QByteArrayMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QByteArrayMatcher *obj = static_cast<QByteArrayMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

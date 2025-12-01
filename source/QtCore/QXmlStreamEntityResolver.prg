@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYRESOLVER_DELETE)
 // virtual QString resolveUndeclaredEntity( const QString & name )
 HB_FUNC_STATIC(QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY)
 {
-  QXmlStreamEntityResolver *obj = (QXmlStreamEntityResolver *)Qt5xHb::itemGetPtrStackSelfItem();
+  QXmlStreamEntityResolver *obj = static_cast<QXmlStreamEntityResolver *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

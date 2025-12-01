@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_DELETE)
 // QObject * eventSource() const
 HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
 {
-  QEventTransition *obj = (QEventTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
 // QEvent::Type eventType() const
 HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
 {
-  QEventTransition *obj = (QEventTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
 // void setEventSource( QObject * object )
 HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 {
-  QEventTransition *obj = (QEventTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 // void setEventType( QEvent::Type type )
 HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTTYPE)
 {
-  QEventTransition *obj = (QEventTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

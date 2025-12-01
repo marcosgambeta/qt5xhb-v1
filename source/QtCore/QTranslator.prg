@@ -51,7 +51,7 @@ RETURN
 #include <QtCore/QTranslator>
 #endif
 
-    // QTranslator( QObject * parent = 0 )
+// QTranslator( QObject * parent = 0 )
 HB_FUNC_STATIC(QTRANSLATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QTRANSLATOR_DELETE)
 // virtual bool isEmpty() const
 HB_FUNC_STATIC(QTRANSLATOR_ISEMPTY)
 {
-  QTranslator *obj = (QTranslator *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTranslator *obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
 // ) const
 HB_FUNC_STATIC(QTRANSLATOR_TRANSLATE)
 {
-  QTranslator *obj = (QTranslator *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTranslator *obj = qobject_cast<QTranslator *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

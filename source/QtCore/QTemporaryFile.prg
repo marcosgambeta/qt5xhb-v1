@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_DELETE)
 // bool autoRemove() const
 HB_FUNC_STATIC(QTEMPORARYFILE_AUTOREMOVE)
 {
-  QTemporaryFile *obj = (QTemporaryFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile *obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_AUTOREMOVE)
 // QString fileTemplate() const
 HB_FUNC_STATIC(QTEMPORARYFILE_FILETEMPLATE)
 {
-  QTemporaryFile *obj = (QTemporaryFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile *obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILETEMPLATE)
 // bool open()
 HB_FUNC_STATIC(QTEMPORARYFILE_OPEN)
 {
-  QTemporaryFile *obj = (QTemporaryFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile *obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_OPEN)
 // void setAutoRemove( bool b )
 HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
 {
-  QTemporaryFile *obj = (QTemporaryFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile *obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
 // void setFileTemplate( const QString & name )
 HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
 {
-  QTemporaryFile *obj = (QTemporaryFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile *obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
 // virtual QString fileName() const
 HB_FUNC_STATIC(QTEMPORARYFILE_FILENAME)
 {
-  QTemporaryFile *obj = (QTemporaryFile *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile *obj = qobject_cast<QTemporaryFile *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

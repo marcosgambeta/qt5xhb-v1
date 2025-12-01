@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SELECT)
 // QStringList extraSelectors() const
 HB_FUNC_STATIC(QFILESELECTOR_EXTRASELECTORS)
 {
-  QFileSelector *obj = (QFileSelector *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFileSelector *obj = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QFILESELECTOR_EXTRASELECTORS)
 // void setExtraSelectors( const QStringList & list )
 HB_FUNC_STATIC(QFILESELECTOR_SETEXTRASELECTORS)
 {
-  QFileSelector *obj = (QFileSelector *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFileSelector *obj = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SETEXTRASELECTORS)
 // QStringList allSelectors() const
 HB_FUNC_STATIC(QFILESELECTOR_ALLSELECTORS)
 {
-  QFileSelector *obj = (QFileSelector *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFileSelector *obj = qobject_cast<QFileSelector *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

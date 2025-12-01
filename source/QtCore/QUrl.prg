@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QURL_DELETE)
 // QString authority() const
 HB_FUNC_STATIC(QURL_AUTHORITY)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QURL_AUTHORITY)
 // void clear()
 HB_FUNC_STATIC(QURL_CLEAR)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QURL_CLEAR)
 // QString errorString() const
 HB_FUNC_STATIC(QURL_ERRORSTRING)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QURL_ERRORSTRING)
 // QString fragment() const
 HB_FUNC_STATIC(QURL_FRAGMENT)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QURL_FRAGMENT)
 // bool hasFragment() const
 HB_FUNC_STATIC(QURL_HASFRAGMENT)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QURL_HASFRAGMENT)
 // bool hasQuery() const
 HB_FUNC_STATIC(QURL_HASQUERY)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QURL_HASQUERY)
 // QString host() const
 HB_FUNC_STATIC(QURL_HOST)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QURL_HOST)
 // bool isEmpty() const
 HB_FUNC_STATIC(QURL_ISEMPTY)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QURL_ISEMPTY)
 // bool isLocalFile() const
 HB_FUNC_STATIC(QURL_ISLOCALFILE)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QURL_ISLOCALFILE)
 // bool isParentOf( const QUrl & childUrl ) const
 HB_FUNC_STATIC(QURL_ISPARENTOF)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QURL_ISPARENTOF)
 // bool isRelative() const
 HB_FUNC_STATIC(QURL_ISRELATIVE)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QURL_ISRELATIVE)
 // bool isValid() const
 HB_FUNC_STATIC(QURL_ISVALID)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QURL_ISVALID)
 // QString password() const
 HB_FUNC_STATIC(QURL_PASSWORD)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QURL_PASSWORD)
 // QString path() const
 HB_FUNC_STATIC(QURL_PATH)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QURL_PORT)
 // QUrl resolved( const QUrl & relative ) const
 HB_FUNC_STATIC(QURL_RESOLVED)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QURL_RESOLVED)
 // QString scheme() const
 HB_FUNC_STATIC(QURL_SCHEME)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QURL_SCHEME)
 // void setAuthority( const QString & authority )
 HB_FUNC_STATIC(QURL_SETAUTHORITY)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QURL_SETAUTHORITY)
 // void setFragment( const QString & fragment )
 HB_FUNC_STATIC(QURL_SETFRAGMENT)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QURL_SETFRAGMENT)
 // void setHost( const QString & host )
 HB_FUNC_STATIC(QURL_SETHOST)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QURL_SETHOST)
 // void setPassword( const QString & password )
 HB_FUNC_STATIC(QURL_SETPASSWORD)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QURL_SETPASSWORD)
 // void setPath( const QString & path )
 HB_FUNC_STATIC(QURL_SETPATH)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QURL_SETPATH)
 // void setPort( int port )
 HB_FUNC_STATIC(QURL_SETPORT)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QURL_SETPORT)
 // void setScheme( const QString & scheme )
 HB_FUNC_STATIC(QURL_SETSCHEME)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -618,7 +618,7 @@ HB_FUNC_STATIC(QURL_SETURL)
 // void setUserInfo( const QString & userInfo )
 HB_FUNC_STATIC(QURL_SETUSERINFO)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -638,7 +638,7 @@ HB_FUNC_STATIC(QURL_SETUSERINFO)
 // void setUserName( const QString & userName )
 HB_FUNC_STATIC(QURL_SETUSERNAME)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -658,7 +658,7 @@ HB_FUNC_STATIC(QURL_SETUSERNAME)
 // void swap( QUrl & other )
 HB_FUNC_STATIC(QURL_SWAP)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -678,7 +678,7 @@ HB_FUNC_STATIC(QURL_SWAP)
 // QByteArray toEncoded( QUrl::FormattingOptions options = QUrl::None ) const
 HB_FUNC_STATIC(QURL_TOENCODED)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -698,7 +698,7 @@ HB_FUNC_STATIC(QURL_TOENCODED)
 // QString toLocalFile() const
 HB_FUNC_STATIC(QURL_TOLOCALFILE)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QURL_TOLOCALFILE)
 // QString toString( QUrl::FormattingOptions options = QUrl::None ) const
 HB_FUNC_STATIC(QURL_TOSTRING)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -734,7 +734,7 @@ HB_FUNC_STATIC(QURL_TOSTRING)
 // QString topLevelDomain() const
 HB_FUNC_STATIC(QURL_TOPLEVELDOMAIN)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -752,7 +752,7 @@ HB_FUNC_STATIC(QURL_TOPLEVELDOMAIN)
 // QString userInfo() const
 HB_FUNC_STATIC(QURL_USERINFO)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -770,7 +770,7 @@ HB_FUNC_STATIC(QURL_USERINFO)
 // QString userName() const
 HB_FUNC_STATIC(QURL_USERNAME)
 {
-  QUrl *obj = (QUrl *)Qt5xHb::itemGetPtrStackSelfItem();
+  QUrl *obj = static_cast<QUrl *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

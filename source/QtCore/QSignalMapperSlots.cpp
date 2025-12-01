@@ -58,7 +58,7 @@ void QSignalMapperSlots::mapped(QWidget *arg)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSIGNALMAPPER");
-    PHB_ITEM parg = Qt5xHb::Signals_return_qobject(arg, "QWIDGET");
+    PHB_ITEM parg = Qt5xHb::Signals_return_qobject((QObject *)arg, "QWIDGET");
 
     hb_vmEvalBlockV(cb, 2, psender, parg);
 
@@ -75,7 +75,7 @@ void QSignalMapperSlots::mapped(QObject *arg)
 
   if (cb != NULL) {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSIGNALMAPPER");
-    PHB_ITEM parg = Qt5xHb::Signals_return_qobject(arg, "QOBJECT");
+    PHB_ITEM parg = Qt5xHb::Signals_return_qobject((QObject *)arg, "QOBJECT");
 
     hb_vmEvalBlockV(cb, 2, psender, parg);
 
@@ -86,7 +86,7 @@ void QSignalMapperSlots::mapped(QObject *arg)
 
 void QSignalMapperSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QSignalMapper *obj = (QSignalMapper *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSignalMapper *obj = qobject_cast<QSignalMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QSignalMapperSlots *s = QCoreApplication::instance()->findChild<QSignalMapperSlots *>();

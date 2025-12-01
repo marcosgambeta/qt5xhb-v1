@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QPAUSEANIMATION_DELETE)
 // void setDuration( int msecs )
 HB_FUNC_STATIC(QPAUSEANIMATION_SETDURATION)
 {
-  QPauseAnimation *obj = (QPauseAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPauseAnimation *obj = qobject_cast<QPauseAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QPAUSEANIMATION_SETDURATION)
 // virtual int duration() const
 HB_FUNC_STATIC(QPAUSEANIMATION_DURATION)
 {
-  QPauseAnimation *obj = (QPauseAnimation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPauseAnimation *obj = qobject_cast<QPauseAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

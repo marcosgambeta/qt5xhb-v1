@@ -49,7 +49,7 @@ RETURN
 #include <QtCore/QParallelAnimationGroup>
 #endif
 
-    // QParallelAnimationGroup( QObject * parent = 0 )
+// QParallelAnimationGroup( QObject * parent = 0 )
 HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_DELETE)
 // virtual int duration() const
 HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_DURATION)
 {
-  QParallelAnimationGroup *obj = (QParallelAnimationGroup *)Qt5xHb::itemGetPtrStackSelfItem();
+  QParallelAnimationGroup *obj = qobject_cast<QParallelAnimationGroup *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

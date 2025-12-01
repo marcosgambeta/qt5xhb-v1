@@ -84,7 +84,7 @@ void QTimeLineSlots::valueChanged(qreal value)
 
 void QTimeLineSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QTimeLine *obj = (QTimeLine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeLine *obj = qobject_cast<QTimeLine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QTimeLineSlots *s = QCoreApplication::instance()->findChild<QTimeLineSlots *>();

@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_DELETE)
 // QObject * senderObject() const
 HB_FUNC_STATIC(QSIGNALTRANSITION_SENDEROBJECT)
 {
-  QSignalTransition *obj = (QSignalTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSignalTransition *obj = static_cast<QSignalTransition *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SENDEROBJECT)
 // void setSenderObject( const QObject * sender )
 HB_FUNC_STATIC(QSIGNALTRANSITION_SETSENDEROBJECT)
 {
-  QSignalTransition *obj = (QSignalTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSignalTransition *obj = static_cast<QSignalTransition *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SETSENDEROBJECT)
 // QByteArray signal() const
 HB_FUNC_STATIC(QSIGNALTRANSITION_SIGNAL)
 {
-  QSignalTransition *obj = (QSignalTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSignalTransition *obj = static_cast<QSignalTransition *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SIGNAL)
 // void setSignal( const QByteArray & signal )
 HB_FUNC_STATIC(QSIGNALTRANSITION_SETSIGNAL)
 {
-  QSignalTransition *obj = (QSignalTransition *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSignalTransition *obj = static_cast<QSignalTransition *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

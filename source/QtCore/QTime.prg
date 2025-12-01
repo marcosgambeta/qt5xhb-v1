@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QTIME_DELETE)
 // QTime addMSecs( int ms ) const
 HB_FUNC_STATIC(QTIME_ADDMSECS)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QTIME_ADDMSECS)
 // QTime addSecs( int s ) const
 HB_FUNC_STATIC(QTIME_ADDSECS)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QTIME_ADDSECS)
 // int elapsed() const
 HB_FUNC_STATIC(QTIME_ELAPSED)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QTIME_ELAPSED)
 // int hour() const
 HB_FUNC_STATIC(QTIME_HOUR)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QTIME_HOUR)
 // bool isNull() const
 HB_FUNC_STATIC(QTIME_ISNULL)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QTIME_ISVALID)
 // int minute() const
 HB_FUNC_STATIC(QTIME_MINUTE)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QTIME_MINUTE)
 // int msec() const
 HB_FUNC_STATIC(QTIME_MSEC)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QTIME_MSEC)
 // int msecsTo( const QTime & t ) const
 HB_FUNC_STATIC(QTIME_MSECSTO)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QTIME_MSECSTO)
 // int restart()
 HB_FUNC_STATIC(QTIME_RESTART)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QTIME_RESTART)
 // int second() const
 HB_FUNC_STATIC(QTIME_SECOND)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QTIME_SECOND)
 // int secsTo( const QTime & t ) const
 HB_FUNC_STATIC(QTIME_SECSTO)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QTIME_SECSTO)
 // bool setHMS( int h, int m, int s, int ms = 0 )
 HB_FUNC_STATIC(QTIME_SETHMS)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QTIME_SETHMS)
 // void start()
 HB_FUNC_STATIC(QTIME_START)
 {
-  QTime *obj = (QTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTime *obj = static_cast<QTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

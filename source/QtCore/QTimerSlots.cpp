@@ -33,7 +33,7 @@ void QTimerSlots::timeout()
 
 void QTimerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimer *obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QTimerSlots *s = QCoreApplication::instance()->findChild<QTimerSlots *>();

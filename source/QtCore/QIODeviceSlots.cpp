@@ -80,7 +80,7 @@ void QIODeviceSlots::readyRead()
 
 void QIODeviceSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QIODeviceSlots *s = QCoreApplication::instance()->findChild<QIODeviceSlots *>();

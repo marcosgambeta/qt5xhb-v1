@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_DELETE)
 // void setPattern( const QString & pattern )
 HB_FUNC_STATIC(QSTRINGMATCHER_SETPATTERN)
 {
-  QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStringMatcher *obj = static_cast<QStringMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETPATTERN)
 // void setCaseSensitivity( Qt::CaseSensitivity cs )
 HB_FUNC_STATIC(QSTRINGMATCHER_SETCASESENSITIVITY)
 {
-  QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStringMatcher *obj = static_cast<QStringMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)
 // QString pattern() const
 HB_FUNC_STATIC(QSTRINGMATCHER_PATTERN)
 {
-  QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStringMatcher *obj = static_cast<QStringMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_PATTERN)
 // Qt::CaseSensitivity caseSensitivity() const
 HB_FUNC_STATIC(QSTRINGMATCHER_CASESENSITIVITY)
 {
-  QStringMatcher *obj = (QStringMatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QStringMatcher *obj = static_cast<QStringMatcher *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

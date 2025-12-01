@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QPOINT_DELETE)
 // bool isNull() const
 HB_FUNC_STATIC(QPOINT_ISNULL)
 {
-  QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QPOINT_ISNULL)
 // int manhattanLength() const
 HB_FUNC_STATIC(QPOINT_MANHATTANLENGTH)
 {
-  QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QPOINT_MANHATTANLENGTH)
 // void setX( int x )
 HB_FUNC_STATIC(QPOINT_SETX)
 {
-  QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QPOINT_SETX)
 // void setY( int y )
 HB_FUNC_STATIC(QPOINT_SETY)
 {
-  QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QPOINT_SETY)
 // int x() const
 HB_FUNC_STATIC(QPOINT_X)
 {
-  QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QPOINT_X)
 // int y() const
 HB_FUNC_STATIC(QPOINT_Y)
 {
-  QPoint *obj = (QPoint *)Qt5xHb::itemGetPtrStackSelfItem();
+  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

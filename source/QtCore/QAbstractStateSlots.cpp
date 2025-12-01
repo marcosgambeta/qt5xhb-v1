@@ -48,7 +48,7 @@ void QAbstractStateSlots::exited()
 
 void QAbstractStateSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractState *obj = (QAbstractState *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractState *obj = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstractStateSlots *s = QCoreApplication::instance()->findChild<QAbstractStateSlots *>();

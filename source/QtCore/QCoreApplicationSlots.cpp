@@ -33,7 +33,7 @@ void QCoreApplicationSlots::aboutToQuit()
 
 void QCoreApplicationSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCoreApplication *obj = (QCoreApplication *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCoreApplication *obj = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QCoreApplicationSlots *s = QCoreApplication::instance()->findChild<QCoreApplicationSlots *>();

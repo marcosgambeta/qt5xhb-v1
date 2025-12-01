@@ -94,7 +94,7 @@ void QItemSelectionModelSlots::currentColumnChanged(const QModelIndex &current, 
 
 void QItemSelectionModelSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QItemSelectionModel *obj = (QItemSelectionModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QItemSelectionModelSlots *s = QCoreApplication::instance()->findChild<QItemSelectionModelSlots *>();

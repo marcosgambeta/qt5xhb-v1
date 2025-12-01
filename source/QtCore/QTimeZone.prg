@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QTIMEZONE_DELETE)
 HB_FUNC_STATIC(QTIMEZONE_SWAP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QTIMEZONE_SWAP)
 HB_FUNC_STATIC(QTIMEZONE_ISVALID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QTIMEZONE_ISVALID)
 HB_FUNC_STATIC(QTIMEZONE_ID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QTIMEZONE_ID)
 HB_FUNC_STATIC(QTIMEZONE_COUNTRY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QTIMEZONE_COUNTRY)
 HB_FUNC_STATIC(QTIMEZONE_COMMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QTIMEZONE_DISPLAYNAME)
 HB_FUNC_STATIC(QTIMEZONE_ABBREVIATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QTIMEZONE_ABBREVIATION)
 HB_FUNC_STATIC(QTIMEZONE_OFFSETFROMUTC)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QTIMEZONE_OFFSETFROMUTC)
 HB_FUNC_STATIC(QTIMEZONE_STANDARDTIMEOFFSET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QTIMEZONE_STANDARDTIMEOFFSET)
 HB_FUNC_STATIC(QTIMEZONE_DAYLIGHTTIMEOFFSET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QTIMEZONE_DAYLIGHTTIMEOFFSET)
 HB_FUNC_STATIC(QTIMEZONE_HASDAYLIGHTTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QTIMEZONE_HASDAYLIGHTTIME)
 HB_FUNC_STATIC(QTIMEZONE_ISDAYLIGHTTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QTIMEZONE_ISDAYLIGHTTIME)
 HB_FUNC_STATIC(QTIMEZONE_HASTRANSITIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QTimeZone *obj = (QTimeZone *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimeZone *obj = static_cast<QTimeZone *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

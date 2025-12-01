@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
 // bool hasFailure() const
 HB_FUNC_STATIC(QTEXTENCODER_HASFAILURE)
 {
-  QTextEncoder *obj = (QTextEncoder *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTextEncoder *obj = static_cast<QTextEncoder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

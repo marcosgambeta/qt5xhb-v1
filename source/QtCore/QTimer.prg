@@ -59,7 +59,7 @@ RETURN
 #include <QtCore/QTimer>
 #endif
 
-    // QTimer( QObject * parent = 0 )
+// QTimer( QObject * parent = 0 )
 HB_FUNC_STATIC(QTIMER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QTIMER_DELETE)
 // int interval() const
 HB_FUNC_STATIC(QTIMER_INTERVAL)
 {
-  QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimer *obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QTIMER_INTERVAL)
 // bool isActive() const
 HB_FUNC_STATIC(QTIMER_ISACTIVE)
 {
-  QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimer *obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QTIMER_ISACTIVE)
 // bool isSingleShot() const
 HB_FUNC_STATIC(QTIMER_ISSINGLESHOT)
 {
-  QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimer *obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QTIMER_ISSINGLESHOT)
 // void setInterval( int msec )
 HB_FUNC_STATIC(QTIMER_SETINTERVAL)
 {
-  QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimer *obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QTIMER_SETINTERVAL)
 // void setSingleShot( bool singleShot )
 HB_FUNC_STATIC(QTIMER_SETSINGLESHOT)
 {
-  QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimer *obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QTIMER_SETSINGLESHOT)
 // int timerId() const
 HB_FUNC_STATIC(QTIMER_TIMERID)
 {
-  QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimer *obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QTIMER_START)
 // void stop()
 HB_FUNC_STATIC(QTIMER_STOP)
 {
-  QTimer *obj = (QTimer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QTimer *obj = qobject_cast<QTimer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

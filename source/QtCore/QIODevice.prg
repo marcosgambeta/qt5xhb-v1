@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QIODEVICE_DELETE)
 // virtual bool atEnd() const
 HB_FUNC_STATIC(QIODEVICE_ATEND)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QIODEVICE_ATEND)
 // virtual qint64 bytesAvailable() const
 HB_FUNC_STATIC(QIODEVICE_BYTESAVAILABLE)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QIODEVICE_BYTESAVAILABLE)
 // virtual qint64 bytesToWrite() const
 HB_FUNC_STATIC(QIODEVICE_BYTESTOWRITE)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QIODEVICE_BYTESTOWRITE)
 // virtual bool canReadLine() const
 HB_FUNC_STATIC(QIODEVICE_CANREADLINE)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QIODEVICE_CANREADLINE)
 // virtual void close()
 HB_FUNC_STATIC(QIODEVICE_CLOSE)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QIODEVICE_CLOSE)
 // QString errorString() const
 HB_FUNC_STATIC(QIODEVICE_ERRORSTRING)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QIODEVICE_ERRORSTRING)
 // bool getChar( char * c )
 HB_FUNC_STATIC(QIODEVICE_GETCHAR)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QIODEVICE_GETCHAR)
 // bool isOpen() const
 HB_FUNC_STATIC(QIODEVICE_ISOPEN)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QIODEVICE_ISOPEN)
 // bool isReadable() const
 HB_FUNC_STATIC(QIODEVICE_ISREADABLE)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QIODEVICE_ISREADABLE)
 // virtual bool isSequential() const
 HB_FUNC_STATIC(QIODEVICE_ISSEQUENTIAL)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QIODEVICE_ISSEQUENTIAL)
 // bool isTextModeEnabled() const
 HB_FUNC_STATIC(QIODEVICE_ISTEXTMODEENABLED)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QIODEVICE_ISTEXTMODEENABLED)
 // bool isWritable() const
 HB_FUNC_STATIC(QIODEVICE_ISWRITABLE)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QIODEVICE_ISWRITABLE)
 // virtual bool open( QIODevice::OpenMode mode )
 HB_FUNC_STATIC(QIODEVICE_OPEN)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QIODEVICE_OPEN)
 // QIODevice::OpenMode openMode() const
 HB_FUNC_STATIC(QIODEVICE_OPENMODE)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QIODEVICE_PEEK)
 // virtual qint64 pos() const
 HB_FUNC_STATIC(QIODEVICE_POS)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QIODEVICE_POS)
 // bool putChar( char c )
 HB_FUNC_STATIC(QIODEVICE_PUTCHAR)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QIODEVICE_READ)
 // QByteArray readAll()
 HB_FUNC_STATIC(QIODEVICE_READALL)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QIODEVICE_READLINE)
 // virtual bool reset()
 HB_FUNC_STATIC(QIODEVICE_RESET)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -494,7 +494,7 @@ HB_FUNC_STATIC(QIODEVICE_RESET)
 // virtual bool seek( qint64 pos )
 HB_FUNC_STATIC(QIODEVICE_SEEK)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QIODEVICE_SEEK)
 // void setTextModeEnabled( bool enabled )
 HB_FUNC_STATIC(QIODEVICE_SETTEXTMODEENABLED)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(QIODEVICE_SETTEXTMODEENABLED)
 // virtual qint64 size() const
 HB_FUNC_STATIC(QIODEVICE_SIZE)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -550,7 +550,7 @@ HB_FUNC_STATIC(QIODEVICE_SIZE)
 // void ungetChar( char c )
 HB_FUNC_STATIC(QIODEVICE_UNGETCHAR)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -570,7 +570,7 @@ HB_FUNC_STATIC(QIODEVICE_UNGETCHAR)
 // virtual bool waitForBytesWritten( int msecs )
 HB_FUNC_STATIC(QIODEVICE_WAITFORBYTESWRITTEN)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QIODEVICE_WAITFORBYTESWRITTEN)
 // virtual bool waitForReadyRead( int msecs )
 HB_FUNC_STATIC(QIODEVICE_WAITFORREADYREAD)
 {
-  QIODevice *obj = (QIODevice *)Qt5xHb::itemGetPtrStackSelfItem();
+  QIODevice *obj = qobject_cast<QIODevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

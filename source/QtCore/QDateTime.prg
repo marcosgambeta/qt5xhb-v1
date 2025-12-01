@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QDATETIME_DELETE)
 // QDateTime addDays( int ndays ) const
 HB_FUNC_STATIC(QDATETIME_ADDDAYS)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QDATETIME_ADDDAYS)
 // QDateTime addMSecs( qint64 msecs ) const
 HB_FUNC_STATIC(QDATETIME_ADDMSECS)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QDATETIME_ADDMSECS)
 // QDateTime addMonths( int nmonths ) const
 HB_FUNC_STATIC(QDATETIME_ADDMONTHS)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QDATETIME_ADDMONTHS)
 // QDateTime addSecs( int s ) const
 HB_FUNC_STATIC(QDATETIME_ADDSECS)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QDATETIME_ADDSECS)
 // QDateTime addYears( int nyears ) const
 HB_FUNC_STATIC(QDATETIME_ADDYEARS)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QDATETIME_ADDYEARS)
 // QDate date() const
 HB_FUNC_STATIC(QDATETIME_DATE)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QDATETIME_DATE)
 // int daysTo( const QDateTime & other ) const
 HB_FUNC_STATIC(QDATETIME_DAYSTO)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QDATETIME_DAYSTO)
 // bool isNull() const
 HB_FUNC_STATIC(QDATETIME_ISNULL)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QDATETIME_ISNULL)
 // bool isValid() const
 HB_FUNC_STATIC(QDATETIME_ISVALID)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QDATETIME_ISVALID)
 // qint64 msecsTo( const QDateTime & other ) const
 HB_FUNC_STATIC(QDATETIME_MSECSTO)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QDATETIME_MSECSTO)
 // int secsTo( const QDateTime & other ) const
 HB_FUNC_STATIC(QDATETIME_SECSTO)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QDATETIME_SECSTO)
 // void setDate( const QDate & date )
 HB_FUNC_STATIC(QDATETIME_SETDATE)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QDATETIME_SETDATE)
 // void setMSecsSinceEpoch( qint64 msecs )
 HB_FUNC_STATIC(QDATETIME_SETMSECSSINCEEPOCH)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QDATETIME_SETMSECSSINCEEPOCH)
 // void setTime( const QTime & time )
 HB_FUNC_STATIC(QDATETIME_SETTIME)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QDATETIME_SETTIME)
 // void setTimeSpec( Qt::TimeSpec spec )
 HB_FUNC_STATIC(QDATETIME_SETTIMESPEC)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QDATETIME_SETTIMESPEC)
 // void setTime_t( uint seconds )
 HB_FUNC_STATIC(QDATETIME_SETTIME_T)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QDATETIME_SETTIME_T)
 // QTime time() const
 HB_FUNC_STATIC(QDATETIME_TIME)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QDATETIME_TIME)
 // Qt::TimeSpec timeSpec() const
 HB_FUNC_STATIC(QDATETIME_TIMESPEC)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QDATETIME_TIMESPEC)
 // QDateTime toLocalTime() const
 HB_FUNC_STATIC(QDATETIME_TOLOCALTIME)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QDATETIME_TOLOCALTIME)
 // qint64 toMSecsSinceEpoch() const
 HB_FUNC_STATIC(QDATETIME_TOMSECSSINCEEPOCH)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QDATETIME_TOSTRING)
 // QDateTime toTimeSpec( Qt::TimeSpec specification ) const
 HB_FUNC_STATIC(QDATETIME_TOTIMESPEC)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QDATETIME_TOTIMESPEC)
 // uint toTime_t() const
 HB_FUNC_STATIC(QDATETIME_TOTIME_T)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -565,7 +565,7 @@ HB_FUNC_STATIC(QDATETIME_TOTIME_T)
 // QDateTime toUTC() const
 HB_FUNC_STATIC(QDATETIME_TOUTC)
 {
-  QDateTime *obj = (QDateTime *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDateTime *obj = static_cast<QDateTime *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
