@@ -61,36 +61,28 @@ RETURN
 #include <QtDBus/QDBusSignature>
 #endif
 
-    /*
-    QDBusSignature()
-    */
+// QDBusSignature()
 HB_FUNC_STATIC(QDBUSSIGNATURE_NEW1)
 {
   QDBusSignature *obj = new QDBusSignature();
   Qt5xHb::returnNewObject(obj, true);
 }
 
-/*
-QDBusSignature( const char * signature )
-*/
+// QDBusSignature( const char * signature )
 HB_FUNC_STATIC(QDBUSSIGNATURE_NEW2)
 {
   QDBusSignature *obj = new QDBusSignature(PCONSTCHAR(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
-/*
-QDBusSignature( QLatin1String signature )
-*/
+// QDBusSignature( QLatin1String signature )
 HB_FUNC_STATIC(QDBUSSIGNATURE_NEW3)
 {
   QDBusSignature *obj = new QDBusSignature(*PQLATIN1STRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
-/*
-QDBusSignature( const QString &signature )
-*/
+// QDBusSignature( const QString & signature )
 HB_FUNC_STATIC(QDBUSSIGNATURE_NEW4)
 {
   QDBusSignature *obj = new QDBusSignature(PQSTRING(1));
@@ -114,7 +106,7 @@ HB_FUNC(QDBUSSIGNATURE_NEW)
 
 HB_FUNC_STATIC(QDBUSSIGNATURE_DELETE)
 {
-  QDBusSignature *obj = (QDBusSignature *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusSignature *obj = static_cast<QDBusSignature *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -127,12 +119,10 @@ HB_FUNC_STATIC(QDBUSSIGNATURE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString signature() const
-*/
+// QString signature() const
 HB_FUNC_STATIC(QDBUSSIGNATURE_SIGNATURE)
 {
-  QDBusSignature *obj = (QDBusSignature *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusSignature *obj = static_cast<QDBusSignature *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,12 +137,10 @@ HB_FUNC_STATIC(QDBUSSIGNATURE_SIGNATURE)
   }
 }
 
-/*
-void setSignature( const QString &signature )
-*/
+// void setSignature( const QString & signature )
 HB_FUNC_STATIC(QDBUSSIGNATURE_SETSIGNATURE)
 {
-  QDBusSignature *obj = (QDBusSignature *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusSignature *obj = static_cast<QDBusSignature *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -35,7 +35,7 @@ void QDBusServerSlots::newConnection(const QDBusConnection &connection)
 
 void QDBusServerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDBusServer *obj = (QDBusServer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusServer *obj = qobject_cast<QDBusServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QDBusServerSlots *s = QCoreApplication::instance()->findChild<QDBusServerSlots *>();

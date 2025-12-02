@@ -74,7 +74,7 @@ void QDBusServiceWatcherSlots::serviceOwnerChanged(const QString &service, const
 
 void QDBusServiceWatcherSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDBusServiceWatcher *obj = (QDBusServiceWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusServiceWatcher *obj = qobject_cast<QDBusServiceWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QDBusServiceWatcherSlots *s = QCoreApplication::instance()->findChild<QDBusServiceWatcherSlots *>();

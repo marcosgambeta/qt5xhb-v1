@@ -93,7 +93,7 @@ void QDBusConnectionInterfaceSlots::callWithCallbackFailed(const QDBusError &err
 
 void QDBusConnectionInterfaceSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDBusConnectionInterface *obj = (QDBusConnectionInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusConnectionInterface *obj = qobject_cast<QDBusConnectionInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QDBusConnectionInterfaceSlots *s = QCoreApplication::instance()->findChild<QDBusConnectionInterfaceSlots *>();

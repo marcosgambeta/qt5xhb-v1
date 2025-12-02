@@ -60,36 +60,28 @@ RETURN
 #include <QtDBus/QDBusObjectPath>
 #endif
 
-    /*
-    QDBusObjectPath()
-    */
+// QDBusObjectPath()
 HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW1)
 {
   QDBusObjectPath *obj = new QDBusObjectPath();
   Qt5xHb::returnNewObject(obj, true);
 }
 
-/*
-QDBusObjectPath( const char * path )
-*/
+// QDBusObjectPath( const char * path )
 HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW2)
 {
   QDBusObjectPath *obj = new QDBusObjectPath(PCONSTCHAR(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
-/*
-QDBusObjectPath( QLatin1String path )
-*/
+// QDBusObjectPath( QLatin1String path )
 HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW3)
 {
   QDBusObjectPath *obj = new QDBusObjectPath(*PQLATIN1STRING(1));
   Qt5xHb::returnNewObject(obj, true);
 }
 
-/*
-QDBusObjectPath( const QString &path )
-*/
+// QDBusObjectPath( const QString & path )
 HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW4)
 {
   QDBusObjectPath *obj = new QDBusObjectPath(PQSTRING(1));
@@ -113,7 +105,7 @@ HB_FUNC(QDBUSOBJECTPATH_NEW)
 
 HB_FUNC_STATIC(QDBUSOBJECTPATH_DELETE)
 {
-  QDBusObjectPath *obj = (QDBusObjectPath *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusObjectPath *obj = static_cast<QDBusObjectPath *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -126,12 +118,10 @@ HB_FUNC_STATIC(QDBUSOBJECTPATH_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString path() const
-*/
+// QString path() const
 HB_FUNC_STATIC(QDBUSOBJECTPATH_PATH)
 {
-  QDBusObjectPath *obj = (QDBusObjectPath *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusObjectPath *obj = static_cast<QDBusObjectPath *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,12 +136,10 @@ HB_FUNC_STATIC(QDBUSOBJECTPATH_PATH)
   }
 }
 
-/*
-void setPath( const QString &path )
-*/
+// void setPath( const QString & path )
 HB_FUNC_STATIC(QDBUSOBJECTPATH_SETPATH)
 {
-  QDBusObjectPath *obj = (QDBusObjectPath *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusObjectPath *obj = static_cast<QDBusObjectPath *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

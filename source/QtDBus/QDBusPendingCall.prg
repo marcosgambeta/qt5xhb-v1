@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDBUSERROR
-REQUEST QDBUSMESSAGE
+REQUEST QDBusError
+REQUEST QDBusMessage
 #endif
 
 CLASS QDBusPendingCall
@@ -66,9 +66,7 @@ RETURN
 #include <QtDBus/QDBusPendingCall>
 #endif
 
-    /*
-    QDBusPendingCall( const QDBusPendingCall &other )
-    */
+// QDBusPendingCall( const QDBusPendingCall & other )
 HB_FUNC_STATIC(QDBUSPENDINGCALL_NEW)
 {
   if (ISNUMPAR(1) && ISQDBUSPENDINGCALL(1)) {
@@ -81,7 +79,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_NEW)
 
 HB_FUNC_STATIC(QDBUSPENDINGCALL_DELETE)
 {
-  QDBusPendingCall *obj = (QDBusPendingCall *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCall *obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -94,12 +92,10 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap( QDBusPendingCall &other )
-*/
+// void swap( QDBusPendingCall & other )
 HB_FUNC_STATIC(QDBUSPENDINGCALL_SWAP)
 {
-  QDBusPendingCall *obj = (QDBusPendingCall *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCall *obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,13 +112,11 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isFinished() const
-*/
+// bool isFinished() const
 HB_FUNC_STATIC(QDBUSPENDINGCALL_ISFINISHED)
 {
 #ifndef Q_QDOC
-  QDBusPendingCall *obj = (QDBusPendingCall *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCall *obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,14 +131,11 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISFINISHED)
   }
 #endif
 }
-
-/*
-void waitForFinished()
-*/
+// void waitForFinished()
 HB_FUNC_STATIC(QDBUSPENDINGCALL_WAITFORFINISHED)
 {
 #ifndef Q_QDOC
-  QDBusPendingCall *obj = (QDBusPendingCall *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCall *obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,14 +152,11 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_WAITFORFINISHED)
   hb_itemReturn(hb_stackSelfItem());
 #endif
 }
-
-/*
-bool isError() const
-*/
+// bool isError() const
 HB_FUNC_STATIC(QDBUSPENDINGCALL_ISERROR)
 {
 #ifndef Q_QDOC
-  QDBusPendingCall *obj = (QDBusPendingCall *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCall *obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,14 +171,11 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISERROR)
   }
 #endif
 }
-
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QDBUSPENDINGCALL_ISVALID)
 {
 #ifndef Q_QDOC
-  QDBusPendingCall *obj = (QDBusPendingCall *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCall *obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,14 +190,11 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ISVALID)
   }
 #endif
 }
-
-/*
-QDBusError error() const
-*/
+// QDBusError error() const
 HB_FUNC_STATIC(QDBUSPENDINGCALL_ERROR)
 {
 #ifndef Q_QDOC
-  QDBusPendingCall *obj = (QDBusPendingCall *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCall *obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,14 +210,11 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_ERROR)
   }
 #endif
 }
-
-/*
-QDBusMessage reply() const
-*/
+// QDBusMessage reply() const
 HB_FUNC_STATIC(QDBUSPENDINGCALL_REPLY)
 {
 #ifndef Q_QDOC
-  QDBusPendingCall *obj = (QDBusPendingCall *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCall *obj = static_cast<QDBusPendingCall *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -251,10 +230,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_REPLY)
   }
 #endif
 }
-
-/*
-static QDBusPendingCall fromError( const QDBusError &error )
-*/
+// static QDBusPendingCall fromError( const QDBusError & error )
 HB_FUNC_STATIC(QDBUSPENDINGCALL_FROMERROR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,9 +245,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALL_FROMERROR)
 #endif
 }
 
-/*
-static QDBusPendingCall fromCompletedCall( const QDBusMessage &message )
-*/
+// static QDBusPendingCall fromCompletedCall( const QDBusMessage & message )
 HB_FUNC_STATIC(QDBUSPENDINGCALL_FROMCOMPLETEDCALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDBUSERROR
+REQUEST QDBusError
 #endif
 
 CLASS QDBusServer INHERIT QObject
@@ -58,17 +58,13 @@ RETURN
 
 HB_FUNC_STATIC(QDBUSSERVER_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QDBusServer( const QString &address, QObject * parent = 0 )
-    */
-    QDBusServer *obj = new QDBusServer(PQSTRING(1), OPQOBJECT(2, 0));
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+    // QDBusServer( const QString & address, QObject * parent = NULL )
+    QDBusServer *obj = new QDBusServer(PQSTRING(1), OPQOBJECT(2, NULL));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QDBusServer( QObject * parent = 0 )
-    */
-    QDBusServer *obj = new QDBusServer(OPQOBJECT(1, 0));
+  } else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
+    // QDBusServer( QObject * parent = NULL )
+    QDBusServer *obj = new QDBusServer(OPQOBJECT(1, NULL));
     Qt5xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -77,7 +73,7 @@ HB_FUNC_STATIC(QDBUSSERVER_NEW)
 
 HB_FUNC_STATIC(QDBUSSERVER_DELETE)
 {
-  QDBusServer *obj = (QDBusServer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusServer *obj = qobject_cast<QDBusServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -92,12 +88,10 @@ HB_FUNC_STATIC(QDBUSSERVER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isConnected() const
-*/
+// bool isConnected() const
 HB_FUNC_STATIC(QDBUSSERVER_ISCONNECTED)
 {
-  QDBusServer *obj = (QDBusServer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusServer *obj = qobject_cast<QDBusServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,12 +106,10 @@ HB_FUNC_STATIC(QDBUSSERVER_ISCONNECTED)
   }
 }
 
-/*
-QDBusError lastError() const
-*/
+// QDBusError lastError() const
 HB_FUNC_STATIC(QDBUSSERVER_LASTERROR)
 {
-  QDBusServer *obj = (QDBusServer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusServer *obj = qobject_cast<QDBusServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,12 +125,10 @@ HB_FUNC_STATIC(QDBUSSERVER_LASTERROR)
   }
 }
 
-/*
-QString address() const
-*/
+// QString address() const
 HB_FUNC_STATIC(QDBUSSERVER_ADDRESS)
 {
-  QDBusServer *obj = (QDBusServer *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusServer *obj = qobject_cast<QDBusServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -155,9 +145,11 @@ HB_FUNC_STATIC(QDBUSSERVER_ADDRESS)
 
 void QDBusServerSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDBusServerSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDBUSSERVER_ONNEWCONNECTION)
 {
-  QDBusServerSlots_connect_signal("newConnection(QDBusConnection)", "newConnection(QDBusConnection)");
+  CONNECT_SIGNAL("newConnection(QDBusConnection)");
 }
 
 #pragma ENDDUMP

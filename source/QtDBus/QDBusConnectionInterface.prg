@@ -52,26 +52,26 @@ RETURN
 
     void QDBusConnectionInterfaceSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDBusConnectionInterfaceSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED)
 {
-  QDBusConnectionInterfaceSlots_connect_signal("serviceRegistered(QString)", "serviceRegistered(QString)");
+  CONNECT_SIGNAL("serviceRegistered(QString)");
 }
 
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED)
 {
-  QDBusConnectionInterfaceSlots_connect_signal("serviceUnregistered(QString)", "serviceUnregistered(QString)");
+  CONNECT_SIGNAL("serviceUnregistered(QString)");
 }
 
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED)
 {
-  QDBusConnectionInterfaceSlots_connect_signal("serviceOwnerChanged(QString,QString,QString)",
-                                               "serviceOwnerChanged(QString,QString,QString)");
+  CONNECT_SIGNAL("serviceOwnerChanged(QString,QString,QString)");
 }
 
 HB_FUNC_STATIC(QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED)
 {
-  QDBusConnectionInterfaceSlots_connect_signal("callWithCallbackFailed(QDBusError,QDBusMessage)",
-                                               "callWithCallbackFailed(QDBusError,QDBusMessage)");
+  CONNECT_SIGNAL("callWithCallbackFailed(QDBusError,QDBusMessage)");
 }
 
 #pragma ENDDUMP

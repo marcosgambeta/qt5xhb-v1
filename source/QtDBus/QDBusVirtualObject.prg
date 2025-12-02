@@ -15,6 +15,8 @@
 
 CLASS QDBusVirtualObject INHERIT QObject
 
+   METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -44,5 +46,23 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QtDBus/QDBusVirtualObject>
 #endif
+
+// virtual ~QDBusVirtualObject()
+HB_FUNC_STATIC(QDBUSVIRTUALOBJECT_DELETE)
+{
+  QDBusVirtualObject *obj = qobject_cast<QDBusVirtualObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+
+  if (obj != NULL) {
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
+    delete obj;
+    obj = NULL;
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr);
+    hb_itemRelease(ptr);
+  }
+
+  hb_itemReturn(hb_stackSelfItem());
+}
 
 #pragma ENDDUMP

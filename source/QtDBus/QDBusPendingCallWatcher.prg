@@ -52,9 +52,7 @@ RETURN
 #include <QtDBus/QDBusPendingCallWatcher>
 #endif
 
-    /*
-    QDBusPendingCallWatcher( const QDBusPendingCall &call, QObject * parent = 0 )
-    */
+// QDBusPendingCallWatcher( const QDBusPendingCall & call, QObject * parent = 0 )
 HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQDBUSPENDINGCALL(1) && ISQOBJECTORNIL(2)) {
@@ -67,7 +65,7 @@ HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_NEW)
 
 HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_DELETE)
 {
-  QDBusPendingCallWatcher *obj = (QDBusPendingCallWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCallWatcher *obj = qobject_cast<QDBusPendingCallWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -82,12 +80,10 @@ HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isFinished() const
-*/
+// bool isFinished() const
 HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_ISFINISHED)
 {
-  QDBusPendingCallWatcher *obj = (QDBusPendingCallWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCallWatcher *obj = qobject_cast<QDBusPendingCallWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,12 +98,10 @@ HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_ISFINISHED)
   }
 }
 
-/*
-void waitForFinished()
-*/
+// void waitForFinished()
 HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_WAITFORFINISHED)
 {
-  QDBusPendingCallWatcher *obj = (QDBusPendingCallWatcher *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusPendingCallWatcher *obj = qobject_cast<QDBusPendingCallWatcher *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,10 +120,11 @@ HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_WAITFORFINISHED)
 
 void QDBusPendingCallWatcherSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDBusPendingCallWatcherSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDBUSPENDINGCALLWATCHER_ONFINISHED)
 {
-  QDBusPendingCallWatcherSlots_connect_signal("finished(QDBusPendingCallWatcher*)",
-                                              "finished(QDBusPendingCallWatcher*)");
+  CONNECT_SIGNAL("finished(QDBusPendingCallWatcher*)");
 }
 
 #pragma ENDDUMP

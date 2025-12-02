@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMETAOBJECT
+REQUEST QMetaObject
 #endif
 
 CLASS QDBusInterface INHERIT QDBusAbstractInterface
@@ -51,14 +51,12 @@ RETURN
 #include <QtDBus/QDBusInterface>
 #endif
 
-    /*
-    QDBusInterface( const QString &service, const QString &path, const QString &interface = QString(), const
-    QDBusConnection &connection = QDBusConnection::sessionBus(), QObject * parent = 0 )
-    */
+// QDBusInterface( const QString & service, const QString & path, const QString & interface = QString(), const
+// QDBusConnection & connection = QDBusConnection::sessionBus(), QObject * parent = 0 )
 HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
 {
-  if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3) &&
-      ISQDBUSCONNECTIONORNIL(4) && ISQOBJECTORNIL(5)) {
+  if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3) && ISQDBUSCONNECTIONORNIL(4) &&
+      ISQOBJECTORNIL(5)) {
     QDBusInterface *obj = new QDBusInterface(
         PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString()),
         HB_ISNIL(4) ? QDBusConnection::sessionBus() : *(QDBusConnection *)Qt5xHb::itemGetPtr(4), OPQOBJECT(5, 0));
@@ -70,7 +68,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
 
 HB_FUNC_STATIC(QDBUSINTERFACE_DELETE)
 {
-  QDBusInterface *obj = (QDBusInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusInterface *obj = qobject_cast<QDBusInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -85,12 +83,10 @@ HB_FUNC_STATIC(QDBUSINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual const QMetaObject * metaObject() const
-*/
+// virtual const QMetaObject * metaObject() const
 HB_FUNC_STATIC(QDBUSINTERFACE_METAOBJECT)
 {
-  QDBusInterface *obj = (QDBusInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusInterface *obj = qobject_cast<QDBusInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,12 +102,10 @@ HB_FUNC_STATIC(QDBUSINTERFACE_METAOBJECT)
   }
 }
 
-/*
-virtual void * qt_metacast( const char * )
-*/
+// virtual void * qt_metacast( const char * )
 HB_FUNC_STATIC(QDBUSINTERFACE_QT_METACAST)
 {
-  QDBusInterface *obj = (QDBusInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusInterface *obj = qobject_cast<QDBusInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,5 +119,7 @@ HB_FUNC_STATIC(QDBUSINTERFACE_QT_METACAST)
 #endif
   }
 }
+
+// virtual int qt_metacall(QMetaObject::Call, int, void **)
 
 #pragma ENDDUMP

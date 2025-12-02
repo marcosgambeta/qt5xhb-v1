@@ -63,27 +63,19 @@ RETURN
 HB_FUNC_STATIC(QDBUSERROR_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDBusError()
-    */
+    // QDBusError()
     QDBusError *obj = new QDBusError();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDBUSMESSAGE(1)) {
-    /*
-    QDBusError( const QDBusMessage &msg )
-    */
+    // QDBusError( const QDBusMessage & msg )
     QDBusError *obj = new QDBusError(*PQDBUSMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
-    /*
-    QDBusError( QDBusError::ErrorType error, const QString &message )
-    */
+    // QDBusError( QDBusError::ErrorType error, const QString & message )
     QDBusError *obj = new QDBusError((QDBusError::ErrorType)hb_parni(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDBUSERROR(1)) {
-    /*
-    QDBusError( const QDBusError &other )
-    */
+    // QDBusError( const QDBusError & other )
     QDBusError *obj = new QDBusError(*PQDBUSERROR(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -93,7 +85,7 @@ HB_FUNC_STATIC(QDBUSERROR_NEW)
 
 HB_FUNC_STATIC(QDBUSERROR_DELETE)
 {
-  QDBusError *obj = (QDBusError *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusError *obj = static_cast<QDBusError *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -106,12 +98,10 @@ HB_FUNC_STATIC(QDBUSERROR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDBusError::ErrorType type() const
-*/
+// QDBusError::ErrorType type() const
 HB_FUNC_STATIC(QDBUSERROR_TYPE)
 {
-  QDBusError *obj = (QDBusError *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusError *obj = static_cast<QDBusError *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,12 +116,10 @@ HB_FUNC_STATIC(QDBUSERROR_TYPE)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QDBUSERROR_NAME)
 {
-  QDBusError *obj = (QDBusError *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusError *obj = static_cast<QDBusError *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,12 +134,10 @@ HB_FUNC_STATIC(QDBUSERROR_NAME)
   }
 }
 
-/*
-QString message() const
-*/
+// QString message() const
 HB_FUNC_STATIC(QDBUSERROR_MESSAGE)
 {
-  QDBusError *obj = (QDBusError *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusError *obj = static_cast<QDBusError *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,12 +152,10 @@ HB_FUNC_STATIC(QDBUSERROR_MESSAGE)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QDBUSERROR_ISVALID)
 {
-  QDBusError *obj = (QDBusError *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDBusError *obj = static_cast<QDBusError *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,9 +170,7 @@ HB_FUNC_STATIC(QDBUSERROR_ISVALID)
   }
 }
 
-/*
-static QString errorString( QDBusError::ErrorType error )
-*/
+// static QString errorString( QDBusError::ErrorType error )
 HB_FUNC_STATIC(QDBUSERROR_ERRORSTRING)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
