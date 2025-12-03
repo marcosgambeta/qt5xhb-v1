@@ -204,7 +204,7 @@ void QGamepadManagerSlots::gamepadDisconnected(int deviceId)
 void QGamepadManagerSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepadManager *obj = (QGamepadManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  QGamepadManager *obj = qobject_cast<QGamepadManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QGamepadManagerSlots *s = QCoreApplication::instance()->findChild<QGamepadManagerSlots *>();

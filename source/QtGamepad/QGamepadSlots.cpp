@@ -494,7 +494,7 @@ void QGamepadSlots::nameChanged(QString value)
 void QGamepadSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = (QGamepad *)Qt5xHb::itemGetPtrStackSelfItem();
+  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QGamepadSlots *s = QCoreApplication::instance()->findChild<QGamepadSlots *>();

@@ -380,7 +380,7 @@ void QGamepadKeyNavigationSlots::buttonR3KeyChanged(Qt::Key key)
 void QGamepadKeyNavigationSlots_connect_signal(const QString &signal, const QString &slot)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepadKeyNavigation *obj = (QGamepadKeyNavigation *)Qt5xHb::itemGetPtrStackSelfItem();
+  QGamepadKeyNavigation *obj = qobject_cast<QGamepadKeyNavigation *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QGamepadKeyNavigationSlots *s = QCoreApplication::instance()->findChild<QGamepadKeyNavigationSlots *>();
