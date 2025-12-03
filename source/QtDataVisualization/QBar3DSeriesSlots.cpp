@@ -69,7 +69,7 @@ void QBar3DSeriesSlots::selectedBarChanged(const QPoint &position)
 
 void QBar3DSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QBar3DSeries *obj = (QBar3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBar3DSeries *obj = qobject_cast<QBar3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QBar3DSeriesSlots *s = QCoreApplication::instance()->findChild<QBar3DSeriesSlots *>();

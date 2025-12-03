@@ -171,7 +171,7 @@ void QCustom3DItemSlots::visibleChanged(bool visible)
 
 void QCustom3DItemSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCustom3DItem *obj = (QCustom3DItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCustom3DItem *obj = qobject_cast<QCustom3DItem *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QCustom3DItemSlots *s = QCoreApplication::instance()->findChild<QCustom3DItemSlots *>();

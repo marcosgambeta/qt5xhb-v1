@@ -171,7 +171,7 @@ void Q3DCameraSlots::zoomLevelChanged(float zoomLevel)
 
 void Q3DCameraSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  Q3DCamera *obj = (Q3DCamera *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Q3DCameraSlots *s = QCoreApplication::instance()->findChild<Q3DCameraSlots *>();

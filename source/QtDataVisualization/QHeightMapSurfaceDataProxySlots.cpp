@@ -120,7 +120,7 @@ void QHeightMapSurfaceDataProxySlots::minZValueChanged(float value)
 
 void QHeightMapSurfaceDataProxySlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHeightMapSurfaceDataProxy *obj = (QHeightMapSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHeightMapSurfaceDataProxy *obj = qobject_cast<QHeightMapSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QHeightMapSurfaceDataProxySlots *s = QCoreApplication::instance()->findChild<QHeightMapSurfaceDataProxySlots *>();

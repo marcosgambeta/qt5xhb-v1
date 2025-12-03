@@ -188,7 +188,7 @@ void Q3DSceneSlots::viewportChanged(const QRect &viewport)
 
 void Q3DSceneSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  Q3DScene *obj = (Q3DScene *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DScene *obj = qobject_cast<Q3DScene *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Q3DSceneSlots *s = QCoreApplication::instance()->findChild<Q3DSceneSlots *>();

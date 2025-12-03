@@ -188,7 +188,7 @@ void QAbstract3DAxisSlots::titleVisibilityChanged(bool visible)
 
 void QAbstract3DAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstract3DAxisSlots *s = QCoreApplication::instance()->findChild<QAbstract3DAxisSlots *>();

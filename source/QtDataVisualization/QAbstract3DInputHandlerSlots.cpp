@@ -69,7 +69,7 @@ void QAbstract3DInputHandlerSlots::sceneChanged(Q3DScene *scene)
 
 void QAbstract3DInputHandlerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstract3DInputHandler *obj = (QAbstract3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstract3DInputHandlerSlots *s = QCoreApplication::instance()->findChild<QAbstract3DInputHandlerSlots *>();

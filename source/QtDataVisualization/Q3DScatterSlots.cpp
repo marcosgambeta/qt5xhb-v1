@@ -86,7 +86,7 @@ void Q3DScatterSlots::selectedSeriesChanged(QScatter3DSeries *series)
 
 void Q3DScatterSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  Q3DScatter *obj = (Q3DScatter *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Q3DScatterSlots *s = QCoreApplication::instance()->findChild<Q3DScatterSlots *>();

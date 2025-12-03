@@ -18,7 +18,7 @@ QValue3DAxisSlots::~QValue3DAxisSlots()
 
 void QValue3DAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QValue3DAxisSlots *s = QCoreApplication::instance()->findChild<QValue3DAxisSlots *>();

@@ -192,7 +192,7 @@ void QBarDataProxySlots::seriesChanged(QBar3DSeries *series)
 
 void QBarDataProxySlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QBarDataProxy *obj = (QBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QBarDataProxySlots *s = QCoreApplication::instance()->findChild<QBarDataProxySlots *>();

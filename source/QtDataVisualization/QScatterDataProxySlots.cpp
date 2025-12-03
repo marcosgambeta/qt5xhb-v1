@@ -143,7 +143,7 @@ void QScatterDataProxySlots::seriesChanged(QScatter3DSeries *series)
 
 void QScatterDataProxySlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QScatterDataProxy *obj = (QScatterDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataProxy *obj = qobject_cast<QScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QScatterDataProxySlots *s = QCoreApplication::instance()->findChild<QScatterDataProxySlots *>();

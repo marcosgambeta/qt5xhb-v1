@@ -426,7 +426,7 @@ void Q3DThemeSlots::windowColorChanged(const QColor &color)
 
 void Q3DThemeSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  Q3DTheme *obj = (Q3DTheme *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Q3DThemeSlots *s = QCoreApplication::instance()->findChild<Q3DThemeSlots *>();

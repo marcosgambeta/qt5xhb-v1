@@ -305,7 +305,7 @@ void QCustom3DVolumeSlots::useHighDefShaderChanged(bool enabled)
 
 void QCustom3DVolumeSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCustom3DVolume *obj = (QCustom3DVolume *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCustom3DVolume *obj = qobject_cast<QCustom3DVolume *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QCustom3DVolumeSlots *s = QCoreApplication::instance()->findChild<QCustom3DVolumeSlots *>();

@@ -86,7 +86,7 @@ void Q3DInputHandlerSlots::zoomEnabledChanged(bool enable)
 
 void Q3DInputHandlerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  Q3DInputHandler *obj = (Q3DInputHandler *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DInputHandler *obj = qobject_cast<Q3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Q3DInputHandlerSlots *s = QCoreApplication::instance()->findChild<Q3DInputHandlerSlots *>();

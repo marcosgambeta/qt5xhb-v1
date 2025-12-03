@@ -325,7 +325,7 @@ void QAbstract3DGraphSlots::shadowQualityChanged(QAbstract3DGraph::ShadowQuality
 
 void QAbstract3DGraphSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstract3DGraph *obj = (QAbstract3DGraph *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DGraph *obj = qobject_cast<QAbstract3DGraph *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstract3DGraphSlots *s = QCoreApplication::instance()->findChild<QAbstract3DGraphSlots *>();

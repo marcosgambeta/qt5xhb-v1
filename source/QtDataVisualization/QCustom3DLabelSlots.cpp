@@ -137,7 +137,7 @@ void QCustom3DLabelSlots::textColorChanged(const QColor &color)
 
 void QCustom3DLabelSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCustom3DLabel *obj = (QCustom3DLabel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QCustom3DLabelSlots *s = QCoreApplication::instance()->findChild<QCustom3DLabelSlots *>();

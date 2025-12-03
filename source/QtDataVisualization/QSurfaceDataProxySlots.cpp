@@ -179,7 +179,7 @@ void QSurfaceDataProxySlots::seriesChanged(QSurface3DSeries *series)
 
 void QSurfaceDataProxySlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QSurfaceDataProxy *obj = (QSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSurfaceDataProxy *obj = qobject_cast<QSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QSurfaceDataProxySlots *s = QCoreApplication::instance()->findChild<QSurfaceDataProxySlots *>();

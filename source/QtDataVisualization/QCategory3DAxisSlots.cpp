@@ -33,7 +33,7 @@ void QCategory3DAxisSlots::labelsChanged()
 
 void QCategory3DAxisSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCategory3DAxis *obj = (QCategory3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QCategory3DAxis *obj = qobject_cast<QCategory3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QCategory3DAxisSlots *s = QCoreApplication::instance()->findChild<QCategory3DAxisSlots *>();

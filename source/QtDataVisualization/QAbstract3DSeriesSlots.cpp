@@ -290,7 +290,7 @@ void QAbstract3DSeriesSlots::visibilityChanged(bool visible)
 
 void QAbstract3DSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QAbstract3DSeriesSlots *s = QCoreApplication::instance()->findChild<QAbstract3DSeriesSlots *>();

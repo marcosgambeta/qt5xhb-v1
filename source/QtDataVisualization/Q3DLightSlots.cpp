@@ -37,7 +37,7 @@ void Q3DLightSlots::autoPositionChanged(bool autoPosition)
 
 void Q3DLightSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  Q3DLight *obj = (Q3DLight *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DLight *obj = qobject_cast<Q3DLight *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Q3DLightSlots *s = QCoreApplication::instance()->findChild<Q3DLightSlots *>();

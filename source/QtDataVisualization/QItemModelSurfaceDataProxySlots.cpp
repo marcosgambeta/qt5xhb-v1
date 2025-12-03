@@ -390,7 +390,7 @@ void QItemModelSurfaceDataProxySlots::zPosRoleReplaceChanged(const QString &repl
 
 void QItemModelSurfaceDataProxySlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QItemModelSurfaceDataProxy *obj = (QItemModelSurfaceDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QItemModelSurfaceDataProxySlots *s = QCoreApplication::instance()->findChild<QItemModelSurfaceDataProxySlots *>();

@@ -103,7 +103,7 @@ void Q3DSurfaceSlots::selectedSeriesChanged(QSurface3DSeries *series)
 
 void Q3DSurfaceSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  Q3DSurface *obj = (Q3DSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Q3DSurfaceSlots *s = QCoreApplication::instance()->findChild<Q3DSurfaceSlots *>();

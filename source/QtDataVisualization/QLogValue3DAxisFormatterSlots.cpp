@@ -69,7 +69,7 @@ void QLogValue3DAxisFormatterSlots::showEdgeLabelsChanged(bool enabled)
 
 void QLogValue3DAxisFormatterSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QLogValue3DAxisFormatter *obj = (QLogValue3DAxisFormatter *)Qt5xHb::itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter *obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QLogValue3DAxisFormatterSlots *s = QCoreApplication::instance()->findChild<QLogValue3DAxisFormatterSlots *>();

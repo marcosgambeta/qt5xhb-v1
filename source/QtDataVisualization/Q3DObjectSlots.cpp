@@ -35,7 +35,7 @@ void Q3DObjectSlots::positionChanged(const QVector3D &position)
 
 void Q3DObjectSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  Q3DObject *obj = (Q3DObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DObject *obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Q3DObjectSlots *s = QCoreApplication::instance()->findChild<Q3DObjectSlots *>();

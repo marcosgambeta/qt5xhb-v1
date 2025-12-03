@@ -339,7 +339,7 @@ void QItemModelBarDataProxySlots::valueRoleReplaceChanged(const QString &replace
 
 void QItemModelBarDataProxySlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QItemModelBarDataProxy *obj = (QItemModelBarDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemModelBarDataProxy *obj = qobject_cast<QItemModelBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QItemModelBarDataProxySlots *s = QCoreApplication::instance()->findChild<QItemModelBarDataProxySlots *>();

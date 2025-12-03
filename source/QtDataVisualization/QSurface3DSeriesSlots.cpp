@@ -137,7 +137,7 @@ void QSurface3DSeriesSlots::textureFileChanged(const QString &filename)
 
 void QSurface3DSeriesSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QSurface3DSeries *obj = (QSurface3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QSurface3DSeries *obj = qobject_cast<QSurface3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QSurface3DSeriesSlots *s = QCoreApplication::instance()->findChild<QSurface3DSeriesSlots *>();

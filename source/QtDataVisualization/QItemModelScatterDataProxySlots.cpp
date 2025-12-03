@@ -240,7 +240,7 @@ void QItemModelScatterDataProxySlots::zPosRoleReplaceChanged(const QString &repl
 
 void QItemModelScatterDataProxySlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QItemModelScatterDataProxy *obj = (QItemModelScatterDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+  QItemModelScatterDataProxy *obj = qobject_cast<QItemModelScatterDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QItemModelScatterDataProxySlots *s = QCoreApplication::instance()->findChild<QItemModelScatterDataProxySlots *>();
