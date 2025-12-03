@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDESIGNERCUSTOMWIDGETINTERFACE
+REQUEST QDesignerCustomWidgetInterface
 #endif
 
 CLASS QDesignerCustomWidgetCollectionInterface
@@ -45,11 +45,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-#include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
-#else
 #include <QtDesigner/QDesignerCustomWidgetCollectionInterface>
-#endif
 #endif
 
 #include "qt5xhb_common.hpp"
@@ -57,17 +53,13 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-#include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
-#else
 #include <QtDesigner/QDesignerCustomWidgetCollectionInterface>
-#endif
 #endif
 
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE)
 {
   QDesignerCustomWidgetCollectionInterface *obj =
-      (QDesignerCustomWidgetCollectionInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+      static_cast<QDesignerCustomWidgetCollectionInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -80,13 +72,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QList<QDesignerCustomWidgetInterface*> customWidgets() const = 0
-*/
+// virtual QList<QDesignerCustomWidgetInterface *> customWidgets() const = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS)
 {
   QDesignerCustomWidgetCollectionInterface *obj =
-      (QDesignerCustomWidgetCollectionInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+      static_cast<QDesignerCustomWidgetCollectionInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

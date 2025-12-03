@@ -69,7 +69,8 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved(QDesignerFormWi
 
 void QDesignerFormWindowManagerInterfaceSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDesignerFormWindowManagerInterface *obj = (QDesignerFormWindowManagerInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QDesignerFormWindowManagerInterfaceSlots *s =

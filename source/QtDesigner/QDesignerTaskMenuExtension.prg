@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACTION
+REQUEST QAction
 #endif
 
 CLASS QDesignerTaskMenuExtension
@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_DELETE)
 {
-  QDesignerTaskMenuExtension *obj = (QDesignerTaskMenuExtension *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerTaskMenuExtension *obj = static_cast<QDesignerTaskMenuExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -74,12 +74,10 @@ HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAction * preferredEditAction() const
-*/
+// virtual QAction * preferredEditAction() const
 HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION)
 {
-  QDesignerTaskMenuExtension *obj = (QDesignerTaskMenuExtension *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerTaskMenuExtension *obj = static_cast<QDesignerTaskMenuExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,12 +93,10 @@ HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION)
   }
 }
 
-/*
-virtual QList<QAction*> taskActions() const = 0
-*/
+// virtual QList<QAction *> taskActions() const = 0
 HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_TASKACTIONS)
 {
-  QDesignerTaskMenuExtension *obj = (QDesignerTaskMenuExtension *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerTaskMenuExtension *obj = static_cast<QDesignerTaskMenuExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

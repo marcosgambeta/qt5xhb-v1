@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QICON
-REQUEST QWIDGET
+REQUEST QIcon
+REQUEST QWidget
 #endif
 
 CLASS QDesignerCustomWidgetInterface
@@ -57,11 +57,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-#include <QtUiPlugin/QDesignerCustomWidgetInterface>
-#else
 #include <QtDesigner/QDesignerCustomWidgetInterface>
-#endif
 #endif
 
 #include "qt5xhb_common.hpp"
@@ -69,16 +65,13 @@ RETURN
 #include "qt5xhb_utils.hpp"
 
 #ifdef __XHARBOUR__
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-#include <QtUiPlugin/QDesignerCustomWidgetInterface>
-#else
 #include <QtDesigner/QDesignerCustomWidgetInterface>
-#endif
 #endif
 
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_DELETE)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -91,12 +84,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString codeTemplate() const
-*/
+// virtual QString codeTemplate() const
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,12 +103,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE)
   }
 }
 
-/*
-virtual QWidget * createWidget( QWidget * parent ) = 0
-*/
+// virtual QWidget * createWidget( QWidget * parent ) = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,12 +123,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET)
   }
 }
 
-/*
-virtual QString domXml() const
-*/
+// virtual QString domXml() const
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,12 +142,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML)
   }
 }
 
-/*
-virtual QString group() const = 0
-*/
+// virtual QString group() const = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_GROUP)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,12 +161,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_GROUP)
   }
 }
 
-/*
-virtual QIcon icon() const = 0
-*/
+// virtual QIcon icon() const = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ICON)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,12 +181,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ICON)
   }
 }
 
-/*
-virtual QString includeFile() const = 0
-*/
+// virtual QString includeFile() const = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,12 +200,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE)
   }
 }
 
-/*
-virtual void initialize( QDesignerFormEditorInterface * formEditor )
-*/
+// virtual void initialize( QDesignerFormEditorInterface * formEditor )
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,12 +221,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool isContainer() const = 0
-*/
+// virtual bool isContainer() const = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,12 +240,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER)
   }
 }
 
-/*
-virtual bool isInitialized() const
-*/
+// virtual bool isInitialized() const
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,12 +259,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED)
   }
 }
 
-/*
-virtual QString name() const = 0
-*/
+// virtual QString name() const = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_NAME)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -295,12 +278,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_NAME)
   }
 }
 
-/*
-virtual QString toolTip() const = 0
-*/
+// virtual QString toolTip() const = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,12 +297,11 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP)
   }
 }
 
-/*
-virtual QString whatsThis() const = 0
-*/
+// virtual QString whatsThis() const = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS)
 {
-  QDesignerCustomWidgetInterface *obj = (QDesignerCustomWidgetInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface *obj =
+      static_cast<QDesignerCustomWidgetInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
+REQUEST QObject
 #endif
 
 CLASS QExtensionManager INHERIT QObject,QAbstractExtensionManager
@@ -52,9 +52,7 @@ RETURN
 #include <QtDesigner/QExtensionManager>
 #endif
 
-    /*
-    QExtensionManager( QObject * parent = 0 )
-    */
+// QExtensionManager( QObject * parent = 0 )
 HB_FUNC_STATIC(QEXTENSIONMANAGER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -67,7 +65,7 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_NEW)
 
 HB_FUNC_STATIC(QEXTENSIONMANAGER_DELETE)
 {
-  QExtensionManager *obj = (QExtensionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  QExtensionManager *obj = qobject_cast<QExtensionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -82,12 +80,10 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QObject * extension( QObject * object, const QString &iid ) const
-*/
+// virtual QObject * extension( QObject * object, const QString & iid ) const
 HB_FUNC_STATIC(QEXTENSIONMANAGER_EXTENSION)
 {
-  QExtensionManager *obj = (QExtensionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  QExtensionManager *obj = qobject_cast<QExtensionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,12 +99,10 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_EXTENSION)
   }
 }
 
-/*
-virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString &iid = QString() )
-*/
+// virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 HB_FUNC_STATIC(QEXTENSIONMANAGER_REGISTEREXTENSIONS)
 {
-  QExtensionManager *obj = (QExtensionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  QExtensionManager *obj = qobject_cast<QExtensionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,12 +119,10 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_REGISTEREXTENSIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString &iid = QString() )
-*/
+// virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 HB_FUNC_STATIC(QEXTENSIONMANAGER_UNREGISTEREXTENSIONS)
 {
-  QExtensionManager *obj = (QExtensionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  QExtensionManager *obj = qobject_cast<QExtensionManager *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

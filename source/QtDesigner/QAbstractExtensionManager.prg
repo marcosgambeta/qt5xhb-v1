@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
+REQUEST QObject
 #endif
 
 CLASS QAbstractExtensionManager
@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_DELETE)
 {
-  QAbstractExtensionManager *obj = (QAbstractExtensionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractExtensionManager *obj = static_cast<QAbstractExtensionManager *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -73,12 +73,10 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QObject * extension( QObject * object, const QString &iid ) const = 0
-*/
+// virtual QObject * extension( QObject * object, const QString & iid ) const = 0
 HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_EXTENSION)
 {
-  QAbstractExtensionManager *obj = (QAbstractExtensionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractExtensionManager *obj = static_cast<QAbstractExtensionManager *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -94,12 +92,10 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_EXTENSION)
   }
 }
 
-/*
-virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString &iid ) = 0
-*/
+// virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString & iid ) = 0
 HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS)
 {
-  QAbstractExtensionManager *obj = (QAbstractExtensionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractExtensionManager *obj = static_cast<QAbstractExtensionManager *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,12 +112,10 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString &iid ) = 0
-*/
+// virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString & iid ) = 0
 HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS)
 {
-  QAbstractExtensionManager *obj = (QAbstractExtensionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractExtensionManager *obj = static_cast<QAbstractExtensionManager *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

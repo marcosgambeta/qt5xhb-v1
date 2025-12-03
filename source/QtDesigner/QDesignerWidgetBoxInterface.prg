@@ -53,7 +53,8 @@ RETURN
 
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_DELETE)
 {
-  QDesignerWidgetBoxInterface *obj = (QDesignerWidgetBoxInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface *obj =
+      qobject_cast<QDesignerWidgetBoxInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -68,12 +69,11 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString fileName() const = 0
-*/
+// virtual QString fileName() const = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_FILENAME)
 {
-  QDesignerWidgetBoxInterface *obj = (QDesignerWidgetBoxInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface *obj =
+      qobject_cast<QDesignerWidgetBoxInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,12 +88,11 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_FILENAME)
   }
 }
 
-/*
-virtual bool load() = 0
-*/
+// virtual bool load() = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_LOAD)
 {
-  QDesignerWidgetBoxInterface *obj = (QDesignerWidgetBoxInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface *obj =
+      qobject_cast<QDesignerWidgetBoxInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,12 +107,11 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_LOAD)
   }
 }
 
-/*
-virtual bool save() = 0
-*/
+// virtual bool save() = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SAVE)
 {
-  QDesignerWidgetBoxInterface *obj = (QDesignerWidgetBoxInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface *obj =
+      qobject_cast<QDesignerWidgetBoxInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,12 +126,11 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SAVE)
   }
 }
 
-/*
-virtual void setFileName( const QString &fileName ) = 0
-*/
+// virtual void setFileName( const QString & fileName ) = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SETFILENAME)
 {
-  QDesignerWidgetBoxInterface *obj = (QDesignerWidgetBoxInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface *obj =
+      qobject_cast<QDesignerWidgetBoxInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

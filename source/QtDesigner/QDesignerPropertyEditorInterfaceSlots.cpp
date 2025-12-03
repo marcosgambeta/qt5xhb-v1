@@ -37,7 +37,8 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged(const QString &name,
 
 void QDesignerPropertyEditorInterfaceSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDesignerPropertyEditorInterface *obj = (QDesignerPropertyEditorInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface *obj =
+      qobject_cast<QDesignerPropertyEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QDesignerPropertyEditorInterfaceSlots *s =

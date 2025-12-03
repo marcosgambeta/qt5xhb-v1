@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
+REQUEST QObject
 #endif
 
 CLASS QAbstractExtensionFactory
@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC(QABSTRACTEXTENSIONFACTORY_DELETE)
 {
-  QAbstractExtensionFactory *obj = (QAbstractExtensionFactory *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractExtensionFactory *obj = static_cast<QAbstractExtensionFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -71,12 +71,10 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QObject * extension( QObject * object, const QString &iid ) const = 0
-*/
+// virtual QObject * extension( QObject * object, const QString & iid ) const = 0
 HB_FUNC_STATIC(QABSTRACTEXTENSIONFACTORY_EXTENSION)
 {
-  QAbstractExtensionFactory *obj = (QAbstractExtensionFactory *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractExtensionFactory *obj = static_cast<QAbstractExtensionFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

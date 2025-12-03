@@ -62,7 +62,7 @@ RETURN
 HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DELETE)
 {
   QDesignerDynamicPropertySheetExtension *obj =
-      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
+      static_cast<QDesignerDynamicPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -75,13 +75,11 @@ HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int addDynamicProperty( const QString &propertyName, const QVariant &value ) = 0
-*/
+// virtual int addDynamicProperty( const QString & propertyName, const QVariant & value ) = 0
 HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY)
 {
   QDesignerDynamicPropertySheetExtension *obj =
-      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
+      static_cast<QDesignerDynamicPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,13 +94,11 @@ HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY)
   }
 }
 
-/*
-virtual bool canAddDynamicProperty( const QString &propertyName ) const = 0
-*/
+// virtual bool canAddDynamicProperty( const QString & propertyName ) const = 0
 HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY)
 {
   QDesignerDynamicPropertySheetExtension *obj =
-      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
+      static_cast<QDesignerDynamicPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,13 +113,11 @@ HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY)
   }
 }
 
-/*
-virtual bool dynamicPropertiesAllowed() const = 0
-*/
+// virtual bool dynamicPropertiesAllowed() const = 0
 HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED)
 {
   QDesignerDynamicPropertySheetExtension *obj =
-      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
+      static_cast<QDesignerDynamicPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,13 +132,11 @@ HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED)
   }
 }
 
-/*
-virtual bool isDynamicProperty( int index ) const = 0
-*/
+// virtual bool isDynamicProperty( int index ) const = 0
 HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY)
 {
   QDesignerDynamicPropertySheetExtension *obj =
-      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
+      static_cast<QDesignerDynamicPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,13 +151,11 @@ HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY)
   }
 }
 
-/*
-virtual bool removeDynamicProperty( int index ) = 0
-*/
+// virtual bool removeDynamicProperty( int index ) = 0
 HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY)
 {
   QDesignerDynamicPropertySheetExtension *obj =
-      (QDesignerDynamicPropertySheetExtension *)Qt5xHb::itemGetPtrStackSelfItem();
+      static_cast<QDesignerDynamicPropertySheetExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

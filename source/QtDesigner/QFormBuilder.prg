@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDESIGNERCUSTOMWIDGETINTERFACE
+REQUEST QDesignerCustomWidgetInterface
 #endif
 
 CLASS QFormBuilder INHERIT QAbstractFormBuilder
@@ -52,9 +52,7 @@ RETURN
 #include <QtDesigner/QFormBuilder>
 #endif
 
-    /*
-    QFormBuilder()
-    */
+// QFormBuilder()
 HB_FUNC_STATIC(QFORMBUILDER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -67,7 +65,7 @@ HB_FUNC_STATIC(QFORMBUILDER_NEW)
 
 HB_FUNC_STATIC(QFORMBUILDER_DELETE)
 {
-  QFormBuilder *obj = (QFormBuilder *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -80,12 +78,10 @@ HB_FUNC_STATIC(QFORMBUILDER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addPluginPath( const QString &pluginPath )
-*/
+// void addPluginPath( const QString & pluginPath )
 HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
 {
-  QFormBuilder *obj = (QFormBuilder *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,12 +98,10 @@ HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearPluginPaths()
-*/
+// void clearPluginPaths()
 HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
 {
-  QFormBuilder *obj = (QFormBuilder *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,12 +118,10 @@ HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QDesignerCustomWidgetInterface*> customWidgets() const
-*/
+// QList<QDesignerCustomWidgetInterface *> customWidgets() const
 HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
 {
-  QFormBuilder *obj = (QFormBuilder *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,12 +155,10 @@ HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
   }
 }
 
-/*
-QStringList pluginPaths() const
-*/
+// QStringList pluginPaths() const
 HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
 {
-  QFormBuilder *obj = (QFormBuilder *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,12 +173,10 @@ HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
   }
 }
 
-/*
-void setPluginPath( const QStringList &pluginPaths )
-*/
+// void setPluginPath( const QStringList & pluginPaths )
 HB_FUNC_STATIC(QFORMBUILDER_SETPLUGINPATH)
 {
-  QFormBuilder *obj = (QFormBuilder *)Qt5xHb::itemGetPtrStackSelfItem();
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
