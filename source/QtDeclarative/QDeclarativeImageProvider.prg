@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIMAGE
-REQUEST QPIXMAP
+REQUEST QImage
+REQUEST QPixmap
 #endif
 
 CLASS QDeclarativeImageProvider
@@ -60,9 +60,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeImageProvider>
 #endif
 
-    /*
-    QDeclarativeImageProvider( QDeclarativeImageProvider::ImageType type )
-    */
+// QDeclarativeImageProvider( QDeclarativeImageProvider::ImageType type )
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -75,7 +73,7 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_NEW)
 
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_DELETE)
 {
-  QDeclarativeImageProvider *obj = (QDeclarativeImageProvider *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeImageProvider *obj = static_cast<QDeclarativeImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -88,12 +86,10 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDeclarativeImageProvider::ImageType imageType() const
-*/
+// QDeclarativeImageProvider::ImageType imageType() const
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_IMAGETYPE)
 {
-  QDeclarativeImageProvider *obj = (QDeclarativeImageProvider *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeImageProvider *obj = static_cast<QDeclarativeImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,12 +104,10 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_IMAGETYPE)
   }
 }
 
-/*
-virtual QImage requestImage( const QString &id, QSize * size, const QSize &requestedSize )
-*/
+// virtual QImage requestImage( const QString & id, QSize * size, const QSize & requestedSize )
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE)
 {
-  QDeclarativeImageProvider *obj = (QDeclarativeImageProvider *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeImageProvider *obj = static_cast<QDeclarativeImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,12 +123,10 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE)
   }
 }
 
-/*
-virtual QPixmap requestPixmap( const QString &id, QSize * size, const QSize &requestedSize )
-*/
+// virtual QPixmap requestPixmap( const QString & id, QSize * size, const QSize & requestedSize )
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP)
 {
-  QDeclarativeImageProvider *obj = (QDeclarativeImageProvider *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeImageProvider *obj = static_cast<QDeclarativeImageProvider *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

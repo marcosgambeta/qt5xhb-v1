@@ -52,7 +52,7 @@ void QDeclarativeComponentSlots::statusChanged(QDeclarativeComponent::Status sta
 
 void QDeclarativeComponentSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDeclarativeComponent *obj = (QDeclarativeComponent *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QDeclarativeComponentSlots *s = QCoreApplication::instance()->findChild<QDeclarativeComponentSlots *>();

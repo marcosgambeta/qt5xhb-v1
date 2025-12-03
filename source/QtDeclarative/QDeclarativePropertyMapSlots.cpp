@@ -37,7 +37,7 @@ void QDeclarativePropertyMapSlots::valueChanged(const QString &key, const QVaria
 
 void QDeclarativePropertyMapSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDeclarativePropertyMap *obj = (QDeclarativePropertyMap *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QDeclarativePropertyMapSlots *s = QCoreApplication::instance()->findChild<QDeclarativePropertyMapSlots *>();

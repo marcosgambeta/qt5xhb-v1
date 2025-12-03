@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKACCESSMANAGER
+REQUEST QNetworkAccessManager
 #endif
 
 CLASS QDeclarativeNetworkAccessManagerFactory
@@ -61,7 +61,7 @@ RETURN
 HB_FUNC_STATIC(QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE)
 {
   QDeclarativeNetworkAccessManagerFactory *obj =
-      (QDeclarativeNetworkAccessManagerFactory *)Qt5xHb::itemGetPtrStackSelfItem();
+      static_cast<QDeclarativeNetworkAccessManagerFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -74,13 +74,11 @@ HB_FUNC_STATIC(QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QNetworkAccessManager * create( QObject * parent ) = 0
-*/
+// virtual QNetworkAccessManager * create( QObject * parent ) = 0
 HB_FUNC_STATIC(QDECLARATIVENETWORKACCESSMANAGERFACTORY_CREATE)
 {
   QDeclarativeNetworkAccessManagerFactory *obj =
-      (QDeclarativeNetworkAccessManagerFactory *)Qt5xHb::itemGetPtrStackSelfItem();
+      static_cast<QDeclarativeNetworkAccessManagerFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

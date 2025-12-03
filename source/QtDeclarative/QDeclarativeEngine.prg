@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDECLARATIVECONTEXT
-REQUEST QDECLARATIVEIMAGEPROVIDER
-REQUEST QDECLARATIVENETWORKACCESSMANAGERFACTORY
-REQUEST QNETWORKACCESSMANAGER
-REQUEST QURL
+REQUEST QDeclarativeContext
+REQUEST QDeclarativeImageProvider
+REQUEST QDeclarativeNetworkAccessManagerFactory
+REQUEST QNetworkAccessManager
+REQUEST QUrl
 #endif
 
 CLASS QDeclarativeEngine INHERIT QObject
@@ -84,9 +84,7 @@ RETURN
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtDeclarative/QDeclarativeContext>
 
-    /*
-    QDeclarativeEngine( QObject * parent = 0 )
-    */
+    // QDeclarativeEngine( QObject * parent = 0 )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -99,7 +97,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_NEW)
 
 HB_FUNC_STATIC(QDECLARATIVEENGINE_DELETE)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -114,12 +112,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addImageProvider( const QString &providerId, QDeclarativeImageProvider * provider )
-*/
+// void addImageProvider( const QString & providerId, QDeclarativeImageProvider * provider )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMAGEPROVIDER)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,12 +132,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMAGEPROVIDER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addImportPath( const QString &path )
-*/
+// void addImportPath( const QString & path )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMPORTPATH)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,12 +152,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMPORTPATH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addPluginPath( const QString &path )
-*/
+// void addPluginPath( const QString & path )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDPLUGINPATH)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,12 +172,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDPLUGINPATH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUrl baseUrl() const
-*/
+// QUrl baseUrl() const
 HB_FUNC_STATIC(QDECLARATIVEENGINE_BASEURL)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,12 +191,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_BASEURL)
   }
 }
 
-/*
-void clearComponentCache()
-*/
+// void clearComponentCache()
 HB_FUNC_STATIC(QDECLARATIVEENGINE_CLEARCOMPONENTCACHE)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,12 +211,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_CLEARCOMPONENTCACHE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDeclarativeImageProvider * imageProvider( const QString &providerId ) const
-*/
+// QDeclarativeImageProvider * imageProvider( const QString & providerId ) const
 HB_FUNC_STATIC(QDECLARATIVEENGINE_IMAGEPROVIDER)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,12 +230,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_IMAGEPROVIDER)
   }
 }
 
-/*
-QStringList importPathList() const
-*/
+// QStringList importPathList() const
 HB_FUNC_STATIC(QDECLARATIVEENGINE_IMPORTPATHLIST)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,12 +248,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_IMPORTPATHLIST)
   }
 }
 
-/*
-QNetworkAccessManager * networkAccessManager() const
-*/
+// QNetworkAccessManager * networkAccessManager() const
 HB_FUNC_STATIC(QDECLARATIVEENGINE_NETWORKACCESSMANAGER)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,12 +267,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_NETWORKACCESSMANAGER)
   }
 }
 
-/*
-QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory() const
-*/
+// QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory() const
 HB_FUNC_STATIC(QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,12 +286,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY)
   }
 }
 
-/*
-QString offlineStoragePath() const
-*/
+// QString offlineStoragePath() const
 HB_FUNC_STATIC(QDECLARATIVEENGINE_OFFLINESTORAGEPATH)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,12 +304,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_OFFLINESTORAGEPATH)
   }
 }
 
-/*
-bool outputWarningsToStandardError() const
-*/
+// bool outputWarningsToStandardError() const
 HB_FUNC_STATIC(QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -346,12 +322,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR)
   }
 }
 
-/*
-QStringList pluginPathList() const
-*/
+// QStringList pluginPathList() const
 HB_FUNC_STATIC(QDECLARATIVEENGINE_PLUGINPATHLIST)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,12 +340,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_PLUGINPATHLIST)
   }
 }
 
-/*
-void removeImageProvider( const QString &providerId )
-*/
+// void removeImageProvider( const QString & providerId )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -388,12 +360,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDeclarativeContext * rootContext() const
-*/
+// QDeclarativeContext * rootContext() const
 HB_FUNC_STATIC(QDECLARATIVEENGINE_ROOTCONTEXT)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -409,12 +379,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ROOTCONTEXT)
   }
 }
 
-/*
-void setBaseUrl( const QUrl &url )
-*/
+// void setBaseUrl( const QUrl & url )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETBASEURL)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -431,12 +399,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETBASEURL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setImportPathList( const QStringList &paths )
-*/
+// void setImportPathList( const QStringList & paths )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETIMPORTPATHLIST)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -453,12 +419,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETIMPORTPATHLIST)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNetworkAccessManagerFactory( QDeclarativeNetworkAccessManagerFactory * factory )
-*/
+// void setNetworkAccessManagerFactory( QDeclarativeNetworkAccessManagerFactory * factory )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -475,12 +439,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOfflineStoragePath( const QString &dir )
-*/
+// void setOfflineStoragePath( const QString & dir )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -497,12 +459,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOutputWarningsToStandardError( bool enabled )
-*/
+// void setOutputWarningsToStandardError( bool enabled )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -519,12 +479,10 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPluginPathList( const QStringList &paths )
-*/
+// void setPluginPathList( const QStringList & paths )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETPLUGINPATHLIST)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -541,9 +499,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETPLUGINPATHLIST)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QDeclarativeContext * contextForObject( const QObject * object )
-*/
+// static QDeclarativeContext * contextForObject( const QObject * object )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_CONTEXTFOROBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -558,9 +514,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_CONTEXTFOROBJECT)
 #endif
 }
 
-/*
-static QDeclarativeEngine::ObjectOwnership objectOwnership( QObject * object )
-*/
+// static QDeclarativeEngine::ObjectOwnership objectOwnership( QObject * object )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_OBJECTOWNERSHIP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -574,9 +528,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_OBJECTOWNERSHIP)
 #endif
 }
 
-/*
-static void setContextForObject( QObject * object, QDeclarativeContext * context )
-*/
+// static void setContextForObject( QObject * object, QDeclarativeContext * context )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETCONTEXTFOROBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -592,9 +544,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETCONTEXTFOROBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setObjectOwnership( QObject * object, QDeclarativeEngine::ObjectOwnership ownership )
-*/
+// static void setObjectOwnership( QObject * object, QDeclarativeEngine::ObjectOwnership ownership )
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOBJECTOWNERSHIP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -612,14 +562,16 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOBJECTOWNERSHIP)
 
 void QDeclarativeEngineSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDeclarativeEngineSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDECLARATIVEENGINE_ONQUIT)
 {
-  QDeclarativeEngineSlots_connect_signal("quit()", "quit()");
+  CONNECT_SIGNAL("quit()");
 }
 
 HB_FUNC_STATIC(QDECLARATIVEENGINE_ONWARNINGS)
 {
-  QDeclarativeEngineSlots_connect_signal("warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)");
+  CONNECT_SIGNAL("warnings(QList<QDeclarativeError>)");
 }
 
 #pragma ENDDUMP

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDECLARATIVECONTEXT
-REQUEST QOBJECT
+REQUEST QDeclarativeContext
+REQUEST QObject
 #endif
 
 CLASS QDeclarativeScriptString
@@ -67,15 +67,11 @@ RETURN
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QDeclarativeScriptString()
-    */
+    // QDeclarativeScriptString()
     QDeclarativeScriptString *obj = new QDeclarativeScriptString();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDECLARATIVESCRIPTSTRING(1)) {
-    /*
-    QDeclarativeScriptString( const QDeclarativeScriptString &other )
-    */
+    // QDeclarativeScriptString( const QDeclarativeScriptString & other )
     QDeclarativeScriptString *obj = new QDeclarativeScriptString(*PQDECLARATIVESCRIPTSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -83,12 +79,10 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_NEW)
   }
 }
 
-/*
-QDeclarativeContext * context() const
-*/
+// QDeclarativeContext * context() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
 {
-  QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,12 +98,10 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
   }
 }
 
-/*
-QObject * scopeObject() const
-*/
+// QObject * scopeObject() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCOPEOBJECT)
 {
-  QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,12 +117,10 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCOPEOBJECT)
   }
 }
 
-/*
-QString script() const
-*/
+// QString script() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
 {
-  QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,12 +135,10 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
   }
 }
 
-/*
-void setContext( QDeclarativeContext * context )
-*/
+// void setContext( QDeclarativeContext * context )
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
 {
-  QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,12 +155,10 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScopeObject( QObject * object )
-*/
+// void setScopeObject( QObject * object )
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
 {
-  QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,12 +175,10 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScript( const QString &script )
-*/
+// void setScript( const QString & script )
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCRIPT)
 {
-  QDeclarativeScriptString *obj = (QDeclarativeScriptString *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

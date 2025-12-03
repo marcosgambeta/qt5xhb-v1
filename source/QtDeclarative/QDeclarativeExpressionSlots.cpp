@@ -33,7 +33,7 @@ void QDeclarativeExpressionSlots::valueChanged()
 
 void QDeclarativeExpressionSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDeclarativeExpression *obj = (QDeclarativeExpression *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeExpression *obj = qobject_cast<QDeclarativeExpression *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QDeclarativeExpressionSlots *s = QCoreApplication::instance()->findChild<QDeclarativeExpressionSlots *>();

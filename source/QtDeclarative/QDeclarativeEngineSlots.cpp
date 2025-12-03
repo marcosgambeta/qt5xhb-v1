@@ -67,7 +67,7 @@ void QDeclarativeEngineSlots::warnings(const QList<QDeclarativeError> &warnings)
 
 void QDeclarativeEngineSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDeclarativeEngine *obj = (QDeclarativeEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine *obj = qobject_cast<QDeclarativeEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QDeclarativeEngineSlots *s = QCoreApplication::instance()->findChild<QDeclarativeEngineSlots *>();
