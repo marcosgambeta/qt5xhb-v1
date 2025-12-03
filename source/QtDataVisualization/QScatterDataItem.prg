@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QQUATERNION
-REQUEST QVECTOR3D
+REQUEST QQuaternion
+REQUEST QVector3D
 #endif
 
 CLASS QScatterDataItem
@@ -67,32 +67,24 @@ RETURN
 #include <QtDataVisualization/QScatterDataItem>
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 HB_FUNC_STATIC(QSCATTERDATAITEM_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QScatterDataItem()
-    */
+    // QScatterDataItem()
     QScatterDataItem *obj = new QScatterDataItem();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
-    /*
-    QScatterDataItem( const QVector3D &position )
-    */
+    // QScatterDataItem( const QVector3D & position )
     QScatterDataItem *obj = new QScatterDataItem(*PQVECTOR3D(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQQUATERNION(2)) {
-    /*
-    QScatterDataItem( const QVector3D &position, const QQuaternion &rotation )
-    */
+    // QScatterDataItem( const QVector3D & position, const QQuaternion & rotation )
     QScatterDataItem *obj = new QScatterDataItem(*PQVECTOR3D(1), *PQQUATERNION(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSCATTERDATAITEM(1)) {
-    /*
-    QScatterDataItem( const QScatterDataItem &other )
-    */
+    // QScatterDataItem( const QScatterDataItem & other )
     QScatterDataItem *obj = new QScatterDataItem(*PQSCATTERDATAITEM(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -100,12 +92,10 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_NEW)
   }
 }
 
-/*
-~QScatterDataItem()
-*/
+// ~QScatterDataItem()
 HB_FUNC_STATIC(QSCATTERDATAITEM_DELETE)
 {
-  QScatterDataItem *obj = (QScatterDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataItem *obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -118,12 +108,10 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPosition( const QVector3D &pos )
-*/
+// void setPosition( const QVector3D & pos )
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETPOSITION)
 {
-  QScatterDataItem *obj = (QScatterDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataItem *obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,12 +128,10 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVector3D position() const
-*/
+// QVector3D position() const
 HB_FUNC_STATIC(QSCATTERDATAITEM_POSITION)
 {
-  QScatterDataItem *obj = (QScatterDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataItem *obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,12 +147,10 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_POSITION)
   }
 }
 
-/*
-void setRotation( const QQuaternion &rot )
-*/
+// void setRotation( const QQuaternion & rot )
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETROTATION)
 {
-  QScatterDataItem *obj = (QScatterDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataItem *obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,12 +167,10 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETROTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QQuaternion rotation() const
-*/
+// QQuaternion rotation() const
 HB_FUNC_STATIC(QSCATTERDATAITEM_ROTATION)
 {
-  QScatterDataItem *obj = (QScatterDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataItem *obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,12 +186,10 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_ROTATION)
   }
 }
 
-/*
-void setX( float value )
-*/
+// void setX( float value )
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETX)
 {
-  QScatterDataItem *obj = (QScatterDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataItem *obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,12 +206,10 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setY( float value )
-*/
+// void setY( float value )
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETY)
 {
-  QScatterDataItem *obj = (QScatterDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataItem *obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,12 +226,10 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setZ( float value )
-*/
+// void setZ( float value )
 HB_FUNC_STATIC(QSCATTERDATAITEM_SETZ)
 {
-  QScatterDataItem *obj = (QScatterDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataItem *obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,12 +246,10 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_SETZ)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-float x() const
-*/
+// float x() const
 HB_FUNC_STATIC(QSCATTERDATAITEM_X)
 {
-  QScatterDataItem *obj = (QScatterDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataItem *obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,12 +264,10 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_X)
   }
 }
 
-/*
-float y() const
-*/
+// float y() const
 HB_FUNC_STATIC(QSCATTERDATAITEM_Y)
 {
-  QScatterDataItem *obj = (QScatterDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataItem *obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,12 +282,10 @@ HB_FUNC_STATIC(QSCATTERDATAITEM_Y)
   }
 }
 
-/*
-float z() const
-*/
+// float z() const
 HB_FUNC_STATIC(QSCATTERDATAITEM_Z)
 {
-  QScatterDataItem *obj = (QScatterDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QScatterDataItem *obj = static_cast<QScatterDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

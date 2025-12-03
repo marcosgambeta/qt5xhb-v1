@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVALUE3DAXISFORMATTER
+REQUEST QValue3DAxisFormatter
 #endif
 
 CLASS QValue3DAxis INHERIT QAbstract3DAxis
@@ -59,11 +59,9 @@ RETURN
 #include <QtDataVisualization/QValue3DAxis>
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
-/*
-QValue3DAxis( QObject * parent = nullptr )
-*/
+// QValue3DAxis( QObject * parent = nullptr )
 HB_FUNC_STATIC(QVALUE3DAXIS_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -74,12 +72,10 @@ HB_FUNC_STATIC(QVALUE3DAXIS_NEW)
   }
 }
 
-/*
-virtual ~QValue3DAxis()
-*/
+// virtual ~QValue3DAxis()
 HB_FUNC_STATIC(QVALUE3DAXIS_DELETE)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -94,12 +90,10 @@ HB_FUNC_STATIC(QVALUE3DAXIS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int segmentCount() const
-*/
+// int segmentCount() const
 HB_FUNC_STATIC(QVALUE3DAXIS_SEGMENTCOUNT)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,12 +108,10 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SEGMENTCOUNT)
   }
 }
 
-/*
-void setSegmentCount( int count )
-*/
+// void setSegmentCount( int count )
 HB_FUNC_STATIC(QVALUE3DAXIS_SETSEGMENTCOUNT)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,12 +128,10 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETSEGMENTCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int subSegmentCount() const
-*/
+// int subSegmentCount() const
 HB_FUNC_STATIC(QVALUE3DAXIS_SUBSEGMENTCOUNT)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,12 +146,10 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SUBSEGMENTCOUNT)
   }
 }
 
-/*
-void setSubSegmentCount( int count )
-*/
+// void setSubSegmentCount( int count )
 HB_FUNC_STATIC(QVALUE3DAXIS_SETSUBSEGMENTCOUNT)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,12 +166,10 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETSUBSEGMENTCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString labelFormat() const
-*/
+// QString labelFormat() const
 HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,12 +184,10 @@ HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
   }
 }
 
-/*
-void setLabelFormat( const QString &format )
-*/
+// void setLabelFormat( const QString & format )
 HB_FUNC_STATIC(QVALUE3DAXIS_SETLABELFORMAT)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,12 +204,10 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETLABELFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QValue3DAxisFormatter * formatter() const
-*/
+// QValue3DAxisFormatter * formatter() const
 HB_FUNC_STATIC(QVALUE3DAXIS_FORMATTER)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,12 +223,10 @@ HB_FUNC_STATIC(QVALUE3DAXIS_FORMATTER)
   }
 }
 
-/*
-void setFormatter( QValue3DAxisFormatter * formatter )
-*/
+// void setFormatter( QValue3DAxisFormatter * formatter )
 HB_FUNC_STATIC(QVALUE3DAXIS_SETFORMATTER)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,12 +243,10 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETFORMATTER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool reversed() const
-*/
+// bool reversed() const
 HB_FUNC_STATIC(QVALUE3DAXIS_REVERSED)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,12 +261,10 @@ HB_FUNC_STATIC(QVALUE3DAXIS_REVERSED)
   }
 }
 
-/*
-void setReversed( bool enable )
-*/
+// void setReversed( bool enable )
 HB_FUNC_STATIC(QVALUE3DAXIS_SETREVERSED)
 {
-  QValue3DAxis *obj = (QValue3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,5 +282,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETREVERSED)
 }
 
 void QValue3DAxisSlots_connect_signal(const QString &signal, const QString &slot);
+
+#define CONNECT_SIGNAL(signal) QValue3DAxisSlots_connect_signal(signal, signal)
 
 #pragma ENDDUMP

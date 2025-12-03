@@ -48,11 +48,9 @@ RETURN
 #include <QtDataVisualization/QValue3DAxisFormatter>
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
-/*
-QValue3DAxisFormatter( QObject * parent = nullptr )
-*/
+// QValue3DAxisFormatter( QObject * parent = nullptr )
 HB_FUNC_STATIC(QVALUE3DAXISFORMATTER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -63,12 +61,10 @@ HB_FUNC_STATIC(QVALUE3DAXISFORMATTER_NEW)
   }
 }
 
-/*
-virtual ~QValue3DAxisFormatter()
-*/
+// virtual ~QValue3DAxisFormatter()
 HB_FUNC_STATIC(QVALUE3DAXISFORMATTER_DELETE)
 {
-  QValue3DAxisFormatter *obj = (QValue3DAxisFormatter *)Qt5xHb::itemGetPtrStackSelfItem();
+  QValue3DAxisFormatter *obj = qobject_cast<QValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);

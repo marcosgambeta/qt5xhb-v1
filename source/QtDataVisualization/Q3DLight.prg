@@ -52,11 +52,9 @@ RETURN
 #include <QtDataVisualization/Q3DLight>
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
-/*
-Q3DLight( QObject * parent = nullptr )
-*/
+// Q3DLight( QObject * parent = nullptr )
 HB_FUNC_STATIC(Q3DLIGHT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -67,12 +65,10 @@ HB_FUNC_STATIC(Q3DLIGHT_NEW)
   }
 }
 
-/*
-virtual ~Q3DLight()
-*/
+// virtual ~Q3DLight()
 HB_FUNC_STATIC(Q3DLIGHT_DELETE)
 {
-  Q3DLight *obj = (Q3DLight *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DLight *obj = qobject_cast<Q3DLight *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -87,13 +83,11 @@ HB_FUNC_STATIC(Q3DLIGHT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAutoPosition( bool enabled )
-*/
+// void setAutoPosition( bool enabled )
 HB_FUNC_STATIC(Q3DLIGHT_SETAUTOPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  Q3DLight *obj = (Q3DLight *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DLight *obj = qobject_cast<Q3DLight *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,13 +105,11 @@ HB_FUNC_STATIC(Q3DLIGHT_SETAUTOPOSITION)
 #endif
 }
 
-/*
-bool isAutoPosition()
-*/
+// bool isAutoPosition()
 HB_FUNC_STATIC(Q3DLIGHT_ISAUTOPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  Q3DLight *obj = (Q3DLight *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DLight *obj = qobject_cast<Q3DLight *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,10 +127,12 @@ HB_FUNC_STATIC(Q3DLIGHT_ISAUTOPOSITION)
 
 void Q3DLightSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) Q3DLightSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(Q3DLIGHT_ONAUTOPOSITIONCHANGED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  Q3DLightSlots_connect_signal("autoPositionChanged(bool)", "autoPositionChanged(bool)");
+  CONNECT_SIGNAL("autoPositionChanged(bool)");
 #else
   hb_retl(false);
 #endif

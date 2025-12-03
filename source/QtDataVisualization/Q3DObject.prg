@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST Q3DSCENE
-REQUEST QVECTOR3D
+REQUEST Q3DScene
+REQUEST QVector3D
 #endif
 
 CLASS Q3DObject INHERIT QObject
@@ -58,11 +58,9 @@ RETURN
 
 #include <QtDataVisualization/Q3DScene>
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
-/*
-Q3DObject( QObject * parent = nullptr )
-*/
+// Q3DObject( QObject * parent = nullptr )
 HB_FUNC_STATIC(Q3DOBJECT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -73,12 +71,10 @@ HB_FUNC_STATIC(Q3DOBJECT_NEW)
   }
 }
 
-/*
-virtual ~Q3DObject()
-*/
+// virtual ~Q3DObject()
 HB_FUNC_STATIC(Q3DOBJECT_DELETE)
 {
-  Q3DObject *obj = (Q3DObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DObject *obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -93,12 +89,10 @@ HB_FUNC_STATIC(Q3DOBJECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Q3DScene * parentScene()
-*/
+// Q3DScene * parentScene()
 HB_FUNC_STATIC(Q3DOBJECT_PARENTSCENE)
 {
-  Q3DObject *obj = (Q3DObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DObject *obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,12 +108,10 @@ HB_FUNC_STATIC(Q3DOBJECT_PARENTSCENE)
   }
 }
 
-/*
-QVector3D position() const
-*/
+// QVector3D position() const
 HB_FUNC_STATIC(Q3DOBJECT_POSITION)
 {
-  Q3DObject *obj = (Q3DObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DObject *obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,12 +127,10 @@ HB_FUNC_STATIC(Q3DOBJECT_POSITION)
   }
 }
 
-/*
-void setPosition( const QVector3D &position )
-*/
+// void setPosition( const QVector3D & position )
 HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 {
-  Q3DObject *obj = (Q3DObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DObject *obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,12 +147,10 @@ HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void copyValuesFrom( const Q3DObject &source )
-*/
+// virtual void copyValuesFrom( const Q3DObject & source )
 HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 {
-  Q3DObject *obj = (Q3DObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  Q3DObject *obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,9 +169,11 @@ HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 
 void Q3DObjectSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) Q3DObjectSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(Q3DOBJECT_ONPOSITIONCHANGED)
 {
-  Q3DObjectSlots_connect_signal("positionChanged(QVector3D)", "positionChanged(QVector3D)");
+  CONNECT_SIGNAL("positionChanged(QVector3D)");
 }
 
 #pragma ENDDUMP

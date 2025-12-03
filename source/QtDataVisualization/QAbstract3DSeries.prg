@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
-REQUEST QLINEARGRADIENT
-REQUEST QQUATERNION
+REQUEST QColor
+REQUEST QLinearGradient
+REQUEST QQuaternion
 #endif
 
 CLASS QAbstract3DSeries INHERIT QObject
@@ -100,14 +100,12 @@ RETURN
 #include <QtDataVisualization/QAbstract3DSeries>
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
-/*
-virtual ~QAbstract3DSeries()
-*/
+// virtual ~QAbstract3DSeries()
 HB_FUNC_STATIC(QABSTRACT3DSERIES_DELETE)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -122,12 +120,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstract3DSeries::SeriesType type() const
-*/
+// QAbstract3DSeries::SeriesType type() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_TYPE)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,12 +138,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_TYPE)
   }
 }
 
-/*
-QString itemLabelFormat() const
-*/
+// QString itemLabelFormat() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABELFORMAT)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,12 +156,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABELFORMAT)
   }
 }
 
-/*
-void setItemLabelFormat( const QString &format )
-*/
+// void setItemLabelFormat( const QString & format )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELFORMAT)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,12 +176,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isVisible() const
-*/
+// bool isVisible() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ISVISIBLE)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,12 +194,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISVISIBLE)
   }
 }
 
-/*
-void setVisible( bool visible )
-*/
+// void setVisible( bool visible )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETVISIBLE)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,12 +214,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstract3DSeries::Mesh mesh() const
-*/
+// QAbstract3DSeries::Mesh mesh() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_MESH)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,12 +232,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MESH)
   }
 }
 
-/*
-void setMesh( QAbstract3DSeries::Mesh mesh )
-*/
+// void setMesh( QAbstract3DSeries::Mesh mesh )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESH)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,12 +252,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isMeshSmooth() const
-*/
+// bool isMeshSmooth() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ISMESHSMOOTH)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,12 +270,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISMESHSMOOTH)
   }
 }
 
-/*
-void setMeshSmooth( bool enable )
-*/
+// void setMeshSmooth( bool enable )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHSMOOTH)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,12 +290,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHSMOOTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QQuaternion meshRotation() const
-*/
+// QQuaternion meshRotation() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_MESHROTATION)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -331,12 +309,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MESHROTATION)
   }
 }
 
-/*
-void setMeshRotation( const QQuaternion &rotation )
-*/
+// void setMeshRotation( const QQuaternion & rotation )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHROTATION)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,12 +329,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHROTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString userDefinedMesh() const
-*/
+// QString userDefinedMesh() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_USERDEFINEDMESH)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,12 +347,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_USERDEFINEDMESH)
   }
 }
 
-/*
-void setUserDefinedMesh( const QString &fileName )
-*/
+// void setUserDefinedMesh( const QString & fileName )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETUSERDEFINEDMESH)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -395,12 +367,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETUSERDEFINEDMESH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Q3DTheme::ColorStyle colorStyle() const
-*/
+// Q3DTheme::ColorStyle colorStyle() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_COLORSTYLE)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,12 +385,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_COLORSTYLE)
   }
 }
 
-/*
-void setColorStyle( Q3DTheme::ColorStyle style )
-*/
+// void setColorStyle( Q3DTheme::ColorStyle style )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETCOLORSTYLE)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -437,12 +405,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETCOLORSTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QColor baseColor() const
-*/
+// QColor baseColor() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_BASECOLOR)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -458,12 +424,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_BASECOLOR)
   }
 }
 
-/*
-void setBaseColor( const QColor &color )
-*/
+// void setBaseColor( const QColor & color )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASECOLOR)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -480,12 +444,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASECOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QLinearGradient baseGradient() const
-*/
+// QLinearGradient baseGradient() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_BASEGRADIENT)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,12 +463,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_BASEGRADIENT)
   }
 }
 
-/*
-void setBaseGradient( const QLinearGradient &gradient )
-*/
+// void setBaseGradient( const QLinearGradient & gradient )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASEGRADIENT)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -523,12 +483,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETBASEGRADIENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QColor singleHighlightColor() const
-*/
+// QColor singleHighlightColor() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -544,12 +502,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR)
   }
 }
 
-/*
-void setSingleHighlightColor( const QColor &color )
-*/
+// void setSingleHighlightColor( const QColor & color )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -566,12 +522,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QLinearGradient singleHighlightGradient() const
-*/
+// QLinearGradient singleHighlightGradient() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -587,12 +541,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT)
   }
 }
 
-/*
-void setSingleHighlightGradient( const QLinearGradient &gradient )
-*/
+// void setSingleHighlightGradient( const QLinearGradient & gradient )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -609,12 +561,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QColor multiHighlightColor() const
-*/
+// QColor multiHighlightColor() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -630,12 +580,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR)
   }
 }
 
-/*
-void setMultiHighlightColor( const QColor &color )
-*/
+// void setMultiHighlightColor( const QColor & color )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -652,12 +600,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QLinearGradient multiHighlightGradient() const
-*/
+// QLinearGradient multiHighlightGradient() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -673,12 +619,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT)
   }
 }
 
-/*
-void setMultiHighlightGradient( const QLinearGradient &gradient )
-*/
+// void setMultiHighlightGradient( const QLinearGradient & gradient )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -695,12 +639,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_NAME)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -715,12 +657,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_NAME)
   }
 }
 
-/*
-void setName( const QString &name )
-*/
+// void setName( const QString & name )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETNAME)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -737,12 +677,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString itemLabel() const
-*/
+// QString itemLabel() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABEL)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -757,12 +695,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ITEMLABEL)
   }
 }
 
-/*
-bool isItemLabelVisible() const
-*/
+// bool isItemLabelVisible() const
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ISITEMLABELVISIBLE)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -777,12 +713,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_ISITEMLABELVISIBLE)
   }
 }
 
-/*
-void setItemLabelVisible( bool visible )
-*/
+// void setItemLabelVisible( bool visible )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELVISIBLE)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -799,12 +733,10 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETITEMLABELVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Q_INVOKABLE void setMeshAxisAndAngle( const QVector3D &axis, float angle )
-*/
+// Q_INVOKABLE void setMeshAxisAndAngle( const QVector3D & axis, float angle )
 HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHAXISANDANGLE)
 {
-  QAbstract3DSeries *obj = (QAbstract3DSeries *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DSeries *obj = qobject_cast<QAbstract3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -823,87 +755,86 @@ HB_FUNC_STATIC(QABSTRACT3DSERIES_SETMESHAXISANDANGLE)
 
 void QAbstract3DSeriesSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstract3DSeriesSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASECOLORCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("baseColorChanged(QColor)", "baseColorChanged(QColor)");
+  CONNECT_SIGNAL("baseColorChanged(QColor)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("baseGradientChanged(QLinearGradient)", "baseGradientChanged(QLinearGradient)");
+  CONNECT_SIGNAL("baseGradientChanged(QLinearGradient)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONCOLORSTYLECHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("colorStyleChanged(Q3DTheme::ColorStyle)",
-                                        "colorStyleChanged(Q3DTheme::ColorStyle)");
+  CONNECT_SIGNAL("colorStyleChanged(Q3DTheme::ColorStyle)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("itemLabelChanged(QString)", "itemLabelChanged(QString)");
+  CONNECT_SIGNAL("itemLabelChanged(QString)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("itemLabelFormatChanged(QString)", "itemLabelFormatChanged(QString)");
+  CONNECT_SIGNAL("itemLabelFormatChanged(QString)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("itemLabelVisibilityChanged(bool)", "itemLabelVisibilityChanged(bool)");
+  CONNECT_SIGNAL("itemLabelVisibilityChanged(bool)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("meshChanged(QAbstract3DSeries::Mesh)", "meshChanged(QAbstract3DSeries::Mesh)");
+  CONNECT_SIGNAL("meshChanged(QAbstract3DSeries::Mesh)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHROTATIONCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("meshRotationChanged(QQuaternion)", "meshRotationChanged(QQuaternion)");
+  CONNECT_SIGNAL("meshRotationChanged(QQuaternion)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("meshSmoothChanged(bool)", "meshSmoothChanged(bool)");
+  CONNECT_SIGNAL("meshSmoothChanged(bool)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("multiHighlightColorChanged(QColor)", "multiHighlightColorChanged(QColor)");
+  CONNECT_SIGNAL("multiHighlightColorChanged(QColor)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("multiHighlightGradientChanged(QLinearGradient)",
-                                        "multiHighlightGradientChanged(QLinearGradient)");
+  CONNECT_SIGNAL("multiHighlightGradientChanged(QLinearGradient)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONNAMECHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("nameChanged(QString)", "nameChanged(QString)");
+  CONNECT_SIGNAL("nameChanged(QString)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("singleHighlightColorChanged(QColor)", "singleHighlightColorChanged(QColor)");
+  CONNECT_SIGNAL("singleHighlightColorChanged(QColor)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("singleHighlightGradientChanged(QLinearGradient)",
-                                        "singleHighlightGradientChanged(QLinearGradient)");
+  CONNECT_SIGNAL("singleHighlightGradientChanged(QLinearGradient)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("userDefinedMeshChanged(QString)", "userDefinedMeshChanged(QString)");
+  CONNECT_SIGNAL("userDefinedMeshChanged(QString)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DSERIES_ONVISIBILITYCHANGED)
 {
-  QAbstract3DSeriesSlots_connect_signal("visibilityChanged(bool)", "visibilityChanged(bool)");
+  CONNECT_SIGNAL("visibilityChanged(bool)");
 }
 
 #pragma ENDDUMP

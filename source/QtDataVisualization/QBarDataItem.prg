@@ -59,32 +59,24 @@ RETURN
 #include <QtDataVisualization/QBarDataItem>
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
 HB_FUNC_STATIC(QBARDATAITEM_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QBarDataItem()
-    */
+    // QBarDataItem()
     QBarDataItem *obj = new QBarDataItem();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QBarDataItem( float value )
-    */
+    // QBarDataItem( float value )
     QBarDataItem *obj = new QBarDataItem(PFLOAT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    QBarDataItem( float value, float angle )
-    */
+    // QBarDataItem( float value, float angle )
     QBarDataItem *obj = new QBarDataItem(PFLOAT(1), PFLOAT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQBARDATAITEM(1)) {
-    /*
-    QBarDataItem( const QBarDataItem &other )
-    */
+    // QBarDataItem( const QBarDataItem & other )
     QBarDataItem *obj = new QBarDataItem(*PQBARDATAITEM(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -92,12 +84,10 @@ HB_FUNC_STATIC(QBARDATAITEM_NEW)
   }
 }
 
-/*
-~QBarDataItem()
-*/
+// ~QBarDataItem()
 HB_FUNC_STATIC(QBARDATAITEM_DELETE)
 {
-  QBarDataItem *obj = (QBarDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataItem *obj = static_cast<QBarDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
     delete obj;
@@ -110,12 +100,10 @@ HB_FUNC_STATIC(QBARDATAITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setValue( float val )
-*/
+// void setValue( float val )
 HB_FUNC_STATIC(QBARDATAITEM_SETVALUE)
 {
-  QBarDataItem *obj = (QBarDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataItem *obj = static_cast<QBarDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,12 +120,10 @@ HB_FUNC_STATIC(QBARDATAITEM_SETVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-float value() const
-*/
+// float value() const
 HB_FUNC_STATIC(QBARDATAITEM_VALUE)
 {
-  QBarDataItem *obj = (QBarDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataItem *obj = static_cast<QBarDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,12 +138,10 @@ HB_FUNC_STATIC(QBARDATAITEM_VALUE)
   }
 }
 
-/*
-void setRotation( float angle )
-*/
+// void setRotation( float angle )
 HB_FUNC_STATIC(QBARDATAITEM_SETROTATION)
 {
-  QBarDataItem *obj = (QBarDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataItem *obj = static_cast<QBarDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,12 +158,10 @@ HB_FUNC_STATIC(QBARDATAITEM_SETROTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-float rotation() const
-*/
+// float rotation() const
 HB_FUNC_STATIC(QBARDATAITEM_ROTATION)
 {
-  QBarDataItem *obj = (QBarDataItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  QBarDataItem *obj = static_cast<QBarDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

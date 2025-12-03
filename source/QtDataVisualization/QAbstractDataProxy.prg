@@ -48,14 +48,12 @@ RETURN
 #include <QtDataVisualization/QAbstractDataProxy>
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
-/*
-virtual ~QAbstractDataProxy()
-*/
+// virtual ~QAbstractDataProxy()
 HB_FUNC_STATIC(QABSTRACTDATAPROXY_DELETE)
 {
-  QAbstractDataProxy *obj = (QAbstractDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractDataProxy *obj = qobject_cast<QAbstractDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -70,12 +68,10 @@ HB_FUNC_STATIC(QABSTRACTDATAPROXY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractDataProxy::DataType type() const
-*/
+// QAbstractDataProxy::DataType type() const
 HB_FUNC_STATIC(QABSTRACTDATAPROXY_TYPE)
 {
-  QAbstractDataProxy *obj = (QAbstractDataProxy *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstractDataProxy *obj = qobject_cast<QAbstractDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

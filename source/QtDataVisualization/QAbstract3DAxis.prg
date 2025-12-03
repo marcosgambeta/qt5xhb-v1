@@ -77,14 +77,12 @@ RETURN
 #include <QtDataVisualization/QAbstract3DAxis>
 #endif
 
-    using namespace QtDataVisualization;
+using namespace QtDataVisualization;
 
-/*
-virtual ~QAbstract3DAxis()
-*/
+// virtual ~QAbstract3DAxis()
 HB_FUNC_STATIC(QABSTRACT3DAXIS_DELETE)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -99,12 +97,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_TITLE)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -119,12 +115,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_TITLE)
   }
 }
 
-/*
-void setTitle( const QString &title )
-*/
+// void setTitle( const QString & title )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLE)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,12 +135,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList labels() const
-*/
+// QStringList labels() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELS)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,12 +153,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELS)
   }
 }
 
-/*
-void setLabels( const QStringList &labels )
-*/
+// void setLabels( const QStringList & labels )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELS)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,12 +173,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstract3DAxis::AxisOrientation orientation() const
-*/
+// QAbstract3DAxis::AxisOrientation orientation() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ORIENTATION)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,12 +191,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ORIENTATION)
   }
 }
 
-/*
-QAbstract3DAxis::AxisType type() const
-*/
+// QAbstract3DAxis::AxisType type() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_TYPE)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,12 +209,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_TYPE)
   }
 }
 
-/*
-float min() const
-*/
+// float min() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_MIN)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,12 +227,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_MIN)
   }
 }
 
-/*
-void setMin( float min )
-*/
+// void setMin( float min )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMIN)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,12 +247,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-float max() const
-*/
+// float max() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_MAX)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,12 +265,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_MAX)
   }
 }
 
-/*
-void setMax( float max )
-*/
+// void setMax( float max )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMAX)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -307,12 +285,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMAX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isAutoAdjustRange() const
-*/
+// bool isAutoAdjustRange() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ISAUTOADJUSTRANGE)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -327,12 +303,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISAUTOADJUSTRANGE)
   }
 }
 
-/*
-void setAutoAdjustRange( bool autoAdjust )
-*/
+// void setAutoAdjustRange( bool autoAdjust )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETAUTOADJUSTRANGE)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -349,12 +323,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETAUTOADJUSTRANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-float labelAutoRotation() const
-*/
+// float labelAutoRotation() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELAUTOROTATION)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -369,12 +341,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELAUTOROTATION)
   }
 }
 
-/*
-void setLabelAutoRotation( float angle )
-*/
+// void setLabelAutoRotation( float angle )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELAUTOROTATION)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,12 +361,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELAUTOROTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isTitleVisible() const
-*/
+// bool isTitleVisible() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEVISIBLE)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,12 +379,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEVISIBLE)
   }
 }
 
-/*
-void setTitleVisible( bool visible )
-*/
+// void setTitleVisible( bool visible )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEVISIBLE)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -433,12 +399,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isTitleFixed() const
-*/
+// bool isTitleFixed() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEFIXED)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -453,12 +417,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEFIXED)
   }
 }
 
-/*
-void setTitleFixed( bool fixed )
-*/
+// void setTitleFixed( bool fixed )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEFIXED)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -475,12 +437,10 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEFIXED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRange( float min, float max )
-*/
+// void setRange( float min, float max )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETRANGE)
 {
-  QAbstract3DAxis *obj = (QAbstract3DAxis *)Qt5xHb::itemGetPtrStackSelfItem();
+  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -499,55 +459,56 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETRANGE)
 
 void QAbstract3DAxisSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstract3DAxisSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED)
 {
-  QAbstract3DAxisSlots_connect_signal("autoAdjustRangeChanged(bool)", "autoAdjustRangeChanged(bool)");
+  CONNECT_SIGNAL("autoAdjustRangeChanged(bool)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED)
 {
-  QAbstract3DAxisSlots_connect_signal("labelAutoRotationChanged(float)", "labelAutoRotationChanged(float)");
+  CONNECT_SIGNAL("labelAutoRotationChanged(float)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONLABELSCHANGED)
 {
-  QAbstract3DAxisSlots_connect_signal("labelsChanged()", "labelsChanged()");
+  CONNECT_SIGNAL("labelsChanged()");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONMAXCHANGED)
 {
-  QAbstract3DAxisSlots_connect_signal("maxChanged(float)", "maxChanged(float)");
+  CONNECT_SIGNAL("maxChanged(float)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONMINCHANGED)
 {
-  QAbstract3DAxisSlots_connect_signal("minChanged(float)", "minChanged(float)");
+  CONNECT_SIGNAL("minChanged(float)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONORIENTATIONCHANGED)
 {
-  QAbstract3DAxisSlots_connect_signal("orientationChanged(QAbstract3DAxis::AxisOrientation)",
-                                      "orientationChanged(QAbstract3DAxis::AxisOrientation)");
+  CONNECT_SIGNAL("orientationChanged(QAbstract3DAxis::AxisOrientation)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONRANGECHANGED)
 {
-  QAbstract3DAxisSlots_connect_signal("rangeChanged(float,float)", "rangeChanged(float,float)");
+  CONNECT_SIGNAL("rangeChanged(float,float)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONTITLECHANGED)
 {
-  QAbstract3DAxisSlots_connect_signal("titleChanged(QString)", "titleChanged(QString)");
+  CONNECT_SIGNAL("titleChanged(QString)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED)
 {
-  QAbstract3DAxisSlots_connect_signal("titleFixedChanged(bool)", "titleFixedChanged(bool)");
+  CONNECT_SIGNAL("titleFixedChanged(bool)");
 }
 
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED)
 {
-  QAbstract3DAxisSlots_connect_signal("titleVisibilityChanged(bool)", "titleVisibilityChanged(bool)");
+  CONNECT_SIGNAL("titleVisibilityChanged(bool)");
 }
 
 #pragma ENDDUMP
