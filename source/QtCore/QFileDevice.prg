@@ -61,9 +61,11 @@ RETURN
 #include <QtCore/QFileDevice>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QFileDevice *p = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QFILEDEVICE_DELETE)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QFILEDEVICE_DELETE)
 // QFileDevice::FileError error() const
 HB_FUNC_STATIC(QFILEDEVICE_ERROR)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ERROR)
 // virtual QString fileName() const
 HB_FUNC_STATIC(QFILEDEVICE_FILENAME)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +119,7 @@ HB_FUNC_STATIC(QFILEDEVICE_FILENAME)
 // bool flush()
 HB_FUNC_STATIC(QFILEDEVICE_FLUSH)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QFILEDEVICE_FLUSH)
 // int handle() const
 HB_FUNC_STATIC(QFILEDEVICE_HANDLE)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +155,7 @@ HB_FUNC_STATIC(QFILEDEVICE_HANDLE)
 // virtual QFileDevice::Permissions permissions() const
 HB_FUNC_STATIC(QFILEDEVICE_PERMISSIONS)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +173,7 @@ HB_FUNC_STATIC(QFILEDEVICE_PERMISSIONS)
 // virtual bool resize( qint64 sz )
 HB_FUNC_STATIC(QFILEDEVICE_RESIZE)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +191,7 @@ HB_FUNC_STATIC(QFILEDEVICE_RESIZE)
 // virtual bool setPermissions( QFileDevice::Permissions permissions )
 HB_FUNC_STATIC(QFILEDEVICE_SETPERMISSIONS)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +209,7 @@ HB_FUNC_STATIC(QFILEDEVICE_SETPERMISSIONS)
 // void unsetError()
 HB_FUNC_STATIC(QFILEDEVICE_UNSETERROR)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +229,7 @@ HB_FUNC_STATIC(QFILEDEVICE_UNSETERROR)
 // virtual bool atEnd() const
 HB_FUNC_STATIC(QFILEDEVICE_ATEND)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +247,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ATEND)
 // virtual void close()
 HB_FUNC_STATIC(QFILEDEVICE_CLOSE)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +267,7 @@ HB_FUNC_STATIC(QFILEDEVICE_CLOSE)
 // virtual bool isSequential() const
 HB_FUNC_STATIC(QFILEDEVICE_ISSEQUENTIAL)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +285,7 @@ HB_FUNC_STATIC(QFILEDEVICE_ISSEQUENTIAL)
 // virtual qint64 pos() const
 HB_FUNC_STATIC(QFILEDEVICE_POS)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +303,7 @@ HB_FUNC_STATIC(QFILEDEVICE_POS)
 // virtual bool seek( qint64 pos )
 HB_FUNC_STATIC(QFILEDEVICE_SEEK)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,7 +321,7 @@ HB_FUNC_STATIC(QFILEDEVICE_SEEK)
 // virtual qint64 size() const
 HB_FUNC_STATIC(QFILEDEVICE_SIZE)
 {
-  QFileDevice *obj = qobject_cast<QFileDevice *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

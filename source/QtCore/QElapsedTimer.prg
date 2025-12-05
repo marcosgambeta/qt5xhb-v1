@@ -67,6 +67,8 @@ RETURN
 #include <QtCore/QElapsedTimer>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QElapsedTimer *p = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 // QElapsedTimer()
 HB_FUNC_STATIC(QELAPSEDTIMER_NEW)
 {
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_NEW)
 
 HB_FUNC_STATIC(QELAPSEDTIMER_DELETE)
 {
-  QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_DELETE)
 // qint64 elapsed() const
 HB_FUNC_STATIC(QELAPSEDTIMER_ELAPSED)
 {
-  QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ELAPSED)
 // bool hasExpired( qint64 timeout ) const
 HB_FUNC_STATIC(QELAPSEDTIMER_HASEXPIRED)
 {
-  QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_HASEXPIRED)
 // void invalidate()
 HB_FUNC_STATIC(QELAPSEDTIMER_INVALIDATE)
 {
-  QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +154,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_INVALIDATE)
 // bool isValid() const
 HB_FUNC_STATIC(QELAPSEDTIMER_ISVALID)
 {
-  QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ISVALID)
 // qint64 msecsSinceReference() const
 HB_FUNC_STATIC(QELAPSEDTIMER_MSECSSINCEREFERENCE)
 {
-  QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +190,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_MSECSSINCEREFERENCE)
 // qint64 msecsTo( const QElapsedTimer & other ) const
 HB_FUNC_STATIC(QELAPSEDTIMER_MSECSTO)
 {
-  QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +208,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_MSECSTO)
 // qint64 nsecsElapsed() const
 HB_FUNC_STATIC(QELAPSEDTIMER_NSECSELAPSED)
 {
-  QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +226,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_NSECSELAPSED)
 // qint64 restart()
 HB_FUNC_STATIC(QELAPSEDTIMER_RESTART)
 {
-  QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +244,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_RESTART)
 // qint64 secsTo( const QElapsedTimer & other ) const
 HB_FUNC_STATIC(QELAPSEDTIMER_SECSTO)
 {
-  QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,7 +262,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_SECSTO)
 // void start()
 HB_FUNC_STATIC(QELAPSEDTIMER_START)
 {
-  QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

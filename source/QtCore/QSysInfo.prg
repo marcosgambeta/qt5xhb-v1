@@ -52,6 +52,8 @@ RETURN
 #include <QtCore/QSysInfo>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QSysInfo *p = static_cast<QSysInfo *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSYSINFO_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();

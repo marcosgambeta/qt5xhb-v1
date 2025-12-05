@@ -71,6 +71,8 @@ RETURN
 #include <QtCore/QStateMachine>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QStateMachine *p = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSTATEMACHINE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_NEW)
 
 HB_FUNC_STATIC(QSTATEMACHINE_DELETE)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_DELETE)
 // void addState( QAbstractState * state )
 HB_FUNC_STATIC(QSTATEMACHINE_ADDSTATE)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ADDSTATE)
 // void removeState( QAbstractState * state )
 HB_FUNC_STATIC(QSTATEMACHINE_REMOVESTATE)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +148,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_REMOVESTATE)
 // QStateMachine::Error error() const
 HB_FUNC_STATIC(QSTATEMACHINE_ERROR)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ERROR)
 // QString errorString() const
 HB_FUNC_STATIC(QSTATEMACHINE_ERRORSTRING)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ERRORSTRING)
 // void clearError()
 HB_FUNC_STATIC(QSTATEMACHINE_CLEARERROR)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_CLEARERROR)
 // bool isRunning() const
 HB_FUNC_STATIC(QSTATEMACHINE_ISRUNNING)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +222,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ISRUNNING)
 // bool isAnimated() const
 HB_FUNC_STATIC(QSTATEMACHINE_ISANIMATED)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,7 +240,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ISANIMATED)
 // void setAnimated( bool enabled )
 HB_FUNC_STATIC(QSTATEMACHINE_SETANIMATED)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +260,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_SETANIMATED)
 // void addDefaultAnimation( QAbstractAnimation * animation )
 HB_FUNC_STATIC(QSTATEMACHINE_ADDDEFAULTANIMATION)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -278,7 +280,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ADDDEFAULTANIMATION)
 // QList<QAbstractAnimation *> defaultAnimations() const
 HB_FUNC_STATIC(QSTATEMACHINE_DEFAULTANIMATIONS)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +317,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_DEFAULTANIMATIONS)
 // void removeDefaultAnimation( QAbstractAnimation * animation )
 HB_FUNC_STATIC(QSTATEMACHINE_REMOVEDEFAULTANIMATION)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +337,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_REMOVEDEFAULTANIMATION)
 // QState::RestorePolicy globalRestorePolicy() const
 HB_FUNC_STATIC(QSTATEMACHINE_GLOBALRESTOREPOLICY)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -353,7 +355,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_GLOBALRESTOREPOLICY)
 // void setGlobalRestorePolicy( QState::RestorePolicy restorePolicy )
 HB_FUNC_STATIC(QSTATEMACHINE_SETGLOBALRESTOREPOLICY)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -373,7 +375,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_SETGLOBALRESTOREPOLICY)
 // void postEvent( QEvent * event, QStateMachine::EventPriority priority = QStateMachine::NormalPriority )
 HB_FUNC_STATIC(QSTATEMACHINE_POSTEVENT)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -394,7 +396,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_POSTEVENT)
 // int postDelayedEvent( QEvent * event, int delay )
 HB_FUNC_STATIC(QSTATEMACHINE_POSTDELAYEDEVENT)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -412,7 +414,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_POSTDELAYEDEVENT)
 // bool cancelDelayedEvent( int id )
 HB_FUNC_STATIC(QSTATEMACHINE_CANCELDELAYEDEVENT)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -430,7 +432,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_CANCELDELAYEDEVENT)
 // bool eventFilter( QObject * watched, QEvent * event )
 HB_FUNC_STATIC(QSTATEMACHINE_EVENTFILTER)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -448,7 +450,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_EVENTFILTER)
 // void start()
 HB_FUNC_STATIC(QSTATEMACHINE_START)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -468,7 +470,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_START)
 // void stop()
 HB_FUNC_STATIC(QSTATEMACHINE_STOP)
 {
-  QStateMachine *obj = qobject_cast<QStateMachine *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

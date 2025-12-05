@@ -57,6 +57,8 @@ RETURN
 #include <QtCore/QTextDecoder>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QTextDecoder *p = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTDECODER_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTCODEC(1)) {
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QTEXTDECODER_NEW)
 
 HB_FUNC_STATIC(QTEXTDECODER_DELETE)
 {
-  QTextDecoder *obj = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -91,14 +93,14 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QString toUnicode( const char * chars, int len )
-    QTextDecoder *obj = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->toUnicode(PCONSTCHAR(1), PINT(2)));
     }
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QString toUnicode( const QByteArray & ba )
-    QTextDecoder *obj = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->toUnicode(*PQBYTEARRAY(1)));
@@ -111,7 +113,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
 // bool hasFailure() const
 HB_FUNC_STATIC(QTEXTDECODER_HASFAILURE)
 {
-  QTextDecoder *obj = static_cast<QTextDecoder *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

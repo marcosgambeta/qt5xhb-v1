@@ -55,6 +55,8 @@ RETURN
 #include <QtCore/QMessageLogger>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QMessageLogger *p = static_cast<QMessageLogger *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QMESSAGELOGGER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -76,7 +78,7 @@ HB_FUNC_STATIC(QMESSAGELOGGER_NEW)
 
 HB_FUNC_STATIC(QMESSAGELOGGER_DELETE)
 {
-  QMessageLogger *obj = static_cast<QMessageLogger *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

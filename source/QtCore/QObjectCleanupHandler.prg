@@ -53,6 +53,9 @@ RETURN
 #include <QtCore/QObjectCleanupHandler>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QObjectCleanupHandler *p = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 // QObjectCleanupHandler()
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_NEW)
 {
@@ -66,7 +69,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_NEW)
 
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_DELETE)
 {
-  QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -84,7 +87,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_DELETE)
 // QObject * add( QObject * object )
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 {
-  QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +106,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 // void remove( QObject * object )
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 {
-  QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +126,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 // bool isEmpty() const
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ISEMPTY)
 {
-  QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +144,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ISEMPTY)
 // void clear()
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_CLEAR)
 {
-  QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

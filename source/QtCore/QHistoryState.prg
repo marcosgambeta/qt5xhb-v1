@@ -53,6 +53,8 @@ RETURN
 #include <QtCore/QHistoryState>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QHistoryState *p = qobject_cast<QHistoryState *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHISTORYSTATE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
@@ -70,7 +72,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_NEW)
 
 HB_FUNC_STATIC(QHISTORYSTATE_DELETE)
 {
-  QHistoryState *obj = qobject_cast<QHistoryState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_DELETE)
 // QAbstractState * defaultState() const
 HB_FUNC_STATIC(QHISTORYSTATE_DEFAULTSTATE)
 {
-  QHistoryState *obj = qobject_cast<QHistoryState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_DEFAULTSTATE)
 // void setDefaultState( QAbstractState * state )
 HB_FUNC_STATIC(QHISTORYSTATE_SETDEFAULTSTATE)
 {
-  QHistoryState *obj = qobject_cast<QHistoryState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +129,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_SETDEFAULTSTATE)
 // QHistoryState::HistoryType historyType() const
 HB_FUNC_STATIC(QHISTORYSTATE_HISTORYTYPE)
 {
-  QHistoryState *obj = qobject_cast<QHistoryState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +147,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_HISTORYTYPE)
 // void setHistoryType( QHistoryState::HistoryType type )
 HB_FUNC_STATIC(QHISTORYSTATE_SETHISTORYTYPE)
 {
-  QHistoryState *obj = qobject_cast<QHistoryState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

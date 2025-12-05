@@ -50,9 +50,12 @@ RETURN
 #include <QtCore/QAbstractListModel>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractListModel *p = qobject_cast<QAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTLISTMODEL_DELETE)
 {
-  QAbstractListModel *obj = qobject_cast<QAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -71,7 +74,7 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_DELETE)
 // parent )
 HB_FUNC_STATIC(QABSTRACTLISTMODEL_DROPMIMEDATA)
 {
-  QAbstractListModel *obj = qobject_cast<QAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +92,7 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_DROPMIMEDATA)
 // virtual QModelIndex index( int row, int column = 0, const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QABSTRACTLISTMODEL_INDEX)
 {
-  QAbstractListModel *obj = qobject_cast<QAbstractListModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

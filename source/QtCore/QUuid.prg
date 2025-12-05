@@ -65,6 +65,8 @@ RETURN
 #include <QtCore/QUuid>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QUuid *p = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QUUID_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QUUID_NEW)
 
 HB_FUNC_STATIC(QUUID_DELETE)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QUUID_DELETE)
 // bool isNull() const
 HB_FUNC_STATIC(QUUID_ISNULL)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QUUID_ISNULL)
 // QByteArray toByteArray() const
 HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
 // QByteArray toRfc4122() const
 HB_FUNC_STATIC(QUUID_TORFC4122)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +156,7 @@ HB_FUNC_STATIC(QUUID_TORFC4122)
 // QString toString() const
 HB_FUNC_STATIC(QUUID_TOSTRING)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +174,7 @@ HB_FUNC_STATIC(QUUID_TOSTRING)
 // QUuid::Variant variant() const
 HB_FUNC_STATIC(QUUID_VARIANT)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +192,7 @@ HB_FUNC_STATIC(QUUID_VARIANT)
 // QUuid::Version version() const
 HB_FUNC_STATIC(QUUID_VERSION)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

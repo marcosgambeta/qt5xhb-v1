@@ -51,6 +51,8 @@ RETURN
 #include <QtCore/QChildEvent>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QChildEvent *p = static_cast<QChildEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 // QChildEvent( QEvent::Type type, QObject * child )
 HB_FUNC_STATIC(QCHILDEVENT_NEW)
 {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QCHILDEVENT_NEW)
 
 HB_FUNC_STATIC(QCHILDEVENT_DELETE)
 {
-  QChildEvent *obj = static_cast<QChildEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QCHILDEVENT_DELETE)
 // bool added() const
 HB_FUNC_STATIC(QCHILDEVENT_ADDED)
 {
-  QChildEvent *obj = static_cast<QChildEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QCHILDEVENT_ADDED)
 // QObject * child() const
 HB_FUNC_STATIC(QCHILDEVENT_CHILD)
 {
-  QChildEvent *obj = static_cast<QChildEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +119,7 @@ HB_FUNC_STATIC(QCHILDEVENT_CHILD)
 // bool polished() const
 HB_FUNC_STATIC(QCHILDEVENT_POLISHED)
 {
-  QChildEvent *obj = static_cast<QChildEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QCHILDEVENT_POLISHED)
 // bool removed() const
 HB_FUNC_STATIC(QCHILDEVENT_REMOVED)
 {
-  QChildEvent *obj = static_cast<QChildEvent *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

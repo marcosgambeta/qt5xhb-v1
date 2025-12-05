@@ -87,7 +87,10 @@ RETURN
 
 #include <QtCore/QStringList>
 
-    // QCoreApplication ( int & argc, char ** argv )
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QCoreApplication *p = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QCoreApplication ( int & argc, char ** argv )
 HB_FUNC_STATIC(QCOREAPPLICATION_NEW)
 {
   int argc;
@@ -100,7 +103,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_NEW)
 
 HB_FUNC_STATIC(QCOREAPPLICATION_DELETE)
 {
-  QCoreApplication *obj = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -118,7 +121,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_DELETE)
 // virtual bool notify( QObject * receiver, QEvent * event )
 HB_FUNC_STATIC(QCOREAPPLICATION_NOTIFY)
 {
-  QCoreApplication *obj = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +139,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_NOTIFY)
 // void quit()
 HB_FUNC_STATIC(QCOREAPPLICATION_QUIT)
 {
-  QCoreApplication *obj = qobject_cast<QCoreApplication *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

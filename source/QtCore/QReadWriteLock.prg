@@ -60,6 +60,8 @@ RETURN
 #include <QtCore/QReadWriteLock>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QReadWriteLock *p = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 // QReadWriteLock( QReadWriteLock::RecursionMode recursionMode = QReadWriteLock::NonRecursive )
 HB_FUNC_STATIC(QREADWRITELOCK_NEW)
 {
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_NEW)
 
 HB_FUNC_STATIC(QREADWRITELOCK_DELETE)
 {
-  QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_DELETE)
 // void lockForRead()
 HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORREAD)
 {
-  QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,14 +113,14 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
 {
   if (ISNUMPAR(0)) {
     // bool tryLockForRead()
-    QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->tryLockForRead());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool tryLockForRead( int timeout )
-    QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->tryLockForRead(PINT(1)));
@@ -131,7 +133,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
 // void lockForWrite()
 HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORWRITE)
 {
-  QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,14 +154,14 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
 {
   if (ISNUMPAR(0)) {
     // bool tryLockForWrite()
-    QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->tryLockForWrite());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool tryLockForWrite( int timeout )
-    QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->tryLockForWrite(PINT(1)));
@@ -172,7 +174,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
 // void unlock()
 HB_FUNC_STATIC(QREADWRITELOCK_UNLOCK)
 {
-  QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

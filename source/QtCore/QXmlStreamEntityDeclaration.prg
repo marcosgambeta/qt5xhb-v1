@@ -61,6 +61,9 @@ RETURN
 #include <QtCore/QXmlStreamEntityDeclaration>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QXmlStreamEntityDeclaration *p = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -78,7 +81,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NEW)
 
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_DELETE)
 {
-  QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -94,7 +97,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_DELETE)
 // QStringRef name() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NAME)
 {
-  QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +116,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NAME)
 // QStringRef notationName() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NOTATIONNAME)
 {
-  QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +135,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NOTATIONNAME)
 // QStringRef publicId() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_PUBLICID)
 {
-  QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +154,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_PUBLICID)
 // QStringRef systemId() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SYSTEMID)
 {
-  QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +173,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SYSTEMID)
 // QStringRef value() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_VALUE)
 {
-  QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

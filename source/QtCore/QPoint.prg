@@ -61,6 +61,8 @@ RETURN
 #include <QtCore/QPoint>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QPoint *p = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPOINT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QPOINT_NEW)
 
 HB_FUNC_STATIC(QPOINT_DELETE)
 {
-  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -94,7 +96,7 @@ HB_FUNC_STATIC(QPOINT_DELETE)
 // bool isNull() const
 HB_FUNC_STATIC(QPOINT_ISNULL)
 {
-  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +114,7 @@ HB_FUNC_STATIC(QPOINT_ISNULL)
 // int manhattanLength() const
 HB_FUNC_STATIC(QPOINT_MANHATTANLENGTH)
 {
-  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +132,7 @@ HB_FUNC_STATIC(QPOINT_MANHATTANLENGTH)
 // void setX( int x )
 HB_FUNC_STATIC(QPOINT_SETX)
 {
-  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QPOINT_SETX)
 // void setY( int y )
 HB_FUNC_STATIC(QPOINT_SETY)
 {
-  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QPOINT_SETY)
 // int x() const
 HB_FUNC_STATIC(QPOINT_X)
 {
-  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +190,7 @@ HB_FUNC_STATIC(QPOINT_X)
 // int y() const
 HB_FUNC_STATIC(QPOINT_Y)
 {
-  QPoint *obj = static_cast<QPoint *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

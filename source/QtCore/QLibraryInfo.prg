@@ -60,9 +60,11 @@ RETURN
 #include <QtCore/QLibraryInfo>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QLibraryInfo *p = static_cast<QLibraryInfo *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QLIBRARYINFO_DELETE)
 {
-  QLibraryInfo *obj = static_cast<QLibraryInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

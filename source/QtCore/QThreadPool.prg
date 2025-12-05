@@ -60,6 +60,8 @@ RETURN
 #include <QtCore/QThreadPool>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QThreadPool *p = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 // QThreadPool( QObject * parent = 0 )
 HB_FUNC_STATIC(QTHREADPOOL_NEW)
 {
@@ -73,7 +75,7 @@ HB_FUNC_STATIC(QTHREADPOOL_NEW)
 
 HB_FUNC_STATIC(QTHREADPOOL_DELETE)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -91,7 +93,7 @@ HB_FUNC_STATIC(QTHREADPOOL_DELETE)
 // void start( QRunnable * runnable, int priority = 0 )
 HB_FUNC_STATIC(QTHREADPOOL_START)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +113,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
 // bool tryStart( QRunnable * runnable )
 HB_FUNC_STATIC(QTHREADPOOL_TRYSTART)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +131,7 @@ HB_FUNC_STATIC(QTHREADPOOL_TRYSTART)
 // int expiryTimeout() const
 HB_FUNC_STATIC(QTHREADPOOL_EXPIRYTIMEOUT)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +149,7 @@ HB_FUNC_STATIC(QTHREADPOOL_EXPIRYTIMEOUT)
 // void setExpiryTimeout( int expiryTimeout )
 HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +169,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 // int maxThreadCount() const
 HB_FUNC_STATIC(QTHREADPOOL_MAXTHREADCOUNT)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +187,7 @@ HB_FUNC_STATIC(QTHREADPOOL_MAXTHREADCOUNT)
 // void setMaxThreadCount( int maxThreadCount )
 HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +207,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 // int activeThreadCount() const
 HB_FUNC_STATIC(QTHREADPOOL_ACTIVETHREADCOUNT)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +225,7 @@ HB_FUNC_STATIC(QTHREADPOOL_ACTIVETHREADCOUNT)
 // void reserveThread()
 HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +245,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 // void releaseThread()
 HB_FUNC_STATIC(QTHREADPOOL_RELEASETHREAD)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +265,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RELEASETHREAD)
 // bool waitForDone( int msecs = -1 )
 HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +283,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
 // void clear()
 HB_FUNC_STATIC(QTHREADPOOL_CLEAR)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

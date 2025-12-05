@@ -61,6 +61,8 @@ RETURN
 #include <QtCore/QMetaType>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QMetaType *p = static_cast<QMetaType *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 // static int registerTypedef( const char * typeName, int aliasId )
 HB_FUNC_STATIC(QMETATYPE_REGISTERTYPEDEF)
 {

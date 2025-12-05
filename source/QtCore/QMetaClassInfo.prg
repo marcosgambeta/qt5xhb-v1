@@ -59,6 +59,8 @@ RETURN
 #include <QtCore/QMetaClassInfo>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QMetaClassInfo *p = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 // QMetaClassInfo()
 HB_FUNC_STATIC(QMETACLASSINFO_NEW)
 {
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_NEW)
 
 HB_FUNC_STATIC(QMETACLASSINFO_DELETE)
 {
-  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_DELETE)
 // const char * name() const
 HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 {
-  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 // const char * value() const
 HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 {
-  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 // const QMetaObject * enclosingMetaObject() const
 HB_FUNC_STATIC(QMETACLASSINFO_ENCLOSINGMETAOBJECT)
 {
-  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

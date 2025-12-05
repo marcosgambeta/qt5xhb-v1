@@ -104,6 +104,8 @@ RETURN
 #include <QtCore/QDir>
 #include <QtCore/QDateTime>
 
+#define GET_PTR_FROM_SELF(p) QFileInfo *p = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QFILEINFO_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QFILEINFO_NEW)
 
 HB_FUNC_STATIC(QFILEINFO_DELETE)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -149,7 +151,7 @@ HB_FUNC_STATIC(QFILEINFO_DELETE)
 // QDir absoluteDir() const
 HB_FUNC_STATIC(QFILEINFO_ABSOLUTEDIR)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QFILEINFO_ABSOLUTEDIR)
 // QString absoluteFilePath() const
 HB_FUNC_STATIC(QFILEINFO_ABSOLUTEFILEPATH)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QFILEINFO_ABSOLUTEFILEPATH)
 // QString absolutePath() const
 HB_FUNC_STATIC(QFILEINFO_ABSOLUTEPATH)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +206,7 @@ HB_FUNC_STATIC(QFILEINFO_ABSOLUTEPATH)
 // QString baseName() const
 HB_FUNC_STATIC(QFILEINFO_BASENAME)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +224,7 @@ HB_FUNC_STATIC(QFILEINFO_BASENAME)
 // QString bundleName() const
 HB_FUNC_STATIC(QFILEINFO_BUNDLENAME)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +242,7 @@ HB_FUNC_STATIC(QFILEINFO_BUNDLENAME)
 // bool caching() const
 HB_FUNC_STATIC(QFILEINFO_CACHING)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +260,7 @@ HB_FUNC_STATIC(QFILEINFO_CACHING)
 // QString canonicalFilePath() const
 HB_FUNC_STATIC(QFILEINFO_CANONICALFILEPATH)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,7 +278,7 @@ HB_FUNC_STATIC(QFILEINFO_CANONICALFILEPATH)
 // QString canonicalPath() const
 HB_FUNC_STATIC(QFILEINFO_CANONICALPATH)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,7 +296,7 @@ HB_FUNC_STATIC(QFILEINFO_CANONICALPATH)
 // QString completeBaseName() const
 HB_FUNC_STATIC(QFILEINFO_COMPLETEBASENAME)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -312,7 +314,7 @@ HB_FUNC_STATIC(QFILEINFO_COMPLETEBASENAME)
 // QString completeSuffix() const
 HB_FUNC_STATIC(QFILEINFO_COMPLETESUFFIX)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -330,7 +332,7 @@ HB_FUNC_STATIC(QFILEINFO_COMPLETESUFFIX)
 // QDateTime created() const
 HB_FUNC_STATIC(QFILEINFO_CREATED)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -349,7 +351,7 @@ HB_FUNC_STATIC(QFILEINFO_CREATED)
 // QDir dir() const
 HB_FUNC_STATIC(QFILEINFO_DIR)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -368,7 +370,7 @@ HB_FUNC_STATIC(QFILEINFO_DIR)
 // bool exists() const
 HB_FUNC_STATIC(QFILEINFO_EXISTS)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -386,7 +388,7 @@ HB_FUNC_STATIC(QFILEINFO_EXISTS)
 // QString fileName() const
 HB_FUNC_STATIC(QFILEINFO_FILENAME)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,7 +406,7 @@ HB_FUNC_STATIC(QFILEINFO_FILENAME)
 // QString filePath() const
 HB_FUNC_STATIC(QFILEINFO_FILEPATH)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,7 +424,7 @@ HB_FUNC_STATIC(QFILEINFO_FILEPATH)
 // QString group() const
 HB_FUNC_STATIC(QFILEINFO_GROUP)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,7 +442,7 @@ HB_FUNC_STATIC(QFILEINFO_GROUP)
 // uint groupId() const
 HB_FUNC_STATIC(QFILEINFO_GROUPID)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -458,7 +460,7 @@ HB_FUNC_STATIC(QFILEINFO_GROUPID)
 // bool isAbsolute() const
 HB_FUNC_STATIC(QFILEINFO_ISABSOLUTE)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -476,7 +478,7 @@ HB_FUNC_STATIC(QFILEINFO_ISABSOLUTE)
 // bool isBundle() const
 HB_FUNC_STATIC(QFILEINFO_ISBUNDLE)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -494,7 +496,7 @@ HB_FUNC_STATIC(QFILEINFO_ISBUNDLE)
 // bool isDir() const
 HB_FUNC_STATIC(QFILEINFO_ISDIR)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -512,7 +514,7 @@ HB_FUNC_STATIC(QFILEINFO_ISDIR)
 // bool isExecutable() const
 HB_FUNC_STATIC(QFILEINFO_ISEXECUTABLE)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -530,7 +532,7 @@ HB_FUNC_STATIC(QFILEINFO_ISEXECUTABLE)
 // bool isFile() const
 HB_FUNC_STATIC(QFILEINFO_ISFILE)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -548,7 +550,7 @@ HB_FUNC_STATIC(QFILEINFO_ISFILE)
 // bool isHidden() const
 HB_FUNC_STATIC(QFILEINFO_ISHIDDEN)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -566,7 +568,7 @@ HB_FUNC_STATIC(QFILEINFO_ISHIDDEN)
 // bool isNativePath() const
 HB_FUNC_STATIC(QFILEINFO_ISNATIVEPATH)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -584,7 +586,7 @@ HB_FUNC_STATIC(QFILEINFO_ISNATIVEPATH)
 // bool isReadable() const
 HB_FUNC_STATIC(QFILEINFO_ISREADABLE)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -602,7 +604,7 @@ HB_FUNC_STATIC(QFILEINFO_ISREADABLE)
 // bool isRelative() const
 HB_FUNC_STATIC(QFILEINFO_ISRELATIVE)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -620,7 +622,7 @@ HB_FUNC_STATIC(QFILEINFO_ISRELATIVE)
 // bool isRoot() const
 HB_FUNC_STATIC(QFILEINFO_ISROOT)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -638,7 +640,7 @@ HB_FUNC_STATIC(QFILEINFO_ISROOT)
 // bool isSymLink() const
 HB_FUNC_STATIC(QFILEINFO_ISSYMLINK)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -656,7 +658,7 @@ HB_FUNC_STATIC(QFILEINFO_ISSYMLINK)
 // bool isWritable() const
 HB_FUNC_STATIC(QFILEINFO_ISWRITABLE)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -674,7 +676,7 @@ HB_FUNC_STATIC(QFILEINFO_ISWRITABLE)
 // QDateTime lastModified() const
 HB_FUNC_STATIC(QFILEINFO_LASTMODIFIED)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -693,7 +695,7 @@ HB_FUNC_STATIC(QFILEINFO_LASTMODIFIED)
 // QDateTime lastRead() const
 HB_FUNC_STATIC(QFILEINFO_LASTREAD)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -712,7 +714,7 @@ HB_FUNC_STATIC(QFILEINFO_LASTREAD)
 // bool makeAbsolute()
 HB_FUNC_STATIC(QFILEINFO_MAKEABSOLUTE)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -730,7 +732,7 @@ HB_FUNC_STATIC(QFILEINFO_MAKEABSOLUTE)
 // QString owner() const
 HB_FUNC_STATIC(QFILEINFO_OWNER)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -748,7 +750,7 @@ HB_FUNC_STATIC(QFILEINFO_OWNER)
 // uint ownerId() const
 HB_FUNC_STATIC(QFILEINFO_OWNERID)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -766,7 +768,7 @@ HB_FUNC_STATIC(QFILEINFO_OWNERID)
 // QString path() const
 HB_FUNC_STATIC(QFILEINFO_PATH)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -784,7 +786,7 @@ HB_FUNC_STATIC(QFILEINFO_PATH)
 // bool permission( QFile::Permissions permissions ) const
 HB_FUNC_STATIC(QFILEINFO_PERMISSION)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -802,7 +804,7 @@ HB_FUNC_STATIC(QFILEINFO_PERMISSION)
 // QFile::Permissions permissions() const
 HB_FUNC_STATIC(QFILEINFO_PERMISSIONS)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -820,7 +822,7 @@ HB_FUNC_STATIC(QFILEINFO_PERMISSIONS)
 // void refresh()
 HB_FUNC_STATIC(QFILEINFO_REFRESH)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -840,7 +842,7 @@ HB_FUNC_STATIC(QFILEINFO_REFRESH)
 // void setCaching( bool enable )
 HB_FUNC_STATIC(QFILEINFO_SETCACHING)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -861,7 +863,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void setFile( const QString & file )
-    QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setFile(PQSTRING(1));
@@ -870,7 +872,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQFILE(1)) {
     // void setFile( const QFile & file )
-    QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setFile(*PQFILE(1));
@@ -879,7 +881,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2)) {
     // void setFile( const QDir & dir, const QString & file )
-    QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setFile(*PQDIR(1), PQSTRING(2));
@@ -894,7 +896,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
 // qint64 size() const
 HB_FUNC_STATIC(QFILEINFO_SIZE)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -912,7 +914,7 @@ HB_FUNC_STATIC(QFILEINFO_SIZE)
 // QString suffix() const
 HB_FUNC_STATIC(QFILEINFO_SUFFIX)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -930,7 +932,7 @@ HB_FUNC_STATIC(QFILEINFO_SUFFIX)
 // void swap( QFileInfo & other )
 HB_FUNC_STATIC(QFILEINFO_SWAP)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -950,7 +952,7 @@ HB_FUNC_STATIC(QFILEINFO_SWAP)
 // QString symLinkTarget() const
 HB_FUNC_STATIC(QFILEINFO_SYMLINKTARGET)
 {
-  QFileInfo *obj = static_cast<QFileInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

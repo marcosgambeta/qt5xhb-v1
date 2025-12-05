@@ -61,6 +61,8 @@ RETURN
 #include <QtCore/QItemSelection>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QItemSelection *p = static_cast<QItemSelection *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QITEMSELECTION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QITEMSELECTION_NEW)
 
 HB_FUNC_STATIC(QITEMSELECTION_DELETE)
 {
-  QItemSelection *obj = static_cast<QItemSelection *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -94,7 +96,7 @@ HB_FUNC_STATIC(QITEMSELECTION_DELETE)
 // void select( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 HB_FUNC_STATIC(QITEMSELECTION_SELECT)
 {
-  QItemSelection *obj = static_cast<QItemSelection *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QITEMSELECTION_SELECT)
 // bool contains( const QModelIndex & index ) const
 HB_FUNC_STATIC(QITEMSELECTION_CONTAINS)
 {
-  QItemSelection *obj = static_cast<QItemSelection *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QITEMSELECTION_CONTAINS)
 // QModelIndexList indexes() const
 HB_FUNC_STATIC(QITEMSELECTION_INDEXES)
 {
-  QItemSelection *obj = static_cast<QItemSelection *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +174,7 @@ HB_FUNC_STATIC(QITEMSELECTION_INDEXES)
 // void merge( const QItemSelection & other, QItemSelectionModel::SelectionFlags command )
 HB_FUNC_STATIC(QITEMSELECTION_MERGE)
 {
-  QItemSelection *obj = static_cast<QItemSelection *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

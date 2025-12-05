@@ -48,6 +48,8 @@ RETURN
 #include <QtCore/QFinalState>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QFinalState *p = qobject_cast<QFinalState *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 // QFinalState( QState * parent = 0 )
 HB_FUNC_STATIC(QFINALSTATE_NEW)
 {
@@ -61,7 +63,7 @@ HB_FUNC_STATIC(QFINALSTATE_NEW)
 
 HB_FUNC_STATIC(QFINALSTATE_DELETE)
 {
-  QFinalState *obj = qobject_cast<QFinalState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);

@@ -59,6 +59,8 @@ RETURN
 #include <QtCore/QReadLocker>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QReadLocker *p = static_cast<QReadLocker *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 // QReadLocker( QReadWriteLock * readWriteLock )
 HB_FUNC_STATIC(QREADLOCKER_NEW)
 {
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(QREADLOCKER_NEW)
 
 HB_FUNC_STATIC(QREADLOCKER_DELETE)
 {
-  QReadLocker *obj = static_cast<QReadLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QREADLOCKER_DELETE)
 // void unlock()
 HB_FUNC_STATIC(QREADLOCKER_UNLOCK)
 {
-  QReadLocker *obj = static_cast<QReadLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +110,7 @@ HB_FUNC_STATIC(QREADLOCKER_UNLOCK)
 // void relock()
 HB_FUNC_STATIC(QREADLOCKER_RELOCK)
 {
-  QReadLocker *obj = static_cast<QReadLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QREADLOCKER_RELOCK)
 // QReadWriteLock * readWriteLock() const
 HB_FUNC_STATIC(QREADLOCKER_READWRITELOCK)
 {
-  QReadLocker *obj = static_cast<QReadLocker *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

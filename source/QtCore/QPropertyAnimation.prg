@@ -54,6 +54,9 @@ RETURN
 #include <QtCore/QPropertyAnimation>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPropertyAnimation *p = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPROPERTYANIMATION_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -71,7 +74,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_NEW)
 
 HB_FUNC_STATIC(QPROPERTYANIMATION_DELETE)
 {
-  QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -89,7 +92,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_DELETE)
 // QByteArray propertyName() const
 HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
 {
-  QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +111,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
 // void setPropertyName( const QByteArray & propertyName )
 HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
 {
-  QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +131,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
 // void setTargetObject( QObject * target )
 HB_FUNC_STATIC(QPROPERTYANIMATION_SETTARGETOBJECT)
 {
-  QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +151,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_SETTARGETOBJECT)
 // QObject * targetObject() const
 HB_FUNC_STATIC(QPROPERTYANIMATION_TARGETOBJECT)
 {
-  QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

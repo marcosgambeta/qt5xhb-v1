@@ -75,7 +75,9 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtCore/QUrl>
 
-    // QMimeData()
+#define GET_PTR_FROM_SELF(p) QMimeData *p = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QMimeData()
 HB_FUNC_STATIC(QMIMEDATA_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QMIMEDATA_NEW)
 
 HB_FUNC_STATIC(QMIMEDATA_DELETE)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QMIMEDATA_DELETE)
 // void clear()
 HB_FUNC_STATIC(QMIMEDATA_CLEAR)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QMIMEDATA_CLEAR)
 // QVariant colorData() const
 HB_FUNC_STATIC(QMIMEDATA_COLORDATA)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +147,7 @@ HB_FUNC_STATIC(QMIMEDATA_COLORDATA)
 // QByteArray data( const QString & mimeType ) const
 HB_FUNC_STATIC(QMIMEDATA_DATA)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(QMIMEDATA_DATA)
 // virtual QStringList formats() const
 HB_FUNC_STATIC(QMIMEDATA_FORMATS)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QMIMEDATA_FORMATS)
 // bool hasColor() const
 HB_FUNC_STATIC(QMIMEDATA_HASCOLOR)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +202,7 @@ HB_FUNC_STATIC(QMIMEDATA_HASCOLOR)
 // virtual bool hasFormat( const QString & mimeType ) const
 HB_FUNC_STATIC(QMIMEDATA_HASFORMAT)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,7 +220,7 @@ HB_FUNC_STATIC(QMIMEDATA_HASFORMAT)
 // bool hasHtml() const
 HB_FUNC_STATIC(QMIMEDATA_HASHTML)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,7 +238,7 @@ HB_FUNC_STATIC(QMIMEDATA_HASHTML)
 // bool hasImage() const
 HB_FUNC_STATIC(QMIMEDATA_HASIMAGE)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -254,7 +256,7 @@ HB_FUNC_STATIC(QMIMEDATA_HASIMAGE)
 // bool hasText() const
 HB_FUNC_STATIC(QMIMEDATA_HASTEXT)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,7 +274,7 @@ HB_FUNC_STATIC(QMIMEDATA_HASTEXT)
 // bool hasUrls() const
 HB_FUNC_STATIC(QMIMEDATA_HASURLS)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,7 +292,7 @@ HB_FUNC_STATIC(QMIMEDATA_HASURLS)
 // QString html() const
 HB_FUNC_STATIC(QMIMEDATA_HTML)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,7 +310,7 @@ HB_FUNC_STATIC(QMIMEDATA_HTML)
 // QVariant imageData() const
 HB_FUNC_STATIC(QMIMEDATA_IMAGEDATA)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -327,7 +329,7 @@ HB_FUNC_STATIC(QMIMEDATA_IMAGEDATA)
 // void removeFormat( const QString & mimeType )
 HB_FUNC_STATIC(QMIMEDATA_REMOVEFORMAT)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,7 +349,7 @@ HB_FUNC_STATIC(QMIMEDATA_REMOVEFORMAT)
 // void setColorData( const QVariant & color )
 HB_FUNC_STATIC(QMIMEDATA_SETCOLORDATA)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,7 +369,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETCOLORDATA)
 // void setData( const QString & mimeType, const QByteArray & data )
 HB_FUNC_STATIC(QMIMEDATA_SETDATA)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,7 +389,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETDATA)
 // void setHtml( const QString & html )
 HB_FUNC_STATIC(QMIMEDATA_SETHTML)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -407,7 +409,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETHTML)
 // void setImageData( const QVariant & image )
 HB_FUNC_STATIC(QMIMEDATA_SETIMAGEDATA)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -427,7 +429,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETIMAGEDATA)
 // void setText( const QString & text )
 HB_FUNC_STATIC(QMIMEDATA_SETTEXT)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,7 +449,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETTEXT)
 // void setUrls( const QList<QUrl> & urls )
 HB_FUNC_STATIC(QMIMEDATA_SETURLS)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -473,7 +475,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETURLS)
 // QString text() const
 HB_FUNC_STATIC(QMIMEDATA_TEXT)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -491,7 +493,7 @@ HB_FUNC_STATIC(QMIMEDATA_TEXT)
 // QList<QUrl> urls() const
 HB_FUNC_STATIC(QMIMEDATA_URLS)
 {
-  QMimeData *obj = qobject_cast<QMimeData *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

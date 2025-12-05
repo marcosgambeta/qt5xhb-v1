@@ -58,6 +58,9 @@ RETURN
 #include <QtCore/QAnimationDriver>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAnimationDriver *p = qobject_cast<QAnimationDriver *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 // QAnimationDriver( QObject * parent = 0 )
 HB_FUNC_STATIC(QANIMATIONDRIVER_NEW)
 {
@@ -71,7 +74,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_NEW)
 
 HB_FUNC_STATIC(QANIMATIONDRIVER_DELETE)
 {
-  QAnimationDriver *obj = qobject_cast<QAnimationDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -89,7 +92,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_DELETE)
 // virtual void advance()
 HB_FUNC_STATIC(QANIMATIONDRIVER_ADVANCE)
 {
-  QAnimationDriver *obj = qobject_cast<QAnimationDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +112,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_ADVANCE)
 // void install()
 HB_FUNC_STATIC(QANIMATIONDRIVER_INSTALL)
 {
-  QAnimationDriver *obj = qobject_cast<QAnimationDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +132,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_INSTALL)
 // void uninstall()
 HB_FUNC_STATIC(QANIMATIONDRIVER_UNINSTALL)
 {
-  QAnimationDriver *obj = qobject_cast<QAnimationDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +152,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_UNINSTALL)
 // bool isRunning() const
 HB_FUNC_STATIC(QANIMATIONDRIVER_ISRUNNING)
 {
-  QAnimationDriver *obj = qobject_cast<QAnimationDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +170,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_ISRUNNING)
 // virtual qint64 elapsed() const
 HB_FUNC_STATIC(QANIMATIONDRIVER_ELAPSED)
 {
-  QAnimationDriver *obj = qobject_cast<QAnimationDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +188,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_ELAPSED)
 // void setStartTime( qint64 startTime )
 HB_FUNC_STATIC(QANIMATIONDRIVER_SETSTARTTIME)
 {
-  QAnimationDriver *obj = qobject_cast<QAnimationDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +208,7 @@ HB_FUNC_STATIC(QANIMATIONDRIVER_SETSTARTTIME)
 // qint64 startTime() const
 HB_FUNC_STATIC(QANIMATIONDRIVER_STARTTIME)
 {
-  QAnimationDriver *obj = qobject_cast<QAnimationDriver *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

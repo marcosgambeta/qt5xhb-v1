@@ -64,6 +64,8 @@ RETURN
 #include <QtCore/QMargins>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QMargins *p = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QMARGINS_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QMARGINS_NEW)
 
 HB_FUNC_STATIC(QMARGINS_DELETE)
 {
-  QMargins *obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -97,7 +99,7 @@ HB_FUNC_STATIC(QMARGINS_DELETE)
 // bool isNull() const
 HB_FUNC_STATIC(QMARGINS_ISNULL)
 {
-  QMargins *obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QMARGINS_ISNULL)
 // int left() const
 HB_FUNC_STATIC(QMARGINS_LEFT)
 {
-  QMargins *obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QMARGINS_LEFT)
 // int top() const
 HB_FUNC_STATIC(QMARGINS_TOP)
 {
-  QMargins *obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QMARGINS_TOP)
 // int right() const
 HB_FUNC_STATIC(QMARGINS_RIGHT)
 {
-  QMargins *obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +171,7 @@ HB_FUNC_STATIC(QMARGINS_RIGHT)
 // int bottom() const
 HB_FUNC_STATIC(QMARGINS_BOTTOM)
 {
-  QMargins *obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +189,7 @@ HB_FUNC_STATIC(QMARGINS_BOTTOM)
 // void setLeft( int left )
 HB_FUNC_STATIC(QMARGINS_SETLEFT)
 {
-  QMargins *obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +209,7 @@ HB_FUNC_STATIC(QMARGINS_SETLEFT)
 // void setTop( int top )
 HB_FUNC_STATIC(QMARGINS_SETTOP)
 {
-  QMargins *obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +229,7 @@ HB_FUNC_STATIC(QMARGINS_SETTOP)
 // void setRight( int right )
 HB_FUNC_STATIC(QMARGINS_SETRIGHT)
 {
-  QMargins *obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +249,7 @@ HB_FUNC_STATIC(QMARGINS_SETRIGHT)
 // void setBottom( int bottom )
 HB_FUNC_STATIC(QMARGINS_SETBOTTOM)
 {
-  QMargins *obj = static_cast<QMargins *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -53,6 +53,9 @@ RETURN
 #include <QtCore/QEventTransition>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QEventTransition *p = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QEVENTTRANSITION_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQSTATEORNIL(1)) {
@@ -70,7 +73,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_NEW)
 
 HB_FUNC_STATIC(QEVENTTRANSITION_DELETE)
 {
-  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -88,7 +91,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_DELETE)
 // QObject * eventSource() const
 HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
 {
-  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +110,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
 // QEvent::Type eventType() const
 HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
 {
-  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +128,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
 // void setEventSource( QObject * object )
 HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 {
-  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +148,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 // void setEventType( QEvent::Type type )
 HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTTYPE)
 {
-  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -55,6 +55,8 @@ RETURN
 #include <QtCore/QDebugStateSaver>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QDebugStateSaver *p = static_cast<QDebugStateSaver *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 // QDebugStateSaver( QDebug & dbg )
 HB_FUNC_STATIC(QDEBUGSTATESAVER_NEW)
 {
@@ -68,7 +70,7 @@ HB_FUNC_STATIC(QDEBUGSTATESAVER_NEW)
 
 HB_FUNC_STATIC(QDEBUGSTATESAVER_DELETE)
 {
-  QDebugStateSaver *obj = static_cast<QDebugStateSaver *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

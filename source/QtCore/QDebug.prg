@@ -61,6 +61,8 @@ RETURN
 #include <QtCore/QDebug>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QDebug *p = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDEBUG_NEW)
 {
   if (ISNUMPAR(1) && ISQIODEVICE(1)) {
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QDEBUG_NEW)
 
 HB_FUNC_STATIC(QDEBUG_DELETE)
 {
-  QDebug *obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QDEBUG_DELETE)
 // void swap( QDebug & other )
 HB_FUNC_STATIC(QDEBUG_SWAP)
 {
-  QDebug *obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +120,7 @@ HB_FUNC_STATIC(QDEBUG_SWAP)
 // QDebug & space()
 HB_FUNC_STATIC(QDEBUG_SPACE)
 {
-  QDebug *obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +139,7 @@ HB_FUNC_STATIC(QDEBUG_SPACE)
 // QDebug & nospace()
 HB_FUNC_STATIC(QDEBUG_NOSPACE)
 {
-  QDebug *obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +158,7 @@ HB_FUNC_STATIC(QDEBUG_NOSPACE)
 // QDebug & maybeSpace()
 HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
 {
-  QDebug *obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +177,7 @@ HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
 // bool autoInsertSpaces() const
 HB_FUNC_STATIC(QDEBUG_AUTOINSERTSPACES)
 {
-  QDebug *obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +195,7 @@ HB_FUNC_STATIC(QDEBUG_AUTOINSERTSPACES)
 // void setAutoInsertSpaces( bool b )
 HB_FUNC_STATIC(QDEBUG_SETAUTOINSERTSPACES)
 {
-  QDebug *obj = static_cast<QDebug *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

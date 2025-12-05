@@ -57,9 +57,11 @@ RETURN
 #include <QtCore/QStateMachine>
 #include <QtCore/QState>
 
+#define GET_PTR_FROM_SELF(p) QAbstractState *p = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTSTATE_DELETE)
 {
-  QAbstractState *obj = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_DELETE)
 // QStateMachine * machine() const
 HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
 {
-  QAbstractState *obj = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
 // QState * parentState() const
 HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
 {
-  QAbstractState *obj = qobject_cast<QAbstractState *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

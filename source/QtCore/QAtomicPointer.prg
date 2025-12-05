@@ -52,6 +52,8 @@ RETURN
 #include <QtCore/QAtomicPointer>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QAtomicPointer *p = static_cast<QAtomicPointer *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QATOMICPOINTER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();

@@ -61,6 +61,8 @@ RETURN
 #include <QtCore/QStandardPaths>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QStandardPaths *p = static_cast<QStandardPaths *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 // static QString writableLocation( QStandardPaths::StandardLocation type )
 HB_FUNC_STATIC(QSTANDARDPATHS_WRITABLELOCATION)
 {

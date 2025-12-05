@@ -55,9 +55,11 @@ RETURN
 #include <QtCore/QJsonParseError>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QJsonParseError *p = static_cast<QJsonParseError *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QJSONPARSEERROR_DELETE)
 {
-  QJsonParseError *obj = static_cast<QJsonParseError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -73,7 +75,7 @@ HB_FUNC_STATIC(QJSONPARSEERROR_DELETE)
 // QString errorString() const
 HB_FUNC_STATIC(QJSONPARSEERROR_ERRORSTRING)
 {
-  QJsonParseError *obj = static_cast<QJsonParseError *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

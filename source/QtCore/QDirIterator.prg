@@ -62,6 +62,8 @@ RETURN
 #include <QtCore/QDirIterator>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QDirIterator *p = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDIRITERATOR_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQDIR(1) && ISNUMORNIL(2)) {
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEW)
 
 HB_FUNC_STATIC(QDIRITERATOR_DELETE)
 {
-  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QDIRITERATOR_DELETE)
 // QFileInfo fileInfo() const
 HB_FUNC_STATIC(QDIRITERATOR_FILEINFO)
 {
-  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILEINFO)
 // QString fileName() const
 HB_FUNC_STATIC(QDIRITERATOR_FILENAME)
 {
-  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILENAME)
 // QString filePath() const
 HB_FUNC_STATIC(QDIRITERATOR_FILEPATH)
 {
-  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +171,7 @@ HB_FUNC_STATIC(QDIRITERATOR_FILEPATH)
 // bool hasNext() const
 HB_FUNC_STATIC(QDIRITERATOR_HASNEXT)
 {
-  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +189,7 @@ HB_FUNC_STATIC(QDIRITERATOR_HASNEXT)
 // QString next()
 HB_FUNC_STATIC(QDIRITERATOR_NEXT)
 {
-  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +207,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEXT)
 // QString path() const
 HB_FUNC_STATIC(QDIRITERATOR_PATH)
 {
-  QDirIterator *obj = static_cast<QDirIterator *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
