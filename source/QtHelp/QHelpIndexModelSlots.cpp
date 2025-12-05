@@ -48,7 +48,7 @@ void QHelpIndexModelSlots::indexCreationStarted()
 
 void QHelpIndexModelSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHelpIndexModel *obj = (QHelpIndexModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpIndexModel *obj = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QHelpIndexModelSlots *s = QCoreApplication::instance()->findChild<QHelpIndexModelSlots *>();

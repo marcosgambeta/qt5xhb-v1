@@ -82,7 +82,7 @@ void QHelpEngineCoreSlots::warning(const QString &msg)
 
 void QHelpEngineCoreSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHelpEngineCore *obj = (QHelpEngineCore *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QHelpEngineCoreSlots *s = QCoreApplication::instance()->findChild<QHelpEngineCoreSlots *>();

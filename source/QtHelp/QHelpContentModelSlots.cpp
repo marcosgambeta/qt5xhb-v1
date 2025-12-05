@@ -48,7 +48,7 @@ void QHelpContentModelSlots::contentsCreationStarted()
 
 void QHelpContentModelSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHelpContentModel *obj = (QHelpContentModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentModel *obj = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QHelpContentModelSlots *s = QCoreApplication::instance()->findChild<QHelpContentModelSlots *>();

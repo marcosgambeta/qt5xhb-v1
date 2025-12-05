@@ -35,7 +35,7 @@ void QHelpSearchResultWidgetSlots::requestShowLink(const QUrl &link)
 
 void QHelpSearchResultWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHelpSearchResultWidget *obj = (QHelpSearchResultWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpSearchResultWidget *obj = qobject_cast<QHelpSearchResultWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QHelpSearchResultWidgetSlots *s = QCoreApplication::instance()->findChild<QHelpSearchResultWidgetSlots *>();

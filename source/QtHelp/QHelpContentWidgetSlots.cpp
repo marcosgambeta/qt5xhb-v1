@@ -35,7 +35,7 @@ void QHelpContentWidgetSlots::linkActivated(const QUrl &link)
 
 void QHelpContentWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHelpContentWidget *obj = (QHelpContentWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpContentWidget *obj = qobject_cast<QHelpContentWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QHelpContentWidgetSlots *s = QCoreApplication::instance()->findChild<QHelpContentWidgetSlots *>();

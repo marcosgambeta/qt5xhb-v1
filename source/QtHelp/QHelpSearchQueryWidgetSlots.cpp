@@ -33,7 +33,7 @@ void QHelpSearchQueryWidgetSlots::search()
 
 void QHelpSearchQueryWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHelpSearchQueryWidget *obj = (QHelpSearchQueryWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpSearchQueryWidget *obj = qobject_cast<QHelpSearchQueryWidget *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QHelpSearchQueryWidgetSlots *s = QCoreApplication::instance()->findChild<QHelpSearchQueryWidgetSlots *>();

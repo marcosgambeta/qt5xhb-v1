@@ -80,7 +80,7 @@ void QHelpSearchEngineSlots::searchingStarted()
 
 void QHelpSearchEngineSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHelpSearchEngine *obj = (QHelpSearchEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     QHelpSearchEngineSlots *s = QCoreApplication::instance()->findChild<QHelpSearchEngineSlots *>();
