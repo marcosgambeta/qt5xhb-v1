@@ -51,7 +51,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) QInputMethodEvent *p = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
 
-    HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
+HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
 {
   if (ISNUMPAR(0)) {
     // QInputMethodEvent()
