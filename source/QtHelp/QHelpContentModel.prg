@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QHELPCONTENTITEM
-REQUEST QMODELINDEX
-REQUEST QVARIANT
+REQUEST QHelpContentItem
+REQUEST QModelIndex
+REQUEST QVariant
 #endif
 
 CLASS QHelpContentModel INHERIT QAbstractItemModel
@@ -61,9 +61,12 @@ RETURN
 #include <QtHelp/QHelpContentModel>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpContentModel *p = qobject_cast<QHelpContentModel *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHELPCONTENTMODEL_DELETE)
 {
-  QHelpContentModel *obj = (QHelpContentModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -78,12 +81,10 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QHelpContentItem * contentItemAt( const QModelIndex &index ) const
-*/
+// QHelpContentItem * contentItemAt( const QModelIndex & index ) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_CONTENTITEMAT)
 {
-  QHelpContentModel *obj = (QHelpContentModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -99,12 +100,10 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_CONTENTITEMAT)
   }
 }
 
-/*
-void createContents( const QString &customFilterName )
-*/
+// void createContents( const QString & customFilterName )
 HB_FUNC_STATIC(QHELPCONTENTMODEL_CREATECONTENTS)
 {
-  QHelpContentModel *obj = (QHelpContentModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,12 +120,10 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_CREATECONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isCreatingContents() const
-*/
+// bool isCreatingContents() const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_ISCREATINGCONTENTS)
 {
-  QHelpContentModel *obj = (QHelpContentModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,12 +138,10 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ISCREATINGCONTENTS)
   }
 }
 
-/*
-virtual int columnCount( const QModelIndex &parent = QModelIndex() ) const
-*/
+// virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_COLUMNCOUNT)
 {
-  QHelpContentModel *obj = (QHelpContentModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,12 +156,10 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_COLUMNCOUNT)
   }
 }
 
-/*
-virtual QVariant data( const QModelIndex &index, int role ) const
-*/
+// virtual QVariant data( const QModelIndex & index, int role ) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_DATA)
 {
-  QHelpContentModel *obj = (QHelpContentModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,12 +175,10 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_DATA)
   }
 }
 
-/*
-virtual QModelIndex index( int row, int column, const QModelIndex &parent = QModelIndex() ) const
-*/
+// virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_INDEX)
 {
-  QHelpContentModel *obj = (QHelpContentModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,12 +195,10 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_INDEX)
   }
 }
 
-/*
-virtual QModelIndex parent( const QModelIndex &index ) const
-*/
+// virtual QModelIndex parent( const QModelIndex & index ) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_PARENT)
 {
-  QHelpContentModel *obj = (QHelpContentModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,12 +214,10 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_PARENT)
   }
 }
 
-/*
-virtual int rowCount( const QModelIndex &parent = QModelIndex() ) const
-*/
+// virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_ROWCOUNT)
 {
-  QHelpContentModel *obj = (QHelpContentModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,14 +234,16 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ROWCOUNT)
 
 void QHelpContentModelSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpContentModelSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPCONTENTMODEL_ONCONTENTSCREATED)
 {
-  QHelpContentModelSlots_connect_signal("contentsCreated()", "contentsCreated()");
+  CONNECT_SIGNAL("contentsCreated()");
 }
 
 HB_FUNC_STATIC(QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED)
 {
-  QHelpContentModelSlots_connect_signal("contentsCreationStarted()", "contentsCreationStarted()");
+  CONNECT_SIGNAL("contentsCreationStarted()");
 }
 
 #pragma ENDDUMP

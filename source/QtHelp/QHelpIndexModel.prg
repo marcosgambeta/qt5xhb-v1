@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODELINDEX
+REQUEST QModelIndex
 #endif
 
 CLASS QHelpIndexModel INHERIT QStringListModel
@@ -53,12 +53,13 @@ RETURN
 #include <QtHelp/QHelpIndexModel>
 #endif
 
-    /*
-    void createIndex( const QString &customFilterName )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpIndexModel *p = qobject_cast<QHelpIndexModel *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// void createIndex( const QString & customFilterName )
 HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 {
-  QHelpIndexModel *obj = (QHelpIndexModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -75,12 +76,10 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex filter( const QString &filter, const QString &wildcard = QString() )
-*/
+// QModelIndex filter( const QString & filter, const QString & wildcard = QString() )
 HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
 {
-  QHelpIndexModel *obj = (QHelpIndexModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,12 +95,10 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
   }
 }
 
-/*
-bool isCreatingIndex() const
-*/
+// bool isCreatingIndex() const
 HB_FUNC_STATIC(QHELPINDEXMODEL_ISCREATINGINDEX)
 {
-  QHelpIndexModel *obj = (QHelpIndexModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,14 +115,16 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_ISCREATINGINDEX)
 
 void QHelpIndexModelSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpIndexModelSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATED)
 {
-  QHelpIndexModelSlots_connect_signal("indexCreated()", "indexCreated()");
+  CONNECT_SIGNAL("indexCreated()");
 }
 
 HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATIONSTARTED)
 {
-  QHelpIndexModelSlots_connect_signal("indexCreationStarted()", "indexCreationStarted()");
+  CONNECT_SIGNAL("indexCreationStarted()");
 }
 
 #pragma ENDDUMP

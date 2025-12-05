@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QHELPSEARCHQUERY
+REQUEST QHelpSearchQuery
 #endif
 
 CLASS QHelpSearchQueryWidget INHERIT QWidget
@@ -52,9 +52,10 @@ RETURN
 #include <QtHelp/QHelpSearchQueryWidget>
 #endif
 
-    /*
-    QHelpSearchQueryWidget( QWidget * parent = 0 )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpSearchQueryWidget *p = qobject_cast<QHelpSearchQueryWidget *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QHelpSearchQueryWidget( QWidget * parent = 0 )
 HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -67,7 +68,7 @@ HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_NEW)
 
 HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_DELETE)
 {
-  QHelpSearchQueryWidget *obj = (QHelpSearchQueryWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -82,12 +83,10 @@ HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QHelpSearchQuery> query() const
-*/
+// QList<QHelpSearchQuery> query() const
 HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_QUERY)
 {
-  QHelpSearchQueryWidget *obj = (QHelpSearchQueryWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,9 +125,11 @@ HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_QUERY)
 
 void QHelpSearchQueryWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpSearchQueryWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_ONSEARCH)
 {
-  QHelpSearchQueryWidgetSlots_connect_signal("search()", "search()");
+  CONNECT_SIGNAL("search()");
 }
 
 #pragma ENDDUMP

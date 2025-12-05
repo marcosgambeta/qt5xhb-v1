@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QHELPSEARCHQUERY
-REQUEST QHELPSEARCHQUERYWIDGET
-REQUEST QHELPSEARCHRESULTWIDGET
+REQUEST QHelpSearchQuery
+REQUEST QHelpSearchQueryWidget
+REQUEST QHelpSearchResultWidget
 #endif
 
 CLASS QHelpSearchEngine INHERIT QObject
@@ -67,9 +67,10 @@ RETURN
 #include <QtHelp/QHelpSearchQueryWidget>
 #include <QtHelp/QHelpSearchResultWidget>
 
-    /*
-    QHelpSearchEngine( QHelpEngineCore * helpEngine, QObject * parent = 0 )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpSearchEngine *p = qobject_cast<QHelpSearchEngine *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QHelpSearchEngine( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 HB_FUNC_STATIC(QHELPSEARCHENGINE_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && ISQOBJECTORNIL(2)) {
@@ -82,7 +83,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_NEW)
 
 HB_FUNC_STATIC(QHELPSEARCHENGINE_DELETE)
 {
-  QHelpSearchEngine *obj = (QHelpSearchEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -97,12 +98,10 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int hitCount() const
-*/
+// int hitCount() const
 HB_FUNC_STATIC(QHELPSEARCHENGINE_HITCOUNT)
 {
-  QHelpSearchEngine *obj = (QHelpSearchEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,12 +116,10 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_HITCOUNT)
   }
 }
 
-/*
-QList<QHelpSearchQuery> query() const
-*/
+// QList<QHelpSearchQuery> query() const
 HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERY)
 {
-  QHelpSearchEngine *obj = (QHelpSearchEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,12 +156,10 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERY)
   }
 }
 
-/*
-QHelpSearchQueryWidget * queryWidget()
-*/
+// QHelpSearchQueryWidget * queryWidget()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERYWIDGET)
 {
-  QHelpSearchEngine *obj = (QHelpSearchEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,12 +175,10 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERYWIDGET)
   }
 }
 
-/*
-QHelpSearchResultWidget * resultWidget()
-*/
+// QHelpSearchResultWidget * resultWidget()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_RESULTWIDGET)
 {
-  QHelpSearchEngine *obj = (QHelpSearchEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,12 +194,10 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_RESULTWIDGET)
   }
 }
 
-/*
-void cancelIndexing()
-*/
+// void cancelIndexing()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELINDEXING)
 {
-  QHelpSearchEngine *obj = (QHelpSearchEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,12 +214,10 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELINDEXING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void cancelSearching()
-*/
+// void cancelSearching()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELSEARCHING)
 {
-  QHelpSearchEngine *obj = (QHelpSearchEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,12 +234,10 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELSEARCHING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reindexDocumentation()
-*/
+// void reindexDocumentation()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_REINDEXDOCUMENTATION)
 {
-  QHelpSearchEngine *obj = (QHelpSearchEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,12 +254,10 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_REINDEXDOCUMENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void search( const QList<QHelpSearchQuery> &queryList )
-*/
+// void search( const QList<QHelpSearchQuery> & queryList )
 HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
 {
-  QHelpSearchEngine *obj = (QHelpSearchEngine *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,24 +282,26 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
 
 void QHelpSearchEngineSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpSearchEngineSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGFINISHED)
 {
-  QHelpSearchEngineSlots_connect_signal("indexingFinished()", "indexingFinished()");
+  CONNECT_SIGNAL("indexingFinished()");
 }
 
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGSTARTED)
 {
-  QHelpSearchEngineSlots_connect_signal("indexingStarted()", "indexingStarted()");
+  CONNECT_SIGNAL("indexingStarted()");
 }
 
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONSEARCHINGFINISHED)
 {
-  QHelpSearchEngineSlots_connect_signal("searchingFinished(int)", "searchingFinished(int)");
+  CONNECT_SIGNAL("searchingFinished(int)");
 }
 
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONSEARCHINGSTARTED)
 {
-  QHelpSearchEngineSlots_connect_signal("searchingStarted()", "searchingStarted()");
+  CONNECT_SIGNAL("searchingStarted()");
 }
 
 #pragma ENDDUMP

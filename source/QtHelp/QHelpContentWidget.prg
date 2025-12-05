@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODELINDEX
+REQUEST QModelIndex
 #endif
 
 CLASS QHelpContentWidget INHERIT QTreeView
@@ -51,9 +51,12 @@ RETURN
 #include <QtHelp/QHelpContentWidget>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpContentWidget *p = qobject_cast<QHelpContentWidget *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHELPCONTENTWIDGET_DELETE)
 {
-  QHelpContentWidget *obj = (QHelpContentWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -68,12 +71,10 @@ HB_FUNC_STATIC(QHELPCONTENTWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex indexOf( const QUrl &link )
-*/
+// QModelIndex indexOf( const QUrl & link )
 HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
 {
-  QHelpContentWidget *obj = (QHelpContentWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -91,9 +92,11 @@ HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
 
 void QHelpContentWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpContentWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPCONTENTWIDGET_ONLINKACTIVATED)
 {
-  QHelpContentWidgetSlots_connect_signal("linkActivated(QUrl)", "linkActivated(QUrl)");
+  CONNECT_SIGNAL("linkActivated(QUrl)");
 }
 
 #pragma ENDDUMP

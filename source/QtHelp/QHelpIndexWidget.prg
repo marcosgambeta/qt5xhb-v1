@@ -51,9 +51,12 @@ RETURN
 #include <QtHelp/QHelpIndexWidget>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpIndexWidget *p = qobject_cast<QHelpIndexWidget *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHELPINDEXWIDGET_DELETE)
 {
-  QHelpIndexWidget *obj = (QHelpIndexWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -68,12 +71,10 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void activateCurrentItem()
-*/
+// void activateCurrentItem()
 HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 {
-  QHelpIndexWidget *obj = (QHelpIndexWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -90,12 +91,10 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void filterIndices( const QString &filter, const QString &wildcard = QString() )
-*/
+// void filterIndices( const QString & filter, const QString & wildcard = QString() )
 HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 {
-  QHelpIndexWidget *obj = (QHelpIndexWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,9 +113,11 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 
 void QHelpIndexWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpIndexWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPINDEXWIDGET_ONLINKACTIVATED)
 {
-  QHelpIndexWidgetSlots_connect_signal("linkActivated(QUrl,QString)", "linkActivated(QUrl,QString)");
+  CONNECT_SIGNAL("linkActivated(QUrl,QString)");
 }
 
 #pragma ENDDUMP
