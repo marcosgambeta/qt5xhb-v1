@@ -77,12 +77,15 @@ RETURN
 #include <QtDataVisualization/QAbstract3DAxis>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstract3DAxis *p = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // virtual ~QAbstract3DAxis()
 HB_FUNC_STATIC(QABSTRACT3DAXIS_DELETE)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -100,7 +103,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_DELETE)
 // QString title() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_TITLE)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +121,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_TITLE)
 // void setTitle( const QString & title )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLE)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +141,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLE)
 // QStringList labels() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELS)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +159,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELS)
 // void setLabels( const QStringList & labels )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELS)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +179,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELS)
 // QAbstract3DAxis::AxisOrientation orientation() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ORIENTATION)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +197,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ORIENTATION)
 // QAbstract3DAxis::AxisType type() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_TYPE)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +215,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_TYPE)
 // float min() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_MIN)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +233,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_MIN)
 // void setMin( float min )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMIN)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +253,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMIN)
 // float max() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_MAX)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,7 +271,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_MAX)
 // void setMax( float max )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMAX)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,7 +291,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETMAX)
 // bool isAutoAdjustRange() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ISAUTOADJUSTRANGE)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +309,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISAUTOADJUSTRANGE)
 // void setAutoAdjustRange( bool autoAdjust )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETAUTOADJUSTRANGE)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +329,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETAUTOADJUSTRANGE)
 // float labelAutoRotation() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELAUTOROTATION)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +347,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_LABELAUTOROTATION)
 // void setLabelAutoRotation( float angle )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELAUTOROTATION)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,7 +367,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETLABELAUTOROTATION)
 // bool isTitleVisible() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEVISIBLE)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,7 +385,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEVISIBLE)
 // void setTitleVisible( bool visible )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEVISIBLE)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -402,7 +405,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEVISIBLE)
 // bool isTitleFixed() const
 HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEFIXED)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -420,7 +423,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_ISTITLEFIXED)
 // void setTitleFixed( bool fixed )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEFIXED)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,7 +443,7 @@ HB_FUNC_STATIC(QABSTRACT3DAXIS_SETTITLEFIXED)
 // void setRange( float min, float max )
 HB_FUNC_STATIC(QABSTRACT3DAXIS_SETRANGE)
 {
-  QAbstract3DAxis *obj = qobject_cast<QAbstract3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

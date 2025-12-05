@@ -90,6 +90,8 @@ RETURN
 #include <QtDataVisualization/Q3DBars>
 #endif
 
+#define GET_PTR_FROM_SELF(p) Q3DBars *p = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // Q3DBars( const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr )
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(Q3DBARS_NEW)
 // virtual ~Q3DBars()
 HB_FUNC_STATIC(Q3DBARS_DELETE)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(Q3DBARS_DELETE)
 // bool isMultiSeriesUniform() const
 HB_FUNC_STATIC(Q3DBARS_ISMULTISERIESUNIFORM)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(Q3DBARS_ISMULTISERIESUNIFORM)
 // void setMultiSeriesUniform( bool uniform )
 HB_FUNC_STATIC(Q3DBARS_SETMULTISERIESUNIFORM)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(Q3DBARS_SETMULTISERIESUNIFORM)
 // float barThickness() const
 HB_FUNC_STATIC(Q3DBARS_BARTHICKNESS)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +182,7 @@ HB_FUNC_STATIC(Q3DBARS_BARTHICKNESS)
 // void setBarThickness( float thicknessRatio )
 HB_FUNC_STATIC(Q3DBARS_SETBARTHICKNESS)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +202,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARTHICKNESS)
 // QSizeF barSpacing() const
 HB_FUNC_STATIC(Q3DBARS_BARSPACING)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +221,7 @@ HB_FUNC_STATIC(Q3DBARS_BARSPACING)
 // void setBarSpacing( const QSizeF & spacing )
 HB_FUNC_STATIC(Q3DBARS_SETBARSPACING)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +241,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARSPACING)
 // bool isBarSpacingRelative() const
 HB_FUNC_STATIC(Q3DBARS_ISBARSPACINGRELATIVE)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,7 +259,7 @@ HB_FUNC_STATIC(Q3DBARS_ISBARSPACINGRELATIVE)
 // void setBarSpacingRelative( bool relative )
 HB_FUNC_STATIC(Q3DBARS_SETBARSPACINGRELATIVE)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -277,7 +279,7 @@ HB_FUNC_STATIC(Q3DBARS_SETBARSPACINGRELATIVE)
 // QCategory3DAxis * rowAxis() const
 HB_FUNC_STATIC(Q3DBARS_ROWAXIS)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,7 +298,7 @@ HB_FUNC_STATIC(Q3DBARS_ROWAXIS)
 // void setRowAxis( QCategory3DAxis * axis )
 HB_FUNC_STATIC(Q3DBARS_SETROWAXIS)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,7 +318,7 @@ HB_FUNC_STATIC(Q3DBARS_SETROWAXIS)
 // QCategory3DAxis * columnAxis() const
 HB_FUNC_STATIC(Q3DBARS_COLUMNAXIS)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +337,7 @@ HB_FUNC_STATIC(Q3DBARS_COLUMNAXIS)
 // void setColumnAxis( QCategory3DAxis * axis )
 HB_FUNC_STATIC(Q3DBARS_SETCOLUMNAXIS)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -355,7 +357,7 @@ HB_FUNC_STATIC(Q3DBARS_SETCOLUMNAXIS)
 // QValue3DAxis * valueAxis() const
 HB_FUNC_STATIC(Q3DBARS_VALUEAXIS)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,7 +376,7 @@ HB_FUNC_STATIC(Q3DBARS_VALUEAXIS)
 // void setValueAxis( QValue3DAxis * axis )
 HB_FUNC_STATIC(Q3DBARS_SETVALUEAXIS)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -394,7 +396,7 @@ HB_FUNC_STATIC(Q3DBARS_SETVALUEAXIS)
 // QBar3DSeries * primarySeries() const
 HB_FUNC_STATIC(Q3DBARS_PRIMARYSERIES)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -413,7 +415,7 @@ HB_FUNC_STATIC(Q3DBARS_PRIMARYSERIES)
 // void setPrimarySeries( QBar3DSeries * series )
 HB_FUNC_STATIC(Q3DBARS_SETPRIMARYSERIES)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -433,7 +435,7 @@ HB_FUNC_STATIC(Q3DBARS_SETPRIMARYSERIES)
 // QBar3DSeries * selectedSeries() const
 HB_FUNC_STATIC(Q3DBARS_SELECTEDSERIES)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -452,7 +454,7 @@ HB_FUNC_STATIC(Q3DBARS_SELECTEDSERIES)
 // float floorLevel() const
 HB_FUNC_STATIC(Q3DBARS_FLOORLEVEL)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -470,7 +472,7 @@ HB_FUNC_STATIC(Q3DBARS_FLOORLEVEL)
 // void setFloorLevel( float level )
 HB_FUNC_STATIC(Q3DBARS_SETFLOORLEVEL)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -490,7 +492,7 @@ HB_FUNC_STATIC(Q3DBARS_SETFLOORLEVEL)
 // void addSeries( QBar3DSeries * series )
 HB_FUNC_STATIC(Q3DBARS_ADDSERIES)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -510,7 +512,7 @@ HB_FUNC_STATIC(Q3DBARS_ADDSERIES)
 // void removeSeries( QBar3DSeries * series )
 HB_FUNC_STATIC(Q3DBARS_REMOVESERIES)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -530,7 +532,7 @@ HB_FUNC_STATIC(Q3DBARS_REMOVESERIES)
 // void insertSeries( int index, QBar3DSeries * series )
 HB_FUNC_STATIC(Q3DBARS_INSERTSERIES)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -550,7 +552,7 @@ HB_FUNC_STATIC(Q3DBARS_INSERTSERIES)
 // QList<QBar3DSeries *> seriesList() const
 HB_FUNC_STATIC(Q3DBARS_SERIESLIST)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -587,7 +589,7 @@ HB_FUNC_STATIC(Q3DBARS_SERIESLIST)
 // void addAxis( QAbstract3DAxis * axis )
 HB_FUNC_STATIC(Q3DBARS_ADDAXIS)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -607,7 +609,7 @@ HB_FUNC_STATIC(Q3DBARS_ADDAXIS)
 // void releaseAxis( QAbstract3DAxis * axis )
 HB_FUNC_STATIC(Q3DBARS_RELEASEAXIS)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -627,7 +629,7 @@ HB_FUNC_STATIC(Q3DBARS_RELEASEAXIS)
 // QList<QAbstract3DAxis *> axes() const
 HB_FUNC_STATIC(Q3DBARS_AXES)
 {
-  Q3DBars *obj = qobject_cast<Q3DBars *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

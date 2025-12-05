@@ -79,6 +79,8 @@ RETURN
 #include <QtDataVisualization/Q3DCamera>
 #endif
 
+#define GET_PTR_FROM_SELF(p) Q3DCamera *p = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // Q3DCamera( QObject * parent = nullptr )
@@ -95,7 +97,7 @@ HB_FUNC_STATIC(Q3DCAMERA_NEW)
 // virtual ~Q3DCamera()
 HB_FUNC_STATIC(Q3DCAMERA_DELETE)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -113,7 +115,7 @@ HB_FUNC_STATIC(Q3DCAMERA_DELETE)
 // float xRotation() const
 HB_FUNC_STATIC(Q3DCAMERA_XROTATION)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +133,7 @@ HB_FUNC_STATIC(Q3DCAMERA_XROTATION)
 // void setXRotation( float rotation )
 HB_FUNC_STATIC(Q3DCAMERA_SETXROTATION)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETXROTATION)
 // float yRotation() const
 HB_FUNC_STATIC(Q3DCAMERA_YROTATION)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +171,7 @@ HB_FUNC_STATIC(Q3DCAMERA_YROTATION)
 // void setYRotation( float rotation )
 HB_FUNC_STATIC(Q3DCAMERA_SETYROTATION)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +191,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETYROTATION)
 // float zoomLevel() const
 HB_FUNC_STATIC(Q3DCAMERA_ZOOMLEVEL)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +209,7 @@ HB_FUNC_STATIC(Q3DCAMERA_ZOOMLEVEL)
 // void setZoomLevel( float zoomLevel )
 HB_FUNC_STATIC(Q3DCAMERA_SETZOOMLEVEL)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +229,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETZOOMLEVEL)
 // Q3DCamera::CameraPreset cameraPreset() const
 HB_FUNC_STATIC(Q3DCAMERA_CAMERAPRESET)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +247,7 @@ HB_FUNC_STATIC(Q3DCAMERA_CAMERAPRESET)
 // void setCameraPreset( Q3DCamera::CameraPreset preset )
 HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPRESET)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +267,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPRESET)
 // bool wrapXRotation() const
 HB_FUNC_STATIC(Q3DCAMERA_WRAPXROTATION)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +285,7 @@ HB_FUNC_STATIC(Q3DCAMERA_WRAPXROTATION)
 // void setWrapXRotation( bool isEnabled )
 HB_FUNC_STATIC(Q3DCAMERA_SETWRAPXROTATION)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,7 +305,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETWRAPXROTATION)
 // bool wrapYRotation() const
 HB_FUNC_STATIC(Q3DCAMERA_WRAPYROTATION)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -321,7 +323,7 @@ HB_FUNC_STATIC(Q3DCAMERA_WRAPYROTATION)
 // void setWrapYRotation( bool isEnabled )
 HB_FUNC_STATIC(Q3DCAMERA_SETWRAPYROTATION)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +343,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETWRAPYROTATION)
 // QVector3D target() const
 HB_FUNC_STATIC(Q3DCAMERA_TARGET)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,7 +362,7 @@ HB_FUNC_STATIC(Q3DCAMERA_TARGET)
 // void setTarget( const QVector3D & target )
 HB_FUNC_STATIC(Q3DCAMERA_SETTARGET)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -380,7 +382,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETTARGET)
 // float minZoomLevel() const
 HB_FUNC_STATIC(Q3DCAMERA_MINZOOMLEVEL)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,7 +400,7 @@ HB_FUNC_STATIC(Q3DCAMERA_MINZOOMLEVEL)
 // void setMinZoomLevel( float zoomLevel )
 HB_FUNC_STATIC(Q3DCAMERA_SETMINZOOMLEVEL)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -418,7 +420,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETMINZOOMLEVEL)
 // float maxZoomLevel() const
 HB_FUNC_STATIC(Q3DCAMERA_MAXZOOMLEVEL)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -436,7 +438,7 @@ HB_FUNC_STATIC(Q3DCAMERA_MAXZOOMLEVEL)
 // void setMaxZoomLevel( float zoomLevel )
 HB_FUNC_STATIC(Q3DCAMERA_SETMAXZOOMLEVEL)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -456,7 +458,7 @@ HB_FUNC_STATIC(Q3DCAMERA_SETMAXZOOMLEVEL)
 // virtual void copyValuesFrom( const Q3DObject & source )
 HB_FUNC_STATIC(Q3DCAMERA_COPYVALUESFROM)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -476,7 +478,7 @@ HB_FUNC_STATIC(Q3DCAMERA_COPYVALUESFROM)
 // void setCameraPosition( float horizontal, float vertical, float zoom = 100.0f )
 HB_FUNC_STATIC(Q3DCAMERA_SETCAMERAPOSITION)
 {
-  Q3DCamera *obj = qobject_cast<Q3DCamera *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

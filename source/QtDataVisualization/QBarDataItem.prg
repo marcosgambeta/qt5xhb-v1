@@ -59,6 +59,8 @@ RETURN
 #include <QtDataVisualization/QBarDataItem>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QBarDataItem *p = static_cast<QBarDataItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 using namespace QtDataVisualization;
 
 HB_FUNC_STATIC(QBARDATAITEM_NEW)
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QBARDATAITEM_NEW)
 // ~QBarDataItem()
 HB_FUNC_STATIC(QBARDATAITEM_DELETE)
 {
-  QBarDataItem *obj = static_cast<QBarDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -103,7 +105,7 @@ HB_FUNC_STATIC(QBARDATAITEM_DELETE)
 // void setValue( float val )
 HB_FUNC_STATIC(QBARDATAITEM_SETVALUE)
 {
-  QBarDataItem *obj = static_cast<QBarDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +125,7 @@ HB_FUNC_STATIC(QBARDATAITEM_SETVALUE)
 // float value() const
 HB_FUNC_STATIC(QBARDATAITEM_VALUE)
 {
-  QBarDataItem *obj = static_cast<QBarDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +143,7 @@ HB_FUNC_STATIC(QBARDATAITEM_VALUE)
 // void setRotation( float angle )
 HB_FUNC_STATIC(QBARDATAITEM_SETROTATION)
 {
-  QBarDataItem *obj = static_cast<QBarDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +163,7 @@ HB_FUNC_STATIC(QBARDATAITEM_SETROTATION)
 // float rotation() const
 HB_FUNC_STATIC(QBARDATAITEM_ROTATION)
 {
-  QBarDataItem *obj = static_cast<QBarDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

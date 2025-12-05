@@ -65,12 +65,15 @@ RETURN
 #include <QtDataVisualization/QAbstract3DInputHandler>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstract3DInputHandler *p = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // virtual ~QAbstract3DInputHandler()
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_DELETE)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -88,7 +91,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_DELETE)
 // QAbstract3DInputHandler::InputView inputView() const
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTVIEW)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +109,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTVIEW)
 // void setInputView( QAbstract3DInputHandler::InputView inputView )
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTVIEW)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +129,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTVIEW)
 // QPoint inputPosition() const
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +148,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_INPUTPOSITION)
 // void setInputPosition( const QPoint & position )
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +168,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION)
 // Q3DScene * scene() const
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SCENE)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +187,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SCENE)
 // void setScene( Q3DScene * scene )
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETSCENE)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +207,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_SETSCENE)
 // virtual void mouseDoubleClickEvent( QMouseEvent * event )
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEDOUBLECLICKEVENT)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +227,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEDOUBLECLICKEVENT)
 // virtual void touchEvent( QTouchEvent * event )
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_TOUCHEVENT)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +247,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_TOUCHEVENT)
 // virtual void mousePressEvent( QMouseEvent * event, const QPoint & mousePos )
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEPRESSEVENT)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,7 +267,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEPRESSEVENT)
 // virtual void mouseReleaseEvent( QMouseEvent * event, const QPoint & mousePos )
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSERELEASEEVENT)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +287,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSERELEASEEVENT)
 // virtual void mouseMoveEvent( QMouseEvent * event, const QPoint & mousePos )
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEMOVEEVENT)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +307,7 @@ HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_MOUSEMOVEEVENT)
 // virtual void wheelEvent( QWheelEvent * event )
 HB_FUNC_STATIC(QABSTRACT3DINPUTHANDLER_WHEELEVENT)
 {
-  QAbstract3DInputHandler *obj = qobject_cast<QAbstract3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

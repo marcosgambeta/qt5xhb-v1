@@ -59,6 +59,8 @@ RETURN
 #include <QtDataVisualization/QValue3DAxis>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QValue3DAxis *p = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // QValue3DAxis( QObject * parent = nullptr )
@@ -75,7 +77,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_NEW)
 // virtual ~QValue3DAxis()
 HB_FUNC_STATIC(QVALUE3DAXIS_DELETE)
 {
-  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -93,7 +95,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_DELETE)
 // int segmentCount() const
 HB_FUNC_STATIC(QVALUE3DAXIS_SEGMENTCOUNT)
 {
-  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +113,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SEGMENTCOUNT)
 // void setSegmentCount( int count )
 HB_FUNC_STATIC(QVALUE3DAXIS_SETSEGMENTCOUNT)
 {
-  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +133,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETSEGMENTCOUNT)
 // int subSegmentCount() const
 HB_FUNC_STATIC(QVALUE3DAXIS_SUBSEGMENTCOUNT)
 {
-  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +151,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SUBSEGMENTCOUNT)
 // void setSubSegmentCount( int count )
 HB_FUNC_STATIC(QVALUE3DAXIS_SETSUBSEGMENTCOUNT)
 {
-  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +171,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETSUBSEGMENTCOUNT)
 // QString labelFormat() const
 HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
 {
-  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +189,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_LABELFORMAT)
 // void setLabelFormat( const QString & format )
 HB_FUNC_STATIC(QVALUE3DAXIS_SETLABELFORMAT)
 {
-  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +209,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETLABELFORMAT)
 // QValue3DAxisFormatter * formatter() const
 HB_FUNC_STATIC(QVALUE3DAXIS_FORMATTER)
 {
-  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,7 +228,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_FORMATTER)
 // void setFormatter( QValue3DAxisFormatter * formatter )
 HB_FUNC_STATIC(QVALUE3DAXIS_SETFORMATTER)
 {
-  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +248,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_SETFORMATTER)
 // bool reversed() const
 HB_FUNC_STATIC(QVALUE3DAXIS_REVERSED)
 {
-  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,7 +266,7 @@ HB_FUNC_STATIC(QVALUE3DAXIS_REVERSED)
 // void setReversed( bool enable )
 HB_FUNC_STATIC(QVALUE3DAXIS_SETREVERSED)
 {
-  QValue3DAxis *obj = qobject_cast<QValue3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -71,6 +71,8 @@ RETURN
 #include <QtDataVisualization/Q3DSurface>
 #endif
 
+#define GET_PTR_FROM_SELF(p) Q3DSurface *p = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // Q3DSurface( const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr )
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(Q3DSURFACE_NEW)
 // virtual ~Q3DSurface()
 HB_FUNC_STATIC(Q3DSURFACE_DELETE)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(Q3DSURFACE_DELETE)
 // QValue3DAxis * axisX() const
 HB_FUNC_STATIC(Q3DSURFACE_AXISX)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXISX)
 // void setAxisX( QValue3DAxis * axis )
 HB_FUNC_STATIC(Q3DSURFACE_SETAXISX)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +147,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISX)
 // QValue3DAxis * axisY() const
 HB_FUNC_STATIC(Q3DSURFACE_AXISY)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXISY)
 // void setAxisY( QValue3DAxis * axis )
 HB_FUNC_STATIC(Q3DSURFACE_SETAXISY)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +186,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISY)
 // QValue3DAxis * axisZ() const
 HB_FUNC_STATIC(Q3DSURFACE_AXISZ)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +205,7 @@ HB_FUNC_STATIC(Q3DSURFACE_AXISZ)
 // void setAxisZ( QValue3DAxis * axis )
 HB_FUNC_STATIC(Q3DSURFACE_SETAXISZ)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +225,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETAXISZ)
 // QSurface3DSeries * selectedSeries() const
 HB_FUNC_STATIC(Q3DSURFACE_SELECTEDSERIES)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +244,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SELECTEDSERIES)
 // bool flipHorizontalGrid() const
 HB_FUNC_STATIC(Q3DSURFACE_FLIPHORIZONTALGRID)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,7 +262,7 @@ HB_FUNC_STATIC(Q3DSURFACE_FLIPHORIZONTALGRID)
 // void setFlipHorizontalGrid( bool flip )
 HB_FUNC_STATIC(Q3DSURFACE_SETFLIPHORIZONTALGRID)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,7 +282,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SETFLIPHORIZONTALGRID)
 // void addSeries( QSurface3DSeries * series )
 HB_FUNC_STATIC(Q3DSURFACE_ADDSERIES)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,7 +302,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ADDSERIES)
 // void removeSeries( QSurface3DSeries * series )
 HB_FUNC_STATIC(Q3DSURFACE_REMOVESERIES)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,7 +322,7 @@ HB_FUNC_STATIC(Q3DSURFACE_REMOVESERIES)
 // QList<QSurface3DSeries *> seriesList() const
 HB_FUNC_STATIC(Q3DSURFACE_SERIESLIST)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,7 +359,7 @@ HB_FUNC_STATIC(Q3DSURFACE_SERIESLIST)
 // void addAxis( QValue3DAxis * axis )
 HB_FUNC_STATIC(Q3DSURFACE_ADDAXIS)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +379,7 @@ HB_FUNC_STATIC(Q3DSURFACE_ADDAXIS)
 // void releaseAxis( QValue3DAxis * axis )
 HB_FUNC_STATIC(Q3DSURFACE_RELEASEAXIS)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -397,7 +399,7 @@ HB_FUNC_STATIC(Q3DSURFACE_RELEASEAXIS)
 // QList<QValue3DAxis *> axes() const
 HB_FUNC_STATIC(Q3DSURFACE_AXES)
 {
-  Q3DSurface *obj = qobject_cast<Q3DSurface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

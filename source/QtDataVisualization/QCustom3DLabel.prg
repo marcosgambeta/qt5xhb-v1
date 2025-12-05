@@ -72,6 +72,8 @@ RETURN
 #include <QtDataVisualization/QCustom3DLabel>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QCustom3DLabel *p = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW)
@@ -95,7 +97,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_NEW)
 // virtual ~QCustom3DLabel()
 HB_FUNC_STATIC(QCUSTOM3DLABEL_DELETE)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -113,7 +115,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_DELETE)
 // QString text() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXT)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +133,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXT)
 // void setText( const QString & text )
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXT)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXT)
 // QFont font() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_FONT)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_FONT)
 // void setFont( const QFont & font )
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFONT)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +192,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFONT)
 // QColor textColor() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXTCOLOR)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +211,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_TEXTCOLOR)
 // void setTextColor( const QColor & color )
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXTCOLOR)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +231,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETTEXTCOLOR)
 // QColor backgroundColor() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_BACKGROUNDCOLOR)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +250,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_BACKGROUNDCOLOR)
 // void setBackgroundColor( const QColor & color )
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDCOLOR)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,7 +270,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDCOLOR)
 // bool isBorderEnabled() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBORDERENABLED)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +288,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBORDERENABLED)
 // void setBorderEnabled( bool enabled )
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBORDERENABLED)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +308,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBORDERENABLED)
 // bool isBackgroundEnabled() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBACKGROUNDENABLED)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,7 +326,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISBACKGROUNDENABLED)
 // void setBackgroundEnabled( bool enabled )
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDENABLED)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +346,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_SETBACKGROUNDENABLED)
 // bool isFacingCamera() const
 HB_FUNC_STATIC(QCUSTOM3DLABEL_ISFACINGCAMERA)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,7 +364,7 @@ HB_FUNC_STATIC(QCUSTOM3DLABEL_ISFACINGCAMERA)
 // void setFacingCamera( bool enabled )
 HB_FUNC_STATIC(QCUSTOM3DLABEL_SETFACINGCAMERA)
 {
-  QCustom3DLabel *obj = qobject_cast<QCustom3DLabel *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

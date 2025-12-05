@@ -58,6 +58,9 @@ RETURN
 #include <QtDataVisualization/QLogValue3DAxisFormatter>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QLogValue3DAxisFormatter *p = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // QLogValue3DAxisFormatter( QObject * parent = nullptr )
@@ -74,7 +77,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_NEW)
 // virtual ~QLogValue3DAxisFormatter()
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_DELETE)
 {
-  QLogValue3DAxisFormatter *obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -92,7 +95,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_DELETE)
 // qreal base() const
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_BASE)
 {
-  QLogValue3DAxisFormatter *obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +113,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_BASE)
 // void setBase( qreal base )
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETBASE)
 {
-  QLogValue3DAxisFormatter *obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +133,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETBASE)
 // bool autoSubGrid() const
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID)
 {
-  QLogValue3DAxisFormatter *obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +151,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID)
 // void setAutoSubGrid( bool enabled )
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID)
 {
-  QLogValue3DAxisFormatter *obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +171,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID)
 // bool showEdgeLabels() const
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS)
 {
-  QLogValue3DAxisFormatter *obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +189,7 @@ HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS)
 // void setShowEdgeLabels( bool enabled )
 HB_FUNC_STATIC(QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS)
 {
-  QLogValue3DAxisFormatter *obj = qobject_cast<QLogValue3DAxisFormatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

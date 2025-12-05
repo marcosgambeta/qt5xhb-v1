@@ -52,6 +52,8 @@ RETURN
 #include <QtDataVisualization/Q3DLight>
 #endif
 
+#define GET_PTR_FROM_SELF(p) Q3DLight *p = qobject_cast<Q3DLight *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // Q3DLight( QObject * parent = nullptr )
@@ -68,7 +70,7 @@ HB_FUNC_STATIC(Q3DLIGHT_NEW)
 // virtual ~Q3DLight()
 HB_FUNC_STATIC(Q3DLIGHT_DELETE)
 {
-  Q3DLight *obj = qobject_cast<Q3DLight *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(Q3DLIGHT_DELETE)
 HB_FUNC_STATIC(Q3DLIGHT_SETAUTOPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  Q3DLight *obj = qobject_cast<Q3DLight *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +111,7 @@ HB_FUNC_STATIC(Q3DLIGHT_SETAUTOPOSITION)
 HB_FUNC_STATIC(Q3DLIGHT_ISAUTOPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  Q3DLight *obj = qobject_cast<Q3DLight *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

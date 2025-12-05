@@ -120,6 +120,9 @@ RETURN
 #include <QtDataVisualization/QItemModelSurfaceDataProxy>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QItemModelSurfaceDataProxy *p = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
@@ -178,7 +181,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_NEW)
 // virtual ~QItemModelSurfaceDataProxy()
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_DELETE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -196,7 +199,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_DELETE)
 // QAbstractItemModel * itemModel() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ITEMMODEL)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +218,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ITEMMODEL)
 // void setItemModel( QAbstractItemModel * itemModel )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETITEMMODEL)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +238,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETITEMMODEL)
 // QString rowRole() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +256,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLE)
 // void setRowRole( const QString & role )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +276,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLE)
 // QString columnRole() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,7 +294,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLE)
 // void setColumnRole( const QString & role )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,7 +314,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLE)
 // QString xPosRole() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -329,7 +332,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLE)
 // void setXPosRole( const QString & role )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -349,7 +352,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLE)
 // QString yPosRole() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,7 +370,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLE)
 // void setYPosRole( const QString & role )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -387,7 +390,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLE)
 // QString zPosRole() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -405,7 +408,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLE)
 // void setZPosRole( const QString & role )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -425,7 +428,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLE)
 // QStringList rowCategories() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORIES)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -443,7 +446,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORIES)
 // void setRowCategories( const QStringList & categories )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWCATEGORIES)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -463,7 +466,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWCATEGORIES)
 // QStringList columnCategories() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORIES)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -481,7 +484,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORIES)
 // void setColumnCategories( const QStringList & categories )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNCATEGORIES)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,7 +504,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNCATEGORIES)
 // bool useModelCategories() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_USEMODELCATEGORIES)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -519,7 +522,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_USEMODELCATEGORIES)
 // void setUseModelCategories( bool enable )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETUSEMODELCATEGORIES)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -539,7 +542,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETUSEMODELCATEGORIES)
 // bool autoRowCategories() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOROWCATEGORIES)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -557,7 +560,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOROWCATEGORIES)
 // void setAutoRowCategories( bool enable )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOROWCATEGORIES)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -577,7 +580,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOROWCATEGORIES)
 // bool autoColumnCategories() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOCOLUMNCATEGORIES)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -595,7 +598,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_AUTOCOLUMNCATEGORIES)
 // void setAutoColumnCategories( bool enable )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOCOLUMNCATEGORIES)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -615,7 +618,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETAUTOCOLUMNCATEGORIES)
 // QRegExp rowRolePattern() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEPATTERN)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -634,7 +637,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEPATTERN)
 // void setRowRolePattern( const QRegExp & pattern )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEPATTERN)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -654,7 +657,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEPATTERN)
 // QRegExp columnRolePattern() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEPATTERN)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -673,7 +676,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEPATTERN)
 // void setColumnRolePattern( const QRegExp & pattern )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEPATTERN)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -693,7 +696,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEPATTERN)
 // QRegExp xPosRolePattern() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEPATTERN)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -712,7 +715,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEPATTERN)
 // void setXPosRolePattern( const QRegExp & pattern )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEPATTERN)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -732,7 +735,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEPATTERN)
 // QRegExp yPosRolePattern() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEPATTERN)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -751,7 +754,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEPATTERN)
 // void setYPosRolePattern( const QRegExp & pattern )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEPATTERN)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -771,7 +774,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEPATTERN)
 // QRegExp zPosRolePattern() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEPATTERN)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -790,7 +793,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEPATTERN)
 // void setZPosRolePattern( const QRegExp & pattern )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEPATTERN)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -810,7 +813,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEPATTERN)
 // QString rowRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEREPLACE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -828,7 +831,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWROLEREPLACE)
 // void setRowRoleReplace( const QString & replace )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEREPLACE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -848,7 +851,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETROWROLEREPLACE)
 // QString columnRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEREPLACE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -866,7 +869,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNROLEREPLACE)
 // void setColumnRoleReplace( const QString & replace )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEREPLACE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -886,7 +889,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEREPLACE)
 // QString xPosRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEREPLACE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -904,7 +907,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_XPOSROLEREPLACE)
 // void setXPosRoleReplace( const QString & replace )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEREPLACE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -924,7 +927,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETXPOSROLEREPLACE)
 // QString yPosRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEREPLACE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -942,7 +945,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_YPOSROLEREPLACE)
 // void setYPosRoleReplace( const QString & replace )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEREPLACE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -962,7 +965,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETYPOSROLEREPLACE)
 // QString zPosRoleReplace() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEREPLACE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -980,7 +983,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ZPOSROLEREPLACE)
 // void setZPosRoleReplace( const QString & replace )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEREPLACE)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1000,7 +1003,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETZPOSROLEREPLACE)
 // QItemModelSurfaceDataProxy::MultiMatchBehavior multiMatchBehavior() const
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_MULTIMATCHBEHAVIOR)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1018,7 +1021,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_MULTIMATCHBEHAVIOR)
 // void setMultiMatchBehavior( QItemModelSurfaceDataProxy::MultiMatchBehavior behavior )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETMULTIMATCHBEHAVIOR)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1039,7 +1042,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_SETMULTIMATCHBEHAVIOR)
 // const QString & zPosRole, const QStringList & rowCategories, const QStringList & columnCategories )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_REMAP)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1060,7 +1063,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_REMAP)
 // Q_INVOKABLE int rowCategoryIndex( const QString & category )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORYINDEX)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1078,7 +1081,7 @@ HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_ROWCATEGORYINDEX)
 // Q_INVOKABLE int columnCategoryIndex( const QString & category )
 HB_FUNC_STATIC(QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORYINDEX)
 {
-  QItemModelSurfaceDataProxy *obj = qobject_cast<QItemModelSurfaceDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

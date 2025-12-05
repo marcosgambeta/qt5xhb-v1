@@ -58,6 +58,8 @@ RETURN
 
 #include <QtDataVisualization/Q3DScene>
 
+#define GET_PTR_FROM_SELF(p) Q3DObject *p = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // Q3DObject( QObject * parent = nullptr )
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(Q3DOBJECT_NEW)
 // virtual ~Q3DObject()
 HB_FUNC_STATIC(Q3DOBJECT_DELETE)
 {
-  Q3DObject *obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(Q3DOBJECT_DELETE)
 // Q3DScene * parentScene()
 HB_FUNC_STATIC(Q3DOBJECT_PARENTSCENE)
 {
-  Q3DObject *obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +113,7 @@ HB_FUNC_STATIC(Q3DOBJECT_PARENTSCENE)
 // QVector3D position() const
 HB_FUNC_STATIC(Q3DOBJECT_POSITION)
 {
-  Q3DObject *obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +132,7 @@ HB_FUNC_STATIC(Q3DOBJECT_POSITION)
 // void setPosition( const QVector3D & position )
 HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 {
-  Q3DObject *obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(Q3DOBJECT_SETPOSITION)
 // virtual void copyValuesFrom( const Q3DObject & source )
 HB_FUNC_STATIC(Q3DOBJECT_COPYVALUESFROM)
 {
-  Q3DObject *obj = qobject_cast<Q3DObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

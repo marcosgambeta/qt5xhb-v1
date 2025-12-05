@@ -68,6 +68,8 @@ RETURN
 #include <QtDataVisualization/Q3DScatter>
 #endif
 
+#define GET_PTR_FROM_SELF(p) Q3DScatter *p = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // Q3DScatter( const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr )
@@ -85,7 +87,7 @@ HB_FUNC_STATIC(Q3DSCATTER_NEW)
 // virtual ~Q3DScatter()
 HB_FUNC_STATIC(Q3DSCATTER_DELETE)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -103,7 +105,7 @@ HB_FUNC_STATIC(Q3DSCATTER_DELETE)
 // QValue3DAxis * axisX() const
 HB_FUNC_STATIC(Q3DSCATTER_AXISX)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISX)
 // void setAxisX( QValue3DAxis * axis )
 HB_FUNC_STATIC(Q3DSCATTER_SETAXISX)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISX)
 // QValue3DAxis * axisY() const
 HB_FUNC_STATIC(Q3DSCATTER_AXISY)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +163,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISY)
 // void setAxisY( QValue3DAxis * axis )
 HB_FUNC_STATIC(Q3DSCATTER_SETAXISY)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +183,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISY)
 // QValue3DAxis * axisZ() const
 HB_FUNC_STATIC(Q3DSCATTER_AXISZ)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +202,7 @@ HB_FUNC_STATIC(Q3DSCATTER_AXISZ)
 // void setAxisZ( QValue3DAxis * axis )
 HB_FUNC_STATIC(Q3DSCATTER_SETAXISZ)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +222,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SETAXISZ)
 // QScatter3DSeries * selectedSeries() const
 HB_FUNC_STATIC(Q3DSCATTER_SELECTEDSERIES)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +241,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SELECTEDSERIES)
 // void addSeries( QScatter3DSeries * series )
 HB_FUNC_STATIC(Q3DSCATTER_ADDSERIES)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +261,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ADDSERIES)
 // void removeSeries( QScatter3DSeries * series )
 HB_FUNC_STATIC(Q3DSCATTER_REMOVESERIES)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(Q3DSCATTER_REMOVESERIES)
 // QList<QScatter3DSeries *> seriesList() const
 HB_FUNC_STATIC(Q3DSCATTER_SERIESLIST)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,7 +318,7 @@ HB_FUNC_STATIC(Q3DSCATTER_SERIESLIST)
 // void addAxis( QValue3DAxis * axis )
 HB_FUNC_STATIC(Q3DSCATTER_ADDAXIS)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,7 +338,7 @@ HB_FUNC_STATIC(Q3DSCATTER_ADDAXIS)
 // void releaseAxis( QValue3DAxis * axis )
 HB_FUNC_STATIC(Q3DSCATTER_RELEASEAXIS)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,7 +358,7 @@ HB_FUNC_STATIC(Q3DSCATTER_RELEASEAXIS)
 // QList<QValue3DAxis *> axes() const
 HB_FUNC_STATIC(Q3DSCATTER_AXES)
 {
-  Q3DScatter *obj = qobject_cast<Q3DScatter *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

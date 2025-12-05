@@ -61,6 +61,9 @@ RETURN
 #include <QtDataVisualization/Q3DInputHandler>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  Q3DInputHandler *p = qobject_cast<Q3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // Q3DInputHandler( QObject * parent = nullptr )
@@ -77,7 +80,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_NEW)
 // virtual ~Q3DInputHandler()
 HB_FUNC_STATIC(Q3DINPUTHANDLER_DELETE)
 {
-  Q3DInputHandler *obj = qobject_cast<Q3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -95,7 +98,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_DELETE)
 // bool isRotationEnabled() const
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ISROTATIONENABLED)
 {
-  Q3DInputHandler *obj = qobject_cast<Q3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +116,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISROTATIONENABLED)
 // void setRotationEnabled( bool enable )
 HB_FUNC_STATIC(Q3DINPUTHANDLER_SETROTATIONENABLED)
 {
-  Q3DInputHandler *obj = qobject_cast<Q3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +136,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_SETROTATIONENABLED)
 // bool isZoomEnabled() const
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ISZOOMENABLED)
 {
-  Q3DInputHandler *obj = qobject_cast<Q3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +154,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISZOOMENABLED)
 // void setZoomEnabled( bool enable )
 HB_FUNC_STATIC(Q3DINPUTHANDLER_SETZOOMENABLED)
 {
-  Q3DInputHandler *obj = qobject_cast<Q3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +174,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_SETZOOMENABLED)
 // bool isSelectionEnabled() const
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ISSELECTIONENABLED)
 {
-  Q3DInputHandler *obj = qobject_cast<Q3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +192,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISSELECTIONENABLED)
 // void setSelectionEnabled( bool enable )
 HB_FUNC_STATIC(Q3DINPUTHANDLER_SETSELECTIONENABLED)
 {
-  Q3DInputHandler *obj = qobject_cast<Q3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +212,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_SETSELECTIONENABLED)
 // bool isZoomAtTargetEnabled() const
 HB_FUNC_STATIC(Q3DINPUTHANDLER_ISZOOMATTARGETENABLED)
 {
-  Q3DInputHandler *obj = qobject_cast<Q3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +230,7 @@ HB_FUNC_STATIC(Q3DINPUTHANDLER_ISZOOMATTARGETENABLED)
 // void setZoomAtTargetEnabled( bool enable )
 HB_FUNC_STATIC(Q3DINPUTHANDLER_SETZOOMATTARGETENABLED)
 {
-  Q3DInputHandler *obj = qobject_cast<Q3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -79,6 +79,8 @@ RETURN
 
 #include <QtDataVisualization/QBar3DSeries>
 
+#define GET_PTR_FROM_SELF(p) QBarDataProxy *p = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // QBarDataProxy( QObject * parent = nullptr )
@@ -95,7 +97,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_NEW)
 // virtual ~QBarDataProxy()
 HB_FUNC_STATIC(QBARDATAPROXY_DELETE)
 {
-  QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -113,7 +115,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_DELETE)
 // int rowCount() const
 HB_FUNC_STATIC(QBARDATAPROXY_ROWCOUNT)
 {
-  QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +133,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ROWCOUNT)
 // QStringList rowLabels() const
 HB_FUNC_STATIC(QBARDATAPROXY_ROWLABELS)
 {
-  QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +151,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ROWLABELS)
 // void setRowLabels( const QStringList & labels )
 HB_FUNC_STATIC(QBARDATAPROXY_SETROWLABELS)
 {
-  QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +171,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETROWLABELS)
 // QStringList columnLabels() const
 HB_FUNC_STATIC(QBARDATAPROXY_COLUMNLABELS)
 {
-  QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +189,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_COLUMNLABELS)
 // void setColumnLabels( const QStringList & labels )
 HB_FUNC_STATIC(QBARDATAPROXY_SETCOLUMNLABELS)
 {
-  QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +209,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETCOLUMNLABELS)
 // QBar3DSeries * series() const
 HB_FUNC_STATIC(QBARDATAPROXY_SERIES)
 {
-  QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +229,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ITEMAT)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // const QBarDataItem * itemAt( int rowIndex, int columnIndex ) const
-    QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       const QBarDataItem *ptr = obj->itemAt(PINT(1), PINT(2));
@@ -235,7 +237,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_ITEMAT)
     }
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // const QBarDataItem * itemAt( const QPoint & position ) const
-    QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       const QBarDataItem *ptr = obj->itemAt(*PQPOINT(1));
@@ -262,7 +264,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETITEM)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBARDATAITEM(3)) {
     // void setItem( int rowIndex, int columnIndex, const QBarDataItem & item )
-    QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setItem(PINT(1), PINT(2), *PQBARDATAITEM(3));
@@ -271,7 +273,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_SETITEM)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQBARDATAITEM(2)) {
     // void setItem( const QPoint & position, const QBarDataItem & item )
-    QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setItem(*PQPOINT(1), *PQBARDATAITEM(2));
@@ -302,7 +304,7 @@ HB_FUNC_STATIC(QBARDATAPROXY_INSERTROWS)
 // void removeRows( int rowIndex, int removeCount, bool removeLabels = true )
 HB_FUNC_STATIC(QBARDATAPROXY_REMOVEROWS)
 {
-  QBarDataProxy *obj = qobject_cast<QBarDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

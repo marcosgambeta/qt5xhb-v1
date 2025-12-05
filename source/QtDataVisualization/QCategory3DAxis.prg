@@ -52,6 +52,9 @@ RETURN
 #include <QtDataVisualization/QCategory3DAxis>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QCategory3DAxis *p = qobject_cast<QCategory3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // QCategory3DAxis( QObject * parent = nullptr )
@@ -68,7 +71,7 @@ HB_FUNC_STATIC(QCATEGORY3DAXIS_NEW)
 // virtual ~QCategory3DAxis()
 HB_FUNC_STATIC(QCATEGORY3DAXIS_DELETE)
 {
-  QCategory3DAxis *obj = qobject_cast<QCategory3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -86,7 +89,7 @@ HB_FUNC_STATIC(QCATEGORY3DAXIS_DELETE)
 // QStringList labels() const
 HB_FUNC_STATIC(QCATEGORY3DAXIS_LABELS)
 {
-  QCategory3DAxis *obj = qobject_cast<QCategory3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +107,7 @@ HB_FUNC_STATIC(QCATEGORY3DAXIS_LABELS)
 // void setLabels( const QStringList & labels )
 HB_FUNC_STATIC(QCATEGORY3DAXIS_SETLABELS)
 {
-  QCategory3DAxis *obj = qobject_cast<QCategory3DAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

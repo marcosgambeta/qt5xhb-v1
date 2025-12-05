@@ -64,6 +64,8 @@ RETURN
 #include <QtDataVisualization/QSurfaceDataItem>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QSurfaceDataItem *p = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 using namespace QtDataVisualization;
 
 HB_FUNC_STATIC(QSURFACEDATAITEM_NEW)
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_NEW)
 // ~QSurfaceDataItem()
 HB_FUNC_STATIC(QSURFACEDATAITEM_DELETE)
 {
-  QSurfaceDataItem *obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_DELETE)
 // void setPosition( const QVector3D & pos )
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETPOSITION)
 {
-  QSurfaceDataItem *obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETPOSITION)
 // QVector3D position() const
 HB_FUNC_STATIC(QSURFACEDATAITEM_POSITION)
 {
-  QSurfaceDataItem *obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_POSITION)
 // void setX( float value )
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETX)
 {
-  QSurfaceDataItem *obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +165,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETX)
 // void setY( float value )
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETY)
 {
-  QSurfaceDataItem *obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +185,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETY)
 // void setZ( float value )
 HB_FUNC_STATIC(QSURFACEDATAITEM_SETZ)
 {
-  QSurfaceDataItem *obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +205,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_SETZ)
 // float x() const
 HB_FUNC_STATIC(QSURFACEDATAITEM_X)
 {
-  QSurfaceDataItem *obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,7 +223,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_X)
 // float y() const
 HB_FUNC_STATIC(QSURFACEDATAITEM_Y)
 {
-  QSurfaceDataItem *obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +241,7 @@ HB_FUNC_STATIC(QSURFACEDATAITEM_Y)
 // float z() const
 HB_FUNC_STATIC(QSURFACEDATAITEM_Z)
 {
-  QSurfaceDataItem *obj = static_cast<QSurfaceDataItem *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

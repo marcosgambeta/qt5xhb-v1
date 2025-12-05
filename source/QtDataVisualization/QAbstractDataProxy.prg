@@ -48,12 +48,15 @@ RETURN
 #include <QtDataVisualization/QAbstractDataProxy>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractDataProxy *p = qobject_cast<QAbstractDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // virtual ~QAbstractDataProxy()
 HB_FUNC_STATIC(QABSTRACTDATAPROXY_DELETE)
 {
-  QAbstractDataProxy *obj = qobject_cast<QAbstractDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -71,7 +74,7 @@ HB_FUNC_STATIC(QABSTRACTDATAPROXY_DELETE)
 // QAbstractDataProxy::DataType type() const
 HB_FUNC_STATIC(QABSTRACTDATAPROXY_TYPE)
 {
-  QAbstractDataProxy *obj = qobject_cast<QAbstractDataProxy *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

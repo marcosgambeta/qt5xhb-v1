@@ -49,6 +49,9 @@ RETURN
 #include <QtDataVisualization/QTouch3DInputHandler>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QTouch3DInputHandler *p = qobject_cast<QTouch3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 // QTouch3DInputHandler( QObject * parent = nullptr )
@@ -65,7 +68,7 @@ HB_FUNC_STATIC(QTOUCH3DINPUTHANDLER_NEW)
 // virtual ~QTouch3DInputHandler()
 HB_FUNC_STATIC(QTOUCH3DINPUTHANDLER_DELETE)
 {
-  QTouch3DInputHandler *obj = qobject_cast<QTouch3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -83,7 +86,7 @@ HB_FUNC_STATIC(QTOUCH3DINPUTHANDLER_DELETE)
 // virtual void touchEvent( QTouchEvent * event )
 HB_FUNC_STATIC(QTOUCH3DINPUTHANDLER_TOUCHEVENT)
 {
-  QTouch3DInputHandler *obj = qobject_cast<QTouch3DInputHandler *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

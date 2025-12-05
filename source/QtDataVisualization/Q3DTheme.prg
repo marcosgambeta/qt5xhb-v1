@@ -118,6 +118,8 @@ RETURN
 #include <QtDataVisualization/Q3DTheme>
 #endif
 
+#define GET_PTR_FROM_SELF(p) Q3DTheme *p = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 HB_FUNC_STATIC(Q3DTHEME_NEW)
@@ -138,7 +140,7 @@ HB_FUNC_STATIC(Q3DTHEME_NEW)
 // virtual ~Q3DTheme()
 HB_FUNC_STATIC(Q3DTHEME_DELETE)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -156,7 +158,7 @@ HB_FUNC_STATIC(Q3DTHEME_DELETE)
 // Q3DTheme::Theme type() const
 HB_FUNC_STATIC(Q3DTHEME_TYPE)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +176,7 @@ HB_FUNC_STATIC(Q3DTHEME_TYPE)
 // void setType( Q3DTheme::Theme themeType )
 HB_FUNC_STATIC(Q3DTHEME_SETTYPE)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +196,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETTYPE)
 // QList<QColor> baseColors() const
 HB_FUNC_STATIC(Q3DTHEME_BASECOLORS)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +236,7 @@ HB_FUNC_STATIC(Q3DTHEME_BASECOLORS)
 // void setBaseColors( const QList<QColor> & colors )
 HB_FUNC_STATIC(Q3DTHEME_SETBASECOLORS)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -260,7 +262,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETBASECOLORS)
 // QColor backgroundColor() const
 HB_FUNC_STATIC(Q3DTHEME_BACKGROUNDCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(Q3DTHEME_BACKGROUNDCOLOR)
 // void setBackgroundColor( const QColor & color )
 HB_FUNC_STATIC(Q3DTHEME_SETBACKGROUNDCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +301,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETBACKGROUNDCOLOR)
 // QColor windowColor() const
 HB_FUNC_STATIC(Q3DTHEME_WINDOWCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,7 +320,7 @@ HB_FUNC_STATIC(Q3DTHEME_WINDOWCOLOR)
 // void setWindowColor( const QColor & color )
 HB_FUNC_STATIC(Q3DTHEME_SETWINDOWCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -338,7 +340,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETWINDOWCOLOR)
 // QColor labelTextColor() const
 HB_FUNC_STATIC(Q3DTHEME_LABELTEXTCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,7 +359,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELTEXTCOLOR)
 // void setLabelTextColor( const QColor & color )
 HB_FUNC_STATIC(Q3DTHEME_SETLABELTEXTCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +379,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLABELTEXTCOLOR)
 // QColor labelBackgroundColor() const
 HB_FUNC_STATIC(Q3DTHEME_LABELBACKGROUNDCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +398,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELBACKGROUNDCOLOR)
 // void setLabelBackgroundColor( const QColor & color )
 HB_FUNC_STATIC(Q3DTHEME_SETLABELBACKGROUNDCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -416,7 +418,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLABELBACKGROUNDCOLOR)
 // QColor gridLineColor() const
 HB_FUNC_STATIC(Q3DTHEME_GRIDLINECOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +437,7 @@ HB_FUNC_STATIC(Q3DTHEME_GRIDLINECOLOR)
 // void setGridLineColor( const QColor & color )
 HB_FUNC_STATIC(Q3DTHEME_SETGRIDLINECOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -455,7 +457,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETGRIDLINECOLOR)
 // QColor singleHighlightColor() const
 HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -474,7 +476,7 @@ HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTCOLOR)
 // void setSingleHighlightColor( const QColor & color )
 HB_FUNC_STATIC(Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -494,7 +496,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR)
 // QColor multiHighlightColor() const
 HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -513,7 +515,7 @@ HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTCOLOR)
 // void setMultiHighlightColor( const QColor & color )
 HB_FUNC_STATIC(Q3DTHEME_SETMULTIHIGHLIGHTCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,7 +535,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETMULTIHIGHLIGHTCOLOR)
 // QColor lightColor() const
 HB_FUNC_STATIC(Q3DTHEME_LIGHTCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -552,7 +554,7 @@ HB_FUNC_STATIC(Q3DTHEME_LIGHTCOLOR)
 // void setLightColor( const QColor & color )
 HB_FUNC_STATIC(Q3DTHEME_SETLIGHTCOLOR)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -572,7 +574,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLIGHTCOLOR)
 // QList<QLinearGradient> baseGradients() const
 HB_FUNC_STATIC(Q3DTHEME_BASEGRADIENTS)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -612,7 +614,7 @@ HB_FUNC_STATIC(Q3DTHEME_BASEGRADIENTS)
 // void setBaseGradients( const QList<QLinearGradient> & gradients )
 HB_FUNC_STATIC(Q3DTHEME_SETBASEGRADIENTS)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -638,7 +640,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETBASEGRADIENTS)
 // QLinearGradient singleHighlightGradient() const
 HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTGRADIENT)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -657,7 +659,7 @@ HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTGRADIENT)
 // void setSingleHighlightGradient( const QLinearGradient & gradient )
 HB_FUNC_STATIC(Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -677,7 +679,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT)
 // QLinearGradient multiHighlightGradient() const
 HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTGRADIENT)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -696,7 +698,7 @@ HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTGRADIENT)
 // void setMultiHighlightGradient( const QLinearGradient & gradient )
 HB_FUNC_STATIC(Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -716,7 +718,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT)
 // float lightStrength() const
 HB_FUNC_STATIC(Q3DTHEME_LIGHTSTRENGTH)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -734,7 +736,7 @@ HB_FUNC_STATIC(Q3DTHEME_LIGHTSTRENGTH)
 // void setLightStrength( float strength )
 HB_FUNC_STATIC(Q3DTHEME_SETLIGHTSTRENGTH)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -754,7 +756,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLIGHTSTRENGTH)
 // float ambientLightStrength() const
 HB_FUNC_STATIC(Q3DTHEME_AMBIENTLIGHTSTRENGTH)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -772,7 +774,7 @@ HB_FUNC_STATIC(Q3DTHEME_AMBIENTLIGHTSTRENGTH)
 // void setAmbientLightStrength( float strength )
 HB_FUNC_STATIC(Q3DTHEME_SETAMBIENTLIGHTSTRENGTH)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -792,7 +794,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETAMBIENTLIGHTSTRENGTH)
 // float highlightLightStrength() const
 HB_FUNC_STATIC(Q3DTHEME_HIGHLIGHTLIGHTSTRENGTH)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -810,7 +812,7 @@ HB_FUNC_STATIC(Q3DTHEME_HIGHLIGHTLIGHTSTRENGTH)
 // void setHighlightLightStrength( float strength )
 HB_FUNC_STATIC(Q3DTHEME_SETHIGHLIGHTLIGHTSTRENGTH)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -830,7 +832,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETHIGHLIGHTLIGHTSTRENGTH)
 // bool isLabelBorderEnabled() const
 HB_FUNC_STATIC(Q3DTHEME_ISLABELBORDERENABLED)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -848,7 +850,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISLABELBORDERENABLED)
 // void setLabelBorderEnabled( bool enabled )
 HB_FUNC_STATIC(Q3DTHEME_SETLABELBORDERENABLED)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -868,7 +870,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLABELBORDERENABLED)
 // QFont font() const
 HB_FUNC_STATIC(Q3DTHEME_FONT)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -887,7 +889,7 @@ HB_FUNC_STATIC(Q3DTHEME_FONT)
 // void setFont( const QFont & font )
 HB_FUNC_STATIC(Q3DTHEME_SETFONT)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -907,7 +909,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETFONT)
 // bool isBackgroundEnabled() const
 HB_FUNC_STATIC(Q3DTHEME_ISBACKGROUNDENABLED)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -925,7 +927,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISBACKGROUNDENABLED)
 // void setBackgroundEnabled( bool enabled )
 HB_FUNC_STATIC(Q3DTHEME_SETBACKGROUNDENABLED)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -945,7 +947,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETBACKGROUNDENABLED)
 // bool isGridEnabled() const
 HB_FUNC_STATIC(Q3DTHEME_ISGRIDENABLED)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -963,7 +965,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISGRIDENABLED)
 // void setGridEnabled( bool enabled )
 HB_FUNC_STATIC(Q3DTHEME_SETGRIDENABLED)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -983,7 +985,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETGRIDENABLED)
 // bool isLabelBackgroundEnabled() const
 HB_FUNC_STATIC(Q3DTHEME_ISLABELBACKGROUNDENABLED)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1001,7 +1003,7 @@ HB_FUNC_STATIC(Q3DTHEME_ISLABELBACKGROUNDENABLED)
 // void setLabelBackgroundEnabled( bool enabled )
 HB_FUNC_STATIC(Q3DTHEME_SETLABELBACKGROUNDENABLED)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1021,7 +1023,7 @@ HB_FUNC_STATIC(Q3DTHEME_SETLABELBACKGROUNDENABLED)
 // Q3DTheme::ColorStyle colorStyle() const
 HB_FUNC_STATIC(Q3DTHEME_COLORSTYLE)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1039,7 +1041,7 @@ HB_FUNC_STATIC(Q3DTHEME_COLORSTYLE)
 // void setColorStyle( Q3DTheme::ColorStyle style )
 HB_FUNC_STATIC(Q3DTHEME_SETCOLORSTYLE)
 {
-  Q3DTheme *obj = qobject_cast<Q3DTheme *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

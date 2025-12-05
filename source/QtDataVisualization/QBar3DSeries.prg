@@ -61,6 +61,8 @@ RETURN
 #include <QtDataVisualization/QBar3DSeries>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QBar3DSeries *p = qobject_cast<QBar3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 using namespace QtDataVisualization;
 
 HB_FUNC_STATIC(QBAR3DSERIES_NEW)
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_NEW)
 // virtual ~QBar3DSeries()
 HB_FUNC_STATIC(QBAR3DSERIES_DELETE)
 {
-  QBar3DSeries *obj = qobject_cast<QBar3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_DELETE)
 // QBarDataProxy * dataProxy() const
 HB_FUNC_STATIC(QBAR3DSERIES_DATAPROXY)
 {
-  QBar3DSeries *obj = qobject_cast<QBar3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +120,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_DATAPROXY)
 // void setDataProxy( QBarDataProxy * proxy )
 HB_FUNC_STATIC(QBAR3DSERIES_SETDATAPROXY)
 {
-  QBar3DSeries *obj = qobject_cast<QBar3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +140,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SETDATAPROXY)
 // QPoint selectedBar() const
 HB_FUNC_STATIC(QBAR3DSERIES_SELECTEDBAR)
 {
-  QBar3DSeries *obj = qobject_cast<QBar3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,7 +159,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SELECTEDBAR)
 // void setSelectedBar( const QPoint & position )
 HB_FUNC_STATIC(QBAR3DSERIES_SETSELECTEDBAR)
 {
-  QBar3DSeries *obj = qobject_cast<QBar3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +179,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_SETSELECTEDBAR)
 // float meshAngle() const
 HB_FUNC_STATIC(QBAR3DSERIES_MESHANGLE)
 {
-  QBar3DSeries *obj = qobject_cast<QBar3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QBAR3DSERIES_MESHANGLE)
 // void setMeshAngle( float angle )
 HB_FUNC_STATIC(QBAR3DSERIES_SETMESHANGLE)
 {
-  QBar3DSeries *obj = qobject_cast<QBar3DSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
