@@ -65,6 +65,8 @@ RETURN
 
 #include <QtCore/QStringList>
 
+#define GET_PTR_FROM_SELF(p) QAxScript *p = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 // QAxScript( const QString & name, QAxScriptManager * manager )
 HB_FUNC_STATIC(QAXSCRIPT_NEW)
 {
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QAXSCRIPT_NEW)
 
 HB_FUNC_STATIC(QAXSCRIPT_DELETE)
 {
-  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
     // QVariant call( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(),
     // const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const
     // QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-    QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QVariant *ptr = new QVariant(obj->call(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2),
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QVariant call( const QString & function, QList<QVariant> & arguments )
-    QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QVariant *ptr = new QVariant(obj->call(PQSTRING(1), PQVARIANTLIST(2)));
@@ -129,7 +131,7 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
 // QStringList functions( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
 HB_FUNC_STATIC(QAXSCRIPT_FUNCTIONS)
 {
-  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +150,7 @@ HB_FUNC_STATIC(QAXSCRIPT_FUNCTIONS)
 // bool load( const QString & code, const QString & language = QString() )
 HB_FUNC_STATIC(QAXSCRIPT_LOAD)
 {
-  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +168,7 @@ HB_FUNC_STATIC(QAXSCRIPT_LOAD)
 // QString scriptCode() const
 HB_FUNC_STATIC(QAXSCRIPT_SCRIPTCODE)
 {
-  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +186,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTCODE)
 // QAxScriptEngine * scriptEngine() const
 HB_FUNC_STATIC(QAXSCRIPT_SCRIPTENGINE)
 {
-  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +205,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTENGINE)
 // QString scriptName() const
 HB_FUNC_STATIC(QAXSCRIPT_SCRIPTNAME)
 {
-  QAxScript *obj = static_cast<QAxScript *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
