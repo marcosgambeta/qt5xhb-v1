@@ -57,33 +57,23 @@ RETURN
 HB_FUNC_STATIC(QBITMAP_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QBitmap()
-    */
+    // QBitmap()
     QBitmap *obj = new QBitmap();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPIXMAP(1)) {
-    /*
-    QBitmap( const QPixmap &pixmap )
-    */
+    // QBitmap( const QPixmap &pixmap )
     QBitmap *obj = new QBitmap(*PQPIXMAP(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    QBitmap( int width, int height )
-    */
+    // QBitmap( int width, int height )
     QBitmap *obj = new QBitmap(PINT(1), PINT(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSIZE(1)) {
-    /*
-    QBitmap( const QSize &size )
-    */
+    // QBitmap( const QSize &size )
     QBitmap *obj = new QBitmap(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
-    /*
-    QBitmap( const QString &fileName, const char * format = 0 )
-    */
+    // QBitmap( const QString &fileName, const char * format = 0 )
     QBitmap *obj = new QBitmap(PQSTRING(1), OPCONSTCHAR(2, 0));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -106,9 +96,7 @@ HB_FUNC_STATIC(QBITMAP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QBITMAP_CLEAR)
 {
   QBitmap *obj = (QBitmap *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -128,9 +116,7 @@ HB_FUNC_STATIC(QBITMAP_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QBitmap transformed( const QTransform &matrix ) const
-*/
+// QBitmap transformed( const QTransform &matrix ) const
 HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
 {
   QBitmap *obj = (QBitmap *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -149,9 +135,7 @@ HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
   }
 }
 
-/*
-static QBitmap fromData( const QSize &size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
-*/
+// static QBitmap fromData( const QSize &size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 HB_FUNC_STATIC(QBITMAP_FROMDATA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,9 +152,7 @@ HB_FUNC_STATIC(QBITMAP_FROMDATA)
 #endif
 }
 
-/*
-static QBitmap fromImage( const QImage &image, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
+// static QBitmap fromImage( const QImage &image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,9 +171,7 @@ HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
 HB_FUNC_STATIC(QBITMAP_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QVariant toVariant()
-    */
+    // QVariant toVariant()
     QBitmap *obj = (QBitmap *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
@@ -200,9 +180,7 @@ HB_FUNC_STATIC(QBITMAP_TOVARIANT)
       Qt5xHb::createReturnClass(variant, "QVARIANT", true);
     }
   } else if (ISNUMPAR(1) && ISQBITMAP(1)) {
-    /*
-    static QVariant toVariant( const QBitmap &)
-    */
+    // static QVariant toVariant( const QBitmap &)
     QBitmap *bitmap = (QBitmap *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
     QVariant *variant = new QVariant();
     variant->setValue<QBitmap>(*bitmap);
@@ -212,9 +190,7 @@ HB_FUNC_STATIC(QBITMAP_TOVARIANT)
   }
 }
 
-/*
-static QBitmap fromVariant( const QVariant &)
-*/
+// static QBitmap fromVariant( const QVariant &)
 HB_FUNC_STATIC(QBITMAP_FROMVARIANT)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1)) {

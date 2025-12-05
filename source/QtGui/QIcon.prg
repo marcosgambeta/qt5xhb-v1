@@ -81,27 +81,19 @@ RETURN
 HB_FUNC_STATIC(QICON_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QIcon()
-    */
+    // QIcon()
     QIcon *obj = new QIcon();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPIXMAP(1)) {
-    /*
-    QIcon( const QPixmap &pixmap )
-    */
+    // QIcon( const QPixmap &pixmap )
     QIcon *obj = new QIcon(*PQPIXMAP(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQICON(1)) {
-    /*
-    QIcon( const QIcon &other )
-    */
+    // QIcon( const QIcon &other )
     QIcon *obj = new QIcon(HB_ISOBJECT(1) ? *(QIcon *)Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QIcon( const QString &fileName )
-    */
+    // QIcon( const QString &fileName )
     QIcon *obj = new QIcon(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -124,9 +116,7 @@ HB_FUNC_STATIC(QICON_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize actualSize( const QSize &size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-*/
+// QSize actualSize( const QSize &size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 HB_FUNC_STATIC(QICON_ACTUALSIZE)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -147,10 +137,7 @@ HB_FUNC_STATIC(QICON_ACTUALSIZE)
   }
 }
 
-/*
-void addFile( const QString &fileName, const QSize &size = QSize(), QIcon::Mode mode = QIcon::Normal, QIcon::State
-state = QIcon::Off )
-*/
+// void addFile( const QString &fileName, const QSize &size = QSize(), QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 HB_FUNC_STATIC(QICON_ADDFILE)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -173,9 +160,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addPixmap( const QPixmap &pixmap, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
-*/
+// void addPixmap( const QPixmap &pixmap, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 HB_FUNC_STATIC(QICON_ADDPIXMAP)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -196,9 +181,7 @@ HB_FUNC_STATIC(QICON_ADDPIXMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-*/
+// QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 HB_FUNC_STATIC(QICON_AVAILABLESIZES)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -239,9 +222,7 @@ HB_FUNC_STATIC(QICON_AVAILABLESIZES)
   }
 }
 
-/*
-qint64 cacheKey() const
-*/
+// qint64 cacheKey() const
 HB_FUNC_STATIC(QICON_CACHEKEY)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -259,9 +240,7 @@ HB_FUNC_STATIC(QICON_CACHEKEY)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QICON_ISNULL)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -279,9 +258,7 @@ HB_FUNC_STATIC(QICON_ISNULL)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QICON_NAME)
 {
   QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
@@ -303,10 +280,7 @@ HB_FUNC_STATIC(QICON_PAINT)
 {
   if (ISBETWEEN(2, 5) && ISQPAINTER(1) && ISQRECT(2) && ISNUMORNIL(3) && ISNUMORNIL(4) &&
       ISNUMORNIL(5)) {
-    /*
-    void paint( QPainter * painter, const QRect &rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode =
-    QIcon::Normal, QIcon::State state = QIcon::Off ) const
-    */
+    // void paint( QPainter * painter, const QRect &rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
     QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
@@ -318,10 +292,7 @@ HB_FUNC_STATIC(QICON_PAINT)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(5, 8) && ISQPAINTER(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
            ISNUMORNIL(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
-    /*
-    void paint( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode
-    mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-    */
+    // void paint( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
     QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
@@ -340,9 +311,7 @@ HB_FUNC_STATIC(QICON_PAINT)
 HB_FUNC_STATIC(QICON_PIXMAP)
 {
   if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    QPixmap pixmap( const QSize &size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-    */
+    // QPixmap pixmap( const QSize &size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
     QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
@@ -353,9 +322,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     }
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
            ISNUMORNIL(4)) {
-    /*
-    QPixmap pixmap( int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-    */
+    // QPixmap pixmap( int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
     QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
@@ -365,9 +332,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
       Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    QPixmap pixmap( int extent, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-    */
+    // QPixmap pixmap( int extent, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
     QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
@@ -381,9 +346,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
   }
 }
 
-/*
-static QIcon fromTheme( const QString &name, const QIcon &fallback = QIcon() )
-*/
+// static QIcon fromTheme( const QString &name, const QIcon &fallback = QIcon() )
 HB_FUNC_STATIC(QICON_FROMTHEME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,9 +361,7 @@ HB_FUNC_STATIC(QICON_FROMTHEME)
 #endif
 }
 
-/*
-static bool hasThemeIcon( const QString &name )
-*/
+// static bool hasThemeIcon( const QString &name )
 HB_FUNC_STATIC(QICON_HASTHEMEICON)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -414,9 +375,7 @@ HB_FUNC_STATIC(QICON_HASTHEMEICON)
 #endif
 }
 
-/*
-static void setThemeName( const QString &name )
-*/
+// static void setThemeName( const QString &name )
 HB_FUNC_STATIC(QICON_SETTHEMENAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -432,9 +391,7 @@ HB_FUNC_STATIC(QICON_SETTHEMENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setThemeSearchPaths( const QStringList &paths )
-*/
+// static void setThemeSearchPaths( const QStringList &paths )
 HB_FUNC_STATIC(QICON_SETTHEMESEARCHPATHS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -450,9 +407,7 @@ HB_FUNC_STATIC(QICON_SETTHEMESEARCHPATHS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QString themeName()
-*/
+// static QString themeName()
 HB_FUNC_STATIC(QICON_THEMENAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -466,9 +421,7 @@ HB_FUNC_STATIC(QICON_THEMENAME)
 #endif
 }
 
-/*
-static QStringList themeSearchPaths()
-*/
+// static QStringList themeSearchPaths()
 HB_FUNC_STATIC(QICON_THEMESEARCHPATHS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,9 +435,7 @@ HB_FUNC_STATIC(QICON_THEMESEARCHPATHS)
 #endif
 }
 
-/*
-static QString fallbackThemeName()
-*/
+// static QString fallbackThemeName()
 HB_FUNC_STATIC(QICON_FALLBACKTHEMENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
@@ -500,9 +451,7 @@ HB_FUNC_STATIC(QICON_FALLBACKTHEMENAME)
 #endif
 }
 
-/*
-static void setFallbackThemeName( const QString &name )
-*/
+// static void setFallbackThemeName( const QString &name )
 HB_FUNC_STATIC(QICON_SETFALLBACKTHEMENAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
@@ -526,9 +475,7 @@ HB_FUNC_STATIC(QICON_SETFALLBACKTHEMENAME)
 HB_FUNC_STATIC(QICON_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QVariant toVariant()
-    */
+    // QVariant toVariant()
     QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
@@ -537,9 +484,7 @@ HB_FUNC_STATIC(QICON_TOVARIANT)
       Qt5xHb::createReturnClass(variant, "QVARIANT", true);
     }
   } else if (ISNUMPAR(1) && ISQICON(1)) {
-    /*
-    static QVariant toVariant( const QIcon &)
-    */
+    // static QVariant toVariant( const QIcon &)
     QIcon *icon = (QIcon *)hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0));
     QVariant *variant = new QVariant();
     variant->setValue<QIcon>(*icon);
@@ -549,9 +494,7 @@ HB_FUNC_STATIC(QICON_TOVARIANT)
   }
 }
 
-/*
-static QIcon fromVariant( const QVariant &)
-*/
+// static QIcon fromVariant( const QVariant &)
 HB_FUNC_STATIC(QICON_FROMVARIANT)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1)) {
