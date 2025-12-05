@@ -53,6 +53,8 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) QSplineSeries *p = qobject_cast<QSplineSeries *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // QSplineSeries( QObject * parent = nullptr )
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(QSPLINESERIES_NEW)
 HB_FUNC_STATIC(QSPLINESERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QSplineSeries *obj = qobject_cast<QSplineSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QSPLINESERIES_DELETE)
 HB_FUNC_STATIC(QSPLINESERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QSplineSeries *obj = qobject_cast<QSplineSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

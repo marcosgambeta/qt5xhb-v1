@@ -75,6 +75,9 @@ RETURN
 #include <QtCharts/QPieSeries>
 #include <QtCore/QAbstractItemModel>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QVPieModelMapper *p = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // QVPieModelMapper( QObject * parent = nullptr )
@@ -94,7 +97,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_NEW)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +118,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SERIES)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +140,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SETSERIES)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +161,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_MODEL)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +183,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SETMODEL)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_VALUESCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +203,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_VALUESCOLUMN)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETVALUESCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +225,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SETVALUESCOLUMN)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_LABELSCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +245,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_LABELSCOLUMN)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETLABELSCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,7 +267,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SETLABELSCOLUMN)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_FIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +287,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_FIRSTROW)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETFIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +309,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_SETFIRSTROW)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_ROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +329,7 @@ HB_FUNC_STATIC(QVPIEMODELMAPPER_ROWCOUNT)
 HB_FUNC_STATIC(QVPIEMODELMAPPER_SETROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVPieModelMapper *obj = qobject_cast<QVPieModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

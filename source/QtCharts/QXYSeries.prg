@@ -102,13 +102,15 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) QXYSeries *p = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // ~QXYSeries()
 HB_FUNC_STATIC(QXYSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QXYSERIES_DELETE)
 HB_FUNC_STATIC(QXYSERIES_POINTSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +150,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTSVISIBLE)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTSVISIBLE)
 HB_FUNC_STATIC(QXYSERIES_COLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +193,7 @@ HB_FUNC_STATIC(QXYSERIES_COLOR)
 HB_FUNC_STATIC(QXYSERIES_SETCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +215,7 @@ HB_FUNC_STATIC(QXYSERIES_SETCOLOR)
 HB_FUNC_STATIC(QXYSERIES_POINTLABELSFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +235,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSFORMAT)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +257,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFORMAT)
 HB_FUNC_STATIC(QXYSERIES_POINTLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,7 +277,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSVISIBLE)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -297,7 +299,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSVISIBLE)
 HB_FUNC_STATIC(QXYSERIES_POINTLABELSFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,7 +320,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSFONT)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,7 +342,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSFONT)
 HB_FUNC_STATIC(QXYSERIES_POINTLABELSCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -361,7 +363,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSCOLOR)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,7 +385,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSCOLOR)
 HB_FUNC_STATIC(QXYSERIES_POINTLABELSCLIPPING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -403,7 +405,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTLABELSCLIPPING)
 HB_FUNC_STATIC(QXYSERIES_SETPOINTLABELSCLIPPING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -426,7 +428,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void append( qreal x, qreal y )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->append(PQREAL(1), PQREAL(2));
@@ -437,7 +439,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void append( const QPointF & point )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->append(*PQPOINTF(1));
@@ -448,7 +450,7 @@ HB_FUNC_STATIC(QXYSERIES_APPEND)
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void append( const QList<QPointF> & points )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QList<QPointF> par1;
@@ -472,7 +474,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void replace( qreal oldX, qreal oldY, qreal newX, qreal newY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->replace(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
@@ -483,7 +485,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
   } else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2)) {
     // void replace( const QPointF & oldPoint, const QPointF & newPoint )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->replace(*PQPOINTF(1), *PQPOINTF(2));
@@ -494,7 +496,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void replace( int index, qreal newX, qreal newY )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->replace(PINT(1), PQREAL(2), PQREAL(3));
@@ -505,7 +507,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2)) {
     // void replace( int index, const QPointF & newPoint )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->replace(PINT(1), *PQPOINTF(2));
@@ -516,7 +518,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void replace( QList<QPointF> points )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QList<QPointF> par1;
@@ -533,7 +535,7 @@ HB_FUNC_STATIC(QXYSERIES_REPLACE)
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void replace( QVector<QPointF> points )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QVector<QPointF> par1;
@@ -557,7 +559,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void remove( qreal x, qreal y )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->remove(PQREAL(1), PQREAL(2));
@@ -568,7 +570,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void remove( const QPointF & point )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->remove(*PQPOINTF(1));
@@ -579,7 +581,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void remove( int index )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->remove(PINT(1));
@@ -596,7 +598,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVE)
 HB_FUNC_STATIC(QXYSERIES_REMOVEPOINTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -618,7 +620,7 @@ HB_FUNC_STATIC(QXYSERIES_REMOVEPOINTS)
 HB_FUNC_STATIC(QXYSERIES_INSERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -640,7 +642,7 @@ HB_FUNC_STATIC(QXYSERIES_INSERT)
 HB_FUNC_STATIC(QXYSERIES_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -662,7 +664,7 @@ HB_FUNC_STATIC(QXYSERIES_CLEAR)
 HB_FUNC_STATIC(QXYSERIES_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -682,7 +684,7 @@ HB_FUNC_STATIC(QXYSERIES_COUNT)
 HB_FUNC_STATIC(QXYSERIES_POINTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -724,7 +726,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTS)
 HB_FUNC_STATIC(QXYSERIES_POINTSVECTOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -766,7 +768,7 @@ HB_FUNC_STATIC(QXYSERIES_POINTSVECTOR)
 HB_FUNC_STATIC(QXYSERIES_AT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -787,7 +789,7 @@ HB_FUNC_STATIC(QXYSERIES_AT)
 HB_FUNC_STATIC(QXYSERIES_SETPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -809,7 +811,7 @@ HB_FUNC_STATIC(QXYSERIES_SETPEN)
 HB_FUNC_STATIC(QXYSERIES_PEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -830,7 +832,7 @@ HB_FUNC_STATIC(QXYSERIES_PEN)
 HB_FUNC_STATIC(QXYSERIES_SETBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -852,7 +854,7 @@ HB_FUNC_STATIC(QXYSERIES_SETBRUSH)
 HB_FUNC_STATIC(QXYSERIES_BRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QXYSeries *obj = qobject_cast<QXYSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

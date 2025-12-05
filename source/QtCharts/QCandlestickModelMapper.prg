@@ -65,6 +65,9 @@ RETURN
 #include <QtCharts/QCandlestickSeries>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QCandlestickModelMapper *p = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     using namespace QtCharts;
 #endif
@@ -73,7 +76,7 @@ RETURN
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapper *obj = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -94,7 +97,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_MODEL)
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapper *obj = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +119,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETMODEL)
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapper *obj = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +140,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SERIES)
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapper *obj = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +162,7 @@ HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_SETSERIES)
 HB_FUNC_STATIC(QCANDLESTICKMODELMAPPER_ORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickModelMapper *obj = qobject_cast<QCandlestickModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

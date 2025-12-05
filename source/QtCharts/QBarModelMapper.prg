@@ -49,6 +49,9 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QBarModelMapper *p = qobject_cast<QBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 #pragma ENDDUMP

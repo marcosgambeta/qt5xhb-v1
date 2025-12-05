@@ -49,6 +49,9 @@ RETURN
 #include <QtCharts/QHorizontalBarSeries>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHorizontalBarSeries *p = qobject_cast<QHorizontalBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // QHorizontalBarSeries( QObject * parent = nullptr )
@@ -68,7 +71,7 @@ HB_FUNC_STATIC(QHORIZONTALBARSERIES_NEW)
 HB_FUNC_STATIC(QHORIZONTALBARSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHorizontalBarSeries *obj = qobject_cast<QHorizontalBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -88,7 +91,7 @@ HB_FUNC_STATIC(QHORIZONTALBARSERIES_DELETE)
 HB_FUNC_STATIC(QHORIZONTALBARSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHorizontalBarSeries *obj = qobject_cast<QHorizontalBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

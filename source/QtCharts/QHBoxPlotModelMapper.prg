@@ -75,6 +75,9 @@ RETURN
 #include <QtCharts/QBoxPlotSeries>
 #include <QtCore/QAbstractItemModel>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHBoxPlotModelMapper *p = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     using namespace QtCharts;
 #endif
@@ -96,7 +99,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_NEW)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +120,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SERIES)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +142,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETSERIES)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +163,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_MODEL)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +185,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETMODEL)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_FIRSTBOXSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +205,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_FIRSTBOXSETROW)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETFIRSTBOXSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +227,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETFIRSTBOXSETROW)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_LASTBOXSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +247,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_LASTBOXSETROW)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETLASTBOXSETROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +269,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETLASTBOXSETROW)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_FIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +289,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_FIRSTCOLUMN)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETFIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -308,7 +311,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETFIRSTCOLUMN)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_COLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -328,7 +331,7 @@ HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_COLUMNCOUNT)
 HB_FUNC_STATIC(QHBOXPLOTMODELMAPPER_SETCOLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QHBoxPlotModelMapper *obj = qobject_cast<QHBoxPlotModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

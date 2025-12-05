@@ -75,6 +75,9 @@ RETURN
 #include <QtCharts/QXYSeries>
 #include <QtCore/QAbstractItemModel>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHXYModelMapper *p = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // QHXYModelMapper( QObject * parent = nullptr )
@@ -94,7 +97,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_NEW)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +118,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SERIES)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +140,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETSERIES)
 HB_FUNC_STATIC(QHXYMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +161,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_MODEL)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +183,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETMODEL)
 HB_FUNC_STATIC(QHXYMODELMAPPER_XROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +203,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_XROW)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETXROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +225,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETXROW)
 HB_FUNC_STATIC(QHXYMODELMAPPER_YROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +245,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_YROW)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETYROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,7 +267,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETYROW)
 HB_FUNC_STATIC(QHXYMODELMAPPER_FIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +287,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_FIRSTCOLUMN)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETFIRSTCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +309,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_SETFIRSTCOLUMN)
 HB_FUNC_STATIC(QHXYMODELMAPPER_COLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +329,7 @@ HB_FUNC_STATIC(QHXYMODELMAPPER_COLUMNCOUNT)
 HB_FUNC_STATIC(QHXYMODELMAPPER_SETCOLUMNCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QHXYModelMapper *obj = qobject_cast<QHXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

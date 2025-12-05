@@ -73,6 +73,8 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) QLogValueAxis *p = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // QLogValueAxis( QObject * parent = nullptr )
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_NEW)
 HB_FUNC_STATIC(QLOGVALUEAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -112,7 +114,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_DELETE)
 HB_FUNC_STATIC(QLOGVALUEAXIS_MIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_MIN)
 HB_FUNC_STATIC(QLOGVALUEAXIS_SETMIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +156,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_SETMIN)
 HB_FUNC_STATIC(QLOGVALUEAXIS_MAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +176,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_MAX)
 HB_FUNC_STATIC(QLOGVALUEAXIS_SETMAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +198,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_SETMAX)
 HB_FUNC_STATIC(QLOGVALUEAXIS_LABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,7 +218,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_LABELFORMAT)
 HB_FUNC_STATIC(QLOGVALUEAXIS_SETLABELFORMAT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,7 +240,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_SETLABELFORMAT)
 HB_FUNC_STATIC(QLOGVALUEAXIS_BASE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +260,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_BASE)
 HB_FUNC_STATIC(QLOGVALUEAXIS_SETBASE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,7 +282,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_SETBASE)
 HB_FUNC_STATIC(QLOGVALUEAXIS_TICKCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,7 +302,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_TICKCOUNT)
 HB_FUNC_STATIC(QLOGVALUEAXIS_MINORTICKCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,7 +322,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_MINORTICKCOUNT)
 HB_FUNC_STATIC(QLOGVALUEAXIS_SETMINORTICKCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,7 +344,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_SETMINORTICKCOUNT)
 HB_FUNC_STATIC(QLOGVALUEAXIS_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,7 +364,7 @@ HB_FUNC_STATIC(QLOGVALUEAXIS_TYPE)
 HB_FUNC_STATIC(QLOGVALUEAXIS_SETRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLogValueAxis *obj = qobject_cast<QLogValueAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

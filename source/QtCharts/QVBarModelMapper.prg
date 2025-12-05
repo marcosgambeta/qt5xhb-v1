@@ -75,6 +75,9 @@ RETURN
 #include <QtCharts/QAbstractBarSeries>
 #include <QtCore/QAbstractItemModel>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QVBarModelMapper *p = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // QVBarModelMapper( QObject * parent = nullptr )
@@ -94,7 +97,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_NEW)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +118,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SERIES)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETSERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +140,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SETSERIES)
 HB_FUNC_STATIC(QVBARMODELMAPPER_MODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +161,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_MODEL)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETMODEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +183,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SETMODEL)
 HB_FUNC_STATIC(QVBARMODELMAPPER_FIRSTBARSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +203,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_FIRSTBARSETCOLUMN)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETFIRSTBARSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +225,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SETFIRSTBARSETCOLUMN)
 HB_FUNC_STATIC(QVBARMODELMAPPER_LASTBARSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +245,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_LASTBARSETCOLUMN)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETLASTBARSETCOLUMN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,7 +267,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SETLASTBARSETCOLUMN)
 HB_FUNC_STATIC(QVBARMODELMAPPER_FIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +287,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_FIRSTROW)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETFIRSTROW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +309,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_SETFIRSTROW)
 HB_FUNC_STATIC(QVBARMODELMAPPER_ROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +329,7 @@ HB_FUNC_STATIC(QVBARMODELMAPPER_ROWCOUNT)
 HB_FUNC_STATIC(QVBARMODELMAPPER_SETROWCOUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QVBarModelMapper *obj = qobject_cast<QVBarModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

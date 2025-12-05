@@ -54,6 +54,8 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) QPolarChart *p = qobject_cast<QPolarChart *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // QPolarChart( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags() )
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QPOLARCHART_NEW)
 HB_FUNC_STATIC(QPOLARCHART_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPolarChart *obj = qobject_cast<QPolarChart *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -94,7 +96,7 @@ HB_FUNC_STATIC(QPOLARCHART_DELETE)
 HB_FUNC_STATIC(QPOLARCHART_ADDAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPolarChart *obj = qobject_cast<QPolarChart *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

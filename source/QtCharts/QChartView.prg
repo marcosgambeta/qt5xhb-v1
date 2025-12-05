@@ -56,6 +56,8 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) QChartView *p = qobject_cast<QChartView *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 HB_FUNC_STATIC(QCHARTVIEW_NEW)
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QCHARTVIEW_NEW)
 HB_FUNC_STATIC(QCHARTVIEW_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QChartView *obj = qobject_cast<QChartView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QCHARTVIEW_DELETE)
 HB_FUNC_STATIC(QCHARTVIEW_RUBBERBAND)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QChartView *obj = qobject_cast<QChartView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +123,7 @@ HB_FUNC_STATIC(QCHARTVIEW_RUBBERBAND)
 HB_FUNC_STATIC(QCHARTVIEW_CHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QChartView *obj = qobject_cast<QChartView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QCHARTVIEW_CHART)
 HB_FUNC_STATIC(QCHARTVIEW_SETCHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QChartView *obj = qobject_cast<QChartView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

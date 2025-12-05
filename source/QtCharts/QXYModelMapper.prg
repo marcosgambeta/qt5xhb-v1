@@ -52,6 +52,8 @@ RETURN
 #include <QtCore/QAbstractItemModel>
 #include <QtCharts/QXYSeries>
 
+#define GET_PTR_FROM_SELF(p) QXYModelMapper *p = qobject_cast<QXYModelMapper *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 #pragma ENDDUMP

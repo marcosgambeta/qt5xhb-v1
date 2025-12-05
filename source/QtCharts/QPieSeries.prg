@@ -87,6 +87,8 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) QPieSeries *p = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // QPieSeries( QObject * parent = nullptr )
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QPIESERIES_NEW)
 HB_FUNC_STATIC(QPIESERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QPIESERIES_DELETE)
 HB_FUNC_STATIC(QPIESERIES_HORIZONTALPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +148,7 @@ HB_FUNC_STATIC(QPIESERIES_HORIZONTALPOSITION)
 HB_FUNC_STATIC(QPIESERIES_SETHORIZONTALPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QPIESERIES_SETHORIZONTALPOSITION)
 HB_FUNC_STATIC(QPIESERIES_VERTICALPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +190,7 @@ HB_FUNC_STATIC(QPIESERIES_VERTICALPOSITION)
 HB_FUNC_STATIC(QPIESERIES_SETVERTICALPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +212,7 @@ HB_FUNC_STATIC(QPIESERIES_SETVERTICALPOSITION)
 HB_FUNC_STATIC(QPIESERIES_PIESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +232,7 @@ HB_FUNC_STATIC(QPIESERIES_PIESIZE)
 HB_FUNC_STATIC(QPIESERIES_SETPIESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +254,7 @@ HB_FUNC_STATIC(QPIESERIES_SETPIESIZE)
 HB_FUNC_STATIC(QPIESERIES_PIESTARTANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,7 +274,7 @@ HB_FUNC_STATIC(QPIESERIES_PIESTARTANGLE)
 HB_FUNC_STATIC(QPIESERIES_SETPIESTARTANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -294,7 +296,7 @@ HB_FUNC_STATIC(QPIESERIES_SETPIESTARTANGLE)
 HB_FUNC_STATIC(QPIESERIES_PIEENDANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,7 +316,7 @@ HB_FUNC_STATIC(QPIESERIES_PIEENDANGLE)
 HB_FUNC_STATIC(QPIESERIES_SETPIEENDANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,7 +338,7 @@ HB_FUNC_STATIC(QPIESERIES_SETPIEENDANGLE)
 HB_FUNC_STATIC(QPIESERIES_COUNT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,7 +358,7 @@ HB_FUNC_STATIC(QPIESERIES_COUNT)
 HB_FUNC_STATIC(QPIESERIES_SUM)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -376,7 +378,7 @@ HB_FUNC_STATIC(QPIESERIES_SUM)
 HB_FUNC_STATIC(QPIESERIES_HOLESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +398,7 @@ HB_FUNC_STATIC(QPIESERIES_HOLESIZE)
 HB_FUNC_STATIC(QPIESERIES_SETHOLESIZE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -418,7 +420,7 @@ HB_FUNC_STATIC(QPIESERIES_SETHOLESIZE)
 HB_FUNC_STATIC(QPIESERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -439,7 +441,7 @@ HB_FUNC_STATIC(QPIESERIES_APPEND)
   if (ISNUMPAR(1) && ISQPIESLICE(1)) {
     // bool append( QPieSlice * slice )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->append(PQPIESLICE(1)));
@@ -448,7 +450,7 @@ HB_FUNC_STATIC(QPIESERIES_APPEND)
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // bool append( QList<QPieSlice *> slices )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QList<QPieSlice *> par1;
@@ -463,7 +465,7 @@ HB_FUNC_STATIC(QPIESERIES_APPEND)
   } else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QPieSlice * append( QString label, qreal value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-    QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QPieSlice *ptr = obj->append(PQSTRING(1), PQREAL(2));
@@ -479,7 +481,7 @@ HB_FUNC_STATIC(QPIESERIES_APPEND)
 HB_FUNC_STATIC(QPIESERIES_INSERT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -499,7 +501,7 @@ HB_FUNC_STATIC(QPIESERIES_INSERT)
 HB_FUNC_STATIC(QPIESERIES_REMOVE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -519,7 +521,7 @@ HB_FUNC_STATIC(QPIESERIES_REMOVE)
 HB_FUNC_STATIC(QPIESERIES_TAKE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -539,7 +541,7 @@ HB_FUNC_STATIC(QPIESERIES_TAKE)
 HB_FUNC_STATIC(QPIESERIES_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -561,7 +563,7 @@ HB_FUNC_STATIC(QPIESERIES_CLEAR)
 HB_FUNC_STATIC(QPIESERIES_SLICES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -600,7 +602,7 @@ HB_FUNC_STATIC(QPIESERIES_SLICES)
 HB_FUNC_STATIC(QPIESERIES_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -620,7 +622,7 @@ HB_FUNC_STATIC(QPIESERIES_ISEMPTY)
 HB_FUNC_STATIC(QPIESERIES_SETLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -642,7 +644,7 @@ HB_FUNC_STATIC(QPIESERIES_SETLABELSVISIBLE)
 HB_FUNC_STATIC(QPIESERIES_SETLABELSPOSITION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPieSeries *obj = qobject_cast<QPieSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

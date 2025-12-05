@@ -57,6 +57,9 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QBarLegendMarker *p = qobject_cast<QBarLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // QBarLegendMarker( QAbstractBarSeries * series, QBarSet * barset, QLegend * legend, QObject * parent = nullptr )
@@ -77,7 +80,7 @@ HB_FUNC_STATIC(QBARLEGENDMARKER_NEW)
 HB_FUNC_STATIC(QBARLEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QBarLegendMarker *obj = qobject_cast<QBarLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -97,7 +100,7 @@ HB_FUNC_STATIC(QBARLEGENDMARKER_DELETE)
 HB_FUNC_STATIC(QBARLEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QBarLegendMarker *obj = qobject_cast<QBarLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +120,7 @@ HB_FUNC_STATIC(QBARLEGENDMARKER_TYPE)
 HB_FUNC_STATIC(QBARLEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QBarLegendMarker *obj = qobject_cast<QBarLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +141,7 @@ HB_FUNC_STATIC(QBARLEGENDMARKER_SERIES)
 HB_FUNC_STATIC(QBARLEGENDMARKER_BARSET)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QBarLegendMarker *obj = qobject_cast<QBarLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -55,6 +55,9 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QCandlestickLegendMarker *p = qobject_cast<QCandlestickLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
     using namespace QtCharts;
 #endif
@@ -77,7 +80,7 @@ HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_NEW)
 HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickLegendMarker *obj = qobject_cast<QCandlestickLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -97,7 +100,7 @@ HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_DELETE)
 HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickLegendMarker *obj = qobject_cast<QCandlestickLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +120,7 @@ HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_TYPE)
 HB_FUNC_STATIC(QCANDLESTICKLEGENDMARKER_SERIES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 8, 0))
-  QCandlestickLegendMarker *obj = qobject_cast<QCandlestickLegendMarker *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

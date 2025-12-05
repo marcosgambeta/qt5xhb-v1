@@ -139,13 +139,15 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) QAbstractAxis *p = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // ~QAbstractAxis()
 HB_FUNC_STATIC(QABSTRACTAXIS_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -165,7 +167,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_DELETE)
 HB_FUNC_STATIC(QABSTRACTAXIS_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +187,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +209,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_ISLINEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +229,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISLINEVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETLINEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,7 +251,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLINEVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_LINEPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +272,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LINEPEN)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETLINEPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -292,7 +294,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLINEPEN)
 HB_FUNC_STATIC(QABSTRACTAXIS_LINEPENCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -313,7 +315,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LINEPENCOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETLINEPENCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +337,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLINEPENCOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_ISGRIDLINEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -355,7 +357,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISGRIDLINEVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +379,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINEVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINEPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -398,7 +400,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINEPEN)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINEPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -420,7 +422,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINEPEN)
 HB_FUNC_STATIC(QABSTRACTAXIS_ISMINORGRIDLINEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,7 +442,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISMINORGRIDLINEVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -462,7 +464,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINEVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINEPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -483,7 +485,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINEPEN)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINEPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -505,7 +507,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINEPEN)
 HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -526,7 +528,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINECOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -548,7 +550,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETGRIDLINECOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -569,7 +571,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINECOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINECOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -591,7 +593,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMINORGRIDLINECOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_LABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -611,7 +613,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -633,7 +635,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_LABELSBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -654,7 +656,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSBRUSH)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -676,7 +678,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSBRUSH)
 HB_FUNC_STATIC(QABSTRACTAXIS_LABELSFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -697,7 +699,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSFONT)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -719,7 +721,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSFONT)
 HB_FUNC_STATIC(QABSTRACTAXIS_LABELSANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -739,7 +741,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSANGLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSANGLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -761,7 +763,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSANGLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_LABELSCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -782,7 +784,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSCOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -804,7 +806,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETLABELSCOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_ISTITLEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -824,7 +826,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISTITLEVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -846,7 +848,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_TITLEBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -867,7 +869,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLEBRUSH)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -889,7 +891,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEBRUSH)
 HB_FUNC_STATIC(QABSTRACTAXIS_TITLEFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -910,7 +912,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLEFONT)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -932,7 +934,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLEFONT)
 HB_FUNC_STATIC(QABSTRACTAXIS_TITLETEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -952,7 +954,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLETEXT)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLETEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -974,7 +976,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETTITLETEXT)
 HB_FUNC_STATIC(QABSTRACTAXIS_SHADESVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -994,7 +996,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1016,7 +1018,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESVISIBLE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SHADESPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1037,7 +1039,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESPEN)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1059,7 +1061,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESPEN)
 HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1080,7 +1082,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBRUSH)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1102,7 +1104,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESBRUSH)
 HB_FUNC_STATIC(QABSTRACTAXIS_SHADESCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1123,7 +1125,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESCOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1145,7 +1147,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESCOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBORDERCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1166,7 +1168,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBORDERCOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESBORDERCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1188,7 +1190,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETSHADESBORDERCOLOR)
 HB_FUNC_STATIC(QABSTRACTAXIS_ORIENTATION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1208,7 +1210,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ORIENTATION)
 HB_FUNC_STATIC(QABSTRACTAXIS_ALIGNMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1228,7 +1230,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ALIGNMENT)
 HB_FUNC_STATIC(QABSTRACTAXIS_ISREVERSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1248,7 +1250,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_ISREVERSE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETREVERSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1270,7 +1272,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETREVERSE)
 HB_FUNC_STATIC(QABSTRACTAXIS_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1290,7 +1292,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TYPE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SHOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1312,7 +1314,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHOW)
 HB_FUNC_STATIC(QABSTRACTAXIS_HIDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1334,7 +1336,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_HIDE)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETMIN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1356,7 +1358,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMIN)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETMAX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1378,7 +1380,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SETMAX)
 HB_FUNC_STATIC(QABSTRACTAXIS_SETRANGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractAxis *obj = qobject_cast<QAbstractAxis *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

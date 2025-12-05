@@ -52,6 +52,9 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPercentBarSeries *p = qobject_cast<QPercentBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // QPercentBarSeries( QObject * parent = nullptr )
@@ -71,7 +74,7 @@ HB_FUNC_STATIC(QPERCENTBARSERIES_NEW)
 HB_FUNC_STATIC(QPERCENTBARSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPercentBarSeries *obj = qobject_cast<QPercentBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -91,7 +94,7 @@ HB_FUNC_STATIC(QPERCENTBARSERIES_DELETE)
 HB_FUNC_STATIC(QPERCENTBARSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QPercentBarSeries *obj = qobject_cast<QPercentBarSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

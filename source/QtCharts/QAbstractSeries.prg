@@ -75,13 +75,16 @@ RETURN
 
 #include <QtCharts/QChart>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractSeries *p = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // ~QAbstractSeries()
 HB_FUNC_STATIC(QABSTRACTSERIES_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -101,7 +104,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_DELETE)
 HB_FUNC_STATIC(QABSTRACTSERIES_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +124,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_TYPE)
 HB_FUNC_STATIC(QABSTRACTSERIES_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +144,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_NAME)
 HB_FUNC_STATIC(QABSTRACTSERIES_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +166,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETNAME)
 HB_FUNC_STATIC(QABSTRACTSERIES_ISVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +186,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ISVISIBLE)
 HB_FUNC_STATIC(QABSTRACTSERIES_SETVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +208,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETVISIBLE)
 HB_FUNC_STATIC(QABSTRACTSERIES_OPACITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +228,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_OPACITY)
 HB_FUNC_STATIC(QABSTRACTSERIES_SETOPACITY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +250,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETOPACITY)
 HB_FUNC_STATIC(QABSTRACTSERIES_USEOPENGL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,7 +270,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_USEOPENGL)
 HB_FUNC_STATIC(QABSTRACTSERIES_SETUSEOPENGL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +292,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SETUSEOPENGL)
 HB_FUNC_STATIC(QABSTRACTSERIES_CHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -310,7 +313,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_CHART)
 HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -330,7 +333,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHAXIS)
 HB_FUNC_STATIC(QABSTRACTSERIES_DETACHAXIS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,7 +353,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_DETACHAXIS)
 HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHEDAXES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,7 +392,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_ATTACHEDAXES)
 HB_FUNC_STATIC(QABSTRACTSERIES_SHOW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,7 +414,7 @@ HB_FUNC_STATIC(QABSTRACTSERIES_SHOW)
 HB_FUNC_STATIC(QABSTRACTSERIES_HIDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QAbstractSeries *obj = qobject_cast<QAbstractSeries *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

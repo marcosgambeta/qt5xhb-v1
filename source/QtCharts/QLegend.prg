@@ -94,13 +94,15 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) QLegend *p = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     using namespace QtCharts;
 
 // ~QLegend()
 HB_FUNC_STATIC(QLEGEND_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -120,7 +122,7 @@ HB_FUNC_STATIC(QLEGEND_DELETE)
 HB_FUNC_STATIC(QLEGEND_ALIGNMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QLEGEND_ALIGNMENT)
 HB_FUNC_STATIC(QLEGEND_ISBACKGROUNDVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QLEGEND_ISBACKGROUNDVISIBLE)
 HB_FUNC_STATIC(QLEGEND_SETBACKGROUNDVISIBLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QLEGEND_SETBACKGROUNDVISIBLE)
 HB_FUNC_STATIC(QLEGEND_COLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +205,7 @@ HB_FUNC_STATIC(QLEGEND_COLOR)
 HB_FUNC_STATIC(QLEGEND_SETCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +227,7 @@ HB_FUNC_STATIC(QLEGEND_SETCOLOR)
 HB_FUNC_STATIC(QLEGEND_BORDERCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +248,7 @@ HB_FUNC_STATIC(QLEGEND_BORDERCOLOR)
 HB_FUNC_STATIC(QLEGEND_SETBORDERCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,7 +270,7 @@ HB_FUNC_STATIC(QLEGEND_SETBORDERCOLOR)
 HB_FUNC_STATIC(QLEGEND_FONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +291,7 @@ HB_FUNC_STATIC(QLEGEND_FONT)
 HB_FUNC_STATIC(QLEGEND_SETFONT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,7 +313,7 @@ HB_FUNC_STATIC(QLEGEND_SETFONT)
 HB_FUNC_STATIC(QLEGEND_LABELCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -332,7 +334,7 @@ HB_FUNC_STATIC(QLEGEND_LABELCOLOR)
 HB_FUNC_STATIC(QLEGEND_SETLABELCOLOR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,7 +356,7 @@ HB_FUNC_STATIC(QLEGEND_SETLABELCOLOR)
 HB_FUNC_STATIC(QLEGEND_REVERSEMARKERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,7 +376,7 @@ HB_FUNC_STATIC(QLEGEND_REVERSEMARKERS)
 HB_FUNC_STATIC(QLEGEND_SETREVERSEMARKERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +398,7 @@ HB_FUNC_STATIC(QLEGEND_SETREVERSEMARKERS)
 HB_FUNC_STATIC(QLEGEND_SHOWTOOLTIPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -416,7 +418,7 @@ HB_FUNC_STATIC(QLEGEND_SHOWTOOLTIPS)
 HB_FUNC_STATIC(QLEGEND_SETSHOWTOOLTIPS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -438,7 +440,7 @@ HB_FUNC_STATIC(QLEGEND_SETSHOWTOOLTIPS)
 HB_FUNC_STATIC(QLEGEND_MARKERSHAPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -458,7 +460,7 @@ HB_FUNC_STATIC(QLEGEND_MARKERSHAPE)
 HB_FUNC_STATIC(QLEGEND_SETMARKERSHAPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -480,7 +482,7 @@ HB_FUNC_STATIC(QLEGEND_SETMARKERSHAPE)
 HB_FUNC_STATIC(QLEGEND_PAINT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -502,7 +504,7 @@ HB_FUNC_STATIC(QLEGEND_PAINT)
 HB_FUNC_STATIC(QLEGEND_SETBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -524,7 +526,7 @@ HB_FUNC_STATIC(QLEGEND_SETBRUSH)
 HB_FUNC_STATIC(QLEGEND_BRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -545,7 +547,7 @@ HB_FUNC_STATIC(QLEGEND_BRUSH)
 HB_FUNC_STATIC(QLEGEND_SETPEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -567,7 +569,7 @@ HB_FUNC_STATIC(QLEGEND_SETPEN)
 HB_FUNC_STATIC(QLEGEND_PEN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -588,7 +590,7 @@ HB_FUNC_STATIC(QLEGEND_PEN)
 HB_FUNC_STATIC(QLEGEND_SETLABELBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -610,7 +612,7 @@ HB_FUNC_STATIC(QLEGEND_SETLABELBRUSH)
 HB_FUNC_STATIC(QLEGEND_LABELBRUSH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -631,7 +633,7 @@ HB_FUNC_STATIC(QLEGEND_LABELBRUSH)
 HB_FUNC_STATIC(QLEGEND_SETALIGNMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -653,7 +655,7 @@ HB_FUNC_STATIC(QLEGEND_SETALIGNMENT)
 HB_FUNC_STATIC(QLEGEND_DETACHFROMCHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -675,7 +677,7 @@ HB_FUNC_STATIC(QLEGEND_DETACHFROMCHART)
 HB_FUNC_STATIC(QLEGEND_ATTACHTOCHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -697,7 +699,7 @@ HB_FUNC_STATIC(QLEGEND_ATTACHTOCHART)
 HB_FUNC_STATIC(QLEGEND_ISATTACHEDTOCHART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -717,7 +719,7 @@ HB_FUNC_STATIC(QLEGEND_ISATTACHEDTOCHART)
 HB_FUNC_STATIC(QLEGEND_MARKERS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
-  QLegend *obj = qobject_cast<QLegend *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
