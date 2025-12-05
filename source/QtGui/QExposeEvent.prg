@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QREGION
+REQUEST QRegion
 #endif
 
 CLASS QExposeEvent INHERIT QEvent
@@ -48,9 +48,9 @@ RETURN
 #include <QtGui/QExposeEvent>
 #endif
 
-    /*
-    QExposeEvent( const QRegion &rgn )
-    */
+#define GET_PTR_FROM_SELF(p) QExposeEvent *p = static_cast<QExposeEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QExposeEvent( const QRegion & rgn )
 HB_FUNC_STATIC(QEXPOSEEVENT_NEW)
 {
   if (ISNUMPAR(1) && ISQREGION(1)) {
@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QEXPOSEEVENT_NEW)
 
 HB_FUNC_STATIC(QEXPOSEEVENT_DELETE)
 {
-  QExposeEvent *obj = (QExposeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -76,12 +76,10 @@ HB_FUNC_STATIC(QEXPOSEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QRegion &region() const
-*/
+// const QRegion & region() const
 HB_FUNC_STATIC(QEXPOSEEVENT_REGION)
 {
-  QExposeEvent *obj = (QExposeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

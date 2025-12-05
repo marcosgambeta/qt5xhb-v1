@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QICONENGINE
+REQUEST QIconEngine
 #endif
 
 CLASS QIconEnginePlugin INHERIT QObject
@@ -49,9 +49,12 @@ RETURN
 #include <QtGui/QIconEnginePlugin>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QIconEnginePlugin *p = qobject_cast<QIconEnginePlugin *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QICONENGINEPLUGIN_DELETE)
 {
-  QIconEnginePlugin *obj = (QIconEnginePlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -66,12 +69,10 @@ HB_FUNC_STATIC(QICONENGINEPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QIconEngine * create( const QString &filename = QString() ) = 0
-*/
+// virtual QIconEngine * create( const QString & filename = QString() ) = 0
 HB_FUNC_STATIC(QICONENGINEPLUGIN_CREATE)
 {
-  QIconEnginePlugin *obj = (QIconEnginePlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

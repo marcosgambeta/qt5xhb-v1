@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
-REQUEST QTOUCHDEVICE
-REQUEST QWINDOW
+REQUEST QObject
+REQUEST QTouchDevice
+REQUEST QWindow
 #endif
 
 CLASS QTouchEvent INHERIT QInputEvent
@@ -55,9 +55,11 @@ RETURN
 #include <QtCore/QList>
 #include <QtGui/QWindow>
 
+#define GET_PTR_FROM_SELF(p) QTouchEvent *p = static_cast<QTouchEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTOUCHEVENT_DELETE)
 {
-  QTouchEvent *obj = (QTouchEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -70,12 +72,10 @@ HB_FUNC_STATIC(QTOUCHEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWindow * window() const
-*/
+// QWindow * window() const
 HB_FUNC_STATIC(QTOUCHEVENT_WINDOW)
 {
-  QTouchEvent *obj = (QTouchEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -91,12 +91,10 @@ HB_FUNC_STATIC(QTOUCHEVENT_WINDOW)
   }
 }
 
-/*
-QObject * target() const
-*/
+// QObject * target() const
 HB_FUNC_STATIC(QTOUCHEVENT_TARGET)
 {
-  QTouchEvent *obj = (QTouchEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,12 +110,10 @@ HB_FUNC_STATIC(QTOUCHEVENT_TARGET)
   }
 }
 
-/*
-Qt::TouchPointStates touchPointStates() const
-*/
+// Qt::TouchPointStates touchPointStates() const
 HB_FUNC_STATIC(QTOUCHEVENT_TOUCHPOINTSTATES)
 {
-  QTouchEvent *obj = (QTouchEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,12 +128,10 @@ HB_FUNC_STATIC(QTOUCHEVENT_TOUCHPOINTSTATES)
   }
 }
 
-/*
-QTouchDevice * device() const
-*/
+// QTouchDevice * device() const
 HB_FUNC_STATIC(QTOUCHEVENT_DEVICE)
 {
-  QTouchEvent *obj = (QTouchEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

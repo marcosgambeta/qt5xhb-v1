@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QLOCALE
+REQUEST QLocale
 #endif
 
 CLASS QValidator INHERIT QObject
@@ -52,9 +52,11 @@ RETURN
 #include <QtGui/QValidator>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QValidator *p = qobject_cast<QValidator *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QVALIDATOR_DELETE)
 {
-  QValidator *obj = (QValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -69,12 +71,10 @@ HB_FUNC_STATIC(QVALIDATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void fixup( QString &input ) const
-*/
+// virtual void fixup( QString & input ) const
 HB_FUNC_STATIC(QVALIDATOR_FIXUP)
 {
-  QValidator *obj = (QValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -93,12 +93,10 @@ HB_FUNC_STATIC(QVALIDATOR_FIXUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QLocale locale() const
-*/
+// QLocale locale() const
 HB_FUNC_STATIC(QVALIDATOR_LOCALE)
 {
-  QValidator *obj = (QValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,12 +112,10 @@ HB_FUNC_STATIC(QVALIDATOR_LOCALE)
   }
 }
 
-/*
-void setLocale( const QLocale &locale )
-*/
+// void setLocale( const QLocale & locale )
 HB_FUNC_STATIC(QVALIDATOR_SETLOCALE)
 {
-  QValidator *obj = (QValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,12 +132,10 @@ HB_FUNC_STATIC(QVALIDATOR_SETLOCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QValidator::State validate( QString &input, int &pos ) const = 0
-*/
+// virtual QValidator::State validate( QString & input, int & pos ) const = 0
 HB_FUNC_STATIC(QVALIDATOR_VALIDATE)
 {
-  QValidator *obj = (QValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

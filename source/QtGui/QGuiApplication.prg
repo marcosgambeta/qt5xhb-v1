@@ -11,61 +11,61 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACCESSIBLEEVENT
-REQUEST QACCESSIBLESTATECHANGEEVENT
-REQUEST QACCESSIBLETABLEMODELCHANGEEVENT
-REQUEST QACCESSIBLETEXTCURSOREVENT
-REQUEST QACCESSIBLETEXTINSERTEVENT
-REQUEST QACCESSIBLETEXTREMOVEEVENT
-REQUEST QACCESSIBLETEXTSELECTIONEVENT
-REQUEST QACCESSIBLETEXTUPDATEEVENT
-REQUEST QACCESSIBLEVALUECHANGEEVENT
-REQUEST QACTIONEVENT
-REQUEST QAPPLICATIONSTATECHANGEEVENT
-REQUEST QCLIPBOARD
-REQUEST QCLOSEEVENT
-REQUEST QCONTEXTMENUEVENT
-REQUEST QCURSOR
-REQUEST QDRAGENTEREVENT
-REQUEST QDRAGLEAVEEVENT
-REQUEST QDRAGMOVEEVENT
-REQUEST QDROPEVENT
-REQUEST QENTEREVENT
-REQUEST QEXPOSEEVENT
-REQUEST QFILEOPENEVENT
-REQUEST QFOCUSEVENT
-REQUEST QFONT
-REQUEST QHELPEVENT
-REQUEST QHIDEEVENT
-REQUEST QHOVEREVENT
-REQUEST QICONDRAGEVENT
-REQUEST QINPUTEVENT
-REQUEST QINPUTMETHOD
-REQUEST QINPUTMETHODEVENT
-REQUEST QINPUTMETHODQUERYEVENT
-REQUEST QKEYEVENT
-REQUEST QMOUSEEVENT
-REQUEST QMOVEEVENT
-REQUEST QNATIVEGESTUREEVENT
-REQUEST QOBJECT
-REQUEST QPAINTEVENT
-REQUEST QPALETTE
-REQUEST QRESIZEEVENT
-REQUEST QSCREEN
-REQUEST QSCREENORIENTATIONCHANGEEVENT
-REQUEST QSCROLLEVENT
-REQUEST QSCROLLPREPAREEVENT
-REQUEST QSHORTCUTEVENT
-REQUEST QSHOWEVENT
-REQUEST QSTATUSTIPEVENT
-REQUEST QSTYLEHINTS
-REQUEST QTABLETEVENT
-REQUEST QTOOLBARCHANGEEVENT
-REQUEST QTOUCHEVENT
-REQUEST QWHATSTHISCLICKEDEVENT
-REQUEST QWHEELEVENT
-REQUEST QWINDOW
-REQUEST QWINDOWSTATECHANGEEVENT
+REQUEST QAccessibleEvent
+REQUEST QAccessibleStateChangeEvent
+REQUEST QAccessibleTableModelChangeEvent
+REQUEST QAccessibleTextCursorEvent
+REQUEST QAccessibleTextInsertEvent
+REQUEST QAccessibleTextRemoveEvent
+REQUEST QAccessibleTextSelectionEvent
+REQUEST QAccessibleTextUpdateEvent
+REQUEST QAccessibleValueChangeEvent
+REQUEST QActionEvent
+REQUEST QApplicationStateChangeEvent
+REQUEST QClipboard
+REQUEST QCloseEvent
+REQUEST QContextMenuEvent
+REQUEST QCursor
+REQUEST QDragEnterEvent
+REQUEST QDragLeaveEvent
+REQUEST QDragMoveEvent
+REQUEST QDropEvent
+REQUEST QEnterEvent
+REQUEST QExposeEvent
+REQUEST QFileOpenEvent
+REQUEST QFocusEvent
+REQUEST QFont
+REQUEST QHelpEvent
+REQUEST QHideEvent
+REQUEST QHoverEvent
+REQUEST QIconDragEvent
+REQUEST QInputEvent
+REQUEST QInputMethod
+REQUEST QInputMethodEvent
+REQUEST QInputMethodQueryEvent
+REQUEST QKeyEvent
+REQUEST QMouseEvent
+REQUEST QMoveEvent
+REQUEST QNativeGestureEvent
+REQUEST QObject
+REQUEST QPaintEvent
+REQUEST QPalette
+REQUEST QResizeEvent
+REQUEST QScreen
+REQUEST QScreenOrientationChangeEvent
+REQUEST QScrollEvent
+REQUEST QScrollPrepareEvent
+REQUEST QShortcutEvent
+REQUEST QShowEvent
+REQUEST QStatusTipEvent
+REQUEST QStyleHints
+REQUEST QTabletEvent
+REQUEST QToolBarChangeEvent
+REQUEST QTouchEvent
+REQUEST QWhatsThisClickedEvent
+REQUEST QWheelEvent
+REQUEST QWindow
+REQUEST QWindowStateChangeEvent
 #endif
 
 CLASS QGuiApplication INHERIT QCoreApplication
@@ -151,9 +151,10 @@ RETURN
 #include <QtGui/QScreen>
 #include <QtGui/QStyleHints>
 
-    /*
-    QGuiApplication( int &argc, char ** argv )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGuiApplication *p = qobject_cast<QGuiApplication *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QGuiApplication( int & argc, char ** argv )
 HB_FUNC_STATIC(QGUIAPPLICATION_NEW)
 {
   int argc;
@@ -167,7 +168,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_NEW)
 
 HB_FUNC_STATIC(QGUIAPPLICATION_DELETE)
 {
-  QGuiApplication *obj = (QGuiApplication *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -182,12 +183,10 @@ HB_FUNC_STATIC(QGUIAPPLICATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool notify( QObject * object, QEvent * event )
-*/
+// virtual bool notify( QObject * object, QEvent * event )
 HB_FUNC_STATIC(QGUIAPPLICATION_NOTIFY)
 {
-  QGuiApplication *obj = (QGuiApplication *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,9 +201,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_NOTIFY)
   }
 }
 
-/*
-static QWindowList allWindows()
-*/
+// static QWindowList allWindows()
 HB_FUNC_STATIC(QGUIAPPLICATION_ALLWINDOWS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,9 +234,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ALLWINDOWS)
 #endif
 }
 
-/*
-static QString applicationDisplayName()
-*/
+// static QString applicationDisplayName()
 HB_FUNC_STATIC(QGUIAPPLICATION_APPLICATIONDISPLAYNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -253,9 +248,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_APPLICATIONDISPLAYNAME)
 #endif
 }
 
-/*
-static void changeOverrideCursor( const QCursor &cursor )
-*/
+// static void changeOverrideCursor( const QCursor & cursor )
 HB_FUNC_STATIC(QGUIAPPLICATION_CHANGEOVERRIDECURSOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,9 +264,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_CHANGEOVERRIDECURSOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QClipboard * clipboard()
-*/
+// static QClipboard * clipboard()
 HB_FUNC_STATIC(QGUIAPPLICATION_CLIPBOARD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -288,9 +279,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_CLIPBOARD)
 #endif
 }
 
-/*
-static bool desktopSettingsAware()
-*/
+// static bool desktopSettingsAware()
 HB_FUNC_STATIC(QGUIAPPLICATION_DESKTOPSETTINGSAWARE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,9 +293,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_DESKTOPSETTINGSAWARE)
 #endif
 }
 
-/*
-static int exec()
-*/
+// static int exec()
 HB_FUNC_STATIC(QGUIAPPLICATION_EXEC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -320,9 +307,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_EXEC)
 #endif
 }
 
-/*
-static QObject * focusObject()
-*/
+// static QObject * focusObject()
 HB_FUNC_STATIC(QGUIAPPLICATION_FOCUSOBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,9 +322,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_FOCUSOBJECT)
 #endif
 }
 
-/*
-static QWindow * focusWindow()
-*/
+// static QWindow * focusWindow()
 HB_FUNC_STATIC(QGUIAPPLICATION_FOCUSWINDOW)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,9 +337,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_FOCUSWINDOW)
 #endif
 }
 
-/*
-static QFont font()
-*/
+// static QFont font()
 HB_FUNC_STATIC(QGUIAPPLICATION_FONT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -371,9 +352,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_FONT)
 #endif
 }
 
-/*
-static QInputMethod * inputMethod()
-*/
+// static QInputMethod * inputMethod()
 HB_FUNC_STATIC(QGUIAPPLICATION_INPUTMETHOD)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -388,9 +367,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_INPUTMETHOD)
 #endif
 }
 
-/*
-static bool isLeftToRight()
-*/
+// static bool isLeftToRight()
 HB_FUNC_STATIC(QGUIAPPLICATION_ISLEFTTORIGHT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,9 +381,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ISLEFTTORIGHT)
 #endif
 }
 
-/*
-static bool isRightToLeft()
-*/
+// static bool isRightToLeft()
 HB_FUNC_STATIC(QGUIAPPLICATION_ISRIGHTTOLEFT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -420,9 +395,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_ISRIGHTTOLEFT)
 #endif
 }
 
-/*
-static Qt::KeyboardModifiers keyboardModifiers()
-*/
+// static Qt::KeyboardModifiers keyboardModifiers()
 HB_FUNC_STATIC(QGUIAPPLICATION_KEYBOARDMODIFIERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -436,9 +409,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_KEYBOARDMODIFIERS)
 #endif
 }
 
-/*
-static Qt::LayoutDirection layoutDirection()
-*/
+// static Qt::LayoutDirection layoutDirection()
 HB_FUNC_STATIC(QGUIAPPLICATION_LAYOUTDIRECTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -452,9 +423,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_LAYOUTDIRECTION)
 #endif
 }
 
-/*
-static QWindow * modalWindow()
-*/
+// static QWindow * modalWindow()
 HB_FUNC_STATIC(QGUIAPPLICATION_MODALWINDOW)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -469,9 +438,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_MODALWINDOW)
 #endif
 }
 
-/*
-static Qt::MouseButtons mouseButtons()
-*/
+// static Qt::MouseButtons mouseButtons()
 HB_FUNC_STATIC(QGUIAPPLICATION_MOUSEBUTTONS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -485,9 +452,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_MOUSEBUTTONS)
 #endif
 }
 
-/*
-static QCursor * overrideCursor()
-*/
+// static QCursor * overrideCursor()
 HB_FUNC_STATIC(QGUIAPPLICATION_OVERRIDECURSOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -502,9 +467,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_OVERRIDECURSOR)
 #endif
 }
 
-/*
-static QPalette palette()
-*/
+// static QPalette palette()
 HB_FUNC_STATIC(QGUIAPPLICATION_PALETTE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -519,9 +482,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_PALETTE)
 #endif
 }
 
-/*
-static QString platformName()
-*/
+// static QString platformName()
 HB_FUNC_STATIC(QGUIAPPLICATION_PLATFORMNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -535,9 +496,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_PLATFORMNAME)
 #endif
 }
 
-/*
-static QScreen * primaryScreen()
-*/
+// static QScreen * primaryScreen()
 HB_FUNC_STATIC(QGUIAPPLICATION_PRIMARYSCREEN)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -552,9 +511,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_PRIMARYSCREEN)
 #endif
 }
 
-/*
-static Qt::KeyboardModifiers queryKeyboardModifiers()
-*/
+// static Qt::KeyboardModifiers queryKeyboardModifiers()
 HB_FUNC_STATIC(QGUIAPPLICATION_QUERYKEYBOARDMODIFIERS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -568,9 +525,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_QUERYKEYBOARDMODIFIERS)
 #endif
 }
 
-/*
-static bool quitOnLastWindowClosed()
-*/
+// static bool quitOnLastWindowClosed()
 HB_FUNC_STATIC(QGUIAPPLICATION_QUITONLASTWINDOWCLOSED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -584,9 +539,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_QUITONLASTWINDOWCLOSED)
 #endif
 }
 
-/*
-static void restoreOverrideCursor()
-*/
+// static void restoreOverrideCursor()
 HB_FUNC_STATIC(QGUIAPPLICATION_RESTOREOVERRIDECURSOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -602,9 +555,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_RESTOREOVERRIDECURSOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QList<QScreen*> screens()
-*/
+// static QList<QScreen *> screens()
 HB_FUNC_STATIC(QGUIAPPLICATION_SCREENS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -637,9 +588,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SCREENS)
 #endif
 }
 
-/*
-static void setApplicationDisplayName( const QString &name )
-*/
+// static void setApplicationDisplayName( const QString & name )
 HB_FUNC_STATIC(QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -655,9 +604,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setDesktopSettingsAware( bool on )
-*/
+// static void setDesktopSettingsAware( bool on )
 HB_FUNC_STATIC(QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -673,9 +620,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setFont( const QFont &font )
-*/
+// static void setFont( const QFont & font )
 HB_FUNC_STATIC(QGUIAPPLICATION_SETFONT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -691,9 +636,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setLayoutDirection( Qt::LayoutDirection direction )
-*/
+// static void setLayoutDirection( Qt::LayoutDirection direction )
 HB_FUNC_STATIC(QGUIAPPLICATION_SETLAYOUTDIRECTION)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -709,9 +652,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETLAYOUTDIRECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setOverrideCursor( const QCursor &cursor )
-*/
+// static void setOverrideCursor( const QCursor & cursor )
 HB_FUNC_STATIC(QGUIAPPLICATION_SETOVERRIDECURSOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -727,9 +668,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETOVERRIDECURSOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setPalette( const QPalette &pal )
-*/
+// static void setPalette( const QPalette & pal )
 HB_FUNC_STATIC(QGUIAPPLICATION_SETPALETTE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -745,9 +684,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETPALETTE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setQuitOnLastWindowClosed( bool quit )
-*/
+// static void setQuitOnLastWindowClosed( bool quit )
 HB_FUNC_STATIC(QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -763,9 +700,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QStyleHints * styleHints()
-*/
+// static QStyleHints * styleHints()
 HB_FUNC_STATIC(QGUIAPPLICATION_STYLEHINTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -780,9 +715,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_STYLEHINTS)
 #endif
 }
 
-/*
-static QWindow * topLevelAt( const QPoint &pos )
-*/
+// static QWindow * topLevelAt( const QPoint & pos )
 HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELAT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -797,9 +730,7 @@ HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELAT)
 #endif
 }
 
-/*
-static QWindowList topLevelWindows()
-*/
+// static QWindowList topLevelWindows()
 HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELWINDOWS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -834,29 +765,31 @@ HB_FUNC_STATIC(QGUIAPPLICATION_TOPLEVELWINDOWS)
 
 void QGuiApplicationSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGuiApplicationSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSOBJECTCHANGED)
 {
-  QGuiApplicationSlots_connect_signal("focusObjectChanged(QObject*)", "focusObjectChanged(QObject*)");
+  CONNECT_SIGNAL("focusObjectChanged(QObject*)");
 }
 
 HB_FUNC_STATIC(QGUIAPPLICATION_ONFOCUSWINDOWCHANGED)
 {
-  QGuiApplicationSlots_connect_signal("focusWindowChanged(QWindow*)", "focusWindowChanged(QWindow*)");
+  CONNECT_SIGNAL("focusWindowChanged(QWindow*)");
 }
 
 HB_FUNC_STATIC(QGUIAPPLICATION_ONFONTDATABASECHANGED)
 {
-  QGuiApplicationSlots_connect_signal("fontDatabaseChanged()", "fontDatabaseChanged()");
+  CONNECT_SIGNAL("fontDatabaseChanged()");
 }
 
 HB_FUNC_STATIC(QGUIAPPLICATION_ONLASTWINDOWCLOSED)
 {
-  QGuiApplicationSlots_connect_signal("lastWindowClosed()", "lastWindowClosed()");
+  CONNECT_SIGNAL("lastWindowClosed()");
 }
 
 HB_FUNC_STATIC(QGUIAPPLICATION_ONSCREENADDED)
 {
-  QGuiApplicationSlots_connect_signal("screenAdded(QScreen*)", "screenAdded(QScreen*)");
+  CONNECT_SIGNAL("screenAdded(QScreen*)");
 }
 
 #pragma ENDDUMP

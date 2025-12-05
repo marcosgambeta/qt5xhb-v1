@@ -49,18 +49,16 @@ RETURN
 #include <QtGui/QInputMethodEvent>
 #endif
 
-HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
+#define GET_PTR_FROM_SELF(p) QInputMethodEvent *p = static_cast<QInputMethodEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+    HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QInputMethodEvent()
-    */
+    // QInputMethodEvent()
     QInputMethodEvent *obj = new QInputMethodEvent();
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(1) && ISQINPUTMETHODEVENT(1)) {
-    /*
-    QInputMethodEvent( const QInputMethodEvent &other )
-    */
+    // QInputMethodEvent( const QInputMethodEvent & other )
     QInputMethodEvent *obj = new QInputMethodEvent(*PQINPUTMETHODEVENT(1));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -70,7 +68,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
 
 HB_FUNC_STATIC(QINPUTMETHODEVENT_DELETE)
 {
-  QInputMethodEvent *obj = (QInputMethodEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -83,12 +81,10 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int replacementLength() const
-*/
+// int replacementLength() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTLENGTH)
 {
-  QInputMethodEvent *obj = (QInputMethodEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,12 +99,10 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTLENGTH)
   }
 }
 
-/*
-int replacementStart() const
-*/
+// int replacementStart() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTSTART)
 {
-  QInputMethodEvent *obj = (QInputMethodEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -123,12 +117,10 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTSTART)
   }
 }
 
-/*
-void setCommitString( const QString &commitString, int replaceFrom = 0, int replaceLength = 0 )
-*/
+// void setCommitString( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
 HB_FUNC_STATIC(QINPUTMETHODEVENT_SETCOMMITSTRING)
 {
-  QInputMethodEvent *obj = (QInputMethodEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

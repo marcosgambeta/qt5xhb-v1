@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIMAGE
-REQUEST QOPENGLFRAMEBUFFEROBJECTFORMAT
-REQUEST QSIZE
+REQUEST QImage
+REQUEST QOpenGLFramebufferObjectFormat
+REQUEST QSize
 #endif
 
 CLASS QOpenGLFramebufferObject
@@ -85,18 +85,17 @@ RETURN
 
 #include <QtGui/QImage>
 
-    /*
-    QOpenGLFramebufferObject( const QSize &size, GLenum target = GL_TEXTURE_2D )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QOpenGLFramebufferObject *p = static_cast<QOpenGLFramebufferObject *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QOpenGLFramebufferObject( const QSize & size, GLenum target = GL_TEXTURE_2D )
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW1)
 {
   QOpenGLFramebufferObject *obj = new QOpenGLFramebufferObject(*PQSIZE(1), OPGLENUM(2, GL_TEXTURE_2D));
   Qt5xHb::returnNewObject(obj, true);
 }
 
-/*
-QOpenGLFramebufferObject( int width, int height, GLenum target = GL_TEXTURE_2D )
-*/
+// QOpenGLFramebufferObject( int width, int height, GLenum target = GL_TEXTURE_2D )
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW2)
 {
   QOpenGLFramebufferObject *obj = new QOpenGLFramebufferObject(PINT(1), PINT(2), OPGLENUM(3, GL_TEXTURE_2D));
@@ -105,10 +104,8 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW2)
 
 #if !defined(QT_OPENGL_ES) || defined(Q_QDOC)
 
-/*
-QOpenGLFramebufferObject( const QSize &size, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
-GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
-*/
+// QOpenGLFramebufferObject( const QSize & size, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
+// GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW3)
 {
   QOpenGLFramebufferObject *obj = new QOpenGLFramebufferObject(
@@ -116,10 +113,8 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW3)
   Qt5xHb::returnNewObject(obj, true);
 }
 
-/*
-QOpenGLFramebufferObject( int width, int height, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
-GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
-*/
+// QOpenGLFramebufferObject( int width, int height, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
+// GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW4)
 {
   QOpenGLFramebufferObject *obj =
@@ -146,10 +141,8 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW4)
 {
 }
 
-/*
-QOpenGLFramebufferObject( const QSize &size, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
-GL_TEXTURE_2D, GLenum internal_format = GL_RGBA )
-*/
+// QOpenGLFramebufferObject( const QSize & size, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
+// GL_TEXTURE_2D, GLenum internal_format = GL_RGBA )
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW5)
 {
   QOpenGLFramebufferObject *obj = new QOpenGLFramebufferObject(
@@ -157,10 +150,8 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW5)
   Qt5xHb::returnNewObject(obj, true);
 }
 
-/*
-QOpenGLFramebufferObject( int width, int height, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
-GL_TEXTURE_2D, GLenum internal_format = GL_RGBA )
-*/
+// QOpenGLFramebufferObject( int width, int height, QOpenGLFramebufferObject::Attachment attachment, GLenum target =
+// GL_TEXTURE_2D, GLenum internal_format = GL_RGBA )
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW6)
 {
   QOpenGLFramebufferObject *obj =
@@ -171,18 +162,14 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW6)
 
 #endif
 
-/*
-QOpenGLFramebufferObject( const QSize &size, const QOpenGLFramebufferObjectFormat &format )
-*/
+// QOpenGLFramebufferObject( const QSize & size, const QOpenGLFramebufferObjectFormat & format )
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW7)
 {
   QOpenGLFramebufferObject *obj = new QOpenGLFramebufferObject(*PQSIZE(1), *PQOPENGLFRAMEBUFFEROBJECTFORMAT(2));
   Qt5xHb::returnNewObject(obj, true);
 }
 
-/*
-QOpenGLFramebufferObject( int width, int height, const QOpenGLFramebufferObjectFormat &format )
-*/
+// QOpenGLFramebufferObject( int width, int height, const QOpenGLFramebufferObjectFormat & format )
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW8)
 {
   QOpenGLFramebufferObject *obj = new QOpenGLFramebufferObject(PINT(1), PINT(2), *PQOPENGLFRAMEBUFFEROBJECTFORMAT(3));
@@ -199,15 +186,13 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW)
 #if !defined(QT_OPENGL_ES) || defined(Q_QDOC)
   else if (ISBETWEEN(2, 4) && ISQSIZE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW3);
-  } else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW4);
   }
 #else
   else if (ISBETWEEN(2, 4) && ISQSIZE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW5);
-  } else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     HB_FUNC_EXEC(QOPENGLFRAMEBUFFEROBJECT_NEW6);
   }
 #endif
@@ -222,7 +207,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_NEW)
 
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_DELETE)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -235,12 +220,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QOpenGLFramebufferObjectFormat format() const
-*/
+// QOpenGLFramebufferObjectFormat format() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_FORMAT)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,12 +239,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_FORMAT)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ISVALID)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,12 +257,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ISVALID)
   }
 }
 
-/*
-bool isBound() const
-*/
+// bool isBound() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ISBOUND)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,12 +275,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ISBOUND)
   }
 }
 
-/*
-bool bind()
-*/
+// bool bind()
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BIND)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,12 +293,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BIND)
   }
 }
 
-/*
-bool release()
-*/
+// bool release()
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_RELEASE)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,12 +311,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_RELEASE)
   }
 }
 
-/*
-int width() const
-*/
+// int width() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_WIDTH)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -356,12 +329,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_WIDTH)
   }
 }
 
-/*
-int height() const
-*/
+// int height() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HEIGHT)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -376,12 +347,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HEIGHT)
   }
 }
 
-/*
-GLuint texture() const
-*/
+// GLuint texture() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_TEXTURE)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,12 +365,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_TEXTURE)
   }
 }
 
-/*
-QSize size() const
-*/
+// QSize size() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SIZE)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -417,12 +384,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SIZE)
   }
 }
 
-/*
-QImage toImage() const
-*/
+// QImage toImage() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_TOIMAGE)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -438,12 +403,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_TOIMAGE)
   }
 }
 
-/*
-QOpenGLFramebufferObject::Attachment attachment() const
-*/
+// QOpenGLFramebufferObject::Attachment attachment() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ATTACHMENT)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -458,12 +421,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_ATTACHMENT)
   }
 }
 
-/*
-void setAttachment( QOpenGLFramebufferObject::Attachment attachment )
-*/
+// void setAttachment( QOpenGLFramebufferObject::Attachment attachment )
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SETATTACHMENT)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -480,12 +441,10 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_SETATTACHMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-GLuint handle() const
-*/
+// GLuint handle() const
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HANDLE)
 {
-  QOpenGLFramebufferObject *obj = (QOpenGLFramebufferObject *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -500,9 +459,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HANDLE)
   }
 }
 
-/*
-static bool bindDefault()
-*/
+// static bool bindDefault()
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BINDDEFAULT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -516,9 +473,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BINDDEFAULT)
 #endif
 }
 
-/*
-static bool hasOpenGLFramebufferObjects()
-*/
+// static bool hasOpenGLFramebufferObjects()
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -532,9 +487,7 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS)
 #endif
 }
 
-/*
-static bool hasOpenGLFramebufferBlit()
-*/
+// static bool hasOpenGLFramebufferBlit()
 HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -552,21 +505,20 @@ HB_FUNC_STATIC(QOPENGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER)
 {
   if (ISBETWEEN(4, 6) && ISQOPENGLFRAMEBUFFEROBJECT(1) && ISQRECT(2) && ISQOPENGLFRAMEBUFFEROBJECT(3) && ISQRECT(4) &&
       ISNUMORNIL(5) && ISNUMORNIL(6)) {
-    /*
-    static void blitFramebuffer( QOpenGLFramebufferObject * target, const QRect &targetRect, QOpenGLFramebufferObject *
-    source, const QRect &sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
-    */
+    // static void blitFramebuffer( QOpenGLFramebufferObject * target, const QRect & targetRect,
+    // QOpenGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum
+    // filter = GL_NEAREST )
+
     QOpenGLFramebufferObject::blitFramebuffer(PQOPENGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQOPENGLFRAMEBUFFEROBJECT(3),
                                               *PQRECT(4), OPGLBITFIELD(5, GL_COLOR_BUFFER_BIT),
                                               OPGLENUM(6, GL_NEAREST));
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(2, 4) && ISQOPENGLFRAMEBUFFEROBJECT(1) && ISQOPENGLFRAMEBUFFEROBJECT(2) &&
-           ISNUMORNIL(3) && ISNUMORNIL(4)) {
-    /*
-    static void blitFramebuffer( QOpenGLFramebufferObject * target, QOpenGLFramebufferObject * source, GLbitfield
-    buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
-    */
+  } else if (ISBETWEEN(2, 4) && ISQOPENGLFRAMEBUFFEROBJECT(1) && ISQOPENGLFRAMEBUFFEROBJECT(2) && ISNUMORNIL(3) &&
+             ISNUMORNIL(4)) {
+    // static void blitFramebuffer( QOpenGLFramebufferObject * target, QOpenGLFramebufferObject * source, GLbitfield
+    // buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
+
     QOpenGLFramebufferObject::blitFramebuffer(PQOPENGLFRAMEBUFFEROBJECT(1), PQOPENGLFRAMEBUFFEROBJECT(2),
                                               OPGLBITFIELD(3, GL_COLOR_BUFFER_BIT), OPGLENUM(4, GL_NEAREST));
 

@@ -58,18 +58,17 @@ RETURN
 #include <QtGui/QDoubleValidator>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDoubleValidator *p = qobject_cast<QDoubleValidator *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QDoubleValidator( QObject * parent = 0 )
-    */
+    // QDoubleValidator( QObject * parent = 0 )
     QDoubleValidator *obj = new QDoubleValidator(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQOBJECTORNIL(4)) {
-    /*
-    QDoubleValidator( double bottom, double top, int decimals, QObject * parent )
-    */
+    // QDoubleValidator( double bottom, double top, int decimals, QObject * parent )
     QDoubleValidator *obj = new QDoubleValidator(PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -79,7 +78,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_NEW)
 
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_DELETE)
 {
-  QDoubleValidator *obj = (QDoubleValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -94,12 +93,10 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-double bottom() const
-*/
+// double bottom() const
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_BOTTOM)
 {
-  QDoubleValidator *obj = (QDoubleValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -114,12 +111,10 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_BOTTOM)
   }
 }
 
-/*
-int decimals() const
-*/
+// int decimals() const
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_DECIMALS)
 {
-  QDoubleValidator *obj = (QDoubleValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -134,12 +129,10 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_DECIMALS)
   }
 }
 
-/*
-QDoubleValidator::Notation notation() const
-*/
+// QDoubleValidator::Notation notation() const
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_NOTATION)
 {
-  QDoubleValidator *obj = (QDoubleValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,12 +147,10 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_NOTATION)
   }
 }
 
-/*
-void setBottom( double )
-*/
+// void setBottom( double )
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETBOTTOM)
 {
-  QDoubleValidator *obj = (QDoubleValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,12 +167,10 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETBOTTOM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDecimals( int )
-*/
+// void setDecimals( int )
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETDECIMALS)
 {
-  QDoubleValidator *obj = (QDoubleValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,12 +187,10 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETDECIMALS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNotation( QDoubleValidator::Notation )
-*/
+// void setNotation( QDoubleValidator::Notation )
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETNOTATION)
 {
-  QDoubleValidator *obj = (QDoubleValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,12 +207,10 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETNOTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setRange( double minimum, double maximum, int decimals = 0 )
-*/
+// virtual void setRange( double minimum, double maximum, int decimals = 0 )
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETRANGE)
 {
-  QDoubleValidator *obj = (QDoubleValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -242,12 +227,10 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETRANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTop( double )
-*/
+// void setTop( double )
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETTOP)
 {
-  QDoubleValidator *obj = (QDoubleValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,12 +247,10 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETTOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-double top() const
-*/
+// double top() const
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_TOP)
 {
-  QDoubleValidator *obj = (QDoubleValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -284,12 +265,10 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_TOP)
   }
 }
 
-/*
-virtual QValidator::State validate( QString &input, int &pos ) const
-*/
+// virtual QValidator::State validate( QString & input, int & pos ) const
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_VALIDATE)
 {
-  QDoubleValidator *obj = (QDoubleValidator *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

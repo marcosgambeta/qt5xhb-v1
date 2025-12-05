@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSCREEN
+REQUEST QScreen
 #endif
 
 CLASS QScreenOrientationChangeEvent INHERIT QEvent
@@ -51,9 +51,10 @@ RETURN
 
 #include <QtGui/QScreen>
 
-    /*
-    QScreenOrientationChangeEvent( QScreen * screen, Qt::ScreenOrientation orientation )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QScreenOrientationChangeEvent *p = static_cast<QScreenOrientationChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QScreenOrientationChangeEvent( QScreen * screen, Qt::ScreenOrientation orientation )
 HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQSCREEN(1) && HB_ISNUM(2)) {
@@ -67,7 +68,7 @@ HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_NEW)
 
 HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_DELETE)
 {
-  QScreenOrientationChangeEvent *obj = (QScreenOrientationChangeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -80,12 +81,10 @@ HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScreen * screen() const
-*/
+// QScreen * screen() const
 HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_SCREEN)
 {
-  QScreenOrientationChangeEvent *obj = (QScreenOrientationChangeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,12 +100,10 @@ HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_SCREEN)
   }
 }
 
-/*
-Qt::ScreenOrientation orientation() const
-*/
+// Qt::ScreenOrientation orientation() const
 HB_FUNC_STATIC(QSCREENORIENTATIONCHANGEEVENT_ORIENTATION)
 {
-  QScreenOrientationChangeEvent *obj = (QScreenOrientationChangeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

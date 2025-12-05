@@ -46,9 +46,9 @@ RETURN
 #include <QtGui/QHideEvent>
 #endif
 
-    /*
-    QHideEvent()
-    */
+#define GET_PTR_FROM_SELF(p) QHideEvent *p = static_cast<QHideEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QHideEvent()
 HB_FUNC_STATIC(QHIDEEVENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QHIDEEVENT_NEW)
 
 HB_FUNC_STATIC(QHIDEEVENT_DELETE)
 {
-  QHideEvent *obj = (QHideEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

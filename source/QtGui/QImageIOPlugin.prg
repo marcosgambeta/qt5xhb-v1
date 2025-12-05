@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIMAGEIOHANDLER
+REQUEST QImageIOHandler
 #endif
 
 CLASS QImageIOPlugin INHERIT QObject
@@ -50,9 +50,11 @@ RETURN
 #include <QtGui/QImageIOPlugin>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QImageIOPlugin *p = qobject_cast<QImageIOPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QIMAGEIOPLUGIN_DELETE)
 {
-  QImageIOPlugin *obj = (QImageIOPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -67,12 +69,10 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QByteArray &format ) const = 0
-*/
+// virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QByteArray & format ) const = 0
 HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
 {
-  QImageIOPlugin *obj = (QImageIOPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -87,12 +87,10 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
   }
 }
 
-/*
-virtual QImageIOHandler * create( QIODevice * device, const QByteArray &format = QByteArray() ) const = 0
-*/
+// virtual QImageIOHandler * create( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
 HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
 {
-  QImageIOPlugin *obj = (QImageIOPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

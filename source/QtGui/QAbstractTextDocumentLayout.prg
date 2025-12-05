@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPAINTDEVICE
-REQUEST QRECTF
-REQUEST QSIZEF
-REQUEST QTEXTDOCUMENT
-REQUEST QTEXTOBJECTINTERFACE
+REQUEST QPaintDevice
+REQUEST QRectF
+REQUEST QSizeF
+REQUEST QTextDocument
+REQUEST QTextObjectInterface
 #endif
 
 CLASS QAbstractTextDocumentLayout INHERIT QObject
@@ -68,9 +68,12 @@ RETURN
 #include <QtGui/QAbstractTextDocumentLayout>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractTextDocumentLayout *p = qobject_cast<QAbstractTextDocumentLayout *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DELETE)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -85,12 +88,10 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString anchorAt( const QPointF &position ) const
-*/
+// QString anchorAt( const QPointF & position ) const
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -105,12 +106,10 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
   }
 }
 
-/*
-virtual QRectF blockBoundingRect( const QTextBlock &block ) const = 0
-*/
+// virtual QRectF blockBoundingRect( const QTextBlock & block ) const = 0
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,12 +125,10 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
   }
 }
 
-/*
-QTextDocument * document() const
-*/
+// QTextDocument * document() const
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,12 +144,10 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT)
   }
 }
 
-/*
-virtual QSizeF documentSize() const = 0
-*/
+// virtual QSizeF documentSize() const = 0
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,12 +163,10 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
   }
 }
 
-/*
-virtual QRectF frameBoundingRect( QTextFrame * frame ) const = 0
-*/
+// virtual QRectF frameBoundingRect( QTextFrame * frame ) const = 0
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,12 +182,10 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
   }
 }
 
-/*
-QTextObjectInterface * handlerForObject( int objectType ) const
-*/
+// QTextObjectInterface * handlerForObject( int objectType ) const
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,12 +201,10 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT)
   }
 }
 
-/*
-virtual int hitTest( const QPointF &point, Qt::HitTestAccuracy accuracy ) const = 0
-*/
+// virtual int hitTest( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,12 +219,10 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST)
   }
 }
 
-/*
-virtual int pageCount() const = 0
-*/
+// virtual int pageCount() const = 0
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,12 +237,10 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT)
   }
 }
 
-/*
-QPaintDevice * paintDevice() const
-*/
+// QPaintDevice * paintDevice() const
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -271,12 +256,10 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE)
   }
 }
 
-/*
-void registerHandler( int objectType, QObject * component )
-*/
+// void registerHandler( int objectType, QObject * component )
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -293,12 +276,10 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPaintDevice( QPaintDevice * device )
-*/
+// void setPaintDevice( QPaintDevice * device )
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE)
 {
-  QAbstractTextDocumentLayout *obj = (QAbstractTextDocumentLayout *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -317,24 +298,26 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE)
 
 void QAbstractTextDocumentLayoutSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractTextDocumentLayoutSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED)
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal("documentSizeChanged(QSizeF)", "documentSizeChanged(QSizeF)");
+  CONNECT_SIGNAL("documentSizeChanged(QSizeF)");
 }
 
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED)
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal("pageCountChanged(int)", "pageCountChanged(int)");
+  CONNECT_SIGNAL("pageCountChanged(int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE)
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal("update(QRectF)", "update(QRectF)");
+  CONNECT_SIGNAL("update(QRectF)");
 }
 
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK)
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal("updateBlock(QTextBlock)", "updateBlock(QTextBlock)");
+  CONNECT_SIGNAL("updateBlock(QTextBlock)");
 }
 
 #pragma ENDDUMP

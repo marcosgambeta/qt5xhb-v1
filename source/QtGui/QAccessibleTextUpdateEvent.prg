@@ -49,9 +49,10 @@ RETURN
 #include <QtGui/QAccessibleTextUpdateEvent>
 #endif
 
-    /*
-    QAccessibleTextUpdateEvent( QObject * obj, int position, const QString &oldText, const QString &text )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAccessibleTextUpdateEvent *p = static_cast<QAccessibleTextUpdateEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QAccessibleTextUpdateEvent( QObject * obj, int position, const QString & oldText, const QString & text )
 HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_NEW)
 {
   if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4)) {
@@ -64,7 +65,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_NEW)
 
 HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_DELETE)
 {
-  QAccessibleTextUpdateEvent *obj = (QAccessibleTextUpdateEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -77,12 +78,10 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString textRemoved() const
-*/
+// QString textRemoved() const
 HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_TEXTREMOVED)
 {
-  QAccessibleTextUpdateEvent *obj = (QAccessibleTextUpdateEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,12 +96,10 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_TEXTREMOVED)
   }
 }
 
-/*
-QString textInserted() const
-*/
+// QString textInserted() const
 HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_TEXTINSERTED)
 {
-  QAccessibleTextUpdateEvent *obj = (QAccessibleTextUpdateEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,12 +114,10 @@ HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_TEXTINSERTED)
   }
 }
 
-/*
-int changePosition() const
-*/
+// int changePosition() const
 HB_FUNC_STATIC(QACCESSIBLETEXTUPDATEEVENT_CHANGEPOSITION)
 {
-  QAccessibleTextUpdateEvent *obj = (QAccessibleTextUpdateEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

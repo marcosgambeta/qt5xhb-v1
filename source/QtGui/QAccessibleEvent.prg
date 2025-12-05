@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACCESSIBLEINTERFACE
-REQUEST QOBJECT
+REQUEST QAccessibleInterface
+REQUEST QObject
 #endif
 
 CLASS QAccessibleEvent
@@ -62,9 +62,9 @@ RETURN
 #include <QtGui/QAccessibleEvent>
 #endif
 
-    /*
-    QAccessibleEvent( QObject * obj, QAccessible::Event typ )
-    */
+#define GET_PTR_FROM_SELF(p) QAccessibleEvent *p = static_cast<QAccessibleEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QAccessibleEvent( QObject * obj, QAccessible::Event typ )
 HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 
 HB_FUNC_STATIC(QACCESSIBLEEVENT_DELETE)
 {
-  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -90,12 +90,10 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAccessible::Event type() const
-*/
+// QAccessible::Event type() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_TYPE)
 {
-  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,12 +108,10 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_TYPE)
   }
 }
 
-/*
-QObject * object() const
-*/
+// QObject * object() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_OBJECT)
 {
-  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,12 +127,10 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_OBJECT)
   }
 }
 
-/*
-void setChild( int chld )
-*/
+// void setChild( int chld )
 HB_FUNC_STATIC(QACCESSIBLEEVENT_SETCHILD)
 {
-  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,12 +147,10 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_SETCHILD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int child() const
-*/
+// int child() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
 {
-  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,12 +165,10 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
   }
 }
 
-/*
-virtual QAccessibleInterface * accessibleInterface() const
-*/
+// virtual QAccessibleInterface * accessibleInterface() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_ACCESSIBLEINTERFACE)
 {
-  QAccessibleEvent *obj = (QAccessibleEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

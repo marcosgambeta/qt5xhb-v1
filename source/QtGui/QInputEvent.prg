@@ -46,9 +46,11 @@ RETURN
 #include <QtGui/QInputEvent>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QInputEvent *p = static_cast<QInputEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QINPUTEVENT_DELETE)
 {
-  QInputEvent *obj = (QInputEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -61,12 +63,10 @@ HB_FUNC_STATIC(QINPUTEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::KeyboardModifiers modifiers() const
-*/
+// Qt::KeyboardModifiers modifiers() const
 HB_FUNC_STATIC(QINPUTEVENT_MODIFIERS)
 {
-  QInputEvent *obj = (QInputEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

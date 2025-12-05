@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZEF
-REQUEST QTEXTOPTION
+REQUEST QSizeF
+REQUEST QTextOption
 #endif
 
 CLASS QStaticText
@@ -70,24 +70,20 @@ RETURN
 #include <QtGui/QStaticText>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QStaticText *p = static_cast<QStaticText *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTATICTEXT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QStaticText()
-    */
+    // QStaticText()
     QStaticText *obj = new QStaticText();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QStaticText( const QString &text )
-    */
+    // QStaticText( const QString & text )
     QStaticText *obj = new QStaticText(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSTATICTEXT(1)) {
-    /*
-    QStaticText( const QStaticText &other )
-    */
+    // QStaticText( const QStaticText & other )
     QStaticText *obj = new QStaticText(*PQSTATICTEXT(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -97,7 +93,7 @@ HB_FUNC_STATIC(QSTATICTEXT_NEW)
 
 HB_FUNC_STATIC(QSTATICTEXT_DELETE)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -110,12 +106,10 @@ HB_FUNC_STATIC(QSTATICTEXT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swap( QStaticText &other )
-*/
+// void swap( QStaticText & other )
 HB_FUNC_STATIC(QSTATICTEXT_SWAP)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,12 +126,10 @@ HB_FUNC_STATIC(QSTATICTEXT_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setText( const QString &text )
-*/
+// void setText( const QString & text )
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXT)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -154,12 +146,10 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXT)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -174,12 +164,10 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXT)
   }
 }
 
-/*
-void setTextFormat( Qt::TextFormat textFormat )
-*/
+// void setTextFormat( Qt::TextFormat textFormat )
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXTFORMAT)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,12 +184,10 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::TextFormat textFormat() const
-*/
+// Qt::TextFormat textFormat() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXTFORMAT)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -216,12 +202,10 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTFORMAT)
   }
 }
 
-/*
-void setTextWidth( qreal textWidth )
-*/
+// void setTextWidth( qreal textWidth )
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXTWIDTH)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,12 +222,10 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal textWidth() const
-*/
+// qreal textWidth() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXTWIDTH)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -258,12 +240,10 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTWIDTH)
   }
 }
 
-/*
-void setTextOption( const QTextOption &textOption )
-*/
+// void setTextOption( const QTextOption & textOption )
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXTOPTION)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,12 +260,10 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextOption textOption() const
-*/
+// QTextOption textOption() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXTOPTION)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -301,12 +279,10 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTOPTION)
   }
 }
 
-/*
-QSizeF size() const
-*/
+// QSizeF size() const
 HB_FUNC_STATIC(QSTATICTEXT_SIZE)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -322,12 +298,10 @@ HB_FUNC_STATIC(QSTATICTEXT_SIZE)
   }
 }
 
-/*
-void prepare( const QTransform &matrix = QTransform(), const QFont &font = QFont() )
-*/
+// void prepare( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
 HB_FUNC_STATIC(QSTATICTEXT_PREPARE)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -345,12 +319,10 @@ HB_FUNC_STATIC(QSTATICTEXT_PREPARE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPerformanceHint( QStaticText::PerformanceHint performanceHint )
-*/
+// void setPerformanceHint( QStaticText::PerformanceHint performanceHint )
 HB_FUNC_STATIC(QSTATICTEXT_SETPERFORMANCEHINT)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -367,12 +339,10 @@ HB_FUNC_STATIC(QSTATICTEXT_SETPERFORMANCEHINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStaticText::PerformanceHint performanceHint() const
-*/
+// QStaticText::PerformanceHint performanceHint() const
 HB_FUNC_STATIC(QSTATICTEXT_PERFORMANCEHINT)
 {
-  QStaticText *obj = (QStaticText *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -61,12 +61,13 @@ RETURN
 #include <QtGui/QSessionManager>
 #endif
 
-    /*
-    QString sessionId() const
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QSessionManager *p = qobject_cast<QSessionManager *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QString sessionId() const
 HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONID)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -81,12 +82,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONID)
   }
 }
 
-/*
-QString sessionKey() const
-*/
+// QString sessionKey() const
 HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONKEY)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,12 +100,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONKEY)
   }
 }
 
-/*
-bool allowsInteraction()
-*/
+// bool allowsInteraction()
 HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSINTERACTION)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,12 +118,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSINTERACTION)
   }
 }
 
-/*
-bool allowsErrorInteraction()
-*/
+// bool allowsErrorInteraction()
 HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSERRORINTERACTION)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,12 +136,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSERRORINTERACTION)
   }
 }
 
-/*
-void release()
-*/
+// void release()
 HB_FUNC_STATIC(QSESSIONMANAGER_RELEASE)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,12 +156,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RELEASE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void cancel()
-*/
+// void cancel()
 HB_FUNC_STATIC(QSESSIONMANAGER_CANCEL)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,12 +176,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_CANCEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRestartHint( QSessionManager::RestartHint )
-*/
+// void setRestartHint( QSessionManager::RestartHint )
 HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTHINT)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,12 +196,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTHINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSessionManager::RestartHint restartHint() const
-*/
+// QSessionManager::RestartHint restartHint() const
 HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTHINT)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,12 +214,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTHINT)
   }
 }
 
-/*
-void setRestartCommand( const QStringList &)
-*/
+// void setRestartCommand( const QStringList & )
 HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTCOMMAND)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,12 +234,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTCOMMAND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList restartCommand() const
-*/
+// QStringList restartCommand() const
 HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTCOMMAND)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,12 +252,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTCOMMAND)
   }
 }
 
-/*
-void setDiscardCommand( const QStringList &)
-*/
+// void setDiscardCommand( const QStringList & )
 HB_FUNC_STATIC(QSESSIONMANAGER_SETDISCARDCOMMAND)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,12 +272,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETDISCARDCOMMAND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList discardCommand() const
-*/
+// QStringList discardCommand() const
 HB_FUNC_STATIC(QSESSIONMANAGER_DISCARDCOMMAND)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -314,10 +293,8 @@ HB_FUNC_STATIC(QSESSIONMANAGER_DISCARDCOMMAND)
 HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    void setManagerProperty( const QString &name, const QString &value )
-    */
-    QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void setManagerProperty( const QString & name, const QString & value )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setManagerProperty(PQSTRING(1), PQSTRING(2));
@@ -325,10 +302,8 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
-    /*
-    void setManagerProperty( const QString &name, const QStringList &value )
-    */
-    QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void setManagerProperty( const QString & name, const QStringList & value )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setManagerProperty(PQSTRING(1), PQSTRINGLIST(2));
@@ -340,12 +315,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
   }
 }
 
-/*
-bool isPhase2() const
-*/
+// bool isPhase2() const
 HB_FUNC_STATIC(QSESSIONMANAGER_ISPHASE2)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,12 +333,10 @@ HB_FUNC_STATIC(QSESSIONMANAGER_ISPHASE2)
   }
 }
 
-/*
-void requestPhase2()
-*/
+// void requestPhase2()
 HB_FUNC_STATIC(QSESSIONMANAGER_REQUESTPHASE2)
 {
-  QSessionManager *obj = (QSessionManager *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -46,9 +46,9 @@ RETURN
 #include <QtGui/QShowEvent>
 #endif
 
-    /*
-    QShowEvent()
-    */
+#define GET_PTR_FROM_SELF(p) QShowEvent *p = static_cast<QShowEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QShowEvent()
 HB_FUNC_STATIC(QSHOWEVENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QSHOWEVENT_NEW)
 
 HB_FUNC_STATIC(QSHOWEVENT_DELETE)
 {
-  QShowEvent *obj = (QShowEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

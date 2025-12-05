@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QIODEVICE
-REQUEST QPICTURE
+REQUEST QByteArray
+REQUEST QIODevice
+REQUEST QPicture
 #endif
 
 CLASS QPictureIO
@@ -81,24 +81,20 @@ RETURN
 #include <QtGui/QPictureIO>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QPictureIO *p = static_cast<QPictureIO *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPICTUREIO_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPictureIO()
-    */
+    // QPictureIO()
     QPictureIO *obj = new QPictureIO();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && ISQIODEVICE(1) && HB_ISCHAR(2)) {
-    /*
-    QPictureIO( QIODevice * ioDevice, const char * format )
-    */
+    // QPictureIO( QIODevice * ioDevice, const char * format )
     QPictureIO *obj = new QPictureIO(PQIODEVICE(1), PCONSTCHAR(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
-    /*
-    QPictureIO( const QString &fileName, const char * format )
-    */
+    // QPictureIO( const QString & fileName, const char * format )
     QPictureIO *obj = new QPictureIO(PQSTRING(1), PCONSTCHAR(2));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -108,7 +104,7 @@ HB_FUNC_STATIC(QPICTUREIO_NEW)
 
 HB_FUNC_STATIC(QPICTUREIO_DELETE)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -121,12 +117,10 @@ HB_FUNC_STATIC(QPICTUREIO_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QPicture &picture() const
-*/
+// const QPicture & picture() const
 HB_FUNC_STATIC(QPICTUREIO_PICTURE)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,12 +136,10 @@ HB_FUNC_STATIC(QPICTUREIO_PICTURE)
   }
 }
 
-/*
-int status() const
-*/
+// int status() const
 HB_FUNC_STATIC(QPICTUREIO_STATUS)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,12 +154,10 @@ HB_FUNC_STATIC(QPICTUREIO_STATUS)
   }
 }
 
-/*
-const char * format() const
-*/
+// const char * format() const
 HB_FUNC_STATIC(QPICTUREIO_FORMAT)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,12 +172,10 @@ HB_FUNC_STATIC(QPICTUREIO_FORMAT)
   }
 }
 
-/*
-QIODevice * ioDevice() const
-*/
+// QIODevice * ioDevice() const
 HB_FUNC_STATIC(QPICTUREIO_IODEVICE)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,12 +191,10 @@ HB_FUNC_STATIC(QPICTUREIO_IODEVICE)
   }
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QPICTUREIO_FILENAME)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,12 +209,10 @@ HB_FUNC_STATIC(QPICTUREIO_FILENAME)
   }
 }
 
-/*
-int quality() const
-*/
+// int quality() const
 HB_FUNC_STATIC(QPICTUREIO_QUALITY)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,12 +227,10 @@ HB_FUNC_STATIC(QPICTUREIO_QUALITY)
   }
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QPICTUREIO_DESCRIPTION)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,12 +245,10 @@ HB_FUNC_STATIC(QPICTUREIO_DESCRIPTION)
   }
 }
 
-/*
-const char * parameters() const
-*/
+// const char * parameters() const
 HB_FUNC_STATIC(QPICTUREIO_PARAMETERS)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,12 +263,10 @@ HB_FUNC_STATIC(QPICTUREIO_PARAMETERS)
   }
 }
 
-/*
-float gamma() const
-*/
+// float gamma() const
 HB_FUNC_STATIC(QPICTUREIO_GAMMA)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,12 +281,10 @@ HB_FUNC_STATIC(QPICTUREIO_GAMMA)
   }
 }
 
-/*
-void setPicture( const QPicture &)
-*/
+// void setPicture( const QPicture & )
 HB_FUNC_STATIC(QPICTUREIO_SETPICTURE)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,12 +301,10 @@ HB_FUNC_STATIC(QPICTUREIO_SETPICTURE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStatus( int )
-*/
+// void setStatus( int )
 HB_FUNC_STATIC(QPICTUREIO_SETSTATUS)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,12 +321,10 @@ HB_FUNC_STATIC(QPICTUREIO_SETSTATUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFormat( const char * )
-*/
+// void setFormat( const char * )
 HB_FUNC_STATIC(QPICTUREIO_SETFORMAT)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -369,12 +341,10 @@ HB_FUNC_STATIC(QPICTUREIO_SETFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIODevice( QIODevice * )
-*/
+// void setIODevice( QIODevice * )
 HB_FUNC_STATIC(QPICTUREIO_SETIODEVICE)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,12 +361,10 @@ HB_FUNC_STATIC(QPICTUREIO_SETIODEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFileName( const QString &)
-*/
+// void setFileName( const QString & )
 HB_FUNC_STATIC(QPICTUREIO_SETFILENAME)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -413,12 +381,10 @@ HB_FUNC_STATIC(QPICTUREIO_SETFILENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setQuality( int )
-*/
+// void setQuality( int )
 HB_FUNC_STATIC(QPICTUREIO_SETQUALITY)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -435,12 +401,10 @@ HB_FUNC_STATIC(QPICTUREIO_SETQUALITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDescription( const QString &)
-*/
+// void setDescription( const QString & )
 HB_FUNC_STATIC(QPICTUREIO_SETDESCRIPTION)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -457,12 +421,10 @@ HB_FUNC_STATIC(QPICTUREIO_SETDESCRIPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setParameters( const char * )
-*/
+// void setParameters( const char * )
 HB_FUNC_STATIC(QPICTUREIO_SETPARAMETERS)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -479,12 +441,10 @@ HB_FUNC_STATIC(QPICTUREIO_SETPARAMETERS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setGamma( float )
-*/
+// void setGamma( float )
 HB_FUNC_STATIC(QPICTUREIO_SETGAMMA)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -501,12 +461,10 @@ HB_FUNC_STATIC(QPICTUREIO_SETGAMMA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool read()
-*/
+// bool read()
 HB_FUNC_STATIC(QPICTUREIO_READ)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -521,12 +479,10 @@ HB_FUNC_STATIC(QPICTUREIO_READ)
   }
 }
 
-/*
-bool write()
-*/
+// bool write()
 HB_FUNC_STATIC(QPICTUREIO_WRITE)
 {
-  QPictureIO *obj = (QPictureIO *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -544,15 +500,13 @@ HB_FUNC_STATIC(QPICTUREIO_WRITE)
 HB_FUNC_STATIC(QPICTUREIO_PICTUREFORMAT)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    static QByteArray pictureFormat( const QString &fileName )
-    */
+    // static QByteArray pictureFormat( const QString & fileName )
+
     QByteArray *ptr = new QByteArray(QPictureIO::pictureFormat(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
-    /*
-    static QByteArray pictureFormat( QIODevice * )
-    */
+    // static QByteArray pictureFormat( QIODevice * )
+
     QByteArray *ptr = new QByteArray(QPictureIO::pictureFormat(PQIODEVICE(1)));
     Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
   } else {
@@ -560,9 +514,7 @@ HB_FUNC_STATIC(QPICTUREIO_PICTUREFORMAT)
   }
 }
 
-/*
-static QList<QByteArray> inputFormats()
-*/
+// static QList<QByteArray> inputFormats()
 HB_FUNC_STATIC(QPICTUREIO_INPUTFORMATS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -598,9 +550,7 @@ HB_FUNC_STATIC(QPICTUREIO_INPUTFORMATS)
 #endif
 }
 
-/*
-static QList<QByteArray> outputFormats()
-*/
+// static QList<QByteArray> outputFormats()
 HB_FUNC_STATIC(QPICTUREIO_OUTPUTFORMATS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

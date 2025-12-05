@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QInputMethodQueryEvent INHERIT QEvent
@@ -50,9 +50,10 @@ RETURN
 #include <QtGui/QInputMethodQueryEvent>
 #endif
 
-    /*
-    QInputMethodQueryEvent( Qt::InputMethodQueries queries )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QInputMethodQueryEvent *p = static_cast<QInputMethodQueryEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QInputMethodQueryEvent( Qt::InputMethodQueries queries )
 HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -65,7 +66,7 @@ HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_NEW)
 
 HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_DELETE)
 {
-  QInputMethodQueryEvent *obj = (QInputMethodQueryEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -78,12 +79,10 @@ HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::InputMethodQueries queries() const
-*/
+// Qt::InputMethodQueries queries() const
 HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_QUERIES)
 {
-  QInputMethodQueryEvent *obj = (QInputMethodQueryEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,12 +97,10 @@ HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_QUERIES)
   }
 }
 
-/*
-void setValue( Qt::InputMethodQuery query, const QVariant &value )
-*/
+// void setValue( Qt::InputMethodQuery query, const QVariant & value )
 HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_SETVALUE)
 {
-  QInputMethodQueryEvent *obj = (QInputMethodQueryEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,12 +117,10 @@ HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_SETVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant value( Qt::InputMethodQuery query ) const
-*/
+// QVariant value( Qt::InputMethodQuery query ) const
 HB_FUNC_STATIC(QINPUTMETHODQUERYEVENT_VALUE)
 {
-  QInputMethodQueryEvent *obj = (QInputMethodQueryEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

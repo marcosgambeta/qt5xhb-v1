@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QFONT
+REQUEST QFont
 #endif
 
 CLASS QTextItem
@@ -61,9 +61,11 @@ RETURN
 #include <QtGui/QTextItem>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QTextItem *p = static_cast<QTextItem *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTITEM_DELETE)
 {
-  QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -76,12 +78,10 @@ HB_FUNC_STATIC(QTEXTITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal descent() const
-*/
+// qreal descent() const
 HB_FUNC_STATIC(QTEXTITEM_DESCENT)
 {
-  QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,12 +96,10 @@ HB_FUNC_STATIC(QTEXTITEM_DESCENT)
   }
 }
 
-/*
-qreal ascent() const
-*/
+// qreal ascent() const
 HB_FUNC_STATIC(QTEXTITEM_ASCENT)
 {
-  QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,12 +114,10 @@ HB_FUNC_STATIC(QTEXTITEM_ASCENT)
   }
 }
 
-/*
-qreal width() const
-*/
+// qreal width() const
 HB_FUNC_STATIC(QTEXTITEM_WIDTH)
 {
-  QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,12 +132,10 @@ HB_FUNC_STATIC(QTEXTITEM_WIDTH)
   }
 }
 
-/*
-QTextItem::RenderFlags renderFlags() const
-*/
+// QTextItem::RenderFlags renderFlags() const
 HB_FUNC_STATIC(QTEXTITEM_RENDERFLAGS)
 {
-  QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,12 +150,10 @@ HB_FUNC_STATIC(QTEXTITEM_RENDERFLAGS)
   }
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QTEXTITEM_TEXT)
 {
-  QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,12 +168,10 @@ HB_FUNC_STATIC(QTEXTITEM_TEXT)
   }
 }
 
-/*
-QFont font() const
-*/
+// QFont font() const
 HB_FUNC_STATIC(QTEXTITEM_FONT)
 {
-  QTextItem *obj = (QTextItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

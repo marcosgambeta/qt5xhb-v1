@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QFONT
+REQUEST QFont
 #endif
 
 CLASS QFontDatabase
@@ -80,9 +80,9 @@ RETURN
 
 #include <QtCore/QStringList>
 
-    /*
-    QFontDatabase()
-    */
+#define GET_PTR_FROM_SELF(p) QFontDatabase *p = static_cast<QFontDatabase *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QFontDatabase()
 HB_FUNC_STATIC(QFONTDATABASE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QFONTDATABASE_NEW)
 
 HB_FUNC_STATIC(QFONTDATABASE_DELETE)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -108,12 +108,10 @@ HB_FUNC_STATIC(QFONTDATABASE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool bold( const QString &family, const QString &style ) const
-*/
+// bool bold( const QString & family, const QString & style ) const
 HB_FUNC_STATIC(QFONTDATABASE_BOLD)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,12 +126,10 @@ HB_FUNC_STATIC(QFONTDATABASE_BOLD)
   }
 }
 
-/*
-QStringList families( QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any ) const
-*/
+// QStringList families( QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any ) const
 HB_FUNC_STATIC(QFONTDATABASE_FAMILIES)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,12 +145,10 @@ HB_FUNC_STATIC(QFONTDATABASE_FAMILIES)
   }
 }
 
-/*
-QFont font( const QString &family, const QString &style, int pointSize ) const
-*/
+// QFont font( const QString & family, const QString & style, int pointSize ) const
 HB_FUNC_STATIC(QFONTDATABASE_FONT)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -170,12 +164,10 @@ HB_FUNC_STATIC(QFONTDATABASE_FONT)
   }
 }
 
-/*
-bool isBitmapScalable( const QString &family, const QString &style = QString() ) const
-*/
+// bool isBitmapScalable( const QString & family, const QString & style = QString() ) const
 HB_FUNC_STATIC(QFONTDATABASE_ISBITMAPSCALABLE)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -190,12 +182,10 @@ HB_FUNC_STATIC(QFONTDATABASE_ISBITMAPSCALABLE)
   }
 }
 
-/*
-bool isFixedPitch( const QString &family, const QString &style = QString() ) const
-*/
+// bool isFixedPitch( const QString & family, const QString & style = QString() ) const
 HB_FUNC_STATIC(QFONTDATABASE_ISFIXEDPITCH)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,12 +200,10 @@ HB_FUNC_STATIC(QFONTDATABASE_ISFIXEDPITCH)
   }
 }
 
-/*
-bool isScalable( const QString &family, const QString &style = QString() ) const
-*/
+// bool isScalable( const QString & family, const QString & style = QString() ) const
 HB_FUNC_STATIC(QFONTDATABASE_ISSCALABLE)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,12 +218,10 @@ HB_FUNC_STATIC(QFONTDATABASE_ISSCALABLE)
   }
 }
 
-/*
-bool isSmoothlyScalable( const QString &family, const QString &style = QString() ) const
-*/
+// bool isSmoothlyScalable( const QString & family, const QString & style = QString() ) const
 HB_FUNC_STATIC(QFONTDATABASE_ISSMOOTHLYSCALABLE)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,12 +236,10 @@ HB_FUNC_STATIC(QFONTDATABASE_ISSMOOTHLYSCALABLE)
   }
 }
 
-/*
-bool italic( const QString &family, const QString &style ) const
-*/
+// bool italic( const QString & family, const QString & style ) const
 HB_FUNC_STATIC(QFONTDATABASE_ITALIC)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,12 +254,10 @@ HB_FUNC_STATIC(QFONTDATABASE_ITALIC)
   }
 }
 
-/*
-QList<int> pointSizes( const QString &family, const QString &style = QString() )
-*/
+// QList<int> pointSizes( const QString & family, const QString & style = QString() )
 HB_FUNC_STATIC(QFONTDATABASE_POINTSIZES)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -291,12 +273,10 @@ HB_FUNC_STATIC(QFONTDATABASE_POINTSIZES)
   }
 }
 
-/*
-QList<int> smoothSizes( const QString &family, const QString &style )
-*/
+// QList<int> smoothSizes( const QString & family, const QString & style )
 HB_FUNC_STATIC(QFONTDATABASE_SMOOTHSIZES)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -315,19 +295,15 @@ HB_FUNC_STATIC(QFONTDATABASE_SMOOTHSIZES)
 HB_FUNC_STATIC(QFONTDATABASE_STYLESTRING)
 {
   if (ISNUMPAR(1) && ISQFONT(1)) {
-    /*
-    QString styleString( const QFont &font )
-    */
-    QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QString styleString( const QFont & font )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->styleString(*PQFONT(1)));
     }
   } else if (ISNUMPAR(1) && ISQFONTINFO(1)) {
-    /*
-    QString styleString( const QFontInfo &fontInfo )
-    */
-    QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QString styleString( const QFontInfo & fontInfo )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->styleString(*PQFONTINFO(1)));
@@ -337,12 +313,10 @@ HB_FUNC_STATIC(QFONTDATABASE_STYLESTRING)
   }
 }
 
-/*
-QStringList styles( const QString &family ) const
-*/
+// QStringList styles( const QString & family ) const
 HB_FUNC_STATIC(QFONTDATABASE_STYLES)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,12 +331,10 @@ HB_FUNC_STATIC(QFONTDATABASE_STYLES)
   }
 }
 
-/*
-int weight( const QString &family, const QString &style ) const
-*/
+// int weight( const QString & family, const QString & style ) const
 HB_FUNC_STATIC(QFONTDATABASE_WEIGHT)
 {
-  QFontDatabase *obj = (QFontDatabase *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,9 +349,7 @@ HB_FUNC_STATIC(QFONTDATABASE_WEIGHT)
   }
 }
 
-/*
-static int addApplicationFont( const QString &fileName )
-*/
+// static int addApplicationFont( const QString & fileName )
 HB_FUNC_STATIC(QFONTDATABASE_ADDAPPLICATIONFONT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -393,9 +363,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ADDAPPLICATIONFONT)
 #endif
 }
 
-/*
-static int addApplicationFontFromData( const QByteArray &fontData )
-*/
+// static int addApplicationFontFromData( const QByteArray & fontData )
 HB_FUNC_STATIC(QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -409,9 +377,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA)
 #endif
 }
 
-/*
-static QStringList applicationFontFamilies( int id )
-*/
+// static QStringList applicationFontFamilies( int id )
 HB_FUNC_STATIC(QFONTDATABASE_APPLICATIONFONTFAMILIES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -425,9 +391,7 @@ HB_FUNC_STATIC(QFONTDATABASE_APPLICATIONFONTFAMILIES)
 #endif
 }
 
-/*
-static bool removeAllApplicationFonts()
-*/
+// static bool removeAllApplicationFonts()
 HB_FUNC_STATIC(QFONTDATABASE_REMOVEALLAPPLICATIONFONTS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -441,9 +405,7 @@ HB_FUNC_STATIC(QFONTDATABASE_REMOVEALLAPPLICATIONFONTS)
 #endif
 }
 
-/*
-static bool removeApplicationFont( int id )
-*/
+// static bool removeApplicationFont( int id )
 HB_FUNC_STATIC(QFONTDATABASE_REMOVEAPPLICATIONFONT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -457,9 +419,7 @@ HB_FUNC_STATIC(QFONTDATABASE_REMOVEAPPLICATIONFONT)
 #endif
 }
 
-/*
-static QList<int> standardSizes()
-*/
+// static QList<int> standardSizes()
 HB_FUNC_STATIC(QFONTDATABASE_STANDARDSIZES)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -474,9 +434,7 @@ HB_FUNC_STATIC(QFONTDATABASE_STANDARDSIZES)
 #endif
 }
 
-/*
-static bool supportsThreadedFontRendering()
-*/
+// static bool supportsThreadedFontRendering()
 HB_FUNC_STATIC(QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -490,9 +448,7 @@ HB_FUNC_STATIC(QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING)
 #endif
 }
 
-/*
-static QString writingSystemName( QFontDatabase::WritingSystem writingSystem )
-*/
+// static QString writingSystemName( QFontDatabase::WritingSystem writingSystem )
 HB_FUNC_STATIC(QFONTDATABASE_WRITINGSYSTEMNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -506,9 +462,7 @@ HB_FUNC_STATIC(QFONTDATABASE_WRITINGSYSTEMNAME)
 #endif
 }
 
-/*
-static QString writingSystemSample( QFontDatabase::WritingSystem writingSystem )
-*/
+// static QString writingSystemSample( QFontDatabase::WritingSystem writingSystem )
 HB_FUNC_STATIC(QFONTDATABASE_WRITINGSYSTEMSAMPLE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

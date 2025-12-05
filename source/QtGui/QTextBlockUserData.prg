@@ -54,9 +54,12 @@ RETURN
 #include <QtGui/QTextBlockUserData>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QTextBlockUserData *p = static_cast<QTextBlockUserData *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTBLOCKUSERDATA_DELETE)
 {
-  QTextBlockUserData *obj = (QTextBlockUserData *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

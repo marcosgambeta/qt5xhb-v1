@@ -48,9 +48,10 @@ RETURN
 #include <QtGui/QAccessibleTextCursorEvent>
 #endif
 
-    /*
-    QAccessibleTextCursorEvent( QObject * obj, int cursorPos )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAccessibleTextCursorEvent *p = static_cast<QAccessibleTextCursorEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QAccessibleTextCursorEvent( QObject * obj, int cursorPos )
 HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
@@ -63,7 +64,7 @@ HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_NEW)
 
 HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_DELETE)
 {
-  QAccessibleTextCursorEvent *obj = (QAccessibleTextCursorEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -76,12 +77,10 @@ HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCursorPosition( int position )
-*/
+// void setCursorPosition( int position )
 HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION)
 {
-  QAccessibleTextCursorEvent *obj = (QAccessibleTextCursorEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -98,12 +97,10 @@ HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int cursorPosition() const
-*/
+// int cursorPosition() const
 HB_FUNC_STATIC(QACCESSIBLETEXTCURSOREVENT_CURSORPOSITION)
 {
-  QAccessibleTextCursorEvent *obj = (QAccessibleTextCursorEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACCESSIBLEINTERFACE
+REQUEST QAccessibleInterface
 #endif
 
 CLASS QAccessiblePlugin INHERIT QObject
@@ -49,9 +49,12 @@ RETURN
 #include <QtGui/QAccessiblePlugin>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAccessiblePlugin *p = qobject_cast<QAccessiblePlugin *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QACCESSIBLEPLUGIN_DELETE)
 {
-  QAccessiblePlugin *obj = (QAccessiblePlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -66,12 +69,10 @@ HB_FUNC_STATIC(QACCESSIBLEPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAccessibleInterface * create( const QString &key, QObject * object ) = 0
-*/
+// virtual QAccessibleInterface * create( const QString & key, QObject * object ) = 0
 HB_FUNC_STATIC(QACCESSIBLEPLUGIN_CREATE)
 {
-  QAccessiblePlugin *obj = (QAccessiblePlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

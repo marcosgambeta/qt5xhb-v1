@@ -11,13 +11,13 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QCOLOR
-REQUEST QIMAGE
-REQUEST QIODEVICE
-REQUEST QPIXMAP
-REQUEST QRECT
-REQUEST QSIZE
+REQUEST QByteArray
+REQUEST QColor
+REQUEST QIODevice
+REQUEST QImage
+REQUEST QPixmap
+REQUEST QRect
+REQUEST QSize
 #endif
 
 CLASS QMovie INHERIT QObject
@@ -94,25 +94,21 @@ RETURN
 #include <QtGui/QColor>
 #include <QtGui/QPixmap>
 
+#define GET_PTR_FROM_SELF(p) QMovie *p = qobject_cast<QMovie *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QMOVIE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QMovie( QObject * parent = 0 )
-    */
+    // QMovie( QObject * parent = 0 )
     QMovie *obj = new QMovie(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && ISQBYTEARRAYORNIL(2) && ISQOBJECTORNIL(3)) {
-    /*
-    QMovie( QIODevice * device, const QByteArray &format = QByteArray(), QObject * parent = 0 )
-    */
+    // QMovie( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
     QMovie *obj =
         new QMovie(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQBYTEARRAYORNIL(2) && ISQOBJECTORNIL(3)) {
-    /*
-    QMovie( const QString &fileName, const QByteArray &format = QByteArray(), QObject * parent = 0 )
-    */
+    // QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
     QMovie *obj =
         new QMovie(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -123,7 +119,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
 
 HB_FUNC_STATIC(QMOVIE_DELETE)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -138,12 +134,10 @@ HB_FUNC_STATIC(QMOVIE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QColor backgroundColor() const
-*/
+// QColor backgroundColor() const
 HB_FUNC_STATIC(QMOVIE_BACKGROUNDCOLOR)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,12 +153,10 @@ HB_FUNC_STATIC(QMOVIE_BACKGROUNDCOLOR)
   }
 }
 
-/*
-QMovie::CacheMode cacheMode() const
-*/
+// QMovie::CacheMode cacheMode() const
 HB_FUNC_STATIC(QMOVIE_CACHEMODE)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,12 +171,10 @@ HB_FUNC_STATIC(QMOVIE_CACHEMODE)
   }
 }
 
-/*
-int currentFrameNumber() const
-*/
+// int currentFrameNumber() const
 HB_FUNC_STATIC(QMOVIE_CURRENTFRAMENUMBER)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,12 +189,10 @@ HB_FUNC_STATIC(QMOVIE_CURRENTFRAMENUMBER)
   }
 }
 
-/*
-QImage currentImage() const
-*/
+// QImage currentImage() const
 HB_FUNC_STATIC(QMOVIE_CURRENTIMAGE)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,12 +208,10 @@ HB_FUNC_STATIC(QMOVIE_CURRENTIMAGE)
   }
 }
 
-/*
-QPixmap currentPixmap() const
-*/
+// QPixmap currentPixmap() const
 HB_FUNC_STATIC(QMOVIE_CURRENTPIXMAP)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,12 +227,10 @@ HB_FUNC_STATIC(QMOVIE_CURRENTPIXMAP)
   }
 }
 
-/*
-QIODevice * device() const
-*/
+// QIODevice * device() const
 HB_FUNC_STATIC(QMOVIE_DEVICE)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,12 +246,10 @@ HB_FUNC_STATIC(QMOVIE_DEVICE)
   }
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QMOVIE_FILENAME)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,12 +264,10 @@ HB_FUNC_STATIC(QMOVIE_FILENAME)
   }
 }
 
-/*
-QByteArray format() const
-*/
+// QByteArray format() const
 HB_FUNC_STATIC(QMOVIE_FORMAT)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,12 +283,10 @@ HB_FUNC_STATIC(QMOVIE_FORMAT)
   }
 }
 
-/*
-int frameCount() const
-*/
+// int frameCount() const
 HB_FUNC_STATIC(QMOVIE_FRAMECOUNT)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,12 +301,10 @@ HB_FUNC_STATIC(QMOVIE_FRAMECOUNT)
   }
 }
 
-/*
-QRect frameRect() const
-*/
+// QRect frameRect() const
 HB_FUNC_STATIC(QMOVIE_FRAMERECT)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -344,12 +320,10 @@ HB_FUNC_STATIC(QMOVIE_FRAMERECT)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QMOVIE_ISVALID)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -364,12 +338,10 @@ HB_FUNC_STATIC(QMOVIE_ISVALID)
   }
 }
 
-/*
-bool jumpToFrame( int frameNumber )
-*/
+// bool jumpToFrame( int frameNumber )
 HB_FUNC_STATIC(QMOVIE_JUMPTOFRAME)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -384,12 +356,10 @@ HB_FUNC_STATIC(QMOVIE_JUMPTOFRAME)
   }
 }
 
-/*
-int loopCount() const
-*/
+// int loopCount() const
 HB_FUNC_STATIC(QMOVIE_LOOPCOUNT)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,12 +374,10 @@ HB_FUNC_STATIC(QMOVIE_LOOPCOUNT)
   }
 }
 
-/*
-int nextFrameDelay() const
-*/
+// int nextFrameDelay() const
 HB_FUNC_STATIC(QMOVIE_NEXTFRAMEDELAY)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -424,12 +392,10 @@ HB_FUNC_STATIC(QMOVIE_NEXTFRAMEDELAY)
   }
 }
 
-/*
-QSize scaledSize()
-*/
+// QSize scaledSize()
 HB_FUNC_STATIC(QMOVIE_SCALEDSIZE)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -445,12 +411,10 @@ HB_FUNC_STATIC(QMOVIE_SCALEDSIZE)
   }
 }
 
-/*
-void setBackgroundColor( const QColor &color )
-*/
+// void setBackgroundColor( const QColor & color )
 HB_FUNC_STATIC(QMOVIE_SETBACKGROUNDCOLOR)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -467,12 +431,10 @@ HB_FUNC_STATIC(QMOVIE_SETBACKGROUNDCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCacheMode( QMovie::CacheMode mode )
-*/
+// void setCacheMode( QMovie::CacheMode mode )
 HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -489,12 +451,10 @@ HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDevice( QIODevice * device )
-*/
+// void setDevice( QIODevice * device )
 HB_FUNC_STATIC(QMOVIE_SETDEVICE)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -511,12 +471,10 @@ HB_FUNC_STATIC(QMOVIE_SETDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFileName( const QString &fileName )
-*/
+// void setFileName( const QString & fileName )
 HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -533,12 +491,10 @@ HB_FUNC_STATIC(QMOVIE_SETFILENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFormat( const QByteArray &format )
-*/
+// void setFormat( const QByteArray & format )
 HB_FUNC_STATIC(QMOVIE_SETFORMAT)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -555,12 +511,10 @@ HB_FUNC_STATIC(QMOVIE_SETFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScaledSize( const QSize &size )
-*/
+// void setScaledSize( const QSize & size )
 HB_FUNC_STATIC(QMOVIE_SETSCALEDSIZE)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -577,12 +531,10 @@ HB_FUNC_STATIC(QMOVIE_SETSCALEDSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int speed() const
-*/
+// int speed() const
 HB_FUNC_STATIC(QMOVIE_SPEED)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -597,12 +549,10 @@ HB_FUNC_STATIC(QMOVIE_SPEED)
   }
 }
 
-/*
-QMovie::MovieState state() const
-*/
+// QMovie::MovieState state() const
 HB_FUNC_STATIC(QMOVIE_STATE)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -617,12 +567,10 @@ HB_FUNC_STATIC(QMOVIE_STATE)
   }
 }
 
-/*
-bool jumpToNextFrame()
-*/
+// bool jumpToNextFrame()
 HB_FUNC_STATIC(QMOVIE_JUMPTONEXTFRAME)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -637,12 +585,10 @@ HB_FUNC_STATIC(QMOVIE_JUMPTONEXTFRAME)
   }
 }
 
-/*
-void setPaused( bool paused )
-*/
+// void setPaused( bool paused )
 HB_FUNC_STATIC(QMOVIE_SETPAUSED)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -659,12 +605,10 @@ HB_FUNC_STATIC(QMOVIE_SETPAUSED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSpeed( int percentSpeed )
-*/
+// void setSpeed( int percentSpeed )
 HB_FUNC_STATIC(QMOVIE_SETSPEED)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -681,12 +625,10 @@ HB_FUNC_STATIC(QMOVIE_SETSPEED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void start()
-*/
+// void start()
 HB_FUNC_STATIC(QMOVIE_START)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -703,12 +645,10 @@ HB_FUNC_STATIC(QMOVIE_START)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QMOVIE_STOP)
 {
-  QMovie *obj = (QMovie *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -727,39 +667,41 @@ HB_FUNC_STATIC(QMOVIE_STOP)
 
 void QMovieSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QMovieSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QMOVIE_ONERROR)
 {
-  QMovieSlots_connect_signal("error(QImageReader::ImageReaderError)", "error(QImageReader::ImageReaderError)");
+  CONNECT_SIGNAL("error(QImageReader::ImageReaderError)");
 }
 
 HB_FUNC_STATIC(QMOVIE_ONFINISHED)
 {
-  QMovieSlots_connect_signal("finished()", "finished()");
+  CONNECT_SIGNAL("finished()");
 }
 
 HB_FUNC_STATIC(QMOVIE_ONFRAMECHANGED)
 {
-  QMovieSlots_connect_signal("frameChanged(int)", "frameChanged(int)");
+  CONNECT_SIGNAL("frameChanged(int)");
 }
 
 HB_FUNC_STATIC(QMOVIE_ONRESIZED)
 {
-  QMovieSlots_connect_signal("resized(QSize)", "resized(QSize)");
+  CONNECT_SIGNAL("resized(QSize)");
 }
 
 HB_FUNC_STATIC(QMOVIE_ONSTARTED)
 {
-  QMovieSlots_connect_signal("started()", "started()");
+  CONNECT_SIGNAL("started()");
 }
 
 HB_FUNC_STATIC(QMOVIE_ONSTATECHANGED)
 {
-  QMovieSlots_connect_signal("stateChanged(QMovie::MovieState)", "stateChanged(QMovie::MovieState)");
+  CONNECT_SIGNAL("stateChanged(QMovie::MovieState)");
 }
 
 HB_FUNC_STATIC(QMOVIE_ONUPDATED)
 {
-  QMovieSlots_connect_signal("updated(QRect)", "updated(QRect)");
+  CONNECT_SIGNAL("updated(QRect)");
 }
 
 #pragma ENDDUMP

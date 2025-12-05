@@ -64,43 +64,32 @@ RETURN
 
 #include <QtCore/QList>
 
+#define GET_PTR_FROM_SELF(p) QKeySequence *p = static_cast<QKeySequence *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QKeySequence()
-    */
+    // QKeySequence()
     QKeySequence *obj = new QKeySequence();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
-    /*
-    QKeySequence( const QString &key )
-    */
+    // QKeySequence( const QString & key )
     QKeySequence *obj = new QKeySequence(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
-    /*
-    QKeySequence( const QString &key, QKeySequence::SequenceFormat format )
-    */
+    // QKeySequence( const QString & key, QKeySequence::SequenceFormat format )
     QKeySequence *obj = new QKeySequence(PQSTRING(1), (QKeySequence::SequenceFormat)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4)) {
-    /*
-    QKeySequence( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
-    */
+  } else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+    // QKeySequence( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
     QKeySequence *obj = new QKeySequence(PINT(1), OPINT(2, 0), OPINT(3, 0), OPINT(4, 0));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQKEYSEQUENCE(1)) {
-    /*
-    QKeySequence( const QKeySequence &keysequence )
-    */
+    // QKeySequence( const QKeySequence & keysequence )
     QKeySequence *obj = new QKeySequence(*PQKEYSEQUENCE(1));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QKeySequence( QKeySequence::StandardKey key )
-    */
+    // QKeySequence( QKeySequence::StandardKey key )
     QKeySequence *obj = new QKeySequence((QKeySequence::StandardKey)hb_parni(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -110,7 +99,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
 
 HB_FUNC_STATIC(QKEYSEQUENCE_DELETE)
 {
-  QKeySequence *obj = (QKeySequence *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -123,12 +112,10 @@ HB_FUNC_STATIC(QKEYSEQUENCE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-uint count() const
-*/
+// uint count() const
 HB_FUNC_STATIC(QKEYSEQUENCE_COUNT)
 {
-  QKeySequence *obj = (QKeySequence *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,12 +130,10 @@ HB_FUNC_STATIC(QKEYSEQUENCE_COUNT)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QKEYSEQUENCE_ISEMPTY)
 {
-  QKeySequence *obj = (QKeySequence *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,12 +148,10 @@ HB_FUNC_STATIC(QKEYSEQUENCE_ISEMPTY)
   }
 }
 
-/*
-QKeySequence::SequenceMatch matches( const QKeySequence &seq ) const
-*/
+// QKeySequence::SequenceMatch matches( const QKeySequence & seq ) const
 HB_FUNC_STATIC(QKEYSEQUENCE_MATCHES)
 {
-  QKeySequence *obj = (QKeySequence *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,12 +166,10 @@ HB_FUNC_STATIC(QKEYSEQUENCE_MATCHES)
   }
 }
 
-/*
-QString toString( QKeySequence::SequenceFormat format = QKeySequence::PortableText ) const
-*/
+// QString toString( QKeySequence::SequenceFormat format = QKeySequence::PortableText ) const
 HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
 {
-  QKeySequence *obj = (QKeySequence *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,9 +185,8 @@ HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
   }
 }
 
-/*
-static QKeySequence fromString( const QString &str, QKeySequence::SequenceFormat format = QKeySequence::PortableText )
-*/
+// static QKeySequence fromString( const QString & str, QKeySequence::SequenceFormat format = QKeySequence::PortableText
+// )
 HB_FUNC_STATIC(QKEYSEQUENCE_FROMSTRING)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,9 +203,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_FROMSTRING)
 #endif
 }
 
-/*
-static QList<QKeySequence> keyBindings( QKeySequence::StandardKey key )
-*/
+// static QList<QKeySequence> keyBindings( QKeySequence::StandardKey key )
 HB_FUNC_STATIC(QKEYSEQUENCE_KEYBINDINGS)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,9 +239,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_KEYBINDINGS)
 #endif
 }
 
-/*
-static QKeySequence mnemonic( const QString &text )
-*/
+// static QKeySequence mnemonic( const QString & text )
 HB_FUNC_STATIC(QKEYSEQUENCE_MNEMONIC)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

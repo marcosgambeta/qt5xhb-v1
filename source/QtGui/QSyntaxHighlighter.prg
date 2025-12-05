@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTDOCUMENT
+REQUEST QTextDocument
 #endif
 
 CLASS QSyntaxHighlighter INHERIT QObject
@@ -54,12 +54,13 @@ RETURN
 
 #include <QtGui/QTextDocument>
 
-    /*
-    virtual ~QSyntaxHighlighter()
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QSyntaxHighlighter *p = qobject_cast<QSyntaxHighlighter *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// virtual ~QSyntaxHighlighter()
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DELETE)
 {
-  QSyntaxHighlighter *obj = (QSyntaxHighlighter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -74,12 +75,10 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDocument( QTextDocument * doc )
-*/
+// void setDocument( QTextDocument * doc )
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_SETDOCUMENT)
 {
-  QSyntaxHighlighter *obj = (QSyntaxHighlighter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,12 +95,10 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_SETDOCUMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextDocument * document() const
-*/
+// QTextDocument * document() const
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
 {
-  QSyntaxHighlighter *obj = (QSyntaxHighlighter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,12 +114,10 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
   }
 }
 
-/*
-void rehighlight()
-*/
+// void rehighlight()
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHT)
 {
-  QSyntaxHighlighter *obj = (QSyntaxHighlighter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,12 +134,10 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void rehighlightBlock( const QTextBlock &block )
-*/
+// void rehighlightBlock( const QTextBlock & block )
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK)
 {
-  QSyntaxHighlighter *obj = (QSyntaxHighlighter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

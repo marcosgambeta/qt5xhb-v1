@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACTION
+REQUEST QAction
 #endif
 
 CLASS QActionEvent INHERIT QEvent
@@ -51,9 +51,9 @@ RETURN
 
 #include <QtWidgets/QAction>
 
-    /*
-    QActionEvent( int type, QAction * action, QAction * before = 0 )
-    */
+#define GET_PTR_FROM_SELF(p) QActionEvent *p = static_cast<QActionEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QActionEvent( int type, QAction * action, QAction * before = 0 )
 HB_FUNC_STATIC(QACTIONEVENT_NEW)
 {
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQACTION(2) && ISQACTIONORNIL(3)) {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QACTIONEVENT_NEW)
 
 HB_FUNC_STATIC(QACTIONEVENT_DELETE)
 {
-  QActionEvent *obj = (QActionEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -79,12 +79,10 @@ HB_FUNC_STATIC(QACTIONEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAction * action() const
-*/
+// QAction * action() const
 HB_FUNC_STATIC(QACTIONEVENT_ACTION)
 {
-  QActionEvent *obj = (QActionEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,12 +98,10 @@ HB_FUNC_STATIC(QACTIONEVENT_ACTION)
   }
 }
 
-/*
-QAction * before() const
-*/
+// QAction * before() const
 HB_FUNC_STATIC(QACTIONEVENT_BEFORE)
 {
-  QActionEvent *obj = (QActionEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

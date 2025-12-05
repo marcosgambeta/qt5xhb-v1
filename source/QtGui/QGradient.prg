@@ -60,9 +60,11 @@ RETURN
 #include <QtGui/QGradient>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QGradient *p = static_cast<QGradient *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRADIENT_DELETE)
 {
-  QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -75,12 +77,10 @@ HB_FUNC_STATIC(QGRADIENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGradient::CoordinateMode coordinateMode() const
-*/
+// QGradient::CoordinateMode coordinateMode() const
 HB_FUNC_STATIC(QGRADIENT_COORDINATEMODE)
 {
-  QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -95,12 +95,10 @@ HB_FUNC_STATIC(QGRADIENT_COORDINATEMODE)
   }
 }
 
-/*
-void setColorAt( qreal position, const QColor &color )
-*/
+// void setColorAt( qreal position, const QColor & color )
 HB_FUNC_STATIC(QGRADIENT_SETCOLORAT)
 {
-  QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,12 +115,10 @@ HB_FUNC_STATIC(QGRADIENT_SETCOLORAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCoordinateMode( QGradient::CoordinateMode mode )
-*/
+// void setCoordinateMode( QGradient::CoordinateMode mode )
 HB_FUNC_STATIC(QGRADIENT_SETCOORDINATEMODE)
 {
-  QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,12 +135,10 @@ HB_FUNC_STATIC(QGRADIENT_SETCOORDINATEMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSpread( QGradient::Spread method )
-*/
+// void setSpread( QGradient::Spread method )
 HB_FUNC_STATIC(QGRADIENT_SETSPREAD)
 {
-  QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,12 +155,10 @@ HB_FUNC_STATIC(QGRADIENT_SETSPREAD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGradient::Spread spread() const
-*/
+// QGradient::Spread spread() const
 HB_FUNC_STATIC(QGRADIENT_SPREAD)
 {
-  QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,12 +173,10 @@ HB_FUNC_STATIC(QGRADIENT_SPREAD)
   }
 }
 
-/*
-QGradient::Type type() const
-*/
+// QGradient::Type type() const
 HB_FUNC_STATIC(QGRADIENT_TYPE)
 {
-  QGradient *obj = (QGradient *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

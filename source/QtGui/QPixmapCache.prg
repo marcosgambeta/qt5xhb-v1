@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPIXMAP
+REQUEST QPixmap
 #endif
 
 CLASS QPixmapCache
@@ -66,9 +66,11 @@ RETURN
 #include <QtGui/QPixmapCache>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QPixmapCache *p = static_cast<QPixmapCache *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPIXMAPCACHE_DELETE)
 {
-  QPixmapCache *obj = (QPixmapCache *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -81,9 +83,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static int cacheLimit()
-*/
+// static int cacheLimit()
 HB_FUNC_STATIC(QPIXMAPCACHE_CACHELIMIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,9 +97,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_CACHELIMIT)
 #endif
 }
 
-/*
-static void setCacheLimit( int )
-*/
+// static void setCacheLimit( int )
 HB_FUNC_STATIC(QPIXMAPCACHE_SETCACHELIMIT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,9 +113,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_SETCACHELIMIT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QPixmap * find( const QString &key )
-*/
+// static QPixmap * find( const QString & key )
 HB_FUNC_STATIC(QPIXMAPCACHE_FIND1)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,9 +128,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_FIND1)
 #endif
 }
 
-/*
-static bool find( const QString &key, QPixmap &pixmap )
-*/
+// static bool find( const QString & key, QPixmap & pixmap )
 HB_FUNC_STATIC(QPIXMAPCACHE_FIND2)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -148,9 +142,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_FIND2)
 #endif
 }
 
-/*
-static bool find( const QString &key, QPixmap * pixmap )
-*/
+// static bool find( const QString & key, QPixmap * pixmap )
 HB_FUNC_STATIC(QPIXMAPCACHE_FIND3)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,9 +160,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_FIND)
 {
 }
 
-/*
-static bool insert( const QString &key, const QPixmap &pixmap )
-*/
+// static bool insert( const QString & key, const QPixmap & pixmap )
 HB_FUNC_STATIC(QPIXMAPCACHE_INSERT1)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,9 +178,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_INSERT)
 {
 }
 
-/*
-static void remove( const QString &key )
-*/
+// static void remove( const QString & key )
 HB_FUNC_STATIC(QPIXMAPCACHE_REMOVE1)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,9 +198,7 @@ HB_FUNC_STATIC(QPIXMAPCACHE_REMOVE)
 {
 }
 
-/*
-static void clear()
-*/
+// static void clear()
 HB_FUNC_STATIC(QPIXMAPCACHE_CLEAR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,17 +11,17 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACCESSIBLEACTIONINTERFACE
-REQUEST QACCESSIBLEEDITABLETEXTINTERFACE
-REQUEST QACCESSIBLEIMAGEINTERFACE
-REQUEST QACCESSIBLETABLECELLINTERFACE
-REQUEST QACCESSIBLETABLEINTERFACE
-REQUEST QACCESSIBLETEXTINTERFACE
-REQUEST QACCESSIBLEVALUEINTERFACE
-REQUEST QCOLOR
-REQUEST QOBJECT
-REQUEST QRECT
-REQUEST QWINDOW
+REQUEST QAccessibleActionInterface
+REQUEST QAccessibleEditableTextInterface
+REQUEST QAccessibleImageInterface
+REQUEST QAccessibleTableCellInterface
+REQUEST QAccessibleTableInterface
+REQUEST QAccessibleTextInterface
+REQUEST QAccessibleValueInterface
+REQUEST QColor
+REQUEST QObject
+REQUEST QRect
+REQUEST QWindow
 #endif
 
 CLASS QAccessibleInterface
@@ -90,12 +90,13 @@ RETURN
 
 #include <QtGui/QWindow>
 
-    /*
-    virtual bool isValid() const = 0
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAccessibleInterface *p = static_cast<QAccessibleInterface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// virtual bool isValid() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ISVALID)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,12 +111,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ISVALID)
   }
 }
 
-/*
-virtual QObject * object() const = 0
-*/
+// virtual QObject * object() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_OBJECT)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,12 +130,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_OBJECT)
   }
 }
 
-/*
-virtual QWindow * window() const
-*/
+// virtual QWindow * window() const
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_WINDOW)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -152,12 +149,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_WINDOW)
   }
 }
 
-/*
-virtual QAccessibleInterface * focusChild() const
-*/
+// virtual QAccessibleInterface * focusChild() const
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_FOCUSCHILD)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -173,12 +168,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_FOCUSCHILD)
   }
 }
 
-/*
-virtual QAccessibleInterface * childAt( int x, int y ) const = 0
-*/
+// virtual QAccessibleInterface * childAt( int x, int y ) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDAT)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -194,12 +187,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDAT)
   }
 }
 
-/*
-virtual QAccessibleInterface * parent() const = 0
-*/
+// virtual QAccessibleInterface * parent() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_PARENT)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,12 +206,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_PARENT)
   }
 }
 
-/*
-virtual QAccessibleInterface * child( int index ) const = 0
-*/
+// virtual QAccessibleInterface * child( int index ) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILD)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -236,12 +225,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILD)
   }
 }
 
-/*
-virtual int childCount() const = 0
-*/
+// virtual int childCount() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDCOUNT)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,12 +243,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDCOUNT)
   }
 }
 
-/*
-virtual int indexOfChild( const QAccessibleInterface * ) const = 0
-*/
+// virtual int indexOfChild( const QAccessibleInterface * ) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INDEXOFCHILD)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,12 +261,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INDEXOFCHILD)
   }
 }
 
-/*
-virtual QString text( QAccessible::Text t ) const = 0
-*/
+// virtual QString text( QAccessible::Text t ) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXT)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,12 +279,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXT)
   }
 }
 
-/*
-virtual void setText( QAccessible::Text t, const QString &text ) = 0
-*/
+// virtual void setText( QAccessible::Text t, const QString & text ) = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -318,12 +299,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QRect rect() const = 0
-*/
+// virtual QRect rect() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RECT)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -339,12 +318,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RECT)
   }
 }
 
-/*
-virtual QAccessible::Role role() const = 0
-*/
+// virtual QAccessible::Role role() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ROLE)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -359,12 +336,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ROLE)
   }
 }
 
-/*
-virtual QColor foregroundColor() const
-*/
+// virtual QColor foregroundColor() const
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_FOREGROUNDCOLOR)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -380,12 +355,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_FOREGROUNDCOLOR)
   }
 }
 
-/*
-virtual QColor backgroundColor() const
-*/
+// virtual QColor backgroundColor() const
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_BACKGROUNDCOLOR)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,12 +374,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_BACKGROUNDCOLOR)
   }
 }
 
-/*
-QAccessibleTextInterface * textInterface()
-*/
+// QAccessibleTextInterface * textInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXTINTERFACE)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -422,12 +393,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXTINTERFACE)
   }
 }
 
-/*
-QAccessibleEditableTextInterface * editableTextInterface()
-*/
+// QAccessibleEditableTextInterface * editableTextInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_EDITABLETEXTINTERFACE)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -443,12 +412,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_EDITABLETEXTINTERFACE)
   }
 }
 
-/*
-QAccessibleValueInterface * valueInterface()
-*/
+// QAccessibleValueInterface * valueInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_VALUEINTERFACE)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -464,12 +431,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_VALUEINTERFACE)
   }
 }
 
-/*
-QAccessibleActionInterface * actionInterface()
-*/
+// QAccessibleActionInterface * actionInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ACTIONINTERFACE)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -485,12 +450,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ACTIONINTERFACE)
   }
 }
 
-/*
-QAccessibleImageInterface * imageInterface()
-*/
+// QAccessibleImageInterface * imageInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_IMAGEINTERFACE)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -506,12 +469,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_IMAGEINTERFACE)
   }
 }
 
-/*
-QAccessibleTableInterface * tableInterface()
-*/
+// QAccessibleTableInterface * tableInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TABLEINTERFACE)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -527,12 +488,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TABLEINTERFACE)
   }
 }
 
-/*
-QAccessibleTableCellInterface * tableCellInterface()
-*/
+// QAccessibleTableCellInterface * tableCellInterface()
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TABLECELLINTERFACE)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -548,12 +507,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TABLECELLINTERFACE)
   }
 }
 
-/*
-void virtual_hook( int id, void * data )
-*/
+// void virtual_hook( int id, void * data )
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_VIRTUAL_HOOK)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -570,12 +527,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_VIRTUAL_HOOK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void * interface_cast( QAccessible::InterfaceType )
-*/
+// virtual void * interface_cast( QAccessible::InterfaceType )
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INTERFACE_CAST)
 {
-  QAccessibleInterface *obj = (QAccessibleInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

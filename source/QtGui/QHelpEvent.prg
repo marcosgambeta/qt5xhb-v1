@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINT
+REQUEST QPoint
 #endif
 
 CLASS QHelpEvent INHERIT QEvent
@@ -53,9 +53,9 @@ RETURN
 #include <QtGui/QHelpEvent>
 #endif
 
-    /*
-    QHelpEvent( QEvent::Type type, const QPoint &pos, const QPoint &globalPos )
-    */
+#define GET_PTR_FROM_SELF(p) QHelpEvent *p = static_cast<QHelpEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QHelpEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos )
 HB_FUNC_STATIC(QHELPEVENT_NEW)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3)) {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QHELPEVENT_NEW)
 
 HB_FUNC_STATIC(QHELPEVENT_DELETE)
 {
-  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -81,12 +81,10 @@ HB_FUNC_STATIC(QHELPEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QPoint &globalPos() const
-*/
+// const QPoint & globalPos() const
 HB_FUNC_STATIC(QHELPEVENT_GLOBALPOS)
 {
-  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,12 +100,10 @@ HB_FUNC_STATIC(QHELPEVENT_GLOBALPOS)
   }
 }
 
-/*
-int globalX() const
-*/
+// int globalX() const
 HB_FUNC_STATIC(QHELPEVENT_GLOBALX)
 {
-  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,12 +118,10 @@ HB_FUNC_STATIC(QHELPEVENT_GLOBALX)
   }
 }
 
-/*
-int globalY() const
-*/
+// int globalY() const
 HB_FUNC_STATIC(QHELPEVENT_GLOBALY)
 {
-  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,12 +136,10 @@ HB_FUNC_STATIC(QHELPEVENT_GLOBALY)
   }
 }
 
-/*
-const QPoint &pos() const
-*/
+// const QPoint & pos() const
 HB_FUNC_STATIC(QHELPEVENT_POS)
 {
-  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,12 +155,10 @@ HB_FUNC_STATIC(QHELPEVENT_POS)
   }
 }
 
-/*
-int x() const
-*/
+// int x() const
 HB_FUNC_STATIC(QHELPEVENT_X)
 {
-  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,12 +173,10 @@ HB_FUNC_STATIC(QHELPEVENT_X)
   }
 }
 
-/*
-int y() const
-*/
+// int y() const
 HB_FUNC_STATIC(QHELPEVENT_Y)
 {
-  QHelpEvent *obj = (QHelpEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

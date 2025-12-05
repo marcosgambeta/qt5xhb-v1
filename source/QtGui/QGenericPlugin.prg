@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
+REQUEST QObject
 #endif
 
 CLASS QGenericPlugin INHERIT QObject
@@ -49,9 +49,11 @@ RETURN
 #include <QtGui/QGenericPlugin>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QGenericPlugin *p = qobject_cast<QGenericPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGENERICPLUGIN_DELETE)
 {
-  QGenericPlugin *obj = (QGenericPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -66,12 +68,10 @@ HB_FUNC_STATIC(QGENERICPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QObject * create( const QString &key, const QString &specification ) = 0
-*/
+// virtual QObject * create( const QString & key, const QString & specification ) = 0
 HB_FUNC_STATIC(QGENERICPLUGIN_CREATE)
 {
-  QGenericPlugin *obj = (QGenericPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

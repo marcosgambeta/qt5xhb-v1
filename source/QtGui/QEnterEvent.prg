@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINT
-REQUEST QPOINTF
+REQUEST QPoint
+REQUEST QPointF
 #endif
 
 CLASS QEnterEvent INHERIT QEvent
@@ -57,9 +57,9 @@ RETURN
 #include <QtGui/QEnterEvent>
 #endif
 
-    /*
-    QEnterEvent( const QPointF &localPos, const QPointF &windowPos, const QPointF &screenPos )
-    */
+#define GET_PTR_FROM_SELF(p) QEnterEvent *p = static_cast<QEnterEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QEnterEvent( const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos )
 HB_FUNC_STATIC(QENTEREVENT_NEW)
 {
   if (ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3)) {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QENTEREVENT_NEW)
 
 HB_FUNC_STATIC(QENTEREVENT_DELETE)
 {
-  QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -85,12 +85,10 @@ HB_FUNC_STATIC(QENTEREVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPoint pos() const
-*/
+// QPoint pos() const
 HB_FUNC_STATIC(QENTEREVENT_POS)
 {
-  QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,12 +104,10 @@ HB_FUNC_STATIC(QENTEREVENT_POS)
   }
 }
 
-/*
-QPoint globalPos() const
-*/
+// QPoint globalPos() const
 HB_FUNC_STATIC(QENTEREVENT_GLOBALPOS)
 {
-  QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -127,12 +123,10 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALPOS)
   }
 }
 
-/*
-int x() const
-*/
+// int x() const
 HB_FUNC_STATIC(QENTEREVENT_X)
 {
-  QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,12 +141,10 @@ HB_FUNC_STATIC(QENTEREVENT_X)
   }
 }
 
-/*
-int y() const
-*/
+// int y() const
 HB_FUNC_STATIC(QENTEREVENT_Y)
 {
-  QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,12 +159,10 @@ HB_FUNC_STATIC(QENTEREVENT_Y)
   }
 }
 
-/*
-int globalX() const
-*/
+// int globalX() const
 HB_FUNC_STATIC(QENTEREVENT_GLOBALX)
 {
-  QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,12 +177,10 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALX)
   }
 }
 
-/*
-int globalY() const
-*/
+// int globalY() const
 HB_FUNC_STATIC(QENTEREVENT_GLOBALY)
 {
-  QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,12 +195,10 @@ HB_FUNC_STATIC(QENTEREVENT_GLOBALY)
   }
 }
 
-/*
-const QPointF &localPos() const
-*/
+// const QPointF & localPos() const
 HB_FUNC_STATIC(QENTEREVENT_LOCALPOS)
 {
-  QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,12 +214,10 @@ HB_FUNC_STATIC(QENTEREVENT_LOCALPOS)
   }
 }
 
-/*
-const QPointF &windowPos() const
-*/
+// const QPointF & windowPos() const
 HB_FUNC_STATIC(QENTEREVENT_WINDOWPOS)
 {
-  QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,12 +233,10 @@ HB_FUNC_STATIC(QENTEREVENT_WINDOWPOS)
   }
 }
 
-/*
-const QPointF &screenPos() const
-*/
+// const QPointF & screenPos() const
 HB_FUNC_STATIC(QENTEREVENT_SCREENPOS)
 {
-  QEnterEvent *obj = (QEnterEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

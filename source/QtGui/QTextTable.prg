@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTCURSOR
-REQUEST QTEXTTABLECELL
-REQUEST QTEXTTABLEFORMAT
+REQUEST QTextCursor
+REQUEST QTextTableCell
+REQUEST QTextTableFormat
 #endif
 
 CLASS QTextTable INHERIT QTextFrame
@@ -69,9 +69,9 @@ RETURN
 
 #include <QtGui/QTextCursor>
 
-    /*
-    QTextTable( QTextDocument * doc )
-    */
+#define GET_PTR_FROM_SELF(p) QTextTable *p = qobject_cast<QTextTable *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QTextTable( QTextDocument * doc )
 HB_FUNC_STATIC(QTEXTTABLE_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1)) {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QTEXTTABLE_NEW)
 
 HB_FUNC_STATIC(QTEXTTABLE_DELETE)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -99,12 +99,10 @@ HB_FUNC_STATIC(QTEXTTABLE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void resize( int rows, int cols )
-*/
+// void resize( int rows, int cols )
 HB_FUNC_STATIC(QTEXTTABLE_RESIZE)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,12 +119,10 @@ HB_FUNC_STATIC(QTEXTTABLE_RESIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void insertRows( int pos, int num )
-*/
+// void insertRows( int pos, int num )
 HB_FUNC_STATIC(QTEXTTABLE_INSERTROWS)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,12 +139,10 @@ HB_FUNC_STATIC(QTEXTTABLE_INSERTROWS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void insertColumns( int pos, int num )
-*/
+// void insertColumns( int pos, int num )
 HB_FUNC_STATIC(QTEXTTABLE_INSERTCOLUMNS)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -165,12 +159,10 @@ HB_FUNC_STATIC(QTEXTTABLE_INSERTCOLUMNS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void appendRows( int count )
-*/
+// void appendRows( int count )
 HB_FUNC_STATIC(QTEXTTABLE_APPENDROWS)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,12 +179,10 @@ HB_FUNC_STATIC(QTEXTTABLE_APPENDROWS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void appendColumns( int count )
-*/
+// void appendColumns( int count )
 HB_FUNC_STATIC(QTEXTTABLE_APPENDCOLUMNS)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -209,12 +199,10 @@ HB_FUNC_STATIC(QTEXTTABLE_APPENDCOLUMNS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void removeRows( int pos, int num )
-*/
+// void removeRows( int pos, int num )
 HB_FUNC_STATIC(QTEXTTABLE_REMOVEROWS)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,12 +219,10 @@ HB_FUNC_STATIC(QTEXTTABLE_REMOVEROWS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void removeColumns( int pos, int num )
-*/
+// void removeColumns( int pos, int num )
 HB_FUNC_STATIC(QTEXTTABLE_REMOVECOLUMNS)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -256,10 +242,8 @@ HB_FUNC_STATIC(QTEXTTABLE_REMOVECOLUMNS)
 HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
-    /*
-    void mergeCells( int row, int col, int numRows, int numCols )
-    */
-    QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void mergeCells( int row, int col, int numRows, int numCols )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->mergeCells(PINT(1), PINT(2), PINT(3), PINT(4));
@@ -267,10 +251,8 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
-    /*
-    void mergeCells( const QTextCursor &cursor )
-    */
-    QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void mergeCells( const QTextCursor & cursor )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->mergeCells(*PQTEXTCURSOR(1));
@@ -282,12 +264,10 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
   }
 }
 
-/*
-void splitCell( int row, int col, int numRows, int numCols )
-*/
+// void splitCell( int row, int col, int numRows, int numCols )
 HB_FUNC_STATIC(QTEXTTABLE_SPLITCELL)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -304,12 +284,10 @@ HB_FUNC_STATIC(QTEXTTABLE_SPLITCELL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int rows() const
-*/
+// int rows() const
 HB_FUNC_STATIC(QTEXTTABLE_ROWS)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -324,12 +302,10 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWS)
   }
 }
 
-/*
-int columns() const
-*/
+// int columns() const
 HB_FUNC_STATIC(QTEXTTABLE_COLUMNS)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -347,30 +323,24 @@ HB_FUNC_STATIC(QTEXTTABLE_COLUMNS)
 HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    /*
-    QTextTableCell cellAt( int row, int col ) const
-    */
-    QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QTextTableCell cellAt( int row, int col ) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTextTableCell *ptr = new QTextTableCell(obj->cellAt(PINT(1), PINT(2)));
       Qt5xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QTextTableCell cellAt( int position ) const
-    */
-    QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QTextTableCell cellAt( int position ) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTextTableCell *ptr = new QTextTableCell(obj->cellAt(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }
   } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
-    /*
-    QTextTableCell cellAt( const QTextCursor &c ) const
-    */
-    QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QTextTableCell cellAt( const QTextCursor & c ) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTextTableCell *ptr = new QTextTableCell(obj->cellAt(*PQTEXTCURSOR(1)));
@@ -381,12 +351,10 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
   }
 }
 
-/*
-QTextCursor rowStart( const QTextCursor &c ) const
-*/
+// QTextCursor rowStart( const QTextCursor & c ) const
 HB_FUNC_STATIC(QTEXTTABLE_ROWSTART)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -402,12 +370,10 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWSTART)
   }
 }
 
-/*
-QTextCursor rowEnd( const QTextCursor &c ) const
-*/
+// QTextCursor rowEnd( const QTextCursor & c ) const
 HB_FUNC_STATIC(QTEXTTABLE_ROWEND)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -423,12 +389,10 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWEND)
   }
 }
 
-/*
-void setFormat( const QTextTableFormat &format )
-*/
+// void setFormat( const QTextTableFormat & format )
 HB_FUNC_STATIC(QTEXTTABLE_SETFORMAT)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -445,12 +409,10 @@ HB_FUNC_STATIC(QTEXTTABLE_SETFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextTableFormat format() const
-*/
+// QTextTableFormat format() const
 HB_FUNC_STATIC(QTEXTTABLE_FORMAT)
 {
-  QTextTable *obj = (QTextTable *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPAINTDEVICE
-REQUEST QREGION
-REQUEST QSIZE
-REQUEST QWINDOW
+REQUEST QPaintDevice
+REQUEST QRegion
+REQUEST QSize
+REQUEST QWindow
 #endif
 
 CLASS QBackingStore
@@ -70,9 +70,9 @@ RETURN
 #include <QtGui/QBackingStore>
 #endif
 
-    /*
-    QBackingStore( QWindow * window )
-    */
+#define GET_PTR_FROM_SELF(p) QBackingStore *p = static_cast<QBackingStore *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QBackingStore( QWindow * window )
 HB_FUNC_STATIC(QBACKINGSTORE_NEW)
 {
   if (ISNUMPAR(1) && ISQWINDOW(1)) {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QBACKINGSTORE_NEW)
 
 HB_FUNC_STATIC(QBACKINGSTORE_DELETE)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -98,12 +98,10 @@ HB_FUNC_STATIC(QBACKINGSTORE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void beginPaint( const QRegion &region )
-*/
+// void beginPaint( const QRegion & region )
 HB_FUNC_STATIC(QBACKINGSTORE_BEGINPAINT)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,12 +118,10 @@ HB_FUNC_STATIC(QBACKINGSTORE_BEGINPAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void endPaint()
-*/
+// void endPaint()
 HB_FUNC_STATIC(QBACKINGSTORE_ENDPAINT)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,12 +138,10 @@ HB_FUNC_STATIC(QBACKINGSTORE_ENDPAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void flush( const QRegion &region, QWindow * win = 0, const QPoint &offset = QPoint() )
-*/
+// void flush( const QRegion & region, QWindow * win = 0, const QPoint & offset = QPoint() )
 HB_FUNC_STATIC(QBACKINGSTORE_FLUSH)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,12 +158,10 @@ HB_FUNC_STATIC(QBACKINGSTORE_FLUSH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool hasStaticContents() const
-*/
+// bool hasStaticContents() const
 HB_FUNC_STATIC(QBACKINGSTORE_HASSTATICCONTENTS)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,12 +176,10 @@ HB_FUNC_STATIC(QBACKINGSTORE_HASSTATICCONTENTS)
   }
 }
 
-/*
-QPaintDevice * paintDevice()
-*/
+// QPaintDevice * paintDevice()
 HB_FUNC_STATIC(QBACKINGSTORE_PAINTDEVICE)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,12 +195,10 @@ HB_FUNC_STATIC(QBACKINGSTORE_PAINTDEVICE)
   }
 }
 
-/*
-void resize( const QSize &size )
-*/
+// void resize( const QSize & size )
 HB_FUNC_STATIC(QBACKINGSTORE_RESIZE)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,12 +215,10 @@ HB_FUNC_STATIC(QBACKINGSTORE_RESIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool scroll( const QRegion &area, int dx, int dy )
-*/
+// bool scroll( const QRegion & area, int dx, int dy )
 HB_FUNC_STATIC(QBACKINGSTORE_SCROLL)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -247,12 +233,10 @@ HB_FUNC_STATIC(QBACKINGSTORE_SCROLL)
   }
 }
 
-/*
-void setStaticContents( const QRegion &region )
-*/
+// void setStaticContents( const QRegion & region )
 HB_FUNC_STATIC(QBACKINGSTORE_SETSTATICCONTENTS)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,12 +253,10 @@ HB_FUNC_STATIC(QBACKINGSTORE_SETSTATICCONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize size() const
-*/
+// QSize size() const
 HB_FUNC_STATIC(QBACKINGSTORE_SIZE)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -290,12 +272,10 @@ HB_FUNC_STATIC(QBACKINGSTORE_SIZE)
   }
 }
 
-/*
-QRegion staticContents() const
-*/
+// QRegion staticContents() const
 HB_FUNC_STATIC(QBACKINGSTORE_STATICCONTENTS)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -311,12 +291,10 @@ HB_FUNC_STATIC(QBACKINGSTORE_STATICCONTENTS)
   }
 }
 
-/*
-QWindow * window() const
-*/
+// QWindow * window() const
 HB_FUNC_STATIC(QBACKINGSTORE_WINDOW)
 {
-  QBackingStore *obj = (QBackingStore *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

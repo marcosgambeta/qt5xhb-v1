@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRAWFONT
+REQUEST QRawFont
 #endif
 
 CLASS QGlyphRun
@@ -65,18 +65,16 @@ RETURN
 #include <QtGui/QGlyphRun>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QGlyphRun *p = static_cast<QGlyphRun *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGLYPHRUN_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QGlyphRun()
-    */
+    // QGlyphRun()
     QGlyphRun *obj = new QGlyphRun();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQGLYPHRUN(1)) {
-    /*
-    QGlyphRun( const QGlyphRun &other )
-    */
+    // QGlyphRun( const QGlyphRun & other )
     QGlyphRun *obj = new QGlyphRun(*PQGLYPHRUN(1));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -86,7 +84,7 @@ HB_FUNC_STATIC(QGLYPHRUN_NEW)
 
 HB_FUNC_STATIC(QGLYPHRUN_DELETE)
 {
-  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -99,12 +97,10 @@ HB_FUNC_STATIC(QGLYPHRUN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QGLYPHRUN_CLEAR)
 {
-  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,12 +117,10 @@ HB_FUNC_STATIC(QGLYPHRUN_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool overline() const
-*/
+// bool overline() const
 HB_FUNC_STATIC(QGLYPHRUN_OVERLINE)
 {
-  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -141,12 +135,10 @@ HB_FUNC_STATIC(QGLYPHRUN_OVERLINE)
   }
 }
 
-/*
-QRawFont rawFont() const
-*/
+// QRawFont rawFont() const
 HB_FUNC_STATIC(QGLYPHRUN_RAWFONT)
 {
-  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,12 +154,10 @@ HB_FUNC_STATIC(QGLYPHRUN_RAWFONT)
   }
 }
 
-/*
-void setOverline( bool overline )
-*/
+// void setOverline( bool overline )
 HB_FUNC_STATIC(QGLYPHRUN_SETOVERLINE)
 {
-  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,12 +174,10 @@ HB_FUNC_STATIC(QGLYPHRUN_SETOVERLINE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRawFont( const QRawFont &rawFont )
-*/
+// void setRawFont( const QRawFont & rawFont )
 HB_FUNC_STATIC(QGLYPHRUN_SETRAWFONT)
 {
-  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -206,12 +194,10 @@ HB_FUNC_STATIC(QGLYPHRUN_SETRAWFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStrikeOut( bool strikeOut )
-*/
+// void setStrikeOut( bool strikeOut )
 HB_FUNC_STATIC(QGLYPHRUN_SETSTRIKEOUT)
 {
-  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -228,12 +214,10 @@ HB_FUNC_STATIC(QGLYPHRUN_SETSTRIKEOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUnderline( bool underline )
-*/
+// void setUnderline( bool underline )
 HB_FUNC_STATIC(QGLYPHRUN_SETUNDERLINE)
 {
-  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,12 +234,10 @@ HB_FUNC_STATIC(QGLYPHRUN_SETUNDERLINE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool strikeOut() const
-*/
+// bool strikeOut() const
 HB_FUNC_STATIC(QGLYPHRUN_STRIKEOUT)
 {
-  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -270,12 +252,10 @@ HB_FUNC_STATIC(QGLYPHRUN_STRIKEOUT)
   }
 }
 
-/*
-bool underline() const
-*/
+// bool underline() const
 HB_FUNC_STATIC(QGLYPHRUN_UNDERLINE)
 {
-  QGlyphRun *obj = (QGlyphRun *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -46,9 +46,9 @@ RETURN
 #include <QtGui/QHoverEvent>
 #endif
 
-    /*
-    QHoverEvent( QEvent::Type type, const QPoint &pos, const QPoint &oldPos )
-    */
+#define GET_PTR_FROM_SELF(p) QHoverEvent *p = static_cast<QHoverEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QHoverEvent( QEvent::Type type, const QPoint & pos, const QPoint & oldPos )
 HB_FUNC_STATIC(QHOVEREVENT_NEW)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3)) {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QHOVEREVENT_NEW)
 
 HB_FUNC_STATIC(QHOVEREVENT_DELETE)
 {
-  QHoverEvent *obj = (QHoverEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

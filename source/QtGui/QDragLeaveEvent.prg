@@ -46,9 +46,9 @@ RETURN
 #include <QtGui/QDragLeaveEvent>
 #endif
 
-    /*
-    QDragLeaveEvent()
-    */
+#define GET_PTR_FROM_SELF(p) QDragLeaveEvent *p = static_cast<QDragLeaveEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QDragLeaveEvent()
 HB_FUNC_STATIC(QDRAGLEAVEEVENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QDRAGLEAVEEVENT_NEW)
 
 HB_FUNC_STATIC(QDRAGLEAVEEVENT_DELETE)
 {
-  QDragLeaveEvent *obj = (QDragLeaveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

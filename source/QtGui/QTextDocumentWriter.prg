@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QIODEVICE
-REQUEST QTEXTCODEC
+REQUEST QByteArray
+REQUEST QIODevice
+REQUEST QTextCodec
 #endif
 
 CLASS QTextDocumentWriter
@@ -69,24 +69,21 @@ RETURN
 
 #include <QtCore/QIODevice>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QTextDocumentWriter *p = static_cast<QTextDocumentWriter *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QTextDocumentWriter()
-    */
+    // QTextDocumentWriter()
     QTextDocumentWriter *obj = new QTextDocumentWriter();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2)) {
-    /*
-    QTextDocumentWriter( QIODevice * device, const QByteArray &format )
-    */
+    // QTextDocumentWriter( QIODevice * device, const QByteArray & format )
     QTextDocumentWriter *obj = new QTextDocumentWriter(PQIODEVICE(1), *PQBYTEARRAY(2));
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQBYTEARRAYORNIL(2)) {
-    /*
-    QTextDocumentWriter( const QString &fileName, const QByteArray &format = QByteArray() )
-    */
+    // QTextDocumentWriter( const QString & fileName, const QByteArray & format = QByteArray() )
     QTextDocumentWriter *obj =
         new QTextDocumentWriter(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -97,7 +94,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_NEW)
 
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_DELETE)
 {
-  QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -110,12 +107,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFormat( const QByteArray &format )
-*/
+// void setFormat( const QByteArray & format )
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETFORMAT)
 {
-  QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -132,12 +127,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QByteArray format() const
-*/
+// QByteArray format() const
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_FORMAT)
 {
-  QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,12 +146,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_FORMAT)
   }
 }
 
-/*
-void setDevice( QIODevice * device )
-*/
+// void setDevice( QIODevice * device )
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETDEVICE)
 {
-  QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,12 +166,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QIODevice * device() const
-*/
+// QIODevice * device() const
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_DEVICE)
 {
-  QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,12 +185,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_DEVICE)
   }
 }
 
-/*
-void setFileName( const QString &fileName )
-*/
+// void setFileName( const QString & fileName )
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETFILENAME)
 {
-  QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,12 +205,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETFILENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_FILENAME)
 {
-  QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,19 +226,15 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_FILENAME)
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_WRITE)
 {
   if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1)) {
-    /*
-    bool write( const QTextDocument * document )
-    */
-    QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
+    // bool write( const QTextDocument * document )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->write(PQTEXTDOCUMENT(1)));
     }
   } else if (ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1)) {
-    /*
-    bool write( const QTextDocumentFragment &fragment )
-    */
-    QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
+    // bool write( const QTextDocumentFragment & fragment )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->write(*PQTEXTDOCUMENTFRAGMENT(1)));
@@ -263,12 +244,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_WRITE)
   }
 }
 
-/*
-void setCodec( QTextCodec * codec )
-*/
+// void setCodec( QTextCodec * codec )
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETCODEC)
 {
-  QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,12 +264,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETCODEC)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextCodec * codec() const
-*/
+// QTextCodec * codec() const
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_CODEC)
 {
-  QTextDocumentWriter *obj = (QTextDocumentWriter *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

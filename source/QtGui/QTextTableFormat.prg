@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTLENGTH
+REQUEST QTextLength
 #endif
 
 CLASS QTextTableFormat INHERIT QTextFrameFormat
@@ -61,9 +61,9 @@ RETURN
 #include <QtGui/QTextTableFormat>
 #endif
 
-    /*
-    QTextTableFormat()
-    */
+#define GET_PTR_FROM_SELF(p) QTextTableFormat *p = static_cast<QTextTableFormat *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QTextTableFormat()
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_NEW)
 
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_DELETE)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -89,12 +89,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_ISVALID)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -109,12 +107,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_ISVALID)
   }
 }
 
-/*
-int columns() const
-*/
+// int columns() const
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_COLUMNS)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,12 +125,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_COLUMNS)
   }
 }
 
-/*
-void setColumns( int columns )
-*/
+// void setColumns( int columns )
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCOLUMNS)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,12 +145,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCOLUMNS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setColumnWidthConstraints( const QVector<QTextLength> &constraints )
-*/
+// void setColumnWidthConstraints( const QVector<QTextLength> & constraints )
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,12 +171,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVector<QTextLength> columnWidthConstraints() const
-*/
+// QVector<QTextLength> columnWidthConstraints() const
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -221,12 +211,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS)
   }
 }
 
-/*
-void clearColumnWidthConstraints()
-*/
+// void clearColumnWidthConstraints()
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,12 +231,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal cellSpacing() const
-*/
+// qreal cellSpacing() const
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_CELLSPACING)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,12 +249,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_CELLSPACING)
   }
 }
 
-/*
-void setCellSpacing( qreal spacing )
-*/
+// void setCellSpacing( qreal spacing )
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLSPACING)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,12 +269,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal cellPadding() const
-*/
+// qreal cellPadding() const
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_CELLPADDING)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,12 +287,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_CELLPADDING)
   }
 }
 
-/*
-void setCellPadding( qreal padding )
-*/
+// void setCellPadding( qreal padding )
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLPADDING)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -327,12 +307,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLPADDING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAlignment( Qt::Alignment alignment )
-*/
+// void setAlignment( Qt::Alignment alignment )
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETALIGNMENT)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -349,12 +327,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Alignment alignment() const
-*/
+// Qt::Alignment alignment() const
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_ALIGNMENT)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -369,12 +345,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_ALIGNMENT)
   }
 }
 
-/*
-void setHeaderRowCount( int count )
-*/
+// void setHeaderRowCount( int count )
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETHEADERROWCOUNT)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,12 +365,10 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETHEADERROWCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int headerRowCount() const
-*/
+// int headerRowCount() const
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_HEADERROWCOUNT)
 {
-  QTextTableFormat *obj = (QTextTableFormat *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

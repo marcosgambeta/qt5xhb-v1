@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSCREEN
-REQUEST QSIZE
-REQUEST QSURFACEFORMAT
+REQUEST QScreen
+REQUEST QSize
+REQUEST QSurfaceFormat
 #endif
 
 CLASS QOffscreenSurface INHERIT QObject,QSurface
@@ -65,9 +65,10 @@ RETURN
 
 #include <QtGui/QScreen>
 
-    /*
-    QOffscreenSurface( QScreen * screen = 0 )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QOffscreenSurface *p = qobject_cast<QOffscreenSurface *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QOffscreenSurface( QScreen * screen = 0 )
 HB_FUNC_STATIC(QOFFSCREENSURFACE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQSCREENORNIL(1)) {
@@ -80,7 +81,7 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_NEW)
 
 HB_FUNC_STATIC(QOFFSCREENSURFACE_DELETE)
 {
-  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -95,12 +96,10 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSurface::SurfaceType surfaceType() const
-*/
+// QSurface::SurfaceType surfaceType() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_SURFACETYPE)
 {
-  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,12 +114,10 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SURFACETYPE)
   }
 }
 
-/*
-void create()
-*/
+// void create()
 HB_FUNC_STATIC(QOFFSCREENSURFACE_CREATE)
 {
-  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,12 +134,10 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_CREATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void destroy()
-*/
+// void destroy()
 HB_FUNC_STATIC(QOFFSCREENSURFACE_DESTROY)
 {
-  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,12 +154,10 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_DESTROY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_ISVALID)
 {
-  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,12 +172,10 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_ISVALID)
   }
 }
 
-/*
-void setFormat( const QSurfaceFormat &format )
-*/
+// void setFormat( const QSurfaceFormat & format )
 HB_FUNC_STATIC(QOFFSCREENSURFACE_SETFORMAT)
 {
-  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -201,12 +192,10 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SETFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSurfaceFormat format() const
-*/
+// QSurfaceFormat format() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_FORMAT)
 {
-  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,12 +211,10 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_FORMAT)
   }
 }
 
-/*
-QSurfaceFormat requestedFormat() const
-*/
+// QSurfaceFormat requestedFormat() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_REQUESTEDFORMAT)
 {
-  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,12 +230,10 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_REQUESTEDFORMAT)
   }
 }
 
-/*
-QSize size() const
-*/
+// QSize size() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_SIZE)
 {
-  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -264,12 +249,10 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SIZE)
   }
 }
 
-/*
-QScreen * screen() const
-*/
+// QScreen * screen() const
 HB_FUNC_STATIC(QOFFSCREENSURFACE_SCREEN)
 {
-  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,12 +268,10 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SCREEN)
   }
 }
 
-/*
-void setScreen( QScreen * screen )
-*/
+// void setScreen( QScreen * screen )
 HB_FUNC_STATIC(QOFFSCREENSURFACE_SETSCREEN)
 {
-  QOffscreenSurface *obj = (QOffscreenSurface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,9 +290,11 @@ HB_FUNC_STATIC(QOFFSCREENSURFACE_SETSCREEN)
 
 void QOffscreenSurfaceSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QOffscreenSurfaceSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QOFFSCREENSURFACE_ONSCREENCHANGED)
 {
-  QOffscreenSurfaceSlots_connect_signal("screenChanged(QScreen*)", "screenChanged(QScreen*)");
+  CONNECT_SIGNAL("screenChanged(QScreen*)");
 }
 
 #pragma ENDDUMP

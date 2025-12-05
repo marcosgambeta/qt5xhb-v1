@@ -10,6 +10,8 @@
 
 #include <hbclass.ch>
 
+#define GET_PTR_FROM_SELF(p) QTextBlockGroup *p = qobject_cast<QTextBlockGroup *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 #ifndef QT5XHB_NO_REQUESTS
 #endif
 

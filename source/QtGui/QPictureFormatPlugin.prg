@@ -50,9 +50,12 @@ RETURN
 #include <QtGui/QPictureFormatPlugin>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPictureFormatPlugin *p = qobject_cast<QPictureFormatPlugin *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_DELETE)
 {
-  QPictureFormatPlugin *obj = (QPictureFormatPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -67,12 +70,10 @@ HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool loadPicture( const QString &format, const QString &filename, QPicture * pic )
-*/
+// virtual bool loadPicture( const QString & format, const QString & filename, QPicture * pic )
 HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_LOADPICTURE)
 {
-  QPictureFormatPlugin *obj = (QPictureFormatPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -87,12 +88,10 @@ HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_LOADPICTURE)
   }
 }
 
-/*
-virtual bool savePicture( const QString &format, const QString &filename, const QPicture &pic )
-*/
+// virtual bool savePicture( const QString & format, const QString & filename, const QPicture & pic )
 HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_SAVEPICTURE)
 {
-  QPictureFormatPlugin *obj = (QPictureFormatPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -107,12 +106,10 @@ HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_SAVEPICTURE)
   }
 }
 
-/*
-virtual bool installIOHandler( const QString &format ) = 0
-*/
+// virtual bool installIOHandler( const QString & format ) = 0
 HB_FUNC_STATIC(QPICTUREFORMATPLUGIN_INSTALLIOHANDLER)
 {
-  QPictureFormatPlugin *obj = (QPictureFormatPlugin *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

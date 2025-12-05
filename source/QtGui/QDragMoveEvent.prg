@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECT
+REQUEST QRect
 #endif
 
 CLASS QDragMoveEvent INHERIT QDropEvent
@@ -50,14 +50,13 @@ RETURN
 #include <QtGui/QDragMoveEvent>
 #endif
 
-    /*
-    QDragMoveEvent( const QPoint &pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons,
-    Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove )
-    */
+#define GET_PTR_FROM_SELF(p) QDragMoveEvent *p = static_cast<QDragMoveEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QDragMoveEvent( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons,
+    // Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove )
 HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 {
-  if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-      ISNUMORNIL(6)) {
+  if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && ISNUMORNIL(6)) {
     QDragMoveEvent *obj = new QDragMoveEvent(*PQPOINT(1), (Qt::DropActions)hb_parni(2), PQMIMEDATA(3),
                                              (Qt::MouseButtons)hb_parni(4), (Qt::KeyboardModifiers)hb_parni(5),
                                              HB_ISNIL(6) ? (QEvent::Type)QEvent::DragMove : (QEvent::Type)hb_parni(6));
@@ -69,7 +68,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 
 HB_FUNC_STATIC(QDRAGMOVEEVENT_DELETE)
 {
-  QDragMoveEvent *obj = (QDragMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -85,10 +84,8 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_DELETE)
 HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
 {
   if (ISNUMPAR(1) && ISQRECT(1)) {
-    /*
-    void accept( const QRect &rectangle )
-    */
-    QDragMoveEvent *obj = (QDragMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void accept( const QRect & rectangle )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->accept(*PQRECT(1));
@@ -96,10 +93,8 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
-    /*
-    void accept()
-    */
-    QDragMoveEvent *obj = (QDragMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void accept()
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->accept();
@@ -111,12 +106,10 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
   }
 }
 
-/*
-QRect answerRect() const
-*/
+// QRect answerRect() const
 HB_FUNC_STATIC(QDRAGMOVEEVENT_ANSWERRECT)
 {
-  QDragMoveEvent *obj = (QDragMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,10 +128,8 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ANSWERRECT)
 HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
 {
   if (ISNUMPAR(1) && ISQRECT(1)) {
-    /*
-    void ignore( const QRect &rectangle )
-    */
-    QDragMoveEvent *obj = (QDragMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void ignore( const QRect & rectangle )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->ignore(*PQRECT(1));
@@ -146,10 +137,8 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
-    /*
-    void ignore()
-    */
-    QDragMoveEvent *obj = (QDragMoveEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void ignore()
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->ignore();

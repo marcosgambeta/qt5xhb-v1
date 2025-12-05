@@ -11,16 +11,16 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QABSTRACTTEXTDOCUMENTLAYOUT
-REQUEST QCHAR
-REQUEST QFONT
-REQUEST QSIZEF
-REQUEST QTEXTBLOCK
-REQUEST QTEXTCURSOR
-REQUEST QTEXTFRAME
-REQUEST QTEXTOBJECT
-REQUEST QTEXTOPTION
-REQUEST QVARIANT
+REQUEST QAbstractTextDocumentLayout
+REQUEST QChar
+REQUEST QFont
+REQUEST QSizeF
+REQUEST QTextBlock
+REQUEST QTextCursor
+REQUEST QTextFrame
+REQUEST QTextObject
+REQUEST QTextOption
+REQUEST QVariant
 #endif
 
 CLASS QTextDocument INHERIT QObject
@@ -141,18 +141,16 @@ RETURN
 #include <QtGui/QTextBlock>
 #include <QtGui/QAbstractTextDocumentLayout>
 
+#define GET_PTR_FROM_SELF(p) QTextDocument *p = qobject_cast<QTextDocument *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
-    /*
-    QTextDocument( QObject * parent = 0 )
-    */
+    // QTextDocument( QObject * parent = 0 )
     QTextDocument *obj = new QTextDocument(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
-    /*
-    QTextDocument( const QString &text, QObject * parent = 0 )
-    */
+    // QTextDocument( const QString & text, QObject * parent = 0 )
     QTextDocument *obj = new QTextDocument(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -162,7 +160,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_DELETE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -177,12 +175,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextDocument * clone( QObject * parent = 0 ) const
-*/
+// QTextDocument * clone( QObject * parent = 0 ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_CLONE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,12 +194,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLONE)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ISEMPTY)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,12 +212,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISEMPTY)
   }
 }
 
-/*
-virtual void clear()
-*/
+// virtual void clear()
 HB_FUNC_STATIC(QTEXTDOCUMENT_CLEAR)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -240,12 +232,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUndoRedoEnabled( bool enable )
-*/
+// void setUndoRedoEnabled( bool enable )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETUNDOREDOENABLED)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,12 +252,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETUNDOREDOENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isUndoRedoEnabled() const
-*/
+// bool isUndoRedoEnabled() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOREDOENABLED)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -282,12 +270,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOREDOENABLED)
   }
 }
 
-/*
-bool isUndoAvailable() const
-*/
+// bool isUndoAvailable() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOAVAILABLE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -302,12 +288,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOAVAILABLE)
   }
 }
 
-/*
-bool isRedoAvailable() const
-*/
+// bool isRedoAvailable() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ISREDOAVAILABLE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -322,12 +306,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISREDOAVAILABLE)
   }
 }
 
-/*
-int availableUndoSteps() const
-*/
+// int availableUndoSteps() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEUNDOSTEPS)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,12 +324,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEUNDOSTEPS)
   }
 }
 
-/*
-int availableRedoSteps() const
-*/
+// int availableRedoSteps() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEREDOSTEPS)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,12 +342,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEREDOSTEPS)
   }
 }
 
-/*
-int revision() const
-*/
+// int revision() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_REVISION)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -382,12 +360,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REVISION)
   }
 }
 
-/*
-void setDocumentLayout( QAbstractTextDocumentLayout * layout )
-*/
+// void setDocumentLayout( QAbstractTextDocumentLayout * layout )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTLAYOUT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -404,12 +380,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTLAYOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractTextDocumentLayout * documentLayout() const
-*/
+// QAbstractTextDocumentLayout * documentLayout() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTLAYOUT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -425,12 +399,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTLAYOUT)
   }
 }
 
-/*
-void setMetaInformation( QTextDocument::MetaInformation info, const QString &)
-*/
+// void setMetaInformation( QTextDocument::MetaInformation info, const QString & )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETMETAINFORMATION)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,12 +419,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMETAINFORMATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString metaInformation( QTextDocument::MetaInformation info ) const
-*/
+// QString metaInformation( QTextDocument::MetaInformation info ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_METAINFORMATION)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -467,12 +437,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_METAINFORMATION)
   }
 }
 
-/*
-QString toHtml( const QByteArray &encoding = QByteArray() ) const
-*/
+// QString toHtml( const QByteArray & encoding = QByteArray() ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_TOHTML)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -487,12 +455,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TOHTML)
   }
 }
 
-/*
-void setHtml( const QString &html )
-*/
+// void setHtml( const QString & html )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETHTML)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -509,12 +475,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETHTML)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString toPlainText() const
-*/
+// QString toPlainText() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_TOPLAINTEXT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -529,12 +493,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TOPLAINTEXT)
   }
 }
 
-/*
-void setPlainText( const QString &text )
-*/
+// void setPlainText( const QString & text )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETPLAINTEXT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -551,12 +513,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETPLAINTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QChar characterAt( int pos ) const
-*/
+// QChar characterAt( int pos ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERAT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -575,10 +535,8 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERAT)
 HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    QTextCursor find( const QString &subString, int from = 0, QTextDocument::FindFlags options = 0 ) const
-    */
-    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QTextCursor find( const QString & subString, int from = 0, QTextDocument::FindFlags options = 0 ) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTextCursor *ptr = new QTextCursor(obj->find(
@@ -586,10 +544,9 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQTEXTCURSOR(2) && ISNUMORNIL(3)) {
-    /*
-    QTextCursor find( const QString &subString, const QTextCursor &from, QTextDocument::FindFlags options = 0 ) const
-    */
-    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QTextCursor find( const QString & subString, const QTextCursor & from, QTextDocument::FindFlags options = 0 )
+    // const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTextCursor *ptr =
@@ -598,10 +555,8 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   } else if (ISBETWEEN(1, 3) && ISQREGEXP(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
-    /*
-    QTextCursor find( const QRegExp &expr, int from = 0, QTextDocument::FindFlags options = 0 ) const
-    */
-    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QTextCursor find( const QRegExp & expr, int from = 0, QTextDocument::FindFlags options = 0 ) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTextCursor *ptr =
@@ -610,10 +565,8 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   } else if (ISBETWEEN(2, 3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && ISNUMORNIL(3)) {
-    /*
-    QTextCursor find( const QRegExp &expr, const QTextCursor &from, QTextDocument::FindFlags options = 0 ) const
-    */
-    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QTextCursor find( const QRegExp & expr, const QTextCursor & from, QTextDocument::FindFlags options = 0 ) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTextCursor *ptr =
@@ -626,12 +579,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
   }
 }
 
-/*
-QTextFrame * frameAt( int pos ) const
-*/
+// QTextFrame * frameAt( int pos ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_FRAMEAT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -647,12 +598,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FRAMEAT)
   }
 }
 
-/*
-QTextFrame * rootFrame() const
-*/
+// QTextFrame * rootFrame() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ROOTFRAME)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -668,12 +617,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ROOTFRAME)
   }
 }
 
-/*
-QTextObject * object( int objectIndex ) const
-*/
+// QTextObject * object( int objectIndex ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -689,12 +636,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECT)
   }
 }
 
-/*
-QTextObject * objectForFormat( const QTextFormat &) const
-*/
+// QTextObject * objectForFormat( const QTextFormat & ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECTFORFORMAT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -710,12 +655,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECTFORFORMAT)
   }
 }
 
-/*
-QTextBlock findBlock( int pos ) const
-*/
+// QTextBlock findBlock( int pos ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCK)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -731,12 +674,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCK)
   }
 }
 
-/*
-QTextBlock findBlockByNumber( int blockNumber ) const
-*/
+// QTextBlock findBlockByNumber( int blockNumber ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYNUMBER)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -752,12 +693,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYNUMBER)
   }
 }
 
-/*
-QTextBlock findBlockByLineNumber( int blockNumber ) const
-*/
+// QTextBlock findBlockByLineNumber( int blockNumber ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -773,12 +712,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER)
   }
 }
 
-/*
-QTextBlock begin() const
-*/
+// QTextBlock begin() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_BEGIN)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -794,12 +731,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_BEGIN)
   }
 }
 
-/*
-QTextBlock end() const
-*/
+// QTextBlock end() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_END)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -815,12 +750,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_END)
   }
 }
 
-/*
-QTextBlock firstBlock() const
-*/
+// QTextBlock firstBlock() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_FIRSTBLOCK)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -836,12 +769,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIRSTBLOCK)
   }
 }
 
-/*
-QTextBlock lastBlock() const
-*/
+// QTextBlock lastBlock() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_LASTBLOCK)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -857,12 +788,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_LASTBLOCK)
   }
 }
 
-/*
-void setPageSize( const QSizeF &size )
-*/
+// void setPageSize( const QSizeF & size )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETPAGESIZE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -879,12 +808,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETPAGESIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizeF pageSize() const
-*/
+// QSizeF pageSize() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_PAGESIZE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -900,12 +827,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_PAGESIZE)
   }
 }
 
-/*
-void setDefaultFont( const QFont &font )
-*/
+// void setDefaultFont( const QFont & font )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTFONT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -922,12 +847,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QFont defaultFont() const
-*/
+// QFont defaultFont() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTFONT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -943,12 +866,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTFONT)
   }
 }
 
-/*
-int pageCount() const
-*/
+// int pageCount() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_PAGECOUNT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -963,12 +884,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_PAGECOUNT)
   }
 }
 
-/*
-bool isModified() const
-*/
+// bool isModified() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_ISMODIFIED)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -983,12 +902,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISMODIFIED)
   }
 }
 
-/*
-void print( QPagedPaintDevice * printer ) const
-*/
+// void print( QPagedPaintDevice * printer ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_PRINT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1005,12 +922,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_PRINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant resource( int type, const QUrl &name ) const
-*/
+// QVariant resource( int type, const QUrl & name ) const
 HB_FUNC_STATIC(QTEXTDOCUMENT_RESOURCE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1026,12 +941,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_RESOURCE)
   }
 }
 
-/*
-void addResource( int type, const QUrl &name, const QVariant &resource )
-*/
+// void addResource( int type, const QUrl & name, const QVariant & resource )
 HB_FUNC_STATIC(QTEXTDOCUMENT_ADDRESOURCE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1048,12 +961,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ADDRESOURCE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void markContentsDirty( int from, int length )
-*/
+// void markContentsDirty( int from, int length )
 HB_FUNC_STATIC(QTEXTDOCUMENT_MARKCONTENTSDIRTY)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1070,12 +981,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_MARKCONTENTSDIRTY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUseDesignMetrics( bool b )
-*/
+// void setUseDesignMetrics( bool b )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETUSEDESIGNMETRICS)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1092,12 +1001,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETUSEDESIGNMETRICS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool useDesignMetrics() const
-*/
+// bool useDesignMetrics() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_USEDESIGNMETRICS)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1112,12 +1019,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_USEDESIGNMETRICS)
   }
 }
 
-/*
-void drawContents( QPainter * painter, const QRectF &rect = QRectF() )
-*/
+// void drawContents( QPainter * painter, const QRectF & rect = QRectF() )
 HB_FUNC_STATIC(QTEXTDOCUMENT_DRAWCONTENTS)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1134,12 +1039,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DRAWCONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextWidth( qreal width )
-*/
+// void setTextWidth( qreal width )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETTEXTWIDTH)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1156,12 +1059,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETTEXTWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal textWidth() const
-*/
+// qreal textWidth() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_TEXTWIDTH)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1176,12 +1077,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TEXTWIDTH)
   }
 }
 
-/*
-qreal idealWidth() const
-*/
+// qreal idealWidth() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_IDEALWIDTH)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1196,12 +1095,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_IDEALWIDTH)
   }
 }
 
-/*
-qreal indentWidth() const
-*/
+// qreal indentWidth() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_INDENTWIDTH)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1216,12 +1113,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_INDENTWIDTH)
   }
 }
 
-/*
-void setIndentWidth( qreal width )
-*/
+// void setIndentWidth( qreal width )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETINDENTWIDTH)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1238,12 +1133,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETINDENTWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal documentMargin() const
-*/
+// qreal documentMargin() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTMARGIN)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1258,12 +1151,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTMARGIN)
   }
 }
 
-/*
-void setDocumentMargin( qreal margin )
-*/
+// void setDocumentMargin( qreal margin )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTMARGIN)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1280,12 +1171,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTMARGIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void adjustSize()
-*/
+// void adjustSize()
 HB_FUNC_STATIC(QTEXTDOCUMENT_ADJUSTSIZE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1302,12 +1191,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ADJUSTSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizeF size() const
-*/
+// QSizeF size() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_SIZE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1323,12 +1210,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SIZE)
   }
 }
 
-/*
-int blockCount() const
-*/
+// int blockCount() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_BLOCKCOUNT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1343,12 +1228,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_BLOCKCOUNT)
   }
 }
 
-/*
-int lineCount() const
-*/
+// int lineCount() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_LINECOUNT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1363,12 +1246,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_LINECOUNT)
   }
 }
 
-/*
-int characterCount() const
-*/
+// int characterCount() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERCOUNT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1383,12 +1264,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERCOUNT)
   }
 }
 
-/*
-void setDefaultStyleSheet( const QString &sheet )
-*/
+// void setDefaultStyleSheet( const QString & sheet )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTSTYLESHEET)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1405,12 +1284,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTSTYLESHEET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString defaultStyleSheet() const
-*/
+// QString defaultStyleSheet() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTSTYLESHEET)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1425,12 +1302,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTSTYLESHEET)
   }
 }
 
-/*
-void clearUndoRedoStacks( QTextDocument::Stacks historyToClear = QTextDocument::UndoAndRedoStacks )
-*/
+// void clearUndoRedoStacks( QTextDocument::Stacks historyToClear = QTextDocument::UndoAndRedoStacks )
 HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1448,12 +1323,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int maximumBlockCount() const
-*/
+// int maximumBlockCount() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1468,12 +1341,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT)
   }
 }
 
-/*
-void setMaximumBlockCount( int maximum )
-*/
+// void setMaximumBlockCount( int maximum )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1490,12 +1361,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextOption defaultTextOption() const
-*/
+// QTextOption defaultTextOption() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTTEXTOPTION)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1511,12 +1380,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTTEXTOPTION)
   }
 }
 
-/*
-void setDefaultTextOption( const QTextOption &option )
-*/
+// void setDefaultTextOption( const QTextOption & option )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTTEXTOPTION)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1533,12 +1400,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTTEXTOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::CursorMoveStyle defaultCursorMoveStyle() const
-*/
+// Qt::CursorMoveStyle defaultCursorMoveStyle() const
 HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1553,12 +1418,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE)
   }
 }
 
-/*
-void setDefaultCursorMoveStyle( Qt::CursorMoveStyle style )
-*/
+// void setDefaultCursorMoveStyle( Qt::CursorMoveStyle style )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1578,10 +1441,8 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE)
 HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
 {
   if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
-    /*
-    void undo( QTextCursor * cursor )
-    */
-    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void undo( QTextCursor * cursor )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->undo(PQTEXTCURSOR(1));
@@ -1589,10 +1450,8 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
-    /*
-    void undo()
-    */
-    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void undo()
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->undo();
@@ -1607,10 +1466,8 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
 HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
 {
   if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
-    /*
-    void redo( QTextCursor * cursor )
-    */
-    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void redo( QTextCursor * cursor )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->redo(PQTEXTCURSOR(1));
@@ -1618,10 +1475,8 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
-    /*
-    void redo()
-    */
-    QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void redo()
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->redo();
@@ -1633,12 +1488,10 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
   }
 }
 
-/*
-void setModified( bool m = true )
-*/
+// void setModified( bool m = true )
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETMODIFIED)
 {
-  QTextDocument *obj = (QTextDocument *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1657,49 +1510,51 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMODIFIED)
 
 void QTextDocumentSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QTextDocumentSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGE)
 {
-  QTextDocumentSlots_connect_signal("contentsChange(int,int,int)", "contentsChange(int,int,int)");
+  CONNECT_SIGNAL("contentsChange(int,int,int)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGED)
 {
-  QTextDocumentSlots_connect_signal("contentsChanged()", "contentsChanged()");
+  CONNECT_SIGNAL("contentsChanged()");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOAVAILABLE)
 {
-  QTextDocumentSlots_connect_signal("undoAvailable(bool)", "undoAvailable(bool)");
+  CONNECT_SIGNAL("undoAvailable(bool)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONREDOAVAILABLE)
 {
-  QTextDocumentSlots_connect_signal("redoAvailable(bool)", "redoAvailable(bool)");
+  CONNECT_SIGNAL("redoAvailable(bool)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOCOMMANDADDED)
 {
-  QTextDocumentSlots_connect_signal("undoCommandAdded()", "undoCommandAdded()");
+  CONNECT_SIGNAL("undoCommandAdded()");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONMODIFICATIONCHANGED)
 {
-  QTextDocumentSlots_connect_signal("modificationChanged(bool)", "modificationChanged(bool)");
+  CONNECT_SIGNAL("modificationChanged(bool)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED)
 {
-  QTextDocumentSlots_connect_signal("cursorPositionChanged(QTextCursor)", "cursorPositionChanged(QTextCursor)");
+  CONNECT_SIGNAL("cursorPositionChanged(QTextCursor)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED)
 {
-  QTextDocumentSlots_connect_signal("blockCountChanged(int)", "blockCountChanged(int)");
+  CONNECT_SIGNAL("blockCountChanged(int)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED)
 {
-  QTextDocumentSlots_connect_signal("documentLayoutChanged()", "documentLayoutChanged()");
+  CONNECT_SIGNAL("documentLayoutChanged()");
 }
 
 #pragma ENDDUMP

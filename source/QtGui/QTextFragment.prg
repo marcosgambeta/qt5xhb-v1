@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGLYPHRUN
-REQUEST QTEXTCHARFORMAT
+REQUEST QGlyphRun
+REQUEST QTextCharFormat
 #endif
 
 CLASS QTextFragment
@@ -65,30 +65,18 @@ RETURN
 #include <QtGui/QTextFragment>
 #endif
 
-    /*
-    QTextFragment()
-    */
-    void QTextFragment_new2()
-{
-  QTextFragment *obj = new QTextFragment();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTextFragment( const QTextFragment &o )
-*/
-void QTextFragment_new3()
-{
-  QTextFragment *obj = new QTextFragment(*PQTEXTFRAGMENT(1));
-  Qt5xHb::returnNewObject(obj, true);
-}
+#define GET_PTR_FROM_SELF(p) QTextFragment *p = static_cast<QTextFragment *>(Qt5xHb::itemGetPtrStackSelfItem())
 
 HB_FUNC_STATIC(QTEXTFRAGMENT_NEW)
 {
   if (ISNUMPAR(0)) {
-    QTextFragment_new2();
+    // QTextFragment()
+    QTextFragment *obj = new QTextFragment();
+    Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQTEXTFRAGMENT(1)) {
-    QTextFragment_new3();
+    // QTextFragment( const QTextFragment & o )
+    QTextFragment *obj = new QTextFragment(*PQTEXTFRAGMENT(1));
+    Qt5xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -96,7 +84,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_NEW)
 
 HB_FUNC_STATIC(QTEXTFRAGMENT_DELETE)
 {
-  QTextFragment *obj = (QTextFragment *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -109,12 +97,10 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_ISVALID)
 {
-  QTextFragment *obj = (QTextFragment *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,12 +115,10 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_ISVALID)
   }
 }
 
-/*
-int position() const
-*/
+// int position() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_POSITION)
 {
-  QTextFragment *obj = (QTextFragment *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,12 +133,10 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_POSITION)
   }
 }
 
-/*
-int length() const
-*/
+// int length() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_LENGTH)
 {
-  QTextFragment *obj = (QTextFragment *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -169,12 +151,10 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_LENGTH)
   }
 }
 
-/*
-bool contains( int position ) const
-*/
+// bool contains( int position ) const
 HB_FUNC_STATIC(QTEXTFRAGMENT_CONTAINS)
 {
-  QTextFragment *obj = (QTextFragment *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -189,12 +169,10 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CONTAINS)
   }
 }
 
-/*
-QTextCharFormat charFormat() const
-*/
+// QTextCharFormat charFormat() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMAT)
 {
-  QTextFragment *obj = (QTextFragment *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,12 +188,10 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMAT)
   }
 }
 
-/*
-int charFormatIndex() const
-*/
+// int charFormatIndex() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMATINDEX)
 {
-  QTextFragment *obj = (QTextFragment *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,12 +206,10 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMATINDEX)
   }
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_TEXT)
 {
-  QTextFragment *obj = (QTextFragment *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,12 +224,10 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_TEXT)
   }
 }
 
-/*
-QList<QGlyphRun> glyphRuns( int from = -1, int length = -1 ) const
-*/
+// QList<QGlyphRun> glyphRuns( int from = -1, int length = -1 ) const
 HB_FUNC_STATIC(QTEXTFRAGMENT_GLYPHRUNS)
 {
-  QTextFragment *obj = (QTextFragment *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

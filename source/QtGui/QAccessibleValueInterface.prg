@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QAccessibleValueInterface
@@ -60,9 +60,12 @@ RETURN
 #include <QtGui/QAccessibleValueInterface>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAccessibleValueInterface *p = static_cast<QAccessibleValueInterface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_DELETE)
 {
-  QAccessibleValueInterface *obj = (QAccessibleValueInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -75,12 +78,10 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QVariant currentValue() const = 0
-*/
+// virtual QVariant currentValue() const = 0
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_CURRENTVALUE)
 {
-  QAccessibleValueInterface *obj = (QAccessibleValueInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -96,12 +97,10 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_CURRENTVALUE)
   }
 }
 
-/*
-virtual void setCurrentValue( const QVariant &value ) = 0
-*/
+// virtual void setCurrentValue( const QVariant & value ) = 0
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_SETCURRENTVALUE)
 {
-  QAccessibleValueInterface *obj = (QAccessibleValueInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,12 +117,10 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_SETCURRENTVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QVariant maximumValue() const = 0
-*/
+// virtual QVariant maximumValue() const = 0
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MAXIMUMVALUE)
 {
-  QAccessibleValueInterface *obj = (QAccessibleValueInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,12 +136,10 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MAXIMUMVALUE)
   }
 }
 
-/*
-virtual QVariant minimumValue() const = 0
-*/
+// virtual QVariant minimumValue() const = 0
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MINIMUMVALUE)
 {
-  QAccessibleValueInterface *obj = (QAccessibleValueInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,12 +155,10 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MINIMUMVALUE)
   }
 }
 
-/*
-virtual QVariant minimumStepSize() const = 0
-*/
+// virtual QVariant minimumStepSize() const = 0
 HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MINIMUMSTEPSIZE)
 {
-  QAccessibleValueInterface *obj = (QAccessibleValueInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

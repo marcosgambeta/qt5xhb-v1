@@ -47,9 +47,10 @@ RETURN
 #include <QtGui/QToolBarChangeEvent>
 #endif
 
-    /*
-    QToolBarChangeEvent( bool t )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QToolBarChangeEvent *p = static_cast<QToolBarChangeEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QToolBarChangeEvent( bool t )
 HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISLOG(1)) {
@@ -62,7 +63,7 @@ HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_NEW)
 
 HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_DELETE)
 {
-  QToolBarChangeEvent *obj = (QToolBarChangeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -75,12 +76,10 @@ HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool toggle() const
-*/
+// bool toggle() const
 HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_TOGGLE)
 {
-  QToolBarChangeEvent *obj = (QToolBarChangeEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

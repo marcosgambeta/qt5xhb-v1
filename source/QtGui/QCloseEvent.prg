@@ -46,9 +46,9 @@ RETURN
 #include <QtGui/QCloseEvent>
 #endif
 
-    /*
-    QCloseEvent()
-    */
+#define GET_PTR_FROM_SELF(p) QCloseEvent *p = static_cast<QCloseEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QCloseEvent()
 HB_FUNC_STATIC(QCLOSEEVENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QCLOSEEVENT_NEW)
 
 HB_FUNC_STATIC(QCLOSEEVENT_DELETE)
 {
-  QCloseEvent *obj = (QCloseEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

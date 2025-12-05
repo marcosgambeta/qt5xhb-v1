@@ -57,9 +57,13 @@ RETURN
 #include <QtGui/QAccessibleEditableTextInterface>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAccessibleEditableTextInterface *p =                                                                                \
+      static_cast<QAccessibleEditableTextInterface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETE)
 {
-  QAccessibleEditableTextInterface *obj = (QAccessibleEditableTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -72,12 +76,10 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void deleteText( int startOffset, int endOffset ) = 0
-*/
+// virtual void deleteText( int startOffset, int endOffset ) = 0
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETETEXT)
 {
-  QAccessibleEditableTextInterface *obj = (QAccessibleEditableTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -94,12 +96,10 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_DELETETEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void insertText( int offset, const QString &text ) = 0
-*/
+// virtual void insertText( int offset, const QString & text ) = 0
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT)
 {
-  QAccessibleEditableTextInterface *obj = (QAccessibleEditableTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,12 +116,10 @@ HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void replaceText( int startOffset, int endOffset, const QString &text ) = 0
-*/
+// virtual void replaceText( int startOffset, int endOffset, const QString & text ) = 0
 HB_FUNC_STATIC(QACCESSIBLEEDITABLETEXTINTERFACE_REPLACETEXT)
 {
-  QAccessibleEditableTextInterface *obj = (QAccessibleEditableTextInterface *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

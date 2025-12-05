@@ -57,9 +57,11 @@ RETURN
 #include <QtGui/QDesktopServices>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QDesktopServices *p = static_cast<QDesktopServices *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDESKTOPSERVICES_DELETE)
 {
-  QDesktopServices *obj = (QDesktopServices *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -72,9 +74,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool openUrl( const QUrl &url )
-*/
+// static bool openUrl( const QUrl & url )
 HB_FUNC_STATIC(QDESKTOPSERVICES_OPENURL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_OPENURL)
 #endif
 }
 
-/*
-static void setUrlHandler( const QString &scheme, QObject * receiver, const char * method )
-*/
+// static void setUrlHandler( const QString & scheme, QObject * receiver, const char * method )
 HB_FUNC_STATIC(QDESKTOPSERVICES_SETURLHANDLER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_SETURLHANDLER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void unsetUrlHandler( const QString &scheme )
-*/
+// static void unsetUrlHandler( const QString & scheme )
 HB_FUNC_STATIC(QDESKTOPSERVICES_UNSETURLHANDLER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

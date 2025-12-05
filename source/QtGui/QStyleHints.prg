@@ -57,12 +57,12 @@ RETURN
 #include <QtGui/QStyleHints>
 #endif
 
-    /*
-    int mouseDoubleClickInterval() const
-    */
+#define GET_PTR_FROM_SELF(p) QStyleHints *p = qobject_cast<QStyleHints *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// int mouseDoubleClickInterval() const
 HB_FUNC_STATIC(QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL)
 {
-  QStyleHints *obj = (QStyleHints *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -77,12 +77,10 @@ HB_FUNC_STATIC(QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL)
   }
 }
 
-/*
-int startDragDistance() const
-*/
+// int startDragDistance() const
 HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGDISTANCE)
 {
-  QStyleHints *obj = (QStyleHints *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -97,12 +95,10 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGDISTANCE)
   }
 }
 
-/*
-int startDragTime() const
-*/
+// int startDragTime() const
 HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGTIME)
 {
-  QStyleHints *obj = (QStyleHints *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,12 +113,10 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGTIME)
   }
 }
 
-/*
-int startDragVelocity() const
-*/
+// int startDragVelocity() const
 HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGVELOCITY)
 {
-  QStyleHints *obj = (QStyleHints *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -137,12 +131,10 @@ HB_FUNC_STATIC(QSTYLEHINTS_STARTDRAGVELOCITY)
   }
 }
 
-/*
-int keyboardInputInterval() const
-*/
+// int keyboardInputInterval() const
 HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDINPUTINTERVAL)
 {
-  QStyleHints *obj = (QStyleHints *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,12 +149,10 @@ HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDINPUTINTERVAL)
   }
 }
 
-/*
-int keyboardAutoRepeatRate() const
-*/
+// int keyboardAutoRepeatRate() const
 HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDAUTOREPEATRATE)
 {
-  QStyleHints *obj = (QStyleHints *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -177,12 +167,10 @@ HB_FUNC_STATIC(QSTYLEHINTS_KEYBOARDAUTOREPEATRATE)
   }
 }
 
-/*
-int cursorFlashTime() const
-*/
+// int cursorFlashTime() const
 HB_FUNC_STATIC(QSTYLEHINTS_CURSORFLASHTIME)
 {
-  QStyleHints *obj = (QStyleHints *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -197,12 +185,10 @@ HB_FUNC_STATIC(QSTYLEHINTS_CURSORFLASHTIME)
   }
 }
 
-/*
-bool showIsFullScreen() const
-*/
+// bool showIsFullScreen() const
 HB_FUNC_STATIC(QSTYLEHINTS_SHOWISFULLSCREEN)
 {
-  QStyleHints *obj = (QStyleHints *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -217,12 +203,10 @@ HB_FUNC_STATIC(QSTYLEHINTS_SHOWISFULLSCREEN)
   }
 }
 
-/*
-int passwordMaskDelay() const
-*/
+// int passwordMaskDelay() const
 HB_FUNC_STATIC(QSTYLEHINTS_PASSWORDMASKDELAY)
 {
-  QStyleHints *obj = (QStyleHints *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -237,12 +221,10 @@ HB_FUNC_STATIC(QSTYLEHINTS_PASSWORDMASKDELAY)
   }
 }
 
-/*
-qreal fontSmoothingGamma() const
-*/
+// qreal fontSmoothingGamma() const
 HB_FUNC_STATIC(QSTYLEHINTS_FONTSMOOTHINGGAMMA)
 {
-  QStyleHints *obj = (QStyleHints *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -257,12 +239,10 @@ HB_FUNC_STATIC(QSTYLEHINTS_FONTSMOOTHINGGAMMA)
   }
 }
 
-/*
-bool useRtlExtensions() const
-*/
+// bool useRtlExtensions() const
 HB_FUNC_STATIC(QSTYLEHINTS_USERTLEXTENSIONS)
 {
-  QStyleHints *obj = (QStyleHints *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

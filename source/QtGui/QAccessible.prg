@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QACCESSIBLEINTERFACE
+REQUEST QAccessibleInterface
 #endif
 
 CLASS QAccessible INHERIT QObject
@@ -52,9 +52,9 @@ RETURN
 #include <QtGui/QAccessible>
 #endif
 
-    /*
-    static QAccessibleInterface * queryAccessibleInterface( QObject * )
-    */
+#define GET_PTR_FROM_SELF(p) QAccessible *p = qobject_cast<QAccessible *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// static QAccessibleInterface * queryAccessibleInterface( QObject * )
 HB_FUNC_STATIC(QACCESSIBLE_QUERYACCESSIBLEINTERFACE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QACCESSIBLE_QUERYACCESSIBLEINTERFACE)
 #endif
 }
 
-/*
-static void updateAccessibility( QAccessibleEvent * event )
-*/
+// static void updateAccessibility( QAccessibleEvent * event )
 HB_FUNC_STATIC(QACCESSIBLE_UPDATEACCESSIBILITY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QACCESSIBLE_UPDATEACCESSIBILITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool isActive()
-*/
+// static bool isActive()
 HB_FUNC_STATIC(QACCESSIBLE_ISACTIVE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -103,9 +99,7 @@ HB_FUNC_STATIC(QACCESSIBLE_ISACTIVE)
 #endif
 }
 
-/*
-static void setRootObject( QObject * object )
-*/
+// static void setRootObject( QObject * object )
 HB_FUNC_STATIC(QACCESSIBLE_SETROOTOBJECT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -121,9 +115,7 @@ HB_FUNC_STATIC(QACCESSIBLE_SETROOTOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void cleanup()
-*/
+// static void cleanup()
 HB_FUNC_STATIC(QACCESSIBLE_CLEANUP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -46,9 +46,9 @@ RETURN
 #include <QtGui/QIconDragEvent>
 #endif
 
-    /*
-    QIconDragEvent()
-    */
+#define GET_PTR_FROM_SELF(p) QIconDragEvent *p = static_cast<QIconDragEvent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QIconDragEvent()
 HB_FUNC_STATIC(QICONDRAGEVENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QICONDRAGEVENT_NEW)
 
 HB_FUNC_STATIC(QICONDRAGEVENT_DELETE)
 {
-  QIconDragEvent *obj = (QIconDragEvent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

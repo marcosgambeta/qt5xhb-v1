@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOPENGLCONTEXT
+REQUEST QOpenGLContext
 #endif
 
 CLASS QOpenGLContextGroup INHERIT QObject
@@ -50,9 +50,12 @@ RETURN
 #include <QtGui/QOpenGLContextGroup>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QOpenGLContextGroup *p = qobject_cast<QOpenGLContextGroup *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_DELETE)
 {
-  QOpenGLContextGroup *obj = (QOpenGLContextGroup *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -67,12 +70,10 @@ HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QOpenGLContext*> shares() const
-*/
+// QList<QOpenGLContext *> shares() const
 HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
 {
-  QOpenGLContextGroup *obj = (QOpenGLContextGroup *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -106,9 +107,7 @@ HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_SHARES)
   }
 }
 
-/*
-static QOpenGLContextGroup * currentContextGroup()
-*/
+// static QOpenGLContextGroup * currentContextGroup()
 HB_FUNC_STATIC(QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
