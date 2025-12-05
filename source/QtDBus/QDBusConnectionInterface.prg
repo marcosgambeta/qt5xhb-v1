@@ -50,6 +50,9 @@ RETURN
 #include <QtDBus/QDBusConnectionInterface>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDBusConnectionInterface *p = qobject_cast<QDBusConnectionInterface *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
     void QDBusConnectionInterfaceSlots_connect_signal(const QString &signal, const QString &slot);
 
 #define CONNECT_SIGNAL(signal) QDBusConnectionInterfaceSlots_connect_signal(signal, signal)

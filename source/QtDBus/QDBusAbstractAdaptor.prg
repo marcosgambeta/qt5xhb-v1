@@ -47,9 +47,12 @@ RETURN
 #include <QtDBus/QDBusAbstractAdaptor>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDBusAbstractAdaptor *p = qobject_cast<QDBusAbstractAdaptor *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDBUSABSTRACTADAPTOR_DELETE)
 {
-  QDBusAbstractAdaptor *obj = qobject_cast<QDBusAbstractAdaptor *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);

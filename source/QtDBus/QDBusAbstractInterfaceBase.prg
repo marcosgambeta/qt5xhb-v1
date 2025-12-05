@@ -47,9 +47,12 @@ RETURN
 #include <QtDBus/QDBusAbstractInterfaceBase>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDBusAbstractInterfaceBase *p = qobject_cast<QDBusAbstractInterfaceBase *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDBUSABSTRACTINTERFACEBASE_DELETE)
 {
-  QDBusAbstractInterfaceBase *obj = qobject_cast<QDBusAbstractInterfaceBase *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);

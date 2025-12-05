@@ -60,6 +60,8 @@ RETURN
 #include <QtDBus/QDBusObjectPath>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QDBusObjectPath *p = static_cast<QDBusObjectPath *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 // QDBusObjectPath()
 HB_FUNC_STATIC(QDBUSOBJECTPATH_NEW1)
 {
@@ -105,7 +107,7 @@ HB_FUNC(QDBUSOBJECTPATH_NEW)
 
 HB_FUNC_STATIC(QDBUSOBJECTPATH_DELETE)
 {
-  QDBusObjectPath *obj = static_cast<QDBusObjectPath *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -121,7 +123,7 @@ HB_FUNC_STATIC(QDBUSOBJECTPATH_DELETE)
 // QString path() const
 HB_FUNC_STATIC(QDBUSOBJECTPATH_PATH)
 {
-  QDBusObjectPath *obj = static_cast<QDBusObjectPath *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +141,7 @@ HB_FUNC_STATIC(QDBUSOBJECTPATH_PATH)
 // void setPath( const QString & path )
 HB_FUNC_STATIC(QDBUSOBJECTPATH_SETPATH)
 {
-  QDBusObjectPath *obj = static_cast<QDBusObjectPath *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

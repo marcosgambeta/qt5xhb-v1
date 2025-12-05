@@ -47,10 +47,13 @@ RETURN
 #include <QtDBus/QDBusVirtualObject>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDBusVirtualObject *p = qobject_cast<QDBusVirtualObject *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 // virtual ~QDBusVirtualObject()
 HB_FUNC_STATIC(QDBUSVIRTUALOBJECT_DELETE)
 {
-  QDBusVirtualObject *obj = qobject_cast<QDBusVirtualObject *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);

@@ -43,4 +43,9 @@ RETURN
 #include <QtDBus/QDBusPendingReplyData>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDBusPendingReplyData *p = static_cast<QDBusPendingReplyData *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// void setMetaTypes(int count, const int *metaTypes)
+
 #pragma ENDDUMP
