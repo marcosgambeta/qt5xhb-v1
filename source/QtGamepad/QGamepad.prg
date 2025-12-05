@@ -104,6 +104,8 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) QGamepad *p = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 // QGamepad( int deviceId = 0, QObject * parent = nullptr )
 HB_FUNC_STATIC(QGAMEPAD_NEW)
 {
@@ -121,7 +123,7 @@ HB_FUNC_STATIC(QGAMEPAD_NEW)
 HB_FUNC_STATIC(QGAMEPAD_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -141,7 +143,7 @@ HB_FUNC_STATIC(QGAMEPAD_DELETE)
 HB_FUNC_STATIC(QGAMEPAD_DEVICEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +163,7 @@ HB_FUNC_STATIC(QGAMEPAD_DEVICEID)
 HB_FUNC_STATIC(QGAMEPAD_SETDEVICEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +185,7 @@ HB_FUNC_STATIC(QGAMEPAD_SETDEVICEID)
 HB_FUNC_STATIC(QGAMEPAD_ISCONNECTED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +205,7 @@ HB_FUNC_STATIC(QGAMEPAD_ISCONNECTED)
 HB_FUNC_STATIC(QGAMEPAD_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +225,7 @@ HB_FUNC_STATIC(QGAMEPAD_NAME)
 HB_FUNC_STATIC(QGAMEPAD_AXISLEFTX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +245,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISLEFTX)
 HB_FUNC_STATIC(QGAMEPAD_AXISLEFTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +265,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISLEFTY)
 HB_FUNC_STATIC(QGAMEPAD_AXISRIGHTX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +285,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISRIGHTX)
 HB_FUNC_STATIC(QGAMEPAD_AXISRIGHTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,7 +305,7 @@ HB_FUNC_STATIC(QGAMEPAD_AXISRIGHTY)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONA)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +325,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONA)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONB)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,7 +345,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONB)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONX)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -363,7 +365,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONX)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -383,7 +385,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONY)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONL1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -403,7 +405,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONL1)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONR1)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -423,7 +425,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONR1)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONL2)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -443,7 +445,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONL2)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONR2)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -463,7 +465,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONR2)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONSELECT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -483,7 +485,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONSELECT)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONSTART)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -503,7 +505,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONSTART)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONL3)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -523,7 +525,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONL3)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONR3)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -543,7 +545,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONR3)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONUP)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -563,7 +565,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONUP)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONDOWN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -583,7 +585,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONDOWN)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONLEFT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -603,7 +605,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONLEFT)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONRIGHT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -623,7 +625,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONRIGHT)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONCENTER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -643,7 +645,7 @@ HB_FUNC_STATIC(QGAMEPAD_BUTTONCENTER)
 HB_FUNC_STATIC(QGAMEPAD_BUTTONGUIDE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
-  QGamepad *obj = qobject_cast<QGamepad *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
