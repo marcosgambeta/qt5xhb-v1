@@ -54,7 +54,10 @@ RETURN
 
 #include <QtDesigner/QExtensionManager>
 
-    // QExtensionFactory( QExtensionManager * parent = 0 )
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QExtensionFactory *p = qobject_cast<QExtensionFactory *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QExtensionFactory( QExtensionManager * parent = 0 )
 HB_FUNC_STATIC(QEXTENSIONFACTORY_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQEXTENSIONMANAGERORNIL(1)) {
@@ -67,7 +70,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_NEW)
 
 HB_FUNC_STATIC(QEXTENSIONFACTORY_DELETE)
 {
-  QExtensionFactory *obj = qobject_cast<QExtensionFactory *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -85,7 +88,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_DELETE)
 // QExtensionManager * extensionManager() const
 HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
 {
-  QExtensionFactory *obj = qobject_cast<QExtensionFactory *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +107,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
 // virtual QObject * extension( QObject * object, const QString & iid ) const
 HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSION)
 {
-  QExtensionFactory *obj = qobject_cast<QExtensionFactory *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

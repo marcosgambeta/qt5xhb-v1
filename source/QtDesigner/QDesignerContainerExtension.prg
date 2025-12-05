@@ -62,9 +62,12 @@ RETURN
 #include <QtDesigner/QDesignerContainerExtension>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDesignerContainerExtension *p = static_cast<QDesignerContainerExtension *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_DELETE)
 {
-  QDesignerContainerExtension *obj = static_cast<QDesignerContainerExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -80,7 +83,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_DELETE)
 // virtual void addWidget( QWidget * page ) = 0
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_ADDWIDGET)
 {
-  QDesignerContainerExtension *obj = static_cast<QDesignerContainerExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +103,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_ADDWIDGET)
 // virtual int count() const = 0
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_COUNT)
 {
-  QDesignerContainerExtension *obj = static_cast<QDesignerContainerExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +121,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_COUNT)
 // virtual int currentIndex() const = 0
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_CURRENTINDEX)
 {
-  QDesignerContainerExtension *obj = static_cast<QDesignerContainerExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +139,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_CURRENTINDEX)
 // virtual void insertWidget( int index, QWidget * page ) = 0
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_INSERTWIDGET)
 {
-  QDesignerContainerExtension *obj = static_cast<QDesignerContainerExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +159,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_INSERTWIDGET)
 // virtual void remove( int index ) = 0
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_REMOVE)
 {
-  QDesignerContainerExtension *obj = static_cast<QDesignerContainerExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +179,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_REMOVE)
 // virtual void setCurrentIndex( int index ) = 0
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX)
 {
-  QDesignerContainerExtension *obj = static_cast<QDesignerContainerExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +199,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX)
 // virtual QWidget * widget( int index ) const = 0
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_WIDGET)
 {
-  QDesignerContainerExtension *obj = static_cast<QDesignerContainerExtension *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

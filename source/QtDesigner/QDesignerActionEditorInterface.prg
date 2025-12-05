@@ -51,12 +51,15 @@ RETURN
 #include <QtDesigner/QDesignerActionEditorInterface>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDesignerActionEditorInterface *p =                                                                                  \
+      qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 #include <QtDesigner/QDesignerFormEditorInterface>
 
 HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_DELETE)
 {
-  QDesignerActionEditorInterface *obj =
-      qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -74,8 +77,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_DELETE)
 // virtual QDesignerFormEditorInterface * core() const
 HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_CORE)
 {
-  QDesignerActionEditorInterface *obj =
-      qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -94,8 +96,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_CORE)
 // virtual void manageAction( QAction * action ) = 0
 HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION)
 {
-  QDesignerActionEditorInterface *obj =
-      qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -115,8 +116,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION)
 // virtual void setFormWindow( QDesignerFormWindowInterface * formWindow ) = 0
 HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW)
 {
-  QDesignerActionEditorInterface *obj =
-      qobject_cast<QDesignerActionEditorInterface *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

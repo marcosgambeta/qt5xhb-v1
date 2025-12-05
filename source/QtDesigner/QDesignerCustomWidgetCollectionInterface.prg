@@ -56,10 +56,13 @@ RETURN
 #include <QtDesigner/QDesignerCustomWidgetCollectionInterface>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDesignerCustomWidgetCollectionInterface *p =                                                                        \
+      static_cast<QDesignerCustomWidgetCollectionInterface *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE)
 {
-  QDesignerCustomWidgetCollectionInterface *obj =
-      static_cast<QDesignerCustomWidgetCollectionInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -75,8 +78,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE)
 // virtual QList<QDesignerCustomWidgetInterface *> customWidgets() const = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS)
 {
-  QDesignerCustomWidgetCollectionInterface *obj =
-      static_cast<QDesignerCustomWidgetCollectionInterface *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
