@@ -78,6 +78,8 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) QIcon *p = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem()
+
 HB_FUNC_STATIC(QICON_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -103,7 +105,7 @@ HB_FUNC_STATIC(QICON_NEW)
 
 HB_FUNC_STATIC(QICON_DELETE)
 {
-  QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QICON_DELETE)
 // QSize actualSize( const QSize &size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 HB_FUNC_STATIC(QICON_ACTUALSIZE)
 {
-  QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QICON_ACTUALSIZE)
 // void addFile( const QString &fileName, const QSize &size = QSize(), QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 HB_FUNC_STATIC(QICON_ADDFILE)
 {
-  QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +165,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
 // void addPixmap( const QPixmap &pixmap, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 HB_FUNC_STATIC(QICON_ADDPIXMAP)
 {
-  QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +186,7 @@ HB_FUNC_STATIC(QICON_ADDPIXMAP)
 // QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 HB_FUNC_STATIC(QICON_AVAILABLESIZES)
 {
-  QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +227,7 @@ HB_FUNC_STATIC(QICON_AVAILABLESIZES)
 // qint64 cacheKey() const
 HB_FUNC_STATIC(QICON_CACHEKEY)
 {
-  QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +245,7 @@ HB_FUNC_STATIC(QICON_CACHEKEY)
 // bool isNull() const
 HB_FUNC_STATIC(QICON_ISNULL)
 {
-  QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QICON_ISNULL)
 // QString name() const
 HB_FUNC_STATIC(QICON_NAME)
 {
-  QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +283,7 @@ HB_FUNC_STATIC(QICON_PAINT)
   if (ISBETWEEN(2, 5) && ISQPAINTER(1) && ISQRECT(2) && ISNUMORNIL(3) && ISNUMORNIL(4) &&
       ISNUMORNIL(5)) {
     // void paint( QPainter * painter, const QRect &rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-    QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->paint(PQPAINTER(1), *PQRECT(2), HB_ISNIL(3) ? (Qt::Alignment)Qt::AlignCenter : (Qt::Alignment)hb_parni(3),
@@ -293,7 +295,7 @@ HB_FUNC_STATIC(QICON_PAINT)
   } else if (ISBETWEEN(5, 8) && ISQPAINTER(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
            ISNUMORNIL(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
     // void paint( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-    QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->paint(PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5),
@@ -312,7 +314,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
 {
   if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QPixmap pixmap( const QSize &size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-    QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QPixmap *ptr =
@@ -323,7 +325,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
            ISNUMORNIL(4)) {
     // QPixmap pixmap( int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-    QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QPixmap *ptr =
@@ -333,7 +335,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     }
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QPixmap pixmap( int extent, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
-    QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QPixmap *ptr =
@@ -476,7 +478,7 @@ HB_FUNC_STATIC(QICON_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
     // QVariant toVariant()
-    QIcon *obj = (QIcon *)Qt5xHb::itemGetPtrStackSelfItem();
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QVariant *variant = new QVariant();
