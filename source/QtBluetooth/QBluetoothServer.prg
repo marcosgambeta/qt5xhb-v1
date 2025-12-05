@@ -71,6 +71,9 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QBluetoothServer *p = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 // QBluetoothServer( QBluetoothServiceInfo::Protocol serverType, QObject * parent = 0 )
 HB_FUNC_STATIC(QBLUETOOTHSERVER_NEW)
 {
@@ -87,7 +90,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_NEW)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -107,7 +110,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_DELETE)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_CLOSE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +133,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
   if (ISBETWEEN(0, 2) && ISQBLUETOOTHADDRESSORNIL(1) && ISNUMORNIL(2)) {
     // bool listen( const QBluetoothAddress & address = QBluetoothAddress(), quint16 port = 0 )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->listen(HB_ISNIL(1) ? QBluetoothAddress() : *(QBluetoothAddress *)Qt5xHb::itemGetPtr(1),
@@ -140,7 +143,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
   } else if (ISBETWEEN(1, 2) && ISQBLUETOOTHUUID(1) && ISCHARORNIL(2)) {
     // QBluetoothServiceInfo listen( const QBluetoothUuid & uuid, const QString & serviceName = QString() )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-    QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QBluetoothServiceInfo *ptr = new QBluetoothServiceInfo(obj->listen(*PQBLUETOOTHUUID(1), OPQSTRING(2, QString())));
@@ -156,7 +159,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_ISLISTENING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +179,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_ISLISTENING)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_SETMAXPENDINGCONNECTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +201,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_SETMAXPENDINGCONNECTIONS)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_MAXPENDINGCONNECTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -218,7 +221,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_MAXPENDINGCONNECTIONS)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_HASPENDINGCONNECTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -238,7 +241,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_HASPENDINGCONNECTIONS)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_NEXTPENDINGCONNECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +262,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_NEXTPENDINGCONNECTION)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_SERVERADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -280,7 +283,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_SERVERADDRESS)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_SERVERPORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,7 +303,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_SERVERPORT)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_SETSECURITYFLAGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -322,7 +325,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_SETSECURITYFLAGS)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_SECURITYFLAGS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -342,7 +345,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_SECURITYFLAGS)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_SERVERTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -362,7 +365,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_SERVERTYPE)
 HB_FUNC_STATIC(QBLUETOOTHSERVER_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothServer *obj = qobject_cast<QBluetoothServer *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

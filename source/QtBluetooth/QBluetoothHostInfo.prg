@@ -64,6 +64,9 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QBluetoothHostInfo *p = static_cast<QBluetoothHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -86,7 +89,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_NEW)
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothHostInfo *obj = static_cast<QBluetoothHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -104,7 +107,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_DELETE)
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_ADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothHostInfo *obj = static_cast<QBluetoothHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +128,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_ADDRESS)
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_SETADDRESS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothHostInfo *obj = static_cast<QBluetoothHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +150,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_SETADDRESS)
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_NAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothHostInfo *obj = static_cast<QBluetoothHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +170,7 @@ HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_NAME)
 HB_FUNC_STATIC(QBLUETOOTHHOSTINFO_SETNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
-  QBluetoothHostInfo *obj = static_cast<QBluetoothHostInfo *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
