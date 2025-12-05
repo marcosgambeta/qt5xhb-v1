@@ -64,6 +64,9 @@ RETURN
 
 #include <QtDeclarative/QDeclarativeContext>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDeclarativeScriptString *p = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -82,7 +85,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_NEW)
 // QDeclarativeContext * context() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
 {
-  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +104,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
 // QObject * scopeObject() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCOPEOBJECT)
 {
-  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +123,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCOPEOBJECT)
 // QString script() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
 {
-  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +141,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
 // void setContext( QDeclarativeContext * context )
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
 {
-  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +161,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
 // void setScopeObject( QObject * object )
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
 {
-  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +181,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
 // void setScript( const QString & script )
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCRIPT)
 {
-  QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

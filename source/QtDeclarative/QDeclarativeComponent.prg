@@ -71,6 +71,9 @@ RETURN
 
 #include <QtDeclarative/QDeclarativeContext>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDeclarativeComponent *p = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && ISQOBJECTORNIL(2)) {
@@ -92,7 +95,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
 
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_DELETE)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -110,7 +113,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_DELETE)
 // virtual QObject * beginCreate( QDeclarativeContext * context )
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_BEGINCREATE)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +132,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_BEGINCREATE)
 // virtual void completeCreate()
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_COMPLETECREATE)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +152,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_COMPLETECREATE)
 // virtual QObject * create( QDeclarativeContext * context = 0 )
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATE)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +171,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATE)
 // QDeclarativeContext * creationContext() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATIONCONTEXT)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +190,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATIONCONTEXT)
 // QList<QDeclarativeError> errors() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ERRORS)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +230,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ERRORS)
 // bool isError() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISERROR)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +248,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISERROR)
 // bool isLoading() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISLOADING)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +266,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISLOADING)
 // bool isNull() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISNULL)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +284,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISNULL)
 // bool isReady() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISREADY)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +302,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISREADY)
 // void loadUrl( const QUrl & url )
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_LOADURL)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -319,7 +322,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_LOADURL)
 // qreal progress() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_PROGRESS)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -337,7 +340,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_PROGRESS)
 // void setData( const QByteArray & data, const QUrl & url )
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_SETDATA)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -357,7 +360,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_SETDATA)
 // QDeclarativeComponent::Status status() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_STATUS)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -375,7 +378,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_STATUS)
 // QUrl url() const
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_URL)
 {
-  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

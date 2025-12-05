@@ -79,6 +79,9 @@ RETURN
 #include <QtDeclarative/QDeclarativeProperty>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDeclarativeProperty *p = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -122,14 +125,14 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     // bool connectNotifySignal( QObject * dest, const char * slot ) const
-    QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->connectNotifySignal(PQOBJECT(1), PCONSTCHAR(2)));
     }
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
     // bool connectNotifySignal( QObject * dest, int method ) const
-    QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->connectNotifySignal(PQOBJECT(1), PINT(2)));
@@ -142,7 +145,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL)
 // bool hasNotifySignal() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +163,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL)
 // int index() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_INDEX)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +181,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_INDEX)
 // bool isDesignable() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISDESIGNABLE)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +199,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISDESIGNABLE)
 // bool isProperty() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISPROPERTY)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +217,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISPROPERTY)
 // bool isResettable() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISRESETTABLE)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -232,7 +235,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISRESETTABLE)
 // bool isSignalProperty() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISSIGNALPROPERTY)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +253,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISSIGNALPROPERTY)
 // bool isValid() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISVALID)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -268,7 +271,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISVALID)
 // bool isWritable() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISWRITABLE)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +289,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISWRITABLE)
 // QMetaMethod method() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_METHOD)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,7 +308,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_METHOD)
 // QString name() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NAME)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +326,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NAME)
 // bool needsNotifySignal() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +344,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL)
 // QObject * object() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_OBJECT)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -360,7 +363,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_OBJECT)
 // QMetaProperty property() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTY)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,7 +382,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTY)
 // int propertyType() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPE)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -397,7 +400,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPE)
 // QDeclarativeProperty::PropertyTypeCategory propertyTypeCategory() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -415,7 +418,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY)
 // const char * propertyTypeName() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPENAME)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -433,7 +436,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPENAME)
 // bool reset() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_RESET)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -451,7 +454,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_RESET)
 // QDeclarativeProperty::Type type() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_TYPE)
 {
-  QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -470,7 +473,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
 {
   if (ISNUMPAR(0)) {
     // QVariant read() const
-    QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QVariant *ptr = new QVariant(obj->read());
@@ -500,7 +503,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_WRITE)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1)) {
     // bool write( const QVariant & value ) const
-    QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt5xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->write(*PQVARIANT(1)));

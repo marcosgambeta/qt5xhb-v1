@@ -59,6 +59,9 @@ RETURN
 #include <QtDeclarative/QDeclarativePropertyMap>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDeclarativePropertyMap *p = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 // QDeclarativePropertyMap( QObject * parent = 0 )
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_NEW)
 {
@@ -72,7 +75,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_NEW)
 
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_DELETE)
 {
-  QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -90,7 +93,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_DELETE)
 // void clear( const QString & key )
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CLEAR)
 {
-  QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +113,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CLEAR)
 // bool contains( const QString & key ) const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CONTAINS)
 {
-  QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +131,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CONTAINS)
 // int count() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_COUNT)
 {
-  QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +149,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_COUNT)
 // void insert( const QString & key, const QVariant & value )
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_INSERT)
 {
-  QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +169,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_INSERT)
 // bool isEmpty() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_ISEMPTY)
 {
-  QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +187,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_ISEMPTY)
 // QStringList keys() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_KEYS)
 {
-  QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +205,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_KEYS)
 // int size() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_SIZE)
 {
-  QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +223,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_SIZE)
 // QVariant value( const QString & key ) const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_VALUE)
 {
-  QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -72,6 +72,9 @@ RETURN
 #include <QtDeclarative/QDeclarativeContext>
 #include <QtWidgets/QGraphicsObject>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDeclarativeView *p = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDECLARATIVEVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -89,7 +92,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_NEW)
 
 HB_FUNC_STATIC(QDECLARATIVEVIEW_DELETE)
 {
-  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -107,7 +110,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_DELETE)
 // QDeclarativeEngine * engine() const
 HB_FUNC_STATIC(QDECLARATIVEVIEW_ENGINE)
 {
-  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +129,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ENGINE)
 // QList<QDeclarativeError> errors() const
 HB_FUNC_STATIC(QDECLARATIVEVIEW_ERRORS)
 {
-  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +169,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ERRORS)
 // QSize initialSize() const
 HB_FUNC_STATIC(QDECLARATIVEVIEW_INITIALSIZE)
 {
-  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +188,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_INITIALSIZE)
 // QDeclarativeView::ResizeMode resizeMode() const
 HB_FUNC_STATIC(QDECLARATIVEVIEW_RESIZEMODE)
 {
-  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +206,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_RESIZEMODE)
 // QDeclarativeContext * rootContext() const
 HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTCONTEXT)
 {
-  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +225,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTCONTEXT)
 // QGraphicsObject * rootObject() const
 HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTOBJECT)
 {
-  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +244,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTOBJECT)
 // void setResizeMode( QDeclarativeView::ResizeMode )
 HB_FUNC_STATIC(QDECLARATIVEVIEW_SETRESIZEMODE)
 {
-  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +264,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SETRESIZEMODE)
 // void setSource( const QUrl & url )
 HB_FUNC_STATIC(QDECLARATIVEVIEW_SETSOURCE)
 {
-  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +284,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SETSOURCE)
 // QUrl source() const
 HB_FUNC_STATIC(QDECLARATIVEVIEW_SOURCE)
 {
-  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -300,7 +303,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SOURCE)
 // QDeclarativeView::Status status() const
 HB_FUNC_STATIC(QDECLARATIVEVIEW_STATUS)
 {
-  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt5xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

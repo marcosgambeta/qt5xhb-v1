@@ -58,10 +58,13 @@ RETURN
 
 #include <QtNetwork/QNetworkAccessManager>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDeclarativeNetworkAccessManagerFactory *p =                                                                         \
+      static_cast<QDeclarativeNetworkAccessManagerFactory *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE)
 {
-  QDeclarativeNetworkAccessManagerFactory *obj =
-      static_cast<QDeclarativeNetworkAccessManagerFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -77,8 +80,7 @@ HB_FUNC_STATIC(QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE)
 // virtual QNetworkAccessManager * create( QObject * parent ) = 0
 HB_FUNC_STATIC(QDECLARATIVENETWORKACCESSMANAGERFACTORY_CREATE)
 {
-  QDeclarativeNetworkAccessManagerFactory *obj =
-      static_cast<QDeclarativeNetworkAccessManagerFactory *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

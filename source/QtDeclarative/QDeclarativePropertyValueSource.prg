@@ -54,10 +54,12 @@ RETURN
 #include <QtDeclarative/QDeclarativePropertyValueSource>
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDeclarativePropertyValueSource *p = static_cast<QDeclarativePropertyValueSource *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYVALUESOURCE_DELETE)
 {
-  QDeclarativePropertyValueSource *obj =
-      static_cast<QDeclarativePropertyValueSource *>(Qt5xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
