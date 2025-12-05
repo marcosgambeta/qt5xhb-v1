@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QPlaceContentRequest
@@ -71,20 +71,19 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPlaceContentRequest *p = static_cast<QPlaceContentRequest *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceContentRequest()
-    */
+    // QPlaceContentRequest()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceContentRequest *obj = new QPlaceContentRequest();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACECONTENTREQUEST(1)) {
-    /*
-    QPlaceContentRequest( const QPlaceContentRequest &other )
-    */
+    // QPlaceContentRequest( const QPlaceContentRequest & other )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceContentRequest *obj = new QPlaceContentRequest(*PQPLACECONTENTREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -97,7 +96,7 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_NEW)
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContentRequest *obj = (QPlaceContentRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -111,13 +110,11 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_DELETE)
 #endif
 }
 
-/*
-QPlaceContent::Type contentType() const
-*/
+// QPlaceContent::Type contentType() const
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_CONTENTTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContentRequest *obj = (QPlaceContentRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,13 +130,11 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_CONTENTTYPE)
 #endif
 }
 
-/*
-void setContentType( QPlaceContent::Type type )
-*/
+// void setContentType( QPlaceContent::Type type )
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_SETCONTENTTYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContentRequest *obj = (QPlaceContentRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,13 +152,11 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_SETCONTENTTYPE)
 #endif
 }
 
-/*
-QString placeId() const
-*/
+// QString placeId() const
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_PLACEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContentRequest *obj = (QPlaceContentRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,13 +172,11 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_PLACEID)
 #endif
 }
 
-/*
-void setPlaceId( const QString &identifier )
-*/
+// void setPlaceId( const QString & identifier )
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_SETPLACEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContentRequest *obj = (QPlaceContentRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,13 +194,11 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_SETPLACEID)
 #endif
 }
 
-/*
-QVariant contentContext() const
-*/
+// QVariant contentContext() const
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_CONTENTCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContentRequest *obj = (QPlaceContentRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,13 +215,11 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_CONTENTCONTEXT)
 #endif
 }
 
-/*
-void setContentContext( const QVariant &context )
-*/
+// void setContentContext( const QVariant & context )
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_SETCONTENTCONTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContentRequest *obj = (QPlaceContentRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,13 +237,11 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_SETCONTENTCONTEXT)
 #endif
 }
 
-/*
-int limit() const
-*/
+// int limit() const
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_LIMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContentRequest *obj = (QPlaceContentRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -272,13 +257,11 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_LIMIT)
 #endif
 }
 
-/*
-void setLimit( int limit )
-*/
+// void setLimit( int limit )
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_SETLIMIT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContentRequest *obj = (QPlaceContentRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -296,13 +279,11 @@ HB_FUNC_STATIC(QPLACECONTENTREQUEST_SETLIMIT)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QPLACECONTENTREQUEST_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContentRequest *obj = (QPlaceContentRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLACEICON
+REQUEST QPlaceIcon
 #endif
 
 CLASS QPlaceSearchResult
@@ -67,20 +67,19 @@ RETURN
 
 #include <QtLocation/QPlaceIcon>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPlaceSearchResult *p = static_cast<QPlaceSearchResult *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPLACESEARCHRESULT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceSearchResult()
-    */
+    // QPlaceSearchResult()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceSearchResult *obj = new QPlaceSearchResult();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACESEARCHRESULT(1)) {
-    /*
-    QPlaceSearchResult( const QPlaceSearchResult &other )
-    */
+    // QPlaceSearchResult( const QPlaceSearchResult & other )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceSearchResult *obj = new QPlaceSearchResult(*PQPLACESEARCHRESULT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -93,7 +92,7 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_NEW)
 HB_FUNC_STATIC(QPLACESEARCHRESULT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchResult *obj = (QPlaceSearchResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -107,13 +106,11 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_DELETE)
 #endif
 }
 
-/*
-QPlaceSearchResult::SearchResultType type() const
-*/
+// QPlaceSearchResult::SearchResultType type() const
 HB_FUNC_STATIC(QPLACESEARCHRESULT_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchResult *obj = (QPlaceSearchResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -129,13 +126,11 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_TYPE)
 #endif
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QPLACESEARCHRESULT_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchResult *obj = (QPlaceSearchResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -151,13 +146,11 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_TITLE)
 #endif
 }
 
-/*
-void setTitle( const QString &title )
-*/
+// void setTitle( const QString & title )
 HB_FUNC_STATIC(QPLACESEARCHRESULT_SETTITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchResult *obj = (QPlaceSearchResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -175,13 +168,11 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_SETTITLE)
 #endif
 }
 
-/*
-QPlaceIcon icon() const
-*/
+// QPlaceIcon icon() const
 HB_FUNC_STATIC(QPLACESEARCHRESULT_ICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchResult *obj = (QPlaceSearchResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -198,13 +189,11 @@ HB_FUNC_STATIC(QPLACESEARCHRESULT_ICON)
 #endif
 }
 
-/*
-void setIcon( const QPlaceIcon &icon )
-*/
+// void setIcon( const QPlaceIcon & icon )
 HB_FUNC_STATIC(QPLACESEARCHRESULT_SETICON)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchResult *obj = (QPlaceSearchResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

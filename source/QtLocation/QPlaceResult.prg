@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLACE
+REQUEST QPlace
 #endif
 
 CLASS QPlaceResult INHERIT QPlaceSearchResult
@@ -57,9 +57,9 @@ RETURN
 #endif
 #endif
 
-    /*
-    QPlaceResult()
-    */
+#define GET_PTR_FROM_SELF(p) QPlaceResult *p = static_cast<QPlaceResult *>(Qt5xHb::itemGetPtrStackSelfItem())
+
+// QPlaceResult()
 HB_FUNC_STATIC(QPLACERESULT_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QPLACERESULT_NEW)
 HB_FUNC_STATIC(QPLACERESULT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -89,13 +89,11 @@ HB_FUNC_STATIC(QPLACERESULT_DELETE)
 #endif
 }
 
-/*
-qreal distance() const
-*/
+// qreal distance() const
 HB_FUNC_STATIC(QPLACERESULT_DISTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -111,13 +109,11 @@ HB_FUNC_STATIC(QPLACERESULT_DISTANCE)
 #endif
 }
 
-/*
-void setDistance( qreal distance )
-*/
+// void setDistance( qreal distance )
 HB_FUNC_STATIC(QPLACERESULT_SETDISTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,13 +131,11 @@ HB_FUNC_STATIC(QPLACERESULT_SETDISTANCE)
 #endif
 }
 
-/*
-QPlace place() const
-*/
+// QPlace place() const
 HB_FUNC_STATIC(QPLACERESULT_PLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -158,13 +152,11 @@ HB_FUNC_STATIC(QPLACERESULT_PLACE)
 #endif
 }
 
-/*
-void setPlace( const QPlace &place )
-*/
+// void setPlace( const QPlace & place )
 HB_FUNC_STATIC(QPLACERESULT_SETPLACE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,13 +174,11 @@ HB_FUNC_STATIC(QPLACERESULT_SETPLACE)
 #endif
 }
 
-/*
-bool isSponsored() const
-*/
+// bool isSponsored() const
 HB_FUNC_STATIC(QPLACERESULT_ISSPONSORED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,13 +194,11 @@ HB_FUNC_STATIC(QPLACERESULT_ISSPONSORED)
 #endif
 }
 
-/*
-void setSponsored( bool sponsored )
-*/
+// void setSponsored( bool sponsored )
 HB_FUNC_STATIC(QPLACERESULT_SETSPONSORED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceResult *obj = (QPlaceResult *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

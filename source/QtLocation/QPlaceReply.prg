@@ -60,9 +60,9 @@ RETURN
 #endif
 #endif
 
-    /*
-    QPlaceReply( QObject * parent = 0 )
-    */
+#define GET_PTR_FROM_SELF(p) QPlaceReply *p = qobject_cast<QPlaceReply *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QPlaceReply( QObject * parent = 0 )
 HB_FUNC_STATIC(QPLACEREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QPLACEREPLY_NEW)
 HB_FUNC_STATIC(QPLACEREPLY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceReply *obj = (QPlaceReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -94,13 +94,11 @@ HB_FUNC_STATIC(QPLACEREPLY_DELETE)
 #endif
 }
 
-/*
-bool isFinished() const
-*/
+// bool isFinished() const
 HB_FUNC_STATIC(QPLACEREPLY_ISFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceReply *obj = (QPlaceReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -116,13 +114,11 @@ HB_FUNC_STATIC(QPLACEREPLY_ISFINISHED)
 #endif
 }
 
-/*
-virtual QPlaceReply::Type type() const
-*/
+// virtual QPlaceReply::Type type() const
 HB_FUNC_STATIC(QPLACEREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceReply *obj = (QPlaceReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,13 +134,11 @@ HB_FUNC_STATIC(QPLACEREPLY_TYPE)
 #endif
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QPLACEREPLY_ERRORSTRING)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceReply *obj = (QPlaceReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -160,13 +154,11 @@ HB_FUNC_STATIC(QPLACEREPLY_ERRORSTRING)
 #endif
 }
 
-/*
-QPlaceReply::Error error() const
-*/
+// QPlaceReply::Error error() const
 HB_FUNC_STATIC(QPLACEREPLY_ERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceReply *obj = (QPlaceReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -182,13 +174,11 @@ HB_FUNC_STATIC(QPLACEREPLY_ERROR)
 #endif
 }
 
-/*
-virtual void abort()
-*/
+// virtual void abort()
 HB_FUNC_STATIC(QPLACEREPLY_ABORT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceReply *obj = (QPlaceReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -208,10 +198,12 @@ HB_FUNC_STATIC(QPLACEREPLY_ABORT)
 
 void QPlaceReplySlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QPlaceReplySlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QPLACEREPLY_ONFINISHED)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceReplySlots_connect_signal("finished()", "finished()");
+  CONNECT_SIGNAL("finished()");
 #else
   hb_retl(false);
 #endif
@@ -220,7 +212,7 @@ HB_FUNC_STATIC(QPLACEREPLY_ONFINISHED)
 HB_FUNC_STATIC(QPLACEREPLY_ONERROR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceReplySlots_connect_signal("error(QPlaceReply::Error,QString)", "error(QPlaceReply::Error,QString)");
+  CONNECT_SIGNAL("error(QPlaceReply::Error,QString)");
 #else
   hb_retl(false);
 #endif

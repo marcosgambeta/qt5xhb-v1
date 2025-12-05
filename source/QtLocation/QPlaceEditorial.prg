@@ -56,20 +56,18 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) QPlaceEditorial *p = static_cast<QPlaceEditorial *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPLACEEDITORIAL_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceEditorial()
-    */
+    // QPlaceEditorial()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceEditorial *obj = new QPlaceEditorial();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACECONTENT(1)) {
-    /*
-    QPlaceEditorial( const QPlaceContent &other )
-    */
+    // QPlaceEditorial( const QPlaceContent & other )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceEditorial *obj = new QPlaceEditorial(*PQPLACECONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -82,7 +80,7 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_NEW)
 HB_FUNC_STATIC(QPLACEEDITORIAL_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceEditorial *obj = (QPlaceEditorial *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -96,13 +94,11 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_DELETE)
 #endif
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QPLACEEDITORIAL_TEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceEditorial *obj = (QPlaceEditorial *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,13 +114,11 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_TEXT)
 #endif
 }
 
-/*
-void setText( const QString &text )
-*/
+// void setText( const QString & text )
 HB_FUNC_STATIC(QPLACEEDITORIAL_SETTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceEditorial *obj = (QPlaceEditorial *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -142,13 +136,11 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_SETTEXT)
 #endif
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QPLACEEDITORIAL_TITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceEditorial *obj = (QPlaceEditorial *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,13 +156,11 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_TITLE)
 #endif
 }
 
-/*
-void setTitle( const QString &data )
-*/
+// void setTitle( const QString & data )
 HB_FUNC_STATIC(QPLACEEDITORIAL_SETTITLE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceEditorial *obj = (QPlaceEditorial *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,13 +178,11 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_SETTITLE)
 #endif
 }
 
-/*
-QString language() const
-*/
+// QString language() const
 HB_FUNC_STATIC(QPLACEEDITORIAL_LANGUAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceEditorial *obj = (QPlaceEditorial *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -210,13 +198,11 @@ HB_FUNC_STATIC(QPLACEEDITORIAL_LANGUAGE)
 #endif
 }
 
-/*
-void setLanguage( const QString &data )
-*/
+// void setLanguage( const QString & data )
 HB_FUNC_STATIC(QPLACEEDITORIAL_SETLANGUAGE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceEditorial *obj = (QPlaceEditorial *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -61,20 +61,19 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPlaceMatchRequest *p = static_cast<QPlaceMatchRequest *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPLACEMATCHREQUEST_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceMatchRequest()
-    */
+    // QPlaceMatchRequest()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceMatchRequest *obj = new QPlaceMatchRequest();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACEMATCHREQUEST(1)) {
-    /*
-    QPlaceMatchRequest( const QPlaceMatchRequest &other )
-    */
+    // QPlaceMatchRequest( const QPlaceMatchRequest & other )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceMatchRequest *obj = new QPlaceMatchRequest(*PQPLACEMATCHREQUEST(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -87,7 +86,7 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_NEW)
 HB_FUNC_STATIC(QPLACEMATCHREQUEST_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceMatchRequest *obj = (QPlaceMatchRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -101,13 +100,11 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_DELETE)
 #endif
 }
 
-/*
-void setResults( const QList<QPlaceSearchResult> &results )
-*/
+// void setResults( const QList<QPlaceSearchResult> & results )
 HB_FUNC_STATIC(QPLACEMATCHREQUEST_SETRESULTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceMatchRequest *obj = (QPlaceMatchRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -131,13 +128,11 @@ HB_FUNC_STATIC(QPLACEMATCHREQUEST_SETRESULTS)
 #endif
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QPLACEMATCHREQUEST_CLEAR)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceMatchRequest *obj = (QPlaceMatchRequest *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

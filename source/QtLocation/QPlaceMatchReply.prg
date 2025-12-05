@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLACE
-REQUEST QPLACEMATCHREQUEST
+REQUEST QPlace
+REQUEST QPlaceMatchRequest
 #endif
 
 CLASS QPlaceMatchReply INHERIT QPlaceReply
@@ -57,9 +57,10 @@ RETURN
 #endif
 #endif
 
-    /*
-    QPlaceMatchReply( QObject * parent = 0 )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPlaceMatchReply *p = qobject_cast<QPlaceMatchReply *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QPlaceMatchReply( QObject * parent = 0 )
 HB_FUNC_STATIC(QPLACEMATCHREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -75,7 +76,7 @@ HB_FUNC_STATIC(QPLACEMATCHREPLY_NEW)
 HB_FUNC_STATIC(QPLACEMATCHREPLY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceMatchReply *obj = (QPlaceMatchReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -91,13 +92,11 @@ HB_FUNC_STATIC(QPLACEMATCHREPLY_DELETE)
 #endif
 }
 
-/*
-QPlaceReply::Type type() const
-*/
+// QPlaceReply::Type type() const
 HB_FUNC_STATIC(QPLACEMATCHREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceMatchReply *obj = (QPlaceMatchReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,13 +112,11 @@ HB_FUNC_STATIC(QPLACEMATCHREPLY_TYPE)
 #endif
 }
 
-/*
-QList<QPlace> places() const
-*/
+// QList<QPlace> places() const
 HB_FUNC_STATIC(QPLACEMATCHREPLY_PLACES)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceMatchReply *obj = (QPlaceMatchReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,13 +154,11 @@ HB_FUNC_STATIC(QPLACEMATCHREPLY_PLACES)
 #endif
 }
 
-/*
-QPlaceMatchRequest request() const
-*/
+// QPlaceMatchRequest request() const
 HB_FUNC_STATIC(QPLACEMATCHREPLY_REQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceMatchReply *obj = (QPlaceMatchReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

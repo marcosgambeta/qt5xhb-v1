@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGEOCOORDINATE
-REQUEST QGEORECTANGLE
-REQUEST QGEOROUTEREQUEST
-REQUEST QGEOROUTESEGMENT
+REQUEST QGeoCoordinate
+REQUEST QGeoRectangle
+REQUEST QGeoRouteRequest
+REQUEST QGeoRouteSegment
 #endif
 
 CLASS QGeoRoute
@@ -82,20 +82,18 @@ RETURN
 #include <QtPositioning/QGeoRectangle>
 #include <QtLocation/QGeoRouteSegment>
 
+#define GET_PTR_FROM_SELF(p) QGeoRoute *p = static_cast<QGeoRoute *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGEOROUTE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QGeoRoute()
-    */
+    // QGeoRoute()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QGeoRoute *obj = new QGeoRoute();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQGEOMANEUVER(1)) {
-    /*
-    QGeoRoute( const QGeoRoute &other )
-    */
+    // QGeoRoute( const QGeoRoute & other )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QGeoRoute *obj = new QGeoRoute(*PQGEOROUTE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -108,7 +106,7 @@ HB_FUNC_STATIC(QGEOROUTE_NEW)
 HB_FUNC_STATIC(QGEOROUTE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -122,13 +120,11 @@ HB_FUNC_STATIC(QGEOROUTE_DELETE)
 #endif
 }
 
-/*
-void setRouteId( const QString &id )
-*/
+// void setRouteId( const QString & id )
 HB_FUNC_STATIC(QGEOROUTE_SETROUTEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -146,13 +142,11 @@ HB_FUNC_STATIC(QGEOROUTE_SETROUTEID)
 #endif
 }
 
-/*
-QString routeId() const
-*/
+// QString routeId() const
 HB_FUNC_STATIC(QGEOROUTE_ROUTEID)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -168,13 +162,11 @@ HB_FUNC_STATIC(QGEOROUTE_ROUTEID)
 #endif
 }
 
-/*
-void setRequest( const QGeoRouteRequest &request )
-*/
+// void setRequest( const QGeoRouteRequest & request )
 HB_FUNC_STATIC(QGEOROUTE_SETREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -192,13 +184,11 @@ HB_FUNC_STATIC(QGEOROUTE_SETREQUEST)
 #endif
 }
 
-/*
-QGeoRouteRequest request() const
-*/
+// QGeoRouteRequest request() const
 HB_FUNC_STATIC(QGEOROUTE_REQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -215,13 +205,11 @@ HB_FUNC_STATIC(QGEOROUTE_REQUEST)
 #endif
 }
 
-/*
-void setBounds( const QGeoRectangle &bounds )
-*/
+// void setBounds( const QGeoRectangle & bounds )
 HB_FUNC_STATIC(QGEOROUTE_SETBOUNDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,13 +227,11 @@ HB_FUNC_STATIC(QGEOROUTE_SETBOUNDS)
 #endif
 }
 
-/*
-QGeoRectangle bounds() const
-*/
+// QGeoRectangle bounds() const
 HB_FUNC_STATIC(QGEOROUTE_BOUNDS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -262,13 +248,11 @@ HB_FUNC_STATIC(QGEOROUTE_BOUNDS)
 #endif
 }
 
-/*
-void setFirstRouteSegment( const QGeoRouteSegment &routeSegment )
-*/
+// void setFirstRouteSegment( const QGeoRouteSegment & routeSegment )
 HB_FUNC_STATIC(QGEOROUTE_SETFIRSTROUTESEGMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -286,13 +270,11 @@ HB_FUNC_STATIC(QGEOROUTE_SETFIRSTROUTESEGMENT)
 #endif
 }
 
-/*
-QGeoRouteSegment firstRouteSegment() const
-*/
+// QGeoRouteSegment firstRouteSegment() const
 HB_FUNC_STATIC(QGEOROUTE_FIRSTROUTESEGMENT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -309,13 +291,11 @@ HB_FUNC_STATIC(QGEOROUTE_FIRSTROUTESEGMENT)
 #endif
 }
 
-/*
-void setTravelTime( int secs )
-*/
+// void setTravelTime( int secs )
 HB_FUNC_STATIC(QGEOROUTE_SETTRAVELTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -333,13 +313,11 @@ HB_FUNC_STATIC(QGEOROUTE_SETTRAVELTIME)
 #endif
 }
 
-/*
-int travelTime() const
-*/
+// int travelTime() const
 HB_FUNC_STATIC(QGEOROUTE_TRAVELTIME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -355,13 +333,11 @@ HB_FUNC_STATIC(QGEOROUTE_TRAVELTIME)
 #endif
 }
 
-/*
-void setDistance( qreal distance )
-*/
+// void setDistance( qreal distance )
 HB_FUNC_STATIC(QGEOROUTE_SETDISTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -379,13 +355,11 @@ HB_FUNC_STATIC(QGEOROUTE_SETDISTANCE)
 #endif
 }
 
-/*
-qreal distance() const
-*/
+// qreal distance() const
 HB_FUNC_STATIC(QGEOROUTE_DISTANCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -401,13 +375,11 @@ HB_FUNC_STATIC(QGEOROUTE_DISTANCE)
 #endif
 }
 
-/*
-void setTravelMode( QGeoRouteRequest::TravelMode mode )
-*/
+// void setTravelMode( QGeoRouteRequest::TravelMode mode )
 HB_FUNC_STATIC(QGEOROUTE_SETTRAVELMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -425,13 +397,11 @@ HB_FUNC_STATIC(QGEOROUTE_SETTRAVELMODE)
 #endif
 }
 
-/*
-QGeoRouteRequest::TravelMode travelMode() const
-*/
+// QGeoRouteRequest::TravelMode travelMode() const
 HB_FUNC_STATIC(QGEOROUTE_TRAVELMODE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -447,13 +417,11 @@ HB_FUNC_STATIC(QGEOROUTE_TRAVELMODE)
 #endif
 }
 
-/*
-void setPath( const QList<QGeoCoordinate> &path )
-*/
+// void setPath( const QList<QGeoCoordinate> & path )
 HB_FUNC_STATIC(QGEOROUTE_SETPATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -477,13 +445,11 @@ HB_FUNC_STATIC(QGEOROUTE_SETPATH)
 #endif
 }
 
-/*
-QList<QGeoCoordinate> path() const
-*/
+// QList<QGeoCoordinate> path() const
 HB_FUNC_STATIC(QGEOROUTE_PATH)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QGeoRoute *obj = (QGeoRoute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

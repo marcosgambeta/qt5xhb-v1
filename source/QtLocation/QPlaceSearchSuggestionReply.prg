@@ -54,9 +54,10 @@ RETURN
 #endif
 #endif
 
-    /*
-    QPlaceSearchSuggestionReply( QObject * parent = 0 )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPlaceSearchSuggestionReply *p = qobject_cast<QPlaceSearchSuggestionReply *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QPlaceSearchSuggestionReply( QObject * parent = 0 )
 HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -72,7 +73,7 @@ HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_NEW)
 HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchSuggestionReply *obj = (QPlaceSearchSuggestionReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -88,13 +89,11 @@ HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_DELETE)
 #endif
 }
 
-/*
-QStringList suggestions() const
-*/
+// QStringList suggestions() const
 HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchSuggestionReply *obj = (QPlaceSearchSuggestionReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -110,13 +109,11 @@ HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS)
 #endif
 }
 
-/*
-QPlaceReply::Type type() const
-*/
+// QPlaceReply::Type type() const
 HB_FUNC_STATIC(QPLACESEARCHSUGGESTIONREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchSuggestionReply *obj = (QPlaceSearchSuggestionReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

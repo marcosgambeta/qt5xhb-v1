@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLACESUPPLIER
-REQUEST QPLACEUSER
+REQUEST QPlaceSupplier
+REQUEST QPlaceUser
 #endif
 
 CLASS QPlaceContent
@@ -71,20 +71,18 @@ RETURN
 #include <QtLocation/QPlaceSupplier>
 #include <QtLocation/QPlaceUser>
 
+#define GET_PTR_FROM_SELF(p) QPlaceContent *p = static_cast<QPlaceContent *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPLACECONTENT_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceContent()
-    */
+    // QPlaceContent()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceContent *obj = new QPlaceContent();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACECONTENT(1)) {
-    /*
-    QPlaceContent( const QPlaceContent &other )
-    */
+    // QPlaceContent( const QPlaceContent & other )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceContent *obj = new QPlaceContent(*PQPLACECONTENT(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -97,7 +95,7 @@ HB_FUNC_STATIC(QPLACECONTENT_NEW)
 HB_FUNC_STATIC(QPLACECONTENT_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContent *obj = (QPlaceContent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -111,13 +109,11 @@ HB_FUNC_STATIC(QPLACECONTENT_DELETE)
 #endif
 }
 
-/*
-QPlaceContent::Type type() const
-*/
+// QPlaceContent::Type type() const
 HB_FUNC_STATIC(QPLACECONTENT_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContent *obj = (QPlaceContent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,13 +129,11 @@ HB_FUNC_STATIC(QPLACECONTENT_TYPE)
 #endif
 }
 
-/*
-QPlaceSupplier supplier() const
-*/
+// QPlaceSupplier supplier() const
 HB_FUNC_STATIC(QPLACECONTENT_SUPPLIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContent *obj = (QPlaceContent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -156,13 +150,11 @@ HB_FUNC_STATIC(QPLACECONTENT_SUPPLIER)
 #endif
 }
 
-/*
-void setSupplier( const QPlaceSupplier &supplier )
-*/
+// void setSupplier( const QPlaceSupplier & supplier )
 HB_FUNC_STATIC(QPLACECONTENT_SETSUPPLIER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContent *obj = (QPlaceContent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -180,13 +172,11 @@ HB_FUNC_STATIC(QPLACECONTENT_SETSUPPLIER)
 #endif
 }
 
-/*
-QPlaceUser user() const
-*/
+// QPlaceUser user() const
 HB_FUNC_STATIC(QPLACECONTENT_USER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContent *obj = (QPlaceContent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,13 +193,11 @@ HB_FUNC_STATIC(QPLACECONTENT_USER)
 #endif
 }
 
-/*
-void setUser( const QPlaceUser &user )
-*/
+// void setUser( const QPlaceUser & user )
 HB_FUNC_STATIC(QPLACECONTENT_SETUSER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContent *obj = (QPlaceContent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -227,13 +215,11 @@ HB_FUNC_STATIC(QPLACECONTENT_SETUSER)
 #endif
 }
 
-/*
-QString attribution() const
-*/
+// QString attribution() const
 HB_FUNC_STATIC(QPLACECONTENT_ATTRIBUTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContent *obj = (QPlaceContent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -249,13 +235,11 @@ HB_FUNC_STATIC(QPLACECONTENT_ATTRIBUTION)
 #endif
 }
 
-/*
-void setAttribution( const QString &attribution )
-*/
+// void setAttribution( const QString & attribution )
 HB_FUNC_STATIC(QPLACECONTENT_SETATTRIBUTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceContent *obj = (QPlaceContent *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

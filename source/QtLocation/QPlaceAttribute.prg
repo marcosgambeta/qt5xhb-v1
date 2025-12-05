@@ -64,20 +64,18 @@ RETURN
 #endif
 #endif
 
+#define GET_PTR_FROM_SELF(p) QPlaceAttribute *p = static_cast<QPlaceAttribute *>(Qt5xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPLACEATTRIBUTE_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QPlaceAttribute()
-    */
+    // QPlaceAttribute()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceAttribute *obj = new QPlaceAttribute();
     Qt5xHb::returnNewObject(obj, true);
 #endif
   } else if (ISNUMPAR(1) && ISQPLACEATTRIBUTE(1)) {
-    /*
-    QPlaceAttribute( const QPlaceAttribute &other )
-    */
+    // QPlaceAttribute( const QPlaceAttribute & other )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     QPlaceAttribute *obj = new QPlaceAttribute(*PQPLACEATTRIBUTE(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -90,7 +88,7 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_NEW)
 HB_FUNC_STATIC(QPLACEATTRIBUTE_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceAttribute *obj = (QPlaceAttribute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -104,13 +102,11 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_DELETE)
 #endif
 }
 
-/*
-QString label() const
-*/
+// QString label() const
 HB_FUNC_STATIC(QPLACEATTRIBUTE_LABEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceAttribute *obj = (QPlaceAttribute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -126,13 +122,11 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_LABEL)
 #endif
 }
 
-/*
-void setLabel( const QString &label )
-*/
+// void setLabel( const QString & label )
 HB_FUNC_STATIC(QPLACEATTRIBUTE_SETLABEL)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceAttribute *obj = (QPlaceAttribute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -150,13 +144,11 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_SETLABEL)
 #endif
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QPLACEATTRIBUTE_TEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceAttribute *obj = (QPlaceAttribute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -172,13 +164,11 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_TEXT)
 #endif
 }
 
-/*
-void setText( const QString &text )
-*/
+// void setText( const QString & text )
 HB_FUNC_STATIC(QPLACEATTRIBUTE_SETTEXT)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceAttribute *obj = (QPlaceAttribute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -196,13 +186,11 @@ HB_FUNC_STATIC(QPLACEATTRIBUTE_SETTEXT)
 #endif
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QPLACEATTRIBUTE_ISEMPTY)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceAttribute *obj = (QPlaceAttribute *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLACESEARCHREQUEST
-REQUEST QPLACESEARCHRESULT
+REQUEST QPlaceSearchRequest
+REQUEST QPlaceSearchResult
 #endif
 
 CLASS QPlaceSearchReply INHERIT QPlaceReply
@@ -61,9 +61,10 @@ RETURN
 
 #include <QtLocation/QPlaceSearchRequest>
 
-    /*
-    QPlaceSearchReply( QObject * parent = 0 )
-    */
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPlaceSearchReply *p = qobject_cast<QPlaceSearchReply *>(Qt5xHb::getQObjectPointerFromSelfItem())
+
+// QPlaceSearchReply( QObject * parent = 0 )
 HB_FUNC_STATIC(QPLACESEARCHREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -79,7 +80,7 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_NEW)
 HB_FUNC_STATIC(QPLACESEARCHREPLY_DELETE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -95,13 +96,11 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_DELETE)
 #endif
 }
 
-/*
-QPlaceReply::Type type() const
-*/
+// QPlaceReply::Type type() const
 HB_FUNC_STATIC(QPLACESEARCHREPLY_TYPE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -117,13 +116,11 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_TYPE)
 #endif
 }
 
-/*
-QList<QPlaceSearchResult> results() const
-*/
+// QList<QPlaceSearchResult> results() const
 HB_FUNC_STATIC(QPLACESEARCHREPLY_RESULTS)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -161,13 +158,11 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_RESULTS)
 #endif
 }
 
-/*
-QPlaceSearchRequest request() const
-*/
+// QPlaceSearchRequest request() const
 HB_FUNC_STATIC(QPLACESEARCHREPLY_REQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,13 +179,11 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_REQUEST)
 #endif
 }
 
-/*
-QPlaceSearchRequest previousPageRequest() const
-*/
+// QPlaceSearchRequest previousPageRequest() const
 HB_FUNC_STATIC(QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -207,13 +200,11 @@ HB_FUNC_STATIC(QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST)
 #endif
 }
 
-/*
-QPlaceSearchRequest nextPageRequest() const
-*/
+// QPlaceSearchRequest nextPageRequest() const
 HB_FUNC_STATIC(QPLACESEARCHREPLY_NEXTPAGEREQUEST)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  QPlaceSearchReply *obj = (QPlaceSearchReply *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
