@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef QT5XHB_EVENTS_H
-#define QT5XHB_EVENTS_H
+#ifndef QT5XHB_EVENTS_HPP
+#define QT5XHB_EVENTS_HPP
 
 namespace Qt5xHb
 {
@@ -16,4 +16,4 @@ namespace Qt5xHb
   PHB_ITEM Events_return_qobject(QObject * ptr, const char * classname);
 }
 
-#endif // QT5XHB_EVENTS_H
+#endif // QT5XHB_EVENTS_HPP

@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef QT5XHB_MACROS_H
-#define QT5XHB_MACROS_H
+#ifndef QT5XHB_MACROS_HPP
+#define QT5XHB_MACROS_HPP
 
 #include "qt5xhb_macros_activeqt.hpp"
 #include "qt5xhb_macros_qtbluetooth.hpp"
@@ -199,4 +199,4 @@
 #define ISARRAYORNIL(n) (HB_ISARRAY(n) || HB_ISNIL(n))
 #define ISOBJECTORNIL(n) (HB_ISOBJECT(n) || HB_ISNIL(n))
 
-#endif // QT5XHB_MACROS_H
+#endif // QT5XHB_MACROS_HPP
