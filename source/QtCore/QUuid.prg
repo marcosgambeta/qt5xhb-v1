@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QUUID_CREATEUUIDV3)
 
     QUuid *ptr = new QUuid(QUuid::createUuidV3(*PQUUID(1), *PQBYTEARRAY(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
-  } else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQUUID(1) && ISQSTRING(2)) {
     // static QUuid createUuidV3( const QUuid & ns, const QString & baseData )
 
     QUuid *ptr = new QUuid(QUuid::createUuidV3(*PQUUID(1), PQSTRING(2)));
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QUUID_CREATEUUIDV5)
 
     QUuid *ptr = new QUuid(QUuid::createUuidV5(*PQUUID(1), *PQBYTEARRAY(2)));
     Qt5xHb::createReturnClass(ptr, "QUUID", true);
-  } else if (ISNUMPAR(2) && ISQUUID(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQUUID(1) && ISQSTRING(2)) {
     // static QUuid createUuidV5( const QUuid & ns, const QString & baseData )
 
     QUuid *ptr = new QUuid(QUuid::createUuidV5(*PQUUID(1), PQSTRING(2)));

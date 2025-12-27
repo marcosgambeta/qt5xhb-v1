@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QCOLOR_NEW)
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QCOLOR_NEW3);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     HB_FUNC_EXEC(QCOLOR_NEW4);
   } else if (ISNUMPAR(1) && ISQCOLOR(1)) {
     // QColor( const QColor &color )
@@ -1320,7 +1320,7 @@ HB_FUNC_STATIC(QCOLOR_SETNAMEDCOLOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setNamedColor(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1757,7 +1757,7 @@ HB_FUNC_STATIC(QCOLOR_FROMRGBA)
 HB_FUNC_STATIC(QCOLOR_ISVALIDCOLOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RBOOL(QColor::isValidColor(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

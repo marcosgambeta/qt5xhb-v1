@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QBLUETOOTHSERVER_LISTEN)
                         OPQUINT16(2, 0)));
     }
 #endif
-  } else if (ISBETWEEN(1, 2) && ISQBLUETOOTHUUID(1) && ISCHARORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQBLUETOOTHUUID(1) && ISQSTRINGORNIL(2)) {
     // QBluetoothServiceInfo listen( const QBluetoothUuid & uuid, const QString & serviceName = QString() )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     GET_PTR_FROM_SELF(obj);

@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQSTRING(2)) {
     // void setMapping( QObject * sender, const QString & text )
     GET_PTR_FROM_SELF(obj);
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
       QObject *ptr = obj->mapping(PINT(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QObject * mapping( const QString & text ) const
     GET_PTR_FROM_SELF(obj);
 

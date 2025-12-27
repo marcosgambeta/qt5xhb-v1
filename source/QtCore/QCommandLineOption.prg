@@ -69,13 +69,13 @@ RETURN
 
 HB_FUNC_STATIC(QCOMMANDLINEOPTION_NEW)
 {
-  if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4)) {
+  if (ISBETWEEN(1, 4) && ISQSTRING(1) && ISQSTRINGORNIL(2) && ISQSTRINGORNIL(3) && ISQSTRINGORNIL(4)) {
     // QCommandLineOption( const QString & name, const QString & description = QString(), const QString & valueName =
     // QString(), const QString & defaultValue = QString() )
     QCommandLineOption *obj =
         new QCommandLineOption(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString()));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 4) && HB_ISARRAY(1) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4)) {
+  } else if (ISBETWEEN(1, 4) && HB_ISARRAY(1) && ISQSTRINGORNIL(2) && ISQSTRINGORNIL(3) && ISQSTRINGORNIL(4)) {
     // QCommandLineOption( const QStringList & names, const QString & description = QString(), const QString & valueName
     // = QString(), const QString & defaultValue = QString() )
     QCommandLineOption *obj = new QCommandLineOption(PQSTRINGLIST(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()),
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_SETVALUENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setValueName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_SETDESCRIPTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setDescription(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QCOMMANDLINEOPTION_SETDEFAULTVALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setDefaultValue(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

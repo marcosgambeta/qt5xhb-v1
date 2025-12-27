@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEREPLY)
 
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // QDBusMessage createErrorReply( const QString name, const QString & msg ) const
     QDBusMessage *obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERRORREPLY)
       QDBusMessage *ptr = new QDBusMessage(obj->createErrorReply(*PQDBUSERROR(1)));
       Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
     }
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     // QDBusMessage createErrorReply( QDBusError::ErrorType type, const QString & msg ) const
     QDBusMessage *obj = static_cast<QDBusMessage *>(Qt5xHb::itemGetPtrStackSelfItem());
 
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_ARGUMENTS)
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATESIGNAL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
+  if (ISNUMPAR(3) && ISQSTRING(1) && ISQSTRING(2) && ISQSTRING(3)) {
 #endif
     QDBusMessage *ptr = new QDBusMessage(QDBusMessage::createSignal(PQSTRING(1), PQSTRING(2), PQSTRING(3)));
     Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATESIGNAL)
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATEMETHODCALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4)) {
+  if (ISNUMPAR(4) && ISQSTRING(1) && ISQSTRING(2) && ISQSTRING(3) && ISQSTRING(4)) {
 #endif
     QDBusMessage *ptr =
         new QDBusMessage(QDBusMessage::createMethodCall(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4)));
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEMETHODCALL)
 
 HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERROR)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // static QDBusMessage createError( const QString & name, const QString & msg )
 
     QDBusMessage *ptr = new QDBusMessage(QDBusMessage::createError(PQSTRING(1), PQSTRING(2)));
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QDBUSMESSAGE_CREATEERROR)
 
     QDBusMessage *ptr = new QDBusMessage(QDBusMessage::createError(*PQDBUSERROR(1)));
     Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     // static QDBusMessage createError( QDBusError::ErrorType type, const QString & msg )
 
     QDBusMessage *ptr = new QDBusMessage(QDBusMessage::createError((QDBusError::ErrorType)hb_parni(1), PQSTRING(2)));

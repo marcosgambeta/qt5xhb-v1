@@ -54,7 +54,7 @@ RETURN
 // QAccessibleTextInsertEvent( QObject * obj, int position, const QString & text )
 HB_FUNC_STATIC(QACCESSIBLETEXTINSERTEVENT_NEW)
 {
-  if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
+  if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && ISQSTRING(3)) {
     QAccessibleTextInsertEvent *obj = new QAccessibleTextInsertEvent(PQOBJECT(1), PINT(2), PQSTRING(3));
     Qt5xHb::returnNewObject(obj, true);
   } else {

@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QDBUSERROR_NEW)
     // QDBusError( const QDBusMessage & msg )
     QDBusError *obj = new QDBusError(*PQDBUSMESSAGE(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     // QDBusError( QDBusError::ErrorType error, const QString & message )
     QDBusError *obj = new QDBusError((QDBusError::ErrorType)hb_parni(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);

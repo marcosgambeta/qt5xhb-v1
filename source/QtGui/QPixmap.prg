@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QPIXMAP_NEW)
     // QPixmap( const QSize &size )
     QPixmap *obj = new QPixmap(*PQSIZE(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
     // QPixmap( const QString &fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
     QPixmap *obj =
         new QPixmap(PQSTRING(1), OPCONSTCHAR(2, 0),
@@ -598,7 +598,7 @@ HB_FUNC_STATIC(QPIXMAP_LOAD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RBOOL(obj->load(PQSTRING(1), OPCONSTCHAR(2, 0),
                       HB_ISNIL(3) ? (Qt::ImageConversionFlags)Qt::AutoColor : (Qt::ImageConversionFlags)hb_parni(3)));
@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QPIXMAP_LOADFROMDATA)
 
 HB_FUNC_STATIC(QPIXMAP_SAVE)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
     // bool save( const QString &fileName, const char * format = 0, int quality = -1 ) const
     GET_PTR_FROM_SELF(obj);
 

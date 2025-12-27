@@ -71,11 +71,11 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NEW)
     // QXmlStreamAttribute()
     QXmlStreamAttribute *obj = new QXmlStreamAttribute();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // QXmlStreamAttribute( const QString & qualifiedName, const QString & value )
     QXmlStreamAttribute *obj = new QXmlStreamAttribute(PQSTRING(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && ISQSTRING(1) && ISQSTRING(2) && ISQSTRING(3)) {
     // QXmlStreamAttribute( const QString & namespaceUri, const QString & name, const QString & value )
     QXmlStreamAttribute *obj = new QXmlStreamAttribute(PQSTRING(1), PQSTRING(2), PQSTRING(3));
     Qt5xHb::returnNewObject(obj, true);

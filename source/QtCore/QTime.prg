@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QTIME_START)
 
 HB_FUNC_STATIC(QTIME_TOSTRING)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QString toString( const QString & format ) const
     GET_PTR_FROM_SELF(obj);
 
@@ -398,13 +398,13 @@ HB_FUNC_STATIC(QTIME_CURRENTTIME)
 
 HB_FUNC_STATIC(QTIME_FROMSTRING)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // static QTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
 
     QTime *ptr = new QTime(
         QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? (Qt::DateFormat)Qt::TextDate : (Qt::DateFormat)hb_parni(2)));
     Qt5xHb::createReturnClass(ptr, "QTIME", true);
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // static QTime fromString( const QString & string, const QString & format )
 
     QTime *ptr = new QTime(QTime::fromString(PQSTRING(1), PQSTRING(2)));

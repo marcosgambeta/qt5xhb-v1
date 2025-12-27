@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDFILE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISCHAR(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+    if (ISNUMPAR(4) && ISQSTRING(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->addFile(PQSTRING(1), *PQSIZE(2), (QIcon::Mode)hb_parni(3), (QIcon::State)hb_parni(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

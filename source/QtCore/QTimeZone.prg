@@ -104,8 +104,8 @@ HB_FUNC_STATIC(QTIMEZONE_NEW)
     QTimeZone *obj = new QTimeZone(PINT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  } else if (ISBETWEEN(4, 6) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && ISNUMORNIL(5) &&
-             ISCHARORNIL(6)) {
+  } else if (ISBETWEEN(4, 6) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ISQSTRING(3) && ISQSTRING(4) && ISNUMORNIL(5) &&
+             ISQSTRINGORNIL(6)) {
     // QTimeZone( const QByteArray & zoneId, int offsetSeconds, const QString & name, const QString & abbreviation,
     // QLocale::Country country = QLocale::AnyCountry, const QString & comment = QString() )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))

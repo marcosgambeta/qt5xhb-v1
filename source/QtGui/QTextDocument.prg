@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
     // QTextDocument( QObject * parent = 0 )
     QTextDocument *obj = new QTextDocument(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQOBJECTORNIL(2)) {
     // QTextDocument( const QString & text, QObject * parent = 0 )
     QTextDocument *obj = new QTextDocument(PQSTRING(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMETAINFORMATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setMetaInformation((QTextDocument::MetaInformation)hb_parni(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETHTML)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setHtml(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETPLAINTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setPlainText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERAT)
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QTextCursor find( const QString & subString, int from = 0, QTextDocument::FindFlags options = 0 ) const
     GET_PTR_FROM_SELF(obj);
 
@@ -543,7 +543,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
           PQSTRING(1), OPINT(2, 0), HB_ISNIL(3) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(3)));
       Qt5xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
-  } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQTEXTCURSOR(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQSTRING(1) && ISQTEXTCURSOR(2) && ISNUMORNIL(3)) {
     // QTextCursor find( const QString & subString, const QTextCursor & from, QTextDocument::FindFlags options = 0 )
     // const
     GET_PTR_FROM_SELF(obj);
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTSTYLESHEET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setDefaultStyleSheet(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

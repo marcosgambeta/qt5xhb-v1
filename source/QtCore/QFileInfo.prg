@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QFILEINFO_NEW)
     // QFileInfo()
     QFileInfo *obj = new QFileInfo();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QFileInfo( const QString & file )
     QFileInfo *obj = new QFileInfo(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QFILEINFO_NEW)
     // QFileInfo( const QFile & file )
     QFileInfo *obj = new QFileInfo(*PQFILE(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQDIR(1) && ISQSTRING(2)) {
     // QFileInfo( const QDir & dir, const QString & file )
     QFileInfo *obj = new QFileInfo(*PQDIR(1), PQSTRING(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -861,7 +861,7 @@ HB_FUNC_STATIC(QFILEINFO_SETCACHING)
 
 HB_FUNC_STATIC(QFILEINFO_SETFILE)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // void setFile( const QString & file )
     GET_PTR_FROM_SELF(obj);
 
@@ -879,7 +879,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQDIR(1) && ISQSTRING(2)) {
     // void setFile( const QDir & dir, const QString & file )
     GET_PTR_FROM_SELF(obj);
 

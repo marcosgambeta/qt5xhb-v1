@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISQSTRINGORNIL(1) && ISNUMORNIL(2)) {
 #endif
       QObject *ptr = obj->findChild<QObject *>(OPQSTRING(1, QString()),
                                                HB_ISNIL(2) ? (Qt::FindChildOptions)Qt::FindChildrenRecursively
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILD)
 
 HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
 {
-  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(0, 2) && ISQSTRINGORNIL(1) && ISNUMORNIL(2)) {
     // QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
     GET_PTR_FROM_SELF(obj);
 
@@ -756,7 +756,7 @@ HB_FUNC_STATIC(QOBJECT_SETOBJECTNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setObjectName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

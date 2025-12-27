@@ -57,7 +57,7 @@ RETURN
 // QDBusConnection & connection = QDBusConnection::sessionBus(), QObject * parent = 0 )
 HB_FUNC_STATIC(QDBUSINTERFACE_NEW)
 {
-  if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3) && ISQDBUSCONNECTIONORNIL(4) &&
+  if (ISBETWEEN(2, 5) && ISQSTRING(1) && ISQSTRING(2) && ISQSTRINGORNIL(3) && ISQDBUSCONNECTIONORNIL(4) &&
       ISQOBJECTORNIL(5)) {
     QDBusInterface *obj = new QDBusInterface(
         PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString()),

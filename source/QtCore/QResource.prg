@@ -72,7 +72,7 @@ RETURN
 // QResource( const QString & file = QString(), const QLocale & locale = QLocale() )
 HB_FUNC_STATIC(QRESOURCE_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISQLOCALEORNIL(2)) {
+  if (ISBETWEEN(0, 2) && ISQSTRINGORNIL(1) && ISQLOCALEORNIL(2)) {
     QResource *obj =
         new QResource(OPQSTRING(1, QString()), HB_ISNIL(2) ? QLocale() : *(QLocale *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, true);
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QRESOURCE_SETFILENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QRESOURCE_SIZE)
 HB_FUNC_STATIC(QRESOURCE_REGISTERRESOURCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSTRINGORNIL(2)) {
 #endif
     RBOOL(QResource::registerResource(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QRESOURCE_REGISTERRESOURCE)
 HB_FUNC_STATIC(QRESOURCE_UNREGISTERRESOURCE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSTRINGORNIL(2)) {
 #endif
     RBOOL(QResource::unregisterResource(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

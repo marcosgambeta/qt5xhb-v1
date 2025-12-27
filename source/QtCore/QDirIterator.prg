@@ -72,20 +72,20 @@ HB_FUNC_STATIC(QDIRITERATOR_NEW)
         new QDirIterator(*PQDIR(1), HB_ISNIL(2) ? (QDirIterator::IteratorFlags)QDirIterator::NoIteratorFlags
                                                 : (QDirIterator::IteratorFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // QDirIterator( const QString & path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
     QDirIterator *obj =
         new QDirIterator(PQSTRING(1), HB_ISNIL(2) ? (QDirIterator::IteratorFlags)QDirIterator::NoIteratorFlags
                                                   : (QDirIterator::IteratorFlags)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QDirIterator( const QString & path, QDir::Filters filters, QDirIterator::IteratorFlags flags =
     // QDirIterator::NoIteratorFlags )
     QDirIterator *obj = new QDirIterator(PQSTRING(1), (QDir::Filters)hb_parni(2),
                                          HB_ISNIL(3) ? (QDirIterator::IteratorFlags)QDirIterator::NoIteratorFlags
                                                      : (QDirIterator::IteratorFlags)hb_parni(3));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(2, 4) && ISQSTRING(1) && HB_ISARRAY(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QDirIterator( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter,
     // QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
     QDirIterator *obj = new QDirIterator(PQSTRING(1), PQSTRINGLIST(2),

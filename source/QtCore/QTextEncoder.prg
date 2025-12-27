@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QTEXTENCODER_DELETE)
 
 HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QByteArray fromUnicode( const QString & str )
     GET_PTR_FROM_SELF(obj);
 

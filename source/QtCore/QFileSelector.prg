@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QFILESELECTOR_DELETE)
 
 HB_FUNC_STATIC(QFILESELECTOR_SELECT)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QString select( const QString & filePath ) const
     GET_PTR_FROM_SELF(obj);
 

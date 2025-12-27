@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
     QMovie *obj =
         new QMovie(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQBYTEARRAYORNIL(2) && ISQOBJECTORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISQBYTEARRAYORNIL(2) && ISQOBJECTORNIL(3)) {
     // QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
     QMovie *obj =
         new QMovie(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2), OPQOBJECT(3, 0));
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

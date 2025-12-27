@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QPICTURE_ISNULL)
 
 HB_FUNC_STATIC(QPICTURE_LOAD)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISCHARORNIL(2)) {
     // bool load( const QString & fileName, const char * format = 0 )
     GET_PTR_FROM_SELF(obj);
 
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QPICTURE_PLAY)
 
 HB_FUNC_STATIC(QPICTURE_SAVE)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISCHARORNIL(2)) {
     // bool save( const QString & fileName, const char * format = 0 )
     GET_PTR_FROM_SELF(obj);
 

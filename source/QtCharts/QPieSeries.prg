@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QPIESERIES_APPEND)
       RBOOL(obj->append(par1));
     }
 #endif
-  } else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(3) && ISQSTRING(1) && HB_ISNUM(2)) {
     // QPieSlice * append( QString label, qreal value )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     GET_PTR_FROM_SELF(obj);

@@ -80,7 +80,7 @@ RETURN
 
 HB_FUNC_STATIC(QBOXSET_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISQOBJECTORNIL(2)) {
+  if (ISBETWEEN(0, 2) && ISQSTRINGORNIL(1) && ISQOBJECTORNIL(2)) {
     /*
     explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
     */
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QBOXSET_NEW)
     Qt5xHb::returnNewObject(obj, false);
 #endif
   } else if (ISBETWEEN(5, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-           ISCHARORNIL(6) && ISQOBJECTORNIL(7)) {
+           ISQSTRINGORNIL(6) && ISQOBJECTORNIL(7)) {
     /*
     explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label
     = QString(), QObject *parent = Q_NULLPTR)
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QBOXSET_SETLABEL)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setLabel(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
 #endif
       obj->setText(PQSTRING(1), HB_ISNIL(2) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
     if (obj != NULL) {
       RQSTRING(obj->text(HB_ISNIL(1) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(1)));
     }
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // QString text ( QString & subtype, QClipboard::Mode mode = QClipboard::Clipboard ) const
     QClipboard *obj = (QClipboard *)Qt5xHb::itemGetPtrStackSelfItem();
 

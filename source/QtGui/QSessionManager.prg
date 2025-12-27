@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_DISCARDCOMMAND)
 
 HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // void setManagerProperty( const QString & name, const QString & value )
     GET_PTR_FROM_SELF(obj);
 
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISARRAY(2)) {
     // void setManagerProperty( const QString & name, const QStringList & value )
     GET_PTR_FROM_SELF(obj);
 

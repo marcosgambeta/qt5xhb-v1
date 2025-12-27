@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SETDELAYEDREPLY)
 
 HB_FUNC_STATIC(QDBUSCONTEXT_SENDERRORREPLY)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSTRINGORNIL(2)) {
     // void sendErrorReply( const QString & name, const QString & msg = QString() ) const
     GET_PTR_FROM_SELF(obj);
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QDBUSCONTEXT_SENDERRORREPLY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISCHARORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSTRINGORNIL(2)) {
     // void sendErrorReply( QDBusError::ErrorType type, const QString & msg = QString() ) const
     GET_PTR_FROM_SELF(obj);
 

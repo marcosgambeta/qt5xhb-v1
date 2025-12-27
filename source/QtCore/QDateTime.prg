@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QDATETIME_TOMSECSSINCEEPOCH)
 
 HB_FUNC_STATIC(QDATETIME_TOSTRING)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QString toString( const QString & format ) const
     GET_PTR_FROM_SELF(obj);
 
@@ -644,13 +644,13 @@ HB_FUNC_STATIC(QDATETIME_FROMMSECSSINCEEPOCH)
 
 HB_FUNC_STATIC(QDATETIME_FROMSTRING)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // static QDateTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
 
     QDateTime *ptr = new QDateTime(
         QDateTime::fromString(PQSTRING(1), HB_ISNIL(2) ? (Qt::DateFormat)Qt::TextDate : (Qt::DateFormat)hb_parni(2)));
     Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // static QDateTime fromString( const QString & string, const QString & format )
 
     QDateTime *ptr = new QDateTime(QDateTime::fromString(PQSTRING(1), PQSTRING(2)));

@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QBLUETOOTHADDRESS_NEW)
     QBluetoothAddress *obj = new QBluetoothAddress(PQUINT64(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QBluetoothAddress( const QString & address )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothAddress *obj = new QBluetoothAddress(PQSTRING(1));

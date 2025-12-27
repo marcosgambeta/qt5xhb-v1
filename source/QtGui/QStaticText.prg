@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QSTATICTEXT_NEW)
     // QStaticText()
     QStaticText *obj = new QStaticText();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QStaticText( const QString & text )
     QStaticText *obj = new QStaticText(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

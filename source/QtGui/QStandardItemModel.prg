@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_FINDITEMS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       QList<QStandardItem *> list = obj->findItems(
           PQSTRING(1), HB_ISNIL(2) ? (Qt::MatchFlags)Qt::MatchExactly : (Qt::MatchFlags)hb_parni(2), OPINT(3, 0));

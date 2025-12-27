@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC(QDBUSSERVER_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQOBJECTORNIL(2)) {
     // QDBusServer( const QString & address, QObject * parent = NULL )
     QDBusServer *obj = new QDBusServer(PQSTRING(1), OPQOBJECT(2, NULL));
     Qt5xHb::returnNewObject(obj, false);

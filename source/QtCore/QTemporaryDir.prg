@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QTEMPORARYDIR_NEW)
     // QTemporaryDir()
     QTemporaryDir *obj = new QTemporaryDir();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QTemporaryDir( const QString & templateName )
     QTemporaryDir *obj = new QTemporaryDir(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);

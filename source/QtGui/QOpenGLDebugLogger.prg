@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QOPENGLDEBUGLOGGER_PUSHGROUP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       obj->pushGroup(PQSTRING(1), OPGLUINT(2, 0),
                      HB_ISNIL(3) ? (QOpenGLDebugMessage::Source)QOpenGLDebugMessage::ApplicationSource

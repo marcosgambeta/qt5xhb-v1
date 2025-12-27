@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_STANDARDLOCATIONS)
 HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTRING(2) && ISNUMORNIL(3)) {
 #endif
     RQSTRING(QStandardPaths::locate((QStandardPaths::StandardLocation)hb_parni(1), PQSTRING(2),
                                     HB_ISNIL(3) ? (QStandardPaths::LocateOptions)QStandardPaths::LocateFile
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_LOCATE)
 HB_FUNC_STATIC(QSTANDARDPATHS_LOCATEALL)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTRING(2) && ISNUMORNIL(3)) {
 #endif
     RQSTRINGLIST(QStandardPaths::locateAll((QStandardPaths::StandardLocation)hb_parni(1), PQSTRING(2),
                                            HB_ISNIL(3) ? (QStandardPaths::LocateOptions)QStandardPaths::LocateFile
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QSTANDARDPATHS_DISPLAYNAME)
 HB_FUNC_STATIC(QSTANDARDPATHS_FINDEXECUTABLE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISARRAYORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISARRAYORNIL(2)) {
 #endif
     RQSTRING(QStandardPaths::findExecutable(PQSTRING(1), OPQSTRINGLIST(2, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_ANCHOR)
 
 HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // void insertText( const QString & text )
     GET_PTR_FROM_SELF(obj);
 
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTCHARFORMAT(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQTEXTCHARFORMAT(2)) {
     // void insertText( const QString & text, const QTextCharFormat & format )
     GET_PTR_FROM_SELF(obj);
 
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTHTML)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->insertHtml(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1188,7 +1188,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // void insertImage( const QString & name )
     GET_PTR_FROM_SELF(obj);
 
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISCHARORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISQSTRINGORNIL(2)) {
     // void insertImage( const QImage & image, const QString & name = QString() )
     GET_PTR_FROM_SELF(obj);
 

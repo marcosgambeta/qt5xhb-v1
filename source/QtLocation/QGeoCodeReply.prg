@@ -73,7 +73,7 @@ RETURN
 HB_FUNC_STATIC(QGEOCODEREPLY_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3)) {
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTRING(2) && ISQOBJECTORNIL(3)) {
     QGeoCodeReply *obj = new QGeoCodeReply((QGeoCodeReply::Error)hb_parni(1), PQSTRING(2), OPQOBJECT(3, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {

@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CANENCODE)
     if (obj != NULL) {
       RBOOL(obj->canEncode(*PQCHAR(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // bool canEncode( const QString & ) const
     GET_PTR_FROM_SELF(obj);
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QTEXTCODEC_TOUNICODE)
 
 HB_FUNC_STATIC(QTEXTCODEC_FROMUNICODE)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QByteArray fromUnicode( const QString & uc ) const
     GET_PTR_FROM_SELF(obj);
 

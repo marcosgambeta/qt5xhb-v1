@@ -105,11 +105,11 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEW)
     // QTextLayout()
     QTextLayout *obj = new QTextLayout();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QTextLayout( const QString & text )
     QTextLayout *obj = new QTextLayout(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && ISOBJECTORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQSTRING(1) && ISQFONT(2) && ISOBJECTORNIL(3)) {
     // QTextLayout( const QString & text, const QFont & font, QPaintDevice * paintdevice = 0 )
     QTextLayout *obj =
         new QTextLayout(PQSTRING(1), *PQFONT(2), HB_ISNIL(3) ? 0 : (QPaintDevice *)Qt5xHb::itemGetPtr(3));
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETPREEDITAREA)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setPreeditArea(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

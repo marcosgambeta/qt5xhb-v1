@@ -64,7 +64,7 @@ RETURN
 HB_FUNC_STATIC(QSAVEFILE_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QSaveFile( const QString & name )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QSaveFile *obj = new QSaveFile(PQSTRING(1));
@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QSAVEFILE_NEW)
     QSaveFile *obj = new QSaveFile(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQOBJECT(2)) {
     // QSaveFile( const QString & name, QObject * parent )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
     QSaveFile *obj = new QSaveFile(PQSTRING(1), PQOBJECT(2));
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QSAVEFILE_SETFILENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

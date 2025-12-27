@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGERENGINE_GEOCODE)
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
     }
 #endif
-  } else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQGEOSHAPE(4)) {
+  } else if (ISNUMPAR(4) && ISQSTRING(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQGEOSHAPE(4)) {
     // virtual QGeoCodeReply * geocode( const QString & address, int limit, int offset, const QGeoShape & bounds )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     GET_PTR_FROM_SELF(obj);

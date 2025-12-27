@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QGEOCODINGMANAGER_GEOCODE)
       Qt5xHb::createReturnQObjectClass(ptr, "QGEOCODEREPLY");
     }
 #endif
-  } else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISQGEOSHAPEORNIL(4)) {
+  } else if (ISBETWEEN(1, 4) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISQGEOSHAPEORNIL(4)) {
     // QGeoCodeReply * geocode( const QString & searchString, int limit = -1, int offset = 0, const QGeoShape & bounds =
     // QGeoShape() )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_NEW)
     // QRegularExpression()
     QRegularExpression *obj = new QRegularExpression();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // QRegularExpression( const QString & pattern, QRegularExpression::PatternOptions options =
     // QRegularExpression::NoPatternOption )
     QRegularExpression *obj = new QRegularExpression(
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_GLOBALMATCH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(1, 4) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       QRegularExpressionMatchIterator *ptr = new QRegularExpressionMatchIterator(
           obj->globalMatch(PQSTRING(1), OPINT(2, 0),
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_MATCH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(1, 4) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       QRegularExpressionMatch *ptr = new QRegularExpressionMatch(
           obj->match(PQSTRING(1), OPINT(2, 0),
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SETPATTERN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setPattern(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_SWAP)
 HB_FUNC_STATIC(QREGULAREXPRESSION_ESCAPE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RQSTRING(QRegularExpression::escape(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_ANCHOREDPATTERN)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RQSTRING(QRegularExpression::anchoredPattern(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QREGULAREXPRESSION_WILDCARDTOREGULAREXPRESSION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RQSTRING(QRegularExpression::wildcardToRegularExpression(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

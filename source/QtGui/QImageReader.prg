@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QIMAGEREADER_NEW)
     QImageReader *obj =
         new QImageReader(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQBYTEARRAYORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQBYTEARRAYORNIL(2)) {
     // QImageReader( const QString & fileName, const QByteArray & format = QByteArray() )
     QImageReader *obj =
         new QImageReader(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *(QByteArray *)Qt5xHb::itemGetPtr(2));
@@ -636,7 +636,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETFILENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setFileName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -791,7 +791,7 @@ HB_FUNC_STATIC(QIMAGEREADER_TEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRING(obj->text(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -829,7 +829,7 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
     if (obj != NULL) {
       RENUM(obj->imageFormat());
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static QByteArray imageFormat( const QString & fileName )
 
     QByteArray *ptr = new QByteArray(QImageReader::imageFormat(PQSTRING(1)));

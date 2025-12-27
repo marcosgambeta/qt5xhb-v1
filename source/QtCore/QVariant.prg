@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     // QVariant( bool b )
     QVariant *obj = new QVariant(PBOOL(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     HB_FUNC_EXEC(QVARIANT_NEW17);
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     HB_FUNC_EXEC(QVARIANT_NEW19);

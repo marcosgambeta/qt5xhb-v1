@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
     // QImage( int width, int height, QImage::Format format )
     QImage *obj = new QImage(PINT(1), PINT(2), (QImage::Format)hb_parni(3));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISCHARORNIL(2)) {
     HB_FUNC_EXEC(QIMAGE_NEW9);
   } else if (ISNUMPAR(1) && ISQIMAGE(1)) {
     // QImage( const QImage &image )
@@ -668,7 +668,7 @@ HB_FUNC_STATIC(QIMAGE_ISNULL)
 
 HB_FUNC_STATIC(QIMAGE_LOAD)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISCHARORNIL(2)) {
     // bool load( const QString &fileName, const char * format = 0 )
     GET_PTR_FROM_SELF(obj);
 
@@ -828,7 +828,7 @@ HB_FUNC_STATIC(QIMAGE_RGBSWAPPED)
 
 HB_FUNC_STATIC(QIMAGE_SAVE)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
     // bool save( const QString &fileName, const char * format = 0, int quality = -1 ) const
     GET_PTR_FROM_SELF(obj);
 
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC(QIMAGE_SETTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       obj->setText(PQSTRING(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC(QIMAGE_TEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
+    if (ISBETWEEN(0, 1) && ISQSTRINGORNIL(1)) {
 #endif
       RQSTRING(obj->text(OPQSTRING(1, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

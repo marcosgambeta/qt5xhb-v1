@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
     // QRawFont()
     QRawFont *obj = new QRawFont();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQSTRING(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // QRawFont( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference =
     // QFont::PreferDefaultHinting )
     QRawFont *obj = new QRawFont(PQSTRING(1), PQREAL(2),
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QRAWFONT_GLYPHINDEXESFORSTRING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QVector<quint32> list = obj->glyphIndexesForString(PQSTRING(1));
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -604,7 +604,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMFILE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
+    if (ISNUMPAR(3) && ISQSTRING(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->loadFromFile(PQSTRING(1), PQREAL(2), (QFont::HintingPreference)hb_parni(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

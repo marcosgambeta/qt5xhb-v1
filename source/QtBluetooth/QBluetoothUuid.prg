@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QBLUETOOTHUUID_NEW)
     HB_FUNC_EXEC(QBLUETOOTHUUID_NEW4);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QBLUETOOTHUUID_NEW5);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // QBluetoothUuid( const QString & uuid )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
     QBluetoothUuid *obj = new QBluetoothUuid(PQSTRING(1));
