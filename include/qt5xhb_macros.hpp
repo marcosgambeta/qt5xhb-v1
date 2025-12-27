@@ -199,4 +199,7 @@
 #define ISARRAYORNIL(n) (HB_ISARRAY(n) || HB_ISNIL(n))
 #define ISOBJECTORNIL(n) (HB_ISOBJECT(n) || HB_ISNIL(n))
 
+#define ISQSTRING(n) HB_ISCHAR(n)
+#define ISQSTRINGORNIL(n) (HB_ISCHAR(n) || HB_ISNIL(n))
+
 #endif // QT5XHB_MACROS_HPP
