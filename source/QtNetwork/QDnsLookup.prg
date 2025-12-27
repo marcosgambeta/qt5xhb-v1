@@ -87,13 +87,13 @@ HB_FUNC_STATIC(QDNSLOOKUP_NEW)
     */
     QDnsLookup *obj = new QDnsLookup(OPQOBJECT(1, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQOBJECTORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTRING(2) && ISQOBJECTORNIL(3)) {
     /*
     QDnsLookup( QDnsLookup::Type type, const QString &name, QObject * parent = nullptr )
     */
     QDnsLookup *obj = new QDnsLookup((QDnsLookup::Type)hb_parni(1), PQSTRING(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQHOSTADDRESS(3) && ISQOBJECTORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTRING(2) && ISQHOSTADDRESS(3) && ISQOBJECTORNIL(4)) {
     /*
     QDnsLookup( QDnsLookup::Type type, const QString &name, const QHostAddress &nameserver, QObject * parent = nullptr
     )
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QDNSLOOKUP_SETNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

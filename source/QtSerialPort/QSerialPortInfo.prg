@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSERIALPORTINFO_NEW)
     QSerialPortInfo *obj = new QSerialPortInfo(*PQSERIALPORT(1));
     Qt5xHb::returnNewObject(obj, true);
 #endif
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QSerialPortInfo( const QString &name )
     */

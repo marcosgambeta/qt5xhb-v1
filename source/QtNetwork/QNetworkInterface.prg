@@ -369,7 +369,7 @@ static QNetworkInterface interfaceFromName( const QString &name )
 HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     QNetworkInterface *ptr = new QNetworkInterface(QNetworkInterface::interfaceFromName(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEINDEXFROMNAME)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RINT(QNetworkInterface::interfaceIndexFromName(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

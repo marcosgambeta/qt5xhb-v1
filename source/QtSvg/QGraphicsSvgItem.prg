@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_NEW)
     */
     QGraphicsSvgItem *obj = new QGraphicsSvgItem(HB_ISNIL(1) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQGRAPHICSITEMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQGRAPHICSITEMORNIL(2)) {
     /*
     QGraphicsSvgItem( const QString &fileName, QGraphicsItem * parent = 0 )
     */
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETELEMENTID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setElementId(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

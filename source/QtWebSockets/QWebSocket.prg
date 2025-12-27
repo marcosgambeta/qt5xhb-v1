@@ -115,7 +115,7 @@ RETURN
 HB_FUNC_STATIC(QWEBSOCKET_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  if (ISBETWEEN(0, 3) && ISCHARORNIL(1) && ISNUMORNIL(2) && ISQOBJECTORNIL(3)) {
+  if (ISBETWEEN(0, 3) && ISQSTRINGORNIL(1) && ISNUMORNIL(2) && ISQOBJECTORNIL(3)) {
     QWebSocket *obj = new QWebSocket(OPQSTRING(1, QString()),
                                      HB_ISNIL(2) ? (QWebSocketProtocol::Version)QWebSocketProtocol::VersionLatest
                                                  : (QWebSocketProtocol::Version)hb_parni(2),
@@ -745,7 +745,7 @@ HB_FUNC_STATIC(QWEBSOCKET_SENDTEXTMESSAGE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQINT64(obj->sendTextMessage(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -876,7 +876,7 @@ HB_FUNC_STATIC(QWEBSOCKET_CLOSE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISCHARORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISQSTRINGORNIL(2)) {
 #endif
       obj->close(HB_ISNIL(1) ? (QWebSocketProtocol::CloseCode)QWebSocketProtocol::CloseCodeNormal
                              : (QWebSocketProtocol::CloseCode)hb_parni(1),

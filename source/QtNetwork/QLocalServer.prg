@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QLOCALSERVER_ISLISTENING)
 
 HB_FUNC_STATIC(QLOCALSERVER_LISTEN)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     bool listen( const QString &name )
     */
@@ -338,7 +338,7 @@ static bool removeServer( const QString &name )
 HB_FUNC_STATIC(QLOCALSERVER_REMOVESERVER)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     RBOOL(QLocalServer::removeServer(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

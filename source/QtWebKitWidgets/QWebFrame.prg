@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQOBJECT(2) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(2, 3) && ISQSTRING(1) && ISQOBJECT(2) && ISNUMORNIL(3)) {
 #endif
       obj->addToJavaScriptWindowObject(PQSTRING(1), PQOBJECT(2),
                                        HB_ISNIL(3) ? (QWebFrame::ValueOwnership)QWebFrame::QtOwnership
@@ -504,7 +504,7 @@ HB_FUNC_STATIC(QWEBFRAME_FINDALLELEMENTS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QWebElementCollection *ptr = new QWebElementCollection(obj->findAllElements(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QWEBELEMENTCOLLECTION", true);
@@ -525,7 +525,7 @@ HB_FUNC_STATIC(QWEBFRAME_FINDFIRSTELEMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QWebElement *ptr = new QWebElement(obj->findFirstElement(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QWEBELEMENT", true);
@@ -857,7 +857,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLTOANCHOR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->scrollToAnchor(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -900,7 +900,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETCONTENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ISCHARORNIL(2) && ISQURLORNIL(3)) {
+    if (ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ISQSTRINGORNIL(2) && ISQURLORNIL(3)) {
 #endif
       obj->setContent(*PQBYTEARRAY(1), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(3));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -944,7 +944,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETHTML)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQURLORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQURLORNIL(2)) {
 #endif
       obj->setHtml(PQSTRING(1), HB_ISNIL(2) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC(QWEBFRAME_EVALUATEJAVASCRIPT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->evaluateJavaScript(PQSTRING(1)));
       RQVARIANT(ptr);

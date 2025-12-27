@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW)
     */
     QHostAddress *obj = new QHostAddress();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QHostAddress( const QString &address )
     */
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     bool setAddress( const QString &address )
     */
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setScopeId(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

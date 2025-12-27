@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_NEW)
     */
     QQmlExpression *obj = new QQmlExpression();
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(3, 4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISQOBJECTORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && ISQSTRING(3) && ISQOBJECTORNIL(4)) {
     /*
     QQmlExpression( QQmlContext * ctxt, QObject * scope, const QString &expression, QObject * parent = 0 )
     */
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETEXPRESSION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setExpression(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QQMLEXPRESSION_SETSOURCELOCATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(2, 3) && ISQSTRING(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
       obj->setSourceLocation(PQSTRING(1), PINT(2), OPINT(3, 0));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

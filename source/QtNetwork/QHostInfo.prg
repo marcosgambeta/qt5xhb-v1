@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETHOSTNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setHostName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETERRORSTRING)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setErrorString(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +377,7 @@ static int lookupHost( const QString &name, QObject * receiver, const char * mem
 HB_FUNC_STATIC(QHOSTINFO_LOOKUPHOST)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
+  if (ISNUMPAR(3) && ISQSTRING(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
 #endif
     RINT(QHostInfo::lookupHost(PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,7 +411,7 @@ static QHostInfo fromName( const QString &name )
 HB_FUNC_STATIC(QHOSTINFO_FROMNAME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     QHostInfo *ptr = new QHostInfo(QHostInfo::fromName(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QHOSTINFO", true);

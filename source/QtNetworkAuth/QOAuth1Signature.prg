@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_INSERT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQVARIANT(2)) {
 #endif
       obj->insert(PQSTRING(1), *PQVARIANT(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_TAKE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->take(PQSTRING(1)));
       RQVARIANT(ptr);
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_VALUE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQVARIANTORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQVARIANTORNIL(2)) {
 #endif
       QVariant *ptr =
           new QVariant(obj->value(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2)));
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETCLIENTSHAREDKEY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setClientSharedKey(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_SETTOKENSECRET)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setTokenSecret(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QOAUTH1SIGNATURE_PLAINTEXT)
       Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
 #endif
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     /*
     static QByteArray plainText( const QString &clientSharedSecret, const QString &tokenSecret )
     */

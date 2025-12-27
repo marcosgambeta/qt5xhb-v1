@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_NEW)
     QQmlApplicationEngine *obj = new QQmlApplicationEngine(*PQURL(1), OPQOBJECT(2, 0));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQOBJECTORNIL(2)) {
     /*
     QQmlApplicationEngine( const QString &filePath, QObject * parent = 0 )
     */
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QQMLAPPLICATIONENGINE_LOAD)
 
     hb_itemReturn(hb_stackSelfItem());
 #endif
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     void load( const QString &filePath )
     */

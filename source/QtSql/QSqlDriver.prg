@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ESCAPEIDENTIFIER)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISNUM(2)) {
 #endif
       RQSTRING(obj->escapeIdentifier(PQSTRING(1), (QSqlDriver::IdentifierType)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISIDENTIFIERESCAPED)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->isIdentifierEscaped(PQSTRING(1), (QSqlDriver::IdentifierType)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -377,8 +377,8 @@ HB_FUNC_STATIC(QSQLDRIVER_OPEN)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 6) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) &&
-        ISCHARORNIL(4) && ISNUMORNIL(5) && ISCHARORNIL(6)) {
+    if (ISBETWEEN(1, 6) && ISQSTRING(1) && ISQSTRINGORNIL(2) && ISQSTRINGORNIL(3) &&
+        ISQSTRINGORNIL(4) && ISNUMORNIL(5) && ISQSTRINGORNIL(6)) {
 #endif
       RBOOL(obj->open(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString()),
                       OPINT(5, -1), OPQSTRING(6, QString())));
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QSQLDRIVER_PRIMARYINDEX)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QSqlIndex *ptr = new QSqlIndex(obj->primaryIndex(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QSQLINDEX", true);
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QSQLDRIVER_RECORD)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QSqlRecord *ptr = new QSqlRecord(obj->record(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQSQLRECORD(3) && HB_ISLOG(4)) {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTRING(2) && ISQSQLRECORD(3) && HB_ISLOG(4)) {
 #endif
       RQSTRING(obj->sqlStatement((QSqlDriver::StatementType)hb_parni(1), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -504,7 +504,7 @@ HB_FUNC_STATIC(QSQLDRIVER_STRIPDELIMITERS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISNUM(2)) {
 #endif
       RQSTRING(obj->stripDelimiters(PQSTRING(1), (QSqlDriver::IdentifierType)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBETONOTIFICATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->subscribeToNotification(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->unsubscribeFromNotification(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

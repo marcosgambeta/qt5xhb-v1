@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QSERIALPORT_NEW)
     QSerialPort *obj = new QSerialPort(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
 #endif
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQOBJECTORNIL(2)) {
     /*
     QSerialPort( const QString &name, QObject * parent = 0 )
     */
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSERIALPORT_SETPORTNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setPortName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

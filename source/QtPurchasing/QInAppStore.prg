@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QINAPPSTORE_REGISTERPRODUCT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->registerProduct((QInAppProduct::ProductType)hb_parni(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QINAPPSTORE_REGISTEREDPRODUCT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QInAppProduct *ptr = obj->registeredProduct(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QINAPPPRODUCT");
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QINAPPSTORE_SETPLATFORMPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
       obj->setPlatformProperty(PQSTRING(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

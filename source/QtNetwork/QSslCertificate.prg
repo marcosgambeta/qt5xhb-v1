@@ -637,7 +637,7 @@ QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 HB_FUNC_STATIC(QSSLCERTIFICATE_FROMPATH)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
     QList<QSslCertificate> list = QSslCertificate::fromPath(
         PQSTRING(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem : (QSsl::EncodingFormat)hb_parni(2),
@@ -755,7 +755,7 @@ static QList<QSslError> verify( QList<QSslCertificate> certificateChain, const Q
 HB_FUNC_STATIC(QSSLCERTIFICATE_VERIFY)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISCHARORNIL(2)) {
+  if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISQSTRINGORNIL(2)) {
 #endif
     QList<QSslCertificate> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);

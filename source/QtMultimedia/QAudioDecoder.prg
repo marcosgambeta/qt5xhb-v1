@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QAUDIODECODER_SETSOURCEFILENAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setSourceFilename(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -431,7 +431,7 @@ static QMultimedia::SupportEstimate hasSupport( const QString &mimeType, const Q
 HB_FUNC_STATIC(QAUDIODECODER_HASSUPPORT)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISARRAYORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISARRAYORNIL(2)) {
 #endif
     RENUM(QAudioDecoder::hasSupport(PQSTRING(1), OPQSTRINGLIST(2, QStringList())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

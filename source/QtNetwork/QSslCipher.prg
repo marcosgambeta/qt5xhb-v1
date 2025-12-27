@@ -73,13 +73,13 @@ HB_FUNC_STATIC(QSSLCIPHER_NEW)
     */
     QSslCipher *obj = new QSslCipher();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QSslCipher( const QString &name )
     */
     QSslCipher *obj = new QSslCipher(PQSTRING(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISNUM(2)) {
     /*
     QSslCipher(  const QString &name, QSsl::SslProtocol protocol )
     */

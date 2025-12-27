@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_SETQUERY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQSQLDATABASEORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSQLDATABASEORNIL(2)) {
     /*
     void setQuery( const QString &query, const QSqlDatabase &db = QSqlDatabase() )
     */

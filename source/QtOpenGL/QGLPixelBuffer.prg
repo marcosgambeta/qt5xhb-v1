@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
     if (obj != NULL) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM(2, GL_TEXTURE_2D)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     GLuint bindTexture( const QString &fileName )
     */

@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
         new QNetworkProxyQuery(*PQURL(1), HB_ISNIL(2) ? (QNetworkProxyQuery::QueryType)QNetworkProxyQuery::UrlRequest
                                                       : (QNetworkProxyQuery::QueryType)hb_parni(2));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISCHARORNIL(3) &&
+  } else if (ISBETWEEN(2, 4) && ISQSTRING(1) && HB_ISNUM(2) && ISQSTRINGORNIL(3) &&
            ISNUMORNIL(4)) {
     /*
     QNetworkProxyQuery( const QString &hostname, int port, const QString &protocolTag = QString(),
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
                                HB_ISNIL(4) ? (QNetworkProxyQuery::QueryType)QNetworkProxyQuery::TcpSocket
                                            : (QNetworkProxyQuery::QueryType)hb_parni(4));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTRINGORNIL(2) && ISNUMORNIL(3)) {
     /*
     QNetworkProxyQuery( quint16 bindPort, const QString &protocolTag = QString(), QNetworkProxyQuery::QueryType
     queryType = QNetworkProxyQuery::TcpServer )
@@ -123,8 +123,8 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
                                HB_ISNIL(3) ? (QNetworkProxyQuery::QueryType)QNetworkProxyQuery::UrlRequest
                                            : (QNetworkProxyQuery::QueryType)hb_parni(3));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(3, 5) && ISQNETWORKCONFIGURATION(1) && HB_ISCHAR(2) && HB_ISNUM(3) &&
-           ISCHARORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(3, 5) && ISQNETWORKCONFIGURATION(1) && ISQSTRING(2) && HB_ISNUM(3) &&
+           ISQSTRINGORNIL(4) && ISNUMORNIL(5)) {
     /*
     QNetworkProxyQuery( const QNetworkConfiguration &networkConfiguration, const QString &hostname, int port, const
     QString &protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpSocket )
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
                                HB_ISNIL(5) ? (QNetworkProxyQuery::QueryType)QNetworkProxyQuery::TcpSocket
                                            : (QNetworkProxyQuery::QueryType)hb_parni(5));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 4) && ISQNETWORKCONFIGURATION(1) && HB_ISNUM(2) && ISCHARORNIL(3) &&
+  } else if (ISBETWEEN(2, 4) && ISQNETWORKCONFIGURATION(1) && HB_ISNUM(2) && ISQSTRINGORNIL(3) &&
            ISNUMORNIL(4)) {
     /*
     QNetworkProxyQuery( const QNetworkConfiguration &networkConfiguration, quint16 bindPort, const QString &
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPEERHOSTNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setPeerHostName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_SETPROTOCOLTAG)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setProtocolTag(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

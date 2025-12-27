@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     if (obj != NULL) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions)hb_parni(4)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     GLuint bindTexture( const QString &fileName )
     */

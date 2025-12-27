@@ -75,7 +75,7 @@ RETURN
 
 HB_FUNC_STATIC(QGEOAREAMONITORINFO_NEW)
 {
-  if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
+  if (ISBETWEEN(0, 1) && ISQSTRINGORNIL(1)) {
     /*
     QGeoAreaMonitorInfo( const QString &name = QString() )
     */
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QGEOAREAMONITORINFO_SETNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEW)
     */
     QSqlQuery *obj = new QSqlQuery(PQSQLRESULT(1));
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && ISCHARORNIL(1) && ISQSQLDATABASEORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRINGORNIL(1) && ISQSQLDATABASEORNIL(2)) {
     /*
     QSqlQuery( const QString &query = QString(), QSqlDatabase db = QSqlDatabase() )
     */
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QSQLQUERY_AT)
 
 HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
 {
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(2, 3) && ISQSTRING(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
     /*
     void bindValue( const QString &placeholder, const QVariant &val, QSql::ParamType paramType = QSql::In )
     */
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
 
 HB_FUNC_STATIC(QSQLQUERY_BOUNDVALUE)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QVariant boundValue( const QString &placeholder ) const
     */
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QSQLQUERY_DRIVER)
 
 HB_FUNC_STATIC(QSQLQUERY_EXEC)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     bool exec( const QString &query )
     */
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISNULL)
     if (obj != NULL) {
       RBOOL(obj->isNull(PINT(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     bool isNull( const QString &name ) const
     */
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QSQLQUERY_PREPARE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->prepare(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -842,7 +842,7 @@ HB_FUNC_STATIC(QSQLQUERY_VALUE)
       QVariant *ptr = new QVariant(obj->value(PINT(1)));
       RQVARIANT(ptr);
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QVariant value( const QString &name ) const
     */

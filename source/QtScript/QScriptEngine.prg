@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_DEFAULTPROTOTYPE)
 
 HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISQSTRINGORNIL(2) && ISNUMORNIL(3)) {
     /*
     QScriptValue evaluate( const QString &program, const QString &fileName = QString(), int lineNumber = 1 )
     */
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEXTENSION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QScriptValue *ptr = new QScriptValue(obj->importExtension(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
       QScriptValue *ptr = new QScriptValue(obj->newRegExp(*PQREGEXP(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     /*
     QScriptValue newRegExp( const QString &pattern, const QString &flags )
     */
@@ -799,7 +799,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_TOSTRINGHANDLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QScriptString *ptr = new QScriptString(obj->toStringHandle(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTSTRING", true);
@@ -899,7 +899,7 @@ static QScriptSyntaxCheckResult checkSyntax( const QString &program )
 HB_FUNC_STATIC(QSCRIPTENGINE_CHECKSYNTAX)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     QScriptSyntaxCheckResult *ptr = new QScriptSyntaxCheckResult(QScriptEngine::checkSyntax(PQSTRING(1)));
     Qt5xHb::createReturnClass(ptr, "QSCRIPTSYNTAXCHECKRESULT", true);

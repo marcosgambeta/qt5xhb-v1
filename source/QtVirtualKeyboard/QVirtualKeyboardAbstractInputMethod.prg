@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_INPUTMODES)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QList<QVirtualKeyboardInputEngine::InputMode> list = obj->inputModes(PQSTRING(1));
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_SETINPUTMODE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+    if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISNUM(2)) {
 #endif
       RBOOL(obj->setInputMode(PQSTRING(1), (QVirtualKeyboardInputEngine::InputMode)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_KEYEVENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQSTRING(2) && HB_ISNUM(3)) {
 #endif
       RBOOL(obj->keyEvent((Qt::Key)hb_parni(1), PQSTRING(2), (Qt::KeyboardModifiers)hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

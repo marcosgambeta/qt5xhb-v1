@@ -96,7 +96,7 @@ RETURN
 HB_FUNC_STATIC(QWEBSOCKETSERVER_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
-  if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
+  if (ISBETWEEN(2, 3) && ISQSTRING(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
     QWebSocketServer *obj =
         new QWebSocketServer(PQSTRING(1), (QWebSocketServer::SslMode)hb_parni(2), OPQOBJECT(3, nullptr));
     Qt5xHb::returnNewObject(obj, false);
@@ -519,7 +519,7 @@ HB_FUNC_STATIC(QWEBSOCKETSERVER_SETSERVERNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setServerName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

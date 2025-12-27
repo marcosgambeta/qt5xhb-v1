@@ -70,7 +70,7 @@ RETURN
 HB_FUNC_STATIC(QWEBENGINECERTIFICATEERROR_NEW)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQURL(2) && HB_ISLOG(3) && HB_ISCHAR(4)) {
+  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQURL(2) && HB_ISLOG(3) && ISQSTRING(4)) {
     QWebEngineCertificateError *obj = new QWebEngineCertificateError(PINT(1), *PQURL(2), PBOOL(3), PQSTRING(4));
     Qt5xHb::returnNewObject(obj, true);
   } else {

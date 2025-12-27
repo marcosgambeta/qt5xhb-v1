@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC(QSQLINDEX_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISCHARORNIL(2)) {
+  if (ISBETWEEN(0, 2) && ISQSTRINGORNIL(1) && ISQSTRINGORNIL(2)) {
     /*
     QSqlIndex( const QString &cursorname = QString(), const QString &name = QString() )
     */
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QSQLINDEX_SETCURSORNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setCursorName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QSQLINDEX_SETNAME)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setName(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

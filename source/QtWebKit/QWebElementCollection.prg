@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEW)
     */
     QWebElementCollection *obj = new QWebElementCollection();
     Qt5xHb::returnNewObject(obj, true);
-  } else if (ISNUMPAR(2) && ISQWEBELEMENT(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQWEBELEMENT(1) && ISQSTRING(2)) {
     /*
     QWebElementCollection( const QWebElement &contextElement, const QString &query )
     */

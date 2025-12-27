@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QSVGRENDERER_NEW)
     */
     QSvgRenderer *obj = new QSvgRenderer(OPQOBJECT(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQOBJECTORNIL(2)) {
     /*
     QSvgRenderer( const QString &filename, QObject * parent = 0 )
     */
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QSVGRENDERER_BOUNDSONELEMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QRectF *ptr = new QRectF(obj->boundsOnElement(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QRECTF", true);
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ELEMENTEXISTS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->elementExists(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QSVGRENDERER_MATRIXFORELEMENT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QMatrix *ptr = new QMatrix(obj->matrixForElement(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QSVGRENDERER_VIEWBOXF)
 
 HB_FUNC_STATIC(QSVGRENDERER_LOAD)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     bool load( const QString &filename )
     */
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && ISQRECTFORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTRING(2) && ISQRECTFORNIL(3)) {
     /*
     void render( QPainter * painter, const QString &elementId, const QRectF &bounds = QRectF() )
     */

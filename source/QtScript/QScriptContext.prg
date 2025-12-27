@@ -363,7 +363,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THISOBJECT)
 
 HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     /*
     QScriptValue throwError( QScriptContext::Error error, const QString &text )
     */
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
       QScriptValue *ptr = new QScriptValue(obj->throwError((QScriptContext::Error)hb_parni(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QScriptValue throwError( const QString &text )
     */

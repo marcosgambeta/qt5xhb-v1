@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QGEOPOSITIONINFOSOURCE_CREATESOURCE)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && ISQOBJECT(2)) {
 #endif
     QGeoPositionInfoSource *ptr = QGeoPositionInfoSource::createSource(PQSTRING(1), PQOBJECT(2));
     Qt5xHb::createReturnClass(ptr, "QGEOPOSITIONINFOSOURCE", false);

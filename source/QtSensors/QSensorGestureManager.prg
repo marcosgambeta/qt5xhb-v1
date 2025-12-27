@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRINGLIST(obj->recognizerSignals(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     QSensorGestureRecognizer *ptr = QSensorGestureManager::sensorGestureRecognizer(PQSTRING(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QSENSORGESTURERECOGNIZER");

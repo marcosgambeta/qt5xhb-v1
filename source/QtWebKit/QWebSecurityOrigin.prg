@@ -268,7 +268,7 @@ static void addLocalScheme( const QString &scheme )
 HB_FUNC_STATIC(QWEBSECURITYORIGIN_ADDLOCALSCHEME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     QWebSecurityOrigin::addLocalScheme(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,7 +340,7 @@ static void removeLocalScheme( const QString &scheme )
 HB_FUNC_STATIC(QWEBSECURITYORIGIN_REMOVELOCALSCHEME)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     QWebSecurityOrigin::removeLocalScheme(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

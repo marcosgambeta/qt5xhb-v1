@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QSQLRECORD_CONTAINS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RBOOL(obj->contains(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QSQLRECORD_FIELD)
       QSqlField *ptr = new QSqlField(obj->field(PINT(1)));
       Qt5xHb::createReturnClass(ptr, "QSQLFIELD", true);
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QSqlField field( const QString &name ) const
     */
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QSQLRECORD_INDEXOF)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RINT(obj->indexOf(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QSQLRECORD_ISEMPTY)
 
 HB_FUNC_STATIC(QSQLRECORD_ISGENERATED)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     bool isGenerated( const QString &name ) const
     */
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QSQLRECORD_ISGENERATED)
 
 HB_FUNC_STATIC(QSQLRECORD_ISNULL)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     bool isNull( const QString &name ) const
     */
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QSQLRECORD_REPLACE)
 
 HB_FUNC_STATIC(QSQLRECORD_SETGENERATED)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2)) {
+  if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISLOG(2)) {
     /*
     void setGenerated( const QString &name, bool generated )
     */
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETNULL)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     void setNull( const QString &name )
     */
@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETVALUE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQVARIANT(2)) {
     /*
     void setValue( const QString &name, const QVariant &val )
     */
@@ -521,7 +521,7 @@ HB_FUNC_STATIC(QSQLRECORD_VALUE)
       QVariant *ptr = new QVariant(obj->value(PINT(1)));
       RQVARIANT(ptr);
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QVariant value( const QString &name ) const
     */
