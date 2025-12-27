@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLITEM(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQXMLITEM(2)) {
     /*
     void bindVariable( const QString &localName, const QXmlItem &value )
     */
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQIODEVICE(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQIODEVICE(2)) {
     /*
     void bindVariable( const QString &localName, QIODevice * device )
     */
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLQUERY(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQXMLQUERY(2)) {
     /*
     void bindVariable( const QString &localName, const QXmlQuery &query )
     */
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
     if (obj != NULL) {
       RBOOL(obj->setFocus(PQIODEVICE(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     bool setFocus( const QString &focus )
     */
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETINITIALTEMPLATENAME)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     void setInitialTemplateName( const QString &localName )
     */
@@ -501,7 +501,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQURLORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQURLORNIL(2)) {
     /*
     void setQuery( const QString &sourceCode, const QUrl &documentURI = QUrl() )
     */

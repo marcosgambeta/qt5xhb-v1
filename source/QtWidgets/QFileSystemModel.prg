@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETICONPROVIDER)
 
 HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     /*
     QModelIndex index( const QString &path, int column = 0 ) const
     */
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MKDIR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQSTRING(2)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->mkdir(*PQMODELINDEX(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
@@ -693,7 +693,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETROOTPATH)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->setRootPath(PQSTRING(1)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);

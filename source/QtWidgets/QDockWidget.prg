@@ -72,7 +72,7 @@ RETURN
 
 HB_FUNC_STATIC(QDOCKWIDGET_NEW)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     /*
     QDockWidget( const QString &title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
     */

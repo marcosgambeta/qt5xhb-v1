@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 4) && (ISQCOLOR(1) || HB_ISNIL(1)) && ISQWIDGETORNIL(2) &&
-      ISCHARORNIL(3) && ISNUMORNIL(4)) {
+      ISQSTRINGORNIL(3) && ISNUMORNIL(4)) {
 #endif
     QColor *ptr = new QColor(QColorDialog::getColor(
         HB_ISNIL(1) ? Qt::white : *(QColor *)Qt5xHb::itemGetPtr(1), OPQWIDGET(2, 0), OPQSTRING(3, QString()),

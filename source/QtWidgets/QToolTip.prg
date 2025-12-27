@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QTOOLTIP_SETPALETTE)
 
 HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
 {
-  if (ISNUMPAR(4) && ISQPOINT(1) && HB_ISCHAR(2) && ISQWIDGET(3) && ISQRECT(4)) {
+  if (ISNUMPAR(4) && ISQPOINT(1) && ISQSTRING(2) && ISQWIDGET(3) && ISQRECT(4)) {
     /*
     void showText( const QPoint &pos, const QString &text, QWidget * w, const QRect &rect )
     */
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QTOOLTIP_SHOWTEXT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(2, 3) && ISQPOINT(1) && HB_ISCHAR(2) && ISQWIDGETORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQPOINT(1) && ISQSTRING(2) && ISQWIDGETORNIL(3)) {
     /*
     void showText( const QPoint &pos, const QString &text, QWidget * w = 0 )
     */

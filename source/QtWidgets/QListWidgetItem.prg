@@ -109,13 +109,13 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
     */
     QListWidgetItem *obj = new QListWidgetItem(OPQLISTWIDGET(1, 0), OPINT(2, QListWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQLISTWIDGETORNIL(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && ISQSTRING(1) && ISQLISTWIDGETORNIL(2) && ISNUMORNIL(3)) {
     /*
     QListWidgetItem( const QString &text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
     */
     QListWidgetItem *obj = new QListWidgetItem(PQSTRING(1), OPQLISTWIDGET(2, 0), OPINT(3, QListWidgetItem::Type));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(2, 4) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQLISTWIDGETORNIL(3) &&
+  } else if (ISBETWEEN(2, 4) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2) && ISQLISTWIDGETORNIL(3) &&
            ISNUMORNIL(4)) {
     /*
     QListWidgetItem( const QIcon &icon, const QString &text, QListWidget * parent = 0, int type =
@@ -669,7 +669,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSTATUSTIP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setStatusTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -711,7 +711,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -795,7 +795,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTOOLTIP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setToolTip(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -857,7 +857,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETWHATSTHIS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setWhatsThis(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

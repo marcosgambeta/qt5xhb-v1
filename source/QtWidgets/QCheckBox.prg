@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QCHECKBOX_NEW)
     */
     QCheckBox *obj = new QCheckBox(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQWIDGETORNIL(2)) {
     /*
     QCheckBox( const QString &text, QWidget * parent = 0 )
     */

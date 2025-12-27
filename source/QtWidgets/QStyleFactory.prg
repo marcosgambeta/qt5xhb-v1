@@ -80,7 +80,7 @@ static QStyle * create( const QString &key )
 HB_FUNC_STATIC(QSTYLEFACTORY_CREATE)
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
     QStyle *ptr = QStyleFactory::create(PQSTRING(1));
     Qt5xHb::createReturnQObjectClass(ptr, "QSTYLE");

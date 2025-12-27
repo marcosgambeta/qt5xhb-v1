@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_NEW)
     */
     QProxyStyle *obj = new QProxyStyle(OPQSTYLE(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QProxyStyle( const QString &key )
     */
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_DRAWITEMTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(6, 7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && HB_ISLOG(5) && HB_ISCHAR(6) &&
+    if (ISBETWEEN(6, 7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && HB_ISLOG(5) && ISQSTRING(6) &&
         ISNUMORNIL(7)) {
 #endif
       obj->drawItemText(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6),
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QPROXYSTYLE_ITEMTEXTRECT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISLOG(4) && HB_ISCHAR(5)) {
+    if (ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISLOG(4) && ISQSTRING(5)) {
 #endif
       QRect *ptr = new QRect(obj->itemTextRect(*PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5)));
       Qt5xHb::createReturnClass(ptr, "QRECT", true);

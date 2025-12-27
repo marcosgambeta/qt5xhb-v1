@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_NEW)
     */
     QUndoCommand *obj = new QUndoCommand(HB_ISNIL(1) ? 0 : (QUndoCommand *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQUNDOCOMMANDORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQUNDOCOMMANDORNIL(2)) {
     /*
     QUndoCommand( const QString &text, QUndoCommand * parent = 0 )
     */
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_SETTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

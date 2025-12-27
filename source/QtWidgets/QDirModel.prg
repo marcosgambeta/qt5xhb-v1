@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QDIRMODEL_INDEX)
           obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     /*
     QModelIndex index( const QString &path, int column = 0 ) const
     */
@@ -702,7 +702,7 @@ HB_FUNC_STATIC(QDIRMODEL_MKDIR)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQSTRING(2)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->mkdir(*PQMODELINDEX(1), PQSTRING(2)));
       Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);

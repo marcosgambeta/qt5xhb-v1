@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QMENUBAR_ACTIVEACTION)
 
 HB_FUNC_STATIC(QMENUBAR_ADDACTION)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QAction * addAction( const QString &text )
     */
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDACTION)
       QAction *ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  } else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && ISQSTRING(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
     /*
     QAction * addAction( const QString &text, const QObject * receiver, const char * member )
     */
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDMENU)
       QAction *ptr = obj->addMenu(PQMENU(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QMenu * addMenu( const QString &title )
     */
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QMENUBAR_ADDMENU)
       QMenu *ptr = obj->addMenu(PQSTRING(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
-  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2)) {
     /*
     QMenu * addMenu( const QIcon &icon, const QString &title )
     */

@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDSIMPLETEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQFONTORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQFONTORNIL(2)) {
 #endif
       QGraphicsSimpleTextItem *ptr =
           obj->addSimpleText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *(QFont *)Qt5xHb::itemGetPtr(2));
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQFONTORNIL(2)) {
+    if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQFONTORNIL(2)) {
 #endif
       QGraphicsTextItem *ptr = obj->addText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *(QFont *)Qt5xHb::itemGetPtr(2));
       Qt5xHb::createReturnClass(ptr, "QGRAPHICSTEXTITEM", false);

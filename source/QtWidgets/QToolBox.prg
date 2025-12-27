@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QTOOLBOX_DELETE)
 
 HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
 {
-  if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
+  if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && ISQSTRING(3)) {
     /*
     int addItem( QWidget * widget, const QIcon &iconSet, const QString &text )
     */
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
       RINT(
           obj->addItem(PQWIDGET(1), HB_ISOBJECT(2) ? *(QIcon *)Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3)));
     }
-  } else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQWIDGET(1) && ISQSTRING(2)) {
     /*
     int addItem( QWidget * w, const QString &text )
     */
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QTOOLBOX_INDEXOF)
 
 HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
 {
-  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4)) {
+  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && ISQSTRING(4)) {
     /*
     int insertItem( int index, QWidget * widget, const QIcon &icon, const QString &text )
     */
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
       RINT(obj->insertItem(PINT(1), PQWIDGET(2), HB_ISOBJECT(3) ? *(QIcon *)Qt5xHb::itemGetPtr(3) : QIcon(hb_parc(3)),
                            PQSTRING(4)));
     }
-  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && ISQSTRING(3)) {
     /*
     int insertItem( int index, QWidget * widget, const QString &text )
     */
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setItemText(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMTOOLTIP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setItemToolTip(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

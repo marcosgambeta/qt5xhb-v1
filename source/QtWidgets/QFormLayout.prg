@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQWIDGET(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQWIDGET(2)) {
     /*
     void addRow( const QString &labelText, QWidget * field )
     */
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQLAYOUT(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQLAYOUT(2)) {
     /*
     void addRow( const QString &labelText, QLayout * field )
     */
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQWIDGET(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQSTRING(2) && ISQWIDGET(3)) {
     /*
     void insertRow( int row, const QString &labelText, QWidget * field )
     */
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQLAYOUT(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQSTRING(2) && ISQLAYOUT(3)) {
     /*
     void insertRow( int row, const QString &labelText, QLayout * field )
     */

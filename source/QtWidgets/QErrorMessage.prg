@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_DELETE)
 
 HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     void showMessage( const QString &message )
     */
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     /*
     void showMessage( const QString &message, const QString &type )
     */

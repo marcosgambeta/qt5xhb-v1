@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QMENU_NEW)
     */
     QMenu *obj = new QMenu(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQWIDGETORNIL(2)) {
     /*
     QMenu( const QString &title, QWidget * parent = 0 )
     */
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QMENU_SETACTIVEACTION)
 
 HB_FUNC_STATIC(QMENU_ADDACTION)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QAction * addAction( const QString &text )
     */
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
       QAction *ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2)) {
     /*
     QAction * addAction( const QIcon &icon, const QString &text )
     */
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
       QAction *ptr = obj->addAction(HB_ISOBJECT(1) ? *(QIcon *)Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  } else if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISQKEYSEQUENCEORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && ISQSTRING(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ISQKEYSEQUENCEORNIL(4)) {
     /*
     QAction * addAction( const QString &text, const QObject * receiver, const char * member, const QKeySequence &
     shortcut = 0 )
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
                                     HB_ISNIL(4) ? 0 : *(QKeySequence *)Qt5xHb::itemGetPtr(4));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  } else if (ISBETWEEN(4, 5) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) &&
+  } else if (ISBETWEEN(4, 5) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2) && ISQOBJECT(3) && HB_ISCHAR(4) &&
            ISQKEYSEQUENCEORNIL(5)) {
     /*
     QAction * addAction( const QIcon &icon, const QString &text, const QObject * receiver, const char * member, const
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
       QAction *ptr = obj->addMenu(PQMENU(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QMenu * addMenu( const QString &title )
     */
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
       QMenu *ptr = obj->addMenu(PQSTRING(1));
       Qt5xHb::createReturnQWidgetClass(ptr, "QMENU");
     }
-  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2)) {
     /*
     QMenu * addMenu( const QIcon &icon, const QString &title )
     */
@@ -743,7 +743,7 @@ HB_FUNC_STATIC(QMENU_SETTITLE)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->setTitle(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -802,7 +802,7 @@ HB_FUNC_STATIC(QMENU_WCEMENU)
 HB_FUNC_STATIC(QMENU_ADDSECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QAction * addSection( const QString &text )
     */
@@ -814,7 +814,7 @@ HB_FUNC_STATIC(QMENU_ADDSECTION)
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 #endif
-  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2)) {
     /*
     QAction * addSection( const QIcon &icon, const QString &text )
     */
@@ -835,7 +835,7 @@ HB_FUNC_STATIC(QMENU_ADDSECTION)
 HB_FUNC_STATIC(QMENU_INSERTSECTION)
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 1, 0))
-  if (ISNUMPAR(2) && ISQACTION(1) && HB_ISCHAR(2)) {
+  if (ISNUMPAR(2) && ISQACTION(1) && ISQSTRING(2)) {
     /*
     QAction * insertSection( QAction * before, const QString &text )
     */
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QMENU_INSERTSECTION)
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
 #endif
-  } else if (ISNUMPAR(3) && ISQACTION(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && ISQACTION(1) && (ISQICON(2) || HB_ISCHAR(2)) && ISQSTRING(3)) {
     /*
     QAction * insertSection( QAction * before, const QIcon &icon, const QString &text )
     */

@@ -72,7 +72,7 @@ RETURN
     */
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_NEW)
 {
-  if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISNUMORNIL(2) && ISCHARORNIL(3)) {
+  if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISNUMORNIL(2) && ISQSTRINGORNIL(3)) {
     QAccessibleWidget *obj = new QAccessibleWidget(
         PQWIDGET(1), HB_ISNIL(2) ? (QAccessible::Role)QAccessible::Client : (QAccessible::Role)hb_parni(2),
         OPQSTRING(3, QString()));
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_DOACTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       obj->doAction(PQSTRING(1));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_KEYBINDINGSFORACTION)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
       RQSTRINGLIST(obj->keyBindingsForAction(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

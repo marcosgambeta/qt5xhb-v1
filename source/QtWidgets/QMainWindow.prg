@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QToolBar * addToolBar( const QString &title )
     */

@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
     Qt5xHb::createReturnClass(ptr, "QFONT", true);
     hb_storl(par1, 1);
   } else if (ISBETWEEN(2, 5) && HB_ISLOG(1) && ISQFONT(2) && ISQWIDGETORNIL(3) &&
-           ISCHARORNIL(4) && ISNUMORNIL(5)) {
+           ISQSTRINGORNIL(4) && ISNUMORNIL(5)) {
     /*
     static QFont getFont( bool * ok, const QFont &initial, QWidget * parent = 0, const QString &title = QString(),
     QFontDialog::FontDialogOptions options = 0 )

@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SIZEHINT)
 HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
 {
   if (ISNUMPAR(1)) {
-    if (HB_ISCHAR(1)) {
+    if (ISQSTRING(1)) {
       /*
       void display( const QString &s )
       */

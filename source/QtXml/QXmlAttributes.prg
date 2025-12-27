@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_APPEND)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4)) {
+    if (ISNUMPAR(4) && ISQSTRING(1) && ISQSTRING(2) && ISQSTRING(3) && ISQSTRING(4)) {
 #endif
       obj->append(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_COUNT)
 
 HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     int index( const QString &qName ) const
     */
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
     if (obj != NULL) {
       RINT(obj->index(*PQLATIN1STRING(1)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     /*
     int index( const QString &uri, const QString &localPart ) const
     */
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
     if (obj != NULL) {
       RQSTRING(obj->type(PINT(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QString type( const QString &qName ) const
     */
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
     if (obj != NULL) {
       RQSTRING(obj->type(PQSTRING(1)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     /*
     QString type( const QString &uri, const QString &localName ) const
     */
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
     if (obj != NULL) {
       RQSTRING(obj->value(PINT(1)));
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QString value( const QString &qName ) const
     */
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
     if (obj != NULL) {
       RQSTRING(obj->value(*PQLATIN1STRING(1)));
     }
-  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     /*
     QString value( const QString &uri, const QString &localName ) const
     */

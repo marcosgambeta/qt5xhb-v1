@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QTABWIDGET_DELETE)
 
 HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
 {
-  if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2)) {
+  if (ISNUMPAR(2) && ISQWIDGET(1) && ISQSTRING(2)) {
     /*
     int addTab( QWidget * page, const QString &label )
     */
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
     if (obj != NULL) {
       RINT(obj->addTab(PQWIDGET(1), PQSTRING(2)));
     }
-  } else if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && ISQSTRING(3)) {
     /*
     int addTab( QWidget * page, const QIcon &icon, const QString &label )
     */
@@ -479,7 +479,7 @@ HB_FUNC_STATIC(QTABWIDGET_INDEXOF)
 
 HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
 {
-  if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3)) {
+  if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && ISQSTRING(3)) {
     /*
     int insertTab( int index, QWidget * page, const QString &label )
     */
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
     if (obj != NULL) {
       RINT(obj->insertTab(PINT(1), PQWIDGET(2), PQSTRING(3)));
     }
-  } else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && ISQSTRING(4)) {
     /*
     int insertTab( int index, QWidget * page, const QIcon &icon, const QString &label )
     */
@@ -765,7 +765,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABTEXT)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setTabText(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -810,7 +810,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABTOOLTIP)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setTabToolTip(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -856,7 +856,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABWHATSTHIS)
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
 #endif
       obj->setTabWhatsThis(PINT(1), PQSTRING(2));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

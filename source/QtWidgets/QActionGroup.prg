@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
       QAction *ptr = obj->addAction(PQACTION(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     QAction * addAction( const QString &text )
     */
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
       QAction *ptr = obj->addAction(PQSTRING(1));
       Qt5xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && ISQSTRING(2)) {
     /*
     QAction * addAction( const QIcon &icon, const QString &text )
     */

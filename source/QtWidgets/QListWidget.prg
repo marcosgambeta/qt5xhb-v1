@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QLISTWIDGET_DELETE)
 
 HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
     void addItem( const QString &label )
     */
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTRING(2)) {
     /*
     void insertItem( int row, const QString &label )
     */
