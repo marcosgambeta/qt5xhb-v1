@@ -134,8 +134,7 @@ HB_FUNC_STATIC(QMIMEDATA_COLORDATA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVariant *ptr = new QVariant(obj->colorData());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->colorData());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -316,8 +315,7 @@ HB_FUNC_STATIC(QMIMEDATA_IMAGEDATA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVariant *ptr = new QVariant(obj->imageData());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->imageData());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

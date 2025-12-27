@@ -226,8 +226,7 @@ HB_FUNC_STATIC(QSQLQUERY_BOUNDVALUE)
     QSqlQuery *obj = (QSqlQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QVariant *ptr = new QVariant(obj->boundValue(PQSTRING(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->boundValue(PQSTRING(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     /*
@@ -236,8 +235,7 @@ HB_FUNC_STATIC(QSQLQUERY_BOUNDVALUE)
     QSqlQuery *obj = (QSqlQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QVariant *ptr = new QVariant(obj->boundValue(PINT(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->boundValue(PINT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -576,8 +574,7 @@ HB_FUNC_STATIC(QSQLQUERY_LASTINSERTID)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVariant *ptr = new QVariant(obj->lastInsertId());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->lastInsertId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -839,8 +836,7 @@ HB_FUNC_STATIC(QSQLQUERY_VALUE)
     QSqlQuery *obj = (QSqlQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QVariant *ptr = new QVariant(obj->value(PINT(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->value(PINT(1)));
     }
   } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     /*
@@ -849,8 +845,7 @@ HB_FUNC_STATIC(QSQLQUERY_VALUE)
     QSqlQuery *obj = (QSqlQuery *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QVariant *ptr = new QVariant(obj->value(PQSTRING(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->value(PQSTRING(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -230,9 +230,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMVALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQVARIANTORNIL(2)) {
 #endif
-      QVariant *ptr =
-          new QVariant(obj->customValue(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->customValue(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -528,8 +526,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_METADATA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
 #endif
-    QVariant *ptr = new QVariant(QHelpEngineCore::metaData(PQSTRING(1), PQSTRING(2)));
-    RQVARIANT(ptr);
+    RQVARIANT(QHelpEngineCore::metaData(PQSTRING(1), PQSTRING(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

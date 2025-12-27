@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_CALL)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QVariant *ptr = new QVariant(obj->call(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2),
+      RQVARIANT(obj->call(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2),
                                              HB_ISNIL(3) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(3),
                                              HB_ISNIL(4) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(4),
                                              HB_ISNIL(5) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(5),
@@ -134,15 +134,13 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_CALL)
                                              HB_ISNIL(7) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(7),
                                              HB_ISNIL(8) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(8),
                                              HB_ISNIL(9) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(9)));
-      RQVARIANT(ptr);
     }
   } else if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISARRAY(2)) {
     // QVariant call( const QString & function, QList<QVariant> & arguments )
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QVariant *ptr = new QVariant(obj->call(PQSTRING(1), PQVARIANTLIST(2)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->call(PQSTRING(1), PQVARIANTLIST(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

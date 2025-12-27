@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QAXBASE_ASVARIANT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVariant *ptr = new QVariant(obj->asVariant());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->asVariant());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -218,8 +217,7 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QVariant *ptr =
-          new QVariant(obj->dynamicCall(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2),
+      RQVARIANT(obj->dynamicCall(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2),
                                         HB_ISNIL(3) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(3),
                                         HB_ISNIL(4) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(4),
                                         HB_ISNIL(5) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(5),
@@ -227,15 +225,13 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
                                         HB_ISNIL(7) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(7),
                                         HB_ISNIL(8) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(8),
                                         HB_ISNIL(9) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(9)));
-      RQVARIANT(ptr);
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QVariant dynamicCall( const char * function, QList<QVariant> & vars )
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QVariant *ptr = new QVariant(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

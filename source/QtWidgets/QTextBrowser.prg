@@ -409,8 +409,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_LOADRESOURCE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2)) {
 #endif
-      QVariant *ptr = new QVariant(obj->loadResource(PINT(1), *PQURL(2)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->loadResource(PINT(1), *PQURL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

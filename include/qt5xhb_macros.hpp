@@ -187,7 +187,7 @@
 #define RQRGB(x)                                            hb_retni(x)
 #define RQINTPTR(x)                                         hb_retnll(x)
 #define RQUINTPTR(x)                                        hb_retnll(x)
-#define RQVARIANT(p)                                        Qt5xHb::createReturnClass(p, "QVARIANT", true)
+#define RQVARIANT(exp)                                      Qt5xHb::createReturnClass(new QVariant(exp), "QVARIANT", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()

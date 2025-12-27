@@ -637,9 +637,7 @@ HB_FUNC_STATIC(QSETTINGS_VALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQVARIANTORNIL(2)) {
 #endif
-      QVariant *ptr =
-          new QVariant(obj->value(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->value(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *(QVariant *)Qt5xHb::itemGetPtr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

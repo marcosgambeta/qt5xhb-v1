@@ -245,8 +245,7 @@ HB_FUNC_STATIC(QANDROIDPARCEL_READVARIANT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVariant *ptr = new QVariant(obj->readVariant());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->readVariant());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

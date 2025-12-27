@@ -1401,8 +1401,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_INPUTMETHODQUERY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->inputMethodQuery((Qt::InputMethodQuery)hb_parni(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->inputMethodQuery((Qt::InputMethodQuery)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

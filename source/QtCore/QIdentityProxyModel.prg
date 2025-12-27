@@ -223,8 +223,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_HEADERDATA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      QVariant *ptr = new QVariant(obj->headerData(PINT(1), (Qt::Orientation)hb_parni(2), PINT(3)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->headerData(PINT(1), (Qt::Orientation)hb_parni(2), PINT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

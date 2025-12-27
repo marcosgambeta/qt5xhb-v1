@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_CURRENTVALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVariant *ptr = new QVariant(obj->currentValue());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->currentValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -126,8 +125,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MAXIMUMVALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVariant *ptr = new QVariant(obj->maximumValue());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->maximumValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -145,8 +143,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MINIMUMVALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVariant *ptr = new QVariant(obj->minimumValue());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->minimumValue());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -164,8 +161,7 @@ HB_FUNC_STATIC(QACCESSIBLEVALUEINTERFACE_MINIMUMSTEPSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVariant *ptr = new QVariant(obj->minimumStepSize());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->minimumStepSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

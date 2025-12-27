@@ -242,8 +242,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_OPTION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->option(PQSTRING(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->option(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
