@@ -154,8 +154,7 @@ HB_FUNC_STATIC(QSENSOR_IDENTIFIER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->identifier());
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->identifier());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -201,8 +200,7 @@ HB_FUNC_STATIC(QSENSOR_TYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->type());
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->type());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1056,8 +1054,7 @@ HB_FUNC_STATIC(QSENSOR_DEFAULTSENSORFORTYPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
-    QByteArray *ptr = new QByteArray(QSensor::defaultSensorForType(*PQBYTEARRAY(1)));
-    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(QSensor::defaultSensorForType(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

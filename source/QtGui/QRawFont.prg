@@ -692,8 +692,7 @@ HB_FUNC_STATIC(QRAWFONT_FONTTABLE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->fontTable(PCONSTCHAR(1)));
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->fontTable(PCONSTCHAR(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

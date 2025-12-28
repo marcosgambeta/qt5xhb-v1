@@ -351,8 +351,7 @@ HB_FUNC_STATIC(QIMAGEREADER_FORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->format());
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->format());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -832,13 +831,11 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
   } else if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static QByteArray imageFormat( const QString & fileName )
 
-    QByteArray *ptr = new QByteArray(QImageReader::imageFormat(PQSTRING(1)));
-    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(QImageReader::imageFormat(PQSTRING(1)));
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     // static QByteArray imageFormat( QIODevice * device )
 
-    QByteArray *ptr = new QByteArray(QImageReader::imageFormat(PQIODEVICE(1)));
-    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(QImageReader::imageFormat(PQIODEVICE(1)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

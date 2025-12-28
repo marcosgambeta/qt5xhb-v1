@@ -502,13 +502,11 @@ HB_FUNC_STATIC(QPICTUREIO_PICTUREFORMAT)
   if (ISNUMPAR(1) && ISQSTRING(1)) {
     // static QByteArray pictureFormat( const QString & fileName )
 
-    QByteArray *ptr = new QByteArray(QPictureIO::pictureFormat(PQSTRING(1)));
-    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(QPictureIO::pictureFormat(PQSTRING(1)));
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     // static QByteArray pictureFormat( QIODevice * )
 
-    QByteArray *ptr = new QByteArray(QPictureIO::pictureFormat(PQIODEVICE(1)));
-    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(QPictureIO::pictureFormat(PQIODEVICE(1)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

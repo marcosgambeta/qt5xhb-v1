@@ -151,8 +151,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESULT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->result());
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->result());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -167,9 +166,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_HASH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2)) {
 #endif
-    QByteArray *ptr =
-        new QByteArray(QCryptographicHash::hash(*PQBYTEARRAY(1), (QCryptographicHash::Algorithm)hb_parni(2)));
-    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(QCryptographicHash::hash(*PQBYTEARRAY(1), (QCryptographicHash::Algorithm)hb_parni(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

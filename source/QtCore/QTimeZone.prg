@@ -194,8 +194,7 @@ HB_FUNC_STATIC(QTIMEZONE_ID)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->id());
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->id());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -424,8 +423,7 @@ HB_FUNC_STATIC(QTIMEZONE_SYSTEMTIMEZONEID)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QByteArray *ptr = new QByteArray(QTimeZone::systemTimeZoneId());
-    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(QTimeZone::systemTimeZoneId());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -584,8 +582,7 @@ HB_FUNC_STATIC(QTIMEZONE_IANAIDTOWINDOWSID)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
-    QByteArray *ptr = new QByteArray(QTimeZone::ianaIdToWindowsId(*PQBYTEARRAY(1)));
-    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(QTimeZone::ianaIdToWindowsId(*PQBYTEARRAY(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -600,16 +597,13 @@ HB_FUNC_STATIC(QTIMEZONE_WINDOWSIDTODEFAULTIANAID)
     // static QByteArray windowsIdToDefaultIanaId( const QByteArray & windowsId )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
-    QByteArray *ptr = new QByteArray(QTimeZone::windowsIdToDefaultIanaId(*PQBYTEARRAY(1)));
-    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(QTimeZone::windowsIdToDefaultIanaId(*PQBYTEARRAY(1)));
 #endif
   } else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2)) {
     // static QByteArray windowsIdToDefaultIanaId( const QByteArray & windowsId, QLocale::Country country )
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 2, 0))
 
-    QByteArray *ptr =
-        new QByteArray(QTimeZone::windowsIdToDefaultIanaId(*PQBYTEARRAY(1), (QLocale::Country)hb_parni(2)));
-    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(QTimeZone::windowsIdToDefaultIanaId(*PQBYTEARRAY(1), (QLocale::Country)hb_parni(2)));
 #endif
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -368,8 +368,7 @@ HB_FUNC_STATIC(QIODEVICE_PEEK)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QByteArray *ptr = new QByteArray(obj->peek(PQINT64(1)));
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->peek(PQINT64(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -426,8 +425,7 @@ HB_FUNC_STATIC(QIODEVICE_READ)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QByteArray *ptr = new QByteArray(obj->read(PQINT64(1)));
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->read(PQINT64(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -443,8 +441,7 @@ HB_FUNC_STATIC(QIODEVICE_READALL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->readAll());
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->readAll());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -467,8 +464,7 @@ HB_FUNC_STATIC(QIODEVICE_READLINE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QByteArray *ptr = new QByteArray(obj->readLine(OPQINT64(1, 0)));
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->readLine(OPQINT64(1, 0)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

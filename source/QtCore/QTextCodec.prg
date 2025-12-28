@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QTEXTCODEC_FROMUNICODE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QByteArray *ptr = new QByteArray(obj->fromUnicode(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->fromUnicode(PQSTRING(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -180,8 +179,7 @@ HB_FUNC_STATIC(QTEXTCODEC_NAME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->name());
-      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(obj->name());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
