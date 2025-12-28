@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQSTRINGORNIL(2)) {
 #endif
-      QModelIndex *ptr = new QModelIndex(obj->filter(PQSTRING(1), OPQSTRING(2, QString())));
-      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(obj->filter(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

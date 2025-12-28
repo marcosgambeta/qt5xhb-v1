@@ -183,9 +183,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_INDEX)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
 #endif
-      QModelIndex *ptr = new QModelIndex(
-          obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
-      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(obj->index(PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -203,8 +201,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_PARENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
-      QModelIndex *ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
-      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(obj->parent(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

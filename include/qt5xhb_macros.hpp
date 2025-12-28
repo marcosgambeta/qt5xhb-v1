@@ -190,6 +190,7 @@
 #define RQVARIANT(exp)                                      Qt5xHb::createReturnClass(new QVariant(exp), "QVARIANT", true)
 #define RQBYTEARRAY(exp)                                    Qt5xHb::createReturnClass(new QByteArray(exp), "QBYTEARRAY", true)
 #define RQCOLOR(exp)                                        Qt5xHb::createReturnClass(new QColor(exp), "QCOLOR", true)
+#define RQMODELINDEX(exp)                                   Qt5xHb::createReturnClass(new QModelIndex(exp), "QMODELINDEX", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()

@@ -233,8 +233,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SIBLING)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3)) {
 #endif
-      QModelIndex *ptr = new QModelIndex(obj->sibling(PINT(1), PINT(2), *PQMODELINDEX(3)));
-      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(obj->sibling(PINT(1), PINT(2), *PQMODELINDEX(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

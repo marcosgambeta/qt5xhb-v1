@@ -98,9 +98,7 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_INDEX)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQMODELINDEXORNIL(3)) {
 #endif
-      QModelIndex *ptr = new QModelIndex(
-          obj->index(PINT(1), OPINT(2, 0), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
-      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(obj->index(PINT(1), OPINT(2, 0), HB_ISNIL(3) ? QModelIndex() : *(QModelIndex *)Qt5xHb::itemGetPtr(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
