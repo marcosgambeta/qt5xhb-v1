@@ -189,6 +189,7 @@
 #define RQUINTPTR(x)                                        hb_retnll(x)
 #define RQVARIANT(exp)                                      Qt5xHb::createReturnClass(new QVariant(exp), "QVARIANT", true)
 #define RQBYTEARRAY(exp)                                    Qt5xHb::createReturnClass(new QByteArray(exp), "QBYTEARRAY", true)
+#define RQCOLOR(exp)                                        Qt5xHb::createReturnClass(new QColor(exp), "QCOLOR", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()

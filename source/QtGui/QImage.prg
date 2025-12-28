@@ -1247,8 +1247,7 @@ HB_FUNC_STATIC(QIMAGE_PIXELCOLOR)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QColor *ptr = new QColor(obj->pixelColor(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->pixelColor(*PQPOINT(1)));
     }
 #endif
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
@@ -1257,8 +1256,7 @@ HB_FUNC_STATIC(QIMAGE_PIXELCOLOR)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QColor *ptr = new QColor(obj->pixelColor(PINT(1), PINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->pixelColor(PINT(1), PINT(2)));
     }
 #endif
   } else {

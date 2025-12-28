@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_CURRENTCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->currentColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->currentColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -236,8 +235,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SELECTEDCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->selectedColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->selectedColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -318,8 +316,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_CUSTOMCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    QColor *ptr = new QColor(QColorDialog::customColor(PINT(1)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColorDialog::customColor(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -371,10 +368,9 @@ HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
   if (ISBETWEEN(0, 4) && (ISQCOLOR(1) || HB_ISNIL(1)) && ISQWIDGETORNIL(2) &&
       ISQSTRINGORNIL(3) && ISNUMORNIL(4)) {
 #endif
-    QColor *ptr = new QColor(QColorDialog::getColor(
+    RQCOLOR(QColorDialog::getColor(
         HB_ISNIL(1) ? Qt::white : *(QColor *)Qt5xHb::itemGetPtr(1), OPQWIDGET(2, 0), OPQSTRING(3, QString()),
         HB_ISNIL(4) ? (QColorDialog::ColorDialogOptions)0 : (QColorDialog::ColorDialogOptions)hb_parni(4)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -390,8 +386,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_STANDARDCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    QColor *ptr = new QColor(QColorDialog::standardColor(PINT(1)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColorDialog::standardColor(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -329,8 +329,7 @@ HB_FUNC_STATIC(QCOLOR_CONVERTTO)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QColor *ptr = new QColor(obj->convertTo((QColor::Spec)hb_parni(1)));
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->convertTo((QColor::Spec)hb_parni(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -384,8 +383,7 @@ HB_FUNC_STATIC(QCOLOR_DARKER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      QColor *ptr = new QColor(obj->darker(OPINT(1, 200)));
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->darker(OPINT(1, 200)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -865,8 +863,7 @@ HB_FUNC_STATIC(QCOLOR_LIGHTER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      QColor *ptr = new QColor(obj->lighter(OPINT(1, 150)));
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->lighter(OPINT(1, 150)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1465,8 +1462,7 @@ HB_FUNC_STATIC(QCOLOR_TOCMYK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->toCmyk());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->toCmyk());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1484,8 +1480,7 @@ HB_FUNC_STATIC(QCOLOR_TOHSL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->toHsl());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->toHsl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1503,8 +1498,7 @@ HB_FUNC_STATIC(QCOLOR_TOHSV)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->toHsv());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->toHsv());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1522,8 +1516,7 @@ HB_FUNC_STATIC(QCOLOR_TORGB)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->toRgb());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->toRgb());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1624,8 +1617,7 @@ HB_FUNC_STATIC(QCOLOR_FROMCMYK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
 #endif
-    QColor *ptr = new QColor(QColor::fromCmyk(PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5, 255)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColor::fromCmyk(PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5, 255)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1639,8 +1631,7 @@ HB_FUNC_STATIC(QCOLOR_FROMCMYKF)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
 #endif
-    QColor *ptr = new QColor(QColor::fromCmykF(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5, 1.0)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColor::fromCmykF(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5, 1.0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1654,8 +1645,7 @@ HB_FUNC_STATIC(QCOLOR_FROMHSL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
 #endif
-    QColor *ptr = new QColor(QColor::fromHsl(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColor::fromHsl(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1669,8 +1659,7 @@ HB_FUNC_STATIC(QCOLOR_FROMHSLF)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
 #endif
-    QColor *ptr = new QColor(QColor::fromHslF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColor::fromHslF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1684,8 +1673,7 @@ HB_FUNC_STATIC(QCOLOR_FROMHSV)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
 #endif
-    QColor *ptr = new QColor(QColor::fromHsv(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColor::fromHsv(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1699,8 +1687,7 @@ HB_FUNC_STATIC(QCOLOR_FROMHSVF)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
 #endif
-    QColor *ptr = new QColor(QColor::fromHsvF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColor::fromHsvF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1712,12 +1699,10 @@ HB_FUNC_STATIC(QCOLOR_FROMRGB)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // static QColor fromRgb( QRgb rgb )
-    QColor *ptr = new QColor(QColor::fromRgb(PQRGB(1)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColor::fromRgb(PQRGB(1)));
   } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
     // static QColor fromRgb( int r, int g, int b, int a = 255 )
-    QColor *ptr = new QColor(QColor::fromRgb(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColor::fromRgb(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1729,8 +1714,7 @@ HB_FUNC_STATIC(QCOLOR_FROMRGBF)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
 #endif
-    QColor *ptr = new QColor(QColor::fromRgbF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColor::fromRgbF(PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4, 1.0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1744,8 +1728,7 @@ HB_FUNC_STATIC(QCOLOR_FROMRGBA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    QColor *ptr = new QColor(QColor::fromRgba(PQRGB(1)));
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+    RQCOLOR(QColor::fromRgba(PQRGB(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

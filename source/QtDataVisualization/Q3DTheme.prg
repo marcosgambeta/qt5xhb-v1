@@ -268,8 +268,7 @@ HB_FUNC_STATIC(Q3DTHEME_BACKGROUNDCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->backgroundColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->backgroundColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -307,8 +306,7 @@ HB_FUNC_STATIC(Q3DTHEME_WINDOWCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->windowColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->windowColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -346,8 +344,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELTEXTCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->labelTextColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->labelTextColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -385,8 +382,7 @@ HB_FUNC_STATIC(Q3DTHEME_LABELBACKGROUNDCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->labelBackgroundColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->labelBackgroundColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -424,8 +420,7 @@ HB_FUNC_STATIC(Q3DTHEME_GRIDLINECOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->gridLineColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->gridLineColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -463,8 +458,7 @@ HB_FUNC_STATIC(Q3DTHEME_SINGLEHIGHLIGHTCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->singleHighlightColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->singleHighlightColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -502,8 +496,7 @@ HB_FUNC_STATIC(Q3DTHEME_MULTIHIGHLIGHTCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->multiHighlightColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->multiHighlightColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -541,8 +534,7 @@ HB_FUNC_STATIC(Q3DTHEME_LIGHTCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->lightColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->lightColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -300,8 +300,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LINEPENCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->linePenColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->linePenColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -513,8 +512,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINECOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->gridLineColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->gridLineColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -556,8 +554,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINECOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->minorGridLineColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->minorGridLineColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -769,8 +766,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->labelsColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->labelsColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1110,8 +1106,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->shadesColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->shadesColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1153,8 +1148,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBORDERCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->shadesBorderColor());
-      Qt5xHb::createReturnClass(ptr, "QCOLOR", true);
+      RQCOLOR(obj->shadesBorderColor());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
