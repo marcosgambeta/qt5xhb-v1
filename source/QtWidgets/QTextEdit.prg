@@ -381,8 +381,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
     QTextEdit *obj = (QTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRect *ptr = new QRect(obj->cursorRect(*PQTEXTCURSOR(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->cursorRect(*PQTEXTCURSOR(1)));
     }
   } else if (ISNUMPAR(0)) {
     /*
@@ -391,8 +390,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
     QTextEdit *obj = (QTextEdit *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRect *ptr = new QRect(obj->cursorRect());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->cursorRect());
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

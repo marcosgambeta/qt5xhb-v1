@@ -840,8 +840,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMSBOUNDINGRECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRectF *ptr = new QRectF(obj->itemsBoundingRect());
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->itemsBoundingRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -951,8 +950,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SCENERECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRectF *ptr = new QRectF(obj->sceneRect());
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->sceneRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

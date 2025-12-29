@@ -329,8 +329,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_BOUNDINGRECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRectF *ptr = new QRectF(obj->boundingRect());
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->boundingRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -411,8 +410,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_CHILDRENBOUNDINGRECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRectF *ptr = new QRectF(obj->childrenBoundingRect());
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->childrenBoundingRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1433,8 +1431,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectFromItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
     }
   } else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     /*
@@ -1443,8 +1440,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectFromItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1460,8 +1456,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromParent(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectFromParent(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
@@ -1470,8 +1465,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectFromParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1487,8 +1481,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromScene(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectFromScene(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
@@ -1497,8 +1490,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1514,8 +1506,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectToItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
     }
   } else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     /*
@@ -1524,8 +1515,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectToItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1541,8 +1531,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToParent(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectToParent(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
@@ -1551,8 +1540,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectToParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1568,8 +1556,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToScene(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectToScene(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
@@ -1578,8 +1565,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRectToScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2106,8 +2092,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SCENEBOUNDINGRECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRectF *ptr = new QRectF(obj->sceneBoundingRect());
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->sceneBoundingRect());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

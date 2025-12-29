@@ -832,16 +832,14 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRect *ptr = new QRect(obj->mapRect(*PQRECT(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->mapRect(*PQRECT(1)));
     }
   } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // QRectF mapRect( const QRectF & ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRect(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->mapRect(*PQRECTF(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

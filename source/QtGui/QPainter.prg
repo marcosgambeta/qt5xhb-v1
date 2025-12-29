@@ -275,33 +275,29 @@ HB_FUNC_STATIC(QPAINTER_BOUNDINGRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->boundingRect(*PQRECTF(1), PINT(2), PQSTRING(3)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->boundingRect(*PQRECTF(1), PINT(2), PQSTRING(3)));
     }
   } else if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && ISQSTRING(3)) {
     // QRect boundingRect( const QRect & rectangle, int flags, const QString & text )
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRect *ptr = new QRect(obj->boundingRect(*PQRECT(1), PINT(2), PQSTRING(3)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->boundingRect(*PQRECT(1), PINT(2), PQSTRING(3)));
     }
   } else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && ISQSTRING(6)) {
     // QRect boundingRect( int x, int y, int w, int h, int flags, const QString & text )
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRect *ptr = new QRect(obj->boundingRect(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->boundingRect(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6)));
     }
   } else if (ISBETWEEN(2, 3) && ISQRECTF(1) && ISQSTRING(2) && ISQTEXTOPTIONORNIL(3)) {
     // QRectF boundingRect( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->boundingRect(*PQRECTF(1), PQSTRING(2),
+      RQRECTF(obj->boundingRect(*PQRECTF(1), PQSTRING(2),
                                                  HB_ISNIL(3) ? QTextOption() : *(QTextOption *)Qt5xHb::itemGetPtr(3)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2581,8 +2577,7 @@ HB_FUNC_STATIC(QPAINTER_VIEWPORT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->viewport());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->viewport());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2600,8 +2595,7 @@ HB_FUNC_STATIC(QPAINTER_WINDOW)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->window());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->window());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

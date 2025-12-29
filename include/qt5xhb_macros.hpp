@@ -195,6 +195,8 @@
 #define RQPOINTF(exp)                                       Qt5xHb::createReturnClass(new QPointF(exp), "QPOINTF", true)
 #define RQLINE(exp)                                         Qt5xHb::createReturnClass(new QLine(exp), "QLINE", true)
 #define RQLINEF(exp)                                        Qt5xHb::createReturnClass(new QLineF(exp), "QLINEF", true)
+#define RQRECT(exp)                                         Qt5xHb::createReturnClass(new QRect(exp), "QRECT", true)
+#define RQRECTF(exp)                                        Qt5xHb::createReturnClass(new QRectF(exp), "QRECTF", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()

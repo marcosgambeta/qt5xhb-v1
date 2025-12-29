@@ -216,8 +216,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_MENURECT)
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
-      QRect *ptr = new QRect(obj->menuRect);
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->menuRect);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

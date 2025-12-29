@@ -176,8 +176,7 @@ HB_FUNC_STATIC(QSCREEN_GEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->geometry());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->geometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -359,8 +358,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEGEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->availableGeometry());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->availableGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -434,8 +432,7 @@ HB_FUNC_STATIC(QSCREEN_VIRTUALGEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->virtualGeometry());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->virtualGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -472,8 +469,7 @@ HB_FUNC_STATIC(QSCREEN_AVAILABLEVIRTUALGEOMETRY)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->availableVirtualGeometry());
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->availableVirtualGeometry());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -603,9 +599,7 @@ HB_FUNC_STATIC(QSCREEN_MAPBETWEEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3)) {
 #endif
-      QRect *ptr = new QRect(
-          obj->mapBetween((Qt::ScreenOrientation)hb_parni(1), (Qt::ScreenOrientation)hb_parni(2), *PQRECT(3)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->mapBetween((Qt::ScreenOrientation)hb_parni(1), (Qt::ScreenOrientation)hb_parni(2), *PQRECT(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

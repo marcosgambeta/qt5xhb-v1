@@ -222,8 +222,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_CELLRECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      QRect *ptr = new QRect(obj->cellRect(PINT(1), PINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(obj->cellRect(PINT(1), PINT(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

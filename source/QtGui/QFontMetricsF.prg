@@ -160,16 +160,14 @@ HB_FUNC_STATIC(QFONTMETRICSF_BOUNDINGRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->boundingRect(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->boundingRect(PQSTRING(1)));
     }
   } else if (ISNUMPAR(1) && ISQCHAR(1)) {
     // QRectF boundingRect( QChar ch ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->boundingRect(*PQCHAR(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->boundingRect(*PQCHAR(1)));
     }
   } else if (ISBETWEEN(3, 5) && ISQRECTF(1) && HB_ISNUM(2) && ISQSTRING(3) && ISNUMORNIL(4) && ISARRAYORNIL(5)) {
     // QRectF boundingRect( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 )
@@ -178,8 +176,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_BOUNDINGRECT)
 
     if (obj != NULL) {
       int par5;
-      QRectF *ptr = new QRectF(obj->boundingRect(*PQRECTF(1), PINT(2), PQSTRING(3), OPINT(4, 0), &par5));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->boundingRect(*PQRECTF(1), PINT(2), PQSTRING(3), OPINT(4, 0), &par5));
       hb_storni(par5, 5);
     }
   } else {
@@ -433,8 +430,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_TIGHTBOUNDINGRECT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
-      QRectF *ptr = new QRectF(obj->tightBoundingRect(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(obj->tightBoundingRect(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
