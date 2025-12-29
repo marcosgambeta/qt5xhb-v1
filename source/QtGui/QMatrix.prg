@@ -329,16 +329,14 @@ HB_FUNC_STATIC(QMATRIX_MAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QLine *ptr = new QLine(obj->map(*PQLINE(1)));
-      Qt5xHb::createReturnClass(ptr, "QLINE", true);
+      RQLINE(obj->map(*PQLINE(1)));
     }
   } else if (ISNUMPAR(1) && ISQLINEF(1)) {
     // QLineF map( const QLineF &l ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QLineF *ptr = new QLineF(obj->map(*PQLINEF(1)));
-      Qt5xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->map(*PQLINEF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPOLYGON(1)) {
     // QPolygon map( const QPolygon &a ) const

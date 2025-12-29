@@ -117,8 +117,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_LINE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QLineF *ptr = new QLineF(obj->line());
-      Qt5xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->line());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

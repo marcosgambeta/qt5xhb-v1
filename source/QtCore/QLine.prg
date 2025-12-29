@@ -381,16 +381,14 @@ HB_FUNC_STATIC(QLINE_TRANSLATED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QLine *ptr = new QLine(obj->translated(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QLINE", true);
+      RQLINE(obj->translated(*PQPOINT(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QLine translated( int dx, int dy ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QLine *ptr = new QLine(obj->translated(PINT(1), PINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QLINE", true);
+      RQLINE(obj->translated(PINT(1), PINT(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

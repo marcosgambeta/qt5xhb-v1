@@ -1148,8 +1148,7 @@ HB_FUNC_STATIC(QVARIANT_TOLINE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QLine *ptr = new QLine(obj->toLine());
-      Qt5xHb::createReturnClass(ptr, "QLINE", true);
+      RQLINE(obj->toLine());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1169,8 +1168,7 @@ HB_FUNC_STATIC(QVARIANT_TOLINEF)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QLineF *ptr = new QLineF(obj->toLineF());
-      Qt5xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->toLineF());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

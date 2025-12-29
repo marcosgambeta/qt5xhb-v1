@@ -193,6 +193,8 @@
 #define RQMODELINDEX(exp)                                   Qt5xHb::createReturnClass(new QModelIndex(exp), "QMODELINDEX", true)
 #define RQPOINT(exp)                                        Qt5xHb::createReturnClass(new QPoint(exp), "QPOINT", true)
 #define RQPOINTF(exp)                                       Qt5xHb::createReturnClass(new QPointF(exp), "QPOINTF", true)
+#define RQLINE(exp)                                         Qt5xHb::createReturnClass(new QLine(exp), "QLINE", true)
+#define RQLINEF(exp)                                        Qt5xHb::createReturnClass(new QLineF(exp), "QLINEF", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()
