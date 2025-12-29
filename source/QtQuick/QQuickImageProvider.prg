@@ -135,8 +135,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTIMAGE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQSTRING(1) && ISQSIZE(2) && ISQSIZE(3)) {
 #endif
-      QImage *ptr = new QImage(obj->requestImage(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
-      Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->requestImage(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

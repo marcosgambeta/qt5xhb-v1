@@ -345,8 +345,7 @@ HB_FUNC_STATIC(QGLWIDGET_GRABFRAMEBUFFER)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
-      QImage *ptr = new QImage(obj->grabFrameBuffer(OPBOOL(1, false)));
-      Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->grabFrameBuffer(OPBOOL(1, false)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -672,8 +671,7 @@ HB_FUNC_STATIC(QGLWIDGET_CONVERTTOGLFORMAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQIMAGE(1)) {
 #endif
-    QImage *ptr = new QImage(QGLWidget::convertToGLFormat(*PQIMAGE(1)));
-    Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
+    RQIMAGE(QGLWidget::convertToGLFormat(*PQIMAGE(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
