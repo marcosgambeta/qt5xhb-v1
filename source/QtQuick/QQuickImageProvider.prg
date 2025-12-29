@@ -156,8 +156,7 @@ HB_FUNC_STATIC(QQUICKIMAGEPROVIDER_REQUESTPIXMAP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQSTRING(1) && ISQSIZE(2) && ISQSIZE(3)) {
 #endif
-      QPixmap *ptr = new QPixmap(obj->requestPixmap(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
-      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->requestPixmap(PQSTRING(1), PQSIZE(2), *PQSIZE(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

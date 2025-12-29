@@ -225,8 +225,7 @@ HB_FUNC_STATIC(QSTYLE_GENERATEDICONPIXMAP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3)) {
 #endif
-      QPixmap *ptr = new QPixmap(obj->generatedIconPixmap((QIcon::Mode)hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3)));
-      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->generatedIconPixmap((QIcon::Mode)hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

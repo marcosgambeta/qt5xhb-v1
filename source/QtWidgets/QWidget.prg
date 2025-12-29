@@ -4599,9 +4599,7 @@ HB_FUNC_STATIC(QWIDGET_GRAB)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQRECTORNIL(1)) {
 #endif
-      QPixmap *ptr =
-          new QPixmap(obj->grab(HB_ISNIL(1) ? QRect(QPoint(0, 0), QSize(-1, -1)) : *(QRect *)Qt5xHb::itemGetPtr(1)));
-      Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->grab(HB_ISNIL(1) ? QRect(QPoint(0, 0), QSize(-1, -1)) : *(QRect *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

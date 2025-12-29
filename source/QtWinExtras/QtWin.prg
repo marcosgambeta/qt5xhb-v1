@@ -138,10 +138,8 @@ HB_FUNC_STATIC(QTWIN_FROMHBITMAP)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && ISNUMORNIL(2)) {
 #endif
-    QPixmap *ptr =
-        new QPixmap(QtWin::fromHBITMAP((HBITMAP)hb_parptr(1), HB_ISNIL(2) ? (QtWin::HBitmapFormat)QtWin::HBitmapNoAlpha
+    RQPIXMAP(QtWin::fromHBITMAP((HBITMAP)hb_parptr(1), HB_ISNIL(2) ? (QtWin::HBitmapFormat)QtWin::HBitmapNoAlpha
                                                                           : (QtWin::HBitmapFormat)hb_parni(2)));
-    Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -196,8 +194,7 @@ HB_FUNC_STATIC(QTWIN_FROMHICON)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
 #endif
-    QPixmap *ptr = new QPixmap(QtWin::fromHICON((HICON)hb_parptr(1)));
-    Qt5xHb::createReturnClass(ptr, "QPIXMAP", true);
+    RQPIXMAP(QtWin::fromHICON((HICON)hb_parptr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
