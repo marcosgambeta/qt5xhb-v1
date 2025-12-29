@@ -620,20 +620,17 @@ HB_FUNC_STATIC(QAPPLICATION_FONT)
     /*
     static QFont font()
     */
-    QFont *ptr = new QFont(QApplication::font());
-    Qt5xHb::createReturnClass(ptr, "QFONT", true);
+    RQFONT(QApplication::font());
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     /*
     static QFont font( const QWidget * widget )
     */
-    QFont *ptr = new QFont(QApplication::font(PQWIDGET(1)));
-    Qt5xHb::createReturnClass(ptr, "QFONT", true);
+    RQFONT(QApplication::font(PQWIDGET(1)));
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     /*
     static QFont font( const char * className )
     */
-    QFont *ptr = new QFont(QApplication::font(PCONSTCHAR(1)));
-    Qt5xHb::createReturnClass(ptr, "QFONT", true);
+    RQFONT(QApplication::font(PCONSTCHAR(1)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
