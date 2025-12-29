@@ -1169,8 +1169,7 @@ HB_FUNC_STATIC(QCHART_BACKGROUNDPEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPen *ptr = new QPen(obj->backgroundPen());
-      Qt5xHb::createReturnClass(ptr, "QPEN", true);
+      RQPEN(obj->backgroundPen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1412,8 +1411,7 @@ HB_FUNC_STATIC(QCHART_PLOTAREABACKGROUNDPEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPen *ptr = new QPen(obj->plotAreaBackgroundPen());
-      Qt5xHb::createReturnClass(ptr, "QPEN", true);
+      RQPEN(obj->plotAreaBackgroundPen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -257,8 +257,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LINEPEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPen *ptr = new QPen(obj->linePen());
-      Qt5xHb::createReturnClass(ptr, "QPEN", true);
+      RQPEN(obj->linePen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -384,8 +383,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_GRIDLINEPEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPen *ptr = new QPen(obj->gridLinePen());
-      Qt5xHb::createReturnClass(ptr, "QPEN", true);
+      RQPEN(obj->gridLinePen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -469,8 +467,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_MINORGRIDLINEPEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPen *ptr = new QPen(obj->minorGridLinePen());
-      Qt5xHb::createReturnClass(ptr, "QPEN", true);
+      RQPEN(obj->minorGridLinePen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1016,8 +1013,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESPEN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPen *ptr = new QPen(obj->shadesPen());
-      Qt5xHb::createReturnClass(ptr, "QPEN", true);
+      RQPEN(obj->shadesPen());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

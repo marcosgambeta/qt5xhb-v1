@@ -201,6 +201,7 @@
 #define RQPOLYGONF(exp)                                     Qt5xHb::createReturnClass(new QPolygonF(exp), "QPOLYGONF", true)
 #define RQBRUSH(exp)                                        Qt5xHb::createReturnClass(new QBrush(exp), "QBRUSH", true)
 #define RQFONT(exp)                                         Qt5xHb::createReturnClass(new QFont(exp), "QFONT", true)
+#define RQPEN(exp)                                          Qt5xHb::createReturnClass(new QPen(exp), "QPEN", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()
