@@ -205,6 +205,8 @@
 #define RQICON(exp)                                         Qt5xHb::createReturnClass(new QIcon(exp), "QICON", true)
 #define RQPIXMAP(exp)                                       Qt5xHb::createReturnClass(new QPixmap(exp), "QPIXMAP", true)
 #define RQIMAGE(exp)                                        Qt5xHb::createReturnClass(new QImage(exp), "QIMAGE", true)
+#define RQSIZE(exp)                                         Qt5xHb::createReturnClass(new QSize(exp), "QSIZE", true)
+#define RQSIZEF(exp)                                        Qt5xHb::createReturnClass(new QSizeF(exp), "QSIZEF", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()

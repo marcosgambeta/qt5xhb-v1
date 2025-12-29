@@ -135,9 +135,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEFORNIL(2)) {
 #endif
-      QSizeF *ptr = new QSizeF(
-          obj->effectiveSizeHint((Qt::SizeHint)hb_parni(1), HB_ISNIL(2) ? QSizeF() : *(QSizeF *)Qt5xHb::itemGetPtr(2)));
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->effectiveSizeHint((Qt::SizeHint)hb_parni(1), HB_ISNIL(2) ? QSizeF() : *(QSizeF *)Qt5xHb::itemGetPtr(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -268,8 +266,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MAXIMUMSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->maximumSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->maximumSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -329,8 +326,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MINIMUMSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->minimumSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->minimumSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -431,8 +427,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PREFERREDSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->preferredSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->preferredSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

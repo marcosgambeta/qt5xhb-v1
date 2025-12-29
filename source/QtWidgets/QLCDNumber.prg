@@ -335,8 +335,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SIZEHINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSize *ptr = new QSize(obj->sizeHint());
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->sizeHint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

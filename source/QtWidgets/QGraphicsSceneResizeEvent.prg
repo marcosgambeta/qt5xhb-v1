@@ -91,8 +91,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEWSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->newSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->newSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -112,8 +111,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_OLDSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->oldSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->oldSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

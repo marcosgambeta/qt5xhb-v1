@@ -266,8 +266,7 @@ HB_FUNC_STATIC(QWEBPAGE_VIEWPORTSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSize *ptr = new QSize(obj->viewportSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->viewportSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -309,8 +308,7 @@ HB_FUNC_STATIC(QWEBPAGE_PREFERREDCONTENTSSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSize *ptr = new QSize(obj->preferredContentsSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->preferredContentsSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

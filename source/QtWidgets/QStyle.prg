@@ -416,9 +416,7 @@ HB_FUNC_STATIC(QSTYLE_SIZEFROMCONTENTS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && ISQWIDGETORNIL(4)) {
 #endif
-      QSize *ptr = new QSize(
-          obj->sizeFromContents((QStyle::ContentsType)hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET(4, 0)));
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->sizeFromContents((QStyle::ContentsType)hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET(4, 0)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

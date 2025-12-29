@@ -309,8 +309,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_ICONSIZE)
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
-      QSize *ptr = new QSize(obj->iconSize);
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->iconSize);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -370,8 +369,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_LEFTBUTTONSIZE)
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
-      QSize *ptr = new QSize(obj->leftButtonSize);
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->leftButtonSize);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -401,8 +399,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_RIGHTBUTTONSIZE)
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
-      QSize *ptr = new QSize(obj->rightButtonSize);
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->rightButtonSize);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QICONENGINE_ACTUALSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      QSize *ptr = new QSize(obj->actualSize(*PQSIZE(1), (QIcon::Mode)hb_parni(2), (QIcon::State)hb_parni(3)));
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->actualSize(*PQSIZE(1), (QIcon::Mode)hb_parni(2), (QIcon::State)hb_parni(3)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

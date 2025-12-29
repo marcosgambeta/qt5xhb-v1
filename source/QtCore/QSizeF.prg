@@ -265,8 +265,7 @@ HB_FUNC_STATIC(QSIZEF_TRANSPOSED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->transposed());
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->transposed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -307,16 +306,14 @@ HB_FUNC_STATIC(QSIZEF_SCALED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QSizeF *ptr = new QSizeF(obj->scaled(PQREAL(1), PQREAL(2), (Qt::AspectRatioMode)hb_parni(3)));
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->scaled(PQREAL(1), PQREAL(2), (Qt::AspectRatioMode)hb_parni(3)));
     }
   } else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2)) {
     // QSizeF scaled( const QSizeF & s, Qt::AspectRatioMode mode ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QSizeF *ptr = new QSizeF(obj->scaled(*PQSIZEF(1), (Qt::AspectRatioMode)hb_parni(2)));
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->scaled(*PQSIZEF(1), (Qt::AspectRatioMode)hb_parni(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -332,8 +329,7 @@ HB_FUNC_STATIC(QSIZEF_EXPANDEDTO)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZEF(1)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->expandedTo(*PQSIZEF(1)));
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->expandedTo(*PQSIZEF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -351,8 +347,7 @@ HB_FUNC_STATIC(QSIZEF_BOUNDEDTO)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZEF(1)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->boundedTo(*PQSIZEF(1)));
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->boundedTo(*PQSIZEF(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -370,8 +365,7 @@ HB_FUNC_STATIC(QSIZEF_TOSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSize *ptr = new QSize(obj->toSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->toSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

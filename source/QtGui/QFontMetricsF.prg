@@ -392,8 +392,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_SIZE)
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && ISQSTRING(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       int par4;
-      QSizeF *ptr = new QSizeF(obj->size(PINT(1), PQSTRING(2), OPINT(3, 0), &par4));
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->size(PINT(1), PQSTRING(2), OPINT(3, 0), &par4));
       hb_storni(par4, 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

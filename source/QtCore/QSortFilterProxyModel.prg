@@ -1202,8 +1202,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SPAN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
-      QSize *ptr = new QSize(obj->span(*PQMODELINDEX(1)));
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->span(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

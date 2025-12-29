@@ -576,8 +576,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ICONSIZE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSize *ptr = new QSize(obj->iconSize());
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->iconSize());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1307,8 +1306,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORINDEX)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
-      QSize *ptr = new QSize(obj->sizeHintForIndex(*PQMODELINDEX(1)));
-      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(obj->sizeHintForIndex(*PQMODELINDEX(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

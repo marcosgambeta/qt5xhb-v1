@@ -815,8 +815,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SIZEHINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZEF(2)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->sizeHint((Qt::SizeHint)hb_parni(1), *PQSIZEF(2)));
-      Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->sizeHint((Qt::SizeHint)hb_parni(1), *PQSIZEF(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
