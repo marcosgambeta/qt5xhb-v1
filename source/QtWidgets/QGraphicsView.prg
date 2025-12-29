@@ -457,8 +457,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPoint *ptr = new QPoint(obj->mapFromScene(*PQPOINTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(obj->mapFromScene(*PQPOINTF(1)));
     }
   } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     /*
@@ -497,8 +496,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPoint *ptr = new QPoint(obj->mapFromScene(PQREAL(1), PQREAL(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(obj->mapFromScene(PQREAL(1), PQREAL(2)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
@@ -524,8 +522,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPointF *ptr = new QPointF(obj->mapToScene(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(obj->mapToScene(*PQPOINT(1)));
     }
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     /*
@@ -564,8 +561,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPointF *ptr = new QPointF(obj->mapToScene(PINT(1), PINT(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(obj->mapToScene(PINT(1), PINT(2)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*

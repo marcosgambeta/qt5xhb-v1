@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QLINE_P1)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPoint *ptr = new QPoint(obj->p1());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(obj->p1());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QLINE_P2)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPoint *ptr = new QPoint(obj->p2());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(obj->p2());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

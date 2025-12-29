@@ -693,16 +693,14 @@ HB_FUNC_STATIC(QMATRIX4X4_MAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPoint *ptr = new QPoint(obj->map(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(obj->map(*PQPOINT(1)));
     }
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // QPointF map( const QPointF &point ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPointF *ptr = new QPointF(obj->map(*PQPOINTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(obj->map(*PQPOINTF(1)));
     }
   } else if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
     // QVector3D map(const QVector3D& point) const

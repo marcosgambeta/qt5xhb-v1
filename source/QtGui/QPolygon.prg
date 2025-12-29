@@ -225,8 +225,7 @@ HB_FUNC_STATIC(QPOLYGON_POINT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPoint *ptr = new QPoint(obj->point(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(obj->point(PINT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

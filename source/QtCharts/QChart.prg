@@ -1438,8 +1438,7 @@ HB_FUNC_STATIC(QCHART_MAPTOVALUE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQPOINTF(1) && ISQABSTRACTSERIESORNIL(2)) {
 #endif
-      QPointF *ptr = new QPointF(obj->mapToValue(*PQPOINTF(1), OPQABSTRACTSERIES(2, nullptr)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(obj->mapToValue(*PQPOINTF(1), OPQABSTRACTSERIES(2, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1459,8 +1458,7 @@ HB_FUNC_STATIC(QCHART_MAPTOPOSITION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQPOINTF(1) && ISQABSTRACTSERIESORNIL(2)) {
 #endif
-      QPointF *ptr = new QPointF(obj->mapToPosition(*PQPOINTF(1), OPQABSTRACTSERIES(2, nullptr)));
-      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(obj->mapToPosition(*PQPOINTF(1), OPQABSTRACTSERIES(2, nullptr)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

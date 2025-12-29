@@ -476,8 +476,7 @@ HB_FUNC_STATIC(QWINDOW_MAPFROMGLOBAL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
-      QPoint *ptr = new QPoint(obj->mapFromGlobal(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(obj->mapFromGlobal(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -495,8 +494,7 @@ HB_FUNC_STATIC(QWINDOW_MAPTOGLOBAL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
-      QPoint *ptr = new QPoint(obj->mapToGlobal(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(obj->mapToGlobal(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1399,8 +1397,7 @@ HB_FUNC_STATIC(QWINDOW_POSITION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPoint *ptr = new QPoint(obj->position());
-      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(obj->position());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
