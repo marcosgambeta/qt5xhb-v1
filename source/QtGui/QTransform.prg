@@ -748,16 +748,14 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->map(*PQPOLYGONF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->map(*PQPOLYGONF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPOLYGON(1)) {
     // QPolygon map( const QPolygon & a ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPolygon *ptr = new QPolygon(obj->map(*PQPOLYGON(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->map(*PQPOLYGON(1)));
     }
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // QRegion map( const QRegion & r ) const
@@ -815,8 +813,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPTOPOLYGON)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECT(1)) {
 #endif
-      QPolygon *ptr = new QPolygon(obj->mapToPolygon(*PQRECT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->mapToPolygon(*PQRECT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

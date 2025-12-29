@@ -1245,8 +1245,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapFromItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapFromItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
     }
   } else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOLYGONF(2)) {
     /*
@@ -1255,8 +1254,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapFromItem(PQGRAPHICSITEM(1), *PQPOLYGONF(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapFromItem(PQGRAPHICSITEM(1), *PQPOLYGONF(2)));
     }
   } else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPAINTERPATH(2)) {
     /*
@@ -1275,8 +1273,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapFromItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapFromItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
     }
   } else if (ISNUMPAR(3) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     /*
@@ -1310,8 +1307,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapFromParent(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapFromParent(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     /*
@@ -1320,8 +1316,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapFromParent(*PQPOLYGONF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapFromParent(*PQPOLYGONF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     /*
@@ -1340,8 +1335,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapFromParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapFromParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
@@ -1375,8 +1369,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapFromScene(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapFromScene(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     /*
@@ -1385,8 +1378,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapFromScene(*PQPOLYGONF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapFromScene(*PQPOLYGONF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     /*
@@ -1405,8 +1397,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
@@ -1590,8 +1581,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
     }
   } else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOLYGONF(2)) {
     /*
@@ -1600,8 +1590,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToItem(PQGRAPHICSITEM(1), *PQPOLYGONF(2)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToItem(PQGRAPHICSITEM(1), *PQPOLYGONF(2)));
     }
   } else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPAINTERPATH(2)) {
     /*
@@ -1620,8 +1609,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
     }
   } else if (ISNUMPAR(3) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     /*
@@ -1655,8 +1643,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToParent(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToParent(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     /*
@@ -1665,8 +1652,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToParent(*PQPOLYGONF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToParent(*PQPOLYGONF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     /*
@@ -1685,8 +1671,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
@@ -1720,8 +1705,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToScene(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToScene(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     /*
@@ -1730,8 +1714,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToScene(*PQPOLYGONF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToScene(*PQPOLYGONF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     /*
@@ -1750,8 +1733,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*

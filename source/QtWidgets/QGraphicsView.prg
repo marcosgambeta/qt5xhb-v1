@@ -466,8 +466,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygon *ptr = new QPolygon(obj->mapFromScene(*PQRECTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->mapFromScene(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     /*
@@ -476,8 +475,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygon *ptr = new QPolygon(obj->mapFromScene(*PQPOLYGONF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->mapFromScene(*PQPOLYGONF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     /*
@@ -505,8 +503,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygon *ptr = new QPolygon(obj->mapFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->mapFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -531,8 +528,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToScene(*PQRECT(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToScene(*PQRECT(1)));
     }
   } else if (ISNUMPAR(1) && ISQPOLYGON(1)) {
     /*
@@ -541,8 +537,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToScene(*PQPOLYGON(1)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToScene(*PQPOLYGON(1)));
     }
   } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     /*
@@ -570,8 +565,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->mapToScene(PINT(1), PINT(2), PINT(3), PINT(4)));
-      Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->mapToScene(PINT(1), PINT(2), PINT(3), PINT(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
