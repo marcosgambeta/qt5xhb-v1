@@ -440,10 +440,8 @@ HB_FUNC_STATIC(QSTYLE_STANDARDICON)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3)) {
 #endif
-      QIcon *ptr =
-          new QIcon(obj->standardIcon((QStyle::StandardPixmap)hb_parni(1),
+      RQICON(obj->standardIcon((QStyle::StandardPixmap)hb_parni(1),
                                       HB_ISNIL(2) ? 0 : (QStyleOption *)Qt5xHb::itemGetPtr(2), OPQWIDGET(3, 0)));
-      Qt5xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

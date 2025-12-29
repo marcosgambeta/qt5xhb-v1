@@ -202,6 +202,7 @@
 #define RQBRUSH(exp)                                        Qt5xHb::createReturnClass(new QBrush(exp), "QBRUSH", true)
 #define RQFONT(exp)                                         Qt5xHb::createReturnClass(new QFont(exp), "QFONT", true)
 #define RQPEN(exp)                                          Qt5xHb::createReturnClass(new QPen(exp), "QPEN", true)
+#define RQICON(exp)                                         Qt5xHb::createReturnClass(new QIcon(exp), "QICON", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()

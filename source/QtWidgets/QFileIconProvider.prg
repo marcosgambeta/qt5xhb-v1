@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
     QFileIconProvider *obj = (QFileIconProvider *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QIcon *ptr = new QIcon(obj->icon((QFileIconProvider::IconType)hb_parni(1)));
-      Qt5xHb::createReturnClass(ptr, "QICON", true);
+      RQICON(obj->icon((QFileIconProvider::IconType)hb_parni(1)));
     }
   } else if (ISNUMPAR(1) && ISQFILEINFO(1)) {
     /*
@@ -105,8 +104,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
     QFileIconProvider *obj = (QFileIconProvider *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QIcon *ptr = new QIcon(obj->icon(*PQFILEINFO(1)));
-      Qt5xHb::createReturnClass(ptr, "QICON", true);
+      RQICON(obj->icon(*PQFILEINFO(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
