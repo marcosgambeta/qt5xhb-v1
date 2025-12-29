@@ -161,8 +161,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_BACKGROUND)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBrush *ptr = new QBrush(obj->background());
-      Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->background());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -394,8 +393,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_FOREGROUND)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBrush *ptr = new QBrush(obj->foreground());
-      Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->foreground());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

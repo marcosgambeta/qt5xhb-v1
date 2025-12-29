@@ -638,8 +638,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_LABELSBRUSH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBrush *ptr = new QBrush(obj->labelsBrush());
-      Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->labelsBrush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -850,8 +849,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_TITLEBRUSH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBrush *ptr = new QBrush(obj->titleBrush());
-      Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->titleBrush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1063,8 +1061,7 @@ HB_FUNC_STATIC(QABSTRACTAXIS_SHADESBRUSH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBrush *ptr = new QBrush(obj->shadesBrush());
-      Qt5xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->shadesBrush());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
