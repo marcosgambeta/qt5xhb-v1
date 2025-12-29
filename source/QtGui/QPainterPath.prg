@@ -566,8 +566,7 @@ HB_FUNC_STATIC(QPAINTERPATH_INTERSECTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->intersected(*PQPAINTERPATH(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->intersected(*PQPAINTERPATH(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -793,8 +792,7 @@ HB_FUNC_STATIC(QPAINTERPATH_SIMPLIFIED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->simplified());
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->simplified());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -830,8 +828,7 @@ HB_FUNC_STATIC(QPAINTERPATH_SUBTRACTED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->subtracted(*PQPAINTERPATH(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->subtracted(*PQPAINTERPATH(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -890,8 +887,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TOREVERSED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->toReversed());
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->toReversed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -932,16 +928,14 @@ HB_FUNC_STATIC(QPAINTERPATH_TRANSLATED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPainterPath *ptr = new QPainterPath(obj->translated(PQREAL(1), PQREAL(2)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->translated(PQREAL(1), PQREAL(2)));
     }
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // QPainterPath translated( const QPointF & offset ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPainterPath *ptr = new QPainterPath(obj->translated(*PQPOINTF(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->translated(*PQPOINTF(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -957,8 +951,7 @@ HB_FUNC_STATIC(QPAINTERPATH_UNITED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->united(*PQPAINTERPATH(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->united(*PQPAINTERPATH(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

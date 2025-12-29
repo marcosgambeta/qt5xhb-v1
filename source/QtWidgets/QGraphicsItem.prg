@@ -452,8 +452,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_CLIPPATH)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->clipPath());
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->clipPath());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1263,8 +1262,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPainterPath *ptr = new QPainterPath(obj->mapFromItem(PQGRAPHICSITEM(1), *PQPAINTERPATH(2)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->mapFromItem(PQGRAPHICSITEM(1), *PQPAINTERPATH(2)));
     }
   } else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     /*
@@ -1325,8 +1323,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPainterPath *ptr = new QPainterPath(obj->mapFromParent(*PQPAINTERPATH(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->mapFromParent(*PQPAINTERPATH(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
@@ -1387,8 +1384,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPainterPath *ptr = new QPainterPath(obj->mapFromScene(*PQPAINTERPATH(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->mapFromScene(*PQPAINTERPATH(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
@@ -1599,8 +1595,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPainterPath *ptr = new QPainterPath(obj->mapToItem(PQGRAPHICSITEM(1), *PQPAINTERPATH(2)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->mapToItem(PQGRAPHICSITEM(1), *PQPAINTERPATH(2)));
     }
   } else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     /*
@@ -1661,8 +1656,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPainterPath *ptr = new QPainterPath(obj->mapToParent(*PQPAINTERPATH(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->mapToParent(*PQPAINTERPATH(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
@@ -1723,8 +1717,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
     QGraphicsItem *obj = (QGraphicsItem *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPainterPath *ptr = new QPainterPath(obj->mapToScene(*PQPAINTERPATH(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->mapToScene(*PQPAINTERPATH(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     /*
@@ -1802,8 +1795,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_OPAQUEAREA)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->opaqueArea());
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->opaqueArea());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2875,8 +2867,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SHAPE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->shape());
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->shape());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

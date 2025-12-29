@@ -482,8 +482,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPFROMSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPainterPath *ptr = new QPainterPath(obj->mapFromScene(*PQPAINTERPATH(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->mapFromScene(*PQPAINTERPATH(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*
@@ -544,8 +543,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
     QGraphicsView *obj = (QGraphicsView *)Qt5xHb::itemGetPtrStackSelfItem();
 
     if (obj != NULL) {
-      QPainterPath *ptr = new QPainterPath(obj->mapToScene(*PQPAINTERPATH(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->mapToScene(*PQPAINTERPATH(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     /*

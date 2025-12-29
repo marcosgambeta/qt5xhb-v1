@@ -770,8 +770,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPainterPath *ptr = new QPainterPath(obj->map(*PQPAINTERPATH(1)));
-      Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->map(*PQPAINTERPATH(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void map( int x, int y, int * tx, int * ty ) const
