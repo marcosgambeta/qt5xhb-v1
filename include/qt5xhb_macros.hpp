@@ -210,6 +210,7 @@
 #define RQPAINTERPATH(exp)                                  Qt5xHb::createReturnClass(new QPainterPath(exp), "QPAINTERPATH", true)
 #define RQREGION(exp)                                       Qt5xHb::createReturnClass(new QRegion(exp), "QREGION", true)
 #define RQTRANSFORM(exp)                                    Qt5xHb::createReturnClass(new QTransform(exp), "QTRANSFORM", true)
+#define RQLOCALE(exp)                                       Qt5xHb::createReturnClass(new QLocale(exp), "QLOCALE", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()
