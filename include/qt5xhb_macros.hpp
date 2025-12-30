@@ -213,6 +213,9 @@
 #define RQLOCALE(exp)                                       Qt5xHb::createReturnClass(new QLocale(exp), "QLOCALE", true)
 #define RQVECTOR3D(exp)                                     Qt5xHb::createReturnClass(new QVector3D(exp), "QVECTOR3D", true)
 #define RQVECTOR4D(exp)                                     Qt5xHb::createReturnClass(new QVector4D(exp), "QVECTOR4D", true)
+#define RQMATRIX(exp)                                       Qt5xHb::createReturnClass(new QMatrix(exp), "QMATRIX", true)
+#define RQMATRIX3X3(exp)                                    Qt5xHb::createReturnClass(new QMatrix3x3(exp), "QMATRIX3X3", true)
+#define RQMATRIX4X4(exp)                                    Qt5xHb::createReturnClass(new QMatrix4x4(exp), "QMATRIX4X4", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()

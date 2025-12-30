@@ -852,8 +852,7 @@ HB_FUNC_STATIC(QPIXMAP_TRUEMATRIX)
 {
   if (ISNUMPAR(3) && ISQMATRIX(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // static QMatrix trueMatrix( const QMatrix &m, int w, int h )
-    QMatrix *ptr = new QMatrix(QPixmap::trueMatrix(*PQMATRIX(1), PINT(2), PINT(3)));
-    Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
+    RQMATRIX(QPixmap::trueMatrix(*PQMATRIX(1), PINT(2), PINT(3)));
   } else if (ISNUMPAR(3) && ISQTRANSFORM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // static QTransform trueMatrix( const QTransform &m, int w, int h )
     RQTRANSFORM(QPixmap::trueMatrix(*PQTRANSFORM(1), PINT(2), PINT(3)));

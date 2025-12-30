@@ -226,8 +226,7 @@ HB_FUNC_STATIC(QSVGRENDERER_MATRIXFORELEMENT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
-      QMatrix *ptr = new QMatrix(obj->matrixForElement(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
+      RQMATRIX(obj->matrixForElement(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

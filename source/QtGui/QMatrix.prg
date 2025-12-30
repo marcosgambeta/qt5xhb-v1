@@ -570,8 +570,7 @@ HB_FUNC_STATIC(QMATRIX_INVERTED)
     if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
-      QMatrix *ptr = new QMatrix(obj->inverted(&par1));
-      Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
+      RQMATRIX(obj->inverted(&par1));
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {

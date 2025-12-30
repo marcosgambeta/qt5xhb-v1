@@ -128,8 +128,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_MATRIX)
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
-      QMatrix *ptr = new QMatrix(obj->matrix);
-      Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
+      RQMATRIX(obj->matrix);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
