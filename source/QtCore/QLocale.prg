@@ -917,17 +917,15 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QDate *ptr = new QDate(obj->toDate(PQSTRING(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
+      RQDATE(obj->toDate(PQSTRING(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
                                                                   : (QLocale::FormatType)hb_parni(2)));
-      Qt5xHb::createReturnClass(ptr, "QDATE", true);
     }
   } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // QDate toDate( const QString & string, const QString & format ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QDate *ptr = new QDate(obj->toDate(PQSTRING(1), PQSTRING(2)));
-      Qt5xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->toDate(PQSTRING(1), PQSTRING(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -941,17 +939,15 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QDateTime *ptr = new QDateTime(obj->toDateTime(PQSTRING(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
+      RQDATETIME(obj->toDateTime(PQSTRING(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
                                                                               : (QLocale::FormatType)hb_parni(2)));
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
     }
   } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // QDateTime toDateTime( const QString & string, const QString & format ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QDateTime *ptr = new QDateTime(obj->toDateTime(PQSTRING(1), PQSTRING(2)));
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->toDateTime(PQSTRING(1), PQSTRING(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1299,17 +1295,15 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTime *ptr = new QTime(obj->toTime(PQSTRING(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
+      RQTIME(obj->toTime(PQSTRING(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
                                                                   : (QLocale::FormatType)hb_parni(2)));
-      Qt5xHb::createReturnClass(ptr, "QTIME", true);
     }
   } else if (ISNUMPAR(2) && ISQSTRING(1) && HB_ISCHAR(2)) {
     // QTime toTime( const QString & string, const QString & format ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTime *ptr = new QTime(obj->toTime(PQSTRING(1), PQSTRING(2)));
-      Qt5xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->toTime(PQSTRING(1), PQSTRING(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

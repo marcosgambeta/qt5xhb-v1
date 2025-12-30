@@ -704,8 +704,7 @@ HB_FUNC_STATIC(QJSVALUE_TODATETIME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->toDateTime());
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->toDateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

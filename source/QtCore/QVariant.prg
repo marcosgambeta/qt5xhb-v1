@@ -948,8 +948,7 @@ HB_FUNC_STATIC(QVARIANT_TODATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDate *ptr = new QDate(obj->toDate());
-      Qt5xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->toDate());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -967,8 +966,7 @@ HB_FUNC_STATIC(QVARIANT_TOTIME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTime *ptr = new QTime(obj->toTime());
-      Qt5xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->toTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -986,8 +984,7 @@ HB_FUNC_STATIC(QVARIANT_TODATETIME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->toDateTime());
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->toDateTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

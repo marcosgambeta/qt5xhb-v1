@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QTIME_ADDMSECS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QTime *ptr = new QTime(obj->addMSecs(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->addMSecs(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -132,8 +131,7 @@ HB_FUNC_STATIC(QTIME_ADDSECS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QTime *ptr = new QTime(obj->addSecs(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->addSecs(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -387,8 +385,7 @@ HB_FUNC_STATIC(QTIME_CURRENTTIME)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QTime *ptr = new QTime(QTime::currentTime());
-    Qt5xHb::createReturnClass(ptr, "QTIME", true);
+    RQTIME(QTime::currentTime());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -401,14 +398,11 @@ HB_FUNC_STATIC(QTIME_FROMSTRING)
   if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISNUMORNIL(2)) {
     // static QTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
 
-    QTime *ptr = new QTime(
-        QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? (Qt::DateFormat)Qt::TextDate : (Qt::DateFormat)hb_parni(2)));
-    Qt5xHb::createReturnClass(ptr, "QTIME", true);
+    RQTIME(QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? (Qt::DateFormat)Qt::TextDate : (Qt::DateFormat)hb_parni(2)));
   } else if (ISNUMPAR(2) && ISQSTRING(1) && ISQSTRING(2)) {
     // static QTime fromString( const QString & string, const QString & format )
 
-    QTime *ptr = new QTime(QTime::fromString(PQSTRING(1), PQSTRING(2)));
-    Qt5xHb::createReturnClass(ptr, "QTIME", true);
+    RQTIME(QTime::fromString(PQSTRING(1), PQSTRING(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

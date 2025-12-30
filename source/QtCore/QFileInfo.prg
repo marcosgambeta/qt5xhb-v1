@@ -338,8 +338,7 @@ HB_FUNC_STATIC(QFILEINFO_CREATED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->created());
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->created());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -682,8 +681,7 @@ HB_FUNC_STATIC(QFILEINFO_LASTMODIFIED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->lastModified());
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->lastModified());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -701,8 +699,7 @@ HB_FUNC_STATIC(QFILEINFO_LASTREAD)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->lastRead());
-      Qt5xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->lastRead());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
