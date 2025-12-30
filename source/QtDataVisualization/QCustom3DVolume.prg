@@ -605,8 +605,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMEWIDTHS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector3D *ptr = new QVector3D(obj->sliceFrameWidths());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->sliceFrameWidths());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -644,8 +643,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMEGAPS)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector3D *ptr = new QVector3D(obj->sliceFrameGaps());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->sliceFrameGaps());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -683,8 +681,7 @@ HB_FUNC_STATIC(QCUSTOM3DVOLUME_SLICEFRAMETHICKNESSES)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector3D *ptr = new QVector3D(obj->sliceFrameThicknesses());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->sliceFrameThicknesses());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -340,8 +340,7 @@ HB_FUNC_STATIC(QVECTOR2D_TOVECTOR3D)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector3D *ptr = new QVector3D(obj->toVector3D());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->toVector3D());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -359,8 +358,7 @@ HB_FUNC_STATIC(QVECTOR2D_TOVECTOR4D)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector4D *ptr = new QVector4D(obj->toVector4D());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR4D", true);
+      RQVECTOR4D(obj->toVector4D());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

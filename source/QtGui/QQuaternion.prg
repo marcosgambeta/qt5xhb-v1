@@ -164,8 +164,7 @@ HB_FUNC_STATIC(QQUATERNION_VECTOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector3D *ptr = new QVector3D(obj->vector());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->vector());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -454,8 +453,7 @@ HB_FUNC_STATIC(QQUATERNION_ROTATEDVECTOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
 #endif
-      QVector3D *ptr = new QVector3D(obj->rotatedVector(*PQVECTOR3D(1)));
-      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->rotatedVector(*PQVECTOR3D(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -473,8 +471,7 @@ HB_FUNC_STATIC(QQUATERNION_TOVECTOR4D)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector4D *ptr = new QVector4D(obj->toVector4D());
-      Qt5xHb::createReturnClass(ptr, "QVECTOR4D", true);
+      RQVECTOR4D(obj->toVector4D());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
