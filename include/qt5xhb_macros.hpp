@@ -219,6 +219,7 @@
 #define RQDATE(exp)                                         Qt5xHb::createReturnClass(new QDate(exp), "QDATE", true)
 #define RQDATETIME(exp)                                     Qt5xHb::createReturnClass(new QDateTime(exp), "QDATETIME", true)
 #define RQTIME(exp)                                         Qt5xHb::createReturnClass(new QTime(exp), "QTIME", true)
+#define RQBITMAP(exp)                                       Qt5xHb::createReturnClass(new QBitmap(exp), "QBITMAP", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()

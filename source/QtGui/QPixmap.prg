@@ -332,8 +332,7 @@ HB_FUNC_STATIC(QPIXMAP_MASK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBitmap *ptr = new QBitmap(obj->mask());
-      Qt5xHb::createReturnClass(ptr, "QBITMAP", true);
+      RQBITMAP(obj->mask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -445,8 +444,7 @@ HB_FUNC_STATIC(QPIXMAP_CREATEHEURISTICMASK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
-      QBitmap *ptr = new QBitmap(obj->createHeuristicMask(OPBOOL(1, true)));
-      Qt5xHb::createReturnClass(ptr, "QBITMAP", true);
+      RQBITMAP(obj->createHeuristicMask(OPBOOL(1, true)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -464,10 +462,8 @@ HB_FUNC_STATIC(QPIXMAP_CREATEMASKFROMCOLOR)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISNUMORNIL(2)) {
 #endif
-      QBitmap *ptr = new QBitmap(
-          obj->createMaskFromColor(HB_ISOBJECT(1) ? *(QColor *)Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)),
+      RQBITMAP(obj->createMaskFromColor(HB_ISOBJECT(1) ? *(QColor *)Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)),
                                    HB_ISNIL(2) ? (Qt::MaskMode)Qt::MaskInColor : (Qt::MaskMode)hb_parni(2)));
-      Qt5xHb::createReturnClass(ptr, "QBITMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
