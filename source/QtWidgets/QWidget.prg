@@ -764,8 +764,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDRENREGION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRegion *ptr = new QRegion(obj->childrenRegion());
-      Qt5xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->childrenRegion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2128,8 +2127,7 @@ HB_FUNC_STATIC(QWIDGET_MASK)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRegion *ptr = new QRegion(obj->mask());
-      Qt5xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->mask());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3791,8 +3789,7 @@ HB_FUNC_STATIC(QWIDGET_VISIBLEREGION)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRegion *ptr = new QRegion(obj->visibleRegion());
-      Qt5xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->visibleRegion());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

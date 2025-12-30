@@ -762,8 +762,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRegion *ptr = new QRegion(obj->map(*PQREGION(1)));
-      Qt5xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->map(*PQREGION(1)));
     }
   } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     // QPainterPath map( const QPainterPath & p ) const

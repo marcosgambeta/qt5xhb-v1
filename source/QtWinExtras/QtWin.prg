@@ -229,8 +229,7 @@ HB_FUNC_STATIC(QTWIN_FROMHRGN)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
 #endif
-    QRegion *ptr = new QRegion(QtWin::fromHRGN((HRGN)hb_parptr(1)));
-    Qt5xHb::createReturnClass(ptr, "QREGION", true);
+    RQREGION(QtWin::fromHRGN((HRGN)hb_parptr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
