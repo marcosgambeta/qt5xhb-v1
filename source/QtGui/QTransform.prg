@@ -549,8 +549,7 @@ HB_FUNC_STATIC(QTRANSFORM_INVERTED)
     if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
-      QTransform *ptr = new QTransform(obj->inverted(&par1));
-      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->inverted(&par1));
       hb_storl(par1, 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -569,8 +568,7 @@ HB_FUNC_STATIC(QTRANSFORM_ADJOINT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTransform *ptr = new QTransform(obj->adjoint());
-      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->adjoint());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -588,8 +586,7 @@ HB_FUNC_STATIC(QTRANSFORM_TRANSPOSED)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTransform *ptr = new QTransform(obj->transposed());
-      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->transposed());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -908,8 +905,7 @@ HB_FUNC_STATIC(QTRANSFORM_FROMTRANSLATE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-    QTransform *ptr = new QTransform(QTransform::fromTranslate(PQREAL(1), PQREAL(2)));
-    Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+    RQTRANSFORM(QTransform::fromTranslate(PQREAL(1), PQREAL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -923,8 +919,7 @@ HB_FUNC_STATIC(QTRANSFORM_FROMSCALE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-    QTransform *ptr = new QTransform(QTransform::fromScale(PQREAL(1), PQREAL(2)));
-    Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+    RQTRANSFORM(QTransform::fromScale(PQREAL(1), PQREAL(2)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

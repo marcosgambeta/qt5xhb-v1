@@ -386,8 +386,7 @@ HB_FUNC_STATIC(QPAINTER_COMBINEDTRANSFORM)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTransform *ptr = new QTransform(obj->combinedTransform());
-      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->combinedTransform());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

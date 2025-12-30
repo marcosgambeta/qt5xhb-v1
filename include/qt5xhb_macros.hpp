@@ -209,6 +209,7 @@
 #define RQSIZEF(exp)                                        Qt5xHb::createReturnClass(new QSizeF(exp), "QSIZEF", true)
 #define RQPAINTERPATH(exp)                                  Qt5xHb::createReturnClass(new QPainterPath(exp), "QPAINTERPATH", true)
 #define RQREGION(exp)                                       Qt5xHb::createReturnClass(new QRegion(exp), "QREGION", true)
+#define RQTRANSFORM(exp)                                    Qt5xHb::createReturnClass(new QTransform(exp), "QTRANSFORM", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()

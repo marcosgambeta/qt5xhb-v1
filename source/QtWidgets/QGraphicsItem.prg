@@ -595,8 +595,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_DEVICETRANSFORM)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTRANSFORM(1)) {
 #endif
-      QTransform *ptr = new QTransform(obj->deviceTransform(*PQTRANSFORM(1)));
-      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->deviceTransform(*PQTRANSFORM(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1214,8 +1213,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_ITEMTRANSFORM)
     if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && ISLOGORNIL(2)) {
 #endif
       bool par2;
-      QTransform *ptr = new QTransform(obj->itemTransform(PQGRAPHICSITEM(1), &par2));
-      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->itemTransform(PQGRAPHICSITEM(1), &par2));
       hb_storl(par2, 2);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -2105,8 +2103,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SCENETRANSFORM)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTransform *ptr = new QTransform(obj->sceneTransform());
-      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->sceneTransform());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3013,8 +3010,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_TRANSFORM)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTransform *ptr = new QTransform(obj->transform());
-      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->transform());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -670,16 +670,14 @@ HB_FUNC_STATIC(QMATRIX4X4_TOTRANSFORM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTransform *ptr = new QTransform(obj->toTransform());
-      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->toTransform());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QTransform toTransform( float distanceToPlane ) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTransform *ptr = new QTransform(obj->toTransform(PFLOAT(1)));
-      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->toTransform(PFLOAT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
