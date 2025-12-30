@@ -43,4 +43,6 @@ RETURN
 #include <QtSql/QSqlDriverCreator>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QSqlDriverCreator *p = (QSqlDriverCreator *)Qt5xHb::itemGetPtrStackSelfItem()
+
 #pragma ENDDUMP

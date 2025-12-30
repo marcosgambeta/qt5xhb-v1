@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSQLRELATION
-REQUEST QSQLTABLEMODEL
-REQUEST QVARIANT
+REQUEST QSqlRelation
+REQUEST QSqlTableModel
+REQUEST QVariant
 #endif
 
 CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
@@ -62,9 +62,9 @@ RETURN
 #include <QtSql/QSqlRelationalTableModel>
 #endif
 
-    /*
-    QSqlRelationalTableModel( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
-    */
+#define GET_PTR_FROM_SELF(p) QSqlRelationalTableModel *p = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem()
+
+// QSqlRelationalTableModel( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISQSQLDATABASEORNIL(2)) {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DELETE)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -93,19 +93,16 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSqlRelation relation( int column ) const
-*/
+// QSqlRelation relation( int column ) const
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QSqlRelation *ptr = new QSqlRelation(obj->relation(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QSQLRELATION", true);
+      RQSQLRELATION(obj->relation(PINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -114,12 +111,10 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
   }
 }
 
-/*
-virtual QSqlTableModel * relationModel( int column ) const
-*/
+// virtual QSqlTableModel * relationModel( int column ) const
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,12 +130,10 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
   }
 }
 
-/*
-virtual void setRelation( int column, const QSqlRelation &relation )
-*/
+// virtual void setRelation( int column, const QSqlRelation &relation )
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -157,12 +150,10 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -179,12 +170,10 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant data( const QModelIndex &index, int role = Qt::DisplayRole ) const
-*/
+// QVariant data( const QModelIndex &index, int role = Qt::DisplayRole ) const
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -199,12 +188,10 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
   }
 }
 
-/*
-bool removeColumns( int column, int count, const QModelIndex &parent = QModelIndex() )
-*/
+// bool removeColumns( int column, int count, const QModelIndex &parent = QModelIndex() )
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -219,12 +206,10 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
   }
 }
 
-/*
-bool select()
-*/
+// bool select()
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SELECT)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -239,12 +224,10 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SELECT)
   }
 }
 
-/*
-bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
-*/
+// bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -259,12 +242,10 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
   }
 }
 
-/*
-void setTable( const QString &table )
-*/
+// void setTable( const QString &table )
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -281,12 +262,10 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void revertRow( int row )
-*/
+// void revertRow( int row )
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REVERTROW)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -303,12 +282,10 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REVERTROW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setJoinMode( QSqlRelationalTableModel::JoinMode joinMode )
-*/
+// void setJoinMode( QSqlRelationalTableModel::JoinMode joinMode )
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETJOINMODE)
 {
-  QSqlRelationalTableModel *obj = (QSqlRelationalTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

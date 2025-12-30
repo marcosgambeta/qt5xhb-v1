@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSQLDATABASE
-REQUEST QSQLINDEX
-REQUEST QSQLRECORD
-REQUEST QVARIANT
+REQUEST QSqlDatabase
+REQUEST QSqlIndex
+REQUEST QSqlRecord
+REQUEST QVariant
 #endif
 
 CLASS QSqlTableModel INHERIT QSqlQueryModel
@@ -90,9 +90,9 @@ RETURN
 
 #include <QtSql/QSqlIndex>
 
-    /*
-    QSqlTableModel( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
-    */
+#define GET_PTR_FROM_SELF(p) QSqlTableModel *p = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem()
+
+// QSqlTableModel( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
 HB_FUNC_STATIC(QSQLTABLEMODEL_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISQSQLDATABASEORNIL(2)) {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_NEW)
 
 HB_FUNC_STATIC(QSQLTABLEMODEL_DELETE)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -121,19 +121,16 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSqlDatabase database() const
-*/
+// QSqlDatabase database() const
 HB_FUNC_STATIC(QSQLTABLEMODEL_DATABASE)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSqlDatabase *ptr = new QSqlDatabase(obj->database());
-      Qt5xHb::createReturnClass(ptr, "QSQLDATABASE", true);
+      RQSQLDATABASE(obj->database());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -142,12 +139,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DATABASE)
   }
 }
 
-/*
-QSqlTableModel::EditStrategy editStrategy() const
-*/
+// QSqlTableModel::EditStrategy editStrategy() const
 HB_FUNC_STATIC(QSQLTABLEMODEL_EDITSTRATEGY)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -162,12 +157,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_EDITSTRATEGY)
   }
 }
 
-/*
-virtual void setEditStrategy( QSqlTableModel::EditStrategy strategy )
-*/
+// virtual void setEditStrategy( QSqlTableModel::EditStrategy strategy )
 HB_FUNC_STATIC(QSQLTABLEMODEL_SETEDITSTRATEGY)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -184,12 +177,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETEDITSTRATEGY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int fieldIndex( const QString &fieldName ) const
-*/
+// int fieldIndex( const QString &fieldName ) const
 HB_FUNC_STATIC(QSQLTABLEMODEL_FIELDINDEX)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -204,12 +195,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FIELDINDEX)
   }
 }
 
-/*
-QString filter() const
-*/
+// QString filter() const
 HB_FUNC_STATIC(QSQLTABLEMODEL_FILTER)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -224,12 +213,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FILTER)
   }
 }
 
-/*
-virtual void setFilter( const QString &filter )
-*/
+// virtual void setFilter( const QString &filter )
 HB_FUNC_STATIC(QSQLTABLEMODEL_SETFILTER)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -246,12 +233,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETFILTER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool insertRecord( int row, const QSqlRecord &record )
-*/
+// bool insertRecord( int row, const QSqlRecord &record )
 HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTRECORD)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -269,19 +254,15 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTRECORD)
 HB_FUNC(QSQLTABLEMODEL_ISDIRTY)
 {
   if (ISNUMPAR(0)) {
-    /*
-    bool isDirty() const
-    */
-    QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+    // bool isDirty() const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->isDirty());
     }
   } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
-    /*
-    bool isDirty( const QModelIndex &index ) const
-    */
-    QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+    // bool isDirty( const QModelIndex &index ) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->isDirty(*PQMODELINDEX(1)));
@@ -291,19 +272,16 @@ HB_FUNC(QSQLTABLEMODEL_ISDIRTY)
   }
 }
 
-/*
-QSqlIndex primaryKey() const
-*/
+// QSqlIndex primaryKey() const
 HB_FUNC_STATIC(QSQLTABLEMODEL_PRIMARYKEY)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSqlIndex *ptr = new QSqlIndex(obj->primaryKey());
-      Qt5xHb::createReturnClass(ptr, "QSQLINDEX", true);
+      RQSQLINDEX(obj->primaryKey());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -312,12 +290,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_PRIMARYKEY)
   }
 }
 
-/*
-virtual void revertRow( int row )
-*/
+// virtual void revertRow( int row )
 HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTROW)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -334,12 +310,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTROW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool select()
-*/
+// virtual bool select()
 HB_FUNC_STATIC(QSQLTABLEMODEL_SELECT)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -354,12 +328,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SELECT)
   }
 }
 
-/*
-bool setRecord( int row, const QSqlRecord &record )
-*/
+// bool setRecord( int row, const QSqlRecord &record )
 HB_FUNC_STATIC(QSQLTABLEMODEL_SETRECORD)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -374,12 +346,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETRECORD)
   }
 }
 
-/*
-void sort( int column, Qt::SortOrder order )
-*/
+// void sort( int column, Qt::SortOrder order )
 HB_FUNC_STATIC(QSQLTABLEMODEL_SORT)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -396,12 +366,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setSort( int column, Qt::SortOrder order )
-*/
+// virtual void setSort( int column, Qt::SortOrder order )
 HB_FUNC_STATIC(QSQLTABLEMODEL_SETSORT)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -418,12 +386,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETSORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setTable( const QString &tableName )
-*/
+// virtual void setTable( const QString &tableName )
 HB_FUNC_STATIC(QSQLTABLEMODEL_SETTABLE)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -440,12 +406,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETTABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString tableName() const
-*/
+// QString tableName() const
 HB_FUNC_STATIC(QSQLTABLEMODEL_TABLENAME)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -460,12 +424,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_TABLENAME)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QSQLTABLEMODEL_CLEAR)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -482,12 +444,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant data( const QModelIndex &index, int role = Qt::DisplayRole ) const
-*/
+// QVariant data( const QModelIndex &index, int role = Qt::DisplayRole ) const
 HB_FUNC_STATIC(QSQLTABLEMODEL_DATA)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -502,12 +462,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DATA)
   }
 }
 
-/*
-bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
-*/
+// bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
 HB_FUNC_STATIC(QSQLTABLEMODEL_SETDATA)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -522,12 +480,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETDATA)
   }
 }
 
-/*
-Qt::ItemFlags flags( const QModelIndex &index ) const
-*/
+// Qt::ItemFlags flags( const QModelIndex &index ) const
 HB_FUNC_STATIC(QSQLTABLEMODEL_FLAGS)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -542,12 +498,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FLAGS)
   }
 }
 
-/*
-QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
-*/
+// QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 HB_FUNC_STATIC(QSQLTABLEMODEL_HEADERDATA)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -562,12 +516,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_HEADERDATA)
   }
 }
 
-/*
-bool insertRows( int row, int count, const QModelIndex &parent = QModelIndex() )
-*/
+// bool insertRows( int row, int count, const QModelIndex &parent = QModelIndex() )
 HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTROWS)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -582,12 +534,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTROWS)
   }
 }
 
-/*
-bool removeColumns( int column, int count, const QModelIndex &parent = QModelIndex() )
-*/
+// bool removeColumns( int column, int count, const QModelIndex &parent = QModelIndex() )
 HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVECOLUMNS)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -602,12 +552,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVECOLUMNS)
   }
 }
 
-/*
-bool removeRows( int row, int count, const QModelIndex &parent = QModelIndex() )
-*/
+// bool removeRows( int row, int count, const QModelIndex &parent = QModelIndex() )
 HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVEROWS)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -622,12 +570,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVEROWS)
   }
 }
 
-/*
-int rowCount( const QModelIndex &parent = QModelIndex() ) const
-*/
+// int rowCount( const QModelIndex &parent = QModelIndex() ) const
 HB_FUNC_STATIC(QSQLTABLEMODEL_ROWCOUNT)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -642,12 +588,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ROWCOUNT)
   }
 }
 
-/*
-void revert()
-*/
+// void revert()
 HB_FUNC_STATIC(QSQLTABLEMODEL_REVERT)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -664,12 +608,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void revertAll()
-*/
+// void revertAll()
 HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTALL)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -686,12 +628,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTALL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool submit()
-*/
+// bool submit()
 HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMIT)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -706,12 +646,10 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMIT)
   }
 }
 
-/*
-bool submitAll()
-*/
+// bool submitAll()
 HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMITALL)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -729,36 +667,28 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMITALL)
 HB_FUNC(QSQLTABLEMODEL_RECORD)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QSqlRecord record() const
-    */
-    QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QSqlRecord record() const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QSqlRecord *ptr = new QSqlRecord(obj->record());
-      Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
+      RQSQLRECORD(obj->record());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    /*
-    QSqlRecord record( int row ) const
-    */
-    QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+    // QSqlRecord record( int row ) const
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QSqlRecord *ptr = new QSqlRecord(obj->record(PINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
+      RQSQLRECORD(obj->record(PINT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
-/*
-virtual bool selectRow( int row )
-*/
+// virtual bool selectRow( int row )
 HB_FUNC_STATIC(QSQLTABLEMODEL_SELECTROW)
 {
-  QSqlTableModel *obj = (QSqlTableModel *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -775,24 +705,26 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SELECTROW)
 
 void QSqlTableModelSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QSqlTableModelSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREDELETE)
 {
-  QSqlTableModelSlots_connect_signal("beforeDelete(int)", "beforeDelete(int)");
+  CONNECT_SIGNAL("beforeDelete(int)");
 }
 
 HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREINSERT)
 {
-  QSqlTableModelSlots_connect_signal("beforeInsert(QSqlRecord)", "beforeInsert(QSqlRecord)");
+  CONNECT_SIGNAL("beforeInsert(QSqlRecord)");
 }
 
 HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREUPDATE)
 {
-  QSqlTableModelSlots_connect_signal("beforeUpdate(int,QSqlRecord)", "beforeUpdate(int,QSqlRecord)");
+  CONNECT_SIGNAL("beforeUpdate(int,QSqlRecord)");
 }
 
 HB_FUNC_STATIC(QSQLTABLEMODEL_ONPRIMEINSERT)
 {
-  QSqlTableModelSlots_connect_signal("primeInsert(int,QSqlRecord)", "primeInsert(int,QSqlRecord)");
+  CONNECT_SIGNAL("primeInsert(int,QSqlRecord)");
 }
 
 #pragma ENDDUMP

@@ -77,4 +77,12 @@
 #define OPQSQLRESULT(n, v)                                  HB_ISNIL(n) ? v : static_cast<QSqlResult *>(Qt5xHb::itemGetPtr(n))
 #define OPQSQLTABLEMODEL(n, v)                              HB_ISNIL(n) ? v : static_cast<QSqlTableModel *>(Qt5xHb::itemGetPtr(n))
 
+#define RQSQLDATABASE(exp)                                  Qt5xHb::createReturnClass(new QSqlDatabase(exp), "QSQLDATABASE", true)
+#define RQSQLERROR(exp)                                     Qt5xHb::createReturnClass(new QSqlError(exp), "QSQLERROR", true)
+#define RQSQLFIELD(exp)                                     Qt5xHb::createReturnClass(new QSqlField(exp), "QSQLFIELD", true)
+#define RQSQLINDEX(exp)                                     Qt5xHb::createReturnClass(new QSqlIndex(exp), "QSQLINDEX", true)
+#define RQSQLQUERY(exp)                                     Qt5xHb::createReturnClass(new QSqlQuery(exp), "QSQLQUERY", true)
+#define RQSQLRECORD(exp)                                    Qt5xHb::createReturnClass(new QSqlRecord(exp), "QSQLRECORD", true)
+#define RQSQLRELATION(exp)                                  Qt5xHb::createReturnClass(new QSqlRelation(exp), "QSQLRELATION", true)
+
 #endif // QT5XHB_MACROS_QTSQL_HPP

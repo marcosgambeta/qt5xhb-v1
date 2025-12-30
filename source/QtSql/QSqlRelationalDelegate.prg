@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWIDGET
+REQUEST QWidget
 #endif
 
 CLASS QSqlRelationalDelegate INHERIT QItemDelegate
@@ -51,9 +51,9 @@ RETURN
 #include <QtSql/QSqlRelationalDelegate>
 #endif
 
-    /*
-    QSqlRelationalDelegate( QObject * aParent = 0 )
-    */
+#define GET_PTR_FROM_SELF(p) QSqlRelationalDelegate *p = (QSqlRelationalDelegate *)Qt5xHb::itemGetPtrStackSelfItem()
+
+// QSqlRelationalDelegate( QObject * aParent = 0 )
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_NEW)
 
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_DELETE)
 {
-  QSqlRelationalDelegate *obj = (QSqlRelationalDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -81,12 +81,10 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget * createEditor( QWidget * aParent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
-*/
+// QWidget * createEditor( QWidget * aParent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_CREATEEDITOR)
 {
-  QSqlRelationalDelegate *obj = (QSqlRelationalDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -102,12 +100,10 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_CREATEEDITOR)
   }
 }
 
-/*
-void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex &index ) const
-*/
+// void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex &index ) const
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETMODELDATA)
 {
-  QSqlRelationalDelegate *obj = (QSqlRelationalDelegate *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

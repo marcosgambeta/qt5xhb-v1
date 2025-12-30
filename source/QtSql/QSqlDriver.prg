@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSQLERROR
-REQUEST QSQLINDEX
-REQUEST QSQLRECORD
-REQUEST QSQLRESULT
-REQUEST QVARIANT
+REQUEST QSqlError
+REQUEST QSqlIndex
+REQUEST QSqlRecord
+REQUEST QSqlResult
+REQUEST QVariant
 #endif
 
 CLASS QSqlDriver INHERIT QObject
@@ -85,9 +85,11 @@ RETURN
 #include <QtSql/QSqlRecord>
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) QSqlDriver *p = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem()
+
 HB_FUNC_STATIC(QSQLDRIVER_DELETE)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -102,12 +104,10 @@ HB_FUNC_STATIC(QSQLDRIVER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool beginTransaction()
-*/
+// virtual bool beginTransaction()
 HB_FUNC_STATIC(QSQLDRIVER_BEGINTRANSACTION)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -122,12 +122,10 @@ HB_FUNC_STATIC(QSQLDRIVER_BEGINTRANSACTION)
   }
 }
 
-/*
-virtual void close() = 0
-*/
+// virtual void close() = 0
 HB_FUNC_STATIC(QSQLDRIVER_CLOSE)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -144,12 +142,10 @@ HB_FUNC_STATIC(QSQLDRIVER_CLOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool commitTransaction()
-*/
+// virtual bool commitTransaction()
 HB_FUNC_STATIC(QSQLDRIVER_COMMITTRANSACTION)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -164,12 +160,10 @@ HB_FUNC_STATIC(QSQLDRIVER_COMMITTRANSACTION)
   }
 }
 
-/*
-virtual QSqlResult * createResult() const = 0
-*/
+// virtual QSqlResult * createResult() const = 0
 HB_FUNC_STATIC(QSQLDRIVER_CREATERESULT)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -185,12 +179,10 @@ HB_FUNC_STATIC(QSQLDRIVER_CREATERESULT)
   }
 }
 
-/*
-virtual QString escapeIdentifier( const QString &identifier, QSqlDriver::IdentifierType type ) const
-*/
+// virtual QString escapeIdentifier( const QString &identifier, QSqlDriver::IdentifierType type ) const
 HB_FUNC_STATIC(QSQLDRIVER_ESCAPEIDENTIFIER)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -205,12 +197,10 @@ HB_FUNC_STATIC(QSQLDRIVER_ESCAPEIDENTIFIER)
   }
 }
 
-/*
-virtual QString formatValue( const QSqlField &field, bool trimStrings = false ) const
-*/
+// virtual QString formatValue( const QSqlField &field, bool trimStrings = false ) const
 HB_FUNC_STATIC(QSQLDRIVER_FORMATVALUE)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,12 +215,10 @@ HB_FUNC_STATIC(QSQLDRIVER_FORMATVALUE)
   }
 }
 
-/*
-virtual QVariant handle() const
-*/
+// virtual QVariant handle() const
 HB_FUNC_STATIC(QSQLDRIVER_HANDLE)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,12 +233,10 @@ HB_FUNC_STATIC(QSQLDRIVER_HANDLE)
   }
 }
 
-/*
-virtual bool hasFeature( QSqlDriver::DriverFeature feature ) const = 0
-*/
+// virtual bool hasFeature( QSqlDriver::DriverFeature feature ) const = 0
 HB_FUNC_STATIC(QSQLDRIVER_HASFEATURE)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -265,12 +251,10 @@ HB_FUNC_STATIC(QSQLDRIVER_HASFEATURE)
   }
 }
 
-/*
-virtual bool isIdentifierEscaped( const QString &identifier, QSqlDriver::IdentifierType type ) const
-*/
+// virtual bool isIdentifierEscaped( const QString &identifier, QSqlDriver::IdentifierType type ) const
 HB_FUNC_STATIC(QSQLDRIVER_ISIDENTIFIERESCAPED)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -285,12 +269,10 @@ HB_FUNC_STATIC(QSQLDRIVER_ISIDENTIFIERESCAPED)
   }
 }
 
-/*
-virtual bool isOpen() const
-*/
+// virtual bool isOpen() const
 HB_FUNC_STATIC(QSQLDRIVER_ISOPEN)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -305,12 +287,10 @@ HB_FUNC_STATIC(QSQLDRIVER_ISOPEN)
   }
 }
 
-/*
-bool isOpenError() const
-*/
+// bool isOpenError() const
 HB_FUNC_STATIC(QSQLDRIVER_ISOPENERROR)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -325,19 +305,16 @@ HB_FUNC_STATIC(QSQLDRIVER_ISOPENERROR)
   }
 }
 
-/*
-QSqlError lastError() const
-*/
+// QSqlError lastError() const
 HB_FUNC_STATIC(QSQLDRIVER_LASTERROR)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSqlError *ptr = new QSqlError(obj->lastError());
-      Qt5xHb::createReturnClass(ptr, "QSQLERROR", true);
+      RQSQLERROR(obj->lastError());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -346,12 +323,10 @@ HB_FUNC_STATIC(QSQLDRIVER_LASTERROR)
   }
 }
 
-/*
-QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
-*/
+// QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 HB_FUNC_STATIC(QSQLDRIVER_NUMERICALPRECISIONPOLICY)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -366,18 +341,16 @@ HB_FUNC_STATIC(QSQLDRIVER_NUMERICALPRECISIONPOLICY)
   }
 }
 
-/*
-virtual bool open( const QString &db, const QString &user = QString(), const QString &password = QString(), const
-QString &host = QString(), int port = -1, const QString &options = QString() ) = 0
-*/
+// virtual bool open( const QString &db, const QString &user = QString(), const QString &password = QString(), const
+// QString &host = QString(), int port = -1, const QString &options = QString() ) = 0
 HB_FUNC_STATIC(QSQLDRIVER_OPEN)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 6) && ISQSTRING(1) && ISQSTRINGORNIL(2) && ISQSTRINGORNIL(3) &&
-        ISQSTRINGORNIL(4) && ISNUMORNIL(5) && ISQSTRINGORNIL(6)) {
+    if (ISBETWEEN(1, 6) && ISQSTRING(1) && ISQSTRINGORNIL(2) && ISQSTRINGORNIL(3) && ISQSTRINGORNIL(4) &&
+        ISNUMORNIL(5) && ISQSTRINGORNIL(6)) {
 #endif
       RBOOL(obj->open(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString()),
                       OPINT(5, -1), OPQSTRING(6, QString())));
@@ -389,19 +362,16 @@ HB_FUNC_STATIC(QSQLDRIVER_OPEN)
   }
 }
 
-/*
-virtual QSqlIndex primaryIndex( const QString &tableName ) const
-*/
+// virtual QSqlIndex primaryIndex( const QString &tableName ) const
 HB_FUNC_STATIC(QSQLDRIVER_PRIMARYINDEX)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
-      QSqlIndex *ptr = new QSqlIndex(obj->primaryIndex(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QSQLINDEX", true);
+      RQSQLINDEX(obj->primaryIndex(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -410,19 +380,16 @@ HB_FUNC_STATIC(QSQLDRIVER_PRIMARYINDEX)
   }
 }
 
-/*
-virtual QSqlRecord record( const QString &tableName ) const
-*/
+// virtual QSqlRecord record( const QString &tableName ) const
 HB_FUNC_STATIC(QSQLDRIVER_RECORD)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSTRING(1)) {
 #endif
-      QSqlRecord *ptr = new QSqlRecord(obj->record(PQSTRING(1)));
-      Qt5xHb::createReturnClass(ptr, "QSQLRECORD", true);
+      RQSQLRECORD(obj->record(PQSTRING(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -431,12 +398,10 @@ HB_FUNC_STATIC(QSQLDRIVER_RECORD)
   }
 }
 
-/*
-virtual bool rollbackTransaction()
-*/
+// virtual bool rollbackTransaction()
 HB_FUNC_STATIC(QSQLDRIVER_ROLLBACKTRANSACTION)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -451,12 +416,10 @@ HB_FUNC_STATIC(QSQLDRIVER_ROLLBACKTRANSACTION)
   }
 }
 
-/*
-void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy )
-*/
+// void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy )
 HB_FUNC_STATIC(QSQLDRIVER_SETNUMERICALPRECISIONPOLICY)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -473,13 +436,11 @@ HB_FUNC_STATIC(QSQLDRIVER_SETNUMERICALPRECISIONPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString sqlStatement( QSqlDriver::StatementType type, const QString &tableName, const QSqlRecord &rec, bool
-preparedStatement ) const
-*/
+// virtual QString sqlStatement( QSqlDriver::StatementType type, const QString &tableName, const QSqlRecord &rec, bool
+// preparedStatement ) const
 HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -494,12 +455,10 @@ HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
   }
 }
 
-/*
-virtual QString stripDelimiters( const QString &identifier, QSqlDriver::IdentifierType type ) const
-*/
+// virtual QString stripDelimiters( const QString &identifier, QSqlDriver::IdentifierType type ) const
 HB_FUNC_STATIC(QSQLDRIVER_STRIPDELIMITERS)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -514,12 +473,10 @@ HB_FUNC_STATIC(QSQLDRIVER_STRIPDELIMITERS)
   }
 }
 
-/*
-virtual bool subscribeToNotification( const QString &name )
-*/
+// virtual bool subscribeToNotification( const QString &name )
 HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBETONOTIFICATION)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -534,12 +491,10 @@ HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBETONOTIFICATION)
   }
 }
 
-/*
-virtual QStringList subscribedToNotifications() const
-*/
+// virtual QStringList subscribedToNotifications() const
 HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -554,12 +509,10 @@ HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS)
   }
 }
 
-/*
-virtual QStringList tables( QSql::TableType tableType ) const
-*/
+// virtual QStringList tables( QSql::TableType tableType ) const
 HB_FUNC_STATIC(QSQLDRIVER_TABLES)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -574,12 +527,10 @@ HB_FUNC_STATIC(QSQLDRIVER_TABLES)
   }
 }
 
-/*
-virtual bool unsubscribeFromNotification( const QString &name )
-*/
+// virtual bool unsubscribeFromNotification( const QString &name )
 HB_FUNC_STATIC(QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -594,12 +545,10 @@ HB_FUNC_STATIC(QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION)
   }
 }
 
-/*
-virtual bool cancelQuery()
-*/
+// virtual bool cancelQuery()
 HB_FUNC_STATIC(QSQLDRIVER_CANCELQUERY)
 {
-  QSqlDriver *obj = (QSqlDriver *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -616,15 +565,16 @@ HB_FUNC_STATIC(QSQLDRIVER_CANCELQUERY)
 
 void QSqlDriverSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QSqlDriverSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSQLDRIVER_ONNOTIFICATION1)
 {
-  QSqlDriverSlots_connect_signal("notification(QString)", "notification(QString)");
+  CONNECT_SIGNAL("notification(QString)");
 }
 
 HB_FUNC_STATIC(QSQLDRIVER_ONNOTIFICATION2)
 {
-  QSqlDriverSlots_connect_signal("notification(QString,QSqlDriver::NotificationSource,QVariant)",
-                                 "notification(QString,QSqlDriver::NotificationSource,QVariant)");
+  CONNECT_SIGNAL("notification(QString,QSqlDriver::NotificationSource,QVariant)");
 }
 
 #pragma ENDDUMP

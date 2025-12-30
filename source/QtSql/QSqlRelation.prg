@@ -59,18 +59,16 @@ RETURN
 #include <QtSql/QSqlRelation>
 #endif
 
+#define GET_PTR_FROM_SELF(p) QSqlRelation *p = (QSqlRelation *)Qt5xHb::itemGetPtrStackSelfItem()
+
 HB_FUNC_STATIC(QSQLRELATION_NEW)
 {
   if (ISNUMPAR(0)) {
-    /*
-    QSqlRelation()
-    */
+    // QSqlRelation()
     QSqlRelation *obj = new QSqlRelation();
     Qt5xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(3) && ISQSTRING(1) && ISQSTRING(2) && ISQSTRING(3)) {
-    /*
-    QSqlRelation( const QString &tableName, const QString &indexColumn, const QString &displayColumn )
-    */
+    // QSqlRelation( const QString &tableName, const QString &indexColumn, const QString &displayColumn )
     QSqlRelation *obj = new QSqlRelation(PQSTRING(1), PQSTRING(2), PQSTRING(3));
     Qt5xHb::returnNewObject(obj, true);
   } else {
@@ -80,7 +78,7 @@ HB_FUNC_STATIC(QSQLRELATION_NEW)
 
 HB_FUNC_STATIC(QSQLRELATION_DELETE)
 {
-  QSqlRelation *obj = (QSqlRelation *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -93,12 +91,10 @@ HB_FUNC_STATIC(QSQLRELATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString displayColumn() const
-*/
+// QString displayColumn() const
 HB_FUNC_STATIC(QSQLRELATION_DISPLAYCOLUMN)
 {
-  QSqlRelation *obj = (QSqlRelation *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -113,12 +109,10 @@ HB_FUNC_STATIC(QSQLRELATION_DISPLAYCOLUMN)
   }
 }
 
-/*
-QString indexColumn() const
-*/
+// QString indexColumn() const
 HB_FUNC_STATIC(QSQLRELATION_INDEXCOLUMN)
 {
-  QSqlRelation *obj = (QSqlRelation *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -133,12 +127,10 @@ HB_FUNC_STATIC(QSQLRELATION_INDEXCOLUMN)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSQLRELATION_ISVALID)
 {
-  QSqlRelation *obj = (QSqlRelation *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -153,12 +145,10 @@ HB_FUNC_STATIC(QSQLRELATION_ISVALID)
   }
 }
 
-/*
-QString tableName() const
-*/
+// QString tableName() const
 HB_FUNC_STATIC(QSQLRELATION_TABLENAME)
 {
-  QSqlRelation *obj = (QSqlRelation *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
