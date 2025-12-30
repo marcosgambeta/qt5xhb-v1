@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
-REQUEST QSVGRENDERER
+REQUEST QSize
+REQUEST QSvgRenderer
 #endif
 
 CLASS QSvgWidget INHERIT QWidget
@@ -55,18 +55,16 @@ RETURN
 
 #include <QtSvg/QSvgRenderer>
 
+#define GET_PTR_FROM_SELF(p) QSvgWidget *p = (QSvgWidget *)Qt5xHb::itemGetPtrStackSelfItem()
+
 HB_FUNC_STATIC(QSVGWIDGET_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
-    /*
-    QSvgWidget( QWidget * parent = 0 )
-    */
+    // QSvgWidget( QWidget * parent = 0 )
     QSvgWidget *obj = new QSvgWidget(OPQWIDGET(1, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQWIDGETORNIL(2)) {
-    /*
-    QSvgWidget( const QString &file, QWidget * parent = 0 )
-    */
+    // QSvgWidget( const QString &file, QWidget * parent = 0 )
     QSvgWidget *obj = new QSvgWidget(PQSTRING(1), OPQWIDGET(2, 0));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -76,7 +74,7 @@ HB_FUNC_STATIC(QSVGWIDGET_NEW)
 
 HB_FUNC_STATIC(QSVGWIDGET_DELETE)
 {
-  QSvgWidget *obj = (QSvgWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -91,12 +89,10 @@ HB_FUNC_STATIC(QSVGWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSvgRenderer * renderer() const
-*/
+// QSvgRenderer * renderer() const
 HB_FUNC_STATIC(QSVGWIDGET_RENDERER)
 {
-  QSvgWidget *obj = (QSvgWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -112,12 +108,10 @@ HB_FUNC_STATIC(QSVGWIDGET_RENDERER)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSVGWIDGET_SIZEHINT)
 {
-  QSvgWidget *obj = (QSvgWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -135,10 +129,8 @@ HB_FUNC_STATIC(QSVGWIDGET_SIZEHINT)
 HB_FUNC_STATIC(QSVGWIDGET_LOAD)
 {
   if (ISNUMPAR(1) && ISQSTRING(1)) {
-    /*
-    void load( const QString &file )
-    */
-    QSvgWidget *obj = (QSvgWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void load( const QString &file )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->load(PQSTRING(1));
@@ -146,10 +138,8 @@ HB_FUNC_STATIC(QSVGWIDGET_LOAD)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
-    /*
-    void load( const QByteArray &contents )
-    */
-    QSvgWidget *obj = (QSvgWidget *)Qt5xHb::itemGetPtrStackSelfItem();
+    // void load( const QByteArray &contents )
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->load(*PQBYTEARRAY(1));

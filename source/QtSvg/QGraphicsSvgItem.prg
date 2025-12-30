@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QSIZE
-REQUEST QSVGRENDERER
+REQUEST QRectF
+REQUEST QSize
+REQUEST QSvgRenderer
 #endif
 
 CLASS QGraphicsSvgItem INHERIT QGraphicsObject
@@ -62,18 +62,16 @@ RETURN
 
 #include <QtSvg/QSvgRenderer>
 
+#define GET_PTR_FROM_SELF(p) QGraphicsSvgItem *p = (QGraphicsSvgItem *)Qt5xHb::itemGetPtrStackSelfItem()
+
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQGRAPHICSITEMORNIL(1)) {
-    /*
-    QGraphicsSvgItem( QGraphicsItem * parent = 0 )
-    */
+    // QGraphicsSvgItem( QGraphicsItem * parent = 0 )
     QGraphicsSvgItem *obj = new QGraphicsSvgItem(HB_ISNIL(1) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(1));
     Qt5xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && ISQSTRING(1) && ISQGRAPHICSITEMORNIL(2)) {
-    /*
-    QGraphicsSvgItem( const QString &fileName, QGraphicsItem * parent = 0 )
-    */
+    // QGraphicsSvgItem( const QString &fileName, QGraphicsItem * parent = 0 )
     QGraphicsSvgItem *obj = new QGraphicsSvgItem(PQSTRING(1), HB_ISNIL(2) ? 0 : (QGraphicsItem *)Qt5xHb::itemGetPtr(2));
     Qt5xHb::returnNewObject(obj, false);
   } else {
@@ -83,7 +81,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_DELETE)
 {
-  QGraphicsSvgItem *obj = (QGraphicsSvgItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt5xHb::Events_disconnect_all_events(obj, true);
@@ -98,12 +96,10 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString elementId() const
-*/
+// QString elementId() const
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_ELEMENTID)
 {
-  QGraphicsSvgItem *obj = (QGraphicsSvgItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -118,12 +114,10 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_ELEMENTID)
   }
 }
 
-/*
-QSize maximumCacheSize() const
-*/
+// QSize maximumCacheSize() const
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_MAXIMUMCACHESIZE)
 {
-  QGraphicsSvgItem *obj = (QGraphicsSvgItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -138,12 +132,10 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_MAXIMUMCACHESIZE)
   }
 }
 
-/*
-QSvgRenderer * renderer() const
-*/
+// QSvgRenderer * renderer() const
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_RENDERER)
 {
-  QGraphicsSvgItem *obj = (QGraphicsSvgItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -159,12 +151,10 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_RENDERER)
   }
 }
 
-/*
-void setElementId( const QString &id )
-*/
+// void setElementId( const QString &id )
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETELEMENTID)
 {
-  QGraphicsSvgItem *obj = (QGraphicsSvgItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -181,12 +171,10 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETELEMENTID)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMaximumCacheSize( const QSize &size )
-*/
+// void setMaximumCacheSize( const QSize &size )
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE)
 {
-  QGraphicsSvgItem *obj = (QGraphicsSvgItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -203,12 +191,10 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSharedRenderer( QSvgRenderer * renderer )
-*/
+// void setSharedRenderer( QSvgRenderer * renderer )
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETSHAREDRENDERER)
 {
-  QGraphicsSvgItem *obj = (QGraphicsSvgItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -225,12 +211,10 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETSHAREDRENDERER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QRectF boundingRect() const
-*/
+// virtual QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_BOUNDINGRECT)
 {
-  QGraphicsSvgItem *obj = (QGraphicsSvgItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -245,12 +229,10 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_BOUNDINGRECT)
   }
 }
 
-/*
-virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-*/
+// virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_PAINT)
 {
-  QGraphicsSvgItem *obj = (QGraphicsSvgItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -267,12 +249,10 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int type() const
-*/
+// virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_TYPE)
 {
-  QGraphicsSvgItem *obj = (QGraphicsSvgItem *)Qt5xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
