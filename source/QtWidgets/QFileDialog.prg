@@ -1211,8 +1211,7 @@ HB_FUNC_STATIC(QFILEDIALOG_DIRECTORYURL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUrl *ptr = new QUrl(obj->directoryUrl());
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->directoryUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1466,11 +1465,10 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILEURL)
       ISQSTRINGORNIL(4) && ISQSTRINGORNIL(5) && ISNUMORNIL(6) &&
       ISARRAYORNIL(7)) {
 #endif
-    QUrl *ptr = new QUrl(QFileDialog::getOpenFileUrl(
+    RQURL(QFileDialog::getOpenFileUrl(
         OPQWIDGET(1, 0), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(3),
         OPQSTRING(4, QString()), NULL, HB_ISNIL(6) ? (QFileDialog::Options)0 : (QFileDialog::Options)hb_parni(6),
         OPQSTRINGLIST(7, QStringList())));
-    Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1490,11 +1488,10 @@ HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILEURL)
       ISQSTRINGORNIL(4) && ISQSTRINGORNIL(5) && ISNUMORNIL(6) &&
       ISARRAYORNIL(7)) {
 #endif
-    QUrl *ptr = new QUrl(QFileDialog::getSaveFileUrl(
+    RQURL(QFileDialog::getSaveFileUrl(
         OPQWIDGET(1, 0), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(3),
         OPQSTRING(4, QString()), NULL, HB_ISNIL(6) ? (QFileDialog::Options)0 : (QFileDialog::Options)hb_parni(6),
         OPQSTRINGLIST(7, QStringList())));
-    Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1512,11 +1509,10 @@ HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORYURL)
   if (ISBETWEEN(0, 5) && ISQWIDGETORNIL(1) && ISQSTRINGORNIL(2) && ISQURLORNIL(3) &&
       ISNUMORNIL(4) && ISARRAYORNIL(5)) {
 #endif
-    QUrl *ptr = new QUrl(QFileDialog::getExistingDirectoryUrl(
+    RQURL(QFileDialog::getExistingDirectoryUrl(
         OPQWIDGET(1, 0), OPQSTRING(2, QString()), HB_ISNIL(3) ? QUrl() : *(QUrl *)Qt5xHb::itemGetPtr(3),
         HB_ISNIL(4) ? (QFileDialog::Options)QFileDialog::ShowDirsOnly : (QFileDialog::Options)hb_parni(4),
         OPQSTRINGLIST(5, QStringList())));
-    Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
-      QUrl *ptr = new QUrl(obj->linkAt(*PQPOINT(1)));
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->linkAt(*PQPOINT(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

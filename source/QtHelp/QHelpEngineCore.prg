@@ -323,8 +323,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FINDFILE)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
-      QUrl *ptr = new QUrl(obj->findFile(*PQURL(1)));
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->findFile(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

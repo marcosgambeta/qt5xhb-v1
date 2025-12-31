@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QPLACEICON_URL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISQSIZEORNIL(1)) {
 #endif
-      QUrl *ptr = new QUrl(obj->url(HB_ISNIL(1) ? QSize() : *(QSize *)Qt5xHb::itemGetPtr(1)));
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->url(HB_ISNIL(1) ? QSize() : *(QSize *)Qt5xHb::itemGetPtr(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

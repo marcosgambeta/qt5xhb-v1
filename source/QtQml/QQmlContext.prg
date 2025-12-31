@@ -112,8 +112,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_BASEURL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUrl *ptr = new QUrl(obj->baseUrl());
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->baseUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -256,8 +255,7 @@ HB_FUNC_STATIC(QQMLCONTEXT_RESOLVEDURL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
-      QUrl *ptr = new QUrl(obj->resolvedUrl(*PQURL(1)));
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->resolvedUrl(*PQURL(1)));
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

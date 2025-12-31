@@ -266,8 +266,7 @@ HB_FUNC_STATIC(QOAUTH1_TEMPORARYCREDENTIALSURL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUrl *ptr = new QUrl(obj->temporaryCredentialsUrl());
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->temporaryCredentialsUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -313,8 +312,7 @@ HB_FUNC_STATIC(QOAUTH1_TOKENCREDENTIALSURL)
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUrl *ptr = new QUrl(obj->tokenCredentialsUrl());
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->tokenCredentialsUrl());
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

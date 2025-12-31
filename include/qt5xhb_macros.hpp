@@ -221,6 +221,7 @@
 #define RQTIME(exp)                                         Qt5xHb::createReturnClass(new QTime(exp), "QTIME", true)
 #define RQBITMAP(exp)                                       Qt5xHb::createReturnClass(new QBitmap(exp), "QBITMAP", true)
 #define RQCURSOR(exp)                                       Qt5xHb::createReturnClass(new QCursor(exp), "QCURSOR", true)
+#define RQURL(exp)                                          Qt5xHb::createReturnClass(new QUrl(exp), "QURL", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  (const char *)x.toLatin1().data()

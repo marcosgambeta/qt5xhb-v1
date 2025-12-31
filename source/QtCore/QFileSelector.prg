@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QFILESELECTOR_SELECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QUrl *ptr = new QUrl(obj->select(*PQURL(1)));
-      Qt5xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->select(*PQURL(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
