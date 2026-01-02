@@ -20,6 +20,7 @@ FUNCTION Main()
    LOCAL oLineEdit
    LOCAL n
 
+   // create application
    oApp := QApplication():new()
 
    aSockets := Array(TOTAL_DE_SOCKETS)
@@ -89,16 +90,16 @@ FUNCTION Main()
 
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    FOR n := 1 TO TOTAL_DE_SOCKETS
       IF hb_isObject(aSockets[n])
          aSockets[n]:delete()
       ENDIF
    NEXT n
-
    oApp:delete()
 
 RETURN NIL

@@ -16,6 +16,7 @@ FUNCTION Main()
    LOCAL oMdiSubWindow3
    LOCAL oMdiSubWindow4
 
+   // create application
    oApp := QApplication():new()
 
    oMainWindow := QMainWindow():new()
@@ -43,10 +44,11 @@ FUNCTION Main()
 
    oMainWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oMainWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

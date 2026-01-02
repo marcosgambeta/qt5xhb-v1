@@ -23,6 +23,7 @@ FUNCTION Main()
    LOCAL oLineEdit
    LOCAL oLCDNumber
 
+   // create application
    oApp := QApplication():new()
 
    // aqui criamos a janela
@@ -67,10 +68,11 @@ FUNCTION Main()
    oLCDNumber := QLCDNumber():newFrom(oWidgets:findChild("lcdNumber"))
    oLCDNumber:display(1234)
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

@@ -12,6 +12,7 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oButton
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
@@ -23,10 +24,11 @@ FUNCTION Main()
    oButton:show()
    ? oButton:onClicked({||dialog(oWindow)})
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL
@@ -39,6 +41,7 @@ STATIC FUNCTION dialog(oWindow)
 
    oPrintPreviewDialog:exec()
 
+   // delete object
    oPrintPreviewDialog:delete()
 
 RETURN NIL

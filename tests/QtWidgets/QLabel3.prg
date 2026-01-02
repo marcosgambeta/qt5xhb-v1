@@ -17,6 +17,7 @@ FUNCTION Main()
    LOCAL oLabel3
    LOCAL oLineEdit3
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
@@ -70,10 +71,11 @@ FUNCTION Main()
 
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

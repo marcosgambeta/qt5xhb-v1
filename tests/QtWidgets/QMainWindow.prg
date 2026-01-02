@@ -11,6 +11,7 @@ FUNCTION Main()
    lOCAL oApp
    LOCAL oWindow
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QMainWindow():new()
@@ -19,10 +20,11 @@ FUNCTION Main()
 
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

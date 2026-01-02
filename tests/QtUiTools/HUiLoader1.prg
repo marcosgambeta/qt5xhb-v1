@@ -43,6 +43,7 @@ FUNCTION Main()
    LOCAL oLineEdit
    LOCAL oLCDNumber
 
+   // create application
    oApp := QApplication():new()
 
    // carregamento do arquivo huiloader.ui
@@ -73,10 +74,11 @@ FUNCTION Main()
 
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

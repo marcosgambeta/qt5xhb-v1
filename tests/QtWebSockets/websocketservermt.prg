@@ -16,6 +16,7 @@ FUNCTION Main()
 
 //   ? s_mutex
 
+   // create application
    oApp := QCoreApplication():new()
 
    oWebSocketServer := QWebSocketServer():new("WebSocketServer", QWebSocketServer_NonSecureMode)
@@ -25,6 +26,7 @@ FUNCTION Main()
    ELSE
       ? "servidor inativo"
       WAIT
+      // delete objects
       oWebSocketServer:delete()
       oApp:delete()
       QUIT
@@ -33,10 +35,11 @@ FUNCTION Main()
    oWebSocketServer:onNewConnection({||hb_ThreadStart(HB_BITOR(HB_THREAD_INHERIT_PUBLIC, HB_THREAD_MEMVARS_COPY), {|oWebSocketServer|newConnection(oWebSocketServer)}, oWebSocketServer)})
    oWebSocketServer:onClosed({||oApp:quit()})
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWebSocketServer:delete()
-
    oApp:delete()
 
 RETURN NIL

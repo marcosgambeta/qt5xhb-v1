@@ -14,6 +14,7 @@ FUNCTION Main()
    LOCAL oView
    LOCAL lFileExist := File("qtsqldemo.db")
 
+   // create application
    oApp := QApplication():new()
 
    // cria um objeto da classe QSqlDatabase
@@ -76,12 +77,12 @@ FUNCTION Main()
    oView:hideColumn(0)
    oView:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oModel:delete()
-
    oView:delete()
-
    oApp:delete()
 
 RETURN NIL

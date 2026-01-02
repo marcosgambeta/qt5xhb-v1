@@ -16,6 +16,7 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oTimer
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
@@ -29,10 +30,11 @@ FUNCTION Main()
    oTimer:setInterval(1000)
    oTimer:start()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

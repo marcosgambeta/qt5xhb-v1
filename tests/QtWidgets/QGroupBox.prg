@@ -16,6 +16,7 @@ FUNCTION Main()
    LOCAL oRadio3
    LOCAL oVBox
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
@@ -41,10 +42,11 @@ FUNCTION Main()
 
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

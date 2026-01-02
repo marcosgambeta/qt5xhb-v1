@@ -16,6 +16,7 @@ FUNCTION Main()
    LOCAL aColorsNames
    LOCAL nIndex
 
+   // create application
    oApp := QApplication():new()
 
    aColorsNames := QColor():colorNames()
@@ -32,6 +33,7 @@ FUNCTION Main()
 
    WAIT
 
+   // delete object
    oApp:delete()
 
 RETURN NIL

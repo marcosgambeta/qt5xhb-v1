@@ -26,6 +26,7 @@ FUNCTION Main()
    LOCAL oMenuD
    LOCAL oActionD1
 
+   // create application
    oApp := QApplication():new()
 
    oMainWindow := QMainWindow():new()
@@ -74,10 +75,11 @@ FUNCTION Main()
 
    oMainWindow:Show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oMainWindow:delete()
-
    oApp:delete()
 
 RETURN NIL
@@ -93,6 +95,7 @@ STATIC FUNCTION aviso(oParent, cText)
 
    oMessageBox:exec()
 
+   // delete object
    oMessageBox:delete()
 
 RETURN NIL

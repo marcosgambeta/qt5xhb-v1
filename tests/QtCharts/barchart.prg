@@ -25,6 +25,7 @@ FUNCTION Main()
    LOCAL oAxis
    LOCAL oChartView
 
+   // create application
    oApp := QApplication():new()
 
    oSet0 := QBarSet():new("Jane")
@@ -97,10 +98,11 @@ FUNCTION Main()
    oWindow:resize(420, 300)
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

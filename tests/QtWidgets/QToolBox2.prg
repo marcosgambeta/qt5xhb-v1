@@ -18,6 +18,7 @@ FUNCTION Main()
    LOCAL oWidget2
    LOCAL oWidget3
 
+   // create application
    oApp := QApplication():new()
 
    oToolBox := QToolBox():new()
@@ -39,10 +40,11 @@ FUNCTION Main()
 
    oToolBox:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oToolBox:delete()
-
    oApp:delete()
 
 RETURN NIL

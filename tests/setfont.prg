@@ -22,6 +22,7 @@ FUNCTION Main()
    LOCAL oActionC1
    LOCAL oLabel
 
+   // create application
    oApp := QApplication():new()
 
    oApp:setFont(QFont():new("Helvetica", 12))
@@ -62,10 +63,11 @@ FUNCTION Main()
 
    oMainWindow:setCentralWidget(oLabel)
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oMainWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

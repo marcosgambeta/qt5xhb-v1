@@ -11,6 +11,7 @@ FUNCTION Main()
    LOCAL oApp
    LOCAL oWindow
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
@@ -18,10 +19,11 @@ FUNCTION Main()
    oWindow:resize(640, 480)
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

@@ -15,6 +15,7 @@ FUNCTION Main()
    LOCAL oModel
    LOCAL oView
 
+   // create application
    oApp := QApplication():new()
 
    s_aColorsNames := QColor():colorNames()
@@ -36,12 +37,12 @@ FUNCTION Main()
 
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oModel:delete()
-
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

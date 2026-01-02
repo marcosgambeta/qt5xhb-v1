@@ -12,6 +12,7 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oDateEdit
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
@@ -24,10 +25,11 @@ FUNCTION Main()
    oDateEdit:setTooltip("Eu sou um QDateEdit")
    oDateEdit:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

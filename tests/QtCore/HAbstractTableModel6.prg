@@ -13,6 +13,7 @@ FUNCTION Main()
    LOCAL oModel
    LOCAL oView
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
@@ -40,12 +41,12 @@ FUNCTION Main()
 
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oModel:delete()
-
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

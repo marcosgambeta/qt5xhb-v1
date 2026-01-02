@@ -12,6 +12,7 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oWebView
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
@@ -23,10 +24,11 @@ FUNCTION Main()
    oWebView:setUrl(QUrl():new("https://github.com/magsoftinfo/qt5xhb-v1"))
    oWebView:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

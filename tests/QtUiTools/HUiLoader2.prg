@@ -41,6 +41,7 @@ FUNCTION Main()
    LOCAL oLineEdit
    LOCAL oLCDNumber
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := loadUI("HUiLoader.ui")
@@ -61,10 +62,11 @@ FUNCTION Main()
 
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL
@@ -98,6 +100,7 @@ STATIC FUNCTION loadUI(cFileName)
       ?? oWidget:parent():metaObject():className()
       ?? " "
       })
+
    oFile := QFile():new(cFileName)
    oFile:open(QIODevice_ReadOnly)
    oUI := oLoader:load(oFile)

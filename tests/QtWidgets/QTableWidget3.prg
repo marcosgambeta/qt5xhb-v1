@@ -21,6 +21,7 @@ FUNCTION Main()
    LOCAL nRows := 10000
    LOCAL nCols := 100
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
@@ -39,10 +40,11 @@ FUNCTION Main()
 
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

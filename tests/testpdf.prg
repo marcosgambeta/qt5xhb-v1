@@ -14,6 +14,7 @@ FUNCTION Main()
    LOCAL oPainter
    LOCAL nPage
 
+   // create application
    oApp := QApplication():new()
 
    oLabel := QLabel():new("Exemplo de criação de arquivo PDF"):show()
@@ -46,10 +47,11 @@ FUNCTION Main()
 
    oPrinter:delete()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oLabel:delete()
-
    oApp:delete()
 
 RETURN NIL

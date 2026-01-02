@@ -11,6 +11,7 @@ FUNCTION Main()
    LOCAL oApp
    LOCAL oWebSocketServer
 
+   // create application
    oApp := QCoreApplication():new()
 
    oWebSocketServer := QWebSocketServer():new("WebSocketServer", QWebSocketServer_NonSecureMode)
@@ -20,6 +21,7 @@ FUNCTION Main()
    ELSE
       ? "servidor inativo"
       WAIT
+      // delete objects
       oWebSocketServer:delete()
       oApp:delete()
       QUIT
@@ -28,10 +30,11 @@ FUNCTION Main()
    oWebSocketServer:onNewConnection({||newConnection(oWebSocketServer)})
    oWebSocketServer:onClosed({||oApp:quit()})
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWebSocketServer:delete()
-
    oApp:delete()
 
 RETURN NIL

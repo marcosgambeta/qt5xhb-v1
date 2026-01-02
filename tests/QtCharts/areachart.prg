@@ -24,6 +24,7 @@ FUNCTION Main()
    LOCAL oChart
    LOCAL oChartView
 
+   // create application
    oApp := QApplication():new()
 
    oSeries0 := QLineSeries():new()
@@ -72,10 +73,11 @@ FUNCTION Main()
    oWindow:resize(400, 300)
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

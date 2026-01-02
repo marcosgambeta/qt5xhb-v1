@@ -13,6 +13,7 @@ FUNCTION Main()
    LOCAL oListView
    LOCAL oSLM
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
@@ -29,12 +30,12 @@ FUNCTION Main()
 
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oSLM:delete()
-
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

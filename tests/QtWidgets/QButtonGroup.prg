@@ -20,6 +20,7 @@ FUNCTION Main()
    LOCAL oButtonGroup
    LOCAL o
 
+   // create application
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
@@ -72,10 +73,11 @@ FUNCTION Main()
 
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

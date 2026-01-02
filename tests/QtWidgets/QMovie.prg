@@ -13,7 +13,7 @@ FUNCTION Main()
    LOCAL oLabel
    LOCAL oMovie
 
-   // cria o objeto QApplication
+   // create application
    oApp := QApplication():new()
 
    // cria uma janela
@@ -42,11 +42,11 @@ FUNCTION Main()
    // mostra a janela
    oWindow:show()
 
-   // inicia o loop de eventos
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL
