@@ -43,22 +43,22 @@ RETURN NIL
 
 STATIC FUNCTION test(oSender, nAction)
 
-   QOut("action triggered")
-   QOut(oSender:classname())
-   QOut(nAction)
+   qout("action triggered")
+   qout(oSender:classname())
+   qout(nAction)
 
 RETURN NIL
 
 STATIC FUNCTION test2(oSender)
 
-   QOut("slider pressed")
-   QOut(oSender:classname())
+   qout("slider pressed")
+   qout(oSender:classname())
 
 RETURN NIL
 
 STATIC FUNCTION test3(oSender)
 
-   QOut("slider released")
-   QOut(oSender:classname())
+   qout("slider released")
+   qout(oSender:classname())
 
 RETURN NIL

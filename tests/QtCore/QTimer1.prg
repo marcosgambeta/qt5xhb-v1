@@ -26,7 +26,7 @@ FUNCTION Main()
    oWindow:show()
 
    oTimer := QTimer():new(oWindow)
-   ? oTimer:onTimeout({||QOut("timer executado")})
+   ? oTimer:onTimeout({||qout("timer executado")})
    oTimer:setInterval(1000)
    oTimer:start()
 

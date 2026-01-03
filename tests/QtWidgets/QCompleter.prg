@@ -23,15 +23,15 @@ FUNCTION Main()
 
    // array de strings
    aDados := {}
-   AAdd(aDados, "Marcia")
-   AAdd(aDados, "Marcelo")
-   AAdd(aDados, "Marcelino")
-   AAdd(aDados, "Marcos")
-   AAdd(aDados, "Marcolino")
-   AAdd(aDados, "Maria")
-   AAdd(aDados, "Margarida")
-   AAdd(aDados, "Mario")
-   AAdd(aDados, "Maristela")
+   aadd(aDados, "Marcia")
+   aadd(aDados, "Marcelo")
+   aadd(aDados, "Marcelino")
+   aadd(aDados, "Marcos")
+   aadd(aDados, "Marcolino")
+   aadd(aDados, "Maria")
+   aadd(aDados, "Margarida")
+   aadd(aDados, "Mario")
+   aadd(aDados, "Maristela")
 
    // cria o objeto QCompleter usando a array como fonte de dados
    oCompleter := QCompleter():new(aDados, oWindow)

@@ -26,9 +26,9 @@ FUNCTION Main()
    // total de colunas
    oModel:setColumnCountCB({||10})
    // conteúdo da célula
-   oModel:setDisplayRoleCB({|nRow, nCol|"Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))})
+   oModel:setDisplayRoleCB({|nRow, nCol|"Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))})
    // títulos das linhas
-   oModel:setVerticalHeaderDisplayRoleCB({|nRow|"Linha " + AllTrim(Str(nRow))})
+   oModel:setVerticalHeaderDisplayRoleCB({|nRow|"Linha " + alltrim(str(nRow))})
 
    oView := QTableView():new(oWindow)
    oView:move(10, 10)

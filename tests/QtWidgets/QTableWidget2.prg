@@ -29,7 +29,7 @@ FUNCTION Main()
 
    FOR r := 1 TO nRows
       FOR c := 1 TO nCols
-         oTable:setItem(r - 1, c - 1, QTableWidgetItem():new(AllTrim(Str(r)) + "," + AllTrim(Str(c))))
+         oTable:setItem(r - 1, c - 1, QTableWidgetItem():new(alltrim(str(r)) + "," + alltrim(str(c))))
       NEXT c
    NEXT r
 

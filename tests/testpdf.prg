@@ -29,7 +29,7 @@ FUNCTION Main()
 
    FOR nPage := 1 TO 5
 
-      oPainter:drawText(10, 10, "Página " + StrZero(nPage, 3))
+      oPainter:drawText(10, 10, "Página " + strzero(nPage, 3))
 
       oPainter:drawRect(0 + 100, 0 + 100, oPrinter:width() - 100, oPrinter:height() - 100)
 

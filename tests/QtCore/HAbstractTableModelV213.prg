@@ -15,7 +15,7 @@ FUNCTION Main()
    LOCAL nRow
 
    IF !File("test.dbf")
-      DBCreate("test", {{"field1    ", "c", 20, 0}, ;
+      dbcreate("test", {{"field1    ", "c", 20, 0}, ;
                         {"field2    ", "c", 20, 0}, ;
                         {"field3    ", "c", 20, 0}, ;
                         {"field4    ", "c", 20, 0}, ;
@@ -39,30 +39,30 @@ FUNCTION Main()
 
    USE test ALIAS test
 
-   IF RecCount() == 0
+   IF reccount() == 0
 
       FOR nRow := 1 TO 10000
          APPEND BLANK
-         REPLACE field1  WITH AllTrim(Str(nRow)) + "," + AllTrim(Str( 1))
-         REPLACE field2  WITH AllTrim(Str(nRow)) + "," + AllTrim(Str( 2))
-         REPLACE field3  WITH AllTrim(Str(nRow)) + "," + AllTrim(Str( 3))
-         REPLACE field4  WITH AllTrim(Str(nRow)) + "," + AllTrim(Str( 4))
-         REPLACE field5  WITH AllTrim(Str(nRow)) + "," + AllTrim(Str( 5))
-         REPLACE field6  WITH AllTrim(Str(nRow)) + "," + AllTrim(Str( 6))
-         REPLACE field7  WITH AllTrim(Str(nRow)) + "," + AllTrim(Str( 7))
-         REPLACE field8  WITH AllTrim(Str(nRow)) + "," + AllTrim(Str( 8))
-         REPLACE field9  WITH AllTrim(Str(nRow)) + "," + AllTrim(Str( 9))
-         REPLACE field10 WITH AllTrim(Str(nRow)) + "," + AllTrim(Str(10))
-         REPLACE field11 WITH AllTrim(Str(nRow)) + "," + AllTrim(Str(11))
-         REPLACE field12 WITH AllTrim(Str(nRow)) + "," + AllTrim(Str(12))
-         REPLACE field13 WITH AllTrim(Str(nRow)) + "," + AllTrim(Str(13))
-         REPLACE field14 WITH AllTrim(Str(nRow)) + "," + AllTrim(Str(14))
-         REPLACE field15 WITH AllTrim(Str(nRow)) + "," + AllTrim(Str(15))
-         REPLACE field16 WITH AllTrim(Str(nRow)) + "," + AllTrim(Str(16))
-         REPLACE field17 WITH AllTrim(Str(nRow)) + "," + AllTrim(Str(17))
-         REPLACE field18 WITH AllTrim(Str(nRow)) + "," + AllTrim(Str(18))
-         REPLACE field19 WITH AllTrim(Str(nRow)) + "," + AllTrim(Str(19))
-         REPLACE field20 WITH AllTrim(Str(nRow)) + "," + AllTrim(Str(20))
+         REPLACE field1  WITH alltrim(str(nRow)) + "," + alltrim(str( 1))
+         REPLACE field2  WITH alltrim(str(nRow)) + "," + alltrim(str( 2))
+         REPLACE field3  WITH alltrim(str(nRow)) + "," + alltrim(str( 3))
+         REPLACE field4  WITH alltrim(str(nRow)) + "," + alltrim(str( 4))
+         REPLACE field5  WITH alltrim(str(nRow)) + "," + alltrim(str( 5))
+         REPLACE field6  WITH alltrim(str(nRow)) + "," + alltrim(str( 6))
+         REPLACE field7  WITH alltrim(str(nRow)) + "," + alltrim(str( 7))
+         REPLACE field8  WITH alltrim(str(nRow)) + "," + alltrim(str( 8))
+         REPLACE field9  WITH alltrim(str(nRow)) + "," + alltrim(str( 9))
+         REPLACE field10 WITH alltrim(str(nRow)) + "," + alltrim(str(10))
+         REPLACE field11 WITH alltrim(str(nRow)) + "," + alltrim(str(11))
+         REPLACE field12 WITH alltrim(str(nRow)) + "," + alltrim(str(12))
+         REPLACE field13 WITH alltrim(str(nRow)) + "," + alltrim(str(13))
+         REPLACE field14 WITH alltrim(str(nRow)) + "," + alltrim(str(14))
+         REPLACE field15 WITH alltrim(str(nRow)) + "," + alltrim(str(15))
+         REPLACE field16 WITH alltrim(str(nRow)) + "," + alltrim(str(16))
+         REPLACE field17 WITH alltrim(str(nRow)) + "," + alltrim(str(17))
+         REPLACE field18 WITH alltrim(str(nRow)) + "," + alltrim(str(18))
+         REPLACE field19 WITH alltrim(str(nRow)) + "," + alltrim(str(19))
+         REPLACE field20 WITH alltrim(str(nRow)) + "," + alltrim(str(20))
       NEXT nRow
 
    ENDIF
@@ -123,10 +123,10 @@ METHOD new(...) CLASS myModel
 RETURN self
 
 METHOD rowCount() CLASS myModel
-RETURN RecCount()
+RETURN reccount()
 
 METHOD columnCount() CLASS myModel
-RETURN FCount()
+RETURN fcount()
 
 METHOD data(pIndex, nRole) CLASS myModel
 
@@ -137,12 +137,12 @@ METHOD data(pIndex, nRole) CLASS myModel
 
    IF oIndex:isValid()
 
-      DBGoTo(nRow + 1)
+      dbgoto(nRow + 1)
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new(FieldGet(nColumn + 1))
+         oVariant := QVariant():new(fieldget(nColumn + 1))
       ELSEIF nRole == Qt_EditRole
-         oVariant := QVariant():new(FieldGet(nColumn + 1))
+         oVariant := QVariant():new(fieldget(nColumn + 1))
       ENDIF
 
    ENDIF
@@ -154,9 +154,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Campo " + AllTrim(Str(nSection + 1)))
+      oVariant := QVariant():new("Campo " + alltrim(str(nSection + 1)))
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Registro " + AllTrim(Str(nSection + 1)))
+      oVariant := QVariant():new("Registro " + alltrim(str(nSection + 1)))
    ENDIF
 
 RETURN oVariant
@@ -183,12 +183,12 @@ METHOD setData(pIndex, pVariant, nRole) CLASS myModel
 
       IF nRole == Qt_EditRole
 
-         DBGoTo(nRow + 1)
+         dbgoto(nRow + 1)
 
          cValue := oVariant:toString()
 
-         IF !Empty(cValue)
-            FieldPut(nColumn + 1, oVariant:toString())
+         IF !empty(cValue)
+            fieldput(nColumn + 1, oVariant:toString())
             lSuccess := .T.
          ENDIF
 

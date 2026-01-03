@@ -25,19 +25,19 @@ FUNCTION Main()
 
    oModel := HAbstractTableModel():new()
    // total de linhas
-   oModel:setRowCountCB({||Len(aColorsNames)})
+   oModel:setRowCountCB({||len(aColorsNames)})
    // total de colunas
    oModel:setColumnCountCB({||2})
    // conteúdo da célula
    oModel:setDisplayRoleCB({|nRow, nCol|{aColorsNames[nRow + 1], NIL}[nCol + 1]})
    // fonte da célula
-   oModel:setFontRoleCB({|nRow, nCol|IIf(nCol == 0, QFont():new("Arial Black", 12), NIL)})
+   oModel:setFontRoleCB({|nRow, nCol|iif(nCol == 0, QFont():new("Arial Black", 12), NIL)})
    // cor de fundo da célula
-   oModel:setBackgroundRoleCB({|nRow, nCol|IIf(nCol == 0, NIL, aColorsNames[nRow + 1])})
+   oModel:setBackgroundRoleCB({|nRow, nCol|iif(nCol == 0, NIL, aColorsNames[nRow + 1])})
    // títulos das colunas
    oModel:setHorizontalHeaderDisplayRoleCB({|nCol|{"Nome", "Cor"}[nCol + 1]})
    // títulos das linhas
-   oModel:setVerticalHeaderDisplayRoleCB({|nRow|AllTrim(Str(nRow + 1))})
+   oModel:setVerticalHeaderDisplayRoleCB({|nRow|alltrim(str(nRow + 1))})
 
    oView := QTableView():new(oWindow)
    oView:move(10, 10)

@@ -28,7 +28,7 @@ FUNCTION Main()
 
    FOR nRow := 0 TO 99
       FOR nColumn := 0 TO 99
-         s_aDados[nRow + 1, nColumn + 1] := AllTrim(Str(nRow)) + "," + AllTrim(Str(nColumn))
+         s_aDados[nRow + 1, nColumn + 1] := alltrim(str(nRow)) + "," + alltrim(str(nColumn))
       NEXT nColumn
    NEXT nRow
 
@@ -110,9 +110,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Coluna " + AllTrim(Str(nSection)))
+      oVariant := QVariant():new("Coluna " + alltrim(str(nSection)))
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Linha " + AllTrim(Str(nSection)))
+      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant

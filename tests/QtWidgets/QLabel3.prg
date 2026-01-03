@@ -40,7 +40,7 @@ FUNCTION Main()
    oLineEdit3:move(120, 220)
 
    o1 := olabel1:buddy()
-   ? ValType(o1)
+   ? valtype(o1)
    ? o1:className()
    ? o1:pointer
 
@@ -53,19 +53,19 @@ FUNCTION Main()
 
    ?
    o1 := olabel1:buddy()
-   ? ValType(o1)
+   ? valtype(o1)
    ? o1:className()
    ? o1:pointer
 
    ?
    o2 := olabel2:buddy()
-   ? ValType(o2)
+   ? valtype(o2)
    ? o2:className()
    ? o2:pointer
 
    ?
    o3 := olabel3:buddy()
-   ? ValType(o3)
+   ? valtype(o3)
    ? o3:className()
    ? o3:pointer
 

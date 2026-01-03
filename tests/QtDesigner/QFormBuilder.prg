@@ -39,10 +39,10 @@ FUNCTION Main()
    // aqui personalizamos os widgets (aparência, ações e eventos)
 
    oPushButton := QPushButton():newFrom(oWindow:findChild("pushButton"))
-   ? oPushButton:onClicked({||QOut("PushButton clicked")})
+   ? oPushButton:onClicked({||qout("PushButton clicked")})
 
    oCommandLinkButton := QCommandLinkButton():newFrom(oWindow:findChild("commandLinkButton"))
-   ? oCommandLinkButton:onClicked({||QOut("CommandLinkButton clicked")})
+   ? oCommandLinkButton:onClicked({||qout("CommandLinkButton clicked")})
    oCommandLinkButton:setStyleSheet("background-color: yellow")
 
    oComboBox := QComboBox():newFrom(oWindow:findChild("comboBox"))
@@ -54,8 +54,8 @@ FUNCTION Main()
 
    oLineEdit := QLineEdit():newFrom(oWindow:findChild("lineEdit"))
    oLineEdit:setText("testando QLineEdit")
-   ? oLineEdit:onFocusInEvent({||QOut("focusin")})
-   ? oLineEdit:onFocusOutEvent({||QOut("focusout")})
+   ? oLineEdit:onFocusInEvent({||qout("focusin")})
+   ? oLineEdit:onFocusOutEvent({||qout("focusout")})
 
    oLCDNumber := QLCDNumber():newFrom(oWindow:findChild("lcdNumber"))
    oLCDNumber:display(1234)

@@ -68,7 +68,7 @@ STATIC FUNCTION dialog(oParent)
    oLineEdit3:resize(100, 30)
 
    oEventFilter1 := HEventFilter():new(oDialog)
-   oEventFilter1:onDestroyed({||QOut("oEventFilter1-destroyed")})
+   oEventFilter1:onDestroyed({||qout("oEventFilter1-destroyed")})
    oEventFilter1:setEventFilterCB({|oObject, oEvent|
       LOCAL nType := oEvent:type()
 
@@ -84,7 +84,7 @@ STATIC FUNCTION dialog(oParent)
       })
 
    oEventFilter2 := HEventFilter():new(oDialog)
-   oEventFilter2:onDestroyed({||QOut("oEventFilter2-destroyed")})
+   oEventFilter2:onDestroyed({||qout("oEventFilter2-destroyed")})
    oEventFilter2:setEventFilterCB({|oObject, oEvent|
       LOCAL nType := oEvent:type()
 
