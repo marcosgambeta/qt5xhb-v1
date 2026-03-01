@@ -1,16 +1,18 @@
 #
 # Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
-# Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+# Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
 
 {!darwin}-stop
 
 -hblib
 
--olib/${hb_plat}/${hb_comp}/hbqtmacextras5
+-o../lib/${hb_plat}/${hb_comp}/hbqtmacextras5
 
--workdir=obj
+-inc
+
+-workdir=../obj/${hb_plat}/${hb_comp}
 
 -n
 -w3
@@ -20,8 +22,8 @@
 
 -cpp
 
--isource/QtMacExtras
--iinclude
+-i../source/QtMacExtras
+-i../include
 -i${QT_INC_DIR}
 
 -cflag=-frtti
@@ -37,5 +39,5 @@
 
 -plugin=qt5xhb_qtmacextras.hb
 
-source/QtMacExtras/QMacPasteboardMime.prg
-source/QtMacExtras/QtMacExtrasVersion.cpp
+../source/QtMacExtras/QMacPasteboardMime.prg
+../source/QtMacExtras/QtMacExtrasVersion.cpp

@@ -1,14 +1,16 @@
 #
 # Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
-# Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+# Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
 
 -hblib
 
--olib/${hb_plat}/${hb_comp}/hbqtscripttools5
+-o../lib/${hb_plat}/${hb_comp}/hbqtscripttools5
 
--workdir=obj
+-inc
+
+-workdir=../obj/${hb_plat}/${hb_comp}
 
 -n
 -w3
@@ -18,8 +20,8 @@
 
 -cpp
 
--isource/QtScriptTools
--iinclude
+-i../source/QtScriptTools
+-i../include
 -i${QT_INC_DIR}
 
 -cflag=-frtti
@@ -35,7 +37,7 @@
 
 -plugin=qt5xhb_qtscripttools.hb
 
-source/QtScriptTools/QScriptEngineDebugger.prg
-source/QtScriptTools/QScriptEngineDebuggerSlots.cpp
-source/QtScriptTools/QScriptEngineDebuggerSlotsMoc.cpp
-source/QtScriptTools/QtScriptToolsVersion.cpp
+../source/QtScriptTools/QScriptEngineDebugger.prg
+../source/QtScriptTools/QScriptEngineDebuggerSlots.cpp
+../source/QtScriptTools/QScriptEngineDebuggerSlotsMoc.cpp
+../source/QtScriptTools/QtScriptToolsVersion.cpp

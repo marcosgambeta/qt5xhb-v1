@@ -1,16 +1,18 @@
 #
 # Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
-# Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+# Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
 
 {!win}-stop
 
 -hblib
 
--olib/${hb_plat}/${hb_comp}/hbqaxcontainer5
+-o../lib/${hb_plat}/${hb_comp}/hbqaxcontainer5
 
--workdir=obj
+-inc
+
+-workdir=../obj/${hb_plat}/${hb_comp}
 
 -n
 -w3
@@ -20,8 +22,8 @@
 
 -cpp
 
--isource/ActiveQt
--iinclude
+-i../source/ActiveQt
+-i../include
 -i${QT_INC_DIR}
 
 -cflag=-frtti
@@ -38,17 +40,17 @@
 
 -plugin=qt5xhb_qaxcontainer.hb
 
-source/ActiveQt/QAxBase.prg
-source/ActiveQt/QAxBaseSlots.cpp
-source/ActiveQt/QAxBaseSlotsMoc.cpp
-source/ActiveQt/QAxObject.prg
-source/ActiveQt/QAxObjectSlots.cpp
-source/ActiveQt/QAxObjectSlotsMoc.cpp
-source/ActiveQt/QAxScript.prg
-source/ActiveQt/QAxScriptEngine.prg
-source/ActiveQt/QAxScriptManager.prg
-source/ActiveQt/QAxScriptSlots.cpp
-source/ActiveQt/QAxScriptSlotsMoc.cpp
-source/ActiveQt/QAxWidget.prg
-source/ActiveQt/QAxWidgetSlots.cpp
-source/ActiveQt/QAxWidgetSlotsMoc.cpp
+../source/ActiveQt/QAxBase.prg
+../source/ActiveQt/QAxBaseSlots.cpp
+../source/ActiveQt/QAxBaseSlotsMoc.cpp
+../source/ActiveQt/QAxObject.prg
+../source/ActiveQt/QAxObjectSlots.cpp
+../source/ActiveQt/QAxObjectSlotsMoc.cpp
+../source/ActiveQt/QAxScript.prg
+../source/ActiveQt/QAxScriptEngine.prg
+../source/ActiveQt/QAxScriptManager.prg
+../source/ActiveQt/QAxScriptSlots.cpp
+../source/ActiveQt/QAxScriptSlotsMoc.cpp
+../source/ActiveQt/QAxWidget.prg
+../source/ActiveQt/QAxWidgetSlots.cpp
+../source/ActiveQt/QAxWidgetSlotsMoc.cpp

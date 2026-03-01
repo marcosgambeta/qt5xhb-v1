@@ -1,14 +1,16 @@
 #
 # Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
-# Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+# Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
 
 -hblib
 
--olib/${hb_plat}/${hb_comp}/hbqtdbus5
+-o../lib/${hb_plat}/${hb_comp}/hbqtdbus5
 
--workdir=obj
+-inc
+
+-workdir=../obj/${hb_plat}/${hb_comp}
 
 -n
 -w3
@@ -18,8 +20,8 @@
 
 -cpp
 
--isource/QtDBus
--iinclude
+-i../source/QtDBus
+-i../include
 -i${QT_INC_DIR}
 
 -cflag=-frtti
@@ -36,32 +38,32 @@
 
 -plugin=qt5xhb_qtdbus.hb
 
-source/QtDBus/QDBusAbstractAdaptor.prg
-source/QtDBus/QDBusAbstractInterface.prg
-source/QtDBus/QDBusAbstractInterfaceBase.prg
-source/QtDBus/QDBusArgument.prg
-source/QtDBus/QDBusConnection.prg
-source/QtDBus/QDBusConnectionInterface.prg
-source/QtDBus/QDBusConnectionInterfaceSlots.cpp
-source/QtDBus/QDBusConnectionInterfaceSlotsMoc.cpp
-source/QtDBus/QDBusContext.prg
-source/QtDBus/QDBusError.prg
-source/QtDBus/QDBusInterface.prg
-source/QtDBus/QDBusMessage.prg
-source/QtDBus/QDBusMetaType.prg
-source/QtDBus/QDBusObjectPath.prg
-source/QtDBus/QDBusPendingCall.prg
-source/QtDBus/QDBusPendingCallWatcher.prg
-source/QtDBus/QDBusPendingCallWatcherSlots.cpp
-source/QtDBus/QDBusPendingCallWatcherSlotsMoc.cpp
-source/QtDBus/QDBusPendingReplyData.prg
-source/QtDBus/QDBusServer.prg
-source/QtDBus/QDBusServerSlots.cpp
-source/QtDBus/QDBusServerSlotsMoc.cpp
-source/QtDBus/QDBusServiceWatcher.prg
-source/QtDBus/QDBusServiceWatcherSlots.cpp
-source/QtDBus/QDBusServiceWatcherSlotsMoc.cpp
-source/QtDBus/QDBusSignature.prg
-source/QtDBus/QDBusUnixFileDescriptor.prg
-source/QtDBus/QDBusVirtualObject.prg
-source/QtDBus/QtDBusVersion.cpp
+../source/QtDBus/QDBusAbstractAdaptor.prg
+../source/QtDBus/QDBusAbstractInterface.prg
+../source/QtDBus/QDBusAbstractInterfaceBase.prg
+../source/QtDBus/QDBusArgument.prg
+../source/QtDBus/QDBusConnection.prg
+../source/QtDBus/QDBusConnectionInterface.prg
+../source/QtDBus/QDBusConnectionInterfaceSlots.cpp
+../source/QtDBus/QDBusConnectionInterfaceSlotsMoc.cpp
+../source/QtDBus/QDBusContext.prg
+../source/QtDBus/QDBusError.prg
+../source/QtDBus/QDBusInterface.prg
+../source/QtDBus/QDBusMessage.prg
+../source/QtDBus/QDBusMetaType.prg
+../source/QtDBus/QDBusObjectPath.prg
+../source/QtDBus/QDBusPendingCall.prg
+../source/QtDBus/QDBusPendingCallWatcher.prg
+../source/QtDBus/QDBusPendingCallWatcherSlots.cpp
+../source/QtDBus/QDBusPendingCallWatcherSlotsMoc.cpp
+../source/QtDBus/QDBusPendingReplyData.prg
+../source/QtDBus/QDBusServer.prg
+../source/QtDBus/QDBusServerSlots.cpp
+../source/QtDBus/QDBusServerSlotsMoc.cpp
+../source/QtDBus/QDBusServiceWatcher.prg
+../source/QtDBus/QDBusServiceWatcherSlots.cpp
+../source/QtDBus/QDBusServiceWatcherSlotsMoc.cpp
+../source/QtDBus/QDBusSignature.prg
+../source/QtDBus/QDBusUnixFileDescriptor.prg
+../source/QtDBus/QDBusVirtualObject.prg
+../source/QtDBus/QtDBusVersion.cpp

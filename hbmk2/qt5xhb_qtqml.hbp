@@ -1,14 +1,16 @@
 #
 # Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
-# Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+# Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
 
 -hblib
 
--olib/${hb_plat}/${hb_comp}/hbqtqml5
+-o../lib/${hb_plat}/${hb_comp}/hbqtqml5
 
--workdir=obj
+-inc
+
+-workdir=../obj/${hb_plat}/${hb_comp}
 
 -n
 -w3
@@ -18,8 +20,8 @@
 
 -cpp
 
--isource/QtQml
--iinclude
+-i../source/QtQml
+-i../include
 -i${QT_INC_DIR}
 
 -cflag=-frtti
@@ -35,35 +37,35 @@
 
 -plugin=qt5xhb_qtqml.hb
 
-source/QtQml/QJSEngine.prg
-source/QtQml/QJSValue.prg
-source/QtQml/QJSValueIterator.prg
-source/QtQml/QQmlApplicationEngine.prg
-source/QtQml/QQmlApplicationEngineSlots.cpp
-source/QtQml/QQmlApplicationEngineSlotsMoc.cpp
-source/QtQml/QQmlComponent.prg
-source/QtQml/QQmlComponentSlots.cpp
-source/QtQml/QQmlComponentSlotsMoc.cpp
-source/QtQml/QQmlContext.prg
-source/QtQml/QQmlEngine.prg
-source/QtQml/QQmlEngineSlots.cpp
-source/QtQml/QQmlEngineSlotsMoc.cpp
-source/QtQml/QQmlError.prg
-source/QtQml/QQmlExpression.prg
-source/QtQml/QQmlExpressionSlots.cpp
-source/QtQml/QQmlExpressionSlotsMoc.cpp
-source/QtQml/QQmlExtensionPlugin.prg
-source/QtQml/QQmlImageProviderBase.prg
-source/QtQml/QQmlIncubationController.prg
-source/QtQml/QQmlIncubator.prg
-source/QtQml/QQmlListProperty.prg
-source/QtQml/QQmlListReference.prg
-source/QtQml/QQmlNetworkAccessManagerFactory.prg
-source/QtQml/QQmlParserStatus.prg
-source/QtQml/QQmlProperty.prg
-source/QtQml/QQmlPropertyMap.prg
-source/QtQml/QQmlPropertyMapSlots.cpp
-source/QtQml/QQmlPropertyMapSlotsMoc.cpp
-source/QtQml/QQmlPropertyValueSource.prg
-source/QtQml/QQmlScriptString.prg
-source/QtQml/QtQmlVersion.cpp
+../source/QtQml/QJSEngine.prg
+../source/QtQml/QJSValue.prg
+../source/QtQml/QJSValueIterator.prg
+../source/QtQml/QQmlApplicationEngine.prg
+../source/QtQml/QQmlApplicationEngineSlots.cpp
+../source/QtQml/QQmlApplicationEngineSlotsMoc.cpp
+../source/QtQml/QQmlComponent.prg
+../source/QtQml/QQmlComponentSlots.cpp
+../source/QtQml/QQmlComponentSlotsMoc.cpp
+../source/QtQml/QQmlContext.prg
+../source/QtQml/QQmlEngine.prg
+../source/QtQml/QQmlEngineSlots.cpp
+../source/QtQml/QQmlEngineSlotsMoc.cpp
+../source/QtQml/QQmlError.prg
+../source/QtQml/QQmlExpression.prg
+../source/QtQml/QQmlExpressionSlots.cpp
+../source/QtQml/QQmlExpressionSlotsMoc.cpp
+../source/QtQml/QQmlExtensionPlugin.prg
+../source/QtQml/QQmlImageProviderBase.prg
+../source/QtQml/QQmlIncubationController.prg
+../source/QtQml/QQmlIncubator.prg
+../source/QtQml/QQmlListProperty.prg
+../source/QtQml/QQmlListReference.prg
+../source/QtQml/QQmlNetworkAccessManagerFactory.prg
+../source/QtQml/QQmlParserStatus.prg
+../source/QtQml/QQmlProperty.prg
+../source/QtQml/QQmlPropertyMap.prg
+../source/QtQml/QQmlPropertyMapSlots.cpp
+../source/QtQml/QQmlPropertyMapSlotsMoc.cpp
+../source/QtQml/QQmlPropertyValueSource.prg
+../source/QtQml/QQmlScriptString.prg
+../source/QtQml/QtQmlVersion.cpp

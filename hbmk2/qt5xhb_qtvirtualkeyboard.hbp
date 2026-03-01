@@ -1,14 +1,16 @@
 #
 # Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
-# Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+# Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
 
 -hblib
 
--olib/${hb_plat}/${hb_comp}/hbqtvirtualkeyboard5
+-o../lib/${hb_plat}/${hb_comp}/hbqtvirtualkeyboard5
 
--workdir=obj
+-inc
+
+-workdir=../obj/${hb_plat}/${hb_comp}
 
 -n
 -w3
@@ -18,8 +20,8 @@
 
 -cpp
 
--isource/QtVirtualKeyboard
--iinclude
+-i../source/QtVirtualKeyboard
+-i../include
 -i${QT_INC_DIR}
 -i${QT_INC_DIR}/QtCore
 -i${QT_INC_DIR}/QtGui
@@ -37,20 +39,20 @@
 
 -plugin=qt5xhb_qtvirtualkeyboard.hb
 
-source/QtVirtualKeyboard/QtVirtualKeyboardVersion.cpp
-source/QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod.prg
-source/QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethodSlots.cpp
-source/QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethodSlotsMoc.cpp
-source/QtVirtualKeyboard/QVirtualKeyboardExtensionPlugin.prg
-source/QtVirtualKeyboard/QVirtualKeyboardInputContext.prg
-source/QtVirtualKeyboard/QVirtualKeyboardInputContextSlots.cpp
-source/QtVirtualKeyboard/QVirtualKeyboardInputContextSlotsMoc.cpp
-source/QtVirtualKeyboard/QVirtualKeyboardInputEngine.prg
-source/QtVirtualKeyboard/QVirtualKeyboardInputEngineSlots.cpp
-source/QtVirtualKeyboard/QVirtualKeyboardInputEngineSlotsMoc.cpp
-source/QtVirtualKeyboard/QVirtualKeyboardSelectionListModel.prg
-source/QtVirtualKeyboard/QVirtualKeyboardSelectionListModelSlots.cpp
-source/QtVirtualKeyboard/QVirtualKeyboardSelectionListModelSlotsMoc.cpp
-source/QtVirtualKeyboard/QVirtualKeyboardTrace.prg
-source/QtVirtualKeyboard/QVirtualKeyboardTraceSlots.cpp
-source/QtVirtualKeyboard/QVirtualKeyboardTraceSlotsMoc.cpp
+../source/QtVirtualKeyboard/QtVirtualKeyboardVersion.cpp
+../source/QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod.prg
+../source/QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethodSlots.cpp
+../source/QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethodSlotsMoc.cpp
+../source/QtVirtualKeyboard/QVirtualKeyboardExtensionPlugin.prg
+../source/QtVirtualKeyboard/QVirtualKeyboardInputContext.prg
+../source/QtVirtualKeyboard/QVirtualKeyboardInputContextSlots.cpp
+../source/QtVirtualKeyboard/QVirtualKeyboardInputContextSlotsMoc.cpp
+../source/QtVirtualKeyboard/QVirtualKeyboardInputEngine.prg
+../source/QtVirtualKeyboard/QVirtualKeyboardInputEngineSlots.cpp
+../source/QtVirtualKeyboard/QVirtualKeyboardInputEngineSlotsMoc.cpp
+../source/QtVirtualKeyboard/QVirtualKeyboardSelectionListModel.prg
+../source/QtVirtualKeyboard/QVirtualKeyboardSelectionListModelSlots.cpp
+../source/QtVirtualKeyboard/QVirtualKeyboardSelectionListModelSlotsMoc.cpp
+../source/QtVirtualKeyboard/QVirtualKeyboardTrace.prg
+../source/QtVirtualKeyboard/QVirtualKeyboardTraceSlots.cpp
+../source/QtVirtualKeyboard/QVirtualKeyboardTraceSlotsMoc.cpp
