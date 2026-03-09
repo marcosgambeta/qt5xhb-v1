@@ -25,10 +25,22 @@ Use a seção 'Issues' caso tenha problemas com a compilação:
 
 https://github.com/marcosgambeta/qt5xhb-v1/issues  
 
+## Notas
+
+Uma versão comercial deste projeto, com otimizações e recursos extras, está disponível no site abaixo:
+
+https://magsoftinfo.com/
+
+Acesse o link para maiores informações.
+
 ## Links
+
+Qt4xHb v1  
+https://github.com/marcosgambeta/qt4xhb-v1
 
 Qt5xHb v2  
 https://github.com/marcosgambeta/qt5xhb-v2
 
+Harbour Addons
 Versões comerciais de bibliotecas para Harbour/xHarbour e Qt Framework 5/6  
 https://magsoftinfo.com/
